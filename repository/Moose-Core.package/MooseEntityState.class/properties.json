@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "tg 5/8/2008 15:45",
-	"instvars" : [
-		 ],
-	"name" : "MooseEntityState",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseEntityState",
+	"type" : "normal"
+}

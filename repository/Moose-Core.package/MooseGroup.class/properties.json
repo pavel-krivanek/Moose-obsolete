@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 11/13/2011 21:22",
-	"instvars" : [
-		 ],
-	"name" : "MooseGroup",
-	"pools" : [
-		 ],
 	"super" : "MooseAbstractGroup",
-	"type" : "normal" }
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseGroup",
+	"type" : "normal"
+}

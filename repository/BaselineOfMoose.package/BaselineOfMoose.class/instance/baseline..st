@@ -44,12 +44,21 @@ baseline: spec
 		spec package: 'Moose-Test-HismoImporter'.
 		spec package: 'Famix-Extensions'.
 		spec package: 'Famix-SourceAnchor'.
-		spec package: 'Famix-File'.
+		
+		"removed because of Smalltalk subset"
+		"spec package: 'Famix-File'."
+		
 		spec package: 'Moose-GenericImporter'.
-		spec package: 'Famix-C'.
+		
+		"removed because of Smalltalk subset"
+		"spec package: 'Famix-C'."
+		
 		spec package: 'Famix-Tests-C'.
 		spec package: 'Famix-Implementation'.
-		spec package: 'Famix-Java'.
+
+		"removed because of Smalltalk subset"
+		"spec package: 'Famix-Java'."
+		
 		spec package: 'Famix-Smalltalk'.
 		spec package: 'Moose-Query-Extensions'.
 		spec package: 'Moose-SmalltalkImporter'.
@@ -176,8 +185,12 @@ baseline: spec
 		spec package: 'Arki-Reporter-Browser'.
 		spec package: 'Arki-Tests-Reporter'.
 		spec package: 'OnMoose-Report'.
-		spec package: 'Dynamix-Core'.
-		spec package: 'Dynamix-Tests-Core'.
+		
+		"removed because of Smalltalk subset"
+		"spec package: 'Dynamix-Core'.
+		spec package: 'Dynamix-Tests-Core'."
+		
+		
 		"spec package: 'PetitJava'."
 		spec package: 'SmaCC_Runtime'.
 		spec package: 'SmaCC_Line_Parser'.

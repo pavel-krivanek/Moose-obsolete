@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-Finder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MooseDependencyBrowser",
-	"pools" : [
-		 ],
 	"super" : "GLMBrowserTemplate",
-	"type" : "normal" }
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseDependencyBrowser",
+	"type" : "normal"
+}

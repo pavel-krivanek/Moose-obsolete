@@ -1,16 +1,15 @@
 {
-	"category" : "Fame-SmalltalkBinding",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"metamodel",
 		"todoOpposite",
-		"todoClass" ],
+		"todoClass"
+	],
 	"name" : "FMIncrementalPragmaProcessor",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

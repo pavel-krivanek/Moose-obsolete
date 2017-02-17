@@ -1,23 +1,22 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
 	"classtraitcomposition" : "TOODependencyQueries classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "usmanbhatti 11/24/2011 22:39",
+	"classvars" : [ ],
 	"instvars" : [
-		"incomingReferences",
-		"subInheritances",
-		"methods",
-		"container",
-		"superInheritances",
-		"attributes",
-		"behavioursWithDeclaredType",
-		"structuresWithDeclaredType" ],
+		"#incomingReferences => FMToManyRelationSlot inverse: #target: inClass: #FAMIXReference",
+		"#subInheritances => FMToManyRelationSlot inverse: #superclass inClass: #FAMIXInheritance",
+		"#methods => FMToManyRelationSlot inverse: #parentType inClass: #FAMIXMethod",
+		"#container",
+		"#superInheritances => FMToManyRelationSlot inverse: #subclass inClass: #FAMIXInheritance",
+		"#attributes => FMToManyRelationSlot inverse: #parentType inClass: #FAMIXAttribute",
+		"#behavioursWithDeclaredType => FMToManyRelationSlot inverse: #declaredType inClass: #FAMIXBehaviouralEntity",
+		"#structuresWithDeclaredType => FMToManyRelationSlot inverse: #declaredType inClass: #FAMIXStructuralEntity"
+	],
 	"name" : "FAMIXType",
-	"pools" : [
-		 ],
+	"commentStamp" : "usmanbhatti 11/24/2011 22:39",
 	"super" : "FAMIXContainerEntity",
 	"traitcomposition" : "TOODependencyQueries",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Famix-Core"
+}

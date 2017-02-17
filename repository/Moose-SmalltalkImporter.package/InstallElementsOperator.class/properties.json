@@ -1,14 +1,13 @@
 {
-	"category" : "Moose-SmalltalkImporter",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 11/8/2011 12:46",
-	"instvars" : [
-		"container" ],
-	"name" : "InstallElementsOperator",
-	"pools" : [
-		 ],
 	"super" : "MooseOperator",
-	"type" : "normal" }
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"container"
+	],
+	"name" : "InstallElementsOperator",
+	"type" : "normal"
+}

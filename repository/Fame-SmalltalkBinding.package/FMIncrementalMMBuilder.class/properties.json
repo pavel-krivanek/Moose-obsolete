@@ -1,16 +1,15 @@
 {
-	"category" : "Fame-SmalltalkBinding",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"packageDict",
 		"envStack",
-		"superclassDict" ],
+		"superclassDict"
+	],
 	"name" : "FMIncrementalMMBuilder",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

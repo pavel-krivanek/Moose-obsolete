@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-Finder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "tg 1/10/2010 19:38",
-	"instvars" : [
-		 ],
-	"name" : "MoosePanel",
-	"pools" : [
-		 ],
 	"super" : "GLMBrowserTemplate",
-	"type" : "normal" }
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MoosePanel",
+	"type" : "normal"
+}

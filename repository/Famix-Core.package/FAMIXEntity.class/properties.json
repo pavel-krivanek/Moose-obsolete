@@ -1,17 +1,16 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		"childrenAccessors",
-		"parentSelectors" ],
 	"classtraitcomposition" : "TMetaLevelDependency classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
+	"classvars" : [ ],
+	"instvars" : [ ],
 	"name" : "FAMIXEntity",
-	"pools" : [
-		 ],
+	"commentStamp" : "<historical>",
 	"super" : "MooseEntity",
 	"traitcomposition" : "TMetaLevelDependency",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [
+		"childrenAccessors",
+		"parentSelectors"
+	],
+	"pools" : [ ],
+	"category" : "Famix-Core"
+}

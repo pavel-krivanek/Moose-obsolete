@@ -1,14 +1,13 @@
 {
-	"category" : "Fame-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 9/20/2009 12:10",
-	"instvars" : [
-		"name" ],
-	"name" : "FM3Element",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "Fame-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name"
+	],
+	"name" : "FM3Element",
+	"type" : "normal"
+}

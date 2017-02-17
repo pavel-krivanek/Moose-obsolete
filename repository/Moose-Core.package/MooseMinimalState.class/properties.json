@@ -1,14 +1,13 @@
 {
+	"commentStamp" : "stephane.ducasse 10/28/2008 22:49",
+	"super" : "MooseEntityState",
 	"category" : "Moose-Core",
 	"classinstvars" : [
-		"singelton" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "stephane.ducasse 10/28/2008 22:49",
-	"instvars" : [
-		 ],
+		"singelton"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
 	"name" : "MooseMinimalState",
-	"pools" : [
-		 ],
-	"super" : "MooseEntityState",
-	"type" : "normal" }
+	"type" : "normal"
+}

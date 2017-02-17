@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-Core-Slots",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#name",
+		"#one => FMToOneRelationSlot inverse: #many inClass: #FMSlotTestClass1",
+		"#multi => FMToManyRelationSlot inverse: #multi inClass: #FMSlotTestClass1"
+	],
+	"name" : "FMSlotTestClass2",
+	"type" : "normal"
+}

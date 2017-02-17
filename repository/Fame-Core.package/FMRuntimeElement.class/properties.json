@@ -1,15 +1,14 @@
 {
-	"category" : "Fame-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 9/20/2009 12:20",
+	"super" : "Object",
+	"category" : "Fame-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"description",
-		"slots" ],
+		"slots"
+	],
 	"name" : "FMRuntimeElement",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

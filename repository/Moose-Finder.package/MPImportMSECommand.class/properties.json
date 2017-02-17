@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-Finder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MPImportMSECommand",
-	"pools" : [
-		 ],
 	"super" : "MPImportCommand",
-	"type" : "normal" }
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MPImportMSECommand",
+	"type" : "normal"
+}

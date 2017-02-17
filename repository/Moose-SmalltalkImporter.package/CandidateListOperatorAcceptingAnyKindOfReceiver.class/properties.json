@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-SmalltalkImporter",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "CandidateListOperatorAcceptingAnyKindOfReceiver",
-	"pools" : [
-		 ],
 	"super" : "AbstractCandidateListOperator",
-	"type" : "normal" }
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CandidateListOperatorAcceptingAnyKindOfReceiver",
+	"type" : "normal"
+}

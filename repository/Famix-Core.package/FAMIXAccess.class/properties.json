@@ -1,16 +1,15 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/23/2011 17:58",
-	"instvars" : [
-		"isWrite",
-		"accessor",
-		"variable" ],
-	"name" : "FAMIXAccess",
-	"pools" : [
-		 ],
 	"super" : "FAMIXAssociation",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#accessor => FMToManyRelationSlot inverse: #accesses inClass: #FAMIXBehaviouralEntity",
+		"#isWrite",
+		"#variable"
+	],
+	"name" : "FAMIXAccess",
+	"type" : "normal"
+}

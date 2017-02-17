@@ -1,15 +1,16 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		"current" ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"current"
+	],
 	"instvars" : [
 		"signature",
-		"timeStamp" ],
+		"timeStamp"
+	],
 	"name" : "MooseImage",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

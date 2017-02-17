@@ -1,17 +1,16 @@
 {
-	"category" : "Moose-Finder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "cyrille.delaunay 10/13/2009 14:38",
+	"super" : "Object",
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"checkboxes",
 		"contextSelected",
 		"dialogWindow",
-		"builder" ],
+		"builder"
+	],
 	"name" : "MooseContextFrame",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

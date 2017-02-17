@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-Finder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "TudorGirba 12/30/2013 06:49",
-	"instvars" : [
-		 ],
-	"name" : "MooseFileFinder",
-	"pools" : [
-		 ],
 	"super" : "GLMBrowserTemplate",
-	"type" : "normal" }
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseFileFinder",
+	"type" : "normal"
+}

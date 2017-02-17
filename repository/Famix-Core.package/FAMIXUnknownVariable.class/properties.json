@@ -1,14 +1,11 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "simon.denier 9/7/2009 12:15",
-	"instvars" : [
-		 ],
-	"name" : "FAMIXUnknownVariable",
-	"pools" : [
-		 ],
 	"super" : "FAMIXStructuralEntity",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXUnknownVariable",
+	"type" : "normal"
+}

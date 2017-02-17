@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-SmalltalkImporter",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MonticelloMethodVisitor",
-	"pools" : [
-		 ],
 	"super" : "AbstractSmalltalkMethodVisitor",
-	"type" : "normal" }
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MonticelloMethodVisitor",
+	"type" : "normal"
+}

@@ -1,16 +1,15 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "MooseGroupStorage",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"byName",
 		"elements",
-		"byType" ],
+		"byType"
+	],
 	"name" : "MooseGroupRuntimeStorage",
-	"pools" : [
-		 ],
-	"super" : "MooseGroupStorage",
-	"type" : "variable" }
+	"type" : "variable"
+}

@@ -1,15 +1,14 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 11/8/2011 18:01",
+	"super" : "MooseTask",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"model",
-		"args" ],
+		"args"
+	],
 	"name" : "MooseOperator",
-	"pools" : [
-		 ],
-	"super" : "MooseTask",
-	"type" : "normal" }
+	"type" : "normal"
+}

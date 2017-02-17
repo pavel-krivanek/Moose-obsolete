@@ -1,17 +1,20 @@
 {
+	"commentStamp" : "TudorGirba 1/21/2011 10:49",
+	"super" : "MooseAbstractGroup",
 	"category" : "Moose-Core",
 	"classinstvars" : [
 		"mostRecentOwner",
 		"rootModel",
-		"metaTower" ],
+		"metaTower"
+	],
+	"pools" : [ ],
 	"classvars" : [
-		"MostRecentOwner" ],
-	"commentStamp" : "TudorGirba 1/21/2011 10:49",
+		"MostRecentOwner"
+	],
 	"instvars" : [
 		"sourceLanguage",
-		"name" ],
+		"name"
+	],
 	"name" : "MooseModel",
-	"pools" : [
-		 ],
-	"super" : "MooseAbstractGroup",
-	"type" : "normal" }
+	"type" : "normal"
+}

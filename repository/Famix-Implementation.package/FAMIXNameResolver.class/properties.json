@@ -1,14 +1,11 @@
 {
-	"category" : "Famix-Implementation",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "FAMIXNameResolver",
-	"pools" : [
-		 ],
 	"super" : "MooseUtilities",
-	"type" : "normal" }
+	"category" : "Famix-Implementation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXNameResolver",
+	"type" : "normal"
+}

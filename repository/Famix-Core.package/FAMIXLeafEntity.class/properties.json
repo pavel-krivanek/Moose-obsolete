@@ -1,14 +1,11 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/28/2011 21:54",
-	"instvars" : [
-		 ],
-	"name" : "FAMIXLeafEntity",
-	"pools" : [
-		 ],
 	"super" : "FAMIXNamedEntity",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXLeafEntity",
+	"type" : "normal"
+}

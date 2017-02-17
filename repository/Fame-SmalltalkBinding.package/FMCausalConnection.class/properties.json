@@ -1,14 +1,13 @@
 {
-	"category" : "Fame-SmalltalkBinding",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"tower" ],
-	"name" : "FMCausalConnection",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tower"
+	],
+	"name" : "FMCausalConnection",
+	"type" : "normal"
+}

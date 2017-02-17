@@ -1,10 +1,10 @@
 {
-	"category" : "Moose-SmalltalkImporter",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "stephane.ducasse 6/13/2008 16:18",
+	"super" : "MooseAbstractImporter",
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"methods",
 		"classes",
@@ -14,9 +14,8 @@
 		"scopes",
 		"others",
 		"implicitVariables",
-		"annotationTypes" ],
+		"annotationTypes"
+	],
 	"name" : "SmalltalkImporter",
-	"pools" : [
-		 ],
-	"super" : "MooseAbstractImporter",
-	"type" : "normal" }
+	"type" : "normal"
+}

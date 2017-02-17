@@ -1,15 +1,14 @@
 {
-	"category" : "Famix-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/28/2011 22:58",
+	"super" : "FAMIXEntity",
+	"category" : "Famix-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"exceptionClass",
-		"definingMethod" ],
+		"definingMethod"
+	],
 	"name" : "FAMIXException",
-	"pools" : [
-		 ],
-	"super" : "FAMIXEntity",
-	"type" : "normal" }
+	"type" : "normal"
+}

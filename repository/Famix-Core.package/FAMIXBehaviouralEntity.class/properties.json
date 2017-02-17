@@ -1,24 +1,23 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
 	"classtraitcomposition" : "TOODependencyQueries classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "usmanbhatti 11/24/2011 22:07",
+	"classvars" : [ ],
 	"instvars" : [
-		"outgoingReferences",
-		"outgoingInvocations",
-		"incomingInvocations",
-		"localVariables",
-		"implicitVariables",
-		"parameters",
-		"signature",
-		"accesses",
-		"declaredType" ],
+		"#parameters => FMToManyRelationSlot inverse: #parentBehaviouralEntity inClass: #FAMIXParameter",
+		"#outgoingReferences => FMToManyRelationSlot inverse: #source inClass: #FAMIXReference",
+		"#outgoingInvocations => FMToManyRelationSlot inverse: #sender inClass: #FAMIXInvocation",
+		"#incomingInvocations => FMToManyRelationSlot inverse: #candidates inClass: #FAMIXInvocation",
+		"#localVariables => FMToManyRelationSlot inverse: #parentBehaviouralEntity inClass: #FAMIXLocalVariable",
+		"#implicitVariables => FMToManyRelationSlot inverse: #parentBehaviouralEntity inClass: #FAMIXImplicitVariable",
+		"#signature",
+		"#accesses => FMToManyRelationSlot inverse: #accessor inClass: #FAMIXAccess",
+		"#declaredType => FMToOneRelationSlot inverse: #behavioursWithDeclaredType inClass: #FAMIXType"
+	],
 	"name" : "FAMIXBehaviouralEntity",
-	"pools" : [
-		 ],
+	"commentStamp" : "usmanbhatti 11/24/2011 22:07",
 	"super" : "FAMIXContainerEntity",
 	"traitcomposition" : "TOODependencyQueries",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Famix-Core"
+}

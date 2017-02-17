@@ -1,14 +1,13 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/23/2011 17:49",
-	"instvars" : [
-		"name" ],
-	"name" : "FAMIXCustomSourceLanguage",
-	"pools" : [
-		 ],
 	"super" : "FAMIXSourceLanguage",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name"
+	],
+	"name" : "FAMIXCustomSourceLanguage",
+	"type" : "normal"
+}

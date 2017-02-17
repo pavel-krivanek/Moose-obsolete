@@ -1,22 +1,23 @@
 {
+	"commentStamp" : "StephaneDucasse 9/20/2009 12:08",
+	"super" : "FM3Element",
 	"category" : "Fame-Core",
 	"classinstvars" : [
 		"object",
 		"boolean",
 		"number",
-		"string" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "StephaneDucasse 9/20/2009 12:08",
+		"string"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"isAbstract",
 		"superclass",
 		"package",
 		"attributes",
 		"implementingClass",
-		"subclasses" ],
+		"subclasses"
+	],
 	"name" : "FM3MetaDescription",
-	"pools" : [
-		 ],
-	"super" : "FM3Element",
-	"type" : "normal" }
+	"type" : "normal"
+}

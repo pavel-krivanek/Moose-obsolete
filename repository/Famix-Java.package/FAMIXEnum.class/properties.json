@@ -1,14 +1,13 @@
 {
-	"category" : "Famix-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "TudorGirba 2/7/2011 15:19",
-	"instvars" : [
-		"values" ],
-	"name" : "FAMIXEnum",
-	"pools" : [
-		 ],
 	"super" : "FAMIXType",
-	"type" : "normal" }
+	"category" : "Famix-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"values"
+	],
+	"name" : "FAMIXEnum",
+	"type" : "normal"
+}

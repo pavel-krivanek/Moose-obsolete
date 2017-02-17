@@ -1,14 +1,13 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"metaModelClasses" ],
-	"name" : "FAMIXMetaModelClassesNotDeclaredInFameRule",
-	"pools" : [
-		 ],
 	"super" : "RBBlockLintRule",
-	"type" : "normal" }
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"metaModelClasses"
+	],
+	"name" : "FAMIXMetaModelClassesNotDeclaredInFameRule",
+	"type" : "normal"
+}

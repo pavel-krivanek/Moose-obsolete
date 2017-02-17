@@ -2,7 +2,7 @@ meta accessing
 allPropertySelectors
 	"Return a dictionary with all properties of this kind of entity, including metamodel properties, metrics, and navigation groups. Keys are abstract names of properties, values are implementing selectors"
 	
-	| props |
+	| props | 
 	props := IdentityDictionary new.
 	self allDeclaredProperties do: [:prop | props at: prop name put: prop implementingSelector].
 	(Pragma allNamed: #navigation: from: self to: MooseEntity)

@@ -5,4 +5,3 @@ initialize
 	receiver := nil.
 	receiverSourceCode := nil.
 	signature := 'nosignature'.
-	candidates := FMMultiMultivalueLink on: self opposite: #incomingInvocations.

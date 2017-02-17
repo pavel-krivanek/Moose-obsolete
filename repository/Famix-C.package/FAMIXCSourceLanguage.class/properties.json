@@ -1,14 +1,11 @@
 {
-	"category" : "Famix-C",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 10/30/2011 23:23",
-	"instvars" : [
-		 ],
-	"name" : "FAMIXCSourceLanguage",
-	"pools" : [
-		 ],
 	"super" : "FAMIXSourceLanguage",
-	"type" : "normal" }
+	"category" : "Famix-C",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXCSourceLanguage",
+	"type" : "normal"
+}

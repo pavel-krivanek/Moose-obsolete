@@ -1,14 +1,11 @@
 {
-	"category" : "Famix-Smalltalk",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 10/30/2011 23:25",
-	"instvars" : [
-		 ],
-	"name" : "FAMIXSmalltalkMonticelloSourceLanguage",
-	"pools" : [
-		 ],
 	"super" : "FAMIXSourceLanguage",
-	"type" : "normal" }
+	"category" : "Famix-Smalltalk",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXSmalltalkMonticelloSourceLanguage",
+	"type" : "normal"
+}

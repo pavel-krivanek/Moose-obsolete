@@ -1,15 +1,14 @@
 {
-	"category" : "Famix-C",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "NicolasAnquetil 11/7/2016 09:55",
+	"super" : "FAMIXAssociation",
+	"category" : "Famix-C",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"source",
-		"target" ],
+		"target"
+	],
 	"name" : "FAMIXInclude",
-	"pools" : [
-		 ],
-	"super" : "FAMIXAssociation",
-	"type" : "normal" }
+	"type" : "normal"
+}

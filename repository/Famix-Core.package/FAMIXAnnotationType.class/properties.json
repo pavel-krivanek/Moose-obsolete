@@ -1,14 +1,13 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/24/2011 22:54",
-	"instvars" : [
-		"instances" ],
-	"name" : "FAMIXAnnotationType",
-	"pools" : [
-		 ],
 	"super" : "FAMIXType",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#instances => FMToManyRelationSlot inverse: #annotationType inClass: #FAMIXAnnotationInstance"
+	],
+	"name" : "FAMIXAnnotationType",
+	"type" : "normal"
+}

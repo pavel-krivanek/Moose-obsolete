@@ -1,15 +1,14 @@
 {
-	"category" : "Famix-C",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "NicolasAnquetil 11/7/2016 09:48",
+	"super" : "FAMIXFile",
+	"category" : "Famix-C",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"incomingIncludeRelations",
-		"outgoingIncludeRelations" ],
+		"outgoingIncludeRelations"
+	],
 	"name" : "FAMIXCFile",
-	"pools" : [
-		 ],
-	"super" : "FAMIXFile",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "VincentBlondeau 9/15/2016 16:51",
-	"instvars" : [
-		"rejectedPackages" ],
-	"name" : "MoosePragmaProcessor",
-	"pools" : [
-		 ],
 	"super" : "FMPragmaProcessor",
-	"type" : "normal" }
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rejectedPackages"
+	],
+	"name" : "MoosePragmaProcessor",
+	"type" : "normal"
+}

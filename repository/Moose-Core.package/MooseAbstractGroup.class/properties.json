@@ -1,16 +1,15 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
 	"classtraitcomposition" : "TMooseGroupDependencyQueries classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
+	"classvars" : [ ],
 	"instvars" : [
-		"storage" ],
+		"storage"
+	],
 	"name" : "MooseAbstractGroup",
-	"pools" : [
-		 ],
+	"commentStamp" : "<historical>",
 	"super" : "MooseEntity",
 	"traitcomposition" : "TMooseGroupDependencyQueries",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Moose-Core"
+}

@@ -1,15 +1,14 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 11/13/2011 21:24",
+	"super" : "MooseGroup",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"originalGroup",
-		"propertySymbolOrBlock" ],
+		"propertySymbolOrBlock"
+	],
 	"name" : "MoosePropertyGroup",
-	"pools" : [
-		 ],
-	"super" : "MooseGroup",
-	"type" : "normal" }
+	"type" : "normal"
+}

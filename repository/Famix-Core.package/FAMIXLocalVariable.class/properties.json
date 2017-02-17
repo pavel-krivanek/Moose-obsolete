@@ -1,14 +1,13 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/28/2011 22:22",
-	"instvars" : [
-		"parentBehaviouralEntity" ],
-	"name" : "FAMIXLocalVariable",
-	"pools" : [
-		 ],
 	"super" : "FAMIXStructuralEntity",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#parentBehaviouralEntity => FMToOneRelationSlot inverse: #localVariables inClass: #FAMIXBehaviouralEntity"
+	],
+	"name" : "FAMIXLocalVariable",
+	"type" : "normal"
+}

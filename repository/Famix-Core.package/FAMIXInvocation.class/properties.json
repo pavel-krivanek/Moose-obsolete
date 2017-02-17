@@ -1,18 +1,17 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/23/2011 20:52",
-	"instvars" : [
-		"sender",
-		"receiver",
-		"receiverSourceCode",
-		"signature",
-		"candidates" ],
-	"name" : "FAMIXInvocation",
-	"pools" : [
-		 ],
 	"super" : "FAMIXAssociation",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#sender => FMToOneRelationSlot inverse: #outgoingInvocations inClass: #FAMIXBehaviouralEntity",
+		"#receiver => FMToOneRelationSlot inverse: #receivingInvocations inClass: #FAMIXNamedEntity",
+		"#receiverSourceCode",
+		"#signature",
+		"#candidates => FMToManyRelationSlot inverse: #incomingInvocations inClass: #FAMIXBehaviouralEntity"
+	],
+	"name" : "FAMIXInvocation",
+	"type" : "normal"
+}

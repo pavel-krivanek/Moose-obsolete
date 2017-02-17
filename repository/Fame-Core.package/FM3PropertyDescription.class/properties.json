@@ -1,10 +1,10 @@
 {
-	"category" : "Fame-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 9/20/2009 12:13",
+	"super" : "FM3Element",
+	"category" : "Fame-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"isContainer",
 		"isDerived",
@@ -14,11 +14,8 @@
 		"package",
 		"type",
 		"key",
-		"implementingSelector",
-		"isTarget",
-		"isSource" ],
+		"implementingSelector"
+	],
 	"name" : "FM3PropertyDescription",
-	"pools" : [
-		 ],
-	"super" : "FM3Element",
-	"type" : "normal" }
+	"type" : "normal"
+}

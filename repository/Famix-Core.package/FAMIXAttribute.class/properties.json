@@ -1,15 +1,14 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "usmanbhatti 11/28/2011 21:57",
-	"instvars" : [
-		"hasClassScope",
-		"parentType" ],
-	"name" : "FAMIXAttribute",
-	"pools" : [
-		 ],
 	"super" : "FAMIXStructuralEntity",
-	"type" : "normal" }
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#parentType => FMToOneRelationSlot inverse: #attributes inClass: #FAMIXType",
+		"#hasClassScope"
+	],
+	"name" : "FAMIXAttribute",
+	"type" : "normal"
+}

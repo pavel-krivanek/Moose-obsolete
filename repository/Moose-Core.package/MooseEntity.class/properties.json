@@ -1,15 +1,18 @@
 {
+	"commentStamp" : "janniklaval 9/28/2011 13:51",
+	"super" : "Object",
 	"category" : "Moose-Core",
 	"classinstvars" : [
-		"mooseSubClasses" ],
+		"mooseSubClasses"
+	],
+	"pools" : [ ],
 	"classvars" : [
-		"MooseID" ],
-	"commentStamp" : "janniklaval 9/28/2011 13:51",
+		"MooseID"
+	],
 	"instvars" : [
 		"mooseID",
-		"state" ],
+		"state"
+	],
 	"name" : "MooseEntity",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

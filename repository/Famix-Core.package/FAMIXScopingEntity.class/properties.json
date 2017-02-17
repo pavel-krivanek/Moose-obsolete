@@ -1,18 +1,17 @@
 {
-	"category" : "Famix-Core",
-	"classinstvars" : [
-		 ],
 	"classtraitcomposition" : "TScopingEntityQueries classTrait",
-	"classvars" : [
-		 ],
-	"commentStamp" : "usmanbhatti 11/24/2011 22:31",
+	"classvars" : [ ],
 	"instvars" : [
-		"globalVariables",
-		"parentScope",
-		"childScopes" ],
+		"#globalVariables => FMToManyRelationSlot inverse: #parentScope inClass: #FAMIXGlobalVariable",
+		"#parentScope => FMToOneRelationSlot inverse: #childScopes inClass: #FAMIXScopingEntity",
+		"#childScopes => FMToManyRelationSlot inverse: #parentScope inClass: #FAMIXScopingEntity"
+	],
 	"name" : "FAMIXScopingEntity",
-	"pools" : [
-		 ],
+	"commentStamp" : "usmanbhatti 11/24/2011 22:31",
 	"super" : "FAMIXContainerEntity",
 	"traitcomposition" : "TScopingEntityQueries",
-	"type" : "normal" }
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Famix-Core"
+}

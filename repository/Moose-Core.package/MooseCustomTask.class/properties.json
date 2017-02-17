@@ -1,16 +1,15 @@
 {
-	"category" : "Moose-Core",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "StephaneDucasse 11/8/2011 17:26",
+	"super" : "MooseTask",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"computation",
 		"description",
-		"length" ],
+		"length"
+	],
 	"name" : "MooseCustomTask",
-	"pools" : [
-		 ],
-	"super" : "MooseTask",
-	"type" : "normal" }
+	"type" : "normal"
+}

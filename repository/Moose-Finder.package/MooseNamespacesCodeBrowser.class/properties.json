@@ -1,14 +1,11 @@
 {
-	"category" : "Moose-Finder",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "TudorGirba 12/30/2013 07:17",
-	"instvars" : [
-		 ],
-	"name" : "MooseNamespacesCodeBrowser",
-	"pools" : [
-		 ],
 	"super" : "MooseCodeBrowser",
-	"type" : "normal" }
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseNamespacesCodeBrowser",
+	"type" : "normal"
+}

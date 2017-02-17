@@ -1,5 +1,4 @@
-accessing
+initialization
 initialize
 
 	super initialize.
-	comments := FMNullMultivalueLink on: self opposite: #container: selector: #comments.
