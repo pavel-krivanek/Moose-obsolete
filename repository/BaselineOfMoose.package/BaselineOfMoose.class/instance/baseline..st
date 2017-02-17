@@ -2,15 +2,12 @@ baseline
 baseline: spec 
     
 	<baseline>
-
- 	| repository | 
-	
-	repository := 'filetree://./repo'.    
        
 	spec for: #common do: [
 		spec preLoadDoIt: #'preload:package:'.
 		spec postLoadDoIt: #'postload:package:'.
-				spec package: 'Grease-Core'.
+		
+		spec package: 'Grease-Core'.
 		spec package: 'Grease-Pharo30-Core'.
 		spec package: 'Magritte-Model'.
 		spec package: 'Magritte-Pharo3-Model'.
