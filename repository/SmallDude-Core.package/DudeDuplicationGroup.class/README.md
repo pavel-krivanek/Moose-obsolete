@@ -1,0 +1,1 @@
+A Duplication group should store duplications (pairs of identical fragments) that are related - it should hold all fragments that are clones of a particullar text fragment

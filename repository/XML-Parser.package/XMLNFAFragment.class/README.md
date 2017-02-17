@@ -1,0 +1,1 @@
+This is a fragment used to build an NFA by the NFABuilder.

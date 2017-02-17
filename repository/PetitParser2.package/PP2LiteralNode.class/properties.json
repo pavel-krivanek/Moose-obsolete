@@ -1,0 +1,15 @@
+{
+	"category" : "PetitParser2-Nodes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"literal",
+		"message" ],
+	"name" : "PP2LiteralNode",
+	"pools" : [
+		 ],
+	"super" : "PP2Node",
+	"type" : "normal" }

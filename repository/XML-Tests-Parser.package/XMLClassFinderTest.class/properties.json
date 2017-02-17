@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-Utils",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XMLClassFinderTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

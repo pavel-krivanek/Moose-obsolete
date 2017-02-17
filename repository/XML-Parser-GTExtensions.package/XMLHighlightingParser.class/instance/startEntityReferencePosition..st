@@ -1,0 +1,3 @@
+handling - positions
+startEntityReferencePosition: aPosition
+	highlighter startEntityReferenceHighlightPosition: aPosition

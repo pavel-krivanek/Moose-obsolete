@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"distanceMatrix",
+		"dendrogram" ],
+	"name" : "MalClusterEngine",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

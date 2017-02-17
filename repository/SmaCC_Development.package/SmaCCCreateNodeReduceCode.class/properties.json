@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC_Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"classDefinition",
+		"index" ],
+	"name" : "SmaCCCreateNodeReduceCode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCReduceCode",
+	"type" : "normal" }

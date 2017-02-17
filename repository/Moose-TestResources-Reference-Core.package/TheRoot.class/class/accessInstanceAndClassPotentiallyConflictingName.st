@@ -1,0 +1,4 @@
+accessing
+accessInstanceAndClassPotentiallyConflictingName
+
+	instanceAndClassPotentiallyConflictingName := 2

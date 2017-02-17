@@ -1,0 +1,3 @@
+private
+errorDocumentConstraintsRequired
+	XMLValidationException signal: 'Document validation constraints required'

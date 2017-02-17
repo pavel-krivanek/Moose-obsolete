@@ -1,0 +1,3 @@
+accessing
+encodedFileContentsWithByteOrderMark
+	^ self streamConverterClass byteOrderMark, self encodedFileContents

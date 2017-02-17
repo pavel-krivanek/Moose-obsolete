@@ -1,0 +1,17 @@
+{
+	"category" : "Moose-Algos-Lattice",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "usmanbhatti 12/23/2011 15:37",
+	"instvars" : [
+		"moduleNodes",
+		"lattice",
+		"aCandidate",
+		"nodesToConsider" ],
+	"name" : "ModuleIdentification",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

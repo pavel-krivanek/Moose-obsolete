@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Table",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tab",
+		"data" ],
+	"name" : "RTTabTableTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+configuration
+cellSize
+	^ 10

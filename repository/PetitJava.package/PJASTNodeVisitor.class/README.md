@@ -1,0 +1,1 @@
+Abstract visitor with all methods needed to visit a PetitJava AST

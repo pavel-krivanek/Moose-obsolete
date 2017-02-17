@@ -1,0 +1,1 @@
+DynamixReference is an abstract class that models a reference to some value in the system. In an object-oriented system, a typical reference is the instance of a class (see DynamixInstance).

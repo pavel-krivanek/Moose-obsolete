@@ -1,0 +1,1 @@
+This class records the final element events (startElement:attributes: and #endElement:) used when no others are defined, as well as every other non-element event.

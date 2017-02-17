@@ -1,0 +1,22 @@
+{
+	"category" : "Trachel-MorphSpecific",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"trachelCanvas",
+		"surface",
+		"eventBeginingDragging",
+		"shapeBeingPointed",
+		"shouldRefresh",
+		"session",
+		"isDrawing",
+		"shapeUnderDrag",
+		"morphDropShape" ],
+	"name" : "TRMorph",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

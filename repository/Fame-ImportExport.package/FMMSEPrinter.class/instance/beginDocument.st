@@ -1,0 +1,4 @@
+parsing
+beginDocument
+
+	stream nextPut: $(

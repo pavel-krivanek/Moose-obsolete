@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FMMSEPrinter",
+	"pools" : [
+		 ],
+	"super" : "FMPrintClient",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 6/9/2014 01:10",
+	"instvars" : [
+		 ],
+	"name" : "DummySignal",
+	"pools" : [
+		 ],
+	"super" : "BeaconSignal",
+	"type" : "normal" }

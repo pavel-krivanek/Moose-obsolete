@@ -1,0 +1,4 @@
+private
+getNoise 
+	 
+	^#('break;' 'else' '{' '}')

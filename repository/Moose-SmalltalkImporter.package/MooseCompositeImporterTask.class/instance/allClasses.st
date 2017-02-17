@@ -1,0 +1,4 @@
+accessing
+allClasses 
+	 
+	^self subclassResponsibility

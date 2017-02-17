@@ -1,0 +1,3 @@
+tokenizing
+nextPIData
+	self subclassResponsibility

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTTreeLayoutTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

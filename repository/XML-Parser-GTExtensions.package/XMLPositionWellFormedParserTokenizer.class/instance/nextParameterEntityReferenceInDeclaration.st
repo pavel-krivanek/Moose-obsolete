@@ -1,0 +1,3 @@
+tokenizing - dtd
+nextParameterEntityReferenceInDeclaration
+	^ self nextParameterEntityReference

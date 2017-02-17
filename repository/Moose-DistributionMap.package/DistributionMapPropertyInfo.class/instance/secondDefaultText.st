@@ -1,0 +1,4 @@
+accessing
+secondDefaultText
+
+	^ self subclassResponsibility

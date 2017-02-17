@@ -1,0 +1,3 @@
+converting
+asMooseGroup 
+	^ self 

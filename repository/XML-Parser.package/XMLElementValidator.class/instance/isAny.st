@@ -1,0 +1,3 @@
+testing
+isAny
+	^ false

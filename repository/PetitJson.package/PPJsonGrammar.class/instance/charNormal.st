@@ -1,0 +1,3 @@
+primitives
+charNormal
+	^ PPPredicateObjectParser anyExceptAnyOf: '\"'

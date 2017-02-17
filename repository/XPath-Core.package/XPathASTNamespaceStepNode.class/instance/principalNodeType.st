@@ -1,0 +1,3 @@
+accessing
+principalNodeType
+	^ XPathNamespaceNodeType new

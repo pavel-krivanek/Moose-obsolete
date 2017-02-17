@@ -1,0 +1,4 @@
+constant
+CIVString
+
+	^ 'CIV#'

@@ -1,0 +1,4 @@
+accessing
+suiteDownloadArtifact
+
+	^ suiteDownloadArtifact

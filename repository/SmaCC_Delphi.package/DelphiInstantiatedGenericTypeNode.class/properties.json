@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"type",
+		"left",
+		"typeArguments",
+		"commas",
+		"right" ],
+	"name" : "DelphiInstantiatedGenericTypeNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiTypeNode",
+	"type" : "normal" }

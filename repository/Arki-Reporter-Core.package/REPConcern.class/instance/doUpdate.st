@@ -1,0 +1,3 @@
+updating
+doUpdate
+	self subclassResponsibility

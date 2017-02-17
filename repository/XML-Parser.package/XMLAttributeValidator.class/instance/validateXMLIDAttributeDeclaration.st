@@ -1,0 +1,3 @@
+validating
+validateXMLIDAttributeDeclaration
+	self errorInvalidXMLIDAttributeDeclaration

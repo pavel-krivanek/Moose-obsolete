@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIndent-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPPushAsParserParser",
+	"pools" : [
+		 ],
+	"super" : "PPDelegateParser",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+attributes
+	^ OrderPreservingStringDictionary newFrom: self attributeAssociations

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Wizard",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MPImportJavaSourceFilesWithJdt2FamixCommand",
+	"pools" : [
+		 ],
+	"super" : "MPImportCommand",
+	"type" : "normal" }

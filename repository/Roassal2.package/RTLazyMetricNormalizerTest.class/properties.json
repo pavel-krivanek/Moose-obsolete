@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-ColorNormalizer-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"n" ],
+	"name" : "RTLazyMetricNormalizerTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

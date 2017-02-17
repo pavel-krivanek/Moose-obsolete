@@ -1,0 +1,1 @@
+This class is a start tag writer. It does not automatically close itself like XMLTagWriter and will make non-wellformed XML if an end tag isn't generated for it.

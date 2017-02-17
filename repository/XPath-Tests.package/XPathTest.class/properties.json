@@ -1,0 +1,16 @@
+{
+	"category" : "XPath-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"document",
+		"namespacedDocument",
+		"textDocument" ],
+	"name" : "XPathTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

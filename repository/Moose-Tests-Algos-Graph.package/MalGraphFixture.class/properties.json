@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MalGraphFixture",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ASVGNodeClasses",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

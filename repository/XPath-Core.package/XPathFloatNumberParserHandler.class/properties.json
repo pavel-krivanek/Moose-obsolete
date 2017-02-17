@@ -1,0 +1,16 @@
+{
+	"category" : "XPath-Core-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/24/2017 21:34",
+	"instvars" : [
+		"sign",
+		"integer",
+		"fraction" ],
+	"name" : "XPathFloatNumberParserHandler",
+	"pools" : [
+		 ],
+	"super" : "XPathNumberParserHandler",
+	"type" : "normal" }

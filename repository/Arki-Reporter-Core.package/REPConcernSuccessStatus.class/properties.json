@@ -1,0 +1,14 @@
+{
+	"category" : "Arki-Reporter-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "REPConcernSuccessStatus",
+	"pools" : [
+		 ],
+	"super" : "REPConcernStatus",
+	"type" : "normal" }

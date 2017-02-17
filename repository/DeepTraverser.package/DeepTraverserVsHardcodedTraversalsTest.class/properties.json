@@ -1,0 +1,14 @@
+{
+	"category" : "DeepTraverser-Tests-Transformed-To-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DeepTraverserVsHardcodedTraversalsTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

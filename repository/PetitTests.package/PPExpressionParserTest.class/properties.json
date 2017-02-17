@@ -1,0 +1,14 @@
+{
+	"category" : "PetitTests-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPExpressionParserTest",
+	"pools" : [
+		 ],
+	"super" : "PPArithmeticParserTest",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+This class parses node tests that are either node name tests like 'name' and '*' or node type tests like 'node()' and 'comment()'.

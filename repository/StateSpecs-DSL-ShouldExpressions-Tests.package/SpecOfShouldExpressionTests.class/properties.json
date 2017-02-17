@@ -1,0 +1,14 @@
+{
+	"category" : "StateSpecs-DSL-ShouldExpressions-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SpecOfShouldExpressionTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

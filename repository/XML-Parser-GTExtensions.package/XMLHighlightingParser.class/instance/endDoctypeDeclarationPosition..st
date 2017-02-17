@@ -1,0 +1,3 @@
+handling - positions
+endDoctypeDeclarationPosition: aPosition
+	highlighter endDoctypeDeclarationHighlightPosition: aPosition

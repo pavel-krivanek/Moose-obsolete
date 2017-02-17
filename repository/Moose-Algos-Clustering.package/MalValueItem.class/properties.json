@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MalValueItem",
+	"pools" : [
+		 ],
+	"super" : "Association",
+	"type" : "normal" }

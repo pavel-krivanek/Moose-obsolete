@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"size" ],
+	"name" : "MalTerms",
+	"pools" : [
+		 ],
+	"super" : "Bag",
+	"type" : "normal" }

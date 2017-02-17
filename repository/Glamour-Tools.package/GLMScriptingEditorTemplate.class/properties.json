@@ -1,0 +1,14 @@
+{
+	"category" : "Glamour-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 12/28/2011 23:33",
+	"instvars" : [
+		 ],
+	"name" : "GLMScriptingEditorTemplate",
+	"pools" : [
+		 ],
+	"super" : "GLMBrowserTemplate",
+	"type" : "normal" }

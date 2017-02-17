@@ -1,0 +1,2 @@
+handling
+handleAttributeNodeTestForLocalName: aLocalName

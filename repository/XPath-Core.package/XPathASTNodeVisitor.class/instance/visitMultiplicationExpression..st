@@ -1,0 +1,3 @@
+visiting - operators
+visitMultiplicationExpression: aMultiplicationExpression
+	^ self visitBinaryOperatorExpression: aMultiplicationExpression

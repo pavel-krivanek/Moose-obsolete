@@ -1,0 +1,1 @@
+FAMIXJavaSourceLanguage represents the Java programming language in which an entity is written.

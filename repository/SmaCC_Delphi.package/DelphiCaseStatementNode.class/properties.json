@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"caseToken",
+		"expression",
+		"ofToken",
+		"options",
+		"elseToken",
+		"endToken" ],
+	"name" : "DelphiCaseStatementNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiMultiStatementNode",
+	"type" : "normal" }

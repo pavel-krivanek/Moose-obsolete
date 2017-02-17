@@ -1,0 +1,1 @@
+This is a class for external parameter parsed entities with external replacements that can be inserted into an XML document.

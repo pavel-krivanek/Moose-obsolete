@@ -1,0 +1,3 @@
+setup
+subFolderAString
+	^ 'folders/subfolderA/'

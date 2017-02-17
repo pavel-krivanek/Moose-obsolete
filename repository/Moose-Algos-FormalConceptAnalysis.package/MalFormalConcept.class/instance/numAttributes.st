@@ -1,0 +1,4 @@
+accessing
+numAttributes
+	
+	^intent cardinality

@@ -1,0 +1,4 @@
+handling
+handleNamespaceNodeTestForNamespaceURI: aURI
+	self startNodeTest.
+	expressionParserHandler handleNamespaceNodeTestForNamespaceURI: aURI.

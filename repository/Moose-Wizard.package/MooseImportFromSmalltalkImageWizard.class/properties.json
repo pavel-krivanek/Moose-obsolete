@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Wizard",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "cyrille.delaunay 11/5/2009 14:19",
+	"instvars" : [
+		"mooseModel" ],
+	"name" : "MooseImportFromSmalltalkImageWizard",
+	"pools" : [
+		 ],
+	"super" : "WizardControl",
+	"type" : "normal" }

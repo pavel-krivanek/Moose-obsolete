@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nspace",
+		"period",
+		"name",
+		"lt",
+		"arguments",
+		"commas",
+		"gt" ],
+	"name" : "JavaQualifiedTypeNameNode",
+	"pools" : [
+		 ],
+	"super" : "JavaProgramNode",
+	"type" : "normal" }

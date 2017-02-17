@@ -1,0 +1,3 @@
+handling - operators
+handleEndEqualityExpression
+	self popAnyEqualityExpressionNodes

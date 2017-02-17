@@ -1,0 +1,14 @@
+{
+	"category" : "PetitAnalyzer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"changed" ],
+	"name" : "PPRewriter",
+	"pools" : [
+		 ],
+	"super" : "PPProcessor",
+	"type" : "normal" }

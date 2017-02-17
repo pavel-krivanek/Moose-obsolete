@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Lattice",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LatticeTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

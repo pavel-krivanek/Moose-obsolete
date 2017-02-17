@@ -1,0 +1,4 @@
+building actions
+installReceiverActionsFor: aPresentation
+
+	self installActionsForRootPragmas: self receiverActionsPragmas in: aPresentation

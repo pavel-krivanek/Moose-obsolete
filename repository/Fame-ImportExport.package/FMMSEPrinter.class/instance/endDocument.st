@@ -1,0 +1,3 @@
+parsing
+endDocument
+	stream nextPut: $)

@@ -1,0 +1,3 @@
+accessing
+haveParameterEntityReferences
+	hasParameterEntityReferences := true

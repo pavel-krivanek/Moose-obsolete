@@ -1,0 +1,3 @@
+accessing
+newEntityReplacement
+	^ '<!--new replacement-->'

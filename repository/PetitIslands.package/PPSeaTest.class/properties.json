@@ -1,0 +1,15 @@
+{
+	"category" : "PetitIslands-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"result",
+		"context" ],
+	"name" : "PPSeaTest",
+	"pools" : [
+		 ],
+	"super" : "PPAbstractParserTest",
+	"type" : "normal" }

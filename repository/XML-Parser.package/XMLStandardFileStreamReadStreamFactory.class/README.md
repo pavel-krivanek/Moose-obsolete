@@ -1,0 +1,1 @@
+A StandardFileStream read stream factory. This stream is preferred for Squeak/Pharo because it does no decoding and returns byte characters so XMLParser can do its own decoding.

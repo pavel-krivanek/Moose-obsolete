@@ -1,0 +1,3 @@
+testing
+hasAttributeValidators
+	^ self doctypeDefinition hasAttributeValidators

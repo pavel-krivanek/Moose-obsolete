@@ -1,0 +1,3 @@
+hooks
+label
+	^ 'VisualID shapes'

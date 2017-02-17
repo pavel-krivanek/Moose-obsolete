@@ -1,0 +1,3 @@
+instance creation
+newNodeTestWithSinglePredicate
+	^ self newNodeTestWithPredicates: self singlePredicate

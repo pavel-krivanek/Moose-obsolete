@@ -1,0 +1,14 @@
+{
+	"category" : "GT-PetitParserDebugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"initialPosition" ],
+	"name" : "GTPPFastStepToStreamPositionChangedAction",
+	"pools" : [
+		 ],
+	"super" : "GTReflectivityDebugAction",
+	"type" : "normal" }

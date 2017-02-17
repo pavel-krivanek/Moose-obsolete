@@ -1,0 +1,1 @@
+This class is used by SAXParserDriver for parsing the external subset of a DTD.

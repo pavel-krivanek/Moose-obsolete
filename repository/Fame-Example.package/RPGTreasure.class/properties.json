@@ -1,0 +1,15 @@
+{
+	"category" : "Fame-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"keeper",
+		"owner" ],
+	"name" : "RPGTreasure",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

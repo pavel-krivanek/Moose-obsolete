@@ -1,0 +1,3 @@
+accessing-classes
+fontMetricsClass
+	^ CairoFontMetricsProvider

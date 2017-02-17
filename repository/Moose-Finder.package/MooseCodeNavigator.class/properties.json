@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Finder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseCodeNavigator",
+	"pools" : [
+		 ],
+	"super" : "GLMBrowserTemplate",
+	"type" : "normal" }

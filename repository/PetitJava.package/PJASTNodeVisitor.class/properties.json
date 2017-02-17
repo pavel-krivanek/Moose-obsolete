@@ -1,0 +1,14 @@
+{
+	"category" : "PetitJava-AST-Visitors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "PJASTNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

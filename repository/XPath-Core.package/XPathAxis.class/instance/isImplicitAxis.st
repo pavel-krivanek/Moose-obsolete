@@ -1,0 +1,3 @@
+testing
+isImplicitAxis
+	^ isImplicit

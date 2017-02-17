@@ -1,0 +1,3 @@
+private
+position
+	^ readStream position

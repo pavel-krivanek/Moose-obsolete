@@ -1,0 +1,4 @@
+initialize-release
+propertyMapperFirstDefaultText
+
+	^ (DistributionMapPropertyInfo fromComputationBlock: self propertyBlockOrSelector andElements: self distributionMapElements) firstDefaultText 

@@ -1,0 +1,3 @@
+accessing
+dependencyFM3PropertyDescription
+	^self explicitRequirement

@@ -1,0 +1,4 @@
+setting
+setServerType 
+	 
+	serverType := 'LANFileServer'

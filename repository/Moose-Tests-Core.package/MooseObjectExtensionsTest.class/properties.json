@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseObjectExtensionsTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

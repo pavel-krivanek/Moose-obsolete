@@ -1,0 +1,3 @@
+setup
+foldersString
+	^ 'folders/'

@@ -1,0 +1,1 @@
+This class writes the external ID of a notaion. It omits empty system ID literals for "PUBLIC" external notation IDs.

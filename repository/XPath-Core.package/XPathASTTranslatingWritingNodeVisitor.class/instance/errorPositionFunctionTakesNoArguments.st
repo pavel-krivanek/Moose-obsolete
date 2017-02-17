@@ -1,0 +1,3 @@
+private
+errorPositionFunctionTakesNoArguments
+	self errorFunctionTakesNoArguments: 'position'

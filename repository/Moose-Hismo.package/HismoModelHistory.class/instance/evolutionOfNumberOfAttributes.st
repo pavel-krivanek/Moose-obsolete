@@ -1,0 +1,4 @@
+properties
+evolutionOfNumberOfAttributes
+
+	^ self allClassHistories sumNumbers: #evolutionOfNumberOfAttributes

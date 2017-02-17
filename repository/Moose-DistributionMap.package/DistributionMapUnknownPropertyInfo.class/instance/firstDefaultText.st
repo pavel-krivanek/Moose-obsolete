@@ -1,0 +1,4 @@
+accessing
+firstDefaultText 
+
+	^ 'propVal isNil'

@@ -1,0 +1,4 @@
+accessing
+defaultImage
+	^ MooseZeroConfCurrentImageScript mooseLatestImage
+	

@@ -1,0 +1,3 @@
+testing
+hasNamedVariable
+	^ variableNameMap notEmpty

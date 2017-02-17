@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-KGB-P9FullReferencer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "M5P9C16FullReferencerOutSideInSide",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

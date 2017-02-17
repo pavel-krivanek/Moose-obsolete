@@ -1,0 +1,14 @@
+{
+	"category" : "PetitTests-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"context" ],
+	"name" : "PPContextTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

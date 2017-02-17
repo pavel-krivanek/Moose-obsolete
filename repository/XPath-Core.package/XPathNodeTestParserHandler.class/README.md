@@ -1,0 +1,1 @@
+An abstract class for node test parser handlers. Parsing is controlled by XPathNodeTestParserContext classes.

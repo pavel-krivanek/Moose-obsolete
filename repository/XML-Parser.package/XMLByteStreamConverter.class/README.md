@@ -1,0 +1,1 @@
+A stream converter for ISO Latin-1, ASCII,  and other compatible byte character encodings.

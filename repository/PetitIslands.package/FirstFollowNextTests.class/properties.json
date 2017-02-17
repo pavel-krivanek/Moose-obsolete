@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIslands-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FirstFollowNextTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

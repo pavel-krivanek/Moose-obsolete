@@ -1,0 +1,14 @@
+{
+	"category" : "PetitTests-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"memento" ],
+	"name" : "PPContextMementoTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

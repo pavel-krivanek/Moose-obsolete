@@ -1,0 +1,14 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		"soleInstance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ASNoFill",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

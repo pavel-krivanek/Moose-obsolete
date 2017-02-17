@@ -1,0 +1,3 @@
+as yet unclassified
+visitEndOfLineCommentsNode: anEndOfLineCommentNode
+	self visitNode: anEndOfLineCommentNode expression

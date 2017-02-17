@@ -1,0 +1,3 @@
+accessing
+draggedElement
+	^ draggedShape element

@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [
+		"instance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 7/13/2016 03:04",
+	"instvars" : [
+		 ],
+	"name" : "XMLTokenContext",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 12/7/2015 18:38",
+	"instvars" : [
+		"builder",
+		"angularSpacing",
+		"radialSpacing",
+		"hasCenter" ],
+	"name" : "RTAbstractSunburstLayout",
+	"pools" : [
+		 ],
+	"super" : "RTLayout",
+	"type" : "normal" }

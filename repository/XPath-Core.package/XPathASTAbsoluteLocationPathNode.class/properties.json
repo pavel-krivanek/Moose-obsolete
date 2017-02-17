@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/21/2017 07:42",
+	"instvars" : [
+		 ],
+	"name" : "XPathASTAbsoluteLocationPathNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTLocationPathNode",
+	"type" : "normal" }

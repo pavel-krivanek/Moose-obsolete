@@ -1,0 +1,19 @@
+{
+	"category" : "Merlin-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "cyrille.delaunay 11/20/2009 15:05",
+	"instvars" : [
+		"currentPane",
+		"wizardPanes",
+		"wizardInformations",
+		"branches",
+		"finalActionBlock",
+		"renderer" ],
+	"name" : "WizardControl",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

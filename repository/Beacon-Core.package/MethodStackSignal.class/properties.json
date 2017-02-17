@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Signals",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 1/30/2016 08:51",
+	"instvars" : [
+		 ],
+	"name" : "MethodStackSignal",
+	"pools" : [
+		 ],
+	"super" : "ThisContextSignal",
+	"type" : "normal" }

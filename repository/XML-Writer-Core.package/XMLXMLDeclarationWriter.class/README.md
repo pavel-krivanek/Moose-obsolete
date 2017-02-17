@@ -1,0 +1,1 @@
+This class writes <?xml ...?> declarations, but not if canonical XML is enabled.

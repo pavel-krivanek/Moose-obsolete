@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-Example",
+	"classinstvars" : [
+		"tower" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LIBRoot",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

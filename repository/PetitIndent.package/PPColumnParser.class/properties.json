@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIndent-Offside-rule",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 5/11/2016 15:00",
+	"instvars" : [
+		 ],
+	"name" : "PPColumnParser",
+	"pools" : [
+		 ],
+	"super" : "PPParser",
+	"type" : "normal" }

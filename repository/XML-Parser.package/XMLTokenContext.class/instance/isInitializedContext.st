@@ -1,0 +1,3 @@
+testing
+isInitializedContext
+	^ true

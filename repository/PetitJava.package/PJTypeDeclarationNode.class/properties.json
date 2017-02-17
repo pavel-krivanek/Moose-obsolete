@@ -1,0 +1,18 @@
+{
+	"category" : "PetitJava-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isInterface",
+		"superclassType",
+		"superInterfaceTypes",
+		"fieldDeclarations",
+		"methodDeclarations" ],
+	"name" : "PJTypeDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "PJAbstractTypeDeclarationNode",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+A simple attribute spec that checks for attributes being present and optionally having a specific value.

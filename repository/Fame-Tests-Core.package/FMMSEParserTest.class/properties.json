@@ -1,0 +1,16 @@
+{
+	"category" : "Fame-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"p",
+		"r",
+		"a" ],
+	"name" : "FMMSEParserTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-LineDecorations",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "bliznjan 2/16/2015 13:05",
+	"instvars" : [
+		 ],
+	"name" : "RTLineHead",
+	"pools" : [
+		 ],
+	"super" : "RTExtremityLineDecoration",
+	"type" : "normal" }

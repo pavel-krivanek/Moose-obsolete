@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"height",
+		"width",
+		"borderColor",
+		"borderWidth" ],
+	"name" : "RTAbstractElementShape",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

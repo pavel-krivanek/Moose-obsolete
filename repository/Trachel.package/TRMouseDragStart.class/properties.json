@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 9/30/2016 12:16",
+	"instvars" : [
+		 ],
+	"name" : "TRMouseDragStart",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractMouseEvent",
+	"type" : "normal" }

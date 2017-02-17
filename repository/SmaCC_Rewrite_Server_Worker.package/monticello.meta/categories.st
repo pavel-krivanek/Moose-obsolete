@@ -1,0 +1,1 @@
+SystemOrganization addCategory: #SmaCC_Rewrite_Server_Worker!

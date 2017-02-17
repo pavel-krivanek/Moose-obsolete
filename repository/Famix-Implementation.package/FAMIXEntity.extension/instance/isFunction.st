@@ -1,0 +1,3 @@
+*Famix-Implementation
+isFunction
+	^false

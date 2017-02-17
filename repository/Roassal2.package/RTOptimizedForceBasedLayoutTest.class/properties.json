@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTOptimizedForceBasedLayoutTest",
+	"pools" : [
+		 ],
+	"super" : "RTForceBasedLayoutTest",
+	"type" : "normal" }

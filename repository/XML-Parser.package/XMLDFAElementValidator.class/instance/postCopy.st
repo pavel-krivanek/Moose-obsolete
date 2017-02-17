@@ -1,0 +1,3 @@
+copying
+postCopy
+	currentState := dfa

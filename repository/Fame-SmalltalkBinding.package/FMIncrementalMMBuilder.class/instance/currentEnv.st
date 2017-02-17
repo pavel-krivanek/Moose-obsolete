@@ -1,0 +1,4 @@
+private
+currentEnv
+
+	^ envStack top

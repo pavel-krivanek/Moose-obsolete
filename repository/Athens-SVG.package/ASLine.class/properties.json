@@ -1,0 +1,17 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"x1",
+		"y1",
+		"x2",
+		"y2" ],
+	"name" : "ASLine",
+	"pools" : [
+		 ],
+	"super" : "ASShape",
+	"type" : "normal" }

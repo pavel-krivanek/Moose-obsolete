@@ -1,0 +1,18 @@
+{
+	"category" : "Moose-RoassalPaintings-OverviewPyramid",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"color",
+		"textColor",
+		"text",
+		"calculation",
+		"popup" ],
+	"name" : "PyramidRectangle",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Text",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lineAnnotations" ],
+	"name" : "DudeCVSAnnotateCleaner",
+	"pools" : [
+		 ],
+	"super" : "DudeCleaningDecorator",
+	"type" : "normal" }

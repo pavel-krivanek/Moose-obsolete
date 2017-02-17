@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTAbstractDraggableView",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+windows
+showTemporaryCursor: cursorOrNil
+	self subclassResponsibility

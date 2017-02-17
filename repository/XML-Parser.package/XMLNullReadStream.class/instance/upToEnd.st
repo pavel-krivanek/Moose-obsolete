@@ -1,0 +1,3 @@
+accessing
+upToEnd
+	^ String new

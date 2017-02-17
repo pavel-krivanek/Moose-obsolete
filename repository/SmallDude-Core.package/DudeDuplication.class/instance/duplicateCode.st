@@ -1,0 +1,4 @@
+accessing
+duplicateCode 
+	 
+	^duplicateCode

@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-Subjects",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTExampleSubclassesSubject",
+	"pools" : [
+		 ],
+	"super" : "GTExampleClassSubject",
+	"type" : "normal" }

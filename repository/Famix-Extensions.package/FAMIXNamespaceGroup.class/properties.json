@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Extensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "FabrizioPerin 12/6/2012 13:23",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXNamespaceGroup",
+	"pools" : [
+		 ],
+	"super" : "MooseGroup",
+	"type" : "normal" }

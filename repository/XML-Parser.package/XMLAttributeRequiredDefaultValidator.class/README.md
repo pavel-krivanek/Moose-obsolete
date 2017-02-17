@@ -1,0 +1,1 @@
+This class makes sure an attribute is present (the #REQUIRED constrant).

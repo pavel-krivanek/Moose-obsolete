@@ -1,0 +1,3 @@
+writing
+entityDeclaration
+	^ self pushNewMarkupWriter: XMLEntityDeclarationWriter

@@ -1,0 +1,2 @@
+formatting
+formatAfterEntityReference: anEntityReferenceWriter

@@ -1,0 +1,15 @@
+{
+	"category" : "Glamour-Magritte-Presentations",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"scrollPane",
+		"containerMorphClass" ],
+	"name" : "GLMMorphicMagritteRenderer",
+	"pools" : [
+		 ],
+	"super" : "GLMMorphicWidgetRenderer",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Tests-Extensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseModelOverviewPyramidExtensionsTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

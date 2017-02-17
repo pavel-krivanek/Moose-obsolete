@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 10/27/2015 11:52",
+	"instvars" : [
+		"color",
+		"label",
+		"rotation",
+		"fontSize",
+		"labelShape" ],
+	"name" : "RTBarLabelFactory",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

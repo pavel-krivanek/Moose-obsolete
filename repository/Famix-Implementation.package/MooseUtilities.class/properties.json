@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Implementation",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseUtilities",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

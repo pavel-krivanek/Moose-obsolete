@@ -1,0 +1,15 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "bliznjan 11/26/2014 00:36",
+	"instvars" : [
+		"dashes",
+		"capStyle" ],
+	"name" : "TRStyledLineShape",
+	"pools" : [
+		 ],
+	"super" : "TRLineShape",
+	"type" : "normal" }

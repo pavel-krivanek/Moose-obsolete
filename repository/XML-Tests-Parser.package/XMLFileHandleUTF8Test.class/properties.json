@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-Files",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XMLFileHandleUTF8Test",
+	"pools" : [
+		 ],
+	"super" : "XMLFileHandleTest",
+	"type" : "normal" }

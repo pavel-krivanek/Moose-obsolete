@@ -1,0 +1,3 @@
+closing
+closeStreams
+	streamReader closeStreams

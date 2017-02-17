@@ -1,0 +1,1 @@
+This is a class for the 'element(name)' type test or for the 'name' type test when the principal node type of the axis is 'element'.

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-ExampleBrowser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 11/11/2015 09:32",
+	"instvars" : [
+		 ],
+	"name" : "RTGeneralExample",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

@@ -1,0 +1,18 @@
+{
+	"category" : "Roassal2Spec-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"label",
+		"diagram",
+		"button1",
+		"button2",
+		"view" ],
+	"name" : "RoassalAndSpecExample",
+	"pools" : [
+		 ],
+	"super" : "ComposableModel",
+	"type" : "normal" }

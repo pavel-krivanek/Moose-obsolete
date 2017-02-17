@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIslands-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 9/13/2014 18:56",
+	"instvars" : [
+		 ],
+	"name" : "PPNonEmptyParser",
+	"pools" : [
+		 ],
+	"super" : "PPDelegateParser",
+	"type" : "normal" }

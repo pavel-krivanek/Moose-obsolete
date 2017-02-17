@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"longestPath" ],
+	"name" : "MalLongestPathTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfMoose",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfMoose",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

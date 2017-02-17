@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-AttachPoint",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/12/2015 10:56",
+	"instvars" : [
+		"offset" ],
+	"name" : "RTShorterDistanceWithOffsetAttachPoint",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractShorterDistanceAttachPoint",
+	"type" : "normal" }

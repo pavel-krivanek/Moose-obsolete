@@ -1,0 +1,1 @@
+This class writes <?...?> processing instructions, but not in DTD internal subsets if canonical XML is enabled.

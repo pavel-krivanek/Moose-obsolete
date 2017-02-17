@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-SmalltalkImporter-LAN",
+	"classinstvars" : [
+		"aVariable" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXStepwiseImporterTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

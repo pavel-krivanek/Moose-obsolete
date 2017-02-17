@@ -1,0 +1,1 @@
+This class validates standalone externally defined xml:id ID attributes. It disallows attributes that require further value normalization.

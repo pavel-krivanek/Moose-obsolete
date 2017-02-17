@@ -1,0 +1,3 @@
+source
+addressBookNamespacePrefixedXML
+	^ XMLParserTest addressBookNamespacePrefixedXML

@@ -1,0 +1,15 @@
+{
+	"category" : "PetitJava-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"constructorInvocation",
+		"statements" ],
+	"name" : "PJConstructorDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "PJBehaviouralNode",
+	"type" : "normal" }

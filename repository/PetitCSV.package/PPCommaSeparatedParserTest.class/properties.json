@@ -1,0 +1,16 @@
+{
+	"category" : "PetitCSV",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"row",
+		"cell",
+		"rows" ],
+	"name" : "PPCommaSeparatedParserTest",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParserTest",
+	"type" : "normal" }

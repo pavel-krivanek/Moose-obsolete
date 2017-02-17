@@ -1,0 +1,14 @@
+{
+	"category" : "PetitSQLite-Tests-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPSQLiteExpressionParserTest",
+	"pools" : [
+		 ],
+	"super" : "PP2CompositeParserTest",
+	"type" : "normal" }

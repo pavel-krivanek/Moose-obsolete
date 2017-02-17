@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Animation",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 10/15/2015 01:11",
+	"instvars" : [
+		"curves",
+		"animatedValue",
+		"index",
+		"during" ],
+	"name" : "RTPathAnimation",
+	"pools" : [
+		 ],
+	"super" : "RTAnimation",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+It represents a primitive type. For example, int or char are modeled using PrimitiveType entities. Void is also considered a primitive type.

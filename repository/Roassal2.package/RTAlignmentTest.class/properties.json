@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"align" ],
+	"name" : "RTAlignmentTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

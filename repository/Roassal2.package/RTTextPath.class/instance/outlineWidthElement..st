@@ -1,0 +1,3 @@
+accessing
+outlineWidthElement: aValueOrAOneArgBlock
+	outlineWidth := aValueOrAOneArgBlock

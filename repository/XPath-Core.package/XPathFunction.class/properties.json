@@ -1,0 +1,16 @@
+{
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [
+		"prototype" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/24/2017 22:27",
+	"instvars" : [
+		"context",
+		"contextNode",
+		"arguments" ],
+	"name" : "XPathFunction",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

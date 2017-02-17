@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"values" ],
+	"name" : "MalMedianAccumulator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

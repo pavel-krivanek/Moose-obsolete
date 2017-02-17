@@ -1,0 +1,14 @@
+{
+	"category" : "PetitXml-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPXmlResource",
+	"pools" : [
+		 ],
+	"super" : "PPParserResource",
+	"type" : "normal" }

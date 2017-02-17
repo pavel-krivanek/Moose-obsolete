@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 8/20/2015 19:54",
+	"instvars" : [
+		 ],
+	"name" : "RTCircularTreeMapExample",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

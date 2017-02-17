@@ -1,0 +1,15 @@
+{
+	"category" : "Fame-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"op",
+		"args" ],
+	"name" : "EQCompound",
+	"pools" : [
+		 ],
+	"super" : "EQExpression",
+	"type" : "normal" }

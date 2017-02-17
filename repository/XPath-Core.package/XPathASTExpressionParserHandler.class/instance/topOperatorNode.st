@@ -1,0 +1,3 @@
+private
+topOperatorNode
+	^ operatorNodeStack last

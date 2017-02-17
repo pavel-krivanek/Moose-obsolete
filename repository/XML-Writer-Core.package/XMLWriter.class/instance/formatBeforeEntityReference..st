@@ -1,0 +1,4 @@
+formatting
+formatBeforeEntityReference: anEntityReferenceWriter
+	formatter
+		ifNotNil: [formatter formatBeforeEntityReference: anEntityReferenceWriter]

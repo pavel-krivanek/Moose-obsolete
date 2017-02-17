@@ -1,0 +1,14 @@
+{
+	"category" : "Arki-Reporter-Core",
+	"classinstvars" : [
+		"byName" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name" ],
+	"name" : "REPStakeholder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

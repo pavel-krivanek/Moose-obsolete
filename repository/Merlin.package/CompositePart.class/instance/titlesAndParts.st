@@ -1,0 +1,4 @@
+accessing - titlesAndParts
+titlesAndParts
+
+	^ titlesAndParts  

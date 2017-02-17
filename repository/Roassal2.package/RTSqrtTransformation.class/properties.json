@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Scaling",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTSqrtTransformation",
+	"pools" : [
+		 ],
+	"super" : "RTScaleTransformation",
+	"type" : "normal" }

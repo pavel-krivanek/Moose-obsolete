@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-SmalltalkImporter-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseSmalltalkImporterRoelTyperTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

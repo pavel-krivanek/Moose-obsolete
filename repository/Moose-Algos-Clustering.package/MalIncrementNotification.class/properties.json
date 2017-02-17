@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MalIncrementNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

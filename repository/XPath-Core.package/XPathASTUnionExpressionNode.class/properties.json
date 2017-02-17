@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/24/2017 21:51",
+	"instvars" : [
+		 ],
+	"name" : "XPathASTUnionExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTBinaryOperatorExpressionNode",
+	"type" : "normal" }

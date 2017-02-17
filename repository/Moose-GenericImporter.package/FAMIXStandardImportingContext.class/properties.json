@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-GenericImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXStandardImportingContext",
+	"pools" : [
+		 ],
+	"super" : "MooseAbstractImportingContext",
+	"type" : "normal" }

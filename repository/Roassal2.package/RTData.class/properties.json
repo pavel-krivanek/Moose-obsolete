@@ -1,0 +1,20 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/17/2015 21:44",
+	"instvars" : [
+		"points",
+		"dotBuilder",
+		"lineBuilder",
+		"shouldConnect",
+		"interaction",
+		"shouldHaveBars",
+		"alignmentOffset" ],
+	"name" : "RTData",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractData",
+	"type" : "normal" }

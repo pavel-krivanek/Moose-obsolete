@@ -1,0 +1,20 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"textEntryContents",
+		"useRequiredInputAsDefault",
+		"defaultBlock",
+		"prefix",
+		"suffix",
+		"returnSuffixAndPrefix",
+		"horizontalSize" ],
+	"name" : "TextFieldPart",
+	"pools" : [
+		 ],
+	"super" : "WizardPart",
+	"type" : "normal" }

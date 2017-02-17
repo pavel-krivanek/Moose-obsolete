@@ -1,0 +1,3 @@
+testing
+wantsLabel
+	^ wantsLabel

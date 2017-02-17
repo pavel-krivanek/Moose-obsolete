@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Utils",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 10/9/2016 05:28",
+	"instvars" : [
+		 ],
+	"name" : "XMLStandardKeyValueCache",
+	"pools" : [
+		 ],
+	"super" : "XMLKeyValueCache",
+	"type" : "normal" }

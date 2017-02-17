@@ -1,0 +1,24 @@
+{
+	"category" : "Famix-Core",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TOODependencyQueries classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "usmanbhatti 11/24/2011 22:07",
+	"instvars" : [
+		"outgoingReferences",
+		"outgoingInvocations",
+		"incomingInvocations",
+		"localVariables",
+		"implicitVariables",
+		"parameters",
+		"signature",
+		"accesses",
+		"declaredType" ],
+	"name" : "FAMIXBehaviouralEntity",
+	"pools" : [
+		 ],
+	"super" : "FAMIXContainerEntity",
+	"traitcomposition" : "TOODependencyQueries",
+	"type" : "normal" }

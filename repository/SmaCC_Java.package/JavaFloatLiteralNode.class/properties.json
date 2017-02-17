@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "JavaFloatLiteralNode",
+	"pools" : [
+		 ],
+	"super" : "JavaLiteralNode",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"option" ],
+	"name" : "RadioButtonsPart",
+	"pools" : [
+		 ],
+	"super" : "SingleOptionAtLeastOneSelectionPart",
+	"type" : "normal" }

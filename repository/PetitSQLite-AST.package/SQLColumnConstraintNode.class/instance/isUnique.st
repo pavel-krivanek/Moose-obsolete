@@ -1,0 +1,3 @@
+initialization
+isUnique
+	^unique

@@ -1,0 +1,3 @@
+accessing
+comparableDisjointNumberStringValue
+	^ self disjointNumberValues first asString asXPathComparable

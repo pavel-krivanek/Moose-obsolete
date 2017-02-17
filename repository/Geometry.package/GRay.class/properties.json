@@ -1,0 +1,15 @@
+{
+	"category" : "Geometry",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NataliaTymchuk 6/27/2014 21:12",
+	"instvars" : [
+		"origin",
+		"direction" ],
+	"name" : "GRay",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

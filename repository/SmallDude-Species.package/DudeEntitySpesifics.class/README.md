@@ -1,0 +1,1 @@
+this tells the detector how to parse the given entities, and what to ignore from them.

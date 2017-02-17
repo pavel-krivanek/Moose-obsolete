@@ -1,0 +1,3 @@
+nesting
+poppedByTokenizer: aTokenizer
+	self subclassResponsibility

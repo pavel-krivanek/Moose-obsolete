@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-MonticelloImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 11/13/2011 23:38",
+	"instvars" : [
+		"importer" ],
+	"name" : "MooseMonticelloVisitor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

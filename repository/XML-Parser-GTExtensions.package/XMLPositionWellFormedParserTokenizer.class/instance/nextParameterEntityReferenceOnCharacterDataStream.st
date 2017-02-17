@@ -1,0 +1,3 @@
+tokenizing - dtd
+nextParameterEntityReferenceOnCharacterDataStream
+	^ self nextParameterEntityReference

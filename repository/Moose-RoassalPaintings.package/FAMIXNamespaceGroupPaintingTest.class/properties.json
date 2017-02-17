@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-RoassalPaintings-Test",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXNamespaceGroupPaintingTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

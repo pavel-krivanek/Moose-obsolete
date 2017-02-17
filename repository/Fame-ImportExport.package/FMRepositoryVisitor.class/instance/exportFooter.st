@@ -1,0 +1,3 @@
+exporting
+exportFooter
+	printer endDocument

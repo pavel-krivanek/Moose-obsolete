@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-ToBeRemoved",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LabelPart",
+	"pools" : [
+		 ],
+	"super" : "WizardPart",
+	"type" : "normal" }

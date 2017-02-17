@@ -1,0 +1,3 @@
+public
+session
+	self subclassResponsibility

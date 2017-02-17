@@ -1,0 +1,17 @@
+{
+	"category" : "PetitIndent-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"context",
+		"quote",
+		"string",
+		"expected" ],
+	"name" : "PPMiniCommonMarkTest",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParserTest",
+	"type" : "normal" }

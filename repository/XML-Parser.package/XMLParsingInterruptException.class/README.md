@@ -1,0 +1,1 @@
+Used to interrupt parsing from a SAXHandler. Will be silently caught.

@@ -1,0 +1,4 @@
+Moose deprecated
+errorLog 
+	 
+	^ loggingStream

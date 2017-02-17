@@ -1,0 +1,3 @@
+source
+addressBookXML
+	^ XMLParserTest addressBookXML

@@ -1,0 +1,3 @@
+testing
+isError
+	^ type = #error

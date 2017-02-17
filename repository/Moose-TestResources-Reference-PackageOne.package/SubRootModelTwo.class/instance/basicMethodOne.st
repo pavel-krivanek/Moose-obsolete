@@ -1,0 +1,4 @@
+methods
+basicMethodOne
+
+	^ 2

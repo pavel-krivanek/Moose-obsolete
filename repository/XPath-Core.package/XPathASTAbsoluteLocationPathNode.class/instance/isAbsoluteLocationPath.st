@@ -1,0 +1,3 @@
+testing
+isAbsoluteLocationPath
+	^ true

@@ -1,0 +1,17 @@
+{
+	"category" : "PetitSQLite-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isUnique",
+		"indexName",
+		"referenceTable",
+		"indexedColumnNames" ],
+	"name" : "SQLCreateIndexNode",
+	"pools" : [
+		 ],
+	"super" : "SQLASTNode",
+	"type" : "normal" }

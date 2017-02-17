@@ -1,0 +1,14 @@
+{
+	"category" : "GT-GlamourDebugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTGlamourDebuggerSmokeTest",
+	"pools" : [
+		 ],
+	"super" : "GTDebuggerSmokeTest",
+	"type" : "normal" }

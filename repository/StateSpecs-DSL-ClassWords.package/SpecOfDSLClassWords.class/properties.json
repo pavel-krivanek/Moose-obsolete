@@ -1,0 +1,14 @@
+{
+	"category" : "StateSpecs-DSL-ClassWords",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "DenisKudryashov 3/2/2016 17:51",
+	"instvars" : [
+		 ],
+	"name" : "SpecOfDSLClassWords",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

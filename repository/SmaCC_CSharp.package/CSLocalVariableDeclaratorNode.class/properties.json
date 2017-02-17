@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"equalToken",
+		"expression" ],
+	"name" : "CSLocalVariableDeclaratorNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

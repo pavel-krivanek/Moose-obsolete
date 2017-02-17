@@ -1,0 +1,4 @@
+accessing
+localMooseModel 
+	 
+	^self

@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 11/26/2015 17:21",
+	"instvars" : [
+		"gridSize",
+		"strategy" ],
+	"name" : "RTDraggableSnapToGrid",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractDraggable",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+utf16BigEndianBOM
+	^ XMLUTF16BigEndianStreamConverter byteOrderMark

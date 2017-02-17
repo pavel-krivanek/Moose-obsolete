@@ -1,0 +1,3 @@
+accessing
+streamCollection
+	^ self inputCollectionWithBOM

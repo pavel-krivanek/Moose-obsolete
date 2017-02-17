@@ -1,0 +1,16 @@
+{
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"to",
+		"owner",
+		"pos" ],
+	"name" : "FMDanglingReference",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

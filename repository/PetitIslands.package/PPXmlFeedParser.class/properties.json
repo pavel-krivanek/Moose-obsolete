@@ -1,0 +1,23 @@
+{
+	"category" : "PetitIslands-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 11/4/2014 17:37",
+	"instvars" : [
+		"item",
+		"openItem",
+		"itemContent",
+		"closeItem",
+		"openShoplist",
+		"shoplistContent",
+		"closeShoplist",
+		"shoplist",
+		"simpleElement",
+		"stringValue" ],
+	"name" : "PPXmlFeedParser",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParser",
+	"type" : "normal" }

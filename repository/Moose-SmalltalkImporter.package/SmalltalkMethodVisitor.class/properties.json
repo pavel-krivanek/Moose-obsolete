@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmalltalkMethodVisitor",
+	"pools" : [
+		 ],
+	"super" : "AbstractSmalltalkMethodVisitor",
+	"type" : "normal" }

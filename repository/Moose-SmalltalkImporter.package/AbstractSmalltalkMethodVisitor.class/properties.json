@@ -1,0 +1,17 @@
+{
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"methodScope",
+		"importer",
+		"famixMethod",
+		"theClass" ],
+	"name" : "AbstractSmalltalkMethodVisitor",
+	"pools" : [
+		 ],
+	"super" : "RBProgramNodeVisitor",
+	"type" : "normal" }

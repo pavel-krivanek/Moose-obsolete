@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Text",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "FabrizioPerin 12/6/2012 13:39",
+	"instvars" : [
+		"name" ],
+	"name" : "DudeDeveloper",
+	"pools" : [
+		 ],
+	"super" : "MooseEntity",
+	"type" : "normal" }

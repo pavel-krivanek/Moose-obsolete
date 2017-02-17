@@ -1,0 +1,4 @@
+Moose deprecated
+logFileSuffix 
+	 
+	^'.log'

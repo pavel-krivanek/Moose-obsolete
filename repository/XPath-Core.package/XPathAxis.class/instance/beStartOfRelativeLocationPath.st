@@ -1,0 +1,3 @@
+changing
+beStartOfRelativeLocationPath
+	isStartOfRelativeLocationPath := true

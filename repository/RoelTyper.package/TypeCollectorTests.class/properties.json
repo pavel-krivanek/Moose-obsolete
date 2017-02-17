@@ -1,0 +1,14 @@
+{
+	"category" : "RoelTyper-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TypeCollectorTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

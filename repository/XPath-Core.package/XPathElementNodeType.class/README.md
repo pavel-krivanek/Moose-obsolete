@@ -1,0 +1,1 @@
+This is a class for the element node type.

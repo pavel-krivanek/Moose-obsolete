@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_leftParens",
+		"_rightParens" ],
+	"name" : "JavaExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "JavaProgramNode",
+	"type" : "normal" }

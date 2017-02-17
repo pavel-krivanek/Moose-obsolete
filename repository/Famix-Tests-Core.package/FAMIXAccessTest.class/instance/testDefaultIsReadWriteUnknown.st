@@ -1,0 +1,3 @@
+tests
+testDefaultIsReadWriteUnknown
+	self assert: FAMIXAccess new isReadWriteUnknown

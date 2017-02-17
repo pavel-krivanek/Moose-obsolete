@@ -1,0 +1,16 @@
+{
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"OperatorApplicators",
+		"SpecialCharacterParsers" ],
+	"commentStamp" : "monty 10/15/2016 00:27",
+	"instvars" : [
+		"nfaBuilder",
+		"binaryOperatorStack" ],
+	"name" : "DTDElementContentModelParser",
+	"pools" : [
+		 ],
+	"super" : "DTDContentModelParser",
+	"type" : "normal" }

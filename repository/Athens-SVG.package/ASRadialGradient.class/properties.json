@@ -1,0 +1,18 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"cx",
+		"cy",
+		"r",
+		"fx",
+		"fy" ],
+	"name" : "ASRadialGradient",
+	"pools" : [
+		 ],
+	"super" : "ASGradient",
+	"type" : "normal" }

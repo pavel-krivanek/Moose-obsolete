@@ -1,0 +1,1 @@
+A simple cross-platform interface for finding classes that may not be in the image.

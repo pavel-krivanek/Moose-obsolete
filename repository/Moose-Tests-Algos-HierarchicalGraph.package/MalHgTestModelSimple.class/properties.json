@@ -1,0 +1,17 @@
+{
+	"category" : "Moose-Tests-Algos-HierarchicalGraph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model",
+		"parent",
+		"children",
+		"level" ],
+	"name" : "MalHgTestModelSimple",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

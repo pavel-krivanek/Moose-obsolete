@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-HismoImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseHismoEveryYearStrategy",
+	"pools" : [
+		 ],
+	"super" : "MooseHismoYearStrategy",
+	"type" : "normal" }

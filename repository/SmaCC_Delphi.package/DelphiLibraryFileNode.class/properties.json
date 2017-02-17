@@ -1,0 +1,25 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"libraryToken",
+		"libraryName",
+		"modifier",
+		"semicolons",
+		"usesToken",
+		"moduleNames",
+		"inTokens",
+		"filenames",
+		"commas",
+		"exports",
+		"main",
+		"period" ],
+	"name" : "DelphiLibraryFileNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiProgramNode",
+	"type" : "normal" }

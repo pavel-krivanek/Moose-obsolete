@@ -1,0 +1,3 @@
+closing
+close
+	atEnd := true

@@ -1,0 +1,4 @@
+sending message
+pragmaWithUnaryName
+
+	<aPragma>

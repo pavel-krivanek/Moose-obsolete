@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Setup",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 1/25/2015 08:02",
+	"instvars" : [
+		 ],
+	"name" : "GTImageSetupCommandLineHandler",
+	"pools" : [
+		 ],
+	"super" : "CommandLineHandler",
+	"type" : "normal" }

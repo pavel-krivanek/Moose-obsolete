@@ -1,0 +1,3 @@
+testing
+isStandaloneExternal
+	^ self isStandalone

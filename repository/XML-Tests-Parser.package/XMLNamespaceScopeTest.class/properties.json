@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-Namespaces",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XMLNamespaceScopeTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

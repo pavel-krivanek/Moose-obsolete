@@ -1,0 +1,1 @@
+MooseObjectQueryResult hold the result of queries that return objects (e.g. opposite) as opposed by associations

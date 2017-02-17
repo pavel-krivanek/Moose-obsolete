@@ -1,0 +1,15 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/25/2017 12:02",
+	"instvars" : [
+		"name",
+		"arguments" ],
+	"name" : "XPathASTFunctionCallNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTNode",
+	"type" : "normal" }

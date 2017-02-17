@@ -1,0 +1,15 @@
+{
+	"category" : "Fame-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rightHandSide",
+		"leftHandSide" ],
+	"name" : "EQEquation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

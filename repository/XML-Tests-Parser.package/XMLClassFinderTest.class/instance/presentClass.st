@@ -1,0 +1,3 @@
+accessing
+presentClass
+	^ self class

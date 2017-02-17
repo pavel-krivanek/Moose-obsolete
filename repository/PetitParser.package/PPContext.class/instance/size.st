@@ -1,0 +1,3 @@
+memoization
+size
+	^ stream size

@@ -1,0 +1,1 @@
+A context for <!DOCTYPE ...> and internal subset tokens.

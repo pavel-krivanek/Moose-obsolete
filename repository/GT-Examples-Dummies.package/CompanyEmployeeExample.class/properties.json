@@ -1,0 +1,16 @@
+{
+	"category" : "GT-Examples-Dummies-Data",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"e",
+		"e2",
+		"c" ],
+	"name" : "CompanyEmployeeExample",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

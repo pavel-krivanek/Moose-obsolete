@@ -1,0 +1,3 @@
+*petitislands
+acceptsEpsilon
+	^ false

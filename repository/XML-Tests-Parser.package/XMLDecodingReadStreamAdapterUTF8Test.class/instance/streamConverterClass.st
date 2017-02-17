@@ -1,0 +1,3 @@
+accessing
+streamConverterClass
+	^ XMLUTF8StreamConverter

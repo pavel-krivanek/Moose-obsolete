@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIndent-Offside-rule",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPOffsideOLParser",
+	"pools" : [
+		 ],
+	"super" : "PPParser",
+	"type" : "normal" }

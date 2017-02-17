@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-RoassalPaintings-OverviewPyramid",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "OverviewPyramidTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

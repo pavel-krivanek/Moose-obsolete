@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "HismoEntityVersionTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

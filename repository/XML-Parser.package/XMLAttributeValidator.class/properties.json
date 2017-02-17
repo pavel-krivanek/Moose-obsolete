@@ -1,0 +1,16 @@
+{
+	"category" : "XML-Parser-Validation",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"NormalizedSpace" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"element",
+		"attribute",
+		"defaultValidator" ],
+	"name" : "XMLAttributeValidator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

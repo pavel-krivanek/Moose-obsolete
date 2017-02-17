@@ -1,0 +1,18 @@
+{
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"indices",
+		"value",
+		"clusters",
+		"foundA0",
+		"foundB0" ],
+	"name" : "MalClusteringData",
+	"pools" : [
+		 ],
+	"super" : "MalSymetricMatrix",
+	"type" : "normal" }

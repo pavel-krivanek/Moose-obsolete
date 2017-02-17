@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LineNumberStreamTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2GT-Glamour",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"myMorph" ],
+	"name" : "GLMMorphicRoassal2Renderer",
+	"pools" : [
+		 ],
+	"super" : "GLMMorphicWidgetRenderer",
+	"type" : "normal" }

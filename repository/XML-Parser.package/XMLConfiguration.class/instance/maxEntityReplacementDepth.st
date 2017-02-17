@@ -1,0 +1,3 @@
+accessing
+maxEntityReplacementDepth
+	^ self parserLimits maxEntityReplacementDepth

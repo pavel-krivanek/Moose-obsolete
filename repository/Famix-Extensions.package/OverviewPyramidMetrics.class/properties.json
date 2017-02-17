@@ -1,0 +1,22 @@
+{
+	"category" : "Famix-Extensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nop",
+		"noc",
+		"nom",
+		"loc",
+		"cyclo",
+		"fanout",
+		"calls",
+		"andc",
+		"ahh" ],
+	"name" : "OverviewPyramidMetrics",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

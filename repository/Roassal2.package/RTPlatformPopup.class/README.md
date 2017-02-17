@@ -1,0 +1,1 @@
+I am a basic class to have the platform popup instead of the roassal popup (RTPopup)

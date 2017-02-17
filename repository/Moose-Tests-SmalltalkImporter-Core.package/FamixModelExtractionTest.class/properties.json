@@ -1,0 +1,35 @@
+{
+	"category" : "Moose-Tests-SmalltalkImporter-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"mseNodeClassName",
+		"mseNodeClass",
+		"msePrinterClassName",
+		"mseOutputServerClassName",
+		"nodeName",
+		"nextNode",
+		"serverType",
+		"outputServerName",
+		"acceptServerName",
+		"acceptNodeName",
+		"canOutputServerName",
+		"canOutputNodeName",
+		"nameNodeName",
+		"nameNodeNameColon",
+		"nextNodeName",
+		"nextNodeNameColon",
+		"initializeNodeName",
+		"sendNodeName",
+		"printOnNodeName",
+		"newNodeClassName",
+		"canOriginateNodeName",
+		"methodWithEmptyBodyNodeName" ],
+	"name" : "FamixModelExtractionTest",
+	"pools" : [
+		 ],
+	"super" : "LANAbstractImportTest",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "DeepTraverser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"onPickNextAction",
+		"onNodeAction",
+		"isActionAppliedOnCurrent" ],
+	"name" : "DeepTraverserWithoutEdges",
+	"pools" : [
+		 ],
+	"super" : "DeepTraverserWithoutAction",
+	"type" : "normal" }

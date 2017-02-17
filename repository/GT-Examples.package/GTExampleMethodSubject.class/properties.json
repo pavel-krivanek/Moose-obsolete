@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-Subjects",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 8/21/2016 21:46",
+	"instvars" : [
+		 ],
+	"name" : "GTExampleMethodSubject",
+	"pools" : [
+		 ],
+	"super" : "GTAbstractExampleMethod",
+	"type" : "normal" }

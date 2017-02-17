@@ -1,0 +1,4 @@
+testing
+hasMoreActiveSubscriptions
+
+	^ announcerModel hasMoreActiveSubscriptions

@@ -1,0 +1,14 @@
+{
+	"category" : "Hashtable",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "pmm 9/7/2005 19:05",
+	"instvars" : [
+		 ],
+	"name" : "IdentityHashSet",
+	"pools" : [
+		 ],
+	"super" : "HashSet",
+	"type" : "normal" }

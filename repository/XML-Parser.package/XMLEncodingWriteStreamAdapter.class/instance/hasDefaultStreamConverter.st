@@ -1,0 +1,3 @@
+testing
+hasDefaultStreamConverter
+	^ streamConverter isDefault

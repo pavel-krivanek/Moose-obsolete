@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Viva",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 8/6/2015 14:03",
+	"instvars" : [
+		"value" ],
+	"name" : "TRVIManualTimer",
+	"pools" : [
+		 ],
+	"super" : "TRVIBasicTimer",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+asBlockArgInTypeCollector: aTypeCollector
+	aTypeCollector transformAsBlockArg: self 

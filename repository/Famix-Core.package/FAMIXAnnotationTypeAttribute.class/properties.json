@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "usmanbhatti 11/28/2011 22:17",
+	"instvars" : [
+		"annotationAttributeInstances" ],
+	"name" : "FAMIXAnnotationTypeAttribute",
+	"pools" : [
+		 ],
+	"super" : "FAMIXAttribute",
+	"type" : "normal" }

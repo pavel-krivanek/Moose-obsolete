@@ -1,0 +1,1 @@
+I model the action of changing the selection in the inspector pane of the debugger.

@@ -1,0 +1,3 @@
+tokenizing
+nextXMLVersionAttributeValue
+	self subclassResponsibility

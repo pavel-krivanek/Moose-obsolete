@@ -1,0 +1,1 @@
+The MooseVisualLocator is a simple template that offers a list of classes on the left hand side and some presentation on the right hand side. It is meant to be subclassed.

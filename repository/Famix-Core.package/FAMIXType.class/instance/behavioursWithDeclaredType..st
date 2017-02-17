@@ -1,0 +1,3 @@
+accessing
+behavioursWithDeclaredType: aCollectionOfBehaviours
+	behavioursWithDeclaredType value: aCollectionOfBehaviours

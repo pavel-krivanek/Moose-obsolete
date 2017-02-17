@@ -1,0 +1,4 @@
+accessing
+distributionMapElements
+
+	^ self computeAndReturnDistributionMapElements

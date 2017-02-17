@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Rewrite_Engine",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"HaltBlock" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rewrite" ],
+	"name" : "SmaCCRewriteTransformation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

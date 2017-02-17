@@ -1,0 +1,4 @@
+basic representation
+importingNamespace
+	
+	^#Namespace

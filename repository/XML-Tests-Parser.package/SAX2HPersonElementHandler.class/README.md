@@ -1,0 +1,1 @@
+Handler for the sample <person> element.

@@ -1,0 +1,3 @@
+hooks
+label
+	^ 'Voronoj diagrams'

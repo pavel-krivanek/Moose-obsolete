@@ -1,0 +1,17 @@
+{
+	"category" : "PetitParser2-GUI-Tests-Highlighting",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TPP2ReparsableAssertions classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"context",
+		"highlighter" ],
+	"name" : "PP2ExpressionHighlighterOptimizationTest",
+	"pools" : [
+		 ],
+	"super" : "PP2CompositeNodeTest",
+	"traitcomposition" : "TPP2ReparsableAssertions",
+	"type" : "normal" }

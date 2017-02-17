@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Finder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 2/24/2011 00:25",
+	"instvars" : [
+		 ],
+	"name" : "MooseSystemComplexityLocator",
+	"pools" : [
+		 ],
+	"super" : "MooseVisualLocator",
+	"type" : "normal" }

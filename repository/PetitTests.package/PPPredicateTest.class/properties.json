@@ -1,0 +1,14 @@
+{
+	"category" : "PetitTests-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPPredicateTest",
+	"pools" : [
+		 ],
+	"super" : "PPAbstractParserTest",
+	"type" : "normal" }

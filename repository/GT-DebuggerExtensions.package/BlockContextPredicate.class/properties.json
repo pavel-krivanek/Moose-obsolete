@@ -1,0 +1,14 @@
+{
+	"category" : "GT-DebuggerExtensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"blockCondition" ],
+	"name" : "BlockContextPredicate",
+	"pools" : [
+		 ],
+	"super" : "GTDebuggerContextPredicate",
+	"type" : "normal" }

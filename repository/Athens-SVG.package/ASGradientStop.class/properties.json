@@ -1,0 +1,16 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"color",
+		"offset",
+		"opacity" ],
+	"name" : "ASGradientStop",
+	"pools" : [
+		 ],
+	"super" : "ASElement",
+	"type" : "normal" }

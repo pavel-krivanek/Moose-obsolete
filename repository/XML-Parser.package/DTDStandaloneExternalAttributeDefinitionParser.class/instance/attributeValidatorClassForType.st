@@ -1,0 +1,3 @@
+private
+attributeValidatorClassForType
+	^ super attributeValidatorClassForType standaloneExternalClass

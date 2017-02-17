@@ -1,0 +1,2 @@
+validating
+validateXMLIDAttributeDeclaration

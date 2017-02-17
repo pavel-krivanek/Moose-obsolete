@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-ShapesForArrow",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRFilledDiamondShape",
+	"pools" : [
+		 ],
+	"super" : "TRDiamondShape",
+	"type" : "normal" }

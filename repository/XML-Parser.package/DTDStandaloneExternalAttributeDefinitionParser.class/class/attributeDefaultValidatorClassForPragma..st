@@ -1,0 +1,4 @@
+private
+attributeDefaultValidatorClassForPragma: aDefaultPragma
+	^ (super attributeDefaultValidatorClassForPragma: aDefaultPragma)
+		standaloneExternalClass

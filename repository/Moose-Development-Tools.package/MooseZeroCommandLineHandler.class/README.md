@@ -1,0 +1,1 @@
+I generate zeroconf commandline scripts for loading Moose next to the current image.

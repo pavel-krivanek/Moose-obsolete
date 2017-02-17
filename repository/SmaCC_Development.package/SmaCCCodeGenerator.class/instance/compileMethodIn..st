@@ -1,0 +1,3 @@
+compiling-scanner
+compileMethodIn: modelClass
+	self subclassResponsibility

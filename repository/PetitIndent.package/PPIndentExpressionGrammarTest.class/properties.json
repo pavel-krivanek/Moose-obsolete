@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIndent-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPIndentExpressionGrammarTest",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParserTest",
+	"type" : "normal" }

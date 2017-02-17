@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-RoassalPaintings",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 10/3/2014 07:04",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXSystemNestingMap",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

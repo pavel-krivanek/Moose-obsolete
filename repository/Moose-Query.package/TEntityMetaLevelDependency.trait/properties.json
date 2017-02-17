@@ -1,0 +1,6 @@
+{
+	"category" : "Moose-Query",
+	"classtraitcomposition" : "TMetaLevelDependency classTrait",
+	"commentStamp" : "JeanChristopheBach 6/3/2015 10:53",
+	"name" : "TEntityMetaLevelDependency",
+	"traitcomposition" : "TMetaLevelDependency" }

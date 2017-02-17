@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-HierarchicalGraph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"levels" ],
+	"name" : "MalHierarchicalGraph",
+	"pools" : [
+		 ],
+	"super" : "MalGraphAlgorithm",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+This class will put a default value for an attribute if the attribute is absent and also makes sure that any value matches the default (the #FIXED constraint).

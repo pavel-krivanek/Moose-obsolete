@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XPathNumberComparableTest",
+	"pools" : [
+		 ],
+	"super" : "XPathComparableTest",
+	"type" : "normal" }

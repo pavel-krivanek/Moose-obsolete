@@ -1,0 +1,18 @@
+{
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ivarClass",
+		"ivarName",
+		"tag",
+		"nbOfCorrectTypes",
+		"nbOfIncorrectTypes" ],
+	"name" : "AbstractType",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

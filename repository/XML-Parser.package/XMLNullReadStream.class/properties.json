@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Streams",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 11/22/2016 23:50",
+	"instvars" : [
+		 ],
+	"name" : "XMLNullReadStream",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

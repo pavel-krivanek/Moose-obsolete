@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-KGB-P10InteractedReferee",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "M5P10C17FullReferencerInSide",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

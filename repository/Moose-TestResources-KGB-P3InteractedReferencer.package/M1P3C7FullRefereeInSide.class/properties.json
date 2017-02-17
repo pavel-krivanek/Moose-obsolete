@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-KGB-P3InteractedReferencer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "M1P3C7FullRefereeInSide",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

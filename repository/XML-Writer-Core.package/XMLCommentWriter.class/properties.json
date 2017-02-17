@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Writer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 4/17/2016 07:12",
+	"instvars" : [
+		"string" ],
+	"name" : "XMLCommentWriter",
+	"pools" : [
+		 ],
+	"super" : "XMLMarkupWriter",
+	"type" : "normal" }

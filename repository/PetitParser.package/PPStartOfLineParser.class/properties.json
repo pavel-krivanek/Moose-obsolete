@@ -1,0 +1,14 @@
+{
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 10/29/2014 15:48",
+	"instvars" : [
+		 ],
+	"name" : "PPStartOfLineParser",
+	"pools" : [
+		 ],
+	"super" : "PPParser",
+	"type" : "normal" }

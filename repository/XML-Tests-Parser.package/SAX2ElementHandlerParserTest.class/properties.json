@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-ElementHandlers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SAX2ElementHandlerParserTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

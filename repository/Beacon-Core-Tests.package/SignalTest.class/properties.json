@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "SignalTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

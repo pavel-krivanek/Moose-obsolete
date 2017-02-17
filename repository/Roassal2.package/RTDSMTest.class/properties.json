@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-DSM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTDSMTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

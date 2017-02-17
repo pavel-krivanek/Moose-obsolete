@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Extensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 11/23/2011 12:32",
+	"instvars" : [
+		 ],
+	"name" : "MooseComputeAllPrimitivePropertiesTask",
+	"pools" : [
+		 ],
+	"super" : "MooseOperator",
+	"type" : "normal" }

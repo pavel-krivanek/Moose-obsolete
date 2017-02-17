@@ -1,0 +1,25 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lt",
+		"arguments",
+		"commas",
+		"gt",
+		"name",
+		"leftParen",
+		"expressions",
+		"rightParen",
+		"receiver",
+		"period",
+		"superToken",
+		"superPeriod" ],
+	"name" : "JavaMethodInvocationNode",
+	"pools" : [
+		 ],
+	"super" : "JavaExpressionNode",
+	"type" : "normal" }

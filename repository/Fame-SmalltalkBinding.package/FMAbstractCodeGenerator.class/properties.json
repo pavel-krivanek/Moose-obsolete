@@ -1,0 +1,22 @@
+{
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rbClass",
+		"model",
+		"defaultSuperclass",
+		"classNamePrefix",
+		"instVarNames",
+		"initializeSource",
+		"defaultCategory",
+		"isGeneratingDerivedMethods",
+		"skipDerivedMethods" ],
+	"name" : "FMAbstractCodeGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+lf
+	^ Character lf

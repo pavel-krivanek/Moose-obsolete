@@ -1,0 +1,19 @@
+{
+	"category" : "Dynamix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 11/24/2011 17:36",
+	"instvars" : [
+		"parent",
+		"children",
+		"start",
+		"stop",
+		"duration",
+		"source" ],
+	"name" : "DynamixEvent",
+	"pools" : [
+		 ],
+	"super" : "DynamixEntity",
+	"type" : "normal" }

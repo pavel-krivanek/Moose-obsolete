@@ -1,0 +1,15 @@
+{
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"textField",
+		"textMorph" ],
+	"name" : "MerlinMorphTextWidget",
+	"pools" : [
+		 ],
+	"super" : "MerlinMorphPartWidget",
+	"type" : "normal" }

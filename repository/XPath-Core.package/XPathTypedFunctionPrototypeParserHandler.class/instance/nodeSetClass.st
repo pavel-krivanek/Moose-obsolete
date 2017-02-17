@@ -1,0 +1,3 @@
+private
+nodeSetClass
+	^ XPathNodeSet

@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [
+		"notifying" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTExampleNautilusNotifications",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

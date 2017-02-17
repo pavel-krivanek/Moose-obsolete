@@ -1,0 +1,14 @@
+{
+	"category" : "Hashtable-Objects",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"NextHash" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"hash" ],
+	"name" : "CVAutoincrementObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

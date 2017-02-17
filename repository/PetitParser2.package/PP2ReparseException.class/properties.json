@@ -1,0 +1,14 @@
+{
+	"category" : "PetitParser2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 10/9/2016 12:36",
+	"instvars" : [
+		 ],
+	"name" : "PP2ReparseException",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-LAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"id" ],
+	"name" : "LANSingleDestinationAddress",
+	"pools" : [
+		 ],
+	"super" : "LANAbstractDestinationAddress",
+	"type" : "normal" }

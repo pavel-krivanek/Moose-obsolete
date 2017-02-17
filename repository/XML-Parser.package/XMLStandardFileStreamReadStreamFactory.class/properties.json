@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Files",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 3/13/2016 23:23",
+	"instvars" : [
+		 ],
+	"name" : "XMLStandardFileStreamReadStreamFactory",
+	"pools" : [
+		 ],
+	"super" : "XMLFileReadStreamFactory",
+	"type" : "normal" }

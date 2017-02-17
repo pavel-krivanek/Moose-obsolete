@@ -1,0 +1,3 @@
+removing
+removeVariables
+	self variables removeAll

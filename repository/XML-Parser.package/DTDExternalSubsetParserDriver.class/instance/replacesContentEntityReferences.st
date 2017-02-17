@@ -1,0 +1,3 @@
+testing
+replacesContentEntityReferences
+	^ self saxDriver replacesContentEntityReferences

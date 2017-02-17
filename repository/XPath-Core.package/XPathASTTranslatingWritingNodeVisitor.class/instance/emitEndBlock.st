@@ -1,0 +1,3 @@
+private
+emitEndBlock
+	self emit: $]

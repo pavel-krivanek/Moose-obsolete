@@ -1,0 +1,1 @@
+A class for testing elements that use XMLCachingNodeList instead of XMLNodeList.

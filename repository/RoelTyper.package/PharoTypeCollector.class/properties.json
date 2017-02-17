@@ -1,0 +1,14 @@
+{
+	"category" : "RoelTyper-Pharo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PharoTypeCollector",
+	"pools" : [
+		 ],
+	"super" : "SqueakTypeCollector",
+	"type" : "normal" }

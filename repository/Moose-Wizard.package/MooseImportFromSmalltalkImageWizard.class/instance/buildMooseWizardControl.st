@@ -1,0 +1,5 @@
+initialize-release
+buildMooseWizardControl
+	
+	self buildMooseWizardPackageControl.
+	self buildMooseWizardModelAttributes.

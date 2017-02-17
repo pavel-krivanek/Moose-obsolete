@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Finder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 9/27/2012 07:30",
+	"instvars" : [
+		 ],
+	"name" : "MooseFinder",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

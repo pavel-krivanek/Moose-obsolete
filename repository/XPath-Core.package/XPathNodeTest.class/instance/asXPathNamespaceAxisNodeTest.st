@@ -1,0 +1,3 @@
+converting
+asXPathNamespaceAxisNodeTest
+	^ self

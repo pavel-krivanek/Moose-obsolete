@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-SourceAnchor",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "usmanbhatti 8/6/2014 14:27",
+	"instvars" : [
+		"allFiles" ],
+	"name" : "FAMIXMultipleFileAnchor",
+	"pools" : [
+		 ],
+	"super" : "FAMIXSourceAnchor",
+	"type" : "normal" }

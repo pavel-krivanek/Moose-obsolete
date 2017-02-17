@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 11/14/2016 13:51",
+	"instvars" : [
+		 ],
+	"name" : "DTDNotationEnumerationListParser",
+	"pools" : [
+		 ],
+	"super" : "DTDEnumerationListParser",
+	"type" : "normal" }

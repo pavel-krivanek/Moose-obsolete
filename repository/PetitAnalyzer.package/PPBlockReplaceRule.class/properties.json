@@ -1,0 +1,14 @@
+{
+	"category" : "PetitAnalyzer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"replaceBlock" ],
+	"name" : "PPBlockReplaceRule",
+	"pools" : [
+		 ],
+	"super" : "PPReplaceRule",
+	"type" : "normal" }

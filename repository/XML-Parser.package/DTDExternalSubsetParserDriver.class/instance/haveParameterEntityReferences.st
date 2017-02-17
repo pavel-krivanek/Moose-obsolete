@@ -1,0 +1,3 @@
+accessing
+haveParameterEntityReferences
+	self saxDriver haveParameterEntityReferences

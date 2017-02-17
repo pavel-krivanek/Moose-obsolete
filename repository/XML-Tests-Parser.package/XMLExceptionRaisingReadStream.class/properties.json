@@ -1,0 +1,15 @@
+{
+	"category" : "XML-Tests-Parser-Streams",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 4/10/2016 00:59",
+	"instvars" : [
+		"stream",
+		"wasClosed" ],
+	"name" : "XMLExceptionRaisingReadStream",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

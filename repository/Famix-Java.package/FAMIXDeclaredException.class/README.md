@@ -1,0 +1,1 @@
+This is an exception explicitly declared as being thrown by a method.

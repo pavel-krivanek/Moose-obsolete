@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2GT-Glamour",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GLMRoassal2MorphicTest",
+	"pools" : [
+		 ],
+	"super" : "GLMMorphicTest",
+	"type" : "normal" }

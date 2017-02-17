@@ -1,0 +1,5 @@
+formatting
+formatAfterCharacterEscape: aCharacterEscape
+	highlighter endEntityReferenceHighlightPosition: self endPosition.
+
+	super formatAfterCharacterEscape: aCharacterEscape.

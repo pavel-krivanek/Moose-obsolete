@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SAX2ParserTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

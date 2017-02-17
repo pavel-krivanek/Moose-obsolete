@@ -1,0 +1,15 @@
+{
+	"category" : "Merlin-ToBeRemoved",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"textEntry",
+		"textEntryContents" ],
+	"name" : "ListSelectorWithSelectionBySmalltalkExpression",
+	"pools" : [
+		 ],
+	"super" : "ListSelector",
+	"type" : "normal" }

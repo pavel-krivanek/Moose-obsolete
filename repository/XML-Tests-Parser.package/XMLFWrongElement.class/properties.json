@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DOM-Factories",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "XMLFWrongElement",
+	"pools" : [
+		 ],
+	"super" : "XMLElement",
+	"type" : "normal" }

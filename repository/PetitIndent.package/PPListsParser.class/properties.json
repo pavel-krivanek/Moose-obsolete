@@ -1,0 +1,26 @@
+{
+	"category" : "PetitIndent-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"list",
+		"item",
+		"numbering",
+		"line",
+		"content",
+		"itemStarts",
+		"itemEnds",
+		"contentElement",
+		"aligns",
+		"blank",
+		"emptyLine",
+		"lineEnd",
+		"paragraph" ],
+	"name" : "PPListsParser",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParser",
+	"type" : "normal" }

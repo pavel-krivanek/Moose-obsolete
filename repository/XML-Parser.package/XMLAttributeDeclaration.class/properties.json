@@ -1,0 +1,18 @@
+{
+	"category" : "XML-Parser-DOM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 2/2/2014 16:47",
+	"instvars" : [
+		"element",
+		"attribute",
+		"type",
+		"defaultPragma",
+		"defaultValue" ],
+	"name" : "XMLAttributeDeclaration",
+	"pools" : [
+		 ],
+	"super" : "XMLDeclarationNode",
+	"type" : "normal" }

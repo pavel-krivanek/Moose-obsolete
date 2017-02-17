@@ -1,0 +1,3 @@
+testing
+canMatch: aClass
+	^ true

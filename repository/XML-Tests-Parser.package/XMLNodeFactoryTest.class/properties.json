@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DOM-Factories",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "XMLNodeFactoryTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

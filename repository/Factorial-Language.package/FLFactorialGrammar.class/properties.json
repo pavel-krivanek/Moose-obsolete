@@ -1,0 +1,32 @@
+{
+	"category" : "Factorial-Language",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "lr 5/21/2008 20:07",
+	"instvars" : [
+		"apply",
+		"binary",
+		"condition",
+		"expression",
+		"function",
+		"literal",
+		"operation",
+		"variable",
+		"add",
+		"close",
+		"cmp",
+		"else",
+		"equal",
+		"id",
+		"if",
+		"num",
+		"open",
+		"sub",
+		"then" ],
+	"name" : "FLFactorialGrammar",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParser",
+	"type" : "normal" }

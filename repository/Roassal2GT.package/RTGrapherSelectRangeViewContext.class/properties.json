@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2GT-Glamour-Roassal-Interaction",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/4/2016 18:31",
+	"instvars" : [
+		 ],
+	"name" : "RTGrapherSelectRangeViewContext",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractViewContext",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "PetitJava-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPJavaTokenParser",
+	"pools" : [
+		 ],
+	"super" : "PP2TokenNode",
+	"type" : "normal" }

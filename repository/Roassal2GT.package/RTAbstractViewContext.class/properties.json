@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2GT-Glamour-Context",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"view",
+		"presentation" ],
+	"name" : "RTAbstractViewContext",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

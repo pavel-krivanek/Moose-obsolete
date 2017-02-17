@@ -1,0 +1,1 @@
+SystemOrganization addCategory: #SmaCC_Generic_Smalltalk_Parser!

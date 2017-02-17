@@ -1,0 +1,3 @@
+accessing
+fullyQualifiedName
+	^ self subclassResponsibility 

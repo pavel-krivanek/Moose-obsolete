@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Validation",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "XMLAnyElementValidator",
+	"pools" : [
+		 ],
+	"super" : "XMLElementValidator",
+	"type" : "normal" }

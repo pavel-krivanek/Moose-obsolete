@@ -1,0 +1,4 @@
+fixture
+matrixClass
+	
+	^MalColumnMatrix

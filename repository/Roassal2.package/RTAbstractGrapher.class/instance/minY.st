@@ -1,0 +1,3 @@
+public - accessing
+minY
+	^ minY

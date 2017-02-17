@@ -1,0 +1,3 @@
+hooks
+inspectView
+	view inspect

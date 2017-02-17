@@ -1,0 +1,3 @@
+private
+endScopedAttributes
+	scopedAttributes removeLast

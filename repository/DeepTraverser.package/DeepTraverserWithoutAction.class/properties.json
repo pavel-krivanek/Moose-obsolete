@@ -1,0 +1,22 @@
+{
+	"category" : "DeepTraverser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"object",
+		"onNodeTraverse",
+		"objectsToTraverse",
+		"objectsTraversed",
+		"initializer",
+		"current",
+		"previous",
+		"startObject",
+		"expectedSize" ],
+	"name" : "DeepTraverserWithoutAction",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

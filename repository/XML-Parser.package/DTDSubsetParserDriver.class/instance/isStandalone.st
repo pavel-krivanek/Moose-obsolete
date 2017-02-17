@@ -1,0 +1,3 @@
+testing
+isStandalone
+	self subclassResponsibility

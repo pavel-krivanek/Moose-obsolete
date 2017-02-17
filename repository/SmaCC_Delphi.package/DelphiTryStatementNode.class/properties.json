@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tryToken",
+		"except",
+		"finally",
+		"endToken" ],
+	"name" : "DelphiTryStatementNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiMultiStatementNode",
+	"type" : "normal" }

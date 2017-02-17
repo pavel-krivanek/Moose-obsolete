@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2GT-Glamour-Context",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"prez",
+		"view" ],
+	"name" : "RTGTContext",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

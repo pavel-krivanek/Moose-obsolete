@@ -1,0 +1,14 @@
+{
+	"category" : "PetitJava-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PJEndOfLineCommentsNode",
+	"pools" : [
+		 ],
+	"super" : "PJCommentsNode",
+	"type" : "normal" }

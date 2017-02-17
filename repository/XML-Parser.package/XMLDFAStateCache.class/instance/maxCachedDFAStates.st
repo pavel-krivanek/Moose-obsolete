@@ -1,0 +1,3 @@
+private
+maxCachedDFAStates
+	^ 64

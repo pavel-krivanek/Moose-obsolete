@@ -1,0 +1,15 @@
+{
+	"category" : "Fame-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"books",
+		"name" ],
+	"name" : "LIBPerson",
+	"pools" : [
+		 ],
+	"super" : "LIBRoot",
+	"type" : "normal" }

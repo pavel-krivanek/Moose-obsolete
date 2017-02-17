@@ -1,0 +1,14 @@
+{
+	"category" : "PetitJava-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "PPJavaParser",
+	"pools" : [
+		 ],
+	"super" : "PPJavaSyntax",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "ACD-Glamour-Interface",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"debugger" ],
+	"name" : "ACDAnnouncerBrowser",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

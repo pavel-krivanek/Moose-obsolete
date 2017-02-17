@@ -1,0 +1,1 @@
+It represents a folder in the file system. It can contain other files or folders.

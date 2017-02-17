@@ -1,0 +1,3 @@
+private
+driverClass
+	^ SAXPositionParserDriver

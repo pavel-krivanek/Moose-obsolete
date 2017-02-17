@@ -1,0 +1,3 @@
+handling
+handleTextNodeTestWith: aHandler
+	aHandler handleTextNodeTest

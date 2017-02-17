@@ -1,0 +1,14 @@
+{
+	"category" : "PetitTests-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPLambdaParserTest",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParserTest",
+	"type" : "normal" }

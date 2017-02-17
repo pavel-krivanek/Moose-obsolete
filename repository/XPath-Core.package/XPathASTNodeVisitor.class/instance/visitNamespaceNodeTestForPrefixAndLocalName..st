@@ -1,0 +1,3 @@
+visiting - node tests
+visitNamespaceNodeTestForPrefixAndLocalName: aNamespaceTestForPrefixAndLocalName
+	^ self visitNodeTest: aNamespaceTestForPrefixAndLocalName

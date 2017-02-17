@@ -1,0 +1,17 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"pathData",
+		"pathCache",
+		"athensPath",
+		"bbox" ],
+	"name" : "ASPath",
+	"pools" : [
+		 ],
+	"super" : "ASShape",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+*petitanalyzer-testing
+isNullable
+	^ true

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Plugins",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTKendrickPlugin",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractPlugin",
+	"type" : "normal" }

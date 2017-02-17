@@ -1,0 +1,3 @@
+accessing
+streamConverterClass
+	^ XMLUTF16BigEndianStreamConverter

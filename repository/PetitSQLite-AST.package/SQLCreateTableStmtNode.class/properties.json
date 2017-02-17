@@ -1,0 +1,15 @@
+{
+	"category" : "PetitSQLite-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"columns",
+		"constraints" ],
+	"name" : "SQLCreateTableStmtNode",
+	"pools" : [
+		 ],
+	"super" : "SQLASTNode",
+	"type" : "normal" }

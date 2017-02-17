@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-MorphSpecific",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 1/4/2017 15:38",
+	"instvars" : [
+		 ],
+	"name" : "RTHowToReportABug",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

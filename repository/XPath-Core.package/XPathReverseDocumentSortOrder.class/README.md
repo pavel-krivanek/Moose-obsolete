@@ -1,0 +1,1 @@
+A sort order for nodes in reverse document order.

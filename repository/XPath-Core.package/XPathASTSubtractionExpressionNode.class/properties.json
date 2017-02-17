@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/22/2017 15:45",
+	"instvars" : [
+		 ],
+	"name" : "XPathASTSubtractionExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTAdditiveExpressionNode",
+	"type" : "normal" }

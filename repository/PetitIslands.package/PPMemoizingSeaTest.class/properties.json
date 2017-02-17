@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIslands-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPMemoizingSeaTest",
+	"pools" : [
+		 ],
+	"super" : "PPSeaTest",
+	"type" : "normal" }

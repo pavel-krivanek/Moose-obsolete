@@ -1,0 +1,14 @@
+{
+	"category" : "Geometry-Test",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GRectangleTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "PetitXml-Nodes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"value" ],
+	"name" : "PPXmlAttribute",
+	"pools" : [
+		 ],
+	"super" : "PPXmlNode",
+	"type" : "normal" }

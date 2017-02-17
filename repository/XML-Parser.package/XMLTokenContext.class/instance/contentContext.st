@@ -1,0 +1,3 @@
+changing
+contentContext
+	^ XMLContentContext new

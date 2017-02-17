@@ -1,0 +1,1 @@
+This is the abstract browser for browsing the source code of a FAMIX model. Look at the subclasses for the actual browsers.

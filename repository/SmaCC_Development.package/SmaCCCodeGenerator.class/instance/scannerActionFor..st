@@ -1,0 +1,3 @@
+compiling-scanner
+scannerActionFor: aString
+	self subclassResponsibility

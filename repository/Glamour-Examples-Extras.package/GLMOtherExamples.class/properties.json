@@ -1,0 +1,14 @@
+{
+	"category" : "Glamour-Examples-Extras",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "GLMOtherExamples",
+	"pools" : [
+		 ],
+	"super" : "GLMExamples",
+	"type" : "normal" }

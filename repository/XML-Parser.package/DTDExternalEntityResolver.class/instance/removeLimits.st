@@ -1,0 +1,3 @@
+configuring
+removeLimits
+	self externalEntityLimits removeAll

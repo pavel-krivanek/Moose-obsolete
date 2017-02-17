@@ -1,0 +1,1 @@
+I hide the dataset when the associated legend entry has been clicked on.

@@ -1,0 +1,17 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"contents",
+		"textEditorContents",
+		"horizontalSize",
+		"verticalSize" ],
+	"name" : "TextEditorPart",
+	"pools" : [
+		 ],
+	"super" : "WizardPart",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+generated-reduction actions
+reduceActionForStartStringExpression1: nodes
+	^ self scanStringExpression

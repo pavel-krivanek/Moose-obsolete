@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/18/2015 14:01",
+	"instvars" : [
+		 ],
+	"name" : "XPathUndeclaredVariableException",
+	"pools" : [
+		 ],
+	"super" : "XPathException",
+	"type" : "normal" }

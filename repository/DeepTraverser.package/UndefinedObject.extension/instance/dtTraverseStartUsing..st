@@ -1,0 +1,2 @@
+*DeepTraverser-private
+dtTraverseStartUsing: aStream

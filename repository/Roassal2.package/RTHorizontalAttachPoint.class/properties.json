@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-AttachPoint",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/12/2015 10:54",
+	"instvars" : [
+		 ],
+	"name" : "RTHorizontalAttachPoint",
+	"pools" : [
+		 ],
+	"super" : "RTAttachPoint",
+	"type" : "normal" }

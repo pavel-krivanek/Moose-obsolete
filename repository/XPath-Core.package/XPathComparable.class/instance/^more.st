@@ -1,0 +1,3 @@
+comparing
+> aComparable
+	self subclassResponsibility

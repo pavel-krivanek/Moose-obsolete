@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-DistributionMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DistributionMapExampleTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DOM-Factories",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 9/8/2016 09:57",
+	"instvars" : [
+		 ],
+	"name" : "XMLFNodeList",
+	"pools" : [
+		 ],
+	"super" : "XMLNodeList",
+	"type" : "normal" }

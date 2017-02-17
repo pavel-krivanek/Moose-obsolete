@@ -1,0 +1,3 @@
+compiling-parser
+compileSymbolTypes: anArray
+	

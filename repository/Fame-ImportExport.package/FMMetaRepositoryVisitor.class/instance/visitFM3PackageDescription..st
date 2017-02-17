@@ -1,0 +1,4 @@
+visiting
+visitFM3PackageDescription: aFM3PackageDescription
+
+	self subclassResponsibility

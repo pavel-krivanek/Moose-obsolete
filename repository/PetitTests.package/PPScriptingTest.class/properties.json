@@ -1,0 +1,14 @@
+{
+	"category" : "PetitTests-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "PPScriptingTest",
+	"pools" : [
+		 ],
+	"super" : "PPAbstractParserTest",
+	"type" : "normal" }

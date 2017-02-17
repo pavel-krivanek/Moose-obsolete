@@ -1,0 +1,3 @@
+source
+addressBookNamespacePrefixedXML
+	^ self class addressBookNamespacePrefixedXML

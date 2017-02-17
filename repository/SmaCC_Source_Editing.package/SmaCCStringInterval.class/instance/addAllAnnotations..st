@@ -1,0 +1,3 @@
+private
+addAllAnnotations: aCollection
+	

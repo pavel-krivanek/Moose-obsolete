@@ -1,0 +1,3 @@
+accessing
+defaultImportingContext
+	^ MooseImportingContext new importMaximum

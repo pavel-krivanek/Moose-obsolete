@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Rewrite_Engine_UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"treeInitializer" ],
+	"name" : "SmaCCRewriteEditor",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

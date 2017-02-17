@@ -1,0 +1,1 @@
+An abstract class for handling internal and external DTD subset events.

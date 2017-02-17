@@ -1,0 +1,3 @@
+removing
+removeFunctions
+	self copiedFunctions removeAll

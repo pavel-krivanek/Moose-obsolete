@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"desiredExtent",
+		"resizeStrategy",
+		"zoomInElements",
+		"ratio" ],
+	"name" : "RTMouseHoverZoom",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

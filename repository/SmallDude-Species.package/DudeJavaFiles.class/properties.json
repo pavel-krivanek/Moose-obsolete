@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Species",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DudeJavaFiles",
+	"pools" : [
+		 ],
+	"super" : "DudeCStyleFiles",
+	"type" : "normal" }

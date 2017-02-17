@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 9/30/2016 12:17",
+	"instvars" : [
+		 ],
+	"name" : "TRMouseLeave",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractMouseEvent",
+	"type" : "normal" }

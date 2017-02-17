@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Exporter-HTML5",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 9/6/2016 19:27",
+	"instvars" : [
+		"showView",
+		"viewBlock",
+		"nameBlock" ],
+	"name" : "RTLinkView",
+	"pools" : [
+		 ],
+	"super" : "RTInteraction",
+	"type" : "normal" }

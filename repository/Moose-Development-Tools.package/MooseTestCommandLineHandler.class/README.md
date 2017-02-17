@@ -1,0 +1,1 @@
+MooseTestCommandLineHandler activateWith: (CommandLineArguments withArguments: {'--junit-xml-output'})

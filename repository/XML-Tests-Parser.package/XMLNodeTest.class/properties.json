@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DOM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "XMLNodeTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

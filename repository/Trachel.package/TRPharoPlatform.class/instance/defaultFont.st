@@ -1,0 +1,3 @@
+fonts
+defaultFont
+	^ StandardFonts defaultFont

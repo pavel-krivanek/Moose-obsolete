@@ -1,0 +1,14 @@
+{
+	"category" : "PetitGui-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 3/4/2011 18:55",
+	"instvars" : [
+		 ],
+	"name" : "PPBrowser",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

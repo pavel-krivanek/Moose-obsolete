@@ -1,0 +1,3 @@
+private
+hasNodeList: aNodeList
+	^ false

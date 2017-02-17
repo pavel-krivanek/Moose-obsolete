@@ -1,0 +1,3 @@
+accessing
+maxCachedCompiledExpressions
+	^ self compiledExpressionCache maxSize

@@ -1,0 +1,3 @@
+accessing
+externalEntityResolver
+	^ self saxDriver externalEntityResolver

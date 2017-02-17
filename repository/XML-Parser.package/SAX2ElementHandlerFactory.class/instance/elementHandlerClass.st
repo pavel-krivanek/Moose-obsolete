@@ -1,0 +1,3 @@
+accessing
+elementHandlerClass
+	^ SAX2ElementHandler

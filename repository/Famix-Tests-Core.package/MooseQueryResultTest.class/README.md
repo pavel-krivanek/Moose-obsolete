@@ -1,0 +1,1 @@
+A MooseQueryResultTest is a test class for testing the behavior of MooseQueryResult

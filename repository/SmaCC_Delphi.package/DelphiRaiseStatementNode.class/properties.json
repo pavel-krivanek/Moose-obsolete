@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"raiseToken",
+		"expression",
+		"atToken",
+		"location" ],
+	"name" : "DelphiRaiseStatementNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiStatementNode",
+	"type" : "normal" }

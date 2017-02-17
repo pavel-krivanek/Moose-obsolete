@@ -1,0 +1,3 @@
+parsing
+beginDocument
+	^self subclassResponsibility

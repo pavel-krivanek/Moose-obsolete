@@ -1,0 +1,14 @@
+{
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 2/4/2015 18:03",
+	"instvars" : [
+		"block" ],
+	"name" : "PPConditionalParser",
+	"pools" : [
+		 ],
+	"super" : "PPDelegateParser",
+	"type" : "normal" }

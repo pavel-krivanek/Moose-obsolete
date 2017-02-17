@@ -1,0 +1,14 @@
+{
+	"category" : "Glamour-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"browser" ],
+	"name" : "GLMBrowserTemplate",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+private
+variableNames
+	^ variableNameMap keys

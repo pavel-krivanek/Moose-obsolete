@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Viva",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "TRVIBasicTimer",
+	"pools" : [
+		 ],
+	"super" : "TRObject",
+	"type" : "normal" }

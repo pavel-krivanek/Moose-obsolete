@@ -1,0 +1,1 @@
+This is a class for storing pushed-back tokens so they can be quickly read again.

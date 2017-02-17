@@ -1,0 +1,1 @@
+This class stores the default highlight TextColors used by the highlighter. It gets the initial defaults from Shout text styling.

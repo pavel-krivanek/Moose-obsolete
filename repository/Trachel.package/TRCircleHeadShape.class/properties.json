@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-ShapesForArrow",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRCircleHeadShape",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractLineDecoratorShape",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+tests
+testMenuEntriesForNamespaces
+
+	self assertAllActionsOf: model allNamespaces

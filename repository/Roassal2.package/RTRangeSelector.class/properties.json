@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/3/2016 18:12",
+	"instvars" : [
+		"visualRange",
+		"rectangle",
+		"pointWhenStartingDragging",
+		"callback" ],
+	"name" : "RTRangeSelector",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractGrapherDecorator",
+	"type" : "normal" }

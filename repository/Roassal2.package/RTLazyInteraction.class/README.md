@@ -1,0 +1,1 @@
+I am an abstract interaction that postpones the element initialization until it is already connected to the view.

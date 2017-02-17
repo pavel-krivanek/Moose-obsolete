@@ -1,0 +1,1 @@
+This is an abstract class for XPath parsers that parse input using injectable parser handlers.

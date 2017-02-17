@@ -1,0 +1,4 @@
+visiting
+visitFM3PropertyDescription: aFM3PropertyDescription
+
+	self subclassResponsibility

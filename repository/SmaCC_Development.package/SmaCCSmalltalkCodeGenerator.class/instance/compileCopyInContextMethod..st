@@ -1,0 +1,3 @@
+compiling-nodes
+compileCopyInContextMethod: aSmaCCNodeClassDefinition
+	

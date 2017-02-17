@@ -1,0 +1,3 @@
+accessing
+elementClassMapper: anElementClassMapper
+	elementClassMapper := anElementClassMapper

@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"event",
+		"v",
+		"r" ],
+	"name" : "RTRotableViewTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 8/4/2016 16:34",
+	"instvars" : [
+		"outlineColor",
+		"outlineWidth" ],
+	"name" : "TRTextPath",
+	"pools" : [
+		 ],
+	"super" : "TRLabelShape",
+	"type" : "normal" }

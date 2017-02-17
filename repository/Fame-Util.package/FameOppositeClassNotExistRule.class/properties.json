@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-Util",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FameOppositeClassNotExistRule",
+	"pools" : [
+		 ],
+	"super" : "RBBlockLintRule",
+	"type" : "normal" }

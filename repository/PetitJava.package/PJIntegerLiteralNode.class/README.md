@@ -1,0 +1,1 @@
+A literal node of an integer valuse

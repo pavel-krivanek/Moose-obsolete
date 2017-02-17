@@ -1,0 +1,3 @@
+testing
+hasPackage
+	^package notNil

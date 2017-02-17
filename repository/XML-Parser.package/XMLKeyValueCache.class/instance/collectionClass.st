@@ -1,0 +1,3 @@
+private
+collectionClass
+	^ Dictionary

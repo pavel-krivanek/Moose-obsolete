@@ -1,0 +1,16 @@
+{
+	"category" : "PetitSQLite-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"columns",
+		"from",
+		"where" ],
+	"name" : "SQLSelectStmtNode",
+	"pools" : [
+		 ],
+	"super" : "SQLASTNode",
+	"type" : "normal" }

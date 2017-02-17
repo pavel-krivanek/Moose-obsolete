@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC_Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"collection",
+		"reduceAction",
+		"variableNameMap",
+		"nodeClassDefinition",
+		"productionSymbol" ],
+	"name" : "SmaCCRHS",
+	"pools" : [
+		 ],
+	"super" : "SmaCCGrammarItem",
+	"type" : "normal" }

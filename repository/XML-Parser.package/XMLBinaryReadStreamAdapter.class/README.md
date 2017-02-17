@@ -1,0 +1,1 @@
+A read stream adapter for binary streams so that next and peek return characters instead of integers.

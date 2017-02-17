@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser",
+	"classinstvars" : [
+		"isSkipping" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 9/10/2016 03:11",
+	"instvars" : [
+		"skippableTests" ],
+	"name" : "XMLSkippableTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

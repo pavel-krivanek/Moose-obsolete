@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Rewrite_Engine",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"filename" ],
+	"name" : "SmaCCRewriteRuleFileParser",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParser",
+	"type" : "normal" }

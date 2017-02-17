@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-RoassalPaintings",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseModelRoassalPaintingsExtensionsTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

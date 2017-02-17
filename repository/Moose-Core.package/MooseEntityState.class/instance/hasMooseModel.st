@@ -1,0 +1,3 @@
+testing
+hasMooseModel
+	^self subclassResponsibility

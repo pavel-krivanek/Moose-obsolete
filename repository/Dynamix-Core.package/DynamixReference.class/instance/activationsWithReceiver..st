@@ -1,0 +1,3 @@
+accessing
+activationsWithReceiver: aCollection
+	activationsWithReceiver value: aCollection

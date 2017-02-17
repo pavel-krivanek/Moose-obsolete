@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Kontractor",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MalKontractorTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

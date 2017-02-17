@@ -1,0 +1,14 @@
+{
+	"category" : "StateSpecs-Specs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "DenisKudryashov 3/2/2016 17:34",
+	"instvars" : [
+		"errorValidationResult" ],
+	"name" : "SpecOfBlockValidationFailure",
+	"pools" : [
+		 ],
+	"super" : "SpecOfValidationFailure",
+	"type" : "normal" }

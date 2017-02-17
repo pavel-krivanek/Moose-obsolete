@@ -1,0 +1,1 @@
+I am a copy of RTLineSegment from Roassal.

@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Types",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 2/9/2017 19:56",
+	"instvars" : [
+		 ],
+	"name" : "XPathNodeSetValueType",
+	"pools" : [
+		 ],
+	"super" : "XPathObjectValueType",
+	"type" : "normal" }

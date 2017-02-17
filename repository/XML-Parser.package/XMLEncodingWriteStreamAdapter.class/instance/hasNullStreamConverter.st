@@ -1,0 +1,3 @@
+testing
+hasNullStreamConverter
+	^ streamConverter isNull

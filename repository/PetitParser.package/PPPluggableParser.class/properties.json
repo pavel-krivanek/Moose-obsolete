@@ -1,0 +1,14 @@
+{
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "BernardoContreras 3/16/2015 21:19",
+	"instvars" : [
+		"block" ],
+	"name" : "PPPluggableParser",
+	"pools" : [
+		 ],
+	"super" : "PPParser",
+	"type" : "normal" }

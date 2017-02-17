@@ -1,0 +1,3 @@
+accessing
+encodedFileContents
+	^ XMLStreamAdapterTest encodedUTF16LEString

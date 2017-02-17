@@ -1,0 +1,3 @@
+handling
+handleCommentNodeTestWith: aHandler
+	aHandler handleCommentNodeTest

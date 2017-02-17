@@ -1,0 +1,14 @@
+{
+	"category" : "PetitXPath-Nodes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "PPXPathFilter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

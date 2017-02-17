@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		"operators" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DelphiBinaryExpressionVisitor",
+	"pools" : [
+		 ],
+	"super" : "DelphiProgramNodeVisitor",
+	"type" : "normal" }

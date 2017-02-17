@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/22/2017 15:01",
+	"instvars" : [
+		"localName" ],
+	"name" : "XPathASTAttributeNodeTestForPrefixAndLocalNameNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTAttributeNodeTestForPrefixNode",
+	"type" : "normal" }

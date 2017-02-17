@@ -1,0 +1,3 @@
+fixture
+tearDown
+    cache := nil

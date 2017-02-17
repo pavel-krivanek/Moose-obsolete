@@ -1,0 +1,14 @@
+{
+	"category" : "ACD-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ACDSenderWhereIsDebugAction",
+	"pools" : [
+		 ],
+	"super" : "WhereIsDebugAction",
+	"type" : "normal" }

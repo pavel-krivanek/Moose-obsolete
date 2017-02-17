@@ -1,0 +1,3 @@
+accessing
+platformSpecificLineBreak
+	^ PlatformSpecificLineBreak

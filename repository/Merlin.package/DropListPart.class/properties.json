@@ -1,0 +1,19 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"list",
+		"selectionIndex",
+		"useRequiredInputAsDefault",
+		"defaultBlock",
+		"horizontalSize",
+		"formatBlock" ],
+	"name" : "DropListPart",
+	"pools" : [
+		 ],
+	"super" : "WizardPart",
+	"type" : "normal" }

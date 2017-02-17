@@ -1,0 +1,3 @@
+public
+reset
+	self initialize

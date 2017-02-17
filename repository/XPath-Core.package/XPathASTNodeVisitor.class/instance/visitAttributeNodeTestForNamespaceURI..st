@@ -1,0 +1,3 @@
+visiting - node tests
+visitAttributeNodeTestForNamespaceURI: anAttributeNodeTestForNamespaceURI
+	^ self visitNodeTest: anAttributeNodeTestForNamespaceURI

@@ -1,0 +1,1 @@
+I define productions to create a Smalltalk AST from the FL source. The Smalltalk AST can be trivially transformed to Smalltalk bytecodes and executed using the infrastructure of the development environment.

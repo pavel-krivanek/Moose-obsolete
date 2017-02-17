@@ -1,0 +1,16 @@
+{
+	"category" : "Moose-Hismo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"concept",
+		"histories",
+		"versions" ],
+	"name" : "HismoCoChangePattern",
+	"pools" : [
+		 ],
+	"super" : "MooseGroup",
+	"type" : "normal" }

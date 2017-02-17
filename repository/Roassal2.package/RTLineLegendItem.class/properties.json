@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Builder-Legend",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"color",
+		"text" ],
+	"name" : "RTLineLegendItem",
+	"pools" : [
+		 ],
+	"super" : "RTLegendItem",
+	"type" : "normal" }

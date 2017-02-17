@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 8/12/2016 13:43",
+	"instvars" : [
+		"dataset",
+		"color",
+		"legendElements" ],
+	"name" : "RTDataHighlightInteraction",
+	"pools" : [
+		 ],
+	"super" : "RTGrapherInteraction",
+	"type" : "normal" }

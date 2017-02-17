@@ -1,0 +1,16 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"pathCommands",
+		"from",
+		"to" ],
+	"name" : "TRSVGPathLineShape",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractLineShape",
+	"type" : "normal" }

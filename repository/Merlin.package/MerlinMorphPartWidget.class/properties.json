@@ -1,0 +1,15 @@
+{
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"wizardPart",
+		"defaultValue" ],
+	"name" : "MerlinMorphPartWidget",
+	"pools" : [
+		 ],
+	"super" : "MerlinMorphWidget",
+	"type" : "normal" }

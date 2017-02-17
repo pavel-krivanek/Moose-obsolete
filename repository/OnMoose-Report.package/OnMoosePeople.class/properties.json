@@ -1,0 +1,14 @@
+{
+	"category" : "OnMoose-Report",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OnMoosePeople",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

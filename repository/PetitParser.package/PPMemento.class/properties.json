@@ -1,0 +1,16 @@
+{
+	"category" : "PetitParser-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "BernardoContreras 3/16/2015 21:40",
+	"instvars" : [
+		"result",
+		"count",
+		"context" ],
+	"name" : "PPMemento",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

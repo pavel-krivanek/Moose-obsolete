@@ -1,0 +1,3 @@
+accessing
+nodeType
+	^ XPathNodeType new

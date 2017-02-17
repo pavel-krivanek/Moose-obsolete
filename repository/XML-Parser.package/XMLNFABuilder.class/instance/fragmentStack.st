@@ -1,0 +1,3 @@
+private
+fragmentStack
+	^ fragmentStack

@@ -1,0 +1,4 @@
+accessing
+suiteVersion
+
+	^ suiteVersion

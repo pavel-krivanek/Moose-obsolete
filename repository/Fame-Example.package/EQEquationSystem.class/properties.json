@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"equations" ],
+	"name" : "EQEquationSystem",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

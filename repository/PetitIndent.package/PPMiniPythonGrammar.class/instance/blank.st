@@ -1,0 +1,3 @@
+whitespaces
+blank
+	^ #blank asParser

@@ -1,0 +1,4 @@
+accessing variable
+accessingNamespace
+
+	Smalltalk

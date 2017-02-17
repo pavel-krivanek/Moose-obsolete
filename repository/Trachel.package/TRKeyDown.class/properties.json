@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 11/22/2015 17:31",
+	"instvars" : [
+		 ],
+	"name" : "TRKeyDown",
+	"pools" : [
+		 ],
+	"super" : "TRKeyboardEvent",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+defaultSecondaryMarkupColor: aTextColor
+	defaultSecondaryMarkupColor := aTextColor

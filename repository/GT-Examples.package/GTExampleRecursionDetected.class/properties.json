@@ -1,0 +1,15 @@
+{
+	"category" : "GT-Examples-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 8/21/2016 14:55",
+	"instvars" : [
+		"resolved",
+		"next" ],
+	"name" : "GTExampleRecursionDetected",
+	"pools" : [
+		 ],
+	"super" : "GTExampleError",
+	"type" : "normal" }

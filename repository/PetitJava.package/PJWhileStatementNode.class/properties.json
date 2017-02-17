@@ -1,0 +1,15 @@
+{
+	"category" : "PetitJava-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"expression",
+		"statement" ],
+	"name" : "PJWhileStatementNode",
+	"pools" : [
+		 ],
+	"super" : "PJStatementNode",
+	"type" : "normal" }

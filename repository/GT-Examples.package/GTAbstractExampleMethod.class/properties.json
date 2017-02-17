@@ -1,0 +1,19 @@
+{
+	"category" : "GT-Examples-Organization",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TGTExampleMethod classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"methodClassName",
+		"methodClass",
+		"meta",
+		"selector" ],
+	"name" : "GTAbstractExampleMethod",
+	"pools" : [
+		 ],
+	"super" : "GTExampleAspect",
+	"traitcomposition" : "TGTExampleMethod",
+	"type" : "normal" }

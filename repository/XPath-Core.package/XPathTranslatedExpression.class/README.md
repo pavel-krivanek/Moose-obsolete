@@ -1,0 +1,1 @@
+This class stores the XPath expression's translation to Smalltalk source code and its array of XPathNodeTest objects.

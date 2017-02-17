@@ -1,0 +1,14 @@
+{
+	"category" : "PetitXPath-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"xml" ],
+	"name" : "PPXPathSyntaxTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

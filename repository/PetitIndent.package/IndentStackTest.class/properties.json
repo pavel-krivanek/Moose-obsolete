@@ -1,0 +1,16 @@
+{
+	"category" : "PetitIndent-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stack",
+		"result",
+		"context" ],
+	"name" : "IndentStackTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

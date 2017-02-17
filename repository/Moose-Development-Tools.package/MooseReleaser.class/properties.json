@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Development-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseReleaser",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

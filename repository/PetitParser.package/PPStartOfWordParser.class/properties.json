@@ -1,0 +1,14 @@
+{
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 12/12/2014 16:50",
+	"instvars" : [
+		 ],
+	"name" : "PPStartOfWordParser",
+	"pools" : [
+		 ],
+	"super" : "PPParser",
+	"type" : "normal" }

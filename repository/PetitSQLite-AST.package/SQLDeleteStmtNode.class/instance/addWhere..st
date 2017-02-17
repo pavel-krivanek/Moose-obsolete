@@ -1,0 +1,3 @@
+accessing
+addWhere: aCollectionRepresentingAnSQLExpression
+	where addLast: aCollectionRepresentingAnSQLExpression

@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 10/26/2016 01:25",
+	"instvars" : [
+		"totalOpenIncludeSections" ],
+	"name" : "XMLPushedBackParameterEntity",
+	"pools" : [
+		 ],
+	"super" : "XMLPushedBackEntity",
+	"type" : "normal" }

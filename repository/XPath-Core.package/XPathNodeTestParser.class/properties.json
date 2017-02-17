@@ -1,0 +1,15 @@
+{
+	"category" : "XPath-Core-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"NodeTypeTestParserSelectors" ],
+	"commentStamp" : "monty 4/2/2016 02:44",
+	"instvars" : [
+		"context",
+		"isParsingNodeTypeTest" ],
+	"name" : "XPathNodeTestParser",
+	"pools" : [
+		 ],
+	"super" : "XPathParser",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+building
+defaultScriptDisplayIn: aPresentation
+	^ ''

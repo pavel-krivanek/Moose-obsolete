@@ -1,0 +1,3 @@
+tests
+testIsXMLConvertingStreamAdapter
+	self deny: self newStreamAdapter isXMLConvertingStreamAdapter

@@ -1,0 +1,3 @@
+public - accessing
+maxX
+	^ maxX

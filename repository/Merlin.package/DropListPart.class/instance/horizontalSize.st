@@ -1,0 +1,4 @@
+accessing
+horizontalSize
+
+	^ horizontalSize 

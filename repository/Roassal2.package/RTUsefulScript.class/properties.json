@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Plugins",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTUsefulScript",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractMenuEntry",
+	"type" : "normal" }

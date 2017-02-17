@@ -1,0 +1,14 @@
+{
+	"category" : "PetitGui-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 12/3/2011 17:25",
+	"instvars" : [
+		 ],
+	"name" : "PPParserInspector",
+	"pools" : [
+		 ],
+	"super" : "GLMCompositePresentation",
+	"type" : "normal" }

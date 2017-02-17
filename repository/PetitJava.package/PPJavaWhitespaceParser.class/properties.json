@@ -1,0 +1,14 @@
+{
+	"category" : "PetitJava-Core",
+	"classinstvars" : [
+		"instance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPJavaWhitespaceParser",
+	"pools" : [
+		 ],
+	"super" : "PP2Node",
+	"type" : "normal" }

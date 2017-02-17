@@ -1,0 +1,19 @@
+{
+	"category" : "Merlin-ToBeRemoved",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"allCheckboxes",
+		"allCheckboxLabels",
+		"allCheckboxContents",
+		"actionSelector",
+		"actionArguments",
+		"actionModel" ],
+	"name" : "MultiCheckboxesPartOld",
+	"pools" : [
+		 ],
+	"super" : "WizardPart",
+	"type" : "normal" }

@@ -1,0 +1,2 @@
+formatting
+formatBeforeQuotedStringValue: aString

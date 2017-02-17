@@ -1,0 +1,15 @@
+{
+	"category" : "RoelTyper-Pharo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"blockTempsMapping",
+		"blocksLimits" ],
+	"name" : "PharoInstvarInterfaceExtractor",
+	"pools" : [
+		 ],
+	"super" : "SqueakInstvarInterfaceExtractor",
+	"type" : "normal" }

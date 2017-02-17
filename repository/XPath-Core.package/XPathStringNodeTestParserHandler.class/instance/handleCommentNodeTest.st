@@ -1,0 +1,3 @@
+handling
+handleCommentNodeTest
+	self parsingResult: XPathCommentNodeTest new

@@ -1,0 +1,3 @@
+testing
+isXPathNodeTestWithPredicates
+	^ true

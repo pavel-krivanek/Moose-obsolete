@@ -1,0 +1,3 @@
+writing
+% aParameterEntityReference
+	self paramEntityRef: aParameterEntityReference

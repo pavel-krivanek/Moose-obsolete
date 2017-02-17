@@ -1,0 +1,5 @@
+basic examples
+multiDependentCheckboxesWithCallbackPart
+
+	"self multiDependentCheckboxesWithCallbackPart"
+	^ self multiDependentCheckboxesWithCallbackPartUsing: MerlinMorphicWizardRenderer new

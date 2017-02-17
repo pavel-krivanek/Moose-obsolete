@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"box" ],
+	"name" : "TRBoxShapeTest",
+	"pools" : [
+		 ],
+	"super" : "TRTest",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Tests-Finder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model",
+		"systemWindows" ],
+	"name" : "MooseFinderTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

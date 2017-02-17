@@ -1,0 +1,16 @@
+{
+	"category" : "Beacon-Core-Loggers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"recordings",
+		"announcer",
+		"mutex" ],
+	"name" : "MemoryLogger",
+	"pools" : [
+		 ],
+	"super" : "SignalLogger",
+	"type" : "normal" }

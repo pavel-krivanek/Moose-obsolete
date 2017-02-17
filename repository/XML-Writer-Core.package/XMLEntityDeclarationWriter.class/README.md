@@ -1,0 +1,1 @@
+This class writes general and parameter <!ENTITY ...> declarations for DTD internal subsets, but not if canonical XML is enabled.

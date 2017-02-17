@@ -1,0 +1,1 @@
+This is an AST node class for the 'text()' type test.

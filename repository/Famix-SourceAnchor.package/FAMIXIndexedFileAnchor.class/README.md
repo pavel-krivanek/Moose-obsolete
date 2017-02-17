@@ -1,0 +1,2 @@
+This offers a source anchor that connects a sourced entity to a file through a relative path stored in the fileName.
+Contrary to FAMIXFileAnchor positions in the file are recorded as number of characters from the begining

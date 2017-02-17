@@ -1,0 +1,3 @@
+accessing
+roleId
+	self subclassResponsibility

@@ -1,0 +1,5 @@
+tokenizing - dtd
+nextParameterEntityReferenceInDeclaration
+	self isInExternalSubsetOrExternalEntity
+		ifFalse: [self errorInternalDeclarationParameterEntityReference].
+	self nextParameterEntityReference.

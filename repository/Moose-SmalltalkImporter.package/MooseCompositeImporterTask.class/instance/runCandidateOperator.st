@@ -1,0 +1,4 @@
+setting
+runCandidateOperator
+
+	candidateOperator := true

@@ -1,0 +1,1 @@
+This is a class for the 'namespace()' type test or for '*' type tests when the principal node type of the axis is an namespace.

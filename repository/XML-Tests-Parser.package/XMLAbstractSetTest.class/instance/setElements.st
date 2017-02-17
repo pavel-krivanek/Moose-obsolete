@@ -1,0 +1,3 @@
+accessing
+setElements
+	self subclassResponsibility

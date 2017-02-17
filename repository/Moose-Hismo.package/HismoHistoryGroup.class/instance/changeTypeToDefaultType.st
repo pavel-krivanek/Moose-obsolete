@@ -1,0 +1,3 @@
+private
+changeTypeToDefaultType
+	self changeTypeTo: HismoHistoryGroup

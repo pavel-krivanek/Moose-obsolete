@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-RoassalPaintings-Test",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MalGraphFixtureTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

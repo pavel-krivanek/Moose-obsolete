@@ -1,0 +1,14 @@
+{
+	"category" : "PetitParser2-Reparsing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"character" ],
+	"name" : "PP2InsertCharacter",
+	"pools" : [
+		 ],
+	"super" : "PP2InputChange",
+	"type" : "normal" }

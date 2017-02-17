@@ -1,0 +1,3 @@
+accessing
+badQualifiedName
+	^ 'prefix: localName'

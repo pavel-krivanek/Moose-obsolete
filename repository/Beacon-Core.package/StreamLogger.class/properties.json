@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Loggers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 6/9/2014 01:48",
+	"instvars" : [
+		 ],
+	"name" : "StreamLogger",
+	"pools" : [
+		 ],
+	"super" : "SerializingLogger",
+	"type" : "normal" }

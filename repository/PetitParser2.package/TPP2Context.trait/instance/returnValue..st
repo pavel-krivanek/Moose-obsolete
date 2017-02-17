@@ -1,0 +1,3 @@
+requirements
+returnValue: anObject
+	self explicitRequirement

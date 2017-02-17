@@ -1,0 +1,1 @@
+A context for parsing the <?xml ...?> token.

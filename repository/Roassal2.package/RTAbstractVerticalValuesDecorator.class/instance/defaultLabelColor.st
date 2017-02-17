@@ -1,0 +1,3 @@
+configuration
+defaultLabelColor
+	^ Color gray

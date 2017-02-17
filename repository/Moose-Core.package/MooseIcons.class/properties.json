@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Core",
+	"classinstvars" : [
+		"icons" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseIcons",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

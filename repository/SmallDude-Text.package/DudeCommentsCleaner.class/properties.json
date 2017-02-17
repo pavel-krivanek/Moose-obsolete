@@ -1,0 +1,17 @@
+{
+	"category" : "SmallDude-Text",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sStartComment",
+		"sEndComment",
+		"sLineComments",
+		"sRegex" ],
+	"name" : "DudeCommentsCleaner",
+	"pools" : [
+		 ],
+	"super" : "DudeCleaningDecorator",
+	"type" : "normal" }

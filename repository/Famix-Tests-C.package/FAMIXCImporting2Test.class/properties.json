@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Tests-C",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model" ],
+	"name" : "FAMIXCImporting2Test",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

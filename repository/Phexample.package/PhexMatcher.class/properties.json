@@ -1,0 +1,14 @@
+{
+	"category" : "Phexample-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"state" ],
+	"name" : "PhexMatcher",
+	"pools" : [
+		 ],
+	"super" : "SpecOfShouldExpression",
+	"type" : "normal" }

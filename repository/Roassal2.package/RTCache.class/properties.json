@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Cachetor",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 8/4/2016 15:52",
+	"instvars" : [
+		"canvas",
+		"trachelShapes",
+		"shapeBeingPointed" ],
+	"name" : "RTCache",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

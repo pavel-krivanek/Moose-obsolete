@@ -1,0 +1,3 @@
+private
+defaultContentHandlerClass
+	^ SAX2ContentHandler

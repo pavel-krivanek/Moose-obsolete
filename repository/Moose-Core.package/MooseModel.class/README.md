@@ -1,0 +1,1 @@
+MooseModel is a special group that is used for manipulating an entire model.

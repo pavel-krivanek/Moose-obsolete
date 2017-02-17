@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Loggers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "SignalSerializer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

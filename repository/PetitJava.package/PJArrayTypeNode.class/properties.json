@@ -1,0 +1,15 @@
+{
+	"category" : "PetitJava-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"dimensions",
+		"elementType" ],
+	"name" : "PJArrayTypeNode",
+	"pools" : [
+		 ],
+	"super" : "PJTypeNode",
+	"type" : "normal" }

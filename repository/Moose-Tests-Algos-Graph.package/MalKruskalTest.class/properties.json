@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nodes",
+		"kruskal" ],
+	"name" : "MalKruskalTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

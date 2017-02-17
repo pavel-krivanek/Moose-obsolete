@@ -1,0 +1,17 @@
+{
+	"category" : "Moose-Development-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"suiteVersion",
+		"suiteDownloadArtifact",
+		"distinctOperatingSystems",
+		"isOneClick" ],
+	"name" : "MooseZeroConfSuiteScript",
+	"pools" : [
+		 ],
+	"super" : "ZeroConfImageScript",
+	"type" : "normal" }

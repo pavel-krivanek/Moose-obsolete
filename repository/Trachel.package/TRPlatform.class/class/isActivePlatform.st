@@ -1,0 +1,3 @@
+testing
+isActivePlatform
+	self subclassResponsibility.

@@ -1,0 +1,1 @@
+This class will put a default value for an attribute if the attribute is absent.

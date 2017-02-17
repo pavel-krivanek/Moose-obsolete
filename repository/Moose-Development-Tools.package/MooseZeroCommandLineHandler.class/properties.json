@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Development-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"imageName",
+		"projectId" ],
+	"name" : "MooseZeroCommandLineHandler",
+	"pools" : [
+		 ],
+	"super" : "ZeroConfCommandLineHandler",
+	"type" : "normal" }

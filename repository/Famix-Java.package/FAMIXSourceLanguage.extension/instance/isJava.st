@@ -1,0 +1,3 @@
+*Famix-Java
+isJava
+	^ false

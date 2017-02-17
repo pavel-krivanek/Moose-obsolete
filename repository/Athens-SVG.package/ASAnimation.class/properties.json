@@ -1,0 +1,18 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"subject",
+		"finishAction",
+		"stepAction",
+		"started",
+		"stopCondition" ],
+	"name" : "ASAnimation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

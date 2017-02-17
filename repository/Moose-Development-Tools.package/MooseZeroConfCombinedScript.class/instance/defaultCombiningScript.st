@@ -1,0 +1,3 @@
+accessing
+defaultCombiningScript
+	^ self class

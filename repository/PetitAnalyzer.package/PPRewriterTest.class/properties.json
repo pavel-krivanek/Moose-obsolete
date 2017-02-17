@@ -1,0 +1,14 @@
+{
+	"category" : "PetitAnalyzer-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rewriter" ],
+	"name" : "PPRewriterTest",
+	"pools" : [
+		 ],
+	"super" : "PPAbstractParserTest",
+	"type" : "normal" }

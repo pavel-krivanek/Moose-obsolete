@@ -1,0 +1,2 @@
+handling - location paths
+handleEndPredicates

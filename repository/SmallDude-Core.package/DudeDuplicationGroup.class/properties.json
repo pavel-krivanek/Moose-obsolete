@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "DudeDuplicationGroup",
+	"pools" : [
+		 ],
+	"super" : "MooseGroup",
+	"type" : "normal" }

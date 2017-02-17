@@ -1,0 +1,3 @@
+accessing
+annotationAttributeInstances: anObject
+	annotationAttributeInstances value: anObject

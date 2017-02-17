@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"initializationToken" ],
+	"name" : "DelphiInitializationSectionNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiCodeSectionNode",
+	"type" : "normal" }

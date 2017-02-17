@@ -1,0 +1,3 @@
+*petitgui-accessing
+displayName
+	^ 'epsilon'

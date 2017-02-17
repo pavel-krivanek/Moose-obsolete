@@ -1,0 +1,3 @@
+accessing
+resolvesExternalEntities
+	^ self entityConfiguration resolvesExternalEntities

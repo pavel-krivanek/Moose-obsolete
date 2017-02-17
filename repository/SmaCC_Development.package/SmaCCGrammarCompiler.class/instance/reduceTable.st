@@ -1,0 +1,3 @@
+reduction table
+reduceTable
+	^ reduceTable

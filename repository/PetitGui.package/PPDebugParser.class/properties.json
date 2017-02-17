@@ -1,0 +1,14 @@
+{
+	"category" : "PetitGui-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"root" ],
+	"name" : "PPDebugParser",
+	"pools" : [
+		 ],
+	"super" : "PPDelegateParser",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"sorter" ],
+	"name" : "MalTopologicalSortingTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

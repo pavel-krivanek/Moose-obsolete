@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Wizard",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"entityDependencies" ],
+	"name" : "MooseContextCheckboxesPart",
+	"pools" : [
+		 ],
+	"super" : "MultiCheckboxesPartOld",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+This is a node test created from a BlockClosure.

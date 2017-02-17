@@ -1,0 +1,15 @@
+{
+	"category" : "Glamour-Examples-Extras",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"SampleData" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"address" ],
+	"name" : "GLMMagrittePersonExample",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

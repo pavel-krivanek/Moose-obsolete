@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "usmanbhatti 11/24/2011 22:34",
+	"instvars" : [
+		"childNamedEntities" ],
+	"name" : "FAMIXPackage",
+	"pools" : [
+		 ],
+	"super" : "FAMIXScopingEntity",
+	"type" : "normal" }

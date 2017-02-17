@@ -1,0 +1,1 @@
+A class to wrap a nested external stream for XMLNestedStreamReader.

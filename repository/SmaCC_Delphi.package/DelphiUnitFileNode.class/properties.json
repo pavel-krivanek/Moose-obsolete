@@ -1,0 +1,23 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"unitToken",
+		"unitName",
+		"modifier",
+		"semicolon",
+		"interfaceSection",
+		"implementationSection",
+		"initializationSection",
+		"finalizationSection",
+		"endToken",
+		"period" ],
+	"name" : "DelphiUnitFileNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiProgramNode",
+	"type" : "normal" }

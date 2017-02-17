@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Writer-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "XMLWriterTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

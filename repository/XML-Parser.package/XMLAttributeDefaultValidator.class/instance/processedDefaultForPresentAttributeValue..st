@@ -1,0 +1,3 @@
+processing
+processedDefaultForPresentAttributeValue: anAttributeValue
+	^ anAttributeValue

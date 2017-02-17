@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Core",
+	"classinstvars" : [
+		"singelton" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "stephane.ducasse 10/28/2008 22:49",
+	"instvars" : [
+		 ],
+	"name" : "MooseMinimalState",
+	"pools" : [
+		 ],
+	"super" : "MooseEntityState",
+	"type" : "normal" }

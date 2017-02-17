@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-Panes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"terminateButton" ],
+	"name" : "WizardLastPane",
+	"pools" : [
+		 ],
+	"super" : "WizardPane",
+	"type" : "normal" }

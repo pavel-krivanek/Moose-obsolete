@@ -1,0 +1,17 @@
+{
+	"category" : "GT-Examples-Organization",
+	"classinstvars" : [
+		"instance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 8/22/2016 14:27",
+	"instvars" : [
+		"theNonMetaClassExamples",
+		"theMetaClassExamples",
+		"systemAnnouncements",
+		"monticelloAnnouncements" ],
+	"name" : "GTExampleOrganizer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

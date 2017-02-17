@@ -1,0 +1,17 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rx",
+		"ry",
+		"cx",
+		"cy" ],
+	"name" : "ASEllipse",
+	"pools" : [
+		 ],
+	"super" : "ASShape",
+	"type" : "normal" }

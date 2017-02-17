@@ -1,0 +1,3 @@
+streaming
+position
+	^ objectsTraversed size

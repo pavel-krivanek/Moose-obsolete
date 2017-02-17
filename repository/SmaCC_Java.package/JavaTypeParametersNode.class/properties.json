@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lt",
+		"parameters",
+		"commas",
+		"gt" ],
+	"name" : "JavaTypeParametersNode",
+	"pools" : [
+		 ],
+	"super" : "JavaProgramNode",
+	"type" : "normal" }

@@ -1,0 +1,5 @@
+private
+buildAllDependents: aCollection builder: aBuilder
+	^ (aBuilder item: #'Browse all dependents')
+		parent: #gte;
+		action: [ GTExampleNavigation browseAllDependentsOf: aCollection ]

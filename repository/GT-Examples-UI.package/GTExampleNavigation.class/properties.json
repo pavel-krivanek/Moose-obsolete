@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTExampleNavigation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

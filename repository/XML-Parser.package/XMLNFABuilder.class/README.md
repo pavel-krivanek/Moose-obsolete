@@ -1,0 +1,1 @@
+This class builds an NFA using a stack of NFAFragments.

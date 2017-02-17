@@ -1,0 +1,14 @@
+{
+	"category" : "PetitXPath-Nodes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"xmlElement" ],
+	"name" : "PPXPathWalker",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

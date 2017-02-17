@@ -1,0 +1,3 @@
+testing
+isReject
+	^ false

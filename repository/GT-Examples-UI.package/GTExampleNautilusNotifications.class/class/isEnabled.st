@@ -1,0 +1,3 @@
+actions
+isEnabled
+	^ notifying == true

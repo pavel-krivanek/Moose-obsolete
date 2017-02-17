@@ -1,0 +1,3 @@
+accessing
+badNmtokens
+	^ XMLStringMethodsTest badNmtokens

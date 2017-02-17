@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"bits",
+		"size" ],
+	"name" : "MalBooleanVector",
+	"pools" : [
+		 ],
+	"super" : "MalVector",
+	"type" : "normal" }

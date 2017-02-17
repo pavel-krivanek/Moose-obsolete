@@ -1,0 +1,3 @@
+accessing
+completeText
+	^ self sourceText

@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC_Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tokens",
+		"states",
+		"excludeStates" ],
+	"name" : "SmaCCScannerDefinition",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

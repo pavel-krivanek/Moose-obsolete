@@ -1,0 +1,1 @@
+This class can be used to control the iteration of node collections during iteration.

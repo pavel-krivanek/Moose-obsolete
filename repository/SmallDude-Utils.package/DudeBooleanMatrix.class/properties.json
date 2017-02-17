@@ -1,0 +1,16 @@
+{
+	"category" : "SmallDude-Utils",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"diagonals",
+		"noRows",
+		"noColumns" ],
+	"name" : "DudeBooleanMatrix",
+	"pools" : [
+		 ],
+	"super" : "MalMatrix",
+	"type" : "normal" }

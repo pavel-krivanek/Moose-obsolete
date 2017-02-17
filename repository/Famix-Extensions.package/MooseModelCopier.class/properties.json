@@ -1,0 +1,15 @@
+{
+	"category" : "Famix-Extensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model",
+		"table" ],
+	"name" : "MooseModelCopier",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

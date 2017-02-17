@@ -1,0 +1,3 @@
+validating
+validatedDefaultForPresentAttributeValue: anAttributeValue
+	^ anAttributeValue

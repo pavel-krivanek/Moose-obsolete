@@ -1,0 +1,1 @@
+I am an abstract class. My subclasses have to override #attachPointsFor:on:

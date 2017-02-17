@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"cc" ],
+	"name" : "MalCyclesCoverageTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+This class writes attribute <!ATTLIST ...> declarations for DTD internal subsets, but not if canonical XML is enabled.

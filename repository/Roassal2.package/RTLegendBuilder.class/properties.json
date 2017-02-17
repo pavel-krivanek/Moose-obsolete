@@ -1,0 +1,23 @@
+{
+	"category" : "Roassal2-Builder-Legend",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 7/10/2015 11:41",
+	"instvars" : [
+		"items",
+		"group",
+		"legendElement",
+		"offset",
+		"position",
+		"isOnDemand",
+		"textSize",
+		"gapSize",
+		"isFixed",
+		"onDemandText" ],
+	"name" : "RTLegendBuilder",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+variables
+compositeVariableSelectors
+	^ #(#compositeTokenVariables #compositeNodeVariables #ignoredCompositeTokenVariables #ignoredCompositeNodeVariables)

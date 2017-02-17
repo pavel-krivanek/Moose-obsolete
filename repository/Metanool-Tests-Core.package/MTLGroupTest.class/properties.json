@@ -1,0 +1,14 @@
+{
+	"category" : "Metanool-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MTLGroupTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

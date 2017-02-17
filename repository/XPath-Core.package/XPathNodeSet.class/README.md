@@ -1,0 +1,1 @@
+This class is an ordered node list that has no duplicates.

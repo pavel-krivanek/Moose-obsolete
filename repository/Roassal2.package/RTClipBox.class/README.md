@@ -1,0 +1,1 @@
+I am a simple class to clip a part of the canvas

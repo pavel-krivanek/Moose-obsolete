@@ -1,0 +1,3 @@
+*fame-util
+isAlphaNumeric
+	^false

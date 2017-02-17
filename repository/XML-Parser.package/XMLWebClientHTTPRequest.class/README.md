@@ -1,0 +1,1 @@
+This class uses the Squeak WebClient library, but does not refer to WebClient classes directly to avoid compile errors on platforms without it.

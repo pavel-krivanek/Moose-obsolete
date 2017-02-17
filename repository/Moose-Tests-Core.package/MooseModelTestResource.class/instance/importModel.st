@@ -1,0 +1,4 @@
+setup
+importModel 
+	 
+	self subclassResponsibility

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2GT-Glamour-Actions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GLMEmptyContextAction",
+	"pools" : [
+		 ],
+	"super" : "GLMAbstractSetContextAction",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"inheritedToken",
+		"name",
+		"left",
+		"arguments",
+		"commas",
+		"right" ],
+	"name" : "DelphiInheritedFunctionCallNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiExpressionNode",
+	"type" : "normal" }

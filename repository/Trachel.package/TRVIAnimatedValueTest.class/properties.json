@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Viva",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRVIAnimatedValueTest",
+	"pools" : [
+		 ],
+	"super" : "TRTest",
+	"type" : "normal" }

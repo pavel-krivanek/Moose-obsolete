@@ -1,0 +1,14 @@
+{
+	"category" : "StateSpecs-Specs",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "DenisKudryashov 3/4/2016 11:54",
+	"instvars" : [
+		 ],
+	"name" : "SpecOfCollectionOrderedEquality",
+	"pools" : [
+		 ],
+	"super" : "SpecOfObjectValue",
+	"type" : "normal" }

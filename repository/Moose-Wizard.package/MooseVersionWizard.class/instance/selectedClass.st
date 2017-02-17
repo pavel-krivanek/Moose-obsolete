@@ -1,0 +1,4 @@
+accessing
+selectedClass
+
+	^configuration theNonMetaClass

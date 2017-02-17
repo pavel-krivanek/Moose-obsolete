@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"CurrentAction" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTAbstractExampleNautilusActionButton",
+	"pools" : [
+		 ],
+	"super" : "AbstractMethodIconAction",
+	"type" : "normal" }

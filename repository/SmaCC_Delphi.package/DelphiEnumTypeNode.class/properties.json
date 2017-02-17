@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"left",
+		"names",
+		"commas",
+		"right" ],
+	"name" : "DelphiEnumTypeNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiTypeNode",
+	"type" : "normal" }

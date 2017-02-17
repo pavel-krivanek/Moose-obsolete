@@ -1,0 +1,3 @@
+tokenizing
+nextContentMarkupToken
+	self subclassResponsibility

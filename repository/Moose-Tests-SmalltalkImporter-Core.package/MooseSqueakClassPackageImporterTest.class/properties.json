@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-SmalltalkImporter-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseSqueakClassPackageImporterTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

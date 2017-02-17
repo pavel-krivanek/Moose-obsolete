@@ -1,0 +1,3 @@
+iterating
+previousPredicate
+	^ self predicateIterator previousVisited

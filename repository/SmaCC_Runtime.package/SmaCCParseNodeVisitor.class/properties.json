@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Runtime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCParseNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

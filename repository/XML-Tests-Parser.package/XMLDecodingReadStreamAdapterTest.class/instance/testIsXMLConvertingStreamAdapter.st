@@ -1,0 +1,3 @@
+tests
+testIsXMLConvertingStreamAdapter
+	self assert: self newStreamAdapter isXMLConvertingStreamAdapter

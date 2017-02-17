@@ -1,0 +1,3 @@
+updating
+updateSelectionInterval
+	self updateReceiverCodeSelection

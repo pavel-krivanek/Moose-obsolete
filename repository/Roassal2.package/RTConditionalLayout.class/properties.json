@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"condition",
+		"thenLayout",
+		"elseLayout",
+		"overallLayout" ],
+	"name" : "RTConditionalLayout",
+	"pools" : [
+		 ],
+	"super" : "RTLayout",
+	"type" : "normal" }

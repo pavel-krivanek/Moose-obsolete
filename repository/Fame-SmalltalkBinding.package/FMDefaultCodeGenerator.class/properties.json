@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FMDefaultCodeGenerator",
+	"pools" : [
+		 ],
+	"super" : "FMAbstractCodeGenerator",
+	"type" : "normal" }

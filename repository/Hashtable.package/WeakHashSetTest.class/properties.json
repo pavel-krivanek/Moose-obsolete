@@ -1,0 +1,14 @@
+{
+	"category" : "Hashtable-Test",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WeakHashSetTest",
+	"pools" : [
+		 ],
+	"super" : "HashSetTest",
+	"type" : "normal" }

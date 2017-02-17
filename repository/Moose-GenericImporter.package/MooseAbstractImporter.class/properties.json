@@ -1,0 +1,16 @@
+{
+	"category" : "Moose-GenericImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"importingContext",
+		"loggingStream",
+		"targetModel" ],
+	"name" : "MooseAbstractImporter",
+	"pools" : [
+		 ],
+	"super" : "MooseTask",
+	"type" : "normal" }

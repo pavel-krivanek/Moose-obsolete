@@ -1,0 +1,3 @@
+tokenizing
+nextName
+	self subclassResponsibility

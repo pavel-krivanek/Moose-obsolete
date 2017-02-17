@@ -1,0 +1,1 @@
+This class records sent messages in a queue.

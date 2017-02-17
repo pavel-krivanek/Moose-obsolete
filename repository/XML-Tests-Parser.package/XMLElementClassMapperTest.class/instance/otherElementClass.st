@@ -1,0 +1,3 @@
+acccessing
+otherElementClass
+	^ XMLFElement

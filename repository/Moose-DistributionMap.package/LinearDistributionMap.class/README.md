@@ -1,0 +1,1 @@
+LinearDistributionMap displays the elements based on linear shades of color. 

@@ -1,0 +1,14 @@
+{
+	"category" : "PetitSQLite-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PetitSQLiteASTNodesParser",
+	"pools" : [
+		 ],
+	"super" : "PetitSQLiteGrammar",
+	"type" : "normal" }

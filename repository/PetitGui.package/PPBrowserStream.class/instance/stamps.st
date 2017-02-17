@@ -1,0 +1,3 @@
+information
+stamps
+	^ stamps

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-FormalConceptAnalysis",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MalFormalContextTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

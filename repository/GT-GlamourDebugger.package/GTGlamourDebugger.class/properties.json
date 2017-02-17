@@ -1,0 +1,14 @@
+{
+	"category" : "GT-GlamourDebugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTGlamourDebugger",
+	"pools" : [
+		 ],
+	"super" : "GTGenericStackDebugger",
+	"type" : "normal" }

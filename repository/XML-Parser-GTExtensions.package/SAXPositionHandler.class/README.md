@@ -1,0 +1,1 @@
+This class is a SAXHandler that can track the positions of tokens. Does not support validation or entity replacement but can check wellformedness and namespaces.

@@ -1,0 +1,1 @@
+This is an AST node class to wrap the root node of a parsed XPath expression.

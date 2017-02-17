@@ -1,0 +1,3 @@
+accessing
+entityConfiguration: anEntityConfiguration
+	entityConfiguration := anEntityConfiguration

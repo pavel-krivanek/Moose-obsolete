@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-DistributionMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"properties" ],
+	"name" : "OpenDistributionMapBasedOnElementsWizard",
+	"pools" : [
+		 ],
+	"super" : "OpenDistributionMapWizard",
+	"type" : "normal" }

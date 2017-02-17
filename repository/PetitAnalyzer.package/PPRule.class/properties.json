@@ -1,0 +1,15 @@
+{
+	"category" : "PetitAnalyzer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"owner",
+		"search" ],
+	"name" : "PPRule",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

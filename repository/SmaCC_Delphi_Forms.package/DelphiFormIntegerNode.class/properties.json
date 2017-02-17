@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Delphi_Forms",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DelphiFormIntegerNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiFormLiteralNode",
+	"type" : "normal" }

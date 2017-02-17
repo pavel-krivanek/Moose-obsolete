@@ -1,0 +1,3 @@
+private
+greaterThanOrEqualToNodeSet: aNodeSet
+	self subclassResponsibility

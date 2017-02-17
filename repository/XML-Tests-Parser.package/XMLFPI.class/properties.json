@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DOM-Factories",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "XMLFPI",
+	"pools" : [
+		 ],
+	"super" : "XMLPI",
+	"type" : "normal" }

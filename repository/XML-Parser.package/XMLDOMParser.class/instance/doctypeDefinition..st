@@ -1,0 +1,3 @@
+private
+doctypeDefinition: aDoctypeDefinition
+	self document doctypeDefinition: aDoctypeDefinition

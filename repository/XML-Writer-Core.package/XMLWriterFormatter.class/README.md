@@ -1,0 +1,1 @@
+An abstract class for formatters used to decorate markup writers. Override the "formatting" messages.

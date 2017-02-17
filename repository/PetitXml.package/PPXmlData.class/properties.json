@@ -1,0 +1,14 @@
+{
+	"category" : "PetitXml-Nodes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "lr 2/4/2010 13:27",
+	"instvars" : [
+		"data" ],
+	"name" : "PPXmlData",
+	"pools" : [
+		 ],
+	"super" : "PPXmlNode",
+	"type" : "normal" }

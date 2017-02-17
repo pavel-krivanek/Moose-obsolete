@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Tests-Text",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"codeBase" ],
+	"name" : "DudeDummyModel",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

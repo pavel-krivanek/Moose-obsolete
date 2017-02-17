@@ -1,0 +1,1 @@
+This class is a null read stream that is already #atEnd and also makes sending #atEnd after #close or sending #close more than once safe, which is needed for the XMLNestedStreamReader null stream.

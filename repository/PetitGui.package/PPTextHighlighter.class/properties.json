@@ -1,0 +1,15 @@
+{
+	"category" : "PetitGui-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"parser",
+		"attributeMapper" ],
+	"name" : "PPTextHighlighter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

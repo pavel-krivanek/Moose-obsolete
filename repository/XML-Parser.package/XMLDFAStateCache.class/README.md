@@ -1,0 +1,1 @@
+This class uses a dictionary with NFAStateSet keys to cache DFA states. (Does not use the regular XML key/value  cache for performance)

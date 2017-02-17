@@ -1,0 +1,3 @@
+accessing
+basicNext
+	^ self next

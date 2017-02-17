@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Finder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "tg 9/16/2009 21:08",
+	"instvars" : [
+		 ],
+	"name" : "MooseBrowsers",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

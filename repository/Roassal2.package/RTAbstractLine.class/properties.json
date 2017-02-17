@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/29/2015 18:33",
+	"instvars" : [
+		"width",
+		"attachPoint",
+		"allowSelfLoop" ],
+	"name" : "RTAbstractLine",
+	"pools" : [
+		 ],
+	"super" : "RTShape",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+private
+input
+	^input

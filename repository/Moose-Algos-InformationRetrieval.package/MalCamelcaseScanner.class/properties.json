@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"next" ],
+	"name" : "MalCamelcaseScanner",
+	"pools" : [
+		 ],
+	"super" : "MalTermScanner",
+	"type" : "normal" }

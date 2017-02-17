@@ -1,0 +1,4 @@
+accessing
+initialPosition
+
+	^ initialPosition

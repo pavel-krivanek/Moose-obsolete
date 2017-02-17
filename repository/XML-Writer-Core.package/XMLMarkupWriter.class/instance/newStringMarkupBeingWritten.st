@@ -1,0 +1,3 @@
+private
+newStringMarkupBeingWritten
+	self write

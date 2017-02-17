@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Builder-Microprint",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nbOfHorizontal",
+		"rules" ],
+	"name" : "RTMicroprint",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

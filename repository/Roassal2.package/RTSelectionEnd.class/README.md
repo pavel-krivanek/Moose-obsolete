@@ -1,0 +1,1 @@
+I am called when the selection with the elastic box ends

@@ -1,0 +1,14 @@
+{
+	"category" : "Dynamix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "DamienCassou 4/22/2015 11:55",
+	"instvars" : [
+		 ],
+	"name" : "DynamixTraceGroup",
+	"pools" : [
+		 ],
+	"super" : "MooseGroup",
+	"type" : "normal" }

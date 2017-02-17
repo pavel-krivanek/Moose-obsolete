@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Selection",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 12/1/2015 13:58",
+	"instvars" : [
+		"color" ],
+	"name" : "RTZoomableBoxView",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractElasticBoxInteraction",
+	"type" : "normal" }

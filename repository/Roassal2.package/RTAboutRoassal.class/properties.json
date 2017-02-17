@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-MorphSpecific",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 10/27/2016 14:05",
+	"instvars" : [
+		 ],
+	"name" : "RTAboutRoassal",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

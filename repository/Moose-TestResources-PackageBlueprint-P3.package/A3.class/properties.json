@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-PackageBlueprint-P3",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "A3",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

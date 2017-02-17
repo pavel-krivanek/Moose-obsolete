@@ -1,0 +1,22 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"packedToken",
+		"arrayToken",
+		"left",
+		"indexes",
+		"commas",
+		"right",
+		"ofToken",
+		"type",
+		"constToken" ],
+	"name" : "DelphiArrayTypeNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiTypeNode",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+A namespace scope is a possibly empty set of mappings from namespace prefixes to URIs and an optional default namespace URI to be used for unprefixed elements. Scopes can be created from other scopes by copying. (Uses copy-on-write to reduce memory use.)

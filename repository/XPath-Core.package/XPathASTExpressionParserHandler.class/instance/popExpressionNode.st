@@ -1,0 +1,3 @@
+private
+popExpressionNode
+	^ expressionNodeStack removeLast

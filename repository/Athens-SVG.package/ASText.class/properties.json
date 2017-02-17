@@ -1,0 +1,14 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ASText",
+	"pools" : [
+		 ],
+	"super" : "ASShape",
+	"type" : "normal" }

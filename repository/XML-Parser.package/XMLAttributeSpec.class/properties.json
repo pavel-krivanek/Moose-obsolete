@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Utils",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 7/24/2016 06:57",
+	"instvars" : [
+		 ],
+	"name" : "XMLAttributeSpec",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

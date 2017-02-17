@@ -1,0 +1,4 @@
+import options
+shouldImportSubclasses
+	
+	^importSubclasses

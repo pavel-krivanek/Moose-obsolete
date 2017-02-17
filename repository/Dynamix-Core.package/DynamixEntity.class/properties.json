@@ -1,0 +1,14 @@
+{
+	"category" : "Dynamix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "DynamixEntity",
+	"pools" : [
+		 ],
+	"super" : "MooseEntity",
+	"type" : "normal" }

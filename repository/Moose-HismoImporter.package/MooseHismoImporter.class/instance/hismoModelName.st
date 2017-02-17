@@ -1,0 +1,4 @@
+accessing
+hismoModelName
+
+	^ hismoModelName

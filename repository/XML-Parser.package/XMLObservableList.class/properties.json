@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-DOM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 3/29/2016 06:02",
+	"instvars" : [
+		"observer" ],
+	"name" : "XMLObservableList",
+	"pools" : [
+		 ],
+	"super" : "XMLOrderedList",
+	"type" : "normal" }

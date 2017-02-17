@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "usmanbhatti 11/23/2011 15:02",
+	"instvars" : [
+		"element" ],
+	"name" : "FAMIXSourceAnchor",
+	"pools" : [
+		 ],
+	"super" : "FAMIXEntity",
+	"type" : "normal" }

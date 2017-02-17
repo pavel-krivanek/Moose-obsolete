@@ -1,0 +1,1 @@
+This class contains some examples. These examples are not accessible from the World menu.

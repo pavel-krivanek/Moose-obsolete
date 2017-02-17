@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Settings",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseSettings",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

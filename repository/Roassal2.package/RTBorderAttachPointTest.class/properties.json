@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"attachPoint",
+		"el" ],
+	"name" : "RTBorderAttachPointTest",
+	"pools" : [
+		 ],
+	"super" : "RTAttachPointTest",
+	"type" : "normal" }

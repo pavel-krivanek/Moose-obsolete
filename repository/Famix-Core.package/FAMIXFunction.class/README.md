@@ -1,0 +1,1 @@
+FAMIXFunction represents a behavioural entity in a procedural language.

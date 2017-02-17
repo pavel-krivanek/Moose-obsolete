@@ -1,0 +1,15 @@
+{
+	"category" : "GT-DebuggerExtensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"left",
+		"right" ],
+	"name" : "AndContextPredicate",
+	"pools" : [
+		 ],
+	"super" : "GTDebuggerContextPredicate",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+accessing
+propertyColorMap 
+
+	^ colorMap

@@ -1,0 +1,14 @@
+{
+	"category" : "Glamour-Examples-Extras",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 9/9/2012 02:50",
+	"instvars" : [
+		 ],
+	"name" : "GLMParameterizableExamplesBrowser",
+	"pools" : [
+		 ],
+	"super" : "GLMBrowserTemplate",
+	"type" : "normal" }

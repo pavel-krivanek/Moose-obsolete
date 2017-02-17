@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-MonticelloImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"importer" ],
+	"name" : "MooseMonticelloImporterTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

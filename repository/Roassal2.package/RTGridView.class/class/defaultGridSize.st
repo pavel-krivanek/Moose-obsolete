@@ -1,0 +1,3 @@
+initialization
+defaultGridSize
+	^ 20

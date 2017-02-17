@@ -1,0 +1,4 @@
+properties
+earliestEvolutionOfNumberOfStatements
+
+	^ self allClassHistories sumNumbers: #earliestEvolutionOfNumberOfStatements

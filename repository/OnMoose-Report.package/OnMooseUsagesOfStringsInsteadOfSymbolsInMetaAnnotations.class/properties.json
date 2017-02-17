@@ -1,0 +1,14 @@
+{
+	"category" : "OnMoose-Report",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OnMooseUsagesOfStringsInsteadOfSymbolsInMetaAnnotations",
+	"pools" : [
+		 ],
+	"super" : "REPMooseQueryConcern",
+	"type" : "normal" }

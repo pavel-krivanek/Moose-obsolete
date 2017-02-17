@@ -1,0 +1,1 @@
+This class models an element namespace prefix and URI mapping as a DOM node for compatibility with the XPath standard. Namespace nodes are equal only if they have the same name, namespace URI, and belong to the same element.

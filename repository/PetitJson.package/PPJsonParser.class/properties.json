@@ -1,0 +1,14 @@
+{
+	"category" : "PetitJson-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPJsonParser",
+	"pools" : [
+		 ],
+	"super" : "PPJsonGrammar",
+	"type" : "normal" }

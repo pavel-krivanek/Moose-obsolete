@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-LAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LANEditor" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LANPool",
+	"pools" : [
+		 ],
+	"super" : "SharedPool",
+	"type" : "normal" }

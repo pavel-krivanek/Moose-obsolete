@@ -1,0 +1,16 @@
+{
+	"category" : "PetitTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parser",
+		"result",
+		"debugResult" ],
+	"name" : "PPCompositeParserTest",
+	"pools" : [
+		 ],
+	"super" : "PPAbstractParserTest",
+	"type" : "normal" }

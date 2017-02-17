@@ -1,0 +1,4 @@
+accessing
+buttonEnabled
+
+	^ buttonEnabled 

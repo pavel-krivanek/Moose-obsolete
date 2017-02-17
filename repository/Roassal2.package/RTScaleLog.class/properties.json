@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Scaling",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"linear",
+		"base",
+		"positive" ],
+	"name" : "RTScaleLog",
+	"pools" : [
+		 ],
+	"super" : "RTScaleLinear",
+	"type" : "normal" }

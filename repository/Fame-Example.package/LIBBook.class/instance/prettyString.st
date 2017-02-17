@@ -1,0 +1,3 @@
+printing
+prettyString
+	^ self title

@@ -1,0 +1,3 @@
+setup
+filesystem
+	^ FileSystem disk

@@ -1,0 +1,3 @@
+testing
+hasSkippedParameterEntityReferences
+	self subclassResponsibility

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Hismo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "HismoMethodHistoryGroup",
+	"pools" : [
+		 ],
+	"super" : "HismoHistoryGroup",
+	"type" : "normal" }

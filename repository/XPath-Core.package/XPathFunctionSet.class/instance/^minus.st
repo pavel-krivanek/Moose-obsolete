@@ -1,0 +1,3 @@
+composition
+- aFunctionOrFunctionSet
+	^ aFunctionOrFunctionSet asXPathFunctionSetSubtractedFromFunctions: self

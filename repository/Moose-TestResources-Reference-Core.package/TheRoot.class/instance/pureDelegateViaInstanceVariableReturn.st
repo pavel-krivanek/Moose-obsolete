@@ -1,0 +1,4 @@
+delegating
+pureDelegateViaInstanceVariableReturn
+
+	^ x pureDelegateViaInstanceVariableReturn

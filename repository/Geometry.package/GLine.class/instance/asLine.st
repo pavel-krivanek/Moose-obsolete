@@ -1,0 +1,3 @@
+converting
+asLine
+	^ self 

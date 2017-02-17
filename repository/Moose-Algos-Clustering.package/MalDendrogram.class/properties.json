@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"parent" ],
+	"name" : "MalDendrogram",
+	"pools" : [
+		 ],
+	"super" : "Collection",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-AttachPoint-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"circle" ],
+	"name" : "RTCircleGeometryTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

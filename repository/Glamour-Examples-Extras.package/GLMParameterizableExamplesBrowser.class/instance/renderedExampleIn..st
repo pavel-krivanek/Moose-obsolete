@@ -1,0 +1,3 @@
+hooks
+renderedExampleIn: composer
+	self subclassResponsibility

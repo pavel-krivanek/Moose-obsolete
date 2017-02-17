@@ -1,0 +1,6 @@
+parts rendering
+merlinMultiSelectionItemsSelectorRenderingFor: aMultiSelectionItemSelectorPart
+
+
+	^ MerlinMultiSelectionItemsSelectorWidget new wizardPart: aMultiSelectionItemSelectorPart; yourself. 
+	

@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-Organization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selector" ],
+	"name" : "GTExampleThemeIcon",
+	"pools" : [
+		 ],
+	"super" : "GTExampleIcon",
+	"type" : "normal" }

@@ -1,0 +1,21 @@
+{
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 3/9/2016 16:24",
+	"instvars" : [
+		"element",
+		"edge",
+		"minDistance",
+		"balance",
+		"anchorElement",
+		"guideEdge",
+		"anchorShape",
+		"guideLine" ],
+	"name" : "RTAnchorConstraint",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

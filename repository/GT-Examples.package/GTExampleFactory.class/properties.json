@@ -1,0 +1,17 @@
+{
+	"category" : "GT-Examples-Organization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 8/22/2016 14:33",
+	"instvars" : [
+		"cache",
+		"source",
+		"provider",
+		"exampleClass" ],
+	"name" : "GTExampleFactory",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

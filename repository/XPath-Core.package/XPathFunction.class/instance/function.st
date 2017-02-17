@@ -1,0 +1,3 @@
+invoking
+function
+	self subclassResponsibility

@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC_Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"symbols",
+		"components" ],
+	"name" : "SmaCCSymbolSet",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }

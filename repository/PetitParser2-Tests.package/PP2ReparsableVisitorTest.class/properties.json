@@ -1,0 +1,17 @@
+{
+	"category" : "PetitParser2-Tests-Optimizations",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TPP2TypeAssertions classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"reparsable",
+		"parser" ],
+	"name" : "PP2ReparsableVisitorTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"traitcomposition" : "TPP2TypeAssertions",
+	"type" : "normal" }

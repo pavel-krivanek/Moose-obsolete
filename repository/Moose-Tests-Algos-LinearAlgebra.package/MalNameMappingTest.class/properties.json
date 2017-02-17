@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-LinearAlgebra",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MalNameMappingTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

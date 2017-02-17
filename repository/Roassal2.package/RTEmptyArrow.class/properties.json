@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-LineDecorations",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTEmptyArrow",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractArrow",
+	"type" : "normal" }

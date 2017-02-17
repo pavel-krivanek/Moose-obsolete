@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TRMouseDraggingTest",
+	"pools" : [
+		 ],
+	"super" : "TRTest",
+	"type" : "normal" }

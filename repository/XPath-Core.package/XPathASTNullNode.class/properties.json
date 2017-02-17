@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		"instance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/22/2017 18:40",
+	"instvars" : [
+		 ],
+	"name" : "XPathASTNullNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTNode",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Rewrite_Engine_Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCRewriteTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

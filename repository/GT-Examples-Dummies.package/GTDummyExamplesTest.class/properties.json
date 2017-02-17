@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-Dummies-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTDummyExamplesTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

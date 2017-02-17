@@ -1,0 +1,3 @@
+tokenizing
+nextTokenFrom: aTokenizer
+	self subclassResponsibility

@@ -1,0 +1,3 @@
+accessing
+contentHandlerClass
+	^ SAX2ContentHandler

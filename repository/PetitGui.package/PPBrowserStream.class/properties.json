@@ -1,0 +1,16 @@
+{
+	"category" : "PetitGui-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"positions",
+		"stamps",
+		"parsers" ],
+	"name" : "PPBrowserStream",
+	"pools" : [
+		 ],
+	"super" : "PPStream",
+	"type" : "normal" }

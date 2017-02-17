@@ -1,0 +1,4 @@
+accessing variable
+accessingGlobalVariableHavingNamespaceName
+
+	Smalltalk

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Scaling-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTScaleTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

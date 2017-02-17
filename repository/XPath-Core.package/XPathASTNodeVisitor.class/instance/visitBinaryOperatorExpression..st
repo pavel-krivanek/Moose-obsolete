@@ -1,0 +1,3 @@
+visiting - operators
+visitBinaryOperatorExpression: aBinaryOperatorExpression
+	^ self visitNodeWithOtherExpression: aBinaryOperatorExpression

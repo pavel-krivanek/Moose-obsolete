@@ -1,0 +1,3 @@
+converting
+asXPathString
+	^ self string

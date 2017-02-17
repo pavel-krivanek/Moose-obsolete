@@ -1,0 +1,3 @@
+streaming
+current
+	^ current

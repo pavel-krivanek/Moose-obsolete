@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-DOM",
+	"classinstvars" : [
+		"instance" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 6/1/2015 19:28",
+	"instvars" : [
+		 ],
+	"name" : "XPathSortOrder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

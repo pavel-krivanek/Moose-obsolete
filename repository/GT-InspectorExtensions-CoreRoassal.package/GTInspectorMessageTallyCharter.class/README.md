@@ -1,0 +1,1 @@
+Helper class for displaying charts specific for a MessageTally.

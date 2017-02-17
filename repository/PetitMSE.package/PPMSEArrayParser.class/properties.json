@@ -1,0 +1,14 @@
+{
+	"category" : "PetitMSE",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPMSEArrayParser",
+	"pools" : [
+		 ],
+	"super" : "PPMSEGrammar",
+	"type" : "normal" }

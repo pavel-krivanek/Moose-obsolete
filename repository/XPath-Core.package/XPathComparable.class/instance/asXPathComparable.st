@@ -1,0 +1,3 @@
+converting
+asXPathComparable
+	^ self

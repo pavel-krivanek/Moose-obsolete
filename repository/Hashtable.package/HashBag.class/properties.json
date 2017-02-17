@@ -1,0 +1,14 @@
+{
+	"category" : "Hashtable",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "HashBag",
+	"pools" : [
+		 ],
+	"super" : "Bag",
+	"type" : "normal" }

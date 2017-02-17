@@ -1,0 +1,14 @@
+{
+	"category" : "DeepTraverser-Tests-Transformed-To-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DeepGraph2TraverserTest",
+	"pools" : [
+		 ],
+	"super" : "DeepTraverserGraphTest",
+	"type" : "normal" }

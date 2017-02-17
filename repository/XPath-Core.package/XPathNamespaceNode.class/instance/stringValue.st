@@ -1,0 +1,3 @@
+accessing
+stringValue
+	^ self uri

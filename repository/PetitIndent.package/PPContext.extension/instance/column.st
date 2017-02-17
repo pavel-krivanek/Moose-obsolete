@@ -1,0 +1,3 @@
+*PetitIndent
+column
+	^ stream column

@@ -1,0 +1,1 @@
+A context for parsing node tests where attributes are the principal node type.

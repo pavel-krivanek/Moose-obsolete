@@ -1,0 +1,14 @@
+{
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "BernardoContreras 3/16/2015 21:29",
+	"instvars" : [
+		"trimmer" ],
+	"name" : "PPTrimmingParser",
+	"pools" : [
+		 ],
+	"super" : "PPDelegateParser",
+	"type" : "normal" }

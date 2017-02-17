@@ -1,0 +1,14 @@
+{
+	"category" : "CollectionExtensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "CEStringExtensionTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

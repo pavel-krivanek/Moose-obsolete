@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lastItem" ],
+	"name" : "GTAbstractExampleMenu",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

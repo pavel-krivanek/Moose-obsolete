@@ -1,0 +1,3 @@
+configuration
+noLabel
+	shouldHaveLabel := false

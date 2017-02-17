@@ -1,0 +1,3 @@
+testing
+isImplied
+	^ true

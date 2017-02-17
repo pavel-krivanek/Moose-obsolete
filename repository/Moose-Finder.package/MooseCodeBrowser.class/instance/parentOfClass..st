@@ -1,0 +1,3 @@
+building
+parentOfClass: aClass
+	self subclassResponsibility

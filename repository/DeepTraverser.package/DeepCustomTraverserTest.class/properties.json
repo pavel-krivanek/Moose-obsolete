@@ -1,0 +1,14 @@
+{
+	"category" : "DeepTraverser-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"traverser" ],
+	"name" : "DeepCustomTraverserTest",
+	"pools" : [
+		 ],
+	"super" : "DeepTraverserGraphTest",
+	"type" : "normal" }

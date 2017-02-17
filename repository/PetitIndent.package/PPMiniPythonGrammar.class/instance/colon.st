@@ -1,0 +1,3 @@
+whitespaces
+colon
+	^ $: asParser

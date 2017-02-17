@@ -1,0 +1,17 @@
+{
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"string",
+		"r1",
+		"r2",
+		"cursor" ],
+	"name" : "MalAbstractStemmer",
+	"pools" : [
+		 ],
+	"super" : "MalStemmer",
+	"type" : "normal" }

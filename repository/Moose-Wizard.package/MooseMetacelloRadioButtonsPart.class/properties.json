@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Wizard",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"option" ],
+	"name" : "MooseMetacelloRadioButtonsPart",
+	"pools" : [
+		 ],
+	"super" : "WizardPart",
+	"type" : "normal" }

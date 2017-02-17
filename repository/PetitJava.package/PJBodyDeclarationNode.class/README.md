@@ -1,0 +1,1 @@
+General body declaration of a class or method

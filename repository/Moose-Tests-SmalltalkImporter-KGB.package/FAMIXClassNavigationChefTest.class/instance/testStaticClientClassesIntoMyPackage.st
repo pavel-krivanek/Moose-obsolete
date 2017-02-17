@@ -1,0 +1,3 @@
+staticDependencies
+testStaticClientClassesIntoMyPackage
+	self assert: self c11FullRefereeOutSide queryStaticIncomingAssociations atTypeScope withinMyPackage size equals: 1

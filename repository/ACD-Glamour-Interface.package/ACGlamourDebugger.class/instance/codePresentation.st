@@ -1,0 +1,3 @@
+accessing
+codePresentation
+	^ self receiverCodePresentation

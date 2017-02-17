@@ -1,0 +1,3 @@
+parsing
+nonEmpty
+	^ self

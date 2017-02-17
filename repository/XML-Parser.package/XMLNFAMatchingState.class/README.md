@@ -1,0 +1,1 @@
+This state can pass to a next state if the input matches against an object.

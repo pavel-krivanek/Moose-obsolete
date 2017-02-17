@@ -1,0 +1,15 @@
+{
+	"category" : "GT-DebuggerExtensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"breakpoints",
+		"debuggerData" ],
+	"name" : "GTReflectivityDebugAction",
+	"pools" : [
+		 ],
+	"super" : "DebugAction",
+	"type" : "normal" }

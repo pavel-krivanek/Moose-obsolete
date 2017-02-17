@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"semicolonToken" ],
+	"name" : "SwiftLoopStatementNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftStatementNode",
+	"type" : "normal" }

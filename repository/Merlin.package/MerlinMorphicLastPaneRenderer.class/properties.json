@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MerlinMorphicLastPaneRenderer",
+	"pools" : [
+		 ],
+	"super" : "MerlinMorphicPaneRenderer",
+	"type" : "normal" }

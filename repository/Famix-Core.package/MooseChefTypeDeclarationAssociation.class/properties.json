@@ -1,0 +1,15 @@
+{
+	"category" : "Famix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NicolasAnquetil 12/3/2011 22:44",
+	"instvars" : [
+		"from",
+		"to" ],
+	"name" : "MooseChefTypeDeclarationAssociation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

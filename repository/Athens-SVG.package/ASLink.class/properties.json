@@ -1,0 +1,16 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"url",
+		"isId",
+		"id" ],
+	"name" : "ASLink",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

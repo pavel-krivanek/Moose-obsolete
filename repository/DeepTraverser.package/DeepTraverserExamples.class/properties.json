@@ -1,0 +1,14 @@
+{
+	"category" : "DeepTraverser-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DeepTraverserExamples",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

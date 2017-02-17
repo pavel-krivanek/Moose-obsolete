@@ -1,0 +1,3 @@
+testing
+atEnd
+	^ currentState isAccepting

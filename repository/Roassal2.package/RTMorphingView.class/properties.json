@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Interactions-MorphingView",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RobertoMinelli 4/20/2016 14:12",
+	"instvars" : [
+		 ],
+	"name" : "RTMorphingView",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractMorphingView",
+	"type" : "normal" }

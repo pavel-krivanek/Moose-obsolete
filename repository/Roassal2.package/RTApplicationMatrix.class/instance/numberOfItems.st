@@ -1,0 +1,3 @@
+accessing
+numberOfItems
+	^ items size

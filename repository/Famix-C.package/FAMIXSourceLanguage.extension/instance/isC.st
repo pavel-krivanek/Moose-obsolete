@@ -1,0 +1,3 @@
+*Famix-C
+isC 
+	^ false

@@ -1,0 +1,3 @@
+accessing
+declarationHandlerClass
+	^ SAX2DeclarationHandler

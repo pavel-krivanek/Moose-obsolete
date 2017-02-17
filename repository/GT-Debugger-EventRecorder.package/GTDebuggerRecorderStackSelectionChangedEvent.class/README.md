@@ -1,0 +1,1 @@
+I model the action of changing the selection in the stack pane of the debugger.

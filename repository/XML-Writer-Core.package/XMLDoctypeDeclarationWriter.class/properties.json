@@ -1,0 +1,15 @@
+{
+	"category" : "XML-Writer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 6/15/2015 02:32",
+	"instvars" : [
+		"root",
+		"externalIDWriter" ],
+	"name" : "XMLDoctypeDeclarationWriter",
+	"pools" : [
+		 ],
+	"super" : "XMLEmbeddedMarkupWriter",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+accessing
+datePattern
+
+	^ datePattern

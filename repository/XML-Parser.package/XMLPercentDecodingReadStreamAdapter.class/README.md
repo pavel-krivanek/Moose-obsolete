@@ -1,0 +1,1 @@
+A read stream adapter that decodes streams encoded with  sequences of "%HH" byte hex values for parsing URIs.

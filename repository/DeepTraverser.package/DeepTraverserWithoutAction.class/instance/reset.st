@@ -1,0 +1,3 @@
+streaming
+reset
+	initializer value

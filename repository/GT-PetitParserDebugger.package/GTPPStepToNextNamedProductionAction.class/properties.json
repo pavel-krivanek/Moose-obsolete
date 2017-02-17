@@ -1,0 +1,14 @@
+{
+	"category" : "GT-PetitParserDebugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"production" ],
+	"name" : "GTPPStepToNextNamedProductionAction",
+	"pools" : [
+		 ],
+	"super" : "GTPPDebugAction",
+	"type" : "normal" }

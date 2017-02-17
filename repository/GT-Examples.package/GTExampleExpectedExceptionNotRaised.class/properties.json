@@ -1,0 +1,15 @@
+{
+	"category" : "GT-Examples-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 8/21/2016 15:26",
+	"instvars" : [
+		"expectedError",
+		"exception" ],
+	"name" : "GTExampleExpectedExceptionNotRaised",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

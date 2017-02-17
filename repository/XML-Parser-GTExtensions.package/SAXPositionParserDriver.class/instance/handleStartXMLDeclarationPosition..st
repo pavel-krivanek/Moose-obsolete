@@ -1,0 +1,3 @@
+handling - positions
+handleStartXMLDeclarationPosition: aPosition
+	self saxHandler startXMLDeclarationPosition: aPosition

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"English" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"array" ],
+	"name" : "MalStopwords",
+	"pools" : [
+		 ],
+	"super" : "Collection",
+	"type" : "normal" }

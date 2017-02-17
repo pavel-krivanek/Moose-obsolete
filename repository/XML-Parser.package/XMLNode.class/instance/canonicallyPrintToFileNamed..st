@@ -1,0 +1,7 @@
+printing
+canonicallyPrintToFileNamed: aFileName
+ 	"Prints to specified file as canonical XML (http://www.w3.org/TR/xml-c14n)"
+
+	self
+		printToFileNamed: aFileName
+		beforeWritingDo: [:writer | writer isCanonical: true]

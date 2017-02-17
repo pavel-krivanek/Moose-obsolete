@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-Organization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"arguments" ],
+	"name" : "GTExampleMethod",
+	"pools" : [
+		 ],
+	"super" : "GTAbstractExampleMethod",
+	"type" : "normal" }

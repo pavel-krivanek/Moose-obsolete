@@ -1,0 +1,1 @@
+This class is an ordered list that sends notifications to an observer when objects are added to it or removed from it. Subclasses should override the #beforeAdding:, #afterAdding:at:, #afterAddingLast: and #afterRemoving: messages to send custom notifications.

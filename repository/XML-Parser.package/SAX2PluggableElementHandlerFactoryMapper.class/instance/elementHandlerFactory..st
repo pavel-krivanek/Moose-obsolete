@@ -1,0 +1,3 @@
+accessing
+elementHandlerFactory: anElementHandlerFactory
+	elementHandlerFactory := anElementHandlerFactory

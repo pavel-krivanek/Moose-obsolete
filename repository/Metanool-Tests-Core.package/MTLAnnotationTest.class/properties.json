@@ -1,0 +1,14 @@
+{
+	"category" : "Metanool-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MTLAnnotationTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+*Famix-Extensions
+structuralChildren 
+	^ #()

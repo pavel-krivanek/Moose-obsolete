@@ -1,0 +1,3 @@
+accessing
+replacementStream
+	^ entity replacementStream

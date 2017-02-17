@@ -1,0 +1,9 @@
+SystemOrganization addCategory: #Merlin!
+SystemOrganization addCategory: 'Merlin-Core'!
+SystemOrganization addCategory: 'Merlin-Examples'!
+SystemOrganization addCategory: 'Merlin-Panes'!
+SystemOrganization addCategory: 'Merlin-Parts'!
+SystemOrganization addCategory: 'Merlin-PartsLayout'!
+SystemOrganization addCategory: 'Merlin-Rendering'!
+SystemOrganization addCategory: 'Merlin-Tests'!
+SystemOrganization addCategory: 'Merlin-ToBeRemoved'!

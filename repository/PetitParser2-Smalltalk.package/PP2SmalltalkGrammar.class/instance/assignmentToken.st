@@ -1,0 +1,3 @@
+token
+assignmentToken
+	^ ':=' asPParser smalltalkToken

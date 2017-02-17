@@ -1,0 +1,4 @@
+accessing
+size 
+	 
+	^dictionary size

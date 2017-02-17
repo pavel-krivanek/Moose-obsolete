@@ -1,0 +1,3 @@
+class
+javaClassInClassBody
+	^ javaClass

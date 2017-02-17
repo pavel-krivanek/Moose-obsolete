@@ -1,0 +1,4 @@
+sending message
+returningSingleSelfSend
+
+	^self accessSharedVariableFromTheInstanceSide

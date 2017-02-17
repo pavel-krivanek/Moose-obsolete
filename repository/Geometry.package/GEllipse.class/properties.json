@@ -1,0 +1,16 @@
+{
+	"category" : "Geometry",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 5/17/2016 10:01",
+	"instvars" : [
+		"center",
+		"a",
+		"b" ],
+	"name" : "GEllipse",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

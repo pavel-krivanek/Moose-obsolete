@@ -1,0 +1,3 @@
+UI
+defaultTopLabelRotation
+	^ -55

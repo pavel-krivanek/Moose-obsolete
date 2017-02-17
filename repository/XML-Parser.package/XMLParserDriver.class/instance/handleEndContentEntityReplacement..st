@@ -1,0 +1,2 @@
+handling
+handleEndContentEntityReplacement: aName

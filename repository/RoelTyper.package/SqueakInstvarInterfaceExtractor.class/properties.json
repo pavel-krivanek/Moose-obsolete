@@ -1,0 +1,14 @@
+{
+	"category" : "RoelTyper-Squeak",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SqueakInstvarInterfaceExtractor",
+	"pools" : [
+		 ],
+	"super" : "InstvarInterfaceExtractor",
+	"type" : "normal" }

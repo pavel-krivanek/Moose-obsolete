@@ -1,0 +1,14 @@
+{
+	"category" : "GT-GlamourDebugger",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTGlamourStepToPresentationBuildAction",
+	"pools" : [
+		 ],
+	"super" : "DebugAction",
+	"type" : "normal" }

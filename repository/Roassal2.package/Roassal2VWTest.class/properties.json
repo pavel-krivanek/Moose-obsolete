@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-ExporterVW",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "Roassal2VWTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

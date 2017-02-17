@@ -1,0 +1,1 @@
+An abstract class for reentrant mutexes that support nested sends of #critical: by the same process without deadlocking.

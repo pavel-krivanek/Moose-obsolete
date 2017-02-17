@@ -1,0 +1,4 @@
+accessing
+historyDictionary
+	
+	^self entityCache

@@ -1,0 +1,1 @@
+This class writes general and parameter entity references.

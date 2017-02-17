@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Interactions-Resize-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "RTResizableTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

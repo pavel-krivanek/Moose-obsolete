@@ -1,0 +1,14 @@
+{
+	"category" : "PetitSmalltalk-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"SeparatorPredicate" ],
+	"commentStamp" : "JanKurs 11/14/2014 17:03",
+	"instvars" : [
+		 ],
+	"name" : "PPSmalltalkTokenParser",
+	"pools" : [
+		 ],
+	"super" : "PPTokenParser",
+	"type" : "normal" }

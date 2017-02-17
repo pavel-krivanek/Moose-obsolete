@@ -1,0 +1,3 @@
+accessing
+defaultComparable
+	self subclassResponsibility

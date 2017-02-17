@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"localName" ],
+	"name" : "XPathAttributeNodeTestForLocalName",
+	"pools" : [
+		 ],
+	"super" : "XPathAttributeNodeTest",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+Define the shapes added to the view by the pad and bar builders

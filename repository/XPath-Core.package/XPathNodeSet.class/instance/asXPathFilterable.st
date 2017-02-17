@@ -1,0 +1,3 @@
+converting
+asXPathFilterable
+	^ self sorted

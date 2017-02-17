@@ -1,0 +1,1 @@
+This class is an optimizing node visitor that does constant folding by eliminating operator expressions that can be evaluated at compile time including arithmetic and boolean operator expressions with literal string or number operands, optimizes location path steps, and eliminates redundant predicates.

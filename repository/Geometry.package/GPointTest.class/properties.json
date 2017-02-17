@@ -1,0 +1,14 @@
+{
+	"category" : "Geometry-Test",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GPointTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

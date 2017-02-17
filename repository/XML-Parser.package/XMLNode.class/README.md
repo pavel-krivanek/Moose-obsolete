@@ -1,0 +1,1 @@
+This is a base class for XML nodes. It has testing messages, messages to access the parent, sibling, and ancestor nodes, and messages to control printing.

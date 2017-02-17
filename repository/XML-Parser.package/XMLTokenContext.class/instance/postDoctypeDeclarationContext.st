@@ -1,0 +1,3 @@
+changing
+postDoctypeDeclarationContext
+	^ XMLPostDoctypeDeclarationContext new

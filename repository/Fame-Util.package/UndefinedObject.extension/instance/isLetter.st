@@ -1,0 +1,3 @@
+*fame-util
+isLetter
+	^false

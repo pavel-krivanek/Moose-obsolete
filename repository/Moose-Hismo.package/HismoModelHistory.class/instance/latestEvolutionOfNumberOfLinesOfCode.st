@@ -1,0 +1,4 @@
+properties
+latestEvolutionOfNumberOfLinesOfCode
+
+	^ self allClassHistories sumNumbers: #latestEvolutionOfNumberOfLinesOfCode

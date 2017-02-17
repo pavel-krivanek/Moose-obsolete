@@ -1,0 +1,3 @@
+accessing
+capacity
+	^ set capacity

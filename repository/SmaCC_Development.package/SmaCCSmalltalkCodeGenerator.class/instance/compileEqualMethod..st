@@ -1,0 +1,3 @@
+compiling-nodes
+compileEqualMethod: aSmaCCNodeClassDefinition
+	

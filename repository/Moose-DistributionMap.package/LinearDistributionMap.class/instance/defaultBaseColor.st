@@ -1,0 +1,4 @@
+rendering
+defaultBaseColor
+
+	^ Color gray

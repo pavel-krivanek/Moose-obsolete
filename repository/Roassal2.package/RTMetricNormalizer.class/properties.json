@@ -1,0 +1,17 @@
+{
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"elements",
+		"view",
+		"translator",
+		"edges" ],
+	"name" : "RTMetricNormalizer",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

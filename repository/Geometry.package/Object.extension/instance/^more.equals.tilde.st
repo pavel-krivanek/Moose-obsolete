@@ -1,0 +1,3 @@
+*Geometry
+>=~ other
+	^ other <=~ self

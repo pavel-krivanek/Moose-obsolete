@@ -1,0 +1,3 @@
+private
+liveExtractType
+	^self

@@ -1,0 +1,3 @@
+accessing
+computeResult 
+	^ nil

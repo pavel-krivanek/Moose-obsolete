@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-Animation",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 10/8/2016 12:19",
+	"instvars" : [
+		"cycleLength",
+		"element" ],
+	"name" : "RTAnimation",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC_Rewrite_Engine",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCReplaceExpressionScanner",
+	"pools" : [
+		 ],
+	"super" : "SmaCCScanner",
+	"type" : "normal" }

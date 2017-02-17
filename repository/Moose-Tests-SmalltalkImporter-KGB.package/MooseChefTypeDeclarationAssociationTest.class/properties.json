@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-SmalltalkImporter-KGB-MooseChef",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model" ],
+	"name" : "MooseChefTypeDeclarationAssociationTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "EQSimple",
+	"pools" : [
+		 ],
+	"super" : "EQExpression",
+	"type" : "normal" }

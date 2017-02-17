@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 5/11/2015 00:46",
+	"instvars" : [
+		"parsingResult" ],
+	"name" : "XPathParserHandler",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

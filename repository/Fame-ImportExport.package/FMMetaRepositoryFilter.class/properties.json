@@ -1,0 +1,15 @@
+{
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"newMetaRepository",
+		"classes" ],
+	"name" : "FMMetaRepositoryFilter",
+	"pools" : [
+		 ],
+	"super" : "FMMetaRepositoryVisitor",
+	"type" : "normal" }

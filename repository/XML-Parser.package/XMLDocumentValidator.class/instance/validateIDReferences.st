@@ -1,0 +1,3 @@
+validating
+validateIDReferences
+	self subclassResponsibility

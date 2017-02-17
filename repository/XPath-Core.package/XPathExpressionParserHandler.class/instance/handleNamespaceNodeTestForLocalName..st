@@ -1,0 +1,2 @@
+handling - node tests
+handleNamespaceNodeTestForLocalName: aLocalName

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-SmalltalkImporter-KGB",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXNamespaceNavigationTest",
+	"pools" : [
+		 ],
+	"super" : "AbstractFAMIXNavigationTest",
+	"type" : "normal" }

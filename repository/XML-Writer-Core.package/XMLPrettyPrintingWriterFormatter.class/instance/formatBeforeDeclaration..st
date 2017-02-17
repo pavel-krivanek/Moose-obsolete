@@ -1,0 +1,3 @@
+formatting
+formatBeforeDeclaration: aDeclarationWriter
+	self writeLineBreak

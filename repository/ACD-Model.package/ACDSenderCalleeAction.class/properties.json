@@ -1,0 +1,14 @@
+{
+	"category" : "ACD-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ACDSenderCalleeAction",
+	"pools" : [
+		 ],
+	"super" : "DebugAction",
+	"type" : "normal" }

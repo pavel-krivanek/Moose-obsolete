@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-MonticelloImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"entities",
+		"scope" ],
+	"name" : "MooseMonticelloMethodPopulator",
+	"pools" : [
+		 ],
+	"super" : "MooseMonticelloVisitor",
+	"type" : "normal" }

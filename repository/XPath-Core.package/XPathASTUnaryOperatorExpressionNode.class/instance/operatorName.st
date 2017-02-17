@@ -1,0 +1,3 @@
+accessing
+operatorName
+	self subclassResponsibility

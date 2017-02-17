@@ -1,0 +1,3 @@
+private
+resetStub
+	topic := nil.

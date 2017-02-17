@@ -1,0 +1,3 @@
+accessing
+defaultMaxSize
+	^ 32

@@ -1,0 +1,14 @@
+{
+	"category" : "PetitSmalltalk-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPSmalltalkWhitespaceParser",
+	"pools" : [
+		 ],
+	"super" : "PPParser",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+rendering
+defaultTitle
+	^ 'Distribution Map'

@@ -1,0 +1,1 @@
+This is a class for internal parameter parsed entities with replacements that can be inserted into documents.

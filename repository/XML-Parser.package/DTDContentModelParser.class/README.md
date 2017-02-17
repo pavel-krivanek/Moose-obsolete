@@ -1,0 +1,1 @@
+This is a base class for DTD content model parsers that turn element declarations into XMLElementValidators.

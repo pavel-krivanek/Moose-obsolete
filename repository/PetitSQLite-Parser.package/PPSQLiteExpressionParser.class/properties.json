@@ -1,0 +1,14 @@
+{
+	"category" : "PetitSQLite-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"operators" ],
+	"name" : "PPSQLiteExpressionParser",
+	"pools" : [
+		 ],
+	"super" : "PP2DelegateNode",
+	"type" : "normal" }

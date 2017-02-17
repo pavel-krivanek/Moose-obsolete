@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"doctypeDefinition" ],
+	"name" : "DTDDocumentValidator",
+	"pools" : [
+		 ],
+	"super" : "XMLDocumentValidator",
+	"type" : "normal" }

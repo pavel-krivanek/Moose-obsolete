@@ -1,0 +1,3 @@
+configuring
+documentReadLimit
+	^ self configuration documentReadLimit

@@ -1,0 +1,14 @@
+{
+	"category" : "Glamour-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 8/24/2011 23:50",
+	"instvars" : [
+		"variableBindings" ],
+	"name" : "GLMDoItContext",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Factorial-Language",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "lr 5/21/2008 20:09",
+	"instvars" : [
+		 ],
+	"name" : "FLFactorialPrinter",
+	"pools" : [
+		 ],
+	"super" : "FLFactorialGrammar",
+	"type" : "normal" }

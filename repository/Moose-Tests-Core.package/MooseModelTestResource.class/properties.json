@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model" ],
+	"name" : "MooseModelTestResource",
+	"pools" : [
+		 ],
+	"super" : "TestResource",
+	"type" : "normal" }

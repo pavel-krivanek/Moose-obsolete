@@ -1,0 +1,14 @@
+{
+	"category" : "OnMoose-Report",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "OnMooseUsageOfObsoletePropertyAnnotation",
+	"pools" : [
+		 ],
+	"super" : "REPMooseQueryConcern",
+	"type" : "normal" }

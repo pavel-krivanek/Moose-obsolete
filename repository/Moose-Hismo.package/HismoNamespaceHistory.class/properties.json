@@ -1,0 +1,16 @@
+{
+	"category" : "Moose-Hismo",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"classHistories",
+		"containingNamespaceHistory",
+		"namespaceHistories" ],
+	"name" : "HismoNamespaceHistory",
+	"pools" : [
+		 ],
+	"super" : "HismoAbstractHistory",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+staticDependencies
+testStaticClientClassesIntoMyNamespace
+	self assert: self c11FullRefereeOutSide queryStaticIncomingAssociations atTypeScope withinMyNamespace size equals: 1

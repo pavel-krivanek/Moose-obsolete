@@ -1,0 +1,4 @@
+accessing-classes
+linearGradientClass
+	^ LinearGradientPaint
+	

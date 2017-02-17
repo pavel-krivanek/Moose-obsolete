@@ -1,0 +1,3 @@
+testing
+preservesUndeclaredEntityReferences
+	^ self saxDriver preservesUndeclaredEntityReferences

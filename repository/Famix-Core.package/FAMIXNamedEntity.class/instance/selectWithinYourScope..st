@@ -1,0 +1,3 @@
+moosechef-scoping-filtering
+selectWithinYourScope: aMooseQueryResult
+	self subclassResponsibility

@@ -1,0 +1,15 @@
+{
+	"category" : "XML-Parser-Validation-DFA",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/24/2014 22:44",
+	"instvars" : [
+		"set",
+		"isAccepting" ],
+	"name" : "XMLNFAStateSet",
+	"pools" : [
+		 ],
+	"super" : "Collection",
+	"type" : "normal" }

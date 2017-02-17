@@ -1,0 +1,3 @@
+handling
+handleTextNodeTest
+	self parsingResult: XPathTextNodeTest new

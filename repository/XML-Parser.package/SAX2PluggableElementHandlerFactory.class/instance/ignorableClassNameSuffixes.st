@@ -1,0 +1,3 @@
+private 
+ignorableClassNameSuffixes
+	^ #('Element' 'ElementHandler')

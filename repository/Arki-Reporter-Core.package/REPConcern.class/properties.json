@@ -1,0 +1,15 @@
+{
+	"category" : "Arki-Reporter-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model",
+		"announcer" ],
+	"name" : "REPConcern",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

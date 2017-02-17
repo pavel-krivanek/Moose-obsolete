@@ -1,0 +1,3 @@
+accessing
+haveSkippedParameterEntityReferences
+	self saxDriver haveSkippedParameterEntityReferences

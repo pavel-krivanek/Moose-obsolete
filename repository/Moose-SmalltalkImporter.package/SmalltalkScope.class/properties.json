@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"dictionary",
+		"parent" ],
+	"name" : "SmalltalkScope",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

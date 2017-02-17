@@ -1,0 +1,4 @@
+moosequery-queries-incoming
+queryIncomingReferences
+
+	self explicitRequirement

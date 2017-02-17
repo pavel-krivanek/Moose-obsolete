@@ -1,0 +1,3 @@
+tokenizing
+nextNonElementWhitespace
+	self subclassResponsibility

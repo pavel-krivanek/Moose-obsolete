@@ -1,0 +1,1 @@
+A stream converter for big endian UTF-32 streams, and the default converter class used when a UTF-32 stream converter is created with newForEncoding: or asXMLStreamConverter and no endian is specified by the encoding name.

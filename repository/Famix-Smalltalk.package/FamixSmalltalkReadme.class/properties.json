@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Smalltalk",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "tg 7/30/2009 03:03",
+	"instvars" : [
+		 ],
+	"name" : "FamixSmalltalkReadme",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

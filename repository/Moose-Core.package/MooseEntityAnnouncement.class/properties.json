@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"entity" ],
+	"name" : "MooseEntityAnnouncement",
+	"pools" : [
+		 ],
+	"super" : "Announcement",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Wizard",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"JavaProjectPath" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseImportFromJdt2FamixWizard",
+	"pools" : [
+		 ],
+	"super" : "WizardControl",
+	"type" : "normal" }

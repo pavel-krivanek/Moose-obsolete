@@ -1,0 +1,16 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 11/26/2015 18:36",
+	"instvars" : [
+		"offset",
+		"spacing",
+		"dashes" ],
+	"name" : "TRCanvasGridShape",
+	"pools" : [
+		 ],
+	"super" : "TRShape",
+	"type" : "normal" }

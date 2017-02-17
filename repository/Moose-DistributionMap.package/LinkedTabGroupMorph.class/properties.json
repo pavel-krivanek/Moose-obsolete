@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-DistributionMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "cyrille.delaunay 3/15/2010 12:31",
+	"instvars" : [
+		"listOrTextFieldPart" ],
+	"name" : "LinkedTabGroupMorph",
+	"pools" : [
+		 ],
+	"super" : "TabGroupMorph",
+	"type" : "normal" }

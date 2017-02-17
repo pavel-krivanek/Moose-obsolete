@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-UML",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 8/24/2015 12:56",
+	"instvars" : [
+		 ],
+	"name" : "RTUMLExample",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

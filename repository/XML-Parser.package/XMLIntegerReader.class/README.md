@@ -1,0 +1,1 @@
+This class reads positive hex or decimal integers up to the maximum a SmallInteger can hold from minimal streams supporting next, peek, and atEnd. It returns nil instead of raising errors for invalid integers.

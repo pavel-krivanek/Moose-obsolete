@@ -1,0 +1,3 @@
+accessing
+structuresWithDeclaredType: aCollectionOfStructuralEntities
+	structuresWithDeclaredType value: aCollectionOfStructuralEntities

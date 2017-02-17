@@ -1,0 +1,3 @@
+hooks
+order
+	^ 10

@@ -1,0 +1,3 @@
+visitor-doubleDispatching
+visitCharacterLiteralNode: aCharacterLiteralNode
+	self subclassResponsibility

@@ -1,0 +1,3 @@
+testing
+hasEmbeddedMarkup
+	^ false

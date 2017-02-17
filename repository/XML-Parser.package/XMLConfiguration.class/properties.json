@@ -1,0 +1,20 @@
+{
+	"category" : "XML-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 7/14/2015 14:40",
+	"instvars" : [
+		"isValidating",
+		"usesNamespaces",
+		"decodesCharacters",
+		"requiresDocumentConstraints",
+		"parserHandlerClass",
+		"parserLimits",
+		"entityConfiguration" ],
+	"name" : "XMLConfiguration",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

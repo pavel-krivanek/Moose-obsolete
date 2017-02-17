@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"result" ],
+	"name" : "GTExampleNautilusDualActionButton",
+	"pools" : [
+		 ],
+	"super" : "GTAbstractExampleNautilusActionButton",
+	"type" : "normal" }

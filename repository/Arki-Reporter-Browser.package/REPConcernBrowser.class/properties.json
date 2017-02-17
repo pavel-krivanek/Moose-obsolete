@@ -1,0 +1,14 @@
+{
+	"category" : "Arki-Reporter-Browser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"root" ],
+	"name" : "REPConcernBrowser",
+	"pools" : [
+		 ],
+	"super" : "GLMBrowserTemplate",
+	"type" : "normal" }

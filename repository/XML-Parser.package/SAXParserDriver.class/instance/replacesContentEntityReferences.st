@@ -1,0 +1,3 @@
+testing
+replacesContentEntityReferences
+	^ self saxHandler replacesContentEntityReferences

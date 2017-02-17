@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"item" ],
+	"name" : "MalVectorItem",
+	"pools" : [
+		 ],
+	"super" : "MalVectorDecorator",
+	"type" : "normal" }

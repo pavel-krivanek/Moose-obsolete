@@ -1,0 +1,16 @@
+{
+	"category" : "Moose-Query",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "TDependencyQueryResult classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseOutgoingQueryResult",
+	"pools" : [
+		 ],
+	"super" : "MooseQueryResult",
+	"traitcomposition" : "TDependencyQueryResult",
+	"type" : "normal" }

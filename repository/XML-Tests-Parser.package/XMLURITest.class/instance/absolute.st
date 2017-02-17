@@ -1,0 +1,3 @@
+accessing
+absolute
+	^ '/absolute/path'

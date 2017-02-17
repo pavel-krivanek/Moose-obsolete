@@ -1,0 +1,16 @@
+{
+	"category" : "Roassal2-Builder-Legend",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"widthDescription",
+		"heightDescription",
+		"boxDescription" ],
+	"name" : "RTPolymorphicBoxLegendItem",
+	"pools" : [
+		 ],
+	"super" : "RTLegendItem",
+	"type" : "normal" }

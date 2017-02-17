@@ -1,0 +1,3 @@
+testing
+isStringNode: aStringOrStringNode
+	^ false

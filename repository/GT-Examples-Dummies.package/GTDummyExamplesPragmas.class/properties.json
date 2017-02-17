@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Examples-Dummies-Data",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GTDummyExamplesPragmas",
+	"pools" : [
+		 ],
+	"super" : "GTAbstractDummyExamples",
+	"type" : "normal" }

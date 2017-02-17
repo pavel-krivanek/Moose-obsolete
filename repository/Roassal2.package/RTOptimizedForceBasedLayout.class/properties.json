@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"mockElements" ],
+	"name" : "RTOptimizedForceBasedLayout",
+	"pools" : [
+		 ],
+	"super" : "RTForceBasedLayout",
+	"type" : "normal" }

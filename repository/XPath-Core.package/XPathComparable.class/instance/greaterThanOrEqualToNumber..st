@@ -1,0 +1,3 @@
+private
+greaterThanOrEqualToNumber: aNumber
+	self subclassResponsibility

@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-PartsLayout",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PaneRow",
+	"pools" : [
+		 ],
+	"super" : "PaneAbstractLine",
+	"type" : "normal" }

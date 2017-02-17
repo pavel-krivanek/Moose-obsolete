@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Signals",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 6/9/2014 08:17",
+	"instvars" : [
+		"target" ],
+	"name" : "WrapperSignal",
+	"pools" : [
+		 ],
+	"super" : "BeaconSignal",
+	"type" : "normal" }

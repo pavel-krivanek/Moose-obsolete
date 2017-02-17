@@ -1,0 +1,17 @@
+{
+	"category" : "Moose-DistributionMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"partsAndElements",
+		"elementsAndPropertyValue",
+		"title",
+		"elementTitleBlock" ],
+	"name" : "AbstractDistributionMap",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

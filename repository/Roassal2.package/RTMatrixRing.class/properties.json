@@ -1,0 +1,22 @@
+{
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "OffrayLuna 5/30/2016 11:34",
+	"instvars" : [
+		"matrix",
+		"elements",
+		"innerRadius",
+		"externalRadius",
+		"rowGap",
+		"columnGap",
+		"lineShape",
+		"rowBlock",
+		"columnBlock" ],
+	"name" : "RTMatrixRing",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+*moose-core
+hasUniqueMooseNameInModel
+	^false

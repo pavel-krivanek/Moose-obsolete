@@ -1,0 +1,2 @@
+handling
+handleAttributeNodeTestForNamespaceURI: aURI localName: aLocalName

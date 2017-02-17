@@ -1,0 +1,3 @@
+hooks
+createLegendBuilder
+	^ RTLegendBuilder new

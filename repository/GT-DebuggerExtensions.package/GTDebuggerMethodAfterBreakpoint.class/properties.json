@@ -1,0 +1,14 @@
+{
+	"category" : "GT-DebuggerExtensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"targetMethod" ],
+	"name" : "GTDebuggerMethodAfterBreakpoint",
+	"pools" : [
+		 ],
+	"super" : "GTDebuggerBrekpoint",
+	"type" : "normal" }

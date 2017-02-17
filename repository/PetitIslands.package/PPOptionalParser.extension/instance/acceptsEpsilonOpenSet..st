@@ -1,0 +1,3 @@
+*petitislands
+acceptsEpsilonOpenSet: set
+	^ true

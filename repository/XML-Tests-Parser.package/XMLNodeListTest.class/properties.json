@@ -1,0 +1,18 @@
+{
+	"category" : "XML-Tests-Parser-DOM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"document",
+		"nodes",
+		"newNode",
+		"absentNode",
+		"changedNodes" ],
+	"name" : "XMLNodeListTest",
+	"pools" : [
+		 ],
+	"super" : "XMLObservableListTest",
+	"type" : "normal" }

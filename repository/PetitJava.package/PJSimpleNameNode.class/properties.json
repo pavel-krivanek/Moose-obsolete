@@ -1,0 +1,15 @@
+{
+	"category" : "PetitJava-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isDeclaration",
+		"identifier" ],
+	"name" : "PJSimpleNameNode",
+	"pools" : [
+		 ],
+	"super" : "PJNameNode",
+	"type" : "normal" }

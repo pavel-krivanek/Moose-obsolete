@@ -1,0 +1,4 @@
+visiting
+visitFM3MetaDescription: aFM3MetaDescription
+
+	self subclassResponsibility

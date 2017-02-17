@@ -1,0 +1,3 @@
+private
+defaultElementHandlerFactoryClass
+	^ SAX2ElementHandlerFactory

@@ -1,0 +1,14 @@
+{
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "AbstractMerger",
+	"pools" : [
+		 ],
+	"super" : "TypeMerger",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"distance",
+		"line",
+		"normal",
+		"alpha",
+		"center",
+		"radius" ],
+	"name" : "TRArcLineShape",
+	"pools" : [
+		 ],
+	"super" : "TRAbstractLineShape",
+	"type" : "normal" }

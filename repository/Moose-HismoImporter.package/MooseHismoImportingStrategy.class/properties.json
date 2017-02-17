@@ -1,0 +1,17 @@
+{
+	"category" : "Moose-HismoImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"versions",
+		"selectedVersions",
+		"lastSelectedVersion",
+		"datePattern" ],
+	"name" : "MooseHismoImportingStrategy",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

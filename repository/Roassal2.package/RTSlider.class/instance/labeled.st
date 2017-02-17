@@ -1,0 +1,3 @@
+accessing
+labeled
+	hasLabel := true

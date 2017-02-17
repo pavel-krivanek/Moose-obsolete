@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MoosePropertyGroupTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

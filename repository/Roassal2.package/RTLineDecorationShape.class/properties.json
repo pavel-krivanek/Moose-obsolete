@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-LineDecorations",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "bliznjan 2/16/2015 13:09",
+	"instvars" : [
+		 ],
+	"name" : "RTLineDecorationShape",
+	"pools" : [
+		 ],
+	"super" : "RTObject",
+	"type" : "normal" }

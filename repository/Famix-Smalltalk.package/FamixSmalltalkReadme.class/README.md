@@ -1,0 +1,1 @@
+This package holds the Smalltalk specific extensions of FAMIX

@@ -1,0 +1,1 @@
+This class is used during parsing to separate the nested operator nodes belonging to one "or" expression from those belonging to another, and to function as a "null" object so there is always at least one operator on the stack.

@@ -1,0 +1,14 @@
+{
+	"category" : "PetitGui-Refactoring",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"targetProduction" ],
+	"name" : "PPExtractProdcutionRefactoring",
+	"pools" : [
+		 ],
+	"super" : "RBExtractMethodRefactoring",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "StateSpecs-DSL-ClassWords-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SpecOfDSLClassWordsTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

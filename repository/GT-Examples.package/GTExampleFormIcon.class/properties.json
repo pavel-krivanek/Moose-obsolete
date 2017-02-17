@@ -1,0 +1,16 @@
+{
+	"category" : "GT-Examples-Organization",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"arguments",
+		"converter",
+		"form" ],
+	"name" : "GTExampleFormIcon",
+	"pools" : [
+		 ],
+	"super" : "GTExampleIcon",
+	"type" : "normal" }

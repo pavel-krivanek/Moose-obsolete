@@ -1,0 +1,3 @@
+staticDependencies
+testStaticProviderNamespaces
+	self assert: self c11FullRefereeOutSide queryStaticOutgoingAssociations atNamespaceScope size equals: 1

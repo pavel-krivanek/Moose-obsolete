@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/14/2015 14:45",
+	"instvars" : [
+		"objects",
+		"defaultColor" ],
+	"name" : "RTMultiLinearColorForIdentity",
+	"pools" : [
+		 ],
+	"super" : "RTMultiLinearColor",
+	"type" : "normal" }

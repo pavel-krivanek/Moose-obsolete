@@ -1,0 +1,3 @@
+validating
+validatePCData: aString
+	self errorUnexpectedPCData

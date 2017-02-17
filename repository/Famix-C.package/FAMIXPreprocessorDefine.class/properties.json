@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-C",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NicolasAnquetil 10/27/2016 14:36",
+	"instvars" : [
+		"macro" ],
+	"name" : "FAMIXPreprocessorDefine",
+	"pools" : [
+		 ],
+	"super" : "FAMIXPreprocessorStatement",
+	"type" : "normal" }

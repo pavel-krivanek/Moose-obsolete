@@ -1,0 +1,3 @@
+*petitislands
+isIslandBorder
+	^ false

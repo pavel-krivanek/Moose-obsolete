@@ -1,0 +1,14 @@
+{
+	"category" : "PetitJava-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPJavaParserTest",
+	"pools" : [
+		 ],
+	"super" : "PPJavaSyntaxTest",
+	"type" : "normal" }

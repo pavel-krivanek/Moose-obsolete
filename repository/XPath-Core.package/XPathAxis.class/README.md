@@ -1,0 +1,1 @@
+This class holds the current axis while a step is being parsed and maps them to handler selectors and parser context classes to parse the node test that comes after.

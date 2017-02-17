@@ -1,0 +1,3 @@
+testing
+isNumberValueType
+	^ false

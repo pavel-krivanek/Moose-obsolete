@@ -1,0 +1,16 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"r",
+		"cx",
+		"cy" ],
+	"name" : "ASCircle",
+	"pools" : [
+		 ],
+	"super" : "ASShape",
+	"type" : "normal" }

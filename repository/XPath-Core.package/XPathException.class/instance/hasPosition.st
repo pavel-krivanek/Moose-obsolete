@@ -1,0 +1,3 @@
+testing
+hasPosition
+	^ position notNil

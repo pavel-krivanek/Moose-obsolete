@@ -1,0 +1,1 @@
+SystemOrganization addCategory: #SmaCC_Parse_Tree_Comparison!

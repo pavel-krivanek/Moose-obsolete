@@ -1,0 +1,3 @@
+accessing
+prefixedXMLSourceSelectorsNamespacesDisabled
+	^ self removeNamespaceSelectorsFrom: self prefixedXMLSourceSelectors

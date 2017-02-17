@@ -1,0 +1,3 @@
+*Moose-Finder
+intervalAsCharPos
+	self subclassResponsibility

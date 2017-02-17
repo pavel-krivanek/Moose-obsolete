@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"dendrogram" ],
+	"name" : "MalDendrogramTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

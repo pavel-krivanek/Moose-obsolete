@@ -1,0 +1,14 @@
+{
+	"category" : "Dynamix-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DynamixEventTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

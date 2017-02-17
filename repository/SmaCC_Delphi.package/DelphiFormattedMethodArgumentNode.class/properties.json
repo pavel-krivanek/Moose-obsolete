@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"argument",
+		"colon",
+		"formatExpression" ],
+	"name" : "DelphiFormattedMethodArgumentNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiProgramNode",
+	"type" : "normal" }

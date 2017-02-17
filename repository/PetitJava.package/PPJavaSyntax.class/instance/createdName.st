@@ -1,0 +1,5 @@
+grammar
+createdName 
+
+	^ classOrInterfaceType 
+	/	primitiveType 

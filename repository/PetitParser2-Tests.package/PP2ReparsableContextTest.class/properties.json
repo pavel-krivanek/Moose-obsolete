@@ -1,0 +1,15 @@
+{
+	"category" : "PetitParser2-Tests-Reparsing",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"context",
+		"parser" ],
+	"name" : "PP2ReparsableContextTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Types",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 2/9/2017 20:03",
+	"instvars" : [
+		 ],
+	"name" : "XPathTextNodeType",
+	"pools" : [
+		 ],
+	"super" : "XPathNodeType",
+	"type" : "normal" }

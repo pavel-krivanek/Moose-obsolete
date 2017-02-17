@@ -1,0 +1,3 @@
+accessing
+declarationType
+	self subclassResponsibility

@@ -1,0 +1,14 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "StephaneDucasse 12/6/2014 07:12",
+	"instvars" : [
+		"stream" ],
+	"name" : "ASConverter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

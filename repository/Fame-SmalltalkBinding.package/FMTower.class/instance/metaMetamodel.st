@@ -1,0 +1,3 @@
+accessing
+metaMetamodel
+	^self subclassResponsibility

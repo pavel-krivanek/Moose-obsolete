@@ -1,0 +1,3 @@
+accessing-dynamic
+gtExamplesContained
+	^ { self }

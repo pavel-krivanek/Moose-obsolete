@@ -1,0 +1,3 @@
+hooks
+defaultStrokeWidth
+	^ 1

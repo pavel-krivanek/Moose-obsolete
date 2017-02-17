@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MorphDropListPart",
+	"pools" : [
+		 ],
+	"super" : "DropListPart",
+	"type" : "normal" }

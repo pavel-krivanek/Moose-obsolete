@@ -1,0 +1,3 @@
+handling
+handleWildcardNodeTestWith: aHandler
+	aHandler handleAttributeNodeTest

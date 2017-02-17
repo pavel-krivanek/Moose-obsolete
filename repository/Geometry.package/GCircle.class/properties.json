@@ -1,0 +1,15 @@
+{
+	"category" : "Geometry",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NataliaTymchuk 6/27/2014 21:12",
+	"instvars" : [
+		"center",
+		"radius" ],
+	"name" : "GCircle",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

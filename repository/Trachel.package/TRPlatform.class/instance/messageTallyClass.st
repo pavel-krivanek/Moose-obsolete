@@ -1,0 +1,3 @@
+accessing-classes
+messageTallyClass
+	self subclassResponsibility

@@ -1,0 +1,16 @@
+{
+	"category" : "StateSpecs-DSL-ShouldExpressions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "DenisKudryashov 3/2/2016 18:16",
+	"instvars" : [
+		"parent",
+		"parentMessage",
+		"value" ],
+	"name" : "SpecOfObjectProperty",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

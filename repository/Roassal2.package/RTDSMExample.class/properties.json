@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-DSM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 9/6/2016 05:00",
+	"instvars" : [
+		 ],
+	"name" : "RTDSMExample",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

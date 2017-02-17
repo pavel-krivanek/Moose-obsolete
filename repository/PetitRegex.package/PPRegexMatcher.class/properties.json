@@ -1,0 +1,14 @@
+{
+	"category" : "PetitRegex-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ParserValidator" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parser" ],
+	"name" : "PPRegexMatcher",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

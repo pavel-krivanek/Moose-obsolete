@@ -1,0 +1,2 @@
+private
+unsafeRemove: anElement

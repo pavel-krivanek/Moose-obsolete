@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-Reference-PackageOne",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SubRootModelTwo",
+	"pools" : [
+		 ],
+	"super" : "TheRoot",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+disjointSetElements
+	self subclassResponsibility

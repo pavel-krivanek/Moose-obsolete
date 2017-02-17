@@ -1,0 +1,3 @@
+accessing
+omitsRedundantXMLNSDeclarations: aBoolean
+	omitsRedundantXMLNSDeclarations := aBoolean

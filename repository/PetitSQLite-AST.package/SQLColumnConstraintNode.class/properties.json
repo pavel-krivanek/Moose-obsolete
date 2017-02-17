@@ -1,0 +1,17 @@
+{
+	"category" : "PetitSQLite-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"defaultValue",
+		"unique",
+		"isPKConstraint",
+		"canBeNull" ],
+	"name" : "SQLColumnConstraintNode",
+	"pools" : [
+		 ],
+	"super" : "SQLASTNode",
+	"type" : "normal" }

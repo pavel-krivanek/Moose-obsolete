@@ -1,0 +1,1 @@
+An abstract class for TestCases with skippable tests.

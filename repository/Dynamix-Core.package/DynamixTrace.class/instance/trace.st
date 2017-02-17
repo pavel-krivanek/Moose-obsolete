@@ -1,0 +1,3 @@
+accessing-derived
+trace 
+	^ self

@@ -1,0 +1,1 @@
+A context for content tokens, everything from the first stat tag to the end of the document.

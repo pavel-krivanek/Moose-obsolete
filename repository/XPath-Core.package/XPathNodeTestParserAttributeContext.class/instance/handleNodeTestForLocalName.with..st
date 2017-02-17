@@ -1,0 +1,3 @@
+handling
+handleNodeTestForLocalName: aLocalName with: aHandler
+	aHandler handleAttributeNodeTestForLocalName: aLocalName

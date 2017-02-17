@@ -1,0 +1,3 @@
+initialize-release
+defaultActions
+	GLMRoassal2Action initializePresentation: self

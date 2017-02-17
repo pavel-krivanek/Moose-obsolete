@@ -1,0 +1,1 @@
+This is a base class for AST node visitors that output the AST using a write stream.

@@ -1,0 +1,3 @@
+whitespaces
+space
+	^ #space asParser

@@ -1,0 +1,1 @@
+This class validates standalone externally defined CDATA attributes. It disallows attributes that need substitution with default or fixed default values.

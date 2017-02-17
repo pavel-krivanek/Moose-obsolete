@@ -1,0 +1,3 @@
+accessing
+nameBlock
+	^ nameBlock

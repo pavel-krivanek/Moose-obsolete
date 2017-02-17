@@ -1,0 +1,18 @@
+{
+	"category" : "PetitGui-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"browser",
+		"input",
+		"stream",
+		"output",
+		"rootClass" ],
+	"name" : "PPDrabBrowser",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+parameterEntityDeclarationClass
+	^ XMLParameterEntityDeclaration

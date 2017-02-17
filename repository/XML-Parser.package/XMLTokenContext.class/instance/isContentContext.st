@@ -1,0 +1,3 @@
+testing
+isContentContext
+	^ false

@@ -1,0 +1,15 @@
+{
+	"category" : "PetitParser2-GUI-Highlighting",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parser",
+		"attributeMapper" ],
+	"name" : "PP2TextHighlighter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

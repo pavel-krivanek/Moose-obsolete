@@ -1,0 +1,4 @@
+private
+privateState
+
+	^ state

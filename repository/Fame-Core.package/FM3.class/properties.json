@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "StephaneDucasse 9/20/2009 11:54",
+	"instvars" : [
+		 ],
+	"name" : "FM3",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

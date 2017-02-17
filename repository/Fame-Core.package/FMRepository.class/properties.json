@@ -1,0 +1,15 @@
+{
+	"category" : "Fame-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "StephaneDucasse 9/20/2009 12:43",
+	"instvars" : [
+		"elements",
+		"metamodel" ],
+	"name" : "FMRepository",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

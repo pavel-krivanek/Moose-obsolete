@@ -1,0 +1,14 @@
+{
+	"category" : "GT-Debugger-EventRecorder-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RogerStebler 3/18/2016 16:47",
+	"instvars" : [
+		 ],
+	"name" : "GTDebuggerRecorderRunToSelectionEvent",
+	"pools" : [
+		 ],
+	"super" : "GTDebuggerRecorderDebugActionEvent",
+	"type" : "normal" }

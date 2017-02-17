@@ -1,0 +1,3 @@
+validating
+validateEndDocument
+	self validateIDReferences

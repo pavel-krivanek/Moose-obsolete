@@ -1,0 +1,1 @@
+Is a kind of NullPattern

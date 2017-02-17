@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-KGB-P12FullReferencer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "M6P12C20FullReferencerOutSide",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Text",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DudeNoiseCleaner",
+	"pools" : [
+		 ],
+	"super" : "DudeCleaningDecorator",
+	"type" : "normal" }

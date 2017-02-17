@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DTD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DTDExternalEntityResolverTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

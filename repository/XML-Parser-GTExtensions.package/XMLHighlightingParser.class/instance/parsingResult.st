@@ -1,0 +1,3 @@
+parsing
+parsingResult
+	^ self asHighlightedText

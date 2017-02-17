@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-ApplicationMatrix",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"items" ],
+	"name" : "RTApplicationMatrix",
+	"pools" : [
+		 ],
+	"super" : "RTBuilder",
+	"type" : "normal" }

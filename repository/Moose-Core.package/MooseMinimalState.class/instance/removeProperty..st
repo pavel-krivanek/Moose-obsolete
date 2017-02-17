@@ -1,0 +1,2 @@
+accessing
+removeProperty: name

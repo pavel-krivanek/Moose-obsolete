@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Validation-Standalone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 11/3/2016 12:49",
+	"instvars" : [
+		 ],
+	"name" : "XMLStandaloneExternalEnumerationAttributeValidator",
+	"pools" : [
+		 ],
+	"super" : "XMLEnumerationAttributeValidator",
+	"type" : "normal" }

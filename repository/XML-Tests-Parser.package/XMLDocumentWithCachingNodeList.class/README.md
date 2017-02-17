@@ -1,0 +1,1 @@
+A class for testing documents that use XMLCachingNodeList instead of XMLNodeList.

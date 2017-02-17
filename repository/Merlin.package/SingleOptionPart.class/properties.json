@@ -1,0 +1,15 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selectedOption",
+		"formatBlock" ],
+	"name" : "SingleOptionPart",
+	"pools" : [
+		 ],
+	"super" : "OptionPart",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "XML-Writer-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 4/17/2016 07:18",
+	"instvars" : [
+		"name",
+		"xmlnsDeclarations",
+		"attributes" ],
+	"name" : "XMLTagWriter",
+	"pools" : [
+		 ],
+	"super" : "XMLEmbeddedMarkupWriter",
+	"type" : "normal" }

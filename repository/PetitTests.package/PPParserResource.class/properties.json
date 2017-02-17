@@ -1,0 +1,14 @@
+{
+	"category" : "PetitTests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parsers" ],
+	"name" : "PPParserResource",
+	"pools" : [
+		 ],
+	"super" : "TestResource",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+controlling
+flushProperties 
+	 
+	self subclassResponsibility

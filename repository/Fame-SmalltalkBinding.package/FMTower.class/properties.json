@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FMTower",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

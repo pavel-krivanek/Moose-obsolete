@@ -1,0 +1,3 @@
+testing
+returnsVariableCollection
+	^ false

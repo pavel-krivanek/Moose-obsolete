@@ -1,0 +1,3 @@
+keywords
+kwLet
+	^ 'let' asParser

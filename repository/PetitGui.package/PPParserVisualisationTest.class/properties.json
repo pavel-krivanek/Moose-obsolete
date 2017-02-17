@@ -1,0 +1,14 @@
+{
+	"category" : "PetitGui-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPParserVisualisationTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+visitor-doubleDispatching
+visitExpressionStatementNode: anExpressionStatementNode
+	self visitNode: anExpressionStatementNode expression

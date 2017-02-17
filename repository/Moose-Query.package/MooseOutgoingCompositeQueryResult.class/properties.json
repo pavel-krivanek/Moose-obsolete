@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Query",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NicolasAnquetil 12/5/2011 11:15",
+	"instvars" : [
+		"invocationStorage" ],
+	"name" : "MooseOutgoingCompositeQueryResult",
+	"pools" : [
+		 ],
+	"super" : "MooseQueryResult",
+	"type" : "normal" }

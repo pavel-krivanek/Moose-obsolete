@@ -1,0 +1,3 @@
+accessing
+contents
+	^ String new

@@ -1,0 +1,3 @@
+compiling-nodes
+compileMatchInContextMethod: aSmaCCNodeClassDefinition
+	self subclassResponsibility

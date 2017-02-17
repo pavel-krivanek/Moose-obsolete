@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Smalltalk",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "janniklaval 11/27/2011 22:24",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXSmalltalkSourceLanguage",
+	"pools" : [
+		 ],
+	"super" : "FAMIXSourceLanguage",
+	"type" : "normal" }

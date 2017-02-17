@@ -1,0 +1,4 @@
+accessing
+allCheckboxLabels: aCollectionOfString
+
+	^ allCheckboxLabels 

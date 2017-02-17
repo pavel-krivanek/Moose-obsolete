@@ -1,0 +1,3 @@
+private
+applyBinaryOperatorOnStack
+	self applyOperator: binaryOperatorStack removeLast

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-InformationRetrieval",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"terms" ],
+	"name" : "MalTermsTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "variable" }

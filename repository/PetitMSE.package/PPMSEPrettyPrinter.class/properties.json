@@ -1,0 +1,14 @@
+{
+	"category" : "PetitMSE",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stream" ],
+	"name" : "PPMSEPrettyPrinter",
+	"pools" : [
+		 ],
+	"super" : "PPMSEArrayParser",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "RTStyledMultiLineTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

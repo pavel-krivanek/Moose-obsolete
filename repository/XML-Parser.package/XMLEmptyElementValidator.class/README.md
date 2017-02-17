@@ -1,0 +1,1 @@
+This class validates EMPTY elements, which can't contain elements, PCDATA, or even comments or PIs.

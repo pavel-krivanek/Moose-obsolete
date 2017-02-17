@@ -1,0 +1,3 @@
+visiting - node tests
+visitElementNodeTestForPrefixAndLocalName: anElementNodeTestForPrefixAndLocalName
+	^ self visitNodeTest: anElementNodeTestForPrefixAndLocalName

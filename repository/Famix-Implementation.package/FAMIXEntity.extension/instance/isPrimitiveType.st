@@ -1,0 +1,3 @@
+*Famix-Implementation
+isPrimitiveType
+	^ false

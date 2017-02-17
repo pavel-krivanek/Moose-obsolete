@@ -1,0 +1,16 @@
+{
+	"category" : "ACD-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"senderContext",
+		"announcerModel",
+		"receiverContext" ],
+	"name" : "ACDDebugSession",
+	"pools" : [
+		 ],
+	"super" : "DebugSession",
+	"type" : "normal" }

@@ -1,0 +1,4 @@
+accessing
+announcement
+
+	^ announcerModel announcement 

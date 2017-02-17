@@ -1,0 +1,1 @@
+MalFormalContext mammals2 computeConcepts

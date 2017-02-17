@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXTypeAliasTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

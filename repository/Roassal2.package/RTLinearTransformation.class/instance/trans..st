@@ -1,0 +1,3 @@
+hooks
+trans: value
+	^ value

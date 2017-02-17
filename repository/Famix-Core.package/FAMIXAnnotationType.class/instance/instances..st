@@ -1,0 +1,3 @@
+accessing
+instances: anAnnotationInstance
+	instances value: anAnnotationInstance

@@ -1,0 +1,4 @@
+accessing
+rootParserContext
+
+	^ rootParserContext

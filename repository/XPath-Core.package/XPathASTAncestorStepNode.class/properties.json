@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/24/2017 21:54",
+	"instvars" : [
+		 ],
+	"name" : "XPathASTAncestorStepNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTStepNode",
+	"type" : "normal" }

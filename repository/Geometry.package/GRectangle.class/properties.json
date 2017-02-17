@@ -1,0 +1,14 @@
+{
+	"category" : "Geometry",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 5/17/2016 09:47",
+	"instvars" : [
+		 ],
+	"name" : "GRectangle",
+	"pools" : [
+		 ],
+	"super" : "Rectangle",
+	"type" : "normal" }

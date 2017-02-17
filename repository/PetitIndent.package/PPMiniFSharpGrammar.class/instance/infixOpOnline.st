@@ -1,0 +1,3 @@
+expressions
+infixOpOnline
+	^ infixOp trimBlanks

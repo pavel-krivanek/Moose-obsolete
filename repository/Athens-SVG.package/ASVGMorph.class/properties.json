@@ -1,0 +1,17 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"svg",
+		"surface",
+		"zoom",
+		"session" ],
+	"name" : "ASVGMorph",
+	"pools" : [
+		 ],
+	"super" : "Morph",
+	"type" : "normal" }

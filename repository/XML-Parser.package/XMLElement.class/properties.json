@@ -1,0 +1,17 @@
+{
+	"category" : "XML-Parser-DOM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 4/6/2016 22:20",
+	"instvars" : [
+		"name",
+		"localName",
+		"attributes",
+		"namespaceScope" ],
+	"name" : "XMLElement",
+	"pools" : [
+		 ],
+	"super" : "XMLNodeWithElements",
+	"type" : "normal" }

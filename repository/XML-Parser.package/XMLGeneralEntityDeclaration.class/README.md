@@ -1,0 +1,1 @@
+This is a class for internal/external parsed/unparsed general <!ENTITY> declarations.

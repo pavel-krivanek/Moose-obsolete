@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-RoassalPaintings-FameView",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseFameViewTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

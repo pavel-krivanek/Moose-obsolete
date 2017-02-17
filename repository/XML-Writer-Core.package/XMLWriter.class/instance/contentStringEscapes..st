@@ -1,0 +1,3 @@
+private
+contentStringEscapes: aContentStringEscapesTable
+	contentStringEscapes := aContentStringEscapesTable

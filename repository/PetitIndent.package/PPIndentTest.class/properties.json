@@ -1,0 +1,25 @@
+{
+	"category" : "PetitIndent-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"aligns",
+		"setIl",
+		"restoreIl",
+		"onside",
+		"offside",
+		"prefix",
+		"a",
+		"p",
+		"align",
+		"b",
+		"top",
+		"nl" ],
+	"name" : "PPIndentTest",
+	"pools" : [
+		 ],
+	"super" : "PPAbstractParserTest",
+	"type" : "normal" }

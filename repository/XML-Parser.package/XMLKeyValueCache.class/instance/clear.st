@@ -1,0 +1,3 @@
+clearing
+clear
+	self removeAll

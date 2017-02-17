@@ -1,0 +1,14 @@
+{
+	"category" : "PetitRegex-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPRegexTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

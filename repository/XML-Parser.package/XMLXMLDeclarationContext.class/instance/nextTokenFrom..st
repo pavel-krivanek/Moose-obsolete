@@ -1,0 +1,3 @@
+tokenizing
+nextTokenFrom: aTokenizer
+	aTokenizer nextXMLDeclarationOrPrologToken

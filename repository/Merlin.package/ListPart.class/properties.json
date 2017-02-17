@@ -1,0 +1,17 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"list",
+		"selectionIndex",
+		"listHeight",
+		"listWidth" ],
+	"name" : "ListPart",
+	"pools" : [
+		 ],
+	"super" : "WizardPart",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+private
+allowedClassNamePatterns
+	^ #('Smalltalk::MO*')

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"hits" ],
+	"name" : "MalHitsFixtureTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

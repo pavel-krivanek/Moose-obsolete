@@ -1,0 +1,29 @@
+{
+	"category" : "PetitXml-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"comment",
+		"whitespace",
+		"processing",
+		"nameStartChar",
+		"nameChar",
+		"nameToken",
+		"misc",
+		"document",
+		"element",
+		"attributes",
+		"content",
+		"characterData",
+		"attribute",
+		"doctype",
+		"attributeValue",
+		"qualified" ],
+	"name" : "PPXmlGrammar",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParser",
+	"type" : "normal" }

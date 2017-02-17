@@ -1,0 +1,4 @@
+handling
+handleNamespaceNodeTestForName: aName
+	self startNodeTest.
+	expressionParserHandler handleNamespaceNodeTestForName: aName.

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-KGB-P4FullInteracted",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "M2P4C10FullReferencerInSide",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

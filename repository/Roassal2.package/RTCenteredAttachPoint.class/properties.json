@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-AttachPoint",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AlexandreBergel 9/29/2015 14:58",
+	"instvars" : [
+		 ],
+	"name" : "RTCenteredAttachPoint",
+	"pools" : [
+		 ],
+	"super" : "RTAttachPoint",
+	"type" : "normal" }

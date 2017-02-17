@@ -1,0 +1,4 @@
+registration
+gtActionType
+	<gtPPDebuggingAction>
+	<gtContextPPDebuggingAction>

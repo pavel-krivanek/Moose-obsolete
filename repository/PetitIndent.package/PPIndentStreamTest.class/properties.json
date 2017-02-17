@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIndent-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"aStream" ],
+	"name" : "PPIndentStreamTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-PackageBlueprint-P1",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "G1",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

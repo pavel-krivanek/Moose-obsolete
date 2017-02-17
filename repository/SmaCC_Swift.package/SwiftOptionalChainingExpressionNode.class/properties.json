@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"expression",
+		"questionMarkToken" ],
+	"name" : "SwiftOptionalChainingExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

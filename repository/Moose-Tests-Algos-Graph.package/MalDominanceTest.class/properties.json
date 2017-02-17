@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nodes",
+		"dom" ],
+	"name" : "MalDominanceTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

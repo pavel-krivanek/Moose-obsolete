@@ -1,0 +1,3 @@
+private
+innerXMLContextClass
+	^ XMLPostDoctypeDeclarationContext

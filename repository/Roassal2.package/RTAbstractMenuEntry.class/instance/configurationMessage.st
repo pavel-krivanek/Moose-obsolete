@@ -1,0 +1,3 @@
+public
+configurationMessage
+	^ self subclassResponsibility 

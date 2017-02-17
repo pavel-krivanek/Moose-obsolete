@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Exceptions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 6/11/2015 00:17",
+	"instvars" : [
+		 ],
+	"name" : "XPathDOMException",
+	"pools" : [
+		 ],
+	"super" : "XPathException",
+	"type" : "normal" }

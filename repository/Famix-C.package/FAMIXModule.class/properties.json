@@ -1,0 +1,15 @@
+{
+	"category" : "Famix-C",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "StephaneDucasse 11/13/2011 23:13",
+	"instvars" : [
+		"compilationUnit",
+		"header" ],
+	"name" : "FAMIXModule",
+	"pools" : [
+		 ],
+	"super" : "FAMIXScopingEntity",
+	"type" : "normal" }

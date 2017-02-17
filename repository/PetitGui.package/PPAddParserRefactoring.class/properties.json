@@ -1,0 +1,16 @@
+{
+	"category" : "PetitGui-Refactoring",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"superclass",
+		"name",
+		"cateogry" ],
+	"name" : "PPAddParserRefactoring",
+	"pools" : [
+		 ],
+	"super" : "RBRefactoring",
+	"type" : "normal" }

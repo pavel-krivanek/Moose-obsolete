@@ -1,0 +1,1 @@
+I represent a header file. Typically a .h or .hpp

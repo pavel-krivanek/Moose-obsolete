@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MalSimilarityItemTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

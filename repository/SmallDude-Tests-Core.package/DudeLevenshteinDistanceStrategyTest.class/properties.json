@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Tests-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DudeLevenshteinDistanceStrategyTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

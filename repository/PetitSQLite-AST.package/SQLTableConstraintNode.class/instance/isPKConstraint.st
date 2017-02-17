@@ -1,0 +1,4 @@
+accessing
+isPKConstraint
+	^isPKConstraint
+	

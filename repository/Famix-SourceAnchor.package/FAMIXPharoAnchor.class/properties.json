@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-SourceAnchor",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "YuriyTymchuk 4/10/2014 11:31",
+	"instvars" : [
+		"pharoEntity" ],
+	"name" : "FAMIXPharoAnchor",
+	"pools" : [
+		 ],
+	"super" : "FAMIXSourceAnchor",
+	"type" : "normal" }

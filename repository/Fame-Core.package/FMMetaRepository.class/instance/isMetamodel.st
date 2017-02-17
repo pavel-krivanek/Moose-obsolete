@@ -1,0 +1,3 @@
+testing
+isMetamodel
+	^true

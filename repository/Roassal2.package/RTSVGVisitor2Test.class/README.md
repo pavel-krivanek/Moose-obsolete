@@ -1,0 +1,1 @@
+I am a simple test class for RTSVGVisitor2

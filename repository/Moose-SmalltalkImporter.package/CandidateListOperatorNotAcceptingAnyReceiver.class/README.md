@@ -1,0 +1,1 @@
+a CandidateListOperatorNotAcceptingAnyReceiver doesn't compute any possible type.

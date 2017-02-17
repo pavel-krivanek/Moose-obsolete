@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"array",
+		"leftBracket",
+		"expression",
+		"rightBracket" ],
+	"name" : "JavaArrayAccessNode",
+	"pools" : [
+		 ],
+	"super" : "JavaExpressionNode",
+	"type" : "normal" }

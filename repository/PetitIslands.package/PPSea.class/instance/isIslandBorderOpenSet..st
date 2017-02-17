@@ -1,0 +1,3 @@
+queries
+isIslandBorderOpenSet: set
+	^ false

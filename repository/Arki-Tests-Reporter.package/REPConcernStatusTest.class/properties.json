@@ -1,0 +1,14 @@
+{
+	"category" : "Arki-Tests-Reporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "REPConcernStatusTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

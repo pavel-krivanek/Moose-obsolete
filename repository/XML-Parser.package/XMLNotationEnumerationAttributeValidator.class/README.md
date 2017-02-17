@@ -1,0 +1,1 @@
+This class validates attributes that can have NOTATION names from a list as values.

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Selection",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 12/1/2015 16:02",
+	"instvars" : [
+		 ],
+	"name" : "RTSelectionExample",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractExample",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+I model the action of closing the debugger.

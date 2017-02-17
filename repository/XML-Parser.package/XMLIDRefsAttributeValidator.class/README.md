@@ -1,0 +1,1 @@
+This class validates attributes with lists of ID ref values separated by spaces.

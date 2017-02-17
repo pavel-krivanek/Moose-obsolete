@@ -1,0 +1,3 @@
+tokenizing
+nextXMLStandaloneAttributeValue
+	self subclassResponsibility

@@ -1,0 +1,1 @@
+I am a class example of RTEditable label

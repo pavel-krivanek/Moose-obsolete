@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-Tests-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FamixJavaTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Athens-SVG",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"points" ],
+	"name" : "ASPolygon",
+	"pools" : [
+		 ],
+	"super" : "ASShape",
+	"type" : "normal" }

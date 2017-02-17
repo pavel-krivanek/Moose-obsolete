@@ -1,0 +1,15 @@
+{
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lives",
+		"compiledMethod" ],
+	"name" : "ExtractedTypeForBlockArg",
+	"pools" : [
+		 ],
+	"super" : "AbstractType",
+	"type" : "normal" }

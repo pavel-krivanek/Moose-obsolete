@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Beacon",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"instance" ],
+	"commentStamp" : "TudorGirba 6/9/2014 08:04",
+	"instvars" : [
+		"announcer" ],
+	"name" : "Beacon",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

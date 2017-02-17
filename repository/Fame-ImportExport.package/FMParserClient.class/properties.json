@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FMParserClient",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

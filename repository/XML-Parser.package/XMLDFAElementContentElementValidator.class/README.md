@@ -1,0 +1,1 @@
+This class validates elements that can only contain element content (no PCDATA) using a regular expression converted to a DFA. It ignores comments, PIs, and whitespace.

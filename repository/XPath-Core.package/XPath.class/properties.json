@@ -1,0 +1,16 @@
+{
+	"category" : "XPath-Core",
+	"classinstvars" : [
+		"compiledExpressionCacheEnabled",
+		"compiledExpressionCache" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 2/14/2017 01:51",
+	"instvars" : [
+		"compiledExpression",
+		"expressionSource" ],
+	"name" : "XPath",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

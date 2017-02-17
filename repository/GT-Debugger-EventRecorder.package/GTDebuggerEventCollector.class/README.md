@@ -1,0 +1,1 @@
+I represent a GTEventCollector for GTDebugger application.

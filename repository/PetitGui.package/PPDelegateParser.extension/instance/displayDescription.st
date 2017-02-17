@@ -1,0 +1,3 @@
+*petitgui-accessing
+displayDescription
+	^ nil

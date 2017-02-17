@@ -1,0 +1,3 @@
+*XPath-Tests
+contextClass
+	^ XPathContext

@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Events",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 9/30/2016 12:15",
+	"instvars" : [
+		 ],
+	"name" : "TRMouseDragEnter",
+	"pools" : [
+		 ],
+	"super" : "TRMouseAbstractDrop",
+	"type" : "normal" }

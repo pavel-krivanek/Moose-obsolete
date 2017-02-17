@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tarjan",
+		"window" ],
+	"name" : "MalTarjanTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

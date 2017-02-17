@@ -1,0 +1,3 @@
+instance creation
+withAttributePrincipalNodeType
+	^ self new defaultNodeTestParserContextClass: XPathNodeTestParserAttributeContext

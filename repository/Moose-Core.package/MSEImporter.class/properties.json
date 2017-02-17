@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MSEImporter",
+	"pools" : [
+		 ],
+	"super" : "FMImporter",
+	"type" : "normal" }

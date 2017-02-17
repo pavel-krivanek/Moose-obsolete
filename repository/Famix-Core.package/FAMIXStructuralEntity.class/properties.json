@@ -1,0 +1,15 @@
+{
+	"category" : "Famix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "usmanbhatti 11/28/2011 21:56",
+	"instvars" : [
+		"declaredType",
+		"incomingAccesses" ],
+	"name" : "FAMIXStructuralEntity",
+	"pools" : [
+		 ],
+	"super" : "FAMIXLeafEntity",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+testing
+isExtractedResult
+	^self subclassResponsibility

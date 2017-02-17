@@ -1,0 +1,3 @@
+private
+defaultMaxSize
+	^ 32

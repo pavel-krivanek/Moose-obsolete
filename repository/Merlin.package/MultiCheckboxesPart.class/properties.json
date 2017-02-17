@@ -1,0 +1,17 @@
+{
+	"category" : "Merlin-Parts",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"checkboxParts",
+		"answer",
+		"labels",
+		"formatBlock" ],
+	"name" : "MultiCheckboxesPart",
+	"pools" : [
+		 ],
+	"super" : "MultipleOptionPart",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"item" ],
+	"name" : "MalFeatureCollection",
+	"pools" : [
+		 ],
+	"super" : "OrderedCollection",
+	"type" : "variable" }

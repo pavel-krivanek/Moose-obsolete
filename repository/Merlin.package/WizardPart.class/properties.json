@@ -1,0 +1,28 @@
+{
+	"category" : "Merlin-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "cyrilledelaunay 3/11/2011 10:49",
+	"instvars" : [
+		"blockContents",
+		"wizardPane",
+		"enableNextButton",
+		"requiredInputs",
+		"callbackBlock",
+		"defaultValue",
+		"groupBoxName",
+		"useLatePopulateContents",
+		"numberOfContentCalls",
+		"numberOfPopulateContents",
+		"paneLine",
+		"output",
+		"isOpen",
+		"hasBeenOpen",
+		"transformationBlock" ],
+	"name" : "WizardPart",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

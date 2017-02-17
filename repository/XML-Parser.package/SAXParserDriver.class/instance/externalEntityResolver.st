@@ -1,0 +1,3 @@
+accessing
+externalEntityResolver
+	^ self saxHandler externalEntityResolver

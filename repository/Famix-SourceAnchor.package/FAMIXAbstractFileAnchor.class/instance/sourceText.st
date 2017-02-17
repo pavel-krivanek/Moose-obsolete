@@ -1,0 +1,3 @@
+accessing
+sourceText
+	self subclassResponsibility

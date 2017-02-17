@@ -1,0 +1,14 @@
+{
+	"category" : "ACD-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"context" ],
+	"name" : "ACDContextLocator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

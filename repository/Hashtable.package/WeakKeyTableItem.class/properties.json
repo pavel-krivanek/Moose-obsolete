@@ -1,0 +1,14 @@
+{
+	"category" : "Hashtable",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WeakKeyTableItem",
+	"pools" : [
+		 ],
+	"super" : "TableItem",
+	"type" : "normal" }

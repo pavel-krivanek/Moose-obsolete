@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 5/9/2016 10:15",
+	"instvars" : [
+		"path" ],
+	"name" : "RTSVGPathLine",
+	"pools" : [
+		 ],
+	"super" : "RTAbstractLine",
+	"type" : "normal" }

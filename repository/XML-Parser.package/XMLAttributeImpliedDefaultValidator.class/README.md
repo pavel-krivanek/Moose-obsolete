@@ -1,0 +1,1 @@
+This class allows an attribute to be absent (the #IMPLIED constraint).

@@ -1,0 +1,1 @@
+This is a base class for AST node classes that have another subexpression in addition to the first.

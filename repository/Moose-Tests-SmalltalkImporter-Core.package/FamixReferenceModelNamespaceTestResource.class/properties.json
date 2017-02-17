@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-SmalltalkImporter-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FamixReferenceModelNamespaceTestResource",
+	"pools" : [
+		 ],
+	"super" : "MooseModelTestResource",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SmallDude-Tests-Text",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DudeNoiseCleanerTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

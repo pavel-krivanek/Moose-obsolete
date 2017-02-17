@@ -1,0 +1,16 @@
+{
+	"category" : "Dynamix-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 11/27/2011 17:31",
+	"instvars" : [
+		"activationsWithArgument",
+		"activationsWithReceiver",
+		"activationsWithReturn" ],
+	"name" : "DynamixReference",
+	"pools" : [
+		 ],
+	"super" : "DynamixEntity",
+	"type" : "normal" }

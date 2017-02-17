@@ -1,0 +1,3 @@
+streaming
+doPickNextNode
+	onPickNextAction value

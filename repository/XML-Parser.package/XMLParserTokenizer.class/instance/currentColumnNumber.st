@@ -1,0 +1,3 @@
+accessing
+currentColumnNumber
+	^ streamReader currentColumnNumber

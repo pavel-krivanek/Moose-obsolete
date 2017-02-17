@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Finder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MooseFinderForSimpleMethodsTest",
+	"pools" : [
+		 ],
+	"super" : "MooseFinderTest",
+	"type" : "normal" }

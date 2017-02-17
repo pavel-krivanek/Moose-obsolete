@@ -1,0 +1,1 @@
+Invoked when invalid XML is detected and validation is on.

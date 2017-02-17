@@ -1,0 +1,1 @@
+This class allocates namespace scopes with a stack. Sending #enterScope pushes a new scope onto the stack that inherits all mappings from the previous (enclosing) scope, and #exitScop pops it off.

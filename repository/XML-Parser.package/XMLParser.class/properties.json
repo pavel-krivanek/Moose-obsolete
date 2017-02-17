@@ -1,0 +1,15 @@
+{
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"tokenizer",
+		"driver" ],
+	"name" : "XMLParser",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

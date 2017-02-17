@@ -1,0 +1,3 @@
+testing
+acceptsVariableArguments
+	^ self prototype acceptsVariableArguments

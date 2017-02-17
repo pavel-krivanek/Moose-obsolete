@@ -1,0 +1,20 @@
+{
+	"category" : "Magritte-Model-Description",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selector",
+		"enableBlock",
+		"model",
+		"comment",
+		"priority",
+		"label",
+		"shortcut" ],
+	"name" : "MAActionDescription",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

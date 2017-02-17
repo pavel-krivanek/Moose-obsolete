@@ -1,0 +1,3 @@
+accessing
+utf16LittleEndianBOM
+	^ XMLUTF16LittleEndianStreamConverter byteOrderMark

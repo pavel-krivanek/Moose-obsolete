@@ -1,0 +1,14 @@
+{
+	"category" : "PetitSmalltalk-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PPSmalltalkParserTests",
+	"pools" : [
+		 ],
+	"super" : "PPSmalltalkGrammarTests",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DropListPartTest",
+	"pools" : [
+		 ],
+	"super" : "WizardPartTest",
+	"type" : "normal" }

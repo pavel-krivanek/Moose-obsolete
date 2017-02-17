@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MerlinExamples",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

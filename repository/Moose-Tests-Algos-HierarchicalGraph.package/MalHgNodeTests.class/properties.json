@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-HierarchicalGraph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MalHgNodeTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

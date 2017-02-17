@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 3/13/2015 21:27",
+	"instvars" : [
+		 ],
+	"name" : "XPathConcatFunction",
+	"pools" : [
+		 ],
+	"super" : "XPathFunction",
+	"type" : "normal" }

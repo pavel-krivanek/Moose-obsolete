@@ -1,0 +1,14 @@
+{
+	"category" : "StateSpecs-Specs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SpecOfCollectionItemTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

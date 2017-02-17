@@ -1,0 +1,1 @@
+A highlighter text styler decorator for XML source code.

@@ -1,0 +1,1 @@
+i am root element of SVG document, correspond to a <svg> tag in document.

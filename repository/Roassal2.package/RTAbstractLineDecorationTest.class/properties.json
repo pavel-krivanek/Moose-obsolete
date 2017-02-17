@@ -1,0 +1,15 @@
+{
+	"category" : "Roassal2-LineDecorations",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"from",
+		"to" ],
+	"name" : "RTAbstractLineDecorationTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

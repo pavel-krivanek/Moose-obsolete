@@ -1,0 +1,35 @@
+{
+	"category" : "PetitIslands-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JanKurs 9/17/2014 17:07",
+	"instvars" : [
+		"javaClass",
+		"classDef",
+		"classBody",
+		"methodDef",
+		"arguments",
+		"methodBody",
+		"methodName",
+		"block",
+		"modifiers",
+		"classId",
+		"type",
+		"javaClassSea",
+		"methodModifiers",
+		"semicolon",
+		"comment",
+		"singleLineComment",
+		"string",
+		"water",
+		"letters",
+		"spaces",
+		"javaClassInClassBody",
+		"methodDefInClassBody" ],
+	"name" : "PPJavaSeaGrammar",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParser",
+	"type" : "normal" }

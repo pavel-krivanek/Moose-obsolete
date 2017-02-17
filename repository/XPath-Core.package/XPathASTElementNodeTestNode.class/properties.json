@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/20/2017 08:00",
+	"instvars" : [
+		 ],
+	"name" : "XPathASTElementNodeTestNode",
+	"pools" : [
+		 ],
+	"super" : "XPathASTNodeTestNode",
+	"type" : "normal" }

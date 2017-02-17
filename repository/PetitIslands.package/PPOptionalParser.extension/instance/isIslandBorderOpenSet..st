@@ -1,0 +1,3 @@
+*petitislands
+isIslandBorderOpenSet: set
+	^ false

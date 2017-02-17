@@ -1,0 +1,1 @@
+This class writes <![CDATA[...]]> sections. If canonical XML is enabled, it writes its contents as a regular XML-escaped string instead.

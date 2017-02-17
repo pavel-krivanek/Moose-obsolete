@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Finder",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"moosePanel" ],
+	"name" : "MoosePanelCommand",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

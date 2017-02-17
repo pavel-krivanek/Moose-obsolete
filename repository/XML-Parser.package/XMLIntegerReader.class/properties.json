@@ -1,0 +1,16 @@
+{
+	"category" : "XML-Parser-Utils",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"CharacterDigitValues",
+		"MaxIntegerValue" ],
+	"commentStamp" : "monty 1/8/2016 03:08",
+	"instvars" : [
+		"readStream",
+		"printStream" ],
+	"name" : "XMLIntegerReader",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-PieChart",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "RTPieBuilderTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

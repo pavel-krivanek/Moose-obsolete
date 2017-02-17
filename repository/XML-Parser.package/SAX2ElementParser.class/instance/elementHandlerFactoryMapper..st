@@ -1,0 +1,3 @@
+accessing
+elementHandlerFactoryMapper: anElementHandlerFactoryMapper
+	elementHandlerFactoryMapper := anElementHandlerFactoryMapper

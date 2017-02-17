@@ -1,0 +1,3 @@
+whitespaces
+sol
+	^ #startOfLine asParser

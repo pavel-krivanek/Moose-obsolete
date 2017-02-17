@@ -1,0 +1,3 @@
+testing
+isPattern
+	^ false

@@ -1,0 +1,2 @@
+handling - positions
+startEntityReferencePosition: aPosition

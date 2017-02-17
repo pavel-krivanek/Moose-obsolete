@@ -1,0 +1,4 @@
+*Famix-Implementation
+isMethod
+
+	^ true

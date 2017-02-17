@@ -1,0 +1,3 @@
+public
+numberMin
+	^ numberMin 

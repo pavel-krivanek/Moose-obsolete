@@ -1,0 +1,1 @@
+This class is a resolver that caches non-local entities in a global cache so they don't have to be retrieved again (like over HTTP). This is the default resolver.

@@ -1,0 +1,3 @@
+accessing
+outputCollection
+	^ self decodedByteString

@@ -1,0 +1,3 @@
+whitespace
+eof
+	^ #eof asParser

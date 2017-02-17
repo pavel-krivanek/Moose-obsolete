@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-DistributionMap",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "DistributionMapStringPropertyInfo",
+	"pools" : [
+		 ],
+	"super" : "DistributionMapPropertyInfo",
+	"type" : "normal" }

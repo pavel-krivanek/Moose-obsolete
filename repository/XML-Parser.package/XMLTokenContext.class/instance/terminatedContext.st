@@ -1,0 +1,3 @@
+changing
+terminatedContext
+	^ XMLTerminatedContext new

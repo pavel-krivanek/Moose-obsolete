@@ -1,0 +1,14 @@
+{
+	"category" : "Geometry",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 7/16/2016 16:25",
+	"instvars" : [
+		 ],
+	"name" : "GCollection",
+	"pools" : [
+		 ],
+	"super" : "OrderedCollection",
+	"type" : "normal" }

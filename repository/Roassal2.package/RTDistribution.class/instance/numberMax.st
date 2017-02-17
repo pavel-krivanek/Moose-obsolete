@@ -1,0 +1,3 @@
+public
+numberMax
+	^ numberMax

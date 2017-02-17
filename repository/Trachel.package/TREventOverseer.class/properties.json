@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"block" ],
+	"name" : "TREventOverseer",
+	"pools" : [
+		 ],
+	"super" : "TRObject",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "Beacon-Core-Signals",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 8/10/2016 14:33",
+	"instvars" : [
+		"timestamp",
+		"processId",
+		"properties" ],
+	"name" : "BeaconSignal",
+	"pools" : [
+		 ],
+	"super" : "Announcement",
+	"type" : "normal" }

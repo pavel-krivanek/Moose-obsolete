@@ -1,0 +1,14 @@
+{
+	"category" : "Merlin-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "WizardPartTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

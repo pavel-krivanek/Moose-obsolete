@@ -1,0 +1,14 @@
+{
+	"category" : "Trachel-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "TRPolygonShapeTest",
+	"pools" : [
+		 ],
+	"super" : "TRTest",
+	"type" : "normal" }

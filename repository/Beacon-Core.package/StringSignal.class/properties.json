@@ -1,0 +1,14 @@
+{
+	"category" : "Beacon-Core-Signals",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"message" ],
+	"name" : "StringSignal",
+	"pools" : [
+		 ],
+	"super" : "BeaconSignal",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "Famix-Extensions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model",
+		"importingContext" ],
+	"name" : "FAMIXImportingVisitor",
+	"pools" : [
+		 ],
+	"super" : "FAMIXVisitor",
+	"type" : "normal" }

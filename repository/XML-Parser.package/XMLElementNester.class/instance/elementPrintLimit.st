@@ -1,0 +1,3 @@
+private
+elementPrintLimit
+	^ 5

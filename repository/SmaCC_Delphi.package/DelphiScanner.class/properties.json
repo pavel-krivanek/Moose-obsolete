@@ -1,0 +1,21 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		"definedItems",
+		"undefinedItems" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ifDefCount",
+		"definedItems",
+		"undefinedItems",
+		"ifDefs",
+		"optComments",
+		"optDepths",
+		"parseOpt" ],
+	"name" : "DelphiScanner",
+	"pools" : [
+		 ],
+	"super" : "SmaCCScanner",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+SmaCCShiftAction represents the LR shift action.

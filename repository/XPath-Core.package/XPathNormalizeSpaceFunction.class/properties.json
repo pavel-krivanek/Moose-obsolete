@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 6/15/2015 00:41",
+	"instvars" : [
+		 ],
+	"name" : "XPathNormalizeSpaceFunction",
+	"pools" : [
+		 ],
+	"super" : "XPathFunction",
+	"type" : "normal" }

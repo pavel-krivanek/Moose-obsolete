@@ -1,0 +1,14 @@
+{
+	"category" : "PetitSQLite-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"importer" ],
+	"name" : "SQLASTAbstractVisitor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

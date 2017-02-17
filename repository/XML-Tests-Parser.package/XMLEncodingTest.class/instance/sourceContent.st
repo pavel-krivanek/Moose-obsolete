@@ -1,0 +1,3 @@
+source
+sourceContent
+	^ 'encoding test'

@@ -1,0 +1,4 @@
+handling
+handleAttributeNodeTestForLocalName: aLocalName
+	self startNodeTest.
+	expressionParserHandler handleAttributeNodeTestForLocalName: aLocalName.

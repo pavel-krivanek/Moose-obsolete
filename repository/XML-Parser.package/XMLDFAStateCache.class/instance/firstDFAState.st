@@ -1,0 +1,3 @@
+accessing
+firstDFAState
+	^ firstDFAState

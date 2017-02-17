@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 1/11/2017 18:24",
+	"instvars" : [
+		 ],
+	"name" : "XPathASTMutatingNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "XPathASTNodeVisitor",
+	"type" : "normal" }

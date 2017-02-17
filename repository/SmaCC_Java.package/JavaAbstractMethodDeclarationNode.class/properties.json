@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"modifiers",
+		"typeParameters",
+		"type",
+		"declarator",
+		"throws",
+		"semicolon" ],
+	"name" : "JavaAbstractMethodDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "JavaProgramNode",
+	"type" : "normal" }

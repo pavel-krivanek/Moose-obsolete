@@ -1,0 +1,4 @@
+*petitgui
+stream
+	
+	^ stream

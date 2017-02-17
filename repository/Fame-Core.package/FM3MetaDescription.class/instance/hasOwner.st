@@ -1,0 +1,3 @@
+testing
+hasOwner
+	^ self hasPackage

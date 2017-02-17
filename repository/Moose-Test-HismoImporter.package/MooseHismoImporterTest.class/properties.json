@@ -1,0 +1,15 @@
+{
+	"category" : "Moose-Test-HismoImporter",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"hismoImporter",
+		"datePattern" ],
+	"name" : "MooseHismoImporterTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+*Moose-Hismo
+versionEntity
+	^ self 

@@ -1,0 +1,14 @@
+{
+	"category" : "Phexample-ShouldPlugins",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SequenceableCollectionComparator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

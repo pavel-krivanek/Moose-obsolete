@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 3/25/2015 04:12",
+	"instvars" : [
+		 ],
+	"name" : "XPathLangFunction",
+	"pools" : [
+		 ],
+	"super" : "XPathFunction",
+	"type" : "normal" }

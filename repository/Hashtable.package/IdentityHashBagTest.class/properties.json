@@ -1,0 +1,14 @@
+{
+	"category" : "Hashtable-Test",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"bag" ],
+	"name" : "IdentityHashBagTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

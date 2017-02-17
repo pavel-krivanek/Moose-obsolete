@@ -1,0 +1,3 @@
+error handling
+errorType
+	self subclassResponsibility

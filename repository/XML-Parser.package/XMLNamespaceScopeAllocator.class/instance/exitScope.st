@@ -1,0 +1,3 @@
+allocating
+exitScope
+	^ scopes removeLast

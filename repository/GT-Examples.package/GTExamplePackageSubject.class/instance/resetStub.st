@@ -1,0 +1,3 @@
+private
+resetStub
+	thePackage := nil

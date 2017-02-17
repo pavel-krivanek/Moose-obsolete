@@ -1,0 +1,4 @@
+setting
+doNotRunCandidateOperator
+
+	candidateOperator := false

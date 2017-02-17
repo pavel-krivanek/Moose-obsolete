@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Tests-Algos-Graph",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MalGraphAlgorithmTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

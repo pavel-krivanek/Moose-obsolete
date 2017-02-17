@@ -1,0 +1,3 @@
+private
+defaultTimeout
+	^ 30

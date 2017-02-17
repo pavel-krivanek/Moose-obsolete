@@ -1,0 +1,16 @@
+{
+	"category" : "RoelTyper-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"dummyVariable",
+		"for",
+		"offsetTest" ],
+	"name" : "RoelTypingTestRoot",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

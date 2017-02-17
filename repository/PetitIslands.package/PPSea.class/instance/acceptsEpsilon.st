@@ -1,0 +1,3 @@
+queries
+acceptsEpsilon
+	^ island acceptsEpsilon

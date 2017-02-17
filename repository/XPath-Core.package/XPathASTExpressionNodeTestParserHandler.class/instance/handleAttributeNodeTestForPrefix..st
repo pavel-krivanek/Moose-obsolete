@@ -1,0 +1,4 @@
+handling
+handleAttributeNodeTestForPrefix: aPrefix
+	self startNodeTest.
+	expressionParserHandler handleAttributeNodeTestForPrefix: aPrefix.

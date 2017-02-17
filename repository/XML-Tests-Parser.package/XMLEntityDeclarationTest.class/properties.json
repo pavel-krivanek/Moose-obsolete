@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DOM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 11/23/2014 18:46",
+	"instvars" : [
+		 ],
+	"name" : "XMLEntityDeclarationTest",
+	"pools" : [
+		 ],
+	"super" : "XMLDeclarationNodeTest",
+	"type" : "normal" }

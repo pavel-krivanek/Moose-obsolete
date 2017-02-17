@@ -1,0 +1,16 @@
+{
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"elements",
+		"maxElementCount" ],
+	"name" : "FMAbstractAttribute",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,21 @@
+{
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"EncodingNameChars",
+		"EncodingNameStartChars",
+		"NormalizedSpace",
+		"PublicIDChars",
+		"VersionDigitChars" ],
+	"commentStamp" : "monty 6/15/2015 23:55",
+	"instvars" : [
+		"pushedBackEntities",
+		"totalOpenIncludeSections",
+		"isInLiteralValue",
+		"isIgnoringLiteralValueTerminator" ],
+	"name" : "XMLWellFormedParserTokenizer",
+	"pools" : [
+		 ],
+	"super" : "XMLParserTokenizer",
+	"type" : "normal" }

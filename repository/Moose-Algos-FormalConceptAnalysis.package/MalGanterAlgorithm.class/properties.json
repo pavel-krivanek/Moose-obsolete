@@ -1,0 +1,16 @@
+{
+	"category" : "Moose-Algos-FormalConceptAnalysis",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"context",
+		"attributesMask",
+		"objectsMask" ],
+	"name" : "MalGanterAlgorithm",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

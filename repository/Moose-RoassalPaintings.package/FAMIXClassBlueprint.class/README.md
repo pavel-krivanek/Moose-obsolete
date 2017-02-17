@@ -1,0 +1,1 @@
+This class encapsulates the logic of the class blueprint view. It is applicable to a set of famix types.

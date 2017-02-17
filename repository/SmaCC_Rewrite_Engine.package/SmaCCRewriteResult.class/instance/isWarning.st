@@ -1,0 +1,3 @@
+testing
+isWarning
+	^ type = #warning

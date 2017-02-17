@@ -1,0 +1,14 @@
+{
+	"category" : "Phexample-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "HenryDorsettCase 11/6/2009 18:56",
+	"instvars" : [
+		"givenNotGiven" ],
+	"name" : "Phexample",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

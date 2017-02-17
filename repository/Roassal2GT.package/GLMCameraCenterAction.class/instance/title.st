@@ -1,0 +1,3 @@
+hooks
+title
+	^ 'Camera center'

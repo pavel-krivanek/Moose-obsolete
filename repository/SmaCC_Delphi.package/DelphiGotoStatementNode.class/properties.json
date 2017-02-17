@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"gotoToken",
+		"label" ],
+	"name" : "DelphiGotoStatementNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiStatementNode",
+	"type" : "normal" }

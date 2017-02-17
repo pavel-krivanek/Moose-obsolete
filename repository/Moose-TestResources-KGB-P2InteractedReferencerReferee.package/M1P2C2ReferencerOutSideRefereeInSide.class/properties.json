@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-TestResources-KGB-P2InteractedReferencerReferee",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "M1P2C2ReferencerOutSideRefereeInSide",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

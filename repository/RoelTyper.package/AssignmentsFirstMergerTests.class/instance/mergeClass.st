@@ -1,0 +1,3 @@
+auxiliary
+mergeClass
+	^AssignmentsFirstMerger

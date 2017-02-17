@@ -1,0 +1,16 @@
+{
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"model",
+		"metamodel",
+		"metaMetamodel" ],
+	"name" : "FMCompleteTower",
+	"pools" : [
+		 ],
+	"super" : "FMTower",
+	"type" : "normal" }

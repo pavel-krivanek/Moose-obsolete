@@ -1,0 +1,14 @@
+{
+	"category" : "ACD-Glamour-Interface",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ACGlamourDebugger",
+	"pools" : [
+		 ],
+	"super" : "GTGenericStackDebugger",
+	"type" : "normal" }

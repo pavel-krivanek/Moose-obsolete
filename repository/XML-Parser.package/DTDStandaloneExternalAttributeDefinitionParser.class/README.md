@@ -1,0 +1,1 @@
+This class parses standalone externally defined ATTLIST attribute definitions and returns XMLAttributeValidators for them that disallow attributes needing further value normalization or substitution with default or fixed default values.

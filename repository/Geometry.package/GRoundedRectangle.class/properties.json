@@ -1,0 +1,15 @@
+{
+	"category" : "Geometry",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 7/16/2016 17:03",
+	"instvars" : [
+		"rectangle",
+		"borderRadius" ],
+	"name" : "GRoundedRectangle",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

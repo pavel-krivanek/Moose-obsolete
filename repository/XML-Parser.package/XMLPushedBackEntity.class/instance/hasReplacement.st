@@ -1,0 +1,3 @@
+testing
+hasReplacement
+	^ entity hasReplacement

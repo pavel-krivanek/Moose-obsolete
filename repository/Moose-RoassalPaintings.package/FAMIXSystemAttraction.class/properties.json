@@ -1,0 +1,19 @@
+{
+	"category" : "Moose-RoassalPaintings",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"classStrongColor",
+		"classPaleColor",
+		"methodStrongColor",
+		"methodPaleColor",
+		"attributeStrongColor",
+		"attributePaleColor" ],
+	"name" : "FAMIXSystemAttraction",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

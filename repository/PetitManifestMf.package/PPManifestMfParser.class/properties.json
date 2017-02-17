@@ -1,0 +1,21 @@
+{
+	"category" : "PetitManifestMf",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"pairs",
+		"pair",
+		"label",
+		"basicValue",
+		"oneLinerBasicValue",
+		"pairValue",
+		"newline",
+		"valueSeparator" ],
+	"name" : "PPManifestMfParser",
+	"pools" : [
+		 ],
+	"super" : "PPCompositeParser",
+	"type" : "normal" }

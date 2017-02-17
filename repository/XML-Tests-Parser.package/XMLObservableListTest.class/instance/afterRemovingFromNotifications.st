@@ -1,0 +1,3 @@
+accessing
+afterRemovingFromNotifications
+	^ #(removed:from:)

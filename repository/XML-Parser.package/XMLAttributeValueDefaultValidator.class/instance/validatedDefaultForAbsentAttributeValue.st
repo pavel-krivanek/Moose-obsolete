@@ -1,0 +1,3 @@
+validating
+validatedDefaultForAbsentAttributeValue
+	^ self value

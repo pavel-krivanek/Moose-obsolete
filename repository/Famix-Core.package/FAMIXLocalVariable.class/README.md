@@ -1,0 +1,1 @@
+FAMIXLocalVariable represents a local variable in the scope of a behavioural entity.

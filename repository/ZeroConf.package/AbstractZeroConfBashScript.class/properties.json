@@ -1,0 +1,23 @@
+{
+	"category" : "ZeroConf",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"directory",
+		"baseUrl",
+		"fileBaseUrl",
+		"basename",
+		"outputStream",
+		"combiningScript",
+		"additionalHelp",
+		"additionalHtmlHelp",
+		"url",
+		"prefixingScript" ],
+	"name" : "AbstractZeroConfBashScript",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

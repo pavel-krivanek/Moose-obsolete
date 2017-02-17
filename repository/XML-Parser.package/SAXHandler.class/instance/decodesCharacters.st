@@ -1,0 +1,3 @@
+configuring
+decodesCharacters
+	^ self configuration decodesCharacters

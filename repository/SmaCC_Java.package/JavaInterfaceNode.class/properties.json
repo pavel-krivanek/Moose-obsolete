@@ -1,0 +1,23 @@
+{
+	"category" : "SmaCC_Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"modifiers",
+		"interfaceToken",
+		"name",
+		"typeParameters",
+		"extendsToken",
+		"interfaceTypes",
+		"commas",
+		"leftBrace",
+		"declarations",
+		"rightBrace" ],
+	"name" : "JavaInterfaceNode",
+	"pools" : [
+		 ],
+	"super" : "JavaProgramNode",
+	"type" : "normal" }

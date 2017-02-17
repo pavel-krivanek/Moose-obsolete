@@ -1,0 +1,3 @@
+adding
+inspectorClass
+	^Inspector

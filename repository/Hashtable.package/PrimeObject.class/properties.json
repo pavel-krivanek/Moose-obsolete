@@ -1,0 +1,14 @@
+{
+	"category" : "Hashtable-Objects",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PrimeObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

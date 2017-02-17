@@ -1,0 +1,16 @@
+{
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 11/19/2016 13:39",
+	"instvars" : [
+		"name",
+		"publicID",
+		"systemID" ],
+	"name" : "DTDNotation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

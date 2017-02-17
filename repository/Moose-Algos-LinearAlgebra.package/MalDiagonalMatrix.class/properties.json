@@ -1,0 +1,14 @@
+{
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MalDiagonalMatrix",
+	"pools" : [
+		 ],
+	"super" : "MalSymetricMatrix",
+	"type" : "normal" }

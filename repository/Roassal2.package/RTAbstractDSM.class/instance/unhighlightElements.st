@@ -1,0 +1,3 @@
+highlighting
+unhighlightElements
+	self unhighlightElements: elements

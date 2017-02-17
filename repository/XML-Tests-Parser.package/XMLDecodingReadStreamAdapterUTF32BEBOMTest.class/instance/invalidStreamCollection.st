@@ -1,0 +1,3 @@
+accessing
+invalidStreamCollection
+	^ self invalidEncodedInputCollectionWithBOM

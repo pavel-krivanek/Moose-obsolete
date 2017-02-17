@@ -1,0 +1,16 @@
+{
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"indexDict",
+		"stack",
+		"serial" ],
+	"name" : "FMMetamodelBuilder",
+	"pools" : [
+		 ],
+	"super" : "FMModelBuilder",
+	"type" : "normal" }

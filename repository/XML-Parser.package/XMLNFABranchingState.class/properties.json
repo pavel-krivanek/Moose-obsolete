@@ -1,0 +1,15 @@
+{
+	"category" : "XML-Parser-Validation-DFA",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 10/7/2014 01:27",
+	"instvars" : [
+		"leftBranch",
+		"rightBranch" ],
+	"name" : "XMLNFABranchingState",
+	"pools" : [
+		 ],
+	"super" : "XMLNFAState",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+hooks
+icon
+	^ GLMUIThemeExtraIcons glamorousZoomOut

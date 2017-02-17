@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Tests-Parser-DOM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 4/12/2015 08:27",
+	"instvars" : [
+		"messageRecorder" ],
+	"name" : "XMLRecordingListObserver",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+hooks
+interactionsToBeRegistered
+	^ Array with: RTSelectableElementsContextInteraction with: RTResizeableViewContextInteraction

@@ -1,0 +1,5 @@
+visitor-doubleDispatching
+visitLocalVariableDeclarationStatementNode: aLocalVariableDeclarationStatementNode
+	self visitNode: aLocalVariableDeclarationStatementNode type.
+	self visitNodes: aLocalVariableDeclarationStatementNode modifiers.
+	self visitNode: aLocalVariableDeclarationStatementNode declarators

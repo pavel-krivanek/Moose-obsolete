@@ -1,0 +1,1 @@
+The Alias models the usage of an instance in an event.

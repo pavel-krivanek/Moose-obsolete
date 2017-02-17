@@ -1,0 +1,3 @@
+drawing
+labelColor
+	^ labelColor

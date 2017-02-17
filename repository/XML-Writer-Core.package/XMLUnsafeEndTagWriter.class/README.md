@@ -1,0 +1,1 @@
+This class is an end tag writer used to close an element started by an XMLUnsafeStartTagWriter.

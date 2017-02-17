@@ -1,0 +1,3 @@
+testing
+isWindowCollapsed
+	^ true

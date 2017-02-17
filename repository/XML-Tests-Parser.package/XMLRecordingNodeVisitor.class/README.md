@@ -1,0 +1,1 @@
+This node visitor records vititing messages sent by node accept methods using an XMLMessageRecorder.

@@ -1,0 +1,3 @@
+accessing
+streamAdapterClass
+	^ XPathReadStreamAdapter

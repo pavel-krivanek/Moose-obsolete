@@ -1,0 +1,4 @@
+*Merlin
+meValue
+
+	^ self

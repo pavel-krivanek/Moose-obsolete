@@ -1,0 +1,3 @@
+private
+sortKey
+	^ self target

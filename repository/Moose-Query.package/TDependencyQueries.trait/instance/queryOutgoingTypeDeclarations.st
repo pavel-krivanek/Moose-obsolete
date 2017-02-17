@@ -1,0 +1,4 @@
+moosequery-queries-outgoing
+queryOutgoingTypeDeclarations
+
+	self explicitRequirement 

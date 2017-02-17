@@ -1,0 +1,3 @@
+testing
+isID
+	^ true

@@ -1,0 +1,3 @@
+accessing
+invalidEncodedInputCollectionWithBOM
+	^ self streamConverterClass byteOrderMark, self invalidEncodedInputCollection

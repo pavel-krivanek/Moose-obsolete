@@ -1,0 +1,4 @@
+*Moose-Core
+mooseName
+	
+	^ #Smalltalk 

@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 11/21/2016 15:42",
+	"instvars" : [
+		"doctypeDefinition" ],
+	"name" : "DTDSubsetParserDriver",
+	"pools" : [
+		 ],
+	"super" : "XMLParserDriver",
+	"type" : "normal" }

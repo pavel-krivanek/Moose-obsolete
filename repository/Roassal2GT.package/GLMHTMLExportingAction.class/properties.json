@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2GT-Glamour-Actions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GLMHTMLExportingAction",
+	"pools" : [
+		 ],
+	"super" : "GLMRoassal2Action",
+	"type" : "normal" }

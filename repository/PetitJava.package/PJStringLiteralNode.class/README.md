@@ -1,0 +1,1 @@
+A node of a string literal.

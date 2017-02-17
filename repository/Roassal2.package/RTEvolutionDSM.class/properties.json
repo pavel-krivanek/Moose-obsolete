@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-DSM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "akevalion 9/5/2016 19:37",
+	"instvars" : [
+		"timelineBlock" ],
+	"name" : "RTEvolutionDSM",
+	"pools" : [
+		 ],
+	"super" : "RTGradualDSM",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+classFinder
+	^ XMLClassFinder

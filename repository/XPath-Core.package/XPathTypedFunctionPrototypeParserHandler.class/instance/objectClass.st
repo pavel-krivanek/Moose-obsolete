@@ -1,0 +1,3 @@
+private
+objectClass
+	^ Object

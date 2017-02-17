@@ -1,0 +1,4 @@
+accessing
+mooseName 
+	 
+	^name

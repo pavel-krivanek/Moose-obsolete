@@ -1,0 +1,17 @@
+{
+	"category" : "SmallDude-Tests-Text",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"code",
+		"referenceModel",
+		"mooseModel" ],
+	"name" : "DudeDummyEntity",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

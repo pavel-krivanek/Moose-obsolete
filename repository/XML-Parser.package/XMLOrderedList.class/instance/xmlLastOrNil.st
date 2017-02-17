@@ -1,0 +1,3 @@
+accessing
+xmlLastOrNil
+	^ self last

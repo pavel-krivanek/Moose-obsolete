@@ -1,0 +1,14 @@
+{
+	"category" : "PetitIslands-Parsers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"waterToken" ],
+	"name" : "PPWater",
+	"pools" : [
+		 ],
+	"super" : "PPDelegateParser",
+	"type" : "normal" }

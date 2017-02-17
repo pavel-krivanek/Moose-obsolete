@@ -1,0 +1,3 @@
+as yet unclassified
+OBSOLETECLASS
+	"THIS CLASS IS OBSOLETE. PLEASE REFER TO RTLabeled"

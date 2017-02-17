@@ -1,0 +1,16 @@
+{
+	"category" : "GT-Inspector",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"index",
+		"value",
+		"slotName" ],
+	"name" : "GTInspectorProtoObjectNode",
+	"pools" : [
+		 ],
+	"super" : "GTInspectorVariableNode",
+	"type" : "normal" }

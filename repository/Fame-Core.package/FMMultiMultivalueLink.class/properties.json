@@ -1,0 +1,14 @@
+{
+	"category" : "Fame-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "tg 9/20/2009 18:22",
+	"instvars" : [
+		 ],
+	"name" : "FMMultiMultivalueLink",
+	"pools" : [
+		 ],
+	"super" : "FMMultivalueLink",
+	"type" : "normal" }

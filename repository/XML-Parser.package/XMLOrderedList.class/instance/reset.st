@@ -1,0 +1,3 @@
+removing
+reset
+	collection reset

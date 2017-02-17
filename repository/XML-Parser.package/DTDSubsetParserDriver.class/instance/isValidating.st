@@ -1,0 +1,3 @@
+testing
+isValidating
+	self subclassResponsibility

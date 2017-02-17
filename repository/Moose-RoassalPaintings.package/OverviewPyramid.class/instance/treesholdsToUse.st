@@ -1,0 +1,4 @@
+accessing - treeshold
+treesholdsToUse
+
+	^ treesholdsToUse.

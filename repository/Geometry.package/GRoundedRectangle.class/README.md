@@ -1,0 +1,1 @@
+I represent a rectangle whose corners are rounded.

@@ -1,0 +1,3 @@
+visiting - operators
+visitGreaterThanExpression: aGreaterThanExpression
+	^ self visitBinaryOperatorExpression: aGreaterThanExpression

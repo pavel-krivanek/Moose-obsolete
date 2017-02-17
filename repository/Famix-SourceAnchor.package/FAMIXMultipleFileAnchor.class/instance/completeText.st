@@ -1,0 +1,3 @@
+public
+completeText
+	^ self sourceText

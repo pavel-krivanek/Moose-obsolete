@@ -1,0 +1,5 @@
+validating
+validateAttributeDeclaration
+	self unparsedEntityValidator validateNotationAttributeDeclaration: self.
+
+	super validateAttributeDeclaration.

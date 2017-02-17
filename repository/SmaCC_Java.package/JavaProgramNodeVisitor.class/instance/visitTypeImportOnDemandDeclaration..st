@@ -1,0 +1,4 @@
+generated
+visitTypeImportOnDemandDeclaration: aTypeImportOnDemandDeclaration
+	^ self
+		visitSingleTypeImportDeclaration: aTypeImportOnDemandDeclaration

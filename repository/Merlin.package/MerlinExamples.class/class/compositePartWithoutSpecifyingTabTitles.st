@@ -1,0 +1,6 @@
+basic morphic examples
+compositePartWithoutSpecifyingTabTitles
+	"self compositePartWithoutSpecifyingTabTitles"
+
+	^ self compositePartWithoutSpecifyingTabTitlesUsing: MerlinMorphicWizardRenderer new
+	

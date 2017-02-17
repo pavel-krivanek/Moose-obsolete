@@ -1,0 +1,14 @@
+{
+	"category" : "Famix-File",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "TudorGirba 1/27/2011 21:30",
+	"instvars" : [
+		 ],
+	"name" : "FAMIXFolder",
+	"pools" : [
+		 ],
+	"super" : "FAMIXAbstractFile",
+	"type" : "normal" }

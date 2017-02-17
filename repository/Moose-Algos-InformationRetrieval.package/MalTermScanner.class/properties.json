@@ -1,0 +1,16 @@
+{
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Void" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"stream",
+		"buffer",
+		"term" ],
+	"name" : "MalTermScanner",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-Builder-ScrollBar",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"view" ],
+	"name" : "RTDoubleScrollBarTest",
+	"pools" : [
+		 ],
+	"super" : "RTTest",
+	"type" : "normal" }

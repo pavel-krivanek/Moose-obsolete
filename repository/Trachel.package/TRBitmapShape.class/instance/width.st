@@ -1,0 +1,3 @@
+accessing
+width
+	^ super width

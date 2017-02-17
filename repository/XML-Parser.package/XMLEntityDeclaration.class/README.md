@@ -1,0 +1,1 @@
+This is an abstract class for general and parameter <!ENTITY> declarations.

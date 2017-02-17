@@ -1,0 +1,3 @@
+class initialization
+initializeCanonicalLineBreak
+	self canonicalLineBreak: Character lf

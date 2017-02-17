@@ -1,0 +1,3 @@
+testing
+hasReduceAction
+	^ reduceAction hasReduceAction

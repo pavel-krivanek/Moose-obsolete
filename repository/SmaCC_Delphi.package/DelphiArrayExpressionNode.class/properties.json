@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"expression",
+		"left",
+		"indexes",
+		"commas",
+		"right" ],
+	"name" : "DelphiArrayExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "DelphiExpressionNode",
+	"type" : "normal" }

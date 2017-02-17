@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 6/15/2015 04:48",
+	"instvars" : [
+		 ],
+	"name" : "XPathSubstringAfterFunction",
+	"pools" : [
+		 ],
+	"super" : "XPathFunction",
+	"type" : "normal" }

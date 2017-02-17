@@ -1,0 +1,3 @@
+testing
+isBinaryOperatorExpression
+	^ true

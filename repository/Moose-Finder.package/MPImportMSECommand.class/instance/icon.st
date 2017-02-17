@@ -1,0 +1,3 @@
+hooks
+icon
+	^ MooseIcons mooseImportMse

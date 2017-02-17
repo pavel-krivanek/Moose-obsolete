@@ -1,0 +1,15 @@
+{
+	"category" : "Hashtable-Test",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"table",
+		"testsize" ],
+	"name" : "WeakKeyIdentityHashTableTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

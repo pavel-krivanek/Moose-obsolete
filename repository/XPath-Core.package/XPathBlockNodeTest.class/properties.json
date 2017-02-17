@@ -1,0 +1,14 @@
+{
+	"category" : "XPath-Core-Compilation",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 2/6/2017 18:38",
+	"instvars" : [
+		"block" ],
+	"name" : "XPathBlockNodeTest",
+	"pools" : [
+		 ],
+	"super" : "XPathNodeTest",
+	"type" : "normal" }

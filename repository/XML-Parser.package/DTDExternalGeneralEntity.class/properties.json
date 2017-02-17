@@ -1,0 +1,14 @@
+{
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "monty 4/8/2016 17:52",
+	"instvars" : [
+		 ],
+	"name" : "DTDExternalGeneralEntity",
+	"pools" : [
+		 ],
+	"super" : "DTDExternalEntity",
+	"type" : "normal" }

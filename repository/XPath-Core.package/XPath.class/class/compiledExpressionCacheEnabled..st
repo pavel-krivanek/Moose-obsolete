@@ -1,0 +1,3 @@
+accessing
+compiledExpressionCacheEnabled: aBoolean
+	compiledExpressionCacheEnabled := aBoolean

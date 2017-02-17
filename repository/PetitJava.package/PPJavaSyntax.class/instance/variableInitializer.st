@@ -1,0 +1,5 @@
+grammar
+variableInitializer 
+
+	^	arrayInitializer 
+	/	expression	

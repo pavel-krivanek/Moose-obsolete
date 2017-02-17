@@ -1,0 +1,3 @@
+testing
+hasCurentScope
+	^ scopes notEmpty

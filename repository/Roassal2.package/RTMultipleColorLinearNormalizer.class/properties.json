@@ -1,0 +1,14 @@
+{
+	"category" : "Roassal2-ColorNormalizerOBSOLETE",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"normalizers" ],
+	"name" : "RTMultipleColorLinearNormalizer",
+	"pools" : [
+		 ],
+	"super" : "RTNAbstractNormalizer",
+	"type" : "normal" }
