@@ -3,7 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#annotationType => FMToOneRelationSlot inverse: #instances inClass: #FAMIXAnnotationType",
-		"#annotatedEntity",
+		"#annotatedEntity => FMToOneRelationSlot inverse: #annotationInstances inClass: #FAMIXNamedEntity",
 		"#attributes => FMToManyRelationSlot inverse: #parentAnnotationInstance inClass: #FAMIXAnnotationInstanceAttribute"
 	],
 	"name" : "FAMIXAnnotationInstance",

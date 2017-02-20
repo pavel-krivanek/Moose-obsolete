@@ -7,18 +7,14 @@
 		"#name",
 		"#isStub",
 		"#modifiers",
-		"#annotationInstances"
+		"#annotationInstances => FMToManyRelationSlot inverse: #annotationInstances inClass: #FAMIXAnnotationInstance"
 	],
 	"name" : "FAMIXNamedEntity",
 	"commentStamp" : "usmanbhatti 11/23/2011 22:48",
 	"super" : "FAMIXSourcedEntity",
 	"traitcomposition" : "TOODependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
-	"classinstvars" : [
-		"#outgoingMSEProperties",
-		"#incomingMSEProperties",
-		"#belongsToMethod"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"category" : "Famix-Core"
 }
