@@ -255,12 +255,12 @@ baseline: spec
 		spec package: 'PetitXml'.
 		spec package: 'PetitXPath'.
 		spec package: 'PetitYAML'.
-		spec package: 'SmallDude-Core'.
+		"spec package: 'SmallDude-Core'.
 		spec package: 'SmallDude-Moose'.
 		spec package: 'SmallDude-Species'.
 		spec package: 'SmallDude-Tests-Core'.
 		spec package: 'SmallDude-Tests-Text'.
-		spec package: 'SmallDude-Text'.
+		spec package: 'SmallDude-Text'."
 		spec package: 'GT-PetitParserDebugger'.
 
 	   self groups: spec.
