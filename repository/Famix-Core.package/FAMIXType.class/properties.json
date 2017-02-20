@@ -2,7 +2,7 @@
 	"classtraitcomposition" : "TOODependencyQueries classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#incomingReferences => FMToManyRelationSlot inverse: #target: inClass: #FAMIXReference",
+		"#incomingReferences => FMToManyRelationSlot inverse: #target inClass: #FAMIXReference",
 		"#subInheritances => FMToManyRelationSlot inverse: #superclass inClass: #FAMIXInheritance",
 		"#methods => FMToManyRelationSlot inverse: #parentType inClass: #FAMIXMethod",
 		"#container",
