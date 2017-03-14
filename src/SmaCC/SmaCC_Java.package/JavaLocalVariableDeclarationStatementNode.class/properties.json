@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaStatementNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"declaration",
+		"semicolon"
+	],
+	"name" : "JavaLocalVariableDeclarationStatementNode",
+	"type" : "normal"
+}

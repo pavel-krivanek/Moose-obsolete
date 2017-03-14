@@ -1,0 +1,1 @@
+This is a class for the 'node()' type test for any node.

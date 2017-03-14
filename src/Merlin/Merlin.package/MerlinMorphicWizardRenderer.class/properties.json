@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphicRenderer",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentIndex",
+		"wizardControl"
+	],
+	"name" : "MerlinMorphicWizardRenderer",
+	"type" : "normal"
+}

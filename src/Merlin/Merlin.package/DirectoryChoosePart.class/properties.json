@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ChooseFilePart",
+	"category" : "Merlin-Parts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DirectoryChoosePart",
+	"type" : "normal"
+}

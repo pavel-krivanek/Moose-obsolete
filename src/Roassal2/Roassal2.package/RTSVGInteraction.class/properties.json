@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "RicardoJacas 5/9/2014 23:44",
+	"super" : "RTObject",
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type",
+		"target",
+		"contained",
+		"external"
+	],
+	"name" : "RTSVGInteraction",
+	"type" : "normal"
+}

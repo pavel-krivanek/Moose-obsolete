@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPJavaSeaGrammar",
+	"category" : "PetitIslands-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPJavaSeaParser",
+	"type" : "normal"
+}

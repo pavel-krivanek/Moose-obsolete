@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Glamour-Tests-Morphic",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"window",
+		"tabs"
+	],
+	"name" : "LazyTabGroupTest",
+	"type" : "normal"
+}

@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-StackBarPlot",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"values",
+		"normalizer",
+		"widthBlock",
+		"heightBlock",
+		"numberOfValuesPerRow",
+		"colorPalette",
+		"labelBlock",
+		"labelConditionalBlock",
+		"labelColor",
+		"legend"
+	],
+	"name" : "RTStackBarPlot",
+	"type" : "normal"
+}

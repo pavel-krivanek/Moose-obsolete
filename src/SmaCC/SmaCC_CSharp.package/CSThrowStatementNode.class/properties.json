@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"throwToken",
+		"expression",
+		"semicolonToken"
+	],
+	"name" : "CSThrowStatementNode",
+	"type" : "normal"
+}

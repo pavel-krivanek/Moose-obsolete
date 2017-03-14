@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TREvent",
+	"category" : "Trachel-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newExtent",
+		"oldExtent"
+	],
+	"name" : "TRResizeCanvasEvent",
+	"type" : "normal"
+}

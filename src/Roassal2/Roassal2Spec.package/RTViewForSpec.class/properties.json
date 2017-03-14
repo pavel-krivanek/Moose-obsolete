@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "BenjaminVanRyseghem 1/22/2014 10:52",
+	"super" : "RTView",
+	"category" : "Roassal2Spec-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lastEvent"
+	],
+	"name" : "RTViewForSpec",
+	"type" : "normal"
+}

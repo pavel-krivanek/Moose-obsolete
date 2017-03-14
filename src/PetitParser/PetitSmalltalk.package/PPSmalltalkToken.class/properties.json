@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PPToken",
+	"category" : "PetitSmalltalk-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"comments"
+	],
+	"name" : "PPSmalltalkToken",
+	"type" : "normal"
+}

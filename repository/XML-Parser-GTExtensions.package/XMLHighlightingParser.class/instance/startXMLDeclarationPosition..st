@@ -1,3 +1,0 @@
-handling - positions
-startXMLDeclarationPosition: aPosition
-	highlighter startXMLDeclarationHighlightPosition: aPosition

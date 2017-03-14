@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBraceToken",
+		"initializers",
+		"commaTokens",
+		"rightBraceToken"
+	],
+	"name" : "CSCollectionInitializerNode",
+	"type" : "normal"
+}

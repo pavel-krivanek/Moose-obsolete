@@ -1,1 +1,0 @@
-I am a segment between two vertices

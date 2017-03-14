@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"axisConfigurationX",
+		"axisConfigurationY",
+		"maxX",
+		"maxY",
+		"minX",
+		"minY",
+		"extent",
+		"decorators",
+		"withOrigin",
+		"yOffset"
+	],
+	"name" : "RTAbstractGrapher",
+	"type" : "normal"
+}

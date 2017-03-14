@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DebugAction",
+	"category" : "GT-GlamourDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"debugStoneType"
+	],
+	"name" : "GTGlamourStepToNextStoneAction",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "PetitGui-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"refactoring"
+	],
+	"name" : "PPGrammarRefactoringTest",
+	"type" : "normal"
+}

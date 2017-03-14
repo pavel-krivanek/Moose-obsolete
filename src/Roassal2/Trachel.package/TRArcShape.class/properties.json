@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "SamirSaleh 1/27/2014 09:31",
+	"super" : "TRShape",
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alphaAngle",
+		"betaAngle",
+		"innerRadius",
+		"externalRadius",
+		"origin",
+		"height",
+		"width",
+		"topLeft",
+		"bottomRight"
+	],
+	"name" : "TRArcShape",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Moose-TestResources-LCOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"a1",
+		"a2",
+		"a3"
+	],
+	"name" : "ClassE",
+	"type" : "normal"
+}

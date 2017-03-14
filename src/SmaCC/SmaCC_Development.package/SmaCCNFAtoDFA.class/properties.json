@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCGraphAlgorithm",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mergedStates"
+	],
+	"name" : "SmaCCNFAtoDFA",
+	"type" : "normal"
+}

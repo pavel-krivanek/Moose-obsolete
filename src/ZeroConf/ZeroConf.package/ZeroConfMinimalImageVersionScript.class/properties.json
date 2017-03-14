@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ZeroConfImageVersionScript",
+	"category" : "ZeroConf-Unity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZeroConfMinimalImageVersionScript",
+	"type" : "normal"
+}

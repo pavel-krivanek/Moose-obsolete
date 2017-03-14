@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Builder-Map-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"builder"
+	],
+	"name" : "RTMapBuilderTest",
+	"type" : "normal"
+}

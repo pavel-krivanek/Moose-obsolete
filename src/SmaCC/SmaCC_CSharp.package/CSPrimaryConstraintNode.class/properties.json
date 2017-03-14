@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classToken",
+		"structToken"
+	],
+	"name" : "CSPrimaryConstraintNode",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+FAMIXUnknownVariable represents some unknown entity encountered while importing the project, possibly due to a syntax error in the source code.

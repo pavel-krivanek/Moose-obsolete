@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "YuriyTymchuk 2/24/2016 10:19",
+	"super" : "ReInvocationSequenceRule",
+	"category" : "Roassal2-Rules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTInvocationSequenceRule",
+	"type" : "normal"
+}

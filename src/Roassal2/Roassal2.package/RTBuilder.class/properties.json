@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "AlexandreBergel 4/23/2015 19:29",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Common",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"interactionBuilder",
+		"shapeBuilder",
+		"layoutBuilder",
+		"title",
+		"metricNormalizer"
+	],
+	"name" : "RTBuilder",
+	"type" : "normal"
+}

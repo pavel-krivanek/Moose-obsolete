@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 1/22/2017 21:34",
+	"super" : "XPathASTRelationalExpressionNode",
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathASTGreaterThanOrEqualToExpressionNode",
+	"type" : "normal"
+}

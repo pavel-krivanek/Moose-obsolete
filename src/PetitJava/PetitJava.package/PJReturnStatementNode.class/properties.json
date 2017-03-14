@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PJStatementNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"expression"
+	],
+	"name" : "PJReturnStatementNode",
+	"type" : "normal"
+}

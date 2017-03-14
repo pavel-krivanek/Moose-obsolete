@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCReduceCode",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCVariableReduceCode",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphDroplListWidget",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MerlinMorphMorphDroplListWidget",
+	"type" : "normal"
+}

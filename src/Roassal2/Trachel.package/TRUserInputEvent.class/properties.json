@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TRShapeEvent",
+	"category" : "Trachel-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"commandKeyPressed",
+		"controlKeyPressed",
+		"shiftKeyPressed",
+		"optionKeyPressed"
+	],
+	"name" : "TRUserInputEvent",
+	"type" : "normal"
+}

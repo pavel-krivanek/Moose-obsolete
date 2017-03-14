@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardPart",
+	"category" : "Merlin-Parts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"titlesAndParts",
+		"selectedPageIndex"
+	],
+	"name" : "CompositePart",
+	"type" : "normal"
+}

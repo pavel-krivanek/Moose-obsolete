@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftParenToken",
+		"expressions",
+		"identifierTokens",
+		"colonTokens",
+		"commaTokens",
+		"rightParenToken"
+	],
+	"name" : "SwiftParenthesizedExpressionNode",
+	"type" : "normal"
+}

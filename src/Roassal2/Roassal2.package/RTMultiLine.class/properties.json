@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 7/30/2014 12:27",
+	"super" : "RTAbstractLine",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"blockProducingPath"
+	],
+	"name" : "RTMultiLine",
+	"type" : "normal"
+}

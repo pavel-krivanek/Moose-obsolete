@@ -1,0 +1,1 @@
+This class is the default node factory. Its accessor messages return the classes used by the DOM parser to build a node tree. You can override these messages to return different classes and inject an instance with the DOM parser's #nodeFactory: message before parsing.

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type",
+		"period",
+		"classToken",
+		"name",
+		"thisToken"
+	],
+	"name" : "JavaClassPropertyNode",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-converting
-asXPathBoolean
-	^ self notEmpty

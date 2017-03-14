@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "akevalion 6/21/2016 17:40",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"radius",
+		"distortion",
+		"k1",
+		"k0",
+		"focus",
+		"position",
+		"view"
+	],
+	"name" : "RTFisheye",
+	"type" : "normal"
+}

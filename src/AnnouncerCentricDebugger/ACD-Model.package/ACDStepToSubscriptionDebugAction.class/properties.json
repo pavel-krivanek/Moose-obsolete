@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DebugAction",
+	"category" : "ACD-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetSubscription"
+	],
+	"name" : "ACDStepToSubscriptionDebugAction",
+	"type" : "normal"
+}

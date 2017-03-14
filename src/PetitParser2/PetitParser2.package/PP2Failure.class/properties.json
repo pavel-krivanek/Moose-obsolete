@@ -1,0 +1,19 @@
+{
+	"classtraitcomposition" : "TPP2Debuggable classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"position",
+		"message",
+		"context",
+		"debugResult",
+		"parser"
+	],
+	"name" : "PP2Failure",
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TPP2Debuggable",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "PetitParser2-Core"
+}

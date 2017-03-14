@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Announcement",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"start",
+		"end",
+		"selectedText"
+	],
+	"name" : "GLMSelectedTextChanged",
+	"type" : "normal"
+}

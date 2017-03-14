@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elements",
+		"resize"
+	],
+	"name" : "RTResizeTest",
+	"type" : "normal"
+}

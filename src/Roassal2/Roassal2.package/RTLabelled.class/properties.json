@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 5/6/2016 13:10",
+	"super" : "RTLabeled",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTLabelled",
+	"type" : "normal"
+}

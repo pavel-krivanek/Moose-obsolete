@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParserTest",
+	"category" : "PetitIndent-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"aPPContext"
+	],
+	"name" : "PPNestedStmtListsParserTest",
+	"type" : "normal"
+}

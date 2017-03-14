@@ -1,3 +1,0 @@
-accessing
-normalizedLineEnding
-	^ self lf

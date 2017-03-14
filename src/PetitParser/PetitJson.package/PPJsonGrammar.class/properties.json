@@ -1,0 +1,31 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParser",
+	"category" : "PetitJson-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"CharacterTable"
+	],
+	"instvars" : [
+		"members",
+		"pair",
+		"string",
+		"value",
+		"elements",
+		"number",
+		"object",
+		"array",
+		"trueToken",
+		"falseToken",
+		"nullToken",
+		"char",
+		"stringToken",
+		"numberToken",
+		"charEscape",
+		"charNormal",
+		"charOctal"
+	],
+	"name" : "PPJsonGrammar",
+	"type" : "normal"
+}

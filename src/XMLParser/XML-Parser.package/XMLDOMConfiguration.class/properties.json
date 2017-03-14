@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "XMLConfiguration",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"preservesCDataNodes",
+		"preservesCommentNodes",
+		"preservesIgnorableWhitespace",
+		"nodeFactory"
+	],
+	"name" : "XMLDOMConfiguration",
+	"type" : "normal"
+}

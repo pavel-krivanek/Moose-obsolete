@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"grammar",
+		"todo",
+		"dependentsMap",
+		"newVariables",
+		"ourType",
+		"currentRHS",
+		"previousVariables"
+	],
+	"name" : "SmaCCVariableCalculation",
+	"type" : "normal"
+}

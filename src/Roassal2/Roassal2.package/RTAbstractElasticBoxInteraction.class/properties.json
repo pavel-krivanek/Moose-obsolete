@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "akevalion 11/27/2015 16:34",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Selection",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"draggingView",
+		"events",
+		"shapeBuilder",
+		"announcer",
+		"key",
+		"group",
+		"allowNegatedBox"
+	],
+	"name" : "RTAbstractElasticBoxInteraction",
+	"type" : "normal"
+}

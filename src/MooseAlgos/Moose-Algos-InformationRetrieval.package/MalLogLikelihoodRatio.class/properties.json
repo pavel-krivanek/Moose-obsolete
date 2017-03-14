@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"terms1",
+		"terms2"
+	],
+	"name" : "MalLogLikelihoodRatio",
+	"type" : "normal"
+}

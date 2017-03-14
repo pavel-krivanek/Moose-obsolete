@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRFocusing",
+	"category" : "Trachel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRFocusCenter",
+	"type" : "normal"
+}

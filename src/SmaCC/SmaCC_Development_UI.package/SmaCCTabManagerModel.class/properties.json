@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TabManagerModel",
+	"category" : "SmaCC_Development_UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCTabManagerModel",
+	"type" : "normal"
+}

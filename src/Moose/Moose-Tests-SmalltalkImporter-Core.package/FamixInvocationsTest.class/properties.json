@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LANAbstractImportTest",
+	"category" : "Moose-Tests-SmalltalkImporter-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FamixInvocationsTest",
+	"type" : "normal"
+}

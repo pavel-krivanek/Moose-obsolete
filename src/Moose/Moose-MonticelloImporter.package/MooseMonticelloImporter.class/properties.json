@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "StephaneDucasse 11/13/2011 23:49",
+	"super" : "SmalltalkImporter",
+	"category" : "Moose-MonticelloImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"repositoryCache"
+	],
+	"name" : "MooseMonticelloImporter",
+	"type" : "normal"
+}

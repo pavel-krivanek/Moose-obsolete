@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "PJASTNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"modifiers",
+		"type",
+		"identifier",
+		"arrayLevel"
+	],
+	"name" : "PJParameterDeclaratorNode",
+	"type" : "normal"
+}

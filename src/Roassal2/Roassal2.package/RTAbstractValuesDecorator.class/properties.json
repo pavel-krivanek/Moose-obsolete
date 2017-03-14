@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTAbstractLineDecorator",
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"labelConversion",
+		"labelRotation"
+	],
+	"name" : "RTAbstractValuesDecorator",
+	"type" : "normal"
+}

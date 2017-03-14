@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "StephaneDucasse 9/20/2009 14:47",
+	"super" : "Collection",
+	"category" : "Fame-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"values",
+		"owner",
+		"opposite"
+	],
+	"name" : "FMMultivalueLink",
+	"type" : "normal"
+}

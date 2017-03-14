@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCRewriteTestExpressionNode",
+	"category" : "SmaCC_Rewrite_Engine_Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"number"
+	],
+	"name" : "SmaCCRewriteTestNumberNode",
+	"type" : "normal"
+}

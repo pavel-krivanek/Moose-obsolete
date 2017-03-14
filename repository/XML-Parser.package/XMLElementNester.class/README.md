@@ -1,1 +1,0 @@
-This is a base class for element nesters that are used by parser tokenizers and drivers to keep track of which elements are open while parsing and ensure they are properly nested.

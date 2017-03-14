@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Hashtable-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stepsize",
+		"testsize"
+	],
+	"name" : "DictionarySpeedTest",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 1/22/2017 15:42",
+	"super" : "XPathASTNamespaceTestForPrefixNode",
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"localName"
+	],
+	"name" : "XPathASTNamespaceTestForPrefixAndLocalNameNode",
+	"type" : "normal"
+}

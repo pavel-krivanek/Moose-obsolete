@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "GRPrinter",
+	"category" : "Grease-Core-Text",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"integerPrinter",
+		"fractionPrinter",
+		"units",
+		"base"
+	],
+	"name" : "GRUnitPrinter",
+	"type" : "normal"
+}

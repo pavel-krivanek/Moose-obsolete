@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 8/19/2016 23:55",
+	"super" : "CustomHelp",
+	"category" : "GT-Examples-Help",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTExampleHelp",
+	"type" : "normal"
+}

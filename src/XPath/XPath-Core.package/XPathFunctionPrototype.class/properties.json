@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "monty 9/28/2016 02:23",
+	"super" : "Object",
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"returnType",
+		"name",
+		"minArguments",
+		"maxArguments",
+		"argumentTypes"
+	],
+	"name" : "XPathFunctionPrototype",
+	"type" : "normal"
+}

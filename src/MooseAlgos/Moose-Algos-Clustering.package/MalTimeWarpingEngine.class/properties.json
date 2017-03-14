@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"vectorA",
+		"vectorB",
+		"matrix",
+		"cost",
+		"distanceBlock"
+	],
+	"name" : "MalTimeWarpingEngine",
+	"type" : "normal"
+}

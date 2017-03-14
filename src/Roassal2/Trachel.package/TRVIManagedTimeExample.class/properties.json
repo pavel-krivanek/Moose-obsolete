@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRObject",
+	"category" : "Trachel-Viva",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRVIManagedTimeExample",
+	"type" : "normal"
+}

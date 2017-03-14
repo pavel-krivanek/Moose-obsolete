@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"unsafeToken",
+		"block"
+	],
+	"name" : "CSUnsafeStatementNode",
+	"type" : "normal"
+}

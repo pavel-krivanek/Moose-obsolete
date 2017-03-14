@@ -1,0 +1,16 @@
+{
+	"classtraitcomposition" : "TMetaLevelDependency classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXEntity",
+	"commentStamp" : "<historical>",
+	"super" : "MooseEntity",
+	"traitcomposition" : "TMetaLevelDependency",
+	"type" : "normal",
+	"classinstvars" : [
+		"childrenAccessors",
+		"parentSelectors"
+	],
+	"pools" : [ ],
+	"category" : "Famix-Core"
+}

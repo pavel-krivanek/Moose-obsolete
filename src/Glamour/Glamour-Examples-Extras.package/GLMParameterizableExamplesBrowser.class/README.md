@@ -1,0 +1,1 @@
+This is an abstract class that provides the infrastructure for an example browser. It is meant to work with classes that hold examples in methods.

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PaneAbstractLine",
+	"category" : "Merlin-PartsLayout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PaneColumn",
+	"type" : "normal"
+}

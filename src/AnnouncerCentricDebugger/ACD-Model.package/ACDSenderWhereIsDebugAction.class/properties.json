@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WhereIsDebugAction",
+	"category" : "ACD-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ACDSenderWhereIsDebugAction",
+	"type" : "normal"
+}

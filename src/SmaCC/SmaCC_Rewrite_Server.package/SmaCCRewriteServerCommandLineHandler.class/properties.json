@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CommandLineHandler",
+	"category" : "SmaCC_Rewrite_Server",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"port"
+	],
+	"name" : "SmaCCRewriteServerCommandLineHandler",
+	"type" : "normal"
+}

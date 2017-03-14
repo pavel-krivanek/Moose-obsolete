@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Stack",
+	"category" : "Moose-Tests-Algos-HierarchicalGraph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FILOStack",
+	"type" : "normal"
+}

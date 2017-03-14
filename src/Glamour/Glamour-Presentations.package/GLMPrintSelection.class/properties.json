@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AndreiChis 10/1/2014 13:40",
+	"super" : "Announcement",
+	"category" : "Glamour-Presentations-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMPrintSelection",
+	"type" : "normal"
+}

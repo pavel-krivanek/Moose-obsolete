@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTPPDebugAction",
+	"category" : "GT-PetitParserDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTPPWhereIsStreamAction",
+	"type" : "normal"
+}

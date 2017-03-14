@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTBoundedShapeBuilder",
+	"category" : "Roassal2-Builder-MondrianOLD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTMondrianShapeBuilder",
+	"type" : "normal"
+}

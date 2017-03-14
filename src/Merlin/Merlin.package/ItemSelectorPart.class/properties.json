@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardPart",
+	"category" : "Merlin-Parts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"addButton",
+		"selectionList",
+		"removeButton",
+		"initialList",
+		"initialListIndex",
+		"selectionListIndex",
+		"textEntryContents",
+		"textEntryMessage"
+	],
+	"name" : "ItemSelectorPart",
+	"type" : "normal"
+}

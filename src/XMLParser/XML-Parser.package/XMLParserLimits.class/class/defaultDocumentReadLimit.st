@@ -1,0 +1,3 @@
+accessing
+defaultDocumentReadLimit
+	^ self defaultReadLimit

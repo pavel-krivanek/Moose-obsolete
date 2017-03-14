@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"identifier",
+		"leftBracketToken",
+		"arguments",
+		"commaTokens",
+		"rightBracketToken",
+		"equalToken",
+		"value"
+	],
+	"name" : "CSMemberInitializerNode",
+	"type" : "normal"
+}

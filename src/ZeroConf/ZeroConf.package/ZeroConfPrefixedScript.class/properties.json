@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "CamilloBruni 1/26/2014 15:11",
+	"super" : "ZeroConfCombinedScript",
+	"category" : "ZeroConf",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"prefixScripts",
+		"inlinePrefixScripts"
+	],
+	"name" : "ZeroConfPrefixedScript",
+	"type" : "normal"
+}

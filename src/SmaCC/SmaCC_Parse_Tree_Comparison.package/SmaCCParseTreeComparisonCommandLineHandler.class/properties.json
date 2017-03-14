@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CommandLineHandler",
+	"category" : "SmaCC_Parse_Tree_Comparison",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCParseTreeComparisonCommandLineHandler",
+	"type" : "normal"
+}

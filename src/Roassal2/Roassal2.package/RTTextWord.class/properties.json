@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JurajKubelka 11/11/2014 22:19",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-TextBuilder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"interval",
+		"text"
+	],
+	"name" : "RTTextWord",
+	"type" : "normal"
+}

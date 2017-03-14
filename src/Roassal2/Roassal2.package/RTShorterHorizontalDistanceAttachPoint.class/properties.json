@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 2/25/2016 12:30",
+	"super" : "RTAbstractShorterDistanceAttachPoint",
+	"category" : "Roassal2-AttachPoint",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTShorterHorizontalDistanceAttachPoint",
+	"type" : "normal"
+}

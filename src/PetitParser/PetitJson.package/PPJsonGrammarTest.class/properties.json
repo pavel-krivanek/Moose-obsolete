@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParserTest",
+	"category" : "PetitJson-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPJsonGrammarTest",
+	"type" : "normal"
+}

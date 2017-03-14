@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseModelTestResource",
+	"category" : "Moose-Tests-SmalltalkImporter-KGB",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXNavigationPluginTestsResource",
+	"type" : "normal"
+}

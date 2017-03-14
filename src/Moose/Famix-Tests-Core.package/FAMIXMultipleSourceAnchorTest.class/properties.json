@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Famix-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"multipleFileAnchor"
+	],
+	"name" : "FAMIXMultipleSourceAnchorTest",
+	"type" : "normal"
+}

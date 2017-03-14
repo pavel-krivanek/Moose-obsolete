@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBraceToken",
+		"statements",
+		"rightBraceToken"
+	],
+	"name" : "SwiftBlockNode",
+	"type" : "normal"
+}

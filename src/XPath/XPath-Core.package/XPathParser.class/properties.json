@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 3/1/2017 06:49",
+	"super" : "Object",
+	"category" : "XPath-Core-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"handler",
+		"readStream",
+		"writeStream"
+	],
+	"name" : "XPathParser",
+	"type" : "normal"
+}

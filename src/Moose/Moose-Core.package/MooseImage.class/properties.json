@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"current"
+	],
+	"instvars" : [
+		"signature",
+		"timeStamp"
+	],
+	"name" : "MooseImage",
+	"type" : "normal"
+}

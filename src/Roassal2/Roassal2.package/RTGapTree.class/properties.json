@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "akevalion 1/15/2015 17:47",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"circles"
+	],
+	"name" : "RTGapTree",
+	"type" : "normal"
+}

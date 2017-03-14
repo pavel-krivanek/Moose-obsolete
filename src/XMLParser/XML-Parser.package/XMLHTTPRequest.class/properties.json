@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 8/2/2016 08:10",
+	"super" : "XMLAbstractFactory",
+	"category" : "XML-Parser-HTTP",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"url"
+	],
+	"name" : "XMLHTTPRequest",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+tests
+testDefaultImporterClass
+	self assert: MoosePharoImporterTask new importerClass equals: SmalltalkImporter

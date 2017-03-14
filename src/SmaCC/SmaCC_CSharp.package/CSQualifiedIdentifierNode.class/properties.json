@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"names",
+		"periodTokens"
+	],
+	"name" : "CSQualifiedIdentifierNode",
+	"type" : "normal"
+}

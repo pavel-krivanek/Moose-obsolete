@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 3/5/2015 10:18",
+	"super" : "RTAbstractElementShape",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"form"
+	],
+	"name" : "RTBitmap",
+	"type" : "normal"
+}

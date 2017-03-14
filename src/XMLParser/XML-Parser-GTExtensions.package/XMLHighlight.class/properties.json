@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 9/21/2015 04:24",
+	"super" : "Object",
+	"category" : "XML-Parser-GTExtensions-Highlighting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color",
+		"start",
+		"end"
+	],
+	"name" : "XMLHighlight",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractGrapherDecorator",
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color",
+		"points",
+		"deviation"
+	],
+	"name" : "RTDevVarDecorator",
+	"type" : "normal"
+}

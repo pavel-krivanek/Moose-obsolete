@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardControl",
+	"category" : "Moose-Wizard",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedDirectory",
+		"versions",
+		"selectedImporting",
+		"hismoImporter",
+		"importWithFilter"
+	],
+	"name" : "MooseHismoImportFromMSEWizard",
+	"type" : "normal"
+}

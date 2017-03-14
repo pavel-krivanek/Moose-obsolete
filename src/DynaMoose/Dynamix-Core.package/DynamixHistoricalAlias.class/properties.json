@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "DynamixAlias",
+	"category" : "Dynamix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"predecessor",
+		"successor"
+	],
+	"name" : "DynamixHistoricalAlias",
+	"type" : "normal"
+}

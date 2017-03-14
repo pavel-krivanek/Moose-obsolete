@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CSUsingDirectiveNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSUsingNamespaceDirectiveNode",
+	"type" : "normal"
+}

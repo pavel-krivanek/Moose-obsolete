@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2DelegateNode",
+	"category" : "PetitParser2-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"min",
+		"max"
+	],
+	"name" : "PP2RepeatingNode",
+	"type" : "normal"
+}

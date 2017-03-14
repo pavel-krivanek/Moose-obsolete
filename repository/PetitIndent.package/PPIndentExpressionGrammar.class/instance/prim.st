@@ -1,3 +1,0 @@
-accessing
-prim
-   ^ parens / number

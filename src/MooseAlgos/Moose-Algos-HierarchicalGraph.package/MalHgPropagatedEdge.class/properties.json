@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalGraphEdge",
+	"category" : "Moose-Algos-HierarchicalGraph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MalHgPropagatedEdge",
+	"type" : "normal"
+}

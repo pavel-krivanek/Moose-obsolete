@@ -1,0 +1,1 @@
+This class has tests for abbreviated and unabbreviated location path expressions taken directly from the XPath 1.0 specification.

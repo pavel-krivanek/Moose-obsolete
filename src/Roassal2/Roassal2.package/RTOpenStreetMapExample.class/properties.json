@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 1/17/2015 16:44",
+	"super" : "RTAbstractExample",
+	"category" : "Roassal2-OpenStreetMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTOpenStreetMapExample",
+	"type" : "normal"
+}

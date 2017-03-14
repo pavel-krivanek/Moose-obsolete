@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-Example",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hoard",
+		"killedBy"
+	],
+	"name" : "RPGDragon",
+	"type" : "normal"
+}

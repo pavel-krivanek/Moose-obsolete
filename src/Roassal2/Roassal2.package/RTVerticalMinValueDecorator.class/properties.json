@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 5/7/2016 15:27",
+	"super" : "RTAbstractVerticalValuesDecorator",
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTVerticalMinValueDecorator",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ExtractedType",
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"compiledMethod"
+	],
+	"name" : "ExtractedTypeForTmp",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 7/15/2015 10:29",
+	"super" : "Object",
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseURI",
+		"currentEntity"
+	],
+	"name" : "XMLParserDriver",
+	"type" : "normal"
+}

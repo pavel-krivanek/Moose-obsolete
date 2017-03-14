@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmallDude-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentStep",
+		"stepCount",
+		"triggerCount",
+		"lastTriggerTime",
+		"startTime",
+		"startTrigger",
+		"incrTrigger",
+		"endTrigger"
+	],
+	"name" : "DudeObserver",
+	"type" : "normal"
+}

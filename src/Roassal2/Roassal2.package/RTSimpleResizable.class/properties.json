@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 3/9/2015 15:46",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions-Resize",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTSimpleResizable",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PetitSQLiteGrammar",
+	"category" : "PetitSQLite-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PetitSQLiteASTNodesParser",
+	"type" : "normal"
+}

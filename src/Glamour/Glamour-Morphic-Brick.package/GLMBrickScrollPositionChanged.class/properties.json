@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMBrickAnnouncement",
+	"category" : "Glamour-Morphic-Brick-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMBrickScrollPositionChanged",
+	"type" : "normal"
+}

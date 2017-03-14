@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalMatrixDecorator",
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"columnMap",
+		"rowMap"
+	],
+	"name" : "MalMappedMatrix",
+	"type" : "normal"
+}

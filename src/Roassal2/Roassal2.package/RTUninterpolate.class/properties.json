@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Grapher-Scaling",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"a",
+		"b"
+	],
+	"name" : "RTUninterpolate",
+	"type" : "normal"
+}

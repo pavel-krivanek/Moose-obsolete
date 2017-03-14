@@ -1,0 +1,1 @@
+This class is a writing AST visitor that translates the AST to Smalltalk source code and an array of node test objects that can be compiled. The resulting XPathTranslatedExpression object can be accessed with #translatedExpression after sending #visitNode: to the AST root.

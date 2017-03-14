@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Moose-Tests-Algos-HierarchicalGraph",
+	"classinstvars" : [
+		"repository"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MalHierarchicalGraphTests",
+	"type" : "normal"
+}

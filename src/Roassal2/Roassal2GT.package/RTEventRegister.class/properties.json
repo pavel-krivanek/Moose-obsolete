@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2GT-EventCollector",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTEventRegister",
+	"type" : "normal"
+}

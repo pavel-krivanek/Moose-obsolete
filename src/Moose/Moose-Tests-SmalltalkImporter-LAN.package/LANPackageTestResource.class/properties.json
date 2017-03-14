@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseModelTestResource",
+	"category" : "Moose-Tests-SmalltalkImporter-LAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LANPackageTestResource",
+	"type" : "normal"
+}

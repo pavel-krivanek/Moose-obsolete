@@ -1,4 +1,0 @@
-sending message
-returningImportedClass
-
-	^ TheRoot

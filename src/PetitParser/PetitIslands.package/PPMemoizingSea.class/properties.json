@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JanKurs 9/13/2014 18:41",
+	"super" : "PPSea",
+	"category" : "PetitIslands-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dictionary"
+	],
+	"name" : "PPMemoizingSea",
+	"type" : "normal"
+}

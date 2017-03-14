@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AlexandreBergel 9/29/2015 15:22",
+	"super" : "RTClickStateInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"afterBlock",
+		"groupBlock"
+	],
+	"name" : "RTExpandable",
+	"type" : "normal"
+}

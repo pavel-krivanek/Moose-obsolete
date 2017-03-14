@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 2/27/2011 22:22",
+	"super" : "PPDelegateParser",
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPAndParser",
+	"type" : "normal"
+}

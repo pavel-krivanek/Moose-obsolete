@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PPXPathGrammar",
+	"category" : "PetitXPath-Core",
+	"classinstvars" : [
+		"default"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPXPathParser",
+	"type" : "normal"
+}

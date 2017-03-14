@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBrace",
+		"values",
+		"commas",
+		"rightBrace"
+	],
+	"name" : "JavaElementArrayInitializerNode",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2InMemoryContext",
+	"category" : "PetitParser2-Recording",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"totalSize",
+		"eventsTrace",
+		"furthestPosition"
+	],
+	"name" : "PP2RecordingContext",
+	"type" : "normal"
+}

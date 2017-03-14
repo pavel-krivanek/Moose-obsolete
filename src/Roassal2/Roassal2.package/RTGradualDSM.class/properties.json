@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 12/24/2015 12:43",
+	"super" : "RTAbstractDSM",
+	"category" : "Roassal2-Builder-DSM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"score"
+	],
+	"name" : "RTGradualDSM",
+	"type" : "normal"
+}

@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "monty 6/16/2015 00:07",
+	"super" : "DTDSubsetParserDriver",
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"saxHandler",
+		"elementNester",
+		"scopeAllocator",
+		"validator",
+		"externalSubsetSystemID",
+		"externalSubsetPublicID",
+		"isStandalone",
+		"isHandlingDTD",
+		"hasParameterEntityReferences",
+		"hasSkippedParameterEntityReferences",
+		"hasUnhandledReservedAttributes"
+	],
+	"name" : "SAXParserDriver",
+	"type" : "normal"
+}

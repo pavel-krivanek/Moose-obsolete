@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseGroupStorage",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"byName",
+		"elements",
+		"byType"
+	],
+	"name" : "MooseGroupRuntimeStorage",
+	"type" : "variable"
+}

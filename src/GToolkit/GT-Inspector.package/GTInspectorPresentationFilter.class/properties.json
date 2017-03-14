@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AndreiChis 1/27/2015 23:31",
+	"super" : "Object",
+	"category" : "GT-Inspector",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTInspectorPresentationFilter",
+	"type" : "normal"
+}

@@ -1,0 +1,22 @@
+{
+	"classtraitcomposition" : "TOODependencyQueries classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"incomingReferences",
+		"subInheritances",
+		"methods",
+		"container",
+		"superInheritances",
+		"attributes",
+		"behavioursWithDeclaredType",
+		"structuresWithDeclaredType"
+	],
+	"name" : "FAMIXType",
+	"commentStamp" : "usmanbhatti 11/24/2011 22:39",
+	"super" : "FAMIXContainerEntity",
+	"traitcomposition" : "TOODependencyQueries",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Famix-Core"
+}

@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "JSProgramNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"getToken",
+		"key",
+		"leftParen",
+		"rightParen",
+		"leftBrace",
+		"statements",
+		"rightBrace"
+	],
+	"name" : "JSGetPropertyAssignmentNode",
+	"type" : "normal"
+}

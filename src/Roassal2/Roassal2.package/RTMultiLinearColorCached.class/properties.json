@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTMultiLinearColor",
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"cache",
+		"sizeBeforeReset"
+	],
+	"name" : "RTMultiLinearColorCached",
+	"type" : "normal"
+}

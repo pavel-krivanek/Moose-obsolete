@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2GT-Glamour-Roassal-Interaction",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTGTContextInteractionTest",
+	"type" : "normal"
+}

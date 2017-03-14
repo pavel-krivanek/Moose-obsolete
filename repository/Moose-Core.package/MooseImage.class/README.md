@@ -1,1 +1,0 @@
-This is a utility class that holds information related to the origin of the Moose image. It is typically instantiated at image creation time and the information is stored following the singleton pattern.

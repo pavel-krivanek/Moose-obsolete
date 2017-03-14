@@ -1,1 +1,0 @@
-This class is a set of NFA states. It wraps an IdentitySet and keeps track of if any of its states is accepting.

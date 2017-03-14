@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Phexample",
+	"category" : "Phexample-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"factory"
+	],
+	"name" : "PhexampleClassTest",
+	"type" : "normal"
+}

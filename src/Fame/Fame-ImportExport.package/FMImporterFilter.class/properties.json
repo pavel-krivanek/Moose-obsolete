@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FMParseClientFilter",
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FMImporterFilter",
+	"type" : "normal"
+}

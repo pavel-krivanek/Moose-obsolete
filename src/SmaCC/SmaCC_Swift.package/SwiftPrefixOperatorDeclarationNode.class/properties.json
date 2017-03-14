@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"operatorTokens",
+		"prefixToken",
+		"leftBraceToken",
+		"rightBraceToken"
+	],
+	"name" : "SwiftPrefixOperatorDeclarationNode",
+	"type" : "normal"
+}

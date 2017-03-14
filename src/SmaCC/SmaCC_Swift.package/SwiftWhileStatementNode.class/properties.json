@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftLoopStatementNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"whileToken",
+		"expression",
+		"block"
+	],
+	"name" : "SwiftWhileStatementNode",
+	"type" : "normal"
+}

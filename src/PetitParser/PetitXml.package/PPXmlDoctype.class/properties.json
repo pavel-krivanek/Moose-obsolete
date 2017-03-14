@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPXmlData",
+	"category" : "PetitXml-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPXmlDoctype",
+	"type" : "normal"
+}

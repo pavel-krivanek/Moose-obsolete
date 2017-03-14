@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2And",
+	"category" : "PetitParser2-Strategies",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"predicate",
+		"literal"
+	],
+	"name" : "PP2AndPredicateObject",
+	"type" : "normal"
+}

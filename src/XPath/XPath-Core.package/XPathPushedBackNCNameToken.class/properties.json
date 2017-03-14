@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 1/10/2015 01:22",
+	"super" : "XPathPushedBackToken",
+	"category" : "XPath-Core-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathPushedBackNCNameToken",
+	"type" : "normal"
+}

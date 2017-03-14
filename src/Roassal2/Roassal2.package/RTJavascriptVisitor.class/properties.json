@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "akevalion 11/25/2014 01:28",
+	"super" : "RTVisitor",
+	"category" : "Roassal2-Exporter-HTML5",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"stream",
+		"validInteractions",
+		"exportFixedShapes",
+		"maxSize"
+	],
+	"name" : "RTJavascriptVisitor",
+	"type" : "normal"
+}

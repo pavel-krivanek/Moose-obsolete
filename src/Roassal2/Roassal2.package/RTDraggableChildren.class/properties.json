@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 10/13/2014 10:35",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTDraggableChildren",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 8/2/2014 20:43",
+	"super" : "RTAbstractExample",
+	"category" : "Roassal2-Builder-PieChart",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTPieExample",
+	"type" : "normal"
+}

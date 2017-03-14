@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTExampleTestCase",
+	"category" : "GT-Tests-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTToolkitExamplesTests",
+	"type" : "normal"
+}

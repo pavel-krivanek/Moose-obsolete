@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PJASTNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"variable",
+		"arrayLevel",
+		"initializer"
+	],
+	"name" : "PJVariableDeclaratorNode",
+	"type" : "normal"
+}

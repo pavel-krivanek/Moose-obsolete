@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Rewrite_Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nodeClass",
+		"nodeInterval",
+		"rewrite"
+	],
+	"name" : "SmaCCRewriteAnnotation",
+	"type" : "normal"
+}

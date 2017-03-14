@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Merlin-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dropListSelectedValue"
+	],
+	"name" : "WizardPaneFlowTest",
+	"type" : "normal"
+}

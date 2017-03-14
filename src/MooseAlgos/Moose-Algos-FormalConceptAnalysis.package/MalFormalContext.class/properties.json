@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "usmanbhatti 10/14/2011 19:20",
+	"super" : "Object",
+	"category" : "Moose-Algos-FormalConceptAnalysis",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fobjects",
+		"fattributes",
+		"concepts"
+	],
+	"name" : "MalFormalContext",
+	"type" : "normal"
+}

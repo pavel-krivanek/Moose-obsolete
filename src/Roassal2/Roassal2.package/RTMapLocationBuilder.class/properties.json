@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Map",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"addedElements"
+	],
+	"name" : "RTMapLocationBuilder",
+	"type" : "normal"
+}

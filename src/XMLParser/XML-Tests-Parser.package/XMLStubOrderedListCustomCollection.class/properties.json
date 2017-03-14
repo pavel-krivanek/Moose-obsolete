@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 3/29/2016 06:39",
+	"super" : "OrderedCollection",
+	"category" : "XML-Tests-Parser-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLStubOrderedListCustomCollection",
+	"type" : "normal"
+}

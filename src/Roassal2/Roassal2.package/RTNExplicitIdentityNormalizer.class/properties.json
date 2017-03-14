@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTNIdentityNormalizer",
+	"category" : "Roassal2-ColorNormalizerOBSOLETE",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"colors",
+		"defaultColor"
+	],
+	"name" : "RTNExplicitIdentityNormalizer",
+	"type" : "normal"
+}

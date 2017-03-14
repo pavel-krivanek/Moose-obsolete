@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 1/18/2017 18:25",
+	"super" : "XPathParserHandler",
+	"category" : "XPath-Core-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathNumberParserHandler",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 2/2/2014 08:10",
+	"super" : "XMLEnumerationAttributeValidator",
+	"category" : "XML-Parser-Validation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"unparedEntityValidator"
+	],
+	"name" : "XMLNotationEnumerationAttributeValidator",
+	"type" : "normal"
+}

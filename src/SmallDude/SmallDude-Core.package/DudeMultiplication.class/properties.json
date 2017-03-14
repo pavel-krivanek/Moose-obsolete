@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXEntity",
+	"category" : "SmallDude-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"duplications"
+	],
+	"name" : "DudeMultiplication",
+	"type" : "normal"
+}

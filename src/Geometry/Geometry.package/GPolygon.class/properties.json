@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "NataliaTymchuk 6/27/2014 21:14",
+	"super" : "Object",
+	"category" : "Geometry",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"vertices",
+		"edges"
+	],
+	"name" : "GPolygon",
+	"type" : "normal"
+}

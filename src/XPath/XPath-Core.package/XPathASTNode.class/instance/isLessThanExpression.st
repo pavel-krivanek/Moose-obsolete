@@ -1,0 +1,3 @@
+testing
+isLessThanExpression
+	^ false

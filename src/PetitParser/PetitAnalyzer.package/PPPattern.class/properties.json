@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PPParser",
+	"category" : "PetitAnalyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"verificationBlock"
+	],
+	"name" : "PPPattern",
+	"type" : "normal"
+}

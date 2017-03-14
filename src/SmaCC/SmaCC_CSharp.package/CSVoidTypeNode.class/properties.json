@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CSTypeNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"voidToken"
+	],
+	"name" : "CSVoidTypeNode",
+	"type" : "normal"
+}

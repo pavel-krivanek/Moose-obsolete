@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SharedPool",
+	"category" : "Moose-TestResources-LAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"LANEditor"
+	],
+	"instvars" : [ ],
+	"name" : "LANPool",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 11/24/2016 02:13",
+	"super" : "XMLIDRefAttributeValidator",
+	"category" : "XML-Parser-Validation-Standalone",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLStandaloneExternalIDRefAttributeValidator",
+	"type" : "normal"
+}

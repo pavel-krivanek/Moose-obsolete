@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PPEpsilonParser",
+	"category" : "PetitAnalyzer-Core",
+	"classinstvars" : [
+		"instance"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPSentinel",
+	"type" : "normal"
+}

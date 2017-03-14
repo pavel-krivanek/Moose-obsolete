@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "AlexandreBergel 12/4/2015 11:47",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Common",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"layout",
+		"actionOnEdges",
+		"partitions",
+		"dynamicForceBasedLayout"
+	],
+	"name" : "RTLayoutBuilder",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TudorGirba 8/25/2011 14:44",
+	"super" : "FAMIXType",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"aliasedType"
+	],
+	"name" : "FAMIXTypeAlias",
+	"type" : "normal"
+}

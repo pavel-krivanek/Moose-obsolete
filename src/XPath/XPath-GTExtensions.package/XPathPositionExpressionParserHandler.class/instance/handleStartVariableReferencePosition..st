@@ -1,0 +1,2 @@
+handling - positions
+handleStartVariableReferencePosition: aPosition

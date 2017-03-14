@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinRenderer",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dialogWindow",
+		"builder"
+	],
+	"name" : "MerlinMorphicRenderer",
+	"type" : "normal"
+}

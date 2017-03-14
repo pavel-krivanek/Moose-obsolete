@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 9/19/2015 12:47",
+	"super" : "RTLabel",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"emphasis"
+	],
+	"name" : "RTStyledLabel",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "REPStakeholder",
+	"category" : "Arki-Reporter-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stakeholders"
+	],
+	"name" : "REPGroupStakeholder",
+	"type" : "normal"
+}

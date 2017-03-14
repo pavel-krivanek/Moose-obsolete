@@ -1,3 +1,0 @@
-private
-numberClass
-	^ Number

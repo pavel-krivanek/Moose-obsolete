@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DudeCleaningDecorator",
+	"category" : "SmallDude-Text",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DudeJavaImportsCleaner",
+	"type" : "normal"
+}

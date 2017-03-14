@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JurajKubelka 11/11/2014 22:16",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-TextBuilder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"wordSeparators"
+	],
+	"name" : "RTTextTokenizer",
+	"type" : "normal"
+}

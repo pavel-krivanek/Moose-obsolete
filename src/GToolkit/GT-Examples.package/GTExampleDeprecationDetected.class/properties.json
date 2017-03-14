@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "StefanReichhart 2/19/2017 16:32",
+	"super" : "GTExamplePragmaError",
+	"category" : "GT-Examples-Exceptions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTExampleDeprecationDetected",
+	"type" : "normal"
+}

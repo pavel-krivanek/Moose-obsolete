@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "AlexandreBergel 11/7/2014 14:51",
+	"super" : "RTAnnounceableObject",
+	"category" : "Roassal2-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isFixed",
+		"model",
+		"shape",
+		"trachelShape",
+		"view"
+	],
+	"name" : "RTShapedObject",
+	"type" : "normal"
+}

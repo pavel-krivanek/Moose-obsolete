@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "REPMooseQueryConcern",
+	"category" : "Arki-Reporter-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stakeholder",
+		"computation",
+		"label",
+		"explanation"
+	],
+	"name" : "REPCustomQueryConcern",
+	"type" : "normal"
+}

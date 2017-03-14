@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseQueryTest",
+	"category" : "Moose-Query-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseQueryComparedToMooseChefTest",
+	"type" : "normal"
+}

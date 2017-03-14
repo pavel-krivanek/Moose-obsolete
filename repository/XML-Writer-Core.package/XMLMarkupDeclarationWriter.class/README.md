@@ -1,1 +1,0 @@
-This is an abstract class for DTD markup declaration writers.

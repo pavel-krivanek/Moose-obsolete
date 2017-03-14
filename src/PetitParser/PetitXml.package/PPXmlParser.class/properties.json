@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPXmlGrammar",
+	"category" : "PetitXml-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPXmlParser",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"grammar",
+		"classes",
+		"variableSymbols",
+		"singleVariableSymbols"
+	],
+	"name" : "SmaCCNodeCalculation",
+	"type" : "normal"
+}

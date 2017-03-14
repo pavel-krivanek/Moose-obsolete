@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "JSStatementNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tryToken",
+		"tryBlock",
+		"catchToken",
+		"leftParen",
+		"exceptionType",
+		"rightParen",
+		"catchBlock",
+		"finallyToken",
+		"finallyBlock"
+	],
+	"name" : "JSTryStatementNode",
+	"type" : "normal"
+}

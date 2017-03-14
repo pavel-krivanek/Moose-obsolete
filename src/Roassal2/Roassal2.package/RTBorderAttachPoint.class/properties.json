@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 7/16/2016 17:10",
+	"super" : "RTAttachPoint",
+	"category" : "Roassal2-AttachPoint",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"offset"
+	],
+	"name" : "RTBorderAttachPoint",
+	"type" : "normal"
+}

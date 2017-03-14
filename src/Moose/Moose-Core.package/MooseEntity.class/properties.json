@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "janniklaval 9/28/2011 13:51",
+	"super" : "Object",
+	"category" : "Moose-Core",
+	"classinstvars" : [
+		"mooseSubClasses"
+	],
+	"pools" : [ ],
+	"classvars" : [
+		"MooseID"
+	],
+	"instvars" : [
+		"mooseID",
+		"state"
+	],
+	"name" : "MooseEntity",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPDelegateParser",
+	"category" : "PetitIslands-Extras",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPPreviousParser",
+	"type" : "normal"
+}

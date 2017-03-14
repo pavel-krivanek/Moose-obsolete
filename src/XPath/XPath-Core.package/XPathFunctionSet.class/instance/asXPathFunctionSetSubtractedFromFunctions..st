@@ -1,0 +1,3 @@
+converting
+asXPathFunctionSetSubtractedFromFunctions: aFunctionSet
+	^ aFunctionSet copyWithoutAll: self

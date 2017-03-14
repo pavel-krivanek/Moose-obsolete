@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TypeMergerTestsRoot",
+	"category" : "RoelTyper-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "AbstractMergerTests",
+	"type" : "normal"
+}

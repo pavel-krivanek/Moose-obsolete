@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 3/27/2015 10:32",
+	"super" : "RTAction",
+	"category" : "Roassal2-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color"
+	],
+	"name" : "RTBlink",
+	"type" : "normal"
+}

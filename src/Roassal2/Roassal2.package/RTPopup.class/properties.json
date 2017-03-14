@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTAbstractPopup",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"groupBlock",
+		"text",
+		"textColor",
+		"alphaPopupBackground",
+		"backgroundColor",
+		"borderColor"
+	],
+	"name" : "RTPopup",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "akevalion 6/2/2015 16:17",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Grapher-Scaling",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"range",
+		"domain",
+		"interpolate",
+		"uninterpolate"
+	],
+	"name" : "RTScale",
+	"type" : "normal"
+}

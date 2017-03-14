@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "akevalion 6/2/2015 19:55",
+	"super" : "RTLinePathBuilder",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTLinearPathBuilder",
+	"type" : "normal"
+}

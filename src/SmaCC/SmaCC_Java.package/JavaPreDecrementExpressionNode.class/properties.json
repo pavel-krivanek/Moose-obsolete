@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"minusMinus",
+		"expression"
+	],
+	"name" : "JavaPreDecrementExpressionNode",
+	"type" : "normal"
+}

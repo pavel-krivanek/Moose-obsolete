@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2FirstSetVisitor",
+	"category" : "PetitParser2-Optimizations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PP2FirstProductionSetCache",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CSDeclarationNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type",
+		"declarators",
+		"commaTokens"
+	],
+	"name" : "CSLocalVariableDeclarationNode",
+	"type" : "normal"
+}

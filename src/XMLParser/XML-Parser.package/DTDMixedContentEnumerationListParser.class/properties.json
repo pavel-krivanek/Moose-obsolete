@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 11/14/2016 13:52",
+	"super" : "DTDEnumerationListParser",
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DTDMixedContentEnumerationListParser",
+	"type" : "normal"
+}

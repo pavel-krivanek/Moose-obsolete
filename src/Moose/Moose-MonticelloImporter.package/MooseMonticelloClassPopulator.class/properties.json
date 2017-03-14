@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseMonticelloVisitor",
+	"category" : "Moose-MonticelloImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseMonticelloClassPopulator",
+	"type" : "normal"
+}

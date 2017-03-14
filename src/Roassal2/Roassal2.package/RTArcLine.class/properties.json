@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 2/24/2016 13:25",
+	"super" : "RTAbstractLine",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"distance",
+		"head"
+	],
+	"name" : "RTArcLine",
+	"type" : "normal"
+}

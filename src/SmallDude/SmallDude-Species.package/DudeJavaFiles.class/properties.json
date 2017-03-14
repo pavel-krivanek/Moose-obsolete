@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DudeCStyleFiles",
+	"category" : "SmallDude-Species",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DudeJavaFiles",
+	"type" : "normal"
+}

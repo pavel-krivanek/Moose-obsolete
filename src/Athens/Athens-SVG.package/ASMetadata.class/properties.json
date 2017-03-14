@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASElement",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASMetadata",
+	"type" : "normal"
+}

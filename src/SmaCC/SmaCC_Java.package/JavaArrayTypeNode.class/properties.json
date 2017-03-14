@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaTypeNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseType",
+		"leftBrackets",
+		"rightBrackets"
+	],
+	"name" : "JavaArrayTypeNode",
+	"type" : "normal"
+}

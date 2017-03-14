@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "M2P6C12FullReferencerInSide",
+	"category" : "Moose-TestResources-KGB-P5FullReferee",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"instVar"
+	],
+	"name" : "M2P5C11FullRefereeOutSide",
+	"type" : "normal"
+}

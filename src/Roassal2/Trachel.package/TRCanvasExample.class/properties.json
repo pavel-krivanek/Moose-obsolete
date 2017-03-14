@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRObject",
+	"category" : "Trachel-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRCanvasExample",
+	"type" : "normal"
+}

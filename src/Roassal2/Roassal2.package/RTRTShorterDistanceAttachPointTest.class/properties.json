@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-AttachPoint-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"e1",
+		"e2",
+		"lineShape",
+		"edge",
+		"view"
+	],
+	"name" : "RTRTShorterDistanceAttachPointTest",
+	"type" : "normal"
+}

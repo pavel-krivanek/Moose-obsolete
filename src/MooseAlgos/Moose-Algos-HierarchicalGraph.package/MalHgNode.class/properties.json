@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalGraphNode",
+	"category" : "Moose-Algos-HierarchicalGraph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hiGraph",
+		"parent",
+		"children",
+		"outgoing",
+		"incoming",
+		"level",
+		"attributes"
+	],
+	"name" : "MalHgNode",
+	"type" : "normal"
+}

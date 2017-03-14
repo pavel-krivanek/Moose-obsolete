@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTNameCloudDictionary",
+	"category" : "Roassal2-Builder-NameCloud",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTSourceCodeDictionary",
+	"type" : "normal"
+}

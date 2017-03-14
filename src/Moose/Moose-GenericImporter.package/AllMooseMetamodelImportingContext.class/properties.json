@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseAbstractImportingContext",
+	"category" : "Moose-GenericImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "AllMooseMetamodelImportingContext",
+	"type" : "normal"
+}

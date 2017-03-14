@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "DudeJavaFiles",
+	"category" : "SmallDude-Species",
+	"classinstvars" : [
+		"cleaner"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DudeCVSAnnotatedJavaFiles",
+	"type" : "normal"
+}

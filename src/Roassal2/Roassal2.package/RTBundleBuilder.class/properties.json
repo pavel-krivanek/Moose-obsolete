@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "akevalion 6/22/2015 19:25",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label",
+		"nodes",
+		"edges",
+		"rootNodes",
+		"elements",
+		"childrenBlock",
+		"connectBezierBlock",
+		"bezier",
+		"sliderShape",
+		"center",
+		"edgeBuilderDo"
+	],
+	"name" : "RTBundleBuilder",
+	"type" : "normal"
+}

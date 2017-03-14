@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Fame-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"eqModel",
+		"libModel",
+		"rpgModel"
+	],
+	"name" : "FMMetaRepositoryFilterTest",
+	"type" : "normal"
+}

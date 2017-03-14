@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2CompositeParserTest",
+	"category" : "PetitJava-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPJavaLexiconTest",
+	"type" : "normal"
+}

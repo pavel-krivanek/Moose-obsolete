@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"block",
+		"equalGreaterThanToken",
+		"expression",
+		"semicolonToken"
+	],
+	"name" : "CSMethodBodyNode",
+	"type" : "normal"
+}

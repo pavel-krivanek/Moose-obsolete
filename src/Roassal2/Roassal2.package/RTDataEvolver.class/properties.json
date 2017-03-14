@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Map",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"data",
+		"stepGiver"
+	],
+	"name" : "RTDataEvolver",
+	"type" : "normal"
+}

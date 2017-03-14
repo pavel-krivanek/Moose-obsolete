@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseAbstractImporter",
+	"category" : "Moose-GenericImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mooseModel"
+	],
+	"name" : "MooseFileStructureImporter",
+	"type" : "normal"
+}

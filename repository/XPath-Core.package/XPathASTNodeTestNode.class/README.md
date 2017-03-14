@@ -1,1 +1,0 @@
-This is a base class for location path step node test AST node classes.

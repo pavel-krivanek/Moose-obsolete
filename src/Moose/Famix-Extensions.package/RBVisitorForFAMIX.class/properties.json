@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "RBProgramNodeVisitor",
+	"category" : "Famix-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodEntity",
+		"stClass",
+		"importer",
+		"targetModel"
+	],
+	"name" : "RBVisitorForFAMIX",
+	"type" : "normal"
+}

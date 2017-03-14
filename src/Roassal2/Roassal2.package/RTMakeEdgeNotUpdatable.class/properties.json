@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 6/13/2016 14:48",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions-MorphingView",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTMakeEdgeNotUpdatable",
+	"type" : "normal"
+}

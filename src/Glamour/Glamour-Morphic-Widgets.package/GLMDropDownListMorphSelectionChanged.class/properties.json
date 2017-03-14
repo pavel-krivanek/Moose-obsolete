@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Announcement",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectionIndex",
+		"selectionValue"
+	],
+	"name" : "GLMDropDownListMorphSelectionChanged",
+	"type" : "normal"
+}

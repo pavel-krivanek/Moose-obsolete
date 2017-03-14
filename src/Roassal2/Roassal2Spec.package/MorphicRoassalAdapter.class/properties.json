@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AbstractMorphicAdapter",
+	"category" : "Roassal2Spec-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"canvas"
+	],
+	"name" : "MorphicRoassalAdapter",
+	"type" : "normal"
+}

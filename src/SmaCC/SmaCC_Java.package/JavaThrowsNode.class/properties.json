@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"throwsToken",
+		"classTypes",
+		"commas"
+	],
+	"name" : "JavaThrowsNode",
+	"type" : "normal"
+}

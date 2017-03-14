@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaStatementNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"doToken",
+		"statement",
+		"whileToken",
+		"leftParen",
+		"expression",
+		"rightParen",
+		"semicolon"
+	],
+	"name" : "JavaDoWhileStatementNode",
+	"type" : "normal"
+}

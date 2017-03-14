@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TRObject",
+	"category" : "Trachel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"LastCamera"
+	],
+	"instvars" : [
+		"block"
+	],
+	"name" : "TRCameraInitializer",
+	"type" : "normal"
+}

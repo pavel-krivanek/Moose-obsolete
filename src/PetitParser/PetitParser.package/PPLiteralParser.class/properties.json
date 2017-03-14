@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "BernardoContreras 3/16/2015 21:20",
+	"super" : "PPParser",
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"literal",
+		"message"
+	],
+	"name" : "PPLiteralParser",
+	"type" : "normal"
+}

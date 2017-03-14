@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLAbstractSetTest",
+	"category" : "XPath-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathFunctionSetTest",
+	"type" : "normal"
+}

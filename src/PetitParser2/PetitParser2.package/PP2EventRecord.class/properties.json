@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PetitParser2-Recording",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"event",
+		"position",
+		"strategy"
+	],
+	"name" : "PP2EventRecord",
+	"type" : "normal"
+}

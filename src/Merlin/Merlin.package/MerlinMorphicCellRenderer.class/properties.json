@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphicRenderer",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"wizardCell"
+	],
+	"name" : "MerlinMorphicCellRenderer",
+	"type" : "normal"
+}

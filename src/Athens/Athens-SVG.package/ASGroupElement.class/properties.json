@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ASContainerElement",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stroke_opacity"
+	],
+	"name" : "ASGroupElement",
+	"type" : "normal"
+}

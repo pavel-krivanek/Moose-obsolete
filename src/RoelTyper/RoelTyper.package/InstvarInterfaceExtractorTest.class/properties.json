@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "RoelTypingTestRoot",
+	"category" : "RoelTyper-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"a",
+		"b",
+		"c",
+		"u",
+		"v",
+		"w",
+		"x",
+		"y",
+		"z"
+	],
+	"name" : "InstvarInterfaceExtractorTest",
+	"type" : "normal"
+}

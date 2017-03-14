@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 8/18/2016 14:21",
+	"super" : "RTGrapherInteraction",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dataset",
+		"legendElements"
+	],
+	"name" : "RTDataToggleInteraction",
+	"type" : "normal"
+}

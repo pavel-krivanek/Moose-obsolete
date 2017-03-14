@@ -1,1 +1,0 @@
-This class encapsulates the logic of constructing a Roassal view with a class blueprint. It is applicable for one class.

@@ -1,0 +1,1 @@
+A context for when tokenizing has stopped.

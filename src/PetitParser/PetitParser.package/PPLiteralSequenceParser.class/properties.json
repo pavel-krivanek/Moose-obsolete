@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "lr 12/4/2009 18:39",
+	"super" : "PPLiteralParser",
+	"category" : "PetitParser-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"size"
+	],
+	"name" : "PPLiteralSequenceParser",
+	"type" : "normal"
+}

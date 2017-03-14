@@ -1,3 +1,0 @@
-windows
-showTemporaryCursor: cursorOrNil
-	World currentHand showTemporaryCursor: cursorOrNil

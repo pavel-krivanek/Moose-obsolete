@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "LeonelMerino 9/19/2014 12:10",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Map",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color",
+		"scale",
+		"countries",
+		"popup",
+		"cities",
+		"cityBuilder",
+		"countryNames",
+		"cityNames",
+		"routeBuilder",
+		"periodLabel",
+		"cityElements"
+	],
+	"name" : "RTMapBuilder",
+	"type" : "normal"
+}

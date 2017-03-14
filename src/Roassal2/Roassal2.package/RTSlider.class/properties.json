@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "PeterUhnak 8/31/2016 10:10",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-UI-Slider",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"callback",
+		"position",
+		"sliderElements",
+		"min",
+		"max",
+		"useIntegerLabel",
+		"value",
+		"orientation",
+		"size",
+		"hasLabel"
+	],
+	"name" : "RTSlider",
+	"type" : "normal"
+}

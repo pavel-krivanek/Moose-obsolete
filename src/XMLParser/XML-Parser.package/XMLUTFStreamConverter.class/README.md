@@ -1,0 +1,1 @@
+An abstract class for Unicode stream converters.

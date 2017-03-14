@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParser",
+	"category" : "PetitTests-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"terms",
+		"addition",
+		"factors",
+		"multiplication",
+		"power",
+		"primary",
+		"parentheses",
+		"number"
+	],
+	"name" : "PPArithmeticParser",
+	"type" : "normal"
+}

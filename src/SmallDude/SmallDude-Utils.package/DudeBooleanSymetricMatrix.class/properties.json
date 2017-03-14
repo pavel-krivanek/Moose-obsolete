@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MalSymetricMatrix",
+	"category" : "SmallDude-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DudeBooleanSymetricMatrix",
+	"type" : "normal"
+}

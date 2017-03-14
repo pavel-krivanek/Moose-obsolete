@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "JSStatementNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"breakToken",
+		"label",
+		"semicolon"
+	],
+	"name" : "JSBreakStatementNode",
+	"type" : "normal"
+}

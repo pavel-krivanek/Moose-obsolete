@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elements",
+		"fixedElement"
+	],
+	"name" : "RTAbstractElementHandling",
+	"type" : "normal"
+}

@@ -1,0 +1,28 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "SmaCC_Development_UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ShowPrecedenceConflicts"
+	],
+	"instvars" : [
+		"tabModel",
+		"definitionModel",
+		"messagesModel",
+		"symbolsModel",
+		"itemSetsModel",
+		"testModel",
+		"parserClassName",
+		"scannerClassName",
+		"type",
+		"allowUnicode",
+		"codeGeneratorType",
+		"savedDefinition",
+		"menu",
+		"optionsMenu"
+	],
+	"name" : "SmaCCParserGenerator",
+	"type" : "normal"
+}

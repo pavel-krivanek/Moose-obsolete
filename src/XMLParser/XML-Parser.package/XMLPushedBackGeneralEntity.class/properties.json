@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 10/30/2016 09:13",
+	"super" : "XMLPushedBackEntity",
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"totalOpenElements"
+	],
+	"name" : "XMLPushedBackGeneralEntity",
+	"type" : "normal"
+}

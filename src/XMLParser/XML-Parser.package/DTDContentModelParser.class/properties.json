@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 10/15/2016 00:20",
+	"super" : "Object",
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"element",
+		"contentModel"
+	],
+	"name" : "DTDContentModelParser",
+	"type" : "normal"
+}

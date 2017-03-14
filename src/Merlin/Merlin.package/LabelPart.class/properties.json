@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardPart",
+	"category" : "Merlin-ToBeRemoved",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LabelPart",
+	"type" : "normal"
+}

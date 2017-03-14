@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"annotations",
+		"name",
+		"leftParen",
+		"expressions",
+		"commas",
+		"rightParen",
+		"leftBrace",
+		"declarations",
+		"rightBrace"
+	],
+	"name" : "JavaEnumConstantNode",
+	"type" : "normal"
+}

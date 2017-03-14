@@ -1,0 +1,15 @@
+{
+	"classtraitcomposition" : "TMooseGroupDependencyQueries classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"storage"
+	],
+	"name" : "MooseAbstractGroup",
+	"commentStamp" : "<historical>",
+	"super" : "MooseEntity",
+	"traitcomposition" : "TMooseGroupDependencyQueries",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Moose-Core"
+}

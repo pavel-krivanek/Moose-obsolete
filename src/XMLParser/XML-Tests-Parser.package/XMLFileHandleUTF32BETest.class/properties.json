@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLFileHandleTest",
+	"category" : "XML-Tests-Parser-Files",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLFileHandleUTF32BETest",
+	"type" : "normal"
+}

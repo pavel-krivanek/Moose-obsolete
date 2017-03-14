@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RBBlockLintRule",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"metaModelClasses"
+	],
+	"name" : "FAMIXMetaModelClassesShouldNotOverrideRule",
+	"type" : "normal"
+}

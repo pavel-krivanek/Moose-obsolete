@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCGLRParser",
+	"category" : "SmaCC_Rewrite_Engine_Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCRewriteTestParser",
+	"type" : "normal"
+}

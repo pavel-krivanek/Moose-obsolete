@@ -1,3 +1,0 @@
-invoking
-function
-	^ self firstArgument

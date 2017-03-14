@@ -1,3 +1,0 @@
-accessing
-resetElements
-	self updateData

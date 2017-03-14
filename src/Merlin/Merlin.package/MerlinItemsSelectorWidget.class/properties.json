@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphPartWidget",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"initialListMorph",
+		"addButtonMorph",
+		"removeButtonMorph",
+		"selectionListMorph",
+		"widgetMorph",
+		"textFieldMorph",
+		"validateButtonMorph"
+	],
+	"name" : "MerlinItemsSelectorWidget",
+	"type" : "normal"
+}

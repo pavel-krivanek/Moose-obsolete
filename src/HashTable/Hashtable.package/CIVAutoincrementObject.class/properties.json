@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Hashtable-Objects",
+	"classinstvars" : [
+		"nextHash"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hash"
+	],
+	"name" : "CIVAutoincrementObject",
+	"type" : "normal"
+}

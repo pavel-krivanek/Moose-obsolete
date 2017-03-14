@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMActionButtonBrick",
+	"category" : "Glamour-Morphic-Brick-Widgets-UI",
+	"classinstvars" : [
+		"asyncTask",
+		"hintBrick"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"hintTitle",
+		"hintText",
+		"hintDelay",
+		"hintModifier"
+	],
+	"name" : "GLMHintableActionButtonBrick",
+	"type" : "normal"
+}

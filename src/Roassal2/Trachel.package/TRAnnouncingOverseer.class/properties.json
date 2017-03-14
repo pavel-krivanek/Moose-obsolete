@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 7/25/2015 23:04",
+	"super" : "TREventOverseer",
+	"category" : "Trachel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcer"
+	],
+	"name" : "TRAnnouncingOverseer",
+	"type" : "normal"
+}

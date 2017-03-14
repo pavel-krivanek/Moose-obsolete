@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Stream",
+	"category" : "SmaCC_Runtime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sourceStream",
+		"previousWasCR",
+		"eolPositions",
+		"lastPosition"
+	],
+	"name" : "SmaCCLineNumberStream",
+	"type" : "normal"
+}

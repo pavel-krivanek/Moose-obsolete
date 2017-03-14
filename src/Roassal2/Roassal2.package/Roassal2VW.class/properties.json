@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "akevalion 8/14/2014 11:09",
+	"super" : "Object",
+	"category" : "Roassal2-ExporterVW",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Roassal2VW",
+	"type" : "normal"
+}

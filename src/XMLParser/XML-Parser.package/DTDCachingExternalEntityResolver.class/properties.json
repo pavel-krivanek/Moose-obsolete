@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 9/30/2016 00:18",
+	"super" : "DTDExternalEntityResolver",
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"EntityCache"
+	],
+	"instvars" : [ ],
+	"name" : "DTDCachingExternalEntityResolver",
+	"type" : "normal"
+}

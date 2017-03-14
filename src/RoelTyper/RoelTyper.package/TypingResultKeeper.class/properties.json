@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"timeTaken",
+		"typeResults"
+	],
+	"name" : "TypingResultKeeper",
+	"type" : "normal"
+}

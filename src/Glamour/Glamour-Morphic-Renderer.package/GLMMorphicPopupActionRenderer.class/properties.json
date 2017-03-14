@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMMorphicActionRenderer",
+	"category" : "Glamour-Morphic-Renderer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMMorphicPopupActionRenderer",
+	"type" : "normal"
+}

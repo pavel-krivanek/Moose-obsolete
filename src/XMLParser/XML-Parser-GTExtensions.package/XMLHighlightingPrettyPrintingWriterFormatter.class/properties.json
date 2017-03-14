@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 9/21/2015 06:43",
+	"super" : "XMLPrettyPrintingWriterFormatter",
+	"category" : "XML-Parser-GTExtensions-Highlighting-Writer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"highlighter"
+	],
+	"name" : "XMLHighlightingPrettyPrintingWriterFormatter",
+	"type" : "normal"
+}

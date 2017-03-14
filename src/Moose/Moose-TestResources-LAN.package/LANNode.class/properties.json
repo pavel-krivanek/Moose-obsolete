@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Model",
+	"category" : "Moose-TestResources-LAN",
+	"classinstvars" : [ ],
+	"pools" : [
+		"LANPool"
+	],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"nextNode"
+	],
+	"name" : "LANNode",
+	"type" : "normal"
+}

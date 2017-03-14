@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AlexandreBergel 9/3/2014 19:51",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"config",
+		"builder"
+	],
+	"name" : "RTAxisRenderer",
+	"type" : "normal"
+}

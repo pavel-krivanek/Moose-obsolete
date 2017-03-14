@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AliakseiSyrel 10/17/2014 10:11",
+	"super" : "Announcement",
+	"category" : "Glamour-Morphic-Brick-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"data"
+	],
+	"name" : "GLMBrickAnnouncement",
+	"type" : "normal"
+}

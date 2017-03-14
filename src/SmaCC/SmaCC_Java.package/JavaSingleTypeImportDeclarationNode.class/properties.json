@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"importToken",
+		"staticToken",
+		"name",
+		"semicolon"
+	],
+	"name" : "JavaSingleTypeImportDeclarationNode",
+	"type" : "normal"
+}

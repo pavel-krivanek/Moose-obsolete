@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ArrayedCollection",
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MalVector",
+	"type" : "normal"
+}

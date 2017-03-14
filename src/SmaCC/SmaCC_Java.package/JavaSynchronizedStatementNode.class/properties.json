@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaStatementNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"synchronizedToken",
+		"leftParen",
+		"expression",
+		"rightParen",
+		"block"
+	],
+	"name" : "JavaSynchronizedStatementNode",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-private
-attributeListClass
-	^ self configuration nodeFactory attributeListClass

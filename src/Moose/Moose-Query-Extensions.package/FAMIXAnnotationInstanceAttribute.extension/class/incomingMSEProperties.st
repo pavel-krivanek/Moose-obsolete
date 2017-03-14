@@ -1,0 +1,3 @@
+*Moose-Query-Extensions
+incomingMSEProperties
+	^ #()

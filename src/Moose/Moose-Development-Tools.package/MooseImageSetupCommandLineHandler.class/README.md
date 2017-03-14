@@ -1,0 +1,1 @@
+The command that is triggered to setup a Moose image right after the configuration is loaded in a fresh Pharo image.

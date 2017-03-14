@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "BernardoContreras 3/16/2015 21:39",
+	"super" : "Object",
+	"category" : "PetitParser-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"message",
+		"context",
+		"position"
+	],
+	"name" : "PPFailure",
+	"type" : "normal"
+}

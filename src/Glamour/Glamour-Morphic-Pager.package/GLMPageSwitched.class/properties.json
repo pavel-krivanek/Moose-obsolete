@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Announcement",
+	"category" : "Glamour-Morphic-Pager-Announcement",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"smooth",
+		"pageIndex"
+	],
+	"name" : "GLMPageSwitched",
+	"type" : "normal"
+}

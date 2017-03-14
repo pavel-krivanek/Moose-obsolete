@@ -1,0 +1,2 @@
+handling - positions
+handleEndNodeTestPosition: aPosition

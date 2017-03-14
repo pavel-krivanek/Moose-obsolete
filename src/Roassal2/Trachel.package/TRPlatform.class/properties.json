@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "akevalion 7/4/2014 16:06",
+	"super" : "TRObject",
+	"category" : "Trachel-Core",
+	"classinstvars" : [
+		"current"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRPlatform",
+	"type" : "normal"
+}

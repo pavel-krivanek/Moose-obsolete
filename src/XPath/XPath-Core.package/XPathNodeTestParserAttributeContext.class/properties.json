@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 4/11/2015 04:14",
+	"super" : "XPathNodeTestParserContext",
+	"category" : "XPath-Core-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathNodeTestParserAttributeContext",
+	"type" : "normal"
+}

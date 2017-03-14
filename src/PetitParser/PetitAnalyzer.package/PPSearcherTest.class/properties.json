@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PPAbstractParserTest",
+	"category" : "PetitAnalyzer-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"searcher"
+	],
+	"name" : "PPSearcherTest",
+	"type" : "normal"
+}

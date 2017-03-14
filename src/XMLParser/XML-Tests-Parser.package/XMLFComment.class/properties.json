@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "XMLComment",
+	"category" : "XML-Tests-Parser-DOM-Factories",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLFComment",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCGraphAlgorithm",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nodeMap"
+	],
+	"name" : "SmaCCEpsilonRemoval",
+	"type" : "normal"
+}

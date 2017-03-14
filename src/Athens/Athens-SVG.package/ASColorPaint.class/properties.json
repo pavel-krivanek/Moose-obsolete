@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ASPaint",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"color"
+	],
+	"name" : "ASColorPaint",
+	"type" : "normal"
+}

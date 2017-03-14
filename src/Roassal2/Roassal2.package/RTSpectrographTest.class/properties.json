@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Builder-Spectrograph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"b"
+	],
+	"name" : "RTSpectrographTest",
+	"type" : "normal"
+}

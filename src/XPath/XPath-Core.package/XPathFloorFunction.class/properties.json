@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 12/22/2014 21:18",
+	"super" : "XPathFunction",
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathFloorFunction",
+	"type" : "normal"
+}

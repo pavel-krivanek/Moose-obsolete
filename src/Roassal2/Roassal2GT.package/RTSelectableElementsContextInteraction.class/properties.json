@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 12/1/2015 14:34",
+	"super" : "RTAbstractContextInteraction",
+	"category" : "Roassal2GT-Glamour-Roassal-Interaction",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTSelectableElementsContextInteraction",
+	"type" : "normal"
+}

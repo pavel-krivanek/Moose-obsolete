@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmallDude-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"strategy",
+		"observer",
+		"codeBase",
+		"fragments",
+		"mooseModel"
+	],
+	"name" : "DudeDetector",
+	"type" : "normal"
+}

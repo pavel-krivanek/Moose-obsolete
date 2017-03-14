@@ -1,3 +1,0 @@
-private
-stringClass
-	^ String

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-ScatterplotMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTScatterplotMap",
+	"type" : "normal"
+}

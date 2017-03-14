@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2SmalltalkGrammar",
+	"category" : "PetitParser2-Smalltalk-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PP2SmalltalkParser",
+	"type" : "normal"
+}

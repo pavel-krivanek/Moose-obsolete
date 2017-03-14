@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "lr 2/26/2013 01:05",
+	"super" : "PPCompositeParserTest",
+	"category" : "PetitSmalltalk-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPSmalltalkClassesTests",
+	"type" : "normal"
+}

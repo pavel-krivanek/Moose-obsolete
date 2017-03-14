@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DebugSession",
+	"category" : "GT-PetitParserDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rootParserContext"
+	],
+	"name" : "GTPPDebugSession",
+	"type" : "normal"
+}

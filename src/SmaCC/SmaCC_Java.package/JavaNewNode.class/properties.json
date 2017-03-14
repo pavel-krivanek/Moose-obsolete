@@ -1,0 +1,26 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newToken",
+		"type",
+		"leftParen",
+		"expressions",
+		"commas",
+		"rightParen",
+		"primary",
+		"period",
+		"lt",
+		"arguments",
+		"gt",
+		"name",
+		"typeArgLeft",
+		"typeArgRight"
+	],
+	"name" : "JavaNewNode",
+	"type" : "normal"
+}

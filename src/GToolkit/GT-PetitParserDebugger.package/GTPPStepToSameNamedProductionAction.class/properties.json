@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTPPStepToNextNamedProductionAction",
+	"category" : "GT-PetitParserDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTPPStepToSameNamedProductionAction",
+	"type" : "normal"
+}

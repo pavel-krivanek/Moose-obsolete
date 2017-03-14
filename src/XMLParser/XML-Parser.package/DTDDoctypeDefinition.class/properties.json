@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "monty 4/6/2015 08:06",
+	"super" : "Object",
+	"category" : "XML-Parser-DTD",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"root",
+		"elementValidators",
+		"attributeValidators",
+		"generalEntities",
+		"parameterEntities",
+		"unparsedEntities",
+		"notations",
+		"elementIDValidator",
+		"unparsedEntityValidator"
+	],
+	"name" : "DTDDoctypeDefinition",
+	"type" : "normal"
+}

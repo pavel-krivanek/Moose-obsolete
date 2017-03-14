@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "monty 10/16/2015 01:17",
+	"super" : "Object",
+	"category" : "XPath-Core-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nodeSet",
+		"nodeSetSize",
+		"nodeSetCollection",
+		"nodeSetSet",
+		"mustVisitNamespaces",
+		"mustVisitAttributes",
+		"totalSorted"
+	],
+	"name" : "XPathNodeSetSorter",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 2/14/2016 02:29",
+	"super" : "XMLStreamConverter",
+	"category" : "XML-Parser-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLNullStreamConverter",
+	"type" : "normal"
+}

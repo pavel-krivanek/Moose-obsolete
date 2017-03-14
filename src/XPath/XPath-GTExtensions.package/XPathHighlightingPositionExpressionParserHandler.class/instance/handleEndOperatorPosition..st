@@ -1,0 +1,3 @@
+handling - positions
+handleEndOperatorPosition: aPosition
+	highlighter endOperatorHighlightPosition: aPosition

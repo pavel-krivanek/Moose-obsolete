@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Rewrite_Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rewriteRule",
+		"source",
+		"newStarts",
+		"newStops",
+		"properties",
+		"methods",
+		"processedNodes",
+		"outputDirectory",
+		"outputFilename",
+		"contextClass"
+	],
+	"name" : "SmaCCRewriteEngine",
+	"type" : "normal"
+}

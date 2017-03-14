@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "REPConcern",
+	"category" : "Arki-Reporter-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"children",
+		"label",
+		"explanation"
+	],
+	"name" : "REPCompositeConcern",
+	"type" : "normal"
+}

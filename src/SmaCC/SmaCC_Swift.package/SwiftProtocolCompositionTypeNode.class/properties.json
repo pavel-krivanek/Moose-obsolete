@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"protocolToken",
+		"lessThanTokens",
+		"identifierTokens",
+		"periodTokens",
+		"commaTokens",
+		"greaterThanTokens"
+	],
+	"name" : "SwiftProtocolCompositionTypeNode",
+	"type" : "normal"
+}

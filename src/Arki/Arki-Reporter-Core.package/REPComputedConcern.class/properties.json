@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "REPConcern",
+	"category" : "Arki-Reporter-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"result",
+		"status",
+		"computationTime"
+	],
+	"name" : "REPComputedConcern",
+	"type" : "normal"
+}

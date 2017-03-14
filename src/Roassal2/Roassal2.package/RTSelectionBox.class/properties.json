@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "akevalion 6/21/2016 17:56",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"aView",
+		"edges",
+		"lastClick"
+	],
+	"name" : "RTSelectionBox",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "AlexandreBergel 9/21/2014 21:00",
+	"super" : "RTShape",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"path",
+		"borderWidth",
+		"borderColor",
+		"curves",
+		"keepInOriginalPosition"
+	],
+	"name" : "RTSVGPath",
+	"type" : "normal"
+}

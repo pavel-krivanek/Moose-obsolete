@@ -1,3 +1,0 @@
-parsing
-parser
-	^ self

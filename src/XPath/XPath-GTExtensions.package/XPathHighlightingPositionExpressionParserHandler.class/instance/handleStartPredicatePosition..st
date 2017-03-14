@@ -1,0 +1,3 @@
+handling - positions
+handleStartPredicatePosition: aPosition
+	highlighter startPredicateHighlightPosition: aPosition

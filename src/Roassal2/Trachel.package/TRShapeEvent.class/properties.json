@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TREvent",
+	"category" : "Trachel-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shape"
+	],
+	"name" : "TRShapeEvent",
+	"type" : "normal"
+}

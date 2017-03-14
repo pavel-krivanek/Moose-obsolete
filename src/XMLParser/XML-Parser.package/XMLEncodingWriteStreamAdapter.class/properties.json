@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 1/26/2016 23:31",
+	"super" : "XMLWriteStreamAdapter",
+	"category" : "XML-Parser-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"streamConverter"
+	],
+	"name" : "XMLEncodingWriteStreamAdapter",
+	"type" : "normal"
+}

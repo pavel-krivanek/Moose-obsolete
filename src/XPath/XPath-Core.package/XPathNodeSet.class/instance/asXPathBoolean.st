@@ -1,0 +1,3 @@
+converting
+asXPathBoolean
+	^ self notEmpty

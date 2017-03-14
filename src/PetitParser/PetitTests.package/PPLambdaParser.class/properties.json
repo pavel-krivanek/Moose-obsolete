@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParser",
+	"category" : "PetitTests-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"expression",
+		"abstraction",
+		"application",
+		"variable"
+	],
+	"name" : "PPLambdaParser",
+	"type" : "normal"
+}

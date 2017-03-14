@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalArrayVector",
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"min",
+		"found",
+		"index",
+		"aNumber",
+		"minObsol"
+	],
+	"name" : "MalClusteringVector",
+	"type" : "variable"
+}

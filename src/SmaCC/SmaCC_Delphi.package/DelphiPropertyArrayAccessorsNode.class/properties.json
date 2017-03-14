@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"left",
+		"arguments",
+		"semicolons",
+		"right"
+	],
+	"name" : "DelphiPropertyArrayAccessorsNode",
+	"type" : "normal"
+}

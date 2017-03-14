@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "NicolasAnquetil 11/7/2016 09:55",
+	"super" : "FAMIXAssociation",
+	"category" : "Famix-C",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"source",
+		"target"
+	],
+	"name" : "FAMIXInclude",
+	"type" : "normal"
+}

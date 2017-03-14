@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2NodeVisitor",
+	"category" : "PetitParser2-Interpretation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentContext",
+		"rootParser"
+	],
+	"name" : "PP2Interpret",
+	"type" : "normal"
+}

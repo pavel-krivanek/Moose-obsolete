@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Debugging_Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"state",
+		"name",
+		"success",
+		"followed",
+		"directLinks",
+		"previousNodes",
+		"reductions",
+		"parser"
+	],
+	"name" : "SmaCCGraphNode",
+	"type" : "normal"
+}

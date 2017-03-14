@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PPStream",
+	"category" : "PetitGui-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"positions",
+		"stamps",
+		"parsers"
+	],
+	"name" : "PPBrowserStream",
+	"type" : "normal"
+}

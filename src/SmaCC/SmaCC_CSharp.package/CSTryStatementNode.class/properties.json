@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tryToken",
+		"block",
+		"clauses",
+		"finally"
+	],
+	"name" : "CSTryStatementNode",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+configuration
+doNotShowLabels
+	wantsLabel := false

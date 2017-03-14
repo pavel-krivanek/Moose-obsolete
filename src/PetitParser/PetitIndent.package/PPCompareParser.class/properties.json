@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PPParser",
+	"category" : "PetitIndent-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"compareBlock",
+		"message",
+		"column"
+	],
+	"name" : "PPCompareParser",
+	"type" : "normal"
+}

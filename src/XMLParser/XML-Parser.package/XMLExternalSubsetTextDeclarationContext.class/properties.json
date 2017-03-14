@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 11/15/2016 15:12",
+	"super" : "XMLExternalSubsetContext",
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLExternalSubsetTextDeclarationContext",
+	"type" : "normal"
+}

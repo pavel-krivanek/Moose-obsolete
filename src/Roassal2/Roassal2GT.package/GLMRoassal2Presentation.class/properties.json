@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMPresentation",
+	"category" : "Roassal2GT-Glamour",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"painting",
+		"paintingBlock",
+		"view",
+		"shouldPopulateSelection",
+		"newViewBlock"
+	],
+	"name" : "GLMRoassal2Presentation",
+	"type" : "normal"
+}

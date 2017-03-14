@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMMorphicWidgetRenderer",
+	"category" : "Glamour-Morphic-Renderer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"container",
+		"paneMorph"
+	],
+	"name" : "GLMMorphicPaneWithoutTitleRenderer",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTConstrainedDraggableView",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTVerticalDraggableView",
+	"type" : "normal"
+}

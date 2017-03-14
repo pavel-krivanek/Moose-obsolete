@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LANOutputServer",
+	"category" : "Moose-TestResources-LAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LANPrintServer",
+	"type" : "normal"
+}

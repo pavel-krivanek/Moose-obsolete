@@ -1,0 +1,3 @@
+handling - positions
+handleEndNumberLiteralPosition: aPosition
+	highlighter endNumberLiteralHighlightPosition: aPosition

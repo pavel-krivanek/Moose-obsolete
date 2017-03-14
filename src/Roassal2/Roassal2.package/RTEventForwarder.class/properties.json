@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AlexandreBergel 8/20/2014 11:17",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"toObject",
+		"eventClass"
+	],
+	"name" : "RTEventForwarder",
+	"type" : "normal"
+}

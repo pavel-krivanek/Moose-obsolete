@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "VincentBlondeau 9/2/2015 11:46",
+	"super" : "MooseOperator",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rootFolder"
+	],
+	"name" : "MooseFileOperator",
+	"type" : "normal"
+}

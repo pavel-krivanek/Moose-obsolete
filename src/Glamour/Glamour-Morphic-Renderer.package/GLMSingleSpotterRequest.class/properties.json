@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Notification",
+	"category" : "Glamour-Morphic-Renderer-Spotter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"prompt",
+		"default",
+		"assisted",
+		"searchBlock",
+		"labelBlock",
+		"iconBlock"
+	],
+	"name" : "GLMSingleSpotterRequest",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaIfStatementNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elseToken",
+		"falseStatement"
+	],
+	"name" : "JavaIfElseStatementNode",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 10/9/2014 20:58",
+	"super" : "XMLNFAState",
+	"category" : "XML-Parser-Validation-DFA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"matcher",
+		"nextState"
+	],
+	"name" : "XMLNFAMatchingState",
+	"type" : "normal"
+}

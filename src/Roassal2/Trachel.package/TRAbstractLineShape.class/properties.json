@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TRShape",
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"width"
+	],
+	"name" : "TRAbstractLineShape",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-Example",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rightHandSide",
+		"leftHandSide"
+	],
+	"name" : "EQEquation",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"theClass",
+		"instVars",
+		"typingResults",
+		"currentExtractedMethod",
+		"localTypingResults"
+	],
+	"name" : "TypeCollector",
+	"type" : "normal"
+}

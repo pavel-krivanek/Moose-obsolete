@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PavelKrivanek 3/13/2017 09:54",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfMoose",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfMoose",
+	"type" : "normal"
+}

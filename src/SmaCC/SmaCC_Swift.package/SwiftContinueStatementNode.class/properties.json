@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftControlTransferStatementNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"continueToken",
+		"name"
+	],
+	"name" : "SwiftContinueStatementNode",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-private
-itemClass
-	^TableItem

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractBuilder",
+	"category" : "Roassal2-Builder-Common",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shape",
+		"createdElements",
+		"shapeInitializer"
+	],
+	"name" : "RTShapeBuilder",
+	"type" : "normal"
+}

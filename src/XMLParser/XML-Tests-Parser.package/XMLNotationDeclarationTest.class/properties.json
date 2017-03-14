@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLDeclarationNodeTest",
+	"category" : "XML-Tests-Parser-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLNotationDeclarationTest",
+	"type" : "normal"
+}

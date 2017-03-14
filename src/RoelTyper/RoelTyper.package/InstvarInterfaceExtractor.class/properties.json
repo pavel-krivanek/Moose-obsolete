@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "InstructionClient",
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stack",
+		"copied",
+		"initialStack",
+		"method",
+		"saveStacks",
+		"input",
+		"collector",
+		"blockTraversal",
+		"blockArgs"
+	],
+	"name" : "InstvarInterfaceExtractor",
+	"type" : "normal"
+}

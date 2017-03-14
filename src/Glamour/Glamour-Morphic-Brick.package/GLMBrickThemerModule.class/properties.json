@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Glamour-Morphic-Brick-Theme",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"themer"
+	],
+	"name" : "GLMBrickThemerModule",
+	"type" : "normal"
+}

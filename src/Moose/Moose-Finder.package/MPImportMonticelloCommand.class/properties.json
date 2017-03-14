@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MPImportCommand",
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MPImportMonticelloCommand",
+	"type" : "normal"
+}

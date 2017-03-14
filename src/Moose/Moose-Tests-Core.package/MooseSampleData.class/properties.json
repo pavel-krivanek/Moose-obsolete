@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "TestResource",
+	"category" : "Moose-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"UniqueInstance"
+	],
+	"instvars" : [
+		"moosemodel1",
+		"moosemodel2",
+		"moosemodel3",
+		"moosemodel4",
+		"moosemodel5",
+		"history"
+	],
+	"name" : "MooseSampleData",
+	"type" : "normal"
+}

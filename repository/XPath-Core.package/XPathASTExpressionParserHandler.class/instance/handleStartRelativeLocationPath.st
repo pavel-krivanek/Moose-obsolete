@@ -1,3 +1,0 @@
-handling - location paths
-handleStartRelativeLocationPath
-	self pushOperatorNode: XPathASTRelativeLocationPathNode new

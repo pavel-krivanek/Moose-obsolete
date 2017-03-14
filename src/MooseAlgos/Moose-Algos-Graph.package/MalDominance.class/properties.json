@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MalGraphAlgorithm",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MalDominance",
+	"type" : "normal"
+}

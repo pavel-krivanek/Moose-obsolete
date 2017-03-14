@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "usmanbhatti 11/24/2011 21:57",
+	"super" : "FAMIXBehaviouralEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"container"
+	],
+	"name" : "FAMIXFunction",
+	"type" : "normal"
+}

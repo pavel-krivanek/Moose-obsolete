@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "usmanbhatti 11/23/2011 15:10",
+	"super" : "FAMIXEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sourcedEntities"
+	],
+	"name" : "FAMIXSourceLanguage",
+	"type" : "normal"
+}

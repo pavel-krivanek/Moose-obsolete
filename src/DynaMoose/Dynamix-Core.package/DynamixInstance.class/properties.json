@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "TudorGirba 11/28/2011 20:39",
+	"super" : "DynamixReference",
+	"category" : "Dynamix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"aliases",
+		"type"
+	],
+	"name" : "DynamixInstance",
+	"type" : "normal"
+}

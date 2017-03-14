@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ZeroConfVMScript",
+	"category" : "ZeroConf-Unity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"status"
+	],
+	"name" : "ZeroConfVMVersionScript",
+	"type" : "normal"
+}

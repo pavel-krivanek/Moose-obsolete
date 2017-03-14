@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 12/29/2014 01:12",
+	"super" : "Object",
+	"category" : "XML-Parser-Namespaces",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"prefixMappings"
+	],
+	"name" : "XMLNamespaceScope",
+	"type" : "normal"
+}

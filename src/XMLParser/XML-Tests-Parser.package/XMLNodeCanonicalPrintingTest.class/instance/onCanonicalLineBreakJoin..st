@@ -1,0 +1,3 @@
+private
+onCanonicalLineBreakJoin: aLineCollection
+	^ XMLWriterTest onCanonicalLineBreakJoin: aLineCollection

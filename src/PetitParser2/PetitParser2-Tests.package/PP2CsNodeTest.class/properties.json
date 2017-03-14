@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2AbstractParserTest",
+	"category" : "PetitParser2-Tests-Nodes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"node",
+		"context"
+	],
+	"name" : "PP2CsNodeTest",
+	"type" : "normal"
+}

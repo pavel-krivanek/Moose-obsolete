@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "CSExpressionNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newToken",
+		"type",
+		"leftParenToken",
+		"arguments",
+		"commaTokens",
+		"rightParenToken",
+		"initializer"
+	],
+	"name" : "CSObjectCreationExpressionNode",
+	"type" : "normal"
+}

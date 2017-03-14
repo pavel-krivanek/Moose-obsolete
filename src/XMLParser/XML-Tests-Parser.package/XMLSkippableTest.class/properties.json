@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 9/10/2016 03:11",
+	"super" : "TestCase",
+	"category" : "XML-Tests-Parser",
+	"classinstvars" : [
+		"isSkipping"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"skippableTests"
+	],
+	"name" : "XMLSkippableTest",
+	"type" : "normal"
+}

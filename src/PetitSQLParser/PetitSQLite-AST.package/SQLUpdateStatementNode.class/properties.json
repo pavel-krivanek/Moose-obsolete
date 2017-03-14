@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SQLASTNode",
+	"category" : "PetitSQLite-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"table",
+		"setValue",
+		"where"
+	],
+	"name" : "SQLUpdateStatementNode",
+	"type" : "normal"
+}

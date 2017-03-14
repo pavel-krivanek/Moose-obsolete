@@ -1,3 +1,0 @@
-keywords
-kwFor
-	^ 'for' asParser

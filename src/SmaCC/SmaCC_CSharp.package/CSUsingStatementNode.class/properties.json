@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"usingToken",
+		"leftParenToken",
+		"expression",
+		"rightParenToken",
+		"statement"
+	],
+	"name" : "CSUsingStatementNode",
+	"type" : "normal"
+}

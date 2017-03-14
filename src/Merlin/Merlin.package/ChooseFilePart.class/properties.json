@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardPart",
+	"category" : "Merlin-Parts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fileDialog",
+		"fileDialogMorph",
+		"dialogLabel",
+		"validExtensions",
+		"selectedPathName"
+	],
+	"name" : "ChooseFilePart",
+	"type" : "normal"
+}

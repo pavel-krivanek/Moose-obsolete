@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PJTypeNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PJPrimitiveTypeNode",
+	"type" : "normal"
+}

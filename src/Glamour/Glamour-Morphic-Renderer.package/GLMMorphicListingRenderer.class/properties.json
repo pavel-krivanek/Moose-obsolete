@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMMorphicWidgetRenderer",
+	"category" : "Glamour-Morphic-Renderer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"treeMorph",
+		"treeModel"
+	],
+	"name" : "GLMMorphicListingRenderer",
+	"type" : "normal"
+}

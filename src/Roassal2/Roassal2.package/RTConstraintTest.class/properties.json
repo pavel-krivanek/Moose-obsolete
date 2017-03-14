@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shape2",
+		"shape1"
+	],
+	"name" : "RTConstraintTest",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "GT-GlamourDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pragma",
+		"session"
+	],
+	"name" : "GTDebuggingStone",
+	"type" : "normal"
+}

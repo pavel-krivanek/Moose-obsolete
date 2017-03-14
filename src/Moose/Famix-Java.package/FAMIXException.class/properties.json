@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "usmanbhatti 11/28/2011 22:58",
+	"super" : "FAMIXEntity",
+	"category" : "Famix-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exceptionClass",
+		"definingMethod"
+	],
+	"name" : "FAMIXException",
+	"type" : "normal"
+}

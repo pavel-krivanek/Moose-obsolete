@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PabloEstefo 4/24/2014 23:14",
+	"super" : "RTAbstractNormalizer",
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"colorScheme",
+		"numberOfBuckets",
+		"scope",
+		"buckets"
+	],
+	"name" : "RTBucketColor",
+	"type" : "normal"
+}

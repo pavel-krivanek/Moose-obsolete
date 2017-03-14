@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "AlexandreBergel 4/19/2016 18:59",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions-MorphingView",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"referenceView",
+		"translator",
+		"referenceModels",
+		"afterAllTranslationsBlocks"
+	],
+	"name" : "RTAbstractMorphingView",
+	"type" : "normal"
+}

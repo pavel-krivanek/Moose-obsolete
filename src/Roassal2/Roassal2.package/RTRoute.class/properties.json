@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Map",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"edge",
+		"mapBuilder",
+		"length"
+	],
+	"name" : "RTRoute",
+	"type" : "normal"
+}

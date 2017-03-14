@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"example",
+		"view",
+		"group",
+		"edges",
+		"nodes",
+		"fromTo",
+		"processing"
+	],
+	"name" : "GTExampleGraphPainter",
+	"type" : "normal"
+}

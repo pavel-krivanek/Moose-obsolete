@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ASContainerElement",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stops",
+		"gradientTransform",
+		"gradientUnits"
+	],
+	"name" : "ASGradient",
+	"type" : "normal"
+}

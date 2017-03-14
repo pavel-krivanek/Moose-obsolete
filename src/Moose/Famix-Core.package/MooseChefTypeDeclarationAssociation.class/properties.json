@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "NicolasAnquetil 12/3/2011 22:44",
+	"super" : "Object",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"from",
+		"to"
+	],
+	"name" : "MooseChefTypeDeclarationAssociation",
+	"type" : "normal"
+}

@@ -1,0 +1,36 @@
+{
+	"commentStamp" : "monty 9/6/2015 15:13",
+	"super" : "Object",
+	"category" : "XML-Writer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"CanonicalLineBreak",
+		"ContentCanonicalEscapes",
+		"ContentEscapes",
+		"ContentNonEntityEscapes",
+		"ContentStringCanonicalEscapes",
+		"ContentStringEscapes",
+		"ContentStringNonEntityEscapes",
+		"DefaultLineBreak",
+		"EntityValueEscapes",
+		"PlatformSpecificLineBreak",
+		"SpaceCharacter"
+	],
+	"instvars" : [
+		"stream",
+		"streamStartPosition",
+		"markupWriterStack",
+		"formatter",
+		"lineBreak",
+		"contentEscapes",
+		"contentStringEscapes",
+		"isEscaping",
+		"isCanonical",
+		"outputsSelfClosingTags",
+		"omitsRedundantXMLNSDeclarations",
+		"hadActiveTagWriter"
+	],
+	"name" : "XMLWriter",
+	"type" : "normal"
+}

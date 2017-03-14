@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCRewriteTestExpressionNode",
+	"category" : "SmaCC_Rewrite_Engine_Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"left",
+		"operator",
+		"right"
+	],
+	"name" : "SmaCCRewriteTestBinaryExpressionNode",
+	"type" : "normal"
+}

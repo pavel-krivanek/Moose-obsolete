@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "StephaneDucasse 11/13/2011 23:53",
+	"super" : "MooseMonticelloImporter",
+	"category" : "Moose-MonticelloImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"directoryString"
+	],
+	"name" : "MooseMonticelloCacheImporter",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCScanner",
+	"category" : "SmaCC_C_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"typeNames"
+	],
+	"name" : "CScanner",
+	"type" : "normal"
+}

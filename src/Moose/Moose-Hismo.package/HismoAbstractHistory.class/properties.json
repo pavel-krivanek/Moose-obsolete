@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "FAMIXEntity",
+	"category" : "Moose-Hismo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"versions",
+		"referenceHistory",
+		"parentHistory"
+	],
+	"name" : "HismoAbstractHistory",
+	"type" : "normal"
+}

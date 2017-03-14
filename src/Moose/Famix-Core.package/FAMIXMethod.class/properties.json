@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "TudorGirba 1/21/2011 10:36",
+	"super" : "FAMIXBehaviouralEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"kind",
+		"parentType",
+		"hasClassScope"
+	],
+	"name" : "FAMIXMethod",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 2/14/2016 04:25",
+	"super" : "Object",
+	"category" : "XML-Parser-GTExtensions-Highlighting-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"streamReader",
+		"outputStream",
+		"writeStream"
+	],
+	"name" : "XMLExternalDocumentConverter",
+	"type" : "normal"
+}

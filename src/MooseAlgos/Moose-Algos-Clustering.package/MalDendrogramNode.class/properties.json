@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalDendrogram",
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"left",
+		"right",
+		"threshold"
+	],
+	"name" : "MalDendrogramNode",
+	"type" : "normal"
+}

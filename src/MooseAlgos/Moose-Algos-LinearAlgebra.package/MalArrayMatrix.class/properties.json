@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalMatrix",
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"array",
+		"columnSize",
+		"rowSize"
+	],
+	"name" : "MalArrayMatrix",
+	"type" : "normal"
+}

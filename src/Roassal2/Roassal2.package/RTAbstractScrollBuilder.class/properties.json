@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "PierreChanson 7/15/2015 18:07",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-ScrollBar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fixedPosition",
+		"size",
+		"movable",
+		"orientation",
+		"width",
+		"shapes",
+		"barShape",
+		"barSpecific",
+		"encompassingRectangleFromSpaceToPixel",
+		"encompassingRectangle",
+		"fillColor"
+	],
+	"name" : "RTAbstractScrollBuilder",
+	"type" : "normal"
+}

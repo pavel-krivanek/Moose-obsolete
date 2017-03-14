@@ -1,0 +1,32 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"MaximumCharacterValue",
+		"TokenNameBlock",
+		"TokenNameMap"
+	],
+	"instvars" : [
+		"type",
+		"shiftReduceTable",
+		"symbols",
+		"scannerDefinition",
+		"otherStartingSymbols",
+		"classDefinitions",
+		"prefix",
+		"suffix",
+		"codeGenerator",
+		"isGLR",
+		"ignoreCase",
+		"ignoredVariables",
+		"annotateTokens",
+		"errorSymbol",
+		"emptySymbol",
+		"sentinelSymbol"
+	],
+	"name" : "SmaCCGrammar",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"whileToken",
+		"leftParenToken",
+		"expression",
+		"rightParenToken",
+		"statement"
+	],
+	"name" : "CSWhileStatementNode",
+	"type" : "normal"
+}

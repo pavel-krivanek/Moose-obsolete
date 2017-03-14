@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 2/9/2017 23:18",
+	"super" : "Object",
+	"category" : "XPath-Core-Types",
+	"classinstvars" : [
+		"instance"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathType",
+	"type" : "normal"
+}

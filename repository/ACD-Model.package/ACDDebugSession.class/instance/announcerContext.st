@@ -1,4 +1,0 @@
-accessing
-announcerContext
-
-	^ announcerModel context

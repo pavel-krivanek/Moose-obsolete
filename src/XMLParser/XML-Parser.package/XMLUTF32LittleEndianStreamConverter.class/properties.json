@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 2/14/2016 02:14",
+	"super" : "XMLUTF32StreamConverter",
+	"category" : "XML-Parser-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLUTF32LittleEndianStreamConverter",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Void"
+	],
+	"instvars" : [
+		"stream",
+		"buffer",
+		"term"
+	],
+	"name" : "MalTermScanner",
+	"type" : "normal"
+}

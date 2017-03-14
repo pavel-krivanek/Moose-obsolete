@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-ColorNormalizerOBSOLETE",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"command"
+	],
+	"name" : "RTNAbstractNormalizer",
+	"type" : "normal"
+}

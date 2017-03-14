@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 3/5/2016 11:50",
+	"super" : "Object",
+	"category" : "XML-Parser-Utils",
+	"classinstvars" : [
+		"implementation"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLAbstractFactory",
+	"type" : "normal"
+}

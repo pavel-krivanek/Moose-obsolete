@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXEntity",
+	"category" : "SmallDude-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"referenceCode",
+		"duplicateCode",
+		"signature",
+		"headDiagNo",
+		"tailDiagNo"
+	],
+	"name" : "DudeDuplication",
+	"type" : "normal"
+}

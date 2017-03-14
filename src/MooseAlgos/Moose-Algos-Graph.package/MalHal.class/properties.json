@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MalTarjan",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nodesToVisit"
+	],
+	"name" : "MalHal",
+	"type" : "normal"
+}

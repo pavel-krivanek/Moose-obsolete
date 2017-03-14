@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DeepTraverserWithoutAction",
+	"category" : "DeepTraverser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onPickNextAction",
+		"onNodeAction",
+		"isActionAppliedOnCurrent"
+	],
+	"name" : "DeepTraverserWithoutEdges",
+	"type" : "normal"
+}

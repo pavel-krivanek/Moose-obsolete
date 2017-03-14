@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftStatementNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"expression",
+		"semicolonToken"
+	],
+	"name" : "SwiftExpressionStatementNode",
+	"type" : "normal"
+}

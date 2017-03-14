@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"condition",
+		"behavior"
+	],
+	"name" : "RTMorphDropInteraction",
+	"type" : "normal"
+}

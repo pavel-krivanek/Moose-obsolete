@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "AlexandreBergel 5/11/2014 20:10",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Spectrograph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"objects",
+		"lineBlock",
+		"pointSize",
+		"highlightBlock"
+	],
+	"name" : "RTSpectrograph",
+	"type" : "normal"
+}

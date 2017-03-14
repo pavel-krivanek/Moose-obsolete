@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "stephane.ducasse 6/13/2008 13:41",
+	"super" : "TestCase",
+	"category" : "Moose-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model"
+	],
+	"name" : "MooseModelTest",
+	"type" : "normal"
+}

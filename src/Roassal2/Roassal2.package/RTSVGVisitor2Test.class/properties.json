@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "akevalion 5/23/2016 12:57",
+	"super" : "TestCase",
+	"category" : "Roassal2-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"visitor"
+	],
+	"name" : "RTSVGVisitor2Test",
+	"type" : "normal"
+}

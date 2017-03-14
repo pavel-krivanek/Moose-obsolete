@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPDelegateParser",
+	"category" : "PetitIndent-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPPushAsParserParser",
+	"type" : "normal"
+}

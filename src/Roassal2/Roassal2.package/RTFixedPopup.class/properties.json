@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTPopup",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTFixedPopup",
+	"type" : "normal"
+}

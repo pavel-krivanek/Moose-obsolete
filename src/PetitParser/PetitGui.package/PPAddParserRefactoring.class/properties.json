@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RBRefactoring",
+	"category" : "PetitGui-Refactoring",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"superclass",
+		"name",
+		"cateogry"
+	],
+	"name" : "PPAddParserRefactoring",
+	"type" : "normal"
+}

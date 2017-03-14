@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseEntityAnnouncement",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"oldName"
+	],
+	"name" : "MooseEntityRenamed",
+	"type" : "normal"
+}

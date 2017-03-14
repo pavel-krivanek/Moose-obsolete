@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLReadStreamAdapterTest",
+	"category" : "XML-Tests-Parser-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLBinaryReadStreamAdapterTest",
+	"type" : "normal"
+}

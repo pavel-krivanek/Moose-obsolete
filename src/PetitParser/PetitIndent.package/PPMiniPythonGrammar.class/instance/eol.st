@@ -1,0 +1,3 @@
+grammar
+eol
+	^ #endOfLine asParser

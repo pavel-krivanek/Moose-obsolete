@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list",
+		"selectionIndex",
+		"announcer",
+		"glamourPresentation"
+	],
+	"name" : "GLMDropListModel",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-configuration
-doNotShowLabels
-	wantsLabel := false

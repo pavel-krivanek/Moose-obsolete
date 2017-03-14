@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Builder-Grapher-Decorators-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"b"
+	],
+	"name" : "RTCursorFollowerTest",
+	"type" : "normal"
+}

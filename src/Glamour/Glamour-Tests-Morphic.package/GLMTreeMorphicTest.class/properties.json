@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMMorphicTest",
+	"category" : "Glamour-Tests-Morphic",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMTreeMorphicTest",
+	"type" : "normal"
+}

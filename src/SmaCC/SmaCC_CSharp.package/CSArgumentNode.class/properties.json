@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"identifier",
+		"colonToken",
+		"expression",
+		"refToken",
+		"outToken"
+	],
+	"name" : "CSArgumentNode",
+	"type" : "normal"
+}

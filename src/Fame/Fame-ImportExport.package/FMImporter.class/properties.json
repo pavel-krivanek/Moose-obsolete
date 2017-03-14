@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "FMParserClient",
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stack",
+		"elements",
+		"model",
+		"metamodel",
+		"stream",
+		"tally",
+		"reminderDict",
+		"serialDict"
+	],
+	"name" : "FMImporter",
+	"type" : "normal"
+}

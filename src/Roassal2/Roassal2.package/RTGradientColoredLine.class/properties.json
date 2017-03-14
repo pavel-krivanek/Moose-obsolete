@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PierreChanson 11/25/2014 12:11",
+	"super" : "RTMultiColoredLine",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"precision"
+	],
+	"name" : "RTGradientColoredLine",
+	"type" : "normal"
+}

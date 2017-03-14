@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PetitParser2-Recording",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"entries",
+		"fEntries",
+		"colors",
+		"selection"
+	],
+	"name" : "PP2EventsTrace",
+	"type" : "normal"
+}

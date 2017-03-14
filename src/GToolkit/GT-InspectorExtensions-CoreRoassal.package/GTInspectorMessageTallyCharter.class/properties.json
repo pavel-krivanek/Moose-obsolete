@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 1/18/2014 14:28",
+	"super" : "GLMCompositePresentation",
+	"category" : "GT-InspectorExtensions-CoreRoassal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTInspectorMessageTallyCharter",
+	"type" : "normal"
+}

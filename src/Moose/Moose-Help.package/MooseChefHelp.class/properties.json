@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CustomHelp",
+	"category" : "Moose-Help",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseChefHelp",
+	"type" : "normal"
+}

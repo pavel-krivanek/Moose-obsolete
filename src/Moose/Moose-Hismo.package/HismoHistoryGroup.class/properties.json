@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MooseGroup",
+	"category" : "Moose-Hismo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"versions"
+	],
+	"name" : "HismoHistoryGroup",
+	"type" : "normal"
+}

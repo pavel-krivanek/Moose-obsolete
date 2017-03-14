@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TudorGirba 7/13/2011 07:28",
+	"super" : "MAAccessor",
+	"category" : "Metanool-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fameProperty"
+	],
+	"name" : "MTLFamePropertyAccessor",
+	"type" : "normal"
+}

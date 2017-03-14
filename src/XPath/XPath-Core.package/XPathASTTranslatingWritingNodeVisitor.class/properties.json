@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "monty 2/21/2017 08:38",
+	"super" : "XPathASTWritingNodeVisitor",
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"InlinedFunctionNamesAndSelectors"
+	],
+	"instvars" : [
+		"contextBlockVariables",
+		"contextBlockIndex",
+		"locationPathRootVariable",
+		"nodeTests"
+	],
+	"name" : "XPathASTTranslatingWritingNodeVisitor",
+	"type" : "normal"
+}

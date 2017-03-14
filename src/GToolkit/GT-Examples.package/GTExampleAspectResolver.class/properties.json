@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "GT-Examples-Organization",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"example",
+		"meta",
+		"aspectClass"
+	],
+	"name" : "GTExampleAspectResolver",
+	"type" : "normal"
+}

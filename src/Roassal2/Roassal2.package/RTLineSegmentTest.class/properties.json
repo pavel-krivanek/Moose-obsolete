@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PeterUhnak 2/24/2016 11:54",
+	"super" : "RTTest",
+	"category" : "Roassal2-AttachPoint-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lineX",
+		"lineY",
+		"lineDiagonal",
+		"lineX0"
+	],
+	"name" : "RTLineSegmentTest",
+	"type" : "normal"
+}

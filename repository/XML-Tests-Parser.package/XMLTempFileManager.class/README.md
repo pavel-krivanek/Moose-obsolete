@@ -1,1 +1,0 @@
-A class for managing temp files using XMLFileHandles. This has race conditions in it and could leak temp files, so it is only to be used for testing in tests that are normally skipped.

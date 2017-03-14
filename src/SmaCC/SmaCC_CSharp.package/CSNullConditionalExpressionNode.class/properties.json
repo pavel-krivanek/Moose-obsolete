@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSExpressionNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"expression",
+		"nullConditionalOperation"
+	],
+	"name" : "CSNullConditionalExpressionNode",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-PieChart",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"objects",
+		"values",
+		"sum",
+		"elements"
+	],
+	"name" : "RTPieBuilder",
+	"type" : "normal"
+}

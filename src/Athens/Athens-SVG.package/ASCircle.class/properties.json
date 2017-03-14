@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ASShape",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"r",
+		"cx",
+		"cy"
+	],
+	"name" : "ASCircle",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractGrapherDecorator",
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shouldHaveLabel",
+		"color",
+		"shapes",
+		"labelBlock"
+	],
+	"name" : "RTAbstractAverageDecorator",
+	"type" : "normal"
+}

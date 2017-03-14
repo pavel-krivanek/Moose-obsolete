@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AliakseiSyrel 10/17/2014 10:34",
+	"super" : "GLMBrickRenderer",
+	"category" : "Glamour-Morphic-Brick-Renderer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMInteractableBrickRenderer",
+	"type" : "normal"
+}

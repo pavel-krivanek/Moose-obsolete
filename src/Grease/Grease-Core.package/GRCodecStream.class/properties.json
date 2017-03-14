@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "pmm 6/25/2012 20:21",
+	"super" : "GRDelegatingStream",
+	"category" : "Grease-Core-Text",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GRCodecStream",
+	"type" : "normal"
+}

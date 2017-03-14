@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "monty 9/18/2016 21:12",
+	"super" : "Object",
+	"category" : "XML-Tests-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"uniqueFileNames",
+		"streamConverter",
+		"fileContents",
+		"fileSuffix"
+	],
+	"name" : "XMLTempFileManager",
+	"type" : "normal"
+}

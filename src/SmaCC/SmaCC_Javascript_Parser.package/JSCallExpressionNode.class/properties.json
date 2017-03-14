@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "JSExpressionNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"expression",
+		"left",
+		"right",
+		"arguments",
+		"commas"
+	],
+	"name" : "JSCallExpressionNode",
+	"type" : "normal"
+}

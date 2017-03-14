@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "akevalion 11/23/2015 19:23",
+	"super" : "RTLabel",
+	"category" : "Roassal2-MorphSpecific",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fieldArea",
+		"editLabelShape",
+		"updateMorphExtent",
+		"events"
+	],
+	"name" : "RTEditableLabel",
+	"type" : "normal"
+}

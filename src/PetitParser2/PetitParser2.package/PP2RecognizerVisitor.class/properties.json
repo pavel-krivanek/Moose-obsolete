@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2NoopVisitor",
+	"category" : "PetitParser2-Optimizations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"inToken",
+		"parents"
+	],
+	"name" : "PP2RecognizerVisitor",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "YuriyTymchuk 6/20/2014 10:46",
+	"super" : "RTAbstractZoomMove",
+	"category" : "Roassal2-Animation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTZoomOutMove",
+	"type" : "normal"
+}

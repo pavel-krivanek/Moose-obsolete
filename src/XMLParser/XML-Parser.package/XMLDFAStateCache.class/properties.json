@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 12/27/2014 03:19",
+	"super" : "Object",
+	"category" : "XML-Parser-Validation-DFA",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"firstDFAState",
+		"cachedDFAStates"
+	],
+	"name" : "XMLDFAStateCache",
+	"type" : "normal"
+}

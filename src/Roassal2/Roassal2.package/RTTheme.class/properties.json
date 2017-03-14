@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 7/13/2016 14:36",
+	"super" : "RTObject",
+	"category" : "Roassal2-Core",
+	"classinstvars" : [
+		"current"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTTheme",
+	"type" : "normal"
+}

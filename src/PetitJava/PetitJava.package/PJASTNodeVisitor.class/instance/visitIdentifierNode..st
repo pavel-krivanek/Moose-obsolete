@@ -1,0 +1,3 @@
+visitor-doubleDispatching
+visitIdentifierNode: anIdentifierNode
+	self subclassResponsibility

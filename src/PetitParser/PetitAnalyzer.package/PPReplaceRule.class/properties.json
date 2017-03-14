@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PPRule",
+	"category" : "PetitAnalyzer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"verificationBlock"
+	],
+	"name" : "PPReplaceRule",
+	"type" : "normal"
+}

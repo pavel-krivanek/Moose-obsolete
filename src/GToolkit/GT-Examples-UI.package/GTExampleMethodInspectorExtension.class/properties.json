@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTAbstractExampleMethodExtension",
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTExampleMethodInspectorExtension",
+	"type" : "normal"
+}

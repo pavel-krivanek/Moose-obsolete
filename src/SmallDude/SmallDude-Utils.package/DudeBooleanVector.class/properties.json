@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MalVector",
+	"category" : "SmallDude-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DudeBooleanVector",
+	"type" : "bytes"
+}

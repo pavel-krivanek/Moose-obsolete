@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXEntity",
+	"category" : "SmallDude-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"lineno",
+		"entity"
+	],
+	"name" : "DudeSourceCodeLine",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Set",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type",
+		"previousItemSets",
+		"grammar"
+	],
+	"name" : "SmaCCItemSet",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 3/10/2015 11:41",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [
+		"lastPopup"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTAbstractPopup",
+	"type" : "normal"
+}

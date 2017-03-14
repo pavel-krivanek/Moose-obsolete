@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"messages",
+		"realNormalizer"
+	],
+	"name" : "RTLazyMetricNormalizer",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLElementClassMapperTest",
+	"category" : "XML-Tests-Parser-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLBasicElementClassMapperTest",
+	"type" : "normal"
+}

@@ -1,3 +1,0 @@
-private
-equalToNumber: aNumber
-	self subclassResponsibility

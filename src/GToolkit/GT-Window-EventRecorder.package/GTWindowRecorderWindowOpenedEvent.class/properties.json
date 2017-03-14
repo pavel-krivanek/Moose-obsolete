@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "RogerStebler 6/16/2016 15:18",
+	"super" : "GTWindowRecorderEvent",
+	"category" : "GT-Window-EventRecorder-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTWindowRecorderWindowOpenedEvent",
+	"type" : "normal"
+}

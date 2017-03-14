@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "StephaneDucasse 12/6/2014 07:18",
+	"super" : "Object",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"EmptyDict"
+	],
+	"instvars" : [
+		"parent",
+		"id",
+		"attributes"
+	],
+	"name" : "ASElement",
+	"type" : "normal"
+}

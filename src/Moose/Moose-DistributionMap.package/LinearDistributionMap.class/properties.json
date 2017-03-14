@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "StephaneDucasse 11/8/2011 16:12",
+	"super" : "AbstractDistributionMap",
+	"category" : "Moose-DistributionMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseColor"
+	],
+	"name" : "LinearDistributionMap",
+	"type" : "normal"
+}

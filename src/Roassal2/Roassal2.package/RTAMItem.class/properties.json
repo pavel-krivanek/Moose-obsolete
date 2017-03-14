@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-ApplicationMatrix",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"itemName",
+		"row",
+		"column",
+		"tags",
+		"model",
+		"color"
+	],
+	"name" : "RTAMItem",
+	"type" : "normal"
+}

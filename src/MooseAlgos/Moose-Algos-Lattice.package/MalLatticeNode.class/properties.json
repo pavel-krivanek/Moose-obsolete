@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MalGraphNode",
+	"category" : "Moose-Algos-Lattice",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"descendants",
+		"labels",
+		"anscentorLabel"
+	],
+	"name" : "MalLatticeNode",
+	"type" : "normal"
+}

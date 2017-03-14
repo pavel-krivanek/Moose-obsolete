@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "akevalion 5/18/2015 13:22",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Calendar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dates",
+		"dateShape",
+		"dateSelector",
+		"monthShape",
+		"yearShape",
+		"dateLayout",
+		"monthLayout",
+		"yearLayout",
+		"dayLabelShape",
+		"dateInteraction",
+		"monthInteraction",
+		"yearInteraction"
+	],
+	"name" : "RTCalendarBuilder",
+	"type" : "normal"
+}

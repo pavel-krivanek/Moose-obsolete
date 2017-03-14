@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 3/29/2016 07:55",
+	"super" : "TestCase",
+	"category" : "XML-Tests-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLAbstractSetTest",
+	"type" : "normal"
+}

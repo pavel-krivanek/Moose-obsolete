@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 2/10/2015 03:01",
+	"super" : "Collection",
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"functionsByName"
+	],
+	"name" : "XPathFunctionSet",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 8/16/2016 23:03",
+	"super" : "XMLNodeVisitor",
+	"category" : "XML-Parser-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"validator"
+	],
+	"name" : "XMLValidatingNodeVisitor",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PluggableButtonMorph",
+	"category" : "Glamour-Morphic-Renderer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMPluggableButtonMorph",
+	"type" : "normal"
+}

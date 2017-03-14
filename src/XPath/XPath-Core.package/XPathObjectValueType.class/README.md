@@ -1,0 +1,1 @@
+This is an XPath type class for any XPath value. Subclasses must implement #newFrom: to return the argument converted to the receiver type.

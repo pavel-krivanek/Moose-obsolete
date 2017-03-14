@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTExampleTestCase",
+	"category" : "Roassal2GT-Tests-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTExampleTestCase",
+	"type" : "normal"
+}

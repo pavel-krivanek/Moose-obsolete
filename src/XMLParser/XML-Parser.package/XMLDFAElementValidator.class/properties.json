@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 4/21/2016 08:11",
+	"super" : "XMLElementValidator",
+	"category" : "XML-Parser-Validation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dfa",
+		"currentState"
+	],
+	"name" : "XMLDFAElementValidator",
+	"type" : "normal"
+}

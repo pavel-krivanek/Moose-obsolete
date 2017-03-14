@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "JSStatementNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ifToken",
+		"leftParen",
+		"expression",
+		"rightParen",
+		"trueStatement",
+		"elseToken",
+		"elseStatement"
+	],
+	"name" : "JSIfStatementNode",
+	"type" : "normal"
+}

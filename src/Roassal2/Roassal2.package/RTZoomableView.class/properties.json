@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "YuriyTymchuk 6/20/2014 10:47",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"minZoom",
+		"maxZoom"
+	],
+	"name" : "RTZoomableView",
+	"type" : "normal"
+}

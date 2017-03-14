@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseAbstractZeroConfImageScript",
+	"category" : "Moose-Development-Tools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseZeroConfSuiteImageScript",
+	"type" : "normal"
+}

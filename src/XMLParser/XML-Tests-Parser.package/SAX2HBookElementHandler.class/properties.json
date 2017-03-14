@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 8/16/2016 04:03",
+	"super" : "SAX2ElementHandler",
+	"category" : "XML-Tests-Parser-ElementHandlers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SAX2HBookElementHandler",
+	"type" : "normal"
+}

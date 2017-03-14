@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "FabrizioPerin 12/11/2012 11:58",
+	"super" : "MooseGroup",
+	"category" : "Famix-File",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXFolderGroup",
+	"type" : "normal"
+}

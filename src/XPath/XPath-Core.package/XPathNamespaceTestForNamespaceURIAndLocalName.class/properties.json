@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "XPathNamespaceTestForNamespaceURI",
+	"category" : "XPath-Core-Compilation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"localName"
+	],
+	"name" : "XPathNamespaceTestForNamespaceURIAndLocalName",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"minus",
+		"expression"
+	],
+	"name" : "JavaUnarySubtractionNode",
+	"type" : "normal"
+}

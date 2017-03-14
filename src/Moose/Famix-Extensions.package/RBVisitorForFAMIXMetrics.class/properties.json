@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RBVisitorForFAMIX",
+	"category" : "Famix-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodComplexity",
+		"numberOfMessageSends",
+		"numberOfStatements",
+		"numberOfLinesOfCode",
+		"parameterComplexityMultiplier",
+		"numberOfConditionals",
+		"cyclomaticNumber",
+		"booleanOperators",
+		"cyclomaticNumber2"
+	],
+	"name" : "RBVisitorForFAMIXMetrics",
+	"type" : "normal"
+}

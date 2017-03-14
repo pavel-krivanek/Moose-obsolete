@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTLine",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"offset"
+	],
+	"name" : "RTDirectedLine",
+	"type" : "normal"
+}

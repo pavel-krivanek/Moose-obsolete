@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTNLinearNormalizer",
+	"category" : "Roassal2-ColorNormalizerOBSOLETE",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scale"
+	],
+	"name" : "RTNumberLinearNormalizer",
+	"type" : "normal"
+}

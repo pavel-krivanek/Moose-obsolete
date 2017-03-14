@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 7/21/2014 15:10",
+	"super" : "RTAbstractShorterDistanceAttachPoint",
+	"category" : "Roassal2-AttachPoint",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"composedShapeSelection"
+	],
+	"name" : "RTShorterDistanceAttachPointAndCompositeShape",
+	"type" : "normal"
+}

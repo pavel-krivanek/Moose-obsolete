@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ZeroConfCombinedScript",
+	"category" : "Moose-Development-Tools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"title"
+	],
+	"name" : "MooseZeroConfCombinedScript",
+	"type" : "normal"
+}

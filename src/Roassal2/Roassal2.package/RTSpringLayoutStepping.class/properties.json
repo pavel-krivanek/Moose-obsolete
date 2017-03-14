@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAnimation",
+	"category" : "Roassal2-Animation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"layout",
+		"afterBlock"
+	],
+	"name" : "RTSpringLayoutStepping",
+	"type" : "normal"
+}

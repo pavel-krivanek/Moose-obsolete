@@ -1,6 +1,0 @@
-{
-	"category" : "PetitParser2-Html-Tests-Core",
-	"classtraitcomposition" : "TPP2TypeAssertions classTrait",
-	"commentStamp" : "",
-	"name" : "TPP2WebPageParserTest",
-	"traitcomposition" : "TPP2TypeAssertions" }

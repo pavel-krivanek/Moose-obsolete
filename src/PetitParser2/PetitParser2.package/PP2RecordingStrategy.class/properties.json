@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2WrappingStrategy",
+	"category" : "PetitParser2-Recording",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PP2RecordingStrategy",
+	"type" : "normal"
+}

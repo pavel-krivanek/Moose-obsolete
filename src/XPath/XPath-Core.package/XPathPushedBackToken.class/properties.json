@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 1/15/2015 11:06",
+	"super" : "Object",
+	"category" : "XPath-Core-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value",
+		"position"
+	],
+	"name" : "XPathPushedBackToken",
+	"type" : "normal"
+}

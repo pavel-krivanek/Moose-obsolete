@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardControl",
+	"category" : "Moose-Wizard",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"configuration"
+	],
+	"name" : "ProjectVersionWizard",
+	"type" : "normal"
+}

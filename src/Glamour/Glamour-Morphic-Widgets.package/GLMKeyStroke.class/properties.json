@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMActionAnnouncement",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMKeyStroke",
+	"type" : "normal"
+}

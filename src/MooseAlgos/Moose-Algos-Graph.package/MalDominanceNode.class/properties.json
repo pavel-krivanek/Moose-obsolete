@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MalDisjointSetNode",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"previousNodes",
+		"uniqueSource"
+	],
+	"name" : "MalDominanceNode",
+	"type" : "normal"
+}

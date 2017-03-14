@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "tg 5/8/2008 15:45",
+	"super" : "Object",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseEntityState",
+	"type" : "normal"
+}

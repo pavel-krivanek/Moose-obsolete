@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ASElement",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"x",
+		"y",
+		"width",
+		"height"
+	],
+	"name" : "ASFilter",
+	"type" : "normal"
+}

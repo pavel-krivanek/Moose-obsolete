@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"repository",
+		"wrapperDict",
+		"printer",
+		"index",
+		"nb",
+		"progBar",
+		"roots"
+	],
+	"name" : "FMRepositoryVisitor",
+	"type" : "normal"
+}

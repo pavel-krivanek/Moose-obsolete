@@ -1,4 +1,0 @@
-accessing
-days
-
-	^ 1

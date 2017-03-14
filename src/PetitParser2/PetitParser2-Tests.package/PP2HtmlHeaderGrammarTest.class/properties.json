@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2CompositeNodeTest",
+	"category" : "PetitParser2-Tests-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PP2HtmlHeaderGrammarTest",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "GT-DebuggerExtensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"metaLink",
+		"condition",
+		"conditionArguments",
+		"targetAction"
+	],
+	"name" : "GTDebuggerBrekpoint",
+	"type" : "normal"
+}

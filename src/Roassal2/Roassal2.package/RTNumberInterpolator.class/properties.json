@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTInterpolator",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTNumberInterpolator",
+	"type" : "normal"
+}

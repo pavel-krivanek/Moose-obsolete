@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "usmanbhatti 12/22/2011 17:51",
+	"super" : "Object",
+	"category" : "Moose-Algos-Lattice",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lattice"
+	],
+	"name" : "MalLatticePatterns",
+	"type" : "normal"
+}

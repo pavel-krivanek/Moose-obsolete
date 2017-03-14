@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SqueakInstvarInterfaceExtractor",
+	"category" : "RoelTyper-Pharo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"blockTempsMapping",
+		"blocksLimits"
+	],
+	"name" : "PharoInstvarInterfaceExtractor",
+	"type" : "normal"
+}

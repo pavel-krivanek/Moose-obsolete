@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PJBehaviouralNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"constructorInvocation",
+		"statements"
+	],
+	"name" : "PJConstructorDeclarationNode",
+	"type" : "normal"
+}

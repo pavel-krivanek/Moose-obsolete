@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLStreamConverterTest",
+	"category" : "XML-Tests-Parser-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLUTF32BigEndianStreamConverterTest",
+	"type" : "normal"
+}

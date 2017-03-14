@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MultiSelectionItemSelectorPart",
+	"category" : "Merlin-Parts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MultiFixedSelectionItemSelectorPart",
+	"type" : "normal"
+}

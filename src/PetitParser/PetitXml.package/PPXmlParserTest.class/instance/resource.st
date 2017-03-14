@@ -1,0 +1,3 @@
+accessing
+resource
+	^ PPXmlResource current

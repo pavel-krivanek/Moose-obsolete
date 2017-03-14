@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "TRShape",
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"borderWidth",
+		"fillColor",
+		"pathString",
+		"curves",
+		"polygons",
+		"rectangle"
+	],
+	"name" : "TRSVGPath",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "StephaneDucasse 11/8/2011 17:40",
+	"super" : "MooseImportingTask",
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classes",
+		"classExtensions"
+	],
+	"name" : "MooseImportClassesTask",
+	"type" : "normal"
+}

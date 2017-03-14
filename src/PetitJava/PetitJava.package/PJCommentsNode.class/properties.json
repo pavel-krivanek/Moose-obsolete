@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PJSyntaxNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"comment"
+	],
+	"name" : "PJCommentsNode",
+	"type" : "normal"
+}

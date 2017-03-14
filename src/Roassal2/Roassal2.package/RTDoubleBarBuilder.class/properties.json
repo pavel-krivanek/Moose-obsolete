@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Grapher-Obsolete",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elements",
+		"topExtremity",
+		"bottomExtremity",
+		"verticalGap",
+		"width"
+	],
+	"name" : "RTDoubleBarBuilder",
+	"type" : "normal"
+}

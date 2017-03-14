@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MalSccExtractor",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dijkstra"
+	],
+	"name" : "MalCircuitSpanningEdges",
+	"type" : "normal"
+}

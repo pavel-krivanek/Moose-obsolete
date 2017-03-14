@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 4/6/2015 09:19",
+	"super" : "XMLPrologContext",
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLXMLDeclarationContext",
+	"type" : "normal"
+}

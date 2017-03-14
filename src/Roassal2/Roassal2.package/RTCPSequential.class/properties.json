@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PabloEstefo 4/24/2014 15:10",
+	"super" : "RTColorPalette",
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTCPSequential",
+	"type" : "normal"
+}

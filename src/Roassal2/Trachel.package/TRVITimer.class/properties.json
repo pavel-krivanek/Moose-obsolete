@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "AlexandreBergel 8/6/2015 12:42",
+	"super" : "TRVIBasicTimer",
+	"category" : "Trachel-Viva",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"active",
+		"cycleLength",
+		"repeat",
+		"startTime",
+		"elapsedCycles"
+	],
+	"name" : "TRVITimer",
+	"type" : "normal"
+}

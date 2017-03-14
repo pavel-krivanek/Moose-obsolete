@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "BorderedMorph",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sizing",
+		"transform",
+		"scrollBar",
+		"paneCount",
+		"maxPanes"
+	],
+	"name" : "GLMPaneScroller",
+	"type" : "normal"
+}

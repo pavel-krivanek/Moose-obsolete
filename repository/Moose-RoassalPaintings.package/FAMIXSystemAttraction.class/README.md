@@ -1,1 +1,0 @@
-This class encapsulates the logic of the system attraction view. It is applicable to a set of famix types.

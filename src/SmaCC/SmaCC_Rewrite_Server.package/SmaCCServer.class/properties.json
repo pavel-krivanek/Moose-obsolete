@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Rewrite_Server",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"socket",
+		"availableServers",
+		"registeredServers"
+	],
+	"name" : "SmaCCServer",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "RicardoJacas 5/9/2014 23:45",
+	"super" : "RTSVGInteraction",
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"id",
+		"val"
+	],
+	"name" : "RTSVGButton",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SQLASTAbstractVisitor",
+	"category" : "PetitSQLite-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SQLASTConcreteVisitor",
+	"type" : "normal"
+}

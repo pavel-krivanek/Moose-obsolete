@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"builder",
+		"shapeBuilder",
+		"placedInFront",
+		"datasets"
+	],
+	"name" : "RTAbstractGrapherDecorator",
+	"type" : "normal"
+}

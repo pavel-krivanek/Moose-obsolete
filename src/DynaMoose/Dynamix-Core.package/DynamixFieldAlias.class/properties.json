@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "DynamixAlias",
+	"category" : "Dynamix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"attribute"
+	],
+	"name" : "DynamixFieldAlias",
+	"type" : "normal"
+}

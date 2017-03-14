@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "monty 3/1/2017 15:10",
+	"super" : "XMLHighlightDefaults",
+	"category" : "XPath-GTExtensions-Highlighting",
+	"classinstvars" : [
+		"defaultAxisColor",
+		"defaultNodeTestColor",
+		"defaultPredicateColor",
+		"defaultOperatorColor",
+		"defaultFunctionCallColor",
+		"defaultStringLiteralColor",
+		"defaultNumberLiteralColor",
+		"defaultVariableReferenceColor"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathExpressionHighlightDefaults",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSTypeNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type",
+		"questionMarkToken"
+	],
+	"name" : "CSNullableTypeNode",
+	"type" : "normal"
+}

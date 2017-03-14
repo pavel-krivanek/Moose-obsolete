@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMMorphicBrowserRenderer",
+	"category" : "Glamour-Morphic-Renderer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"scrollPane",
+		"container",
+		"parentRenderer"
+	],
+	"name" : "GLMMorphicWizardRenderer",
+	"type" : "normal"
+}

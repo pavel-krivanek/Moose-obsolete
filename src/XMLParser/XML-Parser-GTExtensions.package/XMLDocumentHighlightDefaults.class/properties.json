@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "monty 3/1/2017 15:07",
+	"super" : "XMLHighlightDefaults",
+	"category" : "XML-Parser-GTExtensions-Highlighting",
+	"classinstvars" : [
+		"defaultCDataColor",
+		"defaultCommentColor",
+		"defaultEntityReferenceColor",
+		"defaultPrimaryMarkupColor",
+		"defaultQuotedStringValueColor",
+		"defaultSecondaryMarkupColor"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLDocumentHighlightDefaults",
+	"type" : "normal"
+}

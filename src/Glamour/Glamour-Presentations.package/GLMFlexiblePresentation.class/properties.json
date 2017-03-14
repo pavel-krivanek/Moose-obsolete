@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "GLMPresentation",
+	"category" : "Glamour-Presentations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMFlexiblePresentation",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PierreChanson 6/9/2015 17:00",
+	"super" : "RTSVGEntity",
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"box",
+		"points"
+	],
+	"name" : "RTSVGPolygon",
+	"type" : "normal"
+}

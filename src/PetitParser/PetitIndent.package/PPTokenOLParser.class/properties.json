@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPTokenParser",
+	"category" : "PetitIndent-Offside-rule",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPTokenOLParser",
+	"type" : "normal"
+}

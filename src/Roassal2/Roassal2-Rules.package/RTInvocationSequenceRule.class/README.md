@@ -1,0 +1,1 @@
+Edges will not be drawn if nodes are not initialized before the invocation of #edges message

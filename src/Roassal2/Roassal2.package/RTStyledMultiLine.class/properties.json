@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "AlexandreBergel 7/12/2015 18:59",
+	"super" : "RTMultiLine",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"head",
+		"tail",
+		"dashes",
+		"capStyle"
+	],
+	"name" : "RTStyledMultiLine",
+	"type" : "normal"
+}

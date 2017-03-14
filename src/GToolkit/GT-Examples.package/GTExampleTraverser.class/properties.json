@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TudorGirba 8/21/2016 15:06",
+	"super" : "GTExampleProcessor",
+	"category" : "GT-Examples-Runtime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"action"
+	],
+	"name" : "GTExampleTraverser",
+	"type" : "normal"
+}

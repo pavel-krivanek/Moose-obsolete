@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "ChristopheDemarey 3/26/2015 11:49",
+	"super" : "MalGraphNode",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nextNodes"
+	],
+	"name" : "MalNodeWithNext",
+	"type" : "normal"
+}

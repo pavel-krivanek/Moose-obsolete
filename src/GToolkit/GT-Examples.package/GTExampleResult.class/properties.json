@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "TudorGirba 8/20/2016 00:08",
+	"super" : "Object",
+	"category" : "GT-Examples-Runtime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"example",
+		"context",
+		"returnValue",
+		"expectedError",
+		"unexpectedError"
+	],
+	"name" : "GTExampleResult",
+	"type" : "normal"
+}

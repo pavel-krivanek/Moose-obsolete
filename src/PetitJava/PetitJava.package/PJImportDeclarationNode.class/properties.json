@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PJASTNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nameNode",
+		"isStatic",
+		"isOnDemand"
+	],
+	"name" : "PJImportDeclarationNode",
+	"type" : "normal"
+}

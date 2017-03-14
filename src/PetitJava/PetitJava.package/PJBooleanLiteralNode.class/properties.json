@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PJExpressionNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"booleanValue"
+	],
+	"name" : "PJBooleanLiteralNode",
+	"type" : "normal"
+}

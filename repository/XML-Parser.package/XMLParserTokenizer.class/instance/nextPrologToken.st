@@ -1,3 +1,0 @@
-tokenizing
-nextPrologToken
-	self subclassResponsibility

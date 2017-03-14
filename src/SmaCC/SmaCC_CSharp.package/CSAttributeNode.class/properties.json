@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBracket",
+		"target",
+		"colon",
+		"attributeValues",
+		"commas",
+		"rightBracket"
+	],
+	"name" : "CSAttributeNode",
+	"type" : "normal"
+}

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "AlexandreBergel 5/6/2015 11:53",
+	"super" : "RTAbstractGrapher",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"numberOfBars",
+		"y",
+		"allAddedElements",
+		"centerElement",
+		"layoutTranslator",
+		"textBelow"
+	],
+	"name" : "RTDynamicStackedGrapher",
+	"type" : "normal"
+}

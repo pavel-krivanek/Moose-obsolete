@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "RTUsefulScript",
+	"category" : "Roassal2-Plugins",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dic",
+		"view",
+		"scale",
+		"sortX",
+		"sortY",
+		"objectsY",
+		"objectsX"
+	],
+	"name" : "RTSmallMultipleSingleScript",
+	"type" : "normal"
+}

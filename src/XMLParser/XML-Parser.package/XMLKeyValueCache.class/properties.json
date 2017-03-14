@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 10/9/2016 05:23",
+	"super" : "XMLAbstractFactory",
+	"category" : "XML-Parser-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"collection",
+		"maxSize",
+		"mutex"
+	],
+	"name" : "XMLKeyValueCache",
+	"type" : "normal"
+}

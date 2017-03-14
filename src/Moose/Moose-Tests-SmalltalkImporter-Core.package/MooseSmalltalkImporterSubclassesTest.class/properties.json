@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Moose-Tests-SmalltalkImporter-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model",
+		"pharoImporterTask"
+	],
+	"name" : "MooseSmalltalkImporterSubclassesTest",
+	"type" : "normal"
+}

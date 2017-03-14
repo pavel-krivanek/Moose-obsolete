@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "vincentBlondeau 11/10/2015 17:41",
+	"super" : "FAMIXAssociation",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"source",
+		"target"
+	],
+	"name" : "FAMIXReference",
+	"type" : "normal"
+}

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardPart",
+	"category" : "Merlin-ToBeRemoved",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"addButton",
+		"selectionList",
+		"selectionListSelectionIndex",
+		"removeButton",
+		"initialList",
+		"initialListSelectionIndex"
+	],
+	"name" : "ListSelector",
+	"type" : "normal"
+}

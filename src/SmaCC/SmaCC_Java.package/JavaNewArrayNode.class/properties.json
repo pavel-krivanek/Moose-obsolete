@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newToken",
+		"type",
+		"dimExpressions",
+		"leftBrackets",
+		"rightBrackets",
+		"initializer"
+	],
+	"name" : "JavaNewArrayNode",
+	"type" : "normal"
+}

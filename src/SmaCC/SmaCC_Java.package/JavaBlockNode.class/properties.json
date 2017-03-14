@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaStatementNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBrace",
+		"statements",
+		"rightBrace"
+	],
+	"name" : "JavaBlockNode",
+	"type" : "normal"
+}

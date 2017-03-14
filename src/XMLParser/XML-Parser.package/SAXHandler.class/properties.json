@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "monty 3/14/2016 00:11",
+	"super" : "Object",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"input",
+		"documentURI",
+		"configuration",
+		"isInContent",
+		"isInCDataSection"
+	],
+	"name" : "SAXHandler",
+	"type" : "normal"
+}

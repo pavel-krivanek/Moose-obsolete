@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinItemsSelectorWidget",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MerlinMultiSelectionItemsSelectorWidget",
+	"type" : "normal"
+}

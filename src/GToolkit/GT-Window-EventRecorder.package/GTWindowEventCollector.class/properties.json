@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RogerStebler 5/2/2016 16:06",
+	"super" : "GTEventCollector",
+	"category" : "GT-Window-EventRecorder-Base",
+	"classinstvars" : [
+		"uniqueInstance"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTWindowEventCollector",
+	"type" : "normal"
+}

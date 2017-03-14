@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 11/7/2014 14:19",
+	"super" : "OrderedCollection",
+	"category" : "Roassal2-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"attributes"
+	],
+	"name" : "RTGroup",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"owner",
+		"values",
+		"tally"
+	],
+	"name" : "FMFutureAttribute",
+	"type" : "normal"
+}

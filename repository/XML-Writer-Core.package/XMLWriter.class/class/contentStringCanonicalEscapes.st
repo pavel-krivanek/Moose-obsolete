@@ -1,3 +1,0 @@
-private
-contentStringCanonicalEscapes
-	^ ContentStringCanonicalEscapes

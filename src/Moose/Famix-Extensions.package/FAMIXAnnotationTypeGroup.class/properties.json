@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "FabrizioPerin 12/6/2012 13:23",
+	"super" : "MooseGroup",
+	"category" : "Famix-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXAnnotationTypeGroup",
+	"type" : "normal"
+}

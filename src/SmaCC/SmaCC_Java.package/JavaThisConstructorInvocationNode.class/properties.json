@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"thisToken",
+		"leftParen",
+		"expressions",
+		"commas",
+		"rightParen",
+		"semicolon",
+		"primary",
+		"period"
+	],
+	"name" : "JavaThisConstructorInvocationNode",
+	"type" : "normal"
+}

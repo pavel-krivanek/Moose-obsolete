@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 2/9/2011 12:03",
+	"super" : "REPReport",
+	"category" : "OnMoose-Report",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OnMooseReport",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+testing
+hasMmClass
+	^class notNil

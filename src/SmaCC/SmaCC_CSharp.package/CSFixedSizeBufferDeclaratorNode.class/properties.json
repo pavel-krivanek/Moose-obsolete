@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"leftBracketToken",
+		"expression",
+		"rightBracketToken"
+	],
+	"name" : "CSFixedSizeBufferDeclaratorNode",
+	"type" : "normal"
+}

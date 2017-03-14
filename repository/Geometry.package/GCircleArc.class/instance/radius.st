@@ -1,3 +1,0 @@
-accessing
-radius
-	^ circle radius

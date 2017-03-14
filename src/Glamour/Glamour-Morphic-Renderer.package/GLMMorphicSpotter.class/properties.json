@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "DialogWindow",
+	"category" : "Glamour-Morphic-Renderer-Spotter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"textMorph",
+		"text",
+		"answer",
+		"childrenMorphs"
+	],
+	"name" : "GLMMorphicSpotter",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMBrowserTemplate",
+	"category" : "Glamour-Tools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMGlobalBrowserTemplate",
+	"type" : "normal"
+}

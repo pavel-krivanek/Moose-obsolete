@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TRShape",
+	"category" : "Trachel-MorphSpecific",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"font"
+	],
+	"name" : "TRTextShape",
+	"type" : "normal"
+}

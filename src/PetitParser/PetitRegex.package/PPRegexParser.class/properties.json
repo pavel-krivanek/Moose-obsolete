@@ -1,0 +1,37 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParser",
+	"category" : "PetitRegex-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"BeginOfLineParser",
+		"ClassMap",
+		"EndOfLineParser",
+		"EscapeMap"
+	],
+	"instvars" : [
+		"regex",
+		"atom",
+		"anyAtom",
+		"beginOfLineAtom",
+		"endOfLineAtom",
+		"characterAtom",
+		"rangePieceSpec",
+		"number",
+		"groupAtom",
+		"escapeAtom",
+		"characterGroup",
+		"quantifier",
+		"characterSet",
+		"characterSetClass",
+		"characterSetEscape",
+		"characterSetRange",
+		"characterSetCharacter",
+		"predicateAtom",
+		"piece",
+		"branch"
+	],
+	"name" : "PPRegexParser",
+	"type" : "normal"
+}

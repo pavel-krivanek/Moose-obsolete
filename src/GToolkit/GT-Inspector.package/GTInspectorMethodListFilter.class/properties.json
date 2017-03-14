@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AndreiChis 1/27/2015 23:30",
+	"super" : "GTInspectorPresentationFilter",
+	"category" : "GT-Inspector",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"allMethodSignatures",
+		"selectedMethodSignatures"
+	],
+	"name" : "GTInspectorMethodListFilter",
+	"type" : "normal"
+}

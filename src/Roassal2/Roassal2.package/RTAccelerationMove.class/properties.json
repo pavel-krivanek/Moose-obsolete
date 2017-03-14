@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTLinearMove",
+	"category" : "Roassal2-Animation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTAccelerationMove",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 1/14/2014 15:40",
+	"super" : "Object",
+	"category" : "Moose-RoassalPaintings-FameView",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseFameView",
+	"type" : "normal"
+}

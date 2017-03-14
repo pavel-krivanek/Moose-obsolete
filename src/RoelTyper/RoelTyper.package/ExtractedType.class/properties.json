@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "AbstractType",
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"interface",
+		"assignments",
+		"extractedTypes",
+		"links"
+	],
+	"name" : "ExtractedType",
+	"type" : "normal"
+}

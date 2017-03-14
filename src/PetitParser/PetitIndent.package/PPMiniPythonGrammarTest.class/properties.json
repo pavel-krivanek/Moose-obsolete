@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParserTest",
+	"category" : "PetitIndent-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"indent",
+		"align",
+		"context",
+		"dedent",
+		"code"
+	],
+	"name" : "PPMiniPythonGrammarTest",
+	"type" : "normal"
+}

@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "PierreChanson 12/22/2014 09:47",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Kiviat",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"named",
+		"arrayValues",
+		"nodeKiviatElements",
+		"edgeKiviatElements",
+		"shapeNode",
+		"shapeEdge",
+		"polygonElement"
+	],
+	"name" : "RTKiviatNode",
+	"type" : "normal"
+}

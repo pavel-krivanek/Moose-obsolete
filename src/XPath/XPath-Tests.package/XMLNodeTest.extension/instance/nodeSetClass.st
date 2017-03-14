@@ -1,0 +1,3 @@
+*XPath-Tests
+nodeSetClass
+	^ XPathNodeSet

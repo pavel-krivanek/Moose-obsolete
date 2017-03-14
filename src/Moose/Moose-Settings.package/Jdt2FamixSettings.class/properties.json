@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Moose-Settings",
+	"classinstvars" : [
+		"jdt2famixPath"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Jdt2FamixSettings",
+	"type" : "normal"
+}

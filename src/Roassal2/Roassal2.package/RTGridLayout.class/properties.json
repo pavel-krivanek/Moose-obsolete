@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTAbstractGridLayout",
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTGridLayout",
+	"type" : "normal"
+}

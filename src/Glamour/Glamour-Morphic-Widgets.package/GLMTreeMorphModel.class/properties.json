@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "alain.plantec 9/8/2009 15:22",
+	"super" : "PaginatedMorphTreeModel",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"roots",
+		"glamourPresentation",
+		"childrenBlock",
+		"onSelection",
+		"displayFormat",
+		"tagsToFilterBy",
+		"glmAnnouncer",
+		"inputText",
+		"amountToFilterBy",
+		"defaultPageSize",
+		"columnToSortBy",
+		"stopStepping"
+	],
+	"name" : "GLMTreeMorphModel",
+	"type" : "normal"
+}

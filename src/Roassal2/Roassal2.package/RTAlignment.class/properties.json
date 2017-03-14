@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 7/31/2015 18:38",
+	"super" : "RTAbstractElementHandling",
+	"category" : "Roassal2-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTAlignment",
+	"type" : "normal"
+}

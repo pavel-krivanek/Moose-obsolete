@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardPartTest",
+	"category" : "Merlin-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ButtonPartTest",
+	"type" : "normal"
+}

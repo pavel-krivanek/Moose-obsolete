@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MalDijkstraEdge",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"cseVisited"
+	],
+	"name" : "MalCseEdge",
+	"type" : "normal"
+}

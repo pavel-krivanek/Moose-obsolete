@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AlexandreBergel 11/7/2014 14:51",
+	"super" : "RTShapedObject",
+	"category" : "Roassal2-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"connectedEdges",
+		"shouldUpdateEdges"
+	],
+	"name" : "RTElement",
+	"type" : "normal"
+}

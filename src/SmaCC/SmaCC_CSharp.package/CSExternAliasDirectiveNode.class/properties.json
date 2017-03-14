@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"externToken",
+		"aliasToken",
+		"identifierToken",
+		"semicolonToken"
+	],
+	"name" : "CSExternAliasDirectiveNode",
+	"type" : "normal"
+}

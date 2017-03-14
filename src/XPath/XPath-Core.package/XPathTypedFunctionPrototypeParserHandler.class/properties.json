@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "monty 9/28/2016 23:26",
+	"super" : "XPathFunctionPrototypeParserHandler",
+	"category" : "XPath-Core-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"returnType",
+		"functionName",
+		"minArguments",
+		"maxArguments",
+		"argumentTypes",
+		"typesByName"
+	],
+	"name" : "XPathTypedFunctionPrototypeParserHandler",
+	"type" : "normal"
+}

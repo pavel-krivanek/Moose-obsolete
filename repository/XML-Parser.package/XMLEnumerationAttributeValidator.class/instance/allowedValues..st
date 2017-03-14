@@ -1,3 +1,0 @@
-accessing
-allowedValues: anAllowedValuesCollection
-	allowedValues := anAllowedValuesCollection

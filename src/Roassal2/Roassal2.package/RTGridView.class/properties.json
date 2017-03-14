@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PeterUhnak 11/26/2015 18:38",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"gridShape",
+		"gridSize",
+		"dashes",
+		"color"
+	],
+	"name" : "RTGridView",
+	"type" : "normal"
+}

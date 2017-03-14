@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParserTest",
+	"category" : "PetitCSV",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"row",
+		"cell",
+		"rows"
+	],
+	"name" : "PPCommaSeparatedParserTest",
+	"type" : "normal"
+}

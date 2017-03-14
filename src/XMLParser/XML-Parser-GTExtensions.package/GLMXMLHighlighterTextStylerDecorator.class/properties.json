@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 10/2/2015 04:52",
+	"super" : "GLMHighlighterTextStylerDecorator",
+	"category" : "XML-Parser-GTExtensions-Highlighting-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"highlightableLengthLimit",
+		"errorColor",
+		"encoding"
+	],
+	"name" : "GLMXMLHighlighterTextStylerDecorator",
+	"type" : "normal"
+}

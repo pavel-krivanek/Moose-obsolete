@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 5/13/2015 08:46",
+	"super" : "RTAbstractExample",
+	"category" : "Roassal2-Builder-Grapher-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTDynamicStackerGrapherExample",
+	"type" : "normal"
+}

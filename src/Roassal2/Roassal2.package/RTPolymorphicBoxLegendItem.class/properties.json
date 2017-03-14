@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTLegendItem",
+	"category" : "Roassal2-Builder-Legend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"widthDescription",
+		"heightDescription",
+		"boxDescription"
+	],
+	"name" : "RTPolymorphicBoxLegendItem",
+	"type" : "normal"
+}

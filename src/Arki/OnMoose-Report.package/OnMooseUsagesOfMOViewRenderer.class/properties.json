@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "REPMooseQueryConcern",
+	"category" : "OnMoose-Report",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OnMooseUsagesOfMOViewRenderer",
+	"type" : "normal"
+}

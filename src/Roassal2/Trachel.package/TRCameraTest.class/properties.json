@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TRTest",
+	"category" : "Trachel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"camera",
+		"canvas"
+	],
+	"name" : "TRCameraTest",
+	"type" : "normal"
+}

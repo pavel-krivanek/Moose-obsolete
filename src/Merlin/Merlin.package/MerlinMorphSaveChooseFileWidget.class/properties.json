@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphChooseFileWidget",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MerlinMorphSaveChooseFileWidget",
+	"type" : "normal"
+}

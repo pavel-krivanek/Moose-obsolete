@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalSymetricMatrix",
+	"category" : "Moose-Algos-Clustering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"distanceBlock",
+		"columnVector",
+		"items",
+		"dendrogram"
+	],
+	"name" : "MalDistanceSquare",
+	"type" : "normal"
+}

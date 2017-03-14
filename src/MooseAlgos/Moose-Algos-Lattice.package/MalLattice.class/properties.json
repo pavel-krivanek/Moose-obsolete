@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "usmanbhatti 10/25/2011 18:32",
+	"super" : "MalGraphAlgorithm",
+	"category" : "Moose-Algos-Lattice",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"layers"
+	],
+	"name" : "MalLattice",
+	"type" : "normal"
+}

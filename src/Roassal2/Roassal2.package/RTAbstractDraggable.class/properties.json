@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"groupToDrag"
+	],
+	"name" : "RTAbstractDraggable",
+	"type" : "normal"
+}

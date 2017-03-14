@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "akevalion 1/15/2015 15:45",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"x",
+		"y",
+		"r"
+	],
+	"name" : "RTCircleTree",
+	"type" : "normal"
+}

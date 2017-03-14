@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2Token",
+	"category" : "PetitJava-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"comments"
+	],
+	"name" : "PPJavaToken",
+	"type" : "normal"
+}

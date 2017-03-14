@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "JSLiteralNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "JSNullLiteralNode",
+	"type" : "normal"
+}

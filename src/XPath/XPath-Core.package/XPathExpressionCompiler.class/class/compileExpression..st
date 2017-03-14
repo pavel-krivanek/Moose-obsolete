@@ -1,0 +1,3 @@
+compiling
+compileExpression: anExpressionSourceStringOrStream
+	^ self new compileExpression: anExpressionSourceStringOrStream

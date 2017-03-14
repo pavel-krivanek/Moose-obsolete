@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMPagerButtonAnnouncement",
+	"category" : "Glamour-Morphic-Pager-Announcement",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMPagerButtonSelected",
+	"type" : "normal"
+}

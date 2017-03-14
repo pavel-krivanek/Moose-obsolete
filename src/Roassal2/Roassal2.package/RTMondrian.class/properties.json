@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "AlexandreBergel 12/29/2014 12:20",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Mondrian",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentFrame",
+		"edgeBuilder",
+		"rootFrame"
+	],
+	"name" : "RTMondrian",
+	"type" : "normal"
+}

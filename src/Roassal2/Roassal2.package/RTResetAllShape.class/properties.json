@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 9/29/2015 15:08",
+	"super" : "RTObject",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"trCanvas"
+	],
+	"name" : "RTResetAllShape",
+	"type" : "normal"
+}

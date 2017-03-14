@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MalGraphAlgorithm",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"k"
+	],
+	"name" : "MalHits",
+	"type" : "normal"
+}

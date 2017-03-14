@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FMImporter",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MSEImporter",
+	"type" : "normal"
+}

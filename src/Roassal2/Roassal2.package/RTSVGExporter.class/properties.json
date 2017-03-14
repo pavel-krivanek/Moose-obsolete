@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "RicardoJacas 3/17/2014 11:29",
+	"super" : "RTObject",
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"stream",
+		"fileName",
+		"backgroundColor",
+		"code",
+		"canvasWidth",
+		"canvasHeight",
+		"finalWidth",
+		"finalHeight"
+	],
+	"name" : "RTSVGExporter",
+	"type" : "normal"
+}

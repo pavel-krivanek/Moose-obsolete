@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Magnitude",
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Negative",
+		"Positive"
+	],
+	"instvars" : [
+		"positive"
+	],
+	"name" : "MalUnlimited",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "AlexandreBergel 9/4/2015 18:48",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"draggingView",
+		"elements",
+		"center",
+		"startPoint"
+	],
+	"name" : "RTRotableView",
+	"type" : "normal"
+}

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "CSDeclarationNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"_attributes",
+		"modifier",
+		"eventToken",
+		"type",
+		"name",
+		"semicolon"
+	],
+	"name" : "CSInterfaceEventDeclarationNode",
+	"type" : "normal"
+}

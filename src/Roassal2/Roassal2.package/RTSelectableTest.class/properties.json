@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Core-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedElements",
+		"view",
+		"selectable"
+	],
+	"name" : "RTSelectableTest",
+	"type" : "normal"
+}

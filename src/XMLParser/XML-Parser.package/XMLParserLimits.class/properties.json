@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "monty 7/13/2015 13:17",
+	"super" : "Object",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"DefaultReadLimit"
+	],
+	"instvars" : [
+		"documentReadLimit",
+		"maxEntityReplacementDepth"
+	],
+	"name" : "XMLParserLimits",
+	"type" : "normal"
+}

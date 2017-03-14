@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AliakseiSyrel 2/9/2017 14:41",
+	"super" : "PanelMorph",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMPanelMorph",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardControl",
+	"category" : "Moose-DistributionMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"colorCollection",
+		"mooseGroup",
+		"mooseModel",
+		"compositeParts",
+		"distributionMapElements"
+	],
+	"name" : "OpenDistributionMapWizard",
+	"type" : "normal"
+}

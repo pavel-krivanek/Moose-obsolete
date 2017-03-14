@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MorphTreeModel",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"roots",
+		"glamourExpander"
+	],
+	"name" : "GLMExpanderTreeMorphModel",
+	"type" : "normal"
+}

@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC_Source_Editing",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"start",
+		"stop",
+		"next",
+		"previous",
+		"string",
+		"isRemoved"
+	],
+	"name" : "SmaCCStringInterval",
+	"type" : "normal"
+}

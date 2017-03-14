@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 5/26/2016 18:46",
+	"super" : "FAMIXCFile",
+	"category" : "Famix-C",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"module"
+	],
+	"name" : "FAMIXHeader",
+	"type" : "normal"
+}

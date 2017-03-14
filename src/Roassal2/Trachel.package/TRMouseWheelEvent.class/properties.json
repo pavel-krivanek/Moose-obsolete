@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "bliznjan 2/22/2015 17:24",
+	"super" : "TRAbstractMouseEvent",
+	"category" : "Trachel-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"direction"
+	],
+	"name" : "TRMouseWheelEvent",
+	"type" : "normal"
+}

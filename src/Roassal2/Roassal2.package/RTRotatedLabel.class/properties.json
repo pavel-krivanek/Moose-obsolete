@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 3/4/2015 15:28",
+	"super" : "RTLabel",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"angle"
+	],
+	"name" : "RTRotatedLabel",
+	"type" : "normal"
+}

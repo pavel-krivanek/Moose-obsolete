@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "NicolasAnquetil 10/4/2016 13:57",
+	"super" : "FAMIXCSourceLanguage",
+	"category" : "Famix-C",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXCppSourceLanguage",
+	"type" : "normal"
+}

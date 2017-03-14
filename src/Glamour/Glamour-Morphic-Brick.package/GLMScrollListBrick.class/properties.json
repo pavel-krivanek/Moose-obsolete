@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "AliakseiSyrel 1/30/2015 11:05",
+	"super" : "GLMScrollPaneBrick",
+	"category" : "Glamour-Morphic-Brick-Widgets-Scrollpane",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"adaptor",
+		"visibleIndex",
+		"isUpdating"
+	],
+	"name" : "GLMScrollListBrick",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "AlexandreBergel 10/27/2015 14:51",
+	"super" : "Announcement",
+	"category" : "Roassal2-ExampleBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"theClass",
+		"theSelector",
+		"time"
+	],
+	"name" : "RTExampleOpeningEvent",
+	"type" : "normal"
+}

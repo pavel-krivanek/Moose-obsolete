@@ -1,8 +1,0 @@
-roassal
-viewConstellation
-	<menuItem: 'View Multiplication constelation' category: 'Visualize'>
-
-	| view |
-	view := RTMondrianViewBuilder new.
-	self viewConstellationOn: view.
-	^ view openWithToolbar title: 'View Multiplication constelation'

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTScale",
+	"category" : "Roassal2-Builder-Grapher-Scaling",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTScalePolylinear",
+	"type" : "normal"
+}

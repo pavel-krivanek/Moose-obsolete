@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "akevalion 8/4/2016 16:31",
+	"super" : "RTLabel",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"outlineWidth",
+		"outlineColor"
+	],
+	"name" : "RTTextPath",
+	"type" : "normal"
+}

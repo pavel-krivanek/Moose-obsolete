@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "usmanbhatti 8/6/2014 14:27",
+	"super" : "FAMIXSourceAnchor",
+	"category" : "Famix-SourceAnchor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"allFiles"
+	],
+	"name" : "FAMIXMultipleFileAnchor",
+	"type" : "normal"
+}

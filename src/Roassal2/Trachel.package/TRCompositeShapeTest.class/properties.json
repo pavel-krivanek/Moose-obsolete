@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "TRTest",
+	"category" : "Trachel-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"emptyShape",
+		"multiShape",
+		"box1",
+		"box2",
+		"canvas"
+	],
+	"name" : "TRCompositeShapeTest",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+compiling-scanner
+outputStreamClass
+	^ WriteStream

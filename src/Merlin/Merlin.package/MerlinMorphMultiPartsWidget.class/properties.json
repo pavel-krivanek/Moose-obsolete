@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphPartWidget",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tabGroup",
+		"partsMerlinWidgets"
+	],
+	"name" : "MerlinMorphMultiPartsWidget",
+	"type" : "normal"
+}

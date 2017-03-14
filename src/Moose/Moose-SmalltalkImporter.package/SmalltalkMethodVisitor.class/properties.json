@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "AbstractSmalltalkMethodVisitor",
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmalltalkMethodVisitor",
+	"type" : "normal"
+}

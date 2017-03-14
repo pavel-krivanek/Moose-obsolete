@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Famix-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nop",
+		"noc",
+		"nom",
+		"loc",
+		"cyclo",
+		"fanout",
+		"calls",
+		"andc",
+		"ahh"
+	],
+	"name" : "OverviewPyramidMetrics",
+	"type" : "normal"
+}

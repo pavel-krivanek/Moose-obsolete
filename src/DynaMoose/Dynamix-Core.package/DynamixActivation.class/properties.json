@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "TudorGirba 11/26/2011 20:16",
+	"super" : "DynamixEvent",
+	"category" : "Dynamix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"receiver",
+		"behaviour",
+		"arguments",
+		"return"
+	],
+	"name" : "DynamixActivation",
+	"type" : "normal"
+}

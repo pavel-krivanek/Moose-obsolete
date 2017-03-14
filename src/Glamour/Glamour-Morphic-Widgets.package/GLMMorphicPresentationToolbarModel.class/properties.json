@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"renderer",
+		"presentation"
+	],
+	"name" : "GLMMorphicPresentationToolbarModel",
+	"type" : "normal"
+}

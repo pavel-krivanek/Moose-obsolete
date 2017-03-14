@@ -1,1 +1,0 @@
-XPath string conversion function.

@@ -1,0 +1,4 @@
+accessing
+entityCache 
+	 
+	self subclassResponsibility

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphCellWidget",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MerlinMorphColumnWidget",
+	"type" : "normal"
+}

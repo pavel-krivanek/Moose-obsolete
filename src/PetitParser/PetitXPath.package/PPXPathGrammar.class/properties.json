@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParser",
+	"category" : "PetitXPath-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"node",
+		"nameToken",
+		"attributeNameToken",
+		"index",
+		"path",
+		"multiple",
+		"attributeFilter",
+		"string",
+		"whitespace"
+	],
+	"name" : "PPXPathGrammar",
+	"type" : "normal"
+}

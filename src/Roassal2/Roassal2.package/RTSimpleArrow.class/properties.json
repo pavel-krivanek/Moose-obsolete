@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTLineDecorationShape",
+	"category" : "Roassal2-LineDecorations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTSimpleArrow",
+	"type" : "normal"
+}

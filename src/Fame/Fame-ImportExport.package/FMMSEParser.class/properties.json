@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"client",
+		"buf",
+		"char",
+		"progBar",
+		"increments"
+	],
+	"name" : "FMMSEParser",
+	"type" : "normal"
+}

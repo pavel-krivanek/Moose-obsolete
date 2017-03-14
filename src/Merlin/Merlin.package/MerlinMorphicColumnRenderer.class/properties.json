@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphicCellRenderer",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MerlinMorphicColumnRenderer",
+	"type" : "normal"
+}

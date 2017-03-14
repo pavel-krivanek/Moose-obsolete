@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaNameNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nspace",
+		"period"
+	],
+	"name" : "JavaQualifiedNameNode",
+	"type" : "normal"
+}

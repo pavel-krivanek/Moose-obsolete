@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "PierreChanson 11/19/2014 13:57",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Kiviat",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"kiviatMetrics",
+		"kiviatNodes",
+		"objects",
+		"axisSize",
+		"highlight",
+		"polygons",
+		"shapes",
+		"axisTitle",
+		"axisTitles",
+		"axisBuilt"
+	],
+	"name" : "RTKiviatBuilder",
+	"type" : "normal"
+}

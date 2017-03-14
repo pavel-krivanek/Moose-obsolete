@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RBRefactoring",
+	"category" : "PetitGui-Refactoring",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"production",
+		"class"
+	],
+	"name" : "PPRemoveProdcutionRefactoring",
+	"type" : "normal"
+}

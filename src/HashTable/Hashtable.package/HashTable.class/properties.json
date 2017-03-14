@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Collection",
+	"category" : "Hashtable",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"table",
+		"loadfactor",
+		"size",
+		"capacity"
+	],
+	"name" : "HashTable",
+	"type" : "normal"
+}

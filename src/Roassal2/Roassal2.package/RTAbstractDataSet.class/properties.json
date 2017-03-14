@@ -1,0 +1,26 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"points",
+		"x",
+		"y",
+		"builder",
+		"dotBuilder",
+		"histogramBuilder",
+		"lineBuilder",
+		"minX",
+		"maxX",
+		"minY",
+		"maxY",
+		"shouldConnect",
+		"interaction",
+		"elementActions"
+	],
+	"name" : "RTAbstractDataSet",
+	"type" : "normal"
+}

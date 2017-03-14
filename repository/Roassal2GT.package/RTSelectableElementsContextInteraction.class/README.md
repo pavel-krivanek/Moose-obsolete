@@ -1,1 +1,0 @@
-This is an interaction for a view

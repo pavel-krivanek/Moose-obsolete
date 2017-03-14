@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Moose-Algos-InformationRetrieval",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"English"
+	],
+	"instvars" : [
+		"cache"
+	],
+	"name" : "MalStemmer",
+	"type" : "normal"
+}

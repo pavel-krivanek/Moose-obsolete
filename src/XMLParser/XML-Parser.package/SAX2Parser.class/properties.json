@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "monty 8/20/2016 07:04",
+	"super" : "SAXHandler",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contentHandler",
+		"lexicalHandler",
+		"declarationHandler",
+		"parsingResult"
+	],
+	"name" : "SAX2Parser",
+	"type" : "normal"
+}

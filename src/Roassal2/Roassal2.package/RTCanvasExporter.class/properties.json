@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "bliznjan 11/14/2014 13:51",
+	"super" : "RTObject",
+	"category" : "Roassal2-Exporter-PNG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"canvas",
+		"fileName",
+		"imageExporter",
+		"format",
+		"bounds",
+		"oversize"
+	],
+	"name" : "RTCanvasExporter",
+	"type" : "normal"
+}

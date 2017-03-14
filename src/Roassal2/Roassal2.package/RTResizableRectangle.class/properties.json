@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 7/23/2015 21:41",
+	"super" : "RTObject",
+	"category" : "Roassal2-Interactions-Resize",
+	"classinstvars" : [
+		"cornerDirections",
+		"oppositeCorners"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTResizableRectangle",
+	"type" : "normal"
+}

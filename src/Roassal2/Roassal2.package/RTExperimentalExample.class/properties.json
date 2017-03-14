@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "akevalion 6/21/2016 21:21",
+	"super" : "RTAbstractExample",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTExperimentalExample",
+	"type" : "normal"
+}

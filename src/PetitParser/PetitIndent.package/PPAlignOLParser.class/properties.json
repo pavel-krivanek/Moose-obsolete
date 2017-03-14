@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPParser",
+	"category" : "PetitIndent-Offside-rule",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPAlignOLParser",
+	"type" : "normal"
+}

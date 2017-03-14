@@ -1,0 +1,3 @@
+configuration
+defaultWidth
+	^ 30

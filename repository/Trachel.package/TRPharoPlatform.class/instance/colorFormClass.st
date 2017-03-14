@@ -1,3 +1,0 @@
-public
-colorFormClass
-	^ ColorForm

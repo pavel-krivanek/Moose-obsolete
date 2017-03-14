@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "DudeEntitySpesifics",
+	"category" : "SmallDude-Species",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DudeTextFiles",
+	"type" : "normal"
+}

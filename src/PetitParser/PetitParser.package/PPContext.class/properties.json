@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "JanKurs 8/26/2014 16:11",
+	"super" : "Object",
+	"category" : "PetitParser-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"root",
+		"properties",
+		"globals",
+		"furthestFailure"
+	],
+	"name" : "PPContext",
+	"type" : "normal"
+}

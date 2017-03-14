@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "EQSimple",
+	"category" : "Fame-Example",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"number"
+	],
+	"name" : "EQNumerical",
+	"type" : "normal"
+}

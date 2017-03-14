@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TableItem",
+	"category" : "Hashtable",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WeakKeyTableItem",
+	"type" : "normal"
+}

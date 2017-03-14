@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "OptionPart",
+	"category" : "Merlin-Parts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedOptions"
+	],
+	"name" : "MultipleOptionPart",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "akevalion 1/14/2015 15:30",
+	"super" : "RTAbstractTreeBuilder",
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseradius"
+	],
+	"name" : "RTCircularTreeMapBuilder",
+	"type" : "normal"
+}

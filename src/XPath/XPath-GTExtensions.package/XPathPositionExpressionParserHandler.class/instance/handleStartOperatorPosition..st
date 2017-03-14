@@ -1,0 +1,2 @@
+handling - positions
+handleStartOperatorPosition: aPosition

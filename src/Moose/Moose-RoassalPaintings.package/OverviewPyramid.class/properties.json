@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Moose-RoassalPaintings-OverviewPyramid",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"CPPTreesholds",
+		"JavaTreesholds",
+		"MoosePyramidResults",
+		"SmalltalkTreesholds"
+	],
+	"instvars" : [
+		"mooseModel",
+		"metrics",
+		"moView",
+		"treesholdsToUse",
+		"rectangles"
+	],
+	"name" : "OverviewPyramid",
+	"type" : "normal"
+}

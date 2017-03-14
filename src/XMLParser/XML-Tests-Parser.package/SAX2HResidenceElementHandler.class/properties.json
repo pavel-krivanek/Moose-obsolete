@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 8/17/2016 22:02",
+	"super" : "SAX2ElementCharacterHandler",
+	"category" : "XML-Tests-Parser-ElementHandlers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SAX2HResidenceElementHandler",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 10/8/2016 12:45",
+	"super" : "TRKeyboardEvent",
+	"category" : "Trachel-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRKeyUp",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Collection",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseGroupStorage",
+	"type" : "variable"
+}

@@ -1,0 +1,55 @@
+tests
+testDoctypeDeclarationUnterminated
+	#('<!DOCTYPE'
+		'<!DOCTYPE >'
+		'<!DOCTYPE test'
+		'<!DOCTYPE test PUBLIC'
+		'<!DOCTYPE test PUBLIC>'
+		'<!DOCTYPE test PUBLIC "'
+		'<!DOCTYPE test PUBLIC ">'
+		'<!DOCTYPE test PUBLIC "publicid'
+		'<!DOCTYPE test PUBLIC "publicid"'
+		'<!DOCTYPE test PUBLIC "publicid">'
+		'<!DOCTYPE test PUBLIC '''
+		'<!DOCTYPE test PUBLIC ''>'
+		'<!DOCTYPE test PUBLIC ''publicid'
+		'<!DOCTYPE test PUBLIC ''publicid'''
+		'<!DOCTYPE test PUBLIC "publicid">'
+		'<!DOCTYPE test PUBLIC "publicid" "'
+		'<!DOCTYPE test PUBLIC "publicid" ">'
+		'<!DOCTYPE test PUBLIC "publicid" "systemid'
+		'<!DOCTYPE test PUBLIC "publicid" "systemid"'
+		'<!DOCTYPE test PUBLIC "publicid" '''
+		'<!DOCTYPE test PUBLIC "publicid" ''>'
+		'<!DOCTYPE test PUBLIC "publicid" ''systemid'
+		'<!DOCTYPE test PUBLIC "publicid" ''systemid'''
+		'<!DOCTYPE test PUBLIC "publicid" "systemid''>'
+		'<!DOCTYPE test PUBLIC "publicid" ''systemid">'
+		'<!DOCTYPE test PUBLIC "publicid" "systemid" ['
+		'<!DOCTYPE test PUBLIC "publicid" "systemid" [>'
+		'<!DOCTYPE test PUBLIC "publicid" "systemid" []'
+		'<!DOCTYPE test SYSTEM'
+		'<!DOCTYPE test SYSTEM>'
+		'<!DOCTYPE test SYSTEM "'
+		'<!DOCTYPE test SYSTEM ">'
+		'<!DOCTYPE test SYSTEM "systemid'
+		'<!DOCTYPE test SYSTEM "systemid"'
+		'<!DOCTYPE test SYSTEM '''
+		'<!DOCTYPE test SYSTEM ''>'
+		'<!DOCTYPE test SYSTEM ''systemid'
+		'<!DOCTYPE test SYSTEM ''systemid'''
+		'<!DOCTYPE test SYSTEM "systemid''>'
+		'<!DOCTYPE test SYSTEM ''systemid">'
+		'<!DOCTYPE test SYSTEM "systemid" ['
+		'<!DOCTYPE test SYSTEM "systemid" [>'
+		'<!DOCTYPE test SYSTEM "systemid" []'
+		'<!DOCTYPE test ['
+		'<!DOCTYPE test [>'
+		'<!DOCTYPE test []')
+		do: [:each |
+			self
+				should: [SAXHandler parse: each]
+				raise: XMLWellFormednessException.
+			self
+				should: [SAXHandler parse: each, '<test/>']
+				raise: XMLWellFormednessException]

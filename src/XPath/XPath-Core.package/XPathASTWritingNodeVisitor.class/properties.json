@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 2/6/2017 21:32",
+	"super" : "XPathASTNodeVisitor",
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"SpaceCharacter"
+	],
+	"instvars" : [
+		"stream"
+	],
+	"name" : "XPathASTWritingNodeVisitor",
+	"type" : "normal"
+}

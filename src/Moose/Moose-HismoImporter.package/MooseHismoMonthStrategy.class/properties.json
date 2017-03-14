@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseHismoImportingStrategy",
+	"category" : "Moose-HismoImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"months"
+	],
+	"name" : "MooseHismoMonthStrategy",
+	"type" : "normal"
+}

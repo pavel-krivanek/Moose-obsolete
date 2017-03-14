@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 12/30/2013 07:17",
+	"super" : "MooseCodeBrowser",
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseNamespacesCodeBrowser",
+	"type" : "normal"
+}

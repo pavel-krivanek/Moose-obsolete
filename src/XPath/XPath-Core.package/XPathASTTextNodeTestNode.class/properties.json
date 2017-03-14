@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 1/21/2017 07:47",
+	"super" : "XPathASTNodeTestNode",
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathASTTextNodeTestNode",
+	"type" : "normal"
+}

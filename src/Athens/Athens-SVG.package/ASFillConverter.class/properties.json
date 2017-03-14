@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASConverter",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASFillConverter",
+	"type" : "normal"
+}

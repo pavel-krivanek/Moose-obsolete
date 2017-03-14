@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RBRemoveClassRefactoring",
+	"category" : "PetitGui-Refactoring",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"class"
+	],
+	"name" : "PPRemoveParserRefactoring",
+	"type" : "normal"
+}

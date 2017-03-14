@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 5/17/2016 10:32",
+	"super" : "Object",
+	"category" : "Geometry",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"from",
+		"to"
+	],
+	"name" : "GLineSegment",
+	"type" : "normal"
+}

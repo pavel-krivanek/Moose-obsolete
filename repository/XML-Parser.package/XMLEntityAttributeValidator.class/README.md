@@ -1,1 +1,0 @@
-This class validates attributes that contain unparsed entity names (that must be declared).

@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "cyrilledelaunay 3/11/2011 10:51",
+	"super" : "Object",
+	"category" : "Merlin-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"wizardControl",
+		"cancelButton",
+		"partsAndInformationsAssociated",
+		"partsAndRequiredInformations",
+		"wizardParts",
+		"name",
+		"displayLayout",
+		"mainPaneLine",
+		"isOpen",
+		"renderer",
+		"conditions",
+		"failingConditions"
+	],
+	"name" : "WizardPane",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "cyrille.delaunay 3/15/2010 12:31",
+	"super" : "TabSelectorMorph",
+	"category" : "Moose-DistributionMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"listOrTextFieldPart",
+		"firstSideLink",
+		"secondSideLink"
+	],
+	"name" : "LinkedTabSelectorMorph",
+	"type" : "normal"
+}

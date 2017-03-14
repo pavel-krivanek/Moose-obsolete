@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 3/23/2015 15:22",
+	"super" : "RTAbstractDataSet",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTAbstractStackedDataSet",
+	"type" : "normal"
+}

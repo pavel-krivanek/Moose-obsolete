@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASPolygon",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASPolyLine",
+	"type" : "normal"
+}

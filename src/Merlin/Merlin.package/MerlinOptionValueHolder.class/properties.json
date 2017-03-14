@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Model",
+	"category" : "Merlin-Parts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contents",
+		"option"
+	],
+	"name" : "MerlinOptionValueHolder",
+	"type" : "normal"
+}

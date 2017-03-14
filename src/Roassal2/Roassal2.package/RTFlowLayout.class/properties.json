@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PierreChanson 10/24/2014 10:28",
+	"super" : "RTAbstractFlowLayout",
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTFlowLayout",
+	"type" : "normal"
+}

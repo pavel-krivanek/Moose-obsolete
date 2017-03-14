@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2CompositeNodeTest",
+	"category" : "PetitParser2-ManifestMf",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PP2ManifestMfParserTest",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLNodeTest",
+	"category" : "XPath-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathNamespaceNodeTest",
+	"type" : "normal"
+}

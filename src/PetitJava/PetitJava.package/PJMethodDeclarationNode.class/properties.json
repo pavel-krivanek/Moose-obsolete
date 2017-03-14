@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PJBehaviouralNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [
+		"aVisitor"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"body"
+	],
+	"name" : "PJMethodDeclarationNode",
+	"type" : "normal"
+}

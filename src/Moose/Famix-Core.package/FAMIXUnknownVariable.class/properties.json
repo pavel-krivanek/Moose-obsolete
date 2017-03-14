@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "simon.denier 9/7/2009 12:15",
+	"super" : "FAMIXStructuralEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXUnknownVariable",
+	"type" : "normal"
+}

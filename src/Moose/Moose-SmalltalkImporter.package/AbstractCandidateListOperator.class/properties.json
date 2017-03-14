@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseOperator",
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"groups"
+	],
+	"name" : "AbstractCandidateListOperator",
+	"type" : "normal"
+}

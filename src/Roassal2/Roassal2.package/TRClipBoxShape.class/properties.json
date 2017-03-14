@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "TRBoxShape",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"edges",
+		"useColor",
+		"condition"
+	],
+	"name" : "TRClipBoxShape",
+	"type" : "normal"
+}

@@ -1,0 +1,32 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Moose-Query-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model",
+		"class1",
+		"class2",
+		"inh",
+		"method1",
+		"var2",
+		"access",
+		"method2",
+		"method3",
+		"inv1",
+		"inv2",
+		"package1",
+		"inv3",
+		"package2",
+		"var1",
+		"acc1",
+		"namespace",
+		"var3",
+		"ref1",
+		"methodExt"
+	],
+	"name" : "MooseQueryTest",
+	"type" : "normal"
+}

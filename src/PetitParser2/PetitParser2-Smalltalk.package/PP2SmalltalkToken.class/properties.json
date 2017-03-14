@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2Token",
+	"category" : "PetitParser2-Smalltalk-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"comments"
+	],
+	"name" : "PP2SmalltalkToken",
+	"type" : "normal"
+}

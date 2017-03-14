@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "StephaneDucasse 9/20/2009 12:13",
+	"super" : "FM3Element",
+	"category" : "Fame-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isContainer",
+		"isDerived",
+		"isMultivalued",
+		"opposite",
+		"class",
+		"package",
+		"type",
+		"key",
+		"implementingSelector",
+		"isTarget",
+		"isSource"
+	],
+	"name" : "FM3PropertyDescription",
+	"type" : "normal"
+}

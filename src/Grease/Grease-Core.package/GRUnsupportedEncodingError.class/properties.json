@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GRError",
+	"category" : "Grease-Core-Text",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GRUnsupportedEncodingError",
+	"type" : "normal"
+}

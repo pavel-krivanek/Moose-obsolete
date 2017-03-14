@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Neo-JSON-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"propertyName",
+		"valueSchema",
+		"getter",
+		"setter"
+	],
+	"name" : "NeoJSONPropertyMapping",
+	"type" : "normal"
+}

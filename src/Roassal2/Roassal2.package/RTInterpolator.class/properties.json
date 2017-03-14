@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "akevalion 6/21/2016 17:41",
+	"super" : "RTObject",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"start",
+		"stop"
+	],
+	"name" : "RTInterpolator",
+	"type" : "normal"
+}

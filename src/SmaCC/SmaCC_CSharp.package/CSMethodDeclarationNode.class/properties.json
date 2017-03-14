@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSDeclarationNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"header",
+		"body"
+	],
+	"name" : "CSMethodDeclarationNode",
+	"type" : "normal"
+}

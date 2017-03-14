@@ -1,0 +1,15 @@
+{
+	"classtraitcomposition" : "TViewModel classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"glamourPresentation"
+	],
+	"name" : "GLMMorphicModel",
+	"commentStamp" : "",
+	"super" : "Announcer",
+	"traitcomposition" : "TViewModel",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Glamour-Morphic-Widgets"
+}

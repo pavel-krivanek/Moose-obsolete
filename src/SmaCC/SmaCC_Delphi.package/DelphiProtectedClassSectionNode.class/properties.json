@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiClassSectionNode",
+	"category" : "SmaCC_Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"strictToken",
+		"protectedToken"
+	],
+	"name" : "DelphiProtectedClassSectionNode",
+	"type" : "normal"
+}

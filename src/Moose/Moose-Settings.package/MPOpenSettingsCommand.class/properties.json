@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MoosePanelCommand",
+	"category" : "Moose-Settings",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MPOpenSettingsCommand",
+	"type" : "normal"
+}

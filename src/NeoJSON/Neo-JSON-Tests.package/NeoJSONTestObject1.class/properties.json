@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Neo-JSON-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"name",
+		"timestamp",
+		"points",
+		"bytes"
+	],
+	"name" : "NeoJSONTestObject1",
+	"type" : "normal"
+}

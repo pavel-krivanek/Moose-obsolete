@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PeterUhnak 7/13/2016 14:34",
+	"super" : "RTAbstractElementShape",
+	"category" : "Roassal2-MorphSpecific",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"font",
+		"fontSize",
+		"shouldWrap"
+	],
+	"name" : "RTText",
+	"type" : "normal"
+}

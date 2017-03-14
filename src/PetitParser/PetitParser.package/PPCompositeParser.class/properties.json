@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "BernardoContreras 3/16/2015 21:36",
+	"super" : "PPDelegateParser",
+	"category" : "PetitParser-Tools",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dependencies"
+	],
+	"name" : "PPCompositeParser",
+	"type" : "normal"
+}

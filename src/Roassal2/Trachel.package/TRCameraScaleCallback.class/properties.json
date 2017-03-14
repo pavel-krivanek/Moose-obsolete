@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 8/6/2016 18:14",
+	"super" : "TRCallback",
+	"category" : "Trachel-Callbacks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRCameraScaleCallback",
+	"type" : "normal"
+}

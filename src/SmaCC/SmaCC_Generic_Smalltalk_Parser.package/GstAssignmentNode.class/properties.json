@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "GstValueNode",
+	"category" : "SmaCC_Generic_Smalltalk_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"variable",
+		"assignmentToken",
+		"value"
+	],
+	"name" : "GstAssignmentNode",
+	"type" : "normal"
+}

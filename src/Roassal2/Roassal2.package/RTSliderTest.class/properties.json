@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Roassal2-Builder-UI-Slider",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"slider"
+	],
+	"name" : "RTSliderTest",
+	"type" : "normal"
+}

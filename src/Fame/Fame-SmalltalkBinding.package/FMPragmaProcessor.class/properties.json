@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "VincentBlondeau 9/15/2016 16:48",
+	"super" : "Object",
+	"category" : "Fame-SmalltalkBinding",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elements",
+		"packageDict",
+		"classDict",
+		"metaDict",
+		"superclassDict",
+		"packMetaDict",
+		"typeDict",
+		"oppositeDict",
+		"packPropDict",
+		"mmClassDict",
+		"queue"
+	],
+	"name" : "FMPragmaProcessor",
+	"type" : "normal"
+}

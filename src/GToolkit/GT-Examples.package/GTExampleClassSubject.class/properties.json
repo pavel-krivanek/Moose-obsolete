@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "TudorGirba 8/21/2016 21:47",
+	"super" : "GTExampleSubject",
+	"category" : "GT-Examples-Subjects",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"theClassName",
+		"theClass",
+		"meta"
+	],
+	"name" : "GTExampleClassSubject",
+	"type" : "normal"
+}

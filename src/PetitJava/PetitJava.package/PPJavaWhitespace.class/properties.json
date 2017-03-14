@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2Strategy",
+	"category" : "PetitJava-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPJavaWhitespace",
+	"type" : "normal"
+}

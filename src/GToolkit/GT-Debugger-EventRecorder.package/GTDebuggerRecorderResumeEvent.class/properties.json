@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "RogerStebler 3/30/2016 13:18",
+	"super" : "GTDebuggerRecorderDebugActionEvent",
+	"category" : "GT-Debugger-EventRecorder-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTDebuggerRecorderResumeEvent",
+	"type" : "normal"
+}

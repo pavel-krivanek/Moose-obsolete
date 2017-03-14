@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPArithmeticParserTest",
+	"category" : "PetitTests-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPExpressionParserTest",
+	"type" : "normal"
+}

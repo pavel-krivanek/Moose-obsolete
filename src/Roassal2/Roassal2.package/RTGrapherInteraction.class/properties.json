@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 8/18/2016 14:20",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTGrapherInteraction",
+	"type" : "normal"
+}

@@ -1,9 +1,0 @@
-SystemOrganization addCategory: #'GT-Examples'!
-SystemOrganization addCategory: 'GT-Examples-Announcements'!
-SystemOrganization addCategory: 'GT-Examples-Core'!
-SystemOrganization addCategory: 'GT-Examples-Exceptions'!
-SystemOrganization addCategory: 'GT-Examples-Help'!
-SystemOrganization addCategory: 'GT-Examples-Organization'!
-SystemOrganization addCategory: 'GT-Examples-Runtime'!
-SystemOrganization addCategory: 'GT-Examples-Subjects'!
-SystemOrganization addCategory: 'GT-Examples-Testing'!

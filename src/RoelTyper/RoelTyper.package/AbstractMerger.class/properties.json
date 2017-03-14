@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TypeMerger",
+	"category" : "RoelTyper-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "AbstractMerger",
+	"type" : "normal"
+}

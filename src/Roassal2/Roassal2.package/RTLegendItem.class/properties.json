@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RTObject",
+	"category" : "Roassal2-Builder-Legend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"textSize"
+	],
+	"name" : "RTLegendItem",
+	"type" : "normal"
+}

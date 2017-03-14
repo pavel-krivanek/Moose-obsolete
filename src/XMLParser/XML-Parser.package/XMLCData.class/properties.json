@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 6/15/2015 22:05",
+	"super" : "XMLString",
+	"category" : "XML-Parser-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLCData",
+	"type" : "normal"
+}

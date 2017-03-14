@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FM3PropertyDescription",
+	"category" : "Metanool-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MTLAnnotationDescription",
+	"type" : "normal"
+}

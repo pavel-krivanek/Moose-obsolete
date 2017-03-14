@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 7/31/2016 12:18",
+	"super" : "Object",
+	"category" : "XML-Parser-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLElementClassMapper",
+	"type" : "normal"
+}

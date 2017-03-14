@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rhs",
+		"index",
+		"generator",
+		"variableName",
+		"currentIndex",
+		"currentSymbol"
+	],
+	"name" : "SmaCCReduceActionGenerator",
+	"type" : "normal"
+}

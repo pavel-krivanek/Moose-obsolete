@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "TudorGirba 1/21/2011 10:49",
+	"super" : "MooseAbstractGroup",
+	"category" : "Moose-Core",
+	"classinstvars" : [
+		"mostRecentOwner",
+		"rootModel",
+		"metaTower"
+	],
+	"pools" : [ ],
+	"classvars" : [
+		"MostRecentOwner"
+	],
+	"instvars" : [
+		"sourceLanguage",
+		"name"
+	],
+	"name" : "MooseModel",
+	"type" : "normal"
+}

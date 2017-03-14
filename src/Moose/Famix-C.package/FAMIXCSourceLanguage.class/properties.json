@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "StephaneDucasse 10/30/2011 23:23",
+	"super" : "FAMIXSourceLanguage",
+	"category" : "Famix-C",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXCSourceLanguage",
+	"type" : "normal"
+}

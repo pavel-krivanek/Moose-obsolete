@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRTest",
+	"category" : "Trachel-MorphSpecific",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRMorphTest",
+	"type" : "normal"
+}

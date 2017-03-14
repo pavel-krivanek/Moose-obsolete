@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "akevalion 8/13/2015 19:24",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-Common",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"weight",
+		"elements",
+		"rootNodes"
+	],
+	"name" : "RTAbstractTreeBuilder",
+	"type" : "normal"
+}

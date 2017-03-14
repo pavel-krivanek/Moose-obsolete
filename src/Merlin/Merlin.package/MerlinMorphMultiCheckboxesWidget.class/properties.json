@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MerlinMorphPartWidget",
+	"category" : "Merlin-Rendering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"allCheckboxes"
+	],
+	"name" : "MerlinMorphMultiCheckboxesWidget",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTDebuggerSmokeTest",
+	"category" : "GT-PetitParserDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTPPDebuggerSmokeTest",
+	"type" : "normal"
+}

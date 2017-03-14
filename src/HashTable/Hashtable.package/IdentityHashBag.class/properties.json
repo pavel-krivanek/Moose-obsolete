@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Bag",
+	"category" : "Hashtable",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "IdentityHashBag",
+	"type" : "normal"
+}

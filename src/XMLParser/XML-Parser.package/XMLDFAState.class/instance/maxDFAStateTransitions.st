@@ -1,0 +1,3 @@
+private
+maxDFAStateTransitions
+	^ 64

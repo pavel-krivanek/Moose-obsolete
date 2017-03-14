@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ASConverter",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"segments",
+		"path",
+		"absolute",
+		"min",
+		"max"
+	],
+	"name" : "ASPathConverter",
+	"type" : "normal"
+}

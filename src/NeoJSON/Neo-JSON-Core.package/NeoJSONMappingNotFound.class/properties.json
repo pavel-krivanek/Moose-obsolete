@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "NotFound",
+	"category" : "Neo-JSON-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "NeoJSONMappingNotFound",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MoosePanelCommand",
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MPHelp",
+	"type" : "normal"
+}

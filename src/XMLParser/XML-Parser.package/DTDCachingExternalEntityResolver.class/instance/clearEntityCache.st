@@ -1,0 +1,3 @@
+clearing
+clearEntityCache
+	self class clearEntityCache

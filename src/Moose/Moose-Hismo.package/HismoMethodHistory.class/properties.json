@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "HismoAbstractHistory",
+	"category" : "Moose-Hismo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"containingClassHistory"
+	],
+	"name" : "HismoMethodHistory",
+	"type" : "normal"
+}

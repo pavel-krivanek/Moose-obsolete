@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCRegularExpressionNode",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"node",
+		"minimumMatches",
+		"maximumMatches"
+	],
+	"name" : "SmaCCRepeatingRENode",
+	"type" : "normal"
+}

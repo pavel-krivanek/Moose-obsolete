@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TudorGirba 7/13/2011 07:27",
+	"super" : "Object",
+	"category" : "Metanool-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"entity"
+	],
+	"name" : "MTLAnnotationRegistry",
+	"type" : "normal"
+}

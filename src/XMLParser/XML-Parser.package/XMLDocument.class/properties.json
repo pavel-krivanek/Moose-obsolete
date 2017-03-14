@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "monty 6/16/2015 01:46",
+	"super" : "XMLNodeWithElements",
+	"category" : "XML-Parser-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"version",
+		"encoding",
+		"isStandalone",
+		"doctypeDeclaration",
+		"doctypeDefinition"
+	],
+	"name" : "XMLDocument",
+	"type" : "normal"
+}

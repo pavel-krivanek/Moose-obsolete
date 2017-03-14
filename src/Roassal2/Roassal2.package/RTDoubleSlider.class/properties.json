@@ -1,0 +1,25 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-UI-Slider",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"callback",
+		"labelled",
+		"position",
+		"sliderElements",
+		"min",
+		"max",
+		"useIntegerLabel",
+		"extremity1",
+		"extremity2",
+		"line",
+		"cursorMin",
+		"cursorMax",
+		"lineCursor"
+	],
+	"name" : "RTDoubleSlider",
+	"type" : "normal"
+}

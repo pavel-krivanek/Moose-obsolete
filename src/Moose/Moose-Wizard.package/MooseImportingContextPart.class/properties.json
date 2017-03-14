@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "cyrille.delaunay 11/5/2009 14:14",
+	"super" : "WizardPart",
+	"category" : "Moose-Wizard",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"centralCheckbox",
+		"detailContextButton",
+		"contextFrame"
+	],
+	"name" : "MooseImportingContextPart",
+	"type" : "normal"
+}

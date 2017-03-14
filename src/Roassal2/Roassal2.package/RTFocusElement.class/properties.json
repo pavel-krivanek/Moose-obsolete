@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "akevalion 1/20/2015 18:58",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Builder-CircularMap",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"x",
+		"y",
+		"z",
+		"animation"
+	],
+	"name" : "RTFocusElement",
+	"type" : "normal"
+}

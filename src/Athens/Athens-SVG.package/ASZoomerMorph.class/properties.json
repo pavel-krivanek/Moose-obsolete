@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"basicExtent",
+		"maxZoom",
+		"currentAnimation",
+		"currentZoom",
+		"targetZoom",
+		"animStartZoom",
+		"svg",
+		"surface",
+		"svgExtent",
+		"svgZoom",
+		"animCenter"
+	],
+	"name" : "ASZoomerMorph",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 2/7/2017 03:31",
+	"super" : "XPathNodeType",
+	"category" : "XPath-Core-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathPINodeType",
+	"type" : "normal"
+}

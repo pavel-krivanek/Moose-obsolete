@@ -1,0 +1,16 @@
+{
+	"classtraitcomposition" : "TAssociationMetaLevelDependency classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"previous",
+		"next"
+	],
+	"name" : "FAMIXAssociation",
+	"commentStamp" : "usmanbhatti 11/23/2011 15:56",
+	"super" : "FAMIXSourcedEntity",
+	"traitcomposition" : "TAssociationMetaLevelDependency",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Famix-Core"
+}

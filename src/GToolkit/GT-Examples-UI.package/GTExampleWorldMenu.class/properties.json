@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTAbstractExampleMenu",
+	"category" : "GT-Examples-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTExampleWorldMenu",
+	"type" : "normal"
+}

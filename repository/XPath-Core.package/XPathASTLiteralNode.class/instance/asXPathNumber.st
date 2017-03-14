@@ -1,3 +1,0 @@
-converting
-asXPathNumber
-	self subclassResponsibility

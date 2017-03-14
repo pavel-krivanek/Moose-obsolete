@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "TudorGirba 3/8/2011 10:03",
+	"super" : "Object",
+	"category" : "PetitGui-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parser",
+		"result",
+		"children",
+		"parent",
+		"start",
+		"end",
+		"stream",
+		"allChildren"
+	],
+	"name" : "PPParserDebuggerResult",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "RicardoJacas 5/9/2014 23:27",
+	"super" : "RTSVGEntity",
+	"category" : "Roassal2-Exporter-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"path",
+		"center",
+		"scale"
+	],
+	"name" : "RTSVGPathEntity",
+	"type" : "normal"
+}

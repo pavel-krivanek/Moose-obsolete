@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ASContainerElement",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"width",
+		"height",
+		"ids",
+		"viewBox"
+	],
+	"name" : "ASVGRoot",
+	"type" : "normal"
+}

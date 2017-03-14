@@ -1,0 +1,31 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Famix-Tests-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model1",
+		"model2",
+		"p1m1",
+		"p2m1",
+		"p1m2",
+		"p2m2",
+		"p3m2",
+		"p4m2",
+		"lcomModel",
+		"classA",
+		"classB",
+		"classB1",
+		"classB2",
+		"classC",
+		"classD",
+		"classE",
+		"classF",
+		"classF1",
+		"classG"
+	],
+	"name" : "FAMIXExtensionMetricTest",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 1/22/2017 15:29",
+	"super" : "XPathASTElementNodeTestForNamespaceURINode",
+	"category" : "XPath-Core-Compilation-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"localName"
+	],
+	"name" : "XPathASTElementNodeTestForNamespaceURIAndLocalNameNode",
+	"type" : "normal"
+}

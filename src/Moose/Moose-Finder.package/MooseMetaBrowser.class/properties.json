@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "tg 1/1/2010 06:32",
+	"super" : "GLMBrowserTemplate",
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseMetaBrowser",
+	"type" : "normal"
+}

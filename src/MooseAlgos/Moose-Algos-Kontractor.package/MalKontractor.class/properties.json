@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Moose-Algos-Kontractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"LetterFrequency"
+	],
+	"instvars" : [
+		"sizeTo",
+		"wordsToBeRemoved",
+		"pairs"
+	],
+	"name" : "MalKontractor",
+	"type" : "normal"
+}

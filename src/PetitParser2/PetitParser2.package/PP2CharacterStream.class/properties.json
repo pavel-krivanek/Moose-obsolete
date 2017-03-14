@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JanKurs 11/27/2016 17:36",
+	"super" : "Stream",
+	"category" : "PetitParser2-Streams",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"encoder"
+	],
+	"name" : "PP2CharacterStream",
+	"type" : "normal"
+}

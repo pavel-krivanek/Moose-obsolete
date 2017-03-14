@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "HashSet",
+	"category" : "Hashtable",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WeakHashSet",
+	"type" : "normal"
+}

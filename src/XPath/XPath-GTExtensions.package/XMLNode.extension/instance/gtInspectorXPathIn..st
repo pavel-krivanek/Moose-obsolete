@@ -1,0 +1,28 @@
+*XPath-GTExtensions
+gtInspectorXPathIn: aComposite
+	<gtInspectorPresentationOrder: 9>
+
+	self supportsXPathEvaluator
+		ifFalse: [^ self].
+
+	aComposite custom:
+		(GLMRubricHighlightedTextPresentation new
+			title: 'XPath';
+			editingMode: [
+				GLMHighlighterTextRubEditingMode withStylerDecorator:
+					GLMXPathHighlighterTextStylerDecorator new];
+			display: [''];
+			withLineNumbers: true;
+			selectionAct: [:presentation |
+				presentation selectedText asString
+					ifNotEmpty: [:source |
+						presentation selection:
+							(self xPath: source)]]
+				on: $g
+				entitled: 'Evaluated and go';
+			act: [:presentation |
+				presentation selection:
+					(self xPath: presentation text asString)]
+				icon: GLMUIThemeExtraIcons glamorousGo
+				on: $G
+				entitled: 'Evaluate all and go').

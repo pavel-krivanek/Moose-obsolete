@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "usmanbhatti 11/28/2011 22:55",
+	"super" : "FAMIXType",
+	"category" : "Famix-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"arguments",
+		"parameterizableClass"
+	],
+	"name" : "FAMIXParameterizedType",
+	"type" : "normal"
+}

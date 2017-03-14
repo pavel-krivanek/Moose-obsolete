@@ -1,0 +1,3 @@
+handling - positions
+handleStartNodeTestPosition: aPosition
+	highlighter startNodeTestHighlightPosition: aPosition

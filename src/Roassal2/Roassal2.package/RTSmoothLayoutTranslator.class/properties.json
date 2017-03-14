@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTLayoutTranslator",
+	"category" : "Roassal2-Layouts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"move",
+		"nbCycles"
+	],
+	"name" : "RTSmoothLayoutTranslator",
+	"type" : "normal"
+}

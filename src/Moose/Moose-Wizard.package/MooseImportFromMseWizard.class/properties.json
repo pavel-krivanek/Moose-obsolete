@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WizardControl",
+	"category" : "Moose-Wizard",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseImportFromMseWizard",
+	"type" : "normal"
+}

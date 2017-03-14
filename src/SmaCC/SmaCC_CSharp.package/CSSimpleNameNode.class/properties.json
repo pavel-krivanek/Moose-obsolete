@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSExpressionNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"identifierToken",
+		"typeArguments"
+	],
+	"name" : "CSSimpleNameNode",
+	"type" : "normal"
+}

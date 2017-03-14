@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JAAyer 6/25/2010 14:06",
+	"super" : "XMLNode",
+	"category" : "XML-Parser-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"target",
+		"data"
+	],
+	"name" : "XMLPI",
+	"type" : "normal"
+}

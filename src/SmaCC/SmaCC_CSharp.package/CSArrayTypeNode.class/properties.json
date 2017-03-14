@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSTypeNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type",
+		"rankSpecifiers"
+	],
+	"name" : "CSArrayTypeNode",
+	"type" : "normal"
+}

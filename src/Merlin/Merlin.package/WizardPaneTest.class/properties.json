@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Merlin-Tests",
+	"classinstvars" : [
+		"wizardPane1",
+		"firstCheckBoxPart",
+		"secondCheckBoxPart"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"wizardControl"
+	],
+	"name" : "WizardPaneTest",
+	"type" : "normal"
+}

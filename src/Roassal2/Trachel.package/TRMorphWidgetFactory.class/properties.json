@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRObject",
+	"category" : "Trachel-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRMorphWidgetFactory",
+	"type" : "normal"
+}

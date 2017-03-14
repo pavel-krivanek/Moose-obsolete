@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AlexandreBergel 7/10/2015 11:07",
+	"super" : "RTAbstractArrowedLine",
+	"category" : "Roassal2-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"head"
+	],
+	"name" : "RTArrowedLine",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "akevalion 12/7/2015 18:59",
+	"super" : "RTAbstractSunburstLayout",
+	"category" : "Roassal2-Builder-Sunburst",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"wside",
+		"roots"
+	],
+	"name" : "RTSunburstExtentLayout",
+	"type" : "normal"
+}

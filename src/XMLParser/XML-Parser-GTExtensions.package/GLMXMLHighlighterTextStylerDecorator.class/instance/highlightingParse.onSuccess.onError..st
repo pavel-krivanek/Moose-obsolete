@@ -1,0 +1,3 @@
+private
+highlightingParse: aString onSuccess: aOneArgumentBlock onError: aTwoArgumentBlock
+	self subclassResponsibility

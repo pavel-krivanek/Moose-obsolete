@@ -1,3 +1,0 @@
-accessing
-stakeholder
-	^ OnMoosePeople tudorGirba

@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "JSStatementNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"doToken",
+		"statement",
+		"whileToken",
+		"leftParen",
+		"expression",
+		"rightParen",
+		"semicolon"
+	],
+	"name" : "JSDoWhileStatementNode",
+	"type" : "normal"
+}

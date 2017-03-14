@@ -1,0 +1,6 @@
+listControl
+list: anObject
+	"Set the value of list"
+
+	list := anObject.
+	self changed: #list

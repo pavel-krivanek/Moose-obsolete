@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SwiftControlTransferStatementNode",
+	"category" : "SmaCC_Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fallthroughToken"
+	],
+	"name" : "SwiftFallThroughStatementNode",
+	"type" : "normal"
+}

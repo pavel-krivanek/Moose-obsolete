@@ -1,3 +1,0 @@
-instance creation
-withNamespacePrincipalNodeType
-	^ self new defaultNodeTestParserContextClass: XPathNodeTestParserNamespaceContext

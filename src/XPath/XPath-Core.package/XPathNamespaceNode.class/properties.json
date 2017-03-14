@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 2/12/2017 21:09",
+	"super" : "XMLNode",
+	"category" : "XPath-Core-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"uri"
+	],
+	"name" : "XPathNamespaceNode",
+	"type" : "normal"
+}

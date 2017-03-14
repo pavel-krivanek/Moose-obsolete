@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Roassal2-Builder-SimilarityMatrix",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elements",
+		"pairs",
+		"action"
+	],
+	"name" : "RTSimilarityMatrix",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 9/19/2015 17:05",
+	"super" : "XMLUnsafeTagWriter",
+	"category" : "XML-Writer-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"xmlnsDeclarations",
+		"attributes"
+	],
+	"name" : "XMLUnsafeStartTagWriter",
+	"type" : "normal"
+}

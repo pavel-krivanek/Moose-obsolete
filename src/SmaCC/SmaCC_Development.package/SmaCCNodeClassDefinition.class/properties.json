@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCClassDefinition",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"productions",
+		"variables",
+		"extraAttributes"
+	],
+	"name" : "SmaCCNodeClassDefinition",
+	"type" : "normal"
+}

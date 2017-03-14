@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PierreChanson 7/15/2015 18:06",
+	"super" : "RTAbstractScrollBuilder",
+	"category" : "Roassal2-Builder-ScrollBar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTScrollBarBuilder",
+	"type" : "normal"
+}

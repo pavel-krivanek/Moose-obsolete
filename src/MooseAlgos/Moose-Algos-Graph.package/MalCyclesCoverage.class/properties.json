@@ -1,0 +1,16 @@
+{
+	"classtraitcomposition" : "MalTNormalize classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"circuits",
+		"sccExtractorClass"
+	],
+	"name" : "MalCyclesCoverage",
+	"commentStamp" : "",
+	"super" : "MalTarjan",
+	"traitcomposition" : "MalTNormalize",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Moose-Algos-Graph"
+}

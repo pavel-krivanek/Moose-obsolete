@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "usmanbhatti 11/24/2011 22:33",
+	"super" : "FAMIXScopingEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXNamespace",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "akevalion 8/25/2015 03:31",
+	"super" : "RTAbstractPopup",
+	"category" : "Roassal2-MorphSpecific",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"background",
+		"text"
+	],
+	"name" : "RTPlatformPopup",
+	"type" : "normal"
+}

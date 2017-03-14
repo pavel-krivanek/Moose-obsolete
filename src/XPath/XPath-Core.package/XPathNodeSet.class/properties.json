@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "monty 10/7/2015 05:57",
+	"super" : "XMLNodeList",
+	"category" : "XPath-Core-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"set",
+		"sortOrder"
+	],
+	"name" : "XPathNodeSet",
+	"type" : "normal"
+}

@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "akevalion 11/25/2014 01:19",
+	"super" : "RTObject",
+	"category" : "Roassal2-Exporter-HTML5",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"directory",
+		"fileName",
+		"title",
+		"exportFixedShapes",
+		"roassalJSfile",
+		"marginScale",
+		"jsrefenrece",
+		"shouldCreateJS",
+		"maxSizeForString"
+	],
+	"name" : "RTHTML5Exporter",
+	"type" : "normal"
+}

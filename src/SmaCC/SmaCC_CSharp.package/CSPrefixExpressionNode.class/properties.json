@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSExpressionNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"operator",
+		"expression"
+	],
+	"name" : "CSPrefixExpressionNode",
+	"type" : "normal"
+}

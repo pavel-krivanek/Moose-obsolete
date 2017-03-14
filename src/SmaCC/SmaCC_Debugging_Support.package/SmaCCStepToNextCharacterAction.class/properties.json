@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCScannerStepToAction",
+	"category" : "SmaCC_Debugging_Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCStepToNextCharacterAction",
+	"type" : "normal"
+}

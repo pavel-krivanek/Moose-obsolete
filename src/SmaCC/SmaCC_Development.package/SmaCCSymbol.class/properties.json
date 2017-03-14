@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCGrammarItem",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"precedence",
+		"firstTerminals"
+	],
+	"name" : "SmaCCSymbol",
+	"type" : "normal"
+}

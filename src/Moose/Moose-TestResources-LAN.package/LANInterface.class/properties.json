@@ -1,0 +1,21 @@
+{
+	"classtraitcomposition" : "TLANInterface classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"nodeName",
+		"nodeList",
+		"nextNode",
+		"deviceNameMenu",
+		"contents",
+		"originator",
+		"addressee"
+	],
+	"name" : "LANInterface",
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"traitcomposition" : "TLANInterface",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Moose-TestResources-LAN"
+}

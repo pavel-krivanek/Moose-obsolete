@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PJExpressionNode",
+	"category" : "PetitJava-AST",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"literalValue"
+	],
+	"name" : "PJNullLiteralNode",
+	"type" : "normal"
+}

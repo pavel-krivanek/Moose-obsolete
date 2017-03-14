@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "PetitParser2-Benchmarks-GUI-Graphs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"report",
+		"colors",
+		"grapher",
+		"legend"
+	],
+	"name" : "PP2ComplexityGraph",
+	"type" : "normal"
+}

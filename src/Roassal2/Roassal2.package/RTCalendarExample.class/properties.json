@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "akevalion 6/4/2015 14:11",
+	"super" : "RTAbstractExample",
+	"category" : "Roassal2-Builder-Calendar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTCalendarExample",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RobertoMinelli 4/20/2016 14:15",
+	"super" : "RTSmoothLayoutTranslator",
+	"category" : "Roassal2-Interactions-MorphingView",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"resize"
+	],
+	"name" : "RTSmoothResizeLayoutTranslator",
+	"type" : "normal"
+}

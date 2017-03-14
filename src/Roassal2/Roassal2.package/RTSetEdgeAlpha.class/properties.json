@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RTInteraction",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"highAlpha",
+		"lowAlpha"
+	],
+	"name" : "RTSetEdgeAlpha",
+	"type" : "normal"
+}

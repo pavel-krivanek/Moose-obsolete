@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MalMapping",
+	"category" : "Moose-Algos-LinearAlgebra",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"back",
+		"forth"
+	],
+	"name" : "MalNumberMapping",
+	"type" : "normal"
+}

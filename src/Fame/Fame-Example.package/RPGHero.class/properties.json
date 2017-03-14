@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Fame-Example",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"twin",
+		"talisman",
+		"kills"
+	],
+	"name" : "RPGHero",
+	"type" : "normal"
+}

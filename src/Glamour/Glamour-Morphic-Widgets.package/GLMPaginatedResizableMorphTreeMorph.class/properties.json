@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMPaginatedMorphTreeMorph",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMPaginatedResizableMorphTreeMorph",
+	"type" : "normal"
+}

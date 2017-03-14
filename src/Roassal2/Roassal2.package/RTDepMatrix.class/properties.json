@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Builder-StructureMatrix",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"horizontal",
+		"vertical",
+		"function"
+	],
+	"name" : "RTDepMatrix",
+	"type" : "normal"
+}

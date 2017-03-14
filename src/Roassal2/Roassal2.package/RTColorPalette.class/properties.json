@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PabloEstefo 4/24/2014 23:29",
+	"super" : "RTObject",
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [
+		"palette"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTColorPalette",
+	"type" : "normal"
+}

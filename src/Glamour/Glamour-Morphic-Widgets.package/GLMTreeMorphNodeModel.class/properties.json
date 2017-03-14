@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MorphTreeNodeModel",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contents",
+		"containerTree",
+		"onSelection"
+	],
+	"name" : "GLMTreeMorphNodeModel",
+	"type" : "normal"
+}

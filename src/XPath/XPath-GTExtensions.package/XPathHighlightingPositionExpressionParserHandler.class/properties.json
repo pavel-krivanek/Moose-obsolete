@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 3/1/2017 15:14",
+	"super" : "XPathPositionExpressionParserHandler",
+	"category" : "XPath-GTExtensions-Highlighting-Parsers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"highlighter",
+		"expression",
+		"expressionSource"
+	],
+	"name" : "XPathHighlightingPositionExpressionParserHandler",
+	"type" : "normal"
+}

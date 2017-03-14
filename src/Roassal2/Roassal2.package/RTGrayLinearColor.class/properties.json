@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractNormalizer",
+	"category" : "Roassal2-ColorNormalizer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"max",
+		"scope",
+		"min"
+	],
+	"name" : "RTGrayLinearColor",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "DeepTraverserWithoutEdges",
+	"category" : "DeepTraverser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onEdgeAction",
+		"edgesToAction"
+	],
+	"name" : "DeepTraverser",
+	"type" : "normal"
+}

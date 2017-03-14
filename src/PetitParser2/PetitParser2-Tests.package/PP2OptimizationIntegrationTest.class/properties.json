@@ -1,0 +1,15 @@
+{
+	"classtraitcomposition" : "TPP2TypeAssertions classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"parser"
+	],
+	"name" : "PP2OptimizationIntegrationTest",
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"traitcomposition" : "TPP2TypeAssertions",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "PetitParser2-Tests-Optimizations"
+}

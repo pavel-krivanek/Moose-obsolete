@@ -1,0 +1,26 @@
+{
+	"classtraitcomposition" : "TGTExampleMethod classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"methodClass",
+		"selector",
+		"label",
+		"description",
+		"form",
+		"exceptions",
+		"subjects",
+		"children",
+		"properties",
+		"after",
+		"problems",
+		"extensions"
+	],
+	"name" : "GTExample",
+	"commentStamp" : "TudorGirba 9/6/2015 11:03",
+	"super" : "Object",
+	"traitcomposition" : "TGTExampleMethod",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "GT-Examples-Core"
+}

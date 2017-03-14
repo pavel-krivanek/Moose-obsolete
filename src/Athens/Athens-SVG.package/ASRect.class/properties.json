@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "ASShape",
+	"category" : "Athens-SVG",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"x",
+		"y",
+		"width",
+		"height",
+		"rx",
+		"ry"
+	],
+	"name" : "ASRect",
+	"type" : "normal"
+}

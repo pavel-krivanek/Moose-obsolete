@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTDebuggingStone",
+	"category" : "GT-GlamourDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTGlamourDebuggingStone",
+	"type" : "normal"
+}

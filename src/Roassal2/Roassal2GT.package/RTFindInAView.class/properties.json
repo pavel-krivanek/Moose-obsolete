@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTInteraction",
+	"category" : "Roassal2GT-Spotter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTFindInAView",
+	"type" : "normal"
+}

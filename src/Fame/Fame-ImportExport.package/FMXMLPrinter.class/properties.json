@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FMPrintClient",
+	"category" : "Fame-ImportExport",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FMXMLPrinter",
+	"type" : "normal"
+}

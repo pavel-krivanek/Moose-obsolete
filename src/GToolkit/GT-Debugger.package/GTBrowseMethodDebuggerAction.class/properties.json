@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AndreiChis 12/30/2015 11:17",
+	"super" : "DebugAction",
+	"category" : "GT-Debugger-Actions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTBrowseMethodDebuggerAction",
+	"type" : "normal"
+}

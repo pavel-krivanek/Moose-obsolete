@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "E1",
+	"category" : "Moose-TestResources-PackageBlueprint-P1",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "F1",
+	"type" : "normal"
+}

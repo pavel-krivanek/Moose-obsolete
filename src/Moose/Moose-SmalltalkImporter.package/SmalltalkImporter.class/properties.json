@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "stephane.ducasse 6/13/2008 16:18",
+	"super" : "MooseAbstractImporter",
+	"category" : "Moose-SmalltalkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methods",
+		"classes",
+		"namespaces",
+		"packages",
+		"globals",
+		"scopes",
+		"others",
+		"implicitVariables",
+		"annotationTypes"
+	],
+	"name" : "SmalltalkImporter",
+	"type" : "normal"
+}

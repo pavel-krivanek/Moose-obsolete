@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRLabelShape",
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRExtensibleLabelShape",
+	"type" : "normal"
+}

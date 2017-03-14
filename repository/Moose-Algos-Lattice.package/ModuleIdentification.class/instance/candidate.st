@@ -1,4 +1,0 @@
-accessing
-candidate 
-	
-	^ aCandidate

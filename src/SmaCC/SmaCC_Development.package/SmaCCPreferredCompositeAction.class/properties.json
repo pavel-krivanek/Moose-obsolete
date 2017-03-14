@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCCompositeAction",
+	"category" : "SmaCC_Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"preferredAction"
+	],
+	"name" : "SmaCCPreferredCompositeAction",
+	"type" : "normal"
+}

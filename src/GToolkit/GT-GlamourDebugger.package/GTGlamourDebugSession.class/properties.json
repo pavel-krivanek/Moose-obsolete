@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DebugSession",
+	"category" : "GT-GlamourDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rootBrowserContext"
+	],
+	"name" : "GTGlamourDebugSession",
+	"type" : "normal"
+}

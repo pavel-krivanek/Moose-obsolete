@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAnimation",
+	"category" : "Roassal2-Animation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"layout",
+		"elements"
+	],
+	"name" : "RTLayoutAnimation",
+	"type" : "normal"
+}

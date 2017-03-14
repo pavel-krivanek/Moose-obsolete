@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXVisitor",
+	"category" : "Famix-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"graph",
+		"visited"
+	],
+	"name" : "FAMIXGraphTraverser",
+	"type" : "normal"
+}

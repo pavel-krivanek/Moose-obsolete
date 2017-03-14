@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "NicolasAnquetil 12/5/2011 11:14",
+	"super" : "Collection",
+	"category" : "Moose-Query",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"storage",
+		"receiver"
+	],
+	"name" : "MooseQueryResult",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "CustomHelp",
+	"category" : "GT-EventRecorder-Help",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTEventRecorderHelp",
+	"type" : "normal"
+}

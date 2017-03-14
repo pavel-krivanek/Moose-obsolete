@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCGLRParser",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [
+		"keywords"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSharpParser",
+	"type" : "normal"
+}

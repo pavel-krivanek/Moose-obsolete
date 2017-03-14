@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 3/9/2016 16:31",
+	"super" : "RTAbstractExample",
+	"category" : "Roassal2-ExampleBrowser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTInteractionExample",
+	"type" : "normal"
+}

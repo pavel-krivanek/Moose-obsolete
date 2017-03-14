@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 6/4/2015 11:39",
+	"super" : "RTAbstractLineDecorator",
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTHorizontalLineDecorator",
+	"type" : "normal"
+}

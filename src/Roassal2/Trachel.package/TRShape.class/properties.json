@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "TRCallableObject",
+	"category" : "Trachel-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"canvas",
+		"color",
+		"path",
+		"strokePaint",
+		"announcer",
+		"element",
+		"matrix",
+		"rotationAngleDegrees",
+		"session"
+	],
+	"name" : "TRShape",
+	"type" : "normal"
+}

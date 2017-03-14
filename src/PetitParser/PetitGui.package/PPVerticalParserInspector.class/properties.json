@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PPParserInspector",
+	"category" : "PetitGui-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PPVerticalParserInspector",
+	"type" : "normal"
+}

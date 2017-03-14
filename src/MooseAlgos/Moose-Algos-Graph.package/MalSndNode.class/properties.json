@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MalNodeWithPreviousAndNext",
+	"category" : "Moose-Algos-Graph",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"visited",
+		"bfsAncestor"
+	],
+	"name" : "MalSndNode",
+	"type" : "normal"
+}

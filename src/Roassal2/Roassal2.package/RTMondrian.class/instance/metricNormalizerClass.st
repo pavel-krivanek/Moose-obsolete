@@ -1,0 +1,3 @@
+hooks
+metricNormalizerClass
+	^ RTMetricNormalizer

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseGroupSetupStorage",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Tombstone"
+	],
+	"instvars" : [
+		"tally"
+	],
+	"name" : "MooseGroupTeardownStorage",
+	"type" : "variable"
+}

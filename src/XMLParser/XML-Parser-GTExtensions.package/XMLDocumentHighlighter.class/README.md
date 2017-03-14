@@ -1,0 +1,1 @@
+This class is highlighter to highlight XML document Text objects using XMLHighlights.

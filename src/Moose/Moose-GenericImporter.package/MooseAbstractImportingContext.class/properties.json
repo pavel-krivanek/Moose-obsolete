@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "cyrille.delaunay 12/11/2009 16:14",
+	"super" : "Object",
+	"category" : "Moose-GenericImporter",
+	"classinstvars" : [
+		"entityDependencies"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"entityDependencies",
+		"meta",
+		"contextEntities",
+		"entitiesToBeExtracted",
+		"fm3Elements"
+	],
+	"name" : "MooseAbstractImportingContext",
+	"type" : "normal"
+}

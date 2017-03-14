@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "PPCompositeParser",
+	"category" : "PetitIndent-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list",
+		"command",
+		"indent",
+		"dedent",
+		"emptyLine",
+		"contentElement",
+		"lineEnd",
+		"prefix",
+		"_indent",
+		"_dedent"
+	],
+	"name" : "PPNestedStmtListsParser",
+	"type" : "normal"
+}

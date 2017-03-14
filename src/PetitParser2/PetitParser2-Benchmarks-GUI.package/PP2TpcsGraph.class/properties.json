@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2FiveNumberSummaryGraph",
+	"category" : "PetitParser2-Benchmarks-GUI-Graphs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PP2TpcsGraph",
+	"type" : "normal"
+}

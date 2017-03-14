@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "akevalion 8/25/2015 03:40",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"extent",
+		"nodePadding",
+		"nodes",
+		"links",
+		"iterations",
+		"elements",
+		"linkFrom",
+		"linkTo",
+		"linkValue"
+	],
+	"name" : "RTSankeyBuilder",
+	"type" : "normal"
+}

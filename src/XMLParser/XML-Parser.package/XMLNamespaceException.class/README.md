@@ -1,0 +1,1 @@
+Invoked when namespaces are used improperly and namespace checking is on.

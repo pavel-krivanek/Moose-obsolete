@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MPImportCommand",
+	"category" : "Moose-Wizard",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MPImportSTCommand",
+	"type" : "normal"
+}

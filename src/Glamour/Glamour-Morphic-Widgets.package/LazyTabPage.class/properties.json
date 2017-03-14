@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "BorderedMorph",
+	"category" : "Glamour-Morphic-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"actualPageMorph",
+		"labelMorph",
+		"lazyPageMorphCreation",
+		"toolbar"
+	],
+	"name" : "LazyTabPage",
+	"type" : "normal"
+}

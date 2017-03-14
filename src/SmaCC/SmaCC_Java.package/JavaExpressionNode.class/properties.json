@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC_Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"_leftParens",
+		"_rightParens"
+	],
+	"name" : "JavaExpressionNode",
+	"type" : "normal"
+}

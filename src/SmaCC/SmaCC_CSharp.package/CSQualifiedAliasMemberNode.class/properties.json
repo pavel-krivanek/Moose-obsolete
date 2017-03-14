@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "CSTypeNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"global",
+		"colonColonToken",
+		"name",
+		"typeArguments"
+	],
+	"name" : "CSQualifiedAliasMemberNode",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLAttributeSpecTest",
+	"category" : "XML-Tests-Parser-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLBasicAttributeSpecTest",
+	"type" : "normal"
+}

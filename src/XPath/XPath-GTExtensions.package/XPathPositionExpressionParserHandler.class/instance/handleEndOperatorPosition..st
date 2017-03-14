@@ -1,0 +1,2 @@
+handling - positions
+handleEndOperatorPosition: aPosition

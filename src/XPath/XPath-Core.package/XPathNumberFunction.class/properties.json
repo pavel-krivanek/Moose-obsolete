@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 12/27/2014 00:37",
+	"super" : "XPathFunction",
+	"category" : "XPath-Core-Functions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathNumberFunction",
+	"type" : "normal"
+}

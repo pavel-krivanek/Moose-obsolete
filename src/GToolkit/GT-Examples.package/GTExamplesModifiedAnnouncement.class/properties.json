@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "TudorGirba 8/21/2016 07:38",
+	"super" : "Announcement",
+	"category" : "GT-Examples-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcement",
+		"added",
+		"removed"
+	],
+	"name" : "GTExamplesModifiedAnnouncement",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TudorGirba 1/27/2011 21:30",
+	"super" : "FAMIXAbstractFile",
+	"category" : "Famix-File",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"entities"
+	],
+	"name" : "FAMIXFile",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "JSProgramNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"statements"
+	],
+	"name" : "JSFileNode",
+	"type" : "normal"
+}

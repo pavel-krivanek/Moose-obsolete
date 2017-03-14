@@ -1,0 +1,30 @@
+{
+	"commentStamp" : "monty 3/1/2017 15:11",
+	"super" : "XMLHighlighter",
+	"category" : "XML-Parser-GTExtensions-Highlighting",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"xmlDeclarationColor",
+		"doctypeDeclarationColor",
+		"declarationColor",
+		"piColor",
+		"entityReferenceColor",
+		"commentColor",
+		"tagColor",
+		"cdataColor",
+		"quotedStringValueColor",
+		"xmlDeclarationHighlight",
+		"doctypeDeclarationHighlight",
+		"declarationHighlight",
+		"piHighlight",
+		"entityReferenceHighlight",
+		"commentHighlight",
+		"tagHighlight",
+		"cdataHighlight",
+		"quotedStringValueHighlight"
+	],
+	"name" : "XMLDocumentHighlighter",
+	"type" : "normal"
+}

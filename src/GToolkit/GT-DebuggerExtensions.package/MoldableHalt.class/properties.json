@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Halt",
+	"category" : "GT-DebuggerExtensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MoldableHalt",
+	"type" : "normal"
+}

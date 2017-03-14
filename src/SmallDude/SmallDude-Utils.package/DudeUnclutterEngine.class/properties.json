@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmallDude-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"itCount",
+		"upperLimit",
+		"data1"
+	],
+	"name" : "DudeUnclutterEngine",
+	"type" : "normal"
+}

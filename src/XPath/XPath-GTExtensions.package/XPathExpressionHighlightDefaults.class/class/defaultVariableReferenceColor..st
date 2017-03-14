@@ -1,0 +1,3 @@
+accessing
+defaultVariableReferenceColor: aTextColor
+	defaultVariableReferenceColor := aTextColor

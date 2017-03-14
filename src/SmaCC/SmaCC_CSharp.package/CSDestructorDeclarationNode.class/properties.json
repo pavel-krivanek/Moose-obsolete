@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "CSDeclarationNode",
+	"category" : "SmaCC_CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"tildeToken",
+		"identifierToken",
+		"leftParenToken",
+		"rightParenToken",
+		"body"
+	],
+	"name" : "CSDestructorDeclarationNode",
+	"type" : "normal"
+}

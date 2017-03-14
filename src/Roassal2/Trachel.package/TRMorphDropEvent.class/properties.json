@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TRShapeEvent",
+	"category" : "Trachel-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"droppedMorph",
+		"dropMorphEvent"
+	],
+	"name" : "TRMorphDropEvent",
+	"type" : "normal"
+}

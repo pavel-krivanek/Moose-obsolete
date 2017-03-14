@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTComposerTest",
+	"category" : "Roassal2-Builder-Composer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTUnoptimizedComposerTest",
+	"type" : "normal"
+}

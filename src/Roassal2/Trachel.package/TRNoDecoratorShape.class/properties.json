@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRAbstractLineDecoratorShape",
+	"category" : "Trachel-ShapesForArrow",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRNoDecoratorShape",
+	"type" : "normal"
+}

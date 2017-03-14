@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Collection",
+	"category" : "Fame-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selector",
+		"owner",
+		"opposite"
+	],
+	"name" : "FMNullMultivalueLink",
+	"type" : "normal"
+}

@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "RicardoJacas 5/9/2014 23:58",
+	"super" : "TRShape",
+	"category" : "Trachel-ShapesForArrow",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"size",
+		"to",
+		"from",
+		"width",
+		"open",
+		"type",
+		"baseSize",
+		"percentage"
+	],
+	"name" : "TRAbstractLineDecoratorShape",
+	"type" : "normal"
+}

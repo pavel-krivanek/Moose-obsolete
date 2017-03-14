@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXGraphTraverser",
+	"category" : "Famix-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"traversal"
+	],
+	"name" : "FAMIXCustomGraphTraverser",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Builder-Common",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"builder",
+		"shapes"
+	],
+	"name" : "RTShapeBuilderTest",
+	"type" : "normal"
+}

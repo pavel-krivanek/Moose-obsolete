@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TudorGirba 1/27/2011 21:34",
+	"super" : "FAMIXSourceAnchor",
+	"category" : "Famix-SourceAnchor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"source"
+	],
+	"name" : "FAMIXSourceTextAnchor",
+	"type" : "normal"
+}

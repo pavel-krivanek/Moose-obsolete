@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "AlexandreBergel 7/21/2015 15:25",
+	"super" : "Announcement",
+	"category" : "Trachel-Events",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"canvas",
+		"position",
+		"morph"
+	],
+	"name" : "TREvent",
+	"type" : "normal"
+}

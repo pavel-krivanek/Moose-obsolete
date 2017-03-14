@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PP2Strategy",
+	"category" : "PetitParser2-Context",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PP2Pop",
+	"type" : "normal"
+}
