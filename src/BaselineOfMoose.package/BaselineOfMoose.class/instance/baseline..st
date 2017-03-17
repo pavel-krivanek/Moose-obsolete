@@ -122,7 +122,11 @@ baseline: spec
 		self baselineBeacon: spec.
 		self baselinePetitParser2GUI: spec.
 		self baselineMooseAlgos: spec.
-		self baselineSmallDude: spec.
+
+		#(
+			 'SmallDude-Utils'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #SmallDude) ]].
 		
 		#(	
 			'PetitSQLite-Parser'
