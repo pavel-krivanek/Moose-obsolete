@@ -1,1 +1,1 @@
-This is a base class for AST node visitors that output the AST using a write stream.
+This is a base class for AST node visitors that output the AST using a write stream. Instances can be created with #on: to supply a write stream or #new, which will create one, and the result of writing can be obtained with #asString or #contents. (#printString and #printOn: will truncate the output.)

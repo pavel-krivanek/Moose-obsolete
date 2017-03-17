@@ -1395,8 +1395,8 @@ _field_modifiers
 	| field_modifiers
 	;
 field_modifiers
-	: field_modifier
-	| field_modifiers field_modifier
+	: field_modifier 'modifier'
+	| field_modifiers field_modifier 'modifier'
 	;
 field_modifier
 	: ""new""

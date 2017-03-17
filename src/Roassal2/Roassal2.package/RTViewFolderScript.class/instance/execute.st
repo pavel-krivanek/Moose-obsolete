@@ -1,7 +1,7 @@
 hooks
 execute
 	
-	| fr allChildren b |
+	| fr allChildren b lb |
 	fr := UIManager default chooseDirectory.
 	fr ifNil: [ ^ self ].
 	allChildren := fr allChildren.
@@ -9,6 +9,8 @@ execute
 
 	b := RTMondrian new.
 
+	b shape box
+		withTextAbove: #basename.
 	b nodes: fr children forEach: [ :fileRef |
 		b shape box 
 			size: [ :f | (f size + 1) log * 3 ].
@@ -19,7 +21,18 @@ execute
 	].
 	b layout verticalLine.
 	b normalizer
-		objects: allChildren;
+		objects: (allChildren reject: #isDirectory);
 		distinctColorUsing: #extension.
 
-	b inspect
+	b build.
+	
+	lb := RTLegendBuilder new.
+	lb view: b view.
+	lb addText: 'Visualization of the folder named ', fr basename.
+	lb addText: 'Root folder are indicated as large gray boxes.'.
+	lb addText: 'Colored boxes are files.'.
+	lb addText: 'Each color indicate a file extension'.
+	lb build.
+	
+	b view inspect.
+	

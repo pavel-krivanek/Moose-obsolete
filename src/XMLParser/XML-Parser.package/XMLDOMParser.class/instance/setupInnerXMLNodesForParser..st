@@ -10,5 +10,5 @@ setupInnerXMLNodesForParser: aParser
 					forParser: aParser]].
 
 	(context := self topNode newInnerXMLContext) isContentContext
-		ifTrue: [isInContent := true].
+		ifTrue: [self startContent].
 	aParser context: context.

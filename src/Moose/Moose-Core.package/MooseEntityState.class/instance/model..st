@@ -1,3 +1,4 @@
 accessing-common attributes
-model: anObject
-	^ self attributeAt: #privateModel put: anObject
+model: anObject 
+	 
+	^self attributeAt: #privateModel put: anObject

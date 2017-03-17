@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"points",
 		"dotBuilder",
 		"lineBuilder",
 		"shouldConnect",

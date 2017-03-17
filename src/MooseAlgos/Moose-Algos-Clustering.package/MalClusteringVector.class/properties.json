@@ -7,10 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"min",
-		"found",
-		"index",
-		"aNumber",
-		"minObsol"
+		"found"
 	],
 	"name" : "MalClusteringVector",
 	"type" : "variable"

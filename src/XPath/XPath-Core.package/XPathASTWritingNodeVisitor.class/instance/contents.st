@@ -1,5 +1,4 @@
 accessing
 contents
-	"returns the full, untruncated output, unlike #printString, which may
-	truncate"
+	"returns a string of the currently written output"
 	^ stream contents
