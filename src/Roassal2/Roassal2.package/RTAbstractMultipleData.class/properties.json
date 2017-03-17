@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractData",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"groupedElements",
+		"interaction",
+		"metrics",
+		"points"
+	],
+	"name" : "RTAbstractMultipleData",
+	"type" : "normal"
+}

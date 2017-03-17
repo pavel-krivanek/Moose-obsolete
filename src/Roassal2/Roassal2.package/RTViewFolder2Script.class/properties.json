@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTUsefulScript",
+	"category" : "Roassal2-Plugins",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTViewFolder2Script",
+	"type" : "normal"
+}

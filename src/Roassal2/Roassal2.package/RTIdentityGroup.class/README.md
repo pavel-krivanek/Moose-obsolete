@@ -1,0 +1,1 @@
+This class is useful to contains objects for which their class have overriden #= (e.g., AST Nodes)
