@@ -7,6 +7,8 @@ baseline: spec
 		spec preLoadDoIt: #'preload:package:'.
 		spec postLoadDoIt: #'postload:package:'.
 		
+		self baselinePharoOverrides: spec. 
+
 		self baselineGrease: spec. 
 		self baselineMagritte3: spec.
 		self baselineHashtable: spec.
@@ -101,7 +103,6 @@ baseline: spec
 		
 		self baselinePetitParser2: spec.
 		self baselineGeometry: spec.
-		self baselineNeoJSON: spec.
 		self baselineAthens: spec.
 		self baselineRoassal2: spec.
 
