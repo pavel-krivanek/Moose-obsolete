@@ -9,7 +9,8 @@
 		"groupedElements",
 		"interaction",
 		"metrics",
-		"points"
+		"points",
+		"colors"
 	],
 	"name" : "RTAbstractMultipleData",
 	"type" : "normal"
