@@ -1,6 +1,6 @@
 tests
 testFindElementWithID
-	| dtd content document idElement xmlIDElement |
+	| dtd content contentWithUndeclaredAttribute document idElement xmlIDElement |
 
 	dtd := '
 		<!DOCTYPE a [
@@ -25,11 +25,22 @@ testFindElementWithID
 			<d xml:id="two"/>
 			<e/>
 		</a>'.
+	contentWithUndeclaredAttribute := '
+		<a>
+			<b id="one"/>
+			<c id="one"/>
+			<d xml:id="two" undeclared="three"/>
+			<e />
+		</a>'.
 
 	#(true false) do: [:isValidating |
 		document :=
 			XMLDOMParser
-				parse: dtd, content
+				parse:
+					dtd,
+						(isValidating
+							ifTrue: [content]
+							ifFalse: [contentWithUndeclaredAttribute])
 				usingNamespaces: true
 				validation: isValidating.
 		idElement := document findElementNamed: 'c'.
@@ -57,7 +68,7 @@ testFindElementWithID
 	#(true false) do: [:isValidating |
 		document :=
 			XMLDOMParser
-				parse: content
+				parse: contentWithUndeclaredAttribute
 				usingNamespaces: true
 				validation: isValidating.
 		xmlIDElement := document findElementNamed: 'd'.

@@ -1,3 +1,0 @@
-tests
-testCreateTableWith9Columns
-	super testCreateTableWith9Columns.

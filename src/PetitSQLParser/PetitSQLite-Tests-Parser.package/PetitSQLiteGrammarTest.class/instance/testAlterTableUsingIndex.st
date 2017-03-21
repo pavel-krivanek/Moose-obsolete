@@ -1,6 +1,0 @@
-tests
-testAlterTableUsingIndex
-	
-	self 
-		parse: 'ALTER TABLE PX_KM_ALLERGY ADD  CONSTRAINT PX_KM_ALLERGY_PK PRIMARY KEY (PATID, FORMID, RECORDID) USING INDEX'
-		rule: #alterTable.

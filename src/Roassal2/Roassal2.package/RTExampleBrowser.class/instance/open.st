@@ -1,7 +1,7 @@
 instance creation
 open
 	| pager |
-	self checkSendingData.
+	self shouldEventBeManaged ifTrue: [ self checkSendingData ]. 
 	pager := GLMPager new.
 	pager title: 'Roassal examples browser'.
 	pager showFirst: [ :a | a list format: #label. ].

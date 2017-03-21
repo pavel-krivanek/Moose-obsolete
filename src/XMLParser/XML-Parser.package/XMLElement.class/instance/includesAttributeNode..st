@@ -1,3 +1,3 @@
 testing
 includesAttributeNode: aName
-	^ self attributeNodes includesAttributeNode: aName.
+	^ self attributeNodes includesAttributeNode: aName

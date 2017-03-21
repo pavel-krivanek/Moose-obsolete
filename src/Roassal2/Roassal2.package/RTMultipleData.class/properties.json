@@ -1,11 +1,16 @@
 {
-	"commentStamp" : "AlexandreBergel 3/16/2017 11:15",
-	"super" : "RTHorizontalMultipleData",
-	"category" : "Roassal2-Builder-Grapher-Obsolete",
+	"commentStamp" : "AlexandreBergel 9/23/2015 17:31",
+	"super" : "RTAbstractData",
+	"category" : "Roassal2-Builder-Grapher-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"points",
+		"interaction",
+		"metrics",
+		"groupedElements"
+	],
 	"name" : "RTMultipleData",
 	"type" : "normal"
 }

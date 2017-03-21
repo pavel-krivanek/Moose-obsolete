@@ -1,3 +1,0 @@
-tests
-testOptimized
-	self assert: self parserInstance isOptimized
