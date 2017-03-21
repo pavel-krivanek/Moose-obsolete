@@ -1,18 +1,17 @@
 {
-	"commentStamp" : "AlexandreBergel 7/17/2015 21:44",
+	"commentStamp" : "",
 	"super" : "RTAbstractData",
 	"category" : "Roassal2-Builder-Grapher-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"dotBuilder",
-		"lineBuilder",
-		"shouldConnect",
+		"groupedElements",
 		"interaction",
-		"shouldHaveBars",
-		"alignmentOffset"
+		"metrics",
+		"points",
+		"colors"
 	],
-	"name" : "RTData",
+	"name" : "RTAbstractMultipleData",
 	"type" : "normal"
 }

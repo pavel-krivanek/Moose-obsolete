@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 3/16/2017 11:13",
+	"super" : "RTAbstractMultipleData",
+	"category" : "Roassal2-Builder-Grapher-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTVerticalMultipleData",
+	"type" : "normal"
+}

@@ -1,7 +1,7 @@
-sources
-exampleMultiDataPoint
+RTHorizontalMultipleData handles multiple metrics per data points. It is rendered using bar chart.
 
-| b d |
+[[[ 
+| b d |			
 b := RTGrapher new.
 
 d := RTHorizontalMultipleData new.
@@ -15,4 +15,6 @@ d addMetric: #fourth.
 d barChartWithBarTitle: #first rotation: -30.
 
 b add: d.
-^ b 
+
+b
+ ]]]

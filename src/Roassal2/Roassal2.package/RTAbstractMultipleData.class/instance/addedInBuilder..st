@@ -8,8 +8,8 @@ addedInBuilder: aBuilder
 		| values es |
 		values := metrics collect: [ :m | m rtValue: p ].
 		es := barBuilder elementsOn: values.
-		es doWithIndex: [ :e :index | e trachelShape color: (self colorPalette at: index) ].
+		es doWithIndex: [ :e :index | e trachelShape color: (self colorsToUse at: index) ].
 		groupedElements add: es.
 		elements addAll: es
 		 ] separatedBy: [ elements add: ((RTBox new size: 0) elementOn: 0) ].
-	builder view addAll: elements
+	self addAll: elements

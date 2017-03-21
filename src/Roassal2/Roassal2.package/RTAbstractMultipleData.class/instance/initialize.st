@@ -8,3 +8,4 @@ initialize
 	y := [ :anElement | anElement model ].
 	self resetMinAndMax.
 	self resetShapeBuilderForBar.
+	colors := OrderedCollection new

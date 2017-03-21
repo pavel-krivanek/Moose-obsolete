@@ -1,14 +1,11 @@
-hooks
+rendering
 renderIn: aView
 
 	"We need to do the layout here"
 
-| centralDot positiveElements negativeElements  |
+	| centralDot positiveElements negativeElements  |
 	centralDot := self centralDot.
-	
-"	elements := barBuilder elementsOn: self points.
-	builder view addAll: elements.
-"	"interaction setUpElements: elements."
+
 	RTMetricNormalizer new
 		elements: elements;
 		normalizeElementX: [ :anElement | x rtValue: anElement ]
