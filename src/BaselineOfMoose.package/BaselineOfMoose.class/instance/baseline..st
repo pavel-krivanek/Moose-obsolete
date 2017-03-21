@@ -148,7 +148,7 @@ baseline: spec
 
 		self baselineArki: spec.
 		self baselineDynaMoose: spec.
-		"self baselinePetitJava: spec."
+		self baselinePetitJava: spec.
 		self baselineSmaCC: spec.
 		self baselineZeroConf: spec.
 		
