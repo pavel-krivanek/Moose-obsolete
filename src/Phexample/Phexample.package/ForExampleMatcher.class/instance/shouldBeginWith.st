@@ -1,3 +1,3 @@
 examples-expecting-string
-shouldBeginWith
+shouldBeginWith 
 	'abcdef' should beginWith: 'abc'.
