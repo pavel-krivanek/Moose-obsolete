@@ -1,5 +1,5 @@
 accessing actions
 extractExecutingSubscription
 	
-	^ context ifNotNilDo: [:aContext|
+	^ context ifNotNil: [:aContext|
 		(aContext tempNamed: 'subs') at: (aContext tempNamed: 'index')  ]

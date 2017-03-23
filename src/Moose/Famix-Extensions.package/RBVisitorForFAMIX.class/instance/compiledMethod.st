@@ -7,4 +7,4 @@ compiledMethod
 	realSTClass := (mooseEntity hasClassScope and: [self stClass class ~= Metaclass])
 		ifTrue: [self stClass class]
 		ifFalse: [self stClass].
-	^ realSTClass methodDict at: selector
+	^ realSTClass compiledMethodAt: selector ifAbsent:[ ]

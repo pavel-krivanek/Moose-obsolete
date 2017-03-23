@@ -19,4 +19,4 @@ addAssignmentForReturn: val
 							[  (val isVariableBinding and: [ val key = #blockArg ])
 							ifTrue: [
 							]
-						ifFalse: [(self assignmentTypeOf: val) ifNotNilDo: [ :result | eT addAssignment: result ] ] ] ]]
+						ifFalse: [(self assignmentTypeOf: val) ifNotNil: [ :result | eT addAssignment: result ] ] ] ]]

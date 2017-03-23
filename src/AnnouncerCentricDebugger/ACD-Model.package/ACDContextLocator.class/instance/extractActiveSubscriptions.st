@@ -1,4 +1,4 @@
 accessing actions
 extractActiveSubscriptions
 
-	^ context ifNotNilDo: [:aContext| aContext tempNamed: 'subs']
+	^ context ifNotNil: [:aContext| aContext tempNamed: 'subs']

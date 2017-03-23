@@ -17,7 +17,7 @@ handleAssignment: val for: index
 							[ (typingResults at: index + 1) addReverseLinkedExtractedType: (self extractedTypeForReturnInMethod: theClass >> val value) ]
 						ifFalse: 
 							[ (val isVariableBinding and: [ val key = #blockArg ]) 
-							ifFalse: [(self assignmentTypeOf: val) ifNotNilDo: 
+							ifFalse: [(self assignmentTypeOf: val) ifNotNil: 
 								[ :result | 
 								self 
 									addAssignment: result

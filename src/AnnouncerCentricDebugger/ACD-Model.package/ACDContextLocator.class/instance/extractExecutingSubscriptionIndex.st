@@ -1,4 +1,4 @@
 accessing actions
 extractExecutingSubscriptionIndex
 
-	^ context ifNotNilDo: [:aContext| aContext tempNamed: 'index' ]
+	^ context ifNotNil: [:aContext| aContext tempNamed: 'index' ]

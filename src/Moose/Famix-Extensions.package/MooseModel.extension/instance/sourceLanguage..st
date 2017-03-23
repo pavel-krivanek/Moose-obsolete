@@ -1,3 +1,3 @@
 *Famix-Extensions
 sourceLanguage: aSymbol
-	^sourceLanguage := aSymbol
+	sourceLanguage := aSymbol

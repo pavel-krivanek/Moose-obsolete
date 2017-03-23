@@ -1,0 +1,3 @@
+moosequery-queries-incoming
+queryAllIncomingInvocations
+	^ MooseQueryResult new
