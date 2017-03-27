@@ -10,7 +10,6 @@
 	"instvars" : [
 		"contextBlockVariables",
 		"contextBlockIndex",
-		"locationPathRootVariable",
 		"nodeTests"
 	],
 	"name" : "XPathASTTranslatingWritingNodeVisitor",

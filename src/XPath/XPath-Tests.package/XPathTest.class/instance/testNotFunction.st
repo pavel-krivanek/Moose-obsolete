@@ -5,8 +5,8 @@ testNotFunction
 		assert: 'not(false())' asXPath evaluate;
 		deny: 'not(1) or not("1")' asXPath evaluate;
 		assert: 'not(0) and not("")' asXPath evaluate;
-		deny: (document xPath: 'not(/node())');
-		assert: (document xPath: 'not(/text())').
+		deny: (document xpath: 'not(/node())');
+		assert: (document xpath: 'not(/text())').
 	self
 		should: ['not()' asXPath evaluate]
 		raise: XPathArgumentNumberException.

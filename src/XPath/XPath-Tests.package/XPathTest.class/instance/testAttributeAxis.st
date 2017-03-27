@@ -6,14 +6,23 @@ testAttributeAxis
 		XPath
 			for: 'addressbook/person/address/@city'
 			in: document.
-	self assert: result size = 4.
-	result do: [:each |
-		self
-			assert: each class == XMLAttribute;
-			assert: each name = 'city'].
-	self assert:
-		(result collect: [:each | each value]) asArray =
-			#('Los Angeles' 'New York' 'Los Angeles' 'New York').
+	expected := XMLNodeList new.
+	document root
+		elementsAt: 'person'
+		do: [:person |
+			person
+				elementsAt: 'address'
+				do: [:each |
+					(each includesAttribute: 'city')
+						ifTrue: [
+							expected addLast:
+								(each attributeNodeAt: 'city')]]].
+	self
+		assertNodeSet: result
+		hasNodes: expected.
+	self
+		assertNodeSet: result
+		hasSortOrder: XPathLevelDocumentSortOrder.
 
 	"attribute nodes don't have attributes"
 	self assert: 
@@ -21,13 +30,15 @@ testAttributeAxis
 			for: 'addressbook/person/address/@city/@city'
 			in: document) isEmpty.
 
-	expected := XMLNodeList new.
+	expected removeAll.
 	(document allElementsNamed: 'person') allButLast do: [:each |
 		expected addAll: each attributeNodes].
 	result :=
-		(document allElementsNamed: 'person') last xPath:
+		(document allElementsNamed: 'person') last xpath:
 			'preceding-sibling::node()/attribute::node()'.
-	self assert: result = expected.
 	self
 		assertNodeSet: result
-		hasSortOrder: XPathDocumentSortOrder.
+		hasNodes: expected.
+	self
+		assertNodeSet: result
+		hasSortOrder: XPathLevelDocumentSortOrder.

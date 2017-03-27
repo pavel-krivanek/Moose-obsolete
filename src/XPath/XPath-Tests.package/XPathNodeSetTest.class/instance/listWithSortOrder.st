@@ -1,3 +1,3 @@
 accessing
 listWithSortOrder
-	^ self listWithItems sortOrder: XPathDocumentSortOrder new
+	^ self listWithItems sortOrder: XPathLevelDocumentSortOrder new

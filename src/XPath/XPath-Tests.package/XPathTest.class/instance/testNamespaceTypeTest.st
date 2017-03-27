@@ -11,10 +11,10 @@ testNamespaceTypeTest
 					ifTrue: [results addLast: each]]].
 	self
 		assertNodeSet:
-			(namespacedDocument xPath: '//namespace::node() | //text()')
+			(namespacedDocument xpath: '//namespace::node() | //text()')
 		hasNodes: results.
 	self
 		assertNodeSet:
-			(namespacedDocument xPath:
+			(namespacedDocument xpath:
 				'(//namespace::node() | //text())/ self :: namespace()')
 		hasNodes: (results select: [:each | each isNamespace]).

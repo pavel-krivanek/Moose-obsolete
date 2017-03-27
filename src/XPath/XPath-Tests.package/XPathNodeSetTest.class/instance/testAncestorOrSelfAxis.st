@@ -7,23 +7,12 @@ testAncestorOrSelfAxis
 	self
 		assertList: result
 		copiedFrom: list
-		equals:
-			((self listClass with: self listElements first)
-				addAll: self listElements first ancestorElements;
-				addAll: self listElements allButFirst;
-				yourself).
-	self
-		assertListHasUnknownSortOrder: result;
-		assert: (result %%~ 'absent') isEmpty.
+		hasNodes: self listElements, self listElements first ancestorElements.
+	self assert: (result %%~ 'absent') isEmpty.
 
 	result := list %%~ 'root'.
 	self
 		assertList: result
 		copiedFrom: list
-		equals:
-			(self listClass with:
-				self listElements first ancestorElements first).
-	self
-		assertList: result
-		hasSortOrder: XPathReverseDocumentSortOrder.
+		hasNode: self listItems first ancestorElements last.
 	self assert: (result %%~ 'absent') isEmpty.

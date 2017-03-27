@@ -1,9 +1,9 @@
 enumerating - axis
 %% aStringOrBlockOrNodeTestWithPredicates
-	^ aStringOrBlockOrNodeTestWithPredicates isXPathNodeTestWithPredicates
+	^ (aStringOrBlockOrNodeTestWithPredicates isXPathNodeTestWithPredicates
 		ifTrue: [
 			self
 				ancestorAxis: aStringOrBlockOrNodeTestWithPredicates nodeTest
 				predicates: aStringOrBlockOrNodeTestWithPredicates predicates]
 		ifFalse: [
-			self ancestorAxis: aStringOrBlockOrNodeTestWithPredicates]
+			self ancestorAxis: aStringOrBlockOrNodeTestWithPredicates]) sort

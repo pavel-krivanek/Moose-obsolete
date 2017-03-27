@@ -1,3 +1,3 @@
-as yet unclassified
+hooks
 label
 	^ 'Network Latency application'

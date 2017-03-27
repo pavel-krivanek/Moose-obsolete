@@ -7,18 +7,18 @@ testOptimizedPredicatePrecedingAxis
 			element precedingNodes anySatisfy: [:each |
 				each isElementNamed: 'address']].
 	self
-		assertNodeSet: (document xPath: '//*[preceding::address]')
+		assertNodeSet: (document xpath: '//*[preceding::address]')
 		hasNodes: preceding.
 	self
-		assertNodeSet: (document xPath: '//*[preceding::address[true()]]')
+		assertNodeSet: (document xpath: '//*[preceding::address[true()]]')
 		hasNodes: preceding.
 	self
-		assertNodeSet: (document xPath: '//*[./preceding::address]')
+		assertNodeSet: (document xpath: '//*[./preceding::address]')
 		hasNodes: preceding.
 	self
-		assert: (document xPath: '//*[preceding::absent]') isEmpty;
-		assert: (document xPath: '//*[preceding::node()[false()]]') isEmpty;
-		assert: (document xPath: '//*[./preceding::absent]') isEmpty.
+		assert: (document xpath: '//*[preceding::absent]') isEmpty;
+		assert: (document xpath: '//*[preceding::node()[false()]]') isEmpty;
+		assert: (document xpath: '//*[./preceding::absent]') isEmpty.
 
 	preceding :=
 		textDocument allNodesSelect: [:node |
@@ -26,20 +26,20 @@ testOptimizedPredicatePrecedingAxis
 				includes: 'two'].
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[preceding::node() = "two"]')
+			(textDocument xpath: '//node()[preceding::node() = "two"]')
 		hasNodes: preceding.
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[preceding::node()[true()] = "two"]')
+			(textDocument xpath: '//node()[preceding::node()[true()] = "two"]')
 		hasNodes: preceding.
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[./preceding::node() = "two"]')
+			(textDocument xpath: '//node()[./preceding::node() = "two"]')
 		hasNodes: preceding.
 	self
 		assert:
-			(document xPath: '//node()[preceding::node() = "absent"]') isEmpty;
+			(document xpath: '//node()[preceding::node() = "absent"]') isEmpty;
 		assert:
-			(document xPath: '//node()[preceding::node()[false()] = "two"]') isEmpty;
+			(document xpath: '//node()[preceding::node()[false()] = "two"]') isEmpty;
 		assert:
-			(document xPath: '//node()[./preceding::node() = "absent"]') isEmpty.
+			(document xpath: '//node()[./preceding::node() = "absent"]') isEmpty.

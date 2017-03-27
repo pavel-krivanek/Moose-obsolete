@@ -1,4 +1,4 @@
 copying
 copyAfterLast: anObject
 	"copies that don't add or replace keep sort order"
-	^ (super copyAfterLast: anObject) sortOrderFrom: self
+	^ (super copyAfterLast: anObject) sortOrder: self sortOrder

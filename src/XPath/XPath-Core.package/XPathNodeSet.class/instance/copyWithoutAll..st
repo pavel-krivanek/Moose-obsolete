@@ -1,4 +1,4 @@
 copying
 copyWithoutAll: aCollection
 	"copies that don't add or replace keep sort order"
-	^ (super copyWithoutAll: aCollection) sortOrderFrom: self
+	^ (super copyWithoutAll: aCollection) sortOrder: self sortOrder

@@ -3,38 +3,16 @@ testAncestorOrSelfAxisPredicates
 	| list result |
 
 	list := self listWithItems.
-	result :=
-		list
-			ancestorOrSelfAxis: '*'
-			predicates: #(2).
+	result := list %%~ ('*' ?? 2).
 	self
 		assertList: result
 		copiedFrom: list
-		equals:
-			(self listClass with:
-				self listElements first ancestorElements first).
-	self
-		assertList: result
-		hasSortOrder: XPathReverseDocumentSortOrder.
-	self assert:
-		(result
-			ancestorOrSelfAxis: '*'
-			predicates: #(2)) isEmpty.
+		hasNode: self listItems first ancestorElements first.
+	self assert: (result %%~ ('*' ?? 2)) isEmpty.
 
-	result :=
-		list
-			ancestorOrSelfAxis: 'root'
-			predicates: #(1).
+	result := list %%~ ('root' ?? 1).
 	self
 		assertList: result
 		copiedFrom: list
-		equals:
-			(self listClass with:
-				self listElements first ancestorElements first).
-	self
-		assertList: result
-		hasSortOrder: XPathReverseDocumentSortOrder.
-	self assert:
-		(result
-			ancestorOrSelfAxis: 'root'
-			predicates: #(2)) isEmpty.
+		hasNode: self listItems first ancestorElements last.
+	self assert: (result %%~ ('root' ?? 2)) isEmpty.

@@ -28,11 +28,11 @@ testLangFunction
 			</doc>'.
 	self
 		assertNodeSet:
-			(docWithLangElements xPath: '/descendant-or-self::*[lang("en")]')
+			(docWithLangElements xpath: '/descendant-or-self::*[lang("en")]')
 		hasNodes:
 			docWithLangElements root descendantElements.
 	self
 		assertNodeSet:
-			(docWithLangElements xPath: '/descendant-or-self::*[lang("en-us")]')
+			(docWithLangElements xpath: '/descendant-or-self::*[lang("en-us")]')
 		hasNodes:
 			(XMLNodeList with: docWithLangElements descendantElements last).

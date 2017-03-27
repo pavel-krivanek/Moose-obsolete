@@ -1,3 +1,9 @@
 *XPath-Core-enumerating - axis
-~ aNodeTestStringOrBlock
-	^ self selfAxis: aNodeTestStringOrBlock
+~ aStringOrBlockOrNodeTestWithPredicates
+	^ aStringOrBlockOrNodeTestWithPredicates isXPathNodeTestWithPredicates
+		ifTrue: [
+			self
+				selfAxis: aStringOrBlockOrNodeTestWithPredicates nodeTest
+				predicates: aStringOrBlockOrNodeTestWithPredicates predicates]
+		ifFalse: [
+			self selfAxis: aStringOrBlockOrNodeTestWithPredicates]

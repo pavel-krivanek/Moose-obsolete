@@ -5,7 +5,7 @@ testNodeSetComparing
 			<a>1</a><a>2</a><a>3</a>
 			<b>0</b>
 			<c>4</c>
-		</list>' parseXML xPath:
+		</list>' parseXML xpath:
 			'list/a < list/a
 				and list/a <= list/a
 				and list/a > list/a

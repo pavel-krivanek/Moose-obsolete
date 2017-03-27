@@ -3,7 +3,7 @@ testUnabbreviatedChildAxis
 	specificationDocument allNodesDo: [:node |
 		"selects the para element children of the context node"
 		self
-			assertNodeSet: (node xPath: 'child::para')
+			assertNodeSet: (node xpath: 'child::para')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [node elementsAt: 'para']
@@ -11,7 +11,7 @@ testUnabbreviatedChildAxis
 
 		"selects all element children of the context node"
 		self
-			assertNodeSet: (node xPath: 'child::*')
+			assertNodeSet: (node xpath: 'child::*')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [node elements]
@@ -19,7 +19,7 @@ testUnabbreviatedChildAxis
 
 		"selects all text node children of the context node"
 		self
-			assertNodeSet: (node xPath: 'child::text()')
+			assertNodeSet: (node xpath: 'child::text()')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [node stringNodes]
@@ -27,7 +27,7 @@ testUnabbreviatedChildAxis
 
 		"selects all the children of the context node, whatever their node type"
 		self
-			assertNodeSet: (node xPath: 'child::node()')
+			assertNodeSet: (node xpath: 'child::node()')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [node nodes]

@@ -10,8 +10,8 @@ testUnion
 				(addressbook/person[4]/ preceding-sibling::* [position() < 4])'
 			in: document.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
 
 	expected removeAll.
 	document allElementsNamed: 'person' do: [:each |
@@ -22,11 +22,15 @@ testUnion
 			addAll: each elements].
 	result :=
 		XPath
-			for: 'addressbook/person/@* | */person/namespace::* | addressbook/person | */person/*'
+			for:
+				'addressbook/person/@* | ',
+				'*/person/namespace::* | ',
+				'addressbook/person | ',
+				'*/person/*'
 			in: document.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
 
 	expected removeAll.
 	(document allElementsNamed: 'person') first
@@ -35,8 +39,11 @@ testUnion
 		nodesDo: [:each | expected addLast: each].
 	result :=
 		XPath
-			for: 'addressbook/person[1]/node() | */person[1]/@* | addressbook/person[1]/namespace::*'
+			for:
+				'addressbook/person[1]/node() | ',
+				'*/person[1]/@* | ',
+				'addressbook/person[1]/namespace::*'
 			in: document.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.

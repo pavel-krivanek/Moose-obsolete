@@ -1,6 +1,4 @@
 private
 childAxisAnySatisfy: aNodeTest
-	self do: [:each |
-		(each childAxisAnySatisfy: aNodeTest)
-			ifTrue: [^ true]].
-	^ false.
+	^ self anySatisfy: [:each |
+		each childAxisAnySatisfy: aNodeTest]

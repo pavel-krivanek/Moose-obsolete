@@ -8,7 +8,7 @@ testAbbreviatedChildAxisPositionPredicate
 
 		"selects the first para child of the context node"
 		self
-			assertNodeSet: (node xPath: 'para[1]')
+			assertNodeSet: (node xpath: 'para[1]')
 			hasNodes:
 				(paras size > 0
 					ifTrue: [Array with: paras first]
@@ -16,7 +16,7 @@ testAbbreviatedChildAxisPositionPredicate
 
 		"selects the last para child of the context node"
 		self
-			assertNodeSet: (node xPath: 'para[last()]')
+			assertNodeSet: (node xpath: 'para[last()]')
 			hasNodes:
 				(paras size > 0
 					ifTrue: [Array with: paras last]
@@ -24,7 +24,7 @@ testAbbreviatedChildAxisPositionPredicate
 
 		"selects the last but one para child of the context node"
 		self
-			assertNodeSet: (node xPath: 'para[last()-1]')
+			assertNodeSet: (node xpath: 'para[last()-1]')
 			hasNodes:
 				(paras size > 1
 					ifTrue: [Array with: (paras at: paras size - 1)]
@@ -33,7 +33,7 @@ testAbbreviatedChildAxisPositionPredicate
 		"selects all the para children of the context node other than
 		the first para child of the context node"
 		self
-			assertNodeSet: (node xPath: 'para[position()>1]')
+			assertNodeSet: (node xpath: 'para[position()>1]')
 			hasNodes:
 				(paras size > 1
 					ifTrue: [paras allButFirst]

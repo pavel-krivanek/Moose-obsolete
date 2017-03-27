@@ -11,19 +11,19 @@ testNamespaceAxis
 			add: (XPathNamespaceNode element: each name: 'ps' uri: 'personNS')].
 	self assert: nodes size = (namespacedDocument allElements size * 4).
 	self
-		assertNodeSet: (namespacedDocument xPath: '//namespace::*')
+		assertNodeSet: (namespacedDocument xpath: '//namespace::*')
 		hasNodes: nodes.
 	self
-		assertNodeSet: (namespacedDocument xPath: '//namespace::book')
+		assertNodeSet: (namespacedDocument xpath: '//namespace::book')
 		hasNodes: (nodes select: [:each | each name ='book']).
 
 	"namespace nodes can't be prefixed or namespaced themselves:"
 	self
-		assert: (namespacedDocument xPath: '//namespace::book:*') isEmpty;
-		assert: (namespacedDocument xPath: '//namespace::book/namespace::book') isEmpty.
+		assert: (namespacedDocument xpath: '//namespace::book:*') isEmpty;
+		assert: (namespacedDocument xpath: '//namespace::book/namespace::book') isEmpty.
 
 	self
-		assertNodeSet: (document xPath: '//namespace::*')
+		assertNodeSet: (document xpath: '//namespace::*')
 		hasNodes:
 			(document allElementsCollect: [:each |
 				XPathNamespaceNode withXMLNamespaceOnElement: each]).

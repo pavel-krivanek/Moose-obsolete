@@ -1,3 +1,3 @@
 *XPath-Core-evaluating
-xPath: anXPathOrXPathExpressionSourceString
+xpath: anXPathOrXPathExpressionSourceString
 	^ anXPathOrXPathExpressionSourceString asXPath in: self

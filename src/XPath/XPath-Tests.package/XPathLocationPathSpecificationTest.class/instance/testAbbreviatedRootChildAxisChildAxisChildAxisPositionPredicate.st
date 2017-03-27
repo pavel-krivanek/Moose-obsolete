@@ -13,5 +13,5 @@ testAbbreviatedRootChildAxisChildAxisChildAxisPositionPredicate
 		"selects the second section of the fifth chapter of the doc
 		document element"
 		self
-			assertNodeSet: (node xPath: '/doc/chapter[5]/section[2]')
+			assertNodeSet: (node xpath: '/doc/chapter[5]/section[2]')
 			hasNodes: sections]

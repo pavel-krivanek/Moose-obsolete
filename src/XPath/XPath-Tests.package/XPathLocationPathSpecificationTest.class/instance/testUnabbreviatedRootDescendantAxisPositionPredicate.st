@@ -3,7 +3,7 @@ testUnabbreviatedRootDescendantAxisPositionPredicate
 	specificationDocument allNodesDo: [:node |
 		"selects the forty-second figure element in the document"
 		self
-			assertNodeSet: (node xPath: '/descendant::figure[position()=42]')
+			assertNodeSet: (node xpath: '/descendant::figure[position()=42]')
 			hasNodes:
 				(((specificationDocument descendantElementsNamed: 'figure')
 					at: 42)

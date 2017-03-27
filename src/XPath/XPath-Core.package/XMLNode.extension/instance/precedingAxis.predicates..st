@@ -1,4 +1,4 @@
-*XPath-Core-enumerating - predicate axis
+*XPath-Core-private
 precedingAxis: aNodeTestStringOrBlock predicates: aPredicateCollection
 	(aPredicateCollection notEmpty
 		and: [aPredicateCollection first isNumber])

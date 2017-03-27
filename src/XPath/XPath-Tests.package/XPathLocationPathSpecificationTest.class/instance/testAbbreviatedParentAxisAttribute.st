@@ -3,7 +3,7 @@ testAbbreviatedParentAxisAttribute
 	specificationDocument allNodesDo: [:node |
 		"selects the lang attribute of the parent of the context node"
 		self
-			assertNodeSet: (node xPath: '../@lang')
+			assertNodeSet: (node xpath: '../@lang')
 			hasNodes:
 				((node hasParent
 					and: [node parent isElement

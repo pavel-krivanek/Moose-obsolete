@@ -42,7 +42,7 @@ drawOn: aCanvas
 "
 	"surface displayOnMorphicCanvas: aCanvas at: self position."
 	[ aCanvas image: f at: self bounds origin asIntegerPoint sourceRect: (0 @ 0 extent: surface extent) rule: 34 ]
-		on: PrimitiveFailed
+		on: Exception "PrimitiveFailed"
 		do: [ "Maybe just memory object pinning issue so skipping a single paint cycle" ].
 
 	isDrawing := false.

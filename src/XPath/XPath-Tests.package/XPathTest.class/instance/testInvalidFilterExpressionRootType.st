@@ -6,5 +6,5 @@ testInvalidFilterExpressionRootType
 		'(1)/addressbook' '("string")/addressbook' '(true())/addressbook')
 		do: [:each |
 			self
-				should: [document xPath: each]
+				should: [document xpath: each]
 				raise: XPathTypeException]

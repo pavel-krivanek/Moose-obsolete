@@ -3,34 +3,22 @@ testChildAxisPredicates
 	| list result |
 
 	list := self listClass with: self singleListItem parent.
-	result :=
-		list
-			childAxis: '*'
-			predicates: #(3).
+	result := list / ('*' ?? 3).
 	self
 		assertList: result
 		copiedFrom: list
-		equals: (self listClass with: self listElements third).
+		hasNode: self listElements third.
 	self
 		assertList: result
-		hasSortOrder: XPathDocumentSortOrder.
-	self assert:
-		(result
-			childAxis: '*'
-			predicates: #(3)) isEmpty.
+		hasSortOrder: XPathLevelDocumentSortOrder.
+	self assert: (result / ('*' ?? 3)) isEmpty.
 
-	result :=
-		list
-			childAxis: 'three'
-			predicates: #(1).
+	result := list / ('three' ?? 1).
 	self
 		assertList: result
 		copiedFrom: list
-		equals: (self listClass with: self listElements third).
+		hasNode: self listElements third.
 	self
 		assertList: result
-		hasSortOrder: XPathDocumentSortOrder.
-	self assert:
-		(result
-			childAxis: 'three'
-			predicates: #(1)) isEmpty.
+		hasSortOrder: XPathLevelDocumentSortOrder.
+	self assert: (result / ('three' ?? 1)) isEmpty.

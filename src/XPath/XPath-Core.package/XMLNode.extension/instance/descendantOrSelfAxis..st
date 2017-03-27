@@ -1,4 +1,4 @@
-*XPath-Core-enumerating - axis
+*XPath-Core-private
 descendantOrSelfAxis: aNodeTestStringOrBlock
 	^ (self
 		descendantOrSelfAxisSelect: aNodeTestStringOrBlock asXPathNodeTest

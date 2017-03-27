@@ -9,5 +9,5 @@ testUnabbreviatedPrecedingSiblingAxisPositionPredicate
 
 		"selects the next chapter sibling of the context node"
 		self
-			assertNodeSet: (node xPath: 'preceding-sibling::chapter[position()=1]')
+			assertNodeSet: (node xpath: 'preceding-sibling::chapter[position()=1]')
 			hasNodes: chapters]

@@ -53,5 +53,5 @@ testModulus
 				in: nil
 				context:
 					(XPathContext new
-						variableAt: 'var' put: Float xPathNegativeZero;
+						variableAt: 'var' put: Float xpathNegativeZero;
 						yourself)) isNaN].

@@ -5,43 +5,43 @@ testOptimizedChildAxisWithPositionPredicate
 	children :=
 		XMLNodeList with:
 			(document allElementsNamed: 'person') first.
-	result := document xPath: 'addressbook/person[1]'.
+	result := document xpath: 'addressbook/person[1]'.
 	self
 		assertNodeSet: result
 		hasNodes: children.
 	self
 		assertNodeSet: result
-		hasSortOrder: XPathDocumentSortOrder.
-	result := document xPath: 'addressbook/person[1.0][1]'.
+		hasSortOrder: XPathLevelDocumentSortOrder.
+	result := document xpath: 'addressbook/person[1.0][1]'.
 	self
 		assertNodeSet: result
 		hasNodes: children.
 	self
 		assertNodeSet: result
-		hasSortOrder: XPathDocumentSortOrder.
+		hasSortOrder: XPathLevelDocumentSortOrder.
 	self
-		assert: (document xPath: 'addressbook/person[0]') isEmpty;
-		assert: (document xPath: 'addressbook/person[1.2]') isEmpty;
-		assert: (document xPath: 'addressbook/person[1][2]') isEmpty.
+		assert: (document xpath: 'addressbook/person[0]') isEmpty;
+		assert: (document xpath: 'addressbook/person[1.2]') isEmpty;
+		assert: (document xpath: 'addressbook/person[1][2]') isEmpty.
 
 	children :=
 		XMLNodeList with:
 			(document allElementsNamed: 'person') second.
-	result := document xPath: 'addressbook/*[2]'.
+	result := document xpath: 'addressbook/*[2]'.
 	self
 		assertNodeSet: result
 		hasNodes: children.
 	self
 		assertNodeSet: result
-		hasSortOrder: XPathDocumentSortOrder.
-	result := document xPath: 'addressbook/*[2.0][1]'.
+		hasSortOrder: XPathLevelDocumentSortOrder.
+	result := document xpath: 'addressbook/*[2.0][1]'.
 	self
 		assertNodeSet: result
 		hasNodes: children.
 	self
 		assertNodeSet: result
-		hasSortOrder: XPathDocumentSortOrder.
+		hasSortOrder: XPathLevelDocumentSortOrder.
 	self
-		assert: (document xPath: 'addressbook/*[0]') isEmpty;
-		assert: (document xPath: 'addressbook/*[2.2]') isEmpty;
-		assert: (document xPath: 'addressbook/*[2][2]') isEmpty.
+		assert: (document xpath: 'addressbook/*[0]') isEmpty;
+		assert: (document xpath: 'addressbook/*[2.2]') isEmpty;
+		assert: (document xpath: 'addressbook/*[2][2]') isEmpty.

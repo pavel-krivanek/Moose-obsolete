@@ -7,16 +7,16 @@ testDescendantAxis
 	nodeWithElements := self newNodeWithElements.
 	nodeWithElements allNodesDo: [:each |
 		each hasChildren
-			ifTrue: [| list |
-				list := each // 'node()'.
+			ifTrue: [| result |
+				result := each // 'node()'.
 				self
-					assert: list = each descendantNodes;
-					assertList: list hasSortOrder: XPathDocumentSortOrder.
+					assertNodeSet: result
+					hasNodes: each descendantNodes.
 
-				list := each // '*'.
+				result := each // '*'.
 				self
-					assert: list = each descendantElements;
-					assertList: list hasSortOrder: XPathDocumentSortOrder]
+					assertNodeSet: result
+					hasNodes: each descendantElements]
 			ifFalse: [
 				self
 					assert: (each // 'node()') isEmpty;

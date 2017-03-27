@@ -8,9 +8,9 @@ testLocalNameWildcardTest
 			with: 'one' -> 'bookNS'
 			with: 'two' -> 'personNS'.
 	self
-		assertNodeSet: (namespacedDocument xPath: 'book:*/ps:*')
+		assertNodeSet: (namespacedDocument xpath: 'book:*/ps:*')
 		hasNodes: persons.
-	self assert: (namespacedDocument xPath: 'book:*/undeclared:*') isEmpty.
+	self assert: (namespacedDocument xpath: 'book:*/undeclared:*') isEmpty.
 	self
 		assertNodeSet:
 			(XPath

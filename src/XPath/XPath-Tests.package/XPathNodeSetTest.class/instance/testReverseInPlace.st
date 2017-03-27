@@ -11,7 +11,7 @@ testReverseInPlace
 	self
 		assert: list reverseInPlace == list;
 		assert: list = self listWithSingleItem;
-		assertList: list hasSortOrder: XPathReverseDocumentSortOrder.
+		assertList: list hasSortOrder: XPathLevelReverseDocumentSortOrder.
 
 	list := self listWithItems.
 	self
@@ -23,7 +23,7 @@ testReverseInPlace
 	self
 		assert: list reverseInPlace == list;
 		assert: list = (self listClass newFrom: self listItems reversed);
-		assertList: list hasSortOrder: XPathReverseDocumentSortOrder;
+		assertList: list hasSortOrder: XPathLevelReverseDocumentSortOrder;
 		assert: list reverseInPlace == list;
 		assert: list = (self listClass newFrom: self listItems);
-		assertList: list hasSortOrder: XPathDocumentSortOrder.
+		assertList: list hasSortOrder: XPathLevelDocumentSortOrder.

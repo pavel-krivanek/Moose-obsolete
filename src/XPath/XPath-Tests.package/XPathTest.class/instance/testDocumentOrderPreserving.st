@@ -3,27 +3,27 @@ testDocumentOrderPreserving
 	| expected result |
 
 	expected := document allNodesSelect: [:each | each hasChildren].
-	result := document xPath: 'descendant::node()/parent::node()[true()]'.
+	result := document xpath: 'descendant::node()/parent::node()[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
 
 	expected := document allNodes allButFirst.
-	result := document xPath: 'descendant::node()/self::node()[true()]'.
+	result := document xpath: 'descendant::node()/self::node()[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
 
 	expected removeAll.
 	document allElementsDo: [:each | expected addAll: each attributeNodes].
-	result := document xPath: 'descendant::*/@*[true()]'.
+	result := document xpath: 'descendant::*/@*[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
 
 	expected removeAll.
 	namespacedDocument allElementsDo: [:each | expected addAll: each namespaceNodes].
-	result := namespacedDocument xPath: 'descendant::*/namespace::*[true()]'.
+	result := namespacedDocument xpath: 'descendant::*/namespace::*[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.

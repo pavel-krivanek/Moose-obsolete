@@ -4,8 +4,8 @@ testOptimizedAttributeAxis
 
 	attributes := (document findElementNamed: 'person') attributeNodes.
 	self
-		assertNodeSet: (document xPath: 'addressbook/person[1]/@node()')
+		assertNodeSet: (document xpath: 'addressbook/person[1]/@node()')
 		hasNodes: attributes.
 	self
-		assertNodeSet: (document xPath: 'addressbook/person[1]/@*')
+		assertNodeSet: (document xpath: 'addressbook/person[1]/@*')
 		hasNodes: attributes.

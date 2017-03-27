@@ -2,13 +2,12 @@ enumerating
 on: aNodeSet namespaceAxis: aNodeTestStringOrBlock
 	| copy namespaceAxisNodeTest |
 
-	aNodeSet size > 0
-		ifFalse: [^ aNodeSet copyEmpty].
-
+	aNodeSet isEmpty
+		ifTrue: [^ aNodeSet copyEmpty].
 	namespaceAxisNodeTest := aNodeTestStringOrBlock asXPathNamespaceAxisNodeTest.
-	copy := (aNodeSet at: 1) namespaceAxis: namespaceAxisNodeTest.
-	2 to: aNodeSet size do: [:i |
-		(aNodeSet at: i)
+	copy := aNodeSet first namespaceAxis: namespaceAxisNodeTest.
+	aNodeSet allButFirstDo: [:each |
+		each
 			namespaceAxisSelect: namespaceAxisNodeTest
 			into: copy].
 	^ copy.

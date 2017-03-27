@@ -7,5 +7,5 @@ sortOrder
 					ifTrue: [XPathUnknownSortOrder new]
 					ifFalse: [
 						"safe for node sets with <= 1 node"
-						XPathDocumentSortOrder new]].
+						XPathLevelDocumentSortOrder new]].
 	^ sortOrder.

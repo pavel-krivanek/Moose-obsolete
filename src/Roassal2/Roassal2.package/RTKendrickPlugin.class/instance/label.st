@@ -1,3 +1,3 @@
 hooks
 label
-	^ 'Load Kendrick'
+	^ 'Kendrick (epidemiological platform)'

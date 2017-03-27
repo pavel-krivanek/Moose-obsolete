@@ -2,13 +2,13 @@ tests
 testExpandedNameTest
 	self
 		assertNodeSet:
-			(namespacedDocument xPath: 'Q{bookNS}addressbook/Q{personNS}person')
+			(namespacedDocument xpath: 'Q{bookNS}addressbook/Q{personNS}person')
 		hasNodes: (namespacedDocument allElementsNamed: 'person').
-	self assert: (namespacedDocument xPath: 'Q{undeclared}addressbook') isEmpty.
+	self assert: (namespacedDocument xpath: 'Q{undeclared}addressbook') isEmpty.
 
 	self
-		should: [namespacedDocument xPath: 'Q{bookNS} addressbook']
+		should: [namespacedDocument xpath: 'Q{bookNS} addressbook']
 		raise: XPathSyntaxException.
 	self
-		should: [namespacedDocument xPath: 'Q {bookNS}addressbook']
+		should: [namespacedDocument xpath: 'Q {bookNS}addressbook']
 		raise: XPathSyntaxException.

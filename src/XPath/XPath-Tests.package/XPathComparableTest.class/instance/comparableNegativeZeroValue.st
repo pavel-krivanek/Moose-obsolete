@@ -1,3 +1,3 @@
 accessing
 comparableNegativeZeroValue
-	^ Float xPathNegativeZero asXPathComparable
+	^ Float xpathNegativeZero asXPathComparable

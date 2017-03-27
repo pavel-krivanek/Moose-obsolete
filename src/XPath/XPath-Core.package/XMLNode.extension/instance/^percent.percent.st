@@ -1,9 +1,10 @@
 *XPath-Core-enumerating - axis
 %% aStringOrBlockOrNodeTestWithPredicates
-	^ aStringOrBlockOrNodeTestWithPredicates isXPathNodeTestWithPredicates
+	"reverse axis, requires sorting"
+	^ (aStringOrBlockOrNodeTestWithPredicates isXPathNodeTestWithPredicates
 		ifTrue: [
 			self
 				ancestorAxis: aStringOrBlockOrNodeTestWithPredicates nodeTest
 				predicates: aStringOrBlockOrNodeTestWithPredicates predicates]
 		ifFalse: [
-			self ancestorAxis: aStringOrBlockOrNodeTestWithPredicates]
+			self ancestorAxis: aStringOrBlockOrNodeTestWithPredicates]) sort

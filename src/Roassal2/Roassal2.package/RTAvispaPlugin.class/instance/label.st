@@ -1,3 +1,3 @@
 hooks
 label
-	^ 'Load Avispa'
+	^ 'Avispa (Software Process EPF Visualization)'

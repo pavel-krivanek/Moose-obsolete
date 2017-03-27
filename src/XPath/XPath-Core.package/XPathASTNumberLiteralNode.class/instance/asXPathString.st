@@ -1,3 +1,3 @@
 converting
 asXPathString
-	^ xPathString ifNil: [xPathString := self number asXPathString]
+	^ xpathString ifNil: [xpathString := self number asXPathString]

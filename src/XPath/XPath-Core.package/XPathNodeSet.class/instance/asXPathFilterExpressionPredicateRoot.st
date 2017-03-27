@@ -4,4 +4,5 @@ asXPathFilterExpressionPredicateRoot
 	expression, like '(/one)[two]' or '$one[two]' (when $one is bound to
 	a node set), but it must be sorted so predicate positions are relative to
 	document order"
-	^ self sorted
+
+	^ self asSorted

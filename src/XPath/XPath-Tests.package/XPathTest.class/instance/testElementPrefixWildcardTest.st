@@ -4,9 +4,9 @@ testElementPrefixWildcardTest
 
 	persons := namespacedDocument allElementsNamed: 'person'.
 	self
-		assertNodeSet: (namespacedDocument xPath: 'element(*:addressbook)/element(*:person)')
+		assertNodeSet: (namespacedDocument xpath: 'element(*:addressbook)/element(*:person)')
 		hasNodes: persons.
-	self assert: (namespacedDocument xPath: 'element(*:addressbook)/element(*:contaxt-info)') isEmpty.
+	self assert: (namespacedDocument xpath: 'element(*:addressbook)/element(*:contaxt-info)') isEmpty.
 	self
 		assertNodeSet:
 			(XPath

@@ -4,5 +4,5 @@ testInvalidUnionExpressionType
 		'//person | true()' 'true() | //person'
 		'//person | "string"' '"string" | //person') do: [:each |
 		self
-			should: [document xPath: each]
+			should: [document xpath: each]
 			raise: XPathTypeException].

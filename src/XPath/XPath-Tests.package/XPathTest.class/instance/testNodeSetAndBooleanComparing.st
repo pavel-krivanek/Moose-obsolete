@@ -1,7 +1,7 @@
 tests
 testNodeSetAndBooleanComparing
 	self assert:
-		('<list><a>not-empty</a></list>' parseXML xPath:
+		('<list><a>not-empty</a></list>' parseXML xpath:
 			'list/b < true()
 				and list/b <= true()
 				and list/a > false()

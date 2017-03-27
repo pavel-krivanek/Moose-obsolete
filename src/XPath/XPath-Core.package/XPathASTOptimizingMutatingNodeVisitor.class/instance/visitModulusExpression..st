@@ -8,5 +8,5 @@ visitModulusExpression: aModulusExpression
 		ifTrue: [^ aModulusExpression]
 		ifFalse: [
 			^ XPathASTNumberLiteralNode number:
-				(aModulusExpression expression asXPathNumber xPathModulus:
+				(aModulusExpression expression asXPathNumber xpathModulus:
 					aModulusExpression otherExpression asXPathNumber)]

@@ -5,5 +5,5 @@ testAsXPath
 	path := '/addressbook' asXPath.
 	self
 		assert: path class == XPath;
-		assert: (document xPath: path) = (self nodeSetClass with: document root);
+		assert: (document xpath: path) = (self nodeSetClass with: document root);
 		assert: path asXPath == path.

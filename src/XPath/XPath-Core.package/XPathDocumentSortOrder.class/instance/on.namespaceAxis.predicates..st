@@ -3,4 +3,4 @@ on: aNodeSet namespaceAxis: aNodeTestStringOrBlock predicates: aPredicateCollect
 	^ (super
 		on: aNodeSet
 		namespaceAxis: aNodeTestStringOrBlock
-		predicates: aPredicateCollection) sortOrderFrom: aNodeSet
+		predicates: aPredicateCollection) sortOrder: self

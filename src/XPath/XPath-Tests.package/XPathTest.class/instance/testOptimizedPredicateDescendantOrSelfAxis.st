@@ -8,23 +8,23 @@ testOptimizedPredicateDescendantOrSelfAxis
 				each isNamed: 'address']) notNil].
 	self
 		assertNodeSet:
-			(document xPath: '//*[descendant-or-self::address]')
+			(document xpath: '//*[descendant-or-self::address]')
 		hasNodes: descendants.
 	self
 		assertNodeSet:
-			(document xPath: '//*[descendant-or-self::address[true()]]')
+			(document xpath: '//*[descendant-or-self::address[true()]]')
 		hasNodes: descendants.
 	self
 		assertNodeSet:
-			(document xPath: '//*[./descendant-or-self::address]')
+			(document xpath: '//*[./descendant-or-self::address]')
 		hasNodes: descendants.
 	self
 		assert:
-			(document xPath: '//*[descendant-or-self::absent]') isEmpty;
+			(document xpath: '//*[descendant-or-self::absent]') isEmpty;
 		assert:
-			(document xPath: '//*[descendant-or-self::address[false()]]') isEmpty;
+			(document xpath: '//*[descendant-or-self::address[false()]]') isEmpty;
 		assert:
-			(document xPath: '//*[./descendant-or-self::absent]') isEmpty.
+			(document xpath: '//*[./descendant-or-self::absent]') isEmpty.
 
 	descendants :=
 		textDocument descendantNodesSelect: [:node |
@@ -35,26 +35,26 @@ testOptimizedPredicateDescendantOrSelfAxis
 				ifFalse: [node stringValue = 'two']].
 	self
 		assertNodeSet:
-			(textDocument xPath:
+			(textDocument xpath:
 				'//node()[descendant-or-self::node() = "two"]')
 		hasNodes: descendants.
 	self
 		assertNodeSet:
-			(textDocument xPath:
+			(textDocument xpath:
 				'//node()[descendant-or-self::node()[true()] = "two"]')
 		hasNodes: descendants.
 	self
 		assertNodeSet:
-			(textDocument xPath:
+			(textDocument xpath:
 				'//node()[./descendant-or-self::node() = "two"]')
 		hasNodes: descendants.
 	self
 		assert:
-			(textDocument xPath:
+			(textDocument xpath:
 				'//node()[descendant-or-self::node() = "absent"]') isEmpty;
 		assert:
-			(textDocument xPath:
+			(textDocument xpath:
 				'//node()[descendant-or-self::node()[false()] = "two"]') isEmpty;
 		assert:
-			(textDocument xPath:
+			(textDocument xpath:
 				'//node()[./descendant-or-self::node() = "absent"]') isEmpty.

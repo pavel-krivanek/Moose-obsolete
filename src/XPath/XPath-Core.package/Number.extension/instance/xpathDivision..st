@@ -1,5 +1,5 @@
 *XPath-Core-evaluating
-xPathDivision: aDivisor
+xpathDivision: aDivisor
 	self isNaN
 		ifTrue: [^ self].
 
@@ -10,6 +10,6 @@ xPathDivision: aDivisor
 			"if the signs are different, the result should be negative infinity"
 			(self hasSameXPathSignAs: aDivisor)
 				ifTrue: [^ Float infinity]
-				ifFalse: [^ Float xPathNegativeInfinity]].
+				ifFalse: [^ Float xpathNegativeInfinity]].
 
 	^ self / aDivisor.

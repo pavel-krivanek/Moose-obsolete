@@ -1,4 +1,4 @@
-as yet unclassified
+hooks
 execute
 	Gofer new
 		smalltalkhubUser: 'merino'

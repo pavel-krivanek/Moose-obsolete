@@ -5,8 +5,8 @@ testFollowingAxis
 	super testFollowingAxis.
 
 	nodeWithElements := self newNodeWithElements.
-	nodeWithElements allNodesDo: [:each | | list followingNodes |
-		list := each >> 'node()'.
+	nodeWithElements allNodesDo: [:each | | result followingNodes |
+		result := each >> 'node()'.
 		followingNodes := 
 			each hasParent
 				ifTrue: [
@@ -16,10 +16,10 @@ testFollowingAxis
 							ifFalse: [each])]
 				ifFalse: [self newNodeSet].
 		self
-			assert: list = followingNodes;
-			assertList: list hasSortOrder: XPathDocumentSortOrder.
+			assertNodeSet: result
+			hasNodes: followingNodes.
 
-		list := each >> '*'.
+		result := each >> '*'.
 		self
-			assert: list = followingNodes elements;
-			assertList: list hasSortOrder: XPathDocumentSortOrder].
+			assertNodeSet: result
+			hasNodes: followingNodes elements].

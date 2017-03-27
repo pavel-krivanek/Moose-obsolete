@@ -1,3 +1,3 @@
 invoking
 function
-	^ self firstArgument xPathFloor
+	^ self firstArgument xpathFloor

@@ -8,18 +8,18 @@ testParentAxis
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass with: self singleListItem parent).
+				hasNode: self listItems first parent.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
+				hasSortOrder: XPathLevelDocumentSortOrder.
 			self assert: (result % 'root') isEmpty.
 
 			result := list % 'root'.
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass with: self singleListItem parent).
+				hasNode: self listItems first parent.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
+				hasSortOrder: XPathLevelDocumentSortOrder.
 			self assert: (result % 'root') isEmpty]

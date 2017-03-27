@@ -24,8 +24,8 @@ testAsXPathNodeSetPosition
 	(Array
 		with: Float nan
 		with: Float infinity
-		with: Float xPathNegativeInfinity
-		with: Float xPathNegativeZero)
+		with: Float xpathNegativeInfinity
+		with: Float xpathNegativeZero)
 		do: [:each | | position |
 			position := each asXPathNodeSetPosition.
 			self

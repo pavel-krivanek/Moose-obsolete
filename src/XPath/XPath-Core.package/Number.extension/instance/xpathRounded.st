@@ -1,5 +1,5 @@
 *XPath-Core-evaluating
-xPathRounded
+xpathRounded
 	| rounded |
 
 	(self isNaN
@@ -7,7 +7,7 @@ xPathRounded
 			or: [self isInfinite]])
 		ifTrue: [^ self].
 
-	((rounded := (self + 0.5) xPathFloor) isZero
+	((rounded := (self + 0.5) xpathFloor) isZero
 		and: [self negative])
-		ifTrue: [^ Float xPathNegativeZero]
+		ifTrue: [^ Float xpathNegativeZero]
 		ifFalse: [^ rounded].

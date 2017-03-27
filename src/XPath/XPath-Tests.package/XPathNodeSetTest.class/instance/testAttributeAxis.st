@@ -12,18 +12,18 @@ testAttributeAxis
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass withAll: element attributeNodes).
+				hasNodes: element attributeNodes.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
+				hasSortOrder: XPathLevelDocumentSortOrder.
 			self assert: (result @ '*') isEmpty.
 
 			result := list @ 'two'.
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass with: element attributeNodes second).
+				hasNode: element attributeNodes second.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
+				hasSortOrder: XPathLevelDocumentSortOrder.
 			self assert: (result @ 'two') isEmpty].

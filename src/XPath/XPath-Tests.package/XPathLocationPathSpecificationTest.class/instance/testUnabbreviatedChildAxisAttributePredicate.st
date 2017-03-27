@@ -4,7 +4,7 @@ testUnabbreviatedChildAxisAttributePredicate
 		"selects all para children of the context node that have a type
 		attribute with value warning"
 		self
-			assertNodeSet: (node xPath: 'child::para[attribute::type="warning"]')
+			assertNodeSet: (node xpath: 'child::para[attribute::type="warning"]')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [

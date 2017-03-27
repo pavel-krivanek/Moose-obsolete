@@ -8,5 +8,5 @@ testXPathContext
 		variableAt: 'var'
 		put: 'test'.
 	self
-		assert: (node xPath: '$var' context: context) = 'test';
-		assert: (node xPath: (XPath for: '$var') context: context) = 'test'.
+		assert: (node xpath: '$var' context: context) = 'test';
+		assert: (node xpath: (XPath for: '$var') context: context) = 'test'.

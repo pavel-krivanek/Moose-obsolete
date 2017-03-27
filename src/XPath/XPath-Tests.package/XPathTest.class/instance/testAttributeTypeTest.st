@@ -1,15 +1,20 @@
 tests
 testAttributeTypeTest
-	| results |
+	| expected |
 
-	results := XMLNodeList new.
+	expected := XMLNodeList new.
 	document allNodesDo: [:each |
 		each isElement
-			ifTrue: [results addAll: each attributeNodes]
+			ifTrue: [expected addAll: each attributeNodes]
 			ifFalse: [
 				each isStringNode
-					ifTrue: [results addLast: each]]].
-	self assert: (document xPath: '//attribute::* | //text()') = results.
-	self assert:
-		(document xPath: '(//attribute::* | //text())/ self :: attribute()') =
-			(results select: [:each | each isAttribute]).
+					ifTrue: [expected addLast: each]]].
+	self
+		assertNodeSet: (document xpath: '//attribute::* | //text()')
+		hasNodes: expected.
+	
+	expected := expected select: [:each | each isAttribute].
+	self
+		assertNodeSet:
+			(document xpath: '(//attribute::* | //text())/ self :: attribute()')
+		hasNodes: expected.

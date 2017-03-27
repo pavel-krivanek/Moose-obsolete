@@ -1,6 +1,6 @@
-*XPath-Core-enumerating - axis
+*XPath-Core-private
 precedingSiblingAxis: aNodeTestStringOrBlock
 	^ (self
 		precedingSiblingAxisSelect: aNodeTestStringOrBlock asXPathNodeTest
 		into: self nodeSetClass new)
-			sortOrder: XPathReverseDocumentSortOrder new
+			sortOrder: XPathLevelReverseDocumentSortOrder new

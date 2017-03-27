@@ -1,1 +1,1 @@
-This class is an ordered node list that has no duplicates.
+This class implements XPath node sets to store the results of XPath location path expressions. Location path expresssion produce node seets in document order, regardless of the direction (forward or reverse) of the final step axis.

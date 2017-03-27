@@ -5,7 +5,7 @@ testAbbreviatedChildAxisChildPredicate
 		title children with string-value equal to Introduction"
 		self
 			assertNodeSet:
-				(node xPath: 'child::chapter[child::title=''Introduction'']')
+				(node xpath: 'child::chapter[child::title=''Introduction'']')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [
@@ -17,7 +17,7 @@ testAbbreviatedChildAxisChildPredicate
 		"selects the chapter children of the context node that have one or more title children"
 		self
 			assertNodeSet:
-				(node xPath: 'child::chapter[child::title]')
+				(node xpath: 'child::chapter[child::title]')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [

@@ -1,0 +1,1 @@
+This is a document sort order for node sets where all nodes are at the same level, meaning the nth ancestor (parent, grandparent, or other) of each node is the same.

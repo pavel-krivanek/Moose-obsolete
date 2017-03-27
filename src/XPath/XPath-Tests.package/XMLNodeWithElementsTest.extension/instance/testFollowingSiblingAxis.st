@@ -5,17 +5,23 @@ testFollowingSiblingAxis
 	super testFollowingSiblingAxis.
 
 	nodeWithElements := self newNodeWithElements.
-	nodeWithElements allNodesDo: [:each | | list followingSiblings |
-		list := each >>> 'node()'.
+	nodeWithElements allNodesDo: [:each | | result followingSiblings |
+		result := each >>> 'node()'.
 		followingSiblings :=
 			each hasParent
 				ifTrue: [each parent nodes copyAfter: each]
 				ifFalse: [self newNodeSet].
 		self
-			assert: list = followingSiblings;
-			assertList: list hasSortOrder: XPathDocumentSortOrder.
-
-		list := each >>> '*'.
+			assertNodeSet: result
+			hasNodes: followingSiblings.
 		self
-			assert: list = followingSiblings elements;
-			assertList: list hasSortOrder: XPathDocumentSortOrder].
+			assertNodeSet: result
+			hasSortOrder: XPathLevelDocumentSortOrder.
+
+		result := each >>> '*'.
+		self
+			assertNodeSet: result
+			hasNodes: followingSiblings elements.
+		self
+			assertNodeSet: result
+			hasSortOrder: XPathLevelDocumentSortOrder].

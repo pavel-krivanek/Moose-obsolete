@@ -15,4 +15,4 @@ testZeroDivision
 	"otherwise it should be negative"
 	#('-1 div 0' '-0.1 div 0.0' '1 div -0.0' '0.1 div -0') do: [:each |
 		"avoid #negativeInfinity for portability"
-		self assert: each asXPath evaluate = Float xPathNegativeInfinity].
+		self assert: each asXPath evaluate = Float xpathNegativeInfinity].

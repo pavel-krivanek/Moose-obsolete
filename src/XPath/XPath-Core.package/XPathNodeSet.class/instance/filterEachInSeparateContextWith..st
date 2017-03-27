@@ -24,4 +24,4 @@ filterEachInSeparateContextWith: aThreeArgumentBlockOrNumber
 							result asXPathBoolean
 								ifTrue: [copy addToCopyLast: node]]]].
 	"filtering cannot change the sort order"
-	^ copy sortOrderFrom: self.
+	^ copy sortOrder: self sortOrder.

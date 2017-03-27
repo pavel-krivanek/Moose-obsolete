@@ -10,11 +10,11 @@ testElementQualfiedNameTest
 			with: 'two' -> 'personNS'.
 	self
 		assertNodeSet:
-			(namespacedDocument xPath:
+			(namespacedDocument xpath:
 				'element(book:addressbook)/element(ps:person)')
 		hasNodes: persons.
 	self assert:
-		(namespacedDocument xPath:
+		(namespacedDocument xpath:
 			'element(book:addressbook)/element(undeclared:person)') isEmpty.
 	self
 		assertNodeSet:

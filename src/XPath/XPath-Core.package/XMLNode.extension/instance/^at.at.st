@@ -1,9 +1,6 @@
 *XPath-Core-enumerating - axis
 @@ aStringOrBlockOrNodeTestWithPredicates
-	^ aStringOrBlockOrNodeTestWithPredicates isXPathNodeTestWithPredicates
-		ifTrue: [
-			self
-				namespaceAxis: aStringOrBlockOrNodeTestWithPredicates nodeTest
-				predicates: aStringOrBlockOrNodeTestWithPredicates predicates]
-		ifFalse: [
-			self namespaceAxis: aStringOrBlockOrNodeTestWithPredicates]
+	"Returns the attribute value string of the first matching attribute of the
+	receiver or an empty string if there isn't one."
+
+	^ (self @ aStringOrBlockOrNodeTestWithPredicates) stringValue

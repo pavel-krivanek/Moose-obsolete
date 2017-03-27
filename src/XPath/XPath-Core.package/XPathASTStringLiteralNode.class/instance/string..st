@@ -1,4 +1,4 @@
 accessing
 string: aString
 	string := aString.
-	xPathNumber := nil.
+	xpathNumber := nil.

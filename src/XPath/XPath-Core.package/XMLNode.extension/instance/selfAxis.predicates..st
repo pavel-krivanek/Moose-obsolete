@@ -1,4 +1,4 @@
-*XPath-Core-enumerating - predicate axis
+*XPath-Core-private
 selfAxis: aNodeTestStringOrBlock predicates: aPredicateCollection
 	(aPredicateCollection notEmpty
 		and: [aPredicateCollection first isNumber])
@@ -7,7 +7,7 @@ selfAxis: aNodeTestStringOrBlock predicates: aPredicateCollection
 				selfAxisSelect: aNodeTestStringOrBlock asXPathNodeTest
 				at: aPredicateCollection first asXPathNodeSetPosition
 				into: self nodeSetClass new)
-					sortOrder: XPathDocumentSortOrder new;
+					sortOrder: XPathLevelDocumentSortOrder new;
 					filterEachInSeparateContextWithAll: aPredicateCollection
 						startingAt: 2]
 		ifFalse: [

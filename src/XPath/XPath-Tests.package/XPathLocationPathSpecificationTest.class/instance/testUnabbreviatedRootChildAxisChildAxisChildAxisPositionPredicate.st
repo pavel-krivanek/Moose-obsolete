@@ -14,6 +14,6 @@ testUnabbreviatedRootChildAxisChildAxisChildAxisPositionPredicate
 		document element"
 		self
 			assertNodeSet:
-				(node xPath:
+				(node xpath:
 					'/child::doc/child::chapter[position()=5]/child::section[position()=2]')
 			hasNodes: sections]

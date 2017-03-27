@@ -1,4 +1,4 @@
 enumerating
 select: aBlock
-	"select doesn't change sort order"
-	^ (super select: aBlock) sortOrderFrom: self
+	"selecting doesn't change sort order"
+	^ (super select: aBlock) sortOrder: self sortOrder

@@ -5,14 +5,19 @@ testAncestorOrSelfAxis
 	super testAncestorOrSelfAxis.
 
 	nodeWithElements := self newNodeWithElements.
-	nodeWithElements allNodesDo: [:each | | list |
-		list := each %%~ 'node()'.
+	nodeWithElements allNodesDo: [:each | | result |
+		result := each %%~ 'node()'.
 		self
-			assert: list = (each ancestorNodes copyWithFirst: each);
-			assertList: list hasSortOrder: XPathReverseDocumentSortOrder.
+			assertNodeSet: result
+			hasNodes: (each ancestorNodes copyWith: each).
 
-		list := each %%~ '*'.
+		result := each %%~ '*'.
 		each isElement
-			ifTrue: [self assert: list = (each ancestorElements copyWithFirst: each)]
-			ifFalse: [self assert: list = each ancestorElements].
-		self assertList: list hasSortOrder: XPathReverseDocumentSortOrder].
+			ifTrue: [
+				self
+					assertNodeSet: result
+					hasNodes: (each ancestorElements copyWith: each)]
+			ifFalse: [
+				self
+					assertNodeSet: result
+					hasNodes: each ancestorElements]].

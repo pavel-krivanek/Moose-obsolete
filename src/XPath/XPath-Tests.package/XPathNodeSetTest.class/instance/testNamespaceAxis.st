@@ -8,17 +8,17 @@ testNamespaceAxis
 		with: listWithElement sorted
 		with: listWithElement sorted reversed)
 		do: [:list | | result |
-			result := list @@ '*'.
+			result := list namespaceAxis: '*'.
 			self
 				assertList: result
 				copiedFrom: list
 				equals: (self listClass withAll: element namespaceNodes).
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
-			self assert: (result @@ '*') isEmpty.
+				hasSortOrder: XPathLevelDocumentSortOrder.
+			self assert: (result namespaceAxis: '*') isEmpty.
 
-			result := list @@ 'two'.
+			result := list namespaceAxis: 'two'.
 			self
 				assertList: result
 				copiedFrom: list
@@ -26,5 +26,5 @@ testNamespaceAxis
 				equals: (self listClass with: element namespaceNodes third).
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
-			self assert: (result @@ 'two') isEmpty].
+				hasSortOrder: XPathLevelDocumentSortOrder.
+			self assert: (result namespaceAxis: 'two') isEmpty].

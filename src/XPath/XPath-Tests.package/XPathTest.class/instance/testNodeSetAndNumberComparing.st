@@ -1,7 +1,7 @@
 tests
 testNodeSetAndNumberComparing
 	self assert:
-		('<list><a>1</a><a>2</a></list>' parseXML xPath:
+		('<list><a>1</a><a>2</a></list>' parseXML xpath:
 			'list/a < 2
 				and list/a <= 1
 				and list/a > 1

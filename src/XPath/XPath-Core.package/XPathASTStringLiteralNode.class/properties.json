@@ -7,7 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"string",
-		"xPathNumber"
+		"xpathNumber"
 	],
 	"name" : "XPathASTStringLiteralNode",
 	"type" : "normal"

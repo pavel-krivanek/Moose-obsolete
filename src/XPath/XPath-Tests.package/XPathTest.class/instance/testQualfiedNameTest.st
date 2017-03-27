@@ -8,8 +8,8 @@ testQualfiedNameTest
 			with: 'one' -> 'bookNS'
 			with: 'two' -> 'personNS'.
 	self
-		assert: (namespacedDocument xPath: 'book:addressbook/ps:person') = persons;
-		assert: (namespacedDocument xPath: 'book:addressbook/undeclared:person') isEmpty.
+		assert: (namespacedDocument xpath: 'book:addressbook/ps:person') = persons;
+		assert: (namespacedDocument xpath: 'book:addressbook/undeclared:person') isEmpty.
 	self assert:
 		(XPath
 			for: 'one:addressbook/two:person'

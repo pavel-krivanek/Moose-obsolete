@@ -1,17 +1,23 @@
 *XPath-Tests
 testSelfAxis
-	| node list |
+	| node result |
 
 	node := self newNode.
-	list := node ~ 'node()'.
+	result := node ~ 'node()'.
 	self
-		assert: list = (self nodeSetClass with: node);
-		assertList: list hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNode: node.
+	self
+		assertNodeSet: result
+		hasSortOrder: XPathLevelDocumentSortOrder.
 
-	list := node ~ '*'.
+	result := node ~ '*'.
 	node isElement
 		ifTrue: [
 			self
-				assert: list = (self nodeSetClass with: node);
-				assertList: list hasSortOrder: XPathDocumentSortOrder]
-		ifFalse: [self assert: list isEmpty].
+				assertNodeSet: result
+				hasNode: node.
+			self
+				assertNodeSet: result
+				hasSortOrder: XPathLevelDocumentSortOrder]
+		ifFalse: [self assert: result isEmpty].

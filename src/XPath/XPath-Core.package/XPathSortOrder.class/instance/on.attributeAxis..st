@@ -2,13 +2,12 @@ enumerating
 on: aNodeSet attributeAxis: aNodeTestStringOrBlock
 	| copy attributeAxisNodeTest |
 
-	aNodeSet size > 0
-		ifFalse: [^ aNodeSet copyEmpty].
-
+	aNodeSet isEmpty
+		ifTrue: [^ aNodeSet copyEmpty].
 	attributeAxisNodeTest := aNodeTestStringOrBlock asXPathAttributeAxisNodeTest.
-	copy := (aNodeSet at: 1) attributeAxis: attributeAxisNodeTest.
-	2 to: aNodeSet size do: [:i |
-		(aNodeSet at: i)
+	copy := aNodeSet first attributeAxis: attributeAxisNodeTest.
+	aNodeSet allButFirstDo: [:each |
+		each
 			attributeAxisSelect: attributeAxisNodeTest
 			into: copy].
 	^ copy.

@@ -1,3 +1,3 @@
 invoking
 function
-	^ self firstArgument xPathRounded
+	^ self firstArgument xpathRounded

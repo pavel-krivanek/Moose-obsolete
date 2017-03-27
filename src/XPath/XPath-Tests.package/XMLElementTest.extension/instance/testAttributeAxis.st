@@ -8,7 +8,7 @@ testAttributeAxis
 	list := element @ '*'.
 	self
 		assert: list = (self nodeSetClass newFrom: element attributeNodes);
-		assertList: list hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: list hasSortOrder: XPathLevelDocumentSortOrder.
 
 	element := self newNode.
 	self assert: (element @ 'node()') isEmpty.

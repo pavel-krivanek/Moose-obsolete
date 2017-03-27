@@ -3,5 +3,5 @@ testAbbreviatedSelfAxis
 	specificationDocument allNodesDo: [:node |
 		"selects the context node"
 		self
-			assertNodeSet: (node xPath: '.')
+			assertNodeSet: (node xpath: '.')
 			hasNode: node]

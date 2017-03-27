@@ -1,3 +1,3 @@
 invoking
 function
-	^ self firstArgument xPathCeiling
+	^ self firstArgument xpathCeiling

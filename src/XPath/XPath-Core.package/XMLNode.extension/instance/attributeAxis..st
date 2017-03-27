@@ -1,6 +1,6 @@
-*XPath-Core-enumerating - axis
+*XPath-Core-private
 attributeAxis: aNodeTestStringOrBlock
 	^ (self
 		attributeAxisSelect: aNodeTestStringOrBlock asXPathAttributeAxisNodeTest
 		into: self nodeSetClass new)
-			sortOrder: XPathDocumentSortOrder new
+			sortOrder: XPathLevelDocumentSortOrder new

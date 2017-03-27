@@ -1,6 +1,4 @@
 private
 ancestorOrSelfAxisAnySatisfy: aNodeTest
-	self do: [:each |
-		(each ancestorOrSelfAxisAnySatisfy: aNodeTest)
-			ifTrue: [^ true]].
-	^ false.
+	^ self anySatisfy: [:each |
+		each ancestorOrSelfAxisAnySatisfy: aNodeTest]

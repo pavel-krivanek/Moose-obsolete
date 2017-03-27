@@ -4,34 +4,22 @@ testParentAxisPredicates
 		with: self listWithSortOrder
 		with: self listWithSortOrder reversed)
 		do: [:list | | result |
-			result :=
-				list
-					parentAxis: '*'
-					predicates: #(1).
+			result := list % ('*' ?? 1).
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass with: self singleListItem parent).
+				hasNode: self listItems first parent.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
-			self assert:
-				(result
-					parentAxis: 'root'
-					predicates: #(1)) isEmpty.
+				hasSortOrder: XPathLevelDocumentSortOrder.
+			self assert: (result % ('root' ?? 1)) isEmpty.
 
-			result :=
-				list
-					parentAxis: 'root'
-					predicates: #(1).
+			result := list % ('root' ?? 1).
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass with: self singleListItem parent).
+				hasNode: self listItems first parent.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
-			self assert:
-				(result
-					parentAxis: 'root'
-					predicates: #(1)) isEmpty]
+				hasSortOrder: XPathLevelDocumentSortOrder.
+			self assert: (result % ('root' ??1)) isEmpty]

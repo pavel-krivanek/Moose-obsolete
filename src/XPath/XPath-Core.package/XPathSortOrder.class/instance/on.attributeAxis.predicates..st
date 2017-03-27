@@ -2,16 +2,15 @@ enumerating
 on: aNodeSet attributeAxis: aNodeTestStringOrBlock predicates: aPredicateCollection
 	| copy attributeAxisNodeTest |
 
-	aNodeSet size > 0
-		ifFalse: [^ aNodeSet copyEmpty].
-
+	aNodeSet isEmpty
+		ifTrue: [^ aNodeSet copyEmpty].
 	attributeAxisNodeTest := aNodeTestStringOrBlock asXPathAttributeAxisNodeTest.
 	copy :=
-		(aNodeSet at: 1)
+		aNodeSet first
 			attributeAxis: attributeAxisNodeTest
 			predicates: aPredicateCollection.
-	2 to: aNodeSet size do: [:i |
-		((aNodeSet at: i)
+	aNodeSet allButFirstDo: [:each |
+		(each
 			attributeAxis: attributeAxisNodeTest
 			predicates: aPredicateCollection)
 				addAllTo: copy].

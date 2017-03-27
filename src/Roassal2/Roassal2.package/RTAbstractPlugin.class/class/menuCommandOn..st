@@ -1,17 +1,30 @@
 world menu
 menuCommandOn: aBuilder
 	<worldMenu>
-	((aBuilder
+	| b |
+	b := ((aBuilder
 		item: self menuConfigurationSymbol;
 		order: 15;
 		parent: #Roassal) icon: RTIcon smallRoassal)
 		withSeparatorAfter;
-		with: [ self allSubclasses
+		yourself.
+	b
+		with: [ self allNotLoadedPluginClasses
 						do: [ :cls | 
-							(aBuilder item:
-							self menuConfigurationEntryTitle , cls new label)
+							(aBuilder item: self menuConfigurationEntryTitle , cls new label)
 								order: 15;
 								parent: self menuConfigurationSymbol;
-								label: cls new label;
+								label: cls new pluginName;
+								icon: RTIcon smallRoassal;
+								action: [ cls new run ] ] ].
+	b withSeparatorAfter.
+
+	b
+		with: [ self allLoadedPluginClasses
+						do: [ :cls | 
+							(aBuilder item: self menuConfigurationEntryTitle , cls new label)
+								order: 25;
+								parent: self menuConfigurationSymbol;
+								label: cls new pluginName;
 								icon: RTIcon smallRoassal;
 								action: [ cls new run ] ] ]

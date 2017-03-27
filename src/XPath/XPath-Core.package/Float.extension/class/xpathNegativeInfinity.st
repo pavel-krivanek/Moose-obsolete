@@ -1,4 +1,4 @@
 *XPath-Core-accessing
-xPathNegativeInfinity
+xpathNegativeInfinity
 	"older Pharo/Squeak images don't have #negativeInfinity, so this is used instead"
 	^ self infinity negated

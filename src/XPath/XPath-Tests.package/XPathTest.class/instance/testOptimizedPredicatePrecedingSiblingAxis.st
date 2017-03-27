@@ -7,18 +7,18 @@ testOptimizedPredicatePrecedingSiblingAxis
 			element precedingSiblingNodes anySatisfy: [:each |
 				each isElementNamed: 'address']].
 	self
-		assertNodeSet: (document xPath: '//*[preceding-sibling::address]')
+		assertNodeSet: (document xpath: '//*[preceding-sibling::address]')
 		hasNodes: precedingSiblings.
 	self
-		assertNodeSet: (document xPath: '//*[preceding-sibling::address[true()]]')
+		assertNodeSet: (document xpath: '//*[preceding-sibling::address[true()]]')
 		hasNodes: precedingSiblings.
 	self
-		assertNodeSet: (document xPath: '//*[./preceding-sibling::address]')
+		assertNodeSet: (document xpath: '//*[./preceding-sibling::address]')
 		hasNodes: precedingSiblings.
 	self
-		assert: (document xPath: '//*[preceding-sibling::absent]') isEmpty;
-		assert: (document xPath: '//*[preceding-sibling::node()[false()]]') isEmpty;
-		assert: (document xPath: '//*[./preceding-sibling::absent]') isEmpty.
+		assert: (document xpath: '//*[preceding-sibling::absent]') isEmpty;
+		assert: (document xpath: '//*[preceding-sibling::node()[false()]]') isEmpty;
+		assert: (document xpath: '//*[./preceding-sibling::absent]') isEmpty.
 
 	precedingSiblings :=
 		textDocument allNodesSelect: [:node |
@@ -26,24 +26,24 @@ testOptimizedPredicatePrecedingSiblingAxis
 				includes: 'two'].
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[preceding-sibling::node() = "two"]')
+			(textDocument xpath: '//node()[preceding-sibling::node() = "two"]')
 		hasNodes: precedingSiblings.
 	self
 		assertNodeSet:
-			(textDocument xPath:
+			(textDocument xpath:
 				'//node()[preceding-sibling::node()[true()] = "two"]')
 		hasNodes: precedingSiblings.
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[./preceding-sibling::node() = "two"]')
+			(textDocument xpath: '//node()[./preceding-sibling::node() = "two"]')
 		hasNodes: precedingSiblings.
 	self
 		assert:
-			(document xPath: '//node()[preceding-sibling::node() = "absent"]')
+			(document xpath: '//node()[preceding-sibling::node() = "absent"]')
 				isEmpty;
 		assert:
-			(document xPath: '//node()[preceding-sibling::node()[false()] = "two"]')
+			(document xpath: '//node()[preceding-sibling::node()[false()] = "two"]')
 				isEmpty;
 		assert:
-			(document xPath: '//node()[./preceding-sibling::node() = "absent"]')
+			(document xpath: '//node()[./preceding-sibling::node() = "absent"]')
 				isEmpty.

@@ -7,18 +7,18 @@ testOptimizedPredicateDescendantAxis
 			(element descendantElementsDetect: [:each |
 				each isNamed: 'address']) notNil].
 	self
-		assertNodeSet: (document xPath: '//*[descendant::address]')
+		assertNodeSet: (document xpath: '//*[descendant::address]')
 		hasNodes: descendants.
 	self
-		assertNodeSet: (document xPath: '//*[descendant::address[true()]]')
+		assertNodeSet: (document xpath: '//*[descendant::address[true()]]')
 		hasNodes: descendants.
 	self
-		assertNodeSet: (document xPath: '//*[./descendant::address]')
+		assertNodeSet: (document xpath: '//*[./descendant::address]')
 		hasNodes: descendants.
 	self
-		assert: (document xPath: '//*[descendant::absent]') isEmpty;
-		assert: (document xPath: '//*[descendant::address[false()]]') isEmpty;
-		assert: (document xPath: '//*[./descendant::absent]') isEmpty.
+		assert: (document xpath: '//*[descendant::absent]') isEmpty;
+		assert: (document xpath: '//*[descendant::address[false()]]') isEmpty;
+		assert: (document xpath: '//*[./descendant::absent]') isEmpty.
 
 	descendants :=
 		textDocument descendantNodesSelect: [:node |
@@ -28,20 +28,20 @@ testOptimizedPredicateDescendantAxis
 						each stringValue = 'two']) notNil]].
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[descendant::node() = "two"]')
+			(textDocument xpath: '//node()[descendant::node() = "two"]')
 		hasNodes: descendants.
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[descendant::node()[true()] = "two"]')
+			(textDocument xpath: '//node()[descendant::node()[true()] = "two"]')
 		hasNodes: descendants.
 	self
 		assertNodeSet:
-			(textDocument xPath: '//node()[./descendant::node() = "two"]')
+			(textDocument xpath: '//node()[./descendant::node() = "two"]')
 		hasNodes: descendants.
 	self
 		assert:
-			(textDocument xPath: '//node()[descendant::node() = "absent"]') isEmpty;
+			(textDocument xpath: '//node()[descendant::node() = "absent"]') isEmpty;
 		assert:
-			(textDocument xPath: '//node()[descendant::node()[false()] = "two"]') isEmpty;
+			(textDocument xpath: '//node()[descendant::node()[false()] = "two"]') isEmpty;
 		assert:
-			(textDocument xPath: '//node()[./descendant::node() = "absent"]') isEmpty.
+			(textDocument xpath: '//node()[./descendant::node() = "absent"]') isEmpty.

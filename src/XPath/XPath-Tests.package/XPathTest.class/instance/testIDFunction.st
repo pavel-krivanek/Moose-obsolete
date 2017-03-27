@@ -1,6 +1,6 @@
 tests
 testIDFunction
-	| dtdWithIDs contentWithIDs documentWithIDs idElements |
+	| dtdWithIDs contentWithIDs contentWithIDsAndUndeclaredAttributes documentWithIDs idElements |
 
 	dtdWithIDs :=
 		'<!DOCTYPE one [
@@ -28,7 +28,18 @@ testIDFunction
 				<four id4="fourth">
 					<five id="non-id">first</five>
 					<six id2="non-id">third</six>
-					<seven id4="non=id">non-id</seven>
+					<seven id4="non-id">non-id</seven>
+				</four>
+			</three>
+		</one>'.
+	contentWithIDsAndUndeclaredAttributes := '
+		<one id="first">
+			<two/>
+			<three xml:id="third" id3="non-id">
+				<four id4="fourth">
+					<five id="non-id">first</five>
+					<six id2="non-id">third</six>
+					<seven id4="non-id" undeclared="non-id">non-id</seven>
 				</four>
 			</three>
 		</one>'.
@@ -36,38 +47,41 @@ testIDFunction
 	#(true false) do: [:isValidating |
 		documentWithIDs :=
 			XMLDOMParser
-				parse: dtdWithIDs, contentWithIDs
+				parse:
+					(isValidating
+						ifTrue: [dtdWithIDs, contentWithIDs]
+						ifFalse: [dtdWithIDs, contentWithIDsAndUndeclaredAttributes])
 				usingNamespaces: true
 				validation: isValidating.
 		idElements :=
 			documentWithIDs allElementsSelect: [:each |
 				each isNamedAny: #('one' 'three')].
 		self
-			assertNodeSet: (documentWithIDs xPath: 'id("  first  third  non-id  ")')
+			assertNodeSet: (documentWithIDs xpath: 'id("   third  first non-id  ")')
 			hasNodes: idElements.
 		self
-			assertNodeSet: (documentWithIDs xPath: 'id("first third non-id")')
+			assertNodeSet: (documentWithIDs xpath: 'id("first third non-id")')
 			hasNodes: idElements.
 		self
-			assertNodeSet: (documentWithIDs xPath: 'id(//*)')
+			assertNodeSet: (documentWithIDs xpath: 'id(//*)')
 			hasNodes: idElements].
 
 	"xml:id attributes should always be recognized, even without a DTD"
 	#(true false) do: [:isValidating |
 		documentWithIDs :=
 			XMLDOMParser
-				parse: contentWithIDs
+				parse: contentWithIDsAndUndeclaredAttributes
 				usingNamespaces: true
 				validation: isValidating.
 		idElements :=
 			documentWithIDs allElementsSelect: [:each |
 				each isNamedAny: #('three')].
 		self
-			assertNodeSet: (documentWithIDs xPath: 'id("  first  third  non-id  ")')
+			assertNodeSet: (documentWithIDs xpath: 'id("  third  first  non-id  ")')
 			hasNodes: idElements.
 		self
-			assertNodeSet: (documentWithIDs xPath: 'id("first third non-id")')
+			assertNodeSet: (documentWithIDs xpath: 'id("first third non-id")')
 			hasNodes: idElements.
 		self
-			assertNodeSet: (documentWithIDs xPath: 'id(//*)')
+			assertNodeSet: (documentWithIDs xpath: 'id(//*)')
 			hasNodes: idElements].

@@ -8,5 +8,5 @@ visitDivisionExpression: aDivisionExpression
 		ifTrue: [^ aDivisionExpression]
 		ifFalse: [
 			^ XPathASTNumberLiteralNode number:
-				(aDivisionExpression expression asXPathNumber xPathDivision:
+				(aDivisionExpression expression asXPathNumber xpathDivision:
 					aDivisionExpression otherExpression asXPathNumber)].

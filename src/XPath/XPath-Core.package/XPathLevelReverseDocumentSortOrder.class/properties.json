@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 3/15/2017 19:09",
+	"super" : "XPathReverseDocumentSortOrder",
+	"category" : "XPath-Core-DOM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathLevelReverseDocumentSortOrder",
+	"type" : "normal"
+}

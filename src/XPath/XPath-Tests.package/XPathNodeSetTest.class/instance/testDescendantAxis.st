@@ -8,18 +8,12 @@ testDescendantAxis
 	self
 		assertList: result
 		copiedFrom: list
-		equals: (self listClass withAll: root descendantElements).
-	self
-		assertList: result
-		hasSortOrder: XPathDocumentSortOrder.
+		hasNodes: root descendantElements.
 	self assert: (result // 'absent') isEmpty.
 
 	result := list // 'three'.
 	self
 		assertList: result
 		copiedFrom: list
-		equals: (self listClass with: root descendantElements fourth).
-	self
-		assertList: result
-		hasSortOrder: XPathDocumentSortOrder.
+		hasNode: root descendantElements fourth.
 	self assert: (result // 'absent') isEmpty.

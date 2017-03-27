@@ -4,7 +4,7 @@ testAbbreviatedChildAxisAttributePredicatePositionPredicate
 		"selects the fifth para child of the context node that has a type
 		attribute with value warning"
 		self
-			assertNodeSet: (node xPath: 'para[@type=''warning''][5]')
+			assertNodeSet: (node xpath: 'para[@type=''warning''][5]')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [

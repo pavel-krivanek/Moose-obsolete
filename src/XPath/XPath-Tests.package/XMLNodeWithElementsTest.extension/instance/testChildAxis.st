@@ -7,16 +7,22 @@ testChildAxis
 	nodeWithElements := self newNodeWithElements.
 	nodeWithElements allNodesDo: [:each |
 		each hasChildren
-			ifTrue: [| list |
-				list := each / 'node()'.
+			ifTrue: [| result |
+				result := each / 'node()'.
 				self
-					assert: list = each nodes;
-					assertList: list hasSortOrder: XPathDocumentSortOrder.
+					assertNodeSet: result
+					hasNodes: each nodes.
+				self
+					assertNodeSet: result
+					hasSortOrder: XPathLevelDocumentSortOrder.
 
-				list := each / '*'.
+				result := each / '*'.
 				self
-					assert: list = each elements;
-					assertList: list hasSortOrder: XPathDocumentSortOrder.]
+					assertNodeSet: result
+					hasNodes: each elements.
+				self
+					assertNodeSet: result
+					hasSortOrder: XPathLevelDocumentSortOrder]
 			ifFalse: [
 				self
 					assert: (each / 'node()') isEmpty;

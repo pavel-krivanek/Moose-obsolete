@@ -19,7 +19,7 @@ testNamespaceAxisPredicates
 				equals: (self listClass with: element namespaceNodes third).
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
+				hasSortOrder: XPathLevelDocumentSortOrder.
 			self assert:
 				(result
 					namespaceAxis: '*'
@@ -36,7 +36,7 @@ testNamespaceAxisPredicates
 				equals: (self listClass with: element namespaceNodes third).
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
+				hasSortOrder: XPathLevelDocumentSortOrder.
 			self assert:
 				(result
 					namespaceAxis: 'two'

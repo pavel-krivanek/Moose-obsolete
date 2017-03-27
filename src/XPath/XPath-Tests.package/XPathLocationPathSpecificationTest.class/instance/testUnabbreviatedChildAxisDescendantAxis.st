@@ -4,7 +4,7 @@ testUnabbreviatedChildAxisDescendantAxis
 		"selects the para element descendants of the chapter element children
 		of the context node"
 		self
-			assertNodeSet: (node xPath: 'child::chapter/descendant::para')
+			assertNodeSet: (node xpath: 'child::chapter/descendant::para')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [| paras |

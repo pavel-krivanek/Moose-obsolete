@@ -5,17 +5,23 @@ testPrecedingSiblingAxis
 	super testPrecedingSiblingAxis.
 
 	nodeWithElements := self newNodeWithElements.
-	nodeWithElements allNodesDo: [:each | | list precedingSiblings |
-		list := each <<< 'node()'.
+	nodeWithElements allNodesDo: [:each | | result precedingSiblings |
+		result := each <<< 'node()'.
 		precedingSiblings :=
 			each hasParent
-				ifTrue: [(each parent nodes copyUpTo: each) reversed]
+				ifTrue: [each parent nodes copyUpTo: each]
 				ifFalse: [self newNodeSet].
 		self
-			assert: list = precedingSiblings;
-			assertList: list hasSortOrder: XPathReverseDocumentSortOrder.
-
-		list := each <<< '*'.
+			assertNodeSet: result
+			hasNodes: precedingSiblings.
 		self
-			assert: list = precedingSiblings elements;
-			assertList: list hasSortOrder: XPathReverseDocumentSortOrder].
+			assertNodeSet: result
+			hasSortOrder: XPathLevelDocumentSortOrder.
+
+		result := each <<< '*'.
+		self
+			assertNodeSet: result
+			hasNodes: precedingSiblings elements.
+		self
+			assertNodeSet: result
+			hasSortOrder: XPathLevelDocumentSortOrder].

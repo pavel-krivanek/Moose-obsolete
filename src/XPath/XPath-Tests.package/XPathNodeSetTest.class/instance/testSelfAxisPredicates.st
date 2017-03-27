@@ -4,34 +4,22 @@ testSelfAxisPredicates
 		with: self listWithSortOrder
 		with: self listWithSortOrder reversed)
 		do: [:list | | result |
-			result :=
-				list
-					selfAxis: '*'
-					predicates: #(1).
+			result := list ~ ('*' ?? 1).
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass withAll: self listElements).
+				hasNodes: self listElements.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
-			self assert:
-				(result
-					selfAxis: '*'
-					predicates: #(3)) isEmpty.
+				hasSortOrder: XPathLevelDocumentSortOrder.
+			self assert: (result ~ ('*' ?? 3)) isEmpty.
 
-			result :=
-				(list
-					selfAxis: 'three'
-					predicates: #(1)).
+			result := list ~ ('three' ?? 1).
 			self
 				assertList: result
 				copiedFrom: list
-				equals: (self listClass with: self listElements third).
+				hasNode: self listElements third.
 			self
 				assertList: result
-				hasSortOrder: XPathDocumentSortOrder.
-			self assert:
-				(result
-					selfAxis: 'three'
-					predicates: #(3)) isEmpty]
+				hasSortOrder: XPathLevelDocumentSortOrder.
+			self assert: (result ~ ('three' ?? 3)) isEmpty]

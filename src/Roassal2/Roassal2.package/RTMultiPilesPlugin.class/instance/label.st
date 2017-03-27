@@ -1,3 +1,3 @@
 hooks
 label
-	^ 'Load Small MultiPiles'
+	^ 'Small MultiPiles (Dependency Structure Visualization)'

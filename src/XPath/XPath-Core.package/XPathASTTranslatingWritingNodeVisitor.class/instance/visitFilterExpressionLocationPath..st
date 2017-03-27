@@ -8,4 +8,7 @@ visitFilterExpressionLocationPath: aFilterExpressionLocationPath
 		emitAll: ' asXPathFilterExpressionLocationPathRoot';
 		visitLocationPath: aFilterExpressionLocationPath;
 		emit: $).
+	(aFilterExpressionLocationPath hasSteps
+		and: [aFilterExpressionLocationPath isPredicateLocationPath not])
+		ifTrue: [self emitNodeSetSort].
 	^ aFilterExpressionLocationPath.

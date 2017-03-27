@@ -1,6 +1,6 @@
 tests
 testDefaultSortOrder
 	self
-		assertList: self emptyList hasSortOrder: XPathDocumentSortOrder;
-		assertList: self listWithSingleItem hasSortOrder: XPathDocumentSortOrder;
+		assertList: self emptyList hasSortOrder: XPathLevelDocumentSortOrder;
+		assertList: self listWithSingleItem hasSortOrder: XPathLevelDocumentSortOrder;
 		assertListHasUnknownSortOrder: self listWithItems

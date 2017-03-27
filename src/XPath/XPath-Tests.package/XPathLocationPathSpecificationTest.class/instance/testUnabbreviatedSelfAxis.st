@@ -3,7 +3,7 @@ testUnabbreviatedSelfAxis
 	specificationDocument allNodesDo: [:node | | result |
 		"selects the context node if it is a para element, and otherwise
 		selects nothing"
-		result := node xPath: 'self::para'.
+		result := node xpath: 'self::para'.
 		(node isElementNamed: 'para')
 			ifTrue: [
 				self

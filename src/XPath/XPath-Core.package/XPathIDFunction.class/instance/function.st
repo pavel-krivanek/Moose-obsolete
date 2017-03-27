@@ -1,10 +1,10 @@
 invoking
 function
-	| object ids document nodeSet |
+	| object ids nodeSet |
 
 	object := self firstArgument.
 	ids := Set new.
-	object class == self nodeSetClass
+	object isXPathNodeSet
 		ifTrue: [
 			object do: [:each |
 				self
@@ -17,11 +17,22 @@ function
 
 	nodeSet := self newNodeSet.
 	(ids notEmpty
-		and: [self contextNode notNil
-			and: [(document := self contextNode document) notNil]])
-		ifTrue: [| element |
-			ids do: [:each |
-				((element := document findElementWithID: each) notNil
-					and: [(nodeSet includes: element) not])
-					ifTrue: [nodeSet addLast: element]]].
-	^ nodeSet.
+		and: [self contextNode notNil])
+		ifTrue: [| root doctypeDefinition |
+			((root := self contextNode documentRoot) isDocument
+				and: [(doctypeDefinition := root doctypeDefinition) notNil
+					and: [doctypeDefinition hasAttributeValidators]])
+				ifTrue: [
+					self
+						addElementsWithUndeclaredOrDeclaredIDs: ids
+						in: root
+						to: nodeSet
+						declaredWith: doctypeDefinition]
+				ifFalse: [
+					self
+						addElementsWithUndeclaredIDs: ids
+						in: root
+						to: nodeSet]].
+	"the elements matching the IDs are enumerated in document order, so the
+	resulting node set is in document order too"
+	^ nodeSet sortOrder: XPathDocumentSortOrder new.

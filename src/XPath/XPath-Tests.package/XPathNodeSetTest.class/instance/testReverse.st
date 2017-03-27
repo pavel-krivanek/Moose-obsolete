@@ -15,7 +15,7 @@ testReverse
 	list := self listWithSortOrder.
 	copy := list reverse.
 	self
-		assertList: copy hasSortOrder: XPathReverseDocumentSortOrder;
+		assertList: copy hasSortOrder: XPathLevelReverseDocumentSortOrder;
 		assertList: copy
 		copiedFrom: list
 		equals: (self listClass newFrom: self listItems reverse).
@@ -23,7 +23,7 @@ testReverse
 	list := copy.
 	copy := list reverse.
 	self
-		assertList: copy hasSortOrder: XPathDocumentSortOrder;
+		assertList: copy hasSortOrder: XPathLevelDocumentSortOrder;
 		assertList: copy
 		copiedFrom: list
 		equals: self listWithItems.

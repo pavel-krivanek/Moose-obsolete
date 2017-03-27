@@ -1,8 +1,8 @@
 tests
 testElementTypeTest
 	self
-		assertNodeSet: (document xPath: '//element()')
+		assertNodeSet: (document xpath: '//element()')
 		hasNodes: document allElements.
 	self
-		assertNodeSet: (document xPath: '//node()/self::element()')
+		assertNodeSet: (document xpath: '//node()/self::element()')
 		hasNodes: document allElements

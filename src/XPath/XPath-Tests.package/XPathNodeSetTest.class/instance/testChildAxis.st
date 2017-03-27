@@ -7,18 +7,18 @@ testChildAxis
 	self
 		assertList: result
 		copiedFrom: list
-		equals: (self listClass withAll: self listElements).
+		hasNodes: self listElements.
 	self
 		assertList: result
-		hasSortOrder: XPathDocumentSortOrder.
+		hasSortOrder: XPathLevelDocumentSortOrder.
 	self assert: (result / '*') isEmpty.
 
 	result := list / 'three'.
 	self
 		assertList: result
 		copiedFrom: list
-		equals: (self listClass with: self listElements third).
+		hasNode: self listElements third.
 	self
 		assertList: result
-		hasSortOrder: XPathDocumentSortOrder.
+		hasSortOrder: XPathLevelDocumentSortOrder.
 	self assert: (result / 'three') isEmpty.

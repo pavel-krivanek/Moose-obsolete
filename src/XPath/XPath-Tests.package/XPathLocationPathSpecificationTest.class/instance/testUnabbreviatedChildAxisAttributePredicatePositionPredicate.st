@@ -5,7 +5,7 @@ testUnabbreviatedChildAxisAttributePredicatePositionPredicate
 		attribute with value warning"
 		self
 			assertNodeSet:
-				(node xPath: 'child::para[attribute::type=''warning''][position()=5]')
+				(node xpath: 'child::para[attribute::type=''warning''][position()=5]')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [

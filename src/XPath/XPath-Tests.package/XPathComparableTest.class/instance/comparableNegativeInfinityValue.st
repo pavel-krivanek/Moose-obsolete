@@ -1,3 +1,3 @@
 accessing
 comparableNegativeInfinityValue
-	^ Float xPathNegativeInfinity asXPathComparable
+	^ Float xpathNegativeInfinity asXPathComparable

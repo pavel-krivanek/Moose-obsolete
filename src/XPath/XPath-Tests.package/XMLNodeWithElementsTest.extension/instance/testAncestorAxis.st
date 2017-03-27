@@ -5,13 +5,13 @@ testAncestorAxis
 	super testAncestorAxis.
 
 	nodeWithElements := self newNodeWithElements.
-	nodeWithElements allNodesDo: [:each | | list |
-		list := each %% 'node()'.
+	nodeWithElements allNodesDo: [:each | | result |
+		result := each %% 'node()'.
 		self
-			assert: list = each ancestorNodes;
-			assertList: list hasSortOrder: XPathReverseDocumentSortOrder.
+			assertNodeSet: result
+			hasNodes: each ancestorNodes.
 
-		list := each %% '*'.
+		result := each %% '*'.
 		self
-			assert: list = each ancestorElements;
-			assertList: list hasSortOrder: XPathReverseDocumentSortOrder].
+			assertNodeSet: result
+			hasNodes: each ancestorElements].

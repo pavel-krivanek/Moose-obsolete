@@ -1,7 +1,7 @@
 tests
 testNodeSetAndNonNodeSetInequality
 	self assert:
-		('<list><a>1</a><b>two</b></list>' parseXML xPath:
+		('<list><a>1</a><b>two</b></list>' parseXML xpath:
 			'list/a != 2.0
 				and 2.0 != list/a
 				and not(list/a != 1.0)

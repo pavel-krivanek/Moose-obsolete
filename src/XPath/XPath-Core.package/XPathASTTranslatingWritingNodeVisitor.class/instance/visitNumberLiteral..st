@@ -13,14 +13,14 @@ visitNumberLiteral: aNumberLiteral
 			number isInfinite
 				ifTrue: [
 					number negative
-						ifTrue: [self emitNumberLiteral: 'Float xPathNegativeInfinity']
+						ifTrue: [self emitNumberLiteral: 'Float xpathNegativeInfinity']
 						ifFalse: [self emitNumberLiteral: 'Float infinity']]
 				ifFalse: [
 					number isZero
 						ifTrue: [
 							number isXPathNegativeZero
 								ifTrue: [
-									self emitNumberLiteral: 'Float xPathNegativeZero']
+									self emitNumberLiteral: 'Float xpathNegativeZero']
 								ifFalse: [self emitNumberLiteral: '0.0']]
 						ifFalse: [
 							"#asString should be OK for all others"

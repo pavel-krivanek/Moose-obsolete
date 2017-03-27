@@ -1,4 +1,4 @@
-enumerating - predicate axis
+private
 precedingAxis: aNodeTestStringOrBlock predicates: aPredicateCollection
 	^ self sortOrder
 		on: self

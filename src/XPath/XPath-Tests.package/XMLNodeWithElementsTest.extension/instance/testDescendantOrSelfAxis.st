@@ -7,19 +7,29 @@ testDescendantOrSelfAxis
 	nodeWithElements := self newNodeWithElements.
 	nodeWithElements allNodesDo: [:each |
 		each hasChildren
-			ifTrue: [| list |
-				list := each //~ 'node()'.
+			ifTrue: [| result |
+				result := each //~ 'node()'.
 				self
-					assert: list = (each descendantNodes copyWithFirst: each);
-					assertList: list hasSortOrder: XPathDocumentSortOrder.
+					assertNodeSet: result
+					hasNodes: each allNodes.
 
-				list := each //~ '*'.
+				result := each //~ '*'.
 				each isElement
-					ifTrue: [self assert: list = (each descendantElements copyWithFirst: each)]
-					ifFalse: [self assert: list = each descendantElements].
-				self assertList: list hasSortOrder: XPathDocumentSortOrder]
+					ifTrue: [
+						self
+							assertNodeSet: result
+							hasNodes: each allElements]
+					ifFalse: [
+						self
+							assertNodeSet: result
+							hasNodes: each descendantElements]]
 			ifFalse: [
-				self assert: (each //~ 'node()') = (self nodeSetClass with: each).
+				self
+					assertNodeSet: (each //~ 'node()')
+					hasNode: each.
 				each isElement
-					ifTrue: [self assert: (each //~ '*') = (self nodeSetClass with: each)]
+					ifTrue: [
+						self
+							assertNodeSet: (each //~ '*')
+							hasNode: each]
 					ifFalse: [self assert: (each //~ '*') isEmpty]]].

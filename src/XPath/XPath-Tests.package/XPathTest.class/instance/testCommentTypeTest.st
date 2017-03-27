@@ -2,9 +2,11 @@ tests
 testCommentTypeTest
 	| comments |
 
-	comments := document xPath: '//comment()'.
+	comments := document allNodesSelect: [:each | each isComment].
 	self
-		assert: comments size = 2;
-		assert: comments = (document allNodesSelect: [:each | each isComment]);
-		assert: (document xPath: '//comment()/self::comment()') = comments;
-		assert: (document xPath: '//comment()/comment()') isEmpty.
+		assertNodeSet: (document xpath: '//comment()')
+		hasNodes: comments.
+	self
+		assertNodeSet: (document xpath: '//comment()/self::comment()')
+		hasNodes: comments.
+	self assert: (document xpath: '//comment()/comment()') isEmpty.

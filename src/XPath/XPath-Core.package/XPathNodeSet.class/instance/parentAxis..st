@@ -1,4 +1,4 @@
-enumerating - axis
+private
 parentAxis: aNodeTestStringOrBlock
 	^ self sortOrder
 		on: self

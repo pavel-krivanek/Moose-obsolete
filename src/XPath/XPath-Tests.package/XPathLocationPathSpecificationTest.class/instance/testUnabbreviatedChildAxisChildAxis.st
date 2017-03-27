@@ -3,7 +3,7 @@ testUnabbreviatedChildAxisChildAxis
 	specificationDocument allNodesDo: [:node |
 		"selects all para grandchildren of the context node"
 		self
-			assertNodeSet: (node xPath: 'child::*/child::para')
+			assertNodeSet: (node xpath: 'child::*/child::para')
 			hasNodes:
 				(node canHaveChildren
 					ifTrue: [| paras |

@@ -11,13 +11,13 @@ testUnabbreviatedChildAxisSelfPredicate
 		"selects the chapter and appendix children of the context node"
 		self
 			assertNodeSet:
-				(node xPath: 'child::*[self::chapter or self::appendix]')
+				(node xpath: 'child::*[self::chapter or self::appendix]')
 			hasNodes: elements.
 
 		"selects the last chapter or appendix child of the context node"
 		self
 			assertNodeSet:
-				(node xPath:
+				(node xpath:
 					'child::*[self::chapter or self::appendix][position()=last()]')
 			hasNodes:
 				(elements size > 0

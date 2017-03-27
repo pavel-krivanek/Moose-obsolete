@@ -2,34 +2,51 @@ tests
 testReverseDocumentOrderPreserving
 	| expected result |
 
-	expected := document allNodes last ancestorNodes reversed.
 	result :=
-		document allNodes last xPath:
-			'ancestor-or-self::node()/parent::node()[true()]'.
+		document xpath:
+			'addressbook/person[last()]/preceding-sibling::node()/parent::node()[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNode: document root.
+	self
+		assertNodeSet: result
+		hasSortOrder: XPathLevelDocumentSortOrder.
 
-	expected := document allNodes last ancestorNodes reversed.
+	expected :=
+		document root nodes copyUpTo:
+			(document allElementsNamed: 'person') last.
 	result :=
-		document allNodes last xPath:
-			'ancestor::node()/self::node()[true()]'.
+		document xpath:
+			'addressbook/person[last()]/preceding-sibling::node()/self::node()[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
+	self
+		assertNodeSet: result
+		hasSortOrder: XPathLevelDocumentSortOrder.
 
 	expected removeAll.
-	document allNodes last ancestorElements reverseDo: [:each |
+	(document allElementsNamed: 'person') allButLast do: [:each |
 		expected addAll: each attributeNodes].
-	result := document allNodes last xPath: 'ancestor::*/@*[true()]'.
+	result :=
+		document xpath:
+			'addressbook/person[last()]/preceding-sibling::node()/@*[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
+	self
+		assertNodeSet: result
+		hasSortOrder: XPathLevelDocumentSortOrder.
 
 	expected removeAll.
-	document allNodes last ancestorElements reverseDo: [:each |
+	(namespacedDocument allElementsNamed: 'person') allButLast do: [:each |
 		expected addAll: each namespaceNodes].
-	result := document allNodes last xPath: 'ancestor::*/namespace::*[true()]'.
+	result :=
+		namespacedDocument xpath:
+			'book:addressbook/ps:person[last()]/preceding-sibling::node()/namespace::*[true()]'.
 	self
-		assert: result = expected;
-		assertNodeSet: result hasSortOrder: XPathDocumentSortOrder.
+		assertNodeSet: result
+		hasNodes: expected.
+	self
+		assertNodeSet: result
+		hasSortOrder: XPathLevelDocumentSortOrder.
