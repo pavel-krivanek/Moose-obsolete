@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMGenericAction",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMSpawnBrowserAction",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMBrick",
+	"category" : "GT-Spotter-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"triangleBrick",
+		"selectedItemBrick",
+		"spotterModel",
+		"isTriangleVisible"
+	],
+	"name" : "GTSpotterPreviewArrowBrick",
+	"type" : "normal"
+}

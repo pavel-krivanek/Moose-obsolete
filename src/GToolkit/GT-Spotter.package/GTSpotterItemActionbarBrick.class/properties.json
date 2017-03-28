@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMBrick",
+	"category" : "GT-Spotter-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stepModel",
+		"diveInButton",
+		"actOnButton",
+		"candidateLink"
+	],
+	"name" : "GTSpotterItemActionbarBrick",
+	"type" : "normal"
+}

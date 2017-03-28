@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMFallbackScrollListBrick",
+	"category" : "GT-Playground",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTPlaygroundBindingsList",
+	"type" : "normal"
+}

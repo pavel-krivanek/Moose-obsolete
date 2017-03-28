@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "GLMPortReference",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"active",
+		"transformation"
+	],
+	"name" : "GLMOriginPortReference",
+	"type" : "normal"
+}

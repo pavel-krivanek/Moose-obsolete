@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMVerticalLinearLayout",
+	"category" : "GT-Spotter-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"allowedBounds"
+	],
+	"name" : "GTSpotterStackedLayout",
+	"type" : "normal"
+}

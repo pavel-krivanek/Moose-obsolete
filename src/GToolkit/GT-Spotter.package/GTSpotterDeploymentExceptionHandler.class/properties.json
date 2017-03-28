@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTSpotterExceptionHandler",
+	"category" : "GT-Spotter-Exceptions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTSpotterDeploymentExceptionHandler",
+	"type" : "normal"
+}

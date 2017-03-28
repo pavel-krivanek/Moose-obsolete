@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "GT-Spotter-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onAddedSelector",
+		"onRemoveSelector",
+		"receiver",
+		"timestamp"
+	],
+	"name" : "GTSpotterUIThreadStream",
+	"type" : "normal"
+}

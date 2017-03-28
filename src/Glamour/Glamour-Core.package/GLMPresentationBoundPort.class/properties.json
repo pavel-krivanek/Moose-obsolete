@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TudorGirba 2/4/2011 20:27",
+	"super" : "GLMBoundPort",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"presentation"
+	],
+	"name" : "GLMPresentationBoundPort",
+	"type" : "normal"
+}

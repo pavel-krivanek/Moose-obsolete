@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTPlayPagePersistence",
+	"category" : "GT-Playground",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTPlayPageFilePersistence",
+	"type" : "normal"
+}

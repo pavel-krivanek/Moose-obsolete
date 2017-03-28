@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMPort",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMBoundPort",
+	"type" : "normal"
+}

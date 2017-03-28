@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTOrderedFilter",
+	"category" : "GT-Spotter-Filters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTFilterSubstring",
+	"type" : "normal"
+}

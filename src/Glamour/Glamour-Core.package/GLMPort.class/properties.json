@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "tg 12/19/2009 00:15",
+	"super" : "GLMLoggedObject",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name"
+	],
+	"name" : "GLMPort",
+	"type" : "normal"
+}

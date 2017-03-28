@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 1/7/2011 07:31",
+	"super" : "GLMUpdateAction",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMMultipleUpdateAction",
+	"type" : "normal"
+}

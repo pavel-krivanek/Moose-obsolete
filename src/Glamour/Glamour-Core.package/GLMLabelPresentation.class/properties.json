@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMFormatedPresentation",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GLMLabelPresentation",
+	"type" : "normal"
+}

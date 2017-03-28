@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AndreiChis 9/24/2015 18:17",
+	"super" : "GTSpotterProcessorFilter",
+	"category" : "GT-Spotter-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedMethodSignatures",
+		"configurationBlocks"
+	],
+	"name" : "GTSpotterMethodListProcessorFilter",
+	"type" : "normal"
+}

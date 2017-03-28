@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMEditableLabelBrick",
+	"category" : "GT-Playground",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GTPlaygroundEditableTabLabel",
+	"type" : "normal"
+}

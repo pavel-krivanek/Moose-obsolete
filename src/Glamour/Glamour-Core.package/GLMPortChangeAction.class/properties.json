@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "GLMAction",
+	"category" : "Glamour-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"portName"
+	],
+	"name" : "GLMPortChangeAction",
+	"type" : "normal"
+}
