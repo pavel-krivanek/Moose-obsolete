@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instances"
+		"#instances => FMToManyRelationSlot inverse: #annotationType inClass: #FAMIXAnnotationInstance"
 	],
 	"name" : "FAMIXAnnotationType",
 	"type" : "normal"

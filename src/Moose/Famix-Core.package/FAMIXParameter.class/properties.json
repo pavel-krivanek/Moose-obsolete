@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"parentBehaviouralEntity"
+		"#parentBehaviouralEntity => FMToOneRelationSlot inverse: #parameters inClass: #FAMIXBehaviouralEntity"
 	],
 	"name" : "FAMIXParameter",
 	"type" : "normal"

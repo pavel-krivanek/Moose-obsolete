@@ -1,4 +1,45 @@
 meta
 metamodelClasses
 
-	^ MooseEntity withAllSubclasses
+"	^ MooseEntity withAllSubclasses"
+	
+
+^ #(FAMIXEntity
+FAMIXLeafEntity
+FAMIXNamedEntity
+FAMIXContainerEntity
+FAMIXSourcedEntity
+FAMIXStructuralEntity
+FAMIXAssociation
+FAMIXAccess
+FAMIXInheritance
+FAMIXInvocation
+FAMIXReference
+FAMIXAnnotationInstance
+FAMIXAnnotationInstanceAttribute
+FAMIXAnnotationType
+FAMIXAnnotationTypeAttribute
+FAMIXImplicitVariable 
+FAMIXLocalVariable
+FAMIXUnknownVariable
+FAMIXAttribute 
+FAMIXType
+FAMIXClass
+FAMIXBehaviouralEntity
+
+FAMIXMethod
+FAMIXParameter
+FAMIXComment
+FAMIXGlobalVariable
+FAMIXScopingEntity
+FAMIXNamespace
+FAMIXPackage
+FAMIXSourceAnchor
+FAMIXPharoAnchor
+FAMIXSourceLanguage
+FAMIXSmalltalkSourceLanguage
+
+MooseModel
+MooseAbstractGroup
+MooseEntity
+) collect: [ :each | Smalltalk classNamed: each ].

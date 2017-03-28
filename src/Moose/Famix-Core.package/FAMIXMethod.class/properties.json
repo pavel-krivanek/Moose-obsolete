@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"kind",
-		"parentType",
-		"hasClassScope"
+		"#kind",
+		"#hasClassScope",
+		"#parentType => FMToOneRelationSlot inverse: #methods inClass: #FAMIXType"
 	],
 	"name" : "FAMIXMethod",
 	"type" : "normal"

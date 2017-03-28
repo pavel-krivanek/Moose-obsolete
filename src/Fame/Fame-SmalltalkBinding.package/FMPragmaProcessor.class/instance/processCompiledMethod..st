@@ -24,8 +24,6 @@ processCompiledMethod: aMethod
 		ifTrue: [ oppositeDict at: prop put: (pragma argumentAt: 3) ].
 	(Pragma inMethod: aMethod named: #container) ifNotNil: [ prop isContainer: true ].
 	(Pragma inMethod: aMethod named: #derived) ifNotNil: [ prop isDerived: true ].
-	(Pragma inMethod: aMethod named: #source) ifNotNil: [ prop isSource: true ].
-	(Pragma inMethod: aMethod named: #target) ifNotNil: [ prop isTarget: true ]. 
 	(Pragma inMethod: aMethod named: #multivalued)
 		ifNotNil: [ prop isMultivalued: true ].
 	(Pragma inMethod: aMethod named: #key:)

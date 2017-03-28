@@ -1,4 +1,4 @@
 meta information
-navigationSelectors
+navigationSelectors 
 	^ (Pragma allNamed: #navigation: from: self class to: MooseEntity)
 		collect: [ :p | p methodSelector ]

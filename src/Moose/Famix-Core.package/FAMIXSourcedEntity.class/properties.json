@@ -6,10 +6,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"sourceAnchor",
-		"sourceLanguage",
-		"comments",
-		"declaredSourceLanguage"
+		"#sourceAnchor => FMToOneRelationSlot inverse: #element inClass: #FAMIXSourceAnchor",
+		"#sourceLanguage",
+		"#comments => FMToManyRelationSlot inverse: #container inClass: #FAMIXComment",
+		"#declaredSourceLanguage"
 	],
 	"name" : "FAMIXSourcedEntity",
 	"type" : "normal"

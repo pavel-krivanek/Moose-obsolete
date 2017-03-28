@@ -14,9 +14,7 @@
 		"package",
 		"type",
 		"key",
-		"implementingSelector",
-		"isTarget",
-		"isSource"
+		"implementingSelector"
 	],
 	"name" : "FM3PropertyDescription",
 	"type" : "normal"

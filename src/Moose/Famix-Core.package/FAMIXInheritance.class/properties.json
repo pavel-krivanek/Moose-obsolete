@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"superclass",
-		"subclass"
+		"#superclass => FMToOneRelationSlot inverse: #subInheritances inClass: #FAMIXType",
+		"#subclass => FMToOneRelationSlot inverse: #superInheritances inClass: #FAMIXType"
 	],
 	"name" : "FAMIXInheritance",
 	"type" : "normal"

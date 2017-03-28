@@ -1,4 +1,4 @@
-*Famix-Java
+*Famix-Smalltalk
 isAnonymousClass
 	^  self container notNil and: [
 			self container isMethod or: [

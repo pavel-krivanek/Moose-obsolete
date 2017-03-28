@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"hasClassScope",
-		"parentType"
+		"#parentType => FMToOneRelationSlot inverse: #attributes inClass: #FAMIXType",
+		"#hasClassScope"
 	],
 	"name" : "FAMIXAttribute",
 	"type" : "normal"
