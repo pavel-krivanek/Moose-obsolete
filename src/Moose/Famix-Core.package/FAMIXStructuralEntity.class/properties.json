@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"declaredType",
-		"incomingAccesses"
+		"#declaredType => FMToOneRelationSlot inverse: #structuresWithDeclaredType inClass: #FAMIXType",
+		"#incomingAccesses"
 	],
 	"name" : "FAMIXStructuralEntity",
 	"type" : "normal"

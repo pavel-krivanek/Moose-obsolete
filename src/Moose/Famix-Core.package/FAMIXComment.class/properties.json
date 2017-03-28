@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"container",
-		"content"
+		"#container => FMToOneRelationSlot inverse: #comments inClass: #FAMIXSourcedEntity",
+		"#content"
 	],
 	"name" : "FAMIXComment",
 	"type" : "normal"

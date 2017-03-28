@@ -1,8 +1,4 @@
 accessing
 parentScope: aScopingEntity 
-	parentScope := FMMultivalueLink 
-		on: self
-		update: #childScopes
-		from: self parentScope
-		to: aScopingEntity.
+	parentScope := aScopingEntity.
 	self resetMooseName

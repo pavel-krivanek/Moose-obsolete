@@ -1,7 +1,4 @@
 accessing
 parentBehaviouralEntity: aBehaviouralEntity
-	parentBehaviouralEntity := FMMultivalueLink on: self
-					update: #localVariables
-					from: self parentBehaviouralEntity
-					to: aBehaviouralEntity.
+	parentBehaviouralEntity := aBehaviouralEntity.
 	self resetMooseName

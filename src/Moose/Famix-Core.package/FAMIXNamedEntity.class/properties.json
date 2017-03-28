@@ -2,23 +2,19 @@
 	"classtraitcomposition" : "TOODependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"name",
-		"isStub",
-		"receivingInvocations",
-		"modifiers",
-		"parentPackage",
-		"annotationInstances"
+		"#parentPackage => FMToOneRelationSlot inverse: #childNamedEntities inClass: #FAMIXPackage",
+		"#receivingInvocations => FMToManyRelationSlot inverse: #receiver inClass: #FAMIXInvocation",
+		"#name",
+		"#isStub",
+		"#modifiers",
+		"#annotationInstances => FMToManyRelationSlot inverse: #annotatedEntity inClass: #FAMIXAnnotationInstance"
 	],
 	"name" : "FAMIXNamedEntity",
 	"commentStamp" : "usmanbhatti 11/23/2011 22:48",
 	"super" : "FAMIXSourcedEntity",
 	"traitcomposition" : "TOODependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
-	"classinstvars" : [
-		"outgoingMSEProperties",
-		"incomingMSEProperties",
-		"belongsToMethod"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"category" : "Famix-Core"
 }
