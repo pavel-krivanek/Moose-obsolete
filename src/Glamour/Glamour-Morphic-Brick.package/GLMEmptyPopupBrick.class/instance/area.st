@@ -5,13 +5,17 @@ area
 	firstBounds := self subbricks first outerBounds.
 	secondBounds := self subbricks second outerBounds.
 
+	(secondBounds origin x - firstBounds origin x) logCr.
+
 	^ GLMArea
-		origin: self brickBounds origin
+		origin: firstBounds origin
 		vectors: { 
 			GLMVector east: firstBounds width.
 			GLMVector south: firstBounds height.
-			GLMVector horizontal: secondBounds width - firstBounds width.
+			GLMVector horizontal: secondBounds corner x - firstBounds corner x.
 			GLMVector south: secondBounds height.
 			GLMVector west: secondBounds width.
-			GLMVector north: secondBounds height + firstBounds height.
+			GLMVector north: secondBounds height.
+			GLMVector horizontal: firstBounds origin x - secondBounds origin x.
+			GLMVector north: firstBounds height
 		}

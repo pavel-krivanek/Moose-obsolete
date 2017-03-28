@@ -1,5 +1,5 @@
 *XML-Parser-GTExtensions
-addTreeViewChildrenTo: aSequenceableCollection
+addTreeViewChildrenTo: anOrderedCollection
 	self hasDoctypeDeclaration
-		ifTrue: [aSequenceableCollection addLast: self doctypeDeclaration].
-	super addTreeViewChildrenTo: aSequenceableCollection.
+		ifTrue: [anOrderedCollection addLast: self doctypeDeclaration].
+	super addTreeViewChildrenTo: anOrderedCollection.

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 3/7/2017 13:29",
+	"super" : "XMLCanonicalWriterFormatter",
+	"category" : "XML-Parser-GTExtensions-Highlighting-Writer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"highlighter"
+	],
+	"name" : "XMLHighlightingCanonicalWriterFormatter",
+	"type" : "normal"
+}

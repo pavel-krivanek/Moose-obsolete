@@ -8,7 +8,7 @@ gtExampleBorder
 		vShrinkWrap;
 		addBrickBack: (self createLabel: [ :b |
 			self new
-				in: [ :aPopup  | self haltOnce. aPopup themer: aPopup themer popupEditorBorderThemer themer ];
+				in: [ :aPopup  | aPopup themer: aPopup themer popupEditorBorderThemer themer ];
 				closer: (GLMPopupBrickCloser predicate: GLMPopupBrickOutisideClickPredicate new);
 				textModel: 'haba';
 				openOn: b ]);

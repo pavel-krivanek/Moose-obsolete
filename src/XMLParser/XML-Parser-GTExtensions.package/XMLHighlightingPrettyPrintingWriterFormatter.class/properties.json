@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "monty 9/21/2015 06:43",
+	"commentStamp" : "monty 3/7/2017 13:29",
 	"super" : "XMLPrettyPrintingWriterFormatter",
 	"category" : "XML-Parser-GTExtensions-Highlighting-Writer",
 	"classinstvars" : [ ],

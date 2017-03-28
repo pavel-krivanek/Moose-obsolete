@@ -1,0 +1,1 @@
+A disabled version of the superclass.

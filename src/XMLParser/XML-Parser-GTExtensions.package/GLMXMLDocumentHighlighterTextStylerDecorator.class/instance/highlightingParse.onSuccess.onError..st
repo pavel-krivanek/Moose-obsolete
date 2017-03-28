@@ -1,13 +1,13 @@
 private
 highlightingParse: aString onSuccess: aOneArgumentBlock onError: aTwoArgumentBlock
-	| highlightingParser parser |
+	| highlightingParserHandler highlightingParser |
 
-	highlightingParser := XMLHighlightingParser on: aString.
-	parser := highlightingParser parser. "used to get position on error"
-	[parser parseDocument]
+	highlightingParserHandler := self newHighlightingParserHandlerOn: aString.
+	highlightingParser := self newHighlightingParserFromHandler: highlightingParserHandler.
+	[highlightingParser parseDocument]
 		on: XMLParserException
 		do: [:error |
 			^ aTwoArgumentBlock
-				value: highlightingParser
-				value: parser currentPosition].
-	^ aOneArgumentBlock value: highlightingParser.
+				value: highlightingParserHandler
+				value: highlightingParser currentPosition].
+	^ aOneArgumentBlock value: highlightingParserHandler.

@@ -1,0 +1,3 @@
+private
+newHighlightingParserFromHandler: aHighlightingParserHandler
+	^ aHighlightingParserHandler parser

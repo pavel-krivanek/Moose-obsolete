@@ -1,7 +1,7 @@
 *XML-Parser-GTExtensions
-addTreeViewChildrenTo: aSequenceableCollection
+addTreeViewChildrenTo: anOrderedCollection
 	self nodesDo: [:each |
 		(each isStringNode
 			and: [each isEmpty
 				or: [each isWhitespace]])
-			ifFalse: [aSequenceableCollection addLast: each]]
+			ifFalse: [anOrderedCollection addLast: each]]

@@ -1,0 +1,1 @@
+This formatter adds highlights to XMLHighlightingWriter output.

@@ -17,7 +17,6 @@ visitDraggableInteraction: anInteraction with: anObject
 	
 	trachelBlock := [ :e|	(e isKindOf: TRShape) ifTrue: [ e ] ifFalse: [ e trachelShape ] ].
 	list addAll: (anInteraction groupToDrag collect: trachelBlock).
-	anInteraction element ifNotNil: [ :e | list add: (trachelBlock value: e) ].
 	list isEmpty ifTrue: [ self visitInteraction: anInteraction with: anObject ]
 	ifFalse: [
 		stream nextPutAll: 'new RTDraggable(['.

@@ -1,7 +1,7 @@
 morph content setup tools
 newMultiSelectionListFor: aModel list: listSelector primarySelection: primarySelectionSelector changePrimarySelection: changePrimarySelectionSelector listSelection: listSelectionSelector changeListSelection: changeListSelectionSelector
 
-^ (PluggableListMorphOfMany
+^ (PluggableListMorph
 		on: aModel
 		list: listSelector 
 		primarySelection: primarySelectionSelector 

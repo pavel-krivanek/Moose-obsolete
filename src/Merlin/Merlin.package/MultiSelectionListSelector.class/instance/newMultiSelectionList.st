@@ -1,7 +1,7 @@
 morph content setup tools
 newMultiSelectionList
 
-^ PluggableListMorphOfMany
+^ PluggableListMorph
 		on: self
 		list: #list
 		primarySelection: #selectionSymbol

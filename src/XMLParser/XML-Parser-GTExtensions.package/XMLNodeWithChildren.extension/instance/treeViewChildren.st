@@ -1,5 +1,8 @@
 *XML-Parser-GTExtensions
 treeViewChildren
-	self hasChildren
-		ifTrue: [^ self nodes]
+	self supportsTreeView
+		ifTrue: [| treeViewChildren |
+			treeViewChildren := OrderedCollection new: self nodes size.
+			self addTreeViewChildrenTo: treeViewChildren.
+			^ treeViewChildren]
 		ifFalse: [^ #()]

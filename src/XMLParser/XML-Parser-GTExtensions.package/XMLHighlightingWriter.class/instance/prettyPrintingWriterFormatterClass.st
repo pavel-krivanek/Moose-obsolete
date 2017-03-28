@@ -1,0 +1,3 @@
+private
+prettyPrintingWriterFormatterClass
+	^ XMLHighlightingPrettyPrintingWriterFormatter
