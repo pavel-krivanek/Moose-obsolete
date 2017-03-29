@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#source => FMToOneRelationSlot inverse: #outgoingReferences inClass: #FAMIXBehaviouralEntity",
-		"#target => FMToOneRelationSlot inverse: #incomingReferences inClass: #FAMIXType"
+		"#source => FMToOne type: #FAMIXBehaviouralEntity opposite: #outgoingReferences",
+		"#target => FMToOne type: #FAMIXType opposite: #incomingReferences"
 	],
 	"name" : "FAMIXReference",
 	"type" : "normal"

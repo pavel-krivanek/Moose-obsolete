@@ -4,11 +4,11 @@ printOn: aStream
 		store: self name;
 		nextPutAll: ' => ';
 		nextPutAll: self class name.
+	aStream
+		nextPutAll: ' type: ';
+		store: self targetClassName.
 	self hasInverse 
 		ifTrue: [ 
 			aStream
-				nextPutAll: ' inverse: ';
+				nextPutAll: ' opposite: ';
 				store: inverseName ].
-	aStream
-		nextPutAll: ' inClass: ';
-		store: self targetClassName.

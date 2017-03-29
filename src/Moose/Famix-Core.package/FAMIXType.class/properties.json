@@ -2,14 +2,14 @@
 	"classtraitcomposition" : "TOODependencyQueries classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#incomingReferences => FMToManyRelationSlot inverse: #target inClass: #FAMIXReference",
-		"#subInheritances => FMToManyRelationSlot inverse: #superclass inClass: #FAMIXInheritance",
-		"#methods => FMToManyRelationSlot inverse: #parentType inClass: #FAMIXMethod",
+		"#incomingReferences => FMToMany type: #FAMIXReference opposite: #target",
+		"#subInheritances => FMToMany type: #FAMIXInheritance opposite: #superclass",
+		"#methods => FMToMany type: #FAMIXMethod opposite: #parentType",
 		"#container",
-		"#superInheritances => FMToManyRelationSlot inverse: #subclass inClass: #FAMIXInheritance",
-		"#attributes => FMToManyRelationSlot inverse: #parentType inClass: #FAMIXAttribute",
-		"#behavioursWithDeclaredType => FMToManyRelationSlot inverse: #declaredType inClass: #FAMIXBehaviouralEntity",
-		"#structuresWithDeclaredType => FMToManyRelationSlot inverse: #declaredType inClass: #FAMIXStructuralEntity"
+		"#superInheritances => FMToMany type: #FAMIXInheritance opposite: #subclass",
+		"#attributes => FMToMany type: #FAMIXAttribute opposite: #parentType",
+		"#behavioursWithDeclaredType => FMToMany type: #FAMIXBehaviouralEntity opposite: #declaredType",
+		"#structuresWithDeclaredType => FMToMany type: #FAMIXStructuralEntity opposite: #declaredType"
 	],
 	"name" : "FAMIXType",
 	"commentStamp" : "usmanbhatti 11/24/2011 22:39",

@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#childNamedEntities => FMToManyRelationSlot inverse: #parentPackage inClass: #FAMIXNamedEntity"
+		"#childNamedEntities => FMToMany type: #FAMIXNamedEntity opposite: #parentPackage"
 	],
 	"name" : "FAMIXPackage",
 	"type" : "normal"

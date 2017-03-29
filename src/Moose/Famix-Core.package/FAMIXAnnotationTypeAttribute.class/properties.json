@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"annotationAttributeInstances"
+		"#annotationAttributeInstances => FMToMany type: #FAMIXAnnotationInstanceAttribute opposite: #annotationTypeAttribute"
 	],
 	"name" : "FAMIXAnnotationTypeAttribute",
 	"type" : "normal"

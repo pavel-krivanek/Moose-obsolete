@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentAnnotationInstance => FMToOneRelationSlot inverse: #attributes inClass: #FAMIXAnnotationInstance",
-		"#annotationTypeAttribute",
+		"#parentAnnotationInstance => FMToOne type: #FAMIXAnnotationInstance opposite: #attributes",
+		"#annotationTypeAttribute => FMToOne type: #FAMIXAnnotationTypeAttribute opposite: #annotationAttributeInstances",
 		"#value"
 	],
 	"name" : "FAMIXAnnotationInstanceAttribute",

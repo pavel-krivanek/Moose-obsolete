@@ -2,9 +2,9 @@
 	"classtraitcomposition" : "TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#annotationType => FMToOneRelationSlot inverse: #instances inClass: #FAMIXAnnotationType",
-		"#annotatedEntity => FMToOneRelationSlot inverse: #annotationInstances inClass: #FAMIXNamedEntity",
-		"#attributes => FMToManyRelationSlot inverse: #parentAnnotationInstance inClass: #FAMIXAnnotationInstanceAttribute"
+		"#annotationType => FMToOne type: #FAMIXAnnotationType opposite: #instances",
+		"#annotatedEntity => FMToOne type: #FAMIXNamedEntity opposite: #annotationInstances",
+		"#attributes => FMToMany type: #FAMIXAnnotationInstanceAttribute opposite: #parentAnnotationInstance"
 	],
 	"name" : "FAMIXAnnotationInstance",
 	"commentStamp" : "usmanbhatti 11/23/2011 14:51",

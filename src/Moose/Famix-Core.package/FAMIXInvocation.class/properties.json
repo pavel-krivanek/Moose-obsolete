@@ -6,11 +6,11 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#sender => FMToOneRelationSlot inverse: #outgoingInvocations inClass: #FAMIXBehaviouralEntity",
-		"#receiver => FMToOneRelationSlot inverse: #receivingInvocations inClass: #FAMIXNamedEntity",
+		"#sender => FMToOne type: #FAMIXBehaviouralEntity opposite: #outgoingInvocations",
+		"#receiver => FMToOne type: #FAMIXNamedEntity opposite: #receivingInvocations",
 		"#receiverSourceCode",
 		"#signature",
-		"#candidates => FMToManyRelationSlot inverse: #incomingInvocations inClass: #FAMIXBehaviouralEntity"
+		"#candidates => FMToMany type: #FAMIXBehaviouralEntity opposite: #incomingInvocations"
 	],
 	"name" : "FAMIXInvocation",
 	"type" : "normal"

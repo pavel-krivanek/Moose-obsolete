@@ -8,7 +8,7 @@
 	"instvars" : [
 		"#kind",
 		"#hasClassScope",
-		"#parentType => FMToOneRelationSlot inverse: #methods inClass: #FAMIXType"
+		"#parentType => FMToOne type: #FAMIXType opposite: #methods"
 	],
 	"name" : "FAMIXMethod",
 	"type" : "normal"

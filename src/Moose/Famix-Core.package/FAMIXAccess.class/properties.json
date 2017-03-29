@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#accessor => FMToManyRelationSlot inverse: #accesses inClass: #FAMIXBehaviouralEntity",
+		"#accessor => FMToMany type: #FAMIXBehaviouralEntity opposite: #accesses",
 		"#isWrite",
-		"#variable"
+		"#variable => FMToOne type: #FAMIXStructuralEntity opposite: #incomingAccesses"
 	],
 	"name" : "FAMIXAccess",
 	"type" : "normal"

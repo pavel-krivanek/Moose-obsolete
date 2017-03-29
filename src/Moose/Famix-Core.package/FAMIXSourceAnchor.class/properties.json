@@ -2,7 +2,7 @@
 	"classtraitcomposition" : "TDependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#parentSelectors})",
 	"classvars" : [ ],
 	"instvars" : [
-		"#element => FMToOneRelationSlot inverse: #sourceAnchor inClass: #FAMIXSourcedEntity"
+		"#element => FMToOne type: #FAMIXSourcedEntity opposite: #sourceAnchor"
 	],
 	"name" : "FAMIXSourceAnchor",
 	"commentStamp" : "usmanbhatti 11/23/2011 15:02",
