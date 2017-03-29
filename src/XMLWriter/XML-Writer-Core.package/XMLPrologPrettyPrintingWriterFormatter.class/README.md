@@ -1,0 +1,1 @@
+A formatter that inserts whitespace formatting to make the prolog XML output nicer and more readable, but doesn't format content XML.

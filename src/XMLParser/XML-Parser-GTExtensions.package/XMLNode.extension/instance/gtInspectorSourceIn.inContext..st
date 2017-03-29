@@ -12,7 +12,7 @@ gtInspectorSourceIn: aComposite inContext: aGTInspector
 							editingMode: [
 								GLMHighlighterTextRubEditingMode withStylerDecorator:
 									self newSourceEditorTextStylerDecorator];
-							display: [self asHighlightedText];
+							display: [self asHighlightedSourceText];
 							withLineNumbers: true;
 							act: [:presentation |
 								| newOuterXMLNode currentPane |
@@ -22,9 +22,10 @@ gtInspectorSourceIn: aComposite inContext: aGTInspector
 								currentPane := aComposite pane.
 								(aGTInspector panes copyUpTo: currentPane)
 									ifEmpty: [
-										"no previous panes; delete any panes after the current
-										and make its selection the new outer XML node (closing
-										and reopening is a hack but it works for now)"
+										"no previous panes; delete any panes after the
+										current and make its selection the new outer XML
+										node (closing and reopening is a hack but it
+										works for now)"
 										aGTInspector browser close.
 										aGTInspector openOn: newOuterXMLNode]
 									ifNotEmpty: [:previousPanes |
@@ -35,15 +36,19 @@ gtInspectorSourceIn: aComposite inContext: aGTInspector
 											selection: newOuterXMLNode]]
 								icon: GLMUIThemeExtraIcons glamorousAccept
 								on: $s
-								entitled: 'Save']
+								entitled: 'Accept';
+							act: [:presentation |
+								presentation update]
+								icon: GLMUIThemeExtraIcons glamorousUndo
+								entitled: 'Revert']
 					ifFalse: [
 						GLMXMLDisabledRubricHighlightedTextPresentation new
 							title: 'Source';
 							editingMode: [
 								GLMHighlighterTextRubEditingMode withStylerDecorator:
 									(GLMXMLDisabledDocumentHighlighterTextStylerDecorator
-										disabledText: self asHighlightedText)];
-							display: [self asHighlightedText];
+										disabledText: self asHighlightedSourceText)];
+							display: [self asHighlightedSourceText];
 							withLineNumbers: true]))
 		in: aComposite
 		inContext: aGTInspector

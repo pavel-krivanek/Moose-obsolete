@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "monty 7/3/2016 23:29",
-	"super" : "XMLWriterFormatter",
+	"super" : "XMLPrologPrettyPrintingWriterFormatter",
 	"category" : "XML-Writer-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

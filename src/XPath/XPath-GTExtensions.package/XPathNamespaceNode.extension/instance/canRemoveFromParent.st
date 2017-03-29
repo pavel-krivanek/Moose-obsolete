@@ -1,4 +1,0 @@
-*XPath-GTExtensions
-canRemoveFromParent
-	^ false
-	

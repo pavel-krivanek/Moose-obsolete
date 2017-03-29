@@ -1,4 +1,4 @@
-as yet unclassified
+asserting
 should: aBlock enumerate: aCollection
 	| enumerated |
 

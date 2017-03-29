@@ -1,6 +1,6 @@
 *XML-Parser-GTExtensions
 addRemoveActionTo: aPresentation in: aComposite inContext: aGTInspector
-	(self canRemoveFromParent
+	(self supportsRemoveAction
 		and: [aGTInspector panes size > 1
 			and: [aGTInspector panes first ~= aComposite pane]])
 		ifTrue: [
@@ -13,5 +13,4 @@ addRemoveActionTo: aPresentation in: aComposite inContext: aGTInspector
 					aGTInspector removeLastPane.
 					aGTInspector panes do: [:each | each update]]
 				icon: GLMUIThemeExtraIcons glamorousRemove
-				on: $r
 				entitled: 'Remove']
