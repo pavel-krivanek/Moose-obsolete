@@ -19,7 +19,7 @@ baselinePharoOverrides: spec
 		'Glamour-Morphic-Pager'
 		'Glamour-Morphic-Renderer'
 		'Glamour-Morphic-Widgets'
-		'Glamour-Morphic-Theme',
+		'Glamour-Morphic-Theme'
 		'Glamour-Presentations'
 		'Glamour-Tests-Morphic'
 	) do: [ :packageName | 
