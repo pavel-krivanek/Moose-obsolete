@@ -1,0 +1,3 @@
+*XPath-GTExtensions
+supportsRemoveAction
+	^ false

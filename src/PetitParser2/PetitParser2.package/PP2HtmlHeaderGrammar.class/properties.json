@@ -9,8 +9,7 @@
 		"headerStart",
 		"bodyStart",
 		"header",
-		"htmlFragment",
-		"headerStart"
+		"htmlFragment"
 	],
 	"name" : "PP2HtmlHeaderGrammar",
 	"type" : "normal"

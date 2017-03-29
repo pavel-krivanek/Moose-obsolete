@@ -12,8 +12,11 @@ gtInspectorSourceIn: aComposite
 			withLineNumbers: true;
 			act: [:presentation |
 				self expressionSource: presentation text asString.
-				presentation clearUserEdits.
 				aComposite pane update]
 				icon: GLMUIThemeExtraIcons glamorousAccept
 				on: $s
-				entitled: 'Save').
+				entitled: 'Accept';
+			act: [:presentation |
+				presentation update]
+				icon: GLMUIThemeExtraIcons glamorousUndo
+				entitled: 'Revert').

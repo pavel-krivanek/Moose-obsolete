@@ -1,5 +1,11 @@
 private
 generateHighlightingSubclassOf: aFormatterClass named: aName inCategory: aCategory
+	"
+	self
+		generateHighlightingSubclassOf: XMLWriterFormatter
+		named: #XMLHighlightingWriterFormatter
+		inCategory: self category
+	"
 	| newSubclass |
 
 	(aFormatterClass == self

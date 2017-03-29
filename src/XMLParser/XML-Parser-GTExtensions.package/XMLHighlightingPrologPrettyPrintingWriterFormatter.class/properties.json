@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLPrologPrettyPrintingWriterFormatter",
+	"category" : "XML-Parser-GTExtensions-Highlighting-Writer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"highlighter"
+	],
+	"name" : "XMLHighlightingPrologPrettyPrintingWriterFormatter",
+	"type" : "normal"
+}
