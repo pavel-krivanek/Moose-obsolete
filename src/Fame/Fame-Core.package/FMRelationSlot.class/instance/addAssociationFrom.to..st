@@ -12,4 +12,5 @@ addAssociationFrom: ownerObject to: otherObject
 				ifTrue: [ inverseSlot removeAssociationFrom: otherObject to: oldObject ].
 			inverseSlot writeInverse: ownerObject to: otherObject ]
 		ifFalse: [ 
+			inverseSlot read: otherObject.
 			(inverseSlot read: otherObject) inverseAdd: ownerObject ]
