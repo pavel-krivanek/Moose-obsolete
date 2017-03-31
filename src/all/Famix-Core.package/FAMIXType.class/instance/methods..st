@@ -1,3 +1,3 @@
 accessing
-methods: aMethod
-	methods value: aMethod
+methods: anObject
+	methods value: anObject

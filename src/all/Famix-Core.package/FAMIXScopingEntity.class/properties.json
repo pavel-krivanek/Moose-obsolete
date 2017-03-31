@@ -2,9 +2,9 @@
 	"classtraitcomposition" : "TScopingEntityQueries classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"globalVariables",
-		"parentScope",
-		"childScopes"
+		"#globalVariables => FMToMany type: #FAMIXGlobalVariable opposite: #parentScope",
+		"#parentScope => FMToOne type: #FAMIXScopingEntity opposite: #childScopes",
+		"#childScopes => FMToMany type: #FAMIXScopingEntity opposite: #parentScope"
 	],
 	"name" : "FAMIXScopingEntity",
 	"commentStamp" : "usmanbhatti 11/24/2011 22:31",

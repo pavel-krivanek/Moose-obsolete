@@ -2,8 +2,8 @@
 	"classtraitcomposition" : "TAssociationMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"previous",
-		"next"
+		"#previous => FMToOne type: #FAMIXAssociation opposite: #next",
+		"#next => FMToOne type: #FAMIXAssociation opposite: #previous"
 	],
 	"name" : "FAMIXAssociation",
 	"commentStamp" : "usmanbhatti 11/23/2011 15:56",

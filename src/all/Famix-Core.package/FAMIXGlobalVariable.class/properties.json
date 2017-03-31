@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"parentScope"
+		"#parentScope => FMToOne type: #FAMIXScopingEntity opposite: #globalVariables"
 	],
 	"name" : "FAMIXGlobalVariable",
 	"type" : "normal"
