@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FMRelationSlot",
+	"category" : "Fame-Core-Slots",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FMToMany",
+	"type" : "normal"
+}
