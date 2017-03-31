@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractGrapherDecorator",
+	"category" : "Roassal2-Builder-Grapher-Decorators",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label",
+		"startValue",
+		"endValue",
+		"markerColor",
+		"distanceInPixelsFromAxis"
+	],
+	"name" : "RTRangeBelowXAxis",
+	"type" : "normal"
+}
