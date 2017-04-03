@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Collection",
+	"category" : "Fame-Core-Slots",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"values",
+		"owner",
+		"opposite",
+		"slot"
+	],
+	"name" : "FMSlotMultivalueLink",
+	"type" : "normal"
+}
