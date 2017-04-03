@@ -1,3 +1,3 @@
-accessing
+private
 predicateColor
-	^ predicateColor
+	^ predicateColors at: predicateColorLevel

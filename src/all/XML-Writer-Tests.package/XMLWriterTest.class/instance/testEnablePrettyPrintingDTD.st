@@ -23,11 +23,14 @@ testEnablePrettyPrintingDTD
 				element: 'pretty';
 				attribute: 'name';
 				type: 'CDATA';
-				defaultPragma: '#REQUIRED'.
+				defaultPragma: '#IMPLIED'.
 			writer comment: 'notation'.
 			writer notationDeclaration
 				name: 'external';
-				systemID: 'external.txt'].
+				systemID: 'external.txt'.
+			writer pi
+				target: 'target';
+				data: 'data'].
 
 	self assert:
 		writer contents =
@@ -40,8 +43,9 @@ testEnablePrettyPrintingDTD
 					'<!ENTITY % comment "<!--attribute-->">'
 					'%comment;'
 					'<!--attribute-->'
-					'<!ATTLIST pretty name CDATA #REQUIRED>'
+					'<!ATTLIST pretty name CDATA #IMPLIED>'
 					'<!--notation-->'
-					'<!NOTATION external SYSTEM "external.txt">')
+					'<!NOTATION external SYSTEM "external.txt">'
+					'<?target data?>')
 				#(0 ']>'
 					''))).

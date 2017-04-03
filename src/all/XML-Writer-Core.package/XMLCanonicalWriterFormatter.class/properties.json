@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "monty 11/8/2016 08:02",
+	"commentStamp" : "monty 3/31/2017 00:31",
 	"super" : "XMLWriterFormatter",
 	"category" : "XML-Writer-Core",
 	"classinstvars" : [ ],

@@ -1,4 +1,4 @@
 running
 tearDown
 
-	RTPopup resetLastPopup.
+	RTAbstractPopup withAllSubclassesDo: [ :c | c resetLastPopup ]

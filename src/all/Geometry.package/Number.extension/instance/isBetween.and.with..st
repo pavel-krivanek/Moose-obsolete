@@ -6,7 +6,7 @@ isBetween: a and: b with: eps
 		ifFalse:[
 			mi := a min: b. 
 			ma := a max: b. 
-	( self + (2 * eps) >=~ mi and:[ self + (2 * eps) <=~ ma ] )
+	( (self + (2 * eps) greaterOrDifferentThan: mi) and:[ self + (2 * eps) lesserOrDifferentThan: ma ] )
 	ifTrue:[ ^ true]
 	ifFalse:[ 		
 			^  self between: mi and: ma ]] "( ( self - mi ) abs >=~ eps ) and:[ ( ma - self ) abs >=~ eps ]"

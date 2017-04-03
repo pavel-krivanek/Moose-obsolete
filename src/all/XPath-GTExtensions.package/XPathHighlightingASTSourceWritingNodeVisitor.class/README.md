@@ -1,0 +1,1 @@
+This class is a highlighting writing AST visitor that writes the AST as highlighted XPath source code that can be parsed by an XPathExpressionParser or converted to a Text object with #asHighlightedText.

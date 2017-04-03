@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"highlighter",
-		"expression",
 		"expressionSource"
 	],
 	"name" : "XPathHighlightingPositionExpressionParserHandler",

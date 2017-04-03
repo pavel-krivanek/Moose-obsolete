@@ -2,8 +2,8 @@ tokenizing - dtd
 nextSystemIDLiteral
 	| systemID |
 
-	driver handleStartQuotedStringValuePosition: self currentPosition + 1.
+	driver handleStartQuotedStringPosition: self currentPosition + 1.
 	systemID := super nextSystemIDLiteral.
-	driver handleEndQuotedStringValuePosition: self currentPosition.
+	driver handleEndQuotedStringPosition: self currentPosition.
 
 	^ systemID.

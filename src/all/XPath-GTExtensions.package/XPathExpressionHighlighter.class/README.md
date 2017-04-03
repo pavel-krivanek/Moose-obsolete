@@ -1,1 +1,1 @@
-This class is highlighter to highlight XPath expression Text objects using XMLHighlights.
+This class is a highlighter to highlight XPath expression Text objects using XMLHighlights.

@@ -1,0 +1,3 @@
+private
+endPosition
+	^ stream position

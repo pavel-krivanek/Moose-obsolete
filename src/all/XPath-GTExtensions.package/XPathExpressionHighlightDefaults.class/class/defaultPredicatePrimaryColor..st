@@ -1,0 +1,3 @@
+accessing
+defaultPredicatePrimaryColor: aTextColor
+	defaultPredicatePrimaryColor := aTextColor

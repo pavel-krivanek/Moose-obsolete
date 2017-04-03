@@ -7,4 +7,6 @@ blacklist
 	FileReference >> #gtInspectorCsvIn:.
 	RTTabTable >> #gtInspectorTableIn:.
 	RTExploraBuilderExample >> #exampleCircularList.
-	RTHTML5ExporterExample >> #exportAll }
+	RTHTML5ExporterExample >> #exportAll.
+	RTPopupTest >> #testPopupView.
+	RTPopupTest >> #testPopupView02 }

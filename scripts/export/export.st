@@ -26,8 +26,9 @@ groups := result groupedBy: [ :each | each value  ].
 	assoc value do: [ :packageData |
 		packageName := packageData key.
 		version := repo versionWithInfo: (MCPackage named: packageName) workingCopy ancestry ancestors first.
-		dirName := (originalRepositories associations detect: [ :each | 
-			each value = repo description ]) key.
+		"dirName := (originalRepositories associations detect: [ :each | 
+			each value = repo description ]) key."
+		dirName := 'all'.
 		IceMetadatalessFileTreeWriter
 			fileOut: (version)
 			on: (MCFileTreeRepository new directory: (exportDir / dirName) asFileReference ensureCreateDirectory).

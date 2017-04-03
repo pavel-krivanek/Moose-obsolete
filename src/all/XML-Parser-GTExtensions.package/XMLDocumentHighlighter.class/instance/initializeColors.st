@@ -7,7 +7,7 @@ initializeColors
 		piColor: self defaults defaultSecondaryMarkupColor;
 		declarationColor: self defaults defaultPrimaryMarkupColor;
 		tagColor: self defaults defaultPrimaryMarkupColor;
-		quotedStringValueColor: self defaults defaultQuotedStringValueColor;
+		quotedStringColor: self defaults defaultQuotedStringColor;
 		entityReferenceColor: self defaults defaultEntityReferenceColor;
 		commentColor: self defaults defaultCommentColor;
 		cdataColor: self defaults defaultCDataColor.

@@ -16,8 +16,8 @@ testFormattingContent
 		with: [
 			(commentWriter := writer comment) string: 'test'.
 			(piWriter := writer pi)
-				target: 'test';
-				data: 'test'.
+				target: 'xml-xsl';
+				data: 'type="text/xsl" href=''demo.xsl'' title="unterminated'. "deliberately unterminated"
 			(entityRefWriter := writer entityRef) name: 'test'].
 	self assert:
 		(formatter
@@ -41,7 +41,20 @@ testFormattingContent
 			with: commentWriter).
 	self assert:
 		(formatter
-			receivedNextAll: #(formatBeforePI: formatAfterPI:)
+			receivedNext: #formatBeforePI:
+			with: piWriter).
+	"only the first two quoted string were properly terminated and recognized"
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
+			with: 'text/xsl').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
+			with: 'demo.xsl').
+	self assert:
+		(formatter
+			receivedNext: #formatAfterPI:
 			with: piWriter).
 	self assert:
 		(formatter

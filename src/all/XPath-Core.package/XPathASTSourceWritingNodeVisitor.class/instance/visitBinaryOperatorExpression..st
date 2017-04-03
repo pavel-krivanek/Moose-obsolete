@@ -4,7 +4,7 @@ visitBinaryOperatorExpression: aBinaryOperatorExpression
 	aBinaryOperatorExpression expression acceptNodeVisitor: self.
 	self
 		emitSpace;
-		emitAll: aBinaryOperatorExpression operatorName;
+		emitOperatorName: aBinaryOperatorExpression operatorName;
 		emitSpace.
 	aBinaryOperatorExpression otherExpression acceptNodeVisitor: self.
 	self emit: $).

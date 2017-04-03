@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "monty 3/1/2017 15:11",
+	"commentStamp" : "monty 3/31/2017 02:02",
 	"super" : "XMLHighlighter",
 	"category" : "XML-Parser-GTExtensions-Highlighting",
 	"classinstvars" : [ ],
@@ -14,7 +14,7 @@
 		"commentColor",
 		"tagColor",
 		"cdataColor",
-		"quotedStringValueColor",
+		"quotedStringColor",
 		"xmlDeclarationHighlight",
 		"doctypeDeclarationHighlight",
 		"declarationHighlight",
@@ -23,7 +23,7 @@
 		"commentHighlight",
 		"tagHighlight",
 		"cdataHighlight",
-		"quotedStringValueHighlight"
+		"quotedStringHighlight"
 	],
 	"name" : "XMLDocumentHighlighter",
 	"type" : "normal"

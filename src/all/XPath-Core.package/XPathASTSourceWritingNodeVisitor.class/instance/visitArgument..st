@@ -1,5 +1,4 @@
 visiting - functions
 visitArgument: anArgument
-	self previousArgument isNull
-		ifFalse: [self emitAll: ', '].
+	self emitArgumentSeparator.
 	^ super visitArgument: anArgument.

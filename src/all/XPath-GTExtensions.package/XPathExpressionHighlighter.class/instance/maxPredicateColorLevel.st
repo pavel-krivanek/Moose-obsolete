@@ -1,0 +1,3 @@
+private
+maxPredicateColorLevel
+	^ 3
