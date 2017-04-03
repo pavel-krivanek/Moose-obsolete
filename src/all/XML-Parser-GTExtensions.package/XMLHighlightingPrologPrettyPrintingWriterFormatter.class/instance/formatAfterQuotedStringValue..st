@@ -1,5 +1,5 @@
 formatting
 formatAfterQuotedStringValue: aString
-	highlighter endQuotedStringValueHighlightPosition: self endPosition + 1.
+	highlighter endQuotedStringHighlightPosition: self endPosition + 1.
 
 	super formatAfterQuotedStringValue: aString.

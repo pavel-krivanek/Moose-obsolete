@@ -5,7 +5,7 @@ initialize
 	defaultDefaultColor := nil.
 	defaultPrimaryMarkupColor := nil.
 	defaultSecondaryMarkupColor := nil.
-	defaultQuotedStringValueColor := nil.
+	defaultQuotedStringColor := nil.
 	defaultEntityReferenceColor := nil.
 	defaultCommentColor := nil.
 	defaultCDataColor := nil.

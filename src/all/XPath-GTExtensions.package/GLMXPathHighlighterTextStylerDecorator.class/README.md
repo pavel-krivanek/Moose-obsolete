@@ -1,0 +1,1 @@
+A highlighting XPath expression text style decorator.

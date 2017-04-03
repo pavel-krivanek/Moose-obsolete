@@ -30,7 +30,7 @@ hasOnLinePoint: p withRespectTo: vert withApprox: apro
 					/k length)."
 					v := tr vertices detect:[ :vi |  vi~= k v1 and:[ vi ~= k v2 ]].
 
-					(k dist: v) <=~ (2*e) 
+					((k dist: v) lesserOrDifferentThan: (2*e)) 
 						ifTrue:[ ^ true"(k asLine hasPoint: v withApproximation: e)"]
 						ifFalse:[ ^ false]
 					]]

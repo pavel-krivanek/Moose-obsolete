@@ -1,3 +1,0 @@
-handling - positions
-startQuotedStringValuePosition: aPosition
-	highlighter startQuotedStringValueHighlightPosition: aPosition

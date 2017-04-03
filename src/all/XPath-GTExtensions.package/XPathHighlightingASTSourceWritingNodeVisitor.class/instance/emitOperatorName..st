@@ -1,0 +1,5 @@
+private
+emitOperatorName: anOperatorNameStringOrCharacter
+	highlighter startOperatorHighlightPosition: self startPosition.
+	super emitOperatorName: anOperatorNameStringOrCharacter.
+	highlighter endOperatorHighlightPosition: self endPosition.

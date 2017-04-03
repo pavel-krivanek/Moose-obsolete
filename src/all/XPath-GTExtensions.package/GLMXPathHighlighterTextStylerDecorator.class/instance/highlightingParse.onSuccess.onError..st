@@ -12,7 +12,10 @@ highlightingParse: aString onSuccess: aOneArgumentBlock onError: aTwoArgumentBlo
 	[highlightingParser parse]
 		on: XPathException
 		do: [:error |
+			"increment the position by one to more accurately reflect
+			where the error happaned, because the parser peeks for each
+			kind of token"
 			^ aTwoArgumentBlock
 				value: highlightingParserHandler
-				value: highlightingParser currentPosition].
+				value: highlightingParser currentPosition + 1].
 	^ aOneArgumentBlock value: highlightingParserHandler.

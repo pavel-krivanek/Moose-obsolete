@@ -1,0 +1,1 @@
+A highlighting XML document text style decorator for editing the "outer" XML of a document or document node.

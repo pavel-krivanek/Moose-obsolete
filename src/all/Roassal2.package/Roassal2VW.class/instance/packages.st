@@ -6,7 +6,7 @@ packages
 	| tags nopkgs |
 	nopkgs := {
 		'Trachel-MorphSpecific'.
-		 'Roassal2-OpenStreetMap'. 'Roassal2-MorphSpecific'. 'Roassal2-Plugins'. 'Roassal2-ExporterVW' }.
+		 'Roassal2-OpenStreetMap'. 'Roassal2-MorphSpecific'. 'Roassal2-Plugins'. 'Roassal2-ExporterVW'. 'Roassal2-MorphSpecific-Menu' }.
 	
 	tags := {'Roassal2'. 'Trachel'} flatCollect: [ :n | | pkg |
 		pkg := RPackageOrganizer default packageNamed: n.

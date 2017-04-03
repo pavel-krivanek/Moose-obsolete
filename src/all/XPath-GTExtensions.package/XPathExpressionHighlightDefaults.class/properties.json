@@ -5,7 +5,9 @@
 	"classinstvars" : [
 		"defaultAxisColor",
 		"defaultNodeTestColor",
-		"defaultPredicateColor",
+		"defaultPredicatePrimaryColor",
+		"defaultPredicateSecondaryColor",
+		"defaultPredicateTertiaryColor",
 		"defaultOperatorColor",
 		"defaultFunctionCallColor",
 		"defaultStringLiteralColor",

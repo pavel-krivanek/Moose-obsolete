@@ -2,14 +2,18 @@
 gtInspectorTreeIn: aComposite inContext: aGTInspector
 	<gtInspectorPresentationOrder: 5>
 
+	| treeView |
+
+	treeView :=
+		aComposite tree
+			title: 'Tree';
+			display: [{self}];
+			children: [:each | each treeViewChildren];
+			format: [:each | each treeViewLabelText];
+			when: [self supportsTreeView];
+			rootsExpanded.
+
 	self
-		addRemoveActionTo:
-			(aComposite tree
-				title: 'Tree';
-				display: [ {self} ];
-				children: [:each | each treeViewChildren];
-				format: [:each | each treeViewLabelText];
-				when: [self supportsTreeView];
-				rootsExpanded)
+		addRemoveActionTo: treeView
 		in: aComposite
 		inContext: aGTInspector

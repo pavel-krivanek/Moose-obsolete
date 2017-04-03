@@ -1,3 +1,0 @@
-handling - positions
-handleEndQuotedStringValuePosition: aPosition
-	self saxHandler endQuotedStringValuePosition: aPosition
