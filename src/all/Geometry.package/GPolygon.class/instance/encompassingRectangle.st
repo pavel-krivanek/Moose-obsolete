@@ -1,5 +1,5 @@
-as yet unclassified
-encompasingRectangle
+accessing
+encompassingRectangle
 	|leftMost rightMost top bottom|
 	leftMost := vertices first. 
 	rightMost := vertices first.

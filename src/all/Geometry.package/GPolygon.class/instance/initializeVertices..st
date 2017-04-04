@@ -1,4 +1,4 @@
-as yet unclassified
+initialization
 initializeVertices: aCollection
 	self initialize.
 	
