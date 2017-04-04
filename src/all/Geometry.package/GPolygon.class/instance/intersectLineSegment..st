@@ -1,3 +1,3 @@
-as yet unclassified
+comparing
 intersectLineSegment: aLineSegment
 	^ aLineSegment intersectPolygon: self

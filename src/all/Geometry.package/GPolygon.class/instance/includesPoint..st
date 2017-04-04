@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 includesPoint: point
 
   ^ ( AthensPolygonTester new polygon: vertices ) includesPoint: point.

@@ -1,3 +1,3 @@
 *Geometry
-~=~ aNumber
+notEqualTo: aNumber
    ^ (self =~ aNumber) not
