@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 center
 	| min max x y |
 	min := vertices min.
