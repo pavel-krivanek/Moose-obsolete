@@ -1,4 +1,3 @@
 *Famix-Extensions
-children
-
+childrenOfMyKind
 	^ self childScopes

@@ -1,5 +1,5 @@
 *Famix-Extensions
-children
+childrenOfMyKind
 	"Polymorphic accessor to children of this scope in a hierarchical structure (package->subpackages, scope->subscopes)"
 
-	self subclassResponsibility
+	^ self children allWithSubTypesOf: self class
