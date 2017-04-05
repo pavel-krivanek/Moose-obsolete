@@ -7,7 +7,7 @@
 		"#container",
 		"#attributes",
 		"#behavioursWithDeclaredType",
-		"#structuresWithDeclaredType"
+		"#structuresWithDeclaredType",
 		"#subInheritances => FMToMany type: #FAMIXInheritance opposite: #superclass",
 		"#superInheritances => FMToMany type: #FAMIXInheritance opposite: #subclass",
 	],
