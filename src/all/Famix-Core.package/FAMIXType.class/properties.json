@@ -2,14 +2,14 @@
 	"classtraitcomposition" : "TOODependencyQueries classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"incomingReferences",
-		"subInheritances",
-		"methods",
-		"container",
-		"superInheritances",
-		"attributes",
-		"behavioursWithDeclaredType",
-		"structuresWithDeclaredType"
+		"#incomingReferences",
+		"#methods",
+		"#container",
+		"#attributes",
+		"#behavioursWithDeclaredType",
+		"#structuresWithDeclaredType"
+		"#subInheritances => FMToMany type: #FAMIXInheritance opposite: #superclass",
+		"#superInheritances => FMToMany type: #FAMIXInheritance opposite: #subclass",
 	],
 	"name" : "FAMIXType",
 	"commentStamp" : "usmanbhatti 11/24/2011 22:39",
