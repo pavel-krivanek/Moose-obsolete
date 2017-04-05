@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#accessor => FMToMany type: #FAMIXBehaviouralEntity opposite: #accesses",
+		"#accessor => FMToOne type: #FAMIXBehaviouralEntity opposite: #accesses",
 		"#isWrite",
 		"#variable => FMToOne type: #FAMIXStructuralEntity opposite: #incomingAccesses"
 	],

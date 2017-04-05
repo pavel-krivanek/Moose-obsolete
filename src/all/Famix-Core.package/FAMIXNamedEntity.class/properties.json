@@ -15,9 +15,9 @@
 	"traitcomposition" : "TOODependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
 	"classinstvars" : [
-		"outgoingMSEProperties",
-		"incomingMSEProperties",
-		"belongsToMethod"
+		"#outgoingMSEProperties",
+		"#incomingMSEProperties",
+		"#belongsToMethod"
 	],
 	"pools" : [ ],
 	"category" : "Famix-Core"
