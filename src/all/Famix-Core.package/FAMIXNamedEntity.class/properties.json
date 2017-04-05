@@ -14,7 +14,11 @@
 	"super" : "FAMIXSourcedEntity",
 	"traitcomposition" : "TOODependencyQueries + TEntityMetaLevelDependency",
 	"type" : "normal",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"outgoingMSEProperties",
+		"incomingMSEProperties",
+		"belongsToMethod"
+	],
 	"pools" : [ ],
 	"category" : "Famix-Core"
 }
