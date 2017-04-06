@@ -2,5 +2,5 @@ parsing
 nextElementTest
 	context := XPathNodeTestParserElementTypeTestContext new.
 	self
-		peekForNodeTest;
+		peekForNodeTestArgument;
 		nextEndArgumentList.

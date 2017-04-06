@@ -1,0 +1,3 @@
+private
+nodeTestParserHandlerClass
+	^ XPathPositionExpressionNodeTestParserHandler

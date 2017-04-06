@@ -1,5 +1,5 @@
 visiting - node tests
 visitNamespaceNodeTestForLocalName: aNamespaceNodeTestForLocalName
 	^ self
-		emitTypeTestFor: aNamespaceNodeTestForLocalName
-		with: [self emitAll: aNamespaceNodeTestForLocalName localName]
+		emitNodeTest: aNamespaceNodeTestForLocalName
+		withNameTest: aNamespaceNodeTestForLocalName localName

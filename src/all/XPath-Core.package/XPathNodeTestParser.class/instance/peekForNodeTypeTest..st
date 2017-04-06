@@ -8,5 +8,4 @@ peekForNodeTypeTest: aNodeTypeOrFunctionName
 			ifAbsent: [^ false].
 	isParsingNodeTypeTest := true.
 	self perform: nodeTypeTestParserSelector.
-	isParsingNodeTypeTest := false.
 	^ true.

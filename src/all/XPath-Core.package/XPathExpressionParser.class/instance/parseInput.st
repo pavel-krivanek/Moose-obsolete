@@ -2,10 +2,11 @@ parsing
 parseInput
 	currentAxis := XPathExpressionParserAxis new.
 	nodeTestParser :=
-		XPathNodeTestParser
+		self nodeTestParserClass
 			on: readStream
 			for:
-				(XPathASTExpressionNodeTestParserHandler
+				(self nodeTestParserHandlerClass
 					currentAxis: currentAxis
 					expressionParserHandler: handler).
+
 	self nextOrExpression.

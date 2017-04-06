@@ -1,9 +1,8 @@
 visiting - node tests
 visitNamespaceNodeTestForNamespaceURIAndLocalName: aNamespaceNodeTestForNamespaceURIAndLocalName
 	^ self
-		emitTypeTestFor: aNamespaceNodeTestForNamespaceURIAndLocalName
-		with: [
-			self emitAll:
-				(aNamespaceNodeTestForNamespaceURIAndLocalName localName 
-					expandWithXMLNamespaceURI:
-						aNamespaceNodeTestForNamespaceURIAndLocalName namespaceURI)]
+		emitNodeTest: aNamespaceNodeTestForNamespaceURIAndLocalName
+		withNameTest:
+			(aNamespaceNodeTestForNamespaceURIAndLocalName localName 
+				expandWithXMLNamespaceURI:
+					aNamespaceNodeTestForNamespaceURIAndLocalName namespaceURI)

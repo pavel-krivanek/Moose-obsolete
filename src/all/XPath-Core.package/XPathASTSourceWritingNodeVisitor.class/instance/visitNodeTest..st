@@ -1,6 +1,6 @@
 visiting - node tests
 visitNodeTest: aNodeTest
 	self
-		emitTypeTestFor: aNodeTest
-		with: nil.
+		emitNodeTest: aNodeTest
+		withNameTest: ''.
 	^ super visitNodeTest: aNodeTest.

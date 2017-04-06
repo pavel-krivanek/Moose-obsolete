@@ -5,9 +5,12 @@ initializeColors
 		initializePredicateColors;
 		axisColor: self defaults defaultAxisColor;
 		nodeTestColor: self defaults defaultNodeTestColor;
-		predicatePrimaryColor: self defaults defaultPredicatePrimaryColor;
-		predicateSecondaryColor: self defaults defaultPredicateSecondaryColor;
-		predicateTertiaryColor: self defaults defaultPredicateTertiaryColor;
+		predicateLevelOneColor: self defaults defaultPredicateLevelOneColor;
+		predicateLevelTwoColor: self defaults defaultPredicateLevelTwoColor;
+		predicateLevelThreeColor: self defaults defaultPredicateLevelThreeColor;
+		predicateLevelFourColor: self defaults defaultPredicateLevelFourColor;
+		predicateLevelFiveColor: self defaults defaultPredicateLevelFiveColor;
+		predicateLevelSixColor: self defaults defaultPredicateLevelSixColor;
 		operatorColor: self defaults defaultOperatorColor;
 		functionCallColor: self defaults defaultFunctionCallColor;
 		stringLiteralColor: self defaults defaultStringLiteralColor;
