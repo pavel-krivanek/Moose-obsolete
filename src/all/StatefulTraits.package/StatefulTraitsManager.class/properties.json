@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "StatefulTraits",
+	"classinstvars" : [
+		"uniqueInstance"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mergedClasses"
+	],
+	"name" : "StatefulTraitsManager",
+	"type" : "normal"
+}

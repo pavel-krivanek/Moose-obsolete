@@ -1,0 +1,3 @@
+_fromTrait_StatefulTraitsTestingTrait1
+traitVar2
+	^ traitVar2
