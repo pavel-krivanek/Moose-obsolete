@@ -1,3 +1,0 @@
-_fromTrait_FAMIXBehaviorWithExceptions
-exceptions: values
-	exceptions value: values

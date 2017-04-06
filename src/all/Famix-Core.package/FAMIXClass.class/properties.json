@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#isInterface",
-		"#exceptions => FMToMany type: #FAMIXException opposite: #exceptionClass"
+		"isInterface"
 	],
 	"name" : "FAMIXClass",
 	"type" : "normal"

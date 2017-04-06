@@ -1,5 +1,4 @@
-_fromTrait_FAMIXBehaviorWithExceptions
+accessing
 initialize
 	super initialize.
 	isInterface := false.
-	self class initializeSlots: self.
