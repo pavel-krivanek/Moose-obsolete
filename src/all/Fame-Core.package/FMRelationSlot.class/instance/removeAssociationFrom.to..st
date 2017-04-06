@@ -4,6 +4,10 @@ removeAssociationFrom: ownerObject to: otherObject
 	side of the association. If the other side is a ToOne association set the value to nil,
 	for ToMany associations remove <ownerObject> from the collection." 
 
-	self inverseSlot isToOneSlot
-		ifTrue: [ inverseSlot writeInverse: nil to: otherObject ]
-		ifFalse: [ (inverseSlot read: otherObject) inverseRemove: ownerObject ]
+	| realInverseSlot |
+	
+	realInverseSlot := (self realInverseSlotFor: otherObject).
+
+	realInverseSlot isToOneSlot
+		ifTrue: [ realInverseSlot writeInverse: nil to: otherObject ]
+		ifFalse: [ (realInverseSlot read: otherObject) inverseRemove: ownerObject ]

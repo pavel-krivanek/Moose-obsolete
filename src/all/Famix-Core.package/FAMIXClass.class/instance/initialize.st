@@ -1,5 +1,5 @@
-initialize-release
+_fromTrait_FAMIXBehaviorWithExceptions
 initialize
-
 	super initialize.
-	isInterface := false
+	isInterface := false.
+	self class initializeSlots: self.
