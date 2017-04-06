@@ -1,3 +1,0 @@
-accessing
-defaultPredicateTertiaryColor: aTextColor
-	defaultPredicateTertiaryColor := aTextColor

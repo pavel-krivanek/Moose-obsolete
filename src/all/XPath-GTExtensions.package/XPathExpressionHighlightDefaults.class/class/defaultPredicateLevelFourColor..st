@@ -1,0 +1,3 @@
+accessing
+defaultPredicateLevelFourColor: aTextColor
+	defaultPredicateLevelFourColor := aTextColor

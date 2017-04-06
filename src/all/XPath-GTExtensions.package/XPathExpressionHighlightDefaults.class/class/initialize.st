@@ -5,9 +5,12 @@ initialize
 	defaultDefaultColor := nil.
 	defaultAxisColor := nil.
 	defaultNodeTestColor := nil.
-	defaultPredicatePrimaryColor := nil.
-	defaultPredicateSecondaryColor := nil.
-	defaultPredicateTertiaryColor := nil.
+	defaultPredicateLevelOneColor := nil.
+	defaultPredicateLevelTwoColor := nil.
+	defaultPredicateLevelThreeColor := nil.
+	defaultPredicateLevelFourColor := nil.
+	defaultPredicateLevelFiveColor := nil.
+	defaultPredicateLevelSixColor := nil.
 	defaultOperatorColor := nil.
 	defaultFunctionCallColor := nil.
 	defaultStringLiteralColor := nil.

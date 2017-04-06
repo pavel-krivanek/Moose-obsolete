@@ -1,8 +1,7 @@
 visiting - node tests
 visitAttributeNodeTestForNamespaceURI: anAttributeNodeTestForNamespaceURI
 	^ self
-		emitTypeTestFor: anAttributeNodeTestForNamespaceURI
-		with: [
-			self emitAll:
-				('*' expandWithXMLNamespaceURI:
-					anAttributeNodeTestForNamespaceURI namespaceURI)]
+		emitNodeTest: anAttributeNodeTestForNamespaceURI
+		withNameTest:
+			('*' expandWithXMLNamespaceURI:
+				anAttributeNodeTestForNamespaceURI namespaceURI)

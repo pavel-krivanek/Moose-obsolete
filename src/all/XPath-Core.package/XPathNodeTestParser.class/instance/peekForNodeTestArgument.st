@@ -1,0 +1,3 @@
+parsing - peeking
+peekForNodeTestArgument
+	^ self peekForNodeTestStartingWithWildCardOrNCName

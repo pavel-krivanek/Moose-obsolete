@@ -1,3 +1,3 @@
 private
 maxPredicateColorLevel
-	^ 3
+	^ 6
