@@ -14,6 +14,7 @@ baseline: spec
 		self baselineHashtable: spec.
 		self baselineStateSpecs: spec.
 		self baselinePhexample: spec.
+		self baselineStatefulTraits: spec.
 		self baselineFame: spec.
 
 		#(
