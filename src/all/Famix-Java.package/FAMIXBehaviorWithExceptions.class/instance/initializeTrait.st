@@ -1,0 +1,4 @@
+initialization
+initializeTrait
+
+	"do something"
