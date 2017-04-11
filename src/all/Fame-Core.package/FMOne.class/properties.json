@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FMToMany",
+	"name" : "FMOne",
 	"type" : "normal"
 }

@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#instances => FMToMany type: #FAMIXAnnotationInstance opposite: #annotationType"
+		"#instances => FMMany type: #FAMIXAnnotationInstance opposite: #annotationType"
 	],
 	"name" : "FAMIXAnnotationType",
 	"type" : "normal"

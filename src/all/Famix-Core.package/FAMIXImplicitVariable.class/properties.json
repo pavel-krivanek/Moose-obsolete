@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentBehaviouralEntity => FMToOne type: #FAMIXBehaviouralEntity opposite: #implicitVariables"
+		"#parentBehaviouralEntity => FMOne type: #FAMIXBehaviouralEntity opposite: #implicitVariables"
 	],
 	"name" : "FAMIXImplicitVariable",
 	"type" : "normal"

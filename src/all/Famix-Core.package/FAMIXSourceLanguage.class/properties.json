@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#sourcedEntities => FMToMany type: #FAMIXSourcedEntity opposite: #declaredSourceLanguage"
+		"#sourcedEntities => FMMany type: #FAMIXSourcedEntity opposite: #declaredSourceLanguage"
 	],
 	"name" : "FAMIXSourceLanguage",
 	"type" : "normal"

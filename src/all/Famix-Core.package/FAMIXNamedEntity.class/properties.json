@@ -2,12 +2,12 @@
 	"classtraitcomposition" : "TOODependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentPackage => FMToOne type: #FAMIXPackage opposite: #childNamedEntities",
-		"#receivingInvocations => FMToMany type: #FAMIXInvocation opposite: #receiver",
+		"#parentPackage => FMOne type: #FAMIXPackage opposite: #childNamedEntities",
+		"#receivingInvocations => FMMany type: #FAMIXInvocation opposite: #receiver",
 		"#name",
 		"#isStub",
 		"#modifiers",
-		"#annotationInstances => FMToMany type: #FAMIXAnnotationInstance opposite: #annotatedEntity"
+		"#annotationInstances => FMMany type: #FAMIXAnnotationInstance opposite: #annotatedEntity"
 	],
 	"name" : "FAMIXNamedEntity",
 	"commentStamp" : "usmanbhatti 11/23/2011 22:48",
