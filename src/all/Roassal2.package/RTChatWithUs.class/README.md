@@ -1,0 +1,1 @@
+I am a class that simply forward to the discord channel
