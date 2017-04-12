@@ -1,5 +1,6 @@
 running
 setUp
+	super setUp.
 	el1 := RTBox element.
 	el2 := RTBox element.
 	el1 translateTo: 20 @ 20.

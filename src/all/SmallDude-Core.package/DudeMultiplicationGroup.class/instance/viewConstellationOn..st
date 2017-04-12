@@ -10,5 +10,5 @@ viewConstellationOn: view
 		size: 10.
 	view nodes: multipliedEntities.
 	view shape line color: Color veryVeryLightGray.
-	view edges: self from: #yourself toAll: #multiplyingEntities.
-	view forceBasedLayout "graphvizLayout circo"
+	view edges source: self connectFrom: #yourself toAll: #multiplyingEntities.
+	view layout force "graphvizLayout circo"

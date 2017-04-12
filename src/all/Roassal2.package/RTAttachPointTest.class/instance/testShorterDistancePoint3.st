@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testShorterDistancePoint3
 	| p |
 	shape withShorterDistanceAttachPoint.

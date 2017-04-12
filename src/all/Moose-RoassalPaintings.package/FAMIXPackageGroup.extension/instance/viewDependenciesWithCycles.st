@@ -2,6 +2,6 @@
 viewDependenciesWithCycles
 	<menuItem: 'Dependencies (cycles)' category: 'Visualize'>
 	|view |
-	view := RTMondrianViewBuilder new.
+	view := RTMondrian new.
 	self viewDependenciesWithCyclesOn: view.
 	^ view openWithToolbar title: 'Dependencies (cycles)'

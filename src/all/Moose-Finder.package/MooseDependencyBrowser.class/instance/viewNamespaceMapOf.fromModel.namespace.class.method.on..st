@@ -15,7 +15,7 @@ viewNamespaceMapOf: aBlock fromModel: model namespace: namespace class:class met
 	view nodes: model allNamespaces.
 	view shape orthoVerticalLine color: Color veryLightGray.
 	layoutEdges := view edgesFrom: #belongsTo.
-	view treeLayout horizontalGap: 1; userDefinedEdges: layoutEdges.
+	view layout tree horizontalGap: 1; userDefinedEdges: layoutEdges.
 "				source ~= namespace ifTrue: [
 					view shape splineLine color: Color red.
 					view edges: {namespace} from: #yourself toAll: invokedNamespaces ]

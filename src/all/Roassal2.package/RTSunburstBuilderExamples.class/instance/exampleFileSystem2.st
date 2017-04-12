@@ -1,6 +1,6 @@
 sources
 exampleFileSystem2
-	<gtExample>
+	<noTest>
 	<iconSelectorBase64: #exampleFileSystem2Icon>
 	
 	| b c1 c2 |

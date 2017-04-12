@@ -24,7 +24,8 @@ viewHierarchyEvolutionOn: view
 								highColor: Color black;
 								rtValue: each ] ].
 	view
-		edges: self referenceHistory allInheritanceDefinitionHistories
-		from: #superHistory
+		edges 
+		source: self referenceHistory allInheritanceDefinitionHistories
+		connectFrom: #superHistory
 		to: #subHistory.
-	view treeLayout.
+	view layout tree.

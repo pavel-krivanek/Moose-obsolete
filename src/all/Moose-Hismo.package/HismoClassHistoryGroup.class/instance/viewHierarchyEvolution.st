@@ -4,6 +4,6 @@ viewHierarchyEvolution
 	
 	| view |
 	
-	view := RTMondrianViewBuilder new.
+	view := RTMondrian new.
 	self viewHierarchyEvolutionOn: view.
 	^ view open setLabel: 'Hierarchy evolution'

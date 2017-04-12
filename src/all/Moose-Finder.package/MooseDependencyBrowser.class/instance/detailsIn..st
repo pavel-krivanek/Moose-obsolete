@@ -1,7 +1,7 @@
 reusable
 detailsIn: a
 	a roassal2
-		initializeView: [ RTMondrianViewBuilder new ];
+		initializeView: [ RTMondrian new ];
 		title: 'Map of providers';
 		painting: [ :view :model :namespace :class :method | 
 					self
@@ -14,7 +14,7 @@ detailsIn: a
 		allowNil;
 		when: [ :model | model notNil ].
 	a roassal2
-		initializeView: [ RTMondrianViewBuilder new ];
+		initializeView: [ RTMondrian new ];
 		title: 'Map of clients';
 		painting: [ :view :model :namespace :class :method | 
 					self

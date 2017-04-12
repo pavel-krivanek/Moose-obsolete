@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "akevalion 5/23/2016 12:57",
-	"super" : "TestCase",
+	"super" : "RTTest",
 	"category" : "Roassal2-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],

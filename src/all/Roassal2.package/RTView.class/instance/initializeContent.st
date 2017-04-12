@@ -1,4 +1,4 @@
 initialization
 initializeContent
-	elements := OrderedCollection new.
-	edges := OrderedCollection new
+	elements := RTGroup new.
+	edges := RTGroup new

@@ -2,8 +2,8 @@ view
 viewSimpleEvolutionMatrix
 	| view |
 	<menuItem: 'Evolution matrix' category: 'Visualize'>
-	view := RTMondrianViewBuilder new.
+	view := RTMondrian new.
 	self
 		do: [:each | each viewSimpleEvolutionMatrixIn: view].
-	view verticalLineLayout.
-	^ view openWithStatusbar setLabel: 'Simple Evolution Matrix'
+	view layout verticalLine.
+	^ view open "setLabel: 'Simple Evolution Matrix'"

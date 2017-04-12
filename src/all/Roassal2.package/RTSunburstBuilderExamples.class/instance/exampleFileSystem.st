@@ -1,6 +1,6 @@
 sources
 exampleFileSystem
-	<gtExample>
+	<noTest>
 
 	| b c1 c2 |
 	b := RTSunburstBuilder new.

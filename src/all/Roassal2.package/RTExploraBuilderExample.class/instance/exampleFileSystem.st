@@ -1,6 +1,7 @@
 sources
 exampleFileSystem
-| builder |
+	<noTest>
+	| builder |
 	builder := RTExploraBuilder new.
 	builder shape circle size: 10;
 		if: [ :x | x isFile ] fillColor: (Color yellow alpha: 0.8);

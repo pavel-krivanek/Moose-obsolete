@@ -28,7 +28,6 @@ SystemOrganization addCategory: 'Roassal2-Builder-Map-Tests'!
 SystemOrganization addCategory: 'Roassal2-Builder-Menu'!
 SystemOrganization addCategory: 'Roassal2-Builder-Microprint'!
 SystemOrganization addCategory: 'Roassal2-Builder-Mondrian'!
-SystemOrganization addCategory: 'Roassal2-Builder-MondrianOLD'!
 SystemOrganization addCategory: 'Roassal2-Builder-NameCloud'!
 SystemOrganization addCategory: 'Roassal2-Builder-PieChart'!
 SystemOrganization addCategory: 'Roassal2-Builder-ScatterplotMap'!

@@ -1,5 +1,6 @@
 sources
 exampleFileSystem
+<noTest>
 | b color |
 b := RTTreeMapBuilder new.
 color := RTScale linear 
