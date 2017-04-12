@@ -5,6 +5,6 @@ elementsFromModels: objects
 	self assert: [ objects isCollection ] description: 'Provide a set of elements instead of one single element'. 
 	answer := RTGroup new.
 	objects do: [ :o |
-		t := self elementFromModel: o.
-		t notNil ifTrue: [ answer add: t ] ].
+		t := self elementsFromModel: o.
+		t notNil ifTrue: [ answer addAll: t ] ].
 	^ answer

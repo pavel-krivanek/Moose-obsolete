@@ -19,4 +19,4 @@ viewEvolutionMatrixOn: view
 					matrix at: y at: x put: (self emptyNodeOn: view).
 					x := x + 1 ].
 			y := y + 1 ].
-	view cellLayout lineItemsCount: matrix columnCount; gapSize: 3; leftCentered.
+	view layout cell lineItemsCount: matrix columnCount; gapSize: 3; leftCentered.

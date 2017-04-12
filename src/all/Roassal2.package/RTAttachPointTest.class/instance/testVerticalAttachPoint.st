@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testVerticalAttachPoint
 	shape withVerticallAttachPoint.
 	self 

@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testShorterDistancePoint1
 	shape withShorterDistanceAttachPoint.
 	"el1 and el2 are on the same horizontal line. el1 is on the left of el2"

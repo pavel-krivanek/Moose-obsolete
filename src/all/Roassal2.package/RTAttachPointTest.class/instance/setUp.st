@@ -1,6 +1,6 @@
-as yet unclassified
+initialization
 setUp
-	
+	super setUp.
 	view := RTView new.
 	el1 := RTBox new size: 30; elementOn: 1.
 	el2 := RTBox new size: 30; elementOn: 2.

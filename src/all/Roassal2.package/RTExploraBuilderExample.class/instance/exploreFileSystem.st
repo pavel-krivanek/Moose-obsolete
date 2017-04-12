@@ -1,5 +1,6 @@
 basic
 exploreFileSystem
+	<noTest>
 	"
 	self new exploreFileSystem
 	"

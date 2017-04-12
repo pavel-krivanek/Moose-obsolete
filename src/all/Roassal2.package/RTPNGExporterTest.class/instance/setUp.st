@@ -1,5 +1,6 @@
 running
 setUp
+	super setUp.
 	emptyExporter := RTPNGExporter new.
 	
 	view := RTView new.

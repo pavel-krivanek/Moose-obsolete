@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "RTTest",
 	"category" : "Roassal2-Builder-Explora",
 	"classinstvars" : [ ],
 	"pools" : [ ],

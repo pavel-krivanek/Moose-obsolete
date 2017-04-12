@@ -1,5 +1,6 @@
 running
 setUp
+	super setUp.
 	v := RTView new.
 	e1 := RTBox element.
 	e2 := RTBox element.

@@ -1,6 +1,6 @@
 view
 viewEvolutionMatrix
 	| view |	
-	view := RTMondrianViewBuilder new.
+	view := RTMondrian new.
 	self viewEvolutionMatrixOn: view.
 	^ view openWithToolbarEntitled: 'Evolution Matrix'

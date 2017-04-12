@@ -3,6 +3,6 @@ viewConstellation
 	<menuItem: 'View Multiplication constelation' category: 'Visualize'>
 
 	| view |
-	view := RTMondrianViewBuilder new.
+	view := RTMondrian new.
 	self viewConstellationOn: view.
 	^ view openWithToolbar title: 'View Multiplication constelation'
