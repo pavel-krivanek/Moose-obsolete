@@ -2,7 +2,7 @@ tests
 testDocumentInternalSubset
 	| document doctypeDeclaration |
 
-	document := XMLDOMParser parse: self internalSubsetWithDeclarations.
+	document := XMLDOMParser parse: self internalSubsetXMLWithDeclarations.
 	doctypeDeclaration := document doctypeDeclaration.
 	doctypeDeclaration allNodesDo: [:each |
 		self assert: each document == document].

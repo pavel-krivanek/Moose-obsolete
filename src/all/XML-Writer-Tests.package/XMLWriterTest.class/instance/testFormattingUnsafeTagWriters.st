@@ -14,8 +14,20 @@ testFormattingUnsafeTagWriters
 			with: tagWriter).
 	self assert:
 		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'test').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringName: formatAfterQuotedStringName:)
+			with: 'xmlns').
+	self assert:
+		(formatter
 			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
 			with: 'defaultNS').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringName: formatAfterQuotedStringName:)
+			with: 'name').
 	self assert:
 		(formatter
 			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
@@ -24,8 +36,21 @@ testFormattingUnsafeTagWriters
 		(formatter
 			receivedNext: #formatAfterStartTag:
 			with: tagWriter).
-	(tagWriter := writer endTag: 'empty') write.
+
+	(tagWriter := writer endTag: 'test') write.
 	self assert:
 		(formatter
-			receivedNextAll: #(formatBeforeEndTag: formatAfterEndTag:)
+			receivedNext: #formatBeforeEndTag:
 			with: tagWriter).
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'test').
+	self assert:
+		(formatter
+			receivedNext: #formatAfterEndTag:
+			with: tagWriter).
+
+	self assert:
+		writer contents =
+			'<test xmlns="defaultNS" name="value"></test>'.

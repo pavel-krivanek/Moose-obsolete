@@ -1,0 +1,3 @@
+handling - positions
+handleStartQuotedStringNamePosition: aPosition
+	self saxHandler startQuotedStringNamePosition: aPosition

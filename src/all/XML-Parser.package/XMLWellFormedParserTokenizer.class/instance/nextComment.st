@@ -8,16 +8,16 @@ nextComment
 
 	"xml comments can't have '--' in them and must be followed
 	by the terminating '>'"
-	characterDataStream reset.
+	characterStream reset.
 	[(nextChar := streamReader next) == nil
 		or: [nextChar == $-
 			and: [streamReader peek == $-]]]
 		whileFalse: [
 			nextChar isXMLChar
 				ifFalse: [self errorNonCharInComment: nextChar].
-			characterDataStream nextPut: nextChar].
+			characterStream nextPut: nextChar].
 	self
 		expectNext: $-;
 		expectTerminator.
 
-	driver handleComment: characterDataStream contents.
+	driver handleComment: characterStream contents.

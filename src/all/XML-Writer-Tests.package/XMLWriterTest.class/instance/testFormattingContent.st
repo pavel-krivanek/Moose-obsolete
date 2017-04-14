@@ -1,32 +1,51 @@
 tests
 testFormattingContent
-	| formatter writer tagWriter commentWriter piWriter entityRefWriter |
+	| formatter writer tagWriter commentWriter entityRefWriter |
 
 	formatter := XMLWriterRecordingFormatterProxy new.
 	(writer := XMLWriter new) formatter: formatter.
 	(tagWriter := writer tag: 'empty') write.
 	self assert:
 		(formatter
-			receivedNextAll: #(formatBeforeStartTag: formatAfterEndTag:)
+			receivedNext: #formatBeforeStartTag:
 			with: tagWriter).
-	
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'empty').
+	self assert:
+		(formatter
+			receivedNext: #formatAfterEndTag:
+			with: tagWriter).
+
 	(tagWriter := writer tag: 'not-empty')
 		xmlns: 'defaultNS';
 		attributeAt: 'name' put: 'value';
 		with: [
-			(commentWriter := writer comment) string: 'test'.
-			(piWriter := writer pi)
-				target: 'xml-xsl';
-				data: 'type="text/xsl" href=''demo.xsl'' title="unterminated'. "deliberately unterminated"
-			(entityRefWriter := writer entityRef) name: 'test'].
+			writer string: 'one'.
+			(commentWriter := writer comment) string: 'two'.
+			(entityRefWriter := writer entityRef) name: 'three'.
+			writer string: 'four'].
 	self assert:
 		(formatter
 			receivedNext: #formatBeforeStartTag:
 			with: tagWriter).
 	self assert:
 		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'not-empty').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringName: formatAfterQuotedStringName:)
+			with: 'xmlns').
+	self assert:
+		(formatter
 			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
 			with: 'defaultNS').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringName: formatAfterQuotedStringName:)
+			with: 'name').
 	self assert:
 		(formatter
 			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
@@ -35,39 +54,61 @@ testFormattingContent
 		(formatter
 			receivedNext: #formatAfterStartTag:
 			with: tagWriter).
+
 	self assert:
 		(formatter
 			receivedNextAll: #(formatBeforeComment: formatAfterComment:)
 			with: commentWriter).
-	self assert:
-		(formatter
-			receivedNext: #formatBeforePI:
-			with: piWriter).
-	"only the first two quoted string were properly terminated and recognized"
-	self assert:
-		(formatter
-			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
-			with: 'text/xsl').
-	self assert:
-		(formatter
-			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
-			with: 'demo.xsl').
-	self assert:
-		(formatter
-			receivedNext: #formatAfterPI:
-			with: piWriter).
+
 	self assert:
 		(formatter
 			receivedNextAll: #(formatBeforeEntityReference: formatAfterEntityReference:)
 			with: entityRefWriter).
+
 	self assert:
 		(formatter
-			receivedNextAll: #(formatBeforeEndTag: formatAfterEndTag:)
+			receivedNext: #formatBeforeEndTag:
+			with: tagWriter).
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'not-empty').
+	self assert:
+		(formatter
+			receivedNext: #formatAfterEndTag:
 			with: tagWriter).
 
 	writer outputsSelfClosingTags: false.
 	(tagWriter := writer tag: 'empty') write.
 	self assert:
 		(formatter
-			receivedNextAll: #(formatBeforeStartTag: formatAfterStartTag: formatBeforeEndTag: formatAfterEndTag:)
+			receivedNext: #formatBeforeStartTag:
 			with: tagWriter).
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'empty').
+	self assert:
+		(formatter
+			receivedNext: #formatAfterStartTag:
+			with: tagWriter).
+	self assert:
+		(formatter
+			receivedNext: #formatBeforeEndTag:
+			with: tagWriter).
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'empty').
+	self assert:
+		(formatter
+			receivedNext: #formatAfterEndTag:
+			with: tagWriter).
+
+	self assert:
+		writer contents =
+			('<empty />',
+				'<not-empty xmlns="defaultNS" name="value">',
+					'one<!--two-->&three;four',
+				'</not-empty>',
+				'<empty></empty>').

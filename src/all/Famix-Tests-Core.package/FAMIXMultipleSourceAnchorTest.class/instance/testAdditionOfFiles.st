@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testAdditionOfFiles
 	self assert: multipleFileAnchor allFiles size equals: 1.
 	multipleFileAnchor addFileAnchorWithPath: 'aFileName1'.

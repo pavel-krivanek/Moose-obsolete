@@ -1,0 +1,3 @@
+testing
+hasFormatter
+	^ formatter notNil

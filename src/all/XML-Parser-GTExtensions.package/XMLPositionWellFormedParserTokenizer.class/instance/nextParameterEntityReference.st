@@ -1,7 +1,8 @@
 tokenizing - dtd
 nextParameterEntityReference
+	isInEntityReference := true.
 	driver handleStartEntityReferencePosition: self currentPosition.
-	self nextName.
+	self nextEntityName.
 	driver handleEndEntityReferencePosition: self currentPosition + 1.
 	self expectNext: $;.
-	^ false.
+	isInEntityReference := false.

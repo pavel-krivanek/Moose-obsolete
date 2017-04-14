@@ -7,4 +7,4 @@ skipSeparatorsInDeclaration
 		whileTrue: [
 			streamReader next.
 			self nextParameterEntityReferenceInDeclaration.
-			streamReader skipSeparators]
+			streamReader skipSeparators].

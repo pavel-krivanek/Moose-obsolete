@@ -8,17 +8,17 @@ nextContentModel
 	streamReader peek == $E
 		ifTrue: [^ self expectNextAll: 'EMPTY'].
 	
-	declarationStream
+	characterStream
 		reset;
 		nextPut: (self expectNext: $().
 	pushedBackParameterEntity := self topPushedBackEntity.
 	self skipSeparatorsInDeclaration.
 	streamReader peek == $#
 		ifTrue: [
-			self nextMixedContentListOnDeclarationStreamFromEntity:
+			self nextMixedContentListOnCharacterStreamFromEntity:
 				pushedBackParameterEntity]
 		ifFalse: [
-			self nextContentModelChoiceOrSequenceOnDeclarationStreamFromEntity:
+			self nextContentModelChoiceOrSequenceOnCharacterStreamFromEntity:
 				pushedBackParameterEntity].
 
-	^ declarationStream contents.
+	^ characterStream contents.

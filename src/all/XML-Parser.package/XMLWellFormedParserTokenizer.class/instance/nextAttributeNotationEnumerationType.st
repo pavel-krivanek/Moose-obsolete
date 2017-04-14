@@ -1,6 +1,6 @@
 tokenizing - dtd
 nextAttributeNotationEnumerationType
-	declarationStream
+	characterStream
 		reset;
 		nextPutAll:
 			(self
@@ -9,12 +9,20 @@ nextAttributeNotationEnumerationType
 	self
 		expectSeparatorsInDeclaration;
 		expectNext: $(.
-	declarationStream nextPutAll: ' ('.
+	characterStream nextPutAll: ' ('.
 
+	"must have at least one declaration name in the enumeration"
 	self
 		skipSeparatorsInDeclaration;
-		nextNameOnDeclarationStream;
-		skipSeparatorsInDeclaration;
-		nextNameListOnDeclarationStream.
-
-	^ declarationStream contents.
+		nextNotationNameOnCharacterStream.
+	[self skipSeparatorsInDeclaration.
+		streamReader peek == $)]
+		whileFalse: [
+			characterStream nextPut: (self expectNext: $|).
+			self
+				skipSeparatorsInDeclaration;
+				nextNotationNameOnCharacterStream].
+	
+	^ characterStream
+		nextPut: streamReader next;
+		contents.

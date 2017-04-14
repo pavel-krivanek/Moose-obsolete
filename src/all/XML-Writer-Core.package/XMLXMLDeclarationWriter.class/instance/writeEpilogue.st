@@ -1,6 +1,6 @@
 private
 writeEpilogue
-	self isCanonical
+	self isOmittable
 		ifFalse: [
 			self writer
 				nextPutAll: '?>';

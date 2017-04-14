@@ -5,5 +5,5 @@ menuCommandOn: aBuilder
 			order: 0.002; 
 			parent: #Roassal;
 			label: 'Live chat';
-			icon: (Smalltalk ui icons iconNamed: #smallLanguageIcon);
+			icon: self discord;
 			action: [ WebBrowser openOn: 'https://discord.gg/bAuNJMP'  ]

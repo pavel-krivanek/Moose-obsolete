@@ -1,5 +1,7 @@
 meta
-metaBuilder: aCollectionOfClasses 
+metaBuilder: aCollectionOfClasses
 	"I take as parameter a collection of classes described with Fame pragmas"
 
-	^ self metaBuilder: aCollectionOfClasses withProcessor: MoosePragmaProcessor new
+	^ self
+		metaBuilder: aCollectionOfClasses
+		withProcessor: self newPragmaProcessor

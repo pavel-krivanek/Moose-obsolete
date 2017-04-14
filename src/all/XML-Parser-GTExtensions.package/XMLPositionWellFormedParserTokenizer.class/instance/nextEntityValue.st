@@ -1,9 +1,9 @@
 tokenizing - dtd
 nextEntityValue
-	| entityValue |
+	| value |
 
 	driver handleStartQuotedStringPosition: self currentPosition + 1.
-	entityValue := super nextEntityValue.
+	value := super nextEntityValue.
 	driver handleEndQuotedStringPosition: self currentPosition.
 
-	^ entityValue.
+	^ value.

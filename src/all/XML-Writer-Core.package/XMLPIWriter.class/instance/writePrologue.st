@@ -5,4 +5,6 @@ writePrologue
 			self writer
 				formatBeforePI: self;
 				nextPutAll: '<?';
-				writeName: self target]
+				"do not treat PI targets as names to be consistent
+				with XMLXMLDeclarationWriter"
+				nextPutAll: self target]

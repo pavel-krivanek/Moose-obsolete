@@ -1,3 +1,0 @@
-inspector extensions
-methodResolver
-	^ self

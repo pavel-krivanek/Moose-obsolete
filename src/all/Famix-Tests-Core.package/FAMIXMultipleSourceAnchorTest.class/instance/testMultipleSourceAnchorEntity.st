@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testMultipleSourceAnchorEntity
 	| class |
 	class := FAMIXClass new mooseModel: MooseModel new; defineMultiSourceAnchorWithPath: 'aClassName'.

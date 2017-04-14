@@ -6,7 +6,7 @@ nextNotationDeclaration
 		expectNextAll: 'NOTATION';
 		expectSeparatorsInDeclaration.
 
-	name := self nextName.
+	name := self nextNotationName.
 	self expectSeparatorsInDeclaration.
 	streamReader peek == $P
 		ifTrue: [

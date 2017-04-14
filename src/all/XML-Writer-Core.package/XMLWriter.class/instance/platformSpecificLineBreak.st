@@ -1,0 +1,3 @@
+private
+platformSpecificLineBreak
+	^ PlatformSpecificLineBreak

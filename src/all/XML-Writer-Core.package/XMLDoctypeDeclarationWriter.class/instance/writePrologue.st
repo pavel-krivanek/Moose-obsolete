@@ -10,6 +10,4 @@ writePrologue
 		writeName: self root.
 
 	self isExternalIDOmittable
-		ifFalse: [
-			self writer space.
-			self externalIDWriter writeOn: self writer].
+		ifFalse: [self writeExternalID].

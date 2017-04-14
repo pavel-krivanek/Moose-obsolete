@@ -1,6 +1,6 @@
 *XPath-GTExtensions
 gtInspectorXPathIn: aComposite
-	<gtInspectorPresentationOrder: 9>
+	<gtInspectorPresentationOrder: 20>
 
 	self supportsXPathEvaluator
 		ifFalse: [^ self].

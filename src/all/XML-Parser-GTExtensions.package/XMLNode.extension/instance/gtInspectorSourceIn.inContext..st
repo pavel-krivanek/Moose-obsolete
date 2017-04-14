@@ -1,7 +1,7 @@
 *XML-Parser-GTExtensions
 gtInspectorSourceIn: aComposite inContext: aGTInspector
-	<gtInspectorPresentationOrder: 6>
-	
+	<gtInspectorPresentationOrder: 2>
+
 	| sourceEditor currentTextStylerDecorator |
 
 	sourceEditor :=

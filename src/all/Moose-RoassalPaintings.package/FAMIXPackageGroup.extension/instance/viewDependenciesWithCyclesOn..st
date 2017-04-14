@@ -15,5 +15,6 @@ viewDependenciesWithCyclesOn: aView
 				ifTrue: [Color red]
 				ifFalse: [Color white]].
 	aView nodes: self.
-	aView edges: self from: #yourself toAll: #providerPackages.
-	aView dominanceTreeLayout.
+	aView edges
+		connectFrom: #yourself toAll: #providerPackages.
+	aView layout dominanceTree.

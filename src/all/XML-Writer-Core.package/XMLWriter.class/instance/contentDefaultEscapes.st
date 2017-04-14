@@ -1,0 +1,3 @@
+private
+contentDefaultEscapes
+	^ ContentDefaultEscapes

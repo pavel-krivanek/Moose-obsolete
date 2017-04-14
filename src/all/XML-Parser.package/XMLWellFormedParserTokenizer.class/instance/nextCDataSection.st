@@ -3,7 +3,7 @@ nextCDataSection
 	| closingBracketsRead nextChar |
 
 	self expectNextAll: '[CDATA['.
-	characterDataStream reset.
+	characterStream reset.
 	closingBracketsRead := 0.
 	[(nextChar := streamReader next) == nil
 		or: [closingBracketsRead = 2
@@ -12,17 +12,17 @@ nextCDataSection
 			nextChar == $]
 				ifTrue: [
 					closingBracketsRead = 2
-						ifTrue: [characterDataStream nextPut: $]]
+						ifTrue: [characterStream nextPut: $]]
 						ifFalse: [closingBracketsRead := closingBracketsRead + 1]]
 				ifFalse: [
 					closingBracketsRead > 0
 						ifTrue: [
 							1 to: closingBracketsRead do: [:i |
-								characterDataStream nextPut: $]].
+								characterStream nextPut: $]].
 							closingBracketsRead := 0].
 					nextChar isXMLChar
 						ifFalse: [self errorNonCharInCDataSection: nextChar].
-					characterDataStream nextPut: nextChar]].
+					characterStream nextPut: nextChar]].
 	nextChar
 		ifNil: [self errorExpectedCDataSectionTerminator].
-	driver handleCData: characterDataStream contents.
+	driver handleCData: characterStream contents.

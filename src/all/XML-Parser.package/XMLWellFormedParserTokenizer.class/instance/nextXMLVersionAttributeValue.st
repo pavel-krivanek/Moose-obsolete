@@ -6,7 +6,7 @@ nextXMLVersionAttributeValue
 		or: [quote == $'])
 		ifFalse: [self errorExpectedXMLVersionValueStartButGot: quote].
 
-	declarationStream
+	xmlDeclarationStream
 		reset;
 		nextPut: self expectNextVersionDigit;
 		nextPut: (self expectNext: $.);
@@ -14,7 +14,7 @@ nextXMLVersionAttributeValue
 
 	[(nextChar := streamReader next) == nil
 		or: [(VersionDigitChars includes: nextChar) not]]
-		whileFalse: [declarationStream nextPut: nextChar].
+		whileFalse: [xmlDeclarationStream nextPut: nextChar].
 
 	nextChar == quote
 		ifFalse: [
@@ -22,4 +22,4 @@ nextXMLVersionAttributeValue
 				errorExpectedXMLVersionValueEnd: quote
 				butGot: nextChar].
 
-	^ declarationStream contents.
+	^ xmlDeclarationStream contents.

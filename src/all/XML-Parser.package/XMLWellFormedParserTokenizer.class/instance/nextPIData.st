@@ -2,13 +2,13 @@ tokenizing
 nextPIData
 	| nextChar |
 
-	characterDataStream reset.
+	characterStream reset.
 	[(nextChar := streamReader next) == nil
 		or: [nextChar == $?
 			and: [streamReader peek == $>]]]
 		whileFalse: [
 			nextChar isXMLChar
 				ifFalse: [self errorNonCharInPIValue: nextChar].
-			characterDataStream nextPut: nextChar].
+			characterStream nextPut: nextChar].
 	self expectTerminator.
-	^ characterDataStream contents.
+	^ characterStream contents.

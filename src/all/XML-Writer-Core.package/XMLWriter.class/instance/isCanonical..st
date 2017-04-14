@@ -9,14 +9,14 @@ isCanonical: aBoolean
 		ifTrue: [
 			self
 				formatter: self canonicalWriterFormatterClass new;
-				lineBreak: self class canonicalLineBreak;
-				contentEscapes: ContentCanonicalEscapes;
-				contentStringEscapes: ContentStringCanonicalEscapes;
+				lineBreak: self canonicalLineBreak;
+				contentEscapes: self contentCanonicalEscapes;
+				contentStringEscapes: self contentStringCanonicalEscapes;
 				isEscaping: true;
 				omitsRedundantXMLNSDeclarations: true]
 		ifFalse: [
 			self
 				formatter: nil;
-				lineBreak: self class defaultLineBreak;
-				contentEscapes: ContentEscapes;
-				contentStringEscapes: ContentStringEscapes]
+				lineBreak: self defaultLineBreak;
+				contentEscapes: self contentDefaultEscapes;
+				contentStringEscapes: self contentStringDefaultEscapes]

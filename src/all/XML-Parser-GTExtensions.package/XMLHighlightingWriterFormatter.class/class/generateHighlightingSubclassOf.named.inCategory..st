@@ -2,9 +2,17 @@ private
 generateHighlightingSubclassOf: aFormatterClass named: aName inCategory: aCategory
 	"
 	self
-		generateHighlightingSubclassOf: XMLWriterFormatter
-		named: #XMLHighlightingWriterFormatter
-		inCategory: self category
+		generateHighlightingSubclassOf: XMLPrologPrettyPrintingWriterFormatter
+		named: #XMLHighlightingPrologPrettyPrintingWriterFormatter
+		inCategory: self category.
+	self
+		generateHighlightingSubclassOf: XMLPrettyPrintingWriterFormatter
+		named: #XMLHighlightingPrettyPrintingWriterFormatter
+		inCategory: self category.
+	self
+		generateHighlightingSubclassOf: XMLCanonicalWriterFormatter
+		named: #XMLHighlightingCanonicalWriterFormatter
+		inCategory: self category.
 	"
 	| newSubclass |
 

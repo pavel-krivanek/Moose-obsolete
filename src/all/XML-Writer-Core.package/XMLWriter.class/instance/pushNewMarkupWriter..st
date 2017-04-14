@@ -7,6 +7,6 @@ pushNewMarkupWriter: aMarkupWriterClass
 	newMarkupWriter :=
 		self markupWriterStack addLast:
 			(aMarkupWriterClass writer: self).
-	self hadActiveTagWriter
+	hadActiveTagWriter
 		ifFalse: [hadActiveTagWriter := newMarkupWriter isTagWriter].
 	^ newMarkupWriter.

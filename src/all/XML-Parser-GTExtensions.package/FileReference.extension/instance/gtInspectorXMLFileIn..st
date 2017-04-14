@@ -21,8 +21,18 @@ gtInspectorXMLFileIn: aComposite
 				XMLExternalDocumentConverter convert: xmlFileHandle rawReadStream];
 			withLineNumbers: true;
 			act: [:presentation |
+				presentation selection:
+					(XMLDOMParser parse: presentation text asString)]
+				icon: GLMUIThemeExtraIcons glamorousGo
+				on: $g
+				entitled: 'Go';
+			act: [:presentation |
 				currentTextStylerDecorator saveToFile: xmlFileHandle.
 				presentation pane update]
 				icon: GLMUIThemeExtraIcons glamorousSave
 				on: $s
-				entitled: 'Save').
+				entitled: 'Save';
+			act: [:presentation | presentation pane update]
+				icon: GLMUIThemeExtraIcons glamorousUndo
+				on: $Z
+				entitled: 'Revert').

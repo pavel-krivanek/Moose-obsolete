@@ -1,0 +1,3 @@
+accessing
+defaultXMLDeclarationColor: aTextColor
+	defaultXMLDeclarationColor := aTextColor

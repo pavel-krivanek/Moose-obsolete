@@ -1,7 +1,7 @@
 sources
 exampleSeismOnEarthZoom: aView
 	<gtExample>
-	<depends: #exampleSeismOnEarth>
+	<dependsOn: #exampleSeismOnEarth>
 	<noTest>
 	"This example reuse the seism data of Roassal 2."
 

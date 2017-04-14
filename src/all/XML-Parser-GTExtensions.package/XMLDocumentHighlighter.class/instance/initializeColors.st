@@ -2,11 +2,13 @@ initialization
 initializeColors
 	super initializeColors.
 	self
-		xmlDeclarationColor: self defaults defaultSecondaryMarkupColor;
-		doctypeDeclarationColor: self defaults defaultSecondaryMarkupColor;
-		piColor: self defaults defaultSecondaryMarkupColor;
-		declarationColor: self defaults defaultPrimaryMarkupColor;
-		tagColor: self defaults defaultPrimaryMarkupColor;
+		xmlDeclarationColor: self defaults defaultXMLDeclarationColor;
+		doctypeDeclarationColor: self defaults defaultDoctypeDeclarationColor;
+		piColor: self defaults defaultPIColor;
+		declarationColor: self defaults defaultDeclarationColor;
+		tagColor: self defaults defaultTagColor;
+		nameColor: self defaults defaultNameColor;
+		quotedStringNameColor: self defaults defaultQuotedStringNameColor;
 		quotedStringColor: self defaults defaultQuotedStringColor;
 		entityReferenceColor: self defaults defaultEntityReferenceColor;
 		commentColor: self defaults defaultCommentColor;

@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testSourceText
 	| sourceText |
 	sourceText := multipleFileAnchor sourceText.

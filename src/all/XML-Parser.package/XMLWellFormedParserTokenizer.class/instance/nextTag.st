@@ -5,7 +5,7 @@ nextTag
 
 	(streamReader peek == $/)
 		ifTrue: [^ self nextEndTag].
-	tagName := self nextName.
+	tagName := self nextElementName.
 
 	"nil understands isXMLSeparator so is not tested for"
 	[(nextChar := streamReader peek) isXMLSeparator
@@ -16,7 +16,7 @@ nextTag
 			((nextChar := streamReader peek) == $>
 				or: [nextChar == $/]) not]]
 		whileTrue: [| attributeName |
-			attributeName := self nextName.
+			attributeName := self nextAttributeName.
 			streamReader skipSeparators.
 			(nextChar := streamReader next) == $=
 				ifFalse: [
@@ -47,7 +47,7 @@ nextTag
 		handleStartTag: tagName
 		attributes:
 			(attributes
-				ifNil: [OrderPreservingStringDictionary new: 0]).
+				ifNil: [LazyOrderPreservingStringDictionary new]).
 
 	nextChar == $/
 		ifTrue: [

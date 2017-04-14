@@ -5,11 +5,11 @@ generateClassesFrom: aCollection inPackage: aString
 	This method is for incremental generation of metamodels, especially Famix extensions.
 	MooseModel generateClassesFrom: MooseModel metamodelClasses inPackage: 'NewExtension'
 	"
-	
-	|tower generator fm3Package |
-	tower := MooseModel metaBuilder: aCollection withProcessor: MoosePragmaProcessor new.
+
+	| tower generator fm3Package |
+	tower := self metaBuilder: aCollection withProcessor: self newPragmaProcessor.
 	generator := FMDefaultCodeGenerator new.
 	fm3Package := tower metamodel packageNamed: aString.
 	generator acceptFamePackage: fm3Package.
-	self flag: #classExtensionNotSupported. "currently the generator does not handle extension to other packages - cf #acceptFamePackage:"
-	generator previewChanges.
+	self flag: #classExtensionNotSupported.	"currently the generator does not handle extension to other packages - cf #acceptFamePackage:"
+	generator previewChanges
