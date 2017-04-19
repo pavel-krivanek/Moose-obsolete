@@ -18,6 +18,6 @@ baselineMooseAlgos: spec
 		'Moose-Tests-Algos-Clustering'
 		'Moose-Algos-Kontractor'
 		'Moose-Tests-Algos-Kontractor'
-		'Moose-Algos-GraphObjectTraverser'
+		"'Moose-Algos-GraphObjectTraverser'"
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #MooseAlgos) ]]
