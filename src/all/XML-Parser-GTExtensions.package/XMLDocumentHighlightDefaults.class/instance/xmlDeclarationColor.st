@@ -1,0 +1,3 @@
+accessing
+xmlDeclarationColor
+	^ self class defaultXMLDeclarationColor

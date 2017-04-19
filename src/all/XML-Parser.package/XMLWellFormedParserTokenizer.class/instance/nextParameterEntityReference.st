@@ -3,7 +3,7 @@ nextParameterEntityReference
 	| pushedBackParameterEntity name |
 
 	pushedBackParameterEntity := self topPushedBackEntity.
-	name := self nextName.
+	name := self nextEntityName.
 	self expectNext: $;.
 	self topPushedBackEntity == pushedBackParameterEntity
 		ifFalse: [driver handleImproperParameterEntityNesting].

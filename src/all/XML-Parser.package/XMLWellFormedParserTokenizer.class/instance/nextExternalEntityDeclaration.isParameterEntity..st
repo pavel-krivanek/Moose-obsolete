@@ -31,7 +31,7 @@ nextExternalEntityDeclaration: aName isParameterEntity: aBoolean
 					self
 						expectNextAll: 'NDATA';
 						expectSeparatorsInDeclaration.
-					notation := self nextName.
+					notation := self nextNotationName.
 					self
 						skipSeparatorsInDeclaration;
 						expectTerminator].

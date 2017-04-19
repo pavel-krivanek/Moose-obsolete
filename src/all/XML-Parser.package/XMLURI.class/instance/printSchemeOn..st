@@ -2,6 +2,6 @@ printing
 printSchemeOn: aStream
 	self hasScheme
 		ifTrue: [
-			aStream "do not percent encode scheme"
+			aStream
 				nextPutAll: self scheme;
 				nextPut: $:]

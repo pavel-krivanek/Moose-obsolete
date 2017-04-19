@@ -7,7 +7,7 @@ nextDoctypeDeclaration
 		expectNextAll: 'DOCTYPE';
 		expectSeparators.
 
-	root := self nextName.
+	root := self nextElementName.
 	(streamReader peek == $[
 		or: [streamReader peek == $>])
 		ifFalse: [

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 4/11/2017 05:22",
+	"super" : "XMLPushedBackStream",
+	"category" : "XML-Parser-Drivers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLPushedBackInternalStream",
+	"type" : "normal"
+}

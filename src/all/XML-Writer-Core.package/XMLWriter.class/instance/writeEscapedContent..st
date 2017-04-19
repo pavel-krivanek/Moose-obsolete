@@ -1,5 +1,8 @@
 private
 writeEscapedContent: aString
-	self
-		write: aString
-		escapedWith: contentEscapes
+	self isEscaping
+		ifTrue: [
+			self
+				write: aString
+				escapedWith: contentEscapes]
+		ifFalse: [stream nextPutAll: aString]

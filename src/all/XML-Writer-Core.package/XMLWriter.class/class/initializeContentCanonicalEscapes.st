@@ -1,6 +1,6 @@
 class initialization
 initializeContentCanonicalEscapes
 	ContentCanonicalEscapes :=
-		ContentEscapes copy
+		ContentDefaultEscapes copy
 			at: 16rD put: '&#xD;'; "CR"
 			yourself

@@ -3,14 +3,14 @@ nextPCDataToken
 	| isWhitespace nextChar closingBracketsRead |
 
 	isWhitespace := true.
-	characterDataStream reset.
+	characterStream reset.
 	closingBracketsRead := 0.
 	[(nextChar := streamReader peek) == $<
 		or: [nextChar == nil]]
 		whileFalse: [
 			streamReader next == $&
 				ifTrue: [
-					self nextGeneralEntityOrCharacterReferenceOnCharacterDataStream
+					self nextGeneralEntityOrCharacterReferenceOnCharacterStream
 						ifNotNil: [:writtenChar |
 							isWhitespace
 								ifTrue: [isWhitespace := writtenChar isXMLSeparator]]]
@@ -32,9 +32,9 @@ nextPCDataToken
 											closingBracketsRead := 0].
 									nextChar isXMLChar
 										ifFalse: [self errorNonCharInPCData: nextChar]]].
-					characterDataStream nextPut: nextChar]].
+					characterStream nextPut: nextChar]].
 	isWhitespace
 		ifTrue: [
-			characterDataStream position > 0
-				ifTrue: [driver handleWhitespace: characterDataStream contents]]
-		ifFalse: [driver handlePCData: characterDataStream contents].
+			characterStream position > 0
+				ifTrue: [driver handleWhitespace: characterStream contents]]
+		ifFalse: [driver handlePCData: characterStream contents].

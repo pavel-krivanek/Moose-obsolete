@@ -4,7 +4,7 @@ nextEndTag
 	"Skip /"
 	streamReader next.
 	(tagName := elementNester currentElement)
-		ifNil: [self errorUnexpectedEndTag: self nextName].
+		ifNil: [self errorUnexpectedEndTag: self nextElementName].
 	1 to: tagName size do: [:i | | nextChar |
 		"can't use == here because wide chars with the same value
 		aren't identical in pre-Spur VMs"
@@ -14,7 +14,7 @@ nextEndTag
 					errorExpectedEndTag: tagName
 					butGot: nextChar
 					at: i]].
-	elementNester endElement: tagName.
+	elementNester endCurrentElement.
 	driver handleEndTag: tagName.
 	streamReader skipSeparators.
 	self expectTerminator.

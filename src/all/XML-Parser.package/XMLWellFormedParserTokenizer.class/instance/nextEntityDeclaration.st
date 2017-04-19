@@ -29,7 +29,7 @@ nextEntityDeclaration
 					streamReader next.
 					self expectSeparators]].
 
-	name := self nextName.
+	name := self nextEntityName.
 	self expectSeparatorsInDeclaration.
 	streamReader atQuote
 		ifTrue: [

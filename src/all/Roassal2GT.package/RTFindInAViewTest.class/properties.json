@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2GT-Spotter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTFindInAViewTest",
+	"type" : "normal"
+}

@@ -1,6 +1,7 @@
 private
-writeAttributeName: aName value: aValue 
-	self space.
+writeAttributeName: aName value: aValue
 	self
-		writeName: aName
-		escapedContentValue: aValue.
+		space;
+		writeStringName: aName;
+		nextPut: $=;
+		writeEscapedContentString: aValue

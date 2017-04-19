@@ -3,7 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "FAMIXEntity",
-	"commentStamp" : "<historical>",
+	"commentStamp" : "AnneEtien 4/11/2017 17:39",
 	"super" : "MooseEntity",
 	"traitcomposition" : "TMetaLevelDependency",
 	"type" : "normal",

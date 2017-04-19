@@ -15,11 +15,11 @@ viewHierarchyEvolutionOn: view
 	view nodes: self.
 	
 	view shape line 
-				color: [ :each | each isRemoved
+				color: [ :each | each value isRemoved
 						ifTrue: [ Color cyan ]
 						ifFalse: [ (RTNColorLinearNormalizer
 								inContext: [ :x | self ]
-								withCommand: [ :entity | entity age ])
+								withCommand: [ :entity | entity value age ])
 								lowColor: Color veryVeryLightGray;
 								highColor: Color black;
 								rtValue: each ] ].

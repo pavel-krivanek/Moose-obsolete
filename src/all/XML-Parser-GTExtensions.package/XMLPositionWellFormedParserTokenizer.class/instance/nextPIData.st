@@ -1,8 +1,8 @@
 tokenizing
 nextPIData
-	| nextChar quotedStringStart quote |
+	| nextChar quotedStringNameStart quotedStringStart quote |
 
-	characterDataStream reset.
+	characterStream reset.
 	[(nextChar := streamReader next) == nil
 		or: [nextChar == $?
 			and: [streamReader peek == $>]]]
@@ -11,18 +11,43 @@ nextPIData
 				ifFalse: [self errorNonCharInPIValue: nextChar].
 			quotedStringStart
 				ifNil: [
-					(nextChar == $"
-						or: [nextChar == $'])
-						ifTrue: [
-							quote := nextChar.
-							quotedStringStart := self currentPosition]]
+					quotedStringNameStart
+						ifNil: [
+							nextChar isXMLNameStartChar
+								ifTrue: [quotedStringNameStart := self currentPosition]
+								ifFalse: [
+									(nextChar == $"
+										or: [nextChar == $'])
+										ifTrue: [
+											quote := nextChar.
+											quotedStringStart := self currentPosition]]]
+						ifNotNil: [
+							nextChar isXMLNameChar
+								ifFalse: [
+									driver
+										handleStartQuotedStringNamePosition:
+											quotedStringNameStart;
+										handleEndQuotedStringNamePosition:
+											self currentPosition - 1.
+									quotedStringNameStart := nil.
+									(nextChar == $"
+										or: [nextChar == $'])
+										ifTrue: [
+											quote := nextChar.
+											quotedStringStart := self currentPosition]]]]
 				ifNotNil: [
 					nextChar == quote
 						ifTrue: [
 							driver
 								handleStartQuotedStringPosition: quotedStringStart;
 								handleEndQuotedStringPosition: self currentPosition.
-							quotedStringStart := nil]].
-			characterDataStream nextPut: nextChar].
+							quotedStringStart := nil]]].
+	"ignore unterminated strings, but handle terminating names"
+	quotedStringNameStart
+		ifNotNil: [
+			driver
+				handleStartQuotedStringNamePosition: quotedStringNameStart;
+				handleEndQuotedStringNamePosition: self currentPosition - 1].
+
 	self expectTerminator.
-	^ characterDataStream contents.
+	^ characterStream contents.

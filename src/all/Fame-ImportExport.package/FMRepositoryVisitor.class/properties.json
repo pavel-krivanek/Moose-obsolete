@@ -12,7 +12,8 @@
 		"index",
 		"nb",
 		"progBar",
-		"roots"
+		"roots",
+		"lastUpdate"
 	],
 	"name" : "FMRepositoryVisitor",
 	"type" : "normal"

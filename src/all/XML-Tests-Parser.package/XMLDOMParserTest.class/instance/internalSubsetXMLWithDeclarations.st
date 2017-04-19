@@ -1,0 +1,3 @@
+source
+internalSubsetXMLWithDeclarations
+	^ XMLParserTest internalSubsetXMLWithDeclarations

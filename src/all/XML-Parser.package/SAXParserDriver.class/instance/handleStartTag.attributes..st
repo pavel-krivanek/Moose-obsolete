@@ -7,8 +7,8 @@ handleStartTag: anElement attributes: aDictionary
 	totalAttributes := aDictionary size.
 	self isValidating
 		ifTrue: [
-			self elementNester totalOpenElements = 1
-				ifTrue: [self validateRootElement: anElement].
+			self elementNester totalOpenElements > 1
+				ifFalse: [self validateRootElement: anElement].
 			self validator
 				validateStartTag: anElement
 				attributes: aDictionary]

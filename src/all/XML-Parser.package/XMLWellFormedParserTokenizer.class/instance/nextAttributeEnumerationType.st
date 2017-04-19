@@ -1,19 +1,21 @@
 tokenizing - dtd
 nextAttributeEnumerationType
-	declarationStream
+	characterStream
 		reset;
 		nextPut: (self expectNext: $().
+
+	"must have at least one value in the enumeration"
 	self
 		skipSeparatorsInDeclaration;
-		nextNmtokenOnDeclarationStream;
-		skipSeparatorsInDeclaration.
-	[streamReader peek == $)]
+		nextNmtokenOnCharacterStream.
+	[self skipSeparatorsInDeclaration.
+		streamReader peek == $)]
 		whileFalse: [
-			declarationStream nextPut: (self expectNext: $|).
+			characterStream nextPut: (self expectNext: $|).
 			self
 				skipSeparatorsInDeclaration;
-				nextNmtokenOnDeclarationStream;
-				skipSeparatorsInDeclaration].
-	declarationStream nextPut: streamReader next.
+				nextNmtokenOnCharacterStream].
 
-	^ declarationStream contents.
+	^ characterStream
+		nextPut: streamReader next;
+		contents.

@@ -14,6 +14,7 @@ initializeElement: element
 	adding the element into it"
 	canvas := (canvas rtValue: element).
 	canvas addShape: lbl.
+	lbl pushBack.
 	
 	self make: lbl highlightableIfNecessaryBy: element.
 	

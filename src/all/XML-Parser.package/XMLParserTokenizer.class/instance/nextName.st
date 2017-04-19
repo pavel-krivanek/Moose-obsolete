@@ -1,3 +1,0 @@
-tokenizing
-nextName
-	self subclassResponsibility

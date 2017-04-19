@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "YuriyTymchuk 6/20/2014 10:47",
-	"super" : "RTInteraction",
+	"super" : "RTAbstractInteractionView",
 	"category" : "Roassal2-Interactions",
 	"classinstvars" : [ ],
 	"pools" : [ ],

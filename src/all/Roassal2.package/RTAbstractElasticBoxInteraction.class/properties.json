@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "akevalion 11/27/2015 16:34",
-	"super" : "RTInteraction",
+	"super" : "RTAbstractInteractionView",
 	"category" : "Roassal2-Selection",
 	"classinstvars" : [ ],
 	"pools" : [ ],

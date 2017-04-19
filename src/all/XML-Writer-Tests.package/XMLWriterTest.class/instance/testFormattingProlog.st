@@ -1,18 +1,42 @@
 tests
 testFormattingProlog
-	| formatter writer xmlDeclarationWriter doctypeWriter paramEntityDeclarationWriter paramEntityRefWriter |
+	| formatter writer xmlDeclarationWriter doctypeWriter |
 
 	formatter := XMLWriterRecordingFormatterProxy new.
 	(writer := XMLWriter new) formatter: formatter.
-	(xmlDeclarationWriter := writer xml) write.
+	(xmlDeclarationWriter := writer xml)
+		version: '1.0';
+		encoding: 'UTF-16';
+		standalone: 'yes';
+		write.
 	self assert:
 		(formatter
 			receivedNext: #formatBeforeXMLDeclaration:
 			with: xmlDeclarationWriter).
 	self assert:
 		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringName: formatAfterQuotedStringName:)
+			with: 'version').
+	self assert:
+		(formatter
 			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
 			with: '1.0').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringName: formatAfterQuotedStringName:)
+			with: 'encoding').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
+			with: 'UTF-16').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringName: formatAfterQuotedStringName:)
+			with: 'standalone').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
+			with: 'yes').
 	self assert:
 		(formatter
 			receivedNext: #formatAfterXMLDeclaration:
@@ -20,33 +44,53 @@ testFormattingProlog
 
 	(doctypeWriter := writer doctype)
 		root: 'test';
-		with: [
-			(paramEntityDeclarationWriter := writer entityDeclaration)
-				isParameter: true;
-				name: 'test';
-				replacement: 'replacement'.
-			(paramEntityRefWriter := writer paramEntityRef) name: 'test'].
+		publicID: 'public';
+		systemID: 'system';
+		write.
 	self assert:
 		(formatter
-			receivedNextAll: #(formatBeforeDoctypeDeclaration: formatBeforeInternalSubset:)
+			receivedNext: #formatBeforeDoctypeDeclaration:
 			with: doctypeWriter).
 	self assert:
 		(formatter
-			receivedNext: #formatBeforeDeclaration:
-			with: paramEntityDeclarationWriter).
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'test').
 	self assert:
 		(formatter
 			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
-			with: 'replacement').
+			with: 'public').
 	self assert:
 		(formatter
-			receivedNext: #formatAfterDeclaration:
-			with: paramEntityDeclarationWriter).
+			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
+			with: 'system').
 	self assert:
 		(formatter
-			receivedNextAll: #(formatBeforeEntityReference: formatAfterEntityReference:)
-			with: paramEntityRefWriter).
-	self assert:
-		(formatter
-			receivedNextAll: #(formatAfterInternalSubset: formatAfterDoctypeDeclaration:)
+			receivedNext: #formatAfterDoctypeDeclaration:
 			with: doctypeWriter).
+
+	(doctypeWriter := writer doctype)
+		root: 'test';
+		systemID: 'system';
+		write.
+	self assert:
+		(formatter
+			receivedNext: #formatBeforeDoctypeDeclaration:
+			with: doctypeWriter).
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeName: formatAfterName:)
+			with: 'test').
+	self assert:
+		(formatter
+			receivedNextAll: #(formatBeforeQuotedStringValue: formatAfterQuotedStringValue:)
+			with: 'system').
+	self assert:
+		(formatter
+			receivedNext: #formatAfterDoctypeDeclaration:
+			with: doctypeWriter).
+
+	self assert:
+		writer contents =
+			('<?xml version="1.0" encoding="UTF-16" standalone="yes"?>',
+				'<!DOCTYPE test PUBLIC "public" "system">',
+				'<!DOCTYPE test SYSTEM "system">').

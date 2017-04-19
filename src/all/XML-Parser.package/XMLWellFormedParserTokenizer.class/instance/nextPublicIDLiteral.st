@@ -8,7 +8,7 @@ nextPublicIDLiteral
 		or: [quote == $'])
 		ifFalse: [self errorExpectedPublicIDLiteralStartButGot: quote].
 
-	declarationStream reset.
+	characterStream reset.
 	isInWhitespace := false.
 	"it's not enough to test for nil and PublicIDChars inclusion because
 	(PublicIDChars includes: $') = true (double quoted pubids can contain
@@ -25,10 +25,10 @@ nextPublicIDLiteral
 				ifFalse: [
 					isInWhitespace
 						ifTrue: [
-							declarationStream position > 0
-								ifTrue: [declarationStream nextPut: NormalizedSpace].
+							characterStream position > 0
+								ifTrue: [characterStream nextPut: NormalizedSpace].
 							isInWhitespace := false].
-					declarationStream nextPut: nextChar]].
+					characterStream nextPut: nextChar]].
 
 	nextChar == quote
 		ifFalse: [
@@ -36,4 +36,4 @@ nextPublicIDLiteral
 				errorExpectedPublicIDLiteralEnd: quote
 				butGot: nextChar].
 
-	^ declarationStream contents.
+	^ characterStream contents.

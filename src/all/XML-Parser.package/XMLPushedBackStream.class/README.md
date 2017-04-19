@@ -1,1 +1,1 @@
-A class to wrap a nested stream and callback for XMLNestedStreamReader and record the line number, position, and line start position of the current external stream.
+A base class to wrap a nested stream and callback for XMLNestedStreamReader and record the line number, position, and line start position of the current external stream.

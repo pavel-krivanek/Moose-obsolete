@@ -1,6 +1,6 @@
 *XML-Parser-GTExtensions
 gtInspectorTreeIn: aComposite inContext: aGTInspector
-	<gtInspectorPresentationOrder: 5>
+	<gtInspectorPresentationOrder: 1>
 
 	| treeView |
 

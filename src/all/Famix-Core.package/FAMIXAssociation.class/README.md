@@ -5,6 +5,8 @@ For example, FAMIXInheritance has:
 	(i) From mapped to the subclass;
 	(ii) To mapped to the superclass.
 	
+To adapt your code to MooseQuery, you have also to add the <source> and <target> pragmas in the selectors definition for each class inheriting FAMIXAssociation
+
 Next and Previous properties provide an order of the appearence of these associations in code. The order is calculated within a particular relationship for example, method invocation order within a calling method (from).
 For example in java, the following code
  method a() { b(); c(); }

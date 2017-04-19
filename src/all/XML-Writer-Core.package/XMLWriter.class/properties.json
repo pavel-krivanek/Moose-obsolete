@@ -7,10 +7,10 @@
 	"classvars" : [
 		"CanonicalLineBreak",
 		"ContentCanonicalEscapes",
-		"ContentEscapes",
+		"ContentDefaultEscapes",
 		"ContentNonEntityEscapes",
 		"ContentStringCanonicalEscapes",
-		"ContentStringEscapes",
+		"ContentStringDefaultEscapes",
 		"ContentStringNonEntityEscapes",
 		"DefaultLineBreak",
 		"EntityValueEscapes",

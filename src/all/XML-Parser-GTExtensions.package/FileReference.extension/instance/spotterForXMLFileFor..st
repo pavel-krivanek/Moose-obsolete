@@ -11,7 +11,8 @@ spotterForXMLFileFor: aStep
 	aStep listProcessor
 		title: 'XML Document';
 		allCandidates: [
-			(XMLDOMParser parse: xmlFileHandle rawReadStream) allElements];
+			(XMLDOMParser parseFileNamed: xmlFileHandle path)
+				allElements];
 		itemName: #gtDisplayString;
 		filter: GTFilterSubstring;
 		wantsToDisplayOnEmptyQuery: true.

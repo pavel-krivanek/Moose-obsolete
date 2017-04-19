@@ -4,7 +4,9 @@
 	"category" : "Fame-SmalltalkBinding",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"ShouldValidateMetaModel"
+	],
 	"instvars" : [
 		"elements",
 		"packageDict",

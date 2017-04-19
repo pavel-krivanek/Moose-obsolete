@@ -1,7 +1,7 @@
 sources
 exampleSeismOnEarthLiveZoom: aView
 	<gtExample>
-	<depends: #exampleSeismOnEarthLive>
+	<dependsOn: #exampleSeismOnEarthLive>
 	<noTest>
 	"This example download a data set from the web and scale the view afterwards."
 

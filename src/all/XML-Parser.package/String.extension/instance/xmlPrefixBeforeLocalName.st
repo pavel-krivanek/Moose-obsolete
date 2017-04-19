@@ -1,7 +1,6 @@
 *XML-Parser
 xmlPrefixBeforeLocalName
-	"Split the name into namespace prefix
-	(Optimized code)"
+	"optimized"
 	| i |
 
 	i := self size.

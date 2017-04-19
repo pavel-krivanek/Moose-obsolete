@@ -6,7 +6,7 @@ nextElementDeclaration
 
 	self expectSeparatorsInDeclaration.
 	driver
-		handleElementDeclaration: self nextName
+		handleElementDeclaration: self nextElementName
 		contentModel: self nextContentModel.
 	self
 		skipSeparatorsInDeclaration;

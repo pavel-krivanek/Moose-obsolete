@@ -6,10 +6,10 @@ initialize
 		initializeDefaultLineBreak;
 		initializeCanonicalLineBreak;
 		initializePlatformSpecificLineBreak;
-		initializeContentEscapes;
+		initializeContentDefaultEscapes;
 		initializeContentCanonicalEscapes;
 		initializeContentNonEntityEscapes;
-		initializeContentStringEscapes;
+		initializeContentStringDefaultEscapes;
 		initializeContentStringCanonicalEscapes;
 		initializeContentStringNonEntityEscapes;
 		initializeEntityValueEscapes;

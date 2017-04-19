@@ -1,6 +1,6 @@
 printing
 canonicallyPrintToFileNamed: aFileName
- 	"Prints to specified file as canonical XML (http://www.w3.org/TR/xml-c14n)"
+ 	"Prints to the file aFileName as canonical XML (http://www.w3.org/TR/xml-c14n)"
 
 	self
 		printToFileNamed: aFileName

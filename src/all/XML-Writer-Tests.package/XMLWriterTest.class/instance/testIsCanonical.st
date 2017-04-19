@@ -19,9 +19,9 @@ testIsCanonical
 	self
 		assert: (writer isCanonical: true) == writer;
 		assert: (writer formatter isKindOf: XMLCanonicalWriterFormatter);
-		assert: writer lineBreak = XMLWriter canonicalLineBreak;
-		assert: writer contentEscapes = XMLWriter contentCanonicalEscapes;
-		assert: writer contentStringEscapes = XMLWriter contentStringCanonicalEscapes;
+		assert: writer lineBreak = writer canonicalLineBreak;
+		assert: writer contentEscapes = writer contentCanonicalEscapes;
+		assert: writer contentStringEscapes = writer contentStringCanonicalEscapes;
 		assert: writer isEscaping;
 		assert: writer escapesContentEntityReferences;
 		assert: writer omitsRedundantXMLNSDeclarations.
@@ -29,9 +29,9 @@ testIsCanonical
 	self
 		assert: (writer isCanonical: false) == writer;
 		assert: writer formatter isNil;
-		assert: writer lineBreak = XMLWriter defaultLineBreak;
-		assert: writer contentEscapes = XMLWriter contentEscapes;
-		assert: writer contentStringEscapes = XMLWriter contentStringEscapes;
+		assert: writer lineBreak = writer defaultLineBreak;
+		assert: writer contentEscapes = writer contentDefaultEscapes;
+		assert: writer contentStringEscapes = writer contentStringDefaultEscapes;
 		assert: writer isEscaping;
 		assert: writer escapesContentEntityReferences;
 		assert: writer omitsRedundantXMLNSDeclarations.

@@ -1,5 +1,6 @@
 running
 increment
-	progBar ifNotNil: [
-		(increments % 100) = 0 ifTrue: [ progBar value: self pos ]. 
-		increments := increments + 1 ]
+	(progBar isNotNil and: [ (Time millisecondsSince: lastUpdate) >= 500 ])
+		ifTrue: [ 
+			progBar value: self pos.
+			lastUpdate := Time millisecondClockValue ]

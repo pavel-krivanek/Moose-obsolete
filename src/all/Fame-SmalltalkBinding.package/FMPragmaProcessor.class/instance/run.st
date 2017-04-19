@@ -2,4 +2,5 @@ running
 run
 	queue do: [ :cls | self processClass: cls ].
 	self resolveObjectReferences.
-	self validateMetaModel.
+	self class shouldValidateMetaModel
+		ifTrue: [ self validateMetaModel ]

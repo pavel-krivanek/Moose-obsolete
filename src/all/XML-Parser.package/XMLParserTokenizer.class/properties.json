@@ -13,8 +13,8 @@
 		"elementNester",
 		"streamReader",
 		"nameStream",
-		"declarationStream",
-		"characterDataStream"
+		"xmlDeclarationStream",
+		"characterStream"
 	],
 	"name" : "XMLParserTokenizer",
 	"type" : "normal"

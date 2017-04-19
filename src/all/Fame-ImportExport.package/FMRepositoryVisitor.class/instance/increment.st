@@ -1,5 +1,7 @@
 exporting
 increment
-
 	nb := nb + 1.
-	progBar ifNotNil: [ progBar value: nb ]
+	(progBar isNotNil and: [ (Time millisecondsSince: lastUpdate) >= 500 ])
+		ifTrue: [ 
+			progBar value: nb.
+			lastUpdate := Time millisecondClockValue ]

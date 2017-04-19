@@ -4,4 +4,4 @@ initialize
 
 	self
 		initializeHighlights;
-		initializeColors.
+		initializeColorsWithDefaults: self defaults.

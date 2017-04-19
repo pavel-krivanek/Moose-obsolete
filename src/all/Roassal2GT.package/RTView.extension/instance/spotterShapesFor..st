@@ -1,6 +1,6 @@
 *Roassal2GT-Spotter
 spotterShapesFor: aStep
-	<spotterOrder: 15>
+	<spotterOrder: 10>
 	^ aStep listProcessor
 		title: 'Shapes';
 		candidatesLimit: 5;

@@ -1,0 +1,3 @@
+accessing
+predicateLevelFourColor
+	^ self class defaultPredicateLevelFourColor

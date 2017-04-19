@@ -9,7 +9,7 @@ nextSystemIDLiteralWithoutURIFragment: aBoolean
 		or: [quote == $'])
 		ifFalse: [self errorExpectedSystemIDLiteralStartButGot: quote].
 
-	declarationStream reset.
+	characterStream reset.
 	[(nextChar := streamReader next) == nil
 		or: [nextChar == quote]]
 		whileFalse: [
@@ -19,7 +19,7 @@ nextSystemIDLiteralWithoutURIFragment: aBoolean
 				ifTrue: [
 					nextChar == $#
 						ifTrue: [self errorURIFragmentInSystemID]].
-			declarationStream nextPut: nextChar].
+			characterStream nextPut: nextChar].
 
 	nextChar == quote
 		ifFalse: [
@@ -27,4 +27,4 @@ nextSystemIDLiteralWithoutURIFragment: aBoolean
 				errorExpectedSystemIDLiteralEnd: quote
 				butGot: nextChar].
 
-	^ declarationStream contents.
+	^ characterStream contents.

@@ -4,7 +4,7 @@ testDoctypeDeclaration
 
 	doctype :=
 		(XMLDOMParser
-			parse: self internalSubsetWithDeclarations
+			parse: self internalSubsetXMLWithDeclarations
 			usingNamespaces: true
 			validation: true
 			externalEntities: false) doctypeDeclaration.

@@ -1,0 +1,3 @@
+accessing
+defaultDoctypeDeclarationColor: aTextColor
+	defaultDoctypeDeclarationColor := aTextColor

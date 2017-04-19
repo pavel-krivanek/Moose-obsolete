@@ -1,0 +1,3 @@
+accessing
+predicateLevelTwoColor
+	^ self class defaultPredicateLevelTwoColor

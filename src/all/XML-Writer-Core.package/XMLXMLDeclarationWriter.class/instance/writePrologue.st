@@ -1,6 +1,6 @@
 private
 writePrologue
-	self isCanonical
+	self isOmittable
 		ifFalse: [
 			self writer
 				formatBeforeXMLDeclaration: self;

@@ -6,9 +6,9 @@ escapesContentEntityReferences: aBoolean
 		ifTrue: [
 			self
 				isEscaping: true;
-				contentEscapes: ContentEscapes;
-				contentStringEscapes: ContentStringEscapes]
+				contentEscapes: self contentDefaultEscapes;
+				contentStringEscapes: self contentStringDefaultEscapes]
 		ifFalse: [
 			self
-				contentEscapes: ContentNonEntityEscapes;
-				contentStringEscapes: ContentStringNonEntityEscapes]
+				contentEscapes: self contentNonEntityEscapes;
+				contentStringEscapes: self contentStringNonEntityEscapes]

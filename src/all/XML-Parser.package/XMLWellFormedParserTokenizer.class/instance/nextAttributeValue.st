@@ -7,7 +7,7 @@ nextAttributeValue
 		ifFalse: [self errorExpectedAttributeValueStartButGot: quote].
 	
 	isInLiteralValue := true.
-	characterDataStream reset.
+	characterStream reset.
 	[((nextChar := streamReader next) == quote
 		and: [isIgnoringLiteralValueTerminator not])
 			or: [nextChar == $<
@@ -16,14 +16,14 @@ nextAttributeValue
 			nextChar == $&
 				ifTrue: [
 					"char refs should be ignored by whitespace normalization"
-					self nextGeneralEntityOrCharacterReferenceOnCharacterDataStream]
+					self nextGeneralEntityOrCharacterReferenceOnCharacterStream]
 				ifFalse: [
 					nextChar isXMLSeparator
 						ifTrue: [nextChar := NormalizedSpace]
 						ifFalse: [
 							nextChar isXMLChar
 								ifFalse: [self errorNonCharInAttributeValue: nextChar]].
-					characterDataStream nextPut: nextChar]].
+					characterStream nextPut: nextChar]].
 	isInLiteralValue := false.
 
 	nextChar == quote
@@ -32,4 +32,4 @@ nextAttributeValue
 				errorExpectedAttributeValueEnd: quote
 				butGot: nextChar].
 
-	^ characterDataStream contents.
+	^ characterStream contents.

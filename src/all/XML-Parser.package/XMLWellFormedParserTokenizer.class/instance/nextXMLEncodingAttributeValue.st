@@ -9,12 +9,13 @@ nextXMLEncodingAttributeValue
 	((nextChar := streamReader next) notNil
 		and: [EncodingNameStartChars includes: nextChar])
 		ifFalse: [self errorExpectedEncodingName].
-	declarationStream
+
+	xmlDeclarationStream
 		reset;
 		nextPut: nextChar.
 	[(nextChar := streamReader next) == nil
 		or: [(EncodingNameChars includes: nextChar) not]]
-		whileFalse: [declarationStream nextPut: nextChar].
+		whileFalse: [xmlDeclarationStream nextPut: nextChar].
 
 	nextChar == quote
 		ifFalse: [
@@ -22,4 +23,4 @@ nextXMLEncodingAttributeValue
 				errorExpectedXMLEncodingValueEnd: quote
 				butGot: nextChar].
 
-	^ declarationStream contents.
+	^ xmlDeclarationStream contents.

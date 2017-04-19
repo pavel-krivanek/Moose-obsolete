@@ -5,7 +5,7 @@ nextEntityValue
 	quote := streamReader next.
 
 	isInLiteralValue := true.
-	characterDataStream reset.
+	characterStream reset.
 	[((nextChar := streamReader next) == quote
 		and: [isIgnoringLiteralValueTerminator not])
 			or: [nextChar == nil]]
@@ -15,12 +15,12 @@ nextEntityValue
 					streamReader peek == $#
 						ifTrue: [
 							"character refs are replaced in entity values"
-							self nextCharacterReferenceOnCharacterDataStream]
+							self nextCharacterReferenceOnCharacterStream]
 						ifFalse: [
 							"general entity refs aren't replaced but must be complete"
-							characterDataStream nextPut: $&.
-							self nextNameOnCharacterDataStream.
-							characterDataStream nextPut: (self expectNext: $;)]]
+							characterStream nextPut: $&.
+							self nextEntityNameOnCharacterStream.
+							characterStream nextPut: (self expectNext: $;)]]
 				ifFalse: [
 					nextChar == $%
 						ifTrue: [
@@ -28,11 +28,11 @@ nextEntityValue
 								ifFalse: [
 									self
 										errorInternalDeclarationParameterEntityReference].
-							self nextParameterEntityReferenceOnCharacterDataStream]
+							self nextParameterEntityReferenceOnCharacterStream]
 						ifFalse: [
 							nextChar isXMLChar
 								ifFalse: [self errorNonCharInEntityValue: nextChar].
-							characterDataStream nextPut: nextChar]]].
+							characterStream nextPut: nextChar]]].
 	isInLiteralValue := false.
 
 	nextChar == quote
@@ -41,4 +41,4 @@ nextEntityValue
 				errorExpectedEntityValueEnd: quote
 				butGot: nextChar].
 
-	^ characterDataStream contents.
+	^ characterStream contents.

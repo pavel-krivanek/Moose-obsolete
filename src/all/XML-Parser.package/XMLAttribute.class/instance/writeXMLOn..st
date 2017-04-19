@@ -1,5 +1,6 @@
 printing
 writeXMLOn: aWriter
 	aWriter
-		writeName: self name
-		escapedContentValue: self value
+		writeStringName: self name;
+		nextPut: $=;
+		writeEscapedContentString: self value

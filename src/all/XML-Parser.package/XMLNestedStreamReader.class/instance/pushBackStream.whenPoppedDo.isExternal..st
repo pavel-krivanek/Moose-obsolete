@@ -3,7 +3,7 @@ pushBackStream: aStream whenPoppedDo: aBlock isExternal: aBoolean
 	self nestedStreamsAddLast:
 		((isExternal
 			ifTrue: [XMLPushedBackExternalStream]
-			ifFalse: [XMLPushedBackStream])
+			ifFalse: [XMLPushedBackInternalStream])
 				stream: stream
 				whenPoppedDo: whenPoppedDo
 				currentPosition: currentPosition
@@ -13,7 +13,7 @@ pushBackStream: aStream whenPoppedDo: aBlock isExternal: aBoolean
 	peekChar
 		ifNotNil: [
 			self nestedStreamsAddLast:
-				(XMLPushedBackStream
+				(XMLPushedBackInternalStream
 					stream: (XMLSingleCharacterReadStream on: peekChar)
 					whenPoppedDo: nil
 					currentPosition: currentPosition
