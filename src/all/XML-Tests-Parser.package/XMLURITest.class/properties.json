@@ -6,11 +6,12 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"asciiCharacters",
 		"reservedCharacters",
 		"unreservedCharacters",
-		"asciiCharacters",
 		"percentEncodedASCIICharacters",
-		"percentEncodedReservedCharacters"
+		"percentEncodedReservedCharacters",
+		"percentEncodedAlphaNumericCharacters"
 	],
 	"name" : "XMLURITest",
 	"type" : "normal"

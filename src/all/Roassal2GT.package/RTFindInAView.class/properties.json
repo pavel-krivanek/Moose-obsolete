@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "",
-	"super" : "RTInteraction",
+	"commentStamp" : "AlexandreBergel 4/17/2017 19:15",
+	"super" : "RTAbstractInteractionView",
 	"category" : "Roassal2GT-Spotter",
 	"classinstvars" : [ ],
 	"pools" : [ ],

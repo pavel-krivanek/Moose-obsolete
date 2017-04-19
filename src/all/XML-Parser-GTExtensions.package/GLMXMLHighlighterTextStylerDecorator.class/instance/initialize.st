@@ -2,6 +2,5 @@ initialization
 initialize
 	super initialize.
 
-	highlightableLengthLimit := 100000.
-	errorColor := TextColor red.
-	encoding := ''.
+	highlightableLengthLimit := self defaultHighlightableLengthLimit.
+	errorColor := self defaultErrorColor.

@@ -1,0 +1,3 @@
+accessing
+variableReferenceColor
+	^ self class defaultVariableReferenceColor

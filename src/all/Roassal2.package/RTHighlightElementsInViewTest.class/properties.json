@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTTest",
+	"category" : "Roassal2-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTHighlightElementsInViewTest",
+	"type" : "normal"
+}

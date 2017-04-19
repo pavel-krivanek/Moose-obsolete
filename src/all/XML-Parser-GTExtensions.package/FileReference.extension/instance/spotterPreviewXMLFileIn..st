@@ -13,5 +13,6 @@ spotterPreviewXMLFileIn: aComposite
 		display: [
 			"the source is converted to a decoded string and then highlighted"
 			XMLHighlightingParser parse:
-				(XMLExternalDocumentConverter convert: xmlFileHandle rawReadStream)];
+				(XMLExternalDocumentConverter convert:
+					xmlFileHandle rawReadStream)];
 		entity: self.

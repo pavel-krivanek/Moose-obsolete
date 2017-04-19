@@ -1,6 +1,6 @@
 printing
 prettyPrintToFileNamed: aFileName
- 	"Prints XML to specified file with whitespace formatting for readability"
+ 	"Prints XML to the file aFileName with whitespace formatting for readability"
 
 	self
 		printToFileNamed: aFileName

@@ -18,21 +18,32 @@ gtInspectorXMLFileIn: aComposite
 				GLMHighlighterTextRubEditingMode withStylerDecorator:
 					currentTextStylerDecorator];
 			display: [
-				XMLExternalDocumentConverter convert: xmlFileHandle rawReadStream];
+				XMLExternalDocumentConverter convert:
+					xmlFileHandle rawReadStream];
 			withLineNumbers: true;
 			act: [:presentation |
-				presentation selection:
-					(XMLDOMParser parse: presentation text asString)]
-				icon: GLMUIThemeExtraIcons glamorousGo
-				on: $g
-				entitled: 'Go';
-			act: [:presentation |
 				currentTextStylerDecorator saveToFile: xmlFileHandle.
+				"update the entire pane, not just this presentation,
+				because the file contents have changed"
 				presentation pane update]
 				icon: GLMUIThemeExtraIcons glamorousSave
 				on: $s
 				entitled: 'Save';
-			act: [:presentation | presentation pane update]
+			act: [:presentation |
+				"revert edits only in this presentation"
+				presentation update]
 				icon: GLMUIThemeExtraIcons glamorousUndo
 				on: $Z
-				entitled: 'Revert').
+				entitled: 'Revert';
+			"the selection action was removed because it reports the
+			wrong #selectionText if the previous presentation viewed
+			was a text presentation with a selection"
+			act: [:presentation |
+				"do not clear user edits because the source hasn't
+				been accepted/saved"
+				presentation selection:
+					(XMLDOMParser parse:
+						currentTextStylerDecorator text asString)]
+				icon: GLMUIThemeExtraIcons glamorousGo
+				on: $g
+				entitled: 'Parse and go').

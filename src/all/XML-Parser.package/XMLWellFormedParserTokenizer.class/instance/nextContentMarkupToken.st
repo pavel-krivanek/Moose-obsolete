@@ -14,4 +14,4 @@ nextContentMarkupToken
 					self errorUnexpectedMarkupDeclarationInContent].
 			self nextTag]
 		ifNotNil: [:pushedBackGeneralEntity |
-			self nextContentMarkupTokenFromEntity: pushedBackGeneralEntity].
+			self nextContentMarkupTokenFromEntity: pushedBackGeneralEntity]

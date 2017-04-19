@@ -5,4 +5,4 @@ make: label highlightableIfNecessaryBy: element
 	
 	label color: lowColor.
 	element when: TRMouseEnter do: [ :evt | label color: color. label pushFront. evt signalUpdate ].
-	element when: TRMouseLeave do: [ :evt | label color: lowColor. evt signalUpdate ].
+	element when: TRMouseLeave do: [ :evt | label color: lowColor. label pushBack. evt signalUpdate ].

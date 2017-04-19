@@ -3,7 +3,7 @@ buildPreviewTab
 	| resultPresenter |
 	self dynamic
 		title: 'Preview';
-		updateOn: ValueChanged from: [ self previewResultHolder announcer ];
+		updateOn: ValueChanged from: [ self previewResultHolder instVarNamed: 'announcer' ];
 		display: [ | presentation |
 			presentation := GLMCompositePresentation new.
 			(resultPresenter := presentation tabulator)

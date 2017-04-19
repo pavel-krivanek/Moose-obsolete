@@ -1,3 +1,0 @@
-initialization
-initializeColors
-	self defaultColor: self defaults defaultDefaultColor

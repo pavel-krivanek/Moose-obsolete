@@ -1,3 +1,3 @@
 accessing
-fontSize: anObject
-	fontSize := anObject
+fontSize: aPixelSizeAsInteger
+	fontSize := aPixelSizeAsInteger

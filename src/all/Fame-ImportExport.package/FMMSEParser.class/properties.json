@@ -11,7 +11,7 @@
 		"buf",
 		"char",
 		"progBar",
-		"increments"
+		"lastUpdate"
 	],
 	"name" : "FMMSEParser",
 	"type" : "normal"

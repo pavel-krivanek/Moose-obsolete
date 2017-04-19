@@ -14,7 +14,7 @@ nextEndTag
 					errorExpectedEndTag: tagName
 					butGot: nextChar
 					at: i]].
-	elementNester endElement: tagName.
+	elementNester endCurrentElement.
 	driver handleEndTag: tagName.
 	streamReader skipSeparators.
 	self expectTerminator.

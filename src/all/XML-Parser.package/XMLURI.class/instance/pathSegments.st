@@ -1,5 +1,5 @@
 accessing
 pathSegments
-	"Returns a collection of percent-decoded path segments"
+	"Returns a temporary OrderedCollection of percent-decoded path segments"
 
 	^ self rawPathSegments collect: [:each | self percentDecode: each]

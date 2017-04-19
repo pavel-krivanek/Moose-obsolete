@@ -1,6 +1,6 @@
 printing
 printToFileNamed: aFileName beforeWritingDo: aBlock
-	"Prints XML to specified file after evaluating aBlock with the XMLWriter.
+	"Prints XML to the file aFileName after evaluating aBlock with the XMLWriter.
 	Uses the encoding specified in the document's encoding attribute if
 	supported or UTF-8 otherwise."
 

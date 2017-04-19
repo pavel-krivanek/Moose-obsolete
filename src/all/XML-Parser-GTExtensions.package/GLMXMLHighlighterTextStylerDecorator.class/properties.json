@@ -7,8 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"highlightableLengthLimit",
-		"errorColor",
-		"encoding"
+		"errorColor"
 	],
 	"name" : "GLMXMLHighlighterTextStylerDecorator",
 	"type" : "normal"

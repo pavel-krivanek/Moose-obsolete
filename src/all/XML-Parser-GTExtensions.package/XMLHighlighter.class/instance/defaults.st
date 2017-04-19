@@ -1,3 +1,3 @@
 accessing
 defaults
-	self subclassResponsibility
+	^ self defaultsClass new

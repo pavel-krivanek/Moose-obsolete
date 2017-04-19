@@ -1,6 +1,6 @@
 *Roassal2GT-Spotter
 spotterShapesModelsFor: aStep
-	<spotterOrder: 10>
+	<spotterOrder: 15>
 	^ aStep listProcessor
 		title: 'Model objects';
 		candidatesLimit: 5;

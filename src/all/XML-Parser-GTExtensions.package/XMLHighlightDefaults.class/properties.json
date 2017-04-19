@@ -3,7 +3,8 @@
 	"super" : "Object",
 	"category" : "XML-Parser-GTExtensions-Highlighting",
 	"classinstvars" : [
-		"defaultDefaultColor"
+		"defaultDefaultColor",
+		"uiTheme"
 	],
 	"pools" : [ ],
 	"classvars" : [ ],

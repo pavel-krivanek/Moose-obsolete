@@ -52,7 +52,7 @@ nextTag
 	nextChar == $/
 		ifTrue: [
 			streamReader next.
-			elementNester endElement: tagName.
+			elementNester endCurrentElement.
 			driver handleEndTag: tagName].
 
 	self expectTerminator.

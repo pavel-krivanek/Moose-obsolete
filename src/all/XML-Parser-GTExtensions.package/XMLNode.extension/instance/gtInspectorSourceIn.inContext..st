@@ -21,11 +21,6 @@ gtInspectorSourceIn: aComposite inContext: aGTInspector
 							icon: GLMUIThemeExtraIcons glamorousAccept
 							on: $s
 							entitled: 'Accept';
-						act: [:presentation |
-							presentation update]
-							icon: GLMUIThemeExtraIcons glamorousUndo
-							on: $Z
-							entitled: 'Revert';
 						act: [
 							self promptForSourceSaveFileName
 								ifNotEmpty: [:fileName |
@@ -34,7 +29,12 @@ gtInspectorSourceIn: aComposite inContext: aGTInspector
 										inContext: aGTInspector.
 									currentTextStylerDecorator saveToFile: fileName]]
 							icon: GLMUIThemeExtraIcons glamorousSave
-							entitled: 'Save']
+							entitled: 'Save as';
+						act: [:presentation |
+							presentation update]
+							icon: GLMUIThemeExtraIcons glamorousUndo
+							on: $Z
+							entitled: 'Revert']
 				ifFalse: [
 					GLMXMLDisabledRubricHighlightedTextPresentation new
 						editingMode: [
@@ -52,7 +52,7 @@ gtInspectorSourceIn: aComposite inContext: aGTInspector
 								ifNotEmpty: [:fileName |
 									currentTextStylerDecorator saveToFile: fileName]]
 							icon: GLMUIThemeExtraIcons glamorousSave
-							entitled: 'Save']).
+							entitled: 'Save as']).
 
 	sourceEditor
 		title: 'Source';
