@@ -1,6 +1,5 @@
 running
 run
-	increments := 0.
 	UIManager default
 		displayProgress: 'Parsing ' , self stream localName
 		from: 1

@@ -4,8 +4,10 @@ withScope: aClassFAMIX
 
 	| entities |
 	entities := OrderedCollection new.
-	(self allParentTypes includes: aClassFAMIX)
-		ifTrue: [ entities addAll: (self atScope: aClassFAMIX) ].
-	(self allChildrenTypes includes: aClassFAMIX)
-		ifTrue: [ entities addAll: (self toScope: aClassFAMIX) ].
+	self allParentTypes
+		detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ]
+		ifFound: [ entities addAll: (self atScope: aClassFAMIX) ].
+	self allChildrenTypes
+		detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ]
+		ifFound: [ entities addAll: (self toScope: aClassFAMIX) ].
 	^ entities
