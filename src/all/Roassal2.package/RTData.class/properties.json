@@ -10,8 +10,7 @@
 		"lineBuilder",
 		"shouldConnect",
 		"interaction",
-		"shouldHaveBars",
-		"alignmentOffset"
+		"shouldHaveBars"
 	],
 	"name" : "RTData",
 	"type" : "normal"

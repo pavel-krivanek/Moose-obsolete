@@ -10,7 +10,6 @@
 	"instvars" : [
 		"rectangle",
 		"strokeWidth",
-		"borderStyle",
 		"dashes"
 	],
 	"name" : "TRAbstractBoxShape",
