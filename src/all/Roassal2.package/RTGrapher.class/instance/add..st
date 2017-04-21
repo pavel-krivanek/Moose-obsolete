@@ -1,6 +1,7 @@
 adding
 add: aDataSet
 	"Essential method. Add a dataset into the grapher. Only non-empty set are considered"
+	self assert: [ aDataSet isKindOf: RTAbstractData ] description: 'Wrong argument'.
 	aDataSet numberOfPoints = 0 ifTrue: [ ^ self ].
 	
 	datasets add: aDataSet.
