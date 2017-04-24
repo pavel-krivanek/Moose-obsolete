@@ -8,7 +8,7 @@ elements := (RTEllipse new size: 20; color: (Color blue alpha: 0.3)) elementsOn:
 v addAll: elements.
 elements @ RTDraggable.
 
-s := RTSpringLayoutStepping new view: v.
+s := RTForceLayoutStepping new view: v.
 v addAnimation: s.
 
 	^ v

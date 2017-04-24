@@ -5,8 +5,7 @@ visitAbsoluteLocationPath: anAbsoluteLocationPath
 		emitStartGroupingsForLocationPath: anAbsoluteLocationPath;
 		emitInitializingDocumentRootVariableReference.
 	super visitAbsoluteLocationPath: anAbsoluteLocationPath.
-	self emit: $).
-	(anAbsoluteLocationPath hasSteps
-		and: [anAbsoluteLocationPath isPredicateLocationPath not])
-		ifTrue: [self emitNodeSetSort].
+	self
+		emit: $);
+		emitNodeSetSortForLocationPath: anAbsoluteLocationPath.
 	^ anAbsoluteLocationPath.

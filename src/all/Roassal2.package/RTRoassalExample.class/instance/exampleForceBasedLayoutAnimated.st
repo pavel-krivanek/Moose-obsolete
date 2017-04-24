@@ -16,6 +16,6 @@ exampleForceBasedLayoutAnimated
 	edges do: [ :e | e trachelShape pushBack ].
 
 	"RTForceBasedLayout on: v elements edges: v edges."
-	v addAnimation: (RTSpringLayoutStepping new view: v).
+	v addAnimation: (RTForceLayoutStepping new view: v).
 	v @ RTDraggableView.
 	^ v

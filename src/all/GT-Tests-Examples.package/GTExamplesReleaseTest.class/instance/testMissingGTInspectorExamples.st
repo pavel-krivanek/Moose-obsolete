@@ -8,6 +8,7 @@ testMissingGTInspectorExamples
 			MetacelloVersionLoadDirective. " corrupt package detection "
 			MorphicTreeNodeAdapter. " corrupt package detection "
 			ZnMessage. " abstract factory & superclass / subclasses provide examples "
+			CompiledCode. "abstract"
 		}
 		pragmas: #( #gtInspectorPresentationOrder: )
 		examples: #( #gtExample #gtExample: )

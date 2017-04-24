@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"outerXMLNode"
+		"outerXMLNode",
+		"document"
 	],
 	"name" : "GLMXMLOuterXMLDocumentHighlighterTextStylerDecorator",
 	"type" : "normal"

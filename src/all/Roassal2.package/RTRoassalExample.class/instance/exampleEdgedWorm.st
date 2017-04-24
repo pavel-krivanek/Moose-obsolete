@@ -14,7 +14,7 @@ RTEdgeBuilder new
 	connectToAll: [ :value | (Array with: value -1  with: value + 1 with: value + 2) ].
 
 RTForceBasedLayout on: es.
-v addAnimation: (RTSpringLayoutStepping new view: v).
+v addAnimation: (RTForceLayoutStepping new view: v).
 
 v @ RTDraggableView.
 

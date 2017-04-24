@@ -6,8 +6,6 @@ visitRelativeLocationPath: aRelativeLocationPath
 		emitAll: self contextNodeVariable.
 	super visitRelativeLocationPath: aRelativeLocationPath.
 	self
-		emit: $).
-	(aRelativeLocationPath hasSteps
-		and: [aRelativeLocationPath isPredicateLocationPath not])
-		ifTrue: [self emitNodeSetSort].
+		emit: $);
+		emitNodeSetSortForLocationPath: aRelativeLocationPath.
 	^ aRelativeLocationPath.

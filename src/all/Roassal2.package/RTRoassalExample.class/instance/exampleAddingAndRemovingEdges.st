@@ -13,7 +13,7 @@ RTMetricNormalizer new
 	normalizeColor: #numberOfMethods using: (Array with: Color green with: Color red );
 	alphaColor: 0.3.
 	 
-anim := RTSpringLayoutStepping new view: v.
+anim := RTForceLayoutStepping new view: v.
 v addAnimation: anim. 
 
 v addMenu: 'add edges' callback: [ 

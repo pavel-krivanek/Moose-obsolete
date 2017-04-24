@@ -2,6 +2,6 @@ tests
 testBasic
 
 	| l |
-	l := RTSpringLayoutStepping new.
+	l := RTForceLayoutStepping new.
 	self deny: l hasCompleted.
 	
