@@ -1,3 +1,3 @@
 default attach points
 defaultAttachPoint
-	^ RTCenteredAttachPoint instance
+	^ RTCenteredAttachPoint new

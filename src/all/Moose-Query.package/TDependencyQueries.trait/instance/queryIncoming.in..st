@@ -1,5 +1,3 @@
 moosequery-queries-generic
 queryIncoming: aFAMIXClassAssociation in: aCollection
-
-	^ self query: #in with: aFAMIXClassAssociation in: aCollection
-
+	^ (MooseQueryCalculator strategy: MooseQueryIncomingDirectionStrategy) query: aFAMIXClassAssociation for: self in: aCollection

@@ -1,3 +1,3 @@
 testing
-includesFunctionNamed: aName
-	^ functionsByName includesKey: aName
+includesFunctionNamed: aFunctionName
+	^ functionsByName includesKey: aFunctionName

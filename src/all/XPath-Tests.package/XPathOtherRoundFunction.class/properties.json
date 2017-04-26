@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 4/22/2017 12:45",
+	"super" : "XPathRoundFunction",
+	"category" : "XPath-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XPathOtherRoundFunction",
+	"type" : "normal"
+}

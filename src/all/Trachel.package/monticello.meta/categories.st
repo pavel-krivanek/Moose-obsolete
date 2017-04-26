@@ -7,4 +7,5 @@ SystemOrganization addCategory: 'Trachel-MorphSpecific'!
 SystemOrganization addCategory: 'Trachel-Shapes'!
 SystemOrganization addCategory: 'Trachel-ShapesForArrow'!
 SystemOrganization addCategory: 'Trachel-Tests'!
+SystemOrganization addCategory: 'Trachel-Theme'!
 SystemOrganization addCategory: 'Trachel-Viva'!

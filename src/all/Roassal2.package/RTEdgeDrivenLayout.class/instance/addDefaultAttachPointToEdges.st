@@ -1,3 +1,5 @@
 default attach points
 addDefaultAttachPointToEdges
-	edges do: [ :e | e shape attachPoint: self defaultAttachPoint ]
+	| a |
+	a := self defaultAttachPoint.
+	edges do: [ :e | e shape attachPoint: a ]

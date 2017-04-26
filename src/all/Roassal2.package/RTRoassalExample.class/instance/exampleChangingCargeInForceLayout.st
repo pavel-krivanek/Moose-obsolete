@@ -14,7 +14,7 @@ RTEdgeBuilder new
 	
 setSizeAndColor value.
 
-s := RTSpringLayoutStepping new view: v.
+s := RTForceLayoutStepping new view: v.
 layout := RTForceBasedLayout new.
 s layout: layout.
 v addAnimation: s.

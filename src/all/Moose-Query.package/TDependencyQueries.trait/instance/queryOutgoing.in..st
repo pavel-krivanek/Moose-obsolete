@@ -1,4 +1,3 @@
 moosequery-queries-generic
 queryOutgoing: aFAMIXClassAssociation in: aCollection
-
-	^ self query: #out with: aFAMIXClassAssociation in: aCollection
+	^ (MooseQueryCalculator strategy: MooseQueryOutgoingDirectionStrategy) query: aFAMIXClassAssociation for: self in: aCollection

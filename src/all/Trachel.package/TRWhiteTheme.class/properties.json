@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TRAbstractTheme",
+	"category" : "Trachel-Theme",
+	"classinstvars" : [
+		"default"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRWhiteTheme",
+	"type" : "normal"
+}

@@ -1,4 +1,4 @@
-accessing
+initialization
 initialize
 	super initialize.
 	color := Color black alpha: 0.05.

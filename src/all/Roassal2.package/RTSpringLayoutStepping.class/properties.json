@@ -1,15 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "RTAnimation",
+	"super" : "RTForceLayoutStepping",
 	"category" : "Roassal2-Animation",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"view",
-		"layout",
-		"afterBlock"
-	],
+	"instvars" : [ ],
 	"name" : "RTSpringLayoutStepping",
 	"type" : "normal"
 }

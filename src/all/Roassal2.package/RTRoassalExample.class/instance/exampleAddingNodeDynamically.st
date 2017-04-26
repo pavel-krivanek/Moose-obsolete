@@ -3,7 +3,7 @@ exampleAddingNodeDynamically
 | v stepping |
 v := RTView new.
 v @ RTDraggableView.
-stepping := RTSpringLayoutStepping new view: v.
+stepping := RTForceLayoutStepping new view: v.
 stepping after: [ v canvas camera focusOnCenter ].
 v addAnimation: stepping.
 

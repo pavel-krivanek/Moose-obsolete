@@ -1,4 +1,3 @@
 moosequery-queries-generic
 queryAllLocalOutgoing
-	
-	^ self queryAllLocal: #out 
+	^ (MooseQueryCalculator strategy: MooseQueryOutgoingDirectionStrategy) queryAllLocalFor: self

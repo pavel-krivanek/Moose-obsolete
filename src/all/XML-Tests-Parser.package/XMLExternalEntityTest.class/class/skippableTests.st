@@ -11,6 +11,7 @@ skippableTests
 			testParsingEncodedFileWithEncodingAttribute
 			testParsingEncodedFileWithEncodingAttributeAndBOM
 			testParsingExternalEntities
+			testParsingExternalEntitiesLimit
 			testParsingFile
 			testParsingRetrievedURL
 			testParsingURL)

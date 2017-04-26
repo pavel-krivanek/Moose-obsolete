@@ -23,7 +23,7 @@ exampleMovingGrid
 		lineItemsCount: size;
 		on: es.
 	layout := RTForceBasedLayout new initialLayout: initialLayout.
-	step := RTSpringLayoutStepping new
+	step := RTForceLayoutStepping new
 		view: v;
 		layout: layout.
 	v addAnimation: step.

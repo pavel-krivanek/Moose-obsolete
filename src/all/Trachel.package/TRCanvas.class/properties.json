@@ -16,7 +16,8 @@
 		"announcer",
 		"color",
 		"session",
-		"eventOverseer"
+		"eventOverseer",
+		"theme"
 	],
 	"name" : "TRCanvas",
 	"type" : "normal"

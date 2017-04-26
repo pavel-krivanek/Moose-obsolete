@@ -1,4 +1,3 @@
 moosequery-queries-generic
 queryAllIncoming
-	
-	^ self queryAll: #in 
+	^ (MooseQueryCalculator strategy: MooseQueryIncomingDirectionStrategy) queryAllFor: self

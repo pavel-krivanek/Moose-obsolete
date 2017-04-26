@@ -1,3 +1,3 @@
-as yet unclassified
+default attach points
 defaultAttachPoint
-	^ RTHorizontalAttachPoint instance
+	^ RTHorizontalAttachPoint new

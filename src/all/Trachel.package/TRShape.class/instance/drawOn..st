@@ -7,9 +7,9 @@ drawOn: athensCanvas
 		pt scaleBy: matrix sx @ matrix sy.
 		
 		athensCanvas
-			setPaint: color;
+			setPaint: self themedColor;
 			drawShape: self path.
 			
 		athensCanvas
-			setStrokePaint: strokePaint;
+			setStrokePaint: self themedStrokeColor;
 			drawShape: self path  ]

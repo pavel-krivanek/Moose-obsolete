@@ -1,5 +1,5 @@
 tests
 testBasic2
 
-	RTSpringLayoutStepping new refresh
+	RTForceLayoutStepping new refresh
 	

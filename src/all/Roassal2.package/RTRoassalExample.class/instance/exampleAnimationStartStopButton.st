@@ -8,7 +8,7 @@ elements := (RTEllipse new size: 20; color: (Color blue alpha: 0.3)) elementsOn:
 v addAll: elements.
 elements @ RTDraggable.
 
-stepping := RTSpringLayoutStepping new view: v.
+stepping := RTForceLayoutStepping new view: v.
 stepping addStartStopButton.
 "Uncomment the next line to have the animation from the beginning"
 "v addAnimation: stepping."

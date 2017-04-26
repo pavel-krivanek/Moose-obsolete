@@ -2,7 +2,7 @@ tests
 testBasic3
 
 	| v l |
-	l := RTSpringLayoutStepping new.
+	l := RTForceLayoutStepping new.
 	self assert: l nodes isEmpty.
 
 	v := RTView new.

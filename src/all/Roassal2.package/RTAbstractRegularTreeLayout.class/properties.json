@@ -10,7 +10,9 @@
 		"topGap",
 		"leftGap",
 		"nodesByLayer",
-		"isLayered"
+		"isLayered",
+		"shouldBeHorizontallyReversed",
+		"shouldBeVerticallyReversed"
 	],
 	"name" : "RTAbstractRegularTreeLayout",
 	"type" : "normal"

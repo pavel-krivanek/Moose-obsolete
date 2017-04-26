@@ -4,4 +4,6 @@ initialize
 	topGap := 5.
 	leftGap := 5.
 	isLayered := false.
-	self doAttachPoint
+	shouldBeHorizontallyReversed := false.
+	shouldBeVerticallyReversed := false.
+	self doAttachPoint.
