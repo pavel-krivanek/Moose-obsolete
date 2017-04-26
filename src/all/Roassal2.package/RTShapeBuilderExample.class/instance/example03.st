@@ -1,4 +1,4 @@
-as yet unclassified
+example
 example03
 	"
 	self new example03

@@ -1,9 +1,5 @@
 sources
 exampleLabelledIf
-	"
-	var b: RTPieBuilder
-	var c: Class
-	"
 	| b |
 	b := RTPieBuilder new.
 	b interaction popup.
@@ -11,5 +7,4 @@ exampleLabelledIf
 	b slice: #numberOfMethods.
 	b normalizer distinctColor.	
 	b labeledIf: [ :c | c numberOfMethods > 18 ].
-	b build.
-	^ b view
+	^ b

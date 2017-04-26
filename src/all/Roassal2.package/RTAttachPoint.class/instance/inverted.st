@@ -1,3 +1,5 @@
 public - hooks
 inverted
-	inverted := inverted not.
+	"Swap the starting and ending points"
+
+	inverted := inverted not

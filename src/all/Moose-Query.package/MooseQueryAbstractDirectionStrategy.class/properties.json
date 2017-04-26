@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 4/25/2017 20:31",
+	"super" : "Object",
+	"category" : "Moose-Query",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MooseQueryAbstractDirectionStrategy",
+	"type" : "normal"
+}

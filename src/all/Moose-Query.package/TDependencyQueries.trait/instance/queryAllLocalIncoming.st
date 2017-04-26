@@ -1,4 +1,3 @@
 moosequery-queries-generic
 queryAllLocalIncoming
-	
-	^ self queryAllLocal: #in 
+	^ (MooseQueryCalculator strategy: MooseQueryIncomingDirectionStrategy) queryAllLocalFor: self

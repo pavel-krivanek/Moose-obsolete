@@ -1,7 +1,7 @@
 moosequery-queries-outgoing
 queryOutgoingDependencies
-	
 	"Associations + typeDeclarations"
-	^ self queryAllOutgoingAssociations 
-		addAll:  self queryOutgoingTypeDeclarations; 
+
+	^ self queryAllOutgoingAssociations
+		addAll: self queryOutgoingTypeDeclarations;
 		yourself

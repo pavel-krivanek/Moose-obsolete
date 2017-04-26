@@ -1,0 +1,3 @@
+accessing
+trachelCanvasColor
+	^ self subclassResponsibility 

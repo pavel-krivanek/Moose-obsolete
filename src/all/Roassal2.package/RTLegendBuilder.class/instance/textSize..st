@@ -1,3 +1,3 @@
 accessing
-textSize: anObject
-	textSize := anObject
+textSize: aSizeAsInteger
+	textSize := aSizeAsInteger

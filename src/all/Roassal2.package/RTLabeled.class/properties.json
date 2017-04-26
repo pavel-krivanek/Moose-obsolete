@@ -1,21 +1,11 @@
 {
 	"commentStamp" : "AlexandreBergel 5/6/2016 13:10",
-	"super" : "RTInteraction",
+	"super" : "RTAbstractLabeled",
 	"category" : "Roassal2-Interactions",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"canvas",
-		"color",
-		"highlightable",
-		"lbl",
-		"lowColor",
-		"offsetOnEdge",
-		"position",
-		"text",
-		"fontSize"
-	],
+	"instvars" : [ ],
 	"name" : "RTLabeled",
 	"type" : "normal"
 }

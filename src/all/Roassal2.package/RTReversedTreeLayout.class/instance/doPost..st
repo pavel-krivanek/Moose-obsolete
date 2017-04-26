@@ -1,4 +1,4 @@
-as yet unclassified
+hook
 doPost: elements
 	| g hauteur |
 	g := elements asGroup.
