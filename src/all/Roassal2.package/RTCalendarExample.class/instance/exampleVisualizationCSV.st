@@ -1,6 +1,6 @@
 sources
 exampleVisualizationCSV
-
+<noTest>
 | b tab colors dictionary |
 tab := RTTabTable new 
 	input: (TRPlatform current downloadContent: 'http://bl.ocks.org/mbostock/raw/4063318/dji.csv')

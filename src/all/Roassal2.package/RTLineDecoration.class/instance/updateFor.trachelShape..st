@@ -2,7 +2,7 @@ hooks
 updateFor: edge trachelShape: trachelShape
 	| f |
 	f := attachPoint startingPointOf: edge.
-	edge shape class = RTArcLine & (attachPoint class = RTBorderAttachPoint)
+	(edge shape class = RTArcLine and: [ attachPoint class = RTBorderAttachPoint ])
 		ifTrue:
 			[ f := attachPoint
 				attachPointFor: edge

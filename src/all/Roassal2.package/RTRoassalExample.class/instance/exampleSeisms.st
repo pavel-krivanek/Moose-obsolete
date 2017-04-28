@@ -1,6 +1,6 @@
 sources
 exampleSeisms
-
+<noTest>
 | b tab l|
 tab := RTTabTable new input: 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.csv' asZnUrl retrieveContents usingDelimiter: $,.
 tab removeFirstRow.
