@@ -4,8 +4,8 @@ xmlWriterPrefixBeforeLocalName
 	| i |
 
 	i := self size.
-	[i > 1]
-		whileTrue: [
+	[i == 0]
+		whileFalse: [
 			((self at: i) == $:)
 				ifTrue: [^ (self copyFrom: 1 to: i - 1)].
 			i := i - 1].

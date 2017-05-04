@@ -4,5 +4,4 @@ initialize
 
 	self
 		initializeByteOrderMarks;
-		initializeNullCharacter;
-		initializeEncodingHandlerTable
+		initializeNullCharacter

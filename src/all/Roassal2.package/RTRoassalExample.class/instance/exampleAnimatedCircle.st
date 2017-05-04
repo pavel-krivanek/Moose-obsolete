@@ -9,7 +9,7 @@ exampleAnimatedCircle
 	v addAll: (shape elementsOn: (1 to: nbOfCircles)).
 	RTGridLayout on: v elements.
 	
-	v when: TRMouseMove do: [ :evt |  Transcript show: evt positionFromCamera printString; cr . mousePos := evt positionFromCamera. v elements do: #updateShape. v canvas signalUpdate ].
+	v when: TRMouseMove do: [ :evt |  Transcript show: evt position printString; cr . mousePos := evt position. v elements do: #updateShape. v canvas signalUpdate ].
 	
 
 	^ v

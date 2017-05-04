@@ -2,21 +2,24 @@ encoding
 nextPut: aCharacter toStream: aStream
 	| codePoint |
 
-	(codePoint := self codePointFromCharacter: aCharacter) < 16r10000
+	(codePoint := aCharacter asciiValue) < 16r10000
 		ifTrue: [
+			"check for the reserved surrogate pair code points"
+			(codePoint >= 16rD800
+				and: [codePoint <= 16rDFFF])
+				ifTrue: [self errorBadCharacterValue: codePoint].
 			self
-				nextPutFirstByte: ((codePoint bitShift: -8) bitAnd: 16rFF)
-				secondByte: (codePoint bitAnd: 16rFF)
+				nextPutTwoBytes: codePoint
 				toStream: aStream]
-		ifFalse: [| difference |
-			difference := codePoint - 16r10000.
-			"the 10 high-order bits (2 + 16rD8 then the next 8 high-order bits)"
+		ifFalse: [
+			codePoint > 16r10FFFF "max code point"
+				ifTrue: [self errorBadCharacterValue: codePoint].
+			codePoint := codePoint - 16r10000.
+			"the 10 high-order bits"
 			self
-				nextPutFirstByte: 16rD8 + ((difference bitShift: -18) bitAnd: 16r03)
-				secondByte: ((difference bitShift: -10) bitAnd: 16rFF)
+				nextPutTwoBytes: 16rD800 + ((codePoint bitShift: -10) bitAnd: 16r3FF)
 				toStream: aStream.
-			"the 10 low-order bits (2 + 16rDC then the next 8 low-order bits)"
+			"the 10 low-order bits"
 			self
-				nextPutFirstByte: 16rDC + ((difference bitShift: -8) bitAnd: 16r03)
-				secondByte: (difference bitAnd: 16rFF)
+				nextPutTwoBytes: 16rDC00 + (codePoint bitAnd: 16r3FF)
 				toStream: aStream]

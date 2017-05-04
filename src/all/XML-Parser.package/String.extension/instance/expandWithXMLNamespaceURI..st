@@ -1,5 +1,6 @@
 *XML-Parser
 expandWithXMLNamespaceURI: aURI
-	aURI size > 0
-		ifTrue: [^ 'Q{', aURI, '}', self]
-		ifFalse: [^ self]
+	"optimized"
+	aURI size == 0
+		ifTrue: [^ self]
+		ifFalse: [^ 'Q{', aURI, '}', self]

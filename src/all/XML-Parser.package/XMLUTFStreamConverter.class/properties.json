@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "monty 2/14/2016 02:13",
-	"super" : "XMLStreamConverter",
+	"super" : "XMLStatelessStreamConverter",
 	"category" : "XML-Parser-Streams",
 	"classinstvars" : [ ],
 	"pools" : [ ],

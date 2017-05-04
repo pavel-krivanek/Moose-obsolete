@@ -1,0 +1,3 @@
+accessing
+invalidStreamCollections
+	^ self invalidInputCollections

@@ -1,6 +1,6 @@
 entity replacing
 addPushedBackEntity: aPushedBackEntity
-	(self hasPushedBackEntityNamed: aPushedBackEntity name)
+	(self hasPushedBackEntity: aPushedBackEntity)
 		ifTrue: [self errorSelfReferentialEntity: aPushedBackEntity].
 
 	self maxEntityReplacementDepth

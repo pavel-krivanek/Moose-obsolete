@@ -1,3 +1,0 @@
-private
-codePointFromFirstByte: aFirstByte secondByte: aSecondByte
-	self subclassResponsibility

@@ -22,8 +22,8 @@ remove: aCharacter ifAbsent: aBlock
 			"for the byte bitmask, left shift 1 by 7 - (asciiValue \\ 8)
 			(with 'bitAnd: 7' used over '\\ 8' for speed)"
 			bitmask := 1 bitShift: 7 - (asciiValue bitAnd: 7).
-			((byte := wideCharacters at: byteIndex) bitAnd: bitmask) > 0
-				ifFalse: [^ aBlock value].
+			((byte := wideCharacters at: byteIndex) bitAnd: bitmask) == 0
+				ifTrue: [^ aBlock value].
 
 			wideCharacters
 				at: byteIndex

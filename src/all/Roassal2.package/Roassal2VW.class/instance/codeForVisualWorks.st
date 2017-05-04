@@ -99,11 +99,12 @@ classes do:[:cls |
 		('*Test' match: cls myClass name) ifTrue: [ 
 			currentB := btests.
 			('*Tests' match: cat) 
-				ifFalse: [ cat := cat , '-Tests'.] ].
+				ifFalse: [ cat := cat , '-Tests'.] ]
+			ifFalse: [
 		(('*Example*' match: cls myClass name) or: [ '*Examples' match: cls myClass name]) 
 			ifTrue: [ 
 				currentB := bexamples.
-				cat := cat , '-Examples' ].
+				cat := cat , '-Examples' ] ].
 		('Trachel*' match: cat) 
 			ifTrue: [ cat := 'Roassal2-', cat ].
 		p := map at: cat ifAbsent: [ 

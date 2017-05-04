@@ -7,8 +7,10 @@ isXMLQualifiedOrLocalName: aQualifiedOrLocalName
 
 	i := aQualifiedOrLocalName size.
 	self size to: 1 by: -1 do: [:j |
-		i > 0
-			ifFalse: [^ (self at: j) == $:].
+		i == 0
+			ifTrue: [^ (self at: j) == $:].
+		"avoid #== for compatibility with pre-Spur VMs where wide chars
+		aren't an immediate type"
 		(aQualifiedOrLocalName at: i) = (self at: j)
 			ifFalse: [^ false].
 		i := i - 1].

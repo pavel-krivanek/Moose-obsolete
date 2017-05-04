@@ -1,36 +1,32 @@
 decoding
 nextFromStream: aStream
-	| firstChar firstByte secondByte thirdByte |
+	"an attempt was made at porting Bjoern Hoehrmann's DFA-based decoder
+	(with transitions pre-multiplied by 16), but it was slightly slower
+	than this implementation and needed significant modification to report
+	errors the same way, so it was scrapped"
 
-	((firstChar := aStream basicNext) == nil
-		or: [(firstByte := firstChar asciiValue) < 16r80]) "single byte character"
-		ifTrue: [^ firstChar].
+	| firstByte codePoint |
 
-	firstByte < 16rC0 "second bit must be set"
-		ifTrue: [self errorBadCharacterEncoding].
+	aStream basicNext
+		ifNil: [^ nil]
+		ifNotNil: [:firstChar |
+			(firstByte := firstChar asciiValue) < 16r80 "single byte character"
+				ifTrue: [^ firstChar]].
 
-	secondByte :=
-		(aStream basicNext
-			ifNil: [self errorBadCharacterEncoding]) asciiValue.
-	(firstByte bitAnd: 16rF0) < 16rE0 "two bytes"
-		ifTrue: [
-			^ self characterFromCodePoint: 
-				((firstByte bitAnd: 16r1F) bitShift: 6) +
-				(secondByte bitAnd: 16r3F)].
+	codePoint :=
+		self
+			nextMultiByteCodePointStartingWith: firstByte
+			fromStream: aStream.
+	[codePoint == 16rFEFF] "the BOM code point"
+		whileTrue: [
+			aStream basicNext
+				ifNil: [^ nil]
+				ifNotNil: [:firstChar |
+					(firstByte := firstChar asciiValue) < 16r80 "single byte character"
+						ifTrue: [^ firstChar]].
+			codePoint :=
+				self
+					nextMultiByteCodePointStartingWith: firstByte
+					fromStream: aStream].
 
-	thirdByte :=
-		(aStream basicNext
-			ifNil: [self errorBadCharacterEncoding]) asciiValue.
-	(firstByte bitAnd: 16rF0) = 16rE0 "three bytes"
-		ifTrue: [
-			^ self characterFromCodePoint: 
-				((firstByte bitAnd: 16r0F) bitShift: 12) +
-				((secondByte bitAnd: 16r3F) bitShift: 6) +
-				(thirdByte bitAnd: 16r3F)].
-
-	^ self characterFromCodePoint: "four"
-		((firstByte bitAnd: 16r07) bitShift: 18) +
-		((secondByte bitAnd: 16r3F) bitShift: 12) +
-		((thirdByte bitAnd: 16r3F) bitShift: 6) +
-		((aStream basicNext
-			ifNil: [self errorBadCharacterEncoding]) asciiValue bitAnd: 16r3F).
+	^ Character value: codePoint.
