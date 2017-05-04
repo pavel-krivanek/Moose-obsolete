@@ -21,9 +21,9 @@ isXMLWriterNameStartChar
 				ifTrue: [
 					tempValue <= 16r5A "$Z asciiValue hex"
 						ifTrue: [^ true].
-					^ tempValue = 16r5F]. "$_ asciiValue hex"
+					^ tempValue == 16r5F]. "$_ asciiValue hex"
 	
-			^ tempValue = 16r3A]. "$: asciiValue hex"
+			^ tempValue == 16r3A]. "$: asciiValue hex"
 
 	tempValue >= 16rC0
 		ifFalse: [^ false].

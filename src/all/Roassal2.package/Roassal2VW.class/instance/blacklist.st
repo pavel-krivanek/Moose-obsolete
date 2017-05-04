@@ -9,4 +9,13 @@ blacklist
 	RTExploraBuilderExample >> #exampleCircularList.
 	RTHTML5ExporterExample >> #exportAll.
 	RTPopupTest >> #testPopupView.
-	RTPopupTest >> #testPopupView02 }
+	RTPopupTest >> #testPopupView02.
+	RTBuilder >> #openWithToolbar.
+	RTView >> #openWithToolbar.
+	RTView >> #spotterShapesFor:.
+	RTView >> #spotterShapesModelsFor:.
+	RTGrapherTest >> #testError.
+	RTMondrianTest >> #testSourceError.
+	RTObject class >> #gtExamplesFactory.
+	TRDarkTheme >> #trachelCanvasColor.
+	 }

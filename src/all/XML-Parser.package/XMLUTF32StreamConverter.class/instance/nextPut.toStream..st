@@ -2,10 +2,13 @@ encoding
 nextPut: aCharacter toStream: aStream
 	| codePoint |
 
-	codePoint := self codePointFromCharacter: aCharacter.
+	codePoint := aCharacter asciiValue.
+	"check for the reserved surrogate pair code points and code points
+	greater than the max code point"
+	(codePoint >= 16rD800
+		and: [codePoint <= 16rDFFF
+			or: [codePoint > 16r10FFFF]])
+		ifTrue: [self errorBadCharacterValue: codePoint].
 	self
-		nextPutFirstByte: ((codePoint bitShift: -24) bitAnd: 16rFF)
-		secondByte: ((codePoint bitShift: -16) bitAnd: 16rFF)
-		thirdByte: ((codePoint bitShift: -8) bitAnd: 16rFF)
-		fourthByte: (codePoint bitAnd: 16rFF)
+		nextPutFourBytes: codePoint
 		toStream: aStream.

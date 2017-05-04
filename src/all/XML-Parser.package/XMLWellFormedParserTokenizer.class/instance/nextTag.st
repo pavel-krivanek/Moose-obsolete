@@ -24,8 +24,7 @@ nextTag
 			streamReader skipSeparators.
 
 			"delay initializing attributes until now to know for sure if it
-			needs a non-zero capacity, otherwise default initialize to zero
-			later for performance"
+			needs a non-zero capacity, otherwise use the lazy version"
 			((attributes
 				ifNil: [attributes := OrderPreservingStringDictionary new: 10])
 				xmlAt: attributeName

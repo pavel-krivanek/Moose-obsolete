@@ -1,9 +1,10 @@
 nesting
 startElement: anElement
 	self openElements addLast: anElement.
-	rootElement
-		ifNil: [rootElement := anElement].
 	isInElement
-		ifFalse: [isInElement := true].
+		ifFalse: [
+			isInElement := true.
+			rootElement
+				ifNil: [rootElement := anElement]].
 	self hasScopedAttributes
 		ifTrue: [self startScopedAttributes].

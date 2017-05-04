@@ -23,8 +23,8 @@ nextPCDataToken
 									isWhitespace := false.
 									closingBracketsRead := closingBracketsRead + 1]
 								ifFalse: [
-									closingBracketsRead > 0
-										ifTrue: [
+									closingBracketsRead == 0
+										ifFalse: [
 											(closingBracketsRead >= 2
 												and: [nextChar == $>])
 												ifTrue: [
@@ -35,6 +35,6 @@ nextPCDataToken
 					characterStream nextPut: nextChar]].
 	isWhitespace
 		ifTrue: [
-			characterStream position > 0
-				ifTrue: [driver handleWhitespace: characterStream contents]]
+			characterStream position == 0
+				ifFalse: [driver handleWhitespace: characterStream contents]]
 		ifFalse: [driver handlePCData: characterStream contents].

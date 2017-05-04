@@ -14,7 +14,7 @@ add: aCharacter
 			"256 // 8 - 31 = 1 (first index), (256 + 8) // 8 - 31 = 2 (second), etc
 			(with 'bitShift: -3' used over '// 8' for speed)"
 			byteIndex := (asciiValue bitShift: -3) - 31.
-			(wideCharacters isNil
+			(wideCharacters == nil
 				or: [byteIndex > wideCharacters size])
 				ifTrue: [self growWideCharacterBitmapTo: (byteIndex * 1.5) asInteger].
 
@@ -26,8 +26,8 @@ add: aCharacter
 			bitmask := 1 bitShift: 7 - (asciiValue bitAnd: 7).
 			
 			"increment the tally if the character is not already present"
-			(byte bitAnd: bitmask) > 0
-				ifFalse: [tally := tally + 1].
+			(byte bitAnd: bitmask) == 0
+				ifTrue: [tally := tally + 1].
 
 			wideCharacters
 				at: byteIndex

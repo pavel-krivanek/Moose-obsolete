@@ -23,8 +23,8 @@ isXMLChar
 				ifFalse: [^ false].
 			^ tempValue <= 16r10FFFF].
 
-	tempValue = 16r9
+	tempValue == 16r9
 		ifTrue: [^ true].
-	tempValue = 16rA
+	tempValue == 16rA
 		ifTrue: [^ true].
-	^ tempValue = 16rD.
+	^ tempValue == 16rD.

@@ -40,7 +40,7 @@ nextPITarget
 			nameStream nextPut: nextChar].
 	
 	(isReservedTarget
-		and: [length = 3])
+		and: [length == 3])
 		ifTrue: [
 			isLowercaseReservedTarget
 				ifTrue: [

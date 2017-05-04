@@ -21,7 +21,7 @@ nextIgnoreSectionFromEntity: aPushedBackParameterEntity
 	conditional section end is found. Parameter entity references MUST
 	NOT be recognized in this process."
 	openSections := 1.
-	[openSections = 0
+	[openSections == 0
 		or: [(nextChar := streamReader next) == nil]]
 		whileFalse: [
 			nextChar == $>
@@ -38,5 +38,5 @@ nextIgnoreSectionFromEntity: aPushedBackParameterEntity
 			firstChar := secondChar.
 			secondChar := nextChar].
 
-	openSections = 0
+	openSections == 0
 		ifFalse: [self errorUnterminatedIgnoreSections].

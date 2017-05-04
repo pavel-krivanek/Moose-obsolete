@@ -3,4 +3,4 @@ newForEncoding: anEncodingName
 	(self classForEncoding: anEncodingName)
 		ifNil: [^ self null]
 		ifNotNil: [:converterClass |
-			^ converterClass new encoding: anEncodingName]
+			^ converterClass new initializeForEncoding: anEncodingName]

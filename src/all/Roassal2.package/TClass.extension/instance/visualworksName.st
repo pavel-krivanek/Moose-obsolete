@@ -1,3 +1,5 @@
 *roassal2-exportervw
 visualworksName
-	^ self name
+	^ self == TBehavior 
+		ifTrue: [ 'Core.Behavior' ]
+		ifFalse: [ self name ]

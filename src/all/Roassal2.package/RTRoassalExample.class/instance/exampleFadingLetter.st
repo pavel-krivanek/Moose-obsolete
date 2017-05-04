@@ -21,7 +21,7 @@ v addAll: es.
 RTGridLayout new gapSize: 0; on: es.
 
 v when: TRMouseMove do: [ :evt |
-	mousePosition := evt positionFromCamera.
+	mousePosition := evt position.
 	es updateShape.
 	v signalUpdate
 ].

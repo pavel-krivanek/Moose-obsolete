@@ -13,6 +13,6 @@ isXMLNSAttributeName
 		ifFalse: [^ false].
 	(self at: 5) == $s
 		ifFalse: [^ false].
-	self size = 5
+	self size == 5
 		ifTrue: [^ true].
 	^ (self at: 6) == $:.

@@ -1,1 +1,1 @@
-A stream converter for UTF-8 streams. (accepts overlong encodings)
+A stream converter for UTF-8 streams. (Rejects overlong encodings.)
