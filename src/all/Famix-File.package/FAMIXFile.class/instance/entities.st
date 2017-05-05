@@ -6,7 +6,7 @@ entities
 	any container entity can be added to the list of entities
 "
 
-	<MSEProperty: #entities type: #FAMIXContainerEntity>
+	<MSEProperty: #entities type: #FAMIXSourcedEntity opposite: #containerFiles>
 	<multivalued>
 	<MSEComment: 'List of entities defined in the file'>
-	^ entities ifNil: [ entities := OrderedCollection new ]
+	^ entities

@@ -1,3 +1,3 @@
 *Famix-File
 containerFiles
-	^ {(self correspondingFile)}
+	^ self correspondingFile ifNil: [ {} ] ifNotNil: [ :file | {file} ]

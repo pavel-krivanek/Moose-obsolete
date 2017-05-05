@@ -1,5 +1,5 @@
 accessing
-packages
+dataPackages
 	rDataSets isNil
 		ifTrue: [ self loadRDatasets  ].
 	packages := Set new.
