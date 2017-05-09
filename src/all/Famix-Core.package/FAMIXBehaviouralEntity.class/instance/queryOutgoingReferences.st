@@ -1,4 +1,4 @@
-moosechef-queries-outgoing
+moosequery-queries-outgoing
 queryOutgoingReferences
 
 	^ self createOutgoingQueryResultWith: self outgoingReferences 

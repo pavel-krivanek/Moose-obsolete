@@ -2,12 +2,9 @@ tests
 testIsXMLWhitespace
 	| whitespace |
 
-	whitespace := Character xmlWhitespace.
-	0 to: 255 do: [:each | | char |
-		char := each asCharacter.
-		(whitespace includes: char)
-			ifTrue: [self assert: char isXMLWhitespace]
-			ifFalse: [self deny: char isXMLWhitespace]].
-	self
-		assert: (nil respondsTo: #isXMLWhitespace);
-		deny: nil isXMLWhitespace.
+	whitespace := BitmapCharacterSet newFrom: Character xmlWhitespace.
+	whitespace do: [:each |
+		self assert: each isXMLWhitespace].
+	whitespace complement do: [:each |
+		self deny: each isXMLWhitespace].
+	self deny: nil isXMLWhitespace.

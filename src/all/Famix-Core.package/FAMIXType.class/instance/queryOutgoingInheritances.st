@@ -1,4 +1,4 @@
-moosechef-queries-outgoing
+moosequery - TOODependencyQueries
 queryOutgoingInheritances
 
 	^ self createOutgoingQueryResultWith: self superInheritances

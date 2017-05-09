@@ -1,4 +1,4 @@
-moosechef-queries-incoming
+moosequery-queries-incoming
 querySureIncomingInvocations
 	"from privateSureIncomingInvocations"
 	

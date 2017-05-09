@@ -1,4 +1,4 @@
 accessing
 badNames
-	"all names are Nmtokens, but not all Nmtokesn are names"
+	"all names are Nmtokens, but not all Nmtokens are names"
 	^ self badNmtokens, self nonNameNmtokens

@@ -1,4 +1,4 @@
-moosechef-queries-outgoing
+moosequery-queries-outgoing
 queryAllOutgoingInvocations
 
 	^ self queryOutgoing: FAMIXInvocation

@@ -1,4 +1,4 @@
-moosechef-queries-outgoing
+moosequery-queries-outgoing
 queryOutgoingTypeDeclarations
 
 	"typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type.

@@ -1,4 +1,4 @@
-moosechef-queries-incoming
+moosequery-queries-incoming
 queryIncomingAccesses
 
 	^ self queryIncoming: FAMIXAccess

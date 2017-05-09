@@ -1,6 +1,6 @@
 copying
 , aCollection
-	"reimplemented for GS compatibility"
+	"GS doesn't define #, for non-Sequenceable collections"
 	^ self copy
 		addAll: aCollection;
 		yourself

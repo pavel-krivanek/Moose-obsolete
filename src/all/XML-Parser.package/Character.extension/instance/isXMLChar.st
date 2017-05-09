@@ -11,14 +11,12 @@ isXMLChar
 
 	(tempValue := self asciiValue) >= 16r20
 		ifTrue: [
+			"most chars should be in the range 16r20-16rD7FF"
 			tempValue <= 16rD7FF
 				ifTrue: [^ true].
-
-			tempValue >= 16rE000
-				ifFalse: [^ false].
+	
 			tempValue <= 16rFFFD
-				ifTrue: [^ true].
-
+				ifTrue: [^ tempValue >= 16rE000].
 			tempValue >= 16r10000
 				ifFalse: [^ false].
 			^ tempValue <= 16r10FFFF].
