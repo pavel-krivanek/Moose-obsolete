@@ -3,10 +3,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#incomingReferences => FMMany type: #FAMIXReference opposite: #target",
-		"#subInheritances => FMMany type: #FAMIXInheritance opposite: #superclass",
 		"#methods => FMMany type: #FAMIXMethod opposite: #parentType",
 		"#container",
-		"#superInheritances => FMMany type: #FAMIXInheritance opposite: #subclass",
 		"#attributes => FMMany type: #FAMIXAttribute opposite: #parentType",
 		"#behavioursWithDeclaredType => FMMany type: #FAMIXBehaviouralEntity opposite: #declaredType",
 		"#structuresWithDeclaredType => FMMany type: #FAMIXStructuralEntity opposite: #declaredType"

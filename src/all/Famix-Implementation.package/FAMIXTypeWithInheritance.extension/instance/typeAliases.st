@@ -1,4 +1,4 @@
-*Famix-C
+*Famix-Implementation
 typeAliases
 	<MSEProperty: #typeAliases type: #FAMIXTypeAlias opposite: #aliasedType> <multivalued> <derived>
 	<MSEComment: 'Aliases'>

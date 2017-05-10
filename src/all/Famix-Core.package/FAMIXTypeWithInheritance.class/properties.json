@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#subInheritances => FMMany type: #FAMIXInheritance opposite: #superclass",
+		"#superInheritances => FMMany type: #FAMIXInheritance opposite: #subclass"
+	],
+	"name" : "FAMIXTypeWithInheritance",
+	"type" : "normal"
+}
