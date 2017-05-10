@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXEntity",
+	"category" : "Famix-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#caughtExceptions => FMMany type: #FAMIXCaughtException opposite: #definingMethod",
+		"#declaredExceptions => FMMany type: #FAMIXDeclaredException opposite: #definingMethod",
+		"#thrownExceptions => FMMany type: #FAMIXThrownException opposite: #definingMethod"
+	],
+	"name" : "FAMIXMethodWithExceptions",
+	"type" : "normal"
+}
