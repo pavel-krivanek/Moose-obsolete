@@ -9,5 +9,5 @@ gtDisplayPlaygroundIn: composite
 				text evaluateSelectionAndDo: [ :anObject | text selection: anObject ] ]
 			icon: GLMUIThemeExtraIcons glamorousGo
 			on: $g
-			entitled: 'Do it all and go (g)'
-		
+			entitled: 'Do it all and go (g)';
+		with: [ :pharoScript | self extendPlayground: pharoScript ]		

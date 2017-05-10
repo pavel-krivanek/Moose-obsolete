@@ -1,3 +1,5 @@
 accessing
 badNmtokens
-	^ #('' ' ' '	'), (self badNmtokenChars collect: [:each | 'test' copyWith: each])
+	^ #('' ' ' '	'),
+		(XMLCharacterMethodsTest nonNameChars collect: [:each |
+			'test' copyWith: each])

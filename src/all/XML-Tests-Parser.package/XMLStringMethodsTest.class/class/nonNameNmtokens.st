@@ -1,3 +1,4 @@
 accessing
 nonNameNmtokens
-	^ self nonNameStartCharNameChars collect: [:each | 'test' copyWithFirst: each]
+	^ XMLCharacterMethodsTest nonNameStartCharNameChars collect: [:each |
+		'test' copyWithFirst: each]

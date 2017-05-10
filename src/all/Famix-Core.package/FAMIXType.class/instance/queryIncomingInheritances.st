@@ -1,4 +1,4 @@
-moosechef-queries-incoming
+moosequery - TOODependencyQueries
 queryIncomingInheritances
 
 	^ self queryIncoming: FAMIXInheritance

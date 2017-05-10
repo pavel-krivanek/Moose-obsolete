@@ -11,3 +11,8 @@ execute
 		smalltalkhubUser: 'AlisonFernandez' project: 'MultiPiles';
 		package: 'MultiPiles'; 
 		load.
+
+	Gofer new 
+		smalltalkhubUser: 'AlisonFernandez' project: 'MMatrix';
+		package: 'MultiPileMatrix'; 
+		load.

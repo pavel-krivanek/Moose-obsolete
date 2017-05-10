@@ -1,4 +1,4 @@
 initialize-release
 initialize
 	super initialize.
-	entities := OrderedCollection new.
+	entities := OrderedCollection new

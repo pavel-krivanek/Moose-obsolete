@@ -9,9 +9,4 @@ toScope: aClassFAMIX
 					| childAccessor |
 					childAccessor := self perform: sel.
 					childAccessor isNotNil and: [ childAccessor asCollection isNotEmpty ] ]
-				thenCollect: [ :sel | 
-					| childAccessor |
-					childAccessor := self perform: sel.	"Halt now."
-					childAccessor isCollection
-						ifTrue: [ childAccessor flatCollect: [ :c | c toScope: aClassFAMIX ] ]
-						ifFalse: [ childAccessor toScope: aClassFAMIX ] ] ]) flattened
+				thenCollect: [ :sel | (self perform: sel) asCollection collect: [ :c | c toScope: aClassFAMIX ] ] ]) flattened

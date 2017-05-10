@@ -1,4 +1,4 @@
-tests
+tests - reversed
 testReverse
 	| v elements lineShape edge layout compositeShape |
 	v := RTView new.
