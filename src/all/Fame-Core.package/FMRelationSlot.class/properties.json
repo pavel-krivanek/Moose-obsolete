@@ -8,7 +8,8 @@
 	"instvars" : [
 		"targetClass",
 		"inverseName",
-		"inverseSlot"
+		"inverseSlot",
+		"mooseProperty"
 	],
 	"name" : "FMRelationSlot",
 	"type" : "normal"
