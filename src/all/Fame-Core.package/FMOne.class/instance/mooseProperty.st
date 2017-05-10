@@ -11,6 +11,6 @@ mooseProperty
 		mooseProperty isMultivalued: false.
 		mooseProperty isDerived: true.
 		
-		mooseProperty opposite: self inverseSlot mooseProperty.
+		mooseProperty privOpposite: self inverseSlot mooseProperty.
 		
 		mooseProperty ].
