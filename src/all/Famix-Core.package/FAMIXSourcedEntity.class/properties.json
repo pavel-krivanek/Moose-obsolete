@@ -9,7 +9,7 @@
 		"#sourceAnchor => FMOne type: #FAMIXSourceAnchor opposite: #element",
 		"#sourceLanguage",
 		"#comments => FMMany type: #FAMIXComment opposite: #container",
-		"#declaredSourceLanguage => FMMany type: #FAMIXSourceLanguage opposite: #sourcedEntities"
+		"#declaredSourceLanguage => FMOne type: #FAMIXSourceLanguage opposite: #sourcedEntities"
 	],
 	"name" : "FAMIXSourcedEntity",
 	"type" : "normal"
