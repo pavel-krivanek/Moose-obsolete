@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#definingMethod => FMOne type: #FAMIXMethodWithExceptions opposite: #caughtExceptions"
+		"#definingMethod => FMOne type: #FAMIXTMethodWithExceptions opposite: #caughtExceptions"
 	],
 	"name" : "FAMIXCaughtException",
 	"type" : "normal"
