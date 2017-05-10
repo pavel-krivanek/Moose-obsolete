@@ -4,8 +4,6 @@
 	"instvars" : [
 		"#parameters => FMMany type: #FAMIXParameter opposite: #parentBehaviouralEntity",
 		"#outgoingReferences => FMMany type: #FAMIXReference opposite: #source",
-		"#outgoingInvocations => FMMany type: #FAMIXInvocation opposite: #sender",
-		"#incomingInvocations => FMMany type: #FAMIXInvocation opposite: #candidates",
 		"#localVariables => FMMany type: #FAMIXLocalVariable opposite: #parentBehaviouralEntity",
 		"#implicitVariables => FMMany type: #FAMIXImplicitVariable opposite: #parentBehaviouralEntity",
 		"#signature",

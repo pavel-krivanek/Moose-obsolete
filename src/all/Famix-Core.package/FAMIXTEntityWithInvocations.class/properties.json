@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FAMIXTrait",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#outgoingInvocations => FMMany type: #FAMIXInvocation opposite: #sender",
+		"#incomingInvocations => FMMany type: #FAMIXInvocation opposite: #candidates"
+	],
+	"name" : "FAMIXTEntityWithInvocations",
+	"type" : "normal"
+}
