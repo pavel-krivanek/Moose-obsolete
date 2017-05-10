@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXTrait",
+	"type" : "normal"
+}

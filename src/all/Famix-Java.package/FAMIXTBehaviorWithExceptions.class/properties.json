@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FAMIXEntity",
+	"super" : "FAMIXTrait",
 	"category" : "Famix-Java",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 	"instvars" : [
 		"#exceptions => FMMany type: #FAMIXException opposite: #exceptionClass"
 	],
-	"name" : "FAMIXBehaviorWithExceptions",
+	"name" : "FAMIXTBehaviorWithExceptions",
 	"type" : "normal"
 }

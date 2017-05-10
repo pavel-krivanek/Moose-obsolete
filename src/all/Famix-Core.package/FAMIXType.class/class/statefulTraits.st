@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FAMIXTypeWithInheritance }
+	^ { FAMIXTTypeWithInheritance }
