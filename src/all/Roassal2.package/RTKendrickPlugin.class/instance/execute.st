@@ -1,6 +1,12 @@
 hooks
 execute
-	Gofer new
+	Metacello new
+	    repository: 'http://smalltalkhub.com/mc/UMMISCO/Kendrick/main';
+	    configuration:'Kendrick';
+	    version: '0.40';
+	    load
+
+"	Gofer new
 	   url: 'http://smalltalkhub.com/mc/SergeStinckwich/SciSmalltalk/main/';
 	   configurationOf:'SciSmalltalk';
 	   loadVersion: '0.28-baseline'.
@@ -13,4 +19,4 @@ execute
 	Gofer new
 	   url: 'http://smalltalkhub.com/mc/UMMISCO/Kendrick/main';
 	   configurationOf:'Kendrick';
-	   loadVersion:'0.35'
+	   loadVersion:'0.35'"

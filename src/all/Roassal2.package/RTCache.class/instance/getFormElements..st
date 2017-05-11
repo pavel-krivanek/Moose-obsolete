@@ -18,9 +18,9 @@ getFormElements: someElements
 			surface clear.
 			someElements do: [ :element | element trachelShape drawOn: cs ].
 			cs pathTransform loadIdentity scaleBy: 1.001. ].
-	formCanvas
-		image: surface asForm
+	[formCanvas
+	 	image: surface asForm
 		at: 0 @ 0
 		sourceRect: (0 @ 0 extent: surface extent)
-		rule: 34.
+		rule: 34] on: Exception do: [ :ex | ].
 	^ formCanvas form

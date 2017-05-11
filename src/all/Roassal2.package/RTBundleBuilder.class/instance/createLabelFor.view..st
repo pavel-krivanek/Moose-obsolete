@@ -1,4 +1,4 @@
-as yet unclassified
+rendering-utility
 createLabelFor: e view: aView
 	| lbl |
 	lbl := label elementOn: e model.
