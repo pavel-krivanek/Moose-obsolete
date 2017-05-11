@@ -1,4 +1,4 @@
-as yet unclassified
+rendering-utility
 createSliderIfNecessary: aView
 	| bedges slider |
 	sliderShape ifNil: [ ^ self ].

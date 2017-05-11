@@ -1,4 +1,4 @@
-as yet unclassified
+rendering-utility
 createBezierIfNecessary: aView
 	| ebuilder   |
 	connectBezierBlock ifNil: [ ^ self ].
