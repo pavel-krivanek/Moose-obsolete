@@ -8,7 +8,8 @@
 	"instvars" : [
 		"currentFrame",
 		"edgeBuilder",
-		"rootFrame"
+		"rootFrame",
+		"recurrentBlock"
 	],
 	"name" : "RTMondrian",
 	"type" : "normal"

@@ -1,4 +1,4 @@
-as yet unclassified
+rendering-utility
 parentOf: model view: aView
 	| element |
 	element := view elementFromModel: model.
