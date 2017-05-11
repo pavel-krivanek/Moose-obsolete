@@ -1,14 +1,13 @@
 {
-	"commentStamp" : "usmanbhatti 11/23/2011 22:38",
-	"super" : "FAMIXNamedEntity",
+	"commentStamp" : "",
+	"super" : "FAMIXTrait",
 	"category" : "Famix-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#types",
 		"#functions => FMMany type: #FAMIXFunction opposite: #container"
 	],
-	"name" : "FAMIXContainerEntity",
+	"name" : "FAMIXTFunctionsContainer",
 	"type" : "normal"
 }

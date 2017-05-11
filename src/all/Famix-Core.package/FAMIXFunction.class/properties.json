@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"container"
+		"#container => FMOne type: #FAMIXTFunctionsContainer opposite: #functions"
 	],
 	"name" : "FAMIXFunction",
 	"type" : "normal"

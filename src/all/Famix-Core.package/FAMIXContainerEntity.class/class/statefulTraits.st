@@ -1,0 +1,6 @@
+traits
+statefulTraits
+
+	<statefulTraits>
+	
+	^ { FAMIXTFunctionsContainer }
