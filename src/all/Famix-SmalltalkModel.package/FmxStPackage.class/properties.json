@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStScopingEntity",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxStPackage",
+	"type" : "normal"
+}

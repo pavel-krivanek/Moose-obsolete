@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStBehaviouralEntity",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxStMethod",
+	"type" : "normal"
+}
