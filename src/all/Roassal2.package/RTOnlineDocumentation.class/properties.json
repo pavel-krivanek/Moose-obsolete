@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RTAbstractWorldMenu",
+	"category" : "Roassal2-MorphSpecific-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTOnlineDocumentation",
+	"type" : "normal"
+}
