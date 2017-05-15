@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "TudorGirba 5/11/2017 15:17",
+	"super" : "HDReport",
+	"category" : "GT-Examples-Testing",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"progressFile",
+		"examples",
+		"executionTime",
+		"examplesPosition",
+		"examplesErrors",
+		"examplesFailures",
+		"title"
+	],
+	"name" : "GTExamplesHDReport",
+	"type" : "normal"
+}

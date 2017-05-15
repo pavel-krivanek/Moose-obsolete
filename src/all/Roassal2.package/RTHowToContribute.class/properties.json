@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AlexandreBergel 11/2/2016 12:44",
+	"super" : "RTAbstractWorldMenu",
+	"category" : "Roassal2-MorphSpecific-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTHowToContribute",
+	"type" : "normal"
+}

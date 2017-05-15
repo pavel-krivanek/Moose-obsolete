@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "AlexandreBergel 4/10/2017 11:20",
-	"super" : "RTObject",
+	"super" : "RTAbstractWorldMenu",
 	"category" : "Roassal2-MorphSpecific-Menu",
 	"classinstvars" : [
 		"discord"

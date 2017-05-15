@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "AlexandreBergel 4/5/2015 19:37",
-	"super" : "RTObject",
+	"super" : "RTAbstractWorldMenu",
 	"category" : "Roassal2-MorphSpecific-Menu",
 	"classinstvars" : [ ],
 	"pools" : [ ],

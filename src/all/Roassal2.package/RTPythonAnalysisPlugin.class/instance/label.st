@@ -1,3 +1,3 @@
 hooks
 label
-	^ 'simple Python analyzer'
+	^ 'simple Python analyzer [Obsolete]'

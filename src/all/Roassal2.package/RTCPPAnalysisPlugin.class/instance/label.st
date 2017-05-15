@@ -1,3 +1,3 @@
 hooks
 label
-	^ 'simple C and C++ analyzer'
+	^ 'simple C and C++ analyzer [obsolete]'
