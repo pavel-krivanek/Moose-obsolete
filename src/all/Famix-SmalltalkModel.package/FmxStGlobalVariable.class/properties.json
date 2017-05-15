@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStLeafEntity",
+	"super" : "FmxStVariable",
 	"category" : "Famix-SmalltalkModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],

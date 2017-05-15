@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStVariable",
+	"super" : "FmxStNamedEntity",
 	"category" : "Famix-SmalltalkModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FmxStImplicitVariable",
+	"name" : "FmxStVariable",
 	"type" : "normal"
 }
