@@ -29,6 +29,7 @@ nodes: objects
 	"
 	
 	| els |
+	self assert: [ objects isCollection ] description: 'You need to provide a collection to #nodes:'.
 	els := self elementsOn: objects.
 	self currentFrame addElements: els.
 	view addAll: els.
