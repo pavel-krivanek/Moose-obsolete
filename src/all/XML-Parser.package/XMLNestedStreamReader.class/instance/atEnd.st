@@ -1,10 +1,10 @@
 testing
 atEnd
-	peekChar == nil
-		ifFalse: [^ false].
+	peekChar
+		ifNotNil: [^ false].
 	stream atEnd
 		ifFalse: [^ false].
-	"to:do: for speed"
+	"use #to:do: for speed"
 	1 to: nestedStreams size do: [:i |
 		(nestedStreams at: i) stream atEnd
 			ifFalse: [^ false]].

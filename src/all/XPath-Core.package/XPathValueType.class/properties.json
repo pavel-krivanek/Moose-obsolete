@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "XPathObjectValueType",
+	"name" : "XPathValueType",
 	"type" : "normal"
 }
