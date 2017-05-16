@@ -2,5 +2,6 @@ private
 clearAllImplementations
 	"self clearImplementations"
 
-	self implementation: nil.
-	self allSubclassesDo: [:each | each implementation: nil]
+	self
+		implementation: nil;
+		allSubclassesDo: [:each | each implementation: nil]

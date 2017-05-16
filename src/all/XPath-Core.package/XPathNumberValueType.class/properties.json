@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "monty 1/27/2017 17:28",
-	"super" : "XPathObjectValueType",
+	"super" : "XPathValueType",
 	"category" : "XPath-Core-Types",
 	"classinstvars" : [ ],
 	"pools" : [ ],

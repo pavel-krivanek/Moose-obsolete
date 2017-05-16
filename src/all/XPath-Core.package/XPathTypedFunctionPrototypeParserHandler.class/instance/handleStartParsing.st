@@ -5,7 +5,7 @@ handleStartParsing
 	argumentTypes := OrderedCollection new.
 
 	typesByName := Dictionary new.
-	XPathObjectValueType withAllSubclassesDo: [:each | | type |
+	XPathValueType withAllSubclassesDo: [:each | | type |
 		type := each new.
 		typesByName
 			at: type name
