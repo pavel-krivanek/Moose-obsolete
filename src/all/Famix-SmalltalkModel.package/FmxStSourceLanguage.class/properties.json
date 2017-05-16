@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#declaredSourceLanguage => FMOne type: #FmxStSourceLanguage opposite: #sourcedEntities"
+		"#sourcedEntities => FMMany type: #FmxStSourcedEntity opposite: #declaredSourceLanguage"
 	],
-	"name" : "FmxStSourcedEntity",
+	"name" : "FmxStSourceLanguage",
 	"type" : "normal"
 }
