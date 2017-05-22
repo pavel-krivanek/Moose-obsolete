@@ -1,0 +1,3 @@
+hooks
+background
+	self subclassResponsibility

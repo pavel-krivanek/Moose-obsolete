@@ -1,9 +1,14 @@
 allDependencies
 testProviderClassesOutOfMyNamespace
-	self assert: self c15FullReferencerOutSide queryAllOutgoingAssociations atTypeScope outOfMyNamespace size equals: 3.
 	self
 		assert:
-			(self c15FullReferencerOutSide queryAllOutgoingAssociations atTypeScope outOfMyNamespace
+			(self c15FullReferencerOutSide queryAllOutgoingAssociations
+				atScope: FAMIXType) outOfMyNamespace size
+		equals: 3.
+	self
+		assert:
+			((self c15FullReferencerOutSide queryAllOutgoingAssociations
+				atScope: FAMIXType) outOfMyNamespace
 				equalsTo:
 					(Set new
 						add: self c14ReferencerOutSideRefereeOutSide;

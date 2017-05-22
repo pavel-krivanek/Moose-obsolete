@@ -1,3 +1,5 @@
-testing
+deprecated
 isString: aStringOrStringNode
-	^ self string = aStringOrStringNode asString
+	"will be deprecated; use #isStringNode: instead"
+
+	^ self isStringNode: aStringOrStringNode

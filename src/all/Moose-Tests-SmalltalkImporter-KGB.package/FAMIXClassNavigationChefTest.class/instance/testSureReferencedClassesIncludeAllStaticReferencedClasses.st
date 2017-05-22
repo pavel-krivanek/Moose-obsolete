@@ -1,12 +1,8 @@
 MooseKGB-TestFamix3-integralTests
-testSureReferencedClassesIncludeAllStaticReferencedClasses 
-	 
-	| modelClasses | 
-	modelClasses := self model allClasses. 
-	self 
-		assert: 
-			(modelClasses 
-				allSatisfy: 
-					[:referencer |  
-					referencer queryAllOutgoingAssociations atTypeScope 
-						includesAll: referencer queryStaticOutgoingAssociations atTypeScope])
+testSureReferencedClassesIncludeAllStaticReferencedClasses
+	self
+		assert:
+			(self model allClasses
+				allSatisfy: [ :referencer | 
+					(referencer queryAllOutgoingAssociations atScope: FAMIXType)
+						includesAll: (referencer queryStaticOutgoingAssociations atScope: FAMIXType) ])

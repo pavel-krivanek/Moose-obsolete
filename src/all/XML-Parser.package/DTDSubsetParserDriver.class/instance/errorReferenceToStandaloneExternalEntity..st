@@ -2,6 +2,6 @@ private
 errorReferenceToStandaloneExternalEntity: anEntity
 	XMLValidationException
 		formatSignal:
-			'Reference to externally defined entity {1} ',
-			'outside DTD in standalone="yes" document'
+			'Internal reference to externally defined ',
+			'entity {1} in standalone="yes" document'
 		with: anEntity asReference

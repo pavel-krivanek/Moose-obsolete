@@ -1,6 +1,6 @@
 allDependencies
-testProviderClassesIntoMyPackage 
-	 
-	self 
-		assert: 
-			self c15FullReferencerOutSide  queryAllOutgoingAssociations atTypeScope withinMyPackage isEmpty
+testProviderClassesIntoMyPackage
+	self
+		assert:
+			(self c15FullReferencerOutSide queryAllOutgoingAssociations
+				atScope: FAMIXType) withinMyPackage isEmpty

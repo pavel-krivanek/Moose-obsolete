@@ -1,3 +1,0 @@
-testing
-isStandaloneExternal
-	^ self isStandalone

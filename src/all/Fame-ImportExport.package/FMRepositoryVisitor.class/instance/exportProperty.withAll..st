@@ -8,7 +8,7 @@ exportProperty: property withAll: values
 		ifFalse: [
 			property isComposite 
 				ifTrue: [
-					values do: [ :each | self exportElement: each ]]
+					values do: [ :each | (self shouldIgnoreProperty: each) ifFalse: [self exportElement: each] ]]
 				ifFalse: [
 					values do: [ :each | 
 						(self isPrimitiveTypeOrObject: each)

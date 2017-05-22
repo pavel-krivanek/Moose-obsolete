@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TRObject",
+	"category" : "Trachel-Theme",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Current"
+	],
+	"instvars" : [ ],
+	"name" : "TRTheme",
+	"type" : "normal"
+}

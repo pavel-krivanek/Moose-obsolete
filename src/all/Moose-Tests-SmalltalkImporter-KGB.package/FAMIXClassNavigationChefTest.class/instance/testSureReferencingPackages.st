@@ -6,7 +6,14 @@ testSureReferencingPackages
 	p9 := self packageP9FullReferencer.
 	p11 := self packageP11FullReferee.
 	p12 := self packageP12FullReferencer.
-	self assert: self c19FullRefereeOutSide querySureIncomingInvocations atMethodScope atPackageScope size equals: 5.
+	self assert: ((self c19FullRefereeOutSide querySureIncomingInvocations atScope: FAMIXMethod) atScope: FAMIXPackage) size equals: 5.
 	self
 		assert:
-			(self c19FullRefereeOutSide querySureIncomingInvocations atPackageScope equalsTo: (Set with: pEx with: p8 with: p9 with: p11 with: p12))
+			((self c19FullRefereeOutSide querySureIncomingInvocations atScope: FAMIXPackage)
+				equalsTo:
+					(Set
+						with: pEx
+						with: p8
+						with: p9
+						with: p11
+						with: p12))

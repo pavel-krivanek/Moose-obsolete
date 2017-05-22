@@ -1,1 +1,1 @@
-This class represents a processing instruction.
+This class represents a processing instruction node.

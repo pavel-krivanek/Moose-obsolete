@@ -1,0 +1,3 @@
+accessing
+possibleTargetClasses
+	^ self explicitRequirement

@@ -2,10 +2,5 @@ enumerating
 openElementsReverseDo: aBlock
 	"implemented for XMLParserHTML so it's always safe to remove at
 	the end while scanning backwards"
-	| i |
-
-	i := self openElements size.
-	[i > 0]
-		whileTrue: [
-			aBlock value: (self openElements at: i).
-			i := i - 1].
+	self openElements size to: 1 by: -1 do: [:i |
+			aBlock value: (self openElements at: i)]

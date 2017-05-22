@@ -1,9 +1,14 @@
 allOutgoingInvocations
 testReferencedPackages
-	self assert: self c6FullReferencerInSideOutSide queryAllOutgoingInvocations atPackageScope size equals: 3.
 	self
 		assert:
-			(self c6FullReferencerInSideOutSide queryAllOutgoingInvocations atPackageScope
+			(self c6FullReferencerInSideOutSide queryAllOutgoingInvocations
+				atScope: FAMIXPackage) size
+		equals: 3.
+	self
+		assert:
+			((self c6FullReferencerInSideOutSide queryAllOutgoingInvocations
+				atScope: FAMIXPackage)
 				equalsTo:
 					(Set new
 						add: self packageP2InteractedReferencerReferee;

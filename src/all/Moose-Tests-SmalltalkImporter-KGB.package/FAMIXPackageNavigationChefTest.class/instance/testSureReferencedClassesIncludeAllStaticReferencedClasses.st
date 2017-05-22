@@ -1,12 +1,8 @@
 MooseKGB-TestFamix3-integralTests
-testSureReferencedClassesIncludeAllStaticReferencedClasses 
-	 
-	| modelPackages | 
-	modelPackages := self model allPackages. 
-	self 
-		assert: 
-			(modelPackages 
-				allSatisfy: 
-					[:referencer |  
+testSureReferencedClassesIncludeAllStaticReferencedClasses
+	self
+		assert:
+			(self model allPackages
+				allSatisfy: [ :referencer | 
 					referencer querySureOutgoingAssociations
-						includesAll: referencer queryStaticOutgoingAssociations])
+						includesAll: referencer queryStaticOutgoingAssociations ])

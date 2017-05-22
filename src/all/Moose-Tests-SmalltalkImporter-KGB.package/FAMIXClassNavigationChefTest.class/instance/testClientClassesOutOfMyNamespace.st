@@ -1,23 +1,9 @@
 allDependencies
 testClientClassesOutOfMyNamespace
-	self
-		assert: self c14ReferencerOutSideRefereeOutSide queryAllIncomingAssociations atTypeScope outOfMyNamespace size
-		equals: 2.
+	self assert: (self c14ReferencerOutSideRefereeOutSide queryAllIncomingAssociations atScope: FAMIXType) outOfMyNamespace size equals: 2.
 	self
 		assert:
-			(self c14ReferencerOutSideRefereeOutSide queryAllIncomingAssociations atTypeScope outOfMyNamespace
-				equalsTo:
-					(Set new
-						add: self c2ReferencerOutSideRefereeInSide;
-						add: self c15FullReferencerOutSide;
-						yourself)).
-	self
-		assert: self c3ReferencerInSideRefereeOutSide queryAllIncomingAssociations atTypeScope outOfMyNamespace size
-		equals: 1.
-	self
-		assert:
-			(self c3ReferencerInSideRefereeOutSide queryAllIncomingAssociations atTypeScope outOfMyNamespace
-				equalsTo:
-					(Set new
-						add: self c14ReferencerOutSideRefereeOutSide;
-						yourself))
+			((self c14ReferencerOutSideRefereeOutSide queryAllIncomingAssociations atScope: FAMIXType) outOfMyNamespace
+				equalsTo: (Set with: self c2ReferencerOutSideRefereeInSide with: self c15FullReferencerOutSide)).
+	self assert: (self c3ReferencerInSideRefereeOutSide queryAllIncomingAssociations atScope: FAMIXType) outOfMyNamespace size equals: 1.
+	self assert: ((self c3ReferencerInSideRefereeOutSide queryAllIncomingAssociations atScope: FAMIXType) outOfMyNamespace equalsTo: (Set with: self c14ReferencerOutSideRefereeOutSide))

@@ -5,5 +5,6 @@ containerFiles
 	<MSEProperty: #containerFiles type: #FAMIXAbstractFile>
 	<multivalued>
 	<MSEComment: 'List of files containing the entity'>
-	<container>
+	"<container> -> should not be on this side..."
+	
 	^ self sourceAnchor ifNotNil: [ self sourceAnchor containerFiles ] ifNil: [ #() ]

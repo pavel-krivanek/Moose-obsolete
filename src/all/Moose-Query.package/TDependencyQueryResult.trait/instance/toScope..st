@@ -1,8 +1,6 @@
 filtering
 toScope: aClassFamix
-	| basicResult noNilResult |
-	basicResult := self storage collect: [ :dep | (self opposite: dep) ifNotNil: [ :r | r asCollection collect: [ :each | each toScope: aClassFamix ] ] ].
-	"we can get nil in results when the wanted scope does not make
-	sense for an entity. So, we reject the nils"
-	noNilResult := (basicResult reject: #isNil) flattened.
-	^ self newObjectResultWith: noNilResult asSet
+	| res |
+	res := OrderedCollection new.
+	self storage do: [ :dep | (self opposite: dep) ifNotNil: [ :r | r asCollection do: [ :each | res addAll: (each toScope: aClassFamix) ] ] ].
+	^ self newObjectResultWith: res asSet

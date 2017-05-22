@@ -1,6 +1,12 @@
-public
+accessing
 sourceText
-	^ self allFiles inject:  '' into: [ :sum  :each| 
-		sum, 
-		'=======================', each fileName, '====================', String cr,
-		each sourceText ]
+	^ String
+		streamContents: [ :s | 
+			self allFiles
+				do: [ :file | 
+					s
+						<< '=======================';
+						<< file fileName;
+						<< '====================';
+						lf;
+						<< file sourceText ] ]

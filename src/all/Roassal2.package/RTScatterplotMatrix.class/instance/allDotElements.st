@@ -1,0 +1,3 @@
+accesing
+allDotElements
+	^ allDotElements

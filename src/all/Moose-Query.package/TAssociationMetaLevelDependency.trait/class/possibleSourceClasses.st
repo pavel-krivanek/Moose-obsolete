@@ -1,0 +1,3 @@
+accessing
+possibleSourceClasses
+	^ self explicitRequirement

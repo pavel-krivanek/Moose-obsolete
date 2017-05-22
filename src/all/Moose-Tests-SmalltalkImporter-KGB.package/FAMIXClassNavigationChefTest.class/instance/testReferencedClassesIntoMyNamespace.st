@@ -1,11 +1,14 @@
 allOutgoingInvocations
 testReferencedClassesIntoMyNamespace
 	self
-		assert: self c6FullReferencerInSideOutSide queryAllOutgoingInvocations atTypeScope withinMyNamespace size
+		assert:
+			(self c6FullReferencerInSideOutSide queryAllOutgoingInvocations
+				atScope: FAMIXType) withinMyNamespace size
 		equals: 2.
 	self
 		assert:
-			(self c6FullReferencerInSideOutSide queryAllOutgoingInvocations atTypeScope withinMyNamespace
+			((self c6FullReferencerInSideOutSide queryAllOutgoingInvocations
+				atScope: FAMIXType) withinMyNamespace
 				equalsTo:
 					(Set new
 						add: self c3ReferencerInSideRefereeOutSide;

@@ -1,9 +1,14 @@
 allDependencies
 testProviderClassesOutOfMyPackage
-	self assert: self c15FullReferencerOutSide queryAllOutgoingAssociations atTypeScope outOfMyPackage size equals: 3.
 	self
 		assert:
-			(self c15FullReferencerOutSide queryAllOutgoingAssociations atTypeScope outOfMyPackage
+			(self c15FullReferencerOutSide queryAllOutgoingAssociations
+				atScope: FAMIXType) outOfMyPackage size
+		equals: 3.
+	self
+		assert:
+			((self c15FullReferencerOutSide queryAllOutgoingAssociations
+				atScope: FAMIXType) outOfMyPackage
 				equalsTo:
 					(Set new
 						add: self c14ReferencerOutSideRefereeOutSide;

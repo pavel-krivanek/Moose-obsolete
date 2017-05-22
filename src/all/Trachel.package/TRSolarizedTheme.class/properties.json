@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TRTheme",
+	"category" : "Trachel-Theme",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TRSolarizedTheme",
+	"type" : "normal"
+}

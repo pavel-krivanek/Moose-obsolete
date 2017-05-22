@@ -1,4 +1,4 @@
-writing
+deprecated
 withInternalSubset: aStringOrCollectionOrBlock
 	self deprecated: 'use #with: instead'.
 

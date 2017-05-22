@@ -1,3 +1,3 @@
 accessing
 feedURL
-	^ 'http://pharo.org/news/atom.xml'
+	^ 'http://www.squeaksource.com/feed.rss'

@@ -4,6 +4,7 @@ setAsHighlightable
 	
 	Consider the example:
 	=-=-=-=-=-
+	| v es |
 	v := RTView new.
 
 	es := RTBox new size: 20; color: Color blue; elementsOn: #('Hello' 'World').

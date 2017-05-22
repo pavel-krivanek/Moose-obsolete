@@ -5,15 +5,15 @@ testSureReferencedNamespacesTest
 	modelClasses
 		do: [ :each | 
 			self
-				assert: each querySureOutgoingInvocations atNamespaceScope size
-				equals: each querySureOutgoingInvocations atNamespaceScope asSet size ].
+				assert: (each querySureOutgoingInvocations atScope: FAMIXNamespace) size
+				equals: (each querySureOutgoingInvocations atScope: FAMIXNamespace) asSet size ].
 	modelClasses
 		do: [ :each | 
 			self
-				assert: each querySureIncomingInvocations atTypeScope size
-				equals: each querySureIncomingInvocations atTypeScope asSet size ].
+				assert: (each querySureIncomingInvocations atScope: FAMIXType) size
+				equals: (each querySureIncomingInvocations atScope: FAMIXType) asSet size ].
 	modelClasses
 		do: [ :each | 
 			self
-				assert: each querySureIncomingInvocations atNamespaceScope size
-				equals: each querySureIncomingInvocations atNamespaceScope asSet size ]
+				assert: (each querySureIncomingInvocations atScope: FAMIXNamespace) size
+				equals: (each querySureIncomingInvocations atScope: FAMIXNamespace) asSet size ]
