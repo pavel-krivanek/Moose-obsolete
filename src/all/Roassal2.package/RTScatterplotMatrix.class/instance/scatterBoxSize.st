@@ -1,0 +1,3 @@
+accesing
+scatterBoxSize
+	^ boxSize

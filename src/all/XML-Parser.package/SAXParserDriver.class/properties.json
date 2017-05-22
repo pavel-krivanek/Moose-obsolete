@@ -13,7 +13,6 @@
 		"externalSubsetSystemID",
 		"externalSubsetPublicID",
 		"isStandalone",
-		"isHandlingDTD",
 		"hasParameterEntityReferences",
 		"hasSkippedParameterEntityReferences",
 		"hasUnhandledReservedAttributes"

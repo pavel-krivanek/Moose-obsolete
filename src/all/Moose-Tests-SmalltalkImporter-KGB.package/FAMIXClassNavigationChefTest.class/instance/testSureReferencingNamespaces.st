@@ -1,9 +1,14 @@
 sureIncomingInvocations
 testSureReferencingNamespaces
-	self assert: self c19FullRefereeOutSide querySureIncomingInvocations atNamespaceScope size equals: 3.
 	self
 		assert:
-			(self c19FullRefereeOutSide querySureIncomingInvocations atNamespaceScope
+			(self c19FullRefereeOutSide querySureIncomingInvocations
+				atScope: FAMIXNamespace) size
+		equals: 3.
+	self
+		assert:
+			((self c19FullRefereeOutSide querySureIncomingInvocations
+				atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace4FullReferencer

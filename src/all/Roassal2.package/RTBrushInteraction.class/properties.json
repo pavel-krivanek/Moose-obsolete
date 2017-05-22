@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "akevalion 5/19/2017 17:28",
+	"super" : "RTAbstractElasticBoxInteraction",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dragging",
+		"groups",
+		"condition",
+		"domainElements",
+		"highlightColor",
+		"unhighlightColor"
+	],
+	"name" : "RTBrushInteraction",
+	"type" : "normal"
+}

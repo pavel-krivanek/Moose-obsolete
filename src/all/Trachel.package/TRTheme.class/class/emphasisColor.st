@@ -1,0 +1,3 @@
+generic
+emphasisColor
+	^ self red

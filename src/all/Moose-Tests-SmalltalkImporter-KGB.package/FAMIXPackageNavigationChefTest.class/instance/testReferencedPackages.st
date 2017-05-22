@@ -5,10 +5,11 @@ testReferencedPackages
 	p10 := self packageP10InteractedReferee.
 	p11 := self packageP11FullReferee.
 	pEx := self packagePExtensions.
-	
-	self assert: (p8 queryAllOutgoingInvocations atPackageScope equalsTo: (Set 
-				with: p10
-				with: p11
-				with: pEx)).
-	self assert: (pEx queryAllOutgoingInvocations atPackageScope 
-		equalsTo: (Set with: p11))
+	self
+		assert:
+			((p8 queryAllOutgoingInvocations atScope: FAMIXPackage)
+				equalsTo: (Set with: p10 with: p11 with: pEx)).
+	self
+		assert:
+			((pEx queryAllOutgoingInvocations atScope: FAMIXPackage)
+				equalsTo: (Set with: p11))

@@ -1,3 +1,0 @@
-testing
-isHandlingDTD
-	self subclassResponsibility

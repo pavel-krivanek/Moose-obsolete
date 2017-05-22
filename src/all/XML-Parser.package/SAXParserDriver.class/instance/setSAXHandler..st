@@ -7,7 +7,6 @@ setSAXHandler: aSAXHandler
 	externalSubsetPublicID := ''.
 	externalSubsetSystemID := ''.
 	isStandalone := false.
-	isHandlingDTD := false.
 	hasParameterEntityReferences := false.
 	hasSkippedParameterEntityReferences := false.
 	hasUnhandledReservedAttributes := false.

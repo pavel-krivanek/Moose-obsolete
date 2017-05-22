@@ -1,9 +1,14 @@
 allIncomingInvocations
 testReferencingNamespaces
-	self assert: self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations atNamespaceScope size equals: 2.
 	self
 		assert:
-			(self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations atNamespaceScope
+			(self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations
+				atScope: FAMIXNamespace) size
+		equals: 2.
+	self
+		assert:
+			((self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations
+				atScope: FAMIXNamespace)
 				equalsTo:
 					(Set new
 						add: self namespace3ReferencerReferee;

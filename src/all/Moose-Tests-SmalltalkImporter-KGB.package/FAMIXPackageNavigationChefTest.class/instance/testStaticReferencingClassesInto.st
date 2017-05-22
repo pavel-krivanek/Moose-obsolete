@@ -1,10 +1,9 @@
 references
-testStaticReferencingClassesInto 
-	 
-	| p1 p5 | 
-	p1 := self packageP1FullReferencer. 
-	p5 := self packageP5FullReferee. 
-	self 
-		assert: 
-			((p5 queryIncomingReferences atTypeScope withinPackage: p1) 
+testStaticReferencingClassesInto
+	| p1 p5 |
+	p1 := self packageP1FullReferencer.
+	p5 := self packageP5FullReferee.
+	self
+		assert:
+			(((p5 queryIncomingReferences atScope: FAMIXType) withinPackage: p1)
 				equalsTo: (Set with: self c1FullReferencerOutSide))

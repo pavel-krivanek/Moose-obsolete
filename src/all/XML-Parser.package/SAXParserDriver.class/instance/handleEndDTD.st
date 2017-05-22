@@ -7,7 +7,6 @@ handleEndDTD
 		ifTrue: [self parseExternalSubset].
 	self isValidating
 		ifTrue: [self doctypeDefinition validateCompletedDefinition].
-	isHandlingDTD := false.
 
 	self saxHandler
 		doctypeDefinition: self doctypeDefinition;

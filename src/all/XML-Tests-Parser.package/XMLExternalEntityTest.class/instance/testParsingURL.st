@@ -10,4 +10,4 @@ testParsingURL
 	self
 		shouldnt: [doc := XMLDOMParser parseURL: self feedURL]
 		raise: XMLHTTPException.
-	self assert: (doc root isNamed: 'feed').
+	self assert: (doc root isNamed: 'rss').

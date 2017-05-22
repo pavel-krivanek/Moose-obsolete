@@ -73,7 +73,7 @@ testAttributeDefaultFixedValueEntityReference
 		self
 			should: [
 				SAXHandler parse: '<!DOCTYPE root [', badSubset, ']>', goodContent]
-			raise: XMLValidationException.
+			raise: XMLWellFormednessException.
 		self
 			should: [
 				(SAXHandler on: '<!DOCTYPE root SYSTEM "extern.dtd">', goodContent)
@@ -84,16 +84,6 @@ testAttributeDefaultFixedValueEntityReference
 					parseDocument]
 			raise: XMLValidationException.
 
-		self
-			shouldnt: [
-				document :=
-					(XMLDOMParser on: '<!DOCTYPE root [', badSubset, ']>', goodContent)
-						isValidating: false;
-						parseDocument]
-			raise: XMLValidationException.
-		self
-			assert: ((document root elementAt: 'one') attributeAt: 'one') = '';
-			assert: ((document root elementAt: 'two') attributeAt: 'two') = 'value'.
 		self
 			shouldnt: [
 				document :=

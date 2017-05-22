@@ -1,4 +1,4 @@
-private
+writing
 writeLineBreak
 	self writer atBeginning
 		ifFalse: [

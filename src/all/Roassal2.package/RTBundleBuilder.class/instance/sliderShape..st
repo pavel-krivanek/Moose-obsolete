@@ -1,3 +1,3 @@
-accessing
+public - configuration
 sliderShape: aShape
 	sliderShape := aShape

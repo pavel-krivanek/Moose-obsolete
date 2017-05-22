@@ -7,7 +7,10 @@ testAncestorOrSelfAxis
 	self
 		assertList: result
 		copiedFrom: list
-		hasNodes: self listElements, self listElements first ancestorElements.
+		hasNodes:
+			"use #asArray to satisfy GS's Array>>#, argument check"
+			(self listElements asArray,
+				self listElements first ancestorElements asArray).
 	self assert: (result %%~ 'absent') isEmpty.
 
 	result := list %%~ 'root'.

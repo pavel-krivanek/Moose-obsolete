@@ -10,7 +10,10 @@
 	"super" : "FAMIXSourcedEntity",
 	"traitcomposition" : "TAssociationMetaLevelDependency",
 	"type" : "normal",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"possibleTargetClasses",
+		"possibleSourceClasses"
+	],
 	"pools" : [ ],
 	"category" : "Famix-Core"
 }

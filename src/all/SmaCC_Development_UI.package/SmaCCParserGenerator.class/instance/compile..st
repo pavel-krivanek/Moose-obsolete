@@ -2,7 +2,7 @@ private
 compile: aSymbol
 	| grammar stream oldCharacterSize parserCompiler messages |
 	(self scannerClassName isEmpty or: [ self parserClassName isEmpty ])
-		ifTrue: [ ^ self warn: 'Both classes are not specified' ].
+		ifTrue: [ ^ UIManager default alert: 'Both classes are not specified' ].
 	messages := OrderedCollection new.
 	Cursor wait
 		showWhile:

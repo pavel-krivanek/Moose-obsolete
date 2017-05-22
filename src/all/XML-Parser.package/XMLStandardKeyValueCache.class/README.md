@@ -1,1 +1,1 @@
-The class is the standard key-value cache implementation used on Pharo/Squeak.
+This class is the standard key-value cache implementation used on Pharo/Squeak.

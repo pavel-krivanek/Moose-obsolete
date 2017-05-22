@@ -1,3 +1,7 @@
 staticDependencies
 testStaticClientClassesIntoMyPackage
-	self assert: self c11FullRefereeOutSide queryStaticIncomingAssociations atTypeScope withinMyPackage size equals: 1
+	self
+		assert:
+			(self c11FullRefereeOutSide queryStaticIncomingAssociations
+				atScope: FAMIXType) withinMyPackage size
+		equals: 1

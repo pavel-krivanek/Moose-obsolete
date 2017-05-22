@@ -6,6 +6,7 @@ SystemOrganization addCategory: 'Roassal2-Builder-AnimatedScatterPlot'!
 SystemOrganization addCategory: 'Roassal2-Builder-ApplicationMatrix'!
 SystemOrganization addCategory: 'Roassal2-Builder-AxisAdapted'!
 SystemOrganization addCategory: 'Roassal2-Builder-BoxPlot'!
+SystemOrganization addCategory: 'Roassal2-Builder-BundleEdge'!
 SystemOrganization addCategory: 'Roassal2-Builder-Calendar'!
 SystemOrganization addCategory: 'Roassal2-Builder-CircularMap'!
 SystemOrganization addCategory: 'Roassal2-Builder-Common'!

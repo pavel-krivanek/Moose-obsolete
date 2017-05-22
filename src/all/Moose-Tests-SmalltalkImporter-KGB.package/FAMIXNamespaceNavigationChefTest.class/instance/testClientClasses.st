@@ -1,7 +1,9 @@
 allDependencies
 testClientClasses
 	self
-		assert: self namespace2FullReferee queryAllIncomingAssociations atTypeScope asSet
+		assert:
+			(self namespace2FullReferee queryAllIncomingAssociations
+				atScope: FAMIXType) asSet
 		equals:
 			{self c14ReferencerOutSideRefereeOutSide.
 			self c1FullReferencerOutSide.
@@ -11,4 +13,4 @@ testClientClasses
 			self c11FullRefereeOutSide.
 			self c12FullReferencerInSide.
 			self c13FullRefereeInSideOutSide.
-			self c9FullRefereeInSide } asSet
+			self c9FullRefereeInSide} asSet

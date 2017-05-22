@@ -1,3 +1,7 @@
 staticDependencies
 testStaticClientClassesIntoMyNamespace
-	self assert: self c11FullRefereeOutSide queryStaticIncomingAssociations atTypeScope withinMyNamespace size equals: 1
+	self
+		assert:
+			(self c11FullRefereeOutSide queryStaticIncomingAssociations
+				atScope: FAMIXType) withinMyNamespace size
+		equals: 1

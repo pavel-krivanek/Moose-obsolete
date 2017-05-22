@@ -1,14 +1,24 @@
 sureIncomingInvocations
 testSureReferencingClasses
-	self assert: self c14ReferencerOutSideRefereeOutSide querySureIncomingInvocations atTypeScope size equals: 1.
 	self
 		assert:
-			(self c14ReferencerOutSideRefereeOutSide querySureIncomingInvocations atTypeScope
+			(self c14ReferencerOutSideRefereeOutSide querySureIncomingInvocations
+				atScope: FAMIXType) size
+		equals: 1.
+	self
+		assert:
+			((self c14ReferencerOutSideRefereeOutSide querySureIncomingInvocations
+				atScope: FAMIXType)
 				equalsTo: (Set with: self c2ReferencerOutSideRefereeInSide)).
-	self assert: self c13FullRefereeInSideOutSide querySureIncomingInvocations atTypeScope size equals: 4.
 	self
 		assert:
-			(self c13FullRefereeInSideOutSide querySureIncomingInvocations atTypeScope
+			(self c13FullRefereeInSideOutSide querySureIncomingInvocations
+				atScope: FAMIXType) size
+		equals: 4.
+	self
+		assert:
+			((self c13FullRefereeInSideOutSide querySureIncomingInvocations
+				atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c1FullReferencerOutSide

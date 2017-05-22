@@ -1,4 +1,7 @@
 accessing
 childrenEntities
-	^ (self childrenSelectors
-		collect: [ :accessor | self perform: accessor ]) flattened reject: #isNil.
+	| res |
+	res := OrderedCollection new.
+	self childrenSelectors
+		do: [ :accessor | (self perform: accessor) ifNotNil: [ :r | res addAll: r asCollection ] ].
+	^ res
