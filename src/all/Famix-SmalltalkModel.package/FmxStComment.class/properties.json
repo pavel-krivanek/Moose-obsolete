@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#container => FMOne type: #FmxStSourcedEntity opposite: #comments",
+		"#content"
+	],
 	"name" : "FmxStComment",
 	"type" : "normal"
 }
