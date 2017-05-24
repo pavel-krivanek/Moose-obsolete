@@ -1,5 +1,5 @@
 meta
 annotation
-	<MSEClass: #Method super: #FmxStBehaviouralEntity>
+	<MSEClass: #Method super: #FmxStContainerEntity>
 	<package: #FmxSt>
 	^self

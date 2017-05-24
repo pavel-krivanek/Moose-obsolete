@@ -1,11 +1,16 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStBehaviouralEntity",
+	"super" : "FmxStContainerEntity",
 	"category" : "Famix-SmalltalkModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#annotationInstances => FMMany type: #FmxStAnnotationInstance opposite: #annotatedEntity",
+		"#localVariables => FMMany type: #FmxStLocalVariable opposite: #parentBehaviouralEntity",
+		"#parameters => FMMany type: #FmxStParameter opposite: #parentBehaviouralEntity",
+		"#implicitVariables => FMMany type: #FmxStImplicitVariable opposite: #parentBehaviouralEntity"
+	],
 	"name" : "FmxStMethod",
 	"type" : "normal"
 }

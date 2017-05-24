@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#annotatedEntity => FMOne type: #FmxStMethod opposite: #annotationInstances",
+		"#attributes => FMMany type: #FmxStAnnotationInstanceAttribute opposite: #parentAnnotationInstance"
+	],
 	"name" : "FmxStAnnotationInstance",
 	"type" : "normal"
 }

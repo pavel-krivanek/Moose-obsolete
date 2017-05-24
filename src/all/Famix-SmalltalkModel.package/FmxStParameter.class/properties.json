@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStContainerEntity",
+	"super" : "FmxStVariable",
 	"category" : "Famix-SmalltalkModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#globalVariables => FMMany type: #FmxStGlobalVariable opposite: #parentScope"
+		"#parentBehaviouralEntity => FMOne type: #FmxStMethod opposite: #parameters"
 	],
-	"name" : "FmxStScopingEntity",
+	"name" : "FmxStParameter",
 	"type" : "normal"
 }

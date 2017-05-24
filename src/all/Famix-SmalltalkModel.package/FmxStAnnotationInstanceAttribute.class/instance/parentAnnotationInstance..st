@@ -1,0 +1,3 @@
+accessing
+parentAnnotationInstance: anAnnotationInstance
+	parentAnnotationInstance := anAnnotationInstance
