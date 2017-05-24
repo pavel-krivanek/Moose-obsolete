@@ -11,6 +11,8 @@
 	"traitcomposition" : "TAssociationMetaLevelDependency",
 	"type" : "normal",
 	"classinstvars" : [
+		"#possibleTargetClasses",
+		"#possibleSourceClasses"
 	],
 	"pools" : [ ],
 	"category" : "Famix-Core"
