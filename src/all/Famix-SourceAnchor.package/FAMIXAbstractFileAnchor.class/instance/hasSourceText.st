@@ -1,3 +1,3 @@
-querying
+testing
 hasSourceText
 	^ self completeText notEmpty 
