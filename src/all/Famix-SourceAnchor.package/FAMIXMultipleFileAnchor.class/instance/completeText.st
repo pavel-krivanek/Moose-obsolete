@@ -1,3 +1,0 @@
-public
-completeText
-	^ self sourceText

@@ -1,6 +1,6 @@
 accessing
 lineCount
-	^ self hasSourceText 
+	^ self sourceText notNil 
 		ifTrue: [ self sourceText lineCount ]
 		ifFalse: [ self notExistentMetricValue ]
 	
