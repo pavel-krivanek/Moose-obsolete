@@ -1,0 +1,3 @@
+generated
+visitSuperCallExpression: aSuperCallExpression
+	^ self visitExpression: aSuperCallExpression

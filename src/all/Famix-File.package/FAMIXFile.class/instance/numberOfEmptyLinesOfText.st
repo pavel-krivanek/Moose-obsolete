@@ -5,18 +5,16 @@ numberOfEmptyLinesOfText
 	<derived>
 	^ self
 		lookUpPropertyNamed: #numberOfEmptyLinesOfText
-		computedAs: [ 
-			| text elot |
+		computedAs: [ | elot |
 			elot := 0.
 			self
-				ifFileExistsDo: [ 
-					text := self sourceText.
+				ifFileExistsDo: [ | text |text := self sourceText.
 					1 to: text size - 1 do: [ :index | 
 						((text at: index) = Character cr and: [ (text at: index + 1) = Character cr ])
 							ifTrue: [ elot := elot + 1 ] ].
 					1 to: text size - 1 do: [ :index | 
 						((text at: index) = Character space and: [ (text at: index + 1) = Character cr ])
 							ifTrue: [ elot := elot + 1 ] ].
-					(text isEmpty not and: [ text last = Character cr ])
+					(text isNotEmpty and: [ text last = Character cr ])
 						ifTrue: [ elot := elot + 1 ] ].
 			elot ]

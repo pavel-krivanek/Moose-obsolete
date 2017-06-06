@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait",
+	"classtraitcomposition" : "TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes} + TDependencyQueries classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"#parentAnnotationInstance => FMOne type: #FAMIXAnnotationInstance opposite: #attributes",

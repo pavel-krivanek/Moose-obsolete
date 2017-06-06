@@ -4,60 +4,85 @@ definitionComment
 %prefix JS;
 %suffix Node;
 
-%start Expression Statement Program ;
+%states default template;
 
-%ignore_variables semicolon comma leftParen rightParen leftBracket rightBracket leftBrace rightBrace colonToken;
+%start Expression Statement Script Module;
+
+%ignore_variables semicolon comma leftParen rightParen leftBracket rightBracket leftBrace rightBrace left right colonToken;
 
 %hierarchy Literal (
-	NullLiteral 
 	BooleanLiteral 
+	NullLiteral 
 	NumericLiteral 
-	StringLiteral
 	RegularExpressionLiteral
+	StringLiteral
 );
 %hierarchy Expression (
-	ThisExpression
-	Literal
-	NameExpression
 	ArrayLiteral
-	ObjectLiteral
+	ArrowFunction
+	AssignmentExpression
+	BinaryExpression
+	CallExpression
+	ClassExpression
+	CommaExpression
+	ConditionalExpression
 	Function
 	IndexedPropertyExpression
+	Literal
+	NameExpression
 	NamedPropertyExpression
 	NewExpression
-	CallExpression
+	NewTargetExpression
+	ObjectLiteral
+	PrefixExpression
 	PostfixExpression
+	SpreadExpression
+	SuperCallExpression
+	SuperIndexedPropertyExpression
+	SuperNamedPropertyExpression
+	TaggedTemplateLiteral
+	TemplateLiteral
+	ThisExpression
 	UnaryExpression
-	BinaryExpression
-	ConditionalExpression
-	AssignmentExpression
-	CommaExpression
+	YieldExpression
+);
+%hierarchy Function (
+	GeneratorFunction
 );
 %hierarchy Statement (
 	BlockStatement
-	VariableStatement
+	BreakStatement
+	ContinueStatement
+	DebuggerStatement
+	DoWhileStatement
 	EmptyStatement
 	ExpressionStatement
-	IfStatement
-	DoWhileStatement
-	WhileStatement
-	ForStatement
 	ForInStatement
 	ForOfStatement
-	ContinueStatement
-	BreakStatement
-	ReturnStatement
-	WithStatement
-	SwitchStatement
+	ForStatement
+	IfStatement
 	LabelledStatement
+	LexicalDeclaration
+	ReturnStatement
+	SwitchStatement
 	ThrowStatement
 	TryStatement
-	DebuggerStatement
+	VariableStatement
+	WhileStatement
+	WithStatement
+);
+%hierarchy MethodDefinition (
+	GeneratorMethodDefinition
+	GetMethodDefinition
+	SetMethodDefinition
+);
+%hierarchy VariableDeclaration (
+	RestVariableDeclaration
 );
 
 %glr;
 
-%id <semicolon> <identifier> <slash> <slashEqual> <regular_expression> <identifierName>;
+%id <semicolon> <identifier> <slash> <slashEqual> <regular_expression> <identifierName> <rightBrace>;
 
 %right ""else"";
 
@@ -69,6 +94,9 @@ definitionComment
 ;
 <slashEqual>
 :	\/\=
+;
+<rightBrace>
+:	\}
 ;
 
 <comment>
@@ -124,8 +152,14 @@ definitionComment
 <hex_integer>
 :	0 [xX] [0-9A-Fa-f]+
 ;
+<binary_integer>
+:	0 [bB] [0-1]+
+;
+<octal_integer>
+:	0 [oO] [0-7]+
+;
 <numeric>
-:	<decimal> | <hex_integer>
+:	<decimal> | <hex_integer> | <binary_integer> | <octal_integer>
 ;
 <regular_expression_backslash_sequence>
 :	\\ [^\r\n]
@@ -154,78 +188,178 @@ definitionComment
 <regular_expression>
 :	\/ <regular_expression_body> \/ <regular_expression_flags>
 ;
+<no_substitution_template>##################
+:	\` ([^\`$\\] | <escape> | \$[^\`\{])* \$? \`
+;
+<template_head>
+:	\` ([^\`$\\] | <escape> | \$[^\`\{])* \$\{
+;
+template <template_middle>
+:	\}  ([^\`$\\] | <escape> | \$[^\`\{])* \$\{
+;
+template <template_end>
+:	\}  ([^\`$\\] | <escape> | \$[^\`\{])* \$?\`
+;
 <patternToken>
-	: (\`  [^\`]* \`)+
+	: \`\? [^\`]+ \`
 	;
 
-goal : Program;
+goal 
+:	Module
+;
 
-# A.3 Expressions
+# A.2 Expressions
+#IdentifierReference
+#:	Identifier
+#:	Identifier
+#;
+#BindingIdentifieropt
+#:
+#|	BindingIdentifier
+#;
+#BindingIdentifier
+#:	Identifier
+#;
+Identifieropt
+:
+|	Identifier
+;
+Identifier
+: 	<identifier> 'name' {{NameExpression}}
+;
+#LabeledIdentifier
+#:	Identifier
+#;
 PrimaryExpression
 :	""this"" 'thisToken' {{ThisExpression}}
-|	<identifier> 'name' {{NameExpression}}	# mod
+|	Identifier	##
 |	Literal 
 |	ArrayLiteral 
 |	ObjectLiteral 
-|	""("" 'leftParen' Expression "")"" 'rightParen' {{Expression}}
+|	FunctionExpression
+|	ClassExpression
+|	GeneratorExpression
+|	RegularExpressionLiteral
+|	TemplateLiteral
+|	ParenthesizedExpression	# CoverParenthesizedExpressionAndArrowParameterList
+;
+ParenthesizedExpression
+:	""("" 'leftParen' Expression "")"" 'rightParen' {{Expression}}
+;
+CoverParenthesizedExpressionAndArrowParameterList
+:	""("" 'left' ParameterListopt "")"" 'right'	##
+#|	""("" 'left' "")"" 'right'
+#|	""("" 'left'   ""..."" 'ellipsis' Identifier 'varParameter' "")"" 'right'	##
+#|	""("" 'left' ""..."" 'ellipsis' BindingPattern 'varParameter' "")"" 'right' 
+|	""("" 'left' ParameterListopt "","" 'comma' ""..."" 'ellipsis' Identifier 'varParameter' "")"" 'right'	##
+|	""("" 'left' ParameterListopt "","" 'comma' ""..."" 'ellipsis' BindingPattern 'varParameter' "")"" 'right'	##
+;
+ParameterListopt
+:	
+|	ParameterList
+;
+ParameterList
+:	BindingElement 'parameter'
+|	ParameterList "","" 'comma' BindingElement 'parameter'
+;
+Literal
+:	NullLiteral 'value' {{NullLiteral}}
+|	BooleanLiteral 'value' {{BooleanLiteral}}
+|	NumericLiteral 'value' {{NumericLiteral}}
+|	StringLiteral 'value' {{StringLiteral}}
 ;
 ArrayLiteral 
-#:	""["" Elisionopt ""]"" 
-#:	""["" 'leftBracket' ""]"" 'rightBracket' {{}}	# mod
-:	""["" 'leftBracket' ElementList ""]"" 'rightBracket' {{}}
-#|	""["" ElementList "","" Elisionopt ""]""
+:	""["" 'leftBracket' Elisionopt ""]"" 'rightBracket' {{}}
+|	""["" 'leftBracket' ElementList ""]"" 'rightBracket' {{}}
+|	""["" 'leftBracket' ElementList Elision ""]"" 'rightBracket' {{}}	##
 ;
-############OLD############
-#ElementList
-##:	Elisionopt 
-#:	Elision	# mod
-#|	AssignmentExpression 
-##|	ElementList "","" Elisionopt AssignmentExpression
-#|	ElementList "","" Elision	#mod
-#|	ElementList "","" AssignmentExpression	#mod
-#;
-#Elision
-#:	"","" 'comma'
-##|	Elision "",""
-#;
-###########################
 ElementList
-:	ElementExpression 'expression'
-|	ElementList "","" 'comma' ElementExpression 'expression'
+:	Elisionopt AssignmentExpression 'expression'
+|	Elisionopt SpreadElement 'expression'
+|	ElementList "","" 'comma' Elisionopt AssignmentExpression 'expression'
+|	ElementList "","" 'comma' Elisionopt SpreadElement 'expression'
 ;
-ElementExpression
+Elisionopt
 :
-|	AssignmentExpression
+|	Elision
 ;
-#####################
+Elision
+:	"","" 'comma'
+|	Elision "","" 'comma'
+;
+SpreadElement
+:	""..."" 'ellipsis' AssignmentExpression 'expression' {{SpreadExpression}}
+;
 ObjectLiteral  
-:	""{"" 'leftBrace' ""}"" 'rightBrace' {{}}
-|	""{"" 'leftBrace' PropertyNameAndValueList ""}"" 'rightBrace' {{}}
-|	""{"" 'leftBrace' PropertyNameAndValueList "","" 'comma' ""}"" 'rightBrace' {{}}
+:	""{"" 'leftBrace' <rightBrace> 'rightBrace' {{}}
+|	""{"" 'leftBrace' PropertyDefinitionList <rightBrace> 'rightBrace' {{}}
+|	""{"" 'leftBrace' PropertyDefinitionList "","" 'comma' <rightBrace> 'rightBrace' {{}}
 ;
-PropertyNameAndValueList 
-:	PropertyAssignment 'assignment'
-|	PropertyNameAndValueList "","" 'comma' PropertyAssignment 'assignment'
+PropertyDefinitionList
+:	PropertyDefinition 'definition'
+|	PropertyDefinitionList "","" 'comma' PropertyDefinition 'definition'
 ;
-PropertyAssignment
-:	PropertyName 'key' "":"" 'colonToken' AssignmentExpression 'value' {{}}
-|	""get"" 'getToken' PropertyName 'key' ""("" 'leftParen' "")"" 'rightParen' ""{"" 'leftBrace' FunctionBody ""}"" 'rightBrace' {{GetPropertyAssignment}}
-|	""set"" 'setToken' PropertyName 'key' ""("" 'leftParen' PropertySetParameterList "")"" 'rightParen' ""{"" 'leftBrace' FunctionBody ""}"" 'rightBrace' {{SetPropertyAssignment}}
+PropertyDefinition
+:	Identifier
+|	CoverInitializedName
+|	PropertyName 'name' "":"" 'colonToken' AssignmentExpression 'value' {{PropertyAssignment}}
+|	MethodDefinition
 ;
 PropertyName 
-:	<identifierName> 'name' {{NameExpression}}
+:	LiteralPropertyName
+|	ComputedPropertyName
+;
+LiteralPropertyName
+:	Identifier
 |	StringLiteral 'name' {{NameExpression}}
 |	NumericLiteral 'name' {{NameExpression}}
 ;
-PropertySetParameterList 
-:	<identifier>	'variable'	# mod
+ComputedPropertyName
+:	""["" 'leftBrace' AssignmentExpression 'expression' ""]"" 'rightBrace' {{}}
+;
+CoverInitializedName
+:	Identifier 'name' Initializer {{PropertyAssignment}}	##
+;
+Initializeropt
+:
+|	Initializer
+;
+Initializer
+:	""="" 'equalToken' AssignmentExpression 'value'
+;
+TemplateLiteral
+:	<no_substitution_template> 'part' {{}}
+|	StartTemplateLiteral <template_head> 'part' Expression 'expression' TemplateSpans {{}}
+;
+StartTemplateLiteral
+:	{#template}
+;
+TemplateSpans
+:	<template_end> 'part'
+|	TemplateMiddleList <template_end> 'part'
+;
+TemplateMiddleList
+:	<template_middle> 'part' Expression 'expression'
+|	TemplateMiddleList <template_middle> 'part' Expression 'expression'
 ;
 MemberExpression 
 :	PrimaryExpression 
-|	FunctionExpression 
 |	MemberExpression 'expression' ""["" 'leftBracket' Expression 'fieldExpression' ""]"" 'rightBracket' {{IndexedPropertyExpression}}
 |	MemberExpression 'expression' ""."" 'periodToken' <identifierName> 'name' {{NamedPropertyExpression}}
+|	MemberExpression 'expression' TemplateLiteral 'template' {{TaggedTemplateLiteral}}
+|	SuperProperty
+|	MetaProperty
 |	""new"" 'newToken' MemberExpression 'expression' Arguments {{NewExpression}}
+;
+SuperProperty
+:	""super"" 'superToken' ""["" 'leftBracket' Expression 'expression' ""]"" 'rightBracket' {{SuperIndexedPropertyExpression}}
+|	""super"" 'superToken' ""."" 'periodToken' <identifierName> 'name' {{SuperNamedPropertyExpression}}
+;
+MetaProperty
+:	NewTarget
+;
+NewTarget
+:	""new"" 'newToken' ""."" 'periodToken' ""target"" 'targetToken' {{NewTargetExpression}}
 ;
 NewExpression 
 :	MemberExpression 
@@ -233,9 +367,14 @@ NewExpression
 ;
 CallExpression 
 :	MemberExpression 'expression' Arguments {{}}
+|	SuperCall
 |	CallExpression 'expression' Arguments {{}}
-|	CallExpression 'expression' ""["" 'leftBracket' Expression 'fieldExpression' ""]"" 'rightBracket' {{IndexedPropertyExpression}}
+|	CallExpression 'expression' ""["" 'leftBracket' Expression 'expression' ""]"" 'rightBracket' {{IndexedPropertyExpression}}
 |	CallExpression 'expression' ""."" 'periodToken' <identifierName> 'name' {{NamedPropertyExpression}}
+|	CallExpression 'expression' TemplateLiteral 'template'  {{TaggedTemplateLiteral}}
+;
+SuperCall
+:	""super"" 'superToken' Arguments {{SuperCallExpression}}
 ;
 Arguments 
 :	""("" 'left' "")"" 'right'
@@ -243,31 +382,37 @@ Arguments
 ;
 ArgumentList 
 :	AssignmentExpression 'argument'
+|	""..."" 'ellipsis' AssignmentExpression 'varArgument'
 |	ArgumentList "","" 'comma' AssignmentExpression 'argument'
+|	ArgumentList "","" 'comma' ""..."" 'ellipsis' AssignmentExpression 'varArgument'
 ;
 LeftHandSideExpression 
 :	NewExpression 
 |	CallExpression
 ;
-PostfixExpression 
-:	LeftHandSideExpression 
-|	LeftHandSideExpression 'expression' ""++"" 'operator' {{}}
-|	LeftHandSideExpression 'expression' ""--"" 'operator' {{}}
+UpdateExpression
+:	LeftHandSideExpression 'expression' ""++"" 'operator' {{PostfixExpression}}
+|	LeftHandSideExpression 'expression' ""--"" 'operator' {{PostfixExpression}}
+|	""++"" 'operator' UnaryExpression 'expression' {{PrefixExpression}}	##
+|	""--"" 'operator' UnaryExpression 'expression' {{PrefixExpression}}	##
+|	LeftHandSideExpression ###
 ;
 UnaryExpression 
-:	PostfixExpression 
+:	UpdateExpression 
 |	""delete"" 'operator' UnaryExpression 'expression' {{}}
 |	""void"" 'operator' UnaryExpression 'expression' {{}}
 |	""typeof"" 'operator' UnaryExpression 'expression' {{}}
-|	""++"" 'operator' UnaryExpression 'expression' {{}}
-|	""--"" 'operator' UnaryExpression 'expression' {{}}
 |	""+"" 'operator' UnaryExpression 'expression' {{}}
 |	""-"" 'operator' UnaryExpression 'expression' {{}}
 |	""~"" 'operator' UnaryExpression 'expression' {{}} 
 |	""!"" 'operator' UnaryExpression 'expression' {{}}
 ;
+ExponentiationExpression
+:	UnaryExpression
+|	UnaryExpression 'leftExpression' ""**"" 'operator' ExponentiationExpression 'rightExpression' {{BinaryExpression}}
+;
 MultiplicativeExpression 
-:	UnaryExpression 
+:	ExponentiationExpression 
 |	MultiplicativeExpression 'leftExpression' ""*"" 'operator' UnaryExpression 'rightExpression' {{BinaryExpression}}
 |	MultiplicativeExpression 'leftExpression' <slash> 'operator' UnaryExpression 'rightExpression' {{BinaryExpression}}
 |	MultiplicativeExpression 'leftExpression' ""%"" 'operator' UnaryExpression 'rightExpression' {{BinaryExpression}}
@@ -292,14 +437,6 @@ RelationalExpression
 |	RelationalExpression 'leftExpression' ""instanceof"" 'operator' ShiftExpression 'rightExpression' {{BinaryExpression}}
 |	RelationalExpression 'leftExpression' ""in"" 'operator' ShiftExpression 'rightExpression' {{BinaryExpression}}
 ;
-RelationalExpressionNoIn 
-:	ShiftExpression 
-|	RelationalExpressionNoIn 'leftExpression' ""<"" 'operator' ShiftExpression 'rightExpression' {{BinaryExpression}}
-|	RelationalExpressionNoIn 'leftExpression' "">"" 'operator' ShiftExpression 'rightExpression' {{BinaryExpression}}
-|	RelationalExpressionNoIn 'leftExpression' ""<="" 'operator' ShiftExpression 'rightExpression' {{BinaryExpression}}
-|	RelationalExpressionNoIn 'leftExpression' "">="" 'operator' ShiftExpression 'rightExpression' {{BinaryExpression}}
-|	RelationalExpressionNoIn 'leftExpression' ""instanceof"" 'operator' ShiftExpression 'rightExpression' {{BinaryExpression}}
-;
 EqualityExpression 
 :	RelationalExpression 
 |	EqualityExpression 'leftExpression' ""=="" 'operator' RelationalExpression 'rightExpression' {{BinaryExpression}}
@@ -307,71 +444,38 @@ EqualityExpression
 |	EqualityExpression 'leftExpression' ""==="" 'operator' RelationalExpression 'rightExpression' {{BinaryExpression}}
 |	EqualityExpression 'leftExpression' ""!=="" 'operator' RelationalExpression 'rightExpression' {{BinaryExpression}}
 ;
-EqualityExpressionNoIn 
-:	RelationalExpressionNoIn 
-|	EqualityExpressionNoIn 'leftExpression' ""=="" 'operator' RelationalExpressionNoIn 'rightExpression' {{BinaryExpression}}
-|	EqualityExpressionNoIn 'leftExpression' ""!="" 'operator' RelationalExpressionNoIn 'rightExpression' {{BinaryExpression}}
-|	EqualityExpressionNoIn 'leftExpression' ""==="" 'operator' RelationalExpressionNoIn 'rightExpression' {{BinaryExpression}}
-|	EqualityExpressionNoIn 'leftExpression' ""!=="" 'operator' RelationalExpressionNoIn 'rightExpression' {{BinaryExpression}}
-;
 BitwiseANDExpression 
 :	EqualityExpression 
 |	BitwiseANDExpression 'leftExpression'""&"" 'operator' EqualityExpression 'rightExpression' {{BinaryExpression}}
-;
-BitwiseANDExpressionNoIn 
-:	EqualityExpressionNoIn 
-|	BitwiseANDExpressionNoIn 'leftExpression' ""&"" 'operator' EqualityExpressionNoIn 'rightExpression' {{BinaryExpression}}
 ;
 BitwiseXORExpression 
 :	BitwiseANDExpression 
 |	BitwiseXORExpression 'leftExpression' ""^"" 'operator' BitwiseANDExpression 'rightExpression' {{BinaryExpression}}
 ;
-BitwiseXORExpressionNoIn 
-:	BitwiseANDExpressionNoIn 
-|	BitwiseXORExpressionNoIn 'leftExpression' ""^"" 'operator' BitwiseANDExpressionNoIn 'rightExpression' {{BinaryExpression}}
-;
 BitwiseORExpression 
 :	BitwiseXORExpression 
 |	BitwiseORExpression 'leftExpression' ""|"" 'operator' BitwiseXORExpression 'rightExpression' {{BinaryExpression}}
-;
-BitwiseORExpressionNoIn 
-:	BitwiseXORExpressionNoIn 
-|	BitwiseORExpressionNoIn 'leftExpression' ""|"" 'operator' BitwiseXORExpressionNoIn 'rightExpression' {{BinaryExpression}}
 ;
 LogicalANDExpression 
 :	BitwiseORExpression 
 |	LogicalANDExpression 'leftExpression' ""&&"" 'operator' BitwiseORExpression 'rightExpression' {{BinaryExpression}}
 ;
-LogicalANDExpressionNoIn 
-:	BitwiseORExpressionNoIn 
-|	LogicalANDExpressionNoIn 'leftExpression' ""&&"" 'operator' BitwiseORExpressionNoIn 'rightExpression' {{BinaryExpression}}
-;
 LogicalORExpression 
 :	LogicalANDExpression 
 |	LogicalORExpression 'leftExpression' ""||"" 'operator' LogicalANDExpression 'rightExpression' {{BinaryExpression}}
-;
-LogicalORExpressionNoIn 
-:	LogicalANDExpressionNoIn 
-|	LogicalORExpressionNoIn 'leftExpression' ""||"" 'operator' LogicalANDExpressionNoIn 'rightExpression' {{BinaryExpression}}
 ;
 ConditionalExpression 
 :	LogicalORExpression 
 |	LogicalORExpression 'condition' ""?"" 'questionMarkToken' AssignmentExpression 'trueExpression' "":"" 'colonToken' AssignmentExpression 'falseExpression' {{}}
 ;
-ConditionalExpressionNoIn 
-:	LogicalORExpressionNoIn 
-|	LogicalORExpressionNoIn 'condition' ""?"" 'questionMarkToken' AssignmentExpressionNoIn 'trueExpression' "":"" 'colonToken' AssignmentExpressionNoIn 'falseExpression' {{ConditionalExpression}}
-;
 AssignmentExpression 
 :	ConditionalExpression 
-|	LeftHandSideExpression 'lhs' AssignmentOperator 'operator' AssignmentExpression 'rhs' {{}}
-;
-AssignmentExpressionNoIn 
-:	ConditionalExpressionNoIn 
-|	LeftHandSideExpression 'lhs' AssignmentOperator 'operator' AssignmentExpressionNoIn 'rhs' {{AssignmentExpression}}
+|	YieldExpression
+|	ArrowFunction
+|	LeftHandSideExpression 'lhs' AssignmentOperator 'operator' AssignmentExpression 'rhs' {{}}	##
 ;
 AssignmentOperator
-:	""=""
+:	""=""	#
 |	""*=""
 |	<slashEqual>
 |	""%=""
@@ -384,66 +488,173 @@ AssignmentOperator
 |	""^=""
 |	""|=""
 ;
+#AssignmentPattern
+#:	ObjectAssignmentPattern
+#|	ArrayAssignmentPattern
+#;
+#ObjectAssignmentPattern
+#:	""{"" 'leftBrace' <rightBrace> 'rightBrace'
+#|	""{"" 'leftBrace' AssignmentPropertyList <rightBrace> 'rightBrace'
+#|	""{"" 'leftBrace' AssignmentPropertyList "","" 'comma' <rightBrace> 'rightBrace'
+#;
+#ArrayAssignmentPattern
+#:	""["" 'leftBracket' Elisionopt AssignmentRestElementopt ""]"" 'rightBracket'
+#|	""["" 'leftBracket' AssignmentElementList ""]"" 'rightBracket'
+#|	""["" 'leftBracket' AssignmentElementList "","" 'comma' Elisionopt AssignmentRestElementopt ""]"" 'rightBracket'
+#;
+#AssignmentPropertyList
+#:	AssignmentProperty
+#|	AssignmentPropertyList AssignmentProperty
+#;
+#AssignmentElementList
+#:	AssignmentElisionElement
+#|	AssignmentElementList "","" 'comma' AssignmentElisionElement
+#;
+#AssignmentElisionElement
+#:	Elisionopt AssignmentElement
+#;
+#AssignmentProperty
+#:	IdentifierReference Initializeropt
+#|	PropertyName "":"" 'colonToken' AssignmentElement
+#;
+#AssignmentElement
+#:	DestructuringAssignmentTarget Initializeropt
+#;
+#AssignmentRestElementopt
+#:
+#|	AssignmentRestElement
+#;
+#AssignmentRestElement
+#:	""..."" DestructuringAssignmentTarget
+#;
+#DestructuringAssignmentTarget
+#:	LeftHandSideExpression
+#;
+Expressionopt
+:
+|	Expression
+;
 Expression
-:	AssignmentExpression 
+:	AssignmentExpression
 |	Expression 'expression' "","" 'comma' AssignmentExpression 'expression' {{CommaExpression}}
 ;
-ExpressionNoIn
-:	AssignmentExpressionNoIn 
-|	ExpressionNoIn 'expression' "","" 'comma' AssignmentExpressionNoIn 'expression' {{CommaExpression}}
-;
-#A.4 Statements
+#A.3 Statements
 Statement 
-:	Block 
+:	BlockStatement
 |	VariableStatement 
 |	EmptyStatement 
 |	ExpressionStatement 
 |	IfStatement 
-|	IterationStatement 
+|	BreakableStatement
 |	ContinueStatement 
 |	BreakStatement 
 |	ReturnStatement 
 |	WithStatement 
-|	LabelledStatement 
-|	SwitchStatement 
+|	LabelledStatement
 |	ThrowStatement 
 |	TryStatement 
 |	DebuggerStatement
 ;
+Declaration
+:	HoistableDeclaration
+|	ClassDeclaration
+|	LexicalDeclaration
+;
+HoistableDeclaration
+:	FunctionDeclaration
+|	GeneratorDeclaration
+;
+BreakableStatement
+:	IterationStatement 
+|	SwitchStatement
+;
+BlockStatement
+:	Block
+;
 Block 
-:	""{"" 'leftBrace' StatementListopt ""}"" 'rightBrace' {{BlockStatement}}
+:	""{"" 'leftBrace' StatementListopt <rightBrace> 'rightBrace' {{BlockStatement}}
+;
+StatementListopt
+:
+|	StatementList
 ;
 StatementList 
-:	Statement 'statement'
-|	StatementList Statement 'statement'
+:	StatementListItem 'statement'
+|	StatementList StatementListItem 'statement'
+;
+StatementListItem
+:	Statement
+|	LexicalDeclaration #Declaration
+;
+LexicalDeclaration
+:	LetOrConst 'typeToken' BindingList <semicolon> 'semicolon' {{}}
+;
+LetOrConst
+:	""let""
+|	""const""
+;
+BindingList
+:	LexicalBinding 'binding'
+|	BindingList "","" 'comma' LexicalBinding 'binding'
+;
+LexicalBinding
+:	Identifier 'variable' Initializeropt {{VariableDeclaration}}	##
+|	BindingPattern 'pattern' Initializer {{VariablePatternDeclaration}}
 ;
 VariableStatement 
-:	VarType 'varToken' VariableDeclarationList <semicolon> 'semicolon' {{}}
-;
-VarType
-:	""var""
-|	""const""
-|	""let""
+:	""var"" 'varToken' VariableDeclarationList <semicolon> 'semicolon' {{}}
 ;
 VariableDeclarationList 
 :	VariableDeclaration 'variable'
 |	VariableDeclarationList "","" 'comma' VariableDeclaration 'variable'
 ;
-VariableDeclarationListNoIn 
-:	VariableDeclarationNoIn 'variable'
-|	VariableDeclarationListNoIn "","" 'comma' VariableDeclarationNoIn 'variable'
-;
 VariableDeclaration 
-:	<identifier> 'variable' Initialiseropt {{VariableDeclaration}}	# mod
+:	Identifier 'variable' Initializeropt {{VariableDeclaration}}	##
+|	BindingPattern 'pattern' Initializer {{VariablePatternDeclaration}}
 ;
-VariableDeclarationNoIn 
-:	<identifier> 'variable' InitialiserNoInopt {{VariableDeclaration}}	# mod
+BindingPattern
+:	ObjectBindingPattern
+|	ArrayBindingPattern
 ;
-Initialiser 
-:	""="" 'equalsToken' AssignmentExpression 'value'
+ObjectBindingPattern
+:	""{"" 'leftBrace' <rightBrace> 'rightBrace' {{}}
+|	""{"" 'leftBrace' BindingPropertyList <rightBrace> 'rightBrace' {{}}
+|	""{"" 'leftBrace' BindingPropertyList "","" 'comma' <rightBrace> 'rightBrace' {{}}
 ;
-InitialiserNoIn 
-:	""="" 'equalsToken' AssignmentExpressionNoIn 'value'
+ArrayBindingPattern
+:	""["" 'leftBracket' Elisionopt BindingRestElementopt 'restElement' ""]"" 'rightBracket' {{}}
+|	""["" 'leftBracket' BindingElementList ""]"" 'rightBracket' {{}}
+|	""["" 'leftBracket' BindingElementList "","" 'comma' Elisionopt BindingRestElementopt 'restElement' ""]"" 'rightBracket' {{}}
+;
+BindingPropertyList
+:	BindingProperty 'property'
+|	BindingPropertyList "","" 'comma' BindingProperty 'property'
+;
+BindingElementList
+:	BindingElisionElement 
+|	BindingElementList "","" 'comma' BindingElisionElement 
+;
+BindingElisionElement
+:	Elisionopt BindingElement 'element'
+;
+BindingProperty
+:	SingleNameBinding
+|	PropertyName 'name' "":"" 'colonToken' BindingElement 'element' {{}}
+;
+BindingElement
+:	SingleNameBinding
+|	BindingPattern 'variable' Initializeropt {{VariableDeclaration}}
+;
+SingleNameBinding
+:	Identifier 'variable' Initializeropt {{VariableDeclaration}}	##
+;
+BindingRestElementopt
+:
+|	BindingRestElement
+;
+BindingRestElement
+:	""..."" 'ellipsis' Identifier 'variable' {{RestVariableDeclaration}}	##
+|	""..."" 'ellipsis' BindingPattern 'variable' {{RestVariableDeclaration}}
 ;
 EmptyStatement 
 :	<semicolon> 'semicolon' {{}}
@@ -452,37 +663,54 @@ ExpressionStatement
 :	Expression 'expression' <semicolon> 'semicolon' {{}}
 ;
 IfStatement 
-:	""if"" 'ifToken' ""("" 'leftParen' Expression 'expression' "")"" 'rightParen' Statement 'trueStatement' ""else"" 'elseToken' Statement 'elseStatement' {{}}
-|	""if"" 'ifToken' ""("" 'leftParen' Expression 'expression' "")"" 'rightParen' Statement 'trueStatement' {{}}
+:	""if"" 'ifToken' ""("" 'left' Expression 'expression' "")"" 'right' Statement 'trueStatement' ""else"" 'elseToken' Statement 'elseStatement' {{}}
+|	""if"" 'ifToken' ""("" 'left' Expression 'expression' "")"" 'right' Statement 'trueStatement' {{}}
 ;
 IterationStatement 
-:	""do"" 'doToken' Statement 'statement' ""while"" 'whileToken' ""("" 'leftParen' Expression 'expression' "")"" 'rightParen' <semicolon> 'semicolon' {{DoWhileStatement}}
-|	""while"" 'whileToken' ""("" 'leftParen' Expression 'expression' "")"" 'rightParen' Statement 'statement' {{WhileStatement}}
-|	""for"" 'forToken' ""("" 'leftParen' ExpressionNoInopt 'initialExpression'<semicolon> 'semicolon' Expressionopt 'condition'<semicolon> 'semicolon' Expressionopt 'iteratorExpression' "")"" 'rightParen' Statement 'statement' {{ForStatement}}
-|	""for"" 'forToken' ""("" 'leftParen' VarType 'varToken' VariableDeclarationListNoIn <semicolon> 'semicolon' Expressionopt 'condition' <semicolon> 'semicolon' Expressionopt 'iteratorExpression' "")"" 'rightParen' Statement 'statement' {{ForStatement}}
-|	""for"" 'forToken' ""("" 'leftParen' LeftHandSideExpression 'variable' ""in"" 'inToken' Expression 'expression' "")"" 'rightParen' Statement 'statement' {{ForInStatement}}
-|	""for"" 'forToken' ""("" 'leftParen' VarType 'varToken' VariableDeclarationNoIn 'variable' ""in"" 'inToken' Expression 'expression' "")"" 'rightParen' Statement  'statement' {{ForInStatement}}
-|	""for"" 'forToken' ""("" 'leftParen' LeftHandSideExpression 'variable' ""of"" 'ofToken' Expression 'expression' "")"" 'rightParen' Statement 'statement' {{ForOfStatement}}
-|	""for"" 'forToken' ""("" 'leftParen' VarType 'varToken' VariableDeclarationNoIn 'variable' ""of"" 'ofToken' Expression 'expression' "")"" 'rightParen' Statement  'statement' {{ForOfStatement}}
+:	""do"" 'doToken' Statement 'statement' ""while"" 'whileToken' ""("" 'left' Expression 'expression' "")"" 'right' <semicolon> 'semicolon' {{DoWhileStatement}}
+|	""while"" 'whileToken' ""("" 'left' Expression 'expression' "")"" 'right' Statement 'statement' {{WhileStatement}}
+|	""for"" 'forToken' ""("" 'left' Expressionopt 'initialExpression'<semicolon> 'semicolon' Expressionopt 'condition'<semicolon> 'semicolon' Expressionopt 'iteratorExpression' "")"" 'right' Statement 'statement' {{ForStatement}}
+|	""for"" 'forToken' ""("" 'left' ""var"" 'varToken' VariableDeclarationList <semicolon> 'semicolon' Expressionopt 'condition' <semicolon> 'semicolon' Expressionopt 'iteratorExpression' "")"" 'right' Statement 'statement' {{ForStatement}}
+|	""for"" 'forToken' ""("" 'left' LexicalDeclaration 'declaration' Expressionopt 'condition' <semicolon> 'semicolon' Expressionopt 'iteratorExpression' "")"" 'right' Statement 'statement' {{ForStatement}}
+|	""for"" 'forToken' ""("" 'left' LeftHandSideExpression 'variable' ""in"" 'inToken' Expression 'expression' "")"" 'right' Statement 'statement' {{ForInStatement}}
+|	""for"" 'forToken' ""("" 'left' ""var"" 'varToken' ForBinding 'variable' ""in"" 'inToken' Expression 'expression' "")"" 'right' Statement  'statement' {{ForInStatement}}
+|	""for"" 'forToken' ""("" 'left' ForDeclaration ""in"" 'inToken' Expression 'expression' "")"" 'right' Statement  'statement' {{ForInStatement}}
+|	""for"" 'forToken' ""("" 'left' LeftHandSideExpression 'variable' ""of"" 'ofToken' Expression 'expression' "")"" 'right' Statement 'statement' {{ForOfStatement}}
+|	""for"" 'forToken' ""("" 'left' ""var"" 'varToken' VariableDeclaration 'variable' ""of"" 'ofToken' Expression 'expression' "")"" 'right' Statement  'statement' {{ForOfStatement}}
+|	""for"" 'forToken' ""("" 'left' ForDeclaration ""of"" 'ofToken' Expression 'expression' "")"" 'right' Statement  'statement' {{ForOfStatement}}
+;
+ForDeclaration
+:	LetOrConst 'varToken' ForBinding 'variable'
+;
+ForBinding
+:	Identifier	##
+|	BindingPattern
 ;
 ContinueStatement 
-:	""continue"" 'continueToken' Identifieropt 'label' <semicolon> 'semicolon' {{}}
+:	""continue"" 'continueToken' CheckEOL Identifieropt 'label' <semicolon> 'semicolon' {{}}
 ;
 BreakStatement 
-:	""break"" 'breakToken' Identifieropt 'label' <semicolon> 'semicolon' {{}}
+:	""break"" 'breakToken' CheckEOL Identifieropt 'label' <semicolon> 'semicolon' {{}}
+;
+CheckEOL
+:	{self checkEOL. nil}
 ;
 ReturnStatement  
-:	""return"" 'returnToken' Expressionopt 'expression' <semicolon> 'semicolon' {{}}
+:	""return"" 'returnToken' CheckEOL Expressionopt 'expression' <semicolon> 'semicolon' {{}}
 ;
 WithStatement 
-:	""with"" 'withToken' ""("" 'leftParen' Expression 'expression' "")"" 'rightParen' Statement 'statement' {{}}
+:	""with"" 'withToken' ""("" 'left' Expression 'expression' "")"" 'right' Statement 'statement' {{}}
 ;
 SwitchStatement 
-:	""switch"" 'switchToken' ""("" 'leftParen' Expression 'expression' "")"" 'rightParen' CaseBlock {{}}
+:	""switch"" 'switchToken' ""("" 'left' Expression 'expression' "")"" 'right' CaseBlock {{}}
 ;
 CaseBlock 
-:	""{"" 'leftBrace' CaseClausesopt ""}"" 'rightBrace' 
-|	""{"" 'leftBrace' CaseClausesopt DefaultClause 'clause' CaseClausesopt ""}"" 'rightBrace'
+:	""{"" 'leftBrace' CaseClausesopt <rightBrace> 'rightBrace' 
+|	""{"" 'leftBrace' CaseClausesopt DefaultClause 'clause' CaseClausesopt <rightBrace> 'rightBrace'
+;
+CaseClausesopt
+:
+|	CaseClauses
 ;
 CaseClauses 
 :	CaseClause 'clause'
@@ -495,7 +723,11 @@ DefaultClause
 :	""default"" 'defaultToken' "":"" 'colonToken' StatementListopt  {{}}
 ;
 LabelledStatement 
-:	<identifier> 'label' "":"" 'colonToken' Statement 'statement' {{}}	# mod
+:	<identifier> 'label' "":"" 'colonToken' LabeledItem 'statement' {{}}	##
+;
+LabeledItem
+:	Statement
+#|	FunctionDeclaration	#Statement already does FunctionExpression
 ;
 ThrowStatement 
 :	""throw"" 'throwToken' Expression 'expression' <semicolon> 'semicolon' {{}}
@@ -506,86 +738,218 @@ TryStatement
 |	""try"" 'tryToken' Block 'tryBlock' Catch Finally {{}}
 ;
 Catch 
-:	""catch"" 'catchToken' ""("" 'leftParen' <identifier> 'exceptionType' "")"" 'rightParen' Block 'catchBlock'	# mod
+:	""catch"" 'catchToken' ""("" 'left' CatchParameter 'exceptionType' "")"" 'right' Block 'catchBlock'
 ;
 Finally 
 :	""finally"" 'finallyToken' Block 'finallyBlock'
 ;
+CatchParameter
+:	Identifier	##
+|	BindingPattern
+;
 DebuggerStatement 
 :	""debugger"" 'debuggerToken' <semicolon> 'semicolon' {{}}
 ;
-#A.5 Functions and Programs
-#FunctionDeclaration 
-#:	""function"" 'functionToken' <identifier> 'name' ""("" 'leftParen' FormalParameterListopt "")"" 'rightParen' ""{"" 'leftBrace' FunctionBody ""}"" 'rightBrace' {{FunctionDeclaration}}
-#;
+#A.4
+FunctionDeclaration 
+:	""function"" 'functionToken' Identifieropt 'name' ""("" 'left' FormalParameters "")"" 'right' ""{"" 'leftBrace' FunctionBody <rightBrace> 'rightBrace' {{Function}}	##
+;
 FunctionExpression 
-:	""function"" 'functionToken' Identifieropt 'name' ""("" 'leftParen' FormalParameterListopt "")"" 'rightParen' ""{"" 'leftBrace' FunctionBody ""}"" 'rightBrace' {{Function}}
+:	""function"" 'functionToken' Identifieropt 'name' ""("" 'left' FormalParameters "")"" 'right' ""{"" 'leftBrace' FunctionBody <rightBrace> 'rightBrace' {{Function}}	##
 ;
-FormalParameterList 
-:	<identifier> 'argument'	# mod
-|	FormalParameterList "","" 'comma' <identifier> 'argument'	# mod
+StrictFormalParameters
+:	FormalParameters
 ;
-FunctionBody 
-:	SourceElementsopt
-;
-Program  
-:	SourceElementsopt  {{File}}
-;
-SourceElements 
-:	SourceElement 'statement'
-|	SourceElements SourceElement 'statement'
-;
-SourceElement  
-:	Statement 
-#|	FunctionDeclaration
-;
-
-#Optional
-CaseClausesopt
-:
-|	CaseClauses
-;
-Expressionopt
-:
-|	Expression
-;
-ExpressionNoInopt
-:
-|	ExpressionNoIn
-;
-FormalParameterListopt
+FormalParameters
 :
 |	FormalParameterList
 ;
-Identifieropt
-:
-|	<identifier>
+FormalParameterList 
+:	FunctionRestParameter 'restParameter'
+|	FormalsList
+|	FormalsList "","" 'comma' FunctionRestParameter 'restParameter'
 ;
-Initialiseropt
-:
-|	Initialiser
+FormalsList
+:	FormalParameter 'parameter'
+| 	FormalsList "","" 'comma' FormalParameter 'parameter'
 ;
-InitialiserNoInopt
-:
-|	InitialiserNoIn
+FunctionRestParameter
+:	BindingRestElement
 ;
-SourceElementsopt
-:
-|	SourceElements
+FormalParameter
+:	BindingElement
 ;
-StatementListopt
+FunctionBody 
+:	FunctionStatementList
+;
+FunctionStatementList
+:	StatementListopt
+;
+ArrowFunction
+:	ArrowParameters ""=>"" 'arrow' ConciseBody {{}}
+;
+ArrowParameters
+:	Identifier 'parameter'	##
+|	CoverParenthesizedExpressionAndArrowParameterList
+;
+ConciseBody
+:	AssignmentExpression 'statement'
+|	""{"" 'leftBracket' FunctionBody <rightBrace> 'rightBracket'
+;
+MethodDefinition
+:	PropertyName 'name' ""("" 'left' StrictFormalParameters "")"" 'right' ""{"" 'leftBrace' FunctionBody <rightBrace> 'rightBrace' {{}}
+|	GeneratorMethod
+|	""get"" 'getToken' PropertyName 'name' ""("" 'left' "")"" 'right' ""{"" 'leftBrace' FunctionBody <rightBrace> 'rightBrace' {{GetMethodDefinition}}
+|	""set"" 'setToken' PropertyName 'name' ""("" 'left' PropertySetParameterList "")"" 'right' ""{"" 'leftBrace' FunctionBody <rightBrace> 'rightBrace' {{SetMethodDefinition}}
+;
+PropertySetParameterList
+:	FormalParameter 'parameter'
+;
+GeneratorMethod
+:	""*"" 'star' PropertyName 'name' ""("" 'left' StrictFormalParameters "")"" 'right' ""{"" 'leftBrace' GeneratorBody <rightBrace> 'rightBrace' {{GeneratorMethodDefinition}}
+;
+GeneratorDeclaration
+:	""function"" 'functionToken' ""*"" 'star' Identifieropt 'name' ""("" 'left' FormalParameters "")"" 'right' ""{"" 'leftBrace' GeneratorBody <rightBrace> 'rightBrace' {{GeneratorFunction}}	##
+;
+GeneratorExpression
+:	""function"" 'functionToken' ""*"" 'star' Identifieropt 'name' ""("" 'left' FormalParameters "")"" 'right' ""{"" 'leftBrace' GeneratorBody <rightBrace> 'rightBrace' {{GeneratorFunction}}	##
+;
+GeneratorBody
+:	FunctionBody
+;
+YieldExpression
+:	""yield"" 'yieldToken'  staropt AssignmentExpression 'expression' {{}}
+;
+staropt
 :
-|	StatementList
+|	""*"" 'star'
+;
+ClassDeclaration
+:	""class"" 'classToken' Identifieropt 'name' ClassTail {{ClassExpression}}	##
+;
+ClassExpression
+:	""class"" 'classToken' Identifieropt 'name' ClassTail {{}}	##
+;
+ClassTail
+:	ClassHeritageopt ""{"" 'leftBrace' ClassBodyopt <rightBrace> 'rightBrace'
+;
+ClassHeritageopt
+:
+|	ClassHeritage
+;
+ClassHeritage
+:	""extends"" 'extendsToken' LeftHandSideExpression 'superclass'
+;
+ClassBodyopt
+:
+|	ClassBody
+;
+ClassBody
+:	ClassElementList
+;
+ClassElementList
+:	ClassElement 'element'
+|	ClassElementList ClassElement 'element'
+;
+ClassElement
+:	MethodDefinition
+|	""static"" 'staticToken' MethodDefinition 'method' {{StaticMethodDefinition}}
+|	<semicolon> 'semicolon' {{EmptyStatement}}
+;
+#A.5
+Script
+:	ScriptBodyopt {{}}
+;
+ScriptBodyopt
+:
+|	ScriptBody
+;
+ScriptBody
+:	StatementList
+;
+Module
+:	ModuleBodyopt {{}}
+;
+ModuleBodyopt
+:
+|	ModuleBody
+;
+ModuleBody
+:	ModuleItemList
+;
+ModuleItemList
+:	ModuleItem 'item'
+|	ModuleItemList ModuleItem 'item'
+;
+ModuleItem
+:	ImportDeclaration
+|	ExportDeclaration
+|	StatementListItem
+;
+ImportDeclaration
+:	""import"" 'importToken' ImportClause FromClause <semicolon> 'semicolon' {{}}
+|	""import"" 'importToken' ModuleSpecifier <semicolon> 'semicolon' {{}}
+;
+ImportClause
+:	ImportedDefaultBinding 'import'
+|	NameSpaceImport 'import'
+|	NamedImports 'import'
+|	ImportedDefaultBinding 'import' "","" 'comma' NameSpaceImport 'import'
+|	ImportedDefaultBinding 'import' "","" 'comma' NamedImports 'import'
+;
+ImportedDefaultBinding
+:	ImportedBinding
+;
+NameSpaceImport
+:	""*"" 'star' ""as"" 'asToken' ImportedBinding 'import' {{}}
+;
+NamedImports
+:	""{"" 'leftBrace' <rightBrace> 'rightBrace' {{}}
+|	""{"" 'leftBrace' ImportsList <rightBrace> 'rightBrace' {{}}
+|	""{"" 'leftBrace' ImportsList "","" 'comma' <rightBrace> 'rightBrace' {{}}
+;
+FromClause
+:	""from"" 'fromToken' ModuleSpecifier 'from'
+;
+ImportsList
+:	ImportSpecifier 'specifier'
+|	ImportsList "","" 'comma' ImportSpecifier 'specifier'
+;
+ImportSpecifier
+:	ImportedBinding 'binding' {{}}
+|	<identifierName> 'name' ""as"" 'asToken' ImportedBinding 'binding' {{}}
+;
+ModuleSpecifier
+:	StringLiteral 'import'
+;
+ImportedBinding
+:	Identifier	##
+;
+ExportDeclaration
+:	""export"" 'exportToken' ""*"" 'star' FromClause <semicolon> 'semicolon' {{}}
+|	""export"" 'exportToken' ExportClause FromClause <semicolon> 'semicolon' {{}}
+|	""export"" 'exportToken' ExportClause <semicolon> 'semicolon' {{}}
+|	""export"" 'exportToken' VariableStatement 'statement' {{}}
+|	""export"" 'exportToken' Declaration 'declaration' {{}}
+#|	""export"" 'exportToken' ""default"" 'defaultToken' HoistableDeclaration 'declaration' {{}}	#handled by AssignmentExpression version below
+#|	""export"" 'exportToken' ""default"" 'defaultToken' ClassDeclaration 'declaration' {{}}	#handled by AssignmentExpression version below
+|	""export"" 'exportToken' ""default"" 'defaultToken' AssignmentExpression 'statement'<semicolon> 'semicolon' {{}}
+;
+ExportClause
+:	""{"" 'leftBrace' <rightBrace> 'rightBrace'
+|	""{"" 'leftBrace' ExportsList <rightBrace> 'rightBrace'
+|	""{"" 'leftBrace' ExportsList "","" 'comma' <rightBrace> 'rightBrace'
+;
+ExportsList
+:	ExportSpecifier 'specifier'
+|	ExportsList "","" 'comma' ExportSpecifier 'specifier'
+;
+ExportSpecifier
+:	<identifierName> 'name' {{}}
+|	<identifierName> 'name' ""as"" 'asToken' <identifierName> 'as' {{}}
 ;
 
 
-Literal
-:	NullLiteral 'value' {{NullLiteral}}
-|	BooleanLiteral 'value' {{BooleanLiteral}}
-|	NumericLiteral 'value' {{NumericLiteral}}
-|	StringLiteral 'value' {{StringLiteral}}
-|	RegularExpressionLiteral 'value' {{RegularExpressionLiteral}}
-;
 NullLiteral
 :	""null""
 ;
@@ -593,13 +957,6 @@ BooleanLiteral
 :	""true""
 |	""false""
 ;
-
-#Identifier
-#:	IdentifierName
-#;
-#IdentifierName
-#:	<identifierName>
-#;
 StringLiteral
 :	<string>
 ;
@@ -607,5 +964,5 @@ NumericLiteral
 :	<numeric>
 ;
 RegularExpressionLiteral
-:	<regular_expression>
+:	<regular_expression> 'value' {{RegularExpressionLiteral}}
 ;"

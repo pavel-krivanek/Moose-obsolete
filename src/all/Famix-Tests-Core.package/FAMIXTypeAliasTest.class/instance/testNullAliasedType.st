@@ -1,6 +1,8 @@
 tests
 testNullAliasedType
 	| alias |
-	alias := FAMIXTypeAlias new name: 'Alias'.
+	alias := self actualClass new
+		name: 'Alias';
+		yourself.
 	self assert: alias superclassHierarchy isEmpty.
-	self assert: alias subclassHierarchy isEmpty.
+	self assert: alias subclassHierarchy isEmpty

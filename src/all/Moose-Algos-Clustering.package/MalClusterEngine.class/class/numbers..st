@@ -1,7 +1,5 @@
 examples
 numbers: aCollection
-	"ClusterEngine numbers: #(1 2 9 0 7 2 4 3)"
-	
-	^(MalClusterEngine
-		with: aCollection
-		using: [:a :b | (a - b) * (a - b)]) averageLinkage elements
+	"MalClusterEngine numbers: #(1 2 9 0 7 2 4 3)"
+
+	^ (self with: aCollection using: [ :a :b | (a - b) * (a - b) ]) averageLinkage elements

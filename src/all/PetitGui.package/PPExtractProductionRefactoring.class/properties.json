@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PhilippeBack 5/29/2017 12:08",
+	"super" : "RBExtractMethodRefactoring",
+	"category" : "PetitGui-Refactoring",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"targetProduction"
+	],
+	"name" : "PPExtractProductionRefactoring",
+	"type" : "normal"
+}

@@ -1,7 +1,7 @@
-basic
+tests
 testSourceText
 	| comment |
-	comment := FAMIXComment new.
+	comment := self actualClass new.
 	self assert: comment sourceText isEmpty.
 	comment content: 'something'.
 	self assert: comment sourceText equals: 'something'

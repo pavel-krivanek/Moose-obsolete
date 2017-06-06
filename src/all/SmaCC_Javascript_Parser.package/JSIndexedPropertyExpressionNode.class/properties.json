@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"expression",
+		"expressions",
 		"leftBracket",
 		"fieldExpression",
 		"rightBracket"

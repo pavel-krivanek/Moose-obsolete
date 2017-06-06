@@ -18,4 +18,5 @@ blacklist
 	RTMondrianTest >> #testSourceError.
 	RTObject class >> #gtExamplesFactory.
 	TRDarkTheme >> #trachelCanvasColor.
+	RTMondrianTest >> #testNodesError.
 	 }

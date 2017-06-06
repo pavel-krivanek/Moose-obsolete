@@ -1,1 +1,0 @@
-Tests the Object extensions related to the traverser

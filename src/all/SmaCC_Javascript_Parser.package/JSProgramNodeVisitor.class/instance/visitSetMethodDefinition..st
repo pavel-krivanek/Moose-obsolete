@@ -1,0 +1,3 @@
+generated
+visitSetMethodDefinition: aSetMethodDefinition
+	^ self visitMethodDefinition: aSetMethodDefinition

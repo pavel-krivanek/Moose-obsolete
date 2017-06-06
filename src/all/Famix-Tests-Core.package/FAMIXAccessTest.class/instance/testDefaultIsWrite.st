@@ -1,3 +1,3 @@
 tests
 testDefaultIsWrite
-	self assert: FAMIXAccess new isWrite not
+	self assert: self actualClass new isWrite not

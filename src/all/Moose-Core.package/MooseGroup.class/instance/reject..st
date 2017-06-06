@@ -1,7 +1,3 @@
-public interface
-reject: aBlock 
-	 
-	| resultCollection result | 
-	resultCollection := self entities reject: aBlock. 
-	result := self species withAll: resultCollection. 
-	^result
+enumerating
+reject: aBlock
+	^ self species withAll: (self entities reject: aBlock)

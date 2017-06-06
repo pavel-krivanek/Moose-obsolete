@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#tryBlock #catchBlock #finallyBlock)
+	^ #(#tryBlock #exceptionType #catchBlock #finallyBlock)

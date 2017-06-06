@@ -1,0 +1,3 @@
+generated
+import
+	^ import

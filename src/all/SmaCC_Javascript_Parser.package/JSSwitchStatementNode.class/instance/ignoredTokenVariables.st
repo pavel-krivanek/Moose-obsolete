@@ -1,3 +1,3 @@
 generated
 ignoredTokenVariables
-	^ #(#leftParen #rightParen #leftBrace #rightBrace)
+	^ #(#left #right #leftBrace #rightBrace)

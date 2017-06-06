@@ -1,3 +1,7 @@
 tests
 testIsInterface
-	self assert: (FAMIXClass new isInterface: true) isInterface
+	self
+		assert:
+			(self actualClass new
+				isInterface: true;
+				isInterface)

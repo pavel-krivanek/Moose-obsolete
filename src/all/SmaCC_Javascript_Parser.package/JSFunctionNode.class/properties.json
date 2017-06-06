@@ -8,8 +8,11 @@
 	"instvars" : [
 		"functionToken",
 		"name",
-		"arguments",
+		"left",
+		"restParameter",
+		"parameters",
 		"commas",
+		"right",
 		"leftBrace",
 		"statements",
 		"rightBrace"

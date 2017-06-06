@@ -1,7 +1,3 @@
-adding/removing
-collect: aBlock 
-
-	| resultCollection result | 
-	resultCollection := self entities collect: aBlock. 
-	result := MooseGroup withAll: resultCollection. 
-	^ result
+enumerating
+collect: aBlock
+	^ self species withAll: (self entities collect: aBlock)

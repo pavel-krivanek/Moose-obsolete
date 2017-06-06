@@ -1,21 +1,27 @@
 generated
 scanForTokenX1X3
-	currentCharacter == $/
-		ifTrue:
-			[ ^ self scanForTokenX1X2 ].
-	currentCharacter == $=
+	currentCharacter == $\
+		ifTrue: [ ^ self scan6 ].
+	currentCharacter == $]
+		ifTrue: [ ^ self recordAndReportMatch: #(25) ].
+	currentCharacter == $^
+		ifTrue: [ ^ self scan31 ].
+	currentCharacter == $`
+		ifTrue: [ ^ self scan32 ].
+	currentCharacter == ${
+		ifTrue: [ ^ self recordAndReportMatch: #(28) ].
+	currentCharacter == $|
+		ifTrue: [ ^ self scan40 ].
+	currentCharacter == $}
 		ifTrue:
 			[ ^ self scanForTokenX1X1 ].
-	currentCharacter == $[
-		ifTrue: [ ^ self scan15 ].
-	currentCharacter == $\
-		ifTrue: [ ^ self scan16 ].
-	(currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: Character newPage)
-				or: [ (currentCharacter between: (Character value: 14) and: $))
-						or: [ (currentCharacter between: $+ and: $.)
-								or: [ (currentCharacter between: $0 and: $<)
-										or: [ (currentCharacter between: $> and: $Z)
-												or: [ currentCharacter >= $] ] ] ] ] ] ])
-		ifTrue: [ ^ self scan11 ].
+	currentCharacter == $~
+		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+	currentCharacter isDigit
+		ifTrue: [ ^ self scan27 ].
+	currentCharacter isSeparator
+		ifTrue:
+			[ ^ self scanForTokenX1X2 ].
+	(currentCharacter isLetter or: [ '$_' includes: currentCharacter ])
+		ifTrue: [ ^ self scan5 ].
 	^ self reportLastMatch

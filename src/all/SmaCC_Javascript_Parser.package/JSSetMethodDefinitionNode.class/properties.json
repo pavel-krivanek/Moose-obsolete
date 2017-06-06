@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "JSMethodDefinitionNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"setToken"
+	],
+	"name" : "JSSetMethodDefinitionNode",
+	"type" : "normal"
+}

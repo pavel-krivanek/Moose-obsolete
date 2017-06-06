@@ -1,3 +1,3 @@
 tests
 testDefaultIsRead
-	self assert: FAMIXAccess new isRead not
+	self assert: self actualClass new isRead not

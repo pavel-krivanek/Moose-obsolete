@@ -3,7 +3,6 @@
 	"super" : "MooseAbstractGroup",
 	"category" : "Moose-Core",
 	"classinstvars" : [
-		"mostRecentOwner",
 		"rootModel",
 		"metaTower"
 	],

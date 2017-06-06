@@ -11,7 +11,7 @@
 	"instvars" : [
 		"connectToElements",
 		"shape",
-		"reciber"
+		"receiver"
 	],
 	"name" : "RTShowEdge",
 	"type" : "normal"

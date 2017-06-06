@@ -1,4 +1,3 @@
 clustering
 averageLinkage
-	
-	^self performClustering: #averageLinkage
+	^ self performClustering: #averageLinkage

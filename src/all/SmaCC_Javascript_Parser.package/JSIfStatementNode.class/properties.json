@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"ifToken",
-		"leftParen",
+		"left",
 		"expression",
-		"rightParen",
+		"right",
 		"trueStatement",
 		"elseToken",
 		"elseStatement"

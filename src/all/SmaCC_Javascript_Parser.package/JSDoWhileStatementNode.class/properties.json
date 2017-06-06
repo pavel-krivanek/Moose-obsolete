@@ -9,9 +9,9 @@
 		"doToken",
 		"statement",
 		"whileToken",
-		"leftParen",
+		"left",
 		"expression",
-		"rightParen",
+		"right",
 		"semicolon"
 	],
 	"name" : "JSDoWhileStatementNode",

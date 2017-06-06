@@ -1,4 +1,4 @@
-as yet unclassified
+spec
 test_s_l_block_indented_sequence
 	context YAMLContext: #'block-in'.
 	context YAMLM: 3.

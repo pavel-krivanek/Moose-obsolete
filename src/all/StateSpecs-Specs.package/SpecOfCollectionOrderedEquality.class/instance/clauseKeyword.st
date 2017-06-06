@@ -1,3 +1,3 @@
 displaying
 clauseKeyword
-	^'equal with same order to'
+	^'equal in order to'

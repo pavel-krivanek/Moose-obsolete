@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "TDependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#parentSelectors})",
+	"classtraitcomposition" : "TDependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes})",
 	"classvars" : [ ],
 	"instvars" : [
 		"#element => FMOne type: #FAMIXSourcedEntity opposite: #sourceAnchor"

@@ -1,11 +1,11 @@
 SystemOrganization addCategory: #Trachel!
 SystemOrganization addCategory: 'Trachel-Callbacks'!
 SystemOrganization addCategory: 'Trachel-Core'!
+SystemOrganization addCategory: 'Trachel-Core-Theme'!
 SystemOrganization addCategory: 'Trachel-Events'!
 SystemOrganization addCategory: 'Trachel-Examples'!
 SystemOrganization addCategory: 'Trachel-MorphSpecific'!
 SystemOrganization addCategory: 'Trachel-Shapes'!
 SystemOrganization addCategory: 'Trachel-ShapesForArrow'!
 SystemOrganization addCategory: 'Trachel-Tests'!
-SystemOrganization addCategory: 'Trachel-Theme'!
 SystemOrganization addCategory: 'Trachel-Viva'!

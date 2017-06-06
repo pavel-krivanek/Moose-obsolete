@@ -1,4 +1,4 @@
-as yet unclassified
+spec
 l_block_sequence
 	^ ( s_indent "(n+m)", c_l_block_seq_entry"(n+m)" ==> #second) plus
 		"/* For some fixed auto_detected m > 0 */ "

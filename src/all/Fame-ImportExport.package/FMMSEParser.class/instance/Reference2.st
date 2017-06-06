@@ -7,7 +7,7 @@ Reference2
 	self tOPEN ifFalse: [ ^ self backtrack: pos ].
 	self tREF ifFalse: [ ^ self backtrack: pos ].
 	n := self tFULLNAME.
-	nil ~~ n ifFalse: [ ^ self backtrack: pos ].
+	n ifNil: [ ^ self backtrack: pos ].
 	client referenceName: n.
 	self tCLOSE ifFalse: [ ^ self syntaxError ].
 	self tWHITESPACE.

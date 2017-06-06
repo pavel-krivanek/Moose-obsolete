@@ -28,7 +28,7 @@ productionsIn: composite
 			on: $r
 			entitled: 'Rename (r)';
 		selectionAct: [ :list :class | 
-					PPRefactoringUtils new performRefactoring: (PPRemoveProdcutionRefactoring onClass: class production: list selection).
+					PPRefactoringUtils new performRefactoring: (PPRemoveProductionRefactoring onClass: class production: list selection).
 					list pane browser update ]
 			on: $x
 			entitled: 'Remove (x)';

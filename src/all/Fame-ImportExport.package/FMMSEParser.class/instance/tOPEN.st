@@ -1,9 +1,9 @@
 tokens
 tOPEN
 	"Matches opening parenthesis (returns boolean)."
-	^ $( == char 
-		ifTrue: 
-			[ self
+
+	^ $( == char
+		ifTrue: [ self
 				next;
 				tWHITESPACE.
 			true ]

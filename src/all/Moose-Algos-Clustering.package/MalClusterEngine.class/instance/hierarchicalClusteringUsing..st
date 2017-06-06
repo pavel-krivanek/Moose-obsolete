@@ -1,4 +1,3 @@
 private - deprecated
 hierarchicalClusteringUsing: selector
-	
-	^self performClustering: selector
+	^ self performClustering: selector

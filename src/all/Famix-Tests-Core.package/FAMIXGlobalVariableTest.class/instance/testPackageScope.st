@@ -1,3 +1,3 @@
 tests
 testPackageScope 
-	self assert: FAMIXGlobalVariable new packageScope isNil
+	self assert: self actualClass new packageScope isNil

@@ -1,9 +1,9 @@
 generated
 scan13
-	[ self recordMatch: #(89).
+	self recordMatch: #(40).
 	self step.
-	currentCharacter == $\
-		ifTrue: [ ^ self scan14 ].
-	currentCharacter isAlphaNumeric
-		or: [ '$_' includes: currentCharacter ] ] whileTrue.
+	currentCharacter == $+
+		ifTrue: [ ^ self recordAndReportMatch: #(45) ].
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(80) ].
 	^ self reportLastMatch

@@ -1,4 +1,3 @@
 accessing
 dendrogram
-	
-	^dendrogram ifNil: [dendrogram := self averageLinkage]
+	^ dendrogram ifNil: [ dendrogram := self averageLinkage ]

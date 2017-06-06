@@ -1,4 +1,4 @@
-indentation
+spec
 aligns
 	^ [ :context | 
 		context indentStack isEmpty ifFalse: [ 

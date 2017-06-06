@@ -1,0 +1,3 @@
+generated
+visitNewTargetExpression: aNewTargetExpression
+	^ self visitExpression: aNewTargetExpression

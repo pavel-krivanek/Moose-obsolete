@@ -1,3 +1,0 @@
-*fame-util
-isAlphaNumeric
-	^false

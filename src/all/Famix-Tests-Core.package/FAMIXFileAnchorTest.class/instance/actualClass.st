@@ -1,0 +1,3 @@
+helpers
+actualClass
+	^ FAMIXFileAnchor

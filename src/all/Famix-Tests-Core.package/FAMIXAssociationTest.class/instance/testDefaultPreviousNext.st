@@ -1,6 +1,6 @@
 tests
 testDefaultPreviousNext
 	| association |
-	association := FAMIXAssociation new.
+	association := self actualClass new.
 	self assert: association previous isNil.
 	self assert: association next isNil

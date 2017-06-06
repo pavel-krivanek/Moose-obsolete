@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#initialExpression #condition #iteratorExpression #statement)
+	^ #(#initialExpression #condition #iteratorExpression #statement #declaration)

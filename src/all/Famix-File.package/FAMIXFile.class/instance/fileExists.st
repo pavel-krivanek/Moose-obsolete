@@ -1,4 +1,4 @@
 testing
 fileExists
-	name isNil ifTrue: [ ^ false ].
+	name ifNil: [ ^ false ].
 	^ self fileReference exists

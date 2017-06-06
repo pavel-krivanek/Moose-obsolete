@@ -1,7 +1,7 @@
 tests
 testStructuresWithDeclaredType
 	| type structure |
-	type := FAMIXType new.
+	type := self actualClass new.
 	structure := FAMIXStructuralEntity new.
 	structure declaredType: type.
 	self assert: structure declaredType == type.

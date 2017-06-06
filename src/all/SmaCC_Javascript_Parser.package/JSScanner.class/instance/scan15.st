@@ -1,13 +1,12 @@
 generated
 scan15
-	[ self step.
-	currentCharacter == $\
+	self recordMatch: #(44).
+	self step.
+	currentCharacter == $.
 		ifTrue: [ self step.
-			(currentCharacter <= Character tab
-				or: [ (currentCharacter between: Character pageUp and: Character newPage)
-						or: [ currentCharacter >= (Character value: 14) ] ])
-				ifTrue: [ ^ self scan15 ].
+			currentCharacter == $.
+				ifTrue: [ ^ self recordAndReportMatch: #(26) ].
 			^ self reportLastMatch ].
-	currentCharacter == $]
-		ifTrue: [ ^ self scan11 ].
-	true ] whileTrue
+	currentCharacter isDigit
+		ifTrue: [ ^ self scan16 ].
+	^ self reportLastMatch

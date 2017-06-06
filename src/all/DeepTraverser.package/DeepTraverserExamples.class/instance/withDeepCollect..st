@@ -1,9 +1,0 @@
-examples-extensions
-withDeepCollect: graph
-	<gtExample>
-	<dependsOn: #graph1>
-	
-	| result |
-	result := 1 
-		withDeepCollect: [ :each | self nextElementsFor: each inGraph: graph ].
-	self assert: result = #( 1 2 3 ) asOrderedCollection
