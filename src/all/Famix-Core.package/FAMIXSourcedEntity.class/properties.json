@@ -6,16 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-<<<<<<< HEAD
 		"#sourceAnchor => FMOne type: #FAMIXSourceAnchor opposite: #element",
-		"#sourceLanguage",
 		"#comments => FMMany type: #FAMIXComment opposite: #container",
 		"#declaredSourceLanguage => FMOne type: #FAMIXSourceLanguage opposite: #sourcedEntities"
-=======
-		"sourceAnchor",
-		"comments",
-		"declaredSourceLanguage"
->>>>>>> master
 	],
 	"name" : "FAMIXSourcedEntity",
 	"type" : "normal"
