@@ -2,7 +2,7 @@ testing-productions
 testExtractProduction
 	self
 		performRefactoring:
-			(PPExtractProdcutionRefactoring
+			(PPExtractProductionRefactoring
 				onClass: PPArithmeticParser
 				production: #addition
 				interval: (36 to: 60)

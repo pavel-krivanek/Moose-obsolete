@@ -7,7 +7,7 @@ browseSourceOn: aBrowser
 		smalltalkClass: [ self selectedClass ];
 		act: [ :node |
 			| refactoring |
-			refactoring := PPDefineProdcutionRefactoring 	
+			refactoring := PPDefineProductionRefactoring 	
 				onClass: self selectedClass 
 				source: node text asString
 				protocols: #(production).

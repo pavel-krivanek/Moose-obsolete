@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "TRPlainColorTheme",
-	"category" : "Trachel-Theme",
+	"category" : "Trachel-Core-Theme",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

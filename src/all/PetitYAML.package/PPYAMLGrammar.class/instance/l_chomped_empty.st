@@ -1,4 +1,4 @@
-as yet unclassified
+spec
 l_chomped_empty 	
 	^ 
 	(l_strip_empty if: [ :context | context YAMLChomp = #strip ]) /

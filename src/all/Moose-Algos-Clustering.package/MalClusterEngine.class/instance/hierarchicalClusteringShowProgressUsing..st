@@ -1,4 +1,4 @@
 private - deprecated
 hierarchicalClusteringShowProgressUsing: selector
-	
-	^self performClusteringShowProgress: selector
+	self deprecated: 'Uses #hierarchicalClusteringUsing: instead'.
+	^ self hierarchicalClusteringUsing: selector

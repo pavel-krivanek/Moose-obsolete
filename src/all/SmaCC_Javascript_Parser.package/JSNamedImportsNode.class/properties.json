@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "JSProgramNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBrace",
+		"rightBrace",
+		"specifiers",
+		"commas"
+	],
+	"name" : "JSNamedImportsNode",
+	"type" : "normal"
+}

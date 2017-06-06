@@ -1,4 +1,3 @@
 clustering
 singleLinkage
-	
-	^self performClustering: #singleLinkage
+	^ self performClustering: #singleLinkage

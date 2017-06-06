@@ -1,3 +1,3 @@
 testing
 atEnd
-	^nil == char
+	^ char isNil

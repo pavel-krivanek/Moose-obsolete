@@ -1,4 +1,4 @@
 testing
 includes: anItem 
-	anItem isNil ifTrue: [^ false].
+	anItem ifNil: [^ false].
 	^ self includesID: anItem mooseID

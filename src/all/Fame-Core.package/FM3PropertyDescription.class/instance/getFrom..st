@@ -4,8 +4,6 @@ getFrom: element
 
 	| result |
 	result := element mmGetProperty: self.
-	^self isMultivalued 
+	^ self isMultivalued
 		ifTrue: [ result ]
-		ifFalse: [ result isNil 
-			ifTrue: [ Array new ]
-			ifFalse: [ Array with: result ] ].
+		ifFalse: [ result ifNil: [ Array new ] ifNotNil: [ Array with: result ] ]

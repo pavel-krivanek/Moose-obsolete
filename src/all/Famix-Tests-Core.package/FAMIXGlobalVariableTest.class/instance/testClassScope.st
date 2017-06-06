@@ -1,3 +1,3 @@
 tests
 testClassScope 
-	self assert: FAMIXGlobalVariable new typeScope isNil
+	self assert: self actualClass new typeScope isNil

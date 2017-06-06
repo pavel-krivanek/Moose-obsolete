@@ -6,4 +6,4 @@ trachelCanvasColor
 	
 	However, it does not fit the Pharo Dark theme
 	"
-	^ Pharo3DarkTheme baseColor
+	^ Color veryDarkGray

@@ -4,6 +4,6 @@ testHandlingOfWrongSourceAnchor
 	and this test checks that Moose can handle this situation"
 
 	| function |
-	function := FAMIXFunction new.
+	function := self actualClass new.
 	function sourceAnchor: (FAMIXSourceTextAnchor new source: 'pathtosomefile').
 	self assert: function sourceText equals: 'pathtosomefile'

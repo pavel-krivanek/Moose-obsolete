@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "JSProgramNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"binding",
+		"name",
+		"asToken"
+	],
+	"name" : "JSImportSpecifierNode",
+	"type" : "normal"
+}

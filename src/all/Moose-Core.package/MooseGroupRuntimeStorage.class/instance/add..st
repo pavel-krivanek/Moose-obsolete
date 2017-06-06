@@ -1,5 +1,5 @@
 adding
 add: anElement 
 	self privateAdd: anElement.
-	self updateCacheFor: anElement.
+	self updateCacheOnAddingOf: anElement.
 	^anElement

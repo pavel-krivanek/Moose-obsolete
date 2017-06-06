@@ -1,8 +1,8 @@
 generated
 scan16
+	[ self recordMatch: #(101).
 	self step.
-	(currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: Character newPage)
-				or: [ currentCharacter >= (Character value: 14) ] ])
-		ifTrue: [ ^ self scan11 ].
+	currentCharacter isDigit ] whileTrue.
+	('Ee' includes: currentCharacter)
+		ifTrue: [ ^ self scan17 ].
 	^ self reportLastMatch

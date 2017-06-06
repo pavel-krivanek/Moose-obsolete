@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#continueToken #label)
+	^ #(#continueToken)

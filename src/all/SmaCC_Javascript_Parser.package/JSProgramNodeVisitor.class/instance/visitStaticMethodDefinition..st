@@ -1,0 +1,3 @@
+generated
+visitStaticMethodDefinition: aStaticMethodDefinition
+	^ self visitProgram: aStaticMethodDefinition

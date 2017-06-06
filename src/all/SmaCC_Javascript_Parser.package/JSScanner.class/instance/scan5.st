@@ -1,22 +1,9 @@
 generated
 scan5
+	[ self recordMatch: #(97 98).
 	self step.
-	currentCharacter == $u
-		ifTrue: [ self step.
-			(currentCharacter isDigit
-				or: [ (currentCharacter between: $A and: $F)
-						or: [ currentCharacter between: $a and: $f ] ])
-				ifTrue: [ self step.
-					(currentCharacter isDigit
-						or: [ (currentCharacter between: $A and: $F)
-								or: [ currentCharacter between: $a and: $f ] ])
-						ifTrue: [ self step.
-							(currentCharacter isDigit
-								or: [ (currentCharacter between: $A and: $F)
-										or: [ currentCharacter between: $a and: $f ] ])
-								ifTrue: [ self step.
-									(currentCharacter isDigit
-										or: [ (currentCharacter between: $A and: $F)
-												or: [ currentCharacter between: $a and: $f ] ])
-										ifTrue: [ ^ self scan4 ] ] ] ] ].
+	currentCharacter == $\
+		ifTrue: [ ^ self scan6 ].
+	currentCharacter isAlphaNumeric
+		or: [ '$_' includes: currentCharacter ] ] whileTrue.
 	^ self reportLastMatch

@@ -1,0 +1,24 @@
+{
+	"commentStamp" : "",
+	"super" : "JSProgramNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exportToken",
+		"star",
+		"fromToken",
+		"from",
+		"semicolon",
+		"leftBrace",
+		"rightBrace",
+		"specifiers",
+		"commas",
+		"statement",
+		"declaration",
+		"defaultToken"
+	],
+	"name" : "JSExportDeclarationNode",
+	"type" : "normal"
+}

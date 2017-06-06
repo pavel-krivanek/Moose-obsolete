@@ -6,7 +6,7 @@ Element
 	pos := self pos.
 	self tOPEN ifFalse: [ ^ self backtrack: pos ].
 	n := self tFULLNAME.
-	nil ~~ n ifFalse: [ ^ self backtrack: pos ].
+	n ifNil: [ ^ self backtrack: pos ].
 	client beginElement: n.
 	self Serial.
 	[ self Attribute ] whileTrue.

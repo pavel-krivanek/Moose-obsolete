@@ -9,9 +9,9 @@
 		"tryToken",
 		"tryBlock",
 		"catchToken",
-		"leftParen",
+		"left",
 		"exceptionType",
-		"rightParen",
+		"right",
 		"catchBlock",
 		"finallyToken",
 		"finallyBlock"

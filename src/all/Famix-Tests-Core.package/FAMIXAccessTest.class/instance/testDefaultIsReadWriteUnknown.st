@@ -1,3 +1,3 @@
 tests
 testDefaultIsReadWriteUnknown
-	self assert: FAMIXAccess new isReadWriteUnknown
+	self assert: self actualClass new isReadWriteUnknown

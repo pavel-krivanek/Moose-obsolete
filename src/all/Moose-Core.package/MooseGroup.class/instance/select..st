@@ -1,7 +1,3 @@
-public interface
-select: aBlock 
-	 
-	| resultCollection result | 
-	resultCollection := self entities select: aBlock. 
-	result := self species withAll: resultCollection. 
-	^result
+enumerating
+select: aBlock
+	^ self species withAll: (self entities select: aBlock)

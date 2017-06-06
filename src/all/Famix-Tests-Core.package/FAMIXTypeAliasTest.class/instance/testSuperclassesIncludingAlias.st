@@ -6,9 +6,9 @@ testSuperclassesIncludingAlias
 	FAMIXInheritance new
 		superclass: supertype;
 		subclass: type.
-	alias := FAMIXTypeAlias new name: 'Alias'.
+	alias := self actualClass new name: 'Alias'.
 	alias aliasedType: type.
-	subalias := FAMIXType new name: 'SubType'.
+	subalias := self actualClass new name: 'SubType'.
 	FAMIXInheritance new
 		subclass: subalias;
 		superclass: alias.

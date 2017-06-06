@@ -1,4 +1,4 @@
-as yet unclassified
+spec
 autoDetect: context blockHeader: blockHeader
 	| retval position |
 	position := context position.

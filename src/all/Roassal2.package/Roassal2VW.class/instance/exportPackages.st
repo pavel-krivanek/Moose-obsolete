@@ -5,7 +5,7 @@ exportPackages
 	"
 	"This code export all these packages to my workspace in order to export/import this code"
 	| dirpath exporter |
-	dirpath := 'C:\Users\azazael\Downloads\'.
+	dirpath := ''.
 	exporter := RoassalExporter new
 		to: dirpath namespace: self namespace.
 	exporter blacklist: self blacklist.

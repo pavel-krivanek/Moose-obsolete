@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "JSVariableDeclarationNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ellipsis"
+	],
+	"name" : "JSRestVariableDeclarationNode",
+	"type" : "normal"
+}

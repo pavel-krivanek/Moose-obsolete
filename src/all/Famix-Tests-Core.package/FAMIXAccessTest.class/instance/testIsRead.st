@@ -1,4 +1,4 @@
 tests
 testIsRead
-	self assert: (FAMIXAccess new isWrite: false) isRead.
-	self assert: (FAMIXAccess new isWrite: true) isRead not
+	self assert: (self actualClass new isWrite: false) isRead.
+	self assert: (self actualClass new isWrite: true) isRead not

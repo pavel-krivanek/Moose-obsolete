@@ -1,13 +1,22 @@
 generated
 scan6
-	[ self step.
-	currentCharacter == $'
-		ifTrue: [ ^ self scan7 ].
-	currentCharacter == $\
-		ifTrue: [ ^ self scan8 ].
-	currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: Character newPage)
-				or: [ (currentCharacter between: (Character value: 14) and: $&)
-						or: [ (currentCharacter between: $( and: $[)
-								or: [ currentCharacter >= $] ] ] ] ] ] whileTrue.
+	self step.
+	currentCharacter == $u
+		ifTrue: [ self step.
+			(currentCharacter isDigit
+				or: [ (currentCharacter between: $A and: $F)
+						or: [ currentCharacter between: $a and: $f ] ])
+				ifTrue: [ self step.
+					(currentCharacter isDigit
+						or: [ (currentCharacter between: $A and: $F)
+								or: [ currentCharacter between: $a and: $f ] ])
+						ifTrue: [ self step.
+							(currentCharacter isDigit
+								or: [ (currentCharacter between: $A and: $F)
+										or: [ currentCharacter between: $a and: $f ] ])
+								ifTrue: [ self step.
+									(currentCharacter isDigit
+										or: [ (currentCharacter between: $A and: $F)
+												or: [ currentCharacter between: $a and: $f ] ])
+										ifTrue: [ ^ self scan5 ] ] ] ] ].
 	^ self reportLastMatch

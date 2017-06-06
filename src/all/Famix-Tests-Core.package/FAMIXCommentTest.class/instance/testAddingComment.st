@@ -1,4 +1,4 @@
-basic
+tests
 testAddingComment
 	| cls |
 	cls := FAMIXClass new.

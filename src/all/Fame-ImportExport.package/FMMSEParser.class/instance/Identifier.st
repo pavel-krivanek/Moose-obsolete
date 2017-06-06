@@ -1,10 +1,14 @@
 expressions
 Identifier
 	"Matches numerical identifier (returns Number or nil)."
+
 	"Identifier := digit+"
-	char isDigit ifFalse: [ ^ nil ].
+
+	(self characterSet isDigit: char)
+		ifFalse: [ ^ nil ].
+	
 	buf reset.
 	buf nextPut: char.
-	[ self next isDigit ] whileTrue: [ buf nextPut: char ].
+	[ self characterSet isDigit: self next ] whileTrue: [ buf nextPut: char ].
 	self tWHITESPACE.
 	^ Integer readFrom: buf contents readStream

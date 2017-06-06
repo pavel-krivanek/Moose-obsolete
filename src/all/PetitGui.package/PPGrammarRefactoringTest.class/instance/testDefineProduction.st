@@ -2,7 +2,7 @@ testing-productions
 testDefineProduction
 	self
 		performRefactoring:
-			(PPDefineProdcutionRefactoring
+			(PPDefineProductionRefactoring
 				onClass: PPArithmeticParser
 				source: 'function ^ #any plus , $( , $) ==> [ :e | 0 ]'
 				protocols: (Array with: #productions)).

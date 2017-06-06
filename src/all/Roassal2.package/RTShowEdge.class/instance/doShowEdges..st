@@ -5,7 +5,7 @@ doShowEdges: element
 
 	t := (connectToElements rtValue: element).
 	t := t copyWithout: nil.
-	edges := (shape rtValue: element) edgesFrom: (reciber rtValue: element) toAll: t.
+	edges := (shape rtValue: element) edgesFrom: (receiver rtValue: element) toAll: t.
 	element view addAll: edges.
 	element attributes at: #showEdges put: edges.
 	self class lastHighlightedElements: edges

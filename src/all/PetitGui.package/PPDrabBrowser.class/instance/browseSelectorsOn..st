@@ -24,7 +24,7 @@ browseSelectorsOn: aBrowser
 				self selectedSelector: selector asSymbol ] ]
 			on: $r entitled: 'Rename... (r)';
 		selectionAct: [
-			self performRefactoring: (PPRemoveProdcutionRefactoring
+			self performRefactoring: (PPRemoveProductionRefactoring
 				onClass: self selectedClass
 				production: self selectedSelector).
 			self selectedSelector: nil ]

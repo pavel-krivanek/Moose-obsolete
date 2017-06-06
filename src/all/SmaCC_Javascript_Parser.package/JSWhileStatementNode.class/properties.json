@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"whileToken",
-		"leftParen",
+		"left",
 		"expression",
-		"rightParen",
+		"right",
 		"statement"
 	],
 	"name" : "JSWhileStatementNode",

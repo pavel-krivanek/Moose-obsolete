@@ -5,6 +5,6 @@ progressIn: composite
 		display: [:result :sample :stream :parser  | 
 			| morph |
 			morph := ScrollPane new.
-			morph color: Color white.
+			morph color: UITheme current backgroundColor.
 			morph scroller addMorph: stream asPositionMorph.
 			morph ]

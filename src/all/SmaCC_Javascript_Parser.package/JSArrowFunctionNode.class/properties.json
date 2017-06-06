@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "JSExpressionNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parameters",
+		"left",
+		"commas",
+		"right",
+		"ellipsis",
+		"varParameter",
+		"arrow",
+		"statements",
+		"leftBracket",
+		"rightBracket"
+	],
+	"name" : "JSArrowFunctionNode",
+	"type" : "normal"
+}

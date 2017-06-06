@@ -2,7 +2,7 @@ accessing
 elementFromModel: anObject
 	"Return an element that corresponds to the object provided as parameter. If none is found, then return nil"
 	
-	| t |
+	| t key|
 	self elementFromModelCache at: anObject ifPresent: [ :v |
 		v isCollection ifFalse: [ ^ v ] ].
 
@@ -10,6 +10,7 @@ elementFromModel: anObject
 	t := (anObject class == CompiledMethod) 
 				ifTrue: [ self detect: [ :el | el model == anObject ] ifNone: [ nil ] ]
 				ifFalse: [ self detect: [ :el | el model = anObject ] ifNone: [ nil ] ].
-
-	self elementFromModelCache at: anObject put: t.
+	"We have this hack for nil objects because in visualWorks a dictionary cannot have nil as a key"
+	key := anObject isNil ifTrue: [ 'KeyForNilObjects' ] ifFalse: [ anObject ].
+	self elementFromModelCache at: key put: t.
 	^ t

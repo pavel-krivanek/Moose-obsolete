@@ -1,7 +1,7 @@
 tests
 testBehaviorsWithDeclaredType
 	| type behaviour |
-	type := FAMIXType new.
+	type := self actualClass new.
 	behaviour := FAMIXBehaviouralEntity new.
 	behaviour declaredType: type.
 	self assert: behaviour declaredType == type.

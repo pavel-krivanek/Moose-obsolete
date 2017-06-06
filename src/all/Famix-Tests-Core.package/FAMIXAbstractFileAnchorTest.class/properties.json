@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 6/3/2017 16:44",
+	"super" : "TestCase",
+	"category" : "Famix-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FAMIXAbstractFileAnchorTest",
+	"type" : "normal"
+}

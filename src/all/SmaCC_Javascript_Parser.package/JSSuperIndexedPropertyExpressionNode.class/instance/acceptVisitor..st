@@ -1,0 +1,3 @@
+generated
+acceptVisitor: aProgramVisitor
+	^ aProgramVisitor visitSuperIndexedPropertyExpression: self

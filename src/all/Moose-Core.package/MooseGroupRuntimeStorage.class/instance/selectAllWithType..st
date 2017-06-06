@@ -1,3 +1,3 @@
 enumerating
 selectAllWithType: aSmalltalkClass
-	^ byType at: aSmalltalkClass ifAbsent: [ OrderedCollection new ]
+	^ byType at: aSmalltalkClass ifAbsent: [ self class byTypeDefaultCollection ]

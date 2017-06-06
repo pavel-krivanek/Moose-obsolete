@@ -1,7 +1,7 @@
 private
 with: anOwner opposite: anOpposite selector: aSelector
 
-	[ anOpposite numArgs = 1 ] assert.
+	self assert: anOpposite numArgs = 1.
 	owner := anOwner.
 	opposite := anOpposite.
 	selector := aSelector

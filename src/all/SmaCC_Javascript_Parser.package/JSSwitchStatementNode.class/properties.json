@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"switchToken",
-		"leftParen",
+		"left",
 		"expression",
-		"rightParen",
+		"right",
 		"leftBrace",
 		"clauses",
 		"rightBrace"

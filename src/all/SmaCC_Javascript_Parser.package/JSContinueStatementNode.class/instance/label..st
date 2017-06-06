@@ -1,3 +1,7 @@
 generated
-label: aSmaCCToken
-	label := aSmaCCToken
+label: aJSNameExpressionNode
+	self label notNil
+		ifTrue: [ self label parent: nil ].
+	label := aJSNameExpressionNode.
+	self label notNil
+		ifTrue: [ self label parent: self ]

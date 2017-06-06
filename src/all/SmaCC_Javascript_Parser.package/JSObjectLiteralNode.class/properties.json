@@ -8,7 +8,7 @@
 	"instvars" : [
 		"leftBrace",
 		"rightBrace",
-		"assignments",
+		"definitions",
 		"commas"
 	],
 	"name" : "JSObjectLiteralNode",

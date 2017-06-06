@@ -1,8 +1,5 @@
 private
 dangling: reference to: serial
-
-	| todo |
-	todo := reminderDict at: serial ifAbsentPut: [ OrderedCollection new ].
-	todo add: reference.
+	(reminderDict at: serial ifAbsentPut: [ OrderedCollection new ]) add: reference.
 	tally := tally + 1.
-	^reference.
+	^ reference

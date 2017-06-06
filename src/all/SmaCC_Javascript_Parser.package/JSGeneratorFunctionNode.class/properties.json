@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "JSFunctionNode",
+	"category" : "SmaCC_Javascript_Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"star"
+	],
+	"name" : "JSGeneratorFunctionNode",
+	"type" : "normal"
+}

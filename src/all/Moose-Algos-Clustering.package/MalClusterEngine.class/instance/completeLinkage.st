@@ -1,4 +1,3 @@
 clustering
 completeLinkage
-	
-	^self performClustering: #completeLinkage
+	^ self performClustering: #completeLinkage

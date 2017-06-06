@@ -1,6 +1,6 @@
 testing-productions
 testRemoveProduction
-	self performRefactoring: (PPRemoveProdcutionRefactoring onClass: PPArithmeticParser production: #addition).
+	self performRefactoring: (PPRemoveProductionRefactoring onClass: PPArithmeticParser production: #addition).
 	self assert: self changes size equals: 2.
 	self assert: self changes first class equals: RBRemoveMethodChange.
 	self assert: self changes first selector equals: #addition.

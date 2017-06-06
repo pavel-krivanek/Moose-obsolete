@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "TOODependencyQueries classTrait + TEntityMetaLevelDependency classTrait",
+	"classtraitcomposition" : "TOODependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes})",
 	"classvars" : [ ],
 	"instvars" : [
 		"name",

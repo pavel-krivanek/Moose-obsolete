@@ -7,9 +7,7 @@
 	],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"lastInsertedSemicolonPosition"
-	],
+	"instvars" : [ ],
 	"name" : "JSParser",
 	"type" : "normal"
 }

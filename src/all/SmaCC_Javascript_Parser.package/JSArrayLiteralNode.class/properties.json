@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"leftBracket",
-		"expressions",
 		"commas",
-		"rightBracket"
+		"rightBracket",
+		"expressions"
 	],
 	"name" : "JSArrayLiteralNode",
 	"type" : "normal"

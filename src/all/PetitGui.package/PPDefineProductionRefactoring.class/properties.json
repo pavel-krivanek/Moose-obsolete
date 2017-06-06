@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PhilippeBack 5/29/2017 12:08",
+	"super" : "RBRefactoring",
+	"category" : "PetitGui-Refactoring",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"class",
+		"source",
+		"protocols",
+		"method"
+	],
+	"name" : "PPDefineProductionRefactoring",
+	"type" : "normal"
+}

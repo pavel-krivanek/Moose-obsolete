@@ -1,3 +1,7 @@
 generated
-variable: aSmaCCToken
-	variable := aSmaCCToken
+variable: aJSProgramNode
+	self variable notNil
+		ifTrue: [ self variable parent: nil ].
+	variable := aJSProgramNode.
+	self variable notNil
+		ifTrue: [ self variable parent: self ]

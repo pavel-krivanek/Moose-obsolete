@@ -1,4 +1,4 @@
-as yet unclassified
+spec
 test_c_l_block_map_explicit_value
 	context YAMLN: 1.
 	context YAMLM: 1.

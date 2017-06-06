@@ -2,5 +2,5 @@ initialize
 initialize
 	super initialize.
 	connectToElements := [ :el | Array with: el ].
-	reciber := #yourself.
+	receiver := #yourself.
 	self shape: RTLine

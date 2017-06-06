@@ -13,7 +13,7 @@ sourceIn: composite
 					title: 'Extract production'.
 				selector isEmptyOrNil ifFalse: [
 					selector := selector asSymbol.
-					refactoring := PPExtractProdcutionRefactoring
+					refactoring := PPExtractProductionRefactoring
 						onClass: class
 						production: production
 						interval: text selectionInterval
@@ -25,7 +25,7 @@ sourceIn: composite
 			entitled: 'Extract production';		
 		act: [ :text :class :production | 
 				| selector refactoring |
-				refactoring := PPDefineProdcutionRefactoring 	
+				refactoring := PPDefineProductionRefactoring 	
 						onClass: class 
 						source: text text asString 
 						protocols: #(grammar).

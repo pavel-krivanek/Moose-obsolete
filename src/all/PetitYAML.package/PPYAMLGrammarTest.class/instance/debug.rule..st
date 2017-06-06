@@ -1,4 +1,4 @@
-as yet unclassified
+parsing
 debug: aString rule: aSymbol
 	| production |
 	production := self parserInstanceFor: aSymbol.

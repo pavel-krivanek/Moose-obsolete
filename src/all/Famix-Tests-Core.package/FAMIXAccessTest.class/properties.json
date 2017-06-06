@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "FAMIXAssociationTest",
 	"category" : "Famix-Tests-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

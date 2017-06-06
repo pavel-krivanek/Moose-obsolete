@@ -1,11 +1,8 @@
 instance creation
-withAll: collection 
-
-	| common wantedClass wantedType |
+withAll: collection
 	^ self = MooseGroup
-		ifTrue: [ 
-			common := collection commonSuperclass.
-			wantedType := (common name, 'Group') asSymbol.
-			wantedClass := self allSubclasses detect: [:each | each name = wantedType ] ifNone: [MooseGroup] .
+		ifTrue: [ | wantedClass wantedType |
+			wantedType := (collection commonSuperclass name , 'Group') asSymbol.
+			wantedClass := self allSubclasses detect: [ :each | each name = wantedType ] ifNone: [ MooseGroup ].
 			self withKnownType: wantedClass withAll: collection ]
 		ifFalse: [ self withKnownType: self withAll: collection ]

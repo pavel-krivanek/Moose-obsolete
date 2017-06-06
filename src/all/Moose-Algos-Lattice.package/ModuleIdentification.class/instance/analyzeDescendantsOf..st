@@ -2,7 +2,7 @@ middle-phase
 analyzeDescendantsOf: aTop
 	"aTop is a potential module top node. The method analyzes if the descendants of the aTop only have a single connection to the top and to the bottom. If it is not so, "
 
-	| descNodes toRemove |
+	| descNodes |
 	descNodes := aTop descendants.
 	self candidate: aTop.
 	"(aTop labels first) isEmpty ifFalse:[ 

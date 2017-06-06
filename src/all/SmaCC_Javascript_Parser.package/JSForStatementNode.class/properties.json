@@ -7,16 +7,17 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"forToken",
-		"leftParen",
+		"left",
 		"initialExpression",
 		"semicolons",
 		"condition",
 		"iteratorExpression",
-		"rightParen",
+		"right",
 		"statement",
 		"varToken",
 		"variables",
-		"commas"
+		"commas",
+		"declaration"
 	],
 	"name" : "JSForStatementNode",
 	"type" : "normal"

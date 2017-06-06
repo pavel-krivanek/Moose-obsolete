@@ -1,17 +1,11 @@
 generated
 scanForTokenX1X1
-	self recordMatch: #(82).
+	self recordMatch: #(95).
 	self step.
-	currentCharacter == $/
-		ifTrue: [ ^ self scan12 ].
-	currentCharacter == $[
-		ifTrue: [ ^ self scan15 ].
+	currentCharacter == $$
+		ifTrue: [ ^ self scan42 ].
 	currentCharacter == $\
-		ifTrue: [ ^ self scan16 ].
-	(currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: Character newPage)
-				or: [ (currentCharacter between: (Character value: 14) and: $.)
-						or: [ (currentCharacter between: $0 and: $Z)
-								or: [ currentCharacter >= $] ] ] ] ])
-		ifTrue: [ ^ self scan11 ].
-	^ self reportLastMatch
+		ifTrue: [ ^ self scan43 ].
+	currentCharacter == $`
+		ifTrue: [ ^ self recordAndReportMatch: #(106) ].
+	^ self scan41

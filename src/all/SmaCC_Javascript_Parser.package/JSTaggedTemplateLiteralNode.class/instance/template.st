@@ -1,0 +1,3 @@
+generated
+template
+	^ template

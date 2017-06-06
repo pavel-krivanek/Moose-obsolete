@@ -10,6 +10,8 @@
 		"left",
 		"right",
 		"arguments",
+		"ellipsises",
+		"varArguments",
 		"commas"
 	],
 	"name" : "JSCallExpressionNode",

@@ -11,7 +11,8 @@
 		"textColor",
 		"alphaPopupBackground",
 		"backgroundColor",
-		"borderColor"
+		"borderColor",
+		"hasBorder"
 	],
 	"name" : "RTPopup",
 	"type" : "normal"

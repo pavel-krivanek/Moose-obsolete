@@ -3,7 +3,7 @@ hDNodeSize
 	"we still do not know how to compute the number of nodes in the horizontal decomposition. This method was a first effort but does not return the correct results."
 	
 	
-	| allDescendants nodes sum hdNodes totalNodes|
+	| nodes hdNodes totalNodes|
 	totalNodes := 0.
 	hdNodes := OrderedCollection new.
 	nodes := self lattice top descendants.

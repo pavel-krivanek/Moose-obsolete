@@ -1,0 +1,1 @@
+I am an abstract test class for the tests of FAMIXSourcedEntity's subclasses

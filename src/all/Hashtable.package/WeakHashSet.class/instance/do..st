@@ -6,6 +6,6 @@ do: aBlock
 		current := each.
 		[ current notNil ]
 			whileTrue: [
-				current key ifNotNilDo: [ :key |
+				current key ifNotNil: [ :key |
 					aBlock value: key ].
 				current := current next ] ]

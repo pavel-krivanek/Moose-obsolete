@@ -1,12 +1,13 @@
 tokens
 tFULLNAME
-	char isLetter ifFalse: [ ^ nil ].
+	(self characterSet isLetter: char) ifFalse: [ ^ nil ].
+	
 	buf reset.
 	[	buf nextPut: char.
-		[ self next isAlphaNumeric ] whileTrue: [ buf nextPut: char ].
+		[ self nextCharIsAlphanumeric ] whileTrue: [ buf nextPut: char ].
 		$. == char ] whileTrue: 
 			[	buf nextPut: char.
-				self next isLetter ifFalse: [^self syntaxError ] ].
+				(self characterSet isLetter: self next) ifFalse: [^self syntaxError ] ].
 	$: == char ifTrue: [ ^self syntaxError ].
 	self tWHITESPACE.
 	^buf contents

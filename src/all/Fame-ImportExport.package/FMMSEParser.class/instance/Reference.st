@@ -7,7 +7,7 @@ Reference
 	self tOPEN ifFalse: [ ^ self backtrack: pos ].
 	self tREF ifFalse: [ ^ self backtrack: pos ].
 	serial := self Identifier.
-	nil ~~ serial ifFalse: [ ^ self backtrack: pos ].
+	serial ifNil: [ ^ self backtrack: pos ].
 	client referenceNumber: serial.
 	self tCLOSE ifFalse: [ ^ self syntaxError ].
 	self tWHITESPACE.

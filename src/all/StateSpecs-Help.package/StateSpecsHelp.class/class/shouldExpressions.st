@@ -19,7 +19,7 @@ shouldExpressions
 #(1 2) should equal: #(1 2) asOrderedCollection. "not fail because by default comparison not look at collection types"
 #(1 2) should equal: #(1 2) asSet.
 #(1 2) should equal: #(2 1). "not fail because by default equality between collections is not ordered"
-#(1 2) should beOrderedEqualTo: #(2 1). "fail because it is explicit requirement for ordered equality"
+#(1 2) should equalInOrder: #(2 1). "fail because it is explicit requirement for ordered equality"
 
 #(1 2) should haveSize: 10.
 #(1 2) should include: 10.

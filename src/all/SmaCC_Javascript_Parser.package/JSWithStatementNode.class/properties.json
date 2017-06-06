@@ -7,9 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"withToken",
-		"leftParen",
+		"left",
 		"expression",
-		"rightParen",
+		"right",
 		"statement"
 	],
 	"name" : "JSWithStatementNode",

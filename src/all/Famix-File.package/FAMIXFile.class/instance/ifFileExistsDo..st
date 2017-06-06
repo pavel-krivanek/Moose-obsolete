@@ -1,4 +1,4 @@
 testing
 ifFileExistsDo: aBlock
-	name isNil ifTrue: [ ^ aBlock value ].
+	name ifNil: [ ^ aBlock value ].
 	^ self fileExists ifTrue: [ aBlock value ]

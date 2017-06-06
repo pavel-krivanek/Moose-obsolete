@@ -8,7 +8,7 @@ textElement: aOneArgBlock
 	"
 	self group: [ :group :element | 
 		| backRectangle lbl |
-		backRectangle := (RTBox new color: (backgroundColor alpha: self alphaPopupBackground); borderColor: borderColor) element.
+		backRectangle := self createBackgroundElement: backgroundColor "(RTBox new color: (backgroundColor alpha: self alphaPopupBackground); borderWidth: 5; borderColor: borderColor) element".
 		
 		lbl := (RTLabel new 
 				color: textColor;
