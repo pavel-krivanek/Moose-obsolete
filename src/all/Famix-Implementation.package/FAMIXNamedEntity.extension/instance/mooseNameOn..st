@@ -1,4 +1,3 @@
 *Famix-Implementation
-mooseNameOn: stream 
-	self name ifNotNil: 
-		[stream nextPutAll: self name]
+mooseNameOn: stream
+	self name ifNotNil: [ :n | stream nextPutAll: n ]
