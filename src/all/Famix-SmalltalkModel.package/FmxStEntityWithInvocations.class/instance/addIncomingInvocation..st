@@ -1,0 +1,3 @@
+adding
+addIncomingInvocation: anInvocation
+	incomingInvocations add: anInvocation
