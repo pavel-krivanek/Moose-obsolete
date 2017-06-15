@@ -8,7 +8,8 @@
 	"instvars" : [
 		"#receivingInvocations => FMMany type: #FmxStInvocation opposite: #receiver",
 		"#parentPackage => FMOne type: #FmxStPackage opposite: #childNamedEntities",
-		"#name"
+		"#name",
+		"#isStub"
 	],
 	"name" : "FmxStNamedEntity",
 	"type" : "normal"

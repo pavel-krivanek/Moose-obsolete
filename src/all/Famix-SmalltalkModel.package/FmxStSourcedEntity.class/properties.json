@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#declaredSourceLanguage => FMOne type: #FmxStSourceLanguage opposite: #sourcedEntities",
-		"#comments => FMMany type: #FmxStComment opposite: #container"
+		"#comments => FMMany type: #FmxStComment opposite: #container",
+		"#sourceAnchor => FMOne type: #FAMIXSourceAnchor opposite: #element"
 	],
 	"name" : "FmxStSourcedEntity",
 	"type" : "normal"
