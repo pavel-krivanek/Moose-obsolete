@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#subInheritances => FMMany type: #FAMIXInheritance opposite: #superclass",
-		"#superInheritances => FMMany type: #FAMIXInheritance opposite: #subclass"
+		"#subInheritances => FMMany type: #FmxStInheritance opposite: #superclass",
+		"#superInheritances => FMMany type: #FmxStInheritance opposite: #subclass"
 	],
 	"name" : "FmxStTypeWithInheritance",
 	"type" : "normal"
