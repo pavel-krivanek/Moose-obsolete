@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#receivingInvocations => FMMany type: #FmxStInvocation opposite: #receiver"
+		"#receivingInvocations => FMMany type: #FmxStInvocation opposite: #receiver",
+		"#parentPackage => FMOne type: #FmxStPackage opposite: #childNamedEntities",
+		"#name"
 	],
 	"name" : "FmxStNamedEntity",
 	"type" : "normal"

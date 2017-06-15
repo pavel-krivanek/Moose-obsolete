@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#globalVariables => FMMany type: #FmxStGlobalVariable opposite: #package"
+		"#globalVariables => FMMany type: #FmxStGlobalVariable opposite: #package",
+		"#childNamedEntities => FMMany type: #FmxStNamedEntity opposite: #parentPackage"
 	],
 	"name" : "FmxStPackage",
 	"type" : "normal"
