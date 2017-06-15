@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#accessor => FMOne type: #FmxStMethod opposite: #accesses",
-		"#variable => FMOne type: #FmxStVariable opposite: #incomingAccesses"
+		"#variable => FMOne type: #FmxStVariable opposite: #incomingAccesses",
+		"#isWrite"
 	],
 	"name" : "FmxStAccess",
 	"type" : "normal"
