@@ -23,7 +23,7 @@ createMethod: aCompiledMethod
 	method timeStamp: aCompiledMethod timeStamp.
 	importingContext shouldImportMethodBody
 		ifTrue: [ | visitor |
-			visitor := SmalltalkMethodVisitor on: self.
+			visitor := FmxStMethodVisitor on: self.
 			visitor runWith: aCompiledMethod and: method ].
 	anchor := FmxStSourceAnchor new
 		element: method;

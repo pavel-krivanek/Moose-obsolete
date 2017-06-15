@@ -9,7 +9,8 @@
 		"#receivingInvocations => FMMany type: #FmxStInvocation opposite: #receiver",
 		"#parentPackage => FMOne type: #FmxStPackage opposite: #childNamedEntities",
 		"#name",
-		"#isStub"
+		"#isStub",
+		"#modifiers"
 	],
 	"name" : "FmxStNamedEntity",
 	"type" : "normal"

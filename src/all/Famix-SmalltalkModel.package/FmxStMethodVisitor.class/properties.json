@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SmalltalkMethodVisitor",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxStMethodVisitor",
+	"type" : "normal"
+}
