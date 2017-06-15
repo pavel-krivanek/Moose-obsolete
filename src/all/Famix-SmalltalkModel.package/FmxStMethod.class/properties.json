@@ -10,7 +10,11 @@
 		"#localVariables => FMMany type: #FmxStLocalVariable opposite: #parentBehaviouralEntity",
 		"#parameters => FMMany type: #FmxStParameter opposite: #parentBehaviouralEntity",
 		"#implicitVariables => FMMany type: #FmxStImplicitVariable opposite: #parentBehaviouralEntity",
-		"#accesses => FMMany type: #FmxStAccess opposite: #accessor"
+		"#accesses => FMMany type: #FmxStAccess opposite: #accessor",
+		"#kind",
+		"#hasClassScope",
+		"#parentType => FMOne type: #FmxStBehavior opposite: #methods",
+		"#outgoingReferences => FMMany type: #FmxStReference opposite: #source"
 	],
 	"name" : "FmxStMethod",
 	"type" : "normal"

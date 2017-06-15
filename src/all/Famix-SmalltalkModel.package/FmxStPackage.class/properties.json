@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStScopingEntity",
+	"super" : "FmxStContainerEntity",
 	"category" : "Famix-SmalltalkModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#globalVariables => FMMany type: #FmxStGlobalVariable opposite: #package"
+	],
 	"name" : "FmxStPackage",
 	"type" : "normal"
 }

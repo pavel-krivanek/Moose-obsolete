@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#accessor => FMOne type: #FmxStMethod opposite: #accesses",
-		"#variable => FMOne type: #FmxStVariable opposite: #incomingAccesses"
+		"#source => FMOne type: #FmxStMethod opposite: #outgoingReferences",
+		"#target => FMOne type: #FmxStBehavior opposite: #incomingReferences"
 	],
-	"name" : "FmxStAccess",
+	"name" : "FmxStReference",
 	"type" : "normal"
 }

@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#methods => FMMany type: #FmxStMethod opposite: #parentType",
+		"#incomingReferences => FMMany type: #FmxStReference opposite: #target"
+	],
 	"name" : "FmxStBehavior",
 	"type" : "normal"
 }

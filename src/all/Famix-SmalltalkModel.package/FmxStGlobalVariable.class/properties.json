@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#declaredType => FMOne type: #FmxStClass opposite: #globalVariables"
+		"#declaredType => FMOne type: #FmxStClass opposite: #globalVariables",
+		"#package => FMOne type: #FmxStPackage opposite: #globalVariables"
 	],
 	"name" : "FmxStGlobalVariable",
 	"type" : "normal"
