@@ -1,0 +1,3 @@
+accessing
+globalVariables: aCollectionOfStructuralEntities
+	globalVariables value: aCollectionOfStructuralEntities
