@@ -1,7 +1,8 @@
 enumerating
 union: aCollection
-	self
-		storage:
-			(self storage asSet
-				addAll: aCollection;
-				yourself)
+
+	| set |
+	
+	set := self asSet addAll: aCollection; yourself.
+	
+	 ^ self class on: (self receiver) withAll: set

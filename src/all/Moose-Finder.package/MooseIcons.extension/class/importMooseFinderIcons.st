@@ -55,5 +55,6 @@ importMooseFinderIcons
 		'mooseSourceTextSelected'
 		'mooseFolder'
 		'mooseUml'
-		'mooseXml').
+		'mooseXml'
+		'mooseFame').
 	self importIcons: wantedIcons fromFolder: 'icons' inClass: self class category: '*moose-finder'

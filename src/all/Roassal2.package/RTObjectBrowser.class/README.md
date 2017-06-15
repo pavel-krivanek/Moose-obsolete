@@ -1,0 +1,1 @@
+I am a simple builder of interactive view that allows you to inspect and navigate an  object.

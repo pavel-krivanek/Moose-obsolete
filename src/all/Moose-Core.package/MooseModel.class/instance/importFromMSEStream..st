@@ -1,5 +1,5 @@
 actions
-importFromMSEStream: aStream 
+importFromMSEStream: aStream
 	"Benchmarks
 	Time millisecondsToRun: [ MooseModel new importFromMSEStream: (StandardFileStream readOnlyFileNamed: 'network3.mse') ].
 	Time millisecondsToRun: [ MooseModel new importFromMSEStream: (StandardFileStream readOnlyFileNamed: 'moose.mse') ]. 178163 simon.denier 9/11/2009 12:29
@@ -7,7 +7,11 @@ importFromMSEStream: aStream
  	 21551 -> simon.denier 9/11/2009 12:18 - IdentityHashSet (reverted)
 	 17560 -> simon_denier 9/21/2009 22:34 - removing metrics from MSE
 	"
+
 	| repository |
 	repository := self class importFrom: aStream.
 	self silentlyAddAll: repository elements.
-	self entityStorage forRuntime
+	self entityStorage forRuntime.
+	self name: (aStream localName removeSuffix: '.mse').
+	aStream isFileStream
+		ifTrue: [ self rootFolder: aStream fullName asFileReference parent ]

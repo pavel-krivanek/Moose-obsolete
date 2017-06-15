@@ -7,6 +7,4 @@ initialize
 	implicitVariables := FMNullMultivalueLink on: self opposite: #parentBehaviouralEntity: selector: #implicitVariables.
 	parameters := FMNullMultivalueLink on: self opposite: #parentBehaviouralEntity: selector: #parameters.
 	accesses := FMNullMultivalueLink on: self opposite: #accessor: selector: #accesses.
-	outgoingReferences := FMNullMultivalueLink on: self opposite: #source: selector: #outgoingReferences.
-	signature := nil.
-	declaredType := nil
+	outgoingReferences := FMNullMultivalueLink on: self opposite: #source: selector: #outgoingReferences

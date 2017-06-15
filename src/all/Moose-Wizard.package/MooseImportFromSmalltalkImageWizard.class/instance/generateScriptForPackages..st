@@ -15,7 +15,7 @@ generateScriptForPackages: aCollectionOfPackageNames
 	contextItems := '. ' join: ((wizardInformations at: #contextToImport) collect: [ :each | each asString ] ) .
 
 	methodSourceString := String new: 200 streamContents: [:str |
-		str nextPutAll: 'create'; nextPutAll: modelName asLegalSelector capitalized; cr.
+		str nextPutAll: 'create'; nextPutAll: modelName capitalized; cr.
 		str tab.
 		
 		str nextPutAll: '^ MooseScripts createModelNamed: '.

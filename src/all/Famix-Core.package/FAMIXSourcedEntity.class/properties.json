@@ -6,9 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"sourceAnchor",
-		"comments",
-		"declaredSourceLanguage"
+		"sourceAnchor"
 	],
 	"name" : "FAMIXSourcedEntity",
 	"type" : "normal"

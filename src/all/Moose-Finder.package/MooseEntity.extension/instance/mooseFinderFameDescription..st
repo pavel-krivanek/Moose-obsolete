@@ -1,5 +1,6 @@
 *Moose-Finder
 mooseFinderFameDescription: composite
 	<moosePresentationOrder: 400>
-	self mooseDescription gtInspectorRelationsIn: composite.
-	composite presentations last title: 'Fame'
+	(self mooseDescription gtInspectorRelationsIn: composite)
+		title: 'Fame';
+		titleIcon: MooseIcons mooseFame

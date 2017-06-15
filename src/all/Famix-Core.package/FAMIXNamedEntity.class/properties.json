@@ -16,8 +16,7 @@
 	"type" : "normal",
 	"classinstvars" : [
 		"outgoingMSEProperties",
-		"incomingMSEProperties",
-		"belongsToMethod"
+		"incomingMSEProperties"
 	],
 	"pools" : [ ],
 	"category" : "Famix-Core"

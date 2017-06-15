@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "akevalion 6/12/2017 16:19",
+	"super" : "RTBuilder",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"target",
+		"objects",
+		"last"
+	],
+	"name" : "RTObjectBrowser",
+	"type" : "normal"
+}

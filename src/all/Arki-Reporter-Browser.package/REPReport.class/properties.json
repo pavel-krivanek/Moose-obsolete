@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "GLMBrowserTemplate",
+	"super" : "Object",
 	"category" : "Arki-Reporter-Browser",
 	"classinstvars" : [ ],
 	"pools" : [ ],

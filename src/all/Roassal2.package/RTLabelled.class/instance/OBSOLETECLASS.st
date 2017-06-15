@@ -1,3 +1,3 @@
-as yet unclassified
+obsolete class
 OBSOLETECLASS
 	"THIS CLASS IS OBSOLETE. PLEASE REFER TO RTLabeled"

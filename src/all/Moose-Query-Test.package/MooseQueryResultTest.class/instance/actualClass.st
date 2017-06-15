@@ -1,0 +1,3 @@
+helper
+actualClass
+	^ self subclassResponsibility

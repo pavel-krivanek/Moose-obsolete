@@ -1,8 +1,9 @@
 accessing
-previous: anAssociation 
-	previous ~= anAssociation ifTrue: 
-		[ | old |
-		old := previous.
-		previous := anAssociation.
-		old notNil ifTrue: [ old next: nil ].
-		anAssociation notNil ifTrue: [ anAssociation next: self ] ]
+previous: anAssociation
+	| old |
+	previous = anAssociation
+		ifTrue: [ ^ self ].
+	old := previous.
+	previous := anAssociation.
+	old ifNotNil: [ old next: nil ].
+	anAssociation ifNotNil: [ anAssociation next: self ]

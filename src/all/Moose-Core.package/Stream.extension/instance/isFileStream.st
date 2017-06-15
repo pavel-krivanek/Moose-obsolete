@@ -1,0 +1,3 @@
+*Moose-Core
+isFileStream
+	^ false

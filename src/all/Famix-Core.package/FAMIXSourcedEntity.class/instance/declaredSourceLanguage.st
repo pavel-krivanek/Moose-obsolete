@@ -1,7 +1,7 @@
 accessing
 declaredSourceLanguage
-	"Returns the declared SourceLanguage for the source code of this entity."
-	
+	"VBU - Put in private state because it is not used and so take place in the memory"
+
 	<MSEProperty: #declaredSourceLanguage type: #FAMIXSourceLanguage opposite: #sourcedEntities>
 	<MSEComment: 'The declared SourceLanguage for the source code of this entity'>
-	^declaredSourceLanguage
+	^ self privateState attributeAt: #declaredSourceLanguage ifAbsent: [  ]

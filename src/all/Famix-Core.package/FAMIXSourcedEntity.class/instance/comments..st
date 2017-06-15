@@ -1,4 +1,3 @@
 accessing
 comments: aCollection
-
-	comments value: aCollection
+	self comments value: aCollection

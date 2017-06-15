@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "akevalion 6/12/2017 19:38",
+	"super" : "RTAnimation",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"animatedValue",
+		"shape",
+		"shapes",
+		"numberOfShapes",
+		"side"
+	],
+	"name" : "RTAddElementAnimation",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TudorGirba 6/8/2017 23:02",
+	"super" : "GTPlayground",
+	"category" : "Moose-Finder",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MoosePlayground",
+	"type" : "normal"
+}

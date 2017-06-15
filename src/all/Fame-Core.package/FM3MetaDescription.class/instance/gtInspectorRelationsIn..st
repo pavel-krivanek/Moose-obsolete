@@ -1,7 +1,8 @@
 ui
 gtInspectorRelationsIn: composite
 	<gtInspectorPresentationOrder: 0>
-	composite table title: [ self allComplexAttributes size asString , ' Relations' translated ]; 
+	^ composite table 
+			title: [ self allComplexAttributes size asString , ' Relations' translated ]; 
 			display: [ self allComplexAttributes ]; sorted: [ :attribute1 :attribute2 | attribute1 name < attribute2 name ]; 
 			column: 'name'
 			evaluated: [ :each | each name ]

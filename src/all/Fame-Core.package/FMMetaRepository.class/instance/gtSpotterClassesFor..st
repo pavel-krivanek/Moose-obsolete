@@ -1,8 +1,8 @@
 ui
 gtSpotterClassesFor: aStep
-	<spotterOrder: 20>
+	<spotterOrder: 10>
 	aStep listProcessor
-		title: 'Packages';
-		allCandidates: [ self packages ];
-		itemName: [ :example | example fullName ];
+		title: 'Classes';
+		allCandidates: [ self classes ];
+		itemName: [ :class | class fullName ];
 		filter: GTFilterSubstring
