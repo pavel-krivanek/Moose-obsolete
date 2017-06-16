@@ -3,5 +3,5 @@ openMetaBrowser
 
 	| tower |
 
-	tower := MooseModel metaBuilder: self withAllSubclasses, FmxStTraitEntity withAllSubclasses.
+	tower := MooseModel metaBuilder: self withAllSubclasses.
 	MooseMetaBrowser new openOn: tower metamodel
