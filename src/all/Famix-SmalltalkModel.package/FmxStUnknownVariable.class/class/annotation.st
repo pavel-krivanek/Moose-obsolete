@@ -1,5 +1,5 @@
 meta
 annotation
-	<MSEClass: #UnknownVariable super: #FmxStVariableStructuralEntity>
+	<MSEClass: #UnknownVariable super: #FmxStVariable>
 	<package: #FmxSt>
 	^self
