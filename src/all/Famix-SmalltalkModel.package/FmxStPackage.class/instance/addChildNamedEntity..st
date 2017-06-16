@@ -1,0 +1,3 @@
+accessing
+addChildNamedEntity: aNamedEntity
+	childNamedEntities add: aNamedEntity

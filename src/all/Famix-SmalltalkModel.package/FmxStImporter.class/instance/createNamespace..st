@@ -4,6 +4,6 @@ createNamespace: aNamespace
 	| namespace |
 	namespace := namespaces
 		at: aNamespace asString asSymbol
-		put: FAMIXNamespace new.
+		put: FmxStNamespace new.
 	namespace name: 'Smalltalk'.
 	^namespace
