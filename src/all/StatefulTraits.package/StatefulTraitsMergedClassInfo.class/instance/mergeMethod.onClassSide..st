@@ -3,6 +3,8 @@ mergeMethod: aMethod onClassSide: aBoolean
 
 	| newMethodSelector prefix tag className targetClass |
 	
+	aMethod selector=#annotation ifTrue: [ ^ self ].
+	
 	className := aMethod methodClass instanceSide name.
 	"TODO: smarter way of changing selectors"
 	prefix := (aMethod selector = #initializeTrait)
