@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#attributes => FMMany type: #FmxStAttribute opposite: #parentType",
-		"#globalVariables => FMMany type: #FmxStGlobalVariable opposite: #declaredType"
+		"#globalVariables => FMMany type: #FmxStGlobalVariable opposite: #declaredType",
+		"#traits => FMMany type: #FmxStTrait opposite: #users"
 	],
 	"name" : "FmxStClass",
 	"type" : "normal"

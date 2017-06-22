@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"#users => FMMany type: #FmxStClass opposite: #traits"
+	],
 	"name" : "FmxStTrait",
 	"type" : "normal"
 }
