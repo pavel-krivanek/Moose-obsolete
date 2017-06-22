@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#container => FMOne type: #FmxStSourcedEntity opposite: #comments",
+		"#container => FMOne type: #FmxStEntityWithComments opposite: #comments",
 		"#content"
 	],
 	"name" : "FmxStComment",

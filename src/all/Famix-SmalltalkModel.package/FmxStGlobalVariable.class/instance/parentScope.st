@@ -1,6 +1,6 @@
 accessing
-package
+parentScope
 	<MSEComment: 'Scope declaring the global variable. belongsTo implementation'>
 	<container>
 	
-	^ package
+	^ parentScope

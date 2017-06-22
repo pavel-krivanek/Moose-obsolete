@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStContainerEntity",
+	"super" : "FmxStNamedEntity",
 	"category" : "Famix-SmalltalkModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
