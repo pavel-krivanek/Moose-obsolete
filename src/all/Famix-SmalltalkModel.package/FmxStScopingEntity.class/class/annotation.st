@@ -1,5 +1,5 @@
 meta
 annotation
-	<MSEClass: #ScopingEntity super: #FmxStContainerEntity>
+	<MSEClass: #ScopingEntity super: #FmxStNamedEntity>
 	<package: #FmxSt>
 	^self
