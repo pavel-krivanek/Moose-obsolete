@@ -13,7 +13,7 @@ visitVariableNode: aVariableNode
 				access := self createAccessTo: global writing: false]
 			ifFalse: [
 				namedEntity := self resolve: aVariableNode name.
-				access := (namedEntity isKindOf: FmxStContainerEntity)
+				access := (namedEntity isKindOf: FmxStBehavior)
 					ifTrue: [ self createReferenceTo: namedEntity ]
 					ifFalse: [ self createAccessTo: namedEntity writing: false ] ].
 		importer addEntity: access ].
