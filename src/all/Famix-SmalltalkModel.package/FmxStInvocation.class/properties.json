@@ -8,7 +8,7 @@
 	"instvars" : [
 		"#sender => FMOne type: #FmxStEntityWithInvocations opposite: #outgoingInvocations",
 		"#receiver => FMOne type: #FmxStNamedEntity opposite: #receivingInvocations",
-		"#candidates => FMMany type: #FmxStEntityWithInvocations opposite: #incomingInvocations",
+		"#candidates => FMMany type: #FmxStInvocable opposite: #incomingInvocations",
 		"#signature"
 	],
 	"name" : "FmxStInvocation",

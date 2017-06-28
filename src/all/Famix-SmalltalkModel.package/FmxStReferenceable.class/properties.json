@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#outgoingInvocations => FMMany type: #FmxStInvocation opposite: #sender"
+		"#incomingReferences => FMMany type: #FmxStReference opposite: #target"
 	],
-	"name" : "FmxStEntityWithInvocations",
+	"name" : "FmxStReferenceable",
 	"type" : "normal"
 }

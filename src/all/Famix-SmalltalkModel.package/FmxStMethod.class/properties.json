@@ -14,7 +14,6 @@
 		"#kind",
 		"#hasClassScope",
 		"#parentType => FMOne type: #FmxStBehavior opposite: #methods",
-		"#outgoingReferences => FMMany type: #FmxStReference opposite: #source",
 		"#signature"
 	],
 	"name" : "FmxStMethod",

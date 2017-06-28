@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxStEntityWithInvocations. FmxStEntityWithComments }
+	^ { FmxStEntityWithComments. FmxStReferenceable }

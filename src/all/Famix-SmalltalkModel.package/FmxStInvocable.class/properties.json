@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#outgoingInvocations => FMMany type: #FmxStInvocation opposite: #sender"
+		"#incomingInvocations => FMMany type: #FmxStInvocation opposite: #candidates"
 	],
-	"name" : "FmxStEntityWithInvocations",
+	"name" : "FmxStInvocable",
 	"type" : "normal"
 }
