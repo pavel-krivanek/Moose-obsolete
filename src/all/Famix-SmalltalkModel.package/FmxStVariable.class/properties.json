@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"#incomingAccesses => FMMany type: #FmxStAccess opposite: #variable"
-	],
+	"instvars" : [ ],
 	"name" : "FmxStVariable",
 	"type" : "normal"
 }

@@ -3,4 +3,8 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxStEntityWithInvocations. FmxStInvocable. FmxStEntityWithComments. FmxStEntityWithReferences }
+	^ { FmxStEntityWithInvocations. 
+		FmxStInvocable. 
+		FmxStEntityWithComments. 
+		FmxStEntityWithReferences.
+		FmxStEntityWithAccesses }

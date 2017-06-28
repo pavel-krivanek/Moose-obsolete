@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#accessor => FMOne type: #FmxStMethod opposite: #accesses",
-		"#variable => FMOne type: #FmxStVariable opposite: #incomingAccesses",
+		"#accessor => FMOne type: #FmxStEntityWithAccesses opposite: #accesses",
+		"#variable => FMOne type: #FmxStAccessible opposite: #incomingAccesses",
 		"#isWrite"
 	],
 	"name" : "FmxStAccess",

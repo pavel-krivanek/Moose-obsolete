@@ -2,6 +2,6 @@ meta
 annotation
 
 	<ignoreInTraitUsers>
-	<MSEClass: #EntityWithInvocations super: #FmxStTraitEntity>
+	<MSEClass: #EntityWithAccesses super: #FmxStTraitEntity>
 	<package: #FmxSt>
 	^self
