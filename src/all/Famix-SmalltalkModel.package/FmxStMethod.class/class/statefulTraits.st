@@ -7,4 +7,6 @@ statefulTraits
 		FmxStInvocable. 
 		FmxStEntityWithComments. 
 		FmxStEntityWithReferences.
-		FmxStEntityWithAccesses }
+		FmxStEntityWithAccesses.
+		FmxStAnnotable.
+		FmxStPackageable}

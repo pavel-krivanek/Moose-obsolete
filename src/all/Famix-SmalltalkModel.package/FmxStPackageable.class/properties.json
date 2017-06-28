@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStScopingEntity",
+	"super" : "FmxStTraitEntity",
 	"category" : "Famix-SmalltalkModel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#childEntities => FMMany type: #FmxStPackageable opposite: #parentPackage"
+		"#parentPackage => FMOne type: #FmxStPackage opposite: #childEntities"
 	],
-	"name" : "FmxStPackage",
+	"name" : "FmxStPackageable",
 	"type" : "normal"
 }

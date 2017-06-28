@@ -1,6 +1,6 @@
 accessing
-childNamedEntities
+childEntities
 
 	<MSEComment: 'List of entities contained in this package.'>
 	
-	^childNamedEntities
+	^childEntities

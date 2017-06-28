@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"#receivingInvocations => FMMany type: #FmxStInvocation opposite: #receiver",
-		"#parentPackage => FMOne type: #FmxStPackage opposite: #childNamedEntities",
 		"#name",
 		"#isStub",
 		"#modifiers"

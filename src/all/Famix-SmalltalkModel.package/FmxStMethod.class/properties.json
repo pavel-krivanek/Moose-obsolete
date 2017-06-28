@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#annotationInstances => FMMany type: #FmxStAnnotationInstance opposite: #annotatedEntity",
 		"#localVariables => FMMany type: #FmxStLocalVariable opposite: #parentBehaviouralEntity",
 		"#parameters => FMMany type: #FmxStParameter opposite: #parentBehaviouralEntity",
 		"#implicitVariables => FMMany type: #FmxStImplicitVariable opposite: #parentBehaviouralEntity",
