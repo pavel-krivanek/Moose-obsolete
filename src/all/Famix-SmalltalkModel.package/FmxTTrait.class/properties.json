@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#users => FMMany type: #FmxTClass opposite: #traits"
+	],
+	"name" : "FmxTTrait",
+	"type" : "normal"
+}

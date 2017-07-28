@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#superclass => FMOne type: #FmxTEntityWithInheritance opposite: #subInheritances",
+		"#subclass => FMOne type: #FmxTEntityWithInheritance opposite: #superInheritances"
+	],
+	"name" : "FmxTInheritance",
+	"type" : "normal"
+}

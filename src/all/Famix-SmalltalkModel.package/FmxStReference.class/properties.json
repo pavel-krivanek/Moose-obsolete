@@ -5,10 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"#source => FMOne type: #FmxStEntityWithReferences opposite: #outgoingReferences",
-		"#target => FMOne type: #FmxStReferenceable opposite: #incomingReferences"
-	],
+	"instvars" : [ ],
 	"name" : "FmxStReference",
 	"type" : "normal"
 }

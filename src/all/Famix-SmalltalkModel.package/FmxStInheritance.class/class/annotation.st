@@ -1,5 +1,5 @@
 meta
-annotation
-	<MSEClass: #Inheritance super: #FmxStAssociation>
-	<package: #FmxSt>
+notation
+	<MSEClass: #Reference super: #FAMIXAssociation>
+	<package: #FAMIX>
 	^self

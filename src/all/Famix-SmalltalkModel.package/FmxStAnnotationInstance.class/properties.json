@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#annotatedEntity => FMOne type: #FmxStAnnotable opposite: #annotationInstances",
+		"#annotatedEntity => FMOne type: #FmxTAnnotable opposite: #annotationInstances",
 		"#attributes => FMMany type: #FmxStAnnotationInstanceAttribute opposite: #parentAnnotationInstance"
 	],
 	"name" : "FmxStAnnotationInstance",
