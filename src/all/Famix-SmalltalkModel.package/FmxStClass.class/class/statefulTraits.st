@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTEntityWithInheritance. FmxTInheritable. FmxTClass }
+	^ { FmxTWithSubInheritances. FmxTWithSuperInheritances. FmxTClass. FmxTWithTrait }

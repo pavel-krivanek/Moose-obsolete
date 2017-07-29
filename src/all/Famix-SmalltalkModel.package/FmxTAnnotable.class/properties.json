@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FmxStTraitEntity",
-	"category" : "Famix-SmalltalkModel",
+	"category" : "Famix-SmalltalkModel-Annotations",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

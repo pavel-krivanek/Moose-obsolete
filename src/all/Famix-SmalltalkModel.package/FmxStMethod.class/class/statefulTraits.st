@@ -3,10 +3,10 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTEntityWithInvocations. 
+	^ { FmxTWithInvocations. 
 		FmxTInvocable. 
-		FmxTEntityWithComments. 
-		FmxTEntityWithReferences.
-		FmxTEntityWithAccesses.
+		FmxTWithComments. 
+		FmxTWithReferences.
+		FmxTWithAccesses.
 		FmxTAnnotable.
 		FmxTPackageable}

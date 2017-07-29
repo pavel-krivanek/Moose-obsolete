@@ -1,12 +1,12 @@
 {
 	"commentStamp" : "",
 	"super" : "FmxStTraitEntity",
-	"category" : "Famix-SmalltalkModel",
+	"category" : "Famix-SmalltalkModel-References",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#incomingReferences => FMMany type: #FmxStReference opposite: #target"
+		"#incomingReferences => FMMany type: #FmxTReference opposite: #target"
 	],
 	"name" : "FmxTReferenceable",
 	"type" : "normal"

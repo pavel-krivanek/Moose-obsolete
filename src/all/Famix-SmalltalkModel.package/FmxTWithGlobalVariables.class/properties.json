@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-GlobalVariables",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#globalVariables => FMMany type: #FmxTGlobalVariable opposite: #parentScope"
+	],
+	"name" : "FmxTWithGlobalVariables",
+	"type" : "normal"
+}
