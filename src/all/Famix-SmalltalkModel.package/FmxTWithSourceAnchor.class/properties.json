@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-SourceAnchors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#sourceAnchor => FMOne type: #FmxStSourceAnchor opposite: #element"
+	],
+	"name" : "FmxTWithSourceAnchor",
+	"type" : "normal"
+}

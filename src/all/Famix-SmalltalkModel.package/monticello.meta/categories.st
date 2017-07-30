@@ -8,7 +8,10 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-ImplicitVariables'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Inheritance'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Invocations'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-LocalVariables'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Methods'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Packages'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Parameters'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-References'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceAnchors'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceLanguage'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Traits'!
