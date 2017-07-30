@@ -5,10 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"#declaredSourceLanguage => FMOne type: #FmxStSourceLanguage opposite: #sourcedEntities",
-		"#sourceAnchor => FMOne type: #FmxStSourceAnchor opposite: #element"
-	],
+	"instvars" : [ ],
 	"name" : "FmxStSourcedEntity",
 	"type" : "normal"
 }

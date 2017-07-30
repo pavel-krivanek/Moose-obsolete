@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithComments. FmxTReferenceable. FmxTPackageable }
+	^ { FmxTWithMethods. FmxTWithComments. FmxTReferenceable. FmxTPackageable }

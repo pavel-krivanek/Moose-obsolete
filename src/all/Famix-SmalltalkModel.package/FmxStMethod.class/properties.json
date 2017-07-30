@@ -6,13 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#localVariables => FMMany type: #FmxStLocalVariable opposite: #parentBehaviouralEntity",
-		"#parameters => FMMany type: #FmxStParameter opposite: #parentBehaviouralEntity",
-		"#implicitVariables => FMMany type: #FmxStImplicitVariable opposite: #parentBehaviouralEntity",
-		"#kind",
-		"#hasClassScope",
-		"#parentType => FMOne type: #FmxStBehavior opposite: #methods",
-		"#signature"
+		"kind",
+		"hasClassScope",
+		"signature"
 	],
 	"name" : "FmxStMethod",
 	"type" : "normal"

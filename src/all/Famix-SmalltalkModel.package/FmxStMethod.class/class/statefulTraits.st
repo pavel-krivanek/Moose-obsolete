@@ -3,10 +3,14 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithInvocations. 
+	^ { FmxTMethod.
+		FmxTWithInvocations. 
 		FmxTInvocable. 
 		FmxTWithComments. 
 		FmxTWithReferences.
 		FmxTWithAccesses.
 		FmxTAnnotable.
-		FmxTPackageable}
+		FmxTPackageable.
+		FmxTWithLocalVariables.
+		FmxTWithParameters.
+		FmxTWithImplicitVariables }
