@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-Parameters",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#parentBehaviouralEntity => FMOne type: #FmxTWithParameters opposite: #parameters"
+	],
+	"name" : "FmxTParameter",
+	"type" : "normal"
+}

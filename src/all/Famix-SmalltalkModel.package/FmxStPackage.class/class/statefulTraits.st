@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxStEntityWithComments }
+	^ { FmxTWithComments. FmxTPackage }

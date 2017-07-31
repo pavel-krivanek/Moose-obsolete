@@ -5,10 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"#declaredType => FMOne type: #FmxStClass opposite: #globalVariables",
-		"#parentScope => FMOne type: #FmxStScopingEntity opposite: #globalVariables"
-	],
+	"instvars" : [ ],
 	"name" : "FmxStGlobalVariable",
 	"type" : "normal"
 }

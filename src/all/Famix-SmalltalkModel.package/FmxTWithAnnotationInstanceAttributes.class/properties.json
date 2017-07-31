@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-Annotations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#attributes => FMMany type: #FmxTAnnotationInstanceAttribute opposite: #parentAnnotationInstance"
+	],
+	"name" : "FmxTWithAnnotationInstanceAttributes",
+	"type" : "normal"
+}

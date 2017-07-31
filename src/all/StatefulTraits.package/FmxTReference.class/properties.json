@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-References",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#source => FMOne type: #FmxTWithReferences opposite: #outgoingReferences",
+		"#target => FMOne type: #FmxTReferenceable opposite: #incomingReferences"
+	],
+	"name" : "FmxTReference",
+	"type" : "normal"
+}

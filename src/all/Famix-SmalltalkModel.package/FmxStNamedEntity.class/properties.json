@@ -6,10 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#receivingInvocations => FMMany type: #FmxStInvocation opposite: #receiver",
-		"#name",
-		"#isStub",
-		"#modifiers"
+		"name",
+		"isStub",
+		"modifiers"
 	],
 	"name" : "FmxStNamedEntity",
 	"type" : "normal"

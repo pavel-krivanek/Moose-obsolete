@@ -15,7 +15,7 @@ createClass: aClass
 			[ importingContext shouldMergeClassAndMetaclass 
 				ifFalse: [ true ]
 				ifTrue: [ aClass isMeta not ] ]) 
-					ifTrue: [ inheritance := self addEntity: FmxStInheritance new.
+					ifTrue: [ inheritance := self addEntity: FmxTSuperInheritance new.
 							inheritance superclass: (self ensureClass: aClass superclass).
 							inheritance subclass: class ]
 		].

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-SourceLanguage",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#declaredSourceLanguage => FMOne type: #FmxStSourceLanguage opposite: #sourcedEntities"
+	],
+	"name" : "FmxTWithSourceLanguage",
+	"type" : "normal"
+}

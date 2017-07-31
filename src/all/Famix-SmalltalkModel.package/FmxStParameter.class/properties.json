@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"#parentBehaviouralEntity => FMOne type: #FmxStMethod opposite: #parameters"
-	],
+	"instvars" : [ ],
 	"name" : "FmxStParameter",
 	"type" : "normal"
 }
