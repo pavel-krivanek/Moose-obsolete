@@ -1,3 +1,0 @@
-accessing
-attributes: anAnnotationInstanceAttribute
-	attributes value: anAnnotationInstanceAttribute
