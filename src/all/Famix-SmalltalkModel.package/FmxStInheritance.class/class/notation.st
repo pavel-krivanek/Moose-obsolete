@@ -1,5 +1,5 @@
 meta
 notation
-	<MSEClass: #Reference super: #FAMIXAssociation>
+	<MSEClass: #Reference super: #FmxStAssociation>
 	<package: #FAMIX>
 	^self

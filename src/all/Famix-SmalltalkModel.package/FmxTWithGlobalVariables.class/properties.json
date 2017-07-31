@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#globalVariables => FMMany type: #FmxTGlobalVariable opposite: #parentScope"
+		"#globalVariables => FMMany type: #FmxTGlobalVariable opposite: #declaredType"
 	],
 	"name" : "FmxTWithGlobalVariables",
 	"type" : "normal"
