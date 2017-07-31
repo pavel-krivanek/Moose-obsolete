@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#receivingInvocations => FMMany type: #FmxStInvocation opposite: #receiver"
+		"#receivingInvocations => FMMany type: #FmxTInvocation opposite: #receiver"
 	],
 	"name" : "FmxTInvocationsReceiver",
 	"type" : "normal"
