@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-FileInclude",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#source => FMOne type: #FmxTFileWithInclude opposite: #outgoingIncludeRelations",
+		"#target => FMOne type: #FmxTFileWithInclude opposite: #incomingIncludeRelations"
+	],
+	"name" : "FmxTFileInclude",
+	"type" : "normal"
+}

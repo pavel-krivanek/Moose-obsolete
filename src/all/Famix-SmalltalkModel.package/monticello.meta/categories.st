@@ -3,12 +3,14 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-Accesses'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Annotations'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Attributes'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Comments'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-FileInclude'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-GlobalVariables'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-ImplicitVariables'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Inheritance'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Invocations'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-LocalVariables'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Methods'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Modules'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Packages'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Parameters'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-References'!

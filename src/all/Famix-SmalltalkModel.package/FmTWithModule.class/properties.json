@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-Modules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#module => FMOne type: #FmxTModule opposite: #moduleFiles"
+	],
+	"name" : "FmTWithModule",
+	"type" : "normal"
+}
