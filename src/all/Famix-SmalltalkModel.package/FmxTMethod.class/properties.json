@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentType => FMOne type: #FmxStBehavior opposite: #methods"
+		"#parentType => FMOne type: #FmxTWithMethods opposite: #methods"
 	],
 	"name" : "FmxTMethod",
 	"type" : "normal"

@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#implicitVariables => FMMany type: #FmxStImplicitVariable opposite: #parentBehaviouralEntity"
+		"#implicitVariables => FMMany type: #FmxTImplicitVariable opposite: #parentBehaviouralEntity"
 	],
 	"name" : "FmxTWithImplicitVariables",
 	"type" : "normal"

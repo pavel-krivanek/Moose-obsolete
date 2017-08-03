@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentType => FMOne type: #FmxStClass opposite: #attributes",
+		"#parentType => FMOne type: #FmxTWithAttributes opposite: #attributes",
 		"#hasClassScope"
 	],
 	"name" : "FmxTAttribute",

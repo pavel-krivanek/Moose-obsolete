@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#element => FMOne type: #FmxStSourcedEntity opposite: #sourceAnchor"
+		"#element => FMOne type: #FmxTWithSourceAnchor opposite: #sourceAnchor"
 	],
 	"name" : "FmxTSourceAnchor",
 	"type" : "normal"

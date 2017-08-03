@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#localVariables => FMMany type: #FmxStLocalVariable opposite: #parentBehaviouralEntity"
+		"#localVariables => FMMany type: #FmxTLocalVariable opposite: #parentBehaviouralEntity"
 	],
 	"name" : "FmxTWithLocalVariables",
 	"type" : "normal"
