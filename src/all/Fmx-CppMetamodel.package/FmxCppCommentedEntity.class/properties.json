@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxCppEntity",
+	"super" : "FmxCppSourcedEntity",
 	"category" : "Fmx-CppMetamodel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
