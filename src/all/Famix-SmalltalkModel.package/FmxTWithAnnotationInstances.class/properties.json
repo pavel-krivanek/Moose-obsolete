@@ -8,6 +8,6 @@
 	"instvars" : [
 		"#annotationInstances => FMMany type: #FmxTAnnotationInstance opposite: #annotatedEntity"
 	],
-	"name" : "FmxTAnnotable",
+	"name" : "FmxTWithAnnotationInstances",
 	"type" : "normal"
 }

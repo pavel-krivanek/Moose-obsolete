@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxCppVariable",
+	"category" : "Fmx-CppMetamodel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxCppEnumValue",
+	"type" : "normal"
+}

@@ -9,7 +9,7 @@ statefulTraits
 		FmxTWithComments. 
 		FmxTWithReferences.
 		FmxTWithAccesses.
-		FmxTAnnotable.
+		FmxTWithAnnotationInstances.
 		FmxTPackageable.
 		FmxTWithLocalVariables.
 		FmxTWithParameters.

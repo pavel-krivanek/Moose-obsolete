@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxPreprocessorStatement",
+	"category" : "Fmx-CppMetamodel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxPreprocessorIfdef",
+	"type" : "normal"
+}
