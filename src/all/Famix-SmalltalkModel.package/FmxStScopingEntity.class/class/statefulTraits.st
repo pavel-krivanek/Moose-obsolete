@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithGlobalVariables }
+	^ { FmxTGlobalVariableScope }

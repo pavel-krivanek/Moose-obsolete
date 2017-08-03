@@ -15,3 +15,4 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-References'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceAnchors'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceLanguage'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Traits'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-TypedStructures'!

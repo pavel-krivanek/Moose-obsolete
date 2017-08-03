@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-TypedStructures",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#declaredType => FMMany type: #FmxWithTypedStructures opposite: #structuresWithDeclaredType"
+	],
+	"name" : "FmxTTypedStructure",
+	"type" : "normal"
+}

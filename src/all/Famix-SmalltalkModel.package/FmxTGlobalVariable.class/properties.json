@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#declaredType => FMOne type: #FmxTWithGlobalVariables opposite: #globalVariables",
 		"#parentScope => FMOne type: #FmxTGlobalVariableScope opposite: #globalVariables"
 	],
 	"name" : "FmxTGlobalVariable",
