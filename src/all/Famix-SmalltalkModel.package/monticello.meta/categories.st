@@ -4,6 +4,7 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-Annotations'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Attributes'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Comments'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-FileInclude'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Functions'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-GlobalVariables'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-ImplicitVariables'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Inheritance'!
@@ -18,3 +19,4 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceAnchors'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceLanguage'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Traits'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-TypedStructures'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Types'!

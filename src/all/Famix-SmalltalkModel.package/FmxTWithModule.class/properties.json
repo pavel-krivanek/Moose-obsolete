@@ -8,6 +8,6 @@
 	"instvars" : [
 		"#module => FMOne type: #FmxTModule opposite: #moduleFiles"
 	],
-	"name" : "FmTWithModule",
+	"name" : "FmxTWithModule",
 	"type" : "normal"
 }

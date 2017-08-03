@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithFileInclude. FmxTModule }
+	^ { FmxTWithFileInclude. FmxTWithModule }
