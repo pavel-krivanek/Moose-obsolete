@@ -12,6 +12,7 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-Invocations'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-LocalVariables'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Methods'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Modules'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Namespaces'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Packages'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Parameters'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-References'!

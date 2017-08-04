@@ -6,9 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#childEntities => FMMany type: #FmxTPackageable opposite: #parentPackage",
-		"#packageOwner => FMOne type: #FmxTWithPackages opposite: #packages"
+		"#packages => FMMany type: #FmxTPackage opposite: #packageOwner"
 	],
-	"name" : "FmxTPackage",
+	"name" : "FmxTWithPackages",
 	"type" : "normal"
 }

@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithSourceLanguage. FmxTWithSourceAnchor }
+	^ { FmxTWithSourceLanguage. FmxTWithSourceAnchor. FmxTNamespaceEntity }
