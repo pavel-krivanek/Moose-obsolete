@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTType. FmxTReferenceable. FmxTWithTypedStructures }
+	^ { FmxTType. FmxTReferenceable. FmxTWithTypedStructures. FmxTWithTypeAliases }

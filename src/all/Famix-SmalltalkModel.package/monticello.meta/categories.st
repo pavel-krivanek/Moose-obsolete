@@ -18,6 +18,8 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-Parameters'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-References'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceAnchors'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceLanguage'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Templates'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Traits'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-TypeAliases'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-TypedStructures'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Types'!

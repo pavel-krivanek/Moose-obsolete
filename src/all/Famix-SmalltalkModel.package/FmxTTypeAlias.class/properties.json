@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStTraitEntity",
+	"category" : "Famix-SmalltalkModel-TypeAliases",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#aliasedType => FMMany type: #FmxTWithTypeAliases opposite: #typeAliases"
+	],
+	"name" : "FmxTTypeAlias",
+	"type" : "normal"
+}
