@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"macro",
+		"negated"
+	],
+	"name" : "FmxTPreprocessorIfdef",
+	"type" : "normal"
+}

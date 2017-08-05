@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#compilationUnitOwner => FMOne type: #FmxTCompilationUnit opposite: #compilationUnit"
+	],
+	"name" : "FmxTCompilationUnit",
+	"type" : "normal"
+}

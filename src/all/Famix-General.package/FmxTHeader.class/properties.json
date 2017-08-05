@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#headerOwner => FMOne type: #FmxTWithHeader opposite: #header"
+	],
+	"name" : "FmxTHeader",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#parentType => FMOne type: #FmxTWithAttributes opposite: #attributes",
+		"#hasClassScope"
+	],
+	"name" : "FmxTAttribute",
+	"type" : "normal"
+}
