@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStTraitEntity",
+	"super" : "FmxTraitEntity",
 	"category" : "Famix-SmalltalkModel-ImplicitVariables",
 	"classinstvars" : [ ],
 	"pools" : [ ],

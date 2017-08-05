@@ -1,0 +1,3 @@
+accessing
+dereferencedInvocations: anObject
+	dereferencedInvocations value: anObject

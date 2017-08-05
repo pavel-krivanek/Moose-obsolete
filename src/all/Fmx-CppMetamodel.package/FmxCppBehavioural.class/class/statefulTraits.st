@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithParameters. FmxTInvocable. FmxTWithInvocations. FmxTWithReferences. FmxTTypedStructure. FmxTWithAccesses. FmxTWithLocalVariables. FmxTWithParameters. FmxTWithImplicitVariables }
+	^ { FmxTWithParameters. FmxTInvocable. FmxTWithInvocations. FmxTWithReferences. FmxTTypedStructure. FmxTWithAccesses. FmxTWithLocalVariables. FmxTWithParameters. FmxTWithImplicitVariables. FmxTWithDereferencedInvocations }

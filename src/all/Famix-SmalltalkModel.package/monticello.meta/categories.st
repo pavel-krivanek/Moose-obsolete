@@ -3,6 +3,8 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-Accesses'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Annotations'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Attributes'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Comments'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-DereferencedInvocation'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Enums'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-FileInclude'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Functions'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-GlobalVariables'!
@@ -15,6 +17,7 @@ SystemOrganization addCategory: 'Famix-SmalltalkModel-Modules'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Namespaces'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Packages'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-Parameters'!
+SystemOrganization addCategory: 'Famix-SmalltalkModel-Preprocessor'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-References'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceAnchors'!
 SystemOrganization addCategory: 'Famix-SmalltalkModel-SourceLanguage'!

@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStEntity",
-	"category" : "Famix-SmalltalkModel",
+	"super" : "FmxCppSourcedEntity",
+	"category" : "Fmx-CppMetamodel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FmxStTraitEntity",
+	"name" : "FmxCppDereferencedInvocation",
 	"type" : "normal"
 }

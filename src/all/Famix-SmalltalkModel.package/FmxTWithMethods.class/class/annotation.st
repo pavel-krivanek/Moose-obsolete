@@ -1,7 +1,5 @@
 meta
 annotation
-
-	<ignoreInTraitUsers>
-	<MSEClass: #TWithMethods super: #FmxStTraitEntity>
-	<package: #FmxSt>
+	<MSEClass: #TWithMethods super: #FmxTraitEntity>
+	<package: #Fmx>
 	^self
