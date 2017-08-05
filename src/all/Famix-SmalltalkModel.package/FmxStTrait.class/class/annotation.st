@@ -1,5 +1,6 @@
 meta
 annotation
-	<MSEClass: #Class super: #FmxStBehavior>
+
+	<MSEClass: #Trait super: #FmxStBehavior>
 	<package: #FmxSt>
 	^self

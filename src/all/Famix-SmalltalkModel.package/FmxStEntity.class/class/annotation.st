@@ -1,5 +1,6 @@
 meta
 annotation
-	<MSEClass: #Entity super: #Object>
+
+	<MSEClass: #Entity super: #MooseEntity>
 	<package: #FmxSt>
 	^self

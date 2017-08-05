@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "MooseEntity",
-	"category" : "Famix-General",
+	"category" : "Famix-General-Abstract",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

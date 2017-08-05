@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "FmxTraitEntity",
-	"category" : "Famix-General",
+	"category" : "Famix-General-Generics",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
