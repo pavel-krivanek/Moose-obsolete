@@ -1,3 +1,3 @@
 accessing
 attributes: anObject
-	attributes := anObject
+	attributes value: anObject

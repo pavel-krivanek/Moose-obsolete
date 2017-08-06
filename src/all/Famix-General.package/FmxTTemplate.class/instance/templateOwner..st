@@ -1,3 +1,3 @@
 accessing
 templateOwner: anObject
-	templateOwner := anObject
+	templateOwner value: anObject

@@ -1,3 +1,4 @@
 accessing
 namespaceEntities
+	<MSEComment: ''>
 	^ namespaceEntities

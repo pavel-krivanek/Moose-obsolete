@@ -1,3 +1,4 @@
 accessing
 namespaces
+	<MSEComment: ''>
 	^ namespaces

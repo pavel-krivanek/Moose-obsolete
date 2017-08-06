@@ -1,3 +1,3 @@
 accessing
 typedEntity: anObject
-	typedEntity := anObject
+	typedEntity value: anObject

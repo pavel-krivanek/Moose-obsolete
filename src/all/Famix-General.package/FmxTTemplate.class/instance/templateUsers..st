@@ -1,3 +1,3 @@
 accessing
 templateUsers: anObject
-	templateUsers := anObject
+	templateUsers value: anObject

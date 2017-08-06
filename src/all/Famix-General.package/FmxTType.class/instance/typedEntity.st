@@ -1,3 +1,4 @@
 accessing
 typedEntity
+	<MSEComment: ''>
 	^ typedEntity

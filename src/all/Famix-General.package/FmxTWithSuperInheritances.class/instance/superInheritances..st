@@ -1,3 +1,0 @@
-accessing
-superInheritances: anInheritance
-	superInheritances value: anInheritance
