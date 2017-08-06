@@ -19,7 +19,12 @@ processSlot: aSlot in: aClass
 			(self allowPackageNamed: packageName)
 				ifFalse: [ ^ self ].
 			packPropDict at: prop put: packageName ].
-	(Pragma inMethod: aMethod named: #container) ifNotNil: [ prop isContainer: true ].
+
+	aClass primaryContainerTrait ifNotNil: [:aPrimaryContainerTrait |
+		(aPrimaryContainerTrait potentialPrimaryContainer = aSlot name)
+			ifTrue: [  prop isContainer: true  ] ].
+	"(Pragma inMethod: aMethod named: #container) ifNotNil: [ prop isContainer: true ]."
+
 	(Pragma inMethod: aMethod named: #derived) ifNotNil: [ prop isDerived: true ].
 	(Pragma inMethod: aMethod named: #source) ifNotNil: [ prop isSource: true ].
 	(Pragma inMethod: aMethod named: #target) ifNotNil: [ prop isTarget: true ]. 
