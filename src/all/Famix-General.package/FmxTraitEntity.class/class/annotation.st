@@ -2,6 +2,6 @@ meta
 annotation
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TraitEntity super: #FmxStEntity>
+	<MSEClass: #TraitEntity super: #MooseEntity>
 	<package: #FmxSt>
 	^self
