@@ -7,6 +7,7 @@ SystemOrganization addCategory: 'Famix-General-Behaviors'!
 SystemOrganization addCategory: 'Famix-General-Behavioural'!
 SystemOrganization addCategory: 'Famix-General-Comments'!
 SystemOrganization addCategory: 'Famix-General-Enums'!
+SystemOrganization addCategory: 'Famix-General-Exceptions'!
 SystemOrganization addCategory: 'Famix-General-Files'!
 SystemOrganization addCategory: 'Famix-General-Generics'!
 SystemOrganization addCategory: 'Famix-General-Inheritance'!

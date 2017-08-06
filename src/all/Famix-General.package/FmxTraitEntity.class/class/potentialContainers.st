@@ -9,4 +9,4 @@ potentialContainers
 	
 	(relations size ~= 1) ifTrue: [ ^ self subclassResponsibility ].
 	
-	^ relations first name
+	^ (relations collect: #name)
