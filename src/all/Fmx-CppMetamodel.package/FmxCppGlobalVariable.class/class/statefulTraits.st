@@ -1,6 +1,0 @@
-meta
-statefulTraits
-
-	<statefulTraits>
-	
-	^ { FmxTGlobalVariable }
