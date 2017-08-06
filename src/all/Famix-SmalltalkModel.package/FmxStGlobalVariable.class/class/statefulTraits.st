@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTGlobalVariable }
+	^ { FmxTGlobalVariable. FmxTTypedStructure }
