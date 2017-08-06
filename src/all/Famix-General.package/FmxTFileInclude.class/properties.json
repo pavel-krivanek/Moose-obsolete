@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#source => FMOne type: #FmxTFileWithInclude opposite: #outgoingIncludeRelations",
-		"#target => FMOne type: #FmxTFileWithInclude opposite: #incomingIncludeRelations"
+		"#source => FMOne type: #FmxTWithFileInclude opposite: #outgoingIncludeRelations",
+		"#target => FMOne type: #FmxTWithFileInclude opposite: #incomingIncludeRelations"
 	],
 	"name" : "FmxTFileInclude",
 	"type" : "normal"

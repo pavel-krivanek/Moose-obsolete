@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#aliasedType => FMMany type: #FmxTWithTypeAliases opposite: #typeAliases"
+		"#aliasedType => FMOne type: #FmxTWithTypeAliases opposite: #typeAliases"
 	],
 	"name" : "FmxTTypeAlias",
 	"type" : "normal"

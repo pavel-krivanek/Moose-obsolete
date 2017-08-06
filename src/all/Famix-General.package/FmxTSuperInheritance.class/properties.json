@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#superclass => FMOne type: #FmxTWithSubInheritances opposite: #subInheritances"
+		"#superclass => FMOne type: #FmxTWithSuperInheritances opposite: #subInheritances"
 	],
 	"name" : "FmxTSuperInheritance",
 	"type" : "normal"

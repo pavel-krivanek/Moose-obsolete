@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#templates => FMMany type: #FmxTTemplate opposite: #templateUsers"
+		"#templates => FMMany type: #FmxTTemplate opposite: #templateOwner"
 	],
 	"name" : "FmxTWithTemplates",
 	"type" : "normal"

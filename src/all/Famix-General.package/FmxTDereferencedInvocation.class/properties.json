@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#referencer => FMMany type: #FmxTWithDereferencedInvocations opposite: #dereferencedInvocations"
+		"#referencer => FMOne type: #FmxTWithDereferencedInvocations opposite: #dereferencedInvocations"
 	],
 	"name" : "FmxTDereferencedInvocation",
 	"type" : "normal"

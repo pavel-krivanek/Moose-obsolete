@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#compilationUnitOwner => FMOne type: #FmxTCompilationUnit opposite: #compilationUnit"
+		"#compilationUnitOwner => FMOne type: #FmxTWithCompilationUnit opposite: #compilationUnit"
 	],
 	"name" : "FmxTCompilationUnit",
 	"type" : "normal"

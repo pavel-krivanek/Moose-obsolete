@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#attributes => FMMany type: #FmxStAttribute opposite: #parentType"
+		"#attributes => FMMany type: #FmxTAttribute opposite: #parentType"
 	],
 	"name" : "FmxTWithAttributes",
 	"type" : "normal"

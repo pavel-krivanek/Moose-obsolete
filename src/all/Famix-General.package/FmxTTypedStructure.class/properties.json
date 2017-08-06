@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#declaredType => FMMany type: #FmxWithTypedStructures opposite: #structuresWithDeclaredType"
+		"#declaredType => FMOne type: #FmxTWithTypedStructures opposite: #structuresWithDeclaredType"
 	],
 	"name" : "FmxTTypedStructure",
 	"type" : "normal"
