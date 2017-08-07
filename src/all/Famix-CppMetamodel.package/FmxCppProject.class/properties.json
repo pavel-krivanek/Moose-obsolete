@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxCppEntity",
+	"category" : "Famix-CppMetamodel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxCppProject",
+	"type" : "normal"
+}
