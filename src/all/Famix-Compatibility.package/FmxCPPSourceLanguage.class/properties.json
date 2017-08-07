@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxCSourceLanguage",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxCPPSourceLanguage",
+	"type" : "normal"
+}

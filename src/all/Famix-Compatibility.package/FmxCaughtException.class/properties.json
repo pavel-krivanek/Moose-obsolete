@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxException",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxCaughtException",
+	"type" : "normal"
+}

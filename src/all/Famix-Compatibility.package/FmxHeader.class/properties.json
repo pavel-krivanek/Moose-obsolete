@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxCFile",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxHeader",
+	"type" : "normal"
+}

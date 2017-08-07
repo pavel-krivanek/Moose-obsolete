@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxScopingEntity",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxPackage",
+	"type" : "normal"
+}

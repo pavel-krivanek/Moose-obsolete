@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxType",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxEnum",
+	"type" : "normal"
+}

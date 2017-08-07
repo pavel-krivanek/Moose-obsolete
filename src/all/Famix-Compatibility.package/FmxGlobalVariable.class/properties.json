@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStructuralEntity",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxGlobalVariable",
+	"type" : "normal"
+}
