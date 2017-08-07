@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxJavaEntity",
+	"category" : "Famix-JavaMetamodel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxJavaSourcedEntity",
+	"type" : "normal"
+}
