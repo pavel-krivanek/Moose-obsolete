@@ -1,0 +1,4 @@
+accessing
+annotationType
+	<MSEComment: ''>
+	^ annotationType

@@ -1,4 +1,4 @@
 accessing
-typedEntity
+instances
 	<MSEComment: ''>
-	^ typedEntity
+	^ instances

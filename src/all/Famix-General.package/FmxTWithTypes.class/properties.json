@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#types => FMMany type: #FmxTType opposite: #typedEntity"
+		"#types => FMMany type: #FmxTType opposite: #typedEntities"
 	],
 	"name" : "FmxTWithTypes",
 	"type" : "normal"

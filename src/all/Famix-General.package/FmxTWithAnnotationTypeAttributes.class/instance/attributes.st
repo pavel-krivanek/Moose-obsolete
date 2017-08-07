@@ -1,4 +1,0 @@
-accessing
-attributes
-	<MSEComment: ''>
-	^ attributes
