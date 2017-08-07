@@ -1,0 +1,3 @@
+accessing
+argumentsInParameterizedTypes: anObject
+	argumentsInParameterizedTypes value: anObject

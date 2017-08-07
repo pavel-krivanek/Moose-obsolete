@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithExceptions }
+	^ { FmxTWithExceptions. FmxTWithMethods. FmxTWithSuperInheritances. FmxTWithSubInheritances. }

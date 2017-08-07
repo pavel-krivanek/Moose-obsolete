@@ -1,0 +1,4 @@
+accessing
+argumentsInParameterizedTypes
+	<MSEComment: ''>
+	^ argumentsInParameterizedTypes
