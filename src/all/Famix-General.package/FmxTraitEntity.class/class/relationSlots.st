@@ -1,5 +1,5 @@
 slots
 relationSlots 
 
-	^ (self slots select: [:aSlot | aSlot isKindOf: FMRelationSlot]).
+	^ (self slots select: [:aSlot | aSlot isFMRelationSlot]).
 

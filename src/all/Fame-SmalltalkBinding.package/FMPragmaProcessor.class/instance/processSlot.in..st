@@ -2,9 +2,9 @@ private
 processSlot: aSlot in: aClass
 	| prop |
 	
-	(aSlot isKindOf: FMRelationSlot) ifFalse: [
+	(aSlot isFMRelationSlot) ifFalse: [
 		^ self ].
-
+	
 	prop := elements add: aSlot mooseProperty.
 
 	typeDict at: prop put: aSlot targetClass.

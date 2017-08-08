@@ -1,0 +1,4 @@
+*Fame-Core
+isFMRelationSlot
+
+	^ false

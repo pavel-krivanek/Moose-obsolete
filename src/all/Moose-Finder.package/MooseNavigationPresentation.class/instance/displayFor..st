@@ -9,7 +9,7 @@ displayFor: anObject
 					(anObject mooseInterestingEntity perform: pragma methodSelector)
 						mooseInterestingEntity ].
 
-	pragmaValueAssociations addAll: (entity class slots select: [ :each | each isKindOf: FMRelationSlot ] 
+	pragmaValueAssociations addAll: (entity class slots select: #isFMRelationSlot  
 		thenCollect: [ :aSlot | aSlot -> (anObject mooseInterestingEntity perform: aSlot name)	mooseInterestingEntity ]).
 					
 
