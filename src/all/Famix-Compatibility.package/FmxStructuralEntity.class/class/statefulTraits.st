@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTAccessible }
+	^ { FmxTAccessible. FmxTWithDereferencedInvocations. FmxTTypedStructure }
