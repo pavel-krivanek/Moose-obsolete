@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Files",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#entities => FMMany type: #FmxTWithFiles opposite: #containerFiles"
+	],
+	"name" : "FmxTFile",
+	"type" : "normal"
+}

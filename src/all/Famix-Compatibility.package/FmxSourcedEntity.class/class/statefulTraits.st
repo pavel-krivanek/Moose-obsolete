@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithSourceAnchor. FmxTWithComments. FmxTWithSourceLanguage }
+	^ { FmxTWithSourceAnchor. FmxTWithComments. FmxTWithSourceLanguage. FmxTWithFiles }
