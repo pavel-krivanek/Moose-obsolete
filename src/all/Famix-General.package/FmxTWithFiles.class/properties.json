@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#containerFiles => FMMany type: #FmxTFile opposite: #containerFiles"
+		"#containerFiles => FMMany type: #FmxTFile opposite: #entities"
 	],
 	"name" : "FmxTWithFiles",
 	"type" : "normal"
