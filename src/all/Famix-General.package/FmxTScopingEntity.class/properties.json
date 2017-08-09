@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Namespaces",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#parentScope => FMOne type: #FmxTScopingEntity opposite: #childScopes",
+		"#childScopes => FMMany type: #FmxTScopingEntity opposite: #parentScope"
+	],
+	"name" : "FmxTScopingEntity",
+	"type" : "normal"
+}

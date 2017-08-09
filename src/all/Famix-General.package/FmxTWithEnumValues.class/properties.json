@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#enumValues => FMMany type: #FmxTEnumValue opposite: #parentBehaviouralEntity"
+		"#enumValues => FMMany type: #FmxTEnumValue opposite: #parentEnum"
 	],
 	"name" : "FmxTWithEnumValues",
 	"type" : "normal"

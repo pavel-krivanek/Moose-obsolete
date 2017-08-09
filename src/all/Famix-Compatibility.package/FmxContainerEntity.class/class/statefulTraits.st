@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithTypes. FmxTWithFunctions }
+	^ { FmxTWithTypes. FmxTWithFunctions. FmxTWithAnnotationTypes }
