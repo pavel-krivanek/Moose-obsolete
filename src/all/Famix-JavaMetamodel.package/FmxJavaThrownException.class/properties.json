@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FmxJavThrownException",
+	"name" : "FmxJavaThrownException",
 	"type" : "normal"
 }

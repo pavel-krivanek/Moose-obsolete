@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxJavaType",
+	"super" : "FmxJavaException",
 	"category" : "Famix-JavaMetamodel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FmxJavaParametrizedType",
+	"name" : "FmxJavaCaughtException",
 	"type" : "normal"
 }
