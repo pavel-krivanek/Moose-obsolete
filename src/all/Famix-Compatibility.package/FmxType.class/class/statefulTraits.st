@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTType. FmxTReferenceable. FmxTWithTypedStructures. FmxTWithTypeAliases.  FmxTWithMethods. FmxTWithSuperInheritances. FmxTWithSubInheritances. FmxTWithAttributes   }
+	^ { FmxTType. FmxTReferenceable. FmxTWithTypedStructures. FmxTWithTypeAliases.  FmxTWithMethods. FmxTWithSuperInheritances. FmxTWithSubInheritances. FmxTWithAttributes. FmxTParameterizedTypeUser }
