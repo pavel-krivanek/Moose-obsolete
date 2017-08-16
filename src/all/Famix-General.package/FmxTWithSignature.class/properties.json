@@ -1,14 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "FmxStNamedEntity",
-	"category" : "Famix-SmalltalkModel",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Abstract",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"hasClassScope",
 		"signature"
 	],
-	"name" : "FmxStMethod",
+	"name" : "FmxTWithSignature",
 	"type" : "normal"
 }

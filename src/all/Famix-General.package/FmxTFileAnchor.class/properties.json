@@ -1,14 +1,17 @@
 {
 	"commentStamp" : "",
 	"super" : "FmxTraitEntity",
-	"category" : "Famix-General-Behavioural",
+	"category" : "Famix-General-Files",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentType => FMOne type: #FmxTWithMethods opposite: #methods",
-		"#kind"
+		"fileName",
+		"startLine",
+		"startColumn",
+		"endLine",
+		"endColumn"
 	],
-	"name" : "FmxTMethod",
+	"name" : "FmxTFileAnchor",
 	"type" : "normal"
 }

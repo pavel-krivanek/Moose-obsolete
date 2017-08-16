@@ -1,14 +1,13 @@
 {
 	"commentStamp" : "",
 	"super" : "FmxTraitEntity",
-	"category" : "Famix-General-Behavioural",
+	"category" : "Famix-General-Abstract",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"#parentType => FMOne type: #FmxTWithMethods opposite: #methods",
-		"#kind"
+		"hasClassScope"
 	],
-	"name" : "FmxTMethod",
+	"name" : "FmxTWithClassScope",
 	"type" : "normal"
 }

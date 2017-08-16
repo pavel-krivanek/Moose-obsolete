@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTAttribute. FmxTWithClassScope }
+	^ { FmxTFileAnchor }

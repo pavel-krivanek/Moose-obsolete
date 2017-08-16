@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTMethod. FmxTWithThrownExceptions. FmxTWithDeclaredExceptions. FmxTWithCaughtExceptions  }
+	^ { FmxTMethod. FmxTWithThrownExceptions. FmxTWithDeclaredExceptions. FmxTWithCaughtExceptions. FmxTWithClassScope  }

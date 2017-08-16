@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTPackageable. FmxTInvocationsReceiver. FmxTWithAnnotationInstances  }
+	^ { FmxTPackageable. FmxTInvocationsReceiver. FmxTWithAnnotationInstances. FmxTNamed  }
