@@ -82,6 +82,7 @@ baseline: spec
 			'Moose-Tests-MonticelloImporter'
 			'Moose-Query-Test'
 			
+			'Famix-General'
 			'Famix-Compatibility'
 			'Famix-SmalltalkModel'
 			'Famix-JavaMetamodel'
