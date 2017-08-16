@@ -6,6 +6,6 @@ elementNamed: aString
 	entityName := (aString withoutPrefix: 'FAMIX.').
 	(entityName = 'JavaSourceLanguage') ifTrue: [ entityName := 'JAVASourceLanguage' ].
 
-	newName := 'FmxCompatibility.', entityName.
+	newName := 'FmxJava.', entityName.
 
 	^self elementNamed: newName ifAbsent: [ self error: 'Element ''', newName, ''' not found.' ]

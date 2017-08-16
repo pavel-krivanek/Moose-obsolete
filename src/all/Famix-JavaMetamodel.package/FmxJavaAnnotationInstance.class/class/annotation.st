@@ -1,6 +1,6 @@
 meta
 annotation
 
-	<MSEClass: #AnnotationInstance super: #FmxJavaEntity>
+	<MSEClass: #AnnotationInstance super: #FmxJavaSourcedEntity>
 	<package: #FmxJava>
 	^self
