@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "FmxJavaPrmitiveType",
+	"name" : "FmxJavaPrimitiveType",
 	"type" : "normal"
 }

@@ -81,6 +81,13 @@ baseline: spec
 			'Moose-TestResources-PackageBlueprint-P4'
 			'Moose-Tests-MonticelloImporter'
 			'Moose-Query-Test'
+			
+			'Famix-Compatibility'
+			'Famix-SmalltalkModel'
+			'Famix-JavaMetamodel'
+			'Famix-CppMetamodel'
+
+			
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
 
