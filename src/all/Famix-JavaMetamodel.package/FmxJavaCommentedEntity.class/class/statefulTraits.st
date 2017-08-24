@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTWithComments. FmxTInvocationsReceiver. FmxTWithAnnotationInstances }
+	^ { FmxTWithComments. FmxTInvocationsReceiver. FmxTWithAnnotationInstances. FmxTNamed }
