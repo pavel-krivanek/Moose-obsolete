@@ -2,4 +2,4 @@
 allAccesses
 	
 	<navigation: 'All accesses'>
-	^self allWithType: FAMIXAccess 
+	^self allWithTrait: FmxTAccess 

@@ -1,4 +1,0 @@
-*Famix-General
-statefulTraits
-
-	^ {  }
