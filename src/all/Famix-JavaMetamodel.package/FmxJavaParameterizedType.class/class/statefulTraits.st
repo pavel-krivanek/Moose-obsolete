@@ -3,4 +3,4 @@ statefulTraits
 
 	<statefulTraits>
 	
-	^ { FmxTParameterizedType. FmxTWithParameterizedTypeUsers  }
+	^ { FmxTParameterizedType. FmxTWithParameterizedTypeUsers.    }

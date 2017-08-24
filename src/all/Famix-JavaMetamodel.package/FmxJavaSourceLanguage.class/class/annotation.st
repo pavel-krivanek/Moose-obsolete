@@ -1,6 +1,6 @@
 meta
 annotation
 
-	<MSEClass: #SourceLanguage super: #FmxJavaEntity>
+	<MSEClass: #JavaSourceLanguage super: #FmxJavaEntity>
 	<package: #FmxJava>
 	^self
