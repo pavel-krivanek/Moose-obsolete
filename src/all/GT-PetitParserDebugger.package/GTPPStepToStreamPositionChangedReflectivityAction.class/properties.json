@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "GTPPReflectivityStepDebugAction",
+	"category" : "GT-PetitParserDebugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"initialPosition"
+	],
+	"name" : "GTPPStepToStreamPositionChangedReflectivityAction",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+scripting
+beforeMethodBreakpoint
+	^ self addBreakpoint: GTDebuggerMethodBeforeBreakpoint new

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ZeroConfVMVersionScript",
+	"category" : "ZeroConf-Unity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ZeroConfVMVersionTimerHearbeatScript",
+	"type" : "normal"
+}

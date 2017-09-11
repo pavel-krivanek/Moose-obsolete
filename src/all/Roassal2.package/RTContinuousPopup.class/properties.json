@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "akevalion 8/10/2017 17:38",
+	"super" : "RTPopup",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pointers",
+		"controlPoint",
+		"view"
+	],
+	"name" : "RTContinuousPopup",
+	"type" : "normal"
+}

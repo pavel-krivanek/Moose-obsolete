@@ -1,0 +1,1 @@
+I am a new class to combine attach points

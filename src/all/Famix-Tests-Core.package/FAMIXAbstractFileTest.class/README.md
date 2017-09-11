@@ -1,0 +1,1 @@
+A FAMIXAbstractFileTest is a test class for testing the behavior of FAMIXAbstractFile

@@ -1,0 +1,3 @@
+generated
+startingStateForclass_member_declaration
+	^ 6

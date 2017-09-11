@@ -1,0 +1,3 @@
+accessing
+blockValidArea
+	^ controlPoint

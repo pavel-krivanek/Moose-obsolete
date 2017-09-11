@@ -1,0 +1,1 @@
+RTData renders bars and dots in vertical way

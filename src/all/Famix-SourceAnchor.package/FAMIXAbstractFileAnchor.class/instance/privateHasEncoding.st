@@ -1,0 +1,3 @@
+private
+privateHasEncoding
+	^ encoding isNotNil
