@@ -1,6 +1,13 @@
 helpers
 anchorForClassTest
-	^ self actualClass new
+	| file anchor |
+	file := (FileSystem memory / 'test.java')
+		ensureCreateFile;
+		writeStreamDo: [ :s | s nextPutAll: self sourceCodeForTest ];
+		yourself.
+	anchor := self actualClass new
 		startPos: 50;
 		endPos: 253;
-		yourself
+		yourself.
+	anchor stub fileReference willReturn: file.
+	^ anchor

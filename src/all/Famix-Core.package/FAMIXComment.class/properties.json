@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"container",
-		"content"
+		"container"
 	],
 	"name" : "FAMIXComment",
 	"type" : "normal"

@@ -1,3 +1,10 @@
 public - positioning
 left
-	position := #left
+	self positionDo: [ :p |
+		p
+			outer;
+			left;
+			horizontalPadding: offset;
+			middle;
+			move.
+		 ].

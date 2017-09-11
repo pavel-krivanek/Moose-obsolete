@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"fileName"
+		"fileName",
+		"encoding"
 	],
 	"name" : "FAMIXAbstractFileAnchor",
 	"type" : "normal"

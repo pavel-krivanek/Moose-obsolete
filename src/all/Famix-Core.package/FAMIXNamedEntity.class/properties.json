@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "TOODependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes})",
+	"classtraitcomposition" : "TOODependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes})",
 	"classvars" : [ ],
 	"instvars" : [
 		"name",
@@ -16,7 +16,9 @@
 	"type" : "normal",
 	"classinstvars" : [
 		"outgoingMSEProperties",
-		"incomingMSEProperties"
+		"incomingMSEProperties",
+		"outgoingAssociationTypes",
+		"incomingAssociationTypes"
 	],
 	"pools" : [ ],
 	"category" : "Famix-Core"

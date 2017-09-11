@@ -1,7 +1,8 @@
 tests
 testSourceTextWithoutStartPos
 	| anchor |
-	anchor := self actualClass new
+	anchor := self anchorForClassTest
+		startPos: nil;
 		endPos: 250;
 		yourself.
 	anchor stub completeText willReturn: self sourceCodeForTest.

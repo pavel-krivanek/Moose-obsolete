@@ -1,10 +1,6 @@
 private
 commentOfProperty: fm3Prop
-	| commentPrag |
+		| commentPrag |
 	fm3Prop mmClass implementingClass isNil ifTrue: [^ ''].
-	commentPrag := Pragma 
-		inMethod: fm3Prop compiledMethod
-		named: #MSEComment:.
-	^ commentPrag 
-		ifNil: [ '' ]
-		ifNotNil: [ commentPrag argumentAt: 1 ].
+	commentPrag := Pragma inMethod: fm3Prop compiledMethod named: #MSEComment:.
+	^ commentPrag ifNil: [ '' ] ifNotNil: [ commentPrag argumentAt: 1 ]

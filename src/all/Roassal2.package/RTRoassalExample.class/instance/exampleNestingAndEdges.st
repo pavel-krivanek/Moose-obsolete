@@ -12,7 +12,7 @@ RTNest new
 		RTGridLayout on: group ].
 	
 es @ (RTShowEdge new 
-			connectTo: #dependentClasses; 
+			connectToAll: #dependentClasses; 
 			shape: (RTLine new color: Color red);
 			yourself).
 es @ (RTShowLabel new 

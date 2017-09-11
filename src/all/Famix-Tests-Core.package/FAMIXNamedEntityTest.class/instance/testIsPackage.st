@@ -1,6 +1,6 @@
 tests
 testIsPackage
 	| entity |
-	entity := FAMIXNamedEntity new.
+	entity := self actualClass new.
 	entity isPackage: true.
 	self assert: entity isPackage

@@ -5,7 +5,7 @@ definitionComment
 
 %states default interpolatedString interpolatedVerbatimString;
 
-%start compilation_unit namespace_member_declaration statement expression block;
+%start compilation_unit namespace_member_declaration statement expression block class_member_declaration;
 
 %ignore_variables commaToken _leftParen _rightParen semicolonToken;
 

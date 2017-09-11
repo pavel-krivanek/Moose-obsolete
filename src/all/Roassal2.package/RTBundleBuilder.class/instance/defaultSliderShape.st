@@ -1,13 +1,6 @@
 default
 defaultSliderShape
-	| lin c |
-	"lin := TRPlatform current linearGradientClass.
-	c := lin new
-				start: 0@ -8.75; stop: 0@8.75;
-				colorRamp: (Array with: (0.0 -> (Color white alpha: 0.6)) with: (1.0 -> Color transparent).
-	c2 := lin new
-				start: 0@ 7.0; stop: 0@12.0;
-				colorRamp: (Array with: (0.0-> Color transparent) with: (1.0 -> (Color white alpha: 0.6))."
+	| c |
 	c := Color blue.
 	sliderShape := RTCompositeShape new 
 		add: (RTEllipse new size: 30; color: Color blue; borderWidth: 0.01; borderColor: Color black);

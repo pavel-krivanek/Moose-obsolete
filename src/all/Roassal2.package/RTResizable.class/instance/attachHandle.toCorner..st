@@ -7,5 +7,7 @@ attachHandle: aHandle toCorner: aCorner
 		border;
 		stick.
 	aHandle
-		addCallback: (TRTranslationCallback block: [ :shape :step | self callbackFor: aHandle corner: aCorner ]).
+		addCallback:
+			(TRTranslationCallback
+				block: [ :shape :step | self callbackFor: aHandle corner: aCorner ]).
 	self addCursorEventsOn: aHandle corner: aCorner

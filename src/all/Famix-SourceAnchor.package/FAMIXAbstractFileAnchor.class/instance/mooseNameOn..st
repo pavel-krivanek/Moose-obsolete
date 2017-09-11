@@ -1,4 +1,3 @@
 printing
 mooseNameOn: aStream
-	aStream
-		nextPutAll: self fileName asString
+	aStream nextPutAll: self fileName asString

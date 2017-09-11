@@ -15,7 +15,9 @@
 		"textSize",
 		"gapSize",
 		"isFixed",
-		"onDemandText"
+		"onDemandText",
+		"boxShape",
+		"nestBlock"
 	],
 	"name" : "RTLegendBuilder",
 	"type" : "normal"

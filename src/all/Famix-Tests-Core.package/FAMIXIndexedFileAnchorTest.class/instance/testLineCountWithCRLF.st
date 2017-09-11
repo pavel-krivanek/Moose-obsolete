@@ -1,7 +1,7 @@
 tests
 testLineCountWithCRLF
 	| file anchor |
-	(file := FileSystem memory / 'test.txt')
+	(file := FileSystem memory / 'test.java')
 		ensureCreateFile;
 		writeStreamDo: [ :s | s << (self sourceCodeForTest copyReplaceAll: String cr with: String crlf) ].
 	anchor := self actualClass new

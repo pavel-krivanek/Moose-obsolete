@@ -10,7 +10,8 @@
 		"shape",
 		"shapes",
 		"numberOfShapes",
-		"side"
+		"side",
+		"center"
 	],
 	"name" : "RTAddElementAnimation",
 	"type" : "normal"

@@ -1,6 +1,6 @@
 tests
 testIsPrivate
 	| entity |
-	entity := FAMIXNamedEntity new.
+	entity := self actualClass new.
 	entity isPrivate: true.
 	self assert: entity isPrivate

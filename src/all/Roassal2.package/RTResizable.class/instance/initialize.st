@@ -2,4 +2,5 @@ initialization
 initialize
 	super initialize.
 	handles := #().
-	enabled := false
+	enabled := false.
+	self minSize: 20 @ 20

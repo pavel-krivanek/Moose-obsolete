@@ -1,13 +1,8 @@
 accessing
 sourceText
-	(self startLine isNil or: [ self endLine isNil ]) ifTrue: [ ^ '' ].
+	(self startLine isNil and: [ self endLine isNil ]) ifTrue: [ ^ self completeText ].
 	
-	^ String
-		streamContents: [ :stream | 
-			| index |
-			index := 1.
-			self completeText
-				linesDo: [ :each | 
-					(index between: self startLine and: self endLine - 1) ifTrue: [ stream nextPutAll: each; cr ].
-					index = self endLine ifTrue: [ stream nextPutAll: each ].
-					index := index + 1 ] ]
+	self sourcesAreReadable ifFalse: [ ^ '' ].
+	
+	^ self fileReference
+		binaryReadStreamDo: [ :in | String streamContents: [ :s | FAMIXFileAnchorReader readStream: (ZnCharacterReadStream on: in encoding: self encoding) for: self into: s ] ]

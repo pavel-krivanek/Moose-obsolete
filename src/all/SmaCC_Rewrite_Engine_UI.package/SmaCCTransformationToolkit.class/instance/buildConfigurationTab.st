@@ -56,8 +56,8 @@ buildConfigurationTab
 		andShow: [ :presentation | 
 			presentation fastTable
 				display: [ self fileResults ];
-				updateOn: ValueAdded from: [ self fileResults announcer ];
-				updateOn: ValueRemoved from: [ self fileResults announcer ];
+				updateOn: ValueAdded from: [ self fileResults instVarNamed: 'announcer' ];
+				updateOn: ValueRemoved from: [ self fileResults instVarNamed: 'announcer' ];
 				column: 'File' evaluated: [ :each | each filename ];
 				column: 'Error' evaluated: [ :each | each errorString ifNil: [ '' ] ];
 				column: 'Transformation' evaluated: [ :each | each transformation ifNil: [ '' ] ifNotNil: [ :t | t displayString ] ];

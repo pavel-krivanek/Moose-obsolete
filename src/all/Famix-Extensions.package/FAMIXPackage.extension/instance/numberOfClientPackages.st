@@ -5,6 +5,7 @@ numberOfClientPackages
 
 	<MSEProperty: #numberOfClientPackages type: #Number>
 	<MSEComment: 'The number of packages which depend on this package'>
+	<derived>
 
 	^ self lookUpPropertyNamed: #numberOfClientPackages
 				 computedAs: [ self clientPackages size ]

@@ -1,15 +1,13 @@
 properties
-propertyNamed: propertyName ifNil: aBlock 
-	"Return the value of the property named propertyName, evaluate aBlock if the property does not exist" 
-	 
+propertyNamed: propertyName ifNil: aBlock
+	"Return the value of the property named propertyName, evaluate aBlock if the property does not exist"
+
 	| prop |
 	prop := propertyName asSymbol.
-	^ self privateState 
+	^ self privateState
 		propertyAt: prop
-		ifAbsent: 
-			[ | property |
-			[ property := self mmGetProperty: 
-				(self mooseDescription attributeNamed: propertyName) ]
+		ifAbsent: [ | property |
+			[ property := self mmGetProperty: (self mooseDescription attributeNamed: propertyName) ]
 				on: Error
 				do: [ :ex | property := nil ].
-			property ifNil: [aBlock value] ].
+			property ifNil: [ aBlock value ] ]

@@ -1,5 +1,5 @@
 running
 runAll
 	CurrentExecutionEnvironment runTestsBy: [ 
-		examples do: [ :each | self runExample: each ]
+		examples do: [ :each | each ignoreTest ifFalse: [ self runExample: each ] ]
 	]

@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "PeterUhnak 7/25/2015 16:00",
+	"commentStamp" : "PeterUhnak 7/7/2017 08:54",
 	"super" : "RTInteraction",
 	"category" : "Roassal2-Interactions-Resize",
 	"classinstvars" : [ ],
@@ -9,7 +9,8 @@
 		"element",
 		"handles",
 		"enabled",
-		"view"
+		"view",
+		"minSize"
 	],
 	"name" : "RTResizable",
 	"type" : "normal"

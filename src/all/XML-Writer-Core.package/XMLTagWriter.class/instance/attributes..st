@@ -1,3 +1,3 @@
 accessing
-attributes: aDictionaryOrArray
-	attributes := OrderPreservingStringDictionary newFrom: aDictionaryOrArray
+attributes: anAssociationCollection
+	attributes := OrderPreservingStringDictionary newFrom: anAssociationCollection

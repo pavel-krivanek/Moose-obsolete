@@ -15,6 +15,7 @@ exampleAOB
 	
 	lb := RTLegendBuilder new.
 	lb view: b view.
+	lb right.
 	lb addText: 'Fruit example '.
 	fruits do: [ :f | lb addColor: f color text: f name ].
 	lb build.

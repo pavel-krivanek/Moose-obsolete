@@ -1,4 +1,3 @@
 accessing
 includeLine: anInteger
-
-	^ startLine <= anInteger and: [ anInteger <= endLine ]
+	^ anInteger between: startLine and: endLine

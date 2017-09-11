@@ -7,7 +7,7 @@ testBasic
 	v addAll: es.
 	RTCircleLayout on: es.
 
-	es first @ (RTShowEdge new connectTo: [:vvvv| Array with: 2 ]).
+	es first @ (RTShowEdge new connectToAll: [:vvvv| Array with: 2 ]).
 
 	self assert: v numberOfEdges = 0.
 	es first announce: TRMouseEnter.

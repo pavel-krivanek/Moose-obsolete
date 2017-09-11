@@ -8,8 +8,8 @@ You must provide this class with aView instance or the initialized element must 
 
 !! Collaborators
 
-DCRTRectangle
-DCRTResizeCanceled
+RTResizableRectangle
+RTResizeCanceled
 
 !! Example
 

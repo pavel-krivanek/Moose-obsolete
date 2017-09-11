@@ -1,4 +1,4 @@
-public-axis
+public - axis
 axisX
 	| s |
 	self checkIfDataSetHaveBeenAdded.

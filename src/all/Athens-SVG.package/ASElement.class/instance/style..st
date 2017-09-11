@@ -1,7 +1,7 @@
 operations
 style: aString 
 	| values |
-	values := aString subStrings: ';'.
+	values := aString substrings: ';'.
 	
 	values do: [:keyval | | key val setter |
 		key := (keyval copyUpTo: $:) trimBoth.

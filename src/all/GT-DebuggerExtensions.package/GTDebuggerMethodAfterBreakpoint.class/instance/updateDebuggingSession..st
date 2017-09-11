@@ -2,6 +2,5 @@ actions
 updateDebuggingSession: aSession
 	super updateDebuggingSession: aSession.
 	
-	"aSession stepInto."
-	
-	"aSession updateContextTo: aSession interruptedContext sender"
+	aSession stepOver. "instrumented method -> ensure block calling breakpointReached"
+	aSession stepOver. "ReflectiveMethod>>run:with:in:"

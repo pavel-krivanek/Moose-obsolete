@@ -8,13 +8,7 @@ menuFor: aBuilder
 	self buildSubmenu: aBuilder.
 	self inspectExamples: [ package gtExamplesContained ] builder: aBuilder.
 	self inspectReturnValue: [ package gtExamplesContained ] builder: aBuilder.
-	self inspectResults: [ package gtExamplesContained ] builder: aBuilder.
 	self inspectProblems: [ package gtExamplesContained ] builder: aBuilder.
 	self buildSeparator.
 	self runExamples: [ package gtExamplesContained ] builder: aBuilder.
 	self debugExamples: [ package gtExamplesContained ] builder: aBuilder.
-	self buildSeparator.
-	self browsePackage: package builder: aBuilder.
-	self buildSeparator.
-	self browseExamplesReferencing: package packageName  builder: aBuilder.
-	self browseExamplesWithSubject: package asGTExampleSubject builder: aBuilder.

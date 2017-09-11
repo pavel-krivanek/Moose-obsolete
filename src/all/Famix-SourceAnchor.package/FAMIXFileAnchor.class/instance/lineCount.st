@@ -1,4 +1,4 @@
-querying
+accessing
 lineCount
 	(endLine notNil and: [ startLine notNil ])
 		ifTrue: [ ^ endLine - startLine + 1 ].

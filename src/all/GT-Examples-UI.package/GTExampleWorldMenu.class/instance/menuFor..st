@@ -6,9 +6,7 @@ menuFor: aBuilder
 	
 	self buildSeparator.
 	
-	self browseAllExamples: aBuilder.
 	self browseAllExamplesWithProblems: aBuilder.
-	self browseAllExamplesWithDependencies: aBuilder.
 	self browseAllExamplesIgnoredByTests: aBuilder.
 	
 	self buildSeparator.

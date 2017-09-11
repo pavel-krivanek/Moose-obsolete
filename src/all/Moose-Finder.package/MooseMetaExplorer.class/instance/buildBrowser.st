@@ -5,32 +5,38 @@ buildBrowser
 	browser
 		column: #hierarchy;
 		column: #attributes.
-	(browser transmit)
+	browser transmit
 		to: #hierarchy;
 		andShow: [ :a | self hierarchyIn: a ].
-	(browser transmit)
+	browser transmit
 		to: #attributes;
 		from: #hierarchy;
 		andShow: [ :a | 
-					self relationsIn: a.
-					self propertiesIn: a ].
-	(browser transmit)
+			self relationsIn: a.
+			self propertiesIn: a.
+			self methodsIn: a.
+			a
+				onChangeOfPort: #activePresentation
+				act: [ :presentation | 
+					(presentation pane port: #activePresentation) value
+						ifNotNil: [ :activePresentation | |port| port:=((browser paneNamed: #attributes) port: #selection). port silentValue: nil. port value:nil ] ] ].
+	browser transmit
 		from: #attributes port: #strongSelection;
 		toOutsidePort: #propertyToSelect.
-	(browser transmit)
+	browser transmit
 		fromOutsidePort: #propertyToSelect;
 		to: #hierarchy port: #selection;
 		transformed: [ :property | property owner ].
-	(browser transmit)
+	browser transmit
 		fromOutsidePort: #propertyToSelect;
 		to: #attributes port: #selection.
-	(browser transmit)
+	browser transmit
 		from: #hierarchy;
 		toOutsidePort: #selectedEntity.
-	(browser transmit)
+	browser transmit
 		fromOutsidePort: #entityToSelect;
 		to: #hierarchy port: #selection.
-	(browser transmit)
+	browser transmit
 		from: #attributes;
 		toOutsidePort: #selectedAttribute.
 	^ browser

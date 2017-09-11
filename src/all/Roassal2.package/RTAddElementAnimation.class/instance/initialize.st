@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	shape := RTShapeBuilder new.
-	self numberOfShapes: 3.
+	self numberOfShapes: 4.

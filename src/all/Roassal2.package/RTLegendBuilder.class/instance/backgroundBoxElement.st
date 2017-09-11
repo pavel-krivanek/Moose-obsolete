@@ -1,5 +1,6 @@
 hooks
 backgroundBoxElement
-	^ (RTBox new
-		borderColor: Color lightGray;
-		fillColor: Color transparent) element
+	| e |
+	e := self backgroundShape elementOn: nil.
+	self interaction setUpElement: e.
+	^ e

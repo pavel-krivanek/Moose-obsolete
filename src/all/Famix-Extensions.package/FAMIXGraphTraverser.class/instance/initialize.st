@@ -1,4 +1,4 @@
-visiting
+initialization
 initialize 
 	visited := IdentitySet new.
 	graph := MalGraphStructure new 

@@ -2,7 +2,7 @@ tests
 testAllAncestors
 	"ancestors of a node"
 
-	| lattice node patterns |
+	| lattice patterns |
 	lattice := MalLattice on: self initializeDataMammals2.
 	patterns := ModuleIdentification new lattice: lattice.
 	self assert: (patterns allAncestors: (lattice nodes at: 2)) size equals: 2.

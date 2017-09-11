@@ -621,7 +621,14 @@ catches
 	| catches catch_clause 'catch'
 	;
 catch_clause 
-	: ""catch"" 'catchToken' ""("" 'leftParen' formal_parameter 'parameter' "")"" 'rightParen' block 'block' {{CatchClause}}
+	: ""catch"" 'catchToken' ""("" 'leftParen' catch_parameter 'parameter' "")"" 'rightParen' block 'block' {{CatchClause}}
+	;
+catch_parameter
+	: variable_modifiers catch_types variable_declarator_id 'variable'  {{CatchParameter}}
+	;
+catch_types
+	: type 'type'
+	| catch_types ""|"" 'bar' type 'type'
 	;
 finally 
 	: ""finally"" 'finallyToken' block 'block' {{FinallyClause}}

@@ -15,7 +15,7 @@ scanForTokenX19
 	currentCharacter == $}
 		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $~
-		ifTrue: [ ^ self recordAndReportMatch: #(85) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(86) ].
 	currentCharacter isDigit
 		ifTrue:
 			[ ^ self scanForTokenX3 ].

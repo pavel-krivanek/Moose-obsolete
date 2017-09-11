@@ -1,4 +1,4 @@
-accessing
+printing
 mooseNameOn: aStream
 	super mooseNameOn: aStream.
 	aStream

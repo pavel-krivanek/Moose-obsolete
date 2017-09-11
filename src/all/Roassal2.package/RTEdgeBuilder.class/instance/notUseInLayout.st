@@ -1,3 +1,3 @@
-configuration
+public - configuration
 notUseInLayout
 	shouldNotBeUsedInLayout := false

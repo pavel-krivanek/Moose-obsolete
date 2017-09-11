@@ -1,3 +1,3 @@
 *GT-Examples-Core
 gtExamplesFactory
-	^ self methodClass gtExamplesFactory
+	^ self methodClass theNonMetaClass gtExamplesFactory

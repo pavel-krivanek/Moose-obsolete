@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "FAMIXSourcedEntityTest",
+	"super" : "FAMIXNamedEntityTest",
 	"category" : "Famix-Tests-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

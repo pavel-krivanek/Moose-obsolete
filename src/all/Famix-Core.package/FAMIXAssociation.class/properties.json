@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "TAssociationMetaLevelDependency classTrait",
+	"classtraitcomposition" : "TAssociationMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes}",
 	"classvars" : [ ],
 	"instvars" : [
 		"previous",

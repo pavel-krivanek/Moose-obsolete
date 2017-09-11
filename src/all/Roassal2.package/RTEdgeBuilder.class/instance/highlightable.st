@@ -1,4 +1,4 @@
-as yet unclassified
+public - configuration
 highlightable
 	"Make the edges highlightable.
 	Here is an example:

@@ -1,4 +1,4 @@
-as yet unclassified
+instance creation
 on: collection start: start stop: stop
 	^ self new
 		collection: collection;

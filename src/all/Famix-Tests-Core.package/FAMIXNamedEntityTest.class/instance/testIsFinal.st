@@ -1,6 +1,6 @@
 tests
 testIsFinal
 	| entity |
-	entity := FAMIXNamedEntity new.
+	entity :=self actualClass new.
 	entity isFinal: true.
 	self assert: entity isFinal

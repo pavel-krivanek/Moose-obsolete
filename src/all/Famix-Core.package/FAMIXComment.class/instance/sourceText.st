@@ -1,3 +1,3 @@
 accessing
 sourceText
-	^ content ifNil: ['']
+	^ self content ifNil: [ self sourceAnchor ifNil: [ '' ] ifNotNil: [ :sa | sa sourceText ] ]

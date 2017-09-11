@@ -15,7 +15,8 @@
 		"labelBlock",
 		"labelConditionalBlock",
 		"labelColor",
-		"legend"
+		"legend",
+		"isVertical"
 	],
 	"name" : "RTStackBarPlot",
 	"type" : "normal"

@@ -1,7 +1,8 @@
 accessing
 instrumentationContextFrom: aContext
-	|ctxt|
-	ctxt := aContext sender sender sender sender sender.
-	^ ctxt sender methodClass = ReflectiveMethod 
-		ifTrue: [ ctxt sender ]
-		ifFalse: [ ctxt ]
+	"The action of opening the debugger will be called from the debugging action.
+	Hence the top context will not be the one where the metalink was declared,
+	but the one were the debugger was opened. To avoid that we give the breakpoint a
+	chance to return the correct context that contains the metalink instrumentation."
+	
+	^ aContext

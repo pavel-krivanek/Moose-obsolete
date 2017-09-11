@@ -8,6 +8,6 @@ exampleDynamicLabelsAndEdges
 	RTCircleLayout new initialRadius: 150; on: elements.
 	elements @ (RTShowLabel new highlight: [ :value | value - 5 to: value + 5]; center; yourself).
 	elements @ (RTShowEdge new 
-						connectTo: [ :value | value - 5 to: value + 5]; 
+						connectToAll: [ :value | value - 5 to: value + 5]; 
 						shape: (RTLine new color: (Color blue alpha: 0.4))).
 	^ view

@@ -3,5 +3,5 @@ scanForTokenX13
 	self recordMatch: #(2).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(71) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(53) ].
 	^ self reportLastMatch

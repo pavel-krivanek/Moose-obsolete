@@ -1,7 +1,7 @@
 generated
-parameter: aJavaParameterNode
+parameter: aJavaCatchParameterNode
 	self parameter notNil
 		ifTrue: [ self parameter parent: nil ].
-	parameter := aJavaParameterNode.
+	parameter := aJavaCatchParameterNode.
 	self parameter notNil
 		ifTrue: [ self parameter parent: self ]

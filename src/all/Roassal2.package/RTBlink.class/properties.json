@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "AlexandreBergel 3/27/2015 10:32",
 	"super" : "RTInteraction",
-	"category" : "Roassal2-Core",
+	"category" : "Roassal2-Interactions",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

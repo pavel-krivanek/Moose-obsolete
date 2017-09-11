@@ -1,3 +1,3 @@
 tests
 testIsUnknown
-	self assert: FAMIXUnknownSourceLanguage new isUnknown
+	self assert: self actualClass new isUnknown

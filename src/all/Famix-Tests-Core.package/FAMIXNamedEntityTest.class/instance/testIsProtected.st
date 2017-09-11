@@ -1,6 +1,6 @@
 tests
 testIsProtected
 	| entity |
-	entity := FAMIXNamedEntity new.
+	entity := self actualClass new.
 	entity isProtected: true.
 	self assert: entity isProtected

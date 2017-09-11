@@ -7,9 +7,9 @@ element: anElement during: seconds
 	shapes := shape elementsOn: (1 to: numberOfShapes).
 	
 	anElement view addAll: shapes.
+	center := rect center.
 	shapes do: [ :e | 
 		e extent: 0@0.
-		e translateTo: rect center.
 		e pushBack].
 	animatedValue := TRVIAnimatedValue new
 		evaluator: [ :t | t ];

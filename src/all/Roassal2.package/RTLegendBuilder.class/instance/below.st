@@ -1,3 +1,10 @@
 public - positioning
 below
-	position := #below
+	self positionDo: [ :p | 
+		p 
+			outer;
+			verticalPadding: offset;
+			bottom;
+			center;
+			move.
+		 ].

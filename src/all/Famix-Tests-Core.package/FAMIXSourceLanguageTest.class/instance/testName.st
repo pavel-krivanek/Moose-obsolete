@@ -1,3 +1,3 @@
 tests
 testName
-	self assert: FAMIXSourceLanguage new name equals: ''
+	self assert:  self actualClass new name equals: ''

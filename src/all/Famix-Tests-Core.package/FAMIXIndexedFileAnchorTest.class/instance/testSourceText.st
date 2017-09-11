@@ -1,7 +1,7 @@
 tests
 testSourceText
 	| anchor |
-	anchor := self actualClass new
+	anchor := self anchorForClassTest
 		startPos: 212;
 		endPos: 250;
 		yourself.

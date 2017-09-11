@@ -1,8 +1,9 @@
 public - hooks
 attachPointsFor: anEdge on: anElement
 	"Return the four possible attach points for each of the four sides for given edge on given element."
+
 	| rec center |
-	rec := (composedShapeSelection rtValue: anElement trachelShape shapes) encompassingRectangle.
+	rec := self getEncompassingRectangleOf: anElement.
 	center := rec center.
 	^ Array 
 		"upper side"

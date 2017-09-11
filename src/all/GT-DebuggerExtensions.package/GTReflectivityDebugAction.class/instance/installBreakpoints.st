@@ -1,4 +1,3 @@
 actions
 installBreakpoints
-
-	breakpoints do: #install.
+	self breakpoints do: #install.

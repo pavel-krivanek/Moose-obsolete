@@ -1,7 +1,6 @@
 private
 with: element opposite: oppositeSelector
-
-	[ oppositeSelector numArgs = 0 ] assert.
+	self assert: oppositeSelector numArgs = 0.
 	values := OrderedCollection new.
 	owner := element.
-	opposite := oppositeSelector.
+	opposite := oppositeSelector

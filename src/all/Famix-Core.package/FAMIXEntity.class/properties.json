@@ -9,7 +9,9 @@
 	"type" : "normal",
 	"classinstvars" : [
 		"childrenAccessors",
-		"parentSelectors"
+		"parentSelectors",
+		"allChildrenTypes",
+		"allParentTypes"
 	],
 	"pools" : [ ],
 	"category" : "Famix-Core"

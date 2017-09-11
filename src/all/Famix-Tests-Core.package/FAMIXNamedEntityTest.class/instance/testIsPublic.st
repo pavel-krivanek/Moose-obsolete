@@ -1,6 +1,6 @@
 tests
 testIsPublic
 	| entity |
-	entity := FAMIXNamedEntity new.
+	entity := self actualClass new.
 	entity isPublic: true.
 	self assert: entity isPublic

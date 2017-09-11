@@ -1,3 +1,5 @@
 moosequery-queries-outgoing
 queryAllOutgoingAssociations
-	^ self queryStaticOutgoingAssociations union: self queryAllOutgoingInvocations
+	^ self queryStaticOutgoingAssociations
+		addAll: self queryAllOutgoingInvocations;
+		yourself

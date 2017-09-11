@@ -1,4 +1,4 @@
-accessing
+conditions
 whenReceiver: aBlock
 
 	condition := aBlock.

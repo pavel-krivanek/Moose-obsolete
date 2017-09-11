@@ -1,8 +1,8 @@
 private-init
 initializeSubjectsForMethod: aCompiledMethod forExample: aGTExample
-	[ self providerFor: aCompiledMethod do: [ :each | 
-			(each class canPerform: #gtExamplesSubjects) ifTrue: [
-				self initializeSubjects: each gtExamplesSubjects forExample: aGTExample ] ] ]
+	[ self providerFor: aCompiledMethod do: [ :aProvider | 
+			(aProvider class canPerform: #gtExamplesSubjects) ifTrue: [
+				self initializeSubjects: aProvider gtExamplesSubjects forExample: aGTExample ] ] ]
 		on: Error
 		do: [ :exception | 
 			aGTExample addProblem: (GTExampleSubjectError new 

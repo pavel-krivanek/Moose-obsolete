@@ -1,5 +1,5 @@
 {
-	"classtraitcomposition" : "TDependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes})",
+	"classtraitcomposition" : "TDependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes})",
 	"classvars" : [ ],
 	"instvars" : [
 		"element"

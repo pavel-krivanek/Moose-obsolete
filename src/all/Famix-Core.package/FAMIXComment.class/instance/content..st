@@ -1,3 +1,3 @@
 accessing
 content: aString
-	content := aString
+	self privateState attributeAt: #content put: aString
