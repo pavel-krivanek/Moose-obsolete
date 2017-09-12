@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "PP2TokenNode",
+	"super" : "PP2CreateTokenNode",
 	"category" : "PetitJava-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

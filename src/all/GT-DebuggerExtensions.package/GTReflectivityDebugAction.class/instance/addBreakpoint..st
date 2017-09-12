@@ -2,4 +2,5 @@ adding
 addBreakpoint: aBreakpoint
 
 	aBreakpoint targetAction: self.
-	^ self breakpoints add: aBreakpoint
+	self breakpoints add: aBreakpoint.
+	^ aBreakpoint

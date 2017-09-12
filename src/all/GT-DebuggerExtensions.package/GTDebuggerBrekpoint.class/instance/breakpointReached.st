@@ -4,4 +4,4 @@ breakpointReached
 	associated condition with the breakpoint I am only called if
 	the conditions holds."
 	
-	targetAction breakpointReachedFrom: self 
+	self targetAction breakpointReachedFrom: self 

@@ -1,5 +1,5 @@
 *GT-DebuggerExtensions
-debugProcess: process context: context label: title fullView: bool notification: notificationString usingDebuggerInstance: aDebugger initializedWith: aBlock
+debugProcess: process context: context label: title usingDebuggerInstance: aDebugger initializedSessionWith: aSessionBlock initializedDebuggerWith: aDebuggerBlock
 	"Open a notifier in response to an error, halt, or notify. A notifier view
 	just shows a short view of the sender stack and provides a menu that
 	lets the user open a full debugger."
@@ -16,9 +16,9 @@ debugProcess: process context: context label: title fullView: bool notification:
 			redraw problems after opening a debugger e.g. from
 			the testrunner."
 		[
-
+			aSessionBlock value: debugSession.
 			(aDebugger session: debugSession).
-			aBlock value: aDebugger.
+			aDebuggerBlock value: aDebugger.
 		] on: Error do: [ :ex | 	debugSession signalDebuggerError: ex] 
 	].
 

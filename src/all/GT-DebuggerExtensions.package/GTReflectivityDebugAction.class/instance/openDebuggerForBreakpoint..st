@@ -9,14 +9,10 @@ openDebuggerForBreakpoint: aBreakpoint
 		debugProcess: Processor activeProcess 
 		context: (aBreakpoint instrumentationContextFrom: ctxt)
 		label: (self debuggerData at: #title)
-		fullView: true 
-		notification: nil 
 		usingDebuggerClass: self debuggerClass
-		initializedWith: [ :aDebugger | 
-			"FIX ME: do not update the entire debugger. Instead have a hook for updating the 
-			session before opening the debugger and one after to update the actual debugger."
-			aBreakpoint updateDebuggingSession: aDebugger session.
-			aDebugger updateBrowser. 
+		initializedSessionWith: [ :aSession | 
+			self updateDebuggingSession: aSession forBreakpoint: aBreakpoint. ]
+		initializedDebuggerWith: [ :aDebugger | 
 			aDebugger window 
 				position: (self debuggerData at: #position);
 				extent: (self debuggerData at: #extent) ]
