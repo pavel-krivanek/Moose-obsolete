@@ -84,6 +84,8 @@ baseline: spec
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
 
+	self baselineFamixNG: spec.
+
 		#(	
 			'PetitParser'
 		) do: [ :packageName | 
