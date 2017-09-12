@@ -5,7 +5,7 @@ baselineFamixNG: spec
 		'Famix-General'
 		'Famix-Compatibility'
 		'Famix-SmalltalkModel'
-		'Famix-JavaMetamold'
+		'Famix-JavaMetamodel'
 		'Famix-CppMetamodel'
 		'Famix-SQLMetamodel'
 	) do: [ :packageName | 
