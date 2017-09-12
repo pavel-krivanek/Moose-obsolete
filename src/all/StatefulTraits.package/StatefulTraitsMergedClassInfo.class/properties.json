@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "StatefulTraits",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mergedClass",
+		"traits",
+		"slots",
+		"instanceSideSelectors",
+		"classSideSelectors"
+	],
+	"name" : "StatefulTraitsMergedClassInfo",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Files",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fileName",
+		"startLine",
+		"startColumn",
+		"endLine",
+		"endColumn"
+	],
+	"name" : "FmxTFileAnchor",
+	"type" : "normal"
+}

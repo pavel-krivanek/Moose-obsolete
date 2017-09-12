@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Namespaces",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#namespaces => FMMany type: #FmxTNamespace opposite: #namespaceOwner"
+	],
+	"name" : "FmxTWithNamespaces",
+	"type" : "normal"
+}

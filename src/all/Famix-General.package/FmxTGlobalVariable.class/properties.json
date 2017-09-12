@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Variables",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#parentScope => FMOne type: #FmxTGlobalVariableScope opposite: #globalVariables"
+	],
+	"name" : "FmxTGlobalVariable",
+	"type" : "normal"
+}

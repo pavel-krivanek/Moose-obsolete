@@ -1,0 +1,5 @@
+accessing
+parentScope
+	<MSEComment: ''>
+	
+	^parentScope

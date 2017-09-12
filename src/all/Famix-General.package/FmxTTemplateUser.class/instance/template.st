@@ -1,0 +1,4 @@
+accessing
+template
+	<MSEComment: ''>
+	^ template

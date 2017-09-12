@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStBehavior",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxStTrait",
+	"type" : "normal"
+}

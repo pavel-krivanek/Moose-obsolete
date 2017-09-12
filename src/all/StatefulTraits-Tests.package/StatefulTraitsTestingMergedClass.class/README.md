@@ -1,0 +1,1 @@
+an example class for testing purposes of StatefulTraits

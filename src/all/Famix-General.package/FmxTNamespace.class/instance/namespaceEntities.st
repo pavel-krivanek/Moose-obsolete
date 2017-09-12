@@ -1,0 +1,4 @@
+accessing
+namespaceEntities
+	<MSEComment: ''>
+	^ namespaceEntities

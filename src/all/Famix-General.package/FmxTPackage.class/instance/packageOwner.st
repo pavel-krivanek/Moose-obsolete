@@ -1,0 +1,4 @@
+accessing
+packageOwner
+	<MSEComment: ''>
+	^ packageOwner

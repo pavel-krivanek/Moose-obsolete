@@ -1,0 +1,4 @@
+accessing
+enumValues
+	<MSEComment: ''>
+	^ enumValues

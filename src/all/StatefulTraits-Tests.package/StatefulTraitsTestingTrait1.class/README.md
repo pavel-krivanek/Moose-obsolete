@@ -1,0 +1,1 @@
+an example trait for testing purposes of StatefulTraits

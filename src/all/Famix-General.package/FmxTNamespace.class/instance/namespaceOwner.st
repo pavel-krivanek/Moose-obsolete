@@ -1,0 +1,4 @@
+accessing
+namespaceOwner
+	<MSEComment: ''>
+	^ namespaceOwner

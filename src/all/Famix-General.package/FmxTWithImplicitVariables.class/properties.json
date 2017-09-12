@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Variables",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#implicitVariables => FMMany type: #FmxTImplicitVariable opposite: #parentBehaviouralEntity"
+	],
+	"name" : "FmxTWithImplicitVariables",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Inheritance",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#superInheritances => FMMany type: #FmxTSubInheritance opposite: #subclass"
+	],
+	"name" : "FmxTWithSubInheritances",
+	"type" : "normal"
+}

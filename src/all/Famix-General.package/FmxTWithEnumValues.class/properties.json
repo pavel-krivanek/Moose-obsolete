@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Enums",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#enumValues => FMMany type: #FmxTEnumValue opposite: #parentEnum"
+	],
+	"name" : "FmxTWithEnumValues",
+	"type" : "normal"
+}

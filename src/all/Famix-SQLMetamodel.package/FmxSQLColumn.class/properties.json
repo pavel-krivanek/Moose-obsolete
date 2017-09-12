@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxSQLEntity",
+	"category" : "Famix-SQLMetamodel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxSQLColumn",
+	"type" : "normal"
+}

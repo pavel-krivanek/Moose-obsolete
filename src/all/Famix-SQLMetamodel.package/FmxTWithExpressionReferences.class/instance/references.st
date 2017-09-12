@@ -1,0 +1,4 @@
+accessing
+references
+	<target>
+	^ references

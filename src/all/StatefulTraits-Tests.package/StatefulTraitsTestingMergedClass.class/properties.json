@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "PavelKrivanek 1/20/2017 15:56",
+	"super" : "Object",
+	"category" : "StatefulTraits-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"var1",
+		"var2",
+		"traitVar1",
+		"traitVar2",
+		"director"
+	],
+	"name" : "StatefulTraitsTestingMergedClass",
+	"type" : "normal"
+}

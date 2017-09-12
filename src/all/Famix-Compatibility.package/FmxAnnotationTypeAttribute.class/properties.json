@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxAttribute",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxAnnotationTypeAttribute",
+	"type" : "normal"
+}

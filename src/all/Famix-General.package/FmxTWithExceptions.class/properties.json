@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Exceptions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#exceptions => FMMany type: #FmxTException opposite: #exceptionClass"
+	],
+	"name" : "FmxTWithExceptions",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Invocations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#referencer => FMOne type: #FmxTWithDereferencedInvocations opposite: #dereferencedInvocations"
+	],
+	"name" : "FmxTDereferencedInvocation",
+	"type" : "normal"
+}

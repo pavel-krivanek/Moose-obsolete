@@ -1,0 +1,4 @@
+accessing
+otherQuery
+	<container>
+	^ otherQuery

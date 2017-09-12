@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Modules",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#moduleFiles => FMMany type: #FmxTWithModule opposite: #module"
+	],
+	"name" : "FmxTModule",
+	"type" : "normal"
+}

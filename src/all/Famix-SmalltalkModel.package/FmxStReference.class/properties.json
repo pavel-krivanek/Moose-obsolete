@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStAssociation",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxStReference",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxAbstractFileAnchor",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxFileAnchor",
+	"type" : "normal"
+}

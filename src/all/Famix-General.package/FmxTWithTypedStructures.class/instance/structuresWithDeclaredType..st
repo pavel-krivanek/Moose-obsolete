@@ -1,0 +1,3 @@
+accessing
+structuresWithDeclaredType: aGlobalVariable
+	structuresWithDeclaredType value: aGlobalVariable

@@ -1,0 +1,6 @@
+accessing
+structuresWithDeclaredType
+
+	<MSEComment: ''>
+	
+	^structuresWithDeclaredType

@@ -1,0 +1,4 @@
+accessing
+superInheritances
+	<MSEComment: ''>
+	^ superInheritances

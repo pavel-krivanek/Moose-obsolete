@@ -1,0 +1,4 @@
+accessing
+dereferencedInvocations
+	<MSEComment: ''>
+	^ dereferencedInvocations

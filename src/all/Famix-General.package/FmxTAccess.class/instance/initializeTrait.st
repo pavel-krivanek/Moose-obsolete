@@ -1,0 +1,4 @@
+accessing
+initializeTrait
+
+	isWrite := nil.

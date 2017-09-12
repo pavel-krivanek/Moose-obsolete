@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Invocations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#incomingInvocations => FMMany type: #FmxTInvocation opposite: #candidates"
+	],
+	"name" : "FmxTInvocable",
+	"type" : "normal"
+}

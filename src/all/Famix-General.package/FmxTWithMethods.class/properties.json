@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Behavioural",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#methods => FMMany type: #FmxTMethod opposite: #parentType"
+	],
+	"name" : "FmxTWithMethods",
+	"type" : "normal"
+}

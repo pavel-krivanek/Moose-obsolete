@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxStEntity",
+	"category" : "Famix-SmalltalkModel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pharoEntity"
+	],
+	"name" : "FmxStSourceAnchor",
+	"type" : "normal"
+}

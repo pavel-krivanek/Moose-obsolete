@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-SQLMetamodel-Traits",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#selectQuery => FMOne type: #FmxTWithSelectExpressions opposite: #selectExpressions"
+	],
+	"name" : "FmxTSelectExpression",
+	"type" : "normal"
+}

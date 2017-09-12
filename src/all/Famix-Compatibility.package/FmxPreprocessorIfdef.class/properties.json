@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxPreprocessorStatement",
+	"category" : "Famix-Compatibility",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxPreprocessorIfdef",
+	"type" : "normal"
+}

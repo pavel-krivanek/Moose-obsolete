@@ -1,0 +1,5 @@
+accessing
+declaredType
+	<MSEComment: ''>
+	
+	^declaredType

@@ -1,0 +1,4 @@
+accessing
+caughtExceptions
+	<MSEComment: ''>
+	^ caughtExceptions

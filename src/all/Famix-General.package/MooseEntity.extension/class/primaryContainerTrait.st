@@ -1,0 +1,4 @@
+*Famix-General
+primaryContainerTrait
+
+	^ nil

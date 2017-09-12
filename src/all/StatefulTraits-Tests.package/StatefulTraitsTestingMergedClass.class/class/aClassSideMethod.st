@@ -1,0 +1,4 @@
+_fromTrait_StatefulTraitsTestingTrait1
+aClassSideMethod
+
+	^ #aClassSideMethod

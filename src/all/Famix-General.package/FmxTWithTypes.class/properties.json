@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxTraitEntity",
+	"category" : "Famix-General-Types",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"#types => FMMany type: #FmxTType opposite: #typedEntities"
+	],
+	"name" : "FmxTWithTypes",
+	"type" : "normal"
+}
