@@ -1,0 +1,4 @@
+internal
+resetMooseProperty
+
+	mooseProperty := nil.

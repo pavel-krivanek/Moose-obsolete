@@ -1,0 +1,17 @@
+meta-object-protocol
+mooseProperty
+
+	^ mooseProperty ifNil: [ 
+
+		mooseProperty := FM3PropertyDescription new.
+			
+		mooseProperty name: self name asString.
+		mooseProperty setImplementingSelector: self name. "should be a link to slot"
+
+		mooseProperty isMultivalued: true.
+		mooseProperty isDerived: true.
+		
+		mooseProperty privOpposite: self inverseSlot mooseProperty.
+		
+		mooseProperty ].
+		
