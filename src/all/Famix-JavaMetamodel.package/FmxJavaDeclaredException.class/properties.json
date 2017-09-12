@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxJavaException",
+	"category" : "Famix-JavaMetamodel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxJavaDeclaredException",
+	"type" : "normal"
+}

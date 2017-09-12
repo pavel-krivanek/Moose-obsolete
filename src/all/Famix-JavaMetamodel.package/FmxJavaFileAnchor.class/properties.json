@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "FmxJavaSourceAnchor",
+	"category" : "Famix-JavaMetamodel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FmxJavaFileAnchor",
+	"type" : "normal"
+}
