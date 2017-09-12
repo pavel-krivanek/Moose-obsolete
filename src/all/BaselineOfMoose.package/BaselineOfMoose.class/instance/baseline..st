@@ -14,6 +14,7 @@ baseline: spec
 		self baselineHashtable: spec.
 		self baselineStateSpecs: spec.
 		self baselinePhexample: spec.
+		self baselineStatefulTraits: spec.
 		self baselineFame: spec.
 
 		#(
@@ -203,7 +204,6 @@ baseline: spec
 			'GT-PetitParserDebugger'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
-
 
 	   self groups: spec.
 	]
