@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OPEditor",
+	"category" : "OpenPonk-Spec-Windows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPHiddenEditor",
+	"type" : "normal"
+}

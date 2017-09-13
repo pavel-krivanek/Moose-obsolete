@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OPWorkbench",
+	"category" : "OpenPonk-Spec-Windows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPHiddenWorkbench",
+	"type" : "normal"
+}

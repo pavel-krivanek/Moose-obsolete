@@ -1,4 +1,4 @@
 accessing
 editor: anEditor
-	self assert: anEditor class = OPEditor.
+	self assert: (anEditor isKindOf: OPEditor).
 	editor := anEditor

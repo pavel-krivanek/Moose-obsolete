@@ -1,11 +1,16 @@
 accessing
 testBlockFor: anObject
-	| blocks |
+	| blocks editorClass |
+	
+	editorClass := (anObject isKindOf: OPEditor)
+		ifTrue: [ anObject class ]
+		ifFalse: [ OPEditor ].
+	
 	blocks := Dictionary
 		with:
 			OPCanvasModel
 				-> [ :prg | prg arguments first = self model editor plugin className ]
-		with: OPEditor -> [ :prg | prg arguments first = self model plugin className ]
+		with: editorClass -> [ :prg | prg arguments first = self model plugin className ]
 		with:
 			OPWorkbenchToolbar
 				->
