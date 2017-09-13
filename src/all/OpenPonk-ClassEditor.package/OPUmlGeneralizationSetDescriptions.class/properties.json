@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 7/5/2017 13:51",
+	"super" : "Object",
+	"category" : "OpenPonk-ClassEditor-Forms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"set",
+		"controller"
+	],
+	"name" : "OPUmlGeneralizationSetDescriptions",
+	"type" : "normal"
+}

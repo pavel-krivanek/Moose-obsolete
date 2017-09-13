@@ -1,0 +1,1 @@
+A DirectedRelationship represents a relationship between a collection of source model Elements and a collection of target model Elements.

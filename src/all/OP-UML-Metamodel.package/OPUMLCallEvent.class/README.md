@@ -1,0 +1,1 @@
+A CallEvent models the receipt by an object of a message invoking a call of an Operation.

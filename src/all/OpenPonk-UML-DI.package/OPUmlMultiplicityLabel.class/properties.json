@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OPUmlLabel",
+	"category" : "OpenPonk-UML-DI-UML",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUmlMultiplicityLabel",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+A Classifier represents a classification of instances according to their Features.

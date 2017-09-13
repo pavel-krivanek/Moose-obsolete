@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "OpenPonk-Roassal2-Builders",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"head",
+		"tail",
+		"dashes",
+		"color",
+		"attachPoint"
+	],
+	"name" : "OPRTLineDecorationBuilder",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+configuration
+beForModel
+	modelClass := OPUMLModel

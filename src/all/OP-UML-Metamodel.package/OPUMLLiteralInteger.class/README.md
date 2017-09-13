@@ -1,0 +1,1 @@
+A LiteralInteger is a specification of an Integer value.

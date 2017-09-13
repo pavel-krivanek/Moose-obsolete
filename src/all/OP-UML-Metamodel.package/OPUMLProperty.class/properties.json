@@ -1,0 +1,28 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"defaultValue",
+		"datatype",
+		"isDerivedUnion",
+		"aggregation",
+		"redefinedProperties",
+		"isDerived",
+		"associationEnd",
+		"owningAssociation",
+		"isID",
+		"isComposite",
+		"opposite",
+		"owningClass",
+		"interface",
+		"subsettedProperties",
+		"qualifiers",
+		"association"
+	],
+	"name" : "OPUMLProperty",
+	"type" : "normal"
+}

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "OPUmlShape",
+	"category" : "OpenPonk-ClassEditor-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"view",
+		"separators"
+	],
+	"name" : "OPUmlPackageCompartmentableShape",
+	"type" : "normal"
+}

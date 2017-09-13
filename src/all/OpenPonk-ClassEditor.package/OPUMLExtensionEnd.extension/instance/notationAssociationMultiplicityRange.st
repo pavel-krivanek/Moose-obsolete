@@ -1,0 +1,3 @@
+*OpenPonk-ClassEditor
+notationAssociationMultiplicityRange
+	^ (sharedGeneralizations at: #MultiplicityElement) notationAssociationMultiplicityRange

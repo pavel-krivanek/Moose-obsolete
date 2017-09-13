@@ -1,0 +1,28 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"collaborationUses",
+		"inheritedMembers",
+		"features",
+		"attributes",
+		"powertypeExtents",
+		"ownedUseCases",
+		"ownedTemplateSignature",
+		"templateParameter",
+		"isFinalSpecialization",
+		"generals",
+		"representation",
+		"substitutions",
+		"useCases",
+		"isAbstract",
+		"generalizations",
+		"redefinedClassifiers"
+	],
+	"name" : "OPUMLClassifier",
+	"type" : "normal"
+}

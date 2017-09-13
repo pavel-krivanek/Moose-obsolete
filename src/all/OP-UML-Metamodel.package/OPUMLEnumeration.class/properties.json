@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-SimpleClassifiers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ownedLiterals"
+	],
+	"name" : "OPUMLEnumeration",
+	"type" : "normal"
+}

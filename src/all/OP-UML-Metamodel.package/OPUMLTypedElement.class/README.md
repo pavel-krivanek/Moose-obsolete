@@ -1,0 +1,1 @@
+A TypedElement is a NamedElement that may have a Type specified for it.

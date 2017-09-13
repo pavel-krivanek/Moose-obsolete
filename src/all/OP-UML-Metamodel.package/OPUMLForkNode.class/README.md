@@ -1,0 +1,1 @@
+A ForkNode is a ControlNode that splits a flow into multiple concurrent flows.

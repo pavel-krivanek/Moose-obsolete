@@ -1,0 +1,1 @@
+An Activity is the specification of parameterized Behavior as the coordinated sequencing of subordinate units.

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"decisionInputFlow",
+		"decisionInput"
+	],
+	"name" : "OPUMLDecisionNode",
+	"type" : "normal"
+}

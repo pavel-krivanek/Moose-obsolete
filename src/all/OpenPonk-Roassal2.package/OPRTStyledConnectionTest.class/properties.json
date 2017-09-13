@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "OpenPonk-Roassal2-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"from",
+		"to",
+		"edge",
+		"view"
+	],
+	"name" : "OPRTStyledConnectionTest",
+	"type" : "normal"
+}

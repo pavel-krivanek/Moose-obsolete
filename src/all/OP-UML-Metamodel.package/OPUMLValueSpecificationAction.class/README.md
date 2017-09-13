@@ -1,0 +1,1 @@
+A ValueSpecificationAction is an Action that evaluates a ValueSpecification and provides a result.

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 7/5/2017 14:06",
+	"super" : "OPUmlEdge",
+	"category" : "OpenPonk-ClassEditor-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nameLabel",
+		"constraints"
+	],
+	"name" : "OPUmlGeneralizationShape",
+	"type" : "normal"
+}

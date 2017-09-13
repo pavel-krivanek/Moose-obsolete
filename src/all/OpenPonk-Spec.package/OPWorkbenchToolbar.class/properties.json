@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 12/7/2015 21:41",
+	"super" : "DynamicComposableModel",
+	"category" : "OpenPonk-Spec-Windows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"toolbar",
+		"activeEditor"
+	],
+	"name" : "OPWorkbenchToolbar",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+A TimeExpression is a ValueSpecification that represents a time value.

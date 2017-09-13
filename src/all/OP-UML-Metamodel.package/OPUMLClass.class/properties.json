@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "PeterUhnak 7/4/2017 21:05",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isActive",
+		"extensions",
+		"isAbstract",
+		"nestedClassifiers",
+		"superClasses",
+		"ownedAttributes",
+		"ownedOperations",
+		"ownedReceptions"
+	],
+	"name" : "OPUMLClass",
+	"type" : "normal"
+}

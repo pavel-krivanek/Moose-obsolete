@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 11/3/2014 19:24",
+	"super" : "Object",
+	"category" : "OpenPonk-Spec-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"menu"
+	],
+	"name" : "OPMenuBuilder",
+	"type" : "normal"
+}

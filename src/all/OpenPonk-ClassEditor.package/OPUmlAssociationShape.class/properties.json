@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "PeterUhnak 7/3/2017 15:13",
+	"super" : "OPUmlEdge",
+	"category" : "OpenPonk-ClassEditor-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nameLabel",
+		"sourceEndLabels",
+		"targetEndLabels",
+		"constraints",
+		"stereotypeLabel",
+		"propertiesLabel"
+	],
+	"name" : "OPUmlAssociationShape",
+	"type" : "normal"
+}

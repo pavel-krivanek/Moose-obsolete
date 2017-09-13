@@ -1,0 +1,1 @@
+A Duration is a ValueSpecification that specifies the temporal distance between two time instants.

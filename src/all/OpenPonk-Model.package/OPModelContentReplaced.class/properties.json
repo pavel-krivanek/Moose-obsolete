@@ -1,0 +1,14 @@
+{
+	"category" : "OpenPonk-Model-Announcements",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 3/4/2016 17:12",
+	"instvars" : [
+		 ],
+	"name" : "OPModelContentReplaced",
+	"pools" : [
+		 ],
+	"super" : "OPModelEvent",
+	"type" : "normal" }

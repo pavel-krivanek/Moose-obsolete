@@ -1,0 +1,3 @@
+accessing
+modelElement
+	^ self subclassResponsibility

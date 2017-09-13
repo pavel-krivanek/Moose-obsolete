@@ -1,0 +1,1 @@
+An Enumeration is a DataType whose values are enumerated in the model as EnumerationLiterals.

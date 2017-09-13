@@ -1,0 +1,1 @@
+A Namespace is an Element in a model that owns and/or imports a set of NamedElements that can be identified by name.

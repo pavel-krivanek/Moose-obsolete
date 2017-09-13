@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "OpenPonk-ClassEditor-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"property",
+		"element",
+		"comment",
+		"association",
+		"ownedComment",
+		"owningElement"
+	],
+	"name" : "OPUmlAssociationShapeTest",
+	"type" : "normal"
+}

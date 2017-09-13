@@ -1,0 +1,1 @@
+ConnectorKind is an enumeration that defines whether a Connector is an assembly or a delegation.

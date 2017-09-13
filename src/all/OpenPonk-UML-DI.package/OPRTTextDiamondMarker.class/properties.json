@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RTLineDecorationShape",
+	"category" : "OpenPonk-UML-DI-Roassal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"fillColor"
+	],
+	"name" : "OPRTTextDiamondMarker",
+	"type" : "normal"
+}

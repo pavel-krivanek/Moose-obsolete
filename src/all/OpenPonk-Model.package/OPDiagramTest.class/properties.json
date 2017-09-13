@@ -1,0 +1,15 @@
+{
+	"category" : "OpenPonk-Model-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"diagram",
+		"element" ],
+	"name" : "OPDiagramTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+WriteLinkAction is an abstract class for LinkActions that create and destroy links.

@@ -1,0 +1,4 @@
+initialization
+initializeDirectGeneralizations
+	directGeneralizations := {
+	}

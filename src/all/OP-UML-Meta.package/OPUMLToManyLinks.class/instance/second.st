@@ -1,0 +1,3 @@
+copying
+second
+	^ collection second

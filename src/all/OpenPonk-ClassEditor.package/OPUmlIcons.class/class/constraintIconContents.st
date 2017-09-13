@@ -1,0 +1,10 @@
+private - contents
+constraintIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\constraint.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADUSURBVDiN1ZIxagJRGIS//2FuYCHbBnKAIITVdLrBJ2lSBSFXsLHMQSztcgNRYt6aRjyE
+IX0auwhWO1ZWeZJlUwSnnH/+DwYGzl526tALSg1agm8H77OubWI5FzN9rrHBDEgd3MpY9YKe
+Ytnaj+egR8QDRnPesU+AbKHkwnFdqpN/06sPei4VjlYwriTW1QHQcLD9C+DLjHp1gNgUkFYH
+GBNg6HNdHq1soaQfdB8DRIfkc40RAyAH9kAGjOZdeykFAOgvdUNBu4BdrWA5vbOP3+r8jw7O
+3TzgcNrvaAAAAABJRU5ErkJggg=='

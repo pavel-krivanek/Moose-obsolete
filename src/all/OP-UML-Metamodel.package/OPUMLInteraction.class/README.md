@@ -1,0 +1,1 @@
+An Interaction is a unit of Behavior that focuses on the observable exchange of information between connectable elements.

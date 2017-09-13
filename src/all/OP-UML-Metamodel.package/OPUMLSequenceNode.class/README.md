@@ -1,0 +1,1 @@
+A SequenceNode is a StructuredActivityNode that executes a sequence of ExecutableNodes in order.

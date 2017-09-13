@@ -1,0 +1,10 @@
+private - contents
+modelIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\model.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADPSURBVCiRjZIxSgNREIa/eWxjLwTSpvAGVgFXNsXbDdrlCqkEQbtUS24QyFmSwO5L0lh4
+i5xBBEFxfysh4u5Lvm7mnw9mYCwP2lvDng7kSNeZpf+ColLZJcVyF5NiWF7rgDhEh/h7ihzp
+yVXbKCqVnav6oIkPmnTlraKvNDToOdEf17o9S8yDBgZ+ndlyNbKFxI3f6ioq3u10ScPDR0L5
+27t+YU7D9L5W73g2OS6+vnky4+2i4TkPAuAVMPH+CY/ArFXcjGzGmdipl2tDjvQHUzNJCCO5
+kEcAAAAASUVORK5CYII='

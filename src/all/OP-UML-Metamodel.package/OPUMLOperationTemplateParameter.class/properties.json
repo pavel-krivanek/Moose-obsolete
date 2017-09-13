@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parameteredElement"
+	],
+	"name" : "OPUMLOperationTemplateParameter",
+	"type" : "normal"
+}

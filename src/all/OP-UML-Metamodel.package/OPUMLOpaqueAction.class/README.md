@@ -1,0 +1,1 @@
+An OpaqueAction is an Action whose functionality is not specified within UML.

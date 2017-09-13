@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "OpenPonk-ClassEditor-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"property",
+		"prefix",
+		"desc",
+		"reader"
+	],
+	"name" : "OPUmlPropertyMagritteDescriptionsTest",
+	"type" : "normal"
+}

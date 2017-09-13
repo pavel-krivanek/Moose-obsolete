@@ -1,0 +1,11 @@
+private - contents
+profileIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\profile.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AAERSURBVDiNxZFNTsJQFIW/d0shdQEuAjbRBKSpc0aOS1yGmyAhsAQXUEGI3QSMGTs0xob+
+vOtAjYVQGgbGM3vvnnve/e6D/5YBCNeaGEtSZ1LBj/vGr025fdaHc6+cq0vDhI36QljpDmXX
+YEyq5wOsJoRT+ulpHReGC72+apPZkk6ekQK4bTxx2H9ktJeBea36D3YQrrTrCPN9Ti9XZqmH
+TT1srsz2OT1HmIcr7VZ7jid4pEVAydIW9JMb8w4QPOm9tFjjMKRkAfTqAkYUTFAicZj6L3oH
+IAVTLBHKBMOoFiEemG1piTouG9cw9lLESxHXMO64bEpLFA/M9hwCx0v61tuJu98AFfxLv1IF
+/xL/3+kTGRtla/geVQcAAAAASUVORK5CYII='

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "OPUmlRelationshipControllerTest",
+	"category" : "OpenPonk-ClassEditor-Controllers-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"artifact",
+		"library",
+		"extension",
+		"baseArtifact",
+		"extensionLibrary"
+	],
+	"name" : "OPUmlExtensionControllerTest",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OPDITestCase",
+	"category" : "OpenPonk-UML-DI-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUmlCompartmentableShapeTest",
+	"type" : "normal"
+}

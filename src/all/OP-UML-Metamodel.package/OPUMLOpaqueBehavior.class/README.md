@@ -1,0 +1,1 @@
+An OpaqueBehavior is a Behavior whose specification is given in a textual language other than UML.

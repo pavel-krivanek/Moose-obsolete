@@ -1,0 +1,1 @@
+A ReadVariableAction is a VariableAction that retrieves the values of a Variable.

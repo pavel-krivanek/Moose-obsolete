@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-CommonStructure",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"annotatedElements",
+		"body"
+	],
+	"name" : "OPUMLComment",
+	"type" : "normal"
+}

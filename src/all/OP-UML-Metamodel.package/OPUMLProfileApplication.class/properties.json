@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Packages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"applyingPackage",
+		"isStrict",
+		"appliedProfile"
+	],
+	"name" : "OPUMLProfileApplication",
+	"type" : "normal"
+}

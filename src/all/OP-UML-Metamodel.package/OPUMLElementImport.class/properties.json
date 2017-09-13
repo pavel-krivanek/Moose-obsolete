@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-CommonStructure",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alias",
+		"importedElement",
+		"importingNamespace",
+		"visibility"
+	],
+	"name" : "OPUMLElementImport",
+	"type" : "normal"
+}

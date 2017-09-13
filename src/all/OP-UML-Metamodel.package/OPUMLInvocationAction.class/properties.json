@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 7/4/2017 21:05",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onPort",
+		"arguments"
+	],
+	"name" : "OPUMLInvocationAction",
+	"type" : "normal"
+}

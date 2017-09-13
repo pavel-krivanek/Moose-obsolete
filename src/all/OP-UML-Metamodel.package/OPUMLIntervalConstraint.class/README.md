@@ -1,0 +1,1 @@
+An IntervalConstraint is a Constraint that is specified by an Interval.

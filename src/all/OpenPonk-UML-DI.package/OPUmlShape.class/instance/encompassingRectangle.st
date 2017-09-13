@@ -1,0 +1,3 @@
+Roassal2
+encompassingRectangle
+	^ self rtElement encompassingRectangle

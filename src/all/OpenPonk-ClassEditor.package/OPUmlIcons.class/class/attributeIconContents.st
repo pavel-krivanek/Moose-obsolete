@@ -1,0 +1,10 @@
+private - contents
+attributeIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\attribute.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADuSURBVDiN3ZCxSgNhEIS/Ta4RuzSSKjGNrdoLBkLIRfQi6Pv4BPouXnFozvy+gKBvcEUg
+RawNSu4fmwTEy5lYCU417MwOOwv/G2Gqi96DLn/yWJlw7BRs5UwAZlXqj22br/JVygK2c46A
+DMgWfCWCMsFDBMRfuPvVBQZn5rlFxMAAqbRuAeFQB2Gq8XIpTJX177W/cQWDSOLpxHHISPic
+F4wB8LxRgIwIaHm/eJ5RARrA1Xdv4Qc9pyawF8yoJx2rJR2r8cGOoNW90+7aAOacG4ziU3tb
+jpK+vSNcNSBaH2BMZVwXasGNxGvB/+f4BO9vTXGCt0WuAAAAAElFTkSuQmCC'

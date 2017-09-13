@@ -1,0 +1,1 @@
+A StructuralFeature is a typed feature of a Classifier that specifies the structure of instances of the Classifier.

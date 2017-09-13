@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "PeterUhnak 6/28/2015 01:19",
+	"super" : "Object",
+	"category" : "OpenPonk-Spec-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"iconMapping",
+		"childrenMapping",
+		"actionMapping",
+		"menuMapping",
+		"displayMapping"
+	],
+	"name" : "OPNavigatorAdapter",
+	"type" : "normal"
+}

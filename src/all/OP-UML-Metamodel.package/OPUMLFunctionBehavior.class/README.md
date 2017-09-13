@@ -1,0 +1,1 @@
+A FunctionBehavior is an OpaqueBehavior that does not access or modify any objects or other external data.

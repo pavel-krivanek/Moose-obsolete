@@ -1,0 +1,3 @@
+accessing - TemplateParameter
+ownedParameteredElement: aParameterableElement
+	(sharedGeneralizations at: #TemplateParameter) ownedParameteredElement: aParameterableElement

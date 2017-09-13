@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 5/5/2017 10:49",
+	"super" : "OPPlugin",
+	"category" : "OpenPonk-ClassEditor-Plugin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUmlClassEditorPlugin",
+	"type" : "normal"
+}

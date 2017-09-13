@@ -1,0 +1,9 @@
+private - contents
+stereotypeIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\stereotype.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADBSURBVDiN3ZGxDgFhEIS/3VxzqFQe54RwJ6KjUXgNlfAoCo1ScycIlWdRqQ6JyL8qImgu
+JBLTbTHf7GTg1xKAaGUbcWyyGE0J4ooEADQWNsyafPNoVuOzPgZ4j0d7a356ZOidGF18BnFV
++o2lNU04i8N3RprUZPX2g3pixfTIRGB98Zk4YQqQ3xPjiJxQUqUVLq331Qp3wDyUfSFH16Ds
+neiq0QE4FIlQYjV2zjFLqjJ+ofzBjKYEWWuYEnwa/h1dATYvRy5RNn8sAAAAAElFTkSuQmCC'

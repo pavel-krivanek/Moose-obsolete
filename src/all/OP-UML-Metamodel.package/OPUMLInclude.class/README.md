@@ -1,0 +1,1 @@
+An Include relationship specifies that a UseCase contains the behavior defined in another UseCase.

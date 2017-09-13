@@ -1,0 +1,1 @@
+A ConnectorEnd is an endpoint of a Connector, which attaches the Connector to a ConnectableElement.

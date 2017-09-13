@@ -1,0 +1,1 @@
+A ChangeEvent models a change in the system configuration that makes a condition true.

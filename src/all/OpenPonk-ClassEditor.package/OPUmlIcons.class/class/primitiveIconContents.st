@@ -1,0 +1,9 @@
+private - contents
+primitiveIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\primitive.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AACjSURBVDiNxZKhDcJgEEbf/W3AYtkFUdIa2AHdMSCsgGILFBVA0iEYgQRbg8D0Q5CKFgFH
+SXj+vbtcDv6NAcxOKq2m9IgKJEVqCQDzg1beyY0TvGKXuFuVMQYuw4jNbmrVu0BrAwUmRWa5
+jPO9Zu3eoCESlWDgD4jR7KitjFsslv6AURWp5Z+IDa0bmLh65JfAPrNFr8A3xPB8S+83KpD0
+Hf4bHpd5LsedZt3CAAAAAElFTkSuQmCC'

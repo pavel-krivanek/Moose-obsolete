@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DropListModel",
+	"category" : "OpenPonk-Spec-EditableDropList",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPEditableDropListModel",
+	"type" : "normal"
+}

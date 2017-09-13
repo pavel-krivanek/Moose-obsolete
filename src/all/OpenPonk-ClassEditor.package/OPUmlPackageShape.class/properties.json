@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PeterUhnak 8/3/2017 09:05",
+	"super" : "RTAbstractMultiElement",
+	"category" : "OpenPonk-ClassEditor-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"labelText",
+		"stereotypeText",
+		"showTriangle",
+		"style"
+	],
+	"name" : "OPUmlPackageShape",
+	"type" : "normal"
+}

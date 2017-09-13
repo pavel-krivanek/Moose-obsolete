@@ -1,0 +1,10 @@
+private - contents
+unknownIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\unknown.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADySURBVDiNxZEhTkNBGIS/2S60CIrAYxA4XBMEpgXBC2lSheUMCAQX4BacAEHThkdCGxKK
+ggOAwqBxkIJ47I+qYOnbJjUduzNfZv6FRUtlD4dDa/6IlmCdwIv/5qLf1jj2uWnhg4GdBugq
+sC1jFXFerDDKcqvGXj8N4CqMKmKz39Q7QDa0DnCFZwe4nwnIW3qMdhYGOM9n7C29wUTtgW0U
+4gF4utnjCMn+tE2Fs9zqhbg1ePVfHMfh0gkTWZUTGfXlGo3e/v8fmNnABbYQz71dfZR50g3E
+tRm1lCcJCPDmxNLcAAdnZqwBd3MBJC4J6QmL1y+Fj0GJF17n4AAAAABJRU5ErkJggg=='

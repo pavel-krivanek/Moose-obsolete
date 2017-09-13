@@ -1,0 +1,1 @@
+A Feature declares a behavioral or structural characteristic of Classifiers.

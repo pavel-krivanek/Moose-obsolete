@@ -1,0 +1,1 @@
+A ControlNode is an abstract ActivityNode that coordinates flows in an Activity.

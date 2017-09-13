@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "OPNavigatorAdapter",
+	"category" : "OpenPonk-ClassEditor-Plugin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"suffixMapping"
+	],
+	"name" : "OPUmlNavigatorAdapter",
+	"type" : "normal"
+}

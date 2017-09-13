@@ -1,0 +1,1 @@
+A LiteralString is a specification of a String value.

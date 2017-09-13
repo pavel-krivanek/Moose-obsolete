@@ -1,0 +1,1 @@
+An Event is the specification of some occurrence that may potentially trigger effects by an object.

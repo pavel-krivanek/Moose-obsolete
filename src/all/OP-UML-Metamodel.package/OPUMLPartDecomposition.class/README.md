@@ -1,0 +1,1 @@
+A PartDecomposition is a description of the internal Interactions of one Lifeline relative to an Interaction.

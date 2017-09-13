@@ -1,0 +1,10 @@
+private - contents
+extensionIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\extension.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADRSURBVDiNxZExbsJQEETffvtHQrkJDUphRUoTURnTcBVuwJHSkAojYQqqUOQ6gHZoEImM
+LRuKZKqvHentzF/4CxVbDYuthk1e2otwYH95DepW6NxeaoeRSCTTUl93AWaV3oAMEc2IDqN8
+qXFvwPHEml81DdIw4LMXoCi1EyT1uZy0WP9UaQRMNspMvCJi3TMjIl4mG2XQcoXE8SMsDA4A
+QYwA3PgGkHiKjrelv1G+0jxfad7kdZ6xS/8PuH5iW0eAEHh3p3o4gTvVc+Dj/nw9dAZN7EIy
+hsjryAAAAABJRU5ErkJggg=='

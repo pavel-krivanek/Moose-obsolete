@@ -1,0 +1,3 @@
+figures
+refreshFigure
+	self diagramElement changed

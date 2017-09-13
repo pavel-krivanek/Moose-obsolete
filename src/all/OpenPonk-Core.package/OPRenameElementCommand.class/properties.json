@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 6/18/2015 07:01",
+	"super" : "OPUICommand",
+	"category" : "OpenPonk-Core-UICommands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPRenameElementCommand",
+	"type" : "normal"
+}

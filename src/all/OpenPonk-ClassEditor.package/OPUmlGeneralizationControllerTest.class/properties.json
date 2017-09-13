@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "OPUmlRelationshipControllerTest",
+	"category" : "OpenPonk-ClassEditor-Controllers-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parent",
+		"child",
+		"generalization"
+	],
+	"name" : "OPUmlGeneralizationControllerTest",
+	"type" : "normal"
+}

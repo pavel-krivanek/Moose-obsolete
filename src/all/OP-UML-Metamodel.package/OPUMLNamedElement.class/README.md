@@ -1,0 +1,1 @@
+A NamedElement is an Element in a model that may have a name. The name may be given directly and/or via the use of a StringExpression.

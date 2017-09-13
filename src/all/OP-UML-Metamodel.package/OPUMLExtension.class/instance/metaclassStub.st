@@ -1,0 +1,7 @@
+operations - stubs
+metaclassStub
+	"The query metaclass() returns the metaclass that is being extended (as opposed to the extending stereotype)."
+	
+	"{OCL} result = (metaclassEnd().type.oclAsType(Class))"
+	
+	self notYetImplemented

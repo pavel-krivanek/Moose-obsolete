@@ -1,0 +1,1 @@
+A DCNamedElement represents all possible elements of diagram (such as classes, states, associations). s

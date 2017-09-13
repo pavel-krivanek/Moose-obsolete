@@ -1,0 +1,1 @@
+An ActivityEdge is an abstract class for directed connections between two ActivityNodes.

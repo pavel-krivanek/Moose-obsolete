@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "OP-UML-Meta-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"books"
+	],
+	"name" : "OPUMLTestAuthor",
+	"type" : "normal"
+}

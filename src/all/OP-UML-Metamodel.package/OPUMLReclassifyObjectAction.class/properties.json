@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"newClassifiers",
+		"isReplaceAll",
+		"object",
+		"oldClassifiers"
+	],
+	"name" : "OPUMLReclassifyObjectAction",
+	"type" : "normal"
+}

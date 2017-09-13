@@ -1,0 +1,1 @@
+A LiteralBoolean is a specification of a Boolean value.

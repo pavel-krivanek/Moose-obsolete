@@ -1,0 +1,1 @@
+A Template Signature bundles the set of formal TemplateParameters for a template.

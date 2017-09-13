@@ -1,0 +1,1 @@
+ActivityNode is an abstract class for points in the flow of an Activity connected by ActivityEdges.

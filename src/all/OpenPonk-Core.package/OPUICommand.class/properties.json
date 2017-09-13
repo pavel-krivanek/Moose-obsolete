@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 6/18/2015 06:59",
+	"super" : "Object",
+	"category" : "OpenPonk-Core-UICommands",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"object"
+	],
+	"name" : "OPUICommand",
+	"type" : "normal"
+}

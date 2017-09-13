@@ -1,0 +1,3 @@
+markers
+none
+	^ RTNoDecorationShape

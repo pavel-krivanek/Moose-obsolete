@@ -1,0 +1,1 @@
+A ConnectableElementTemplateParameter exposes a ConnectableElement as a formal parameter for a template.

@@ -1,0 +1,1 @@
+A ReadIsClassifiedObjectAction is an Action that determines whether an object is classified by a given Classifier.

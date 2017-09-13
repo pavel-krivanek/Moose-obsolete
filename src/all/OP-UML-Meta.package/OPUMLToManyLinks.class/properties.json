@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Collection",
+	"category" : "OP-UML-Meta-Models",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"owner",
+		"collection",
+		"oppositeSelector"
+	],
+	"name" : "OPUMLToManyLinks",
+	"type" : "normal"
+}

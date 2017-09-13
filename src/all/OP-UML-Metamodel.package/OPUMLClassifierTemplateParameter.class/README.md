@@ -1,0 +1,1 @@
+A ClassifierTemplateParameter exposes a Classifier as a formal template parameter.

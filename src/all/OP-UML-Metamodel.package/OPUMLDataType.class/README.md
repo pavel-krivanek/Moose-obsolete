@@ -1,0 +1,1 @@
+A DataType is a type whose instances are identified only by their value.

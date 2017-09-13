@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "PeterUhnak 10/21/2014 19:27",
+	"super" : "Object",
+	"category" : "OpenPonk-Core-Models",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"uuid",
+		"dirty",
+		"fileName",
+		"layouts",
+		"models",
+		"storageFolder",
+		"state",
+		"name"
+	],
+	"name" : "OPProject",
+	"type" : "normal"
+}

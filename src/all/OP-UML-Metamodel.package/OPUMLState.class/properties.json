@@ -1,0 +1,27 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isSubmachineState",
+		"regions",
+		"exit",
+		"doActivity",
+		"connectionPoints",
+		"redefinitionContext",
+		"submachine",
+		"deferrableTriggers",
+		"isSimple",
+		"isComposite",
+		"entry",
+		"redefinedState",
+		"connections",
+		"isOrthogonal",
+		"stateInvariant"
+	],
+	"name" : "OPUMLState",
+	"type" : "normal"
+}

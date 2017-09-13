@@ -1,0 +1,1 @@
+A DestroyLinkAction is a WriteLinkAction that destroys links (including link objects).

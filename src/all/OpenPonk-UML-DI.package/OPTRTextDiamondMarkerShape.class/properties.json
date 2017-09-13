@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TRFilledDiamondShape",
+	"category" : "OpenPonk-UML-DI-Trachel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"fillColor"
+	],
+	"name" : "OPTRTextDiamondMarkerShape",
+	"type" : "normal"
+}

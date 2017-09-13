@@ -1,0 +1,1 @@
+A RedefinableTemplateSignature supports the addition of formal template parameters in a specialization of a template classifier.

@@ -1,0 +1,1 @@
+An AddVariableValueAction is a WriteVariableAction for adding values to a Variable.

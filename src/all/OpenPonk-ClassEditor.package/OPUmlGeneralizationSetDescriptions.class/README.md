@@ -1,0 +1,1 @@
+I am a description proxy for a generalization set and I collaborate with GeneralizationController.

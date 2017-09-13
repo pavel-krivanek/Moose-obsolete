@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "PeterUhnak 7/3/2017 20:50",
+	"super" : "Object",
+	"category" : "OpenPonk-ClassEditor-Forms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"property",
+		"labelPrefix",
+		"reader"
+	],
+	"name" : "OPUmlPropertyMagritteDescriptions",
+	"type" : "normal"
+}

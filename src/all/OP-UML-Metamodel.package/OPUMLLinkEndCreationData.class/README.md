@@ -1,0 +1,1 @@
+LinkEndCreationData is LinkEndData used to provide values for one end of a link to be created by a CreateLinkAction.

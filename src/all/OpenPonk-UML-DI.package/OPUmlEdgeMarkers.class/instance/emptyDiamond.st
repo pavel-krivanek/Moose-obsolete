@@ -1,0 +1,3 @@
+markers
+emptyDiamond
+	^ OPRTTextDiamondMarker empty

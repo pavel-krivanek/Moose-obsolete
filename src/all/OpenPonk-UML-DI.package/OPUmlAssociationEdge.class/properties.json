@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "OPUmlEdge",
+	"category" : "OpenPonk-UML-DI-Facades",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label",
+		"sourceLabel",
+		"sourceMultiplicity",
+		"targetLabel",
+		"targetMultiplicity",
+		"constraints"
+	],
+	"name" : "OPUmlAssociationEdge",
+	"type" : "normal"
+}

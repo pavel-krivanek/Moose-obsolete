@@ -1,0 +1,1 @@
+An ExpansionRegion is a StructuredActivityNode that executes its content multiple times corresponding to elements of input collection(s).

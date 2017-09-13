@@ -1,0 +1,1 @@
+I am an event that gets fired when the content of the associated model has changed so much that full rebuild is warrented.

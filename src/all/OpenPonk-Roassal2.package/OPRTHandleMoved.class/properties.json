@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 9/16/2015 07:13",
+	"super" : "Announcement",
+	"category" : "OpenPonk-Roassal2-Connection",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPRTHandleMoved",
+	"type" : "normal"
+}

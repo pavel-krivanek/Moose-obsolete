@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 6/4/2015 14:41",
+	"super" : "RTLayout",
+	"category" : "OpenPonk-Core-Figures",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPRTNullLayout",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+TransitionKind is an Enumeration type used to differentiate the various kinds of Transitions.

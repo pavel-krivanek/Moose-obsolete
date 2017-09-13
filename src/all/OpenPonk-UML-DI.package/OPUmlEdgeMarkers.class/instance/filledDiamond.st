@@ -1,0 +1,3 @@
+markers
+filledDiamond
+	^ OPRTTextDiamondMarker filled

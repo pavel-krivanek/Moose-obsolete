@@ -1,0 +1,1 @@
+ParameterDirectionKind is an Enumeration that defines literals used to specify direction of parameters.

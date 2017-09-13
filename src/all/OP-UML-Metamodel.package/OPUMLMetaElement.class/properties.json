@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "PeterUhnak 5/3/2017 10:08",
+	"super" : "Object",
+	"category" : "OP-UML-Metamodel-Meta",
+	"classinstvars" : [
+		"metaModels"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcer",
+		"directGeneralizations",
+		"sharedGeneralizations",
+		"tags",
+		"uuid"
+	],
+	"name" : "OPUMLMetaElement",
+	"type" : "normal"
+}

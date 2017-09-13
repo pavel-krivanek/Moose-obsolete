@@ -1,0 +1,1 @@
+A DurationConstraint is a Constraint that refers to a DurationInterval.

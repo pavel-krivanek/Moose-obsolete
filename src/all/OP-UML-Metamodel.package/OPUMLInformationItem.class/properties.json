@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-InformationFlows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"representeds"
+	],
+	"name" : "OPUMLInformationItem",
+	"type" : "normal"
+}

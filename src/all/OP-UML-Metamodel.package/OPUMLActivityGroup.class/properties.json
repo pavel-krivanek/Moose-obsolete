@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"superGroup",
+		"containedEdges",
+		"containedNodes",
+		"inActivity",
+		"subgroups"
+	],
+	"name" : "OPUMLActivityGroup",
+	"type" : "normal"
+}

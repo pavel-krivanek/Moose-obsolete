@@ -1,0 +1,1 @@
+A DurationInterval defines the range between two Durations.

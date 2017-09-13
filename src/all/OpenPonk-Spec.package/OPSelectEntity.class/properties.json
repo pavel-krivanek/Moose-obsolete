@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "PeterUhnak 7/29/2016 13:09",
+	"super" : "ComposableModel",
+	"category" : "OpenPonk-Spec-Windows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"entity",
+		"selectEntity",
+		"possibleEntities",
+		"selectDialogBlock",
+		"displaySymbol",
+		"entityText",
+		"ghostText",
+		"selectDialog"
+	],
+	"name" : "OPSelectEntity",
+	"type" : "normal"
+}

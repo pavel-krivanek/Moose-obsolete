@@ -1,0 +1,1 @@
+Observation specifies a value determined by observing an event or events that occur relative to other model Elements.

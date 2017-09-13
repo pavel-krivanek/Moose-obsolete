@@ -1,0 +1,1 @@
+An AcceptEventAction is an Action that waits for the occurrence of one or more specific Events.

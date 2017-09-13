@@ -1,0 +1,1 @@
+I am an abstract controller for relationship-type elements.

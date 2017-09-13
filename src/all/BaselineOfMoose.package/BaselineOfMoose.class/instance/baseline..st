@@ -207,5 +207,8 @@ baseline: spec
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
 
+		self baselineOpenPonkClassEditor: spec.
+			
+			
 	   self groups: spec.
 	]

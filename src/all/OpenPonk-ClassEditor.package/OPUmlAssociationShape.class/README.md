@@ -1,0 +1,1 @@
+I am a shape composition to accomodate for the most common UML Association shape.

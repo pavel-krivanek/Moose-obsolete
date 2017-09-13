@@ -1,0 +1,3 @@
+figures
+createFigure
+	^ self shouldNotImplement

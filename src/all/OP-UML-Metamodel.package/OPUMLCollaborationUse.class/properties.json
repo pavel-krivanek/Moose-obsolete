@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"roleBindings",
+		"type"
+	],
+	"name" : "OPUMLCollaborationUse",
+	"type" : "normal"
+}

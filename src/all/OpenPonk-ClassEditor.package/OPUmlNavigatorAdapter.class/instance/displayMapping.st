@@ -1,0 +1,3 @@
+accessing
+displayMapping
+	^ {OPUMLElement -> #name}

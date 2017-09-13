@@ -1,0 +1,1 @@
+A LiteralUnlimitedNatural is a specification of an UnlimitedNatural number.

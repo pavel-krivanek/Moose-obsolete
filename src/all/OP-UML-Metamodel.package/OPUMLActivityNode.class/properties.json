@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"outgoings",
+		"activity",
+		"inStructuredNode",
+		"inGroups",
+		"inInterruptibleRegions",
+		"inPartitions",
+		"redefinedNodes",
+		"incomings"
+	],
+	"name" : "OPUMLActivityNode",
+	"type" : "normal"
+}

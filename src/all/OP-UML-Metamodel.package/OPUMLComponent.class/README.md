@@ -1,0 +1,1 @@
+A Component represents a modular part of a system that encapsulates its contents and whose manifestation is replaceable within its environment.  

@@ -1,0 +1,1 @@
+A ReclassifyObjectAction is an Action that changes the Classifiers that classify an object.

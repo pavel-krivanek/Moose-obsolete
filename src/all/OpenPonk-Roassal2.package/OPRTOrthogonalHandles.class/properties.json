@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "RTInteraction",
+	"category" : "OpenPonk-Roassal2-Connection",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"points",
+		"edge",
+		"isActive",
+		"segmentHandles",
+		"cornerHandles",
+		"handles"
+	],
+	"name" : "OPRTOrthogonalHandles",
+	"type" : "normal"
+}

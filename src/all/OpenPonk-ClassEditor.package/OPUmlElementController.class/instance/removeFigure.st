@@ -1,0 +1,3 @@
+figures
+removeFigure
+	self removeDiagramElement

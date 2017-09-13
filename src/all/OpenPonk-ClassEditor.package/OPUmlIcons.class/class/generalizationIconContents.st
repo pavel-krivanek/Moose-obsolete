@@ -1,0 +1,10 @@
+private - contents
+generalizationIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\generalization.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADvSURBVDiNxZK9TgJBFIW/u7shPAEViQUvYGsHiYEdSxJbewt6WzrfwAews7NxE1ik2sSS
+F6CCd/AnOMfG3RCd1Y0meqqZe2a+e+5k4C80LNQZFuqEvKQJIH7k9n159NGz7y67XFMTLQ/P
+ZrSzY7to0hSA8UIHaa6igi304O7U2z8TfQV4ght74azcv+44VYvrRgCXa4rnPjuxdVmbjWyD
+mLlcl2Ut+AZuqS47lt44D/mRuCJhkA1sG0wQe+SNyV6XnkE1uzcmsUd16T8pnaufztUPpmlM
+qdH/A6qvXDcjgEUcyrP6cQJ5Vu0kDPi13gDJkkfqaimOAQAAAABJRU5ErkJggg=='

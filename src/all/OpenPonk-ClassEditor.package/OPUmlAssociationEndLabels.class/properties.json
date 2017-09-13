@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "PeterUhnak 7/3/2017 15:31",
+	"super" : "Object",
+	"category" : "OpenPonk-ClassEditor-Shapes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nameLabel",
+		"multiplicityLabel",
+		"redefinesLabel",
+		"modifiersLabel",
+		"associationShape",
+		"modelElement"
+	],
+	"name" : "OPUmlAssociationEndLabels",
+	"type" : "normal"
+}

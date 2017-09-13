@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "PeterUhnak 10/29/2014 17:55",
+	"super" : "ComposableModel",
+	"category" : "OpenPonk-Spec-Windows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"canvasModel",
+		"paletteModel",
+		"workbench",
+		"canvasMenuModel",
+		"formModel",
+		"zoomLabel",
+		"diagramController",
+		"plugin"
+	],
+	"name" : "OPEditor",
+	"type" : "normal"
+}

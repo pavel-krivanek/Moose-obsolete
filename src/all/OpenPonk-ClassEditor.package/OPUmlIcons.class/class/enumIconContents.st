@@ -1,0 +1,9 @@
+private - contents
+enumIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\enum.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AACmSURBVDiNxZIxDgFRFEXP/eY3FmAlFvCTicIkeuuwAovQW4BoTWEk04sNWIYGmfA0SIjC
+i0nc/p57igv/jgCGG6t1pfYULZDKXAmAYm1T7/KjE7zF92Qv1MomBj0AGdvVQEsXwGAUYQzQ
+NBzdBhjxDH2AmLEHDj4DIYkuwMWIbgPBqcy1+Kb4EYDoFJXN7za7MtfMBXgew5F2fmCB5H2j
+BdKv4+3kBmsPLbxzYn3TAAAAAElFTkSuQmCC'

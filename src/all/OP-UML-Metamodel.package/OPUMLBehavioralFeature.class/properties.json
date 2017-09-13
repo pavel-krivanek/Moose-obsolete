@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"concurrency",
+		"raisedExceptions",
+		"isAbstract",
+		"ownedParameterSets",
+		"methods",
+		"ownedParameters"
+	],
+	"name" : "OPUMLBehavioralFeature",
+	"type" : "normal"
+}

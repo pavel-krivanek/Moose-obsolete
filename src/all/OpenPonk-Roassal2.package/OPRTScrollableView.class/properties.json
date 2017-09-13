@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 10/4/2015 22:33",
+	"super" : "RTInteraction",
+	"category" : "OpenPonk-Roassal2-Interactivity",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPRTScrollableView",
+	"type" : "normal"
+}

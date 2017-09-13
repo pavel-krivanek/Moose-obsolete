@@ -1,0 +1,1 @@
+A DestroyObjectAction is an Action that destroys objects.

@@ -1,0 +1,1 @@
+A JoinNode is a ControlNode that synchronizes multiple flows.

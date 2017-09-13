@@ -1,0 +1,1 @@
+Physical definition of a graphical image.

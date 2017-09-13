@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isBehavior",
+		"requireds",
+		"redefinedPorts",
+		"isService",
+		"protocol",
+		"isConjugated",
+		"provideds"
+	],
+	"name" : "OPUMLPort",
+	"type" : "normal"
+}

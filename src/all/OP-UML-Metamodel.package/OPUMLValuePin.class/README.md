@@ -1,0 +1,1 @@
+A ValuePin is an InputPin that provides a value by evaluating a ValueSpecification.

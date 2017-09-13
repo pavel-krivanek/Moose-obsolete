@@ -1,0 +1,1 @@
+A DecisionNode is a ControlNode that chooses between outgoing ActivityEdges for the routing of tokens.

@@ -1,0 +1,3 @@
+accessing
+declaredTypeName
+	^ declaredType value

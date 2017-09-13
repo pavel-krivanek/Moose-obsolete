@@ -1,0 +1,3 @@
+accessing
+owningElement
+	^ self subclassResponsibility

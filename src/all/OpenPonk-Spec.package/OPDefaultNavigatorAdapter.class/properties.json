@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PeterUhnak 6/27/2015 23:58",
+	"super" : "OPNavigatorAdapter",
+	"category" : "OpenPonk-Spec-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPDefaultNavigatorAdapter",
+	"type" : "normal"
+}

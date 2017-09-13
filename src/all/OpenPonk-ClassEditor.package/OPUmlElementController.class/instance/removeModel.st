@@ -1,0 +1,4 @@
+model
+removeModel
+	self subclassResponsibility
+	

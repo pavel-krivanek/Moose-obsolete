@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "OpenPonk-ClassEditor-Tests - UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model",
+		"project",
+		"workbench",
+		"window",
+		"editor",
+		"view",
+		"paletteEntries"
+	],
+	"name" : "OPUmlEditorWorkbenchTest",
+	"type" : "normal"
+}

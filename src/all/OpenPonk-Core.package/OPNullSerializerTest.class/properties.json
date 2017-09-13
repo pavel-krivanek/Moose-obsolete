@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OPAbstractSerializerTest",
+	"category" : "OpenPonk-Core-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPNullSerializerTest",
+	"type" : "normal"
+}

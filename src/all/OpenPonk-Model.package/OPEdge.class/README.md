@@ -1,0 +1,1 @@
+A DCEdge represents a oriented binary connection between two model objects.

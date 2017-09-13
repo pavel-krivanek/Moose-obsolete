@@ -1,0 +1,14 @@
+{
+	"category" : "OpenPonk-Model-Model",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 3/13/2016 01:06",
+	"instvars" : [
+		"body" ],
+	"name" : "OPMComment",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

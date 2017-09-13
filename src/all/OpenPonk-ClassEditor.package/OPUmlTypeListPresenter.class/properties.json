@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "PeterUhnak 8/6/2016 12:52",
+	"super" : "ComposableModel",
+	"category" : "OpenPonk-ClassEditor-Windows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"searchInput",
+		"addEntryButton",
+		"entriesList",
+		"itemsBlock",
+		"displayNameBlock",
+		"orphanedItems"
+	],
+	"name" : "OPUmlTypeListPresenter",
+	"type" : "normal"
+}

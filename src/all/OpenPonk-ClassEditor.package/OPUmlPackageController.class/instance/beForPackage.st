@@ -1,0 +1,3 @@
+configuration
+beForPackage
+	modelClass := OPUMLPackage

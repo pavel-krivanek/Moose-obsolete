@@ -1,0 +1,10 @@
+private - contents
+dataTypeIconContents
+	"Private - Method generated with the content of the file File @ D:\OpenPonk\icons\uml\dataType.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAG7AAABuwBHnU4NQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADbSURBVDiNxZIxTsNAEEXfX5OCI4CUm1BYeAXBUk4A3IMOaCiQ6LkAR4AN4ETpuQEdosgJ
+gAKUnyoSWI4sQyR+ObP//Z3RwH9LAAdjTzVn2sXoQJ4K5QCUjz7rmrz0hK7GujbqVIstmdlc
+3I6ingZjn8psf3v2kqIuGgEO7KRCce/e/Szjsqx8c1foHGBQeTKK2q3/oHGEh329SpwYjtpG
+WLmDLPCG2fw14POLY4lJG+DHDjAfZeVrQw/x/B64WrYkZq2AFDVclZQKHTbV13MHDuRdr9GB
+/K/h69EC9xhByVkP+hoAAAAASUVORK5CYII='

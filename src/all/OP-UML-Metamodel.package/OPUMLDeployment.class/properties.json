@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "PeterUhnak 7/8/2017 17:07",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Deployments",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"deployedArtifacts",
+		"configurations",
+		"location"
+	],
+	"name" : "OPUMLDeployment",
+	"type" : "normal"
+}
