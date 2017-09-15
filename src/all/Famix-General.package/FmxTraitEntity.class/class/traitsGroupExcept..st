@@ -5,7 +5,7 @@ traitsGroupExcept: aSetOfTraits
 	
 	targetClasses := (self relationSlots collect: #targetClass) copyWithoutAll: aSetOfTraits.
 	
-	found := targetClasses copy.
+	found := targetClasses asOrderedCollection.
 	targetClasses do: [ :each | 
 		found addAll: (each traitsGroupExcept: aSetOfTraits, targetClasses) ].
 	

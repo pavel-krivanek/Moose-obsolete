@@ -17,6 +17,8 @@ baselineOpenPonkClassEditor: spec
 		'OP-UML-Metamodel'
 
 		'OpenPonk-ClassEditor'
+
+		'Moose-MetamodeEditor'
 		
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
