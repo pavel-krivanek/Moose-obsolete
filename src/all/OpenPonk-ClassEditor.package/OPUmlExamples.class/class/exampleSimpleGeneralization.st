@@ -1,6 +1,3 @@
 examples
 exampleSimpleGeneralization
-	^ OPProject new
-		name: 'Simple Generalization';
-		addModel: self sampleSimpleGeneralization;
-		open
+	^ OPProject openOnModel: (OPUmlExamples >> #simpleGeneralization:) gtExample returnValue

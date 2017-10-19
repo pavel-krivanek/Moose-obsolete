@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"object"
+		"model"
 	],
 	"name" : "OPUICommand",
 	"type" : "normal"

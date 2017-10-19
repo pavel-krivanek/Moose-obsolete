@@ -1,4 +1,4 @@
-as yet unclassified
+actions
 createProfile
 	| profile classMetaclass sortals mixins associationMetaclass associations moments |
 	profile := OPUMLProfile new

@@ -1,4 +1,4 @@
-as yet unclassified
+adornments
 showAdornmentsOn: anElement
 	| boxes |
 	boxes := adornments

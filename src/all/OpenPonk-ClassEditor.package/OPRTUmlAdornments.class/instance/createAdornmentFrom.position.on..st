@@ -1,4 +1,4 @@
-as yet unclassified
+adornments
 createAdornmentFrom: anAssociation position: aPosition on: anElement
 	| box icon size |
 	size := 20.

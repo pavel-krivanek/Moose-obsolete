@@ -1,3 +1,0 @@
-accessing
-declaredTypeName
-	^ declaredType value

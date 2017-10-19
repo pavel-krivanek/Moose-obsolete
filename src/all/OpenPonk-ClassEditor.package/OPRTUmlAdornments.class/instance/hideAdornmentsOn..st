@@ -1,4 +1,4 @@
-as yet unclassified
+adornments
 hideAdornmentsOn: anElement
 	(anElement hasAttribute: self className)
 		ifFalse: [ ^ self ].

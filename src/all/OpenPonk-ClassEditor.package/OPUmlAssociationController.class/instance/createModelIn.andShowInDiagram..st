@@ -1,7 +1,7 @@
 construction
 createModelIn: aTargetController andShowInDiagram: aDiagramController
 	| sourceProp targetProp |
-	model := self createModel.
+	self model: self createModel.
 	(sourceProp := OPUMLProperty new)
 		owningClass: aTargetController model;
 		name: sourceController model name uncapitalized;

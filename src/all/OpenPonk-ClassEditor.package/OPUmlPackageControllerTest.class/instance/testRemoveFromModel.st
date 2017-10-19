@@ -2,7 +2,6 @@ tests - removing
 testRemoveFromModel
 	| model |
 	model := self newEmptyModel.
-	diagramController model: OPUMLPackage new.
 	diagramController model packagedElements add: model.
 	diagramController showModelInDiagram: model.
 	controller := diagramController controllerForModel: model.

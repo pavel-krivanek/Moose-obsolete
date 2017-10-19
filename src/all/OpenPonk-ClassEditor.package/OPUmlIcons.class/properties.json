@@ -2,11 +2,11 @@
 	"commentStamp" : "PeterUhnak 9/11/2017 18:55",
 	"super" : "Object",
 	"category" : "OpenPonk-ClassEditor-Plugin",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [
+	"classinstvars" : [
 		"icons"
 	],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "OPUmlIcons",
 	"type" : "normal"
