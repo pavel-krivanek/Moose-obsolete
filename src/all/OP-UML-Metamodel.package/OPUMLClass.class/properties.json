@@ -13,7 +13,8 @@
 		"superClasses",
 		"ownedAttributes",
 		"ownedOperations",
-		"ownedReceptions"
+		"ownedReceptions",
+		"traits"
 	],
 	"name" : "OPUMLClass",
 	"type" : "normal"

@@ -1,4 +1,4 @@
-ui hooks
+*Moose-MetamodeEditor
 initializePalette: aPalette
 	(aPalette newCreationEntry: [ OPUmlClassController new ])
 		label: 'Class';
@@ -20,6 +20,10 @@ initializePalette: aPalette
 		label: 'Generalization';
 		icon: OPUmlIcons generalizationIcon.
 	aPalette newSeparator.
+	(aPalette newConnectionCreationTool: [ MetamodeEditorGeneralizationController new ])
+		label: 'Trait usage';
+		icon: OPUmlIcons generalizationIcon.
+	aPalette newSeparator.	
 	(aPalette newCreationEntry: [ OPUmlEnumerationController new ])
 		label: 'Enumeration';
 		icon: OPUmlIcons enumIcon;

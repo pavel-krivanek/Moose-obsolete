@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "OPWorkbench",
+	"category" : "OpenPonk-Spec-Windows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"traitsModel",
+		"preview"
+	],
+	"name" : "MooseMetamodelEditorWorkbench",
+	"type" : "normal"
+}

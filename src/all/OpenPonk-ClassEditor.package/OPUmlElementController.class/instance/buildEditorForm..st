@@ -1,3 +1,3 @@
 forms
 buildEditorForm: aForm
-	aForm fromMagritteDescriptions: self magritteDescription.
+	"aForm fromMagritteDescriptions: self magritteDescription."

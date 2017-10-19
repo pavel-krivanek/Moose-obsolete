@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OPUmlRelationshipController",
+	"category" : "Moose-MetamodeEditor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetamodeEditorGeneralizationController",
+	"type" : "normal"
+}

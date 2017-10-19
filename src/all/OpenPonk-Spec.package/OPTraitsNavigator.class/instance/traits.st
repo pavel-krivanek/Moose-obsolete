@@ -1,0 +1,4 @@
+initialization
+traits
+
+	^ FmxTraitEntity allSubclasses

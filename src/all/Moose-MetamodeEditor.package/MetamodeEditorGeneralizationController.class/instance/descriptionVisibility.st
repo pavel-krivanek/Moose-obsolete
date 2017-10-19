@@ -1,0 +1,3 @@
+figures
+descriptionVisibility
+	^ nil
