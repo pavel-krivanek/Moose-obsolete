@@ -1,6 +1,6 @@
 GTInspector - extensions
 gtInspectorAllPropertiesIn: aComposite
-	<gtInspectorPresentationOrder: 6>
+	<gtInspectorPresentationOrder: 7>
 	aComposite fastTable
 		title: 'Properties (All)';
 		display: [ self inspectorProperties ];

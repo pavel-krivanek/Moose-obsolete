@@ -1,6 +1,3 @@
 examples
 exampleSimpleAssociation
-	^ OPProject new
-		name: 'Simple Association';
-		addModel: self sampleSimpleAssociation;
-		open
+	^ OPProject openOnModel: (OPUmlExamples >> #simpleAssociation:) gtExample returnValue

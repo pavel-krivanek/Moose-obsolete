@@ -1,6 +1,6 @@
 GTInspector - extensions
 gtInspectorGeneralizationsIn: aComposite
-	<gtInspectorPresentationOrder: 7>
+	<gtInspectorPresentationOrder: 8>
 	aComposite fastTable
 		title: 'Generalizations';
 		display: [ sharedGeneralizations associations ];

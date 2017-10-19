@@ -10,7 +10,7 @@ menuCommandOn: aBuilder
 				parent: #UMLClassEditor;
 				label: 'Rich Class';
 				icon: OPIcons current dcOmlDiagramIcon;
-				action: [ self exampleCompleteClass ].
+				action: [ self exampleRichClass ].
 			(aBuilder item: #UMLExampleSimpleAssociation)
 				parent: #UMLClassEditor;
 				label: 'Simple Association';

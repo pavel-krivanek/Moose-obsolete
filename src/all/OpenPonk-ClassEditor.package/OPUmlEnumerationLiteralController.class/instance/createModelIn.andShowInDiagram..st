@@ -3,7 +3,7 @@ createModelIn: aClassifierController andShowInDiagram: aDiagramController
 	| newModel |
 	newModel := self modelClass new.
 	newModel name: 'literal'.
-	model := newModel.
+	self model: newModel.
 	aClassifierController model ownedLiterals add: model.
 	aDiagramController addController: self.
 	self showInDiagram: aDiagramController

@@ -1,8 +1,8 @@
 tests
 testExample: anExampleSelector
-	| wnd |
+	| window |
 	self assert: anExampleSelector isSymbol.
 	self assert: (OPUmlExamples class selectors includes: anExampleSelector).
-	wnd := OPUmlExamples perform: anExampleSelector.
-	self assert: (wnd isKindOf: OPWorkbench).
-	wnd delete
+	window := OPUmlExamples perform: anExampleSelector.
+	self assert: (window isKindOf: OPWorkbench).
+	window delete

@@ -1,4 +1,4 @@
-as yet unclassified
+actions
 openProfile
 	<script: 'self new openProfile'>
 	OPProject openOnModel: self createProfile

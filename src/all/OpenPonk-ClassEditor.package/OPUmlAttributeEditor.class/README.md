@@ -1,1 +1,0 @@
-I am an UI used to help specify default value and type of an attribute.

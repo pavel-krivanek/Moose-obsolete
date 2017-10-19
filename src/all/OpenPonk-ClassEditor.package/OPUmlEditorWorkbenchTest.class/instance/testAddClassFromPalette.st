@@ -9,8 +9,9 @@ testAddClassFromPalette
 	ev shape: shape.
 	ev position: position.
 	ev canvas: view canvas.
+	"Pseudo-mock OPRenameElementCommand>>execute, so there's no asking user questions for a name."
 	link := MetaLink new
-		metaObject: [ :object | (object instVarNamed: #object) name: 'Hello' ];
+		metaObject: [ :object | (object instVarNamed: #model) name: 'Hello' ];
 		selector: #value:;
 		arguments: #(object);
 		control: #instead.
