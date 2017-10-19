@@ -8,4 +8,3 @@ SystemOrganization addCategory: 'OpenPonk-ClassEditor-Profiles'!
 SystemOrganization addCategory: 'OpenPonk-ClassEditor-Shapes'!
 SystemOrganization addCategory: 'OpenPonk-ClassEditor-Tests'!
 SystemOrganization addCategory: 'OpenPonk-ClassEditor-Tests - UI'!
-
