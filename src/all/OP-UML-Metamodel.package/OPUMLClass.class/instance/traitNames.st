@@ -1,4 +1,4 @@
 traits
 traitNames
 
-	^ (traits collect: #asString) joinUsing: ', '
+	^ (self traits collect: #name) joinUsing: ', '
