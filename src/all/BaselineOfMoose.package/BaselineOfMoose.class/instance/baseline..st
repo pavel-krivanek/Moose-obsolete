@@ -16,14 +16,15 @@ baseline: spec
 		self baselinePhexample: spec.
 		self baselineFame: spec.
 
-		"#(
-			'GT-Examples'
-			'GT-Examples-UI'
-			'GT-Examples-Dummies'
-			'GT-Examples-Examples'
-			'GT-Tests-Examples'
+		#(
+			'GToolkit-Examples' 
+			'GToolkit-Examples-Dummies' 
+			'GToolkit-Examples-Extensions' 
+			'GToolkit-Examples-Roassal2UI' 
+			'GToolkit-Examples-UI' 
+			'GToolkit-Tests-Examples'
 		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]]."
+			spec package: packageName with: [ spec repository: (self url: #GToolkitExamples) ]].
 		
 		self baselineDeepTraverser: spec.
 		self baselineRoelTyper: spec.

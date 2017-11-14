@@ -1,0 +1,3 @@
+defaults
+defaultLineSeparator
+	^ String lf

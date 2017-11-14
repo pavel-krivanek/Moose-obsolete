@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "DeepTraverserGraphTest",
+	"category" : "DeepTraverser-Tests-Transformed-To-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DeepTraverserUsescasesTest",
+	"type" : "normal"
+}
