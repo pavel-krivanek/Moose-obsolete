@@ -1,4 +1,4 @@
 parsing
 nextTextTest
 	self nextEndArgumentList.
-	context handleTextNodeTestWith: handler.
+	state handleTextNodeTestWith: handler.

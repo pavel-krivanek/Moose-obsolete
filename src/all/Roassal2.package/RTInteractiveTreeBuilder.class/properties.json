@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "akevalion 10/11/2017 18:03",
+	"super" : "RTAbstractTreeBuilder",
+	"category" : "Roassal2-Experimental",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"labelShape",
+		"lineShape",
+		"layout",
+		"gap",
+		"padding",
+		"afterClose",
+		"afterOpen"
+	],
+	"name" : "RTInteractiveTreeBuilder",
+	"type" : "normal"
+}

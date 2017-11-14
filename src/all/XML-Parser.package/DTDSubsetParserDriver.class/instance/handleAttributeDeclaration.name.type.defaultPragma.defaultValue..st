@@ -2,7 +2,7 @@ handling - dtd
 handleAttributeDeclaration: anElement name: anAttribute type: aType defaultPragma: aDefaultPragma defaultValue: aDefaultValue
 	| newAttributeValidator |
 
-	self mustNotProcessEntityOrAttributeDeclaration
+	self mustSkipEntityAndAttributeDeclarations
 		ifTrue: [^ self].
 
 	newAttributeValidator :=

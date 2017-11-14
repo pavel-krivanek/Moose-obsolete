@@ -1,3 +1,0 @@
-private
-resetStub
-	thePackage := nil

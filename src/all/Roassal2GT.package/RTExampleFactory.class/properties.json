@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "GTExampleFactory",
+	"super" : "GtExampleFactory",
 	"category" : "Roassal2GT-Examples",
 	"classinstvars" : [ ],
 	"pools" : [ ],

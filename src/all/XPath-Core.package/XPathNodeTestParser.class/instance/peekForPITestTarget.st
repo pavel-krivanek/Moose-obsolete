@@ -8,7 +8,7 @@ peekForPITestTarget
 			ifNil: [self nextNCNameOptional: true])
 		ifNil: [^ false]
 		ifNotNil: [
-			context
+			state
 				handlePINodeTestForName: target
 				with: handler.
 			^ true]

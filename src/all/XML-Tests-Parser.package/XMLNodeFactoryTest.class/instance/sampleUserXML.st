@@ -1,4 +1,4 @@
-source XML
+source
 sampleUserXML
 	^
 	XMLWriter new

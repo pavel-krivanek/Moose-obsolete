@@ -1,6 +1,6 @@
 handling - content
 startPrefixMapping: aPrefix uri: aURI
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #startPrefixMapping:uri:
 		arguments:

@@ -8,13 +8,18 @@
 	"instvars" : [
 		"extent",
 		"nodePadding",
-		"nodes",
-		"links",
-		"iterations",
 		"elements",
+		"links",
 		"linkFrom",
 		"linkTo",
-		"linkValue"
+		"lineShape",
+		"linkValue",
+		"edges",
+		"interactionEdge",
+		"iterations",
+		"labelShape",
+		"labelInteraction",
+		"lelements"
 	],
 	"name" : "RTSankeyBuilder",
 	"type" : "normal"

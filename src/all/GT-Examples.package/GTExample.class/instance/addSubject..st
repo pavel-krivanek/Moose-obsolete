@@ -1,3 +1,0 @@
-private
-addSubject: aGTExampleSubject
-	subjects add: aGTExampleSubject asGTExampleSubject

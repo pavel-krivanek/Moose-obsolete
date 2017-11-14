@@ -1,6 +1,6 @@
 handling - content
 processingInstruction: aTargetString data: aDataString
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #processingInstruction:data:
 		arguments:

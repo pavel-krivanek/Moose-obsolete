@@ -1,0 +1,3 @@
+changing
+terminatedState
+	^ XMLTerminatedState new

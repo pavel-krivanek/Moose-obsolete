@@ -1,3 +1,3 @@
-accessing
+defaults
 declarationColor
 	^ self class defaultDeclarationColor

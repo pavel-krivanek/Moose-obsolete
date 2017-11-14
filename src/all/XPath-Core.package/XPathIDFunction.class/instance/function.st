@@ -1,4 +1,4 @@
-invoking
+implementing
 function
 	| object ids nodeSet |
 
@@ -33,6 +33,7 @@ function
 						addElementsWithUndeclaredIDs: ids
 						in: root
 						to: nodeSet]].
+
 	"the elements matching the IDs are enumerated in document order, so the
 	resulting node set is in document order too"
 	^ nodeSet sortOrder: XPathDocumentSortOrder new.

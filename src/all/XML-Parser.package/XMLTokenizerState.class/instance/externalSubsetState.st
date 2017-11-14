@@ -1,0 +1,3 @@
+changing
+externalSubsetState
+	^ XMLExternalSubsetState new

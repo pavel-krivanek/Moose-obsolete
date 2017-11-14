@@ -1,3 +1,3 @@
-private
+defaults
 writeStreamCollectionClass
 	^ String

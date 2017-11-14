@@ -1,5 +1,5 @@
 acccessing
 attributes
-	^ OrderPreservingStringDictionary
+	^ XMLAttributeDictionary
 		with: 'name' -> 'value'
 		with: 'name2' -> 'value2'

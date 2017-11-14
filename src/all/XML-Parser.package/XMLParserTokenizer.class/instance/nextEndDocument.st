@@ -1,7 +1,7 @@
 tokenizing
 nextEndDocument
-	context isTerminatedContext
+	state isTerminatedState
 		ifFalse: [
 			self closeStreams.
-			context := context terminatedContext.
+			state := state terminatedState.
 			driver handleEndDocument]

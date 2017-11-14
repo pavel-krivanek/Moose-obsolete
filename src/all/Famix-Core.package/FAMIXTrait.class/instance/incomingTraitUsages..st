@@ -1,0 +1,3 @@
+accessing
+incomingTraitUsages: aCollection
+	incomingTraitUsages value: aCollection

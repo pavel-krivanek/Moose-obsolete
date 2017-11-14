@@ -2,4 +2,4 @@
 providerNamespaces
 	"returns a set of all the namespaces that the receiver depends on the receiver"
 
-	^ (self queryAllOutgoingAssociations atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FAMIXNamespace) withoutSelfLoops

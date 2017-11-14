@@ -4,4 +4,4 @@ addUnresolvableExternalParameterEntity: aName
 		ifTrue: [^ nil].
 	^ self parameterEntities
 		at: aName
-		put: (DTDUnresolvableExternalParameterEntity named: aName).
+		put: (DTDUnresolvableExternalParameterParsedEntity named: aName).

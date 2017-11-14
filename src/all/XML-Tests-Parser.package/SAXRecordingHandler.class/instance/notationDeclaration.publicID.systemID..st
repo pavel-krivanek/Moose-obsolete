@@ -1,6 +1,6 @@
 handling - declaration
 notationDeclaration: aName publicID: aPublicID systemID: aSystemID
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #notationDeclaration:publicID:systemID:
 		arguments:

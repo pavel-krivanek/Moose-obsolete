@@ -1,6 +1,7 @@
-private
+accessing
 buttonMorph: aModel
-	^UITheme current 
+	| button |
+	button := UITheme current 
 		newButtonIn: nil 
 		for: aModel 
 		getState: nil
@@ -8,4 +9,9 @@ buttonMorph: aModel
 		arguments: nil 
 		getEnabled: nil 
 		label: aModel buttonLabel
-		help: nil
+		help: nil.
+	aModel glamourAction icon ifNotNil: [ :anIcon |
+		button 
+			icon: anIcon;
+			label: aModel buttonLabel ].
+	^ button

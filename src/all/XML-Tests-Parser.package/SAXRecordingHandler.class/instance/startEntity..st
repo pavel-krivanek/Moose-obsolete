@@ -1,6 +1,6 @@
 handling - lexical
 startEntity: anEntityName
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #startEntity:
 		arguments:

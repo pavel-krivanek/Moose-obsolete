@@ -4,9 +4,9 @@ resolvePrefix: aPrefix ifUnresolvable: aBlock
 	is empty), including the predefined 'xml' and 'xmlns' prefixes. Returns the
 	value of aBlock if aPrefix is unresolvable."
 
-	self hasNamespaces "avoid lazy initializing the scope"
+	^ self hasNamespaces "avoid lazy initializing the scope"
 		ifTrue: [
-			^ self namespaceScope
+			self namespaceScope
 				resolvePrefix: aPrefix
 				ifUnresolvable: aBlock]
-		ifFalse: [^ aBlock value]
+		ifFalse: [aBlock value]

@@ -1,1 +1,0 @@
-I am a report that once executed produces an XML result that can be integrated in Hudson/Jenkins in order to display run/failing examples as tests.

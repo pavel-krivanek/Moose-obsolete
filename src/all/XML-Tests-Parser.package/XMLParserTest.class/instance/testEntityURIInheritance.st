@@ -11,9 +11,10 @@ testEntityURIInheritance
 		doctypeDefinition parameterEntities
 			at: 'first'
 			put:
-				(DTDExternalParameterEntity
-					name: 'first'
-					replacement: '<!ENTITY second "<!--comment-->">'
+				((DTDExternalParameterParsedEntity name: 'first')
+					resolvedReplacement:
+						(DTDDecodedResolvedExternalParsedEntityReplacement contents:
+							'<!ENTITY second "<!--comment-->">');
 					uri: 'test.ent').
 
 	self assert: driver baseURI = 'test.xml'.

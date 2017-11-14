@@ -2,5 +2,5 @@ parsing
 nextPITest
 	self peekForPITestTarget
 		ifFalse: [
-			context handlePINodeTestWith: handler].
+			state handlePINodeTestWith: handler].
 	self nextEndArgumentList.

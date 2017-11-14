@@ -1,3 +1,3 @@
 stepping and presenter
 step
-	^ 0.8 
+	^ 0.5

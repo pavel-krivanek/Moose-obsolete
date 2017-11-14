@@ -2,8 +2,7 @@ allDependencies
 testProviderClasses
 	self
 		assert:
-			((self namespace1InteractedReferencerReferee
-				queryAllOutgoingAssociations atScope: FAMIXType)
+			((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FAMIXType)
 				equalsTo:
 					((Set
 						with: self c11FullRefereeOutSide

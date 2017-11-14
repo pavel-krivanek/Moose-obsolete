@@ -5,7 +5,7 @@ testPushBackStreamWhenPoppedDoIsExternalException
 
 	| stream streamReader evaluated |
 
-	stream := XMLExceptionRaisingReadStream on: self sourceXML.
+	stream := self newStreamOnSourceXML.
 	streamReader := self newStreamReaderOnSourceXML.
 	evaluated := false.
 	streamReader

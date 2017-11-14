@@ -1,0 +1,3 @@
+testing
+hasParser
+	^ hasParser

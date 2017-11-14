@@ -1,3 +1,3 @@
 public - executing
 move
-	fixedElement translateTo: self computeX @ self computeY
+	movableElement translateTo: self computeX @ self computeY

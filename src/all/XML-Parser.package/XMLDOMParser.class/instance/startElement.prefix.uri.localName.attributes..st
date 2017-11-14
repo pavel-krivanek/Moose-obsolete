@@ -1,12 +1,13 @@
 handling - content
-startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: aDictionary
+startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: anAttributeDictionary
 	self pushElement:
 		((self nodeFactory
 			classForElement: aQualifiedName
 			namespaceURI: aURI
 			localName: aLocalName
-			attributes: aDictionary) new
+			attributes: anAttributeDictionary) new
 				setConfiguration: self configuration
 				name: aQualifiedName
 				localName: aLocalName
-				attributes: aDictionary)
+				attributes: anAttributeDictionary
+				namespaceScope: currentScope)

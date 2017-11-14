@@ -5,14 +5,11 @@ moosechefEqualsTo: anEntity moduloScope: aScope
 	  When changing scopes, we might get collections and then we check whether it includes the receiver"
 
 	| entityRescoped myselfRescoped |
-
-	aScope isNil ifTrue: [^ self == anEntity].
-	myselfRescoped := (self perform: aScope).
+	myselfRescoped := self atScope: aScope.
+	(myselfRescoped size = 1) ifTrue: [ myselfRescoped := myselfRescoped anyOne ].
 	myselfRescoped isCollection
-		ifTrue: [^ myselfRescoped anySatisfy: [:myElt | myElt moosechefEqualsTo: anEntity moduloScope: aScope ]]
-		ifFalse: [
-			entityRescoped := (anEntity perform: aScope).
+		ifTrue: [ ^ myselfRescoped anySatisfy: [ :myElt | myElt moosechefEqualsTo: anEntity moduloScope: aScope ] ]
+		ifFalse: [ entityRescoped := anEntity atScope: aScope.
 			entityRescoped isCollection
-				ifTrue: [^ entityRescoped includes: myselfRescoped]
-				ifFalse: [^ entityRescoped == myselfRescoped]
-		]
+				ifTrue: [ ^ entityRescoped includes: myselfRescoped ]
+				ifFalse: [ ^ entityRescoped == myselfRescoped ] ]

@@ -8,7 +8,7 @@ testClientPackages
 	p7 := self packageP7ReferencerReferee.
 	self
 		assert:
-			((p5 queryAllIncomingAssociations atScope: FAMIXPackage)
+			((p5 queryAllIncoming atScope: FAMIXPackage)
 				equalsTo:
 					(Set
 						with: p1

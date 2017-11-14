@@ -1,4 +1,4 @@
-private
+basic
 basicCurrentWorkingDirectory
 	^ String streamContents: [:stream |
 		"the class-side workingDirectory isn't used for backwards compatibility"

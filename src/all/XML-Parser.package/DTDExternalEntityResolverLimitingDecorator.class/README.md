@@ -1,0 +1,1 @@
+This class is a decorator for DTDExternalEntityResolvers that limits the number of entities that can be resolved. This is not handled directly by resolvers to make them less stateful and more reusable.

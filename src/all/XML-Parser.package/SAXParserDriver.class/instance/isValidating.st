@@ -1,3 +1,3 @@
 testing
 isValidating
-	^ self saxHandler isValidating
+	^ isValidating

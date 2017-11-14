@@ -1,0 +1,3 @@
+testing
+includesAssociation: anAssociation
+	^ attributeDictionary includesAssociation: anAssociation

@@ -1,12 +1,12 @@
 initialization
-setStream: aStream readLimit: aReadLimit
+setStream: aStream readLimit: anInteger
 	streamReader :=
 		XMLNestedStreamReader
 			on:
 				(aStream isXMLConvertingStreamAdapter
 					ifTrue: [aStream]
 					ifFalse: [XMLDecodingReadStreamAdapter on: aStream])
-			readLimit: aReadLimit.
+			readLimit: anInteger.
 
 	"this is the preferred LE char for Pharo/Squeak"
 	streamReader normalizedLineEndingChar: Character cr.

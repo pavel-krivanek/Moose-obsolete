@@ -1,1 +1,1 @@
-An abstract class to wrap pushed-back parameter entities to keep track of the nesting of include sections within entity replacements.
+A class to decorate pushed-back parameter entities to keep track of the nesting of include sections within entity replacements.

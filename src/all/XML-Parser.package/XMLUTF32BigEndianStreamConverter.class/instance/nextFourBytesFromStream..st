@@ -1,4 +1,4 @@
-private
+basic
 nextFourBytesFromStream: aStream
 	^ ((aStream basicNext
 			ifNil: [^ nil]) asciiValue bitShift: 24) +

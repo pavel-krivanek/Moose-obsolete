@@ -1,0 +1,3 @@
+accessing
+outgoingTraitUsages: aCollectionOfTraitUsages
+	outgoingTraitUsages value: aCollectionOfTraitUsages

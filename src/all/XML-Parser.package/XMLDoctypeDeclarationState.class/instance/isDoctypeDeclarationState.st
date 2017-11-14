@@ -1,0 +1,3 @@
+testing
+isDoctypeDeclarationState
+	^ true

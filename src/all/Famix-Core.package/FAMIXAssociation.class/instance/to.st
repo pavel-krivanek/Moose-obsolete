@@ -6,5 +6,4 @@ to
 
 	<MSEProperty: #to type: #FAMIXNamedEntity> <derived>
 	<MSEComment: 'Generic accessor to the target entity of the association'>
-	<target>
 	^ self subclassResponsibility

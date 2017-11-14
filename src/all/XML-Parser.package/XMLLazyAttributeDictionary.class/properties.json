@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 9/20/2017 09:07",
+	"super" : "Collection",
+	"category" : "XML-Parser",
+	"classinstvars" : [
+		"emptyAttributeDictionary"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"attributeDictionary"
+	],
+	"name" : "XMLLazyAttributeDictionary",
+	"type" : "normal"
+}

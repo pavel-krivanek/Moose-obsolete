@@ -9,7 +9,7 @@ modelVersion1
 	(FAMIX.Namespace (id: 1) (name ''aNamespace''))
 
 	(FAMIX.Class (id: 2) (name ''ClassA'') (container (ref: 1)) (parentPackage (ref: 201)))
-	(FAMIX.Method (name ''methodA1'') (signature ''methodA1()'') (parentType (ref: 2)) (LOC 2))
+	(FAMIX.Method (name ''methodA1'') (signature ''methodA1()'') (parentType (ref: 2)) (numberOfLinesOfCode 2))
 	(FAMIX.Attribute (name ''attributeA1'') (parentType (ref: 2)))
 
 	(FAMIX.Class (id: 3) (name ''ClassB'') (container (ref: 1)) (parentPackage (ref: 201)))

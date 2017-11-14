@@ -23,11 +23,11 @@ nextTag
 					self errorExpectedAttributeNameValueSeparatorButGot: nextChar].
 			streamReader skipSeparators.
 
-			"delay initializing attributes until now to know for sure if it
+			"delay initializing 'attributes' until now to know for sure if it
 			needs a non-zero capacity, otherwise use the lazy version"
 			((attributes
-				ifNil: [attributes := OrderPreservingStringDictionary new: 10])
-				xmlAt: attributeName
+				ifNil: [attributes := driver newAttributeDictionary])
+				at: attributeName
 				newPut: self nextAttributeValue)
 				ifFalse: [self errorDuplicateAttribute: attributeName].
 
@@ -46,7 +46,7 @@ nextTag
 		handleStartTag: tagName
 		attributes:
 			(attributes
-				ifNil: [LazyOrderPreservingStringDictionary new]).
+				ifNil: [driver newEmptyAttributeDictionary]).
 
 	nextChar == $/
 		ifTrue: [

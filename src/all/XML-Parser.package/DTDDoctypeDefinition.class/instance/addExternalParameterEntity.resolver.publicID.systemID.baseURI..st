@@ -5,7 +5,7 @@ addExternalParameterEntity: aName resolver: aResolver publicID: aPublicID system
 	^ self parameterEntities
 		at: aName
 		put:
-			(DTDExternalParameterEntity
+			(DTDExternalParameterParsedEntity
 				name: aName
 				resolver: aResolver
 				publicID: aPublicID

@@ -1,8 +1,8 @@
 positioning
 skipSeparators
-	"isXMLWhitespace matches the Squeak/Pharo isSeparator range, so
-	it is used here instead of isXMLSeparator to give expected behavior
-	when reading non-XML files"
+	"we use #isXMLWhitespace instead of the narrower, XML-specific
+	#isXMLSeparator, because this class can be used for non-XML
+	streams too"
 	[self atEnd not
 		and: [self peek isXMLWhitespace]]
 		whileTrue: [self next]

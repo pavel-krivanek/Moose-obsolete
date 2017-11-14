@@ -1,6 +1,5 @@
 *GT-Inspector
 exampleSimpleMethodsBrowser
-	<gtExample>
 	"Open a Methods Browser on Object."
 	|ui|
 	ui := GlamourPresentationModel new.

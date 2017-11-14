@@ -1,3 +1,3 @@
 instance creation
 newStreamReaderOn: aStream
-	^ XMLNestedStreamReader on: aStream
+	^ self streamReaderClass on: aStream

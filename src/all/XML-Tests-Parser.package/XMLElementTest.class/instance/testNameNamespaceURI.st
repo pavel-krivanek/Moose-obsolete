@@ -49,3 +49,13 @@ testNameNamespaceURI
 				name: 'prefix:three'
 				namespaceURI: '']
 		raise: XMLNamespaceException.
+
+	(element := self newNode) usesNamespaces: false.
+	self assert:
+		(element
+			name: 'four'
+			namespaceURI: 'defaultNS') == element.
+	self
+		assert: element name = 'four';
+		assert: element namespaceURI = 'defaultNS';
+		assert: element usesNamespaces.

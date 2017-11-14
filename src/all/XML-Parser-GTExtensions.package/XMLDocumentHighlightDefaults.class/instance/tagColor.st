@@ -1,3 +1,3 @@
-accessing
+defaults
 tagColor
 	^ self class defaultTagColor

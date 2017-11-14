@@ -4,4 +4,4 @@ addUnresolvableExternalGeneralEntity: aName
 		ifTrue: [^ nil].
 	^ self generalEntities
 		at: aName
-		put: (DTDUnresolvableExternalGeneralEntity named: aName).
+		put: (DTDUnresolvableExternalGeneralParsedEntity named: aName).

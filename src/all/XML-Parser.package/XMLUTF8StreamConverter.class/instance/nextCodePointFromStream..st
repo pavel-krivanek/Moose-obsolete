@@ -1,3 +1,3 @@
-private
+basic
 nextCodePointFromStream: aStream
 	self shouldNotImplement

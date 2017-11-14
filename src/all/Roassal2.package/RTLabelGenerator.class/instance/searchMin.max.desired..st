@@ -1,8 +1,9 @@
 public
-searchMin: dmin max: dmax desired: m
+searchMin: dmin max: dmax desired: desiredNumberOfTicks
 	| best sm dm cm delta bestScore k |
 	best := RTGrapherLabel new.
 	bestScore := -2.
+	desiredNumberOfTicks <= 0 ifTrue: [ self error: 'The minimun value of desiredNumberOfTicks is 1' ].
 	
 	"In case of a particular situation"
 	(dmin = 0 and: [ dmax = 0 ]) ifTrue: [ 
@@ -22,7 +23,7 @@ searchMin: dmin max: dmax desired: m
 			k := 2.
 			[ :break2 |
 				[ true ] whileTrue: [ | z |
-					dm := self densityMax: k m: m.
+					dm := [ self densityMax: k m: desiredNumberOfTicks ] on: ZeroDivide do: [ :ex | self error: 'Please increase the value of desiredNumberOfTicks/labels' ].
 					((self w: sm c: 1 d: dm l: 1) < bestScore) 
 						ifTrue: [ break2 value ].
 					delta := (dmax - dmin)/(k+1)/ n j/ (nice qat: n i).
@@ -47,7 +48,7 @@ searchMin: dmin max: dmax desired: m
 									lstep := step.
 									c := self coverageMin: dmin max: dmax lmin: lmin lmax: lmax.
 									s := self simplicity: lmin max: lmax step: lstep.
-									d := self density: k m: m dmin: dmin dmax: dmax lmin: lmin lmax: lmax.
+									d := self density: k m: desiredNumberOfTicks dmin: dmin dmax: dmax lmin: lmin lmax: lmax.
 									l := self legibility: lmin max: lmax step: lstep.
 									score := self w: s c: c d: d l: l.
 							

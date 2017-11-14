@@ -1,3 +1,4 @@
 instance creation
 newStreamAdapterOnNCName
-	^ self streamAdapterClass on: self ncName readStream
+	^ self streamAdapterClass on:
+		(self newStreamOn: self ncName)

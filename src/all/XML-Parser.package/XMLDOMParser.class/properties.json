@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"document",
-		"nodeStack"
+		"nodeStack",
+		"currentScope"
 	],
 	"name" : "XMLDOMParser",
 	"type" : "normal"

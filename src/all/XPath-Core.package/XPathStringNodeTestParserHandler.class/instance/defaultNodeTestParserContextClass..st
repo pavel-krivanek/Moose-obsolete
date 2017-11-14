@@ -1,3 +1,0 @@
-accessing
-defaultNodeTestParserContextClass: aClass
-	defaultNodeTestParserContextClass := aClass

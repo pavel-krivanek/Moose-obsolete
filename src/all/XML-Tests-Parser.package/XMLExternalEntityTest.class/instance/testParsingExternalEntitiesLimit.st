@@ -1,7 +1,7 @@
 tests
 testParsingExternalEntitiesLimit
 	"This test uses HTTP so is skipped by default."
-	| parser resolver totalResolvedExternalEntities |
+	| handler parser limitedResolver totalResolvedExternalEntities |
 
 	self
 		skipOrReturnWith: [^ self]
@@ -9,29 +9,32 @@ testParsingExternalEntitiesLimit
 
 	DTDCachingExternalEntityResolver clearEntityCache.
 
-	(parser := SAXHandler on: self musicXMLDocument)
+	(handler := SAXHandler on: self musicXMLDocument)
 		resolvesExternalEntities: true.
-	(resolver := parser externalEntityResolver)
+	parser := handler parser.
+	(limitedResolver := parser driver externalEntityResolver)
 		maxExternalEntities: nil.
 	parser parseDocument.
-	totalResolvedExternalEntities := resolver totalResolvedExternalEntities.
+	totalResolvedExternalEntities := limitedResolver totalResolvedExternalEntities.
 	self assert: totalResolvedExternalEntities > 0.
 
 	"should report the same number of resolved entities each time, even if
 	they were cached, to ensure deterministic behavior regardless of which
 	resolver is used or the state of the cache"
-	(parser := SAXHandler on: self musicXMLDocument)
+	(handler := SAXHandler on: self musicXMLDocument)
 		resolvesExternalEntities: true.
-	(resolver := parser externalEntityResolver)
+	parser := handler parser.
+	(limitedResolver := parser driver externalEntityResolver)
 		maxExternalEntities: totalResolvedExternalEntities.
 	parser parseDocument.
 	self assert:
-		resolver totalResolvedExternalEntities =
+		limitedResolver totalResolvedExternalEntities =
 			totalResolvedExternalEntities.
 
-	(parser := SAXHandler on: self musicXMLDocument)
+	(handler := SAXHandler on: self musicXMLDocument)
 		resolvesExternalEntities: true.
-	(resolver := parser externalEntityResolver)
+	parser := handler parser.
+	(limitedResolver := parser driver externalEntityResolver)
 		maxExternalEntities: totalResolvedExternalEntities - 1.
 	self
 		should: [parser parseDocument]

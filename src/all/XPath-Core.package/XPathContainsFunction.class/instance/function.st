@@ -1,4 +1,4 @@
-invoking
+implementing
 function
 	"use findString:startingAt: for portability"
 	^ (self firstArgument

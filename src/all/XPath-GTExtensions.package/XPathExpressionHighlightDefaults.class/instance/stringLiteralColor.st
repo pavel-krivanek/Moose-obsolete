@@ -1,3 +1,3 @@
-accessing
+defaults
 stringLiteralColor
 	^ self class defaultStringLiteralColor

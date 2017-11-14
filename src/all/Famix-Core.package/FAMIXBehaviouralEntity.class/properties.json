@@ -1,5 +1,9 @@
 {
-	"classtraitcomposition" : "TOODependencyQueries classTrait",
+	"commentStamp" : "usmanbhatti 11/24/2011 22:07",
+	"super" : "FAMIXContainerEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"outgoingReferences",
@@ -13,11 +17,5 @@
 		"declaredType"
 	],
 	"name" : "FAMIXBehaviouralEntity",
-	"commentStamp" : "usmanbhatti 11/24/2011 22:07",
-	"super" : "FAMIXContainerEntity",
-	"traitcomposition" : "TOODependencyQueries",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "Famix-Core"
+	"type" : "normal"
 }

@@ -12,7 +12,7 @@ nextPITarget
 			nextChar == $X
 				ifTrue: [isReservedTarget := true]
 				ifFalse: [
-					"nil understands isXMLNameStartChar so it does
+					"nil understands #isXMLNameStartChar so it does
 					not need to be tested for"
 					nextChar isXMLNameStartChar
 						ifFalse: [self errorExpectedPITarget].
@@ -21,8 +21,8 @@ nextPITarget
 	nameStream nextPut: nextChar.
 	length := 1.
 
-	"nil understands isXMLNameChar so it does not need to be tested for"
-	[(nextChar := streamReader peek) isXMLNameChar]
+	"nil understands #isXMLNameChar so it does not need to be tested for"
+	[streamReader peek isXMLNameChar]
 		whileTrue: [
 			nextChar := streamReader next.
 			length := length + 1.
@@ -40,11 +40,11 @@ nextPITarget
 			nameStream nextPut: nextChar].
 	
 	(isReservedTarget
-		and: [length == 3])
+		and: [length = 3])
 		ifTrue: [
 			isLowercaseReservedTarget
 				ifTrue: [
-					context isXMLDeclarationContext
+					state isXMLDeclarationState
 						ifFalse: [self errorXMLDeclarationNotAtStart].
 					"return nil to indicate it's an XML declaration, not a PI"
 					^ nil].

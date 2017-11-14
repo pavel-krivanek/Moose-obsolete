@@ -3,11 +3,16 @@ testDeclareNamespaces
 	| element |
 
 	element := self newNode.
-	element declareNamespaces: self namespaces.
+	self assert: (element declareNamespaces: self namespaces) == element.
 	self namespaces keysAndValuesDo: [:prefix :uri |
 		self assert: (element isDeclaredPrefix: prefix uri: uri)].
 
 	element := self newNode.
-	element declareNamespaces: self namespaces associations.
+	self assert: (element declareNamespaces: self namespaces associations) == element.
 	self namespaces keysAndValuesDo: [:prefix :uri |
-		self assert: (element isDeclaredPrefix: prefix uri: uri)]
+		self assert: (element isDeclaredPrefix: prefix uri: uri)].
+
+	(element := self newNode) usesNamespaces: false.
+	self
+		assert: (element declareNamespaces: #()) == element;
+		assert: element usesNamespaces.

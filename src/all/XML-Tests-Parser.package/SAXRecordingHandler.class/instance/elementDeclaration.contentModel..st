@@ -1,6 +1,6 @@
 handling - declaration
 elementDeclaration: anElementName contentModel: aContentModel
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #elementDeclaration:contentModel:
 		arguments:

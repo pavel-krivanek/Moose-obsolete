@@ -1,3 +1,3 @@
-private
+basic
 nextTwoBytesFromStream: aStream
 	self subclassResponsibility

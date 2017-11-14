@@ -1,1 +1,0 @@
-A context for before tokenizing has started.

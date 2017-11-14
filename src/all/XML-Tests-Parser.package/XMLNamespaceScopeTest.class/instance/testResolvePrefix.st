@@ -10,6 +10,5 @@ testResolvePrefix
 
 	self assert:
 		(scope resolvePrefix: 'xml') = scope xmlNamespaceURI.
-
 	self assert:
 		(scope resolvePrefix: 'xmlns') = scope xmlnsNamespaceURI.

@@ -5,15 +5,10 @@ testProviderPackages
 	p11 := self packageP11FullReferee.
 	p7 := self packageP7ReferencerReferee.
 	pEx := self packagePExtensions.
+	self assert: (self c15FullReferencerOutSide queryAllOutgoing atScope: FAMIXPackage) size equals: 4.
 	self
 		assert:
-			(self c15FullReferencerOutSide queryAllOutgoingAssociations
-				atScope: FAMIXPackage) size
-		equals: 4.
-	self
-		assert:
-			((self c15FullReferencerOutSide queryAllOutgoingAssociations
-				atScope: FAMIXPackage)
+			((self c15FullReferencerOutSide queryAllOutgoing atScope: FAMIXPackage)
 				equalsTo:
 					(Set new
 						add: p10;

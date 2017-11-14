@@ -11,7 +11,7 @@ testResolvePrefixIfUnresolvable
 				self assert:
 					(attribute
 						resolvePrefix: prefix
-						ifUnresolvable: [#unresolvable]) = #unresolvable]
+						ifUnresolvable: ['unresolvable']) = 'unresolvable']
 			ifFalse: [
 				self assert:
 					(attribute

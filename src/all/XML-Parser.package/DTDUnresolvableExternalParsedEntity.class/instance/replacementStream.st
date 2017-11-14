@@ -1,0 +1,3 @@
+accessing
+replacementStream
+	self errorUnresolvableExternalEntity

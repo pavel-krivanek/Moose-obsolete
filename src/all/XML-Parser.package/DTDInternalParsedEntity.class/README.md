@@ -1,0 +1,1 @@
+This is an abstract base class for internal parsed entities with replacements that can be inserted into an XML document.

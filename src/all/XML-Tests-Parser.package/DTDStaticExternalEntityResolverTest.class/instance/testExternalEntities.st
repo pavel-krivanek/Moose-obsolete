@@ -2,6 +2,9 @@ tests
 testExternalEntities
 	| resolver replacementAssociation |
 
+	self isTestingLimiting
+		ifTrue: [^ self].
+
 	resolver := self newResolver.
 	self
 		assert: resolver externalEntities class == Dictionary;

@@ -1,16 +1,16 @@
 private
 newHighlightingParserFromHandler: aHighlightingParserHandler
-	| parser rootElement context |
+	| parser rootElement |
 
 	parser := super newHighlightingParserFromHandler: aHighlightingParserHandler.
 
-	self outerXMLNode document
-		ifNotNil: [:document |
-			parser driver isStandalone: document isStandalone.
-			document hasDoctypeDefinition
+	self document
+		ifNotNil: [
+			parser driver isStandalone: self document isStandalone.
+			self document hasDoctypeDefinition
 				ifTrue: [
 					parser driver doctypeDefinition
-						addGeneralEntitiesFrom: document doctypeDefinition]].
+						addGeneralEntitiesFrom: self document doctypeDefinition]].
 
 	self outerXMLNode isElement
 		ifTrue: [rootElement := self outerXMLNode]
@@ -24,8 +24,8 @@ newHighlightingParserFromHandler: aHighlightingParserHandler
 			rootElement hasNamespaces
 				ifTrue: [parser driver currentScope: rootElement namespaceScope]].
 
-	(context := self outerXMLNode parent newInnerXMLContext) isContentContext
+	parser state: self outerXMLNode parent newInnerXMLState.
+	parser state isContentState
 		ifTrue: [aHighlightingParserHandler startContent].
-	parser context: context.
 
 	^ parser.

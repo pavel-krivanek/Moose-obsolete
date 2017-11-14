@@ -1,3 +1,3 @@
-accessing
+defaults
 piColor
 	^ self class defaultPIColor

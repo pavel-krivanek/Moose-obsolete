@@ -1,0 +1,3 @@
+accessing
+separators
+	^ Character xmlSeparators

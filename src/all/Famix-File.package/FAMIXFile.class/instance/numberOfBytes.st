@@ -5,12 +5,6 @@ numberOfBytes
 	<derived>
 	^ self
 		lookUpPropertyNamed: #numberOfBytes
-		computedAs: [ 
-			self fileExists
-				ifTrue: [ 
-					| stream v |
-					stream := self readStream.
-					v := stream contents size.
-					stream close.
-					v ]
+		computedAs: [ self fileExists
+				ifTrue: [ self fileReference size ]
 				ifFalse: [ 0 ] ]

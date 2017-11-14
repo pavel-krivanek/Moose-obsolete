@@ -21,3 +21,8 @@ testUndeclarePrefixes
 	self
 		should: [innerElement undeclarePrefixes]
 		raise: XMLNamespaceException.
+
+	(element := self newNode) usesNamespaces: false.
+	self
+		assert: element undeclarePrefixes == element;
+		assert: element usesNamespaces.

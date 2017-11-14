@@ -3,7 +3,7 @@ testEntityReferenceUnterminatedInEntityValue
 	#('<!DOCTYPE test [
 			<!ENTITY name "value">
 			<!ENTITY param "&">
-		]><test/>',
+		]><test/>'
 		'<!DOCTYPE test [
 			<!ENTITY name "value">
 			<!ENTITY param "&name">

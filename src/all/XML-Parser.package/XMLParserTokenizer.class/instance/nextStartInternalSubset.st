@@ -2,4 +2,4 @@ tokenizing - dtd
 nextStartInternalSubset
 	"skip ["
 	streamReader next.
-	context := context internalSubsetContext.
+	state := state internalSubsetState.

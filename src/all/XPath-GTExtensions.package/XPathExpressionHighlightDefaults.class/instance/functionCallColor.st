@@ -1,3 +1,3 @@
-accessing
+defaults
 functionCallColor
 	^ self class defaultFunctionCallColor

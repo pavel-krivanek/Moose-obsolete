@@ -1,3 +1,7 @@
 accessing
 externalEntityResolver
-	^ self saxHandler externalEntityResolver
+	^ externalEntityResolver
+		ifNil: [
+			externalEntityResolver :=
+				self saxHandler externalEntityResolver
+					asLimitingExternalEntityResolver]

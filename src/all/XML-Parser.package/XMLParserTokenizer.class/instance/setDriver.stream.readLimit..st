@@ -1,11 +1,11 @@
 initialization
-setDriver: aDriver stream: aStream readLimit: aReadLimit
-	context := XMLUnitializedContext new.
+setDriver: aDriver stream: aStream readLimit: anInteger
+	state := XMLUninitializedState new.
 	driver := aDriver.
 	streamReader :=
-		(XMLNestedStreamReader
+		self streamReaderClass
 			on: aStream
-			readLimit: aReadLimit).
+			readLimit: anInteger.
 
 	"must use #writeStream instead of 'WriteStream on:' to get 0-based
 	streams on Gemstone"

@@ -12,7 +12,7 @@ outerXMLForNode: aNode parsedWith: aParser
 			to: self nodes size.
 	self removeNodes: removedNodes.
 	[aParser
-		pushInnerXMLRootNode: self;
+		innerXMLRootNode: self;
 		parseDocument]
 		on: Error
 		do: [:error |

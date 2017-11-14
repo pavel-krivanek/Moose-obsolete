@@ -7,7 +7,7 @@ testResolvePrefixIfUnresolvable
 		self assert:
 			(element
 				resolvePrefix: prefix
-				ifUnresolvable: [#unresolvable]) = #unresolvable.
+				ifUnresolvable: ['unresolvable']) = 'unresolvable'.
 		element declarePrefix: prefix uri: uri.
 		self assert:
 			(element
@@ -22,3 +22,14 @@ testResolvePrefixIfUnresolvable
 		(element
 			resolvePrefix: 'xmlns'
 			ifUnresolvable: [self fail]) = XMLNamespaceScope xmlnsNamespaceURI.
+
+	(element := self newNode) usesNamespaces: false.
+	self assert:
+		(element
+			resolvePrefix: 'xml'
+			ifUnresolvable: ['unresolvable']) = 'unresolvable'.
+	self  assert:
+		(element
+			resolvePrefix: 'xmlns'
+			ifUnresolvable: ['unresolvable']) = 'unresolvable'.
+	self deny: element usesNamespaces.

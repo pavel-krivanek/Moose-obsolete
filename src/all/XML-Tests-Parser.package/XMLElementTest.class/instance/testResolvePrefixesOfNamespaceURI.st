@@ -24,8 +24,16 @@ testResolvePrefixesOfNamespaceURI
 		(element resolvePrefixesOfNamespaceURI:
 			XMLNamespaceScope xmlNamespaceURI) =
 				(Set with: 'xml').
-
 	self assert:
 		(element resolvePrefixesOfNamespaceURI:
 			XMLNamespaceScope xmlnsNamespaceURI) =
 				(Set with: 'xmlns').
+
+	(element := self newNode) usesNamespaces: false.
+	self assert:
+		(element resolvePrefixesOfNamespaceURI:
+			XMLNamespaceScope xmlNamespaceURI) isEmpty.
+	self assert:
+		(element resolvePrefixesOfNamespaceURI:
+			XMLNamespaceScope xmlnsNamespaceURI) isEmpty.
+	self deny: element usesNamespaces.

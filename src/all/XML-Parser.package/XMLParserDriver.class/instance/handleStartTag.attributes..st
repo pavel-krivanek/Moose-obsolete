@@ -1,2 +1,2 @@
 handling
-handleStartTag: anElementName attributes: aDictionary
+handleStartTag: anElement attributes: anAttributeDictionary

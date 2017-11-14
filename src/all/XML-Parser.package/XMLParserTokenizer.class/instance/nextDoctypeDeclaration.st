@@ -2,7 +2,7 @@ tokenizing - dtd
 nextDoctypeDeclaration
 	| root publicID systemID |
 
-	context := context doctypeDeclarationContext.
+	state := state doctypeDeclarationState.
 	self
 		expectNextAll: 'DOCTYPE';
 		expectSeparators.

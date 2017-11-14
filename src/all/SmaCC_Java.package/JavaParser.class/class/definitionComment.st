@@ -427,6 +427,7 @@ interface_member_declarations
 interface_member_declaration 
 	: constant_declaration 
 	| abstract_method_declaration 
+	| interface_method_declaration
 	| type_declaration
 	;
 constant_declaration 
@@ -434,6 +435,20 @@ constant_declaration
 	# need to semantically check that modifiers of field declaration
 	# include only PUBLIC, ""static"", or ""final"". Other modifiers are
 	# disallowed.
+	;
+interface_method_declaration 
+	: interface_method_header method_body 'body' {{MethodDeclaration}}
+	;	
+interface_method_header 
+	: interface_modifiers_opt type_parameters_opt 'typeParameters' type 'type' method_declarator 'declarator' throws_opt 'throws'
+	| interface_modifiers_opt type_parameters_opt 'typeParameters' void 'type' method_declarator 'declarator' throws_opt 'throws'
+	;
+interface_modifiers_opt
+	: modifiers_opt
+	| default_modifier 'modifier'
+	;
+default_modifier 
+	: ""default"" 'token' {{Modifier}}
 	;
 abstract_method_declaration 
 	: method_header "";"" 'semicolon' {{AbstractMethodDeclaration}}
@@ -596,14 +611,18 @@ synchronized_statement
 try_statement 
 	: ""try"" 'tryToken' try_resources_opt block 'block' catches {{TryStatement}}
 	| ""try"" 'tryToken' try_resources_opt block 'block' catches_opt finally 'finally' {{TryStatement}}
+	| ""try"" 'tryToken' try_resources block 'block' {{TryStatement}}
 	;
 try_resources_opt
 	:
-	| ""("" 'leftParen' try_resources semicolon_opt "")"" 'rightParen'
+	| try_resources
 	;
 try_resources
+	: ""("" 'leftParen' try_resources_list semicolon_opt "")"" 'rightParen'
+	;
+try_resources_list
 	: try_resource 'resource'
-	| try_resources "";"" 'semicolon' try_resource 'resource' 
+	| try_resources_list "";"" 'semicolon' try_resource 'resource' 
 	;
 try_resource
 	: variable_modifiers type 'type' initialized_variable_declarator 'variableDeclaration' {{LocalVariableDeclaration}}
@@ -655,6 +674,7 @@ primary_no_new_array
 	| array_type 'type' ""."" 'period' ""class"" 'classToken' {{ClassProperty}}
 	| name 'name' ""."" 'period' ""class"" 'classToken' {{ClassProperty}} ###???
 	| name 'name' ""."" 'period' ""this"" 'thisToken' {{ClassProperty}} ###???
+	| method_reference_expression
 	;
 lambda_expression
 	: lambda_parameters ""->"" 'arrowToken' lambda_function {{LambdaExpression}}
@@ -683,8 +703,8 @@ lambda_function
 	| expression 'value'
 	;
 method_reference_expression
-	: assignment_expression
-	| assignment_expression 'receiver' ""::"" 'colonColonToken' <IDENTIFIER> 'name' {{MethodReference}}
+	: primary_or_name 'receiver' ""::"" 'colonColonToken' <IDENTIFIER> 'name' {{MethodReference}}
+	| reference_type 'receiver' ""::"" 'colonColonToken' ""new"" 'name' {{MethodReference}}
 	;
 class_instance_creation_expression 
 	: ""new"" 'newToken' class_type 'type' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' {{New}}
@@ -775,6 +795,11 @@ unary_expression_not_plus_minus
 	;
 cast_expression 
 	: ""("" 'leftParen' type 'type' "")"" 'rightParen' unary_expression_not_plus_minus 'expression' {{CastExpression}}
+	| ""("" 'leftParen' type 'type' additional_bound_opt "")"" 'rightParen' lambda_expression 'expression' {{CastExpression}}
+	;
+additional_bound_opt
+	:
+	| ""&"" 'ampToken' interface_type 'interfaceType'
 	;
 multiplicative_expression 
 	: unary_expression 
@@ -862,7 +887,7 @@ expression_opt
 	| expression 
 	;
 expression 
-	: method_reference_expression 
+	: assignment_expression 
 	| lambda_expression
 	;
 constant_expression 

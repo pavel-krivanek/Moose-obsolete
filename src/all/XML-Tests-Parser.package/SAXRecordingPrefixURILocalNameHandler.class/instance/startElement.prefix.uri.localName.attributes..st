@@ -1,6 +1,6 @@
 handling - content
-startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: aDictionary
-	self messageRecorder
+startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: anAttributeDictionary
+	self
 		recordMessageReceiver: self
 		selector: #startElement:prefix:uri:localName:attributes:
 		arguments:
@@ -9,5 +9,5 @@ startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName att
 				addLast: aPrefix;
 				addLast: aURI;
 				addLast: aLocalName;
-				addLast: aDictionary;
+				addLast: anAttributeDictionary;
 				yourself)

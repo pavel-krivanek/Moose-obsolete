@@ -1,5 +1,5 @@
 handling - content
 startDocument
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #startDocument

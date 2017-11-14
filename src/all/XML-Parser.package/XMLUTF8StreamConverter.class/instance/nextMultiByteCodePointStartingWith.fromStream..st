@@ -1,4 +1,4 @@
-private
+basic
 nextMultiByteCodePointStartingWith: aFirstByte fromStream: aStream
 	| secondByte thirdByte codePoint |
 

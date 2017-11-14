@@ -1,4 +1,0 @@
-moosequery-queries-incoming
-queryAllIncomingInvocations
-
-	self explicitRequirement

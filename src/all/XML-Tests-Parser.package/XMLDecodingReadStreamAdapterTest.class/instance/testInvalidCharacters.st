@@ -1,7 +1,7 @@
 tests
 testInvalidCharacters
 	self invalidStreamCollections do: [:each | | streamAdapter |
-		streamAdapter := self newStreamAdapterOn: each readStream.
+		streamAdapter := self newStreamAdapterOn: (self newStreamOn: each).
 		[streamAdapter atEnd]
 			whileFalse: [
 				self

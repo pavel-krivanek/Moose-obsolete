@@ -1,3 +1,0 @@
-public
-reset
-	self initialize

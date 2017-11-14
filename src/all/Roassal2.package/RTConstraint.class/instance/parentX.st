@@ -1,3 +1,3 @@
 private
 parentX
-	^ movableElementX value: movableElement
+	^ fixedElementX value: fixedElement

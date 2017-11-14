@@ -8,7 +8,7 @@ testProviderPackages
 	pEx := self packagePExtensions.
 	self
 		assert:
-			((p8 queryAllOutgoingAssociations atScope: FAMIXPackage)
+			((p8 queryAllOutgoing atScope: FAMIXPackage)
 				equalsTo:
 					(Set
 						with: p10

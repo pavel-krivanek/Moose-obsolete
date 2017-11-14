@@ -1,3 +1,3 @@
-private 
+defaults
 elementClassMapperClass
 	^ XMLBasicElementClassMapper

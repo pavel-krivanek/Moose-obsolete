@@ -1,6 +1,5 @@
-MooseQueryResult is the abstract class for holding the result of all MooseChef queries.
-By default MooseQueryResults are assumed to contain a collection of associations between the entity in receiver and all the element in storage.
-There are exceptions to this default: MooseIncoming/OutgoingInstanciationQueryResult , MooseObjectQueryResult , and MooseOutgoingCompositeQueryResult
+MooseQueryResult is the abstract class for holding the result of all Moose-Query queries.
+By default MooseQueryResults are assumed to contain a collection of associations between the entity in receiver and all the element in storage at the exception of  MooseObjectQueryResult.
 
 Instance Variables:
 	storage	the elements resulting of the queries

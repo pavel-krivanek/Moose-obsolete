@@ -1,3 +1,0 @@
-private
-methodResolverClass
-	^ GTExampleMethodResolver

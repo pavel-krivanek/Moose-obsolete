@@ -1,3 +1,0 @@
-changing
-externalSubsetContext
-	^ XMLExternalSubsetContext new

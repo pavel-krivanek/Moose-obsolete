@@ -1,3 +1,0 @@
-private
-errorNoSupportedImplementation
-	self subclassResponsibility

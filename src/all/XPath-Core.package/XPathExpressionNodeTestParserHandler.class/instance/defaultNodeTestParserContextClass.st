@@ -1,3 +1,0 @@
-accessing
-defaultNodeTestParserContextClass
-	^ currentAxis defaultNodeTestParserContextClass

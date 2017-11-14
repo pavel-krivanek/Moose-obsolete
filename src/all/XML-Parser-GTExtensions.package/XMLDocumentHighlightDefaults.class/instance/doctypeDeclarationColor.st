@@ -1,3 +1,3 @@
-accessing
+defaults
 doctypeDeclarationColor
 	^ self class defaultDoctypeDeclarationColor

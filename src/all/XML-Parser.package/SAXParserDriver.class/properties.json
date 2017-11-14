@@ -12,10 +12,13 @@
 		"validator",
 		"externalSubsetSystemID",
 		"externalSubsetPublicID",
+		"isValidating",
+		"usesNamespaces",
 		"isStandalone",
 		"hasParameterEntityReferences",
 		"hasSkippedParameterEntityReferences",
-		"hasUnhandledReservedAttributes"
+		"hasUnhandledReservedAttributes",
+		"externalEntityResolver"
 	],
 	"name" : "SAXParserDriver",
 	"type" : "normal"

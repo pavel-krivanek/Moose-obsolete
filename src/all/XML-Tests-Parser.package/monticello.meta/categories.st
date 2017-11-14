@@ -3,7 +3,9 @@ SystemOrganization addCategory: 'XML-Tests-Parser-DOM'!
 SystemOrganization addCategory: 'XML-Tests-Parser-DOM-Factories'!
 SystemOrganization addCategory: 'XML-Tests-Parser-DTD'!
 SystemOrganization addCategory: 'XML-Tests-Parser-ElementHandlers'!
+SystemOrganization addCategory: 'XML-Tests-Parser-Exceptions'!
 SystemOrganization addCategory: 'XML-Tests-Parser-Files'!
+SystemOrganization addCategory: 'XML-Tests-Parser-HTTP'!
 SystemOrganization addCategory: 'XML-Tests-Parser-Namespaces'!
 SystemOrganization addCategory: 'XML-Tests-Parser-Streams'!
 SystemOrganization addCategory: 'XML-Tests-Parser-URI'!

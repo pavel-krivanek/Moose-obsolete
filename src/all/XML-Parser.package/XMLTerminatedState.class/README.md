@@ -1,0 +1,1 @@
+A state for when tokenizing has stopped.

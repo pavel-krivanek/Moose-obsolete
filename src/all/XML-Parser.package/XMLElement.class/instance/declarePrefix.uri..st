@@ -2,6 +2,7 @@ namespacing
 declarePrefix: aPrefix uri: aURI
 	| oldMapping |
 
+	self ensureUsesNamespaces.
 	oldMapping :=
 		self namespaceScope
 			prefixMappingAt: aPrefix
@@ -19,4 +20,4 @@ declarePrefix: aPrefix uri: aURI
 						or: [
 							scope
 								includesPrefix: aPrefix
-								mappedTo: oldMapping]]]
+								mappedTo: oldMapping]]].

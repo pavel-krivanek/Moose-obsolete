@@ -1,1 +1,0 @@
-I describe a package subject of an example.

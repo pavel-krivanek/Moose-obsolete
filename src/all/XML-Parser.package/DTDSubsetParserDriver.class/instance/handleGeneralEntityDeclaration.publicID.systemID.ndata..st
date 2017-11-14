@@ -1,6 +1,6 @@
 handling - dtd
 handleGeneralEntityDeclaration: aName publicID: aPublicID systemID: aSystemID ndata: aNotation
-	self mustNotProcessEntityOrAttributeDeclaration
+	self mustSkipEntityAndAttributeDeclarations
 		ifTrue: [^ self].
 
 	aNotation isEmpty

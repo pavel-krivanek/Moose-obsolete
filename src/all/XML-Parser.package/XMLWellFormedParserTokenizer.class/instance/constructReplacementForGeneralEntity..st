@@ -3,8 +3,8 @@ constructReplacementForGeneralEntity: anEntity
 	isInLiteralValue
 		ifTrue: [
 			anEntity isExternal
-				ifTrue: [self errorLiteralContextExternalEntity: anEntity].
-			self constructReplacementForLiteralContextEntity: anEntity]
+				ifTrue: [self errorLiteralReferenceToExternalGeneralEntity: anEntity].
+			self constructLiteralReplacementForEntity: anEntity]
 		ifFalse: [
 			driver handleStartContentEntityReplacement: anEntity name.
 			self

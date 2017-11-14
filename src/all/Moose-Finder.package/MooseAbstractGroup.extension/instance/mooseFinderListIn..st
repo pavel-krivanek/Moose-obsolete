@@ -1,15 +1,9 @@
 *moose-finder
 mooseFinderListIn: composite
 	<moosePresentationOrder: 1>
-	composite list
+	composite fastList
 		beMultiple;
 		showOnly: 50;
-		searchOn:
-				[ :text :each | 
-			Smalltalk compiler
-				evaluate: ' | entity each | each := self. entity := each.' , text
-				for: each
-				logged: false ];
 		display: #mooseInterestingEntity;
 		sortBlock: [ :a :b | a mooseDisplayString < b mooseDisplayString ];
 		send:
@@ -29,7 +23,4 @@ mooseFinderListIn: composite
 				or: [ input mooseInterestingEntity isKindOf: Collection ] ];
 		dynamicActionsOnSelection: [ :list | list selection mooseInterestingEntity mooseFinderActions ];
 		updateOn: MooseEntityAdded from: [ :anObject | MooseFinder announcerFor: anObject ];
-		updateOn: MooseEntityRemoved from: [ :anObject | MooseFinder announcerFor: anObject ];
-		helpMessage:
-			'A selection boolean statement using ''each'' to refer to each element' , String cr
-				, 'For example: ' , String cr , 'each beginsWith:''C'''
+		updateOn: MooseEntityRemoved from: [ :anObject | MooseFinder announcerFor: anObject ]

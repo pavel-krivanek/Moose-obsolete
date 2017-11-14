@@ -4,5 +4,4 @@ clientNamespaces
 
 	"Moose cook was: ^ self inheritedByNamespaces union: self invokingNamespaces"
 
-	^ (self queryAllIncomingAssociations atScope: FAMIXNamespace)
-		withoutSelfLoops
+	^ (self queryAllIncoming atScope: FAMIXNamespace) withoutSelfLoops

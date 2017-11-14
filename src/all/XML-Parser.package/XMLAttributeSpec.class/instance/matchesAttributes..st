@@ -1,3 +1,3 @@
 matching
-matchesAttributes: aDictionary
+matchesAttributes: anAttributeDictionary
 	self subclassResponsibility

@@ -1,3 +1,3 @@
 accessing
-classForElement: aQualifiedName namespaceURI: aURI localName: aLocalName attributes: aDictionary ifNone: aBlock
+classForElement: aQualifiedName namespaceURI: aURI localName: aLocalName attributes: anAssociationCollection ifNone: aBlock
 	self subclassResponsibility

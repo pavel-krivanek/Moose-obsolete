@@ -1,6 +1,6 @@
 handling - content
 endElement: aQualifiedName
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #endElement:
 		arguments:

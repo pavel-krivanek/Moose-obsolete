@@ -4,4 +4,5 @@ sourceXMLNormalizedWith: aCharacter
 		(Array
 			with: aCharacter
 			with: aCharacter
+			with: (String withAll: self nonLineEndingSeparators)
 			with: aCharacter)

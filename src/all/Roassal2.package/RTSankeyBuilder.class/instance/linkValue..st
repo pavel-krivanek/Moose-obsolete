@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 linkValue: aBlock
 	linkValue := aBlock

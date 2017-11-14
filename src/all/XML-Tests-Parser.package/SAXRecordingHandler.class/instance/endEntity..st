@@ -1,6 +1,6 @@
 handling - lexical
 endEntity: anEntityName
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #endEntity:
 		arguments:

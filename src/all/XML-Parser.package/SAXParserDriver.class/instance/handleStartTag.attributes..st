@@ -1,60 +1,60 @@
 handling
-handleStartTag: anElement attributes: aDictionary
+handleStartTag: anElement attributes: anAttributeDictionary
 	"performance critical method"
 	| prefix totalAttributes namespaceURI currentScope |
 
 	prefix := anElement xmlPrefixBeforeLocalName.
-	totalAttributes := aDictionary size.
+	totalAttributes := anAttributeDictionary size.
 	self isValidating
 		ifTrue: [
 			self elementNester totalOpenElements > 1
 				ifFalse: [self validateRootElement: anElement].
 			self validator
 				validateStartTag: anElement
-				attributes: aDictionary]
+				attributes: anAttributeDictionary]
 		ifFalse: [
 			self doctypeDefinition
 				processStartTag: anElement
-				attributes: aDictionary].
+				attributes: anAttributeDictionary].
 	"validation and processing can add attributes"
-	aDictionary size > totalAttributes
+	anAttributeDictionary size > totalAttributes
 		ifTrue: [
 			self
-				checkForReservedAttributesIn: aDictionary
+				checkForReservedAttributesIn: anAttributeDictionary
 				afterIndex: totalAttributes.
-			totalAttributes := aDictionary size].
+			totalAttributes := anAttributeDictionary size].
 	self usesNamespaces
 		ifTrue: [
-			currentScope := self scopeAllocator enterScope.
+			anAttributeDictionary setNamespaceScope:
+				(currentScope := self scopeAllocator enterScope).
 			self hasUnhandledReservedAttributes
 				ifTrue: [
-					(self extractNamespacesFromAttributes: aDictionary)
+					(self extractNamespacesFromAttributes: anAttributeDictionary)
 						ifNotNil: [:namespaces |
 							self
 								declareNamespaces: namespaces
 								inScope: currentScope.
-							totalAttributes := aDictionary size]].
+							totalAttributes := anAttributeDictionary size]].
+			self saxHandler startScope: currentScope.
 			namespaceURI :=
 				currentScope
 					validateAndResolvePrefix: prefix
 					ofElement: anElement.
 			totalAttributes > 0
 				ifTrue: [
-					"aDictionary is an OrderPreservingStringDictionary, so use
-					its internal #orderedKeys over #keys for speed"
+					"anAttributeDictionary is an XMLAttributeDictionary, which
+					is an OrderPreservingStringDictionary, so use its internal
+					#orderedKeys over #keys for speed"
 					currentScope
-						validatePrefixesOfAttributes: aDictionary orderedKeys
+						validatePrefixesOfAttributes: anAttributeDictionary orderedKeys
 						from: 1
 						to: totalAttributes]].
 	self hasUnhandledReservedAttributes
-		ifTrue: [self handleReservedAttributes: aDictionary].
+		ifTrue: [self handleReservedAttributes: anAttributeDictionary].
 
 	self saxHandler
 		startElement: anElement
 		prefix: prefix
 		uri: (namespaceURI ifNil: [''])
 		localName: (anElement xmlLocalNameAfterPrefix: prefix)
-		attributes: aDictionary.
-
-	currentScope
-		ifNotNil: [self saxHandler currentScope: currentScope].
+		attributes: anAttributeDictionary.

@@ -1,4 +1,4 @@
-private
+basic
 nextPutTwoBytes: anInteger toStream: aStream
 	aStream
 		basicNextPutByte: (anInteger bitAnd: 16rFF);

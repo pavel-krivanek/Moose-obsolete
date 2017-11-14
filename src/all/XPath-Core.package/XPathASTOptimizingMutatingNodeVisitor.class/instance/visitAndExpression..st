@@ -3,7 +3,7 @@ visitAndExpression: anAndExpression
 	"traverse in post-order"
 	super visitAndExpression: anAndExpression.
 
-	"the and of literals can be evaluated at compile time"
+	"the 'and' of literals can be evaluated at compile time"
 	anAndExpression hasNonLiteralExpression
 		ifTrue: [^ anAndExpression]
 		ifFalse: [

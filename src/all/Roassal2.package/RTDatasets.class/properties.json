@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AlexandreBergel 4/10/2016 20:50",
+	"super" : "Object",
+	"category" : "Roassal2-Table",
+	"classinstvars" : [
+		"packages",
+		"rDataSets"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RTDatasets",
+	"type" : "normal"
+}

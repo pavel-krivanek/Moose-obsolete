@@ -13,7 +13,7 @@ peekForNameTestStartingWithNCName: anNCName
 					(readStream peekFor: $*)
 						ifTrue: [
 							"a 'prefix:*' wildcard QName test"
-							context
+							state
 								handleNodeTestForPrefix: anNCName
 								with: handler.
 							^ true]
@@ -23,7 +23,7 @@ peekForNameTestStartingWithNCName: anNCName
 								ifFalse: [
 									"not a function call, so it's a 'prefix:localName'
 									QName test"
-									context
+									state
 										handleNodeTestForPrefix: anNCName
 										localName: localName
 										with: handler.
@@ -36,11 +36,11 @@ peekForNameTestStartingWithNCName: anNCName
 					uri := self expectUpTo: $}.
 					(readStream peekFor: $*)
 						ifTrue: [
-							context
+							state
 								handleNodeTestForNamespaceURI: uri
 								with: handler]
 						ifFalse: [
-							context
+							state
 								handleNodeTestForNamespaceURI: uri
 								localName: self nextNCName
 								with: handler].
@@ -59,7 +59,7 @@ peekForNameTestStartingWithNCName: anNCName
 									(self peekForNodeTypeTest: anNCName)
 										ifTrue: [^ true]]
 								ifFalse: [
-									context
+									state
 										handleNodeTestForName: anNCName
 										with: handler.
 									^ true]]]].

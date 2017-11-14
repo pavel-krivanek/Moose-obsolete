@@ -1,6 +1,6 @@
 handling - content
 ignorableWhitespace: aString
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #ignorableWhitespace:
 		arguments:

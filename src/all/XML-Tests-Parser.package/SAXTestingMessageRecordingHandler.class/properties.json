@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "monty 9/19/2017 06:15",
+	"super" : "SAXRecordingHandler",
+	"category" : "XML-Tests-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isInContentResults",
+		"isInCDataSectionResults",
+		"hasParserResults"
+	],
+	"name" : "SAXTestingMessageRecordingHandler",
+	"type" : "normal"
+}

@@ -1,4 +1,4 @@
-private
+instance creation
 newFileReadStreamOnPath
 	"memory file references need special handling"
 	self usesMemoryStore

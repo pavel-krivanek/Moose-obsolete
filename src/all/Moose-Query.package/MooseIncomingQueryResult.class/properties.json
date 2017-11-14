@@ -3,7 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "MooseIncomingQueryResult",
-	"commentStamp" : "",
+	"commentStamp" : "CyrilFerlicot 10/31/2017 19:46",
 	"super" : "MooseQueryResult",
 	"traitcomposition" : "TDependencyQueryResult",
 	"type" : "normal",

@@ -1,4 +1,4 @@
-invoking
+implementing
 function
 	| string writeStream isInWhitespace normalizedSpace |
 

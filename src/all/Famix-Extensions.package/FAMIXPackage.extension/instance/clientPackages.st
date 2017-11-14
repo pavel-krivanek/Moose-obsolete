@@ -2,5 +2,4 @@
 clientPackages
 	"^ self inheritedByPackages union: self invokingPackages"
 
-	^ (self queryAllIncomingAssociations atScope: FAMIXPackage)
-		withoutSelfLoops
+	^ (self queryAllIncoming atScope: FAMIXPackage) withoutSelfLoops

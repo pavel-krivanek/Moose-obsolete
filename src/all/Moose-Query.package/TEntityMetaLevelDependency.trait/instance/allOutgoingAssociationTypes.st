@@ -1,0 +1,3 @@
+accessing
+allOutgoingAssociationTypes
+	^ self class allOutgoingAssociationTypes

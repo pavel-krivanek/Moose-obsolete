@@ -16,14 +16,14 @@ testFiles
 	self assert: file totalNumberOfLinesOfText equals: 2.
 	self assert: (file propertyNamed: #totalNumberOfLinesOfText) equals: 2.
 	self assert: (file propertyNamed: #numberOfLinesOfText) equals: 2.
-	self assert: (file propertyNamed: #numberOfCharacters) equals: 9.
-	self assert: (file propertyNamed: #averageNumberOfCharactersPerLine) equals: 4.5.
+	self assert: (file propertyNamed: #numberOfCharacters) equals: 10.
+	self assert: (file propertyNamed: #averageNumberOfCharactersPerLine) equals: 5.0.
 	self assert: (file propertyNamed: #numberOfEmptyLinesOfText) equals: 0.
 	self assert: (file propertyNamed: #numberOfBytes) < 15.
 	file := files entityNamed: #'folders/fileWith9Chars4Lines2EmptyLines'.
 	self assert: (file propertyNamed: #totalNumberOfLinesOfText) equals: 4.
 	self assert: (file propertyNamed: #numberOfLinesOfText) equals: 2.
-	self assert: (file propertyNamed: #numberOfCharacters) equals: 9.
-	self assert: (file propertyNamed: #averageNumberOfCharactersPerLine) equals: 4.5.
+	self assert: (file propertyNamed: #numberOfCharacters) equals: 12.
+	self assert: (file propertyNamed: #averageNumberOfCharactersPerLine) equals: 6.0.
 	self assert: (file propertyNamed: #numberOfEmptyLinesOfText) equals: 2.
 	self assert: (file propertyNamed: #numberOfBytes) < 16

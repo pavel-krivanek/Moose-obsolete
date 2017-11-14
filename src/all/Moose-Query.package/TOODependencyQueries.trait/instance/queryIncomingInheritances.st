@@ -1,4 +1,0 @@
-moosequery - TOODependencyQueries
-queryIncomingInheritances
-
-	self explicitRequirement

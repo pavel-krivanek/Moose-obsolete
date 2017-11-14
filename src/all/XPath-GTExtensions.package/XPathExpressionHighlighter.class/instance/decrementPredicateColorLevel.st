@@ -1,4 +1,4 @@
-accessing
+highlighting - predicate levels
 decrementPredicateColorLevel
 	(predicateColorLevel := predicateColorLevel - 1) >= 1
 		ifFalse: [

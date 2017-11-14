@@ -12,6 +12,5 @@ testResolvePrefix
 
 	self assert:
 		(context resolvePrefix: 'xml') = XMLNamespaceScope xmlNamespaceURI.
-	
 	self assert:
 		(context resolvePrefix: 'xmlns') = XMLNamespaceScope xmlnsNamespaceURI.

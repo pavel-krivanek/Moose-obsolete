@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "monty 9/21/2017 13:18",
+	"super" : "OrderPreservingStringDictionary",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLAttributeDictionary",
+	"type" : "normal"
+}

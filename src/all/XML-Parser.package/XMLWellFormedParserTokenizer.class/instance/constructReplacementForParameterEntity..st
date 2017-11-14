@@ -1,7 +1,7 @@
 entity replacing
 constructReplacementForParameterEntity: anEntity
 	isInLiteralValue
-		ifTrue: [self constructReplacementForLiteralContextEntity: anEntity]
+		ifTrue: [self constructLiteralReplacementForEntity: anEntity]
 		ifFalse: [
 			"the trailing space"
 			streamReader pushBackCharacter: NormalizedSpace.

@@ -6,5 +6,4 @@ from
 	
 	<MSEProperty: #from type: #FAMIXNamedEntity> <derived>
 	<MSEComment: 'Generic accessor to the entity originating the association. Refined by subclasses'>
-	<source>
 	^ self subclassResponsibility

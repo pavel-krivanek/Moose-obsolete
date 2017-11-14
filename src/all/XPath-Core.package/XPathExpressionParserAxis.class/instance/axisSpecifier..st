@@ -4,6 +4,6 @@ axisSpecifier: anAxisSpecifier
 		ifFalse: [
 			axisSpecifier := anAxisSpecifier.
 			handlerSelector := nil.
-			defaultNodeTestParserContextClass := nil].
+			defaultNodeTestParserStateClass := nil].
 	"now explicit"
 	isImplicit := false.

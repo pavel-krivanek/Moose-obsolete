@@ -1,0 +1,1 @@
+A state for parsing the <?xml ...?> token.

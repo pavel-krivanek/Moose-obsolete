@@ -14,4 +14,4 @@ isXMLQualifiedOrLocalName: aQualifiedOrLocalName
 		(aQualifiedOrLocalName at: i) = (self at: j)
 			ifFalse: [^ false].
 		i := i - 1].
-	^ i = 0.
+	^ i == 0.

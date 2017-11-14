@@ -1,3 +1,3 @@
-accessing
+defaults
 operatorColor
 	^ self class defaultOperatorColor

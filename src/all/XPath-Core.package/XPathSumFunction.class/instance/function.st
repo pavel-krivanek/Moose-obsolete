@@ -1,4 +1,4 @@
-invoking
+implementing
 function
 	^ self firstArgument
 		inject: 0

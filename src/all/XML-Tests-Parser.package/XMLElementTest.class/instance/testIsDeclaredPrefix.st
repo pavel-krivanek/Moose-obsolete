@@ -4,8 +4,8 @@ testIsDeclaredPrefix
 
 	element := self newNodeWithElements.
 	elementsWithDeclaredPrefix :=
-		element allElementsSelect: [:each | each isDeclaredPrefix: 'prefix'].
-	self assert: elementsWithDeclaredPrefix size = 2.
+		element allElementsSelect: [:each |
+			each isDeclaredPrefix: 'prefix'].
 
 	element allElementsDo: [:each |
 		(elementsWithDeclaredPrefix includes: each )
@@ -19,3 +19,8 @@ testIsDeclaredPrefix
 		(elementsWithDeclaredPrefix includes: each )
 			ifTrue: [self assert: (each isDeclaredPrefix: 'prefix')]
 			ifFalse: [self deny: (each isDeclaredPrefix: 'prefix')]].
+
+	(element := self newNode) usesNamespaces: false.
+	self
+		deny: (element isDeclaredPrefix: 'prefix');
+		deny: element usesNamespaces.

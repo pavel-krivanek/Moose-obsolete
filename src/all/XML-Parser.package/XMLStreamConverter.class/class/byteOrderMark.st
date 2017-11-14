@@ -1,4 +1,4 @@
 accessing
 byteOrderMark
 	"avoid #asString and #newFrom: for GS portability"
-	^ String withAll: (self byteOrderMarkBytes collect: [:each | each asCharacter])
+	^ String withAll: (self basicByteOrderMarkBytes collect: [:each | each asCharacter])

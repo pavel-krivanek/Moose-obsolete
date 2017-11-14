@@ -1,6 +1,6 @@
 handling - content
 endElement: aQualifiedName prefix: aPrefix uri: aURI
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #endElement:prefix:uri:
 		arguments:

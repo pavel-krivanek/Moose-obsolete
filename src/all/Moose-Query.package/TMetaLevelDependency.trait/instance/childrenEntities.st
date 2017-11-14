@@ -1,7 +1,8 @@
 accessing
 childrenEntities
-	| res |
-	res := OrderedCollection new.
-	self childrenSelectors
-		do: [ :accessor | (self perform: accessor) ifNotNil: [ :r | res addAll: r asCollection ] ].
-	^ res
+	self
+		deprecated: 'Use #children instead'
+		on: '19 Septembre 2017'
+		in: 'Moose 6.1'
+		transformWith: '`@receiver childrenEntities' -> '`@receiver children'.
+	^ self children

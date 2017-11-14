@@ -9,7 +9,9 @@
 		"leftParen",
 		"type",
 		"rightParen",
-		"expression"
+		"expression",
+		"ampToken",
+		"interfaceType"
 	],
 	"name" : "JavaCastExpressionNode",
 	"type" : "normal"

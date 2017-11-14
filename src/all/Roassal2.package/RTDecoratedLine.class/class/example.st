@@ -23,4 +23,4 @@ example
 		add: b2;
 		addAll: edges.
 	edges do: [ :each | each update ].
-	v open
+	^ v

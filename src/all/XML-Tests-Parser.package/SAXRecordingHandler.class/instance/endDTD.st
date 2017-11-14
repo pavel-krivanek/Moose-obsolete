@@ -1,5 +1,5 @@
 handling - lexical
 endDTD
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #endDTD

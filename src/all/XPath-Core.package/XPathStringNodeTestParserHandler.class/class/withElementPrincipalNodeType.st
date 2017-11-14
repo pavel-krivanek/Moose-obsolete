@@ -1,3 +1,3 @@
 instance creation
 withElementPrincipalNodeType
-	^ self new defaultNodeTestParserContextClass: XPathNodeTestParserElementContext
+	^ self new defaultNodeTestParserStateClass: XPathNodeTestParserElementState

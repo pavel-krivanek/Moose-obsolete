@@ -1,6 +1,6 @@
 handling - content
 endPrefixMapping: aPrefix
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #endPrefixMapping:
 		arguments:

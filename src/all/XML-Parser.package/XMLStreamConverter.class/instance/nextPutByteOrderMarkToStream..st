@@ -1,4 +1,4 @@
 encoding
 nextPutByteOrderMarkToStream: aStream
-	self class byteOrderMarkBytes do: [:each |
+	self class basicByteOrderMarkBytes do: [:each |
 		aStream basicNextPutByte: each]

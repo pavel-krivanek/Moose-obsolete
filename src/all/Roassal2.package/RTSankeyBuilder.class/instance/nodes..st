@@ -1,3 +1,4 @@
-as yet unclassified
+accessing
 nodes: aCollection
-	nodes := aCollection
+	elements := self shape elementsOn: aCollection.
+	lelements := self labelShape elementsOn: aCollection.

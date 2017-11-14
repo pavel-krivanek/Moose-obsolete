@@ -1,3 +1,3 @@
-private
+basic
 basicDelete
 	self subclassResponsibility

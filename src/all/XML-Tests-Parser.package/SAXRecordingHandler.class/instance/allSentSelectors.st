@@ -1,3 +1,4 @@
 accessing
 allSentSelectors
-	^ (self messageRecorder messagesCollect: [:each | each selector]) asArray
+	^ (self messageRecorder messagesCollect: [:each |
+		each selector]) asArray

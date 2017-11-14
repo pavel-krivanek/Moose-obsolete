@@ -1,5 +1,3 @@
 instance creation
 named: aName
-	^ self
-		name: aName
-		replacement: ''
+	^ self new name: aName

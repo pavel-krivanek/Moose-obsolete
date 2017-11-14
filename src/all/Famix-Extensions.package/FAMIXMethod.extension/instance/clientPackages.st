@@ -2,4 +2,4 @@
 clientPackages
 	"returns a set of all the packages that depend on the receiver"
 
-	^ (self queryAllIncomingAssociations atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FAMIXPackage) withoutSelfLoops

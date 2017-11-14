@@ -3,7 +3,7 @@ printOn: aStream
 	super printOn: aStream.
 	aStream
 		nextPut: $(;
-		print: context;
+		print: state;
 		nextPutAll: '; ';
 		print: streamReader;
 		nextPut: $).

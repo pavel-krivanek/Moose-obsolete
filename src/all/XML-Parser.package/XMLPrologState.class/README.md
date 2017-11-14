@@ -1,0 +1,1 @@
+A state for prolog tokens.

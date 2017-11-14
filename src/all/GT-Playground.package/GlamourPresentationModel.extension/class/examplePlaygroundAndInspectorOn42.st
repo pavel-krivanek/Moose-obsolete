@@ -1,6 +1,5 @@
 *GT-Playground
 examplePlaygroundAndInspectorOn42
-	<gtExample>
 	|ui lay|	
 	ui := DynamicComposableModel new.
 	ui title: 'Too Much Glamour!' translated.

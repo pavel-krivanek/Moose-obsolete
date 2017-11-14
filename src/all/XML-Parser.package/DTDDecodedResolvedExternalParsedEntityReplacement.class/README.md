@@ -1,0 +1,1 @@
+This class stores the decoded resolved replacement of an external parsed entity.

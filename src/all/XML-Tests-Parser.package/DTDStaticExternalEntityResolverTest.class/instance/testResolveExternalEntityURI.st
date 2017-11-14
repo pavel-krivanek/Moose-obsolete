@@ -2,6 +2,9 @@ tests
 testResolveExternalEntityURI
 	| resolver |
 
+	self isTestingLimiting
+		ifTrue: [^ self].
+
 	resolver := self newResolver.
 	self entityURIStringsAndReplacementsDo: [:uriString :replacement |
 		self
@@ -16,8 +19,8 @@ testResolveExternalEntityURI
 			externalEntityAtURI: uriString
 			put: replacement.
 		self
-			assert: (resolver resolveExternalEntityURI: uriString) = replacement;
-			assert: (resolver resolveExternalEntityURI: uriString asXMLURI) = replacement.
+			assert: (resolver resolveExternalEntityURI: uriString) contents = replacement;
+			assert: (resolver resolveExternalEntityURI: uriString asXMLURI) contents = replacement.
 
 		resolver maxExternalEntitySize: replacement size - 1.
 		self

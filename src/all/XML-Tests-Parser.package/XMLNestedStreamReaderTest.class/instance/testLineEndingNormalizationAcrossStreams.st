@@ -2,10 +2,14 @@ tests
 testLineEndingNormalizationAcrossStreams
 	| streamReader |
 
-	streamReader := self newStreamReaderOn: (String with: self lf) readStream.
+	streamReader :=
+		self newStreamReaderOn:
+			(self newStreamOn: (String with: self lf)).
 	streamReader pushBackCharacter: self cr.
 	streamReader
-		pushBackStream: (String with: self cr with: self lf) readStream
+		pushBackStream:
+			(self newStreamOn:
+				(String with: self cr with: self lf))
 		whenPoppedDo: nil
 		isExternal: true.
 	self

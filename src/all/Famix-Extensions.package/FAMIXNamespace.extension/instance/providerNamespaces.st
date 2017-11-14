@@ -2,5 +2,4 @@
 providerNamespaces
 	"MooseCook was: ^ self inheritedNamespaces union: self invokedNamespaces"
 
-	^ (self queryAllOutgoingAssociations atScope: FAMIXNamespace)
-		withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FAMIXNamespace) withoutSelfLoops

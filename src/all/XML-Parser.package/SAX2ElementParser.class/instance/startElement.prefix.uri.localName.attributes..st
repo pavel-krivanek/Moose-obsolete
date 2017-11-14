@@ -1,5 +1,5 @@
 handling - content
-startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: aDictionary
+startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: anAttributeDictionary
 	| newElementHandler |
 
 	newElementHandler :=
@@ -7,7 +7,7 @@ startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName att
 			classForElement: aQualifiedName
 			namespaceURI: aURI
 			localName: aLocalName
-			attributes: aDictionary)
+			attributes: anAttributeDictionary)
 				parser: self
 				parent: self elementHandler
 				parentFactory: self elementHandlerFactory.
@@ -23,4 +23,4 @@ startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName att
 		prefix: aPrefix
 		uri: aURI
 		localName: aLocalName
-		attributes: aDictionary.
+		attributes: anAttributeDictionary.

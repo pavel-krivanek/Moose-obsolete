@@ -2,7 +2,7 @@ private
 axisSpecifiersTemplate
 	"Returns an array of arrays where each subarray has an axis name,
 	a handler selector to map it to, and the principal node type for
-	that axis, which is used to determine the parser context class
+	that axis, which is used to determine the parser state class
 	when parsing the node test after."
 
 	^ #(

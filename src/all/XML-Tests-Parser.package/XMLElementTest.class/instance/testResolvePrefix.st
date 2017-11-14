@@ -10,6 +10,11 @@ testResolvePrefix
 
 	self assert:
 		(element resolvePrefix: 'xml') = XMLNamespaceScope xmlNamespaceURI.
-
 	self assert:
 		(element resolvePrefix: 'xmlns') = XMLNamespaceScope xmlnsNamespaceURI.
+
+	(element := self newNode) usesNamespaces: false.
+	self
+		assert: (element resolvePrefix: 'xml') = '';
+		assert: (element resolvePrefix: 'xmlns') = '';
+		deny: element usesNamespaces.

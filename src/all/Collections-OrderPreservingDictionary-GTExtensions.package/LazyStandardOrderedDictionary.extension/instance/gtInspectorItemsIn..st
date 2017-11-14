@@ -1,3 +1,0 @@
-*Collections-OrderPreservingDictionary-GTExtensions
-gtInspectorItemsIn: composite
-	orderPreservingDictionary gtInspectorItemsIn: composite

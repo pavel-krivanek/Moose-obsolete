@@ -1,3 +1,0 @@
-moosequery-TScopingEntityQueries
-queryOutgoingReferences
-	^ self queryOutgoing: FAMIXReference

@@ -1,6 +1,6 @@
 handling - content
 characters: aString
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #characters:
 		arguments:

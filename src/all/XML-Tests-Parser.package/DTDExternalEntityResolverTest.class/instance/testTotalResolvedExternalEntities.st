@@ -2,6 +2,9 @@ tests
 testTotalResolvedExternalEntities
 	| resolver |
 
+	self isTestingLimiting
+		ifFalse: [^ self].
+
 	resolver := self newResolver.
 	self assert: resolver totalResolvedExternalEntities = 0.
 

@@ -1,0 +1,3 @@
+testing
+isIdentityDictionary
+	^ attributeDictionary isIdentityDictionary

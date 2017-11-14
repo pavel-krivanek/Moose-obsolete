@@ -1,6 +1,6 @@
 handling - dtd
 handleParameterEntityDeclaration: aName replacement: aReplacement
-	self mustNotProcessEntityOrAttributeDeclaration
+	self mustSkipEntityAndAttributeDeclarations
 		ifFalse: [
 			self doctypeDefinition
 				addInternalParameterEntity: aName

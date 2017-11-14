@@ -3,8 +3,8 @@ visitSelfStep: aSelfStep
 	"traverse in post-order"
 	super visitSelfStep: aSelfStep.
 
-	"'self::node()' or '.' can be eliminated if it's not the first step
-	and the previous step is a forward axis step"
+	"steps like 'self::node()' or '.' can be eliminated if they're not
+	the first step and the previous step is a forward axis step"
 	(aSelfStep nodeTest isAnyNodeTest
 		and: [aSelfStep hasPredicates not
 			and: [self previousStep isNull not

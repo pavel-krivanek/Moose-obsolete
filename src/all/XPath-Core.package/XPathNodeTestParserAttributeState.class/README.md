@@ -1,0 +1,1 @@
+A state for parsing node tests where attributes are the principal node type.

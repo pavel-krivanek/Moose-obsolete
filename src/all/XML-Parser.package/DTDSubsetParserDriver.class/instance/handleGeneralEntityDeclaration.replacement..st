@@ -1,6 +1,6 @@
 handling - dtd
 handleGeneralEntityDeclaration: aName replacement: aReplacement
-	self mustNotProcessEntityOrAttributeDeclaration
+	self mustSkipEntityAndAttributeDeclarations
 		ifTrue: [^ self].
 
 	self isStandaloneExternal

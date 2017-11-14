@@ -2,11 +2,11 @@ tests
 testPushBackStreamWhenPoppedDoIsExternal
 	| streamReader evaluated |
 
-	streamReader := XMLNestedStreamReader on: '' readStream.
+	streamReader := self newStreamReaderOn: (self newStreamOn: '').
 	evaluated := false.
 	self assert:
 		(streamReader
-			pushBackStream: self sourceXML readStream
+			pushBackStream: self newStreamReaderOnSourceXML
 			whenPoppedDo: [evaluated := true]
 			isExternal: true) == streamReader.
 	self normalizedSourceXML do: [:each |

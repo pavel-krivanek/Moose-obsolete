@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "monty 2/28/2017 07:57",
+	"commentStamp" : "monty 10/8/2017 15:55",
 	"super" : "Object",
 	"category" : "XPath-Core-Parsers",
 	"classinstvars" : [ ],
@@ -10,7 +10,7 @@
 	"instvars" : [
 		"axisSpecifier",
 		"handlerSelector",
-		"defaultNodeTestParserContextClass",
+		"defaultNodeTestParserStateClass",
 		"isImplicit",
 		"isStartOfRelativeLocationPath",
 		"isFirstAxis"

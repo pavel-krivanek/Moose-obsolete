@@ -1,8 +1,6 @@
 tests
 testEncoding
-	self encodingNames do: [:each | | streamConverter |
-		streamConverter := XMLStreamConverter newForEncoding: each.
-		self assert: streamConverter class == self streamConverterClass.
+	self encodingNamesWithCaseInversions do: [:each |
 		self assert:
-			streamConverter encoding =
-				self streamConverterClass primaryEncodingName]
+			(XMLStreamConverter newForEncoding: each) encoding =
+				self primaryEncodingName]

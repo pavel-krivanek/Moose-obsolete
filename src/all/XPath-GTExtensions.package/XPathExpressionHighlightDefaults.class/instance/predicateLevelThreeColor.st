@@ -1,3 +1,3 @@
-accessing
+defaults
 predicateLevelThreeColor
 	^ self class defaultPredicateLevelThreeColor

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "CyrilFerlicot 9/24/2017 18:42",
+	"super" : "MooseEntityState",
+	"category" : "Moose-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"attributes",
+		"entity",
+		"propertyCache",
+		"queryCache"
+	],
+	"name" : "MooseDevelopmentState",
+	"type" : "normal"
+}

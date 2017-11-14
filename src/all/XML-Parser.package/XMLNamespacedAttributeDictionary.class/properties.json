@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "monty 9/20/2017 09:07",
+	"super" : "XMLAttributeDictionary",
+	"category" : "XML-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"namespaceScope"
+	],
+	"name" : "XMLNamespacedAttributeDictionary",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+private
+copyEmptyAttributeDictionary
+	^ attributeDictionary copy

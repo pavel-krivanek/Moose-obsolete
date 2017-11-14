@@ -1,0 +1,1 @@
+This subclass is used when namespaces are enabled. It has an extra inst var for namespace scopes.

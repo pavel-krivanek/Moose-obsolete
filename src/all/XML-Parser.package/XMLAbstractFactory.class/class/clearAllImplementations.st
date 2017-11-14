@@ -1,6 +1,6 @@
-private
+clearing
 clearAllImplementations
-	"self clearImplementations"
+	"self clearAllImplementations"
 
 	self
 		implementation: nil;

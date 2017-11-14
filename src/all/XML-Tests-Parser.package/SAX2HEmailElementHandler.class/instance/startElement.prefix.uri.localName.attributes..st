@@ -1,3 +1,3 @@
 handling - content
-startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: aDictionary
-	self parser parsingResult addEmailAddress: (aDictionary at: 'address')
+startElement: aQualifiedName prefix: aPrefix uri: aURI localName: aLocalName attributes: anAttributeDictionary
+	self parser parsingResult addEmailAddress: (anAttributeDictionary at: 'address')

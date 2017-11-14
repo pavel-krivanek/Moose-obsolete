@@ -2,10 +2,10 @@ tests
 testCloseStreams
 	| stream streamReader pushedBackStream evaluated |
 
-	stream := XMLExceptionRaisingReadStream on: self sourceXML.
+	stream := self newStreamOnSourceXML.
 	streamReader := self newStreamReaderOn: stream.
 
-	pushedBackStream := XMLExceptionRaisingReadStream on: self sourceXML.	
+	pushedBackStream := self newStreamOnSourceXML.
 	evaluated := false.
 	streamReader
 		pushBackStream: pushedBackStream

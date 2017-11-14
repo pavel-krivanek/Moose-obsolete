@@ -9,11 +9,8 @@ onURL: aURLString upToLimit: aMaxSize
 
 	^ (self
 		on:
-			"return an XMLDecodingReadStreamAdapter on the undecoded response
-			so we can do our own looking at byte order marks and <?xml ...?>
-			encoding attributes"
-			(XMLDecodingReadStreamAdapter on:
-				(aURLString asXMLURI
-					streamGetUpToLimit: aMaxSize
-					decoding: false))
-		documentURI: aURLString) documentReadLimit: aMaxSize
+			(DTDExternalEntityResolver new
+				streamResolveExternalEntityURI: aURLString
+				upToLimit: aMaxSize)
+		documentURI: aURLString)
+			documentReadLimit: aMaxSize

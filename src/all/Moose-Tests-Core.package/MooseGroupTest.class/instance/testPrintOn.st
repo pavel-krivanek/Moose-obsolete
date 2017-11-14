@@ -1,7 +1,5 @@
 tests
 testPrintOn
-	| group stream |
-	group := self model allTypes.
-	stream := WriteStream on: String new.
-	group printOn: stream.
-	self assert: stream contents equals: 'All types (' , self model allTypes size asString , ' FAMIXTypes)'
+	| printOn |
+	printOn := String streamContents: [ :stream | self model allTypes printOn: stream ].
+	self assert: printOn equals: 'All famixtypes (' , self model allTypes size asString , ' FAMIXTypes)'

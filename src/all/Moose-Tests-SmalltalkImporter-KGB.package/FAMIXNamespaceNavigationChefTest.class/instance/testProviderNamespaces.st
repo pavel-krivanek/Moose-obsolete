@@ -2,8 +2,7 @@ allDependencies
 testProviderNamespaces
 	self
 		assert:
-			((self namespace1InteractedReferencerReferee
-				queryAllOutgoingAssociations atScope: FAMIXNamespace)
+			((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace2FullReferee

@@ -1,3 +1,3 @@
-private
+basic
 basicFileSize
 	^ self directoryEntry fileSize

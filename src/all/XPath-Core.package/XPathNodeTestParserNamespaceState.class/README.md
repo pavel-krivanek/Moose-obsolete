@@ -1,0 +1,1 @@
+A state for parsing node tests where namespaces are the principal node type.

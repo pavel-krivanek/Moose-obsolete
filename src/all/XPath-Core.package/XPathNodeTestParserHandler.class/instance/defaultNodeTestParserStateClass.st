@@ -1,0 +1,3 @@
+defaults
+defaultNodeTestParserStateClass
+	self subclassResponsibility

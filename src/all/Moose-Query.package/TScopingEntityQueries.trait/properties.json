@@ -1,7 +1,0 @@
-{
-	"commentStamp" : "NicolasAnquetil 12/5/2011 11:15",
-	"traitcomposition" : "TOODependencyQueries",
-	"classtraitcomposition" : "TOODependencyQueries classTrait",
-	"category" : "Moose-Query",
-	"name" : "TScopingEntityQueries"
-}

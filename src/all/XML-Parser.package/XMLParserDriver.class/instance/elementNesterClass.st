@@ -1,3 +1,3 @@
-private
+defaults
 elementNesterClass
 	^ XMLElementNester

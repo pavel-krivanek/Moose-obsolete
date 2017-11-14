@@ -1,0 +1,3 @@
+testing
+usesNamespaces
+	^ attributeDictionary usesNamespaces

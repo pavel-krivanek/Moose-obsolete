@@ -1,5 +1,5 @@
 accessing
 peek
-	^ atEnd
-		ifTrue: [nil]
-		ifFalse: [character]
+	atEnd
+		ifTrue: [^ nil]
+		ifFalse: [^ character]

@@ -1,4 +1,6 @@
 evaluating
 evaluate
-	"used to evaluate expressions that don't use a context node"
+	"Used to evaluate expressions that don't need a context node
+	(Mostly for testing)"
+
 	^ self in: nil

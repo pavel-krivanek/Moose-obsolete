@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"defaultNodeTestParserContextClass"
+		"defaultNodeTestParserStateClass"
 	],
 	"name" : "XPathStringNodeTestParserHandler",
 	"type" : "normal"

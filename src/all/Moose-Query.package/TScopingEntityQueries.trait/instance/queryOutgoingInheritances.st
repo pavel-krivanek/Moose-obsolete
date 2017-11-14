@@ -1,3 +1,0 @@
-moosequery-TScopingEntityQueries
-queryOutgoingInheritances
-	^ self queryOutgoing: FAMIXInheritance

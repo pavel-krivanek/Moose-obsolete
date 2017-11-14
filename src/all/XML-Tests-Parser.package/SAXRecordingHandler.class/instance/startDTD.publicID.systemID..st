@@ -1,6 +1,6 @@
 handling - lexical
 startDTD: aRootElementName publicID: aPublicID systemID: aSystemID
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #startDTD:publicID:systemID:
 		arguments:

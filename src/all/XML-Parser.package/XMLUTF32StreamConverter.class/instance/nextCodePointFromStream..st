@@ -1,4 +1,4 @@
-private
+basic
 nextCodePointFromStream: aStream
 	| codePoint |
 

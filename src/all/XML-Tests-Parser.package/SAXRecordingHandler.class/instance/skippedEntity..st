@@ -1,6 +1,6 @@
 handling - content
 skippedEntity: anEntityName
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #skippedEntity:
 		arguments:

@@ -1,10 +1,10 @@
 handling - content
-startElement: aQualifiedName attributes: aDictionary
-	self messageRecorder
+startElement: aQualifiedName attributes: anAttributeDictionary
+	self
 		recordMessageReceiver: self
 		selector: #startElement:attributes:
 		arguments:
 			(OrderedCollection new
 				addLast: aQualifiedName;
-				addLast: aDictionary;
+				addLast: anAttributeDictionary;
 				yourself)

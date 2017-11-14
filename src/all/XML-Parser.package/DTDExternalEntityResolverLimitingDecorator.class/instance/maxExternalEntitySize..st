@@ -1,0 +1,3 @@
+configuring
+maxExternalEntitySize: anInteger
+	self externalEntityResolver maxExternalEntitySize: anInteger

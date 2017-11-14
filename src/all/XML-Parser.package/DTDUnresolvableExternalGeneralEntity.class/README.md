@@ -1,1 +1,0 @@
-This is a class for unresolvable external general parsed entities. Resolving them will raise an exception.

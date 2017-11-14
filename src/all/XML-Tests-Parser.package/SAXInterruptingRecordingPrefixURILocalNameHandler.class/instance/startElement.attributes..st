@@ -1,8 +1,8 @@
 handling - content
-startElement: aQualifiedName attributes: aDictionary
+startElement: aQualifiedName attributes: anAttributeDictionary
 	super
 		startElement: aQualifiedName
-		attributes: aDictionary.
+		attributes: anAttributeDictionary.
 
 	self interruptOn = #startElement:attributes:
 		ifTrue: [self interruptParsing].

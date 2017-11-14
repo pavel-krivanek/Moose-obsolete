@@ -1,3 +1,4 @@
 configuring
 externalEntityLimits
-	^ externalEntityLimits ifNil: [externalEntityLimits := DTDExternalEntityLimits new]
+	^ externalEntityLimits
+		ifNil: [externalEntityLimits := DTDExternalEntityLimits new]

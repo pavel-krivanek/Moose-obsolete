@@ -2,5 +2,4 @@
 providerPackages
 	"^ self inheritedPackages union: self invokedPackages"
 
-	^ (self queryAllOutgoingAssociations atScope: FAMIXPackage)
-		withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FAMIXPackage) withoutSelfLoops

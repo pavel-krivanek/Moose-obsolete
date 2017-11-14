@@ -4,6 +4,9 @@ testCopy
 
 	super testCopy.
 
+	self isTestingLimiting
+		ifTrue: [^ self].
+
 	resolver := self newResolverWithEntities.
 	copy := resolver copy.
 	self

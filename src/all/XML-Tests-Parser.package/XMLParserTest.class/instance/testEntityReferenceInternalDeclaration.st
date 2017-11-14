@@ -4,7 +4,7 @@ testEntityReferenceInternalDeclaration
 			<!ENTITY % name "root">
 			<!ENTITY % contentModel "EMPTY">
 			<!ELEMENT %name; %contentModel;>
-		]><root/>',
+		]><root/>'
 		'<!DOCTYPE root [
 			<!ENTITY % name "value">
 			<!ENTITY % name2 "%name;">

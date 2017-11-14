@@ -1,13 +1,11 @@
 {
-	"classtraitcomposition" : "TGTExampleIcon classTrait",
+	"commentStamp" : "",
+	"super" : "GtAbstractExampleMethod",
+	"category" : "Roassal2GT-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "RTExampleMethodIcon",
-	"commentStamp" : "",
-	"super" : "GTAbstractExampleMethod",
-	"traitcomposition" : "TGTExampleIcon",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "Roassal2GT-Examples"
+	"type" : "normal"
 }

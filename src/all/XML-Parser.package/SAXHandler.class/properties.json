@@ -9,6 +9,7 @@
 		"input",
 		"documentURI",
 		"configuration",
+		"hasParser",
 		"isInContent",
 		"isInCDataSection"
 	],

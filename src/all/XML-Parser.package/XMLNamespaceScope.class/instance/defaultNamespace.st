@@ -2,4 +2,7 @@ mapping
 defaultNamespace
 	^ prefixMappings
 		ifNil: ['']
-		ifNotNil: [prefixMappings at: '' ifAbsent: ['']]
+		ifNotNil: [
+			prefixMappings
+				at: ''
+				ifAbsent: ['']]

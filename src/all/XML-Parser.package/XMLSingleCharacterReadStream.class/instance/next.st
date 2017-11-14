@@ -1,7 +1,7 @@
 accessing
 next
-	^ atEnd
-		ifTrue: [nil]
+	atEnd
+		ifTrue: [^ nil]
 		ifFalse: [
 			atEnd := true.
-			character]
+			^ character]

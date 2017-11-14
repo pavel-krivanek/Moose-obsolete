@@ -1,3 +1,3 @@
-accessing
+defaults
 typeName
 	^ 'mixed content'

@@ -1,6 +1,6 @@
 parsing
 nextElementTest
-	context := XPathNodeTestParserElementTypeTestContext new.
+	state := XPathNodeTestParserElementTypeTestState new.
 	self
 		peekForNodeTestArgument;
 		nextEndArgumentList.

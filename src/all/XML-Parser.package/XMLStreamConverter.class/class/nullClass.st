@@ -1,0 +1,3 @@
+defaults
+nullClass
+	^ XMLNullStreamConverter

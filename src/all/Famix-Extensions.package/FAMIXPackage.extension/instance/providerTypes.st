@@ -4,5 +4,4 @@ providerTypes
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>
-	^ (self queryAllOutgoingAssociations atScope: FAMIXType)
-		withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FAMIXType) withoutSelfLoops

@@ -7,4 +7,5 @@ initialize
 	attributes := FMNullMultivalueLink on: self opposite: #parentType: selector: #attributes.
 	behavioursWithDeclaredType := FMNullMultivalueLink on: self opposite: #declaredType: selector: #behavioursWithDeclaredType.
 	structuresWithDeclaredType := FMNullMultivalueLink on: self opposite: #declaredType: selector: #structuresWithDeclaredType.
-	incomingReferences := FMNullMultivalueLink on: self opposite: #target: selector: #incomingReferences
+	incomingReferences := FMNullMultivalueLink on: self opposite: #target: selector: #incomingReferences.
+	outgoingTraitUsages := FMNullMultivalueLink on: self opposite: #user: selector: #outgoingTraitUsages

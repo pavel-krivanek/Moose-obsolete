@@ -1,4 +1,4 @@
-private
+basic
 nextTwoBytesFromStream: aStream
 	^ ((aStream basicNext
 			ifNil: [^ nil]) asciiValue) +

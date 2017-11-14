@@ -2,6 +2,7 @@ namespacing
 undeclarePrefix: aPrefix
 	| currentNamespaceURI |
 
+	self ensureUsesNamespaces.
 	currentNamespaceURI :=
 		self namespaceScope
 			prefixMappingAt: aPrefix

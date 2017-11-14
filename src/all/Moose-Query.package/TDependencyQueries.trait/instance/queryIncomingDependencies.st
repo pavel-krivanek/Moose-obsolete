@@ -2,6 +2,6 @@ moosequery-queries-incoming
 queryIncomingDependencies
 	"Associations + typeDeclaractions"
 
-	^ self queryAllIncomingAssociations
+	^ self queryAllIncoming
 		addAll: self queryIncomingTypeDeclarations;
 		yourself

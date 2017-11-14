@@ -1,6 +1,6 @@
 parsing
 nextNamespaceTest
-	context := XPathNodeTestParserNamespaceTypeTestContext new.
+	state := XPathNodeTestParserNamespaceTypeTestState new.
 	self
 		peekForNodeTestArgument;
 		nextEndArgumentList.

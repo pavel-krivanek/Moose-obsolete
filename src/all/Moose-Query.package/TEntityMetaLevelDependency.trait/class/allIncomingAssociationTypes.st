@@ -1,0 +1,3 @@
+accessing
+allIncomingAssociationTypes
+   ^ self explicitRequirement

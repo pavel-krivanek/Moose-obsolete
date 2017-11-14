@@ -7,6 +7,7 @@ testPrintOnWithError
 		classLayout: MooseEntity classLayout copy;
 		yourself.
 	cls compileSilently: 'mooseName   ^ 1/0'.
+	cls compileSilently: 'defaultStateClass	^ MooseMemoryEfficientState'.
 	entity := cls new.
 	stream := WriteStream on: String new.
 	entity printOn: stream.

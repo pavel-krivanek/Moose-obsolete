@@ -8,18 +8,18 @@ initialize
 	race conditions during class reinitialization"
 	temp := Dictionary new.
 	self axisSpecifiersTemplate do: [:each |
-		| axisSpecifier handlerSelector principalNodeType parserContextClass |
+		| axisSpecifier handlerSelector principalNodeType parserStateClass |
 		axisSpecifier := each first.
 		handlerSelector := each second.
 		principalNodeType := each third.
-		parserContextClass :=
+		parserStateClass :=
 			principalNodeType = #attribute
-				ifTrue: [XPathNodeTestParserAttributeContext]
+				ifTrue: [XPathNodeTestParserAttributeState]
 				ifFalse: [
 					principalNodeType = #namespace
-						ifTrue: [XPathNodeTestParserNamespaceContext]
-						ifFalse: [XPathNodeTestParserElementContext]].
+						ifTrue: [XPathNodeTestParserNamespaceState]
+						ifFalse: [XPathNodeTestParserElementState]].
 		temp
 			at: axisSpecifier
-			put: handlerSelector -> parserContextClass].
+			put: handlerSelector -> parserStateClass].
 	AxisSpecifiers := temp.

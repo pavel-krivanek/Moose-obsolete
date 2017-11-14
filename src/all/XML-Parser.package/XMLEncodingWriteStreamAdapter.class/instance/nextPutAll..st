@@ -1,8 +1,9 @@
 accessing
 nextPutAll: aCollection
-	"to:do: for speed"
-	1 to: aCollection size do: [:i |
+	"can't use #to:do: here because other #nextPutAll: implementations
+	support non-sequenceable collection arguments wtih #do:"
+	aCollection do: [:each |
 		streamConverter
-			nextPut: (aCollection at: i)
+			nextPut: each
 			toStream: self].
 	^ aCollection.

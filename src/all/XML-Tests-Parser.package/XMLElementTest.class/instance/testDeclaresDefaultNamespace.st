@@ -19,3 +19,8 @@ testDeclaresDefaultNamespace
 	self deny: element declaresDefaultNamespace.
 	element elementsDo: [:each |
 		self assert: each declaresDefaultNamespace].
+
+	(element := self newNode) usesNamespaces: false.
+	self
+		deny: element declaresDefaultNamespace;
+		deny: element usesNamespaces.

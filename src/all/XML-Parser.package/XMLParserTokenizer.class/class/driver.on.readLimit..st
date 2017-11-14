@@ -1,9 +1,9 @@
 instance creation
-driver: aDriver on: aStringOrStream readLimit: aReadLimit
+driver: aDriver on: aStringOrStream readLimit: anInteger
 	^self new
 		setDriver: aDriver
 		stream:
 			(aStringOrStream isStream
 				ifTrue: [aStringOrStream]
 				ifFalse: [aStringOrStream readStream])
-		readLimit: aReadLimit
+		readLimit: anInteger

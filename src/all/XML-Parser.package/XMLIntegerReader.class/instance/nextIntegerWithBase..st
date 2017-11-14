@@ -1,3 +1,5 @@
 reading
 nextIntegerWithBase: aBase
-	^ self nextIntegerWithBase: aBase upTo: nil
+	^ self
+		nextIntegerWithBase: aBase
+		upTo: nil

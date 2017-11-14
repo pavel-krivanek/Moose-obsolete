@@ -1,6 +1,7 @@
 accessing
 peekFor: anObject
-	self peek = anObject
+	(self atEnd not
+		and: [self peek = anObject])
 		ifTrue: [
 			self next.
 			^ true]

@@ -1,3 +1,3 @@
-private
+defaults
 defaultTypeClass
 	^ XPathNodeSetValueType

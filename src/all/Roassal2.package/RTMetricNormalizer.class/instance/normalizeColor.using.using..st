@@ -16,6 +16,3 @@ normalizeColor: metricBlock using: colors using: transformation
 	max = 0 ifTrue: [ ^ self ].
 	
 	self normalizeColor: metricBlock using: colors using: transformation min: min max: max
-"	normalizer := RTMultiLinearColor new colors: colors.
-	elements do: [ :el |  
-		el trachelShape color: (normalizer level: (((transformation rtValue: (metricBlock rtValue: el model)) - min) / max)) ]"

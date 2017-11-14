@@ -1,3 +1,0 @@
-ui
-gtInspectorActionFor: aGTExample
-	^ nil

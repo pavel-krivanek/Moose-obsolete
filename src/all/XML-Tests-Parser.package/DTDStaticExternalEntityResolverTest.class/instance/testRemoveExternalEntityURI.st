@@ -2,6 +2,9 @@ tests
 testRemoveExternalEntityURI
 	| resolver |
 
+	self isTestingLimiting
+		ifTrue: [^ self].
+
 	resolver := self newResolverWithEntities.
 	self entityURIStringsAndReplacementsDo: [:uriString :replacement |
 		self

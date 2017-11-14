@@ -8,9 +8,7 @@ addOn: stream using: aSVGVisitor
 	self addFillColor: stream.
 	self closeTag: stream.
 	self startTransform: stream.
-	box := element encompassingRectangle.
-	self addRotation: self angle point: (self x)@(self y) into: stream.
-	
+	self addMatrix: stream visitor: aSVGVisitor.
 	self closeTag: stream.
 	self startClass: stream.
 	self closeTag: stream.

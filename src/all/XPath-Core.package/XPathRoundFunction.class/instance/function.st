@@ -1,3 +1,3 @@
-invoking
+implementing
 function
 	^ self firstArgument xpathRounded

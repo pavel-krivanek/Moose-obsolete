@@ -1,3 +1,3 @@
 instance creation
 newStreamReaderOnSourceXML
-	^ self newStreamReaderOn: self sourceXML readStream
+	^ self newStreamReaderOn: self newStreamOnSourceXML

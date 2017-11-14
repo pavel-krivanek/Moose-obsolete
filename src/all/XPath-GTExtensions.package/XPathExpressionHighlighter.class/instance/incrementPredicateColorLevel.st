@@ -1,4 +1,4 @@
-accessing
+highlighting - predicate levels
 incrementPredicateColorLevel
 	(predicateColorLevel := predicateColorLevel + 1) <= self maxPredicateColorLevel
 		ifFalse: [

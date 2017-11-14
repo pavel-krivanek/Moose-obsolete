@@ -1,3 +1,3 @@
 configuring
-maxExternalEntities: aLimit
-	self externalEntityLimits maxExternalEntities: aLimit
+maxExternalEntities: anInteger
+	self externalEntityLimits maxExternalEntities: anInteger

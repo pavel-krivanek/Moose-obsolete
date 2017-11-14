@@ -13,7 +13,6 @@ processClass: aClass ifPragmaAbsent: anErrorBlock
 	"the description for the class"
 	meta := FM3MetaDescription new.
 	meta name: className asString.
-	superclassDict at: meta put: superclassName.
 	meta setImplementingClass: aClass.
 	pragma
 		ifNotEmpty: [ (Pragma inMethod: pragma first method named: #abstract)
@@ -25,6 +24,7 @@ processClass: aClass ifPragmaAbsent: anErrorBlock
 					(self allowPackageNamed: packageName)
 						ifFalse: [ ^ self ].
 					packMetaDict at: meta put: packageName asString ] ].
+	superclassDict at: meta put: superclassName.
 	elements add: meta.
 	classDict at: aClass put: meta.
 	aClass methods do: [ :each | self processCompiledMethod: each ].

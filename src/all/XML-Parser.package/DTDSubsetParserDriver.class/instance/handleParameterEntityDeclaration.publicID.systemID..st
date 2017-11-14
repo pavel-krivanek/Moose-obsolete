@@ -1,6 +1,6 @@
 handling - dtd
 handleParameterEntityDeclaration: aName publicID: aPublicID systemID: aSystemID
-	self mustNotProcessEntityOrAttributeDeclaration
+	self mustSkipEntityAndAttributeDeclarations
 		ifFalse: [
 			self resolvesExternalEntities
 				ifTrue: [

@@ -1,3 +1,3 @@
 accessing
-highlightableLengthLimit: aLimit
-	highlightableLengthLimit := aLimit
+highlightableLengthLimit: anInteger
+	highlightableLengthLimit := anInteger

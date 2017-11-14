@@ -1,1 +1,1 @@
-This is class for internal/external parameter <!ENTITY> declarations.
+This is a class for parameter <!ENTITY> declarations.

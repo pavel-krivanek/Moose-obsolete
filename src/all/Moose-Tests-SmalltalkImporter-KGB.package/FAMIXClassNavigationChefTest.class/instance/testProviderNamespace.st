@@ -1,14 +1,9 @@
 allDependencies
 testProviderNamespace
+	self assert: (self c15FullReferencerOutSide queryAllOutgoing atScope: FAMIXNamespace) size equals: 3.
 	self
 		assert:
-			(self c15FullReferencerOutSide queryAllOutgoingAssociations
-				atScope: FAMIXNamespace) size
-		equals: 3.
-	self
-		assert:
-			((self c15FullReferencerOutSide queryAllOutgoingAssociations
-				atScope: FAMIXNamespace)
+			((self c15FullReferencerOutSide queryAllOutgoing atScope: FAMIXNamespace)
 				equalsTo:
 					(Set new
 						add: self namespace3ReferencerReferee;

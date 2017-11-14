@@ -6,4 +6,5 @@ open
 	view := RTView new.
 	view @ RTDraggableView.
 	self renderOn: view.
+	self renderLegendOn: view.
 	^ view openWithToolbarEntitled: self title

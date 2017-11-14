@@ -1,3 +1,0 @@
-changing
-prologContext
-	^ XMLPrologContext new

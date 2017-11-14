@@ -5,7 +5,7 @@ addInternalParameterEntity: aName replacement: aReplacement baseURI: aBaseURIStr
 	^ self parameterEntities
 		at: aName
 		put:
-			(DTDInternalParameterEntity
+			(DTDInternalParameterParsedEntity
 				name: aName
 				replacement: aReplacement
 				uri: aBaseURIString).

@@ -1,3 +1,3 @@
 instance creation
 null
-	^ XMLNullStreamConverter new
+	^ self nullClass new

@@ -1,6 +1,6 @@
 handling - declaration
 generalEntityDeclaration: aName replacement: aReplacement
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #generalEntityDeclaration:replacement:
 		arguments:

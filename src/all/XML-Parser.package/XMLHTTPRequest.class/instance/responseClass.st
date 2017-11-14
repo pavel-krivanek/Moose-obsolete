@@ -1,0 +1,3 @@
+defaults
+responseClass
+	self subclassResponsibility

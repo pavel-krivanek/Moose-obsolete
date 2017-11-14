@@ -9,12 +9,12 @@ nextXMLDeclarationOrPrologToken
 					self nextPITarget
 						ifNil: [^ self nextXMLDeclaration]
 						ifNotNil: [:target |
-							context := context prologContext.
+							state := state prologState.
 							^ self nextPIWithTarget: target]].
-			context := context prologContext.
+			state := state prologState.
 			^ self nextNonPIPrologOrContentMarkupToken].
 
 	"other prolog tokens can have whitespace before them, so the doc
 	does not need to start with an '<' for them"
-	context := context prologContext.
+	state := state prologState.
 	self nextPrologToken.

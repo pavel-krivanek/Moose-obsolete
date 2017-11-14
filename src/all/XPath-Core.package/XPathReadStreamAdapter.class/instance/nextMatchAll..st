@@ -2,6 +2,9 @@ accessing
 nextMatchAll: aString
 	| oldPosition |
 
+	aString size > 0
+		ifFalse: [^ true].
+
 	(stream atEnd not
 		and: [stream peek = (aString at: 1)])
 		ifFalse: [^ false].

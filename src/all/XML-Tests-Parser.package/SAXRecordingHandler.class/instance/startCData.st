@@ -1,5 +1,5 @@
 handling - lexical
 startCData
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #startCData

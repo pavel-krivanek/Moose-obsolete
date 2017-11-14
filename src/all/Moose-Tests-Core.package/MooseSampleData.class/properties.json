@@ -4,16 +4,13 @@
 	"category" : "Moose-Tests-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [
-		"UniqueInstance"
-	],
+	"classvars" : [ ],
 	"instvars" : [
 		"moosemodel1",
 		"moosemodel2",
 		"moosemodel3",
 		"moosemodel4",
-		"moosemodel5",
-		"history"
+		"moosemodel5"
 	],
 	"name" : "MooseSampleData",
 	"type" : "normal"

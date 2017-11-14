@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"externalEntityLimits",
-		"totalResolvedExternalEntities"
+		"externalEntityLimits"
 	],
 	"name" : "DTDExternalEntityResolver",
 	"type" : "normal"

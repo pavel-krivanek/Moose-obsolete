@@ -1,3 +1,3 @@
 initialization
 movable: aMovableElement
-	fixedElement := aMovableElement
+	movableElement := aMovableElement

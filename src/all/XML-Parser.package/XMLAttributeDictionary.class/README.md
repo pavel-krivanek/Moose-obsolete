@@ -1,0 +1,1 @@
+This class is an OrderPreservingStringDictionary for XML attributes that returns empty strings instead of raising errors when absent keys are looked up. It has messages to lookup the namespace URI of an attribute key and to lookup an attribute value or association by local or qualified name and namespace URI.

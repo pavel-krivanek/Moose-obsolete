@@ -1,1 +1,0 @@
-I describe a selector as a subject of an example.

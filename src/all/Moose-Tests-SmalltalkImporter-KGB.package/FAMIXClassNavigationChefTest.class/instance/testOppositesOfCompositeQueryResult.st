@@ -1,9 +1,9 @@
 allOutgoingInvocations
 testOppositesOfCompositeQueryResult
-	self assert: self c6FullReferencerInSideOutSide queryAllOutgoingAssociations opposites size equals: 7.
+	self assert: self c6FullReferencerInSideOutSide queryAllOutgoing opposites size equals: 7.
 	self
 		assert:
-			(self c6FullReferencerInSideOutSide queryAllOutgoingAssociations opposites
+			(self c6FullReferencerInSideOutSide queryAllOutgoing opposites
 				equalsTo:
 					(Set new
 						add: self c3ReferencerInSideRefereeOutSide;

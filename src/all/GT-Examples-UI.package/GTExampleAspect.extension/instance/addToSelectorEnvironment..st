@@ -1,2 +1,0 @@
-*GT-Examples-UI
-addToSelectorEnvironment: aSelectorEnvironment

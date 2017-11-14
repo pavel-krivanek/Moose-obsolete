@@ -1,10 +1,10 @@
 comparing
-= aFunctionSet
-	self == aFunctionSet
+= anObject
+	self == anObject
 		ifTrue: [^ true].
 
-	(self species == aFunctionSet species
-		and: [self size = aFunctionSet size])
+	(self species == anObject species
+		and: [self size = anObject size])
 		ifFalse: [^ false].
 
-	^ self allSatisfy: [:each | aFunctionSet includes: each].
+	^ self allSatisfy: [:each | anObject includes: each].

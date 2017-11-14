@@ -1,4 +1,4 @@
-source XML
+source
 sampleBooksXML
 	^ '
 		<books>

@@ -1,4 +1,4 @@
-private
+finding
 findSupportedImplementation
 	self isSupportedImplementation
 		ifTrue: [^ self].

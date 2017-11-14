@@ -1,4 +1,4 @@
-invoking
+implementing
 function
 	| sourceString searchString replacementString replacementMap writeStream |
 

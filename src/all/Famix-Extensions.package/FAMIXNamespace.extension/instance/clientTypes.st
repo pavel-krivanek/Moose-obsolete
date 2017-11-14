@@ -4,5 +4,4 @@ clientTypes
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncomingAssociations atScope: FAMIXType)
-		withoutSelfLoops
+	^ (self queryAllIncoming atScope: FAMIXType) withoutSelfLoops

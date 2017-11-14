@@ -2,11 +2,25 @@ adding
 addElementNamed: aName attributes: anAssociationCollection
 	"adds and returns a new element with the specified name and attributes"
 
-	"added first to inherit the config and namespaces
-	before setting the name and attributes"
-	^ (self addNode:
-		(self nodeFactory
-			classForElement: aName
-			attributes: anAssociationCollection) new)
-				name: aName;
-				setAttributes: anAssociationCollection
+	| addedElementNamespaceScope addedElementNamespaceURI addedElementAttributeDictionary addedElement |
+
+	addedElementNamespaceScope := self newNamespaceScopeForAddedElement.
+	addedElementNamespaceURI :=
+		self
+			namespaceURIOfAddedElementNamed: aName
+			withScope: addedElementNamespaceScope.
+	addedElementAttributeDictionary :=
+		self
+			newAttributeDictionaryFrom: anAssociationCollection
+			forAddedElementWithScope: addedElementNamespaceScope.
+	"added first to inherit the config before setting the name and attributes"
+	addedElement :=
+		self addNode:
+			((self nodeFactory
+				classForElement: aName
+				namespaceURI: addedElementNamespaceURI
+				attributes: addedElementAttributeDictionary) new
+				setNamespaceScope: addedElementNamespaceScope).
+	^ addedElement
+		name: aName;
+		setAttributes: addedElementAttributeDictionary.

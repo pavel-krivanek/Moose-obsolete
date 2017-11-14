@@ -1,4 +1,4 @@
-as yet unclassified
+private
 computeElementBreadths
 	"Iterative assig the breadth (x-position) for each node"
 	| remainingElements nextElements x kx |

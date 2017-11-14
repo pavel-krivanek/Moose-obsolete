@@ -2,4 +2,4 @@
 clientNamespaces
 	"returns a set of all the namespaces that depend on the receiver"
 
-	^ (self queryAllIncomingAssociations atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FAMIXNamespace) withoutSelfLoops

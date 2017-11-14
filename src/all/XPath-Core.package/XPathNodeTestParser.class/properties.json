@@ -8,7 +8,7 @@
 		"NodeTypeTestParserSelectors"
 	],
 	"instvars" : [
-		"context",
+		"state",
 		"isParsingNodeTypeTest"
 	],
 	"name" : "XPathNodeTestParser",

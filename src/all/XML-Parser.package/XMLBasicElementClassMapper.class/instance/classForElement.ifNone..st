@@ -3,5 +3,5 @@ classForElement: aQualifiedName ifNone: aBlock
 	^ self
 		classForElement: aQualifiedName
 		namespaceURI: ''
-		attributes: #()
+		attributes: XMLLazyAttributeDictionary  new
 		ifNone: aBlock

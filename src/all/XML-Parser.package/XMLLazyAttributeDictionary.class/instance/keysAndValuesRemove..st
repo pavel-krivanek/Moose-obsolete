@@ -1,0 +1,3 @@
+removing
+keysAndValuesRemove: aTwoArgumentBlock
+	self copiedAttributeDictionary keysAndValuesRemove: aTwoArgumentBlock

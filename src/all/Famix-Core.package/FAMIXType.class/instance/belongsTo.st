@@ -1,4 +1,3 @@
 accessing
 belongsTo
-	
-	^ self container
+	^ self container ifNil: [ self parentPackage ]

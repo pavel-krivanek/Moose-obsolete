@@ -1,3 +1,0 @@
-*GT-Examples-Core
-gtExampleSubstrings
-	^ {  }

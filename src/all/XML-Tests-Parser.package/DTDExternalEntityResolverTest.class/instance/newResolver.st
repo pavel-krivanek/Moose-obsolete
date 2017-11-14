@@ -1,3 +1,5 @@
 instance creation
 newResolver
-	^ self resolverClass new
+	^ self isTestingLimiting
+		ifTrue: [self resolverClass new asLimitingExternalEntityResolver]
+		ifFalse: [self resolverClass new]

@@ -6,10 +6,10 @@ peekForNodeTestStartingWithWildCard
 	(readStream peekFor: $:)
 		ifTrue: [
 			(readStream peekFor: $*)
-				ifTrue: [context handleWildcardNodeTestWith: handler]
+				ifTrue: [state handleWildcardNodeTestWith: handler]
 				ifFalse: [
-					context
+					state
 						handleNodeTestForLocalName: self nextNCName
 						with: handler]]
-		ifFalse: [context handleWildcardNodeTestWith: handler].
+		ifFalse: [state handleWildcardNodeTestWith: handler].
 	^ true.

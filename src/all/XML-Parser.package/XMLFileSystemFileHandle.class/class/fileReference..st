@@ -1,3 +1,3 @@
 instance creation
 fileReference: aFileReference
-	^ self new fileReference: aFileReference
+	^ self new setFileReference: aFileReference

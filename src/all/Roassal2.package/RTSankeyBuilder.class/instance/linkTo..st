@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 linkTo: aBlock
 	linkTo := aBlock

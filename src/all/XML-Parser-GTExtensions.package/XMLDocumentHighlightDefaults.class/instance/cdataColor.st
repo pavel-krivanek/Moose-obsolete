@@ -1,3 +1,3 @@
-accessing
+defaults
 cdataColor
 	^ self class defaultCDataColor

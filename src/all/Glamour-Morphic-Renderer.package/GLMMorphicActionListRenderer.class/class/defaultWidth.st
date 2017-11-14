@@ -1,3 +1,3 @@
 defaults
 defaultWidth 
-	^100
+	^150

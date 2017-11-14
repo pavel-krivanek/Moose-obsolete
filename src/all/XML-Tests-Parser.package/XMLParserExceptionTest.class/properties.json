@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "XMLExceptionTest",
+	"category" : "XML-Tests-Parser-Exceptions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "XMLParserExceptionTest",
+	"type" : "normal"
+}

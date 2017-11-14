@@ -1,6 +1,6 @@
 parsing
 parseInput
-	context := handler defaultNodeTestParserContextClass new.
+	state := handler defaultNodeTestParserStateClass new.
 	isParsingNodeTypeTest := false.
 
 	self peekForNodeTest.

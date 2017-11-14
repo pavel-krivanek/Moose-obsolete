@@ -7,7 +7,7 @@ testResolvePrefixIfUnresolvable
 		self assert:
 			(scope
 				resolvePrefix: prefix
-				ifUnresolvable: [#unresolvable]) = #unresolvable.
+				ifUnresolvable: ['unresolvable']) = 'unresolvable'.
 		scope mapPrefix: prefix to: uri.
 		self assert:
 			(scope

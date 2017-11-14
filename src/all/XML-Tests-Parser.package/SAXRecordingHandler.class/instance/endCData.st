@@ -1,5 +1,5 @@
 handling - lexical
 endCData
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #endCData

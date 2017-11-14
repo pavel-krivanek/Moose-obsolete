@@ -8,4 +8,5 @@ resetMSEProperties
 		do: [ :aSubClass | 
 			aSubClass resetParentAndChildrenAccessors.
 			aSubClass outgoingMSEPropertiesCache: nil.
-			aSubClass incomingMSEPropertiesCache: nil ]
+			aSubClass incomingMSEPropertiesCache: nil.
+			aSubClass resetAssociationTypesCaches ]

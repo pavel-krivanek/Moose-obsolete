@@ -1,3 +1,3 @@
-accessing
+defaults
 nameColor
 	^ self class defaultNameColor

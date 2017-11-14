@@ -1,3 +1,3 @@
 accessing
 attributes
-	^ OrderPreservingStringDictionary newFrom: self attributeAssociations
+	^ XMLAttributeDictionary newFrom: self attributeAssociations

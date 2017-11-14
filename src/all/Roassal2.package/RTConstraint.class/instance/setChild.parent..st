@@ -1,4 +1,4 @@
 obsolete
 setChild: aChildShape parent: aParentShape
-	fixedElement := aChildShape.
-	movableElement := aParentShape
+	fixedElement := aParentShape.
+	movableElement := aChildShape

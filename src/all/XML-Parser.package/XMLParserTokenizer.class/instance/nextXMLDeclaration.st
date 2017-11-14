@@ -20,4 +20,4 @@ nextXMLDeclaration
 		expectNext: $?;
 		expectTerminator.
 
-	context := context prologContext.
+	state := state prologState.

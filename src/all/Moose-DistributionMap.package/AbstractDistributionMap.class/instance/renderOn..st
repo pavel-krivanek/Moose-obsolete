@@ -3,7 +3,7 @@ renderOn: view
 	| parts partElements shape |
 	parts := self orderParts: self parts.
 	shape := RTCompositeShape new.
-	shape add: (RTLabel new text: #asString; height: 10).
+	shape add: (RTLabel new text: #mooseName; height: 10).
 	shape add: (RTBox new color: Color transparent; borderColor: Color gray).
 	partElements := shape elementsOn: parts.
 	partElements do: [ :each |
@@ -16,5 +16,5 @@ renderOn: view
 			on: each
 			inShape: #second 
 			nest: elements.	 ].
-	RTFlowLayout on: partElements.
+	RTGridLayout on: partElements.
 	partElements @ RTDraggable	

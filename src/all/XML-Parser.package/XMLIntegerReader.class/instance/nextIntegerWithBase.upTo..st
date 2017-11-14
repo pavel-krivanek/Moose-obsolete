@@ -2,7 +2,8 @@ reading
 nextIntegerWithBase: aBase upTo: aReadLimit
 	| integer maxValue maxBaseValue digitValue readLimit |
 
-	(aBase > 1 and: [aBase <= self class maxBase])
+	(aBase > 1
+		and: [aBase <= self class maxBase])
 		ifFalse: [self errorUnsupportedBase: aBase].
 
 	maxValue := self class maxIntegerValue.

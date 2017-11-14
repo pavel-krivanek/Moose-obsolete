@@ -18,7 +18,9 @@
 		"outgoingMSEProperties",
 		"incomingMSEProperties",
 		"outgoingAssociationTypes",
-		"incomingAssociationTypes"
+		"incomingAssociationTypes",
+		"allIncomingAssociationTypes",
+		"allOutgoingAssociationTypes"
 	],
 	"pools" : [ ],
 	"category" : "Famix-Core"

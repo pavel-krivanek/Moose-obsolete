@@ -1,4 +1,5 @@
 testing
 atEnd
-	^ super atEnd
-		or: [stream peek ~~ $%]
+	^ peekChar == nil
+		and: [stream atEnd
+			or: [stream peek ~~ $%]]

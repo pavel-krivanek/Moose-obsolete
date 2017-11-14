@@ -1,3 +1,3 @@
 *Famix-File
 containerFiles
-	^ self allFiles collect: #correspondingFile thenReject: #isNil
+	^ self propertyNamed: #containerFiles ifAbsentPut: [ self allFiles collect: #correspondingFile thenReject: #isNil ]

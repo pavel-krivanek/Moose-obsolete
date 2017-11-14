@@ -1,4 +1,4 @@
 tokenizing
 nextStartDocument
-	self context: driver newInitialContext.
+	self state: driver newInitialState.
 	driver handleStartDocument.

@@ -1,1 +1,0 @@
-A context for parsing prolog tokens after <!DOCTYPE ...> declarations.

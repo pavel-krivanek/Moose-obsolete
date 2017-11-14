@@ -5,5 +5,4 @@ efferentCoupling
 	<MSEProperty: #efferentCoupling type: #Number>
 	<derived>
 	<MSEComment: 'Efferent Coupling of a package'>
-	^ ((self queryAllOutgoingAssociations outOfMyPackage
-		atScope: FAMIXType) select: [ :c | c isInstanceSide ]) size
+	^ ((self queryAllOutgoing outOfMyPackage atScope: FAMIXType) select: [ :c | c isInstanceSide ]) size

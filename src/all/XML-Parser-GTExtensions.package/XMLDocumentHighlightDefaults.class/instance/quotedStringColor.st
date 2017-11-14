@@ -1,3 +1,3 @@
-accessing
+defaults
 quotedStringColor
 	^ self class defaultQuotedStringColor

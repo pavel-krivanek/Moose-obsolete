@@ -5,7 +5,7 @@ addInternalGeneralEntity: aName replacement: aReplacement baseURI: aBaseURIStrin
 	^ self generalEntities
 		at: aName
 		put:
-			(DTDInternalGeneralEntity 
+			(DTDInternalGeneralParsedEntity 
 				name: aName
 				replacement: aReplacement
 				uri: aBaseURIString).

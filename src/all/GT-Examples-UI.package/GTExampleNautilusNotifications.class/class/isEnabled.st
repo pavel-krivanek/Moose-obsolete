@@ -1,3 +1,0 @@
-actions
-isEnabled
-	^ notifying == true

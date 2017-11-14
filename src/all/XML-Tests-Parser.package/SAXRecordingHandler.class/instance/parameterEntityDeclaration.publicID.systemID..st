@@ -1,6 +1,6 @@
 handling - declaration
 parameterEntityDeclaration: aName publicID: aPublicID systemID: aSystemID
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #parameterEntityDeclaration:publicID:systemID:
 		arguments:

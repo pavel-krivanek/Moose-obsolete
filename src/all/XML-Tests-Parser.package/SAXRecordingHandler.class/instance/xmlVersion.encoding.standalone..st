@@ -1,6 +1,6 @@
 handling - lexical
 xmlVersion: aVersionFloat encoding: anEncoding standalone: aBoolean
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #xmlVersion:encoding:standalone:
 		arguments:

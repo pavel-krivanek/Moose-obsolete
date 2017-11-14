@@ -1,0 +1,3 @@
+configuring
+resolvesLocalFromNonLocal: aBoolean
+	self externalEntityResolver resolvesLocalFromNonLocal: aBoolean

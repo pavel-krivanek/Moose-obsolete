@@ -1,5 +1,5 @@
 handling - content
 endDocument
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #endDocument

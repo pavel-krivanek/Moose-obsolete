@@ -4,6 +4,6 @@ nextDoctypeDeclarationOrComment
 	streamReader next.
 	streamReader peek == $-
 		ifTrue: [^ self nextComment].
-	context isPostDoctypeDeclarationContext
+	state isPostDoctypeDeclarationState
 		ifTrue: [self errorMultipleDoctypeDeclarations].
 	self nextDoctypeDeclaration.

@@ -1,3 +1,5 @@
-as yet unclassified
+accessing
 dependencyFM3PropertyDescription
-	^self allDeclaredProperties select: [ :e | e type implementingClass isNotNil and: [ e type implementingClass inheritsFrom: FAMIXNamedEntity ] ]
+	"Return all the properties corresponding to the source or the target of the association"
+
+	^ self allDeclaredProperties select: [ :e | e isSource or: [ e isTarget ] ]

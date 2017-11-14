@@ -1,0 +1,1 @@
+A state for external subset tokens.

@@ -1,17 +1,17 @@
 tests
 testSkipSeparators
-	| streamReader readStream currentLineNumber currentColumnNumber currentPosition |
+	| streamReader stream currentLineNumber currentColumnNumber currentPosition |
 
 	streamReader := self newStreamReaderOnSourceXML.
-	readStream := self normalizedSourceXML readStream.
+	stream := self newStreamOn: self normalizedSourceXML.
 	currentLineNumber := 1.
 	currentColumnNumber := currentPosition := 0.
-	[readStream atEnd]
+	[stream atEnd]
 		whileFalse: [| totalSeparatorsSkipped |
 			totalSeparatorsSkipped := 0.
-			[readStream peek isXMLSeparator]
+			[self separators includes: stream peek]
 				whileTrue: [
-					readStream next = self normalizedLineEnding
+					stream next = self normalizedLineEnding
 						ifTrue: [
 							currentLineNumber := currentLineNumber + 1.
 							currentColumnNumber := 0]
@@ -25,7 +25,7 @@ testSkipSeparators
 				assert: streamReader currentPosition = currentPosition.
 			totalSeparatorsSkipped > 0
 				ifFalse: [
-					readStream next.
+					stream next.
 					streamReader next.
 					currentColumnNumber := currentColumnNumber + 1.
 					currentPosition := currentPosition + 1]].

@@ -2,17 +2,17 @@ tests
 testOnStreamIfBinary
 	| stream adapter |
 
-	stream := '1' readStream.
+	stream := self newStreamOn: '1'.
 	self assert: (self streamAdapterClass onStreamIfBinary: stream) == stream.
 
-	stream upToEnd.
+	stream next.
 	self assert: (self streamAdapterClass onStreamIfBinary: stream) == stream.
 
-	stream := #(1) readStream.
+	stream := self newStreamOn: #(1).
 	adapter := self streamAdapterClass onStreamIfBinary: stream.
 	self
 		assert: adapter class == self streamAdapterClass;
 		assert: adapter hasDefaultStreamConverter.
 
-	stream upToEnd.
+	stream next.
 	self assert: (self streamAdapterClass onStreamIfBinary: stream) == stream.

@@ -4,6 +4,7 @@ defaultNamespace: aURI
 	inherited default namesapce"
 	| oldNamespace |
 
+	self ensureUsesNamespaces.
 	oldNamespace := self defaultNamespace.
 	self
 		allNamespaceScopesDo: [:scope |

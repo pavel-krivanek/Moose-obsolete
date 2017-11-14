@@ -1,6 +1,6 @@
 *Collections-OrderPreservingDictionary-GTExtensions
-gtInspectorItemsIn: composite
-	^ composite table
+gtInspectorItemsIn: aComposite
+	^ aComposite table
 		title: 'Items';
 		display: [self associations];
 		children: [:each | 

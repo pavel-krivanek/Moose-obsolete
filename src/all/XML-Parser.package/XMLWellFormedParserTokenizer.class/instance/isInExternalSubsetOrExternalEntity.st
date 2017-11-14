@@ -8,5 +8,5 @@ isInExternalSubsetOrExternalEntity
 	for this purpose, even though they were defined externally to
 	the document."
 
-	^ context isExternalSubsetContext
+	^ state isExternalSubsetState
 		or: [self topPushedBackExternalEntity notNil]

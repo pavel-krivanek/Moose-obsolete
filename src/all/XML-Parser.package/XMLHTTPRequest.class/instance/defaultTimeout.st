@@ -1,3 +1,3 @@
-private
+defaults
 defaultTimeout
 	^ 30

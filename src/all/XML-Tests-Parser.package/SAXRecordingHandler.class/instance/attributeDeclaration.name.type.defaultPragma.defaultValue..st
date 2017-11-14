@@ -1,6 +1,6 @@
 handling - declaration
 attributeDeclaration: anElementName name: anAttributeName type: aType defaultPragma: aDefaultPragma defaultValue: aDefaultValue
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #attributeDeclaration:name:type:defaultPragma:defaultValue:
 		arguments:

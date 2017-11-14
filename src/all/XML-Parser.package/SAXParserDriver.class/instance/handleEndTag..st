@@ -15,8 +15,9 @@ handleEndTag: anElement
 				ifFalse: [''])
 		localName: (anElement xmlLocalNameAfterPrefix: prefix).
 
-	currentScope ifNotNil: [
-		currentScope hasNamespaces
-			ifTrue: [self undeclareNamespacesInScope: currentScope]].
+	self usesNamespaces
+		ifTrue: [
+			currentScope hasNamespaces
+				ifTrue: [self undeclareNamespacesInScope: currentScope]].
 	self isValidating
 		ifTrue: [self validator validateEndTag: anElement].

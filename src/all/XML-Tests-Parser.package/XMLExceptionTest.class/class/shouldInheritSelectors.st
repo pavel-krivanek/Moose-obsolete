@@ -1,0 +1,3 @@
+asserting
+shouldInheritSelectors
+	^ true

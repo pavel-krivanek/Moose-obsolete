@@ -12,7 +12,7 @@ testNonDigit
 				uppercaseLetterInterval := #()].
 		0 to: 256 do: [:each | | char reader |
 			char := each asCharacter.
-			reader := XMLIntegerReader on: char asString readStream.
+			reader := XMLIntegerReader on: (self newStreamOn: char asString).
 			((digitInterval includes: each)
 				or: [(letterInterval includes: each)
 					or: [uppercaseLetterInterval includes: each]])

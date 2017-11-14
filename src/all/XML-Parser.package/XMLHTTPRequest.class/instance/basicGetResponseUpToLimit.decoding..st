@@ -1,0 +1,3 @@
+basic
+basicGetResponseUpToLimit: aMaxSize decoding: aBoolean
+	self subclassResponsibility

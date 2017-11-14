@@ -1,15 +1,9 @@
-as yet unclassified
+hooks
 renderIn: aView
-	| edges |
-	elements := self shape elementsOn: nodes.
+	elements ifNil: [ elements := RTGroup new ].
 	self interaction setUpElements: elements.
 	aView addAll: elements.
-	edges := RTEdgeBuilder new
-		view: aView;
-		elements: elements;
-		objects: links;
-		connectFrom: linkFrom to: linkTo.
-	edges doWithIndex: [:e :i| 
-		e attributes at: #value put: (linkValue rtValue: (links at:i) ) ].
-	
-	self computeElements: edges.
+	self computeSankey.
+	lelements ifNil: [ lelements := RTGroup new ].
+	aView addAll: lelements.
+	self updateNodes.

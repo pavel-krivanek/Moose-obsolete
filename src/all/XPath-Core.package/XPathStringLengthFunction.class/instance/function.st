@@ -1,4 +1,4 @@
-invoking
+implementing
 function
 	^ (self hasArguments
 		ifTrue: [self firstArgument]

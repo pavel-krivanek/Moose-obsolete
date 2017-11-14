@@ -1,0 +1,3 @@
+accessing
+values
+	^ attributeDictionary values

@@ -1,3 +1,3 @@
-instance creation
+basic
 basicOnPath: aPathString
 	self subclassResponsibility

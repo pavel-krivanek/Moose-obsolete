@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 linkFrom: aBlock
 	linkFrom := aBlock

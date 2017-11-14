@@ -5,7 +5,7 @@ addExternalGeneralEntity: aName resolver: aResolver publicID: aPublicID systemID
 	^ self generalEntities
 		at: aName
 		put:
-			(DTDExternalGeneralEntity
+			(DTDExternalGeneralParsedEntity
 				name: aName
 				resolver: aResolver
 				publicID: aPublicID

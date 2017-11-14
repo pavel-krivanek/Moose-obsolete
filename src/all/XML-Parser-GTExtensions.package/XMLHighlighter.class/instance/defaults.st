@@ -1,3 +1,3 @@
-accessing
+defaults
 defaults
 	^ self defaultsClass new

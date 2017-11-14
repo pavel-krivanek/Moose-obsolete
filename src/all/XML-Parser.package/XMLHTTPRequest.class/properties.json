@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "monty 8/2/2016 08:10",
+	"commentStamp" : "monty 10/17/2017 00:19",
 	"super" : "XMLAbstractFactory",
 	"category" : "XML-Parser-HTTP",
 	"classinstvars" : [ ],

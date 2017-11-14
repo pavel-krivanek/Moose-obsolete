@@ -1,5 +1,9 @@
 {
-	"classtraitcomposition" : "TScopingEntityQueries classTrait",
+	"commentStamp" : "usmanbhatti 11/24/2011 22:31",
+	"super" : "FAMIXContainerEntity",
+	"category" : "Famix-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"globalVariables",
@@ -7,11 +11,5 @@
 		"childScopes"
 	],
 	"name" : "FAMIXScopingEntity",
-	"commentStamp" : "usmanbhatti 11/24/2011 22:31",
-	"super" : "FAMIXContainerEntity",
-	"traitcomposition" : "TScopingEntityQueries",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "Famix-Core"
+	"type" : "normal"
 }

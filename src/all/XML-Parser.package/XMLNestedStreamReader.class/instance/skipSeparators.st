@@ -1,5 +1,7 @@
 positioning
 skipSeparators
+	"This code is heavily optimized."
+
 	| isExternalNormalizedLineEnding |
 
 	[peekChar

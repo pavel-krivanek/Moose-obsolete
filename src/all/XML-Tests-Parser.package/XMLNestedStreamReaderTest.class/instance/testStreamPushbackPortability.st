@@ -2,10 +2,9 @@ tests
 testStreamPushbackPortability
 	| streamReader output lastPeek lastNext |
 
-	streamReader := self newStreamReaderOn: '' readStream.
+	streamReader := self newStreamReaderOn: (self newStreamOn: '').
 	streamReader
-		pushBackStream:
-			(XMLExceptionRaisingReadStream on: self sourceXML)
+		pushBackStream: self newStreamOnSourceXML
 		whenPoppedDo: nil
 		isExternal: true.
 	output := String new writeStream.

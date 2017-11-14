@@ -1,3 +1,3 @@
 accessing
 belongsTo
-	^ self parentScope
+	^ self parentScope ifNil: [ self parentPackage ]

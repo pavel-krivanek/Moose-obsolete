@@ -1,3 +1,3 @@
-as yet unclassified
-links: aCollection
-	links := aCollection
+accessing
+links: anArray
+	links := anArray

@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 extent: aPoint
 	extent := aPoint

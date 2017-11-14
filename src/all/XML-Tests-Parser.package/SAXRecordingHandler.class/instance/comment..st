@@ -1,6 +1,6 @@
 handling - lexical
 comment: aString
-	self messageRecorder
+	self
 		recordMessageReceiver: self
 		selector: #comment:
 		arguments:

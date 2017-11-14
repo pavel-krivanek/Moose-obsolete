@@ -1,4 +1,4 @@
 public - positioning
 center
-	movableElementX := [ :shape | shape position x ].
+	fixedElementX := [ :shape | shape position x ].
 	directionX := 0

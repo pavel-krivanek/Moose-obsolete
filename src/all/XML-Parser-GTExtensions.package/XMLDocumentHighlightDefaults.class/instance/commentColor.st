@@ -1,3 +1,3 @@
-accessing
+defaults
 commentColor
 	^ self class defaultCommentColor

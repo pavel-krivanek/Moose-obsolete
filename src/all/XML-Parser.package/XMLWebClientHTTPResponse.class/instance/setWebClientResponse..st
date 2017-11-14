@@ -1,0 +1,3 @@
+initialization
+setWebClientResponse: aWebClientResponse
+	webClientResponse := aWebClientResponse

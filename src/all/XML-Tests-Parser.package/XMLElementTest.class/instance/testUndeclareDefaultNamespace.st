@@ -1,15 +1,27 @@
 tests
 testUndeclareDefaultNamespace
-	| element elementsWithDefaultNamespace |
+	| element oldRootDefaultNamespace elementsWithCustomDefaultNamespace |
 
 	element := self newNodeWithElements.
-	elementsWithDefaultNamespace :=
-		element allElementsSelect: [:each | each defaultNamespace notEmpty].
+	oldRootDefaultNamespace := element defaultNamespace.
+	elementsWithCustomDefaultNamespace :=
+		element descendantElementsSelect: [:each |
+			each defaultNamespace notEmpty
+				and: [each defaultNamespace ~= oldRootDefaultNamespace]].
 
 	element
-		defaultNamespace: 'defaultNS';
+		defaultNamespace: 'newDefaultNS';
 		undeclareDefaultNamespace;
 		allElementsDo: [:each |
-			(elementsWithDefaultNamespace includes: each)
-				ifTrue: [self assert: each defaultNamespace notEmpty]
+			(elementsWithCustomDefaultNamespace includes: each)
+				ifTrue: [
+					self
+						assert: each defaultNamespace notEmpty;
+						deny: each defaultNamespace = oldRootDefaultNamespace;
+						deny: each defaultNamespace = 'newDefaultNS']
 				ifFalse: [self assert: each defaultNamespace isEmpty]].
+
+	(element := self newNode) usesNamespaces: false.
+	self
+		assert: element undeclareDefaultNamespace == element;
+		assert: element usesNamespaces.

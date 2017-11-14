@@ -15,7 +15,7 @@ testFamixMethodTypeDeclarationsWithoutSelfLoops
 			((self model entityNamed: 'C2.m3(C2,C3)')
 				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FAMIXType)
 				size
-		equals: 2.
+		equals: 3.
 	self
 		assert:
 			(((self model entityNamed: 'C2.m3(C2,C3)')

@@ -6,4 +6,4 @@ outerXMLNode: aNode
 	from it if the source is being saved to a file"
 	self
 		configuration: aNode configuration;
-		document: aNode document.
+		document: aNode document

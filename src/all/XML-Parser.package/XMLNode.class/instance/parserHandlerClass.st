@@ -1,4 +1,4 @@
-private
+defaults
 parserHandlerClass
 	^ self configuration
 		ifNil: [XMLDOMParser]

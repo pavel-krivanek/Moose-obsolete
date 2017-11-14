@@ -5,7 +5,7 @@ addStandaloneExternalInternalGeneralEntity: aName replacement: aReplacement base
 	^ self generalEntities
 		at: aName
 		put:
-			(DTDStandaloneExternalInternalGeneralEntity 
+			(DTDStandaloneExternalInternalGeneralParsedEntity 
 				name: aName
 				replacement: aReplacement
 				uri: aBaseURIString).

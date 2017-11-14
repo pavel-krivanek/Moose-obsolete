@@ -1,0 +1,3 @@
+moosequery-queries-incoming
+incomingTypeDeclarations
+	^ {}

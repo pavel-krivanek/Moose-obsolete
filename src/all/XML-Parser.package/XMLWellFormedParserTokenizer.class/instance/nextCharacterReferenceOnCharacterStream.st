@@ -6,7 +6,7 @@ nextCharacterReferenceOnCharacterStream
 
 	"skip #"
 	streamReader next.
-	(context isContentContext
+	(state isContentState
 		and: [driver replacesContentEntityReferences not])
 		ifTrue: [
 			nameStream reset.

@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "monty 6/16/2015 01:48",
+	"commentStamp" : "monty 10/6/2017 14:27",
 	"super" : "Object",
 	"category" : "XML-Parser-Drivers",
 	"classinstvars" : [ ],
@@ -8,7 +8,7 @@
 		"PredefinedEntities"
 	],
 	"instvars" : [
-		"context",
+		"state",
 		"driver",
 		"elementNester",
 		"streamReader",

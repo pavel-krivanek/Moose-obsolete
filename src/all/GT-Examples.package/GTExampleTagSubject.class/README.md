@@ -1,1 +1,0 @@
-I describe a package tag subject of an example.

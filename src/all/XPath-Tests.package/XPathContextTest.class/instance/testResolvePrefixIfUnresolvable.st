@@ -7,7 +7,7 @@ testResolvePrefixIfUnresolvable
 		self assert:
 			(context
 				resolvePrefix: key
-				ifUnresolvable: [#unresolvable]) = #unresolvable.
+				ifUnresolvable: ['unresolvable']) = 'unresolvable'.
 		context
 			declarePrefix: key
 			uri: value.
@@ -20,7 +20,6 @@ testResolvePrefixIfUnresolvable
 		(context
 			resolvePrefix: 'xml'
 			ifUnresolvable: [self fail]) = XMLNamespaceScope xmlNamespaceURI.
-	
 	self assert:
 		(context
 			resolvePrefix: 'xmlns'

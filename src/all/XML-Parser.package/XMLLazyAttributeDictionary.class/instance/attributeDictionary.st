@@ -1,0 +1,3 @@
+private
+attributeDictionary
+	^ attributeDictionary

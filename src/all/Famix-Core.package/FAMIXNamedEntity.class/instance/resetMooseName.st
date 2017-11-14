@@ -1,4 +1,4 @@
 meta information
 resetMooseName
 	super resetMooseName.
-	self childrenEntities do: [ :entity | entity resetMooseName ]
+	self children do: [ :entity | entity resetMooseName ]

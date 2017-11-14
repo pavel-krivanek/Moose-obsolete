@@ -1,5 +1,5 @@
 private
-elementClassMapAt: aKey attributes: anAssociationCollection
+elementClassMapAt: aKey attributes: anAttributeDictionary
 	| classOrCollection |
 
 	classOrCollection :=
@@ -12,7 +12,7 @@ elementClassMapAt: aKey attributes: anAssociationCollection
 			"to:do: for speed"
 			1 to: classOrCollection size - 1 do: [:i |
 				((classOrCollection at: i) key
-					matchesAttributeAssociations: anAssociationCollection)
+					matchesAttributes: anAttributeDictionary)
 					ifTrue: [^ (classOrCollection at: i) value]].
 			^ classOrCollection last]
 		ifFalse: [^ classOrCollection].
