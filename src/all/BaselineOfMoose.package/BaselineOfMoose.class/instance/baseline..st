@@ -43,6 +43,7 @@ baseline: spec
 			'Moose-Hismo'
 			'Moose-HismoImporter'
 			'Moose-Test-HismoImporter'
+			'Moose-Tests-Hismo'
 			'Famix-Extensions'
 			'Famix-SourceAnchor'
 			'Famix-File'
@@ -77,8 +78,8 @@ baseline: spec
 			'Moose-TestResources-KGB-P8FullReferencer'
 			'Moose-TestResources-KGB-P9FullReferencer'
 			'Moose-TestResources-KGB-P10InteractedReferee'
-			'Moose-TestResources-KGB-P11FullReferee'
 			'Moose-TestResources-KGB-P12FullReferencer'
+			'Moose-TestResources-KGB-P11FullReferee' "dependency"
 			'Moose-TestResources-KGB-P13FullReferencer'
 			'Moose-TestResources-KGB-P14FullReferee'
 			'Moose-TestResources-KGB-PExtensions'
