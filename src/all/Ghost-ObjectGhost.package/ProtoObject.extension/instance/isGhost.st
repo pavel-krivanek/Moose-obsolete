@@ -1,0 +1,3 @@
+*Ghost-ObjectGhost
+isGhost
+	^false

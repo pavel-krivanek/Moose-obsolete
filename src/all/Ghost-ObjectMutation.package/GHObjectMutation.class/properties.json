@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 9/2/2016 18:01",
+	"super" : "GHClassGhost",
+	"category" : "Ghost-ObjectMutation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classDelegator",
+		"victimBehaviour"
+	],
+	"name" : "GHObjectMutation",
+	"type" : "normal"
+}

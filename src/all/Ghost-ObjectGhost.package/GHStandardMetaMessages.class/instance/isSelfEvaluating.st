@@ -1,0 +1,3 @@
+literal testing
+isSelfEvaluating
+	^false

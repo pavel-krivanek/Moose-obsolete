@@ -1,0 +1,17 @@
+{
+	"classtraitcomposition" : "GHTNotNilGhost classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"superclass",
+		"methodDict",
+		"format"
+	],
+	"name" : "GHClassGhost",
+	"commentStamp" : "DenisKudryashov 3/29/2016 15:40",
+	"super" : "GHObjectGhost",
+	"traitcomposition" : "GHTNotNilGhost",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Ghost-ClassGhost"
+}

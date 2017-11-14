@@ -1,0 +1,1 @@
+I represent standart set of meta messages which used by tools to explore any objects state

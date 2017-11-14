@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 3/18/2016 15:10",
+	"super" : "ProcessLocalVariable",
+	"category" : "Ghost-ObjectGhost",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GHCurrentMetaLevelDepth",
+	"type" : "normal"
+}

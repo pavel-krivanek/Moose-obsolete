@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "DenisKudryashov 9/2/2016 18:02",
+	"super" : "GHGhostBehaviour",
+	"category" : "Ghost-ObjectMutation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"OverridenMetaLevel"
+	],
+	"instvars" : [
+		"mutationBehaviour"
+	],
+	"name" : "GHVictimBehaviour",
+	"type" : "normal"
+}

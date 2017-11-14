@@ -1,0 +1,1 @@
+I represent empty meta level for ghosts

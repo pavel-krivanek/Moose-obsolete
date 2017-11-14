@@ -1,0 +1,3 @@
+literal testing
+shouldBePrintedAsLiteral
+	^false

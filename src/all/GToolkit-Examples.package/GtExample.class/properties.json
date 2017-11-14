@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "AndreiChis 10/6/2017 22:45",
+	"super" : "Object",
+	"category" : "GToolkit-Examples-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"methodClass",
+		"selector",
+		"label",
+		"description",
+		"form",
+		"exceptions",
+		"subjects",
+		"children",
+		"properties",
+		"after",
+		"problems"
+	],
+	"name" : "GtExample",
+	"type" : "normal"
+}

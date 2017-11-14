@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MooseSampleData",
+	"category" : "Moose-Tests-Hismo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"history"
+	],
+	"name" : "MooseHismoSampleData",
+	"type" : "normal"
+}

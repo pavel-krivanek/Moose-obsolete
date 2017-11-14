@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "DenisKudryashov 3/18/2016 16:17",
+	"super" : "GHGhostBehaviour",
+	"category" : "Ghost-ObjectGhost",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"metaLevel",
+		"target"
+	],
+	"name" : "GHDelegatorBehaviour",
+	"type" : "normal"
+}

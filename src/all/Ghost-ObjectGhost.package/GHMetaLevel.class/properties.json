@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "DenisKudryashov 2/17/2016 13:18",
+	"super" : "Object",
+	"category" : "Ghost-ObjectGhost",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Empty",
+		"Standard"
+	],
+	"instvars" : [
+		"metaMessages"
+	],
+	"name" : "GHMetaLevel",
+	"type" : "normal"
+}

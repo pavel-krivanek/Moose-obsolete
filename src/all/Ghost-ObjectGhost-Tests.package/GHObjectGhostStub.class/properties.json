@@ -1,0 +1,15 @@
+{
+	"classtraitcomposition" : "GHTNotNilGhost classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"ghostBehaviour"
+	],
+	"name" : "GHObjectGhostStub",
+	"commentStamp" : "DenisKudryashov 2/17/2016 16:51",
+	"super" : "GHObjectGhost",
+	"traitcomposition" : "GHTNotNilGhost",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Ghost-ObjectGhost-Tests"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 9/2/2016 18:03",
+	"super" : "GHMetaMessages",
+	"category" : "Ghost-ObjectMutation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GHVictimMetaMessages",
+	"type" : "normal"
+}

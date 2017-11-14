@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GHGhostTestCase",
+	"category" : "Ghost-ObjectGhost-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GHObjectGhostTests",
+	"type" : "normal"
+}

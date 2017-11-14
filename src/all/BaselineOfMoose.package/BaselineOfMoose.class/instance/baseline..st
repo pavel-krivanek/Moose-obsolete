@@ -8,14 +8,21 @@ baseline: spec
 		spec postLoadDoIt: #'postload:package:'.
 		
 		self baselinePharoOverrides: spec. 
+		
+		#(	
+			'WebBrowser-Core'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #WebBrowser) ]].
+		
 
 		self baselineGrease: spec. 
 		self baselineMagritte3: spec.
 		self baselineHashtable: spec.
 		self baselineStateSpecs: spec.
 		self baselinePhexample: spec.
+		self baselineGhost: spec.
+		self baselineMocketry: spec.
 		self baselineFame: spec.
-
 		#(
 			'GToolkit-Examples' 
 			'GToolkit-Examples-Dummies' 
@@ -121,6 +128,13 @@ baseline: spec
 			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
 
 		self baselineBeacon: spec.
+		
+		#(	
+			'FuelBeacon'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #FuelBeacon) ]].
+		
+		
 		self baselinePetitParser2GUI: spec.
 		self baselineMooseAlgos: spec.
 

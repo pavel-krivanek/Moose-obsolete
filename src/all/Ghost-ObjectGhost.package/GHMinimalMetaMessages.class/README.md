@@ -1,0 +1,1 @@
+I implement minimal set of meta messages which define only class, hash and equality

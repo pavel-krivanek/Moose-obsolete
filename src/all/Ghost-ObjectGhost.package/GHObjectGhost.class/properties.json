@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "GHTMinimalGhost classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GHObjectGhost",
+	"commentStamp" : "DenisKudryashov 3/29/2016 15:17",
+	"super" : "nil",
+	"traitcomposition" : "GHTMinimalGhost",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Ghost-ObjectGhost"
+}

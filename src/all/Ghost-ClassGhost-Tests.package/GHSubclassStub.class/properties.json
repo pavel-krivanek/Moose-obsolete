@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "DenisKudryashov 2/17/2016 17:06",
+	"super" : "GHClassStub",
+	"category" : "Ghost-ClassGhost-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "GHSubclassStub",
+	"type" : "normal"
+}

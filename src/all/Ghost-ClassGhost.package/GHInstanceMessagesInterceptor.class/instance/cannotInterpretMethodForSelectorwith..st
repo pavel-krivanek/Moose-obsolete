@@ -1,0 +1,4 @@
+simulation trick
+cannotInterpretMethodForSelectorwith: arg1
+	
+	^GHInstanceMessagesInterceptor simulateCannotInterpretIn: thisContext

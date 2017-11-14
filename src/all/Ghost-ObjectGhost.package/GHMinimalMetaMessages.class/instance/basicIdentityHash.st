@@ -1,0 +1,3 @@
+comparing
+basicIdentityHash
+	^self ghostIdentityHash

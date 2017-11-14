@@ -1,0 +1,3 @@
+accessing
+mutationBehaviour
+	^victimBehaviour mutationBehaviour

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AndreiChis 10/13/2017 17:56",
+	"super" : "Object",
+	"category" : "GToolkit-Examples-Runtime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"example",
+		"result"
+	],
+	"name" : "GtExampleWithResult",
+	"type" : "normal"
+}

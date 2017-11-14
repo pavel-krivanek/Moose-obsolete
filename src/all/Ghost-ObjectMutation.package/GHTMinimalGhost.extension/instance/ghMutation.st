@@ -1,0 +1,3 @@
+*Ghost-ObjectMutation
+ghMutation
+	^nil

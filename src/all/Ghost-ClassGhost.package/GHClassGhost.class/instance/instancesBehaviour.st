@@ -1,0 +1,3 @@
+accessing
+instancesBehaviour
+	nil subclassResponsibility 

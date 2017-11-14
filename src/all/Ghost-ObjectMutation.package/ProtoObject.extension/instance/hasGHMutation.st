@@ -1,0 +1,3 @@
+*Ghost-ObjectMutation
+hasGHMutation
+	^false
