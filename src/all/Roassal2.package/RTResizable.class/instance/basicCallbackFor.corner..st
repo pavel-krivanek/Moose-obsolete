@@ -12,7 +12,8 @@ basicCallbackFor: aHandle corner: aCorner
 	oppositeCornerPosition := element encompassingRectangle perform: oppositeCorner.
 	element trachelShape
 		doWithoutCallbacks: [ 
-			element extent: newExtent.
+			element trachelShape extent: newExtent.
+			element shape extent: newExtent.
 			self translateCorner: oppositeCorner of: element to: oppositeCornerPosition ].
 	"This is to trigger repositioning of subelements etc."
 	element trachelShape triggerCallbacksForNewExtent: newExtent oldExtent: oldExtent.
