@@ -4,7 +4,7 @@ This is a base class for element class mappers. Subclasses need to implement the
 Class {
 	#name : #XMLElementClassMapper,
 	#superclass : #Object,
-	#category : 'XML-Parser-Utils'
+	#category : #XML-Parser-Utils
 }
 
 { #category : #private }

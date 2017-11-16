@@ -57,7 +57,7 @@ Class {
 	#classInstVars : [
 		'mooseSubClasses'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'meta accessing' }

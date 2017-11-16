@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'segments'
 	],
-	#category : 'Roassal2-AttachPoint'
+	#category : #Roassal2-AttachPoint
 }
 
 { #category : #'instance creation' }

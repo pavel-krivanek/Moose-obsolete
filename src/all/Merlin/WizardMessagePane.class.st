@@ -1,7 +1,7 @@
 Class {
 	#name : #WizardMessagePane,
 	#superclass : #WizardPane,
-	#category : 'Merlin-Panes'
+	#category : #Merlin-Panes
 }
 
 { #category : #'private - accessing' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeNoiseCleanerTest,
 	#superclass : #TestCase,
-	#category : 'SmallDude-Tests-Text'
+	#category : #SmallDude-Tests-Text
 }
 
 { #category : #testing }

@@ -8,7 +8,7 @@ Class {
 		'source',
 		'target'
 	],
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #'fame annotation' }

@@ -5,7 +5,7 @@ Class {
 		'stream',
 		'spec'
 	],
-	#category : 'Arki-Reporter-Core'
+	#category : #Arki-Reporter-Core
 }
 
 { #category : #'instance creation' }

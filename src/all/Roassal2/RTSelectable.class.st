@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'selectionCallback'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #actions }

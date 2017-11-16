@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'properties'
 	],
-	#category : 'Moose-DistributionMap'
+	#category : #Moose-DistributionMap
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'context'
 	],
-	#category : 'PetitYAML'
+	#category : #PetitYAML
 }
 
 { #category : #accessing }

@@ -6,7 +6,7 @@ Defines an attribute parent folder to point to its container.
 Class {
 	#name : #FAMIXAbstractFile,
 	#superclass : #FAMIXNamedEntity,
-	#category : 'Famix-File'
+	#category : #Famix-File
 }
 
 { #category : #initialize-release }

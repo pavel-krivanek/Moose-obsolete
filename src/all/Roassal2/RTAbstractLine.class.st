@@ -9,7 +9,7 @@ Class {
 		'attachPoint',
 		'allowSelfLoop'
 	],
-	#category : 'Roassal2-Shapes'
+	#category : #Roassal2-Shapes
 }
 
 { #category : #public }

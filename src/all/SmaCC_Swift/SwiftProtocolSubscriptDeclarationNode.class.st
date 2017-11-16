@@ -34,7 +34,7 @@ Class {
 		'getToken',
 		'setToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

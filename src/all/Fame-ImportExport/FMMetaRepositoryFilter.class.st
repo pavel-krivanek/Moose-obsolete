@@ -5,7 +5,7 @@ Class {
 		'newMetaRepository',
 		'classes'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #accessing }

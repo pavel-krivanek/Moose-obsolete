@@ -35,7 +35,7 @@ Class {
 		'elements',
 		'timelineLabelBuilder'
 	],
-	#category : 'Roassal2-Builder-Timeline'
+	#category : #Roassal2-Builder-Timeline
 }
 
 { #category : #adding }

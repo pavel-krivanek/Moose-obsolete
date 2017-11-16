@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'storage'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #meta }

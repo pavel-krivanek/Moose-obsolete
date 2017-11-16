@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'details'
 	],
-	#category : 'Grease-Core-Exceptions'
+	#category : #Grease-Core-Exceptions
 }
 
 { #category : #accessing }

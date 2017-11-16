@@ -1,7 +1,7 @@
 Class {
 	#name : #MAExternalFileModelTest,
 	#superclass : #MAFileModelTest,
-	#category : 'Magritte-Tests-Pharo-Model'
+	#category : #Magritte-Tests-Pharo-Model
 }
 
 { #category : #private }

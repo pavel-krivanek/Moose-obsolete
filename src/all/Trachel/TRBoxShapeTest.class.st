@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'box'
 	],
-	#category : 'Trachel-Tests'
+	#category : #Trachel-Tests
 }
 
 { #category : #running }

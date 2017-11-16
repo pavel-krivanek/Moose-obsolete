@@ -6,7 +6,7 @@ Class {
 		'name',
 		'semicolon'
 	],
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

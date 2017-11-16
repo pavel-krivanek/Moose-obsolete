@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'announcer'
 	],
-	#category : 'Trachel-Core'
+	#category : #Trachel-Core
 }
 
 { #category : #example }

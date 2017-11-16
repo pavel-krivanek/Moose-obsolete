@@ -18,7 +18,7 @@ Class {
 		'numbers',
 		'sorted'
 	],
-	#category : 'Roassal2-Utility'
+	#category : #Roassal2-Utility
 }
 
 { #category : #public }

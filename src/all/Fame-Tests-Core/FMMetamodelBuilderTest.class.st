@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'metamodel'
 	],
-	#category : 'Fame-Tests-Core'
+	#category : #Fame-Tests-Core
 }
 
 { #category : #running }

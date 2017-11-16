@@ -7,7 +7,7 @@ Class {
 		'containingNamespaceHistory',
 		'containingPackageHistory'
 	],
-	#category : 'Moose-Hismo'
+	#category : #Moose-Hismo
 }
 
 { #category : #initialize }

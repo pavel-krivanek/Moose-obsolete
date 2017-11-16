@@ -5,7 +5,7 @@ Class {
 		'code',
 		'method'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #'instance creation' }

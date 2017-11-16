@@ -1,7 +1,7 @@
 Class {
 	#name : #RTNullLayout,
 	#superclass : #RTLayout,
-	#category : 'Roassal2-Layouts'
+	#category : #Roassal2-Layouts
 }
 
 { #category : #hook }

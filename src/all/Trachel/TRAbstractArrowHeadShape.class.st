@@ -5,5 +5,5 @@ Class {
 		'left',
 		'right'
 	],
-	#category : 'Trachel-ShapesForArrow'
+	#category : #Trachel-ShapesForArrow
 }

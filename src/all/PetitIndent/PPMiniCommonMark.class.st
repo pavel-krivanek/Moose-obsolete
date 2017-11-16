@@ -31,7 +31,7 @@ Class {
 		'list',
 		'listDoubleBlanks'
 	],
-	#category : 'PetitIndent-Examples'
+	#category : #PetitIndent-Examples
 }
 
 { #category : #headers }

@@ -20,7 +20,7 @@ Class {
 		'currentExtractedMethod',
 		'localTypingResults'
 	],
-	#category : 'RoelTyper-Core'
+	#category : #RoelTyper-Core
 }
 
 { #category : #'instance creation' }

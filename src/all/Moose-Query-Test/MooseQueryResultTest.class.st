@@ -4,7 +4,7 @@ A MooseQueryResultTest is a test class for testing the behavior of MooseQueryRes
 Class {
 	#name : #MooseQueryResultTest,
 	#superclass : #TestCase,
-	#category : 'Moose-Query-Test'
+	#category : #Moose-Query-Test
 }
 
 { #category : #testing }

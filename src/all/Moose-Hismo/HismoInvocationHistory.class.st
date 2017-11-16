@@ -6,7 +6,7 @@ Class {
 		'invokedByHistory',
 		'receivingClassHistory'
 	],
-	#category : 'Moose-Hismo'
+	#category : #Moose-Hismo
 }
 
 { #category : #'instance creation' }

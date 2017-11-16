@@ -1,7 +1,7 @@
 Class {
 	#name : #M4P8C15FullReferencerOutSide,
 	#superclass : #M3P7C14ReferencerOutSideRefereeOutSide,
-	#category : 'Moose-TestResources-KGB-P8FullReferencer'
+	#category : #Moose-TestResources-KGB-P8FullReferencer
 }
 
 { #category : #Moose-Cook-ModelFamix2-Test-Methods }

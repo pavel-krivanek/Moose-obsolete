@@ -14,7 +14,7 @@ Class {
 		'cache',
 		'continuing'
 	],
-	#category : 'GT-Spotter-Model'
+	#category : #GT-Spotter-Model
 }
 
 { #category : #public }

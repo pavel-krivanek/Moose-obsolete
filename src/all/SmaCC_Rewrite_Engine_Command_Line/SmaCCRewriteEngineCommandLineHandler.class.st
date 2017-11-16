@@ -7,7 +7,7 @@ Class {
 		'totalCount',
 		'doneSemaphore'
 	],
-	#category : 'SmaCC_Rewrite_Engine_Command_Line'
+	#category : #SmaCC_Rewrite_Engine_Command_Line
 }
 
 { #category : #accessing }

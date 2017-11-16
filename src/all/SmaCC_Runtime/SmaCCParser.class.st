@@ -28,7 +28,7 @@ Class {
 	#classInstVars : [
 		'cacheId'
 	],
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }
 
 { #category : #caching }

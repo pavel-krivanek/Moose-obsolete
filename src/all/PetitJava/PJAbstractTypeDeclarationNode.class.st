@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'simpleName'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #comparing }

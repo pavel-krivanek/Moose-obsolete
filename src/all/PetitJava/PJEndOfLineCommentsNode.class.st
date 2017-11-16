@@ -1,7 +1,7 @@
 Class {
 	#name : #PJEndOfLineCommentsNode,
 	#superclass : #PJCommentsNode,
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #'as yet unclassified' }

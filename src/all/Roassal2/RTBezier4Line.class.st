@@ -6,7 +6,7 @@ Maybe we need roassal3 now with a better system for bezier lines
 Class {
 	#name : #RTBezier4Line,
 	#superclass : #RTBezier3Line,
-	#category : 'Roassal2-Shapes'
+	#category : #Roassal2-Shapes
 }
 
 { #category : #accessing }

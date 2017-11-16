@@ -22,7 +22,7 @@ Class {
 		'value',
 		'markerColor'
 	],
-	#category : 'Roassal2-Builder-Grapher-Decorators'
+	#category : #Roassal2-Builder-Grapher-Decorators
 }
 
 { #category : #hooks }

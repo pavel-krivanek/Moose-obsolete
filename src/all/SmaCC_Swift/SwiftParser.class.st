@@ -1,7 +1,7 @@
 Class {
 	#name : #SwiftParser,
 	#superclass : #SmaCCGLRParser,
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated-accessing }

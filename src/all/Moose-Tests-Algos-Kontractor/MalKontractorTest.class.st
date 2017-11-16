@@ -1,7 +1,7 @@
 Class {
 	#name : #MalKontractorTest,
 	#superclass : #TestCase,
-	#category : 'Moose-Tests-Algos-Kontractor'
+	#category : #Moose-Tests-Algos-Kontractor
 }
 
 { #category : #testing }

@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'default'
 	],
-	#category : 'Trachel-Core-Theme'
+	#category : #Trachel-Core-Theme
 }
 
 { #category : #accessing }

@@ -14,7 +14,7 @@ Class {
 		'description',
 		'slots'
 	],
-	#category : 'Fame-Core'
+	#category : #Fame-Core
 }
 
 { #category : #'instance creation' }

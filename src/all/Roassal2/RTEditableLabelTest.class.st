@@ -4,7 +4,7 @@ A RTEditableLabelTest is a test class for testing the behavior of RTEditableLabe
 Class {
 	#name : #RTEditableLabelTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-MorphSpecific'
+	#category : #Roassal2-MorphSpecific
 }
 
 { #category : #tests }

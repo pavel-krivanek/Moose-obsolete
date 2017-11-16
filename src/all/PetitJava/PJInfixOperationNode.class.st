@@ -11,7 +11,7 @@ Class {
 		'operator',
 		'right'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #visiting }

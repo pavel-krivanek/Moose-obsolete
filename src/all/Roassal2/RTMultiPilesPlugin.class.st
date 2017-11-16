@@ -1,7 +1,7 @@
 Class {
 	#name : #RTMultiPilesPlugin,
 	#superclass : #RTAbstractPlugin,
-	#category : 'Roassal2-Plugins'
+	#category : #Roassal2-Plugins
 }
 
 { #category : #hooks }

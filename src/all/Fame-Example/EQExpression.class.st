@@ -1,7 +1,7 @@
 Class {
 	#name : #EQExpression,
 	#superclass : #Object,
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #'As yet unclassified' }

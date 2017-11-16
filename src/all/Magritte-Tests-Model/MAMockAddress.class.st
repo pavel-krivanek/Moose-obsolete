@@ -6,7 +6,7 @@ Class {
 		'street',
 		'plz'
 	],
-	#category : 'Magritte-Tests-Model-Mocks'
+	#category : #Magritte-Tests-Model-Mocks
 }
 
 { #category : #comparing }

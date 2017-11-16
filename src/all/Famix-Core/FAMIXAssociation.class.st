@@ -30,7 +30,7 @@ Class {
 		'possibleTargetClasses',
 		'possibleSourceClasses'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

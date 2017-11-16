@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'moosePanel'
 	],
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #'as yet unclassified' }

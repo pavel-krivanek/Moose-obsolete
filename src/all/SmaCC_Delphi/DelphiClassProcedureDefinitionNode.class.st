@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiClassProcedureDefinitionNode,
 	#superclass : #DelphiProcedureDefinitionNode,
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

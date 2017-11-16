@@ -5,7 +5,7 @@ Class {
 		'values',
 		'title'
 	],
-	#category : 'Roassal2-Builder-StackBarPlot'
+	#category : #Roassal2-Builder-StackBarPlot
 }
 
 { #category : #'accessing - computed' }

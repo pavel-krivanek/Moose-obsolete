@@ -13,7 +13,7 @@ Class {
 		'storage',
 		'receiver'
 	],
-	#category : 'Moose-Query'
+	#category : #Moose-Query
 }
 
 { #category : #'instance creation' }

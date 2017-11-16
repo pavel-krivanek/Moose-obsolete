@@ -6,7 +6,7 @@ Notable exception: #include which is represented as an Association
 Class {
 	#name : #FAMIXPreprocessorStatement,
 	#superclass : #FAMIXSourcedEntity,
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #'as yet unclassified' }

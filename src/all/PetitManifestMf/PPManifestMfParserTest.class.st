@@ -1,7 +1,7 @@
 Class {
 	#name : #PPManifestMfParserTest,
 	#superclass : #PPCompositeParserTest,
-	#category : 'PetitManifestMf'
+	#category : #PetitManifestMf
 }
 
 { #category : #'as yet unclassified' }

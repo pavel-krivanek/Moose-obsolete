@@ -4,7 +4,7 @@ A RTTextLines contains RTTextLine objects and represents whole text splitted int
 Class {
 	#name : #RTTextLines,
 	#superclass : #OrderedCollection,
-	#category : 'Roassal2-Builder-TextBuilder'
+	#category : #Roassal2-Builder-TextBuilder
 }
 
 { #category : #enumerating }

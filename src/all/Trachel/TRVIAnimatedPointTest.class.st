@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'pZero'
 	],
-	#category : 'Trachel-Viva'
+	#category : #Trachel-Viva
 }
 
 { #category : #running }

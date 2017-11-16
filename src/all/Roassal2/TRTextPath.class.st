@@ -8,7 +8,7 @@ Class {
 		'outlineColor',
 		'outlineWidth'
 	],
-	#category : 'Roassal2-Experimental'
+	#category : #Roassal2-Experimental
 }
 
 { #category : #drawing }

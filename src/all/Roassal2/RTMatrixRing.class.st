@@ -17,7 +17,7 @@ Class {
 		'rowBlock',
 		'columnBlock'
 	],
-	#category : 'Roassal2-Builder-Sunburst'
+	#category : #Roassal2-Builder-Sunburst
 }
 
 { #category : #accessing }

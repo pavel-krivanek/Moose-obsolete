@@ -1,7 +1,7 @@
 Class {
 	#name : #PetitSQLiteASTNodesParser,
 	#superclass : #PetitSQLiteGrammar,
-	#category : 'PetitSQLite-Parser'
+	#category : #PetitSQLite-Parser
 }
 
 { #category : #'as yet unclassified' }

@@ -9,7 +9,7 @@ RTAnimationExample new installTitle: 'Smooth'
 Class {
 	#name : #RTAnimationExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-ExampleBrowser'
+	#category : #Roassal2-ExampleBrowser
 }
 
 { #category : #sources }

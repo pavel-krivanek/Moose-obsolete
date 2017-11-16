@@ -7,7 +7,7 @@ WindowClosed
 Class {
 	#name : #GTWindowRecorderWindowClosedEvent,
 	#superclass : #GTWindowRecorderEvent,
-	#category : 'GT-Window-EventRecorder-Events'
+	#category : #GT-Window-EventRecorder-Events
 }
 
 { #category : #testing }

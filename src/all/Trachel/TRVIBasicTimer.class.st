@@ -16,7 +16,7 @@ Timer can be stopped (paused), resumed or fully reset. The timer value & elapsed
 Class {
 	#name : #TRVIBasicTimer,
 	#superclass : #TRObject,
-	#category : 'Trachel-Viva'
+	#category : #Trachel-Viva
 }
 
 { #category : #accessing }

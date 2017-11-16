@@ -4,7 +4,7 @@ I am an abstract class. My subclasses have to override #attachPointsFor:on:
 Class {
 	#name : #RTAbstractShorterDistanceAttachPoint,
 	#superclass : #RTAttachPoint,
-	#category : 'Roassal2-AttachPoint'
+	#category : #Roassal2-AttachPoint
 }
 
 { #category : #util }

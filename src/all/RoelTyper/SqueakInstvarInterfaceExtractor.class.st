@@ -1,7 +1,7 @@
 Class {
 	#name : #SqueakInstvarInterfaceExtractor,
 	#superclass : #InstvarInterfaceExtractor,
-	#category : 'RoelTyper-Squeak'
+	#category : #RoelTyper-Squeak
 }
 
 { #category : #'instruction decoding' }

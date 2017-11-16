@@ -1,7 +1,7 @@
 Class {
 	#name : #CSharpScanner,
 	#superclass : #SmaCCScanner,
-	#category : 'SmaCC_CSharp'
+	#category : #SmaCC_CSharp
 }
 
 { #category : #generated-initialization }

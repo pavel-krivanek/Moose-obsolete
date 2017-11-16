@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'serverType'
 	],
-	#category : 'Moose-TestResources-LAN'
+	#category : #Moose-TestResources-LAN
 }
 
 { #category : #sending-receiving }

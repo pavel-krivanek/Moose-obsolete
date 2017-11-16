@@ -7,7 +7,7 @@ Class {
 		'declarators',
 		'commaTokens'
 	],
-	#category : 'SmaCC_CSharp'
+	#category : #SmaCC_CSharp
 }
 
 { #category : #generated }

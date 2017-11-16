@@ -1,5 +1,5 @@
 Class {
 	#name : #RTAbstractCircle,
 	#superclass : #RTLineDecorationShape,
-	#category : 'Roassal2-LineDecorations'
+	#category : #Roassal2-LineDecorations
 }

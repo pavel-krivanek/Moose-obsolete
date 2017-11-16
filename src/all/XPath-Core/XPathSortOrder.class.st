@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'XPath-Core-DOM'
+	#category : #XPath-Core-DOM
 }
 
 { #category : #accessing }

@@ -10,7 +10,7 @@ Class {
 		'ids',
 		'viewBox'
 	],
-	#category : 'Athens-SVG'
+	#category : #Athens-SVG
 }
 
 { #category : #'to be done' }

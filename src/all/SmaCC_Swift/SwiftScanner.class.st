@@ -1,7 +1,7 @@
 Class {
 	#name : #SwiftScanner,
 	#superclass : #SmaCCScanner,
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated-initialization }

@@ -16,7 +16,7 @@ Class {
 		'dedent',
 		'nl'
 	],
-	#category : 'PetitIndent-Examples'
+	#category : #PetitIndent-Examples
 }
 
 { #category : #accessing }

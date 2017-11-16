@@ -5,7 +5,7 @@ Class {
 		'librarian',
 		'books'
 	],
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #initialize-release }

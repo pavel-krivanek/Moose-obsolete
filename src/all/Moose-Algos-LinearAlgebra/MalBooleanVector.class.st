@@ -8,7 +8,7 @@ Class {
 		'bits',
 		'size'
 	],
-	#category : 'Moose-Algos-LinearAlgebra'
+	#category : #Moose-Algos-LinearAlgebra
 }
 
 { #category : #'logical operations' }

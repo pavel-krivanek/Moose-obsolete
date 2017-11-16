@@ -1,7 +1,7 @@
 Class {
 	#name : #PharoTypeCollector,
 	#superclass : #SqueakTypeCollector,
-	#category : 'RoelTyper-Pharo'
+	#category : #RoelTyper-Pharo
 }
 
 { #category : #heuristics }

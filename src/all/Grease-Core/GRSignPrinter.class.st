@@ -5,7 +5,7 @@ Class {
 		'negativePrinter',
 		'positivePrinter'
 	],
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #initialization }

@@ -8,7 +8,7 @@ Class {
 		'item',
 		'collection'
 	],
-	#category : 'Moose-Algos-Clustering'
+	#category : #Moose-Algos-Clustering
 }
 
 { #category : #adding }

@@ -4,7 +4,7 @@ This is a class for the 'processing-instruction()' type test.
 Class {
 	#name : #XPathPINodeTest,
 	#superclass : #XPathNodeTest,
-	#category : 'XPath-Core-Compilation'
+	#category : #XPath-Core-Compilation
 }
 
 { #category : #testing }

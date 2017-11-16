@@ -9,7 +9,7 @@ Class {
 		'maxSize',
 		'mutex'
 	],
-	#category : 'XML-Parser-Utils'
+	#category : #XML-Parser-Utils
 }
 
 { #category : #defaults }

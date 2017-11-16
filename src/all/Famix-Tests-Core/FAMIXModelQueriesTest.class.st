@@ -12,7 +12,7 @@ Class {
 		'namespace2',
 		'stubPrimitiveType'
 	],
-	#category : 'Famix-Tests-Core'
+	#category : #Famix-Tests-Core
 }
 
 { #category : #'as yet unclassified' }

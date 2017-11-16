@@ -1,7 +1,7 @@
 Class {
 	#name : #HismoNamespaceVersion,
 	#superclass : #HismoEntityVersion,
-	#category : 'Moose-Hismo'
+	#category : #Moose-Hismo
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'searcher'
 	],
-	#category : 'PetitAnalyzer-Tests'
+	#category : #PetitAnalyzer-Tests
 }
 
 { #category : #running }

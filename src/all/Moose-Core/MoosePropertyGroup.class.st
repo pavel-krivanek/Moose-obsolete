@@ -12,7 +12,7 @@ Class {
 		'originalGroup',
 		'propertySymbolOrBlock'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'instance creation' }

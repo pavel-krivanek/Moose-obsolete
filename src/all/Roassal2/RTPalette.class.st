@@ -54,7 +54,7 @@ b
 Class {
 	#name : #RTPalette,
 	#superclass : #RTObject,
-	#category : 'Roassal2-ColorNormalizer'
+	#category : #Roassal2-ColorNormalizer
 }
 
 { #category : #palettes }

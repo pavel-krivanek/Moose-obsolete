@@ -9,7 +9,7 @@ Class {
 		'throws',
 		'semicolon'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

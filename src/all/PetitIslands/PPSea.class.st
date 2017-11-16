@@ -54,7 +54,7 @@ Class {
 		'defaultAfterWaterParser',
 		'contextIdentifier'
 	],
-	#category : 'PetitIslands-Parsers'
+	#category : #PetitIslands-Parsers
 }
 
 { #category : #queries }

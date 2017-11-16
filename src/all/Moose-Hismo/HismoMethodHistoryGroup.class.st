@@ -1,7 +1,7 @@
 Class {
 	#name : #HismoMethodHistoryGroup,
 	#superclass : #HismoHistoryGroup,
-	#category : 'Moose-Hismo'
+	#category : #Moose-Hismo
 }
 
 { #category : #'instance creation' }

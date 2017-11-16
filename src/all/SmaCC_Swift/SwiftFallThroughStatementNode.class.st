@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'fallthroughToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

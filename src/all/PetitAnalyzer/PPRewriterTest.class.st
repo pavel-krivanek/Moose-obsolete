@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'rewriter'
 	],
-	#category : 'PetitAnalyzer-Tests'
+	#category : #PetitAnalyzer-Tests
 }
 
 { #category : #running }

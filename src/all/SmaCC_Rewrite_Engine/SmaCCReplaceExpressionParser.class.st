@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCReplaceExpressionParser,
 	#superclass : #SmaCCParser,
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #generated-accessing }

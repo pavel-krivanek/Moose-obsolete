@@ -4,7 +4,7 @@ An abstract class for node test parser handlers. Parsing is controlled by XPathN
 Class {
 	#name : #XPathNodeTestParserHandler,
 	#superclass : #XPathParserHandler,
-	#category : 'XPath-Core-Parsers'
+	#category : #XPath-Core-Parsers
 }
 
 { #category : #defaults }

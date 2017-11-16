@@ -1,7 +1,7 @@
 Class {
 	#name : #M3P7C14ReferencerOutSideRefereeOutSide,
 	#superclass : #Object,
-	#category : 'Moose-TestResources-KGB-P7ReferencerReferee'
+	#category : #Moose-TestResources-KGB-P7ReferencerReferee
 }
 
 { #category : #Moose-Cook-ModelFamix2-Test-Methods }

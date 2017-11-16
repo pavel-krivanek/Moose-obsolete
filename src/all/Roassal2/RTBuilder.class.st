@@ -12,7 +12,7 @@ Class {
 		'title',
 		'metricNormalizer'
 	],
-	#category : 'Roassal2-Builder-Common'
+	#category : #Roassal2-Builder-Common
 }
 
 { #category : #accessing }

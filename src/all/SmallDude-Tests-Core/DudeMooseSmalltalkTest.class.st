@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : 'SmallDude-Tests-Core'
+	#category : #SmallDude-Tests-Core
 }
 
 { #category : #setUp }

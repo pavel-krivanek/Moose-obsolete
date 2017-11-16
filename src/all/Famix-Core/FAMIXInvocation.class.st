@@ -19,7 +19,7 @@ Class {
 		'signature',
 		'candidates'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

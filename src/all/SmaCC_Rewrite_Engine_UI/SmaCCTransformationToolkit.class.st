@@ -6,7 +6,7 @@ Class {
 		'resultsList',
 		'previewResult'
 	],
-	#category : 'SmaCC_Rewrite_Engine_UI'
+	#category : #SmaCC_Rewrite_Engine_UI
 }
 
 { #category : #actions }

@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #accessing }

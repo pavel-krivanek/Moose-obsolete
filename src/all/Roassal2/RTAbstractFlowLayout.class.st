@@ -28,7 +28,7 @@ Class {
 		'aBlock',
 		'maxWithBlock'
 	],
-	#category : 'Roassal2-Layouts'
+	#category : #Roassal2-Layouts
 }
 
 { #category : #public }

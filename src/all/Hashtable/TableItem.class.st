@@ -7,7 +7,7 @@ Class {
 		'keyHash',
 		'next'
 	],
-	#category : 'Hashtable'
+	#category : #Hashtable
 }
 
 { #category : #'instance creation' }

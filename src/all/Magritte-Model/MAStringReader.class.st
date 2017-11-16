@@ -4,7 +4,7 @@ I recreate Magritte-described domain objects from strings. Typically I am used t
 Class {
 	#name : #MAStringReader,
 	#superclass : #MAReader,
-	#category : 'Magritte-Model-Visitor'
+	#category : #Magritte-Model-Visitor
 }
 
 { #category : #private }

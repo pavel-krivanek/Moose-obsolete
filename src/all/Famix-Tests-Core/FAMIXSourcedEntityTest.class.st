@@ -4,7 +4,7 @@ I am an abstract test class for the tests of FAMIXSourcedEntity's subclasses
 Class {
 	#name : #FAMIXSourcedEntityTest,
 	#superclass : #FAMIXEntityTest,
-	#category : 'Famix-Tests-Core'
+	#category : #Famix-Tests-Core
 }
 
 { #category : #testing }

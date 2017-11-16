@@ -8,7 +8,7 @@ Class {
 		'interactionBuilder',
 		'layoutBuilder'
 	],
-	#category : 'Roassal2-Utility'
+	#category : #Roassal2-Utility
 }
 
 { #category : #adding }

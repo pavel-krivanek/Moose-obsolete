@@ -8,7 +8,7 @@ Class {
 		'markerColor',
 		'distanceInPixelsFromAxis'
 	],
-	#category : 'Roassal2-Builder-Grapher-Decorators'
+	#category : #Roassal2-Builder-Grapher-Decorators
 }
 
 { #category : #'default configuration' }

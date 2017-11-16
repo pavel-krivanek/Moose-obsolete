@@ -22,7 +22,7 @@ Class {
 		'accessor',
 		'variable'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

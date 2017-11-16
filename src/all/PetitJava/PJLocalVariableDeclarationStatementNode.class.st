@@ -16,7 +16,7 @@ Class {
 		'type',
 		'declarators'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #accessing }

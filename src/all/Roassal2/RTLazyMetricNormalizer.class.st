@@ -5,7 +5,7 @@ Class {
 		'messages',
 		'realNormalizer'
 	],
-	#category : 'Roassal2-ColorNormalizer'
+	#category : #Roassal2-ColorNormalizer
 }
 
 { #category : #building }

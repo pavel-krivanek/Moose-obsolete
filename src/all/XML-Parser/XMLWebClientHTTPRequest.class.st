@@ -4,7 +4,7 @@ This class uses the WebClient library to implement HTTP requests. This is used o
 Class {
 	#name : #XMLWebClientHTTPRequest,
 	#superclass : #XMLHTTPRequest,
-	#category : 'XML-Parser-HTTP'
+	#category : #XML-Parser-HTTP
 }
 
 { #category : #testing }

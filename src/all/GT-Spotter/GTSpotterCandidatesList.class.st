@@ -12,7 +12,7 @@ Class {
 		'announcer',
 		'processorLinksMap'
 	],
-	#category : 'GT-Spotter-Model'
+	#category : #GT-Spotter-Model
 }
 
 { #category : #adding/removing }

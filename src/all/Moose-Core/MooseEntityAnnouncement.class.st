@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'entity'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #accessing }

@@ -46,7 +46,7 @@ Class {
 		'eof',
 		'onsideLine'
 	],
-	#category : 'PetitIslands-Examples'
+	#category : #PetitIslands-Examples
 }
 
 { #category : #indentation }

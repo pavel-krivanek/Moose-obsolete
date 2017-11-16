@@ -16,7 +16,7 @@ Class {
 	#instVars : [
 		'root'
 	],
-	#category : 'PetitGui-Core'
+	#category : #PetitGui-Core
 }
 
 { #category : #'instance creation' }

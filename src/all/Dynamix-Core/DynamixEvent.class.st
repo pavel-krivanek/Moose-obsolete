@@ -20,7 +20,7 @@ Class {
 		'duration',
 		'source'
 	],
-	#category : 'Dynamix-Core'
+	#category : #Dynamix-Core
 }
 
 { #category : #meta }

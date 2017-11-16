@@ -1,7 +1,7 @@
 Class {
 	#name : #PrimeObject,
 	#superclass : #Object,
-	#category : 'Hashtable-Objects'
+	#category : #Hashtable-Objects
 }
 
 { #category : #accessing }

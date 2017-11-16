@@ -4,7 +4,7 @@ I contain tests that should be executed last as they check for various memory le
 Class {
 	#name : #GTFinalReleaseTest,
 	#superclass : #TestCase,
-	#category : 'GT-Tests-Release'
+	#category : #GT-Tests-Release
 }
 
 { #category : #tests }

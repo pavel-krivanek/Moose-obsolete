@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'disabledText'
 	],
-	#category : 'XML-Parser-GTExtensions-Highlighting-Parser'
+	#category : #XML-Parser-GTExtensions-Highlighting-Parser
 }
 
 { #category : #'instance creation' }

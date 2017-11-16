@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'mooseModel'
 	],
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #initialize-release }

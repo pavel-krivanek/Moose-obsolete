@@ -10,7 +10,7 @@ Class {
 		'constructorInvocation',
 		'statements'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #accessing }

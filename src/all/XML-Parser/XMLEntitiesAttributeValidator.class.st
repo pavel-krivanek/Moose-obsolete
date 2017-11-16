@@ -4,7 +4,7 @@ This class validates attributes with lists of unparsed entity name values (that 
 Class {
 	#name : #XMLEntitiesAttributeValidator,
 	#superclass : #XMLEntityAttributeValidator,
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #defaults }

@@ -4,7 +4,7 @@ XPath node set count (size) function.
 Class {
 	#name : #XPathCountFunction,
 	#superclass : #XPathFunction,
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #accessing }

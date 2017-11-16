@@ -12,7 +12,7 @@ Class {
 		'r2',
 		'cursor'
 	],
-	#category : 'Moose-Algos-InformationRetrieval'
+	#category : #Moose-Algos-InformationRetrieval
 }
 
 { #category : #private-algorithm }

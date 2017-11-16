@@ -12,7 +12,7 @@ Class {
 		'line',
 		'stepping'
 	],
-	#category : 'Roassal2-Experimental'
+	#category : #Roassal2-Experimental
 }
 
 { #category : #private }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'indices'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #private }

@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLFileHandleUTF8Test,
 	#superclass : #XMLFileHandleTest,
-	#category : 'XML-Tests-Parser-Files'
+	#category : #XML-Tests-Parser-Files
 }
 
 { #category : #accessing }

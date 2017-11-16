@@ -1,7 +1,7 @@
 Class {
 	#name : #M6P11C19FullRefereeOutSide,
 	#superclass : #Object,
-	#category : 'Moose-TestResources-KGB-P11FullReferee'
+	#category : #Moose-TestResources-KGB-P11FullReferee
 }
 
 { #category : #Moose-Cook-ModelFamix2-Test-Methods }

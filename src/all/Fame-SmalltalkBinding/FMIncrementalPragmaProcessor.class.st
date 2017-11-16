@@ -6,7 +6,7 @@ Class {
 		'todoOpposite',
 		'todoClass'
 	],
-	#category : 'Fame-SmalltalkBinding'
+	#category : #Fame-SmalltalkBinding
 }
 
 { #category : #private }

@@ -1,7 +1,7 @@
 Class {
 	#name : #DTDExternalEntityResolverTest,
 	#superclass : #TestCase,
-	#category : 'XML-Tests-Parser-DTD'
+	#category : #XML-Tests-Parser-DTD
 }
 
 { #category : #testing }

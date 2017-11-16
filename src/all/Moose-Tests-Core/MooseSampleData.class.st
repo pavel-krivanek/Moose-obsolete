@@ -8,7 +8,7 @@ Class {
 		'moosemodel4',
 		'moosemodel5'
 	],
-	#category : 'Moose-Tests-Core'
+	#category : #Moose-Tests-Core
 }
 
 { #category : #initialization }

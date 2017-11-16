@@ -4,7 +4,7 @@ This is an AST node class for subtraction '-' expressions. Negation expressions 
 Class {
 	#name : #XPathASTSubtractionExpressionNode,
 	#superclass : #XPathASTAdditiveExpressionNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

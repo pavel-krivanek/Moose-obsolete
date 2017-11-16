@@ -6,7 +6,7 @@ Class {
 		'filter',
 		'shouldSkip'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ Abstract, do not run.
 Class {
 	#name : #XMLNodeWithElementsTest,
 	#superclass : #XMLNodeWithChildrenTest,
-	#category : 'XML-Tests-Parser-DOM'
+	#category : #XML-Tests-Parser-DOM
 }
 
 { #category : #asserting }

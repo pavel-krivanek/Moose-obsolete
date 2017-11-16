@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCCharacterSet,
 	#superclass : #SmaCCIntegerSet,
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #adding }

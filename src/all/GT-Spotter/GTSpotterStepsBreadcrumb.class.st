@@ -7,7 +7,7 @@ Class {
 		'band',
 		'animation'
 	],
-	#category : 'GT-Spotter-UI'
+	#category : #GT-Spotter-UI
 }
 
 { #category : #adding/removing }

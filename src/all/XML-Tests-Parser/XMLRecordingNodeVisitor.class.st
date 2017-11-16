@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'messageRecorder'
 	],
-	#category : 'XML-Tests-Parser-DOM'
+	#category : #XML-Tests-Parser-DOM
 }
 
 { #category : #accessing }

@@ -5,7 +5,7 @@ Class {
 		'accessesHistory',
 		'accessedInHistory'
 	],
-	#category : 'Moose-Hismo'
+	#category : #Moose-Hismo
 }
 
 { #category : #'instance creation' }

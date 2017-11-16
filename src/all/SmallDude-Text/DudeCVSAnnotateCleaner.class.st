@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'lineAnnotations'
 	],
-	#category : 'SmallDude-Text'
+	#category : #SmallDude-Text
 }
 
 { #category : #parsing }

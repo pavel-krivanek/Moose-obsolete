@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'draggedShape'
 	],
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }
 
 { #category : #accessing }

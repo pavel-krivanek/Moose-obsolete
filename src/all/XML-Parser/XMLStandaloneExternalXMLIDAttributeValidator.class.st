@@ -4,7 +4,7 @@ This class validates standalone externally defined xml:id ID attributes. It disa
 Class {
 	#name : #XMLStandaloneExternalXMLIDAttributeValidator,
 	#superclass : #XMLXMLIDAttributeValidator,
-	#category : 'XML-Parser-Validation-Standalone'
+	#category : #XML-Parser-Validation-Standalone
 }
 
 { #category : #testing }

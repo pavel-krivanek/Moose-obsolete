@@ -20,7 +20,7 @@ g
 Class {
 	#name : #RTGrapherSelectRangeViewContext,
 	#superclass : #RTAbstractViewContext,
-	#category : 'Roassal2GT-Glamour-Roassal-Interaction'
+	#category : #Roassal2GT-Glamour-Roassal-Interaction
 }
 
 { #category : #public }

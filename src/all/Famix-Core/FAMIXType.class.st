@@ -19,7 +19,7 @@ Class {
 		'structuresWithDeclaredType',
 		'outgoingTraitUsages'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

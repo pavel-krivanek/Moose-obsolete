@@ -10,7 +10,7 @@ Class {
 		'privacyAgreementNotificationBrick',
 		'processorKeyBindings'
 	],
-	#category : 'GT-Spotter-UI'
+	#category : #GT-Spotter-UI
 }
 
 { #category : #actions }

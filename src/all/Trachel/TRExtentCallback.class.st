@@ -6,7 +6,7 @@ I am triggered when the extent (size) of aShape has been changed.
 Class {
 	#name : #TRExtentCallback,
 	#superclass : #TRCallback,
-	#category : 'Trachel-Callbacks'
+	#category : #Trachel-Callbacks
 }
 
 { #category : #testing }

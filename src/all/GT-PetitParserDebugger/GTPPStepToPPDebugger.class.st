@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPStepToPPDebugger,
 	#superclass : #DebugAction,
-	#category : 'GT-PetitParserDebugger'
+	#category : #GT-PetitParserDebugger
 }
 
 { #category : #registration }

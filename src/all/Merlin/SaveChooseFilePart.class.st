@@ -1,7 +1,7 @@
 Class {
 	#name : #SaveChooseFilePart,
 	#superclass : #ChooseFilePart,
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #'*Merlin-Rendering' }

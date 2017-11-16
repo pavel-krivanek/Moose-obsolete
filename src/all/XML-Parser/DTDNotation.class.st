@@ -9,7 +9,7 @@ Class {
 		'publicID',
 		'systemID'
 	],
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #'instance creation' }

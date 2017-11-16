@@ -5,7 +5,7 @@ Class {
 		'node',
 		'rule'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #public }

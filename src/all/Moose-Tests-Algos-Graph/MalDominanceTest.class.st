@@ -5,7 +5,7 @@ Class {
 		'nodes',
 		'dom'
 	],
-	#category : 'Moose-Tests-Algos-Graph'
+	#category : #Moose-Tests-Algos-Graph
 }
 
 { #category : #running }

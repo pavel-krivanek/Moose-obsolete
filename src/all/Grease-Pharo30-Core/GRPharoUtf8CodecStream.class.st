@@ -9,7 +9,7 @@ Class {
 		'Latin1ToUtf8Encodings',
 		'Latin1ToUtf8Map'
 	],
-	#category : 'Grease-Pharo30-Core'
+	#category : #Grease-Pharo30-Core
 }
 
 { #category : #'class initialization' }

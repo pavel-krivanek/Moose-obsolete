@@ -30,7 +30,7 @@ Class {
 		'ifThenEnd',
 		'expressionBlock'
 	],
-	#category : 'PetitIndent-Examples'
+	#category : #PetitIndent-Examples
 }
 
 { #category : #whitespaces }

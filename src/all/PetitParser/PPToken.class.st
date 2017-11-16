@@ -18,7 +18,7 @@ Class {
 	#classVars : [
 		'NewLineParser'
 	],
-	#category : 'PetitParser-Core'
+	#category : #PetitParser-Core
 }
 
 { #category : #initialization }

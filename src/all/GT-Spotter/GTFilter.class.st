@@ -12,7 +12,7 @@ Class {
 		'filteredItems',
 		'streamed'
 	],
-	#category : 'GT-Spotter-Filters'
+	#category : #GT-Spotter-Filters
 }
 
 { #category : #public }

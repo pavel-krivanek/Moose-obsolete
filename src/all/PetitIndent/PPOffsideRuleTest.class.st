@@ -13,7 +13,7 @@ Class {
 		'indent',
 		'dedent'
 	],
-	#category : 'PetitIndent-Tests'
+	#category : #PetitIndent-Tests
 }
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ XPath id() function to select elements from the document of the context node by 
 Class {
 	#name : #XPathIDFunction,
 	#superclass : #XPathFunction,
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #accessing }

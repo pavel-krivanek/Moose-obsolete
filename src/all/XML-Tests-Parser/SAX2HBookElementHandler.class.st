@@ -4,7 +4,7 @@ Handler for the sample <books> <book> element.
 Class {
 	#name : #SAX2HBookElementHandler,
 	#superclass : #SAX2ElementHandler,
-	#category : 'XML-Tests-Parser-ElementHandlers'
+	#category : #XML-Tests-Parser-ElementHandlers
 }
 
 { #category : #'handling - content' }

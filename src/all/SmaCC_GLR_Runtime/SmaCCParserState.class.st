@@ -21,7 +21,7 @@ Class {
 		'scannerState',
 		'attributes'
 	],
-	#category : 'SmaCC_GLR_Runtime'
+	#category : #SmaCC_GLR_Runtime
 }
 
 { #category : #'instance creation' }

@@ -9,7 +9,7 @@ Class {
 		'predicateIterator',
 		'stepIterator'
 	],
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #private }

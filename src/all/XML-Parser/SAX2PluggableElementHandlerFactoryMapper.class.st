@@ -14,7 +14,7 @@ Class {
 		'elementHandlerFactoryMap',
 		'elementHandlerFactory'
 	],
-	#category : 'XML-Parser'
+	#category : #XML-Parser
 }
 
 { #category : #defaults }

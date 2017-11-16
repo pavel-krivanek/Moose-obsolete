@@ -13,7 +13,7 @@ Class {
 		'createSubdirectories',
 		'commonParentDirectory'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #actions-rewrites }

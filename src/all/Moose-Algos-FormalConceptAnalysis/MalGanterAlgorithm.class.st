@@ -6,7 +6,7 @@ Class {
 		'attributesMask',
 		'objectsMask'
 	],
-	#category : 'Moose-Algos-FormalConceptAnalysis'
+	#category : #Moose-Algos-FormalConceptAnalysis
 }
 
 { #category : #'instance creation' }

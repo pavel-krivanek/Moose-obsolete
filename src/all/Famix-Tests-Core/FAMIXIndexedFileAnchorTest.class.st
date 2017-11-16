@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXIndexedFileAnchorTest,
 	#superclass : #FAMIXAbstractFileAnchorTest,
-	#category : 'Famix-Tests-Core'
+	#category : #Famix-Tests-Core
 }
 
 { #category : #helpers }

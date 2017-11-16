@@ -1,7 +1,7 @@
 Class {
 	#name : #RTMondrianFrameTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Builder-Mondrian'
+	#category : #Roassal2-Builder-Mondrian
 }
 
 { #category : #tests }

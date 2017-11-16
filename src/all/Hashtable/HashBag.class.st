@@ -1,7 +1,7 @@
 Class {
 	#name : #HashBag,
 	#superclass : #Bag,
-	#category : 'Hashtable'
+	#category : #Hashtable
 }
 
 { #category : #'instance creation' }

@@ -42,7 +42,7 @@ Class {
 		'hasBeenOpen',
 		'transformationBlock'
 	],
-	#category : 'Merlin-Core'
+	#category : #Merlin-Core
 }
 
 { #category : #accessing }

@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'singelton'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'instance creation' }

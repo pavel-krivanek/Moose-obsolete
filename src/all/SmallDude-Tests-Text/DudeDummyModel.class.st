@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'codeBase'
 	],
-	#category : 'SmallDude-Tests-Text'
+	#category : #SmallDude-Tests-Text
 }
 
 { #category : #'As yet unclassified' }

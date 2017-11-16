@@ -1,7 +1,7 @@
 Class {
 	#name : #VerveineJTestResource,
 	#superclass : #MooseModelTestResource,
-	#category : 'Famix-Tests-Java'
+	#category : #Famix-Tests-Java
 }
 
 { #category : #hook }

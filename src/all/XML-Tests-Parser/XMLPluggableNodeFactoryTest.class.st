@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLPluggableNodeFactoryTest,
 	#superclass : #XMLNodeFactoryTest,
-	#category : 'XML-Tests-Parser-DOM-Factories'
+	#category : #XML-Tests-Parser-DOM-Factories
 }
 
 { #category : #accessing }

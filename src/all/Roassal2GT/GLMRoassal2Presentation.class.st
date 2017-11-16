@@ -34,7 +34,7 @@ Class {
 		'shouldPopulateSelection',
 		'newViewBlock'
 	],
-	#category : 'Roassal2GT-Glamour'
+	#category : #Roassal2GT-Glamour
 }
 
 { #category : #'scripting actions' }

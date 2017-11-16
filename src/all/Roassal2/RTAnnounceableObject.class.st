@@ -15,7 +15,7 @@ Class {
 		'announcer',
 		'attributes'
 	],
-	#category : 'Roassal2-Core'
+	#category : #Roassal2-Core
 }
 
 { #category : #adding }

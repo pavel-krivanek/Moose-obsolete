@@ -11,7 +11,7 @@ Class {
 		'reminderDict',
 		'serialDict'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #private }

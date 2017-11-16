@@ -11,11 +11,11 @@ unzip -o moose-6.1.zip
 
 #./pharo moose-6.1.image ./Moose/scripts/export/installExporter.st --save --quit
 
-mv ./Moose/src/all/BaselineOfMoose.package ./Moose/
-mv ./Moose/src/all/.filetree ./Moose/
+mv ./Moose/src/all/BaselineOfMoose ./Moose/
+mv ./Moose/src/all/.properties ./Moose/
 rm -rf ./Moose/src/all/*
-mv ./Moose/BaselineOfMoose.package ./Moose/src/all/
-mv ./Moose/.filetree ./Moose/src/all
+mv ./Moose/BaselineOfMoose ./Moose/src/all/
+mv ./Moose/.properties ./Moose/src/all
 
 ./pharo moose-6.1.image ./Moose/scripts/export/export.st --quit
 

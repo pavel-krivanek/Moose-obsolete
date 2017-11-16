@@ -8,7 +8,7 @@ Class {
 		'InflectionRules',
 		'Uninflected'
 	],
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #initialization }

@@ -27,7 +27,7 @@ Class {
 		'view',
 		'minSize'
 	],
-	#category : 'Roassal2-Interactions-Resize'
+	#category : #Roassal2-Interactions-Resize
 }
 
 { #category : #example }

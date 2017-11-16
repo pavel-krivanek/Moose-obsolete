@@ -18,7 +18,7 @@ Class {
 		'parent',
 		'attributes'
 	],
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }
 
 { #category : #accessing }

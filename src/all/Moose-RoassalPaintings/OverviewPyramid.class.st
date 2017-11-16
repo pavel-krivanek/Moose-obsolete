@@ -14,7 +14,7 @@ Class {
 		'MoosePyramidResults',
 		'SmalltalkTreesholds'
 	],
-	#category : 'Moose-RoassalPaintings-OverviewPyramid'
+	#category : #Moose-RoassalPaintings-OverviewPyramid
 }
 
 { #category : #accessing }

@@ -10,7 +10,7 @@ Class {
 		'location',
 		'directory'
 	],
-	#category : 'Magritte-Pharo3-Model'
+	#category : #Magritte-Pharo3-Model
 }
 
 { #category : #accessing }

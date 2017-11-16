@@ -60,7 +60,7 @@ Class {
 		'inoutTokens',
 		'subscriptTokens'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

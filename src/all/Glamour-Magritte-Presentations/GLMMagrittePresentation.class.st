@@ -5,7 +5,7 @@ Class {
 		'magritteDescription',
 		'answerBlock'
 	],
-	#category : 'Glamour-Magritte-Presentations'
+	#category : #Glamour-Magritte-Presentations
 }
 
 { #category : #accessing }

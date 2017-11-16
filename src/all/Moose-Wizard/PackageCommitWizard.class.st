@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'packages'
 	],
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #'instance creation' }

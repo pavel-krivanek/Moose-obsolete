@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'entityDependencies'
 	],
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #'private - utilities' }

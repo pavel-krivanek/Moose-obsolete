@@ -1,7 +1,7 @@
 Class {
 	#name : #MalGraphFixtureTest,
 	#superclass : #TestCase,
-	#category : 'Moose-RoassalPaintings-Test'
+	#category : #Moose-RoassalPaintings-Test
 }
 
 { #category : #tests }

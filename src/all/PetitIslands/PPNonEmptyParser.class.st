@@ -4,7 +4,7 @@ I return failure, if the delegate parser did not consumed any input.
 Class {
 	#name : #PPNonEmptyParser,
 	#superclass : #PPDelegateParser,
-	#category : 'PetitIslands-Parsers'
+	#category : #PetitIslands-Parsers
 }
 
 { #category : #'*petitislands' }

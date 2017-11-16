@@ -4,7 +4,7 @@ Handler for the sample <person> element.
 Class {
 	#name : #SAX2HPersonElementHandler,
 	#superclass : #SAX2ElementHandler,
-	#category : 'XML-Tests-Parser-ElementHandlers'
+	#category : #XML-Tests-Parser-ElementHandlers
 }
 
 { #category : #'handling - content' }

@@ -8,7 +8,7 @@ The goal of this abstraction is to provide a home for behavior that is specific 
 Class {
 	#name : #MooseGroup,
 	#superclass : #MooseAbstractGroup,
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'instance creation' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #PPXmlParserTest,
 	#superclass : #PPCompositeParserTest,
-	#category : 'PetitXml-Tests'
+	#category : #PetitXml-Tests
 }
 
 { #category : #accessing }

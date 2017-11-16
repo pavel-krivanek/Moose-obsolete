@@ -13,7 +13,7 @@ Class {
 		'declarations',
 		'rightBraceToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

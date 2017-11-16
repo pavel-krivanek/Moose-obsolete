@@ -17,7 +17,7 @@ Class {
 		'arrayLevel',
 		'initializer'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #comparing }

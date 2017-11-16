@@ -9,7 +9,7 @@ Class {
 		'cachedWidth',
 		'cachedHeight'
 	],
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #configuration }

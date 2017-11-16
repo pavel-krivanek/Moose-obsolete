@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'expressions'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #generated }

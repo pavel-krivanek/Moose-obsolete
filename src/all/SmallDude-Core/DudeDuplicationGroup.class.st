@@ -4,7 +4,7 @@ A Duplication group should store duplications (pairs of identical fragments) tha
 Class {
 	#name : #DudeDuplicationGroup,
 	#superclass : #MooseGroup,
-	#category : 'SmallDude-Core'
+	#category : #SmallDude-Core
 }
 
 { #category : #meta }

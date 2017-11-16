@@ -4,7 +4,7 @@ This class holds a collection of browsers useable on Moose objects.
 Class {
 	#name : #MooseBrowsers,
 	#superclass : #Object,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #famix }

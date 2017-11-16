@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'directoryString'
 	],
-	#category : 'Moose-MonticelloImporter'
+	#category : #Moose-MonticelloImporter
 }
 
 { #category : #'hook - private' }

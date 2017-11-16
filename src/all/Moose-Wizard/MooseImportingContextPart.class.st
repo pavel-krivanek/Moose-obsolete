@@ -24,7 +24,7 @@ Class {
 		'detailContextButton',
 		'contextFrame'
 	],
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #actions }

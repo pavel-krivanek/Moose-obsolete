@@ -27,7 +27,7 @@ v
 Class {
 	#name : #RTMakeEdgeNotUpdatable,
 	#superclass : #RTInteraction,
-	#category : 'Roassal2-Interactions-MorphingView'
+	#category : #Roassal2-Interactions-MorphingView
 }
 
 { #category : #hooks }

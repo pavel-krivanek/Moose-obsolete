@@ -34,7 +34,7 @@ Class {
 		'shouldCreateJS',
 		'maxSizeForString'
 	],
-	#category : 'Roassal2-Exporter-HTML5'
+	#category : #Roassal2-Exporter-HTML5
 }
 
 { #category : #'as yet unclassified' }

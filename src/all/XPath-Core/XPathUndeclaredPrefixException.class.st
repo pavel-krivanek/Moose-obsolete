@@ -4,5 +4,5 @@ Invoked for undeclared namespace prefixes used in name tests (only when one or m
 Class {
 	#name : #XPathUndeclaredPrefixException,
 	#superclass : #XPathException,
-	#category : 'XPath-Core-Exceptions'
+	#category : #XPath-Core-Exceptions
 }

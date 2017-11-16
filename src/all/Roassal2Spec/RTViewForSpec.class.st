@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'lastEvent'
 	],
-	#category : 'Roassal2Spec-Core'
+	#category : #Roassal2Spec-Core
 }
 
 { #category : #adding }

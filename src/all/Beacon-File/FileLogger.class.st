@@ -26,7 +26,7 @@ Class {
 		'stream',
 		'lineSeparator'
 	],
-	#category : 'Beacon-File'
+	#category : #Beacon-File
 }
 
 { #category : #defaults }

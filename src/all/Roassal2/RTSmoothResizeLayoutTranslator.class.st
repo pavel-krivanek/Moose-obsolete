@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'resize'
 	],
-	#category : 'Roassal2-Interactions-MorphingView'
+	#category : #Roassal2-Interactions-MorphingView
 }
 
 { #category : #testing }

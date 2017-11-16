@@ -1,7 +1,7 @@
 Class {
 	#name : #PPXmlResource,
 	#superclass : #PPParserResource,
-	#category : 'PetitXml-Tests'
+	#category : #PetitXml-Tests
 }
 
 { #category : #accessing }

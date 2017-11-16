@@ -6,7 +6,7 @@ Class {
 		'nameToken',
 		'methodName'
 	],
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

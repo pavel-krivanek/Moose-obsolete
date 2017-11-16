@@ -10,7 +10,7 @@ Class {
 		'lastUpdate',
 		'characterSet'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #expressions }

@@ -5,7 +5,7 @@ Class {
 		'isDeclaration',
 		'identifier'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #'instance creation' }

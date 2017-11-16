@@ -6,7 +6,7 @@ self openOn: MooseModel root allModels first allPackages
 Class {
 	#name : #MoosePackagesCodeBrowser,
 	#superclass : #MooseCodeBrowser,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #building }

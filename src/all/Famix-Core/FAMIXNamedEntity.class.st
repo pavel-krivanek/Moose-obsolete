@@ -28,7 +28,7 @@ Class {
 		'allIncomingAssociationTypes',
 		'allOutgoingAssociationTypes'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #accessing }

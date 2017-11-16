@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'labelledInteraction'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #visitor }

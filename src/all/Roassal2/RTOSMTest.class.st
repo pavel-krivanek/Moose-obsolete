@@ -1,7 +1,7 @@
 Class {
 	#name : #RTOSMTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-OpenStreetMap'
+	#category : #Roassal2-OpenStreetMap
 }
 
 { #category : #tests }

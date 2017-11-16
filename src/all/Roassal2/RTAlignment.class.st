@@ -17,7 +17,7 @@ For example, inspect the following:
 Class {
 	#name : #RTAlignment,
 	#superclass : #RTAbstractElementHandling,
-	#category : 'Roassal2-Core'
+	#category : #Roassal2-Core
 }
 
 { #category : #public }

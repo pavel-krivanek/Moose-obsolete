@@ -21,7 +21,7 @@ Class {
 	#classInstVars : [
 		'keywords'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #accessing }

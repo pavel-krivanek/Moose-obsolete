@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLDecodingReadStreamAdapterUTF32LETest,
 	#superclass : #XMLDecodingReadStreamAdapterTest,
-	#category : 'XML-Tests-Parser-Streams'
+	#category : #XML-Tests-Parser-Streams
 }
 
 { #category : #accessing }

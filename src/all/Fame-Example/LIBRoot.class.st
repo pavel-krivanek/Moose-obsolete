@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'tower'
 	],
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #accessing }

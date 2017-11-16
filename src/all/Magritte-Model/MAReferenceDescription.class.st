@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'reference'
 	],
-	#category : 'Magritte-Model-Description'
+	#category : #Magritte-Model-Description
 }
 
 { #category : #accessing-defaults }

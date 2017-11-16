@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'default'
 	],
-	#category : 'Fame-Util'
+	#category : #Fame-Util
 }
 
 { #category : #'instance creation' }

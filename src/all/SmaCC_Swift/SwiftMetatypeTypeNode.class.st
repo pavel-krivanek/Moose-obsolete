@@ -27,7 +27,7 @@ Class {
 		'full_string_literalTokens',
 		'operatorTokens'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

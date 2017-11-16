@@ -12,7 +12,7 @@ Class {
 		'output',
 		'rootClass'
 	],
-	#category : 'PetitGui-Core'
+	#category : #PetitGui-Core
 }
 
 { #category : #browse }

@@ -1,7 +1,7 @@
 Class {
 	#name : #CheckboxPartTest,
 	#superclass : #WizardPartTest,
-	#category : 'Merlin-Tests'
+	#category : #Merlin-Tests
 }
 
 { #category : #'as yet unclassified' }

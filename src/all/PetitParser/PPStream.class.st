@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'newlines'
 	],
-	#category : 'PetitParser-Core'
+	#category : #PetitParser-Core
 }
 
 { #category : #converting }

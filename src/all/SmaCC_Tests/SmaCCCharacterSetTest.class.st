@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCCharacterSetTest,
 	#superclass : #SmaCCBitCollectionTest,
-	#category : 'SmaCC_Tests'
+	#category : #SmaCC_Tests
 }
 
 { #category : #private }

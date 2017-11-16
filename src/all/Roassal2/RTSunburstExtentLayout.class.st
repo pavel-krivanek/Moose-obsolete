@@ -11,7 +11,7 @@ Class {
 		'wside',
 		'roots'
 	],
-	#category : 'Roassal2-Builder-Sunburst'
+	#category : #Roassal2-Builder-Sunburst
 }
 
 { #category : #hook }

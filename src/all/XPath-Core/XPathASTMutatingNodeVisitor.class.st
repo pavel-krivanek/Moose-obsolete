@@ -4,7 +4,7 @@ This class is a rewriting node visitor that can replace any node in the tree wit
 Class {
 	#name : #XPathASTMutatingNodeVisitor,
 	#superclass : #XPathASTNodeVisitor,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #'visiting - location paths' }

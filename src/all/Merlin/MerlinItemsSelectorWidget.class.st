@@ -10,7 +10,7 @@ Class {
 		'textFieldMorph',
 		'validateButtonMorph'
 	],
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #'accessing - morphs' }

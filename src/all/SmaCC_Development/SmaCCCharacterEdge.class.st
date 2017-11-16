@@ -5,7 +5,7 @@ SmaCCCharacterEdge is a SmaCCEdge for Characters.
 Class {
 	#name : #SmaCCCharacterEdge,
 	#superclass : #SmaCCEdge,
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #comparing }

@@ -7,7 +7,7 @@ Class {
 		'referenceModelSubRootLevelOneName',
 		'testRunnerName'
 	],
-	#category : 'Moose-Tests-SmalltalkImporter-Core'
+	#category : #Moose-Tests-SmalltalkImporter-Core
 }
 
 { #category : #resources }

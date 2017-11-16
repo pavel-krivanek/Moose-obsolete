@@ -4,7 +4,7 @@ This class validates attributes with lists of Nmtoken name values separated by s
 Class {
 	#name : #XMLNmtokensAttributeValidator,
 	#superclass : #XMLNmtokenAttributeValidator,
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #defaults }

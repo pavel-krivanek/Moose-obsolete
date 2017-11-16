@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseImportFromMseWizard,
 	#superclass : #WizardControl,
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #example }

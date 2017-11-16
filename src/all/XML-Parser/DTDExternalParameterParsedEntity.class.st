@@ -4,7 +4,7 @@ This is a class for external parameter parsed entities with external replacement
 Class {
 	#name : #DTDExternalParameterParsedEntity,
 	#superclass : #DTDExternalParsedEntity,
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #testing }

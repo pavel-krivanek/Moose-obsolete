@@ -1,7 +1,7 @@
 Class {
 	#name : #RTMethodAgeTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-MorphSpecific'
+	#category : #Roassal2-MorphSpecific
 }
 
 { #category : #tests }

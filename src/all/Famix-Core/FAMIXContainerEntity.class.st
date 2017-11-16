@@ -10,7 +10,7 @@ Class {
 		'types',
 		'functions'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

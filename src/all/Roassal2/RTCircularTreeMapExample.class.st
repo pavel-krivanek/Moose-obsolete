@@ -24,7 +24,7 @@ b build.
 Class {
 	#name : #RTCircularTreeMapExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-Builder-CircularMap'
+	#category : #Roassal2-Builder-CircularMap
 }
 
 { #category : #sources }

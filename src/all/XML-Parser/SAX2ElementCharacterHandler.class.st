@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'characters'
 	],
-	#category : 'XML-Parser'
+	#category : #XML-Parser
 }
 
 { #category : #accessing }

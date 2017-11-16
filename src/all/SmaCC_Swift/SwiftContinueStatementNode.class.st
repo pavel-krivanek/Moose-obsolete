@@ -5,7 +5,7 @@ Class {
 		'continueToken',
 		'name'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

@@ -1,7 +1,7 @@
 Class {
 	#name : #RTGrapherScatterplotExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-Builder-Grapher-Examples'
+	#category : #Roassal2-Builder-Grapher-Examples
 }
 
 { #category : #sources }

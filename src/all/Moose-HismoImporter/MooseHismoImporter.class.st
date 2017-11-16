@@ -10,7 +10,7 @@ Class {
 		'datePattern',
 		'importingContext'
 	],
-	#category : 'Moose-HismoImporter'
+	#category : #Moose-HismoImporter
 }
 
 { #category : #'as yet unclassified' }

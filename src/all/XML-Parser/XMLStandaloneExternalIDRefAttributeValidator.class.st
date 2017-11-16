@@ -4,7 +4,7 @@ This class validates standalone externally defined attributes that refer to an I
 Class {
 	#name : #XMLStandaloneExternalIDRefAttributeValidator,
 	#superclass : #XMLIDRefAttributeValidator,
-	#category : 'XML-Parser-Validation-Standalone'
+	#category : #XML-Parser-Validation-Standalone
 }
 
 { #category : #testing }

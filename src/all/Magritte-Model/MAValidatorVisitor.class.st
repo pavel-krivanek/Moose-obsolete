@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'object'
 	],
-	#category : 'Magritte-Model-Visitor'
+	#category : #Magritte-Model-Visitor
 }
 
 { #category : #'instance creation' }

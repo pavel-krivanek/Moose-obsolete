@@ -1,7 +1,7 @@
 Class {
 	#name : #MPImportHismoCommand,
 	#superclass : #MPImportCommand,
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #hooks }

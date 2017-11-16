@@ -7,7 +7,7 @@ Class {
 		'listHeight',
 		'listWidth'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #accessing }

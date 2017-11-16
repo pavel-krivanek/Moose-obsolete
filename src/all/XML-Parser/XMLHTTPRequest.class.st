@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'url'
 	],
-	#category : 'XML-Parser-HTTP'
+	#category : #XML-Parser-HTTP
 }
 
 { #category : #finding }

@@ -13,7 +13,7 @@ Class {
 		'buffer',
 		'identifier'
 	],
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #parsing }

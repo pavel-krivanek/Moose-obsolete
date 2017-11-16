@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'streamConverter'
 	],
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ An OverviewPyramidTest is a test class for testing the behavior of OverviewPyram
 Class {
 	#name : #OverviewPyramidTest,
 	#superclass : #TestCase,
-	#category : 'Moose-Tests-RoassalPaintings-OverviewPyramid'
+	#category : #Moose-Tests-RoassalPaintings-OverviewPyramid
 }
 
 { #category : #tests }

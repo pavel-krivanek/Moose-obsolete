@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'values'
 	],
-	#category : 'Famix-Java'
+	#category : #Famix-Java
 }
 
 { #category : #initialize-release }

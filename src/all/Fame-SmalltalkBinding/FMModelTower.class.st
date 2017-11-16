@@ -5,7 +5,7 @@ Class {
 		'model',
 		'delegate'
 	],
-	#category : 'Fame-SmalltalkBinding'
+	#category : #Fame-SmalltalkBinding
 }
 
 { #category : #'as yet unclassified' }

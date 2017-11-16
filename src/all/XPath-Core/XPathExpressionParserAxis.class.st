@@ -15,7 +15,7 @@ Class {
 	#classVars : [
 		'AxisSpecifiers'
 	],
-	#category : 'XPath-Core-Parsers'
+	#category : #XPath-Core-Parsers
 }
 
 { #category : #private }

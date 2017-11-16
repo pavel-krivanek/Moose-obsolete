@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'repository'
 	],
-	#category : 'Moose-Tests-Algos-HierarchicalGraph'
+	#category : #Moose-Tests-Algos-HierarchicalGraph
 }
 
 { #category : #util }

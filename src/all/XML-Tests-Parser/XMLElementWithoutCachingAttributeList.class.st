@@ -4,7 +4,7 @@ A class for testing elements that use XMLAttributeList instead of XMLCachingAttr
 Class {
 	#name : #XMLElementWithoutCachingAttributeList,
 	#superclass : #XMLElement,
-	#category : 'XML-Tests-Parser-DOM'
+	#category : #XML-Tests-Parser-DOM
 }
 
 { #category : #defaults }

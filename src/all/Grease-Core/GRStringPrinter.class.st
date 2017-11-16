@@ -7,7 +7,7 @@ Class {
 		'pad',
 		'character'
 	],
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #accessing }

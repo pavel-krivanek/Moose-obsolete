@@ -16,7 +16,7 @@ The PPEndOfFileParser can be used to accept some input only if it is at the end 
 Class {
 	#name : #PPEndOfFileParser,
 	#superclass : #PPParser,
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #parsing }

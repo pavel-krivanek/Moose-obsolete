@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'converter'
 	],
-	#category : 'Beacon-Syslog'
+	#category : #Beacon-Syslog
 }
 
 { #category : #accessing }

@@ -10,7 +10,7 @@ Class {
 		'returnSuffixAndPrefix',
 		'horizontalSize'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #'instance creation' }

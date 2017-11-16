@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'next'
 	],
-	#category : 'Moose-Algos-InformationRetrieval'
+	#category : #Moose-Algos-InformationRetrieval
 }
 
 { #category : #example }

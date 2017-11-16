@@ -4,7 +4,7 @@ A parser that accepts a single literal object, such as a character. This is the 
 Class {
 	#name : #PPLiteralObjectParser,
 	#superclass : #PPLiteralParser,
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #operators }

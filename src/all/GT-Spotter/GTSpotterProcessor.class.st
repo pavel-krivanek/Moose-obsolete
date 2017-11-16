@@ -8,7 +8,7 @@ Class {
 		'allFilteredCandidates',
 		'order'
 	],
-	#category : 'GT-Spotter-Processors'
+	#category : #GT-Spotter-Processors
 }
 
 { #category : #public }

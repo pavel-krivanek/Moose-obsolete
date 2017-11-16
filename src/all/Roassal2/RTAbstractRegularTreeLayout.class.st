@@ -36,7 +36,7 @@ Class {
 		'shouldBeHorizontallyReversed',
 		'shouldBeVerticallyReversed'
 	],
-	#category : 'Roassal2-Layouts'
+	#category : #Roassal2-Layouts
 }
 
 { #category : #testing }

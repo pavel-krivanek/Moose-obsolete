@@ -4,7 +4,7 @@ This class validates standalone externally defined Nmtoken name attributes. It d
 Class {
 	#name : #XMLStandaloneExternalNmtokenAttributeValidator,
 	#superclass : #XMLNmtokenAttributeValidator,
-	#category : 'XML-Parser-Validation-Standalone'
+	#category : #XML-Parser-Validation-Standalone
 }
 
 { #category : #testing }

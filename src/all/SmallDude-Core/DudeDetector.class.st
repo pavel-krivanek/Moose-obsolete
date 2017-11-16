@@ -8,7 +8,7 @@ Class {
 		'fragments',
 		'mooseModel'
 	],
-	#category : 'SmallDude-Core'
+	#category : #SmallDude-Core
 }
 
 { #category : #initialize-release }

@@ -5,7 +5,7 @@ Class {
 		'_leftParens',
 		'_rightParens'
 	],
-	#category : 'SmaCC_CSharp'
+	#category : #SmaCC_CSharp
 }
 
 { #category : #generated }

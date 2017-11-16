@@ -2,7 +2,7 @@ Class {
 	#name : #MooseGroupStorage,
 	#superclass : #Collection,
 	#type : #variable,
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'instance creation' }

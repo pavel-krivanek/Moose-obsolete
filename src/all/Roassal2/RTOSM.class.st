@@ -13,7 +13,7 @@ Class {
 		'ratio',
 		'onload'
 	],
-	#category : 'Roassal2-OpenStreetMap'
+	#category : #Roassal2-OpenStreetMap
 }
 
 { #category : #resources }

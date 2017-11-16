@@ -5,7 +5,7 @@ Class {
 		'keeper',
 		'owner'
 	],
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #initialize-release }

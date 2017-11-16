@@ -7,7 +7,7 @@ Class {
 		'entity',
 		'fragmentLength'
 	],
-	#category : 'SmallDude-Core'
+	#category : #SmallDude-Core
 }
 
 { #category : #'instance creation' }

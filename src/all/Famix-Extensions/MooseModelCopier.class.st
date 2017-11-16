@@ -5,7 +5,7 @@ Class {
 		'model',
 		'table'
 	],
-	#category : 'Famix-Extensions'
+	#category : #Famix-Extensions
 }
 
 { #category : #running }

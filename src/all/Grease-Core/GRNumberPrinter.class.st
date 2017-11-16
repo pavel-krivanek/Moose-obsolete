@@ -31,7 +31,7 @@ Class {
 		'NumbersToCharactersLowercase',
 		'NumbersToCharactersUppercase'
 	],
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #initialization }

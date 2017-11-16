@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLCharacterMethodsTest,
 	#superclass : #TestCase,
-	#category : 'XML-Tests-Parser'
+	#category : #XML-Tests-Parser
 }
 
 { #category : #accessing }

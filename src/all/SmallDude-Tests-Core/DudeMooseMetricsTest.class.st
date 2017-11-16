@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeMooseMetricsTest,
 	#superclass : #MooseFileStructureImporterTest,
-	#category : 'SmallDude-Tests-Core'
+	#category : #SmallDude-Tests-Core
 }
 
 { #category : #setUp }

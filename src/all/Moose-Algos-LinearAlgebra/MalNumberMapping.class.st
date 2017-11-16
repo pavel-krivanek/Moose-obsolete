@@ -8,7 +8,7 @@ Class {
 		'back',
 		'forth'
 	],
-	#category : 'Moose-Algos-LinearAlgebra'
+	#category : #Moose-Algos-LinearAlgebra
 }
 
 { #category : #'instance creation' }

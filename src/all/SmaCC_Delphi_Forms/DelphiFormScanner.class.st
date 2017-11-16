@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiFormScanner,
 	#superclass : #SmaCCScanner,
-	#category : 'SmaCC_Delphi_Forms'
+	#category : #SmaCC_Delphi_Forms
 }
 
 { #category : #generated-initialization }

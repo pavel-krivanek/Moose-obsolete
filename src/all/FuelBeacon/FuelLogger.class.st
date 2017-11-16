@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'directory'
 	],
-	#category : 'FuelBeacon-Core'
+	#category : #FuelBeacon-Core
 }
 
 { #category : #'instance creation' }

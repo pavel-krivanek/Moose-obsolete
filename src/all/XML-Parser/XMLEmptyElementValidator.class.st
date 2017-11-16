@@ -4,7 +4,7 @@ This class validates EMPTY elements, which can't contain elements, PCDATA, or ev
 Class {
 	#name : #XMLEmptyElementValidator,
 	#superclass : #XMLElementValidator,
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #testing }

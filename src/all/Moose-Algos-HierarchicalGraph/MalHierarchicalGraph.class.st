@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'levels'
 	],
-	#category : 'Moose-Algos-HierarchicalGraph'
+	#category : #Moose-Algos-HierarchicalGraph
 }
 
 { #category : #creation }

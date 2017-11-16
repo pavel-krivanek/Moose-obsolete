@@ -5,7 +5,7 @@ Class {
 		'parent',
 		'properties'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #changing }

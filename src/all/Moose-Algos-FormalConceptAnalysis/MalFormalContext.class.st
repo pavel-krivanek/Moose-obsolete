@@ -9,7 +9,7 @@ Class {
 		'fattributes',
 		'concepts'
 	],
-	#category : 'Moose-Algos-FormalConceptAnalysis'
+	#category : #Moose-Algos-FormalConceptAnalysis
 }
 
 { #category : #examples }

@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'uniqueInstance'
 	],
-	#category : 'GT-Window-EventRecorder-Base'
+	#category : #GT-Window-EventRecorder-Base
 }
 
 { #category : #cleanup }

@@ -9,7 +9,7 @@ Class {
 		'objects',
 		'last'
 	],
-	#category : 'Roassal2-Experimental'
+	#category : #Roassal2-Experimental
 }
 
 { #category : #private }

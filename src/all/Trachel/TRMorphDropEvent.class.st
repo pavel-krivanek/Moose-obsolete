@@ -5,7 +5,7 @@ Class {
 		'droppedMorph',
 		'dropMorphEvent'
 	],
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }
 
 { #category : #accessing }

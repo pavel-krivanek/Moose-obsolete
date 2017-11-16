@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'vector'
 	],
-	#category : 'Moose-Algos-LinearAlgebra'
+	#category : #Moose-Algos-LinearAlgebra
 }
 
 { #category : #'instance creation' }

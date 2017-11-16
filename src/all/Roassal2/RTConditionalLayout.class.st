@@ -7,7 +7,7 @@ Class {
 		'elseLayout',
 		'overallLayout'
 	],
-	#category : 'Roassal2-Layouts'
+	#category : #Roassal2-Layouts
 }
 
 { #category : #accessing }

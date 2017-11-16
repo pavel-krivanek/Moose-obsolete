@@ -4,5 +4,5 @@ A class to store a nested internal stream for XMLNestedStreamReader. It reports 
 Class {
 	#name : #XMLPushedBackInternalStream,
 	#superclass : #XMLPushedBackStream,
-	#category : 'XML-Parser-Drivers'
+	#category : #XML-Parser-Drivers
 }

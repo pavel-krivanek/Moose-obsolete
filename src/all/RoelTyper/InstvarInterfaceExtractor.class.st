@@ -26,7 +26,7 @@ Class {
 		'blockTraversal',
 		'blockArgs'
 	],
-	#category : 'RoelTyper-Core'
+	#category : #RoelTyper-Core
 }
 
 { #category : #private }

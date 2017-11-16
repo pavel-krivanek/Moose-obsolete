@@ -16,7 +16,7 @@ Class {
 		'implicitVariables',
 		'annotationTypes'
 	],
-	#category : 'Moose-SmalltalkImporter'
+	#category : #Moose-SmalltalkImporter
 }
 
 { #category : #constant }

@@ -4,7 +4,7 @@ A RTConditionalLayoutTest is a test class for testing the behavior of RTConditio
 Class {
 	#name : #RTConditionalLayoutTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Layouts-Tests'
+	#category : #Roassal2-Layouts-Tests
 }
 
 { #category : #tests }

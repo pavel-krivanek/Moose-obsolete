@@ -5,7 +5,7 @@ Class {
 		'contents',
 		'option'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #accessing }

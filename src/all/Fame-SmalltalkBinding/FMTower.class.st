@@ -1,7 +1,7 @@
 Class {
 	#name : #FMTower,
 	#superclass : #Object,
-	#category : 'Fame-SmalltalkBinding'
+	#category : #Fame-SmalltalkBinding
 }
 
 { #category : #'instance creation' }

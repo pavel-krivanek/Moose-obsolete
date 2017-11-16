@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiProgramParser,
 	#superclass : #DelphiParser,
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #'file types' }

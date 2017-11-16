@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'presentation'
 	],
-	#category : 'Roassal2GT-Glamour-Roassal-Interaction'
+	#category : #Roassal2GT-Glamour-Roassal-Interaction
 }
 
 { #category : #accessing }

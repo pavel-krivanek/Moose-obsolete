@@ -1,5 +1,5 @@
 Class {
 	#name : #TRMouseDoubleRightClick,
 	#superclass : #TRMouseDoubleClick,
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }

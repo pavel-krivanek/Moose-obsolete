@@ -1,7 +1,7 @@
 Class {
 	#name : #DynamixReferenceTest,
 	#superclass : #TestCase,
-	#category : 'Dynamix-Tests-Core'
+	#category : #Dynamix-Tests-Core
 }
 
 { #category : #tests }

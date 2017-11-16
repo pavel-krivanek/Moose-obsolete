@@ -4,7 +4,7 @@ This is an exception that is explicitly handled by a method. For example, in Jav
 Class {
 	#name : #FAMIXCaughtException,
 	#superclass : #FAMIXException,
-	#category : 'Famix-Java'
+	#category : #Famix-Java
 }
 
 { #category : #initialize-release }

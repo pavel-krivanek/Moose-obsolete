@@ -38,7 +38,7 @@ Class {
 		'finalActionBlock',
 		'renderer'
 	],
-	#category : 'Merlin-Core'
+	#category : #Merlin-Core
 }
 
 { #category : #'addition / removal' }

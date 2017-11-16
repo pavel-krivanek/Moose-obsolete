@@ -6,7 +6,7 @@ Class {
 		'leftBracket',
 		'rightBracket'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

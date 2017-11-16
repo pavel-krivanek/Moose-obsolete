@@ -1,7 +1,7 @@
 Class {
 	#name : #M2P4C9FullRefereeInSide,
 	#superclass : #Object,
-	#category : 'Moose-TestResources-KGB-P4FullInteracted'
+	#category : #Moose-TestResources-KGB-P4FullInteracted
 }
 
 { #category : #Moose-Cook-ModelFamix2-Test-Methods }

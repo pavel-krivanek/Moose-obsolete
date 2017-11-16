@@ -6,7 +6,7 @@ Class {
 		'view',
 		'exporter'
 	],
-	#category : 'Roassal2-Exporter-PNG'
+	#category : #Roassal2-Exporter-PNG
 }
 
 { #category : #running }

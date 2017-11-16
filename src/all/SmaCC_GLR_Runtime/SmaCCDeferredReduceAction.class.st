@@ -12,7 +12,7 @@ Class {
 		'selector',
 		'arguments'
 	],
-	#category : 'SmaCC_GLR_Runtime'
+	#category : #SmaCC_GLR_Runtime
 }
 
 { #category : #'instance creation' }

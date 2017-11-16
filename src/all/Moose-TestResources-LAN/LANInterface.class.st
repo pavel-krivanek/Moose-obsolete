@@ -26,7 +26,7 @@ Class {
 		'originator',
 		'addressee'
 	],
-	#category : 'Moose-TestResources-LAN'
+	#category : #Moose-TestResources-LAN
 }
 
 { #category : #'interface specs' }

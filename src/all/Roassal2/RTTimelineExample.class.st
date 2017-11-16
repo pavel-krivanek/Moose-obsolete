@@ -23,7 +23,7 @@ b build.
 Class {
 	#name : #RTTimelineExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-Builder-Timeline'
+	#category : #Roassal2-Builder-Timeline
 }
 
 { #category : #sources }

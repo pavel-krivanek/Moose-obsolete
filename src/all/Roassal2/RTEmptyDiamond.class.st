@@ -1,7 +1,7 @@
 Class {
 	#name : #RTEmptyDiamond,
 	#superclass : #RTAbstractDiamond,
-	#category : 'Roassal2-LineDecorations'
+	#category : #Roassal2-LineDecorations
 }
 
 { #category : #hooks }

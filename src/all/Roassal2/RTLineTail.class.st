@@ -4,7 +4,7 @@ A DCRTLineTail is a handler of tail of a line
 Class {
 	#name : #RTLineTail,
 	#superclass : #RTExtremityLineDecoration,
-	#category : 'Roassal2-LineDecorations'
+	#category : #Roassal2-LineDecorations
 }
 
 { #category : #converting }

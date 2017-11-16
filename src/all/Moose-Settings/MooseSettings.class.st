@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseSettings,
 	#superclass : #Object,
-	#category : 'Moose-Settings'
+	#category : #Moose-Settings
 }
 
 { #category : #settings }

@@ -7,7 +7,7 @@ Class {
 		'referenceModel',
 		'mooseModel'
 	],
-	#category : 'SmallDude-Tests-Text'
+	#category : #SmallDude-Tests-Text
 }
 
 { #category : #initialize-release }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'treeInitializer'
 	],
-	#category : 'SmaCC_Rewrite_Engine_UI'
+	#category : #SmaCC_Rewrite_Engine_UI
 }
 
 { #category : #private }

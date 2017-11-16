@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'prefixMappings'
 	],
-	#category : 'XML-Parser-Namespaces'
+	#category : #XML-Parser-Namespaces
 }
 
 { #category : #defaults }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'window'
 	],
-	#category : 'Moose-Tests-DistributionMap'
+	#category : #Moose-Tests-DistributionMap
 }
 
 { #category : #running }

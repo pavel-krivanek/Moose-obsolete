@@ -19,7 +19,7 @@ Class {
 		'stamps',
 		'parsers'
 	],
-	#category : 'PetitGui-Core'
+	#category : #PetitGui-Core
 }
 
 { #category : #converting }

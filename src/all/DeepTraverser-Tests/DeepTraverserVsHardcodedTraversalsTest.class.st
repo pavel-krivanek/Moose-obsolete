@@ -1,7 +1,7 @@
 Class {
 	#name : #DeepTraverserVsHardcodedTraversalsTest,
 	#superclass : #TestCase,
-	#category : 'DeepTraverser-Tests-Transformed-To-Examples'
+	#category : #DeepTraverser-Tests-Transformed-To-Examples
 }
 
 { #category : #testing }

@@ -5,7 +5,7 @@ Class {
 		'fuelBeacon',
 		'directory'
 	],
-	#category : 'FuelBeacon-Tests'
+	#category : #FuelBeacon-Tests
 }
 
 { #category : #'own services' }

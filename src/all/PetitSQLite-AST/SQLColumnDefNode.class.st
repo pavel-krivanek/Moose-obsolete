@@ -5,7 +5,7 @@ Class {
 		'type',
 		'constraints'
 	],
-	#category : 'PetitSQLite-AST'
+	#category : #PetitSQLite-AST
 }
 
 { #category : #accessing }

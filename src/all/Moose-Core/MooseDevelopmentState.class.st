@@ -12,7 +12,7 @@ Class {
 		'propertyCache',
 		'queryCache'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'accessing properties' }

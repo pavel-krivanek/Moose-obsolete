@@ -16,7 +16,7 @@ Class {
 		'yScale',
 		'label'
 	],
-	#category : 'Roassal2-Builder-Grapher-Core'
+	#category : #Roassal2-Builder-Grapher-Core
 }
 
 { #category : #adding }

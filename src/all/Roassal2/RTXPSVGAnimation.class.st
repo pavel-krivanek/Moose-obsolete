@@ -9,7 +9,7 @@ Class {
 		'curves1',
 		'animatedValue'
 	],
-	#category : 'Roassal2-Experimental'
+	#category : #Roassal2-Experimental
 }
 
 { #category : #public }

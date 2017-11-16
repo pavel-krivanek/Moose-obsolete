@@ -4,7 +4,7 @@ An abstract class for UTF-16 stream converters.
 Class {
 	#name : #XMLUTF16StreamConverter,
 	#superclass : #XMLUTFStreamConverter,
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #testing }

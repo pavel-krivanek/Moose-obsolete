@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'index'
 	],
-	#category : 'PetitXPath-Nodes'
+	#category : #PetitXPath-Nodes
 }
 
 { #category : #'instance creation' }

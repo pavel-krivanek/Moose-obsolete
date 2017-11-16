@@ -10,7 +10,7 @@ Class {
 		'macro',
 		'negated'
 	],
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #'as yet unclassified' }

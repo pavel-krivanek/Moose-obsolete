@@ -12,7 +12,7 @@ Class {
 		'startObject',
 		'expectedSize'
 	],
-	#category : 'DeepTraverser'
+	#category : #DeepTraverser
 }
 
 { #category : #'*DeepTraverser-UI' }

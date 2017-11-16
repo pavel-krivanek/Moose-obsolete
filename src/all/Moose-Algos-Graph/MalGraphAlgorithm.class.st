@@ -12,7 +12,7 @@ Class {
 		'edges',
 		'nodeSortBlock'
 	],
-	#category : 'Moose-Algos-Graph'
+	#category : #Moose-Algos-Graph
 }
 
 { #category : #private }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'textField'
 	],
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #'accessing - wizard management' }

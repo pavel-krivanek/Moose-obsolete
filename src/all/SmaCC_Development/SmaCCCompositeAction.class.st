@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'actions'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #accessing-actions }

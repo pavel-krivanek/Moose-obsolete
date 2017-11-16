@@ -12,7 +12,7 @@ v
 Class {
 	#name : #RTSelectionExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-Selection'
+	#category : #Roassal2-Selection
 }
 
 { #category : #sources }

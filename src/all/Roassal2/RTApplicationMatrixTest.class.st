@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'b'
 	],
-	#category : 'Roassal2-Builder-ApplicationMatrix'
+	#category : #Roassal2-Builder-ApplicationMatrix
 }
 
 { #category : #running }

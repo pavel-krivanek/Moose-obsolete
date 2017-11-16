@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'stream'
 	],
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #'instance creation' }

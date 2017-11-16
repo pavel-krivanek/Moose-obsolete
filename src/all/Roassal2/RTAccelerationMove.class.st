@@ -1,7 +1,7 @@
 Class {
 	#name : #RTAccelerationMove,
 	#superclass : #RTLinearMove,
-	#category : 'Roassal2-Animation'
+	#category : #Roassal2-Animation
 }
 
 { #category : #public }

@@ -7,7 +7,7 @@ Class {
 		'children',
 		'level'
 	],
-	#category : 'Moose-Tests-Algos-HierarchicalGraph'
+	#category : #Moose-Tests-Algos-HierarchicalGraph
 }
 
 { #category : #accessing }

@@ -6,7 +6,7 @@ Class {
 		'local',
 		'uri'
 	],
-	#category : 'PetitXml-Nodes'
+	#category : #PetitXml-Nodes
 }
 
 { #category : #'instance creation' }

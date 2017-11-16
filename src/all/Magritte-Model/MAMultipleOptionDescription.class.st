@@ -4,7 +4,7 @@ I am a description of multiple options, possible options are stored within the =
 Class {
 	#name : #MAMultipleOptionDescription,
 	#superclass : #MAOptionDescription,
-	#category : 'Magritte-Model-Description'
+	#category : #Magritte-Model-Description
 }
 
 { #category : #accessing-defaults }

@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLUTF32BigEndianStreamConverterTest,
 	#superclass : #XMLStreamConverterTest,
-	#category : 'XML-Tests-Parser-Streams'
+	#category : #XML-Tests-Parser-Streams
 }
 
 { #category : #testing }

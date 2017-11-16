@@ -4,7 +4,7 @@ This is a document sort order for node sets where all nodes are at the same leve
 Class {
 	#name : #XPathLevelDocumentSortOrder,
 	#superclass : #XPathDocumentSortOrder,
-	#category : 'XPath-Core-DOM'
+	#category : #XPath-Core-DOM
 }
 
 { #category : #converting }

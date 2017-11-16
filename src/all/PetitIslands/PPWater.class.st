@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'waterToken'
 	],
-	#category : 'PetitIslands-Parsers'
+	#category : #PetitIslands-Parsers
 }
 
 { #category : #'as yet unclassified' }

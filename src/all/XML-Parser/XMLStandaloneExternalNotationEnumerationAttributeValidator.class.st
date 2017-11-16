@@ -4,7 +4,7 @@ This class validates attributes that can have NOTATION names from a list as valu
 Class {
 	#name : #XMLStandaloneExternalNotationEnumerationAttributeValidator,
 	#superclass : #XMLNotationEnumerationAttributeValidator,
-	#category : 'XML-Parser-Validation-Standalone'
+	#category : #XML-Parser-Validation-Standalone
 }
 
 { #category : #testing }

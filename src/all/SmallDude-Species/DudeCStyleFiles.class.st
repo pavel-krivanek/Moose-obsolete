@@ -4,7 +4,7 @@ This class tells the detector that we are analyzing C-style source code (this in
 Class {
 	#name : #DudeCStyleFiles,
 	#superclass : #DudeTextFiles,
-	#category : 'SmallDude-Species'
+	#category : #SmallDude-Species
 }
 
 { #category : #parsing }

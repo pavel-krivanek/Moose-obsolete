@@ -27,7 +27,7 @@ Class {
 		'labelYTextConvertion',
 		'color'
 	],
-	#category : 'Roassal2-Builder-Grapher-Decorators'
+	#category : #Roassal2-Builder-Grapher-Decorators
 }
 
 { #category : #accessing }

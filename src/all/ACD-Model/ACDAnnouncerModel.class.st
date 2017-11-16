@@ -18,7 +18,7 @@ Class {
 		'executingSubscriptionIndex',
 		'activeSubscriptions'
 	],
-	#category : 'ACD-Model'
+	#category : #ACD-Model
 }
 
 { #category : #'instance creation' }

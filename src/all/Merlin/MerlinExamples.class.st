@@ -1,7 +1,7 @@
 Class {
 	#name : #MerlinExamples,
 	#superclass : #Object,
-	#category : 'Merlin-Examples'
+	#category : #Merlin-Examples
 }
 
 { #category : #'basic morphic examples' }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'nextComponent'
 	],
-	#category : 'SmallDude-Text'
+	#category : #SmallDude-Text
 }
 
 { #category : #'instance creation' }

@@ -35,7 +35,7 @@ Class {
 		'inToken',
 		'block'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

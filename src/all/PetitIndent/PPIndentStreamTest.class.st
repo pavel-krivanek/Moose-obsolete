@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'aStream'
 	],
-	#category : 'PetitIndent-Tests'
+	#category : #PetitIndent-Tests
 }
 
 { #category : #asserting }

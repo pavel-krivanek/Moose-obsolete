@@ -1,7 +1,7 @@
 Class {
 	#name : #SQLASTConcreteVisitor,
 	#superclass : #SQLASTAbstractVisitor,
-	#category : 'PetitSQLite-AST'
+	#category : #PetitSQLite-AST
 }
 
 { #category : #'as yet unclassified' }

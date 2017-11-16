@@ -6,7 +6,7 @@ Class {
 		'lineno',
 		'entity'
 	],
-	#category : 'SmallDude-Core'
+	#category : #SmallDude-Core
 }
 
 { #category : #initialize-release }

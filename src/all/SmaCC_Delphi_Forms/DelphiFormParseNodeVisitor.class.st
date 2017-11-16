@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiFormParseNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : 'SmaCC_Delphi_Forms'
+	#category : #SmaCC_Delphi_Forms
 }
 
 { #category : #generated }

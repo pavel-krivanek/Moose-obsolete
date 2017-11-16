@@ -11,7 +11,7 @@ Class {
 		'cost',
 		'distanceBlock'
 	],
-	#category : 'Moose-Algos-Clustering'
+	#category : #Moose-Algos-Clustering
 }
 
 { #category : #accessing }

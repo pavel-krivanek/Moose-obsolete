@@ -1,7 +1,7 @@
 Class {
 	#name : #GTGlamourDebuggingStone,
 	#superclass : #GTDebuggingStone,
-	#category : 'GT-GlamourDebugger'
+	#category : #GT-GlamourDebugger
 }
 
 { #category : #private }

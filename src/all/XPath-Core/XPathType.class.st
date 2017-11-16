@@ -9,7 +9,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'XPath-Core-Types'
+	#category : #XPath-Core-Types
 }
 
 { #category : #accessing }

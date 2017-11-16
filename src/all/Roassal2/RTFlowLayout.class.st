@@ -5,7 +5,7 @@ A RTFlowLayout arrange elements in a rectangle including space (gapSize) between
 Class {
 	#name : #RTFlowLayout,
 	#superclass : #RTAbstractFlowLayout,
-	#category : 'Roassal2-Layouts'
+	#category : #Roassal2-Layouts
 }
 
 { #category : #hook }

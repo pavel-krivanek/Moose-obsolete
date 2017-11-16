@@ -7,7 +7,7 @@ The opposite of me is TRAddedCallback.
 Class {
 	#name : #TRRemoveCallback,
 	#superclass : #TRCallback,
-	#category : 'Trachel-Callbacks'
+	#category : #Trachel-Callbacks
 }
 
 { #category : #testing }

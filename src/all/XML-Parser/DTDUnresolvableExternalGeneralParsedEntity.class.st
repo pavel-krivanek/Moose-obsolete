@@ -4,5 +4,5 @@ This is a class for unresolvable external general parsed entities that lazily ra
 Class {
 	#name : #DTDUnresolvableExternalGeneralParsedEntity,
 	#superclass : #DTDUnresolvableExternalParsedEntity,
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }

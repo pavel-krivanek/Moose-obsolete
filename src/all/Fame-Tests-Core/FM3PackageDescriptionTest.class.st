@@ -4,5 +4,5 @@ Class {
 	#instVars : [
 		'tower'
 	],
-	#category : 'Fame-Tests-Core'
+	#category : #Fame-Tests-Core
 }

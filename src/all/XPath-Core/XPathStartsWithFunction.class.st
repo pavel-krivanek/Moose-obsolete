@@ -4,7 +4,7 @@ XPath string prefix testing function.
 Class {
 	#name : #XPathStartsWithFunction,
 	#superclass : #XPathFunction,
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #accessing }

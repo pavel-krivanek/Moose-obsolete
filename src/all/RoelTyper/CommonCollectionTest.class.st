@@ -1,7 +1,7 @@
 Class {
 	#name : #CommonCollectionTest,
 	#superclass : #TestCase,
-	#category : 'RoelTyper-Tests'
+	#category : #RoelTyper-Tests
 }
 
 { #category : #tests }

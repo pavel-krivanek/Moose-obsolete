@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLNodeFactoryTest,
 	#superclass : #TestCase,
-	#category : 'XML-Tests-Parser-DOM-Factories'
+	#category : #XML-Tests-Parser-DOM-Factories
 }
 
 { #category : #testing }

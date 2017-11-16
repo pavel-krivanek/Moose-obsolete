@@ -5,7 +5,7 @@ Class {
 		'dictionary',
 		'parent'
 	],
-	#category : 'Moose-SmalltalkImporter'
+	#category : #Moose-SmalltalkImporter
 }
 
 { #category : #'instance creation' }

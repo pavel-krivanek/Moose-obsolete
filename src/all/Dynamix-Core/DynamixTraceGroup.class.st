@@ -5,7 +5,7 @@ A DynamixTraceGroup is a group containing traces of execution
 Class {
 	#name : #DynamixTraceGroup,
 	#superclass : #MooseGroup,
-	#category : 'Dynamix-Core'
+	#category : #Dynamix-Core
 }
 
 { #category : #'as yet unclassified' }

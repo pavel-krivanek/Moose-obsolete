@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'a'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #parsing }

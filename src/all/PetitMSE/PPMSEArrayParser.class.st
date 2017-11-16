@@ -1,7 +1,7 @@
 Class {
 	#name : #PPMSEArrayParser,
 	#superclass : #PPMSEGrammar,
-	#category : 'PetitMSE'
+	#category : #PetitMSE
 }
 
 { #category : #accessing }

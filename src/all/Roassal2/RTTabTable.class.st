@@ -9,7 +9,7 @@ Class {
 		'values',
 		'firstRow'
 	],
-	#category : 'Roassal2-Table'
+	#category : #Roassal2-Table
 }
 
 { #category : #data }

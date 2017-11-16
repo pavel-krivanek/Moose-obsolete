@@ -7,7 +7,7 @@ Class {
 		'horizontalSize',
 		'verticalSize'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #'instance creation' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeJavaImportsCleaner,
 	#superclass : #DudeCleaningDecorator,
-	#category : 'SmallDude-Text'
+	#category : #SmallDude-Text
 }
 
 { #category : #'instance creation' }

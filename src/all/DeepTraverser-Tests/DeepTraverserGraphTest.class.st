@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'graph'
 	],
-	#category : 'DeepTraverser-Tests-Transformed-To-Examples'
+	#category : #DeepTraverser-Tests-Transformed-To-Examples
 }
 
 { #category : #testing }

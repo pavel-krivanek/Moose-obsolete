@@ -4,7 +4,7 @@ A stream converter for big endian UTF-16 streams, and the default converter clas
 Class {
 	#name : #XMLUTF16BigEndianStreamConverter,
 	#superclass : #XMLUTF16StreamConverter,
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #basic }

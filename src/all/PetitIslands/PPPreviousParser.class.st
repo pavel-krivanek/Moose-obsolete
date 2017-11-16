@@ -1,7 +1,7 @@
 Class {
 	#name : #PPPreviousParser,
 	#superclass : #PPDelegateParser,
-	#category : 'PetitIslands-Extras'
+	#category : #PetitIslands-Extras
 }
 
 { #category : #parsing }

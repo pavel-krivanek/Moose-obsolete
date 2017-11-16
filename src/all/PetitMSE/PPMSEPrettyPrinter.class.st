@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'stream'
 	],
-	#category : 'PetitMSE'
+	#category : #PetitMSE
 }
 
 { #category : #'as yet unclassified' }

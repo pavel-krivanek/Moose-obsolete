@@ -25,7 +25,7 @@ Class {
 		'equalEqualTokens',
 		'declarations'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

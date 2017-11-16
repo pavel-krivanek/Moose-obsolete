@@ -1,7 +1,7 @@
 Class {
 	#name : #RTTimelineTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Builder-Timeline-Tests'
+	#category : #Roassal2-Builder-Timeline-Tests
 }
 
 { #category : #tests }

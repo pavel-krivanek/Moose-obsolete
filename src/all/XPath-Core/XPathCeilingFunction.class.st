@@ -4,7 +4,7 @@ XPath ceiling function.
 Class {
 	#name : #XPathCeilingFunction,
 	#superclass : #XPathFunction,
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #accessing }

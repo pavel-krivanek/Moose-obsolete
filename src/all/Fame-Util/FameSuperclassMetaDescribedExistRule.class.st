@@ -1,7 +1,7 @@
 Class {
 	#name : #FameSuperclassMetaDescribedExistRule,
 	#superclass : #RBBlockLintRule,
-	#category : 'Fame-Util'
+	#category : #Fame-Util
 }
 
 { #category : #accessing }

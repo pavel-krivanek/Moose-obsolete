@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'hash'
 	],
-	#category : 'Hashtable-Objects'
+	#category : #Hashtable-Objects
 }
 
 { #category : #accessing }

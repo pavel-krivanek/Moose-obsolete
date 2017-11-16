@@ -6,7 +6,7 @@ Class {
 		'onNodeAction',
 		'isActionAppliedOnCurrent'
 	],
-	#category : 'DeepTraverser'
+	#category : #DeepTraverser
 }
 
 { #category : #deprecated }

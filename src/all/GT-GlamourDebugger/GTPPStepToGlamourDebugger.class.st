@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPStepToGlamourDebugger,
 	#superclass : #DebugAction,
-	#category : 'GT-GlamourDebugger'
+	#category : #GT-GlamourDebugger
 }
 
 { #category : #registration }

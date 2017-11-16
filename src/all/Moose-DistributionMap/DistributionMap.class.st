@@ -39,7 +39,7 @@ Class {
 		'properties',
 		'defaultColors'
 	],
-	#category : 'Moose-DistributionMap'
+	#category : #Moose-DistributionMap
 }
 
 { #category : #examples }

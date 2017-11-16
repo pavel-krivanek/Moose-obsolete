@@ -7,7 +7,7 @@ MessageSendDebugAction
 Class {
 	#name : #GTDebuggerRecorderMessageSendEvent,
 	#superclass : #GTDebuggerRecorderDebugActionEvent,
-	#category : 'GT-Debugger-EventRecorder-Events'
+	#category : #GT-Debugger-EventRecorder-Events
 }
 
 { #category : #initialization }

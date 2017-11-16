@@ -10,7 +10,7 @@ Class {
 		'aliases',
 		'type'
 	],
-	#category : 'Dynamix-Core'
+	#category : #Dynamix-Core
 }
 
 { #category : #meta }

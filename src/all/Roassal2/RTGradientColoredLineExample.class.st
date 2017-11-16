@@ -35,7 +35,7 @@ v canvas.'
 Class {
 	#name : #RTGradientColoredLineExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-ExampleBrowser'
+	#category : #Roassal2-ExampleBrowser
 }
 
 { #category : #sources }

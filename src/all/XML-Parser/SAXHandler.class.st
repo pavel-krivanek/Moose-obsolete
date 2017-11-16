@@ -50,7 +50,7 @@ Class {
 		'isInContent',
 		'isInCDataSection'
 	],
-	#category : 'XML-Parser'
+	#category : #XML-Parser
 }
 
 { #category : #'instance creation' }

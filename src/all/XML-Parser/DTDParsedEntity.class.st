@@ -4,7 +4,7 @@ This is an abstract base class for parsed entities with replacements that can be
 Class {
 	#name : #DTDParsedEntity,
 	#superclass : #DTDEntity,
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #converting }

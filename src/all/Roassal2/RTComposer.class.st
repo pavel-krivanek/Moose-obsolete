@@ -34,7 +34,7 @@ Class {
 		'backgrounds',
 		'names'
 	],
-	#category : 'Roassal2-Builder-Composer'
+	#category : #Roassal2-Builder-Composer
 }
 
 { #category : #accessing }

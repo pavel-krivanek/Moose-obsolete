@@ -12,7 +12,7 @@ Class {
 		'properties',
 		'endToken'
 	],
-	#category : 'SmaCC_Delphi_Forms'
+	#category : #SmaCC_Delphi_Forms
 }
 
 { #category : #generated }

@@ -5,7 +5,7 @@ Class {
 		'textEntry',
 		'textEntryContents'
 	],
-	#category : 'Merlin-ToBeRemoved'
+	#category : #Merlin-ToBeRemoved
 }
 
 { #category : #'instance creation' }

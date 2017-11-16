@@ -5,7 +5,7 @@ Class {
 		'entities',
 		'scope'
 	],
-	#category : 'Moose-MonticelloImporter'
+	#category : #Moose-MonticelloImporter
 }
 
 { #category : #accessing }

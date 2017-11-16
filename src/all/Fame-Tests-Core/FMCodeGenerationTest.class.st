@@ -1,7 +1,7 @@
 Class {
 	#name : #FMCodeGenerationTest,
 	#superclass : #TestCase,
-	#category : 'Fame-Tests-Core'
+	#category : #Fame-Tests-Core
 }
 
 { #category : #running }

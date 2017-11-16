@@ -4,7 +4,7 @@ An Explora builder that do not try to guess what is coming to step before
 Class {
 	#name : #RTExploraBuilderLazy,
 	#superclass : #RTExploraBuilder,
-	#category : 'Roassal2-Builder-Explora'
+	#category : #Roassal2-Builder-Explora
 }
 
 { #category : #'as yet unclassified' }

@@ -6,7 +6,7 @@ Class {
 		'intent',
 		'extent'
 	],
-	#category : 'Moose-Algos-FormalConceptAnalysis'
+	#category : #Moose-Algos-FormalConceptAnalysis
 }
 
 { #category : #'instance creation' }

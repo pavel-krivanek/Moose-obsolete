@@ -29,7 +29,7 @@ Class {
 	#instVars : [
 		'level'
 	],
-	#category : 'Roassal2-Builder-Timeline'
+	#category : #Roassal2-Builder-Timeline
 }
 
 { #category : #configuration }

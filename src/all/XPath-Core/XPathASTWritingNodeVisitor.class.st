@@ -10,7 +10,7 @@ Class {
 	#classVars : [
 		'SpaceCharacter'
 	],
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #'class initialization' }

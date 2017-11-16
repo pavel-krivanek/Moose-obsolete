@@ -4,5 +4,5 @@ This is a stub custom collection for XMLOrderedLists to test that #= and #hash d
 Class {
 	#name : #XMLStubOrderedListCustomCollection,
 	#superclass : #OrderedCollection,
-	#category : 'XML-Tests-Parser-DOM'
+	#category : #XML-Tests-Parser-DOM
 }

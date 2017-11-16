@@ -1,7 +1,7 @@
 Class {
 	#name : #GTCurrentSpotterExceptionHandler,
 	#superclass : #Notification,
-	#category : 'GT-Spotter-Exceptions'
+	#category : #GT-Spotter-Exceptions
 }
 
 { #category : #accessing-defaults }

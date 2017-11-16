@@ -6,7 +6,7 @@ Class {
 		'string',
 		'context'
 	],
-	#category : 'PetitIndent-Examples'
+	#category : #PetitIndent-Examples
 }
 
 { #category : #'as yet unclassified' }

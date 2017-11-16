@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'parent'
 	],
-	#category : 'Moose-Algos-Clustering'
+	#category : #Moose-Algos-Clustering
 }
 
 { #category : #'instance creation' }

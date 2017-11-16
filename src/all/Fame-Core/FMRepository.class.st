@@ -34,7 +34,7 @@ Class {
 		'elements',
 		'metamodel'
 	],
-	#category : 'Fame-Core'
+	#category : #Fame-Core
 }
 
 { #category : #'instance creation' }

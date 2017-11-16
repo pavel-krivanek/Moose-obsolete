@@ -16,7 +16,7 @@ Class {
 		'radialSpacing',
 		'hasCenter'
 	],
-	#category : 'Roassal2-Builder-Sunburst'
+	#category : #Roassal2-Builder-Sunburst
 }
 
 { #category : #accessing }

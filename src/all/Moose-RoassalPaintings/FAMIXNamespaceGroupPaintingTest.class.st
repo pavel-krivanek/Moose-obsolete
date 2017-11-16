@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXNamespaceGroupPaintingTest,
 	#superclass : #TestCase,
-	#category : 'Moose-RoassalPaintings-Test'
+	#category : #Moose-RoassalPaintings-Test
 }
 
 { #category : #tests }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'typeNames'
 	],
-	#category : 'SmaCC_C_Parser'
+	#category : #SmaCC_C_Parser
 }
 
 { #category : #generated-initialization }

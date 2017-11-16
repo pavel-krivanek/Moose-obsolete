@@ -5,5 +5,5 @@ Target: drop target element (element underneath the dragged one)
 Class {
 	#name : #TRMouseDragLeave,
 	#superclass : #TRMouseAbstractDrop,
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }

@@ -38,7 +38,7 @@ Class {
 		'owner',
 		'opposite'
 	],
-	#category : 'Fame-Core'
+	#category : #Fame-Core
 }
 
 { #category : #'instance creation' }

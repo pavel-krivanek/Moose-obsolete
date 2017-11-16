@@ -1,7 +1,7 @@
 Class {
 	#name : #MTLAnnotationDescription,
 	#superclass : #FM3PropertyDescription,
-	#category : 'Metanool-Core'
+	#category : #Metanool-Core
 }
 
 { #category : #'as yet unclassified' }

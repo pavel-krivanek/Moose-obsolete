@@ -4,7 +4,7 @@ This is a class for the 'attribute()' type test or for the '*' type test when th
 Class {
 	#name : #XPathAttributeNodeTest,
 	#superclass : #XPathNodeTest,
-	#category : 'XPath-Core-Compilation'
+	#category : #XPath-Core-Compilation
 }
 
 { #category : #testing }

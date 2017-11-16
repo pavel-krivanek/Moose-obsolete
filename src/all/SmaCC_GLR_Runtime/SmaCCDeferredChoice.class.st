@@ -14,7 +14,7 @@ Class {
 		'possibleItems',
 		'choiceBlock'
 	],
-	#category : 'SmaCC_GLR_Runtime'
+	#category : #SmaCC_GLR_Runtime
 }
 
 { #category : #accessing }

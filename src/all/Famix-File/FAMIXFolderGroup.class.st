@@ -4,7 +4,7 @@ FAMIXFolderGroup is a MooseGroup containing only FAMIX enities of type FAMIXFold
 Class {
 	#name : #FAMIXFolderGroup,
 	#superclass : #MooseGroup,
-	#category : 'Famix-File'
+	#category : #Famix-File
 }
 
 { #category : #meta }

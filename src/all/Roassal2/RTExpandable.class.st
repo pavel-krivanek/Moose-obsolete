@@ -36,7 +36,7 @@ Class {
 		'afterBlock',
 		'groupBlock'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #accessing }

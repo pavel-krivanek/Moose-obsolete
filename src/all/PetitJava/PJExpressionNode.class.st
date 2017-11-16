@@ -4,7 +4,7 @@ Common superclass for all expression nodes e.i. nodes that have some kind of val
 Class {
 	#name : #PJExpressionNode,
 	#superclass : #PJASTNode,
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #visiting }

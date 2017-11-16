@@ -1,7 +1,7 @@
 Class {
 	#name : #OnMooseTranscriptUsages,
 	#superclass : #REPMooseQueryConcern,
-	#category : 'OnMoose-Report'
+	#category : #OnMoose-Report
 }
 
 { #category : #'as yet unclassified' }

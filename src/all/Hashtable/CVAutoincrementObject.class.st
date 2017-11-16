@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'NextHash'
 	],
-	#category : 'Hashtable-Objects'
+	#category : #Hashtable-Objects
 }
 
 { #category : #'class initialization' }

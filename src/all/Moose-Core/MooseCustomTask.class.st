@@ -14,7 +14,7 @@ Class {
 		'description',
 		'length'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'instance creation' }

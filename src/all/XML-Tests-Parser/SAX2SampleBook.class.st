@@ -9,7 +9,7 @@ Class {
 		'isbn',
 		'authors'
 	],
-	#category : 'XML-Tests-Parser-ElementHandlers'
+	#category : #XML-Tests-Parser-ElementHandlers
 }
 
 { #category : #adding }

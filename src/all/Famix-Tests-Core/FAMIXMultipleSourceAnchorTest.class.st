@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'multipleFileAnchor'
 	],
-	#category : 'Famix-Tests-Core'
+	#category : #Famix-Tests-Core
 }
 
 { #category : #initialization }

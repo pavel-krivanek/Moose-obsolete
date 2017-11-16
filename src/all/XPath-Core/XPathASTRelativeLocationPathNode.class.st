@@ -4,7 +4,7 @@ This is an AST node class for relative location paths whose root node is the con
 Class {
 	#name : #XPathASTRelativeLocationPathNode,
 	#superclass : #XPathASTLocationPathNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

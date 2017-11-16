@@ -1,7 +1,7 @@
 Class {
 	#name : #StParser,
 	#superclass : #SmaCCParser,
-	#category : 'SmaCC_Smalltalk_Parser'
+	#category : #SmaCC_Smalltalk_Parser
 }
 
 { #category : #generated-accessing }

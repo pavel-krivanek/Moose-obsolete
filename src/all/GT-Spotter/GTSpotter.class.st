@@ -29,7 +29,7 @@ Class {
 		'isPreviewVisible',
 		'wasOpened'
 	],
-	#category : 'GT-Spotter-Model'
+	#category : #GT-Spotter-Model
 }
 
 { #category : #cleanup }

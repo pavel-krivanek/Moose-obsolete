@@ -151,7 +151,7 @@ Class {
 		'comment',
 		'label'
 	],
-	#category : 'PetitSQLite-Parser'
+	#category : #PetitSQLite-Parser
 }
 
 { #category : #'as yet unclassified' }

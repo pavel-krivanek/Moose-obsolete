@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCRewriteTest,
 	#superclass : #TestCase,
-	#category : 'SmaCC_Rewrite_Engine_Tests'
+	#category : #SmaCC_Rewrite_Engine_Tests
 }
 
 { #category : #private }

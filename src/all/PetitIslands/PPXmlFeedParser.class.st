@@ -75,7 +75,7 @@ Class {
 		'simpleElement',
 		'stringValue'
 	],
-	#category : 'PetitIslands-Examples'
+	#category : #PetitIslands-Examples
 }
 
 { #category : #tags }

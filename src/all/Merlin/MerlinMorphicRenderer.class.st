@@ -5,7 +5,7 @@ Class {
 		'dialogWindow',
 		'builder'
 	],
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #accessing }

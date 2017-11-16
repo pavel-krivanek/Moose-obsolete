@@ -10,7 +10,7 @@ Class {
 		'preservesUndeclaredEntityReferences',
 		'externalEntityResolver'
 	],
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #accessing }

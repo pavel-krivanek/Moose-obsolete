@@ -32,7 +32,7 @@ Class {
 		'block',
 		'angle'
 	],
-	#category : 'Roassal2-Builder-Kiviat'
+	#category : #Roassal2-Builder-Kiviat
 }
 
 { #category : #accessing }

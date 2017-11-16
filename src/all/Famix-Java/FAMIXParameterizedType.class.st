@@ -15,7 +15,7 @@ Class {
 		'arguments',
 		'parameterizableClass'
 	],
-	#category : 'Famix-Java'
+	#category : #Famix-Java
 }
 
 { #category : #initialize-release }

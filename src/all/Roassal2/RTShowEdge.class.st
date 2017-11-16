@@ -25,7 +25,7 @@ Class {
 		'lastHighlightedElements',
 		'lastColor'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #'reset shape' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MASingleSelectListMorph,
 	#superclass : #MAListMorph,
-	#category : 'Magritte-Morph-Model'
+	#category : #Magritte-Morph-Model
 }
 
 { #category : #private }

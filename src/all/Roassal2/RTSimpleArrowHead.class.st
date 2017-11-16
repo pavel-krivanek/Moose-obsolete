@@ -18,7 +18,7 @@ v open
 Class {
 	#name : #RTSimpleArrowHead,
 	#superclass : #RTLineDecoration,
-	#category : 'Roassal2-LineDecorations'
+	#category : #Roassal2-LineDecorations
 }
 
 { #category : #hooks }

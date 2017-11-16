@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'allowedValues'
 	],
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #defaults }

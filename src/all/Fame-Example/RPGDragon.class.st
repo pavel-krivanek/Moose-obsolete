@@ -5,7 +5,7 @@ Class {
 		'hoard',
 		'killedBy'
 	],
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #initialize-release }

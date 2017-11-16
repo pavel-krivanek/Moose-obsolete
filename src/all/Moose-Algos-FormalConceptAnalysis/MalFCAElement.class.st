@@ -6,7 +6,7 @@ Class {
 		'bits',
 		'value'
 	],
-	#category : 'Moose-Algos-FormalConceptAnalysis'
+	#category : #Moose-Algos-FormalConceptAnalysis
 }
 
 { #category : #initialize-release }

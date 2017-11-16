@@ -15,7 +15,7 @@ Class {
 		'arguments',
 		'return'
 	],
-	#category : 'Dynamix-Core'
+	#category : #Dynamix-Core
 }
 
 { #category : #meta }

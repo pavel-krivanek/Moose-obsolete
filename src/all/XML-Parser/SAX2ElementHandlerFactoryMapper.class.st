@@ -8,7 +8,7 @@ When a SAX2ElementParser requests the factory for a new element handler, if none
 Class {
 	#name : #SAX2ElementHandlerFactoryMapper,
 	#superclass : #Object,
-	#category : 'XML-Parser'
+	#category : #XML-Parser
 }
 
 { #category : #accessing }

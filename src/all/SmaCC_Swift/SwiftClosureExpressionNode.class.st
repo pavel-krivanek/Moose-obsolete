@@ -37,7 +37,7 @@ Class {
 		'unownedLeftParenunsafeRightParenToken',
 		'statements'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

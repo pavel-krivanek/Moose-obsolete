@@ -11,7 +11,7 @@ Class {
 		'newline',
 		'valueSeparator'
 	],
-	#category : 'PetitManifestMf'
+	#category : #PetitManifestMf
 }
 
 { #category : #'as yet unclassified' }

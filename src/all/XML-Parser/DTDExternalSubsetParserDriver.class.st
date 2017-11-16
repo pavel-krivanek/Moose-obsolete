@@ -8,7 +8,7 @@ Class {
 		'saxDriver',
 		'documentURI'
 	],
-	#category : 'XML-Parser-Drivers'
+	#category : #XML-Parser-Drivers
 }
 
 { #category : #'instance creation' }

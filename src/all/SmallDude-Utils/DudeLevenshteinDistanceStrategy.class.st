@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'threshold'
 	],
-	#category : 'SmallDude-Utils'
+	#category : #SmallDude-Utils
 }
 
 { #category : #'instance creation' }

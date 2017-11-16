@@ -36,7 +36,7 @@ Class {
 	#instVars : [
 		'controlElement'
 	],
-	#category : 'Roassal2-Shapes'
+	#category : #Roassal2-Shapes
 }
 
 { #category : #accessing }

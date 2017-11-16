@@ -4,7 +4,7 @@ A read stream adapter for binary streams so that next and peek return characters
 Class {
 	#name : #XMLBinaryReadStreamAdapter,
 	#superclass : #XMLReadStreamAdapter,
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #'instance creation' }

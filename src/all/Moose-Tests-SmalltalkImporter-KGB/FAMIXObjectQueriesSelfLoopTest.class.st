@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXObjectQueriesSelfLoopTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : 'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
+	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
 }
 
 { #category : #'as yet unclassified' }

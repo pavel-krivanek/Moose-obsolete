@@ -8,7 +8,7 @@ Class {
 		'right',
 		'endToken'
 	],
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

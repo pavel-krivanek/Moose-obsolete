@@ -1,7 +1,7 @@
 Class {
 	#name : #XPathNamespaceNodeTest,
 	#superclass : #XMLNodeTest,
-	#category : 'XPath-Tests'
+	#category : #XPath-Tests
 }
 
 { #category : #'instance creation' }

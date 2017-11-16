@@ -5,7 +5,7 @@ Class {
 		'op',
 		'args'
 	],
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #'As yet unclassified' }

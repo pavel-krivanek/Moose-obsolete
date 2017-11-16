@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'data'
 	],
-	#category : 'PetitXml-Nodes'
+	#category : #PetitXml-Nodes
 }
 
 { #category : #'instance creation' }

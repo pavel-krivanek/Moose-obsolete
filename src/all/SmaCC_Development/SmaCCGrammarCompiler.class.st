@@ -12,7 +12,7 @@ Class {
 		'codeGenerator',
 		'reduceTable'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #'instance creation' }

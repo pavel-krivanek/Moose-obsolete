@@ -4,7 +4,7 @@ THIS CLASS IS OBSOLETE. PLEASE REFER TO RTLabeled
 Class {
 	#name : #RTLabelled,
 	#superclass : #RTLabeled,
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #'instance creation' }

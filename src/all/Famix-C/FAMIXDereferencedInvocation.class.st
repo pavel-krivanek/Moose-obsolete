@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'referencer'
 	],
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #initialize-release }

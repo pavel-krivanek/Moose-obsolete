@@ -4,7 +4,7 @@ A sort order for nodes in document order.
 Class {
 	#name : #XPathDocumentSortOrder,
 	#superclass : #XPathSortOrder,
-	#category : 'XPath-Core-DOM'
+	#category : #XPath-Core-DOM
 }
 
 { #category : #converting }

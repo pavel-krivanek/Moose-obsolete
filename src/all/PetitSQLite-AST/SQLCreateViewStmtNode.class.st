@@ -6,7 +6,7 @@ Class {
 		'referenceTable',
 		'ofTables'
 	],
-	#category : 'PetitSQLite-AST'
+	#category : #PetitSQLite-AST
 }
 
 { #category : #'as yet unclassified' }

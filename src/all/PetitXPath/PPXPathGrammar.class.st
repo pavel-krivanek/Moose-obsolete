@@ -12,7 +12,7 @@ Class {
 		'string',
 		'whitespace'
 	],
-	#category : 'PetitXPath-Core'
+	#category : #PetitXPath-Core
 }
 
 { #category : #accessing }

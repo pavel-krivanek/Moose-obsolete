@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseIncomingQueryResultTest,
 	#superclass : #MooseQueryResultTest,
-	#category : 'Moose-Query-Test'
+	#category : #Moose-Query-Test
 }
 
 { #category : #asserting }

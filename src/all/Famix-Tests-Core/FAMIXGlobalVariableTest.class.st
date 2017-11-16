@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXGlobalVariableTest,
 	#superclass : #FAMIXNamedEntityTest,
-	#category : 'Famix-Tests-Core'
+	#category : #Famix-Tests-Core
 }
 
 { #category : #helpers }

@@ -30,7 +30,7 @@ Class {
 		'globals',
 		'furthestFailure'
 	],
-	#category : 'PetitParser-Core'
+	#category : #PetitParser-Core
 }
 
 { #category : #'as yet unclassified' }

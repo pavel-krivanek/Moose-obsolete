@@ -4,7 +4,7 @@ This is an abstract class for resolved external entity replacements.
 Class {
 	#name : #DTDResolvedExternalParsedEntityReplacement,
 	#superclass : #Object,
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #converting }

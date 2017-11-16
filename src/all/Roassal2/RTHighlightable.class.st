@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'color'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #'reset shape' }

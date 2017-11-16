@@ -4,7 +4,7 @@ A highlighting XPath expression text style decorator.
 Class {
 	#name : #GLMXPathHighlighterTextStylerDecorator,
 	#superclass : #GLMXMLHighlighterTextStylerDecorator,
-	#category : 'XPath-GTExtensions-Highlighting-Parsers'
+	#category : #XPath-GTExtensions-Highlighting-Parsers
 }
 
 { #category : #parsing }

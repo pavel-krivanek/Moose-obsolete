@@ -19,7 +19,7 @@ Class {
 		'minScale',
 		'maxScale'
 	],
-	#category : 'Roassal2-ColorNormalizerOBSOLETE'
+	#category : #Roassal2-ColorNormalizerOBSOLETE
 }
 
 { #category : #initialize-release }

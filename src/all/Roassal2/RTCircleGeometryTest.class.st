@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'circle'
 	],
-	#category : 'Roassal2-AttachPoint-Tests'
+	#category : #Roassal2-AttachPoint-Tests
 }
 
 { #category : #tests }

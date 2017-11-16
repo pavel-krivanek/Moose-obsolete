@@ -1,7 +1,7 @@
 Class {
 	#name : #WeakHashSet,
 	#superclass : #HashSet,
-	#category : 'Hashtable'
+	#category : #Hashtable
 }
 
 { #category : #enumerating }

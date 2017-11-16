@@ -9,7 +9,7 @@ Class {
 		'vertices',
 		'strokeWidth'
 	],
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #visitor }

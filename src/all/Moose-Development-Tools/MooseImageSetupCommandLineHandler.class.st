@@ -4,7 +4,7 @@ The command that is triggered to setup a Moose image right after the configurati
 Class {
 	#name : #MooseImageSetupCommandLineHandler,
 	#superclass : #CommandLineHandler,
-	#category : 'Moose-Development-Tools'
+	#category : #Moose-Development-Tools
 }
 
 { #category : #accessing }

@@ -5,7 +5,7 @@ I answer the unique element if collection size = 1, or the full collection if is
 Class {
 	#name : #PPXPathMultipleFilter,
 	#superclass : #PPXPathFilter,
-	#category : 'PetitXPath-Nodes'
+	#category : #PetitXPath-Nodes
 }
 
 { #category : #printing }

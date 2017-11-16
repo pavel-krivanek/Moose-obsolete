@@ -8,7 +8,7 @@ Class {
 		'attachFrom',
 		'attachTo'
 	],
-	#category : 'Roassal2-AttachPoint'
+	#category : #Roassal2-AttachPoint
 }
 
 { #category : #public }

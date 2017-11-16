@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'debugStoneType'
 	],
-	#category : 'GT-GlamourDebugger'
+	#category : #GT-GlamourDebugger
 }
 
 { #category : #accessing }

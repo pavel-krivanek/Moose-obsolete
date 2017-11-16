@@ -1,7 +1,7 @@
 Class {
 	#name : #HashSet,
 	#superclass : #HashTable,
-	#category : 'Hashtable'
+	#category : #Hashtable
 }
 
 { #category : #comparing }

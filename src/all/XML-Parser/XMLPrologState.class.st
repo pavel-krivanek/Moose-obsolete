@@ -4,7 +4,7 @@ A state for prolog tokens.
 Class {
 	#name : #XMLPrologState,
 	#superclass : #XMLTokenizerState,
-	#category : 'XML-Parser-Drivers'
+	#category : #XML-Parser-Drivers
 }
 
 { #category : #testing }

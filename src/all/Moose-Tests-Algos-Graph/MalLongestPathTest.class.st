@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'longestPath'
 	],
-	#category : 'Moose-Tests-Algos-Graph'
+	#category : #Moose-Tests-Algos-Graph
 }
 
 { #category : #converting }

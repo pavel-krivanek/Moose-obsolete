@@ -16,7 +16,7 @@ Class {
 		'packages',
 		'classExtensions'
 	],
-	#category : 'Moose-SmalltalkImporter'
+	#category : #Moose-SmalltalkImporter
 }
 
 { #category : #adding }

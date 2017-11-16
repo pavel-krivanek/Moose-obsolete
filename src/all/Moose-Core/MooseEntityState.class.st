@@ -7,7 +7,7 @@ My main methods are:
 Class {
 	#name : #MooseEntityState,
 	#superclass : #Object,
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'instance creation' }

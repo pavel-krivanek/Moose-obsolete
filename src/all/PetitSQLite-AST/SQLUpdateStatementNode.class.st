@@ -6,7 +6,7 @@ Class {
 		'setValue',
 		'where'
 	],
-	#category : 'PetitSQLite-AST'
+	#category : #PetitSQLite-AST
 }
 
 { #category : #accessing }

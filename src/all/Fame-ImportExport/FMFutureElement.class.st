@@ -7,7 +7,7 @@ Class {
 		'metaDescription',
 		'owner'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #'instance creation' }

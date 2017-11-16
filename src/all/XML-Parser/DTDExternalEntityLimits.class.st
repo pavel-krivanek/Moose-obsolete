@@ -10,7 +10,7 @@ Class {
 		'maxExternalEntitySize',
 		'resolvesLocalFromNonLocal'
 	],
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #accessing }

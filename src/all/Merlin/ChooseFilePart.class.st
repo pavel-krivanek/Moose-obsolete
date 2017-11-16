@@ -8,7 +8,7 @@ Class {
 		'validExtensions',
 		'selectedPathName'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #accessing }

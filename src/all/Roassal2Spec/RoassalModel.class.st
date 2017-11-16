@@ -8,7 +8,7 @@ Class {
 		'script',
 		'lastEvent'
 	],
-	#category : 'Roassal2Spec-Core'
+	#category : #Roassal2Spec-Core
 }
 
 { #category : #specs }

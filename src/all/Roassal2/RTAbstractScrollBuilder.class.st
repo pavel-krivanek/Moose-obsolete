@@ -17,7 +17,7 @@ Class {
 		'encompassingRectangle',
 		'fillColor'
 	],
-	#category : 'Roassal2-Builder-ScrollBar'
+	#category : #Roassal2-Builder-ScrollBar
 }
 
 { #category : #adding }

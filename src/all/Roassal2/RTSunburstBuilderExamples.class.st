@@ -16,7 +16,7 @@ RTSunburstBuilderExamples new installTitle: 'basic15'
 Class {
 	#name : #RTSunburstBuilderExamples,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-Builder-Sunburst'
+	#category : #Roassal2-Builder-Sunburst
 }
 
 { #category : #examples }

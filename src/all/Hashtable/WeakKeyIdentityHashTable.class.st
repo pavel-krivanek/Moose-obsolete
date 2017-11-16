@@ -1,7 +1,7 @@
 Class {
 	#name : #WeakKeyIdentityHashTable,
 	#superclass : #WeakKeyHashTable,
-	#category : 'Hashtable'
+	#category : #Hashtable
 }
 
 { #category : #private }

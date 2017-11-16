@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'parameterizedTypes'
 	],
-	#category : 'Famix-Java'
+	#category : #Famix-Java
 }
 
 { #category : #initialize-release }

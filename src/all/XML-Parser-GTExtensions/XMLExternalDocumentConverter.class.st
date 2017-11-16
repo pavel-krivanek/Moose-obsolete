@@ -9,7 +9,7 @@ Class {
 		'outputStream',
 		'writeStream'
 	],
-	#category : 'XML-Parser-GTExtensions-Highlighting-Parser'
+	#category : #XML-Parser-GTExtensions-Highlighting-Parser
 }
 
 { #category : #converting }

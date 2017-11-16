@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'recordedEvent'
 	],
-	#category : 'GT-Debugger-EventRecorder-Base'
+	#category : #GT-Debugger-EventRecorder-Base
 }
 
 { #category : #'instance creation' }

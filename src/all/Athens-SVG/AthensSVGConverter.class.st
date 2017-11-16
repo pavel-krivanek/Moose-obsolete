@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'node'
 	],
-	#category : 'Athens-SVG'
+	#category : #Athens-SVG
 }
 
 { #category : #'instance creation' }

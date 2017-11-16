@@ -7,7 +7,7 @@ Class {
 		'values',
 		'tally'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #'instance creation' }

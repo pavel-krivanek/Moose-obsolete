@@ -70,7 +70,7 @@ Class {
 	#classInstVars : [
 		'codeTemplates'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #'code generation templates' }

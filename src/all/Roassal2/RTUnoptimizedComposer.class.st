@@ -1,7 +1,7 @@
 Class {
 	#name : #RTUnoptimizedComposer,
 	#superclass : #RTComposer,
-	#category : 'Roassal2-Builder-Composer'
+	#category : #Roassal2-Builder-Composer
 }
 
 { #category : #public-layout }

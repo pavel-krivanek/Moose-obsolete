@@ -14,7 +14,7 @@ Class {
 		'elements',
 		'rootNodes'
 	],
-	#category : 'Roassal2-Builder-Common'
+	#category : #Roassal2-Builder-Common
 }
 
 { #category : #color }

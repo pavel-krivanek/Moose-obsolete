@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : 'Famix-Tests-C'
+	#category : #Famix-Tests-C
 }
 
 { #category : #running }

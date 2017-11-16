@@ -15,7 +15,7 @@ Class {
 		'rootModel',
 		'metaTower'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #meta }

@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'baseradius'
 	],
-	#category : 'Roassal2-Builder-CircularMap'
+	#category : #Roassal2-Builder-CircularMap
 }
 
 { #category : #accessing }

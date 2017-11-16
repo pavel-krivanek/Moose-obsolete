@@ -1,7 +1,7 @@
 Class {
 	#name : #ACDSenderWhereIsDebugAction,
 	#superclass : #WhereIsDebugAction,
-	#category : 'ACD-Model'
+	#category : #ACD-Model
 }
 
 { #category : #registration }

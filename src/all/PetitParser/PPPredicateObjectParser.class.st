@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'cache'
 	],
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #factory-objects }

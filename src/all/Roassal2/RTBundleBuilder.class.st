@@ -32,7 +32,7 @@ Class {
 		'center',
 		'edgeBuilderDo'
 	],
-	#category : 'Roassal2-Builder-BundleEdge'
+	#category : #Roassal2-Builder-BundleEdge
 }
 
 { #category : #accessing }

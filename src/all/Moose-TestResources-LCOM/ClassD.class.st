@@ -1,7 +1,7 @@
 Class {
 	#name : #ClassD,
 	#superclass : #Object,
-	#category : 'Moose-TestResources-LCOM'
+	#category : #Moose-TestResources-LCOM
 }
 
 { #category : #stub }

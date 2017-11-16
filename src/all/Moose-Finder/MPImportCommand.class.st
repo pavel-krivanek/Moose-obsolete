@@ -1,7 +1,7 @@
 Class {
 	#name : #MPImportCommand,
 	#superclass : #MoosePanelCommand,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #accessing }

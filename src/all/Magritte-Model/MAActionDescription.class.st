@@ -10,7 +10,7 @@ Class {
 		'label',
 		'shortcut'
 	],
-	#category : 'Magritte-Model-Description'
+	#category : #Magritte-Model-Description
 }
 
 { #category : #accessing }

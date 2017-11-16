@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'hal'
 	],
-	#category : 'Moose-Tests-Algos-Graph'
+	#category : #Moose-Tests-Algos-Graph
 }
 
 { #category : #tests }

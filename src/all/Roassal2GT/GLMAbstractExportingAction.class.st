@@ -1,7 +1,7 @@
 Class {
 	#name : #GLMAbstractExportingAction,
 	#superclass : #GLMRoassal2Action,
-	#category : 'Roassal2GT-Glamour-Actions'
+	#category : #Roassal2GT-Glamour-Actions
 }
 
 { #category : #accessing }

@@ -16,7 +16,7 @@ Class {
 		'ghost',
 		'ghostBuilder'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #'announcement handling' }

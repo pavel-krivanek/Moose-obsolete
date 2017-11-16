@@ -4,7 +4,7 @@ self openOn: FileSystem disk root
 Class {
 	#name : #MooseFileExplorer,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #'as yet unclassified' }

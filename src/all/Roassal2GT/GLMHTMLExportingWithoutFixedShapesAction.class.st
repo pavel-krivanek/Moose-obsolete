@@ -1,7 +1,7 @@
 Class {
 	#name : #GLMHTMLExportingWithoutFixedShapesAction,
 	#superclass : #GLMAbstractExportingAction,
-	#category : 'Roassal2GT-Glamour-Actions'
+	#category : #Roassal2GT-Glamour-Actions
 }
 
 { #category : #hooks }

@@ -11,7 +11,7 @@ Class {
 		'actionModel',
 		'parentComposite'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #accessing }

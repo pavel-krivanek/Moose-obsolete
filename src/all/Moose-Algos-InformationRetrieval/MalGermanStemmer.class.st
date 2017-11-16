@@ -6,7 +6,7 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalGermanStemmer,
 	#superclass : #MalAbstractStemmer,
-	#category : 'Moose-Algos-InformationRetrieval'
+	#category : #Moose-Algos-InformationRetrieval
 }
 
 { #category : #private-algorithm }

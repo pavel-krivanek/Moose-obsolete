@@ -4,7 +4,7 @@ TDependencyQueryResult is a Trait that provides some common MooseChef selectors 
 "
 Trait {
 	#name : #TDependencyQueryResult,
-	#category : 'Moose-Query'
+	#category : #Moose-Query
 }
 
 { #category : #filtering }

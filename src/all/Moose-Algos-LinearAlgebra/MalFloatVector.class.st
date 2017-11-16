@@ -5,7 +5,7 @@ Class {
 	#name : #MalFloatVector,
 	#superclass : #MalVector,
 	#type : #variable,
-	#category : 'Moose-Algos-LinearAlgebra'
+	#category : #Moose-Algos-LinearAlgebra
 }
 
 { #category : #'instance creation' }

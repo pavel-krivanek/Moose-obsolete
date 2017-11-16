@@ -4,7 +4,7 @@ Helper class for displaying charts specific for a MessageTally.
 Class {
 	#name : #GTInspectorMessageTallyCharter,
 	#superclass : #GLMCompositePresentation,
-	#category : 'GT-InspectorExtensions-CoreRoassal'
+	#category : #GT-InspectorExtensions-CoreRoassal
 }
 
 { #category : #visualization }

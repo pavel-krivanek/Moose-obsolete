@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'cc'
 	],
-	#category : 'Moose-Tests-Algos-Graph'
+	#category : #Moose-Tests-Algos-Graph
 }
 
 { #category : #running }

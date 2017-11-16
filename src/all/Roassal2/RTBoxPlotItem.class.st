@@ -18,7 +18,7 @@ Class {
 		'minOutlier',
 		'maxOutlier'
 	],
-	#category : 'Roassal2-Builder-BoxPlot'
+	#category : #Roassal2-Builder-BoxPlot
 }
 
 { #category : #computing }

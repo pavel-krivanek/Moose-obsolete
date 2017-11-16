@@ -6,7 +6,7 @@ Class {
 		'cell',
 		'rows'
 	],
-	#category : 'PetitCSV'
+	#category : #PetitCSV
 }
 
 { #category : #'as yet unclassified' }

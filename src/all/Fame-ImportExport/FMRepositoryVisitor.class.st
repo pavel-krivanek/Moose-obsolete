@@ -11,7 +11,7 @@ Class {
 		'roots',
 		'lastUpdate'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #'instance creation' }

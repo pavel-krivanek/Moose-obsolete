@@ -5,7 +5,7 @@ Class {
 		'context',
 		'items'
 	],
-	#category : 'GT-Spotter-Iterators'
+	#category : #GT-Spotter-Iterators
 }
 
 { #category : #accessing }

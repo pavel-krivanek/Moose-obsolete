@@ -4,7 +4,7 @@ I am a description of tables, their cells and labels. I hold a reference to the 
 Class {
 	#name : #MATableDescription,
 	#superclass : #MAReferenceDescription,
-	#category : 'Magritte-Model-Description'
+	#category : #Magritte-Model-Description
 }
 
 { #category : #accessing-defaults }

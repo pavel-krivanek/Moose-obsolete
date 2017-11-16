@@ -1,7 +1,7 @@
 Class {
 	#name : #MADescriptionHolder,
 	#superclass : #MAValueHolder,
-	#category : 'Magritte-Model-Utility'
+	#category : #Magritte-Model-Utility
 }
 
 { #category : #acessing-magritte }

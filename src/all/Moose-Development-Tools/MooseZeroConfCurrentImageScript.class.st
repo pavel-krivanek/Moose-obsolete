@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseZeroConfCurrentImageScript,
 	#superclass : #MooseAbstractZeroConfImageScript,
-	#category : 'Moose-Development-Tools'
+	#category : #Moose-Development-Tools
 }
 
 { #category : #accessing }

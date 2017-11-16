@@ -10,7 +10,7 @@ Class {
 		'items',
 		'dendrogram'
 	],
-	#category : 'Moose-Algos-Clustering'
+	#category : #Moose-Algos-Clustering
 }
 
 { #category : #constants }

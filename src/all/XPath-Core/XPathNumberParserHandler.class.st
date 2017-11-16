@@ -4,7 +4,7 @@ An abstract class for number parser handlers.
 Class {
 	#name : #XPathNumberParserHandler,
 	#superclass : #XPathParserHandler,
-	#category : 'XPath-Core-Parsers'
+	#category : #XPath-Core-Parsers
 }
 
 { #category : #handling }

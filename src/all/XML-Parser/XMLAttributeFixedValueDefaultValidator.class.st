@@ -4,7 +4,7 @@ This class will put a default value for an attribute if the attribute is absent 
 Class {
 	#name : #XMLAttributeFixedValueDefaultValidator,
 	#superclass : #XMLAttributeValueDefaultValidator,
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #defaults }

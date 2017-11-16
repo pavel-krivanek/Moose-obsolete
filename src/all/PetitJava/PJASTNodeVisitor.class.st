@@ -4,7 +4,7 @@ Abstract visitor with all methods needed to visit a PetitJava AST
 Class {
 	#name : #PJASTNodeVisitor,
 	#superclass : #Object,
-	#category : 'PetitJava-AST-Visitors'
+	#category : #PetitJava-AST-Visitors
 }
 
 { #category : #visitor-doubleDispatching }

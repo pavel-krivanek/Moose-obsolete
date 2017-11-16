@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'string'
 	],
-	#category : 'XML-Parser-DOM'
+	#category : #XML-Parser-DOM
 }
 
 { #category : #'instance creation' }

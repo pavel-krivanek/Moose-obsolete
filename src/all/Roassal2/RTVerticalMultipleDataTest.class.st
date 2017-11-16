@@ -5,7 +5,7 @@ Class {
 		'd',
 		'b'
 	],
-	#category : 'Roassal2-Builder-Grapher-Tests'
+	#category : #Roassal2-Builder-Grapher-Tests
 }
 
 { #category : #initialization }

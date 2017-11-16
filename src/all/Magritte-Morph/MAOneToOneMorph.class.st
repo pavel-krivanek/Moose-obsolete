@@ -1,7 +1,7 @@
 Class {
 	#name : #MAOneToOneMorph,
 	#superclass : #MARelationMorph,
-	#category : 'Magritte-Morph-Model'
+	#category : #Magritte-Morph-Model
 }
 
 { #category : #'as yet unclassified' }

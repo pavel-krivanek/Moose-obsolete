@@ -33,7 +33,7 @@ Class {
 	#classInstVars : [
 		'entityDependencies'
 	],
-	#category : 'Moose-GenericImporter'
+	#category : #Moose-GenericImporter
 }
 
 { #category : #importing-filters }

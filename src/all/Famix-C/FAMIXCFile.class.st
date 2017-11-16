@@ -8,7 +8,7 @@ Class {
 		'incomingIncludeRelations',
 		'outgoingIncludeRelations'
 	],
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #initialize-release }

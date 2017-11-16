@@ -4,7 +4,7 @@ This class is an optimizing node visitor that does constant folding by eliminati
 Class {
 	#name : #XPathASTOptimizingMutatingNodeVisitor,
 	#superclass : #XPathASTMutatingNodeVisitor,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #'instance creation' }

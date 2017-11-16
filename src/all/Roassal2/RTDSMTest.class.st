@@ -1,7 +1,7 @@
 Class {
 	#name : #RTDSMTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Builder-DSM'
+	#category : #Roassal2-Builder-DSM
 }
 
 { #category : #tests }

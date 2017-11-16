@@ -47,7 +47,7 @@ Class {
 		'dynamicTypeTokens',
 		'andToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

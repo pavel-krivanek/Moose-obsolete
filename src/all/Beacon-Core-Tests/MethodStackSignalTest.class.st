@@ -5,7 +5,7 @@ A CurrentStackSignalTest is xxxxxxxxx.
 Class {
 	#name : #MethodStackSignalTest,
 	#superclass : #TestCase,
-	#category : 'Beacon-Core-Tests'
+	#category : #Beacon-Core-Tests
 }
 
 { #category : #testing }

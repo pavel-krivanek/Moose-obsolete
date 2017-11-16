@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'keywords'
 	],
-	#category : 'SmaCC_Javascript_Parser'
+	#category : #SmaCC_Javascript_Parser
 }
 
 { #category : #generated-accessing }

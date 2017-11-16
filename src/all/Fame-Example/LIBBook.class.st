@@ -5,7 +5,7 @@ Class {
 		'title',
 		'authors'
 	],
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #initialize-release }

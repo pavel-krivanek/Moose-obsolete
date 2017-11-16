@@ -4,7 +4,7 @@ It represents a folder in the file system. It can contain other files or folders
 Class {
 	#name : #FAMIXFolder,
 	#superclass : #FAMIXAbstractFile,
-	#category : 'Famix-File'
+	#category : #Famix-File
 }
 
 { #category : #initialize-release }

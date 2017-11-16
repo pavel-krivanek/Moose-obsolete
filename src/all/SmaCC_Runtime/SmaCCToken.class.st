@@ -16,7 +16,7 @@ Class {
 		'ids',
 		'value'
 	],
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }
 
 { #category : #'instance creation' }

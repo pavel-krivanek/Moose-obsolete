@@ -7,7 +7,7 @@ Class {
 		'title',
 		'elementTitleBlock'
 	],
-	#category : 'Moose-DistributionMap'
+	#category : #Moose-DistributionMap
 }
 
 { #category : #'instance creation' }

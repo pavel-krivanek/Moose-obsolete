@@ -25,7 +25,7 @@ Class {
 		'padding',
 		'bounds'
 	],
-	#category : 'Roassal2-Layouts'
+	#category : #Roassal2-Layouts
 }
 
 { #category : #space-calculation }

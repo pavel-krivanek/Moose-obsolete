@@ -1,7 +1,7 @@
 Class {
 	#name : #GstScanner,
 	#superclass : #SmaCCScanner,
-	#category : 'SmaCC_Generic_Smalltalk_Parser'
+	#category : #SmaCC_Generic_Smalltalk_Parser
 }
 
 { #category : #generated-initialization }

@@ -9,7 +9,7 @@ Usage:
 Class {
 	#name : #RTLineDecorationShape,
 	#superclass : #RTObject,
-	#category : 'Roassal2-LineDecorations'
+	#category : #Roassal2-LineDecorations
 }
 
 { #category : #converting }

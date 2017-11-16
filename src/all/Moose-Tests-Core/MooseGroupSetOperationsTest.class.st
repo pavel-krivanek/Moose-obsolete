@@ -5,7 +5,7 @@ Class {
 		'group1',
 		'group2'
 	],
-	#category : 'Moose-Tests-Core'
+	#category : #Moose-Tests-Core
 }
 
 { #category : #setUp }

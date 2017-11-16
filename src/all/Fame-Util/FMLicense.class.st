@@ -1,7 +1,7 @@
 Class {
 	#name : #FMLicense,
 	#superclass : #Object,
-	#category : 'Fame-Util'
+	#category : #Fame-Util
 }
 
 { #category : #license }

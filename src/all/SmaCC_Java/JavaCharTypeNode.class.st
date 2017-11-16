@@ -1,7 +1,7 @@
 Class {
 	#name : #JavaCharTypeNode,
 	#superclass : #JavaPrimitiveTypeNode,
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

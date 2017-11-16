@@ -4,7 +4,7 @@ This is an AST node class for 'ancestor-or-self::' steps.
 Class {
 	#name : #XPathASTAncestorOrSelfStepNode,
 	#superclass : #XPathASTStepNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

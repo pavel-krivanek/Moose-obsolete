@@ -24,7 +24,7 @@ Class {
 	#classVars : [
 		'LetterFrequency'
 	],
-	#category : 'Moose-Algos-Kontractor'
+	#category : #Moose-Algos-Kontractor
 }
 
 { #category : #benchs }

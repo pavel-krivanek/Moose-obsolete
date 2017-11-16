@@ -26,7 +26,7 @@ Class {
 		'number',
 		'string'
 	],
-	#category : 'Fame-Core'
+	#category : #Fame-Core
 }
 
 { #category : #initialize-release }

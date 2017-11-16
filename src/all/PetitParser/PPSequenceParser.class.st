@@ -4,7 +4,7 @@ A parser that parses a sequence of parsers.
 Class {
 	#name : #PPSequenceParser,
 	#superclass : #PPListParser,
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #operators }

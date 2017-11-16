@@ -20,7 +20,7 @@ Class {
 	#instVars : [
 		'dictionary'
 	],
-	#category : 'PetitIslands-Parsers'
+	#category : #PetitIslands-Parsers
 }
 
 { #category : #'as yet unclassified' }

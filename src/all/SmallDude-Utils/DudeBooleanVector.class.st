@@ -2,7 +2,7 @@ Class {
 	#name : #DudeBooleanVector,
 	#superclass : #MalVector,
 	#type : #bytes,
-	#category : 'SmallDude-Utils'
+	#category : #SmallDude-Utils
 }
 
 { #category : #initialize-release }

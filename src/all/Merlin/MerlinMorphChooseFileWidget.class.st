@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'fileDialog'
 	],
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #accessing }

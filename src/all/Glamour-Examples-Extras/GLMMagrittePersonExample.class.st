@@ -8,7 +8,7 @@ Class {
 	#classVars : [
 		'SampleData'
 	],
-	#category : 'Glamour-Examples-Extras'
+	#category : #Glamour-Examples-Extras
 }
 
 { #category : #examples-utils }

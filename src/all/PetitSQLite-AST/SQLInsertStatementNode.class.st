@@ -6,7 +6,7 @@ Class {
 		'values',
 		'table'
 	],
-	#category : 'PetitSQLite-AST'
+	#category : #PetitSQLite-AST
 }
 
 { #category : #accessing }

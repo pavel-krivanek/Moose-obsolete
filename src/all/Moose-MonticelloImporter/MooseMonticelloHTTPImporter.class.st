@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'httpUrl'
 	],
-	#category : 'Moose-MonticelloImporter'
+	#category : #Moose-MonticelloImporter
 }
 
 { #category : #'as yet unclassified' }

@@ -19,7 +19,7 @@ Class {
 		'attributeValue',
 		'qualified'
 	],
-	#category : 'PetitXml-Core'
+	#category : #PetitXml-Core
 }
 
 { #category : #grammar }

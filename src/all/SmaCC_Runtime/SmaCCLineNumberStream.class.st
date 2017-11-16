@@ -17,7 +17,7 @@ Class {
 		'eolPositions',
 		'lastPosition'
 	],
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }
 
 { #category : #'instance creation' }

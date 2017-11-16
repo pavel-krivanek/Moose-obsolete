@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'trCanvas'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ The only difference to the superclass is that on answer it does not delete the m
 Class {
 	#name : #MASilentContainerMorph,
 	#superclass : #MAContainerMorph,
-	#category : 'Magritte-Morph-Model'
+	#category : #Magritte-Morph-Model
 }
 
 { #category : #answering }

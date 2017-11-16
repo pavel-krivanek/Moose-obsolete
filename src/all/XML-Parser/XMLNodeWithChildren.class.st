@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'nodes'
 	],
-	#category : 'XML-Parser-DOM'
+	#category : #XML-Parser-DOM
 }
 
 { #category : #adding }

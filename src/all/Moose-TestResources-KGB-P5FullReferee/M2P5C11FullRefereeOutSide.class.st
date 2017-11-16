@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'instVar'
 	],
-	#category : 'Moose-TestResources-KGB-P5FullReferee'
+	#category : #Moose-TestResources-KGB-P5FullReferee
 }
 
 { #category : #Moose-Cook-ModelFamix2-Test-Methods }

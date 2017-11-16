@@ -1,7 +1,7 @@
 Class {
 	#name : #MATextMorph,
 	#superclass : #MAMemoMorph,
-	#category : 'Magritte-Morph-Model'
+	#category : #Magritte-Morph-Model
 }
 
 { #category : #private }

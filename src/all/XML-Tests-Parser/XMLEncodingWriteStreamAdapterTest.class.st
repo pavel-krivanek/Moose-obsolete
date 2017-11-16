@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLEncodingWriteStreamAdapterTest,
 	#superclass : #XMLWriteStreamAdapterTest,
-	#category : 'XML-Tests-Parser-Streams'
+	#category : #XML-Tests-Parser-Streams
 }
 
 { #category : #accessing }

@@ -6,7 +6,7 @@ Class {
 		'base',
 		'positive'
 	],
-	#category : 'Roassal2-Builder-Grapher-Scaling'
+	#category : #Roassal2-Builder-Grapher-Scaling
 }
 
 { #category : #accessing }

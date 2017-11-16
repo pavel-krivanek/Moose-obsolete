@@ -4,7 +4,7 @@ This is an AST node class for the negation operator, which should return its ope
 Class {
 	#name : #XPathASTNegationExpressionNode,
 	#superclass : #XPathASTUnaryOperatorExpressionNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

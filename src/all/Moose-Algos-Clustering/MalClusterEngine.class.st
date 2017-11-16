@@ -8,7 +8,7 @@ Class {
 		'distanceMatrix',
 		'dendrogram'
 	],
-	#category : 'Moose-Algos-Clustering'
+	#category : #Moose-Algos-Clustering
 }
 
 { #category : #examples }

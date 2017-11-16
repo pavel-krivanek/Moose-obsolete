@@ -4,7 +4,7 @@ Class {
 	#classVars : [
 		'JavaProjectPath'
 	],
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #'class initialization' }

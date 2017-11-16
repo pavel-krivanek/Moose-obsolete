@@ -4,7 +4,7 @@ This class represents an ordered list of child nodes for an XML document or elem
 Class {
 	#name : #XMLNodeList,
 	#superclass : #XMLObservableList,
-	#category : 'XML-Parser-DOM'
+	#category : #XML-Parser-DOM
 }
 
 { #category : #'instance creation' }

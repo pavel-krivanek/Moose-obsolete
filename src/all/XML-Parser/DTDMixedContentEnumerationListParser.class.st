@@ -4,7 +4,7 @@ This is a parser of mixed content lists in the form of ""(#PCDATA|one|two|...)*"
 Class {
 	#name : #DTDMixedContentEnumerationListParser,
 	#superclass : #DTDEnumerationListParser,
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #private }

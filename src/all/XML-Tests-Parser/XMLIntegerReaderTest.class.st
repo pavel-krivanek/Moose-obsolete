@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLIntegerReaderTest,
 	#superclass : #TestCase,
-	#category : 'XML-Tests-Parser-Utils'
+	#category : #XML-Tests-Parser-Utils
 }
 
 { #category : #accessing }

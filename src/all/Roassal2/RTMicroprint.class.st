@@ -5,7 +5,7 @@ Class {
 		'nbOfHorizontal',
 		'rules'
 	],
-	#category : 'Roassal2-Builder-Microprint'
+	#category : #Roassal2-Builder-Microprint
 }
 
 { #category : #'as yet unclassified' }

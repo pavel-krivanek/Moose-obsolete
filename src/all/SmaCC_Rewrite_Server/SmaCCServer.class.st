@@ -6,7 +6,7 @@ Class {
 		'availableServers',
 		'registeredServers'
 	],
-	#category : 'SmaCC_Rewrite_Server'
+	#category : #SmaCC_Rewrite_Server
 }
 
 { #category : #'instance creation' }

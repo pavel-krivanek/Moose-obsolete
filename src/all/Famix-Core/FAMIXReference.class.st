@@ -18,7 +18,7 @@ Class {
 		'source',
 		'target'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

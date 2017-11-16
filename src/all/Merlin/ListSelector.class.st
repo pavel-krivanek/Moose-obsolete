@@ -9,7 +9,7 @@ Class {
 		'initialList',
 		'initialListSelectionIndex'
 	],
-	#category : 'Merlin-ToBeRemoved'
+	#category : #Merlin-ToBeRemoved
 }
 
 { #category : #'instance creation' }

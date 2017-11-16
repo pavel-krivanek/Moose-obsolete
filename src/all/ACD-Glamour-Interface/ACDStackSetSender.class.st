@@ -1,7 +1,7 @@
 Class {
 	#name : #ACDStackSetSender,
 	#superclass : #DebugAction,
-	#category : 'ACD-Glamour-Interface'
+	#category : #ACD-Glamour-Interface
 }
 
 { #category : #'as yet unclassified' }

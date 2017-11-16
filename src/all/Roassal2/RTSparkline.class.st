@@ -6,7 +6,7 @@ Class {
 		'maxValue',
 		'minValue'
 	],
-	#category : 'Roassal2-Sparkline'
+	#category : #Roassal2-Sparkline
 }
 
 { #category : #initialization }

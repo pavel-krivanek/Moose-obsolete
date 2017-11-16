@@ -4,7 +4,7 @@ This class forwards position handler messages to an XPathPositionExpressionParse
 Class {
 	#name : #XPathPositionExpressionNodeTestParserHandler,
 	#superclass : #XPathExpressionNodeTestParserHandler,
-	#category : 'XPath-GTExtensions-Highlighting-Parsers'
+	#category : #XPath-GTExtensions-Highlighting-Parsers
 }
 
 { #category : #'handling - positions' }

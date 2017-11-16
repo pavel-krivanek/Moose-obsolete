@@ -4,7 +4,7 @@ I am a visitor responsible for visiting Magritte descriptions. I am an abstract 
 Class {
 	#name : #MAVisitor,
 	#superclass : #MABasicObject,
-	#category : 'Magritte-Model-Visitor'
+	#category : #Magritte-Model-Visitor
 }
 
 { #category : #private }

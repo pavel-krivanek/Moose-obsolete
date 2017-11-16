@@ -23,7 +23,7 @@ Class {
 		'stream',
 		'allChildren'
 	],
-	#category : 'PetitGui-Core'
+	#category : #PetitGui-Core
 }
 
 { #category : #'*petitgui' }

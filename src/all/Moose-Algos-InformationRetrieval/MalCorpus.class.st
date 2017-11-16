@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'documents'
 	],
-	#category : 'Moose-Algos-InformationRetrieval'
+	#category : #Moose-Algos-InformationRetrieval
 }
 
 { #category : #example }

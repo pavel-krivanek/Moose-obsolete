@@ -18,7 +18,7 @@ Class {
 		'keyBinding',
 		'sortBlock'
 	],
-	#category : 'GT-Spotter-Processors'
+	#category : #GT-Spotter-Processors
 }
 
 { #category : #accessing }

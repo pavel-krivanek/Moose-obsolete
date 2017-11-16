@@ -9,7 +9,7 @@ Class {
 		'commaTokens',
 		'greaterThanTokens'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

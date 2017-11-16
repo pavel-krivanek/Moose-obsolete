@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLElementTest,
 	#superclass : #XMLNodeWithElementsTest,
-	#category : 'XML-Tests-Parser-DOM'
+	#category : #XML-Tests-Parser-DOM
 }
 
 { #category : #testing }

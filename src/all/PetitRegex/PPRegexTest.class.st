@@ -1,7 +1,7 @@
 Class {
 	#name : #PPRegexTest,
 	#superclass : #TestCase,
-	#category : 'PetitRegex-Tests'
+	#category : #PetitRegex-Tests
 }
 
 { #category : #accessing }

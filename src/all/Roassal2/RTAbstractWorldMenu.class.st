@@ -4,7 +4,7 @@ Abstract class that can be used to produce a new set of Menu entries. See class 
 Class {
 	#name : #RTAbstractWorldMenu,
 	#superclass : #RTObject,
-	#category : 'Roassal2-MorphSpecific-Menu'
+	#category : #Roassal2-MorphSpecific-Menu
 }
 
 { #category : #public }

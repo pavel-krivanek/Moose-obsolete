@@ -11,7 +11,7 @@ Class {
 		'maxArguments',
 		'argumentTypes'
 	],
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #'instance creation' }

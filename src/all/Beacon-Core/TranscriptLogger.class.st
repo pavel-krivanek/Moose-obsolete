@@ -10,7 +10,7 @@ Example:
 Class {
 	#name : #TranscriptLogger,
 	#superclass : #SignalLogger,
-	#category : 'Beacon-Core-Loggers'
+	#category : #Beacon-Core-Loggers
 }
 
 { #category : #registering }

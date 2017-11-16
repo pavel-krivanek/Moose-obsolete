@@ -17,7 +17,7 @@ Class {
 		'defaultCommentColor',
 		'defaultCDataColor'
 	],
-	#category : 'XML-Parser-GTExtensions-Highlighting'
+	#category : #XML-Parser-GTExtensions-Highlighting
 }
 
 { #category : #accessing }

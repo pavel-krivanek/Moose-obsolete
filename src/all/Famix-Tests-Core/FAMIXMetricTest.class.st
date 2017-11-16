@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXMetricTest,
 	#superclass : #TestCase,
-	#category : 'Famix-Tests-Core'
+	#category : #Famix-Tests-Core
 }
 
 { #category : #testing }

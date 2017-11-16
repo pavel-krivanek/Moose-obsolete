@@ -12,7 +12,7 @@ Class {
 		'andc',
 		'ahh'
 	],
-	#category : 'Famix-Extensions'
+	#category : #Famix-Extensions
 }
 
 { #category : #'instance creation' }

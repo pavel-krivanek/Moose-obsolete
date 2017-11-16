@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCRewriteTestParser,
 	#superclass : #SmaCCGLRParser,
-	#category : 'SmaCC_Rewrite_Engine_Tests'
+	#category : #SmaCC_Rewrite_Engine_Tests
 }
 
 { #category : #generated-accessing }

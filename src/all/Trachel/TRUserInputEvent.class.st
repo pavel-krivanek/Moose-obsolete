@@ -7,7 +7,7 @@ Class {
 		'shiftKeyPressed',
 		'optionKeyPressed'
 	],
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }
 
 { #category : #'instance creation' }

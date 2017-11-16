@@ -11,7 +11,7 @@ Class {
 		'selectionListIndex',
 		'selectionListSelections'
 	],
-	#category : 'Merlin-ToBeRemoved'
+	#category : #Merlin-ToBeRemoved
 }
 
 { #category : #'instance creation' }

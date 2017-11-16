@@ -12,7 +12,7 @@ Class {
 		'attributeStrongColor',
 		'attributePaleColor'
 	],
-	#category : 'Moose-RoassalPaintings'
+	#category : #Moose-RoassalPaintings
 }
 
 { #category : #initialize-release }

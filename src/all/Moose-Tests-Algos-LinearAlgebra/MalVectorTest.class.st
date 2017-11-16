@@ -8,7 +8,7 @@ Class {
 		'v',
 		'w'
 	],
-	#category : 'Moose-Tests-Algos-LinearAlgebra'
+	#category : #Moose-Tests-Algos-LinearAlgebra
 }
 
 { #category : #testing }

@@ -8,7 +8,7 @@ Class {
 	#pools : [
 		'LANPool'
 	],
-	#category : 'Moose-TestResources-LAN'
+	#category : #Moose-TestResources-LAN
 }
 
 { #category : #'instance creation' }

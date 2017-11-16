@@ -1,7 +1,7 @@
 Class {
 	#name : #WeakKeyHashTable,
 	#superclass : #HashTable,
-	#category : 'Hashtable'
+	#category : #Hashtable
 }
 
 { #category : #adding }

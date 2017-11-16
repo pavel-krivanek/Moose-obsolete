@@ -8,7 +8,7 @@ Class {
 		'stream',
 		'wasClosed'
 	],
-	#category : 'XML-Tests-Parser-Streams'
+	#category : #XML-Tests-Parser-Streams
 }
 
 { #category : #'instance creation' }

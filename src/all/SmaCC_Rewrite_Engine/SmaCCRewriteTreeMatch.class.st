@@ -6,7 +6,7 @@ Class {
 		'source',
 		'trees'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #testing }

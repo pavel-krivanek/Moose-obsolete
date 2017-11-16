@@ -55,7 +55,7 @@ Class {
 		'movableElement',
 		'movableElementX'
 	],
-	#category : 'Roassal2-Core'
+	#category : #Roassal2-Core
 }
 
 { #category : #'instance creation' }

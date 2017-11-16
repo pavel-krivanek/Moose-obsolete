@@ -39,7 +39,7 @@ Class {
 		'conditions',
 		'failingConditions'
 	],
-	#category : 'Merlin-Core'
+	#category : #Merlin-Core
 }
 
 { #category : #'instance creation' }

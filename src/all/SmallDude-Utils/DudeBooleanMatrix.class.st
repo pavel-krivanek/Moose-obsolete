@@ -6,7 +6,7 @@ Class {
 		'noRows',
 		'noColumns'
 	],
-	#category : 'SmallDude-Utils'
+	#category : #SmallDude-Utils
 }
 
 { #category : #accessing }

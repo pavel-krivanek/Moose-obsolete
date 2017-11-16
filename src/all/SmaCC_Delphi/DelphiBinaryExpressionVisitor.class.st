@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'operators'
 	],
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #private }

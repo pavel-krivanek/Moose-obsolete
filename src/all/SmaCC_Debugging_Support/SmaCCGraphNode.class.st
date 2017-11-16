@@ -11,7 +11,7 @@ Class {
 		'reductions',
 		'parser'
 	],
-	#category : 'SmaCC_Debugging_Support'
+	#category : #SmaCC_Debugging_Support
 }
 
 { #category : #inspecting }

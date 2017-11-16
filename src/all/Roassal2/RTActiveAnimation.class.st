@@ -7,7 +7,7 @@ Class {
 		'intervalInMilliseconds',
 		'lastRefresh'
 	],
-	#category : 'Roassal2-Animation'
+	#category : #Roassal2-Animation
 }
 
 { #category : #accessing }

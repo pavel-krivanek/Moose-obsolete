@@ -6,7 +6,7 @@ Class {
 		'value',
 		'description'
 	],
-	#category : 'Magritte-Tests-Model-Memento'
+	#category : #Magritte-Tests-Model-Memento
 }
 
 { #category : #testing }

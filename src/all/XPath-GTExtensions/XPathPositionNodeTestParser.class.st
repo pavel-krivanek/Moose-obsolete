@@ -8,7 +8,7 @@ Class {
 		'startArgumentPosition',
 		'endArgumentPosition'
 	],
-	#category : 'XPath-GTExtensions-Highlighting-Parsers'
+	#category : #XPath-GTExtensions-Highlighting-Parsers
 }
 
 { #category : #accessing }

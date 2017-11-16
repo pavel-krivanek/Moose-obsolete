@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'mutex'
 	],
-	#category : 'XML-Parser-Utils'
+	#category : #XML-Parser-Utils
 }
 
 { #category : #testing }

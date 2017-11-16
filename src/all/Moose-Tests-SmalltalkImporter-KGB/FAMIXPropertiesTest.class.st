@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXPropertiesTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : 'Moose-Tests-SmalltalkImporter-KGB'
+	#category : #Moose-Tests-SmalltalkImporter-KGB
 }
 
 { #category : #tests }

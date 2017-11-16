@@ -5,7 +5,7 @@ Class {
 		'tarjan',
 		'window'
 	],
-	#category : 'Moose-Tests-Algos-Graph'
+	#category : #Moose-Tests-Algos-Graph
 }
 
 { #category : #running }

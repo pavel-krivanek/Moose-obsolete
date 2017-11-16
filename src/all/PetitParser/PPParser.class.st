@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'properties'
 	],
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #'instance creation' }

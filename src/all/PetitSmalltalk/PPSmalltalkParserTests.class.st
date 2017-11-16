@@ -1,7 +1,7 @@
 Class {
 	#name : #PPSmalltalkParserTests,
 	#superclass : #PPSmalltalkGrammarTests,
-	#category : 'PetitSmalltalk-Tests'
+	#category : #PetitSmalltalk-Tests
 }
 
 { #category : #private }

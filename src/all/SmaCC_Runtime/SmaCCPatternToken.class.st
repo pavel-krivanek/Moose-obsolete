@@ -20,7 +20,7 @@ Class {
 		'testBlock',
 		'nodeClassName'
 	],
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }
 
 { #category : #comparing }

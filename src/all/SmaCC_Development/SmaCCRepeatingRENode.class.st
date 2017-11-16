@@ -14,7 +14,7 @@ Class {
 		'minimumMatches',
 		'maximumMatches'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #'instance creation' }

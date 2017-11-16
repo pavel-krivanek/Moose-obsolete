@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'initialPosition'
 	],
-	#category : 'GT-PetitParserDebugger'
+	#category : #GT-PetitParserDebugger
 }
 
 { #category : #registration }

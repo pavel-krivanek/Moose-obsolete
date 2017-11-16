@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'entities'
 	],
-	#category : 'Famix-File'
+	#category : #Famix-File
 }
 
 { #category : #initialize-release }

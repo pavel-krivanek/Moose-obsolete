@@ -5,7 +5,7 @@ Class {
 		'model',
 		'famixClass'
 	],
-	#category : 'Famix-Tests-Extensions'
+	#category : #Famix-Tests-Extensions
 }
 
 { #category : #running }

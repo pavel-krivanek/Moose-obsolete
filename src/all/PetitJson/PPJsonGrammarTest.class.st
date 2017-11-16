@@ -1,7 +1,7 @@
 Class {
 	#name : #PPJsonGrammarTest,
 	#superclass : #PPCompositeParserTest,
-	#category : 'PetitJson-Tests'
+	#category : #PetitJson-Tests
 }
 
 { #category : #accessing }

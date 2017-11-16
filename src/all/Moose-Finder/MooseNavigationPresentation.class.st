@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseNavigationPresentation,
 	#superclass : #GLMCompositePresentation,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #building }

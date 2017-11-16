@@ -11,7 +11,7 @@ Class {
 		'prePeekStreamPosition',
 		'streamConverter'
 	],
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #private }

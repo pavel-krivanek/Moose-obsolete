@@ -5,7 +5,7 @@ Class {
 		'model',
 		'announcer'
 	],
-	#category : 'Arki-Reporter-Core'
+	#category : #Arki-Reporter-Core
 }
 
 { #category : #'instance creation' }

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'title'
 	],
-	#category : 'Moose-Development-Tools'
+	#category : #Moose-Development-Tools
 }
 
 { #category : #accessing }

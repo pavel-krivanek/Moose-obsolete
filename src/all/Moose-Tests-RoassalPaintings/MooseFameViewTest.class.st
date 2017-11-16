@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseFameViewTest,
 	#superclass : #TestCase,
-	#category : 'Moose-Tests-RoassalPaintings-FameView'
+	#category : #Moose-Tests-RoassalPaintings-FameView
 }
 
 { #category : #ui }

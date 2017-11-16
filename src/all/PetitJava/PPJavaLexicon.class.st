@@ -79,7 +79,7 @@ Class {
 		'falseToken',
 		'nullToken'
 	],
-	#category : 'PetitJava-Core'
+	#category : #PetitJava-Core
 }
 
 { #category : #accessing }

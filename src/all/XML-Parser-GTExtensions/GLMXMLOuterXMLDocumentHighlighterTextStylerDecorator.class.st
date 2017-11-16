@@ -8,7 +8,7 @@ Class {
 		'outerXMLNode',
 		'document'
 	],
-	#category : 'XML-Parser-GTExtensions-Highlighting-Parser'
+	#category : #XML-Parser-GTExtensions-Highlighting-Parser
 }
 
 { #category : #private }

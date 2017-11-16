@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'traversal'
 	],
-	#category : 'Famix-Extensions'
+	#category : #Famix-Extensions
 }
 
 { #category : #'as yet unclassified' }

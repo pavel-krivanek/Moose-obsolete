@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'option'
 	],
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #'radio buttons model' }

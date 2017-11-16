@@ -1,7 +1,7 @@
 Class {
 	#name : #FMXMLPrinter,
 	#superclass : #FMPrintClient,
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #'instance creation' }

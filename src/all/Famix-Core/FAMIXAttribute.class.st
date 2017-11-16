@@ -9,7 +9,7 @@ Class {
 		'hasClassScope',
 		'parentType'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

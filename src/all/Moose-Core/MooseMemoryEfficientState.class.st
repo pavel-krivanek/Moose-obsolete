@@ -13,7 +13,7 @@ Class {
 		'entity',
 		'propertyCache'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'accessing properties' }

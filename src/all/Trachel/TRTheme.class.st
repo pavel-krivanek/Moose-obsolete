@@ -4,7 +4,7 @@ Class {
 	#classVars : [
 		'Current'
 	],
-	#category : 'Trachel-Core-Theme'
+	#category : #Trachel-Core-Theme
 }
 
 { #category : #'base color' }

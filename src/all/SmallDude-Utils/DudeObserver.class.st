@@ -11,7 +11,7 @@ Class {
 		'incrTrigger',
 		'endTrigger'
 	],
-	#category : 'SmallDude-Utils'
+	#category : #SmallDude-Utils
 }
 
 { #category : #default }

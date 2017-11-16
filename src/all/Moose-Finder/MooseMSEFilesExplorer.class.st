@@ -6,7 +6,7 @@ self openOn: FSDiskStore currentFilesystem workingDirectory / 'metamodels'.
 Class {
 	#name : #MooseMSEFilesExplorer,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #'instance creation' }

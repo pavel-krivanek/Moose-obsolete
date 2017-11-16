@@ -43,7 +43,7 @@ Class {
 		'bangTokens',
 		'typeTokens'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

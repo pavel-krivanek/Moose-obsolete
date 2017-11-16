@@ -4,7 +4,7 @@ This class validates standalone externally defined CDATA attributes. It disallow
 Class {
 	#name : #XMLStandaloneExternalCDataAttributeValidator,
 	#superclass : #XMLCDataAttributeValidator,
-	#category : 'XML-Parser-Validation-Standalone'
+	#category : #XML-Parser-Validation-Standalone
 }
 
 { #category : #testing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #TypeMerger,
 	#superclass : #Object,
-	#category : 'RoelTyper-Core'
+	#category : #RoelTyper-Core
 }
 
 { #category : #'instance creation' }

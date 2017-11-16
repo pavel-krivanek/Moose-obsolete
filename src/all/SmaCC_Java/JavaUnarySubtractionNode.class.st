@@ -5,7 +5,7 @@ Class {
 		'minus',
 		'expression'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

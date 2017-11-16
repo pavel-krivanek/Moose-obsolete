@@ -4,7 +4,7 @@ I am an abstract interaction that postpones the element initialization until it 
 Class {
 	#name : #RTLazyInteraction,
 	#superclass : #RTInteraction,
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #hooks }

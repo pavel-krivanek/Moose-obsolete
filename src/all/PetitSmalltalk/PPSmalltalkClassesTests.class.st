@@ -4,7 +4,7 @@ Evalaute the following code to verify the complete image.
 Class {
 	#name : #PPSmalltalkClassesTests,
 	#superclass : #PPCompositeParserTest,
-	#category : 'PetitSmalltalk-Tests'
+	#category : #PetitSmalltalk-Tests
 }
 
 { #category : #utilities }

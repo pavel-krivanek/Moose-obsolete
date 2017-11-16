@@ -4,7 +4,7 @@ I am a memento that forwards read- and write-access directly to the model. I can
 Class {
 	#name : #MAStraightMemento,
 	#superclass : #MAMemento,
-	#category : 'Magritte-Model-Memento'
+	#category : #Magritte-Model-Memento
 }
 
 { #category : #testing }

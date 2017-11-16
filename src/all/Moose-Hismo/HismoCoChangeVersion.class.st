@@ -5,7 +5,7 @@ Class {
 		'history1',
 		'history2'
 	],
-	#category : 'Moose-Hismo'
+	#category : #Moose-Hismo
 }
 
 { #category : #'instance creation' }

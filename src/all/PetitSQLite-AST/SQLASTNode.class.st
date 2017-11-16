@@ -6,7 +6,7 @@ Class {
 		'ast',
 		'completeName'
 	],
-	#category : 'PetitSQLite-AST'
+	#category : #PetitSQLite-AST
 }
 
 { #category : #'as yet unclassified' }

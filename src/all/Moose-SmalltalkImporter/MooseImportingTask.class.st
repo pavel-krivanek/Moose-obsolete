@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'importerClass'
 	],
-	#category : 'Moose-SmalltalkImporter'
+	#category : #Moose-SmalltalkImporter
 }
 
 { #category : #accessing }

@@ -15,7 +15,7 @@ Class {
 		'license',
 		'url'
 	],
-	#category : 'Grease-Core'
+	#category : #Grease-Core
 }
 
 { #category : #querying }

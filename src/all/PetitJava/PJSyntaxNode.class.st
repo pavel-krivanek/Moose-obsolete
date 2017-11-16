@@ -1,5 +1,5 @@
 Class {
 	#name : #PJSyntaxNode,
 	#superclass : #PJASTNode,
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }

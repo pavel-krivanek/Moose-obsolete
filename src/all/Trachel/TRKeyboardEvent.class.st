@@ -8,7 +8,7 @@ Class {
 		'keyValue',
 		'keyCombination'
 	],
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }
 
 { #category : #comparing }

@@ -6,7 +6,7 @@ Class {
 		'message',
 		'column'
 	],
-	#category : 'PetitIndent-Core'
+	#category : #PetitIndent-Core
 }
 
 { #category : #'as yet unclassified' }

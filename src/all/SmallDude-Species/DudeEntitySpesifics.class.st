@@ -4,7 +4,7 @@ this tells the detector how to parse the given entities, and what to ignore from
 Class {
 	#name : #DudeEntitySpesifics,
 	#superclass : #Object,
-	#category : 'SmallDude-Species'
+	#category : #SmallDude-Species
 }
 
 { #category : #parsing }

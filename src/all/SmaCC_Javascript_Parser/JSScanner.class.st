@@ -1,7 +1,7 @@
 Class {
 	#name : #JSScanner,
 	#superclass : #SmaCCScanner,
-	#category : 'SmaCC_Javascript_Parser'
+	#category : #SmaCC_Javascript_Parser
 }
 
 { #category : #generated-initialization }

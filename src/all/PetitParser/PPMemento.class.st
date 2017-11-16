@@ -14,7 +14,7 @@ Class {
 		'count',
 		'context'
 	],
-	#category : 'PetitParser-Core'
+	#category : #PetitParser-Core
 }
 
 { #category : #'instance creation' }

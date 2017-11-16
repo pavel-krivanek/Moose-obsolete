@@ -6,7 +6,7 @@ I should be atteched to TRCamera (`aView canvas camera addCallback:`)
 Class {
 	#name : #TRCameraScaleCallback,
 	#superclass : #TRCallback,
-	#category : 'Trachel-Callbacks'
+	#category : #Trachel-Callbacks
 }
 
 { #category : #testing }

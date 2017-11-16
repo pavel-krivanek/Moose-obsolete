@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'mergedStates'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #accessing }

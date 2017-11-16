@@ -4,7 +4,7 @@ This is an AST node class for 'mod' modulus expressions that return the remainde
 Class {
 	#name : #XPathASTModulusExpressionNode,
 	#superclass : #XPathASTMultiplicativeExpressionNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

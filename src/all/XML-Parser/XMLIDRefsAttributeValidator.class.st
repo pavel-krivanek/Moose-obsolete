@@ -4,7 +4,7 @@ This class validates attributes with lists of ID ref values separated by spaces.
 Class {
 	#name : #XMLIDRefsAttributeValidator,
 	#superclass : #XMLIDRefAttributeValidator,
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #defaults }

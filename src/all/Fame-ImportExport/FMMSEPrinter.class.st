@@ -1,7 +1,7 @@
 Class {
 	#name : #FMMSEPrinter,
 	#superclass : #FMPrintClient,
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #parsing }

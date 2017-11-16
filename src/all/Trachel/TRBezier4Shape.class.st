@@ -1,7 +1,7 @@
 Class {
 	#name : #TRBezier4Shape,
 	#superclass : #TRBezier3Shape,
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #hooks }

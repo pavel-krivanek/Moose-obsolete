@@ -17,7 +17,7 @@ Class {
 		'typeArgLeft',
 		'typeArgRight'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

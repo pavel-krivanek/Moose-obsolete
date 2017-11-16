@@ -12,7 +12,7 @@ Class {
 	#classVars : [
 		'InlinedFunctionNamesAndSelectors'
 	],
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #'class initialization' }

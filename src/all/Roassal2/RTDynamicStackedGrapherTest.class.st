@@ -4,7 +4,7 @@ A RTDynamicStackedGrapherTest is a test class for testing the behavior of RTDyna
 Class {
 	#name : #RTDynamicStackedGrapherTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Builder-Grapher-Tests'
+	#category : #Roassal2-Builder-Grapher-Tests
 }
 
 { #category : #tests }

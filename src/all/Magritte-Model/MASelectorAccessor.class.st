@@ -8,7 +8,7 @@ Class {
 		'readSelector',
 		'writeSelector'
 	],
-	#category : 'Magritte-Model-Accessor'
+	#category : #Magritte-Model-Accessor
 }
 
 { #category : #testing }

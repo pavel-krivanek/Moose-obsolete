@@ -17,7 +17,7 @@ Class {
 		'rightBrace',
 		'semicolon'
 	],
-	#category : 'SmaCC_CSharp'
+	#category : #SmaCC_CSharp
 }
 
 { #category : #generated }

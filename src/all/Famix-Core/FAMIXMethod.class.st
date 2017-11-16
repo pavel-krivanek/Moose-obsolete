@@ -11,7 +11,7 @@ Class {
 		'parentType',
 		'hasClassScope'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

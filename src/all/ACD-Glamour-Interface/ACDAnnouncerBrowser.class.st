@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'debugger'
 	],
-	#category : 'ACD-Glamour-Interface'
+	#category : #ACD-Glamour-Interface
 }
 
 { #category : #building }

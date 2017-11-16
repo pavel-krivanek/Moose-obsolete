@@ -1,7 +1,7 @@
 Class {
 	#name : #RTExtensibleLabel,
 	#superclass : #RTLabel,
-	#category : 'Roassal2-Shapes'
+	#category : #Roassal2-Shapes
 }
 
 { #category : #hooks }

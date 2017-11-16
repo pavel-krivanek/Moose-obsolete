@@ -1,7 +1,7 @@
 Class {
 	#name : #RTUnoptimizedComposerTest,
 	#superclass : #RTComposerTest,
-	#category : 'Roassal2-Builder-Composer'
+	#category : #Roassal2-Builder-Composer
 }
 
 { #category : #running }

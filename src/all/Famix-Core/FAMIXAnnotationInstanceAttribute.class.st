@@ -19,7 +19,7 @@ Class {
 		'annotationTypeAttribute',
 		'value'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #accessing }

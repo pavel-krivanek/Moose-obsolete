@@ -7,7 +7,7 @@ Class {
 		'famixMethod',
 		'theClass'
 	],
-	#category : 'Moose-SmalltalkImporter'
+	#category : #Moose-SmalltalkImporter
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ This is a base class for XPath node tests.
 Class {
 	#name : #XPathNodeTest,
 	#superclass : #Object,
-	#category : 'XPath-Core-Compilation'
+	#category : #XPath-Core-Compilation
 }
 
 { #category : #converting }

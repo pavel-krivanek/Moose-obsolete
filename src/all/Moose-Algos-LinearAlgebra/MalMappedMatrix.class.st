@@ -8,7 +8,7 @@ Class {
 		'columnMap',
 		'rowMap'
 	],
-	#category : 'Moose-Algos-LinearAlgebra'
+	#category : #Moose-Algos-LinearAlgebra
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ I am a class for pharo platform
 Class {
 	#name : #TRPharoPlatform,
 	#superclass : #TRPlatform,
-	#category : 'Trachel-MorphSpecific'
+	#category : #Trachel-MorphSpecific
 }
 
 { #category : #testing }

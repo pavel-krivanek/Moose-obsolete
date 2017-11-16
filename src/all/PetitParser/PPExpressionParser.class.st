@@ -50,7 +50,7 @@ Class {
 	#instVars : [
 		'operators'
 	],
-	#category : 'PetitParser-Tools'
+	#category : #PetitParser-Tools
 }
 
 { #category : #private }

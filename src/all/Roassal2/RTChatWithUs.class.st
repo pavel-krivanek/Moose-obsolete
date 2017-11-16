@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'discord'
 	],
-	#category : 'Roassal2-MorphSpecific-Menu'
+	#category : #Roassal2-MorphSpecific-Menu
 }
 
 { #category : #'world menu' }

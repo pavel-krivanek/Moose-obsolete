@@ -4,7 +4,7 @@ This class encapsulates the logic of the class blueprint view. It is applicable 
 Class {
 	#name : #FAMIXClassBlueprint,
 	#superclass : #Object,
-	#category : 'Moose-RoassalPaintings'
+	#category : #Moose-RoassalPaintings
 }
 
 { #category : #public }

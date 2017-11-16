@@ -8,7 +8,7 @@ Class {
 		'classes',
 		'extensions'
 	],
-	#category : 'Fame-Core'
+	#category : #Fame-Core
 }
 
 { #category : #initialize-release }

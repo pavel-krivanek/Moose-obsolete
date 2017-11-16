@@ -18,7 +18,7 @@ Class {
 		'currentId',
 		'cachedInterval'
 	],
-	#category : 'SmaCC_Source_Editing'
+	#category : #SmaCC_Source_Editing
 }
 
 { #category : #'instance creation' }

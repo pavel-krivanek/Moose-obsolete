@@ -8,7 +8,7 @@ RTBundleExample new installTitle: 'GroupOfGroups'
 Class {
 	#name : #RTBundleExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-Builder-BundleEdge'
+	#category : #Roassal2-Builder-BundleEdge
 }
 
 { #category : #sources }

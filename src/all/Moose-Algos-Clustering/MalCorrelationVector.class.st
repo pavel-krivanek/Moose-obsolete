@@ -5,7 +5,7 @@ Class {
 	#name : #MalCorrelationVector,
 	#superclass : #MalVector,
 	#type : #bytes,
-	#category : 'Moose-Algos-Clustering'
+	#category : #Moose-Algos-Clustering
 }
 
 { #category : #'instance creation' }

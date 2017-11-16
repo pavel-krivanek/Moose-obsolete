@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'next'
 	],
-	#category : 'Magritte-Model-Accessor'
+	#category : #Magritte-Model-Accessor
 }
 
 { #category : #testing }

@@ -22,7 +22,7 @@ Class {
 		'periodTokens',
 		'declarations'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

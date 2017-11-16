@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'productions'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ This class validates standalone externally defined elements with element content
 Class {
 	#name : #XMLStandaloneExternalDFAElementContentElementValidator,
 	#superclass : #XMLDFAElementContentElementValidator,
-	#category : 'XML-Parser-Validation-Standalone'
+	#category : #XML-Parser-Validation-Standalone
 }
 
 { #category : #testing }

@@ -6,7 +6,7 @@ Class {
 		'isLong',
 		'isFloat'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #'as yet unclassified' }

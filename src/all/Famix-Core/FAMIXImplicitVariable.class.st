@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'parentBehaviouralEntity'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

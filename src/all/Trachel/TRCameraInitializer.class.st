@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'LastCamera'
 	],
-	#category : 'Trachel-Core'
+	#category : #Trachel-Core
 }
 
 { #category : #public }

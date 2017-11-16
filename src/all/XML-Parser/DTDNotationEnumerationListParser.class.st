@@ -4,7 +4,7 @@ This class parses notation attribute value lists in the form of ""NOTATION (one|
 Class {
 	#name : #DTDNotationEnumerationListParser,
 	#superclass : #DTDEnumerationListParser,
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #private }

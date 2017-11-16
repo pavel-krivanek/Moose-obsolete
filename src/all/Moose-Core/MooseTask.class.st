@@ -9,7 +9,7 @@ Class {
 		'progBar',
 		'nb'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #private }

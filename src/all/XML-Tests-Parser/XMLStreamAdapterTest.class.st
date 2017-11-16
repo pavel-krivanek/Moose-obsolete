@@ -4,7 +4,7 @@ Abstract, do not run.
 Class {
 	#name : #XMLStreamAdapterTest,
 	#superclass : #TestCase,
-	#category : 'XML-Tests-Parser-Streams'
+	#category : #XML-Tests-Parser-Streams
 }
 
 { #category : #converting }

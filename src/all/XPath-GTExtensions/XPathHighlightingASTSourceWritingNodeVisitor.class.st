@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'highlighter'
 	],
-	#category : 'XPath-GTExtensions-Highlighting-AST'
+	#category : #XPath-GTExtensions-Highlighting-AST
 }
 
 { #category : #converting }

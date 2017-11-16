@@ -11,7 +11,7 @@ Class {
 		'foundA0',
 		'foundB0'
 	],
-	#category : 'Moose-Algos-Clustering'
+	#category : #Moose-Algos-Clustering
 }
 
 { #category : #'instance creation' }

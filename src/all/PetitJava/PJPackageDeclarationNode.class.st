@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'nameNode'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #visiting }

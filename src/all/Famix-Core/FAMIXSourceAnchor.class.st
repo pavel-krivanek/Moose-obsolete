@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'element'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #accessing }

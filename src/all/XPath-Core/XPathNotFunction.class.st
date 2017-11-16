@@ -4,7 +4,7 @@ XPath negation function.
 Class {
 	#name : #XPathNotFunction,
 	#superclass : #XPathFunction,
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #accessing }

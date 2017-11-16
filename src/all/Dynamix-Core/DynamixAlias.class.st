@@ -11,7 +11,7 @@ Class {
 		'creator',
 		'timestamp'
 	],
-	#category : 'Dynamix-Core'
+	#category : #Dynamix-Core
 }
 
 { #category : #meta }

@@ -1,7 +1,7 @@
 Class {
 	#name : #FileNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : 'SmaCC_Line_Parser'
+	#category : #SmaCC_Line_Parser
 }
 
 { #category : #generated }

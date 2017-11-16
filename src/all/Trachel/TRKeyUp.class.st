@@ -18,5 +18,5 @@ c open
 Class {
 	#name : #TRKeyUp,
 	#superclass : #TRKeyboardEvent,
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }

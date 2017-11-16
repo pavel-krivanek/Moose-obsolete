@@ -1,7 +1,7 @@
 Class {
 	#name : #CSProgramNode,
 	#superclass : #SmaCCParseNode,
-	#category : 'SmaCC_CSharp'
+	#category : #SmaCC_CSharp
 }
 
 { #category : #generated }

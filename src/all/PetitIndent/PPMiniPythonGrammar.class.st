@@ -47,7 +47,7 @@ Class {
 		'ifKw',
 		'onelineString'
 	],
-	#category : 'PetitIndent-Examples'
+	#category : #PetitIndent-Examples
 }
 
 { #category : #indent-dedent }

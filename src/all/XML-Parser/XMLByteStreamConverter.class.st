@@ -4,7 +4,7 @@ A stream converter for ISO Latin-1, ASCII,  and other compatible byte character 
 Class {
 	#name : #XMLByteStreamConverter,
 	#superclass : #XMLStatelessStreamConverter,
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #basic }

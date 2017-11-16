@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXSelfLoopScopeTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : 'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
+	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
 }
 
 { #category : #famix-class }

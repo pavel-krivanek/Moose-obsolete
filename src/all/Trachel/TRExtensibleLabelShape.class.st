@@ -1,7 +1,7 @@
 Class {
 	#name : #TRExtensibleLabelShape,
 	#superclass : #TRLabelShape,
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #accessing }

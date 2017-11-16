@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCTabManagerModel,
 	#superclass : #TabManagerModel,
-	#category : 'SmaCC_Development_UI'
+	#category : #SmaCC_Development_UI
 }
 
 { #category : #api-focus }

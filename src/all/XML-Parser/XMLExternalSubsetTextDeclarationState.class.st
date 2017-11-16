@@ -6,7 +6,7 @@ This state #canTerminateInput unlike XMLXMLDeclarationState because external sub
 Class {
 	#name : #XMLExternalSubsetTextDeclarationState,
 	#superclass : #XMLExternalSubsetState,
-	#category : 'XML-Parser-Drivers'
+	#category : #XML-Parser-Drivers
 }
 
 { #category : #tokenizing }

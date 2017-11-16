@@ -7,7 +7,7 @@ WindowDeActivated
 Class {
 	#name : #GTWindowRecorderWindowDeActivatedEvent,
 	#superclass : #GTWindowRecorderEvent,
-	#category : 'GT-Window-EventRecorder-Events'
+	#category : #GT-Window-EventRecorder-Events
 }
 
 { #category : #testing }

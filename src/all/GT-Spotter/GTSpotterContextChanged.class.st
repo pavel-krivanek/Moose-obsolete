@@ -5,7 +5,7 @@ Class {
 		'previous',
 		'current'
 	],
-	#category : 'GT-Spotter-Announcements'
+	#category : #GT-Spotter-Announcements
 }
 
 { #category : #compatibility }

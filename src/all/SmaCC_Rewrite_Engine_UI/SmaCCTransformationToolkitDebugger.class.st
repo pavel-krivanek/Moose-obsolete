@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCTransformationToolkitDebugger,
 	#superclass : #GTGenericStackDebugger,
-	#category : 'SmaCC_Rewrite_Engine_UI'
+	#category : #SmaCC_Rewrite_Engine_UI
 }
 
 { #category : #testing }

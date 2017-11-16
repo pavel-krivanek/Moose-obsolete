@@ -5,7 +5,7 @@ Class {
 		'qualifier',
 		'simpleName'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #'instance creation' }

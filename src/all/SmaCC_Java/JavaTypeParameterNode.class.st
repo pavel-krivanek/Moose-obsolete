@@ -7,7 +7,7 @@ Class {
 		'types',
 		'amps'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

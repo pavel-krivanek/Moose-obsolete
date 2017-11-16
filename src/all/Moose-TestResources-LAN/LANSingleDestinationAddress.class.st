@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'id'
 	],
-	#category : 'Moose-TestResources-LAN'
+	#category : #Moose-TestResources-LAN
 }
 
 { #category : #comparing }

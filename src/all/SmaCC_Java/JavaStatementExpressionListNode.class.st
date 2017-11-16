@@ -5,7 +5,7 @@ Class {
 		'expressions',
 		'commas'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

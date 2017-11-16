@@ -24,7 +24,7 @@ Class {
 	#instVars : [
 		'vertices'
 	],
-	#category : 'Roassal2-Shapes'
+	#category : #Roassal2-Shapes
 }
 
 { #category : #'instance creation' }

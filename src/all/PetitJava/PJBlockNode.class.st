@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'statements'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #accessing }

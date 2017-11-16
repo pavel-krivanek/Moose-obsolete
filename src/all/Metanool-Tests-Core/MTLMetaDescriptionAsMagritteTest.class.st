@@ -1,7 +1,7 @@
 Class {
 	#name : #MTLMetaDescriptionAsMagritteTest,
 	#superclass : #TestCase,
-	#category : 'Metanool-Tests-Core'
+	#category : #Metanool-Tests-Core
 }
 
 { #category : #tests }

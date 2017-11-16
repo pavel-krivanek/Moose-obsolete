@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'blockCondition'
 	],
-	#category : 'GT-DebuggerExtensions'
+	#category : #GT-DebuggerExtensions
 }
 
 { #category : #'instance creation' }

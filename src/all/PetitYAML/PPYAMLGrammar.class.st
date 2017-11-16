@@ -140,7 +140,7 @@ Class {
 		'l_bare_document',
 		'aligns'
 	],
-	#category : 'PetitYAML'
+	#category : #PetitYAML
 }
 
 { #category : #spec }

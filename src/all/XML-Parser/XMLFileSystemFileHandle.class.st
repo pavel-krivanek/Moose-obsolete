@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'fileReference'
 	],
-	#category : 'XML-Parser-Files'
+	#category : #XML-Parser-Files
 }
 
 { #category : #basic }

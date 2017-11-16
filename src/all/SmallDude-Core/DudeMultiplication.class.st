@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'duplications'
 	],
-	#category : 'SmallDude-Core'
+	#category : #SmallDude-Core
 }
 
 { #category : #'instance creation' }

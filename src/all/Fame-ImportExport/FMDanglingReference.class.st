@@ -6,7 +6,7 @@ Class {
 		'owner',
 		'pos'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #'instance creation' }

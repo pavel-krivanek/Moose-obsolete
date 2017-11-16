@@ -1,7 +1,7 @@
 Class {
 	#name : #REPConcernSuccessStatus,
 	#superclass : #REPConcernStatus,
-	#category : 'Arki-Reporter-Core'
+	#category : #Arki-Reporter-Core
 }
 
 { #category : #accessing }

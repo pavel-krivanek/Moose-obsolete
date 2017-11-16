@@ -1,7 +1,7 @@
 Class {
 	#name : #SwiftParseNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

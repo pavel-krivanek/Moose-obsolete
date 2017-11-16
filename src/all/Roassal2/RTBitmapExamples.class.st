@@ -1,7 +1,7 @@
 Class {
 	#name : #RTBitmapExamples,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-ExampleBrowser'
+	#category : #Roassal2-ExampleBrowser
 }
 
 { #category : #examples }

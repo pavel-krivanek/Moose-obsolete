@@ -5,7 +5,7 @@ Class {
 		'selected',
 		'selectedIndex'
 	],
-	#category : 'Magritte-Morph-Model'
+	#category : #Magritte-Morph-Model
 }
 
 { #category : #private-building }

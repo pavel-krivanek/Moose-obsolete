@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'message'
 	],
-	#category : 'Beacon-Core-Signals'
+	#category : #Beacon-Core-Signals
 }
 
 { #category : #'instance creation' }

@@ -10,7 +10,7 @@ Class {
 		'equal',
 		'value'
 	],
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

@@ -31,7 +31,7 @@ Class {
 		'startTime',
 		'elapsedCycles'
 	],
-	#category : 'Trachel-Viva'
+	#category : #Trachel-Viva
 }
 
 { #category : #private }

@@ -4,7 +4,7 @@ This observer records notifications from XMLAttributeLists.
 Class {
 	#name : #XMLRecordingAttributeListObserver,
 	#superclass : #XMLRecordingListObserver,
-	#category : 'XML-Tests-Parser-DOM'
+	#category : #XML-Tests-Parser-DOM
 }
 
 { #category : #notifying }

@@ -19,7 +19,7 @@ Class {
 		'hasUnhandledReservedAttributes',
 		'externalEntityResolver'
 	],
-	#category : 'XML-Parser-Drivers'
+	#category : #XML-Parser-Drivers
 }
 
 { #category : #'instance creation' }

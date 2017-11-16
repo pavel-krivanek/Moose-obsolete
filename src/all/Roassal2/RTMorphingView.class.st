@@ -8,7 +8,7 @@ I am the advanced brother of RTMorphingView. In addition to its functionalities 
 Class {
 	#name : #RTMorphingView,
 	#superclass : #RTAbstractMorphingView,
-	#category : 'Roassal2-Interactions-MorphingView'
+	#category : #Roassal2-Interactions-MorphingView
 }
 
 { #category : #examples }

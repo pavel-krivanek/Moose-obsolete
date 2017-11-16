@@ -4,7 +4,7 @@ I am an implementation of an ordered multi-map. I allow multiple values to be as
 Class {
 	#name : #GROrderedMultiMap,
 	#superclass : #GRSmallDictionary,
-	#category : 'Grease-Core-Collections'
+	#category : #Grease-Core-Collections
 }
 
 { #category : #accessing }

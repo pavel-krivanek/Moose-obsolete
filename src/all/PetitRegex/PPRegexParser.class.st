@@ -29,7 +29,7 @@ Class {
 		'EndOfLineParser',
 		'EscapeMap'
 	],
-	#category : 'PetitRegex-Core'
+	#category : #PetitRegex-Core
 }
 
 { #category : #private }

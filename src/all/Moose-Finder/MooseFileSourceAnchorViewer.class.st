@@ -4,7 +4,7 @@ This browser simply provides the possibility to open a sourceAnchor with the tex
 Class {
 	#name : #MooseFileSourceAnchorViewer,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #accessing }

@@ -22,7 +22,7 @@ Class {
 		'labelInteraction',
 		'lelements'
 	],
-	#category : 'Roassal2-Experimental'
+	#category : #Roassal2-Experimental
 }
 
 { #category : #private }

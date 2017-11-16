@@ -1,7 +1,7 @@
 Class {
 	#name : #PPJavaWhitespace,
 	#superclass : #PP2Strategy,
-	#category : 'PetitJava-Core'
+	#category : #PetitJava-Core
 }
 
 { #category : #parsing }

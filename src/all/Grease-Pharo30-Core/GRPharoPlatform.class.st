@@ -9,7 +9,7 @@ Class {
 		'UrlTable',
 		'XmlTable'
 	],
-	#category : 'Grease-Pharo30-Core'
+	#category : #Grease-Pharo30-Core
 }
 
 { #category : #'class initialization' }

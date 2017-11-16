@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'factory'
 	],
-	#category : 'Phexample-Test'
+	#category : #Phexample-Test
 }
 
 { #category : #'as yet unclassified' }

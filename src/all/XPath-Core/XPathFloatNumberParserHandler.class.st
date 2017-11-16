@@ -9,7 +9,7 @@ Class {
 		'integer',
 		'fraction'
 	],
-	#category : 'XPath-Core-Parsers'
+	#category : #XPath-Core-Parsers
 }
 
 { #category : #handling }

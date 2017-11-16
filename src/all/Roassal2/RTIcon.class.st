@@ -1,7 +1,7 @@
 Class {
 	#name : #RTIcon,
 	#superclass : #RTObject,
-	#category : 'Roassal2-Utility'
+	#category : #Roassal2-Utility
 }
 
 { #category : #icons }

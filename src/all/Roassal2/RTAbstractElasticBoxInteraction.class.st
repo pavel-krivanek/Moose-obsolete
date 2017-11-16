@@ -16,7 +16,7 @@ Class {
 		'group',
 		'allowNegatedBox'
 	],
-	#category : 'Roassal2-Selection'
+	#category : #Roassal2-Selection
 }
 
 { #category : #accessing }

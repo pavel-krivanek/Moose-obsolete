@@ -9,7 +9,7 @@ This will open the editor with a variable named #variable whose value will be 'v
 Class {
 	#name : #GLMEditor,
 	#superclass : #GLMScriptingEditorTemplate,
-	#category : 'Glamour-Tools'
+	#category : #Glamour-Tools
 }
 
 { #category : #private }

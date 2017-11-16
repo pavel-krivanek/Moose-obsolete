@@ -5,7 +5,7 @@ Class {
 		'staticToken',
 		'block'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

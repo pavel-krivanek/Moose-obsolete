@@ -9,7 +9,7 @@ Class {
 		'pushedBackToken',
 		'writeStream'
 	],
-	#category : 'XPath-Core-Streams'
+	#category : #XPath-Core-Streams
 }
 
 { #category : #'instance creation' }

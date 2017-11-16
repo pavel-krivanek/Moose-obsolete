@@ -8,7 +8,7 @@ Class {
 		'currentAxis',
 		'nodeTestParser'
 	],
-	#category : 'XPath-Core-Parsers'
+	#category : #XPath-Core-Parsers
 }
 
 { #category : #testing }

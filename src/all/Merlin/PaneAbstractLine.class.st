@@ -7,7 +7,7 @@ Class {
 		'subComponents',
 		'groupBoxName'
 	],
-	#category : 'Merlin-PartsLayout'
+	#category : #Merlin-PartsLayout
 }
 
 { #category : #'instance creation' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeBooleanSymetricMatrix,
 	#superclass : #MalSymetricMatrix,
-	#category : 'SmallDude-Utils'
+	#category : #SmallDude-Utils
 }
 
 { #category : #accessing }

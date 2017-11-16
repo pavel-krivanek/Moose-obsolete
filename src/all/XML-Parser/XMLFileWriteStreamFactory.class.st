@@ -6,7 +6,7 @@ Subclasses should create write streams that do no automatic encoding and accept 
 Class {
 	#name : #XMLFileWriteStreamFactory,
 	#superclass : #XMLAbstractFactory,
-	#category : 'XML-Parser-Files'
+	#category : #XML-Parser-Files
 }
 
 { #category : #basic }

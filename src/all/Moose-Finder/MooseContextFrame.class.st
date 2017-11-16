@@ -29,7 +29,7 @@ Class {
 		'dialogWindow',
 		'builder'
 	],
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #'instance creation' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #ACDStackSetReceiver,
 	#superclass : #DebugAction,
-	#category : 'ACD-Glamour-Interface'
+	#category : #ACD-Glamour-Interface
 }
 
 { #category : #testing }

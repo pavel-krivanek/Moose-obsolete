@@ -1,7 +1,7 @@
 Class {
 	#name : #RTStretchBehavior,
 	#superclass : #RTNestingBehavior,
-	#category : 'Roassal2-Core'
+	#category : #Roassal2-Core
 }
 
 { #category : #hooks }

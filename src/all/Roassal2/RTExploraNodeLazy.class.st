@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'block'
 	],
-	#category : 'Roassal2-Builder-Explora'
+	#category : #Roassal2-Builder-Explora
 }
 
 { #category : #'as yet unclassified' }

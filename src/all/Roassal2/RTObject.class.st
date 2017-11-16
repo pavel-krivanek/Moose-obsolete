@@ -4,7 +4,7 @@ Root of most of the Roassal classes.
 Class {
 	#name : #RTObject,
 	#superclass : #Object,
-	#category : 'Roassal2-Core'
+	#category : #Roassal2-Core
 }
 
 { #category : #'as yet unclassified' }

@@ -27,7 +27,7 @@ Class {
 		'typeTokens',
 		'periodPeriodPeriodTokens'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

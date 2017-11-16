@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPDebuggerSmokeTest,
 	#superclass : #GTDebuggerSmokeTest,
-	#category : 'GT-PetitParserDebugger'
+	#category : #GT-PetitParserDebugger
 }
 
 { #category : #accessing }

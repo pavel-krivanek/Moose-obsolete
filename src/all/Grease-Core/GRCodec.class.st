@@ -4,7 +4,7 @@ A codec defines how Seaside communicates without the outside world and how outsi
 Class {
 	#name : #GRCodec,
 	#superclass : #GRObject,
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #accessing }

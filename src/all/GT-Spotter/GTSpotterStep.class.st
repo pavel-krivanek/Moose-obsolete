@@ -27,7 +27,7 @@ Class {
 		'lastSearchContext',
 		'event'
 	],
-	#category : 'GT-Spotter-Model'
+	#category : #GT-Spotter-Model
 }
 
 { #category : #example }

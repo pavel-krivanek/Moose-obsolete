@@ -27,7 +27,7 @@ Class {
 		'classDict',
 		'nameDict'
 	],
-	#category : 'Fame-Core'
+	#category : #Fame-Core
 }
 
 { #category : #'instance creation' }

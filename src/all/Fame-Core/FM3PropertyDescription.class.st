@@ -29,7 +29,7 @@ Class {
 		'isTarget',
 		'isSource'
 	],
-	#category : 'Fame-Core'
+	#category : #Fame-Core
 }
 
 { #category : #initialize-release }

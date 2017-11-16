@@ -1,7 +1,7 @@
 Class {
 	#name : #RTGTContextExample,
 	#superclass : #RTObject,
-	#category : 'Roassal2GT-Glamour-Context'
+	#category : #Roassal2GT-Glamour-Context
 }
 
 { #category : #'as yet unclassified' }

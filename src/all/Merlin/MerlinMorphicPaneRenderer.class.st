@@ -7,7 +7,7 @@ Class {
 		'nextButtonActions',
 		'terminateButtonActions'
 	],
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #updating }

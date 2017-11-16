@@ -7,7 +7,7 @@ GTRunToSelectionDebugAction
 Class {
 	#name : #GTDebuggerRecorderGTRunToSelectionEvent,
 	#superclass : #GTDebuggerRecorderDebugActionEvent,
-	#category : 'GT-Debugger-EventRecorder-Events'
+	#category : #GT-Debugger-EventRecorder-Events
 }
 
 { #category : #initialization }

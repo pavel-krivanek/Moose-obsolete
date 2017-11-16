@@ -34,7 +34,7 @@ Class {
 		'byType',
 		'sortedCollectionList'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #'as yet unclassified' }

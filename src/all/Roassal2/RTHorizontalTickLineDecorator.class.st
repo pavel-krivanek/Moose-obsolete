@@ -30,7 +30,7 @@ Add some horizontal lines, one line per tick.
 Class {
 	#name : #RTHorizontalTickLineDecorator,
 	#superclass : #RTAbstractTickLineDecorator,
-	#category : 'Roassal2-Builder-Grapher-Decorators'
+	#category : #Roassal2-Builder-Grapher-Decorators
 }
 
 { #category : #hooks }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'oldName'
 	],
-	#category : 'Moose-Core'
+	#category : #Moose-Core
 }
 
 { #category : #accessing }

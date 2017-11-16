@@ -4,7 +4,7 @@ Return the current column in the input
 Class {
 	#name : #PPColumnParser,
 	#superclass : #PPParser,
-	#category : 'PetitIndent-Offside-rule'
+	#category : #PetitIndent-Offside-rule
 }
 
 { #category : #analysis }

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'circles'
 	],
-	#category : 'Roassal2-Builder-CircularMap'
+	#category : #Roassal2-Builder-CircularMap
 }
 
 { #category : #computing }

@@ -4,7 +4,7 @@ FAMIXSmalltalkSourceLanguage represents the Smalltalk language.
 Class {
 	#name : #FAMIXSmalltalkSourceLanguage,
 	#superclass : #FAMIXSourceLanguage,
-	#category : 'Famix-Smalltalk'
+	#category : #Famix-Smalltalk
 }
 
 { #category : #meta }

@@ -1,7 +1,7 @@
 Class {
 	#name : #FirstFollowNextTests,
 	#superclass : #TestCase,
-	#category : 'PetitIslands-Tests'
+	#category : #PetitIslands-Tests
 }
 
 { #category : #support }

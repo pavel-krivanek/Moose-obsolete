@@ -1,7 +1,7 @@
 Class {
 	#name : #RTDraggableView,
 	#superclass : #RTAbstractInteractionView,
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #hooks }

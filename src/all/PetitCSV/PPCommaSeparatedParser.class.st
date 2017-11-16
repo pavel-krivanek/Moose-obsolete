@@ -9,7 +9,7 @@ Class {
 		'whitespace',
 		'nonComma'
 	],
-	#category : 'PetitCSV'
+	#category : #PetitCSV
 }
 
 { #category : #'as yet unclassified' }

@@ -24,7 +24,7 @@ Class {
 	#instVars : [
 		'value'
 	],
-	#category : 'Trachel-Viva'
+	#category : #Trachel-Viva
 }
 
 { #category : #actions }

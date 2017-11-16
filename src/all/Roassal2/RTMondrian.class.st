@@ -31,7 +31,7 @@ Class {
 		'rootFrame',
 		'recurrentBlock'
 	],
-	#category : 'Roassal2-Builder-Mondrian'
+	#category : #Roassal2-Builder-Mondrian
 }
 
 { #category : #public }

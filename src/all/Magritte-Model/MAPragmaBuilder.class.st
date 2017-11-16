@@ -7,7 +7,7 @@ I dynamically build container descriptions from instance-side methods decorated 
 Class {
 	#name : #MAPragmaBuilder,
 	#superclass : #MABasicObject,
-	#category : 'Magritte-Model-Utility'
+	#category : #Magritte-Model-Utility
 }
 
 { #category : #constants }

@@ -8,7 +8,7 @@ Class {
 		'highlightableLengthLimit',
 		'errorColor'
 	],
-	#category : 'XML-Parser-GTExtensions-Highlighting-Parser'
+	#category : #XML-Parser-GTExtensions-Highlighting-Parser
 }
 
 { #category : #accessing }

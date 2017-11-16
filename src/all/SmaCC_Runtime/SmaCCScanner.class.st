@@ -42,7 +42,7 @@ Class {
 	#classInstVars : [
 		'keywordMap'
 	],
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }
 
 { #category : #'class initialization' }

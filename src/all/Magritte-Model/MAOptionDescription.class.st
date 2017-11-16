@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'options'
 	],
-	#category : 'Magritte-Model-Description'
+	#category : #Magritte-Model-Description
 }
 
 { #category : #accessing-defaults }

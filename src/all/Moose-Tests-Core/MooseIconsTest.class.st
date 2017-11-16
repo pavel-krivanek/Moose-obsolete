@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseIconsTest,
 	#superclass : #TestCase,
-	#category : 'Moose-Tests-Core'
+	#category : #Moose-Tests-Core
 }
 
 { #category : #tests }

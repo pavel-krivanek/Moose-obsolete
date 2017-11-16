@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLPITest,
 	#superclass : #XMLNodeTest,
-	#category : 'XML-Tests-Parser-DOM'
+	#category : #XML-Tests-Parser-DOM
 }
 
 { #category : #'instance creation' }

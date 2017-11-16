@@ -8,7 +8,7 @@ Class {
 		'nodeTest',
 		'predicates'
 	],
-	#category : 'XPath-Core-Compilation'
+	#category : #XPath-Core-Compilation
 }
 
 { #category : #'instance creation' }

@@ -5,7 +5,7 @@ Class {
 		'model',
 		'pharoImporterTask'
 	],
-	#category : 'Moose-Tests-SmalltalkImporter-Core'
+	#category : #Moose-Tests-SmalltalkImporter-Core
 }
 
 { #category : #accessing }

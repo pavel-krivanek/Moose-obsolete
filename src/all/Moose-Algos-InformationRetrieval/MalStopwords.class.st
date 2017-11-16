@@ -12,7 +12,7 @@ Class {
 	#classVars : [
 		'English'
 	],
-	#category : 'Moose-Algos-InformationRetrieval'
+	#category : #Moose-Algos-InformationRetrieval
 }
 
 { #category : #constants }

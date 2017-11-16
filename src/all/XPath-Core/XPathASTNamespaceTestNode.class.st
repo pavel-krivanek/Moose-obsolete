@@ -4,7 +4,7 @@ This is an AST node class for the 'namespace()' type test or for '*' type tests 
 Class {
 	#name : #XPathASTNamespaceTestNode,
 	#superclass : #XPathASTNodeTestNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

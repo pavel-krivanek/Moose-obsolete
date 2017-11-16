@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseSmalltalkImporterFamixClassTest,
 	#superclass : #TestCase,
-	#category : 'Moose-Tests-SmalltalkImporter-Core'
+	#category : #Moose-Tests-SmalltalkImporter-Core
 }
 
 { #category : #tests }

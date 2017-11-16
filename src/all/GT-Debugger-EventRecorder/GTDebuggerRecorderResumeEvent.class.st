@@ -7,7 +7,7 @@ ResumeDebugAction
 Class {
 	#name : #GTDebuggerRecorderResumeEvent,
 	#superclass : #GTDebuggerRecorderDebugActionEvent,
-	#category : 'GT-Debugger-EventRecorder-Events'
+	#category : #GT-Debugger-EventRecorder-Events
 }
 
 { #category : #initialization }

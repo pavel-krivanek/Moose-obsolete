@@ -37,7 +37,7 @@ Class {
 	#classVars : [
 		'LogLevels'
 	],
-	#category : 'Beacon-Syslog'
+	#category : #Beacon-Syslog
 }
 
 { #category : #'instance creation' }

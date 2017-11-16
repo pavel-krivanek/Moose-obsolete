@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'hits'
 	],
-	#category : 'Moose-Tests-Algos-Graph'
+	#category : #Moose-Tests-Algos-Graph
 }
 
 { #category : #initialize-release }

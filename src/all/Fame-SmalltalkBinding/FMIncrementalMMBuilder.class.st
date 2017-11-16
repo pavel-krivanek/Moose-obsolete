@@ -6,7 +6,7 @@ Class {
 		'envStack',
 		'superclassDict'
 	],
-	#category : 'Fame-SmalltalkBinding'
+	#category : #Fame-SmalltalkBinding
 }
 
 { #category : #DSL }

@@ -6,7 +6,7 @@ Class {
 		'addressee',
 		'originator'
 	],
-	#category : 'Moose-TestResources-LAN'
+	#category : #Moose-TestResources-LAN
 }
 
 { #category : #accessing }

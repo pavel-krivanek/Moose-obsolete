@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'request'
 	],
-	#category : 'XML-Parser-HTTP'
+	#category : #XML-Parser-HTTP
 }
 
 { #category : #parsing }

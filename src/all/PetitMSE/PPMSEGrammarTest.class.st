@@ -1,7 +1,7 @@
 Class {
 	#name : #PPMSEGrammarTest,
 	#superclass : #PPCompositeParserTest,
-	#category : 'PetitMSE'
+	#category : #PetitMSE
 }
 
 { #category : #accessing }

@@ -5,7 +5,7 @@ Class {
 		'labels',
 		'statements'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

@@ -10,7 +10,7 @@ Class {
 	#classVars : [
 		'EncodingNamesAndTextConverterClassesCache'
 	],
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #basic }

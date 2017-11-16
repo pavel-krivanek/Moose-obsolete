@@ -7,7 +7,7 @@ Class {
 		'lastSelectedVersion',
 		'datePattern'
 	],
-	#category : 'Moose-HismoImporter'
+	#category : #Moose-HismoImporter
 }
 
 { #category : #private }

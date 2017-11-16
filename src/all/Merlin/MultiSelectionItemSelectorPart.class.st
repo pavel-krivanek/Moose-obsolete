@@ -5,7 +5,7 @@ Class {
 		'initialListSelections',
 		'selectionListSelections'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #'control - initial list' }

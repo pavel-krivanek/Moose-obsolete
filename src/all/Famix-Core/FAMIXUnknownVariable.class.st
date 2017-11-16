@@ -4,7 +4,7 @@ FAMIXUnknownVariable represents some unknown entity encountered while importing 
 Class {
 	#name : #FAMIXUnknownVariable,
 	#superclass : #FAMIXStructuralEntity,
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

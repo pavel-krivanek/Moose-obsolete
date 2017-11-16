@@ -10,7 +10,7 @@ Class {
 		'arcWidth',
 		'centerWidth'
 	],
-	#category : 'Roassal2-Builder-Sunburst'
+	#category : #Roassal2-Builder-Sunburst
 }
 
 { #category : #accesing }

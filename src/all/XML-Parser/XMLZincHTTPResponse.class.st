@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'zincResponse'
 	],
-	#category : 'XML-Parser-HTTP'
+	#category : #XML-Parser-HTTP
 }
 
 { #category : #accessing }

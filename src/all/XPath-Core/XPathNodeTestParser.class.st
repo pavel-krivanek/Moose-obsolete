@@ -11,7 +11,7 @@ Class {
 	#classVars : [
 		'NodeTypeTestParserSelectors'
 	],
-	#category : 'XPath-Core-Parsers'
+	#category : #XPath-Core-Parsers
 }
 
 { #category : #'class initialization' }

@@ -15,7 +15,7 @@ Class {
 		'superToken',
 		'superPeriod'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

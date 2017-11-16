@@ -13,7 +13,7 @@ Class {
 		'_indent',
 		'_dedent'
 	],
-	#category : 'PetitIndent-Examples'
+	#category : #PetitIndent-Examples
 }
 
 { #category : #indentation }

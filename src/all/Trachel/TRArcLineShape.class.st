@@ -9,7 +9,7 @@ Class {
 		'center',
 		'radius'
 	],
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #accessing }

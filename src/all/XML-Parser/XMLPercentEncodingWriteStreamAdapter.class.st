@@ -4,7 +4,7 @@ A write stream adapter that encodes streams with sequences of ""%HH"" hex byte v
 Class {
 	#name : #XMLPercentEncodingWriteStreamAdapter,
 	#superclass : #XMLEncodingWriteStreamAdapter,
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #private }

@@ -16,7 +16,7 @@ Class {
 	#instVars : [
 		'container'
 	],
-	#category : 'Moose-SmalltalkImporter'
+	#category : #Moose-SmalltalkImporter
 }
 
 { #category : #running }

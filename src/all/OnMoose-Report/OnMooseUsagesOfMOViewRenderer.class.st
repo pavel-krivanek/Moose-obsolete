@@ -4,7 +4,7 @@ OnMooseUsagesOfMOViewRenderer openOn: MooseModel root allModels last
 Class {
 	#name : #OnMooseUsagesOfMOViewRenderer,
 	#superclass : #REPMooseQueryConcern,
-	#category : 'OnMoose-Report'
+	#category : #OnMoose-Report
 }
 
 { #category : #private }

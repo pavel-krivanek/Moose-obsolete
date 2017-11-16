@@ -1,7 +1,7 @@
 Class {
 	#name : #PPJavaTokenParser,
 	#superclass : #PP2CreateTokenNode,
-	#category : 'PetitJava-Core'
+	#category : #PetitJava-Core
 }
 
 { #category : #'as yet unclassified' }

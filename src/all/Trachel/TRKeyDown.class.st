@@ -21,5 +21,5 @@ v open
 Class {
 	#name : #TRKeyDown,
 	#superclass : #TRKeyboardEvent,
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }

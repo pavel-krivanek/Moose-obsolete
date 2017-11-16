@@ -4,7 +4,7 @@ This is an AST node class for '*' multiplication expressions.
 Class {
 	#name : #XPathASTMultiplicationExpressionNode,
 	#superclass : #XPathASTMultiplicativeExpressionNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

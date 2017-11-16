@@ -4,7 +4,7 @@ A parser which creates an AST upor parsing the code
 Class {
 	#name : #PPJavaParser,
 	#superclass : #PPJavaSyntax,
-	#category : 'PetitJava-Core'
+	#category : #PetitJava-Core
 }
 
 { #category : #grammar-literals-string }

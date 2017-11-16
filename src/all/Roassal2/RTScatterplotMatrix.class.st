@@ -21,7 +21,7 @@ Class {
 		'allDotElements',
 		'labelShape'
 	],
-	#category : 'Roassal2-Experimental'
+	#category : #Roassal2-Experimental
 }
 
 { #category : #helpers }

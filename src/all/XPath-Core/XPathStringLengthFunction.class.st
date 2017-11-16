@@ -5,7 +5,7 @@ XPath string length function.
 Class {
 	#name : #XPathStringLengthFunction,
 	#superclass : #XPathFunction,
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #accessing }

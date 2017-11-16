@@ -5,7 +5,7 @@ Class {
 		'user',
 		'trait'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

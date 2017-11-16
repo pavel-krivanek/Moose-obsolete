@@ -7,7 +7,7 @@ Class {
 		'parent',
 		'morph'
 	],
-	#category : 'Magritte-Morph-Model'
+	#category : #Magritte-Morph-Model
 }
 
 { #category : #'instance creation' }

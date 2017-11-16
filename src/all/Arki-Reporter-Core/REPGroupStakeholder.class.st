@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'stakeholders'
 	],
-	#category : 'Arki-Reporter-Core'
+	#category : #Arki-Reporter-Core
 }
 
 { #category : #'instance creation' }

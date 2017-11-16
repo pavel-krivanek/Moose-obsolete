@@ -4,7 +4,7 @@ This is an AST node class for absolute location paths whose root node is the roo
 Class {
 	#name : #XPathASTAbsoluteLocationPathNode,
 	#superclass : #XPathASTLocationPathNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

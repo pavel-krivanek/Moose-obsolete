@@ -4,7 +4,7 @@ I represent a GTEventCollector for GTDebugger application.
 Class {
 	#name : #GTDebuggerEventCollector,
 	#superclass : #GTEventCollector,
-	#category : 'GT-Debugger-EventRecorder-Base'
+	#category : #GT-Debugger-EventRecorder-Base
 }
 
 { #category : #initialization }

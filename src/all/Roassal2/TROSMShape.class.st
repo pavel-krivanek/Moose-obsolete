@@ -69,7 +69,7 @@ Class {
 	#classVars : [
 		'EmptyTile'
 	],
-	#category : 'Roassal2-OpenStreetMap'
+	#category : #Roassal2-OpenStreetMap
 }
 
 { #category : #resources }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'operators'
 	],
-	#category : 'PetitSQLite-Parser'
+	#category : #PetitSQLite-Parser
 }
 
 { #category : #private }

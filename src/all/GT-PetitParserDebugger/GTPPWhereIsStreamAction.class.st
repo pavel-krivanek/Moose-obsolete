@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPWhereIsStreamAction,
 	#superclass : #GTPPDebugAction,
-	#category : 'GT-PetitParserDebugger'
+	#category : #GT-PetitParserDebugger
 }
 
 { #category : #registration }

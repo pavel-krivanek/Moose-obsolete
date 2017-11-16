@@ -1,7 +1,7 @@
 Class {
 	#name : #VerveineJMooseFinderTest,
 	#superclass : #MooseFinderTest,
-	#category : 'Moose-Tests-Finder'
+	#category : #Moose-Tests-Finder
 }
 
 { #category : #accessing }

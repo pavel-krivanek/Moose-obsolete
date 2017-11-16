@@ -34,7 +34,7 @@ Class {
 		'to',
 		'shouldBeUsedInLayout'
 	],
-	#category : 'Roassal2-Core'
+	#category : #Roassal2-Core
 }
 
 { #category : #'DEPRECATED - edge construction' }

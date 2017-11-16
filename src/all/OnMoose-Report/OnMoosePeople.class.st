@@ -1,7 +1,7 @@
 Class {
 	#name : #OnMoosePeople,
 	#superclass : #Object,
-	#category : 'OnMoose-Report'
+	#category : #OnMoose-Report
 }
 
 { #category : #accessing }

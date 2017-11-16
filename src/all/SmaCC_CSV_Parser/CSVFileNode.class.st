@@ -5,7 +5,7 @@ Class {
 		'lines',
 		'eols'
 	],
-	#category : 'SmaCC_CSV_Parser'
+	#category : #SmaCC_CSV_Parser
 }
 
 { #category : #generated }

@@ -19,7 +19,7 @@ Class {
 		'defaultNumberLiteralColor',
 		'defaultVariableReferenceColor'
 	],
-	#category : 'XPath-GTExtensions-Highlighting'
+	#category : #XPath-GTExtensions-Highlighting
 }
 
 { #category : #accessing }

@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'expression'
 	],
-	#category : 'PetitJava-AST'
+	#category : #PetitJava-AST
 }
 
 { #category : #visiting }

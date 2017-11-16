@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : 'PetitJava-Core'
+	#category : #PetitJava-Core
 }
 
 { #category : #accessing }

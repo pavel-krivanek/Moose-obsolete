@@ -9,7 +9,7 @@ Class {
 		'compilationUnit',
 		'header'
 	],
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #initialize-release }

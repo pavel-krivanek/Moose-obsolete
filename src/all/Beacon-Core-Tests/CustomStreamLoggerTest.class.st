@@ -5,7 +5,7 @@ A CustomStreamLoggerTest is xxxxxxxxx.
 Class {
 	#name : #CustomStreamLoggerTest,
 	#superclass : #TestCase,
-	#category : 'Beacon-Core-Tests'
+	#category : #Beacon-Core-Tests
 }
 
 { #category : #tests }

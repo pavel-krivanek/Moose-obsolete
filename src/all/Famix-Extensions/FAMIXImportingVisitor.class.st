@@ -5,7 +5,7 @@ Class {
 		'model',
 		'importingContext'
 	],
-	#category : 'Famix-Extensions'
+	#category : #Famix-Extensions
 }
 
 { #category : #accessing }

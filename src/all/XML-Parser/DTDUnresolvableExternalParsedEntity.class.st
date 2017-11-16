@@ -4,7 +4,7 @@ This is an abstract base class for unresolvable external parsed entities that la
 Class {
 	#name : #DTDUnresolvableExternalParsedEntity,
 	#superclass : #DTDParsedEntity,
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #private }

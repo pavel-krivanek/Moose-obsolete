@@ -12,7 +12,7 @@ Class {
 		'whenObjectsChangedBlock',
 		'factory'
 	],
-	#category : 'Magritte-Morph-Morphs'
+	#category : #Magritte-Morph-Morphs
 }
 
 { #category : #private }

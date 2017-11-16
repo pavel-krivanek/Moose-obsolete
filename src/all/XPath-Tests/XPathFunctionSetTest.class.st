@@ -1,7 +1,7 @@
 Class {
 	#name : #XPathFunctionSetTest,
 	#superclass : #XMLAbstractSetTest,
-	#category : 'XPath-Tests'
+	#category : #XPath-Tests
 }
 
 { #category : #testing }

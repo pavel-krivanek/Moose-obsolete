@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'isInterface'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

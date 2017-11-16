@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'traverser'
 	],
-	#category : 'DeepTraverser-Tests-Tests'
+	#category : #DeepTraverser-Tests-Tests
 }
 
 { #category : #running }

@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'block'
 	],
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #'instance creation' }

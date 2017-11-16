@@ -6,7 +6,7 @@ Class {
 		'untilToken',
 		'expression'
 	],
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

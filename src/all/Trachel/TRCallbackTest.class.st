@@ -7,7 +7,7 @@ Class {
 		'circle2',
 		'rectangle1'
 	],
-	#category : 'Trachel-Tests'
+	#category : #Trachel-Tests
 }
 
 { #category : #running }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseHismoEveryMonthStrategy,
 	#superclass : #MooseHismoMonthStrategy,
-	#category : 'Moose-HismoImporter'
+	#category : #Moose-HismoImporter
 }
 
 { #category : #accessing }

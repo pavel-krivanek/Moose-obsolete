@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'parentEnum'
 	],
-	#category : 'Famix-Java'
+	#category : #Famix-Java
 }
 
 { #category : #initialize-release }

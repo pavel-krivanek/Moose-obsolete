@@ -5,7 +5,7 @@ Class {
 		'name',
 		'urlCodec'
 	],
-	#category : 'Grease-Pharo30-Core'
+	#category : #Grease-Pharo30-Core
 }
 
 { #category : #private }

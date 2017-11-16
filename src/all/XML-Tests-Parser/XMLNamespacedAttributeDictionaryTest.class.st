@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLNamespacedAttributeDictionaryTest,
 	#superclass : #XMLAttributeDictionaryTest,
-	#category : 'XML-Tests-Parser'
+	#category : #XML-Tests-Parser
 }
 
 { #category : #accessing }

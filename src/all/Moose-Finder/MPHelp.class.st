@@ -1,7 +1,7 @@
 Class {
 	#name : #MPHelp,
 	#superclass : #MoosePanelCommand,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #accessing }

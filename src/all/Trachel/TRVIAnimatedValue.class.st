@@ -14,7 +14,7 @@ Class {
 		'timer',
 		'finishCallback'
 	],
-	#category : 'Trachel-Viva'
+	#category : #Trachel-Viva
 }
 
 { #category : #grouping }

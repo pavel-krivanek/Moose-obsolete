@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXInvokingMethodsGraphTraverser,
 	#superclass : #FAMIXGraphTraverser,
-	#category : 'Famix-Extensions'
+	#category : #Famix-Extensions
 }
 
 { #category : #running }

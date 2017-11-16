@@ -11,7 +11,7 @@ Class {
 		'caseSensitive',
 		'query'
 	],
-	#category : 'GT-Spotter-Filters'
+	#category : #GT-Spotter-Filters
 }
 
 { #category : #private }

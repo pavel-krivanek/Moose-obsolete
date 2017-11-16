@@ -1,7 +1,7 @@
 Class {
 	#name : #DeepTraverserExamples,
 	#superclass : #Object,
-	#category : 'DeepTraverser-Examples'
+	#category : #DeepTraverser-Examples
 }
 
 { #category : #examples-difference }

@@ -12,7 +12,7 @@ Class {
 		'rotationAngleDegrees',
 		'session'
 	],
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #visitor }

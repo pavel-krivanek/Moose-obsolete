@@ -1,7 +1,7 @@
 Class {
 	#name : #MalHgPerformanceTests,
 	#superclass : #TestCase,
-	#category : 'Moose-Tests-Algos-HierarchicalGraph'
+	#category : #Moose-Tests-Algos-HierarchicalGraph
 }
 
 { #category : #tests }

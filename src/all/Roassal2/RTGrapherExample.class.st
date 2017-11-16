@@ -16,7 +16,7 @@ RTGrapherDecorationExample new installTitle: 'RangeBelowXAxis'
 Class {
 	#name : #RTGrapherExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-Builder-Grapher-Examples'
+	#category : #Roassal2-Builder-Grapher-Examples
 }
 
 { #category : #sources }

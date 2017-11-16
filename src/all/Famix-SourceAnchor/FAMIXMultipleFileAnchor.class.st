@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'allFiles'
 	],
-	#category : 'Famix-SourceAnchor'
+	#category : #Famix-SourceAnchor
 }
 
 { #category : #'as yet unclassified' }

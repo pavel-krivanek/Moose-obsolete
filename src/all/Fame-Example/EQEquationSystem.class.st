@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'equations'
 	],
-	#category : 'Fame-Example'
+	#category : #Fame-Example
 }
 
 { #category : #'As yet unclassified' }

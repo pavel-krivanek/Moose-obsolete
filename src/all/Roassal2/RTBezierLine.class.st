@@ -24,7 +24,7 @@ Class {
 		'follow',
 		'tension'
 	],
-	#category : 'Roassal2-Shapes'
+	#category : #Roassal2-Shapes
 }
 
 { #category : #public }

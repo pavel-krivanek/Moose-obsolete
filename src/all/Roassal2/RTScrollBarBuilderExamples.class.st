@@ -5,7 +5,7 @@ A RTScrollBarBuilderExamples shows some usable examples for the scroll bar.
 Class {
 	#name : #RTScrollBarBuilderExamples,
 	#superclass : #RTObject,
-	#category : 'Roassal2-Builder-ScrollBar'
+	#category : #Roassal2-Builder-ScrollBar
 }
 
 { #category : #examples }

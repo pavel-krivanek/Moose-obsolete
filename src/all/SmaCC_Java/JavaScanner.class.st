@@ -1,7 +1,7 @@
 Class {
 	#name : #JavaScanner,
 	#superclass : #SmaCCScanner,
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated-initialization }

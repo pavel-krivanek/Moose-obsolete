@@ -16,7 +16,7 @@ Class {
 		'negated',
 		'negatedMessage'
 	],
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #accessing }

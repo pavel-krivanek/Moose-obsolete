@@ -1,7 +1,7 @@
 Class {
 	#name : #FMPragmaProcessorTest,
 	#superclass : #TestCase,
-	#category : 'Fame-Tests-Core'
+	#category : #Fame-Tests-Core
 }
 
 { #category : #running }

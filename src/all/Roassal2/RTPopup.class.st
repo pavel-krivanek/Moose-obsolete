@@ -61,7 +61,7 @@ Class {
 		'borderColor',
 		'hasBorder'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #lastPopup }

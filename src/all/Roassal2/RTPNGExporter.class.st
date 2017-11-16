@@ -9,7 +9,7 @@ Class {
 		'fileName',
 		'saveWithScale'
 	],
-	#category : 'Roassal2-Exporter-PNG'
+	#category : #Roassal2-Exporter-PNG
 }
 
 { #category : #accessing }

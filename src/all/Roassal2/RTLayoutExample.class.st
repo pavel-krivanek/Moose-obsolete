@@ -26,7 +26,7 @@ b build.
 Class {
 	#name : #RTLayoutExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-ExampleBrowser'
+	#category : #Roassal2-ExampleBrowser
 }
 
 { #category : #sources }

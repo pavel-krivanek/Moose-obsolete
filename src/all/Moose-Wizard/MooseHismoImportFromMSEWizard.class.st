@@ -8,7 +8,7 @@ Class {
 		'hismoImporter',
 		'importWithFilter'
 	],
-	#category : 'Moose-Wizard'
+	#category : #Moose-Wizard
 }
 
 { #category : #creating }

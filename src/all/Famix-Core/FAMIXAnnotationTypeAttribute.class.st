@@ -22,7 +22,7 @@ Class {
 	#instVars : [
 		'annotationAttributeInstances'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

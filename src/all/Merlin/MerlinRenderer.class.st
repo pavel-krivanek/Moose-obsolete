@@ -1,7 +1,7 @@
 Class {
 	#name : #MerlinRenderer,
 	#superclass : #Object,
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #rendering }

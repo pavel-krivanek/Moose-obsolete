@@ -4,7 +4,7 @@ This class validates standalone externally defined attributes with lists of Nmto
 Class {
 	#name : #XMLStandaloneExternalNmtokensAttributeValidator,
 	#superclass : #XMLNmtokensAttributeValidator,
-	#category : 'XML-Parser-Validation-Standalone'
+	#category : #XML-Parser-Validation-Standalone
 }
 
 { #category : #testing }

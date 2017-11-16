@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'parentScope'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

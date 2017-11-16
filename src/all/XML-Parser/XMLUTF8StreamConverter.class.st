@@ -4,7 +4,7 @@ A stream converter for UTF-8 streams. (Rejects overlong encodings.)
 Class {
 	#name : #XMLUTF8StreamConverter,
 	#superclass : #XMLUTFStreamConverter,
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #basic }

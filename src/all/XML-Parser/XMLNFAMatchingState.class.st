@@ -8,7 +8,7 @@ Class {
 		'matcher',
 		'nextState'
 	],
-	#category : 'XML-Parser-Validation-DFA'
+	#category : #XML-Parser-Validation-DFA
 }
 
 { #category : #'instance creation' }

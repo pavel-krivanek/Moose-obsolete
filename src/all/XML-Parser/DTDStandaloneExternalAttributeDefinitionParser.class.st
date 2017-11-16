@@ -4,7 +4,7 @@ This class parses standalone externally defined ATTLIST attribute definitions an
 Class {
 	#name : #DTDStandaloneExternalAttributeDefinitionParser,
 	#superclass : #DTDAttributeDefinitionParser,
-	#category : 'XML-Parser-DTD-Standalone'
+	#category : #XML-Parser-DTD-Standalone
 }
 
 { #category : #private }

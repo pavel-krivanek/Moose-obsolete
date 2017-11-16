@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'targetProduction'
 	],
-	#category : 'PetitGui-Refactoring'
+	#category : #PetitGui-Refactoring
 }
 
 { #category : #'instance creation' }

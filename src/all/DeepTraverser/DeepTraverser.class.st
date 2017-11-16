@@ -5,7 +5,7 @@ Class {
 		'onEdgeAction',
 		'edgesToAction'
 	],
-	#category : 'DeepTraverser'
+	#category : #DeepTraverser
 }
 
 { #category : #private }

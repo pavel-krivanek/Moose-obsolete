@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'allowedContent'
 	],
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : 'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
+	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
 }
 
 { #category : #setup }

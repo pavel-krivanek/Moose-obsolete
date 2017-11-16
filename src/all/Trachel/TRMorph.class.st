@@ -15,7 +15,7 @@ Class {
 		'shapeUnderDrag',
 		'morphDropShape'
 	],
-	#category : 'Trachel-MorphSpecific'
+	#category : #Trachel-MorphSpecific
 }
 
 { #category : #dropping/grabbing }

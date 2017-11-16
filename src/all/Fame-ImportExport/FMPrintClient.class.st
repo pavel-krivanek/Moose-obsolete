@@ -5,7 +5,7 @@ Class {
 		'stream',
 		'indent'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #private }

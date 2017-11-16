@@ -1,7 +1,7 @@
 Class {
 	#name : #GstProgramNode,
 	#superclass : #SmaCCParseNode,
-	#category : 'SmaCC_Generic_Smalltalk_Parser'
+	#category : #SmaCC_Generic_Smalltalk_Parser
 }
 
 { #category : #generated }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MAStringWriter,
 	#superclass : #MAWriter,
-	#category : 'Magritte-Model-Visitor'
+	#category : #Magritte-Model-Visitor
 }
 
 { #category : #private }

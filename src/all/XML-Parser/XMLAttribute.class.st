@@ -10,7 +10,7 @@ Class {
 		'name',
 		'value'
 	],
-	#category : 'XML-Parser-DOM'
+	#category : #XML-Parser-DOM
 }
 
 { #category : #'instance creation' }

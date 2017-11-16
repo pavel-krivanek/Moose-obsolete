@@ -6,5 +6,5 @@ SmaCCParserError is the exception raised when a parsing error occurs. The descri
 Class {
 	#name : #SmaCCParserError,
 	#superclass : #Error,
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }

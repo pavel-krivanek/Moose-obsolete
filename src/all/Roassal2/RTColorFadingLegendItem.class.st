@@ -5,7 +5,7 @@ Class {
 		'colors',
 		'description'
 	],
-	#category : 'Roassal2-Builder-Legend'
+	#category : #Roassal2-Builder-Legend
 }
 
 { #category : #accessing }

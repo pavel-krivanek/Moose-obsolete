@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'keywords'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated-accessing }

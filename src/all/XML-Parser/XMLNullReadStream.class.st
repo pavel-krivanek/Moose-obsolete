@@ -4,7 +4,7 @@ This class is a null read stream that is already #atEnd and also makes sending #
 Class {
 	#name : #XMLNullReadStream,
 	#superclass : #Object,
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #testing }

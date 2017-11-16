@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'refactoring'
 	],
-	#category : 'PetitGui-Tests'
+	#category : #PetitGui-Tests
 }
 
 { #category : #accessing }

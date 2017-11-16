@@ -7,7 +7,7 @@ WindowMoved
 Class {
 	#name : #GTWindowRecorderWindowMovedEvent,
 	#superclass : #GTWindowRecorderEvent,
-	#category : 'GT-Window-EventRecorder-Events'
+	#category : #GT-Window-EventRecorder-Events
 }
 
 { #category : #initialization }

@@ -8,7 +8,7 @@ Class {
 		'declaredType',
 		'incomingAccesses'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

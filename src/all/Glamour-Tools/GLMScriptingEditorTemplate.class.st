@@ -13,7 +13,7 @@ To open any of the subclasses, you need to provide an array of associations whos
 Class {
 	#name : #GLMScriptingEditorTemplate,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Glamour-Tools'
+	#category : #Glamour-Tools
 }
 
 { #category : #'instance creation' }

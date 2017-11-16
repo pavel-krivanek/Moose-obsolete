@@ -9,7 +9,7 @@ Class {
 		'horizontalSize',
 		'formatBlock'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #'instance creation' }

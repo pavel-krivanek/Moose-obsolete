@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'tension'
 	],
-	#category : 'Roassal2-Experimental'
+	#category : #Roassal2-Experimental
 }
 
 { #category : #testing }

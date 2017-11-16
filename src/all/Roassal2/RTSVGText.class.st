@@ -12,7 +12,7 @@ Class {
 		'content',
 		'fontSize'
 	],
-	#category : 'Roassal2-Exporter-SVG'
+	#category : #Roassal2-Exporter-SVG
 }
 
 { #category : #adding }

@@ -9,7 +9,7 @@ Class {
 		'head',
 		'tail'
 	],
-	#category : 'Roassal2-LineDecorations'
+	#category : #Roassal2-LineDecorations
 }
 
 { #category : #examples }

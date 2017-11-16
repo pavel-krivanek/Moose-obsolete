@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'repositoryCache'
 	],
-	#category : 'Moose-MonticelloImporter'
+	#category : #Moose-MonticelloImporter
 }
 
 { #category : #assertion }

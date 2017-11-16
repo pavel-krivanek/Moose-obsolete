@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'instances'
 	],
-	#category : 'Hashtable-Objects'
+	#category : #Hashtable-Objects
 }
 
 { #category : #testing }

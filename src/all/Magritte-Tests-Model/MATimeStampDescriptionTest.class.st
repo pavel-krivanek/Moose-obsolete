@@ -1,7 +1,7 @@
 Class {
 	#name : #MATimeStampDescriptionTest,
 	#superclass : #MAMagnitudeDescriptionTest,
-	#category : 'Magritte-Tests-Model-Description'
+	#category : #Magritte-Tests-Model-Description
 }
 
 { #category : #testing }

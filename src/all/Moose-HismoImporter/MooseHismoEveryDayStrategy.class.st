@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseHismoEveryDayStrategy,
 	#superclass : #MooseHismoDayStrategy,
-	#category : 'Moose-HismoImporter'
+	#category : #Moose-HismoImporter
 }
 
 { #category : #accessing }

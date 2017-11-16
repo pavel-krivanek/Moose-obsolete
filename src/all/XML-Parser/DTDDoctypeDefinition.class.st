@@ -15,7 +15,7 @@ Class {
 		'elementIDValidator',
 		'unparsedEntityValidator'
 	],
-	#category : 'XML-Parser-DTD'
+	#category : #XML-Parser-DTD
 }
 
 { #category : #adding }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'browser'
 	],
-	#category : 'Glamour-Tools'
+	#category : #Glamour-Tools
 }
 
 { #category : #opening }

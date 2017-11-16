@@ -6,7 +6,7 @@ Class {
 		'run',
 		'data'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #'instance creation' }

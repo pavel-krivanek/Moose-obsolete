@@ -5,7 +5,7 @@ Class {
 		'predecessor',
 		'successor'
 	],
-	#category : 'Dynamix-Core'
+	#category : #Dynamix-Core
 }
 
 { #category : #meta }

@@ -9,7 +9,7 @@ Class {
 		'idReferences',
 		'ids'
 	],
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #accessing }

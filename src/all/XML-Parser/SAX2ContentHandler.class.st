@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'parser'
 	],
-	#category : 'XML-Parser'
+	#category : #XML-Parser
 }
 
 { #category : #'instance creation' }

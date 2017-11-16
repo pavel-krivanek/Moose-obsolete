@@ -4,7 +4,7 @@ A sort order for unsorted nodes or nodes in an unknown sort order.
 Class {
 	#name : #XPathUnknownSortOrder,
 	#superclass : #XPathSortOrder,
-	#category : 'XPath-Core-DOM'
+	#category : #XPath-Core-DOM
 }
 
 { #category : #converting }

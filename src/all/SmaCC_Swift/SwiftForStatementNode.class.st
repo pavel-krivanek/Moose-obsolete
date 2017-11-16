@@ -11,7 +11,7 @@ Class {
 		'leftParenToken',
 		'rightParenToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

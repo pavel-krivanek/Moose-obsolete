@@ -4,7 +4,7 @@ This is a reverse document sort order for node sets where all nodes are at the s
 Class {
 	#name : #XPathLevelReverseDocumentSortOrder,
 	#superclass : #XPathReverseDocumentSortOrder,
-	#category : 'XPath-Core-DOM'
+	#category : #XPath-Core-DOM
 }
 
 { #category : #converting }

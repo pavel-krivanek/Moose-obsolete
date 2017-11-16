@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'rewriter'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #generated-initialization }

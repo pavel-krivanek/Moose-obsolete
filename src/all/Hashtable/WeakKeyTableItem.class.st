@@ -1,7 +1,7 @@
 Class {
 	#name : #WeakKeyTableItem,
 	#superclass : #TableItem,
-	#category : 'Hashtable'
+	#category : #Hashtable
 }
 
 { #category : #accessing }

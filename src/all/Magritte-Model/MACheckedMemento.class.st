@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'original'
 	],
-	#category : 'Magritte-Model-Memento'
+	#category : #Magritte-Model-Memento
 }
 
 { #category : #testing }

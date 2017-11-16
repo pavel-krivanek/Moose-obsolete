@@ -35,7 +35,7 @@ Class {
 		'aCandidate',
 		'nodesToConsider'
 	],
-	#category : 'Moose-Algos-Lattice'
+	#category : #Moose-Algos-Lattice
 }
 
 { #category : #initialize-release }

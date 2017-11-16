@@ -4,7 +4,7 @@ I am a description of an one-to-many relationship, possible values are instances
 Class {
 	#name : #MAToManyRelationDescription,
 	#superclass : #MARelationDescription,
-	#category : 'Magritte-Model-Description'
+	#category : #Magritte-Model-Description
 }
 
 { #category : #accessing-defaults }

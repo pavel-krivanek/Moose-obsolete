@@ -10,7 +10,7 @@ Class {
 		'emailAddresses',
 		'residence'
 	],
-	#category : 'XML-Tests-Parser-ElementHandlers'
+	#category : #XML-Tests-Parser-ElementHandlers
 }
 
 { #category : #adding }

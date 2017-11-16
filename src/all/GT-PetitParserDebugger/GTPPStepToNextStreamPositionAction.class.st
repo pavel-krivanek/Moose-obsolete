@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPStepToNextStreamPositionAction,
 	#superclass : #GTPPDebugAction,
-	#category : 'GT-PetitParserDebugger'
+	#category : #GT-PetitParserDebugger
 }
 
 { #category : #registration }

@@ -9,7 +9,7 @@ Class {
 		'model',
 		'color'
 	],
-	#category : 'Roassal2-Builder-ApplicationMatrix'
+	#category : #Roassal2-Builder-ApplicationMatrix
 }
 
 { #category : #accessing }

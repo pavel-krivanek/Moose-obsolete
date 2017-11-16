@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'startContext'
 	],
-	#category : 'GT-PetitParserDebugger'
+	#category : #GT-PetitParserDebugger
 }
 
 { #category : #testing }

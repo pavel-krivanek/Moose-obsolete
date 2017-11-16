@@ -6,7 +6,7 @@ Class {
 		'items',
 		'right'
 	],
-	#category : 'SmaCC_Delphi_Forms'
+	#category : #SmaCC_Delphi_Forms
 }
 
 { #category : #generated }

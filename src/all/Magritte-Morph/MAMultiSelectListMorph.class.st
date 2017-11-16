@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'selected'
 	],
-	#category : 'Magritte-Morph-Model'
+	#category : #Magritte-Morph-Model
 }
 
 { #category : #private }

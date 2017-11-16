@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'shape'
 	],
-	#category : 'Roassal2-LineDecorations'
+	#category : #Roassal2-LineDecorations
 }
 
 { #category : #'instance creation' }

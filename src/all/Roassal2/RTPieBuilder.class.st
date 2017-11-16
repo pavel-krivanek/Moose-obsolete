@@ -7,7 +7,7 @@ Class {
 		'sum',
 		'elements'
 	],
-	#category : 'Roassal2-Builder-PieChart'
+	#category : #Roassal2-Builder-PieChart
 }
 
 { #category : #'public - pies' }

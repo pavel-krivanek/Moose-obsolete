@@ -31,7 +31,7 @@ Class {
 		'e',
 		'stringText'
 	],
-	#category : 'PetitMSE'
+	#category : #PetitMSE
 }
 
 { #category : #grammar }

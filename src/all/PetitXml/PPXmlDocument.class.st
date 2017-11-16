@@ -4,7 +4,7 @@ An XML root node.
 Class {
 	#name : #PPXmlDocument,
 	#superclass : #PPXmlParent,
-	#category : 'PetitXml-Nodes'
+	#category : #PetitXml-Nodes
 }
 
 { #category : #accessing }

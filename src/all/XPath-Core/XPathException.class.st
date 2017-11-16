@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'position'
 	],
-	#category : 'XPath-Core-Exceptions'
+	#category : #XPath-Core-Exceptions
 }
 
 { #category : #testing }

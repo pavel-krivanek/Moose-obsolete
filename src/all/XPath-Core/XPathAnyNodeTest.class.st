@@ -4,7 +4,7 @@ This is a class for the 'node()' type test for any node.
 Class {
 	#name : #XPathAnyNodeTest,
 	#superclass : #XPathNodeTest,
-	#category : 'XPath-Core-Compilation'
+	#category : #XPath-Core-Compilation
 }
 
 { #category : #testing }

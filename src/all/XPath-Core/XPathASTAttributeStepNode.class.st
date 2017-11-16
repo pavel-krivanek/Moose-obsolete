@@ -4,7 +4,7 @@ This is an AST node class for 'attribute::' (or '@') steps.
 Class {
 	#name : #XPathASTAttributeStepNode,
 	#superclass : #XPathASTStepNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #visiting }

@@ -12,7 +12,7 @@ Class {
 		'terms1',
 		'terms2'
 	],
-	#category : 'Moose-Algos-InformationRetrieval'
+	#category : #Moose-Algos-InformationRetrieval
 }
 
 { #category : #'instance creation' }

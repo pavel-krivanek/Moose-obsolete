@@ -4,7 +4,7 @@ This is a base class for additive binary operator expression AST nodes of the sa
 Class {
 	#name : #XPathASTAdditiveExpressionNode,
 	#superclass : #XPathASTBinaryOperatorExpressionNode,
-	#category : 'XPath-Core-Compilation-AST'
+	#category : #XPath-Core-Compilation-AST
 }
 
 { #category : #defaults }

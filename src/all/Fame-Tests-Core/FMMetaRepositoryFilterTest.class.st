@@ -6,7 +6,7 @@ Class {
 		'libModel',
 		'rpgModel'
 	],
-	#category : 'Fame-Tests-Core'
+	#category : #Fame-Tests-Core
 }
 
 { #category : #buidling-models }

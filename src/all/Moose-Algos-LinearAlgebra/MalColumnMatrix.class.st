@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'columns'
 	],
-	#category : 'Moose-Algos-LinearAlgebra'
+	#category : #Moose-Algos-LinearAlgebra
 }
 
 { #category : #accessing }

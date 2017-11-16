@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'group'
 	],
-	#category : 'Metanool-Core'
+	#category : #Metanool-Core
 }
 
 { #category : #accessing }

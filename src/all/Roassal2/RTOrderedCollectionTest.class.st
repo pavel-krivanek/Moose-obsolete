@@ -1,7 +1,7 @@
 Class {
 	#name : #RTOrderedCollectionTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Utility'
+	#category : #Roassal2-Utility
 }
 
 { #category : #tests }

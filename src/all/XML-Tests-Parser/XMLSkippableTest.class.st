@@ -10,7 +10,7 @@ Class {
 	#classInstVars : [
 		'isSkipping'
 	],
-	#category : 'XML-Tests-Parser'
+	#category : #XML-Tests-Parser
 }
 
 { #category : #testing }

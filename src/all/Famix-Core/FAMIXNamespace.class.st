@@ -8,7 +8,7 @@ When an entity is placed inside a namespace, the fully qualified name (mooseName
 Class {
 	#name : #FAMIXNamespace,
 	#superclass : #FAMIXScopingEntity,
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

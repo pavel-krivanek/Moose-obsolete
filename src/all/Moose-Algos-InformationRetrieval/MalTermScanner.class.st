@@ -22,7 +22,7 @@ Class {
 	#classVars : [
 		'Void'
 	],
-	#category : 'Moose-Algos-InformationRetrieval'
+	#category : #Moose-Algos-InformationRetrieval
 }
 
 { #category : #'instance creation' }

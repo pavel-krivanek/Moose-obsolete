@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'lines'
 	],
-	#category : 'SmaCC_Line_Parser'
+	#category : #SmaCC_Line_Parser
 }
 
 { #category : #generated }

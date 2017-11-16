@@ -1,7 +1,7 @@
 Class {
 	#name : #RTCircularTreeMapTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Builder-CircularMap'
+	#category : #Roassal2-Builder-CircularMap
 }
 
 { #category : #tests }

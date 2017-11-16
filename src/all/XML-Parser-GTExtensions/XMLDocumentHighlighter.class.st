@@ -28,7 +28,7 @@ Class {
 		'cdataHighlight',
 		'commentHighlight'
 	],
-	#category : 'XML-Parser-GTExtensions-Highlighting'
+	#category : #XML-Parser-GTExtensions-Highlighting
 }
 
 { #category : #accessing }

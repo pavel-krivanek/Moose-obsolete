@@ -1,5 +1,5 @@
 Class {
 	#name : #MerlinMorphicPartRenderer,
 	#superclass : #MerlinMorphicRenderer,
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }

@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'color'
 	],
-	#category : 'Roassal2-Selection'
+	#category : #Roassal2-Selection
 }
 
 { #category : #accessing }

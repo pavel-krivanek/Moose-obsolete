@@ -4,7 +4,7 @@ FAMIXCSourceLanguage represents the C language.
 Class {
 	#name : #FAMIXCSourceLanguage,
 	#superclass : #FAMIXSourceLanguage,
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #meta }

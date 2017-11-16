@@ -8,7 +8,7 @@ Class {
 		'dedent',
 		'code'
 	],
-	#category : 'PetitIndent-Examples'
+	#category : #PetitIndent-Examples
 }
 
 { #category : #'as yet unclassified' }

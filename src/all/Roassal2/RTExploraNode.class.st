@@ -47,7 +47,7 @@ Class {
 		'iconOpen',
 		'iconClose'
 	],
-	#category : 'Roassal2-Builder-Explora'
+	#category : #Roassal2-Builder-Explora
 }
 
 { #category : #adding }

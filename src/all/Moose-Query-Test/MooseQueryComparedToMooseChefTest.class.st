@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseQueryComparedToMooseChefTest,
 	#superclass : #MooseQueryTest,
-	#category : 'Moose-Query-Test'
+	#category : #Moose-Query-Test
 }
 
 { #category : #tests }

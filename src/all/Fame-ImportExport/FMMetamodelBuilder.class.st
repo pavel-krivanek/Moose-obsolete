@@ -6,7 +6,7 @@ Class {
 		'stack',
 		'serial'
 	],
-	#category : 'Fame-ImportExport'
+	#category : #Fame-ImportExport
 }
 
 { #category : #DSL }

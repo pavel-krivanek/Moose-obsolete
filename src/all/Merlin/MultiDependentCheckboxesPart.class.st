@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'entityDependencies'
 	],
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #private }

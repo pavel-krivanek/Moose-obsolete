@@ -1,7 +1,7 @@
 Class {
 	#name : #RTShorterDistanceAttachPointAndCompositeShapeTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-AttachPoint-Tests'
+	#category : #Roassal2-AttachPoint-Tests
 }
 
 { #category : #tests }

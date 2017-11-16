@@ -12,7 +12,7 @@ Class {
 	#classVars : [
 		'NormalizedSpace'
 	],
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #'instance creation' }

@@ -5,7 +5,7 @@ Class {
 		'blockTempsMapping',
 		'blocksLimits'
 	],
-	#category : 'RoelTyper-Pharo'
+	#category : #RoelTyper-Pharo
 }
 
 { #category : #'as yet unclassified' }

@@ -37,7 +37,7 @@ Class {
 		'boxShape',
 		'nestBlock'
 	],
-	#category : 'Roassal2-Builder-Legend'
+	#category : #Roassal2-Builder-Legend
 }
 
 { #category : #'instance creation' }

@@ -5,7 +5,7 @@ Class {
 		'a1',
 		'a2'
 	],
-	#category : 'Moose-TestResources-LCOM'
+	#category : #Moose-TestResources-LCOM
 }
 
 { #category : #stub }

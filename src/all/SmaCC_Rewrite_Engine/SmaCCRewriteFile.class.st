@@ -9,7 +9,7 @@ Class {
 		'timestamp',
 		'cachedLists'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #'instance creation' }

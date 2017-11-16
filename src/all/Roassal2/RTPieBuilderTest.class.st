@@ -1,7 +1,7 @@
 Class {
 	#name : #RTPieBuilderTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Builder-PieChart'
+	#category : #Roassal2-Builder-PieChart
 }
 
 { #category : #tests }

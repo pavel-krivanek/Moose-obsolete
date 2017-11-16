@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeAClass,
 	#superclass : #Object,
-	#category : 'SmallDude-Tests-Core'
+	#category : #SmallDude-Tests-Core
 }
 
 { #category : #'public interface' }

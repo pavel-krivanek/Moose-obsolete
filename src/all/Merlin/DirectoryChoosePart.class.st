@@ -1,7 +1,7 @@
 Class {
 	#name : #DirectoryChoosePart,
 	#superclass : #ChooseFilePart,
-	#category : 'Merlin-Parts'
+	#category : #Merlin-Parts
 }
 
 { #category : #'as yet unclassified' }

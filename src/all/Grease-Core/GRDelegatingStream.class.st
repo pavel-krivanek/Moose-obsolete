@@ -15,7 +15,7 @@ Class {
 	#instVars : [
 		'stream'
 	],
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #'instance creation' }

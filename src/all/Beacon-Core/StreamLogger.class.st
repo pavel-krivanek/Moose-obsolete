@@ -4,7 +4,7 @@ This is an abstract logger that forwards to a stream all signals that it receive
 Class {
 	#name : #StreamLogger,
 	#superclass : #SerializingLogger,
-	#category : 'Beacon-Core-Loggers'
+	#category : #Beacon-Core-Loggers
 }
 
 { #category : #operations }

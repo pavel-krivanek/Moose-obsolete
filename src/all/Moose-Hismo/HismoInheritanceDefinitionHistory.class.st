@@ -5,7 +5,7 @@ Class {
 		'subHistory',
 		'superHistory'
 	],
-	#category : 'Moose-Hismo'
+	#category : #Moose-Hismo
 }
 
 { #category : #'instance creation' }

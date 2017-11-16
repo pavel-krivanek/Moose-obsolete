@@ -11,7 +11,7 @@ browser openOn: (
 Class {
 	#name : #MooseCustomizableSystemComplexityBrowser,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #'instance creation' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #LineParser,
 	#superclass : #SmaCCParser,
-	#category : 'SmaCC_Line_Parser'
+	#category : #SmaCC_Line_Parser
 }
 
 { #category : #generated-accessing }

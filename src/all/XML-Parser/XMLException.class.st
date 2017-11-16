@@ -4,7 +4,7 @@ A generic exception class that supports message formatting. Used as a base class
 Class {
 	#name : #XMLException,
 	#superclass : #Error,
-	#category : 'XML-Parser-Exceptions'
+	#category : #XML-Parser-Exceptions
 }
 
 { #category : #signalling }

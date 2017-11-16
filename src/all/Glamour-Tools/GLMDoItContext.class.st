@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'variableBindings'
 	],
-	#category : 'Glamour-Tools'
+	#category : #Glamour-Tools
 }
 
 { #category : #'instance creation' }

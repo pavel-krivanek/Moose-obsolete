@@ -10,7 +10,7 @@ Class {
 		'index',
 		'during'
 	],
-	#category : 'Roassal2-Animation'
+	#category : #Roassal2-Animation
 }
 
 { #category : #'as yet unclassified' }

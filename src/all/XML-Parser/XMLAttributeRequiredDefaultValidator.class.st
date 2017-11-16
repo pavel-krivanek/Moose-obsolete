@@ -4,7 +4,7 @@ This class makes sure an attribute is present (the #REQUIRED constrant).
 Class {
 	#name : #XMLAttributeRequiredDefaultValidator,
 	#superclass : #XMLAttributeDefaultValidator,
-	#category : 'XML-Parser-Validation'
+	#category : #XML-Parser-Validation
 }
 
 { #category : #private }

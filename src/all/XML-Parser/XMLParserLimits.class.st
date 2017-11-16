@@ -11,7 +11,7 @@ Class {
 	#classVars : [
 		'DefaultReadLimit'
 	],
-	#category : 'XML-Parser'
+	#category : #XML-Parser
 }
 
 { #category : #defaults }

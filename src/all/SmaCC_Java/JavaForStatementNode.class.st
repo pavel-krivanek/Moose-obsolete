@@ -12,7 +12,7 @@ Class {
 		'rightParen',
 		'statement'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

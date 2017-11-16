@@ -4,7 +4,7 @@ This is a base class for node types.
 Class {
 	#name : #XPathNodeType,
 	#superclass : #XPathType,
-	#category : 'XPath-Core-Types'
+	#category : #XPath-Core-Types
 }
 
 { #category : #testing }

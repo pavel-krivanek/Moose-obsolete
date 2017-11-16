@@ -4,7 +4,7 @@ self openOn: MooseModel root allModels last
 Class {
 	#name : #MooseClassHierarchyBrowser,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #building }

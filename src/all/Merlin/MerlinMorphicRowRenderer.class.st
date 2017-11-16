@@ -1,7 +1,7 @@
 Class {
 	#name : #MerlinMorphicRowRenderer,
 	#superclass : #MerlinMorphicCellRenderer,
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #rendering }

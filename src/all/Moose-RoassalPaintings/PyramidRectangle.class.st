@@ -8,7 +8,7 @@ Class {
 		'calculation',
 		'popup'
 	],
-	#category : 'Moose-RoassalPaintings-OverviewPyramid'
+	#category : #Moose-RoassalPaintings-OverviewPyramid
 }
 
 { #category : #defaults }

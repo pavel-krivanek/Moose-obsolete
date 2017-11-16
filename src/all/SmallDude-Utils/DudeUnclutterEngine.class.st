@@ -6,7 +6,7 @@ Class {
 		'upperLimit',
 		'data1'
 	],
-	#category : 'SmallDude-Utils'
+	#category : #SmallDude-Utils
 }
 
 { #category : #'instance creation' }

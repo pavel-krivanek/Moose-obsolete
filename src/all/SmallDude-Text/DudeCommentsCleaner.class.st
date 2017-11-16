@@ -7,7 +7,7 @@ Class {
 		'sLineComments',
 		'sRegex'
 	],
-	#category : 'SmallDude-Text'
+	#category : #SmallDude-Text
 }
 
 { #category : #private }

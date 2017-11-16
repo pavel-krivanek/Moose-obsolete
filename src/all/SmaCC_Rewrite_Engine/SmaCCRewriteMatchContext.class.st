@@ -13,7 +13,7 @@ Class {
 		'SilentProperties',
 		'Uninitialized'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #compiling }

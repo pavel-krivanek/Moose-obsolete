@@ -1,7 +1,7 @@
 Class {
 	#name : #REPMooseQueryConcern,
 	#superclass : #REPComputedConcern,
-	#category : 'Arki-Reporter-Core'
+	#category : #Arki-Reporter-Core
 }
 
 { #category : #accessing }

@@ -7,7 +7,7 @@ GTGoAndInspectBytecodeDebugAction
 Class {
 	#name : #GTDebuggerRecorderGoAndInspectBytecodeEvent,
 	#superclass : #GTDebuggerRecorderDebugActionEvent,
-	#category : 'GT-Debugger-EventRecorder-Events'
+	#category : #GT-Debugger-EventRecorder-Events
 }
 
 { #category : #accessing }

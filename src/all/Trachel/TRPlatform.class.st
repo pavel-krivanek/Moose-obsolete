@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'current'
 	],
-	#category : 'Trachel-Core'
+	#category : #Trachel-Core
 }
 
 { #category : #default }

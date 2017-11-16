@@ -8,7 +8,7 @@ Class {
 		'character',
 		'atEnd'
 	],
-	#category : 'XML-Parser-Streams'
+	#category : #XML-Parser-Streams
 }
 
 { #category : #'instance creation' }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'whenHandledBlock'
 	],
-	#category : 'Trachel-Events'
+	#category : #Trachel-Events
 }
 
 { #category : #events }

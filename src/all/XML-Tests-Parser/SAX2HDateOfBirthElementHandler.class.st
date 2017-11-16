@@ -4,7 +4,7 @@ Handler for the sample <person> <date-of-birth> element.
 Class {
 	#name : #SAX2HDateOfBirthElementHandler,
 	#superclass : #SAX2ElementCharacterHandler,
-	#category : 'XML-Tests-Parser-ElementHandlers'
+	#category : #XML-Tests-Parser-ElementHandlers
 }
 
 { #category : #'handling - content' }

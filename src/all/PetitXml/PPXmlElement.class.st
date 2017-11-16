@@ -8,7 +8,7 @@ Class {
 		'name',
 		'attributes'
 	],
-	#category : 'PetitXml-Nodes'
+	#category : #PetitXml-Nodes
 }
 
 { #category : #'instance creation' }

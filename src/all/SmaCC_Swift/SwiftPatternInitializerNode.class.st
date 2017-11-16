@@ -33,7 +33,7 @@ Class {
 		'asTokens',
 		'equalToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

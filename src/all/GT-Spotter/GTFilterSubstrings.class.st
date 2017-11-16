@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'separators'
 	],
-	#category : 'GT-Spotter-Filters'
+	#category : #GT-Spotter-Filters
 }
 
 { #category : #accessing-defaults }

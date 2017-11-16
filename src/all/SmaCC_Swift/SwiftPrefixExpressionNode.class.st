@@ -46,7 +46,7 @@ Class {
 		'statements',
 		'dynamicTypeTokens'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

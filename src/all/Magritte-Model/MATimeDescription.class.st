@@ -4,7 +4,7 @@ I am a description of times, possible values are instances of ==Time==. My visua
 Class {
 	#name : #MATimeDescription,
 	#superclass : #MAMagnitudeDescription,
-	#category : 'Magritte-Model-Description'
+	#category : #Magritte-Model-Description
 }
 
 { #category : #accessing-defaults }

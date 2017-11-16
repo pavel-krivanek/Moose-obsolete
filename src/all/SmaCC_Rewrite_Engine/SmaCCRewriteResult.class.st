@@ -11,7 +11,7 @@ Class {
 		'interval',
 		'transformation'
 	],
-	#category : 'SmaCC_Rewrite_Engine'
+	#category : #SmaCC_Rewrite_Engine
 }
 
 { #category : #'instance creation' }

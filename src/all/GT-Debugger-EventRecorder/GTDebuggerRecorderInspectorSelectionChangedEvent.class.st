@@ -4,7 +4,7 @@ I model the action of changing the selection in the inspector pane of the debugg
 Class {
 	#name : #GTDebuggerRecorderInspectorSelectionChangedEvent,
 	#superclass : #GTDebuggerRecorderEvent,
-	#category : 'GT-Debugger-EventRecorder-Events'
+	#category : #GT-Debugger-EventRecorder-Events
 }
 
 { #category : #initialization }

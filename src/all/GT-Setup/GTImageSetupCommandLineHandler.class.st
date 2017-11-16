@@ -12,7 +12,7 @@ To use from inside the image, run:
 Class {
 	#name : #GTImageSetupCommandLineHandler,
 	#superclass : #CommandLineHandler,
-	#category : 'GT-Setup'
+	#category : #GT-Setup
 }
 
 { #category : #accessing }

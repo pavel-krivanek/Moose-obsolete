@@ -10,7 +10,7 @@ Class {
 		'declarations',
 		'rightBrace'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

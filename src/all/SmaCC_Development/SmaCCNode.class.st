@@ -9,7 +9,7 @@ Class {
 	#classVars : [
 		'NextId'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #'class initialization' }

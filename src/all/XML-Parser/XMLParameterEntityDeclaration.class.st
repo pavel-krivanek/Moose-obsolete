@@ -4,7 +4,7 @@ This is a class for parameter <!ENTITY> declarations.
 Class {
 	#name : #XMLParameterEntityDeclaration,
 	#superclass : #XMLEntityDeclaration,
-	#category : 'XML-Parser-DOM'
+	#category : #XML-Parser-DOM
 }
 
 { #category : #testing }

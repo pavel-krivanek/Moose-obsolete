@@ -5,7 +5,7 @@ A PPStartOfLineParser is that does not fail, if the stream position is at the be
 Class {
 	#name : #PPStartOfLineParser,
 	#superclass : #PPParser,
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #parsing }

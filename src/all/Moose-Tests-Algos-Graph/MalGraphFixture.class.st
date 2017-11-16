@@ -1,7 +1,7 @@
 Class {
 	#name : #MalGraphFixture,
 	#superclass : #Object,
-	#category : 'Moose-Tests-Algos-Graph'
+	#category : #Moose-Tests-Algos-Graph
 }
 
 { #category : #fixtures }

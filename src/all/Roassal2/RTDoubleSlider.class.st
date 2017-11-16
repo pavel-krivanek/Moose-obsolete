@@ -19,7 +19,7 @@ Class {
 		'cursorMax',
 		'lineCursor'
 	],
-	#category : 'Roassal2-Builder-UI-Slider'
+	#category : #Roassal2-Builder-UI-Slider
 }
 
 { #category : #private }

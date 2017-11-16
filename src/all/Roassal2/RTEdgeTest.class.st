@@ -6,7 +6,7 @@ Class {
 		'el2',
 		'edge'
 	],
-	#category : 'Roassal2-Core-Tests'
+	#category : #Roassal2-Core-Tests
 }
 
 { #category : #running }

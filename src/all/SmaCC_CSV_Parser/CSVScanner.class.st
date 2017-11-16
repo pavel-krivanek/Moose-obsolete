@@ -1,7 +1,7 @@
 Class {
 	#name : #CSVScanner,
 	#superclass : #SmaCCScanner,
-	#category : 'SmaCC_CSV_Parser'
+	#category : #SmaCC_CSV_Parser
 }
 
 { #category : #generated }

@@ -5,7 +5,7 @@ Class {
 		'view',
 		'presentation'
 	],
-	#category : 'Roassal2GT-Glamour-Context'
+	#category : #Roassal2GT-Glamour-Context
 }
 
 { #category : #'private - utility' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #PPXmlParser,
 	#superclass : #PPXmlGrammar,
-	#category : 'PetitXml-Core'
+	#category : #PetitXml-Core
 }
 
 { #category : #grammar }

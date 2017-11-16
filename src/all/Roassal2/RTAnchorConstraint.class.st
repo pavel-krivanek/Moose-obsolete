@@ -32,7 +32,7 @@ Class {
 		'anchorShape',
 		'guideLine'
 	],
-	#category : 'Roassal2-Core'
+	#category : #Roassal2-Core
 }
 
 { #category : #building }

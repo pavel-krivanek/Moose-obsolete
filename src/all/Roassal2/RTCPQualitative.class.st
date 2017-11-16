@@ -15,7 +15,7 @@ FalutUI1 color scheme come from: http://flatuicolors.com/
 Class {
 	#name : #RTCPQualitative,
 	#superclass : #RTColorPalette,
-	#category : 'Roassal2-ColorNormalizer'
+	#category : #Roassal2-ColorNormalizer
 }
 
 { #category : #default }

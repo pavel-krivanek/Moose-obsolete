@@ -24,7 +24,7 @@ Class {
 		'nodeListClass',
 		'attributeListClass'
 	],
-	#category : 'XML-Parser-DOM'
+	#category : #XML-Parser-DOM
 }
 
 { #category : #converting }

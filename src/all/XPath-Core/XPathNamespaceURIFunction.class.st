@@ -4,7 +4,7 @@ XPath namespace URI function.
 Class {
 	#name : #XPathNamespaceURIFunction,
 	#superclass : #XPathFunction,
-	#category : 'XPath-Core-Functions'
+	#category : #XPath-Core-Functions
 }
 
 { #category : #accessing }

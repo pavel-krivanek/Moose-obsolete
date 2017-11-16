@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiClassFunctionDefinitionNode,
 	#superclass : #DelphiFunctionDefinitionNode,
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

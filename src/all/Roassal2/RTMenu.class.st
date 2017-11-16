@@ -14,7 +14,7 @@ Class {
 		'highlightColor',
 		'isLocked'
 	],
-	#category : 'Roassal2-Builder-Menu'
+	#category : #Roassal2-Builder-Menu
 }
 
 { #category : #adding }

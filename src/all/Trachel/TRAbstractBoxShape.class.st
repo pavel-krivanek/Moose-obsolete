@@ -9,7 +9,7 @@ Class {
 	#classInstVars : [
 		'nullRectangle'
 	],
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #public }

@@ -1,7 +1,7 @@
 Class {
 	#name : #RTSugiyamaLayoutTest,
 	#superclass : #RTTest,
-	#category : 'Roassal2-Layouts-Tests'
+	#category : #Roassal2-Layouts-Tests
 }
 
 { #category : #'as yet unclassified' }

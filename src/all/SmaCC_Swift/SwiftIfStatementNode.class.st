@@ -8,7 +8,7 @@ Class {
 		'elseToken',
 		'else'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

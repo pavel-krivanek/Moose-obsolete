@@ -6,7 +6,7 @@ Class {
 		'points',
 		'deviation'
 	],
-	#category : 'Roassal2-Builder-Grapher-Decorators'
+	#category : #Roassal2-Builder-Grapher-Decorators
 }
 
 { #category : #accessing }

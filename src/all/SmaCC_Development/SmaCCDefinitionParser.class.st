@@ -13,7 +13,7 @@ Class {
 		'grammar',
 		'defaultClasses'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #generated-accessing }

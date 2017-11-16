@@ -1,7 +1,7 @@
 Class {
 	#name : #GRPrinter,
 	#superclass : #GRObject,
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #parts-date }

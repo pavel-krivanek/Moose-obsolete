@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'aliasedType'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

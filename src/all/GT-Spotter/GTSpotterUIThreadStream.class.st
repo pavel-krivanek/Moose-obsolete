@@ -7,7 +7,7 @@ Class {
 		'receiver',
 		'timestamp'
 	],
-	#category : 'GT-Spotter-Utils'
+	#category : #GT-Spotter-Utils
 }
 
 { #category : #adding/removing }

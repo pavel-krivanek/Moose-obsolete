@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'module'
 	],
-	#category : 'Famix-C'
+	#category : #Famix-C
 }
 
 { #category : #initialize-release }

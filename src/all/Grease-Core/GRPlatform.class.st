@@ -16,7 +16,7 @@ Class {
 	#classVars : [
 		'Current'
 	],
-	#category : 'Grease-Core'
+	#category : #Grease-Core
 }
 
 { #category : #registration }

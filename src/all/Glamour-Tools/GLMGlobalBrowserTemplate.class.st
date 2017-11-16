@@ -1,7 +1,7 @@
 Class {
 	#name : #GLMGlobalBrowserTemplate,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Glamour-Tools'
+	#category : #Glamour-Tools
 }
 
 { #category : #opening }

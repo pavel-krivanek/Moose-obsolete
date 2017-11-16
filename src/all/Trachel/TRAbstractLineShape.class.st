@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'width'
 	],
-	#category : 'Trachel-Shapes'
+	#category : #Trachel-Shapes
 }
 
 { #category : #testing }

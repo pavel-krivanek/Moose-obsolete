@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'childNamedEntities'
 	],
-	#category : 'Famix-Core'
+	#category : #Famix-Core
 }
 
 { #category : #meta }

@@ -6,7 +6,7 @@ SmaCCParseNodeVisitor is an abstract visitor for the SmaCC parse trees.
 Class {
 	#name : #SmaCCParseNodeVisitor,
 	#superclass : #Object,
-	#category : 'SmaCC_Runtime'
+	#category : #SmaCC_Runtime
 }
 
 { #category : #visiting }

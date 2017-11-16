@@ -9,7 +9,7 @@ Class {
 		'newProduction',
 		'class'
 	],
-	#category : 'PetitGui-Refactoring'
+	#category : #PetitGui-Refactoring
 }
 
 { #category : #'instance creation' }

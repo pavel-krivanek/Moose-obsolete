@@ -6,7 +6,7 @@ Class {
 		'colon',
 		'formatExpression'
 	],
-	#category : 'SmaCC_Delphi'
+	#category : #SmaCC_Delphi
 }
 
 { #category : #generated }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'roassalPresentation'
 	],
-	#category : 'Roassal2GT-Glamour-Actions'
+	#category : #Roassal2GT-Glamour-Actions
 }
 
 { #category : #initialization }

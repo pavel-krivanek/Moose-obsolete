@@ -6,7 +6,7 @@ This is an interaction for an element
 Class {
 	#name : #RTSelectableElementContextInteraction,
 	#superclass : #RTAbstractContextInteraction,
-	#category : 'Roassal2GT-Glamour-Roassal-Interaction'
+	#category : #Roassal2GT-Glamour-Roassal-Interaction
 }
 
 { #category : #hooks }

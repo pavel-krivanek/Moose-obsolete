@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'errorInstance'
 	],
-	#category : 'Arki-Reporter-Core'
+	#category : #Arki-Reporter-Core
 }
 
 { #category : #accessing }

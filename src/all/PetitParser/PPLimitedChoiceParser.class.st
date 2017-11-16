@@ -22,7 +22,7 @@ Class {
 	#instVars : [
 		'limit'
 	],
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #'as yet unclassified' }

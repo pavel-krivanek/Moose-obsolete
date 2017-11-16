@@ -5,7 +5,7 @@ Class {
 		'elseToken',
 		'falseStatement'
 	],
-	#category : 'SmaCC_Java'
+	#category : #SmaCC_Java
 }
 
 { #category : #generated }

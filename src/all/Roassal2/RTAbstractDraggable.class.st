@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'groupToDrag'
 	],
-	#category : 'Roassal2-Interactions'
+	#category : #Roassal2-Interactions
 }
 
 { #category : #hooks }

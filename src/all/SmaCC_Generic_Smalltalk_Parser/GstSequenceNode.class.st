@@ -8,7 +8,7 @@ Class {
 		'statements',
 		'periods'
 	],
-	#category : 'SmaCC_Generic_Smalltalk_Parser'
+	#category : #SmaCC_Generic_Smalltalk_Parser
 }
 
 { #category : #generated }

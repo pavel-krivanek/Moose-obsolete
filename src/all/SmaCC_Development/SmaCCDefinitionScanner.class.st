@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'parseSourceSelector'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #generated-initialization }

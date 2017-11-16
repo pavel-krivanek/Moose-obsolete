@@ -10,7 +10,7 @@ Class {
 		'publicID',
 		'systemID'
 	],
-	#category : 'XML-Parser-DOM'
+	#category : #XML-Parser-DOM
 }
 
 { #category : #'instance creation' }

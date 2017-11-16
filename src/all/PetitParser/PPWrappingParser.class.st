@@ -4,7 +4,7 @@ A parser that performs an action block upon activation with the stream and a con
 Class {
 	#name : #PPWrappingParser,
 	#superclass : #PPActionParser,
-	#category : 'PetitParser-Parsers'
+	#category : #PetitParser-Parsers
 }
 
 { #category : #parsing }

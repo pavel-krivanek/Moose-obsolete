@@ -5,7 +5,7 @@ Class {
 		'regularExpression',
 		'createIdMethod'
 	],
-	#category : 'SmaCC_Development'
+	#category : #SmaCC_Development
 }
 
 { #category : #private }

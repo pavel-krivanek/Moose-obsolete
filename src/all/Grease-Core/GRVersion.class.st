@@ -11,7 +11,7 @@ Class {
 		'stageLabel',
 		'stageNumber'
 	],
-	#category : 'Grease-Core'
+	#category : #Grease-Core
 }
 
 { #category : #'instance creation' }

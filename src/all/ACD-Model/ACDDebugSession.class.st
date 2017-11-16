@@ -6,7 +6,7 @@ Class {
 		'announcerModel',
 		'receiverContext'
 	],
-	#category : 'ACD-Model'
+	#category : #ACD-Model
 }
 
 { #category : #accessing }

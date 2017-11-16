@@ -23,7 +23,7 @@ self halt.
 Class {
 	#name : #RTOpenStreetMapExample,
 	#superclass : #RTAbstractExample,
-	#category : 'Roassal2-OpenStreetMap'
+	#category : #Roassal2-OpenStreetMap
 }
 
 { #category : #sources }

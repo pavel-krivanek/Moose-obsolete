@@ -5,7 +5,7 @@ Class {
 		'wizardPart',
 		'defaultValue'
 	],
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #accessing }

@@ -147,7 +147,7 @@ Class {
 		'finally',
 		'initializerDeclaration'
 	],
-	#category : 'PetitJava-Core'
+	#category : #PetitJava-Core
 }
 
 { #category : #'as yet unclassified' }

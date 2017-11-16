@@ -4,7 +4,7 @@ This is the abstract browser for browsing the source code of a FAMIX model. Look
 Class {
 	#name : #MooseCodeBrowser,
 	#superclass : #GLMBrowserTemplate,
-	#category : 'Moose-Finder'
+	#category : #Moose-Finder
 }
 
 { #category : #building }

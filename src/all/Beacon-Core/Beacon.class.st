@@ -16,7 +16,7 @@ Class {
 	#classVars : [
 		'instance'
 	],
-	#category : 'Beacon-Core-Beacon'
+	#category : #Beacon-Core-Beacon
 }
 
 { #category : #logging }

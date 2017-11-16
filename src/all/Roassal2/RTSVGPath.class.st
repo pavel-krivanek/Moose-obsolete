@@ -43,7 +43,7 @@ Class {
 		'curves',
 		'keepInOriginalPosition'
 	],
-	#category : 'Roassal2-Shapes'
+	#category : #Roassal2-Shapes
 }
 
 { #category : #countries }

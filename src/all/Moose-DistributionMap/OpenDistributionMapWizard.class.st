@@ -8,7 +8,7 @@ Class {
 		'compositeParts',
 		'distributionMapElements'
 	],
-	#category : 'Moose-DistributionMap'
+	#category : #Moose-DistributionMap
 }
 
 { #category : #'computing - possible properties' }

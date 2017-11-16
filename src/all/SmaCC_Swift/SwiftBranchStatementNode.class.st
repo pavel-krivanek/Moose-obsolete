@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'semicolonToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

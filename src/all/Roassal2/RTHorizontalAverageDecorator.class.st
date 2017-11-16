@@ -16,7 +16,7 @@ b.
 Class {
 	#name : #RTHorizontalAverageDecorator,
 	#superclass : #RTAbstractAverageDecorator,
-	#category : 'Roassal2-Builder-Grapher-Decorators'
+	#category : #Roassal2-Builder-Grapher-Decorators
 }
 
 { #category : #drawing-hooks }

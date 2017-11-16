@@ -1,7 +1,7 @@
 Class {
 	#name : #MerlinMorphicFirstPaneRenderer,
 	#superclass : #MerlinMorphicPaneRenderer,
-	#category : 'Merlin-Rendering'
+	#category : #Merlin-Rendering
 }
 
 { #category : #rendering }

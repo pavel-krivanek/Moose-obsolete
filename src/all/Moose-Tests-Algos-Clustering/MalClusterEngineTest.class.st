@@ -4,7 +4,7 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalClusterEngineTest,
 	#superclass : #TestCase,
-	#category : 'Moose-Tests-Algos-Clustering'
+	#category : #Moose-Tests-Algos-Clustering
 }
 
 { #category : #testing }

@@ -4,7 +4,7 @@ self open
 Class {
 	#name : #GLMOtherExamples,
 	#superclass : #GLMExamples,
-	#category : 'Glamour-Examples-Extras'
+	#category : #Glamour-Examples-Extras
 }
 
 { #category : #'other examples' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #A4,
 	#superclass : #Object,
-	#category : 'Moose-TestResources-PackageBlueprint-P4'
+	#category : #Moose-TestResources-PackageBlueprint-P4
 }
 
 { #category : #'as yet unclassified' }

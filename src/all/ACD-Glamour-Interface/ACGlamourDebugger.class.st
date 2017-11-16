@@ -1,7 +1,7 @@
 Class {
 	#name : #ACGlamourDebugger,
 	#superclass : #GTGenericStackDebugger,
-	#category : 'ACD-Glamour-Interface'
+	#category : #ACD-Glamour-Interface
 }
 
 { #category : #accessing }

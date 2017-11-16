@@ -5,7 +5,7 @@ Class {
 		'result',
 		'context'
 	],
-	#category : 'PetitIslands-Tests'
+	#category : #PetitIslands-Tests
 }
 
 { #category : #indentation }

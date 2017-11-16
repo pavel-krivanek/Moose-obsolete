@@ -1,7 +1,7 @@
 Class {
 	#name : #ConcreteMergerTests,
 	#superclass : #TypeMergerTestsRoot,
-	#category : 'RoelTyper-Tests'
+	#category : #RoelTyper-Tests
 }
 
 { #category : #auxiliary }

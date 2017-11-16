@@ -10,7 +10,7 @@ Class {
 		'value',
 		'index'
 	],
-	#category : 'Moose-Algos-LinearAlgebra'
+	#category : #Moose-Algos-LinearAlgebra
 }
 
 { #category : #'instance creation' }

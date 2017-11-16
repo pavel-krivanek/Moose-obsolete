@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'listOrTextFieldPart'
 	],
-	#category : 'Moose-DistributionMap'
+	#category : #Moose-DistributionMap
 }
 
 { #category : #accessing }

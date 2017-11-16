@@ -5,7 +5,7 @@ Class {
 		'expression',
 		'questionMarkToken'
 	],
-	#category : 'SmaCC_Swift'
+	#category : #SmaCC_Swift
 }
 
 { #category : #generated }

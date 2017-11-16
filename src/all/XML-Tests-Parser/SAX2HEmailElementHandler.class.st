@@ -4,7 +4,7 @@ Handler for the sample <person> <contacts> <email> element.
 Class {
 	#name : #SAX2HEmailElementHandler,
 	#superclass : #SAX2ElementHandler,
-	#category : 'XML-Tests-Parser-ElementHandlers'
+	#category : #XML-Tests-Parser-ElementHandlers
 }
 
 { #category : #'handling - content' }

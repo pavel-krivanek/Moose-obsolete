@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'testData'
 	],
-	#category : 'Moose-Tests-Hismo'
+	#category : #Moose-Tests-Hismo
 }
 
 { #category : #resources }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'parts'
 	],
-	#category : 'Grease-Core-Text'
+	#category : #Grease-Core-Text
 }
 
 { #category : #operators }
