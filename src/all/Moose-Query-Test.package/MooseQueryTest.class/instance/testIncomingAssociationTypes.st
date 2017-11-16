@@ -5,5 +5,6 @@ testIncomingAssociationTypes
 		assert: class1 incomingAssociationTypes asSet
 		equals:
 			{FAMIXInheritance.
-			FAMIXReference} asSet.
+			FAMIXReference.
+			FAMIXTraitUsage} asSet.
 	self assert: method1 incomingAssociationTypes equals: {FAMIXInvocation}
