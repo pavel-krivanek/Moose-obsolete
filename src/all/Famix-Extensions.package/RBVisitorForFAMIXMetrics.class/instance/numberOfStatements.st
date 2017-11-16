@@ -1,4 +1,0 @@
-accessing
-numberOfStatements
-	
-	^numberOfStatements

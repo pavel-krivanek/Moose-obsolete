@@ -1,3 +1,0 @@
-tokenizing
-nextXMLEncodingAttributeValue
-	self subclassResponsibility

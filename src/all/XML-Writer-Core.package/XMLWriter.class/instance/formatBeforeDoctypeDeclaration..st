@@ -1,4 +1,0 @@
-formatting
-formatBeforeDoctypeDeclaration: aDoctypeDeclarationWriter
-	formatter
-		ifNotNil: [formatter formatBeforeDoctypeDeclaration: aDoctypeDeclarationWriter]

@@ -1,3 +1,0 @@
-accessing
-nodeType
-	^ XPathCommentNodeType new

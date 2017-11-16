@@ -1,2 +1,0 @@
-positioning
-position: anInteger

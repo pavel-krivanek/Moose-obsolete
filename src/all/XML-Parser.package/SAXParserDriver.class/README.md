@@ -1,1 +1,0 @@
-SAXParserDriver together with SAXHandler provides a SAX-like API for XML parsing. The driver processes XML tokens and signals SAX events to a SAXHandler. See SAXHandler for more info.

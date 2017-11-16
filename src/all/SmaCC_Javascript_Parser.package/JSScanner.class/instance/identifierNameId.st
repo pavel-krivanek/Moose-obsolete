@@ -1,3 +1,0 @@
-generated
-identifierNameId
-	^ 98

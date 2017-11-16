@@ -1,3 +1,0 @@
-*petitanalyzer-testing
-isFirstSetTerminal
-	^ true

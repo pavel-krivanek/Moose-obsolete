@@ -1,3 +1,0 @@
-metrics
-numberOfReceivedMessages
-	^ messages size

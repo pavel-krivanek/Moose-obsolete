@@ -1,1 +1,0 @@
-This class is the standard implementation that uses Pharo and Squeak's Mutex class to implement a reentrant mutex.

@@ -1,3 +1,0 @@
-accessing
-haveUnhandledReservedAttributes
-	hasUnhandledReservedAttributes := true

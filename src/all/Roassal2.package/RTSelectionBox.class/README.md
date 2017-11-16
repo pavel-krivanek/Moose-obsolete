@@ -1,1 +1,0 @@
-I am a simple selection Box interaction to  create elastic boxs that allow to explore the edges from a view

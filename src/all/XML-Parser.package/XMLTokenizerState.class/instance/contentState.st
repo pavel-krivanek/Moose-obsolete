@@ -1,3 +1,0 @@
-changing
-contentState
-	^ XMLContentState new

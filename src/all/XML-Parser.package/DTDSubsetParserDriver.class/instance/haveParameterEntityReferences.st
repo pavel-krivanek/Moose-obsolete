@@ -1,3 +1,0 @@
-accessing
-haveParameterEntityReferences
-	self subclassResponsibility

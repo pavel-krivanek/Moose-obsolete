@@ -1,3 +1,0 @@
-whitespaces
-sol
-	^ #startOfLine asParser

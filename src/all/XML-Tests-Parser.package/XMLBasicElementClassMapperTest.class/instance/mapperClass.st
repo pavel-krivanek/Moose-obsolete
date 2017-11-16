@@ -1,3 +1,0 @@
-acccessing
-mapperClass
-	^ XMLBasicElementClassMapper

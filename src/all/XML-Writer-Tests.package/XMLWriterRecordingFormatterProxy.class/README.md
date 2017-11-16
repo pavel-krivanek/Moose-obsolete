@@ -1,1 +1,0 @@
-Records sent formatter messages in a queue for testing.

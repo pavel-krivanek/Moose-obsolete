@@ -1,3 +1,0 @@
-element-titles
-defaultElementTitleFormattingBlock
-	^ #yourself

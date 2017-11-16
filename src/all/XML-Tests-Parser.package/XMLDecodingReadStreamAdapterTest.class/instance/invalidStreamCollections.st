@@ -1,3 +1,0 @@
-accessing
-invalidStreamCollections
-	^ self invalidEncodedInputCollections

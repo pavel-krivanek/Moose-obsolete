@@ -1,3 +1,0 @@
-handling - operators
-handleNegationOperator
-	self pushUnaryOperatorNode: XPathASTNegationExpressionNode new

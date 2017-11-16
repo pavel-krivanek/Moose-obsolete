@@ -1,4 +1,0 @@
-accessing
-activeSubscriptions
-
-	^ announcerModel activeSubscriptions

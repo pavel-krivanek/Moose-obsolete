@@ -1,1 +1,0 @@
-A generic exception class that supports message formatting. Used as a base class for exceptions in XMLParser and related packages like XPath.

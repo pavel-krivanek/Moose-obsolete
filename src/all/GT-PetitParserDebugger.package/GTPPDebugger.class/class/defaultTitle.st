@@ -1,4 +1,0 @@
-accessing
-defaultTitle
-
-	^ 'PetitParser Debugger'

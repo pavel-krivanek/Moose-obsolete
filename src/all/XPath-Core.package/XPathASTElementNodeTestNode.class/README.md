@@ -1,1 +1,0 @@
-This is an AST node class for the 'element()' type test or for '*' type tests when the principal node type of the axis is an element.

@@ -1,3 +1,0 @@
-visiting
-visitBehaviouralEntity: aBehaviouralEntity 
-	self visitContainerEntity: aBehaviouralEntity.

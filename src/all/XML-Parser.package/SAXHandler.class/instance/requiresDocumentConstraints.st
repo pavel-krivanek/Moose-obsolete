@@ -1,3 +1,0 @@
-configuring
-requiresDocumentConstraints
-	^ self configuration requiresDocumentConstraints

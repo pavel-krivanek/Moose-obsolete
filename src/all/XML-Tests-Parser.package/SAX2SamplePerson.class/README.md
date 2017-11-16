@@ -1,1 +1,0 @@
-The sample person object parsed by the SAX2ElementParser.

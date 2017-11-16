@@ -1,1 +1,0 @@
-I'm a "walker" for visiting all nodes of a XPath expression and resolve an xml document with it. 

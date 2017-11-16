@@ -1,3 +1,0 @@
-handling - positions
-handleStartDoctypeDeclarationPosition: aPosition
-	self saxHandler startDoctypeDeclarationPosition: aPosition

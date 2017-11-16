@@ -1,3 +1,0 @@
-private
-newExtractor
-	^PharoInstvarInterfaceExtractor new

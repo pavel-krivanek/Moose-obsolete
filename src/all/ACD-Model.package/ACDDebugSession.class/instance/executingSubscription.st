@@ -1,4 +1,0 @@
-accessing
-executingSubscription
-
-	^ announcerModel executingSubscription 

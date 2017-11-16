@@ -1,3 +1,0 @@
-accessing
-axisName
-	^ 'following-sibling'

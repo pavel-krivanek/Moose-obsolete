@@ -1,3 +1,0 @@
-hooks
-title
-	^ 'Zoom in'

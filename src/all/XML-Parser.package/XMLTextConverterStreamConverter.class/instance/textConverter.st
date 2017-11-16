@@ -1,3 +1,0 @@
-accessing
-textConverter
-	^ textConverter

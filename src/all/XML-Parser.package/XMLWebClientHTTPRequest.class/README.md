@@ -1,1 +1,0 @@
-This class uses the WebClient library to implement HTTP requests. This is used on Squeak when Zinc isn't installed.

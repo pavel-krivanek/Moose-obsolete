@@ -1,3 +1,0 @@
-method
-methodBody 
-	^ semicolon / block

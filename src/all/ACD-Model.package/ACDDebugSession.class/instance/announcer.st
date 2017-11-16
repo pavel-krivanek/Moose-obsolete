@@ -1,4 +1,0 @@
-accessing
-announcer
-
-	^ announcerModel announcer

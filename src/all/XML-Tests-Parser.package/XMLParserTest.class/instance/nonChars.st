@@ -1,3 +1,0 @@
-accessing
-nonChars
-	^ XMLCharacterMethodsTest nonChars

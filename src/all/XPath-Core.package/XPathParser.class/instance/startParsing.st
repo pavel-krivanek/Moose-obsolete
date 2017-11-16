@@ -1,3 +1,0 @@
-parsing
-startParsing
-	handler handleStartParsing

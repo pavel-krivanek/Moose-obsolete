@@ -1,4 +1,0 @@
-accessing
-selectedClass
-
-	^configuration theNonMetaClass

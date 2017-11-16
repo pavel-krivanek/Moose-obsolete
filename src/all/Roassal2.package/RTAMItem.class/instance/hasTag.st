@@ -1,4 +1,0 @@
-testing
-hasTag
-
-	^ tags notEmpty

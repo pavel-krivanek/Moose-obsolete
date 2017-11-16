@@ -1,3 +1,0 @@
-accessing
-maxEntityReplacementDepth: anInteger
-	self parserLimits maxEntityReplacementDepth: anInteger

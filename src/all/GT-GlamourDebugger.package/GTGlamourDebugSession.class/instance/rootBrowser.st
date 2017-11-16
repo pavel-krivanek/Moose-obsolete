@@ -1,4 +1,0 @@
-accessing
-rootBrowser
-
-	^ rootBrowserContext receiver

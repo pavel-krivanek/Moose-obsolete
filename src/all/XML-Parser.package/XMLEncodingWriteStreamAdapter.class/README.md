@@ -1,1 +1,0 @@
-A write stream adapter that encodes stream contents using a stream converter.

@@ -1,1 +1,0 @@
-FAMIXCSourceLanguage represents the C language.

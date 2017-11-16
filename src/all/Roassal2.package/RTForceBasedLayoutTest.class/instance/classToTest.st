@@ -1,3 +1,0 @@
-tests
-classToTest
-	^ RTForceBasedLayout

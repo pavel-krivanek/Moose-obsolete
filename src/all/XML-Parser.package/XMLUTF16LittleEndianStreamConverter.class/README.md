@@ -1,1 +1,0 @@
-A stream converter for little endian UTF-16 streams.

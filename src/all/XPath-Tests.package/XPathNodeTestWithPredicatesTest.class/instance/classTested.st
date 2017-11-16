@@ -1,3 +1,0 @@
-accessing
-classTested
-	^ XPathNodeTestWithPredicates

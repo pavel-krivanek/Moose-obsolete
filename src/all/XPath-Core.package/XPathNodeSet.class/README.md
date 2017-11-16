@@ -1,1 +1,0 @@
-This class implements XPath node sets to store the results of XPath location path expressions. Location path expresssion produce node seets in document order, regardless of the direction (forward or reverse) of the final step axis.

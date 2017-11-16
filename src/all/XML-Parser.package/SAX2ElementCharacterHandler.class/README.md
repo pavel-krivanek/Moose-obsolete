@@ -1,1 +1,0 @@
-This class is a SAX2ElementHandler that handles #characters: events. Sending #characters returns the complete character data of the element as a string.

@@ -1,4 +1,0 @@
-accessing
-localMooseModel 
-	 
-	^self mooseModel

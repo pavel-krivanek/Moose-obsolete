@@ -1,3 +1,0 @@
-*Ghost-StateSpecsSupport
-isStateSpec
-	^false

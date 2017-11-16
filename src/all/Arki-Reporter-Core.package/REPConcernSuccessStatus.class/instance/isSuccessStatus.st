@@ -1,3 +1,0 @@
-testing
-isSuccessStatus
-	^ true

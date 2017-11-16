@@ -1,3 +1,0 @@
-accessing
-normalizedLineEndingChar: aCharacter
-	streamReader normalizedLineEndingChar: aCharacter

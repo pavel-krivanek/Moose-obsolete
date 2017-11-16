@@ -1,1 +1,0 @@
-This class will make sure the value of a standalone externally defined attribute is present (the default value is never used).

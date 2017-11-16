@@ -1,3 +1,0 @@
-accessing
-allParentTypes
-	^ self explicitRequirement

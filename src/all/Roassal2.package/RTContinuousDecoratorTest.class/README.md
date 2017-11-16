@@ -1,1 +1,0 @@
-A RTContinuousDecoratorTest is a test class for testing the behavior of RTContinuousDecorator

@@ -1,3 +1,0 @@
-accessing
-replacesContentEntityReferences
-	^ self entityConfiguration replacesContentEntityReferences

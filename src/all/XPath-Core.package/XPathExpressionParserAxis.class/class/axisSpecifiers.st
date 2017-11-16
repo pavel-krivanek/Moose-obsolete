@@ -1,3 +1,0 @@
-private
-axisSpecifiers
-	^ AxisSpecifiers

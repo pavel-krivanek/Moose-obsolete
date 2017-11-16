@@ -1,3 +1,0 @@
-copying
-postCopy
-	currentState := dfa

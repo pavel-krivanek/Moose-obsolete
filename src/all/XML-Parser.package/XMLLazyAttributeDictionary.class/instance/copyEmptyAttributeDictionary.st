@@ -1,3 +1,0 @@
-private
-copyEmptyAttributeDictionary
-	^ attributeDictionary copy

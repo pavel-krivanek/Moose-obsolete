@@ -1,3 +1,0 @@
-converting
-asLimitingExternalEntityResolver
-	^ DTDExternalEntityResolverLimitingDecorator externalEntityResolver: self

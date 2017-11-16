@@ -1,3 +1,0 @@
-accessing
-addImplicitVariable: anImplicitVariable
-	implicitVariables add: anImplicitVariable

@@ -1,3 +1,0 @@
-whitespaces
-eol
-	^ nl / eof

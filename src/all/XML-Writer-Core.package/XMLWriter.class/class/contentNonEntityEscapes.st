@@ -1,3 +1,0 @@
-accessing
-contentNonEntityEscapes
-	^ ContentNonEntityEscapes

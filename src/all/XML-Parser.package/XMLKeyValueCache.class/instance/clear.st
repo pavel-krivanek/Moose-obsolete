@@ -1,3 +1,0 @@
-clearing
-clear
-	self removeAll

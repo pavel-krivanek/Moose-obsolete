@@ -1,3 +1,0 @@
-private
-privateHasEncoding
-	^ encoding isNotNil

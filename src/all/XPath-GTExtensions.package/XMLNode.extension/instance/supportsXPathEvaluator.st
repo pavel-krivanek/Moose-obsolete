@@ -1,3 +1,0 @@
-*XPath-GTExtensions
-supportsXPathEvaluator
-	^ true

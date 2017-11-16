@@ -1,3 +1,0 @@
-registration
-gtACDSenderActionFor: aDebugger
-	<gtACDSenderDebuggingAction>

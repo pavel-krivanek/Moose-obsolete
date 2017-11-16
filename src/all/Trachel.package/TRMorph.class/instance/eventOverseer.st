@@ -1,3 +1,0 @@
-accessing
-eventOverseer
-	^ trachelCanvas eventOverseer

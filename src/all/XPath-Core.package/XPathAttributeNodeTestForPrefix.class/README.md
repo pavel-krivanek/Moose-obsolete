@@ -1,1 +1,0 @@
-This is a class for the 'attribute(prefix:*)' type test or for the 'prefix:*' type test when the principal node type of the axis is 'attribute'.

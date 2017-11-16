@@ -1,1 +1,0 @@
-A validating node visitor that can validate DOM node trees using XMLDocumentValidators.

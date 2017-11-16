@@ -1,1 +1,0 @@
-This is a read stream that raises errors if sent peek or next when atEnd, which streams on other platforms disallow, or if sent close multiple times or if sent atEnd, next, or peek when closed, which StandardFileStream disallows . Used to test portability.

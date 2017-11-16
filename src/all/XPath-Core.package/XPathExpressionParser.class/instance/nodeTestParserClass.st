@@ -1,3 +1,0 @@
-private
-nodeTestParserClass
-	^ XPathNodeTestParser

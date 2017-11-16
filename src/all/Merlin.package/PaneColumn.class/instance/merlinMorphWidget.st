@@ -1,4 +1,0 @@
-*Merlin-Rendering
-merlinMorphWidget
-
-	^ nil

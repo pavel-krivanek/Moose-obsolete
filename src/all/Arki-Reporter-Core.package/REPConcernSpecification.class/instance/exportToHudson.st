@@ -1,3 +1,0 @@
-opening
-exportToHudson
-	self root

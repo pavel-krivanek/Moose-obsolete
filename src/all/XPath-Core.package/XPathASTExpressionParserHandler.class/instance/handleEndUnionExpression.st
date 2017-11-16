@@ -1,3 +1,0 @@
-handling - operators
-handleEndUnionExpression
-	self popAnyUnionExpressionNodes

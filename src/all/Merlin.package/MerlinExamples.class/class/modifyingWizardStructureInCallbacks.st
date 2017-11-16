@@ -1,5 +1,0 @@
-basic morphic examples
-modifyingWizardStructureInCallbacks
-
-	"self modifyingWizardStructureInCallbacks"
-	^ self modifyingWizardStructureInCallbacksUsing: MerlinMorphicWizardRenderer new

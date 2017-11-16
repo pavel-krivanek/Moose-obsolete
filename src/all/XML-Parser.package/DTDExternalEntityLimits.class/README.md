@@ -1,1 +1,0 @@
-This class places security limits on the number and size of external parsed entities. You can set these using the configuration messages in DTDExternalEntityResolver or remove them using removeLimits.

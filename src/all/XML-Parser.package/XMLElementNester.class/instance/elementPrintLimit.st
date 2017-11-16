@@ -1,3 +1,0 @@
-private
-elementPrintLimit
-	^ 5

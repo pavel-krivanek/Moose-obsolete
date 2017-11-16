@@ -1,3 +1,0 @@
-private
-emitEndBlock
-	self emit: $]

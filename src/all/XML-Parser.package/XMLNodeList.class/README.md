@@ -1,1 +1,0 @@
-This class represents an ordered list of child nodes for an XML document or element. Non-modifying accessing messages like #first and #last return nil instead of raising exceptions.

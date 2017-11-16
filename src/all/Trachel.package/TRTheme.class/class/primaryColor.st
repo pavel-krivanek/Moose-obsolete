@@ -1,3 +1,0 @@
-generic
-primaryColor
-	^ self blue

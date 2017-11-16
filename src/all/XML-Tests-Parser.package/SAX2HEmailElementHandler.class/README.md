@@ -1,1 +1,0 @@
-Handler for the sample <person> <contacts> <email> element.

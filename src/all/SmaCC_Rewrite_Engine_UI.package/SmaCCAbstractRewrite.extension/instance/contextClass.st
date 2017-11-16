@@ -1,3 +1,0 @@
-*SmaCC_Rewrite_Engine_UI
-contextClass
-	^ SmaCCRewriteMatchContext

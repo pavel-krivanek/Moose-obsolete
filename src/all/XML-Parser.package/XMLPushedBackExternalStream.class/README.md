@@ -1,1 +1,0 @@
-A class to store a nested external stream for XMLNestedStreamReader.

@@ -1,3 +1,0 @@
-processing
-processedDefaultForPresentAttributeValue: anAttributeValue
-	^ anAttributeValue

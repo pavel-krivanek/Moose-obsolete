@@ -1,3 +1,0 @@
-changing
-beStartOfRelativeLocationPath
-	isStartOfRelativeLocationPath := true

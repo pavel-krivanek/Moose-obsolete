@@ -1,1 +1,0 @@
-self new browser openOn: (RBBrowserEnvironment new forPackageNames: #('Glamour'))

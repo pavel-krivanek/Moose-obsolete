@@ -1,4 +1,0 @@
-handling
-handleTextNodeTest
-	self startNodeTest.
-	expressionParserHandler handleTextNodeTest.

@@ -1,4 +1,0 @@
-meta
-metamodelClasses
-
-	^ MooseEntity withAllSubclasses

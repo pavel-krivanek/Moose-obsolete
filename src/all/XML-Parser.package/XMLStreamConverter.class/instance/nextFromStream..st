@@ -1,3 +1,0 @@
-decoding
-nextFromStream: aStream
-	self subclassResponsibility

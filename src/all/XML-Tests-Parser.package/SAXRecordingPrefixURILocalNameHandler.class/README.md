@@ -1,1 +1,0 @@
-This class records the first element events (#startElement:prefix:uri:attributes:localName: and #endElement:prefix:uri:localName:) sent before the others.

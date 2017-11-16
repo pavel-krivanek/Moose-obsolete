@@ -1,3 +1,0 @@
-accessing
-start 
-	^path end

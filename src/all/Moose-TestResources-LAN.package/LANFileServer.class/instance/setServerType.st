@@ -1,4 +1,0 @@
-setting
-setServerType 
-	 
-	serverType := 'LANFileServer'

@@ -1,3 +1,0 @@
-*petitislands
-isIslandBorder
-	^ self subclassResponsibility

@@ -1,1 +1,0 @@
-This is an abstract class for tag writers that are "unsafe" because they can make non-wellformed XML if they aren't used correctly.

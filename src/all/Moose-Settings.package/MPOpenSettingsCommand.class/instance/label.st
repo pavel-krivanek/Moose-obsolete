@@ -1,3 +1,0 @@
-hooks
-label
-	^ 'Moose settings'

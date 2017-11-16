@@ -1,4 +1,0 @@
-rendering
-specificMorphContents 
-
-	^ self widgetMorph

@@ -1,4 +1,0 @@
-basic representation
-importingInheritance
-	
-	^#Inheritance

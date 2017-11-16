@@ -1,3 +1,0 @@
-accessing
-associationAtName: aQualifiedOrLocalName
-	^ attributeDictionary associationAtName: aQualifiedOrLocalName

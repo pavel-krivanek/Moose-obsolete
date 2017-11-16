@@ -1,3 +1,0 @@
-accessing
-implicitVariables: aCollectionOfImplicitVariables
-	implicitVariables value: aCollectionOfImplicitVariables

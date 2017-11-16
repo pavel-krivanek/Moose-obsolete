@@ -1,3 +1,0 @@
-private
-lessThanOrEqualToString: aString
-	self subclassResponsibility

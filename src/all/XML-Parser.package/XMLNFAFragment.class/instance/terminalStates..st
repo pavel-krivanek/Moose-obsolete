@@ -1,3 +1,0 @@
-accessing
-terminalStates: aTerminalStateCollection
-	terminalStates := aTerminalStateCollection

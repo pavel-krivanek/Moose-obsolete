@@ -1,4 +1,0 @@
-creating
-installHismoModel
-
-	hismoModel install

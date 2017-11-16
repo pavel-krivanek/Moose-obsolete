@@ -1,4 +1,0 @@
-basic representation
-importingAttribute
-	
-	^#Attribute

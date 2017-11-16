@@ -1,3 +1,0 @@
-*Moose-Core
-isFileStream
-	^ true

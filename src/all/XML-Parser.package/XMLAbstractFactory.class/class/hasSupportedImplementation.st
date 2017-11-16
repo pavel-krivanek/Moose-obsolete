@@ -1,3 +1,0 @@
-testing
-hasSupportedImplementation
-	^ self findSupportedImplementation notNil

@@ -1,3 +1,0 @@
-accessing
-keysSortedSafely
-	^ attributeDictionary keysSortedSafely

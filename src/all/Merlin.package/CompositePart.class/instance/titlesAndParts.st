@@ -1,4 +1,0 @@
-accessing - titlesAndParts
-titlesAndParts
-
-	^ titlesAndParts  

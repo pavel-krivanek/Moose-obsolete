@@ -1,3 +1,0 @@
-validating
-validateAttributeDefaultValue: aDefaultValue
-	self errorIDAttributeMustBeRequiredOrImplied

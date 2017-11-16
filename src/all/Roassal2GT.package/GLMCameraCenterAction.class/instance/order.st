@@ -1,3 +1,0 @@
-hooks
-order
-	^ 6

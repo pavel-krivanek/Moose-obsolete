@@ -1,7 +1,0 @@
-{
-	"commentStamp" : "JeanChristopheBach 6/3/2015 10:54",
-	"traitcomposition" : "TMetaLevelDependency",
-	"classtraitcomposition" : "TMetaLevelDependency classTrait",
-	"category" : "Moose-Query",
-	"name" : "TAssociationMetaLevelDependency"
-}

@@ -1,1 +1,0 @@
-This is a base class for binary operator expression AST nodes.

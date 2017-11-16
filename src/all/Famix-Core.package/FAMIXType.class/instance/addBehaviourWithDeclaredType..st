@@ -1,3 +1,0 @@
-accessing
-addBehaviourWithDeclaredType: aBehaviour
-	behavioursWithDeclaredType add: aBehaviour

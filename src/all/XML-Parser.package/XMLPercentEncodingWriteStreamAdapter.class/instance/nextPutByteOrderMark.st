@@ -1,3 +1,0 @@
-accessing
-nextPutByteOrderMark
-	self shouldNotImplement

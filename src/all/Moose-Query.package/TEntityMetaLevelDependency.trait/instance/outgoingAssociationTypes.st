@@ -1,3 +1,0 @@
-accessing
-outgoingAssociationTypes
-	^ self class outgoingAssociationTypes

@@ -1,3 +1,0 @@
-comparing
-ghostIdentityHash
-	^GHMetaMessages extractIdentityHashOf: self

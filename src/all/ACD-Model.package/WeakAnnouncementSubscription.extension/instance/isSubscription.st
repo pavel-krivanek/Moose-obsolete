@@ -1,4 +1,0 @@
-*ACD-Model
-isSubscription
-
-	^ true

@@ -1,3 +1,0 @@
-parsing
-parsingResult
-	^ parsingResult

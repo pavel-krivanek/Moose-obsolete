@@ -1,3 +1,0 @@
-accessing
-incomingAssociationTypes
-	^ self class incomingAssociationTypes

@@ -1,4 +1,0 @@
-accessing
-progress 
-	 
-	^currentStep

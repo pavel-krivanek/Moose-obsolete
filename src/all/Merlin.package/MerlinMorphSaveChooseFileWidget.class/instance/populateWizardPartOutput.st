@@ -1,4 +1,0 @@
-accessing - wizard management
-populateWizardPartOutput 
-
-	self wizardPart outputValue: self fileDialog saveSelectedFile

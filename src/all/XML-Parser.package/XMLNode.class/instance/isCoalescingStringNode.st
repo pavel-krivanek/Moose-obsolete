@@ -1,3 +1,0 @@
-private
-isCoalescingStringNode
-	^ false

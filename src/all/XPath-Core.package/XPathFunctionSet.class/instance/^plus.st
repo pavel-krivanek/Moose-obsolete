@@ -1,3 +1,0 @@
-composition
-+ aFunctionOrFunctionSet
-	^ aFunctionOrFunctionSet asXPathFunctionSetWithFunctions: self

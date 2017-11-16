@@ -1,3 +1,0 @@
-*PetitIndent
-column
-	^ PPColumnParser new

@@ -1,3 +1,0 @@
-accessing
-collection
-	self subclassResponsibility

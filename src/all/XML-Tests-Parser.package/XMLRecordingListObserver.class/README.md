@@ -1,1 +1,0 @@
-This observer records notifications using an XMLMessageRecorder.

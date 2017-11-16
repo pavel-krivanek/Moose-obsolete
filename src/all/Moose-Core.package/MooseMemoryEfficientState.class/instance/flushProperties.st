@@ -1,3 +1,0 @@
-controlling
-flushProperties
-	propertyCache initialize

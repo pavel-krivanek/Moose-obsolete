@@ -1,3 +1,0 @@
-accessing
-labelYTextConvertion
-	^ labelYTextConvertion

@@ -1,3 +1,0 @@
-namespacing
-undeclarePrefixes
-	self namespaceScope unmapPrefixes

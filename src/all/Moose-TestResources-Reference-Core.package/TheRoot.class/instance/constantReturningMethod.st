@@ -1,4 +1,0 @@
-constant accessing
-constantReturningMethod
-
-	^ 'dummyConst'

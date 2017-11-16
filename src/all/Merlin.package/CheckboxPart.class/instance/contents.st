@@ -1,4 +1,0 @@
-checkbox control
-contents
-
-	^contents

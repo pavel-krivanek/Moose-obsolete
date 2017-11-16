@@ -1,3 +1,0 @@
-accessing
-currentScope: aNamespaceScope
-	self scopeAllocator currentScope: aNamespaceScope

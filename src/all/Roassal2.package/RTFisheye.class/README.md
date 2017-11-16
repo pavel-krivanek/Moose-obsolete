@@ -1,1 +1,0 @@
-I am a simple to expand boxes from a simple view using the mouse in that interaction.

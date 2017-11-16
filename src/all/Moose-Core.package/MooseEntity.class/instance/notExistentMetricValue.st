@@ -1,4 +1,0 @@
-properties
-notExistentMetricValue
-	
-	^-1

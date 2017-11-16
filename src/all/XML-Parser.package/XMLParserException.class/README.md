@@ -1,1 +1,0 @@
-A base class for XMLParser exceptions that supports line number error info and can be used with on:do: to catch any XMLParser-related errors.

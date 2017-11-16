@@ -1,3 +1,0 @@
-accessing
-encodedByteString
-	^ self decodedByteString

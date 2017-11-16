@@ -1,3 +1,0 @@
-literal testing
-isSelfEvaluating
-	^false

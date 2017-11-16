@@ -1,1 +1,0 @@
-XPath node set sum function.

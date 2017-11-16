@@ -1,3 +1,0 @@
-testing
-hasDefaultNamespace
-	^ self includesPrefix: ''

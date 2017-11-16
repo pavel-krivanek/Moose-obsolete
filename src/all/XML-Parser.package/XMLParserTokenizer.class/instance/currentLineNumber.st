@@ -1,3 +1,0 @@
-accessing
-currentLineNumber
-	^ streamReader currentLineNumber

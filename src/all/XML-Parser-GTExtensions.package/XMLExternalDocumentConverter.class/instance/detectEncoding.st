@@ -1,3 +1,0 @@
-private 
-detectEncoding
-	streamReader detectEncoding

@@ -1,3 +1,0 @@
-memoization
-size
-	^ stream size

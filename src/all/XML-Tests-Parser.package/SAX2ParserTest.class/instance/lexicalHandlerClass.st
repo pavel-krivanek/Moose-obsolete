@@ -1,3 +1,0 @@
-accessing
-lexicalHandlerClass
-	^ SAX2LexicalHandler

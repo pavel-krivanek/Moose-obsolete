@@ -1,3 +1,0 @@
-testing
-allowsDuplicates
-	^ true

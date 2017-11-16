@@ -1,3 +1,0 @@
-changing
-doctypeDeclarationState
-	^ XMLDoctypeDeclarationState new

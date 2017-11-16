@@ -1,4 +1,0 @@
-announcement registration
-unregisterToSystemAnnouncer
-
-	SystemAnnouncer uniqueInstance unsubscribe: self

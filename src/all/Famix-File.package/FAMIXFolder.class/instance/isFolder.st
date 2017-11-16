@@ -1,3 +1,0 @@
-testing
-isFolder
-	^ true

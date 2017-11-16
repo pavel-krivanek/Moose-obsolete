@@ -1,3 +1,0 @@
-adding
-addAssignmentForReturnSelf
-	(self extractedTypeForReturnInMethod: currentExtractedMethod) addAssignment: theClass

@@ -1,4 +1,0 @@
-accessingSuperclassInstVar
-accessSharedVariableOfSuperclassInstanceSide
-
-	TheRootSharedVariable := 5

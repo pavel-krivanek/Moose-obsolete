@@ -1,1 +1,0 @@
-A StandardFileStream write stream factory. This stream is preferred for Pharo/Squeak because it does no encoding and accepts byte characters so XMLParser can do its own encoding.

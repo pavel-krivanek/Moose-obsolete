@@ -1,1 +1,0 @@
-This is a parser of lists in the form of "(one|two|...)".  It assumes there is no whitespace around the "|" separated list values.

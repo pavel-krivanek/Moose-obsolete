@@ -1,3 +1,0 @@
-accessing-classes
-surfaceClass
-	self subclassResponsibility.

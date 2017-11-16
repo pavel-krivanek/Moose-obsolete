@@ -1,4 +1,0 @@
-hooks
-icon
-	
-	^ MooseIcons mooseImportSmalltalk

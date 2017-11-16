@@ -1,3 +1,0 @@
-rendering
-areTicksCentered
-	^ config ticksCentered

@@ -1,1 +1,0 @@
-It represents a file in the file system.

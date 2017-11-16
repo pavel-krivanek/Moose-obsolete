@@ -1,1 +1,0 @@
-XPath namespace URI function.

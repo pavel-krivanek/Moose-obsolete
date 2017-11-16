@@ -1,3 +1,0 @@
-acccessing
-elementClass
-	^ XMLElement

@@ -1,3 +1,0 @@
-hooks
-label
-	self subclassResponsibility

@@ -1,3 +1,0 @@
-accessing
-yScale
-	^ RTLinearTransformation instance

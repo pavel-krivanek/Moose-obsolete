@@ -1,3 +1,0 @@
-accessing
-childNamedEntities: aNamedEntity
-	childNamedEntities value: aNamedEntity

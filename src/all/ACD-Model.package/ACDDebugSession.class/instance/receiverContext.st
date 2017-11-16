@@ -1,4 +1,0 @@
-accessing
-receiverContext
-
-	^ receiverContext

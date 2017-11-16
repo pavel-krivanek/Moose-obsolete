@@ -1,4 +1,0 @@
-actions
-requiredInputs
-
-	^ requiredInputs

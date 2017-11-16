@@ -1,3 +1,0 @@
-tokenizing
-nextPCDataToken
-	self subclassResponsibility

@@ -1,2 +1,0 @@
-handling
-handleElementNodeTestForLocalName: aLocalName

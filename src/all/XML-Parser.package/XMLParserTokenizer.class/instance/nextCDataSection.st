@@ -1,3 +1,0 @@
-tokenizing
-nextCDataSection
-	self subclassResponsibility

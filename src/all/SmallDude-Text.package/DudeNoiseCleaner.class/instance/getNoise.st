@@ -1,4 +1,0 @@
-private
-getNoise 
-	 
-	^#('break;' 'else' '{' '}')

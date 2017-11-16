@@ -1,3 +1,0 @@
-*Ghost-ObjectGhost
-isGhost
-	^false

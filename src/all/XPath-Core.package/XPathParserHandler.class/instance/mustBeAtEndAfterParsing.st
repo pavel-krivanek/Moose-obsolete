@@ -1,3 +1,0 @@
-testing
-mustBeAtEndAfterParsing
-	^ true

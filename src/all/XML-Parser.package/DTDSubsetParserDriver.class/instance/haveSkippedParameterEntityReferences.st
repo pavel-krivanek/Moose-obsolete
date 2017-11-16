@@ -1,3 +1,0 @@
-accessing
-haveSkippedParameterEntityReferences
-	self subclassResponsibility

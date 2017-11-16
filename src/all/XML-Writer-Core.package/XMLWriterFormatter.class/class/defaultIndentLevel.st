@@ -1,3 +1,0 @@
-accessing
-defaultIndentLevel
-	^ 0

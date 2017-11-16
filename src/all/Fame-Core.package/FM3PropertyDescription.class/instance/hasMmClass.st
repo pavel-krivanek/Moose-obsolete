@@ -1,3 +1,0 @@
-testing
-hasMmClass
-	^class notNil

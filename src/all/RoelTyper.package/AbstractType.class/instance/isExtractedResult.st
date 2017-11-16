@@ -1,3 +1,0 @@
-testing
-isExtractedResult
-	^self subclassResponsibility

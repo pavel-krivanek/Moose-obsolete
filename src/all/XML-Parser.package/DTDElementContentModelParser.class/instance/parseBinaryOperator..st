@@ -1,3 +1,0 @@
-private
-parseBinaryOperator: aCharacter
-	binaryOperatorStack addLast: aCharacter

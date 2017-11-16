@@ -1,3 +1,0 @@
-*petitgui-accessing
-displayDescription
-	^ 'and'

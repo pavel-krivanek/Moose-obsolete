@@ -1,3 +1,0 @@
-setup
-foldersString
-	^ 'folders/'

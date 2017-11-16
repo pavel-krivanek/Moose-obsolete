@@ -1,3 +1,0 @@
-handling - positions
-startDeclarationPosition: aPosition
-	highlighter startDeclarationHighlightPosition: aPosition

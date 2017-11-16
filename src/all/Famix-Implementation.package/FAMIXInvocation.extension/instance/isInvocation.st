@@ -1,3 +1,0 @@
-*Famix-Implementation
-isInvocation 	
-	^true

@@ -1,3 +1,0 @@
-operators
-nonMemoized
-	^ self

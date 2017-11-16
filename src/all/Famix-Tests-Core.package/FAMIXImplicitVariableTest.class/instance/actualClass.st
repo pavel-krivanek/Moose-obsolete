@@ -1,3 +1,0 @@
-helpers
-actualClass
-	^ FAMIXImplicitVariable

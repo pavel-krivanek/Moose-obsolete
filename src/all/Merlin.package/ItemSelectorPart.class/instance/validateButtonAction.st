@@ -1,4 +1,0 @@
-actions
-validateButtonAction
-
-	self evaluateTextEntryContents.

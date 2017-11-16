@@ -1,4 +1,0 @@
-accessing
-debuggingStonePragma
-
-	^ #debuggingStone:label:

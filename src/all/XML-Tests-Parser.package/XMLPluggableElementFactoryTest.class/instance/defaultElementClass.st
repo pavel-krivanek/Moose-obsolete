@@ -1,3 +1,0 @@
-accessing
-defaultElementClass
-	^ self elementClass

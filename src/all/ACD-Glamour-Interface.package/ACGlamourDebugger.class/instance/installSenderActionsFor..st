@@ -1,4 +1,0 @@
-building actions
-installSenderActionsFor: aPresentation
-
-	self installActionsForRootPragmas: self senderDebuggingActionsPragmas in: aPresentation

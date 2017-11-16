@@ -1,1 +1,0 @@
-This class uses the Pharo FileSystem API to implement file IO. The preferred implementation.

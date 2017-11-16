@@ -1,3 +1,0 @@
-generated
-visitArrayBindingPattern: anArrayBindingPattern
-	^ self visitProgram: anArrayBindingPattern

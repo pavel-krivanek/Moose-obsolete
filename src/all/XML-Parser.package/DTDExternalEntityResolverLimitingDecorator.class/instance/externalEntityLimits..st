@@ -1,3 +1,0 @@
-configuring
-externalEntityLimits: anExternalEntityLimits
-	self externalEntityResolver externalEntityLimits: anExternalEntityLimits

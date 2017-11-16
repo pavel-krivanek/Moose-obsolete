@@ -1,3 +1,0 @@
-accessing
-allOutgoingAssociationTypes
-	^ self privateAllOutgoingAssociationTypes

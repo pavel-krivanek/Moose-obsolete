@@ -1,4 +1,0 @@
-accessing
-firstDefaultText
-
-	^ self subclassResponsability 

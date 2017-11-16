@@ -1,3 +1,0 @@
-accessing
-baseShape
-	^ self subclassResponsibility

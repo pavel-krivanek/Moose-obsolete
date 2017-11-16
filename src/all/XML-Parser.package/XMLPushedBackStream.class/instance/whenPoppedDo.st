@@ -1,3 +1,0 @@
-accessing
-whenPoppedDo
-	^ whenPoppedDo

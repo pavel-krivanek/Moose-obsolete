@@ -1,3 +1,0 @@
-accessing
-badNames
-	^ XMLStringMethodsTest badNames

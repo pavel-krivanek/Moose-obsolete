@@ -1,4 +1,0 @@
-running
-withProgress
-
-	runSelector := #runWithProgress

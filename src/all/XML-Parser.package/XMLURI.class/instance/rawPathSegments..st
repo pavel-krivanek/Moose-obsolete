@@ -1,3 +1,0 @@
-private
-rawPathSegments: aPathSegmentCollection
-	rawPathSegments := aPathSegmentCollection

@@ -1,8 +1,0 @@
-visiting - node tests
-visitAttributeNodeTestForNamespaceURIAndLocalName: anAttributeNodeTestForNamespaceURIAndLocalName
-	nodeTests addLast:
-		(XPathAttributeNodeTestForNamespaceURIAndLocalName
-			namespaceURI: anAttributeNodeTestForNamespaceURIAndLocalName namespaceURI
-			localName: anAttributeNodeTestForNamespaceURIAndLocalName localName).
-	^ super visitAttributeNodeTestForNamespaceURIAndLocalName:
-		anAttributeNodeTestForNamespaceURIAndLocalName.

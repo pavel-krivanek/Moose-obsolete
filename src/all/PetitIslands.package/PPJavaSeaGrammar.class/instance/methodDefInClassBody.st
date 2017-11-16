@@ -1,3 +1,0 @@
-method
-methodDefInClassBody
-	^ methodDef

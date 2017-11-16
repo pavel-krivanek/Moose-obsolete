@@ -1,3 +1,0 @@
-accessing
-presentClass
-	^ self class

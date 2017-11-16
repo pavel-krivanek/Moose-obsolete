@@ -1,3 +1,0 @@
-initialization
-gapBetweenTimeLines
-	^ 3

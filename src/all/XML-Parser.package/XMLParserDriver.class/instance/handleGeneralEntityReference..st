@@ -1,3 +1,0 @@
-handling
-handleGeneralEntityReference: aName
-	^ nil

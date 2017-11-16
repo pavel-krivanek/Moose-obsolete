@@ -1,3 +1,0 @@
-configuring
-preservesCommentNodes
-	^ self configuration preservesCommentNodes

@@ -1,3 +1,0 @@
-RoelTyperValidation
-contents
-	^self types

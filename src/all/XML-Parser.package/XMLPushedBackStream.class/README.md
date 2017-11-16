@@ -1,1 +1,0 @@
-A base class to store a nested stream for XMLNestedStreamReader, along with its callback and the current position, line number, and line start position of the current external stream.

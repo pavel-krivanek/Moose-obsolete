@@ -1,5 +1,0 @@
-grammar
-variableInitializer 
-
-	^	arrayInitializer 
-	/	expression	

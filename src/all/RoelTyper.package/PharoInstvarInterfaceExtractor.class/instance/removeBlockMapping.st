@@ -1,3 +1,0 @@
-as yet unclassified
-removeBlockMapping
-	blockTempsMapping removeLast

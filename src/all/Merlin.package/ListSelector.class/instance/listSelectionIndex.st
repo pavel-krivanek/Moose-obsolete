@@ -1,3 +1,0 @@
-initial list control
-listSelectionIndex
-	^initialListSelectionIndex

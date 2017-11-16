@@ -1,1 +1,0 @@
-A MemoryLoggerTest is xxxxxxxxx.

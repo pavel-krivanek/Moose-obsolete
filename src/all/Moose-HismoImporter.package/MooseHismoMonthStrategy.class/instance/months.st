@@ -1,4 +1,0 @@
-accessing
-months
-
-	^ months

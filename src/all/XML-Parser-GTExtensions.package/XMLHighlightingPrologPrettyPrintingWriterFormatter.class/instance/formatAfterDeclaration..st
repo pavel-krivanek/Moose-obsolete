@@ -1,5 +1,0 @@
-formatting
-formatAfterDeclaration: aDeclarationWriter
-	highlighter endDeclarationHighlightPosition: self endPosition.
-
-	super formatAfterDeclaration: aDeclarationWriter.

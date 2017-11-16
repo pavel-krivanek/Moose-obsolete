@@ -1,1 +1,0 @@
-This class is a rewriting node visitor that can replace any node in the tree with the result of its #visit*: message.

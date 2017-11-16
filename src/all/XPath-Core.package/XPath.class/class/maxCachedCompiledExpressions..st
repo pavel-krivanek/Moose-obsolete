@@ -1,3 +1,0 @@
-accessing
-maxCachedCompiledExpressions: anInteger
-	self compiledExpressionCache maxSize: anInteger

@@ -1,3 +1,0 @@
-tokenizing - dtd
-nextParameterEntityReference
-	self subclassResponsibility

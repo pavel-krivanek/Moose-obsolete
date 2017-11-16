@@ -1,3 +1,0 @@
-shapes
-rectangle
-	self box

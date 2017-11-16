@@ -1,3 +1,0 @@
-testing
-isAttributeNodeTestForPrefix
-	^ true

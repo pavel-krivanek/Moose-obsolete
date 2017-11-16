@@ -1,3 +1,0 @@
-initialization
-setAttributeDictionary: anAttributeDictionary
-	attributeDictionary := anAttributeDictionary

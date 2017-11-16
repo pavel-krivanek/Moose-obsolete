@@ -1,3 +1,0 @@
-accessing
-allNonNameStartCharNameChars
-	^ self class allNonNameStartCharNameChars

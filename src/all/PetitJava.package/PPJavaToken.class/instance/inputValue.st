@@ -1,3 +1,0 @@
-accessing
-inputValue
-	^ self value

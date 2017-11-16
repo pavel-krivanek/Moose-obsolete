@@ -1,1 +1,0 @@
-I return failure, if the delegate parser did not consumed any input.

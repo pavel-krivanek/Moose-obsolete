@@ -1,3 +1,0 @@
-handling - positions
-handleEndEntityReferencePosition: aPosition
-	self saxHandler endEntityReferencePosition: aPosition

@@ -1,3 +1,0 @@
-accessing
-imageUrl
-	self subclassResponsibility 

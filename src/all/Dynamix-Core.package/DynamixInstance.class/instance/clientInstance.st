@@ -1,3 +1,0 @@
-accessing-derived
-clientInstance
-	^ self

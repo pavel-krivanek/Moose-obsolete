@@ -1,3 +1,0 @@
-accessing
-listCopyClass
-	^ self listClass

@@ -1,3 +1,0 @@
-accessing
-constructorInvocation: aConstructorInvocation
-	constructorInvocation := aConstructorInvocation

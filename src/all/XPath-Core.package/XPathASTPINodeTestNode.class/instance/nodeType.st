@@ -1,3 +1,0 @@
-accessing
-nodeType
-	^ XPathPINodeType new

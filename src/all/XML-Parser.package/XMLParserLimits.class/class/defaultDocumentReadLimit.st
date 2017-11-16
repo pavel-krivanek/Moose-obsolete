@@ -1,3 +1,0 @@
-defaults
-defaultDocumentReadLimit
-	^ self defaultReadLimit

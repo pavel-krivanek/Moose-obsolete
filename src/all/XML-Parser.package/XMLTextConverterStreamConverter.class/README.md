@@ -1,1 +1,0 @@
-A stream converter that delegates to a Pharo/Squeak TextConverter subclass. This will only be used on Pharo/Squeak if none of the other XML stream converters support the specified encoding but a TextConverter subclass does.

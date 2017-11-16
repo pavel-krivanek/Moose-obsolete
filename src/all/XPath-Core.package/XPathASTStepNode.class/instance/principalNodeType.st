@@ -1,3 +1,0 @@
-accessing
-principalNodeType
-	^ XPathElementNodeType new

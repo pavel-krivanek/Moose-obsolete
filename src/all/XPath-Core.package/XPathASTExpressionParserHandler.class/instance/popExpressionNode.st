@@ -1,3 +1,0 @@
-private
-popExpressionNode
-	^ expressionNodeStack removeLast

@@ -1,4 +1,0 @@
-accessing
-classHistoriesPresentInTheLastVersion
-	
-	^self computeClassHistoriesPresentInTheLastVersion

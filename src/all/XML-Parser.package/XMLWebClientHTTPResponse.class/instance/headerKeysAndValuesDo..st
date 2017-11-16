@@ -1,3 +1,0 @@
-enumerating
-headerKeysAndValuesDo: aTwoArgumentBlock
-	self webClientResponse headersDo: aTwoArgumentBlock

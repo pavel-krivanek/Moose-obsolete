@@ -1,1 +1,0 @@
-I define the scanner and parser for the FL programming language using the parser combinator framework PetitParser.

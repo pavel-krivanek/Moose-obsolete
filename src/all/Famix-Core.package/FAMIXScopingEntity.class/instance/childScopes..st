@@ -1,3 +1,0 @@
-accessing
-childScopes: aCollectionOfScopingEntity 
-	childScopes value: aCollectionOfScopingEntity

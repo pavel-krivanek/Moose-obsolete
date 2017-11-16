@@ -1,3 +1,0 @@
-constants
-blue
-	^ Color blue

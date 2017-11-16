@@ -1,1 +1,0 @@
-I am a RTSmoothLayoutTranslator that also resizes the elements

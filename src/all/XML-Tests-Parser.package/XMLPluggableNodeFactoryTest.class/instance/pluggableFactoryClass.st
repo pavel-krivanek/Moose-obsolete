@@ -1,3 +1,0 @@
-accessing
-pluggableFactoryClass
-	^ self factoryClass

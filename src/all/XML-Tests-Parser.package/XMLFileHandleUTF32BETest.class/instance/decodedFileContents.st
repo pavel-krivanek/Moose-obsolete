@@ -1,3 +1,0 @@
-accessing
-decodedFileContents
-	^ XMLStreamAdapterTest decodedUTF32String

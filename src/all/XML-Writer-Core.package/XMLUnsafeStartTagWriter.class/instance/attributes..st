@@ -1,3 +1,0 @@
-accessing
-attributes: anAssociationCollection
-	attributes := OrderPreservingStringDictionary newFrom: anAssociationCollection

@@ -1,3 +1,0 @@
-tests
-testBasic
-	view @ RTDoubleScrollBar

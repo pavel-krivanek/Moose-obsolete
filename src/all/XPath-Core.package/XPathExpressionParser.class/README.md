@@ -1,1 +1,0 @@
-This class parses XPath expressions. It understands all of XPath 1.0 syntax and supports some extensions like the attribute(), element(), and namespace() type tests that can optionally have name test arguments, and name tests like 'Q{NamespaceURI}localName', '*:localName', and 'Q{NamespaceURI}*'.

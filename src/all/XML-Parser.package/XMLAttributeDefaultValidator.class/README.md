@@ -1,1 +1,0 @@
-This is a base class for attribute default validators that implement constraints from the default declaration part of an ATTLIST attribute definition.

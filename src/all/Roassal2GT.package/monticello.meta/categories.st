@@ -1,9 +1,0 @@
-SystemOrganization addCategory: #Roassal2GT!
-SystemOrganization addCategory: 'Roassal2GT-EventCollector'!
-SystemOrganization addCategory: 'Roassal2GT-Examples'!
-SystemOrganization addCategory: 'Roassal2GT-Glamour'!
-SystemOrganization addCategory: 'Roassal2GT-Glamour-Actions'!
-SystemOrganization addCategory: 'Roassal2GT-Glamour-Context'!
-SystemOrganization addCategory: 'Roassal2GT-Glamour-Roassal-Interaction'!
-SystemOrganization addCategory: 'Roassal2GT-Spotter'!
-SystemOrganization addCategory: 'Roassal2GT-Tests-Examples'!

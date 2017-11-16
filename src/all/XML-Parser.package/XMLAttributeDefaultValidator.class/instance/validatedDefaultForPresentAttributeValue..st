@@ -1,3 +1,0 @@
-validating
-validatedDefaultForPresentAttributeValue: anAttributeValue
-	^ anAttributeValue

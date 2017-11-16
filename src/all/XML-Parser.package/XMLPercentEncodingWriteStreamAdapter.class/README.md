@@ -1,1 +1,0 @@
-A write stream adapter that encodes streams with sequences of "%HH" hex byte values for printing URIs.

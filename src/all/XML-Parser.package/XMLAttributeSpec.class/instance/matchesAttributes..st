@@ -1,3 +1,0 @@
-matching
-matchesAttributes: anAttributeDictionary
-	self subclassResponsibility

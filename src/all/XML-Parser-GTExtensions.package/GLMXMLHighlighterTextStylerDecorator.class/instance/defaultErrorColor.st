@@ -1,3 +1,0 @@
-accessing
-defaultErrorColor
-	^ TextColor red

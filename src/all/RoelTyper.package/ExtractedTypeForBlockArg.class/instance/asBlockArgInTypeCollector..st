@@ -1,3 +1,0 @@
-accessing
-asBlockArgInTypeCollector: aTypeCollector
-	self newLive

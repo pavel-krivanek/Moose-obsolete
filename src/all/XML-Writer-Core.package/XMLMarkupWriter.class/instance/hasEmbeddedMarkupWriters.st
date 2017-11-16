@@ -1,3 +1,0 @@
-testing
-hasEmbeddedMarkupWriters
-	^ false

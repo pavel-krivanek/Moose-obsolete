@@ -1,4 +1,0 @@
-handling
-handlePINodeTest
-	self startNodeTest.
-	expressionParserHandler handlePINodeTest.

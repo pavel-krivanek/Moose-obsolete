@@ -1,3 +1,0 @@
-accessing
-outerXMLNode
-	^ outerXMLNode

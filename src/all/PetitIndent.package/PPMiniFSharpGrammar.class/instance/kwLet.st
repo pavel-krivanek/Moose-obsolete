@@ -1,3 +1,0 @@
-keywords
-kwLet
-	^ 'let' asParser

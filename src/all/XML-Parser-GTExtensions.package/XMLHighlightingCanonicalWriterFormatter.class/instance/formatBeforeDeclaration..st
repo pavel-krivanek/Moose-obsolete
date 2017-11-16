@@ -1,5 +1,0 @@
-formatting
-formatBeforeDeclaration: aDeclarationWriter
-	super formatBeforeDeclaration: aDeclarationWriter.
-
-	highlighter startDeclarationHighlightPosition: self startPosition.

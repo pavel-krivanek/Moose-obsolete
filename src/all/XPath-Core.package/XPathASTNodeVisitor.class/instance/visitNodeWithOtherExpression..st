@@ -1,5 +1,0 @@
-visiting
-visitNodeWithOtherExpression: aNodeWithOtherExpression
-	self visitNodeWithExpression: aNodeWithOtherExpression.
-	aNodeWithOtherExpression otherExpression acceptNodeVisitor: self.
-	^ aNodeWithOtherExpression.

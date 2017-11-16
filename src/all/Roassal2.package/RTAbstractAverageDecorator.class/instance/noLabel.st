@@ -1,3 +1,0 @@
-configuration
-noLabel
-	shouldHaveLabel := false

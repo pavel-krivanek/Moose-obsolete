@@ -1,3 +1,0 @@
-accessing - gaps
-paddingText
-	^ padding

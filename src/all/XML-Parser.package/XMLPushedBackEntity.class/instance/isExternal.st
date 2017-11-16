@@ -1,3 +1,0 @@
-testing
-isExternal
-	^ entity isExternal

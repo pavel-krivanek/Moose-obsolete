@@ -1,3 +1,0 @@
-defaults
-responseClass
-	self subclassResponsibility

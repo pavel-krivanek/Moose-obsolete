@@ -1,3 +1,0 @@
-accessing
-isId
-	^ isId == true

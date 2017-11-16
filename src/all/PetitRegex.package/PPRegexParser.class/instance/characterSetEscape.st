@@ -1,3 +1,0 @@
-grammar-characters
-characterSetEscape
-	^ escapeAtom

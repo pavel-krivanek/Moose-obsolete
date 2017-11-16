@@ -1,1 +1,0 @@
-This is an AST node class for 'mod' modulus expressions that return the remainder after truncating division. Unlike \\, the result takes the sign of the receiver, so '5 mod 2' and '5 mod -2'  are both '1'.

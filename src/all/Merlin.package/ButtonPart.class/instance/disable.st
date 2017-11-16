@@ -1,4 +1,0 @@
-accessing
-disable
-
-	buttonEnabled := false.

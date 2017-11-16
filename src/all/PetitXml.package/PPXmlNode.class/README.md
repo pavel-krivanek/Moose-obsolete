@@ -1,1 +1,0 @@
-An abstract XML node.

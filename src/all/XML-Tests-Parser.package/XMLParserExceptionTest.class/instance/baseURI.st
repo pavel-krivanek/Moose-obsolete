@@ -1,3 +1,0 @@
-accessing
-baseURI
-	^ 'test.xml'

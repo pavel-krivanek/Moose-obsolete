@@ -1,3 +1,0 @@
-accessing
-functions: aCollectionOfFunctions
-	functions value: aCollectionOfFunctions

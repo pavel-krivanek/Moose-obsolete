@@ -1,1 +1,0 @@
-This is a base class for DOM node tree visitors. Subclasses can implement any of the "visiting" messages, and instances can be used by sending a node #acceptNodeVisitor: with it as the argument.

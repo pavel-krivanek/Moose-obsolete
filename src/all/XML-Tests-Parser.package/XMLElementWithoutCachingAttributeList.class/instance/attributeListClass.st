@@ -1,3 +1,0 @@
-defaults
-attributeListClass
-	^ XMLAttributeList

@@ -1,3 +1,0 @@
-accessing
-unconvertableEncodingNames
-	^ #('unconvertableEncodingName')

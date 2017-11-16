@@ -1,4 +1,0 @@
-accessing
-numberOfLinesOfCode
-	
-	^numberOfLinesOfCode

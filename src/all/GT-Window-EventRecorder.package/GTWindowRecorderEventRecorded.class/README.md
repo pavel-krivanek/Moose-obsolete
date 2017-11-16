@@ -1,1 +1,0 @@
-I am an event that is sent after a window action was recorded.

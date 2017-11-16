@@ -1,3 +1,0 @@
-accessing
-alphaVersion 
-	^ 70

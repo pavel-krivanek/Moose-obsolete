@@ -1,3 +1,0 @@
-comparing
-= anObject
-	^ attributeDictionary = anObject

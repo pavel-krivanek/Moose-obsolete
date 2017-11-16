@@ -1,3 +1,0 @@
-hooks
-trans: value
-	^ value

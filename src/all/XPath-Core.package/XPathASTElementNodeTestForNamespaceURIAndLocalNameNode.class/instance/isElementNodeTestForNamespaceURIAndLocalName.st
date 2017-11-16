@@ -1,3 +1,0 @@
-testing
-isElementNodeTestForNamespaceURIAndLocalName
-	^ true

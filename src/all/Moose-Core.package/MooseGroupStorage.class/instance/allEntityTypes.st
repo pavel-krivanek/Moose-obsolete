@@ -1,3 +1,0 @@
-enumerating
-allEntityTypes
-	self subclassResponsibility

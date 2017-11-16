@@ -1,2 +1,0 @@
-*DeepTraverser-private
-dtTraverseUsing: aStream

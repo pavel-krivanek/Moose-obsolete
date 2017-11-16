@@ -1,3 +1,0 @@
-testing
-isInitializedState
-	^ false

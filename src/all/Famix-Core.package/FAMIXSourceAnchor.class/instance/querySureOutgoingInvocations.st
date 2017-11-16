@@ -1,3 +1,0 @@
-moosequery-queries-outgoing
-querySureOutgoingInvocations
-	^ MooseQueryResult new

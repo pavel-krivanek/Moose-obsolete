@@ -1,4 +1,0 @@
-white
-tabSpace 
-	 
-	^Character tab

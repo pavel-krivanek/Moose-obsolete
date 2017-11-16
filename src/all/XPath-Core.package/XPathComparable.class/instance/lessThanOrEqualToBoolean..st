@@ -1,3 +1,0 @@
-private
-lessThanOrEqualToBoolean: aBoolean
-	self subclassResponsibility

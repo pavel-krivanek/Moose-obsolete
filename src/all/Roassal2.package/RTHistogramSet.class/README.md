@@ -1,1 +1,0 @@
-The histogram gives you a distribution frequency over the points given. Frequency on y and a collection of values per bars on x.  

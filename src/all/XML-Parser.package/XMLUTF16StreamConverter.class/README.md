@@ -1,1 +1,0 @@
-An abstract class for UTF-16 stream converters.

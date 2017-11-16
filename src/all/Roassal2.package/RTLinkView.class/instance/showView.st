@@ -1,3 +1,0 @@
-accessing
-showView
-	showView := true.

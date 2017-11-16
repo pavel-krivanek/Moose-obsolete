@@ -1,1 +1,0 @@
-I am a simple class to generate text in roassal with Athens cairo that uses the textPathCommand from roassal

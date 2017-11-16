@@ -1,3 +1,0 @@
-converting
-asXPathString
-	^ self string

@@ -1,1 +1,0 @@
-RTExampleOpeningEvent  is an event that is trigger when someone browse an example

@@ -1,1 +1,0 @@
-XPath string length function.

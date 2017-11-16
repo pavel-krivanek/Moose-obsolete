@@ -1,4 +1,0 @@
-formatting
-formatAfterInternalSubset: aDoctypeDeclarationWriter
-	formatter
-		ifNotNil: [formatter formatAfterInternalSubset: aDoctypeDeclarationWriter]

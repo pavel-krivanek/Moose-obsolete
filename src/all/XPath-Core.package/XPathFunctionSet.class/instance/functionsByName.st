@@ -1,3 +1,0 @@
-private
-functionsByName
-	^ functionsByName

@@ -1,1 +1,0 @@
-FAMIXImplicitVariable represents a variable defined by the compiler in a context, such as self, super, thisContext.

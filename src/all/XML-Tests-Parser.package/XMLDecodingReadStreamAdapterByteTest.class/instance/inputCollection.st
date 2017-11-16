@@ -1,3 +1,0 @@
-accessing
-inputCollection
-	^ self encodedByteString

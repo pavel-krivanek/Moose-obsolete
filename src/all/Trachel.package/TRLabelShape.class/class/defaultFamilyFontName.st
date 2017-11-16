@@ -1,3 +1,0 @@
-configuration
-defaultFamilyFontName
-	^ TRPlatform current defaultFamilyFontName.

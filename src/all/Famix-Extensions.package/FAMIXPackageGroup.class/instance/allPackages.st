@@ -1,4 +1,0 @@
-navigation
-allPackages
-
-	^ self

@@ -1,3 +1,0 @@
-handling
-handleEmptyNodeTestWith: aHandler
-	aHandler handleElementNodeTest

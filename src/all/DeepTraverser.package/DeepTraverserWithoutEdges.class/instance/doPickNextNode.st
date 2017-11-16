@@ -1,3 +1,0 @@
-streaming
-doPickNextNode
-	onPickNextAction value

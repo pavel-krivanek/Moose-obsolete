@@ -1,3 +1,0 @@
-handling - axis
-handleDescendantOrSelfAxis
-	self pushOperatorNode: XPathASTDescendantOrSelfStepNode new

@@ -1,5 +1,0 @@
-handling - operators
-handleLessThanOrEqualToOperator
-	self
-		popAnyRelationalExpressionNodes;
-		pushBinaryOperatorNode: XPathASTLessThanOrEqualToExpressionNode new

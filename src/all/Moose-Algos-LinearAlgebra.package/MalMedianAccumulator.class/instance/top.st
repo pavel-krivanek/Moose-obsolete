@@ -1,4 +1,0 @@
-accessing
-top
-	
-	^values first

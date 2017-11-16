@@ -1,3 +1,0 @@
-private
-topOperatorNode
-	^ operatorNodeStack last

@@ -1,2 +1,0 @@
-private
-unsafeRemove: anElement

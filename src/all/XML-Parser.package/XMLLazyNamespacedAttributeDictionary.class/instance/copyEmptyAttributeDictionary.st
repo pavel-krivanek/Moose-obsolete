@@ -1,3 +1,0 @@
-private
-copyEmptyAttributeDictionary
-	^ super copyEmptyAttributeDictionary setNamespaceScope: self namespaceScope

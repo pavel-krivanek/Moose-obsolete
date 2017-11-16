@@ -1,1 +1,0 @@
-This class validates Nmtoken name attributes.

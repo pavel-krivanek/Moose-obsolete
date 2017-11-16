@@ -1,3 +1,0 @@
-accessing
-label
-	^ 'Bundle Edges'

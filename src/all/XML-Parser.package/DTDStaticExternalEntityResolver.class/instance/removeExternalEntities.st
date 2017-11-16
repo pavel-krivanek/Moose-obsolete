@@ -1,3 +1,0 @@
-removing
-removeExternalEntities
-	self externalEntities removeAll

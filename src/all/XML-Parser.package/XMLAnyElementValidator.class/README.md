@@ -1,1 +1,0 @@
-This class validates elements that can contain any content.

@@ -1,3 +1,0 @@
-queries
-isIslandBorderOpenSet: set
-	^ false

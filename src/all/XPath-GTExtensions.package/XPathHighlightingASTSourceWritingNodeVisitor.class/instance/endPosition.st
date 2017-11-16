@@ -1,3 +1,0 @@
-private
-endPosition
-	^ stream position

@@ -1,3 +1,0 @@
-indentation
-blank
-	^ #blank asParser

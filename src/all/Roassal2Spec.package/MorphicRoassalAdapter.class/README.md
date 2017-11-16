@@ -1,1 +1,0 @@
-I am bridging RoassalModel and RTView

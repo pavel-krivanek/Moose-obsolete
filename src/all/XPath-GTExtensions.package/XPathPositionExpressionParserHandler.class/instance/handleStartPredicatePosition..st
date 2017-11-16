@@ -1,2 +1,0 @@
-handling - positions
-handleStartPredicatePosition: aPosition

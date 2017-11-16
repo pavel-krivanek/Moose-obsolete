@@ -1,3 +1,0 @@
-accessing
-category
-	^ 'Export as...'

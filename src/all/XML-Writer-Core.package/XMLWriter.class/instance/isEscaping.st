@@ -1,3 +1,0 @@
-testing
-isEscaping
-	^ isEscaping

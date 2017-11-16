@@ -1,3 +1,0 @@
-accessing
-allowedContent: anAllowedContentCollection
-	allowedContent := anAllowedContentCollection

@@ -1,1 +1,0 @@
-This class validates standalone externally defined elements with element content that cannot have whitespace between elements unlike the superclass.

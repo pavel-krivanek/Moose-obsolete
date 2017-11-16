@@ -1,1 +1,0 @@
-This is a tokenizer for well-formed XML documents that supports DTD subsets and entity replacement.

@@ -1,1 +1,0 @@
-This class parses literal "ANY" and "EMPTY" element content models and returns XMLElementValidators accepting any content or no content (not even whitespace, comments, or PIs).

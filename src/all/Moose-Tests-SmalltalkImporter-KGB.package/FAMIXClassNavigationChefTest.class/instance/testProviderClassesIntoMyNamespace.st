@@ -1,3 +1,0 @@
-allDependencies
-testProviderClassesIntoMyNamespace
-	self assert: (self c15FullReferencerOutSide queryAllOutgoing atScope: FAMIXType) withinMyNamespace isEmpty

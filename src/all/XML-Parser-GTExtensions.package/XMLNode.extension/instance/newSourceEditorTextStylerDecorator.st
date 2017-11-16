@@ -1,3 +1,0 @@
-*XML-Parser-GTExtensions
-newSourceEditorTextStylerDecorator
-	^ GLMXMLOuterXMLDocumentHighlighterTextStylerDecorator outerXMLNode: self

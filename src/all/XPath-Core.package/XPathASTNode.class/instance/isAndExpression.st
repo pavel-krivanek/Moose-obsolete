@@ -1,3 +1,0 @@
-testing
-isAndExpression
-	^ false

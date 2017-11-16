@@ -1,3 +1,0 @@
-private
-maxBase
-	^ 16

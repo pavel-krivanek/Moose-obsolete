@@ -1,1 +1,0 @@
-This is an abstract class for markup declaration nodes in the internal subset.

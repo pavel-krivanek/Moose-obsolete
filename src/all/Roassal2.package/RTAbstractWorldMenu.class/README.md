@@ -1,1 +1,0 @@
-Abstract class that can be used to produce a new set of Menu entries. See class side

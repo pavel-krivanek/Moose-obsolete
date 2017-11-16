@@ -1,3 +1,0 @@
-accessing
-comparableFalseValue
-	^ false asXPathComparable

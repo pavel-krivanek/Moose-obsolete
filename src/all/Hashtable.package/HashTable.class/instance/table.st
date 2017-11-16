@@ -1,3 +1,0 @@
-private
-table
-	^table

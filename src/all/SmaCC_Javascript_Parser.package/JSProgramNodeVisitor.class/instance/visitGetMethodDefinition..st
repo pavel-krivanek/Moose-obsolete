@@ -1,3 +1,0 @@
-generated
-visitGetMethodDefinition: aGetMethodDefinition
-	^ self visitMethodDefinition: aGetMethodDefinition

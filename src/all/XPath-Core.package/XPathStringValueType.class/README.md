@@ -1,1 +1,0 @@
-This is an XPath type class for string values.

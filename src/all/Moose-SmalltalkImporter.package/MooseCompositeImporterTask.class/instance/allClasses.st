@@ -1,4 +1,0 @@
-accessing
-allClasses 
-	 
-	^self subclassResponsibility

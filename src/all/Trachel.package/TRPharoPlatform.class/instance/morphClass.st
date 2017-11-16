@@ -1,3 +1,0 @@
-public
-morphClass
-	^ Morph

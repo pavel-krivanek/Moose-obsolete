@@ -1,3 +1,0 @@
-private
-atEnd
-	^ readStream atEnd

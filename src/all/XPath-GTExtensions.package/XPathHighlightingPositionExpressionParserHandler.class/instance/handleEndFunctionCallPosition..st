@@ -1,3 +1,0 @@
-handling - positions
-handleEndFunctionCallPosition: aPosition
-	highlighter endFunctionCallHighlightPosition: aPosition

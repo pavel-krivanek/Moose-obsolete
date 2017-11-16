@@ -1,2 +1,0 @@
-validating
-validateStartTag: anElement

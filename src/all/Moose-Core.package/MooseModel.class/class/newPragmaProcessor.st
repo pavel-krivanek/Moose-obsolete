@@ -1,3 +1,0 @@
-meta
-newPragmaProcessor
-	^ MoosePragmaProcessor new

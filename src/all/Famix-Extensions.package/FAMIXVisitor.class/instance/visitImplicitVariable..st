@@ -1,4 +1,0 @@
-visiting
-visitImplicitVariable: anImplicitVariable
-
-	self visitStructuralEntity: anImplicitVariable 

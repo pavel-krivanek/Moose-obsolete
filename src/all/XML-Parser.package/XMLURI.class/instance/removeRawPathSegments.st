@@ -1,3 +1,0 @@
-private
-removeRawPathSegments
-	self rawPathSegments removeAll

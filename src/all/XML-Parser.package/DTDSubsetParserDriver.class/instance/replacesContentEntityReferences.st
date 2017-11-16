@@ -1,3 +1,0 @@
-testing
-replacesContentEntityReferences
-	self subclassResponsibility

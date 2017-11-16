@@ -1,4 +1,0 @@
-properties
-evolutionOfNumberOfLinesOfCode
-
-	^ self allClassHistories sumNumbers: #evolutionOfNumberOfLinesOfCode

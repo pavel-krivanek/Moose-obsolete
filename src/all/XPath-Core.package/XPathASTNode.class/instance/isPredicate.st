@@ -1,3 +1,0 @@
-testing
-isPredicate
-	^ false

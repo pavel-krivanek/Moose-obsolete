@@ -1,1 +1,0 @@
-This class validates ID attributes for the xml:id spec.

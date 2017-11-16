@@ -1,4 +1,0 @@
-parsing
-beginDocument
-
-	stream nextPut: $(

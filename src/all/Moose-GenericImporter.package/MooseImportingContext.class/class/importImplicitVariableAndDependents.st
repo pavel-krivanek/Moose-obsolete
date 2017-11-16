@@ -1,4 +1,0 @@
-importing-filters
-importImplicitVariableAndDependents
-	
-	^self allDependentsOf: self importingImplicitVariable

@@ -1,4 +1,0 @@
-accessing
-debugStoneType
-	
-	^ debugStoneType

@@ -1,3 +1,0 @@
-validating
-validatedDefaultForAbsentAttributeValue
-	self errorStandaloneExternalAttributeDefaultFixedValueUsed

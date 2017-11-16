@@ -1,1 +1,0 @@
-FAMIXTrait models a trait as it can be found in Pharo or PHP.

@@ -1,3 +1,0 @@
-defaults
-entityReferenceColor
-	^ self class defaultEntityReferenceColor

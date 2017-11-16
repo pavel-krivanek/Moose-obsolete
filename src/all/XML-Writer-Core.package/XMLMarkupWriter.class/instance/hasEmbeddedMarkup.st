@@ -1,3 +1,0 @@
-testing
-hasEmbeddedMarkup
-	^ false

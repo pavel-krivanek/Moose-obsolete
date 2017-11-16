@@ -1,4 +1,0 @@
-properties
-latestEvolutionOfNumberOfStatements
-
-	^ self allClassHistories sumNumbers: #latestEvolutionOfNumberOfStatements

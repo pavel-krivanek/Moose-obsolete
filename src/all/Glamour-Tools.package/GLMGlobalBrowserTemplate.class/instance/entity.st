@@ -1,3 +1,0 @@
-opening
-entity
-	^ self subclassResponsibility

@@ -1,3 +1,0 @@
-source
-sourceContent
-	^ 'encoding test'

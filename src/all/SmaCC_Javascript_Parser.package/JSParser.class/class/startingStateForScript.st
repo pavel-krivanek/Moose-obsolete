@@ -1,3 +1,0 @@
-generated
-startingStateForScript
-	^ 4

@@ -1,3 +1,0 @@
-accessing
-createObjectBlock
-	^ creationBlock

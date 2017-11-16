@@ -1,3 +1,0 @@
-testing
-isLeafNode
-	^ children isEmpty.

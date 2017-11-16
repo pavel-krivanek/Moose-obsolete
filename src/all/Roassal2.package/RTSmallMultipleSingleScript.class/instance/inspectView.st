@@ -1,3 +1,0 @@
-hooks
-inspectView
-	view inspect

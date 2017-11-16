@@ -1,1 +1,0 @@
-This class is a parser that can extract the scheme, user info, host, port, path segments, query (as an OrderedCollection of associations), and fragment of a URI. It does not handle percent decoding and raises no errors.

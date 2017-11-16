@@ -1,3 +1,0 @@
-tokenizing
-nextContentMarkupToken
-	self subclassResponsibility

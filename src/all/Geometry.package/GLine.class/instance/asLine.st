@@ -1,3 +1,0 @@
-converting
-asLine
-	^ self 

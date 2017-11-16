@@ -1,3 +1,0 @@
-defaults
-contentStringNonEntityEscapes
-	^ ContentStringNonEntityEscapes

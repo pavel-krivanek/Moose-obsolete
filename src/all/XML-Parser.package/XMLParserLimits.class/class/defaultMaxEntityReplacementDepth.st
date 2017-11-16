@@ -1,3 +1,0 @@
-defaults
-defaultMaxEntityReplacementDepth
-	^ 10

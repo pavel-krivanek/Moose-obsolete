@@ -1,2 +1,0 @@
-handling
-handleAttributeNodeTestForLocalName: aLocalName

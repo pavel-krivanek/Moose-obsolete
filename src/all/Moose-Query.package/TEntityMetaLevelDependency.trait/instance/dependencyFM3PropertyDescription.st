@@ -1,3 +1,0 @@
-accessing
-dependencyFM3PropertyDescription
-	^ self class dependencyFM3PropertyDescription

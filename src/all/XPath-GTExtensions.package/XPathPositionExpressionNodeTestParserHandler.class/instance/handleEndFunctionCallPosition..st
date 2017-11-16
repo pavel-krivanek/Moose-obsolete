@@ -1,3 +1,0 @@
-handling - positions
-handleEndFunctionCallPosition: aPosition
-	expressionParserHandler handleEndFunctionCallPosition: aPosition

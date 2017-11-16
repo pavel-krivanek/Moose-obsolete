@@ -1,0 +1,45 @@
+Class {
+	#name : #RPGDragon,
+	#superclass : #Object,
+	#instVars : [
+		'hoard',
+		'killedBy'
+	],
+	#category : 'Fame-Example'
+}
+
+{ #category : #initialize-release }
+RPGDragon class >> annotation [
+	<MSEClass: #Dragon super: #Object>
+	<package: #RPG>
+	^self
+]
+
+{ #category : #accessing }
+RPGDragon >> hoard [
+	<MSEProperty: #hoard type: #RPGTreasure opposite: #keeper> <multivalued>
+	^hoard
+]
+
+{ #category : #accessing }
+RPGDragon >> hoard: aTreasure [
+	hoard value: aTreasure
+]
+
+{ #category : #initialize-release }
+RPGDragon >> initialize [
+	super initialize.
+	hoard := FMMultivalueLink on: self opposite: #keeper:.
+	killedBy := FMMultiMultivalueLink on: self opposite: #kills.
+]
+
+{ #category : #accessing }
+RPGDragon >> killedBy [
+	<MSEProperty: #killedBy type: #RPGHero opposite: #kills> <multivalued>
+	^killedBy
+]
+
+{ #category : #accessing }
+RPGDragon >> killedBy: aHero [
+	killedBy value: aHero
+]

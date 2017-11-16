@@ -1,3 +1,0 @@
-accessing
-unprefixedAttributes
-	^ self attributesClass newFrom: self unprefixedAttributeAssociations

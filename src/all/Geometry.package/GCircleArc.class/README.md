@@ -1,1 +1,0 @@
-I represent a circle arc described by the underlying GCircle and the start and end angle (in radians).

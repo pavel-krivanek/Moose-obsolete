@@ -1,3 +1,0 @@
-testing
-isOmittable
-	^ self isCanonical

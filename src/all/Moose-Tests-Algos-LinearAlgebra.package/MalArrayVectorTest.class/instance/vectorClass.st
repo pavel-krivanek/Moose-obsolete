@@ -1,4 +1,0 @@
-fixture
-vectorClass
-	
-	^MalArrayVector

@@ -1,3 +1,0 @@
-accessing
-comparableInfinityValue
-	^ Float infinity asXPathComparable

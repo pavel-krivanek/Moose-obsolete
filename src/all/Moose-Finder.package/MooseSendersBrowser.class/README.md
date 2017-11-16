@@ -1,1 +1,0 @@
-self openOn: (MooseModel root allModels last allMethods detect: [:each | each clientMethods size > 10])

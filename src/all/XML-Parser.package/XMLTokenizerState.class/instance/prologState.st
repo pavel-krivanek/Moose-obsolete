@@ -1,3 +1,0 @@
-changing
-prologState
-	^ XMLPrologState new

@@ -1,3 +1,0 @@
-accessing
-defaultMaxSize
-	^ 32

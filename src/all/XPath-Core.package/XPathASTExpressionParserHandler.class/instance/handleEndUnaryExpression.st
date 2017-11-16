@@ -1,3 +1,0 @@
-handling - operators
-handleEndUnaryExpression
-	self popAnyUnaryExpressionNodes

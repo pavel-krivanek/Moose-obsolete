@@ -1,3 +1,0 @@
-accessing
-maxBase
-	^ XMLIntegerReader maxBase

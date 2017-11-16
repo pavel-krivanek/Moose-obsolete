@@ -1,3 +1,0 @@
-formatting
-formatBeforeDoctypeDeclaration: aDoctypeDeclarationWriter
-	self writeLineBreak

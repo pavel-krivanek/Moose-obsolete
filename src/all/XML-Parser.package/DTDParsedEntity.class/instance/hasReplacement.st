@@ -1,3 +1,0 @@
-testing
-hasReplacement
-	self subclassResponsibility

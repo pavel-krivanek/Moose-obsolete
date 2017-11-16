@@ -1,3 +1,0 @@
-accessing
-externalEntityResolver: anExternalEntityResolver
-	externalEntityResolver := anExternalEntityResolver

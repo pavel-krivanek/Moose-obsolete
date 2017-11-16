@@ -1,3 +1,0 @@
-generated
-visitComputedPropertyName: aComputedPropertyName
-	^ self visitProgram: aComputedPropertyName

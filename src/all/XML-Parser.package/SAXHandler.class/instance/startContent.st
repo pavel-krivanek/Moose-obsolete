@@ -1,3 +1,0 @@
-private
-startContent
-	isInContent := true

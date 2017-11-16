@@ -1,3 +1,0 @@
-accessing
-documentURI
-	^ nil

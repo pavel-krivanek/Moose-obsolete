@@ -1,3 +1,0 @@
-configuring
-maxExternalEntitySize: anInteger
-	self externalEntityLimits maxExternalEntitySize: anInteger

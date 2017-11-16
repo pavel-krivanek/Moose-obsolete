@@ -1,3 +1,0 @@
-accessing
-setClass
-	self subclassResponsibility

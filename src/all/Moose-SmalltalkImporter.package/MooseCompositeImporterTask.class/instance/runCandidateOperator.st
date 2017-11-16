@@ -1,4 +1,0 @@
-setting
-runCandidateOperator
-
-	candidateOperator := true

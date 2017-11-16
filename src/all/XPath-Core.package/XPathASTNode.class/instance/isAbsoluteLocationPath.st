@@ -1,3 +1,0 @@
-testing
-isAbsoluteLocationPath
-	^ false

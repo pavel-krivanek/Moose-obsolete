@@ -1,3 +1,0 @@
-accessing
-incomingInvocations: anInvocation
-	incomingInvocations value: anInvocation

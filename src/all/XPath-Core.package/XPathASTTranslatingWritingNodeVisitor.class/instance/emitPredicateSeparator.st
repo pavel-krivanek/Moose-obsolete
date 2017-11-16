@@ -1,3 +1,0 @@
-private
-emitPredicateSeparator
-	self emit: $.

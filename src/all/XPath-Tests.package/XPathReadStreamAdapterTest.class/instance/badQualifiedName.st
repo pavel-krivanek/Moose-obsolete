@@ -1,3 +1,0 @@
-accessing
-badQualifiedName
-	^ 'prefix: localName'

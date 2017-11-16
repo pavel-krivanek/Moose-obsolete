@@ -1,5 +1,0 @@
-basic morphic examples
-modifyingWizardStructureInChooseFilePartCallbacks
-
-	"self modifyingWizardStructureInChooseFilePartCallbacks"
-	^ self modifyingWizardStructureInChooseFilePartCallbacksUsing: MerlinMorphicWizardRenderer new

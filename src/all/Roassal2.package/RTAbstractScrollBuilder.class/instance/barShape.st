@@ -1,3 +1,0 @@
-accessing
-barShape
-	^ barShape

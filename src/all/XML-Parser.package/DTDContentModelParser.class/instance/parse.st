@@ -1,3 +1,0 @@
-parsing
-parse
-	self subclassResponsibility

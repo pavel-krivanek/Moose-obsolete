@@ -1,1 +1,0 @@
-A lazy version of XMLAttributeDictionary that uses less memory until it's modified.

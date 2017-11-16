@@ -1,1 +1,0 @@
-A handler class for function prototype parsers that returns XPathFunctionPrototypes with the function name, return type, and number and types of arguments from the prototype source.

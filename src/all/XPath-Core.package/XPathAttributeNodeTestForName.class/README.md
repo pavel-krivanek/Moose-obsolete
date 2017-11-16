@@ -1,1 +1,0 @@
-This is a class for the 'attribute(name)' type test or for the 'name' type test when the principal node type of the axis is 'attribute'.

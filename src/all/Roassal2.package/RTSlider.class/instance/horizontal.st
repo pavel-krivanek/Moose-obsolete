@@ -1,3 +1,0 @@
-accessing
-horizontal
-	orientation := #horizontal

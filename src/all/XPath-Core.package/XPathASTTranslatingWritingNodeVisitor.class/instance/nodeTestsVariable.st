@@ -1,3 +1,0 @@
-private
-nodeTestsVariable
-	^ 't'

@@ -1,3 +1,0 @@
-closing
-close
-	atEnd := true

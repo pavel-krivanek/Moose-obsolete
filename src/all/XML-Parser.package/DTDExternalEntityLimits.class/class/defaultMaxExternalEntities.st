@@ -1,3 +1,0 @@
-accessing
-defaultMaxExternalEntities
-	^ 20

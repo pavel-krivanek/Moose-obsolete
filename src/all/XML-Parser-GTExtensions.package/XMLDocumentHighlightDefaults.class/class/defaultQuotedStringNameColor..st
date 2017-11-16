@@ -1,3 +1,0 @@
-accessing
-defaultQuotedStringNameColor: aTextColor
-	defaultQuotedStringNameColor := aTextColor

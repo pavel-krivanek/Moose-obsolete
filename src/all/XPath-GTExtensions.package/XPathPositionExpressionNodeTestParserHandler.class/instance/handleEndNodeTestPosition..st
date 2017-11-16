@@ -1,3 +1,0 @@
-handling - positions
-handleEndNodeTestPosition: aPosition
-	expressionParserHandler handleEndNodeTestPosition: aPosition

@@ -1,3 +1,0 @@
-execution
-icon
-	^ GLMUIThemeExtraIcons glamorousHelp

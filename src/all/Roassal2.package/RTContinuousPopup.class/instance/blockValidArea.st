@@ -1,3 +1,0 @@
-accessing
-blockValidArea
-	^ controlPoint

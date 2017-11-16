@@ -1,3 +1,0 @@
-DynamixInstance represents an instance of a type (e.g., a class).
-
-It is created by an Activation and maintains a list of references to all Activations that hold a ref- erence to this object (i.e., Activations reference the receiver instance of a message, Activations that hold a reference to the Instance in the return value of a message send). The Instance is associated with its defining Class entity of the structural model.

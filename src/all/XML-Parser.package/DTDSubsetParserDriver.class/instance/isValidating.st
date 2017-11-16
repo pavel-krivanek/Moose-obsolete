@@ -1,3 +1,0 @@
-testing
-isValidating
-	self subclassResponsibility

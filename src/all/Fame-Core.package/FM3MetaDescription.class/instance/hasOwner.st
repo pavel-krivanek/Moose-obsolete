@@ -1,3 +1,0 @@
-testing
-hasOwner
-	^ self hasPackage

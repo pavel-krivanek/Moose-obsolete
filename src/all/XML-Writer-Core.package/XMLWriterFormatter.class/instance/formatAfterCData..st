@@ -1,2 +1,0 @@
-formatting
-formatAfterCData: aCDataWriter

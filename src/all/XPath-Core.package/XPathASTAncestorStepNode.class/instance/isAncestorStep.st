@@ -1,3 +1,0 @@
-testing
-isAncestorStep
-	^ true

@@ -1,4 +1,0 @@
-properties
-earliestEvolutionOfNumberOfAttributes
-
-	^ self allClassHistories sumNumbers: #earliestEvolutionOfNumberOfAttributes

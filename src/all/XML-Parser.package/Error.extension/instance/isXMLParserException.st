@@ -1,3 +1,0 @@
-*XML-Parser
-isXMLParserException
-	^ false

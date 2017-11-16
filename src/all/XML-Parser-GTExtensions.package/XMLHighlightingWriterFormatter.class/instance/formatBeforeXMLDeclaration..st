@@ -1,5 +1,0 @@
-formatting
-formatBeforeXMLDeclaration: anXMLDeclarationWriter
-	super formatBeforeXMLDeclaration: anXMLDeclarationWriter.
-
-	highlighter startXMLDeclarationHighlightPosition: self startPosition.

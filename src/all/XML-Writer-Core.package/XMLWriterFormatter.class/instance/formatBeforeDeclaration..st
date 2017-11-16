@@ -1,2 +1,0 @@
-formatting
-formatBeforeDeclaration: aDeclarationWriter

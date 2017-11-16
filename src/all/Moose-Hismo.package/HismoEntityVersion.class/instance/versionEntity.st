@@ -1,4 +1,0 @@
-accessing
-versionEntity
-	
-	^versionEntity

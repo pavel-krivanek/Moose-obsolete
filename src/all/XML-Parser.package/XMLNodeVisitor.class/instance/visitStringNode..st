@@ -1,3 +1,0 @@
-visiting
-visitStringNode: aStringNode
-	^ aStringNode

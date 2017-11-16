@@ -1,3 +1,0 @@
-removing
-removeAttributes
-	self attributeNodes removeAll

@@ -1,3 +1,0 @@
-accessing
-elementDeclarationClass
-	^ XMLElementDeclaration

@@ -1,3 +1,0 @@
-accessing
-belongsTo
-	^ self parentBehaviouralEntity  

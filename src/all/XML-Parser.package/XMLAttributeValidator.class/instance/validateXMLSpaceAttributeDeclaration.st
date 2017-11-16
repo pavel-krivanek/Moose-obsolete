@@ -1,3 +1,0 @@
-validating
-validateXMLSpaceAttributeDeclaration
-	self errorInvalidXMLSpaceAttributeDeclaration

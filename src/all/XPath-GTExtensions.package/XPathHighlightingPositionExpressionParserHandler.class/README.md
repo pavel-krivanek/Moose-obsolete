@@ -1,1 +1,0 @@
-This class is a highlighting handler for XPathPositionExpressionParsers that returns the parsed expression source as a highlighted Text object.

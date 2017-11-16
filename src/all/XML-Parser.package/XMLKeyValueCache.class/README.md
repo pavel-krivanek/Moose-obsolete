@@ -1,1 +1,0 @@
-A simple key-value cache that automatically empties when it reaches a maximum size. Uses a reentrant mutex to ensure thread-safety.

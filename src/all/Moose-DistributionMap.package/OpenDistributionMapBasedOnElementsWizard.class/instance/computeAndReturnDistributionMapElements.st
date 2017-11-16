@@ -1,4 +1,0 @@
-accessing
-computeAndReturnDistributionMapElements
-
-	^ self mooseGroup

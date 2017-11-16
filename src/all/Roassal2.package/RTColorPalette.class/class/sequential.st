@@ -1,4 +1,0 @@
-palettes
-sequential
-
-	^ RTCPSequential new

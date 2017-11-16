@@ -1,3 +1,0 @@
-private
-popOperatorNode
-	^ operatorNodeStack removeLast

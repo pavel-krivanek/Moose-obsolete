@@ -1,4 +1,0 @@
-accessing
-numObjects
-	
-	^extent cardinality

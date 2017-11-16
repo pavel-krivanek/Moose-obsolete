@@ -1,3 +1,0 @@
-accessing
-center
-	strategy := #center

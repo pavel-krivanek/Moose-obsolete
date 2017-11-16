@@ -1,4 +1,0 @@
-accessing groups
-entityCache 
-	 
-	^queryCache

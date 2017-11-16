@@ -1,4 +1,0 @@
-handling
-handleElementNodeTest
-	self startNodeTest.
-	expressionParserHandler handleElementNodeTest.

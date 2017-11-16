@@ -1,1 +1,0 @@
-I am a class that display general information about Roassal

@@ -1,5 +1,0 @@
-*fame-util
-handleFameProperty: aSymbol value: anObject
-	"override me if you want your object to deal with undefined properties loaded from MSE"
-	Transcript show: 'Unkown property ''', aSymbol, ''' in ', self class asString.
-	Transcript cr.

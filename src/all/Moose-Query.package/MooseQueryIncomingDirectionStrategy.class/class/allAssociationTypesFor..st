@@ -1,3 +1,0 @@
-accessing
-allAssociationTypesFor: anEntity
-	^ anEntity allIncomingAssociationTypes

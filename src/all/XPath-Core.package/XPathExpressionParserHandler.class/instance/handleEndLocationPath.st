@@ -1,2 +1,0 @@
-handling - location paths
-handleEndLocationPath

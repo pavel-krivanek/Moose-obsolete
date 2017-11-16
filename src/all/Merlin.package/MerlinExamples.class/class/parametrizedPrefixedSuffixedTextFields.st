@@ -1,5 +1,0 @@
-basic morphic examples
-parametrizedPrefixedSuffixedTextFields
-	"self parametrizedPrefixedSuffixedTextFields"
-
-	^ self parametrizedPrefixedSuffixedTextFieldsUsing: MerlinMorphicWizardRenderer new

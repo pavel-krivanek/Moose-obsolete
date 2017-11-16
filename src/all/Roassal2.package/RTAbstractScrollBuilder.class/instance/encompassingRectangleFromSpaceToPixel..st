@@ -1,3 +1,0 @@
-accessing
-encompassingRectangleFromSpaceToPixel: aRectangle
-	encompassingRectangleFromSpaceToPixel := aRectangle

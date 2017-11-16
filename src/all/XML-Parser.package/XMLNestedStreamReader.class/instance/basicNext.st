@@ -1,3 +1,0 @@
-private
-basicNext
-	^ self next

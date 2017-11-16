@@ -1,3 +1,0 @@
-enumerating
-keysAndValuesDo: aBlock
-	attributeDictionary keysAndValuesDo: aBlock

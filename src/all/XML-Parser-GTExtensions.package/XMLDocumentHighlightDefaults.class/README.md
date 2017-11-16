@@ -1,1 +1,0 @@
-This class stores the default highlight TextColors used by the document highlighter. It gets the initial defaults from Shout text styling.

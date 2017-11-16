@@ -1,3 +1,0 @@
-private
-lessThanOrEqualToNumber: aNumber
-	self subclassResponsibility

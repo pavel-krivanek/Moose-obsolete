@@ -1,4 +1,0 @@
-hook
-selectVersion: aVersion
-
-	^ true

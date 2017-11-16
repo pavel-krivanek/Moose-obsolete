@@ -1,1 +1,0 @@
-This class stores the settings and components of a parser. For performance it uses separate inst vars instead of a dictionary and lazy initializes some components.

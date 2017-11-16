@@ -1,3 +1,0 @@
-properties
-numberOfEmptyLinesOfText
-	^ self subclassResponsibility

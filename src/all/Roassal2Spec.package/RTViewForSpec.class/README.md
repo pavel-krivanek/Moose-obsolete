@@ -1,1 +1,0 @@
-I am a special view used to record registered announcement to propagate them outside of the view to other Spec models

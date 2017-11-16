@@ -1,3 +1,0 @@
-UI
-defaultTopLabelRotation
-	^ -55

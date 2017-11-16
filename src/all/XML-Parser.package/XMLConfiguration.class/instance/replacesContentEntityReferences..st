@@ -1,3 +1,0 @@
-accessing
-replacesContentEntityReferences: aBoolean
-	self entityConfiguration replacesContentEntityReferences: aBoolean

@@ -1,3 +1,0 @@
-accessing
-cr
-	^ Character cr

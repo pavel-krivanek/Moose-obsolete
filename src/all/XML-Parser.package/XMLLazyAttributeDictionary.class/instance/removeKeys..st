@@ -1,3 +1,0 @@
-removing
-removeKeys: aKeyCollection
-	self copiedAttributeDictionary removeKeys: aKeyCollection

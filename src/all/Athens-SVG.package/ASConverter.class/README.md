@@ -1,1 +1,0 @@
-A converter is a kind of parser.

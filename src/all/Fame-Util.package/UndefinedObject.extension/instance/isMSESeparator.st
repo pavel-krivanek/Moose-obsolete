@@ -1,3 +1,0 @@
-*Fame-Util
-isMSESeparator
-	^false

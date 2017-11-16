@@ -1,3 +1,0 @@
-accessing
-uniqueIdentifierName
-	^ 'NameConventionBetweenFM3AndSmalltalk'

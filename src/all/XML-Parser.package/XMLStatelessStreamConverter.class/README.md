@@ -1,1 +1,0 @@
-This is a base class for stateless, immutable stream converter classes. Each subclass has a single instance that is shared.

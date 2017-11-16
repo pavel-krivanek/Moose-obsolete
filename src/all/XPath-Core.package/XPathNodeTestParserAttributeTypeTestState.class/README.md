@@ -1,1 +1,0 @@
-A state for parsing the arguments of an attribute() type test.

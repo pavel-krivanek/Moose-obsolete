@@ -1,3 +1,0 @@
-bindings
-method 
-	^ GLMDoItContext >> #method

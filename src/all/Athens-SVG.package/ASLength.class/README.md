@@ -1,1 +1,0 @@
-A coordinate or length value can be expressed as a number following by a unit identifier (e.g., "25cm" or "15em"). The list of unit identifiers in SVG matches the list of unit identifiers in CSS: em, ex, px, pt, pc, cm, mm, in and percentages. The following describes how the various unit identifiers are processed:

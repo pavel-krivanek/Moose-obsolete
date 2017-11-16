@@ -1,3 +1,0 @@
-converting
-asXMLHTTPRequest
-	^ self

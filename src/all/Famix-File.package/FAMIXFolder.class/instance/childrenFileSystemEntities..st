@@ -1,3 +1,0 @@
-accessing
-childrenFileSystemEntities: aFAMIXAbstractFile
-	self childrenFileSystemEntities value: aFAMIXAbstractFile

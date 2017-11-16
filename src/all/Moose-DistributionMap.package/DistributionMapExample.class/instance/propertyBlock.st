@@ -1,4 +1,0 @@
-accessing
-propertyBlock
-
-	^ propertyBlock

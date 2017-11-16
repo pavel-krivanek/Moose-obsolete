@@ -1,1 +1,0 @@
-PhexampleClassTest has is like PhexampleTest, but inherits from Phexample. That's a bit circular, which is why more 'advanced' tests go here.

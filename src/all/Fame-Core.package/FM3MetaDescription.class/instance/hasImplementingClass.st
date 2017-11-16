@@ -1,3 +1,0 @@
-testing
-hasImplementingClass
-	^ implementingClass notNil

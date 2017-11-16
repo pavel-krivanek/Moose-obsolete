@@ -1,3 +1,0 @@
-accessing
-margeRectangle
-	^ margeRectangle

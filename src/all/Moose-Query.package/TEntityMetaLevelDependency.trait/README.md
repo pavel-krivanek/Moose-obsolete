@@ -1,1 +1,0 @@
-This trait provides a common, paradigm agnostic vocabulary to query dependencies of named entities at meta level.

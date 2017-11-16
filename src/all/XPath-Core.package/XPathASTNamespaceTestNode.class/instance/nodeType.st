@@ -1,3 +1,0 @@
-accessing
-nodeType
-	^ XPathNamespaceNodeType new

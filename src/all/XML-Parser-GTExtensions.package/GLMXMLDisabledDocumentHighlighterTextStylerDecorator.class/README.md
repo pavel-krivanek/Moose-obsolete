@@ -1,1 +1,0 @@
-A highlighting XML document text style decorator for disabled highlighting text presentations. The text and encoding are set at instance creation and can't be changed with editing.

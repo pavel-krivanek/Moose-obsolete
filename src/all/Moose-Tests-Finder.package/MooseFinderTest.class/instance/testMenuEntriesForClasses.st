@@ -1,4 +1,0 @@
-tests
-testMenuEntriesForClasses
-
-	self assertAllActionsOf: model allModelClasses

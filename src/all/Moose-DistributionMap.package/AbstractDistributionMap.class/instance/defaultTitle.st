@@ -1,3 +1,0 @@
-rendering
-defaultTitle
-	^ 'Distribution Map'

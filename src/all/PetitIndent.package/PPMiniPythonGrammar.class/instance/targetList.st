@@ -1,3 +1,0 @@
-grammar
-targetList
-	^ nil asParser

@@ -1,3 +1,0 @@
-*Famix-Implementation
-isNamespace
-	^ false

@@ -1,3 +1,0 @@
-handling - positions
-handleStartArgumentPosition: aPosition
-	expressionParserHandler handleStartArgumentPosition: aPosition

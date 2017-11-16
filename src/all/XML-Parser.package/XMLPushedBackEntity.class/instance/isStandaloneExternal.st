@@ -1,3 +1,0 @@
-testing
-isStandaloneExternal
-	^ entity isStandaloneExternal

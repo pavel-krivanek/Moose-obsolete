@@ -1,4 +1,0 @@
-controlling
-flushGroups 
-	 
-	self subclassResponsibility

@@ -1,1 +1,0 @@
-I generate a downloader script in bash for a Moose image for the given release

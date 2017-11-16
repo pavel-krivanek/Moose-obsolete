@@ -1,3 +1,0 @@
-finding
-noSupportedImplementationFound
-	self subclassResponsibility

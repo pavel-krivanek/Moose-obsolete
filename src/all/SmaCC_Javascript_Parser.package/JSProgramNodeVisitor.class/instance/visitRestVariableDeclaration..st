@@ -1,3 +1,0 @@
-generated
-visitRestVariableDeclaration: aRestVariableDeclaration
-	^ self visitVariableDeclaration: aRestVariableDeclaration

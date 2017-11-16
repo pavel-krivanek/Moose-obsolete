@@ -1,3 +1,0 @@
-configuration
-gapBetweenLevels
-	^ 1

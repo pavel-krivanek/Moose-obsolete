@@ -1,3 +1,0 @@
-testing
-isActivation
-	^self subclassResponsibility

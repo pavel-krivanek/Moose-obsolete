@@ -1,3 +1,0 @@
-changing
-internalSubsetState
-	^ XMLInternalSubsetState new

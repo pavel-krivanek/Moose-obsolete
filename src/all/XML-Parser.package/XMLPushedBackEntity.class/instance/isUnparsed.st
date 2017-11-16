@@ -1,3 +1,0 @@
-testing
-isUnparsed
-	^ entity isUnparsed

@@ -1,1 +1,0 @@
-I am trait for ghosts which are not required special identity interception because they supposed to be identified as any other objects.

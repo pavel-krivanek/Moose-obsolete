@@ -1,1 +1,0 @@
-MooseAccumulatingFinder new openOn: MooseModel root allModels first

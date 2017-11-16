@@ -1,3 +1,0 @@
-basic
-open
-	^ $( asParser trim

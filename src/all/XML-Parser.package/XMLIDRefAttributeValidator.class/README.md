@@ -1,1 +1,0 @@
-This class validates attributes that refer to an ID of another element with a ID attribute.

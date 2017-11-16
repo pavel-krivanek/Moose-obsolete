@@ -1,3 +1,0 @@
-private
-newExtractor
-	^SqueakInstvarInterfaceExtractor new

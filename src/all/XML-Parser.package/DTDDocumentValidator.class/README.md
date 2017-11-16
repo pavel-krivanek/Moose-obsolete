@@ -1,1 +1,0 @@
-This class validates documents using a DTD.

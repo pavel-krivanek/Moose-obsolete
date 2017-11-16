@@ -1,3 +1,0 @@
-private
-errorHTTPException: anError
-	XMLHTTPException signalMessageFrom: anError

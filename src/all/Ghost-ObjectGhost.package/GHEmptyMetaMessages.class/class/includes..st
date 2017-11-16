@@ -1,3 +1,0 @@
-testing
-includes: aSymbol
-	^false

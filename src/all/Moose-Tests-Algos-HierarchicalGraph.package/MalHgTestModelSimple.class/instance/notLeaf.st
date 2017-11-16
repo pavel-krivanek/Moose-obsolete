@@ -1,3 +1,0 @@
-testing
-notLeaf
-	^ children notEmpty.

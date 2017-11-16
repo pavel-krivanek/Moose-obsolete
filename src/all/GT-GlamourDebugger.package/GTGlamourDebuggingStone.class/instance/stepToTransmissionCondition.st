@@ -1,4 +1,0 @@
-actions
-stepToTransmissionCondition
-
-	^ self stepToGlamourValueBlock

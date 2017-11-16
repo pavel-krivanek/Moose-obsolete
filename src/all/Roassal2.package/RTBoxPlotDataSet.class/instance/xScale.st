@@ -1,3 +1,0 @@
-accessing
-xScale
-	^ RTLinearTransformation instance

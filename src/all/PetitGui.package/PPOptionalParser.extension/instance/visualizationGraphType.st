@@ -1,3 +1,0 @@
-*petitgui-mondrian
-visualizationGraphType
-	^ '?'

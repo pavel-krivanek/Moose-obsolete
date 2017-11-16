@@ -1,3 +1,0 @@
-private
-elements
-	^nameDict values

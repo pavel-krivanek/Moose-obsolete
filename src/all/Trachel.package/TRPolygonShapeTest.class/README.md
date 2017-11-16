@@ -1,1 +1,0 @@
-A TRPolygonShapeTest is a test class for testing the behavior of TRPolygonShape

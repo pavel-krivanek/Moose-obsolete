@@ -1,1 +1,0 @@
-This browser simply provides the possibility to open a sourceAnchor with the text of the sourceAnchor interval selected. It is a helper browser used in the Finder.

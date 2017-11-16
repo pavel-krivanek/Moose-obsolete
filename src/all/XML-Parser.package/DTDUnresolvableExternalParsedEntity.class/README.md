@@ -1,1 +1,0 @@
-This is an abstract base class for unresolvable external parsed entities that lazily raises an error when #replacement or #replacementStream is sent, which would normally trigger resolution.

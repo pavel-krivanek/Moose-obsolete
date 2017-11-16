@@ -1,4 +1,0 @@
-private
-filterFailed
-
-	context := nil

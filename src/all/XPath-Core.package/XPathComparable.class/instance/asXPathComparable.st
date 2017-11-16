@@ -1,3 +1,0 @@
-converting
-asXPathComparable
-	^ self

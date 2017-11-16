@@ -1,3 +1,0 @@
-accessing
-possibleSourceClasses
-	^ self explicitRequirement

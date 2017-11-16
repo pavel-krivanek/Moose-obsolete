@@ -1,3 +1,0 @@
-source
-addressBookXMLWithDTD
-	^ XMLParserTest addressBookXMLWithDTD

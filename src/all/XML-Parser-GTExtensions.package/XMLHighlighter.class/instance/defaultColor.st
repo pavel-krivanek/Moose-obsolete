@@ -1,3 +1,0 @@
-accessing
-defaultColor
-	^ defaultHighlight color

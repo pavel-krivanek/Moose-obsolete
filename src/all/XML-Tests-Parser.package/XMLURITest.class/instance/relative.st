@@ -1,3 +1,0 @@
-accessing
-relative
-	^ 'relative/path'

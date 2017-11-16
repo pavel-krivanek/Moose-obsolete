@@ -1,2 +1,0 @@
-*petitgui-accessing
-exampleOn: aStream

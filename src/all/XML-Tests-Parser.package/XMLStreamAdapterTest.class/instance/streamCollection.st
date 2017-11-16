@@ -1,3 +1,0 @@
-accessing
-streamCollection
-	^ String new

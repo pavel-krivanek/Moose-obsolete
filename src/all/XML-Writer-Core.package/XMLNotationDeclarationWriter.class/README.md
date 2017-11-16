@@ -1,1 +1,0 @@
-This class writes <!NOTATION ...> declarations for DTD internal subsets, but not if canonical XML is enabled.

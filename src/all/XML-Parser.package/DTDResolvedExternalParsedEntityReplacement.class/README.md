@@ -1,1 +1,0 @@
-This is an abstract class for resolved external entity replacements.

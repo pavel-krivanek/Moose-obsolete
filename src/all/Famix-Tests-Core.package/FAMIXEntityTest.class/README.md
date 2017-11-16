@@ -1,1 +1,0 @@
-I am the generic class for all the tests for famix entities

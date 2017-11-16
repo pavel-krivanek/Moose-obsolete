@@ -1,3 +1,0 @@
-*Famix-Java
-isParameterType
-	^ false

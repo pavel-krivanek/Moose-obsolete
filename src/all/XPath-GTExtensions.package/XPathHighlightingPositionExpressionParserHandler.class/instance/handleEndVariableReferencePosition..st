@@ -1,3 +1,0 @@
-handling - positions
-handleEndVariableReferencePosition: aPosition
-	highlighter endVariableReferenceHighlightPosition: aPosition

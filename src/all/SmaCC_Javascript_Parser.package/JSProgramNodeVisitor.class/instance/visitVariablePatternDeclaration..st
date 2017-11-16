@@ -1,3 +1,0 @@
-generated
-visitVariablePatternDeclaration: aVariablePatternDeclaration
-	^ self visitProgram: aVariablePatternDeclaration

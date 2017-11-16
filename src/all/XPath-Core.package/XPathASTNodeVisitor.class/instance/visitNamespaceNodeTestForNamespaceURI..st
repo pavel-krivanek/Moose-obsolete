@@ -1,3 +1,0 @@
-visiting - node tests
-visitNamespaceNodeTestForNamespaceURI: aNamespaceNodeTestForNamespaceURI
-	^ self visitNodeTest: aNamespaceNodeTestForNamespaceURI

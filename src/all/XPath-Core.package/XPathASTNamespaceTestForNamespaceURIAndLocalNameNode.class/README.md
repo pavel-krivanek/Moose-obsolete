@@ -1,1 +1,0 @@
-This is an AST node class for the 'namespace(Q{namespaceURI}localName)' type test or for the 'Q{namespaceURI}localName' type test when the principal node type of the axis is 'namespace'.

@@ -1,1 +1,0 @@
-Signalled when ReadStream>>next encounters a premature end.

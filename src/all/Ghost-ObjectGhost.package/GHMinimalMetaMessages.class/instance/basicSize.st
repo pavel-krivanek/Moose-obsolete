@@ -1,3 +1,0 @@
-accessing
-basicSize
-	^self ghostSize

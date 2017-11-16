@@ -1,3 +1,0 @@
-testing
-hasNullStreamConverter
-	^ streamConverter isNull

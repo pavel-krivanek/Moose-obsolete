@@ -1,3 +1,0 @@
-testing
-testInitialize
-	PPToken initialize

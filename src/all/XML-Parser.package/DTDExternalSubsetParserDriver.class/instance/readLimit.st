@@ -1,3 +1,0 @@
-accessing
-readLimit
-	^ self externalEntityResolver externalSubsetReadLimit

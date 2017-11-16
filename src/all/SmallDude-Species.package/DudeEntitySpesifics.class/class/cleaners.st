@@ -1,4 +1,0 @@
-parsing
-cleaners 
-	 
-	self subclassResponsibility

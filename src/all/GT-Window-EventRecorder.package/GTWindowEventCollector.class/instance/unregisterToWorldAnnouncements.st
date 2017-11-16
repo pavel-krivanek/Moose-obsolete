@@ -1,4 +1,0 @@
-announcement registration
-unregisterToWorldAnnouncements
-
-	World announcer unsubscribe: self

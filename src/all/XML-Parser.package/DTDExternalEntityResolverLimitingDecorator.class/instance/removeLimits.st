@@ -1,3 +1,0 @@
-configuring
-removeLimits
-	self externalEntityResolver removeLimits

@@ -1,3 +1,0 @@
-accessing
-incomingMSEProperties
-	^ self explicitRequirement

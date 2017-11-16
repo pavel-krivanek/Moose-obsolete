@@ -1,3 +1,0 @@
-tokenizing
-nextElementName
-	self subclassResponsibility

@@ -1,1 +1,0 @@
-A state for <!DOCTYPE ...> and internal subset tokens.

@@ -1,1 +1,0 @@
-This is a class for the 'attribute(Q{namespaceURI}localName)' type test or for the 'Q{namespaceURI}localName' type test when the principal node type of the axis is 'attribute'.

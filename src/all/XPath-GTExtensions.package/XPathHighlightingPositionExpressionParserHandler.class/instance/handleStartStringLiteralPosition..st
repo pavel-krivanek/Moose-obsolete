@@ -1,3 +1,0 @@
-handling - positions
-handleStartStringLiteralPosition: aPosition
-	highlighter startStringLiteralHighlightPosition: aPosition

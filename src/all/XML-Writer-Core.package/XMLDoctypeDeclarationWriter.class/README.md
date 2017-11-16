@@ -1,1 +1,0 @@
-This class writes <!DOCTYPE ...> declarations. You can set the root element and the public and system IDs using the messages under "accessing" before specifying any internal subset with #with:.

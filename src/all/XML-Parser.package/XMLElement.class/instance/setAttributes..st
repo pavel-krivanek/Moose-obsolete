@@ -1,3 +1,0 @@
-initialization
-setAttributes: anAssociationCollection
-	self attributeNodes setAttributes: anAssociationCollection

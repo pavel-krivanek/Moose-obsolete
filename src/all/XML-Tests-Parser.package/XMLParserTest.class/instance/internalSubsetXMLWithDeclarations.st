@@ -1,3 +1,0 @@
-source
-internalSubsetXMLWithDeclarations
-	^ self class internalSubsetXMLWithDeclarations

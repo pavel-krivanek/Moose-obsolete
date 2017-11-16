@@ -1,3 +1,0 @@
-asserting
-shouldInheritTests
-	^ true

@@ -1,3 +1,0 @@
-testing
-includesExternalEntityURI: anXMLURIOrURIString
-	^ self externalEntities includesKey: anXMLURIOrURIString asXMLURI

@@ -1,1 +1,0 @@
-XPath function to return the substring after another substring.

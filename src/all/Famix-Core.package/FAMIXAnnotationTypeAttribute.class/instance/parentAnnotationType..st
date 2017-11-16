@@ -1,3 +1,0 @@
-accessing
-parentAnnotationType: anAnnotationType
-	self parentType: anAnnotationType

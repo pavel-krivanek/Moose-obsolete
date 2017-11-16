@@ -1,3 +1,0 @@
-defaults
-xmlDeclarationColor
-	^ self class defaultXMLDeclarationColor

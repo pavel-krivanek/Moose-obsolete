@@ -1,3 +1,0 @@
-class initialization
-initializeDefaultLineBreak
-	self defaultLineBreak: Character cr

@@ -1,4 +1,0 @@
-accessing
-stepCount 
-	 
-	^stepCount

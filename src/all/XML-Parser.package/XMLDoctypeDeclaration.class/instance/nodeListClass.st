@@ -1,3 +1,0 @@
-defaults
-nodeListClass
-	^ XMLInternalSubsetList

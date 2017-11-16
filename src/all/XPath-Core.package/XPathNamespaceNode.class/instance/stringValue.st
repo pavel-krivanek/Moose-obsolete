@@ -1,3 +1,0 @@
-accessing
-stringValue
-	^ self uri

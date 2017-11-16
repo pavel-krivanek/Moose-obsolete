@@ -1,3 +1,0 @@
-defaults
-defaultTypeClass
-	^ XPathNodeSetValueType

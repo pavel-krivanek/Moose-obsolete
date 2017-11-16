@@ -1,3 +1,0 @@
-setup
-filesystem
-	^ FileSystem disk

@@ -1,3 +1,0 @@
-testing
-resolvesExternalEntities
-	^ self saxHandler resolvesExternalEntities

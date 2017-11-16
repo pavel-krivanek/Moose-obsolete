@@ -1,3 +1,0 @@
-testing
-isPostDoctypeDeclarationState
-	^ true

@@ -1,4 +1,0 @@
-private
-currentEnv
-
-	^ envStack top

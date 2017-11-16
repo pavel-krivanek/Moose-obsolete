@@ -1,2 +1,0 @@
-handling - positions
-handleStartOperatorPosition: aPosition

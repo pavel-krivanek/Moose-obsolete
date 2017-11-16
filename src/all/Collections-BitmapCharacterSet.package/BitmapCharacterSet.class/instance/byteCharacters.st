@@ -1,3 +1,0 @@
-private
-byteCharacters
-	^ byteCharacters

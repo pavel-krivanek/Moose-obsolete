@@ -1,3 +1,0 @@
-testing
-hasElementValidators
-	self subclassResponsibility

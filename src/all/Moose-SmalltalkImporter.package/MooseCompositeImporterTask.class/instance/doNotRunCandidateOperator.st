@@ -1,4 +1,0 @@
-setting
-doNotRunCandidateOperator
-
-	candidateOperator := false

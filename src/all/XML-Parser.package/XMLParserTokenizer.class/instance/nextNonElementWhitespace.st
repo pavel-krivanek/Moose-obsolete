@@ -1,3 +1,0 @@
-tokenizing
-nextNonElementWhitespace
-	self subclassResponsibility

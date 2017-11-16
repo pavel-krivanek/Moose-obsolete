@@ -1,4 +1,0 @@
-accessing
-nomNocSymbol
-
-	^ #NomNoc

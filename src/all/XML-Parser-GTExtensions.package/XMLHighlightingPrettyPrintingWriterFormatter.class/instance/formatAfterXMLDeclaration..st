@@ -1,5 +1,0 @@
-formatting
-formatAfterXMLDeclaration: anXMLDeclarationWriter
-	highlighter endXMLDeclarationHighlightPosition: self endPosition.
-
-	super formatAfterXMLDeclaration: anXMLDeclarationWriter.

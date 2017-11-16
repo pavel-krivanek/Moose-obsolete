@@ -1,3 +1,0 @@
-accessing
-currentPosition
-	^ readStream position

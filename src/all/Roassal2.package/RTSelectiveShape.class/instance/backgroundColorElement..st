@@ -1,3 +1,0 @@
-accessing
-backgroundColorElement: aValueOrAOneArgBlock
-	backgroundColor := aValueOrAOneArgBlock

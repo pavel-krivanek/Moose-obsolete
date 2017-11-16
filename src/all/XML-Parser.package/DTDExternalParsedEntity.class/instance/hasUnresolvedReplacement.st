@@ -1,3 +1,0 @@
-testing
-hasUnresolvedReplacement
-	^ self unresolvedReplacement notNil

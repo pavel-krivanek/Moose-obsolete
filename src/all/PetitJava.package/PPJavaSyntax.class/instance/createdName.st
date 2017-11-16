@@ -1,5 +1,0 @@
-grammar
-createdName 
-
-	^ classOrInterfaceType 
-	/	primitiveType 

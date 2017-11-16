@@ -1,3 +1,0 @@
-accessing
-setElements
-	self subclassResponsibility

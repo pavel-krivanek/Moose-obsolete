@@ -1,3 +1,0 @@
-private
-input
-	^input

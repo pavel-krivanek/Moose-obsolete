@@ -1,1 +1,0 @@
-This class parses notation attribute value lists in the form of "NOTATION (one|two|...)". It assumes there is no whitespace around the "|" separated list values.

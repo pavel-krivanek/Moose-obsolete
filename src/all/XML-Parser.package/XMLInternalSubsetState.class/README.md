@@ -1,1 +1,0 @@
-A state for internal subset tokens.

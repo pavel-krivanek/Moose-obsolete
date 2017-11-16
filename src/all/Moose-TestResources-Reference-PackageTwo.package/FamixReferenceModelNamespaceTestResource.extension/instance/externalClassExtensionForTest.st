@@ -1,2 +1,0 @@
-*Moose-TestResources-Reference-PackageTwo
-externalClassExtensionForTest

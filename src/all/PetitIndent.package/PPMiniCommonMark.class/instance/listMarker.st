@@ -1,3 +1,0 @@
-lists
-listMarker
-	^ orderedListMarker / bulletListMarker

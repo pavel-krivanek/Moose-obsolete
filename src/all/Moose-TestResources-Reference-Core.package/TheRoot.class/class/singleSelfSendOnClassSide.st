@@ -1,4 +1,0 @@
-accessing class variables
-singleSelfSendOnClassSide
-
-	self accessSharedVariableFromTheClassSide

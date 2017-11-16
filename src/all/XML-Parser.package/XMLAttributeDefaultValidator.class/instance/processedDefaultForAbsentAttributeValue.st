@@ -1,3 +1,0 @@
-processing
-processedDefaultForAbsentAttributeValue
-	^ nil

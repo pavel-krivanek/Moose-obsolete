@@ -1,4 +1,0 @@
-accessing
-parentType 
-
-	^ self parentEnum

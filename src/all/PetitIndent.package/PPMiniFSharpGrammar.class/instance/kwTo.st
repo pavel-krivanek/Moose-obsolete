@@ -1,3 +1,0 @@
-keywords
-kwTo
-	^ 'to' asParser

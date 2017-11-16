@@ -1,3 +1,0 @@
-accessing
-comparableDisjointStringValue
-	^ self disjointStringValues first asXPathComparable

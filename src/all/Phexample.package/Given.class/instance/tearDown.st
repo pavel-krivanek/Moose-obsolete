@@ -1,3 +1,0 @@
-fixture
-tearDown
-    cache := nil

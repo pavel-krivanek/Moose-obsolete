@@ -1,1 +1,0 @@
-This is an exception that is explicitly handled by a method. For example, in Java it is an exception that appears in a catch statement.

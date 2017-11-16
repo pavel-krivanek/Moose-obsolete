@@ -1,3 +1,0 @@
-accessing
-streamReaderClass
-	^ XMLNestedStreamReader

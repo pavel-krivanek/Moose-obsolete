@@ -1,3 +1,0 @@
-constants
-green
-	^ Color green

@@ -1,3 +1,0 @@
-*petitislands
-isWater
-	^ false

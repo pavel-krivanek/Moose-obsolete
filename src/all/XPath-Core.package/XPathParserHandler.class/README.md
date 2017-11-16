@@ -1,1 +1,0 @@
-An abstract class for XPath parser handlers. Subclasses implement "handling" messages sent by parsers.

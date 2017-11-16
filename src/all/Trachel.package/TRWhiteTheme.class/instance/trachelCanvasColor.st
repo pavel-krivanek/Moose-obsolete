@@ -1,3 +1,0 @@
-accessing
-trachelCanvasColor
-	^ Color white

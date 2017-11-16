@@ -1,3 +1,0 @@
-*PetitJava
-visitJavaWhitespace: node
-	^ true

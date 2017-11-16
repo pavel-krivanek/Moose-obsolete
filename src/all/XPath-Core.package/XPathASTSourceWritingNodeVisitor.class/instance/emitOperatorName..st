@@ -1,3 +1,0 @@
-private
-emitOperatorName: anOperatorNameStringOrCharacter
-	self emitAll: anOperatorNameStringOrCharacter asString

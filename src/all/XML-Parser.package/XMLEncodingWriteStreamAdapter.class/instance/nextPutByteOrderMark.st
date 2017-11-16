@@ -1,3 +1,0 @@
-accessing
-nextPutByteOrderMark
-	streamConverter nextPutByteOrderMarkToStream: self

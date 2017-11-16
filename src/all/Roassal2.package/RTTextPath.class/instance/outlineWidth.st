@@ -1,3 +1,0 @@
-accessing
-outlineWidth
-	^ outlineWidth

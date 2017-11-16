@@ -1,1 +1,0 @@
-A state for parsing prolog tokens after <!DOCTYPE ...> declarations.

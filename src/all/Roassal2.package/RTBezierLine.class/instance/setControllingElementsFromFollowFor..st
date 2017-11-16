@@ -1,3 +1,0 @@
-control points
-setControllingElementsFromFollowFor: anEdge
-	controllingElements := self getControllingElementsFromFollowFor: anEdge

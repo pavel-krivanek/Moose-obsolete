@@ -1,1 +1,0 @@
-This is an AST node class for relative location paths whose root node is the context node.

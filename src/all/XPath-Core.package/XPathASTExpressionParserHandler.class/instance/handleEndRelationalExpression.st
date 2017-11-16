@@ -1,3 +1,0 @@
-handling - operators
-handleEndRelationalExpression
-	self popAnyRelationalExpressionNodes

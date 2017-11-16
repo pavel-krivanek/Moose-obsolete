@@ -1,3 +1,0 @@
-accessing
-saveWithScale
-	^ saveWithScale

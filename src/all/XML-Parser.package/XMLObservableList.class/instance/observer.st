@@ -1,3 +1,0 @@
-observing
-observer
-	^ observer

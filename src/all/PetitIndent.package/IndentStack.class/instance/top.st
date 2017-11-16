@@ -1,3 +1,0 @@
-accessing
-top
-	^ contents last

@@ -1,1 +1,0 @@
-FAMIXGlobalVariableGroup is a MooseGroup containing only FAMIX enities of type FAMIXGlobalVariable.

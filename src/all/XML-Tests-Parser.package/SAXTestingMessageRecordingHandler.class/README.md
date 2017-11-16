@@ -1,1 +1,0 @@
-This handler records the results of testing messages from within handlers.

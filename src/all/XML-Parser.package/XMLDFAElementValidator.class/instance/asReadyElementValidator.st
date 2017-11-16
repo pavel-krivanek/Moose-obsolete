@@ -1,3 +1,0 @@
-converting
-asReadyElementValidator
-	^ self copy

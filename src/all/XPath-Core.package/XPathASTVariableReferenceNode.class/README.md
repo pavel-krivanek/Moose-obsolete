@@ -1,1 +1,0 @@
-This is an AST node class for variable references. Variables are bound to values at runtime using XPathContext objects.

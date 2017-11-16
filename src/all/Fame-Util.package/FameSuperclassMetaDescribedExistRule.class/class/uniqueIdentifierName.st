@@ -1,3 +1,0 @@
-accessing
-uniqueIdentifierName
-	^ 'SuperclassMetaDescribedExist'

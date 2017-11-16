@@ -1,1 +1,0 @@
-This class converts an external XML document  into a string with line endings normalized to CRs (the Pharo/Squeak LE) and decodes it from any of the supported character encodings and will infer incodings from byte order marks or null bytes and also consider  <?xml ...?> encoding attributes.

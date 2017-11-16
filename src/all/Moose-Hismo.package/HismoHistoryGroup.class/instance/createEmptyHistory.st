@@ -1,3 +1,0 @@
-private
-createEmptyHistory
-	^ HismoAbstractHistory new

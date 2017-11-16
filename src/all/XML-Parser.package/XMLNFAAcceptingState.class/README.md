@@ -1,1 +1,0 @@
-An NFA in this state is considered to accept the input.

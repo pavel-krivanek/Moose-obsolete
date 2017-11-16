@@ -1,1 +1,0 @@
-The sample book object parsed by the SAX2ElementParser.

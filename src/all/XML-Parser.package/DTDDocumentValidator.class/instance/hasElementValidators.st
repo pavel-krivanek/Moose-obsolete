@@ -1,3 +1,0 @@
-testing
-hasElementValidators
-	^ self doctypeDefinition hasElementValidators

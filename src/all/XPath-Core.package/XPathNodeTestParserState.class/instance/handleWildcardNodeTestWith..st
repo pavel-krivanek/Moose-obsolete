@@ -1,3 +1,0 @@
-handling
-handleWildcardNodeTestWith: aHandler
-	self subclassResponsibility

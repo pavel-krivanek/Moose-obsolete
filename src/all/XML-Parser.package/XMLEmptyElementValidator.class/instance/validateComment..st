@@ -1,3 +1,0 @@
-validating
-validateComment: aString
-	self errorUnexpectedComment

@@ -1,3 +1,0 @@
-accessing
-canonicalLineBreak: aCharacterOrString
-	CanonicalLineBreak := aCharacterOrString asString

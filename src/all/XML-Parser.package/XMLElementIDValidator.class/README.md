@@ -1,1 +1,0 @@
-This class is shared by attribute validators to validate element IDs and ID references, including xml:id IDs.

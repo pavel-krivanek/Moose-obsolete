@@ -1,3 +1,0 @@
-private
-resetStreamToStartPosition
-	stream position: startPosition

@@ -1,1 +1,0 @@
-This is an AST node class for 'and' expressions. The evaluation should short-curcuit so that the other expression is only evaluated if the first evaluates as true.

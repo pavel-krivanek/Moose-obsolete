@@ -1,4 +1,0 @@
-rendering
-defaultBaseColor
-
-	^ Color gray

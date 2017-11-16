@@ -1,3 +1,0 @@
-accessing
-axisName
-	^ 'namespace'

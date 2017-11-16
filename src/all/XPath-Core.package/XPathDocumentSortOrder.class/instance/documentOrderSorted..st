@@ -1,3 +1,0 @@
-sorting
-documentOrderSorted: aNodeSet
-	^ aNodeSet

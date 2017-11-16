@@ -1,3 +1,0 @@
-*famix-smalltalk
-isSmalltalk
-	 ^ false

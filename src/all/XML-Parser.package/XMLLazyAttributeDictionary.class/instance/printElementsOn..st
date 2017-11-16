@@ -1,3 +1,0 @@
-printing
-printElementsOn: aStream
-	attributeDictionary printElementsOn: aStream

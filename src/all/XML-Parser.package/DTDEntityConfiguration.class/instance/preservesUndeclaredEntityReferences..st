@@ -1,3 +1,0 @@
-accessing
-preservesUndeclaredEntityReferences: aBoolean
-	preservesUndeclaredEntityReferences := aBoolean

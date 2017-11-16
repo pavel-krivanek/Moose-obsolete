@@ -1,1 +1,0 @@
-An XML text node.

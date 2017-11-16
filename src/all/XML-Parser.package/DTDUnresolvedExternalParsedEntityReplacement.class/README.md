@@ -1,1 +1,0 @@
-This class stores an entity resolver and the public ID, system ID, and base URI of an external entity so its replacement can be lazily resolved only if the entity is referenced.

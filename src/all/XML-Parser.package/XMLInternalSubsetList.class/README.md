@@ -1,1 +1,0 @@
-This class represents the list of nodes that comprise a document's internal DTD subset.

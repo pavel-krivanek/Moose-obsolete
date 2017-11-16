@@ -1,3 +1,0 @@
-handling
-handleAnyNodeTestWith: aHandler
-	aHandler handleAnyNodeTest

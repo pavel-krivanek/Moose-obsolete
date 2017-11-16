@@ -1,1 +1,0 @@
-PPPattern is meta-parser that is solely used to match other types of parsers. It cannot be used for actually parsing something. The constructor method determines what can be matched.

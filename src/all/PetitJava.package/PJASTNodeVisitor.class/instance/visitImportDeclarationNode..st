@@ -1,4 +1,0 @@
-visitor-doubleDispatching
-visitImportDeclarationNode: anImportDeclarationNode
-
-	self visitNode: anImportDeclarationNode nameNode

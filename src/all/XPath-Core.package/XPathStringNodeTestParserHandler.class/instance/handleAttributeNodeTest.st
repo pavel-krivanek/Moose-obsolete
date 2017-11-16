@@ -1,3 +1,0 @@
-handling
-handleAttributeNodeTest
-	self parsingResult: XPathAttributeNodeTest new

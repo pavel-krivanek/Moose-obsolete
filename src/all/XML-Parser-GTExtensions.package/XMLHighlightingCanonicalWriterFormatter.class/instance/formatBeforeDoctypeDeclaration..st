@@ -1,5 +1,0 @@
-formatting
-formatBeforeDoctypeDeclaration: aDoctypeDeclarationWriter
-	super formatBeforeDoctypeDeclaration: aDoctypeDeclarationWriter.
-
-	highlighter startDoctypeDeclarationHighlightPosition: self startPosition.

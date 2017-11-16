@@ -1,1 +1,0 @@
-This class holds a collection of browsers useable on Moose objects.

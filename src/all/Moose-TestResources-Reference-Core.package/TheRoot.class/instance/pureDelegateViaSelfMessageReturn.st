@@ -1,4 +1,0 @@
-delegating
-pureDelegateViaSelfMessageReturn
-
-	^ self x pureDelegateViaSelfMessageReturn

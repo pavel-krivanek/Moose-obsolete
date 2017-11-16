@@ -1,2 +1,0 @@
-formatting
-formatBeforeQuotedStringName: aName

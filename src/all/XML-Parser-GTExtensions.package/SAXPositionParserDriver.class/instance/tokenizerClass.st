@@ -1,3 +1,0 @@
-defaults
-tokenizerClass
-	^ XMLPositionWellFormedParserTokenizer

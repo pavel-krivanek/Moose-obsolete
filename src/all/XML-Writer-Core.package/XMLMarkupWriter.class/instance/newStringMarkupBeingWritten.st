@@ -1,3 +1,0 @@
-private
-newStringMarkupBeingWritten
-	self write

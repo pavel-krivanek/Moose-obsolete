@@ -1,3 +1,0 @@
-accessing
-currentPosition
-	^ streamReader currentPosition

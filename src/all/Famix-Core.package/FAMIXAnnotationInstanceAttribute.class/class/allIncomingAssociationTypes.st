@@ -1,3 +1,0 @@
-accessing
-allIncomingAssociationTypes
-   ^ self privateAllIncomingAssociationTypes

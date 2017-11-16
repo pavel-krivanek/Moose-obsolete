@@ -1,3 +1,0 @@
-enumerating
-activeMarkupWriterWithAncestorsDo: aBlock
-	self markupWriterStack reverseDo: aBlock

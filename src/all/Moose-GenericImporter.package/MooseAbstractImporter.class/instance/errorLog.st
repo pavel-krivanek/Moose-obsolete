@@ -1,4 +1,0 @@
-Moose deprecated
-errorLog 
-	 
-	^ loggingStream

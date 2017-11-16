@@ -1,3 +1,0 @@
-accessing
-doNotWrapText
-	shouldWrap := false

@@ -1,3 +1,0 @@
-configuring
-externalEntityLimits: anExternalEntityLimits
-	externalEntityLimits := anExternalEntityLimits

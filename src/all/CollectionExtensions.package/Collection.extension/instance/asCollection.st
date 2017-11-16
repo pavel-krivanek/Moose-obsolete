@@ -1,3 +1,0 @@
-*CollectionExtensions
-asCollection
-	^ self

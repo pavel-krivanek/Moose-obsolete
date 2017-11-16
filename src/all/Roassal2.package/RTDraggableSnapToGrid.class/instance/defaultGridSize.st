@@ -1,3 +1,0 @@
-initialization
-defaultGridSize
-	^ 10

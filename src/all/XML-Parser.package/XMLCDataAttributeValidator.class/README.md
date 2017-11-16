@@ -1,1 +1,0 @@
-This class validates CDATA attributes, which are not whitespace-normalized further.

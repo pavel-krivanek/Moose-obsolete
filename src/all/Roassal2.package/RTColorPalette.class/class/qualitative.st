@@ -1,4 +1,0 @@
-palettes
-qualitative
-
-	^ RTCPQualitative new

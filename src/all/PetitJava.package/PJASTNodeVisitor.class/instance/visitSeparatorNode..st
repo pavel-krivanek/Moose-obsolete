@@ -1,3 +1,0 @@
-visitor-doubleDispatching
-visitSeparatorNode: aSeparatorNode
-	self subclassResponsibility

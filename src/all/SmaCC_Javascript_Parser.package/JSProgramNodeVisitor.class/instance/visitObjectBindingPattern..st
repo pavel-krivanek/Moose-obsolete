@@ -1,3 +1,0 @@
-generated
-visitObjectBindingPattern: anObjectBindingPattern
-	^ self visitProgram: anObjectBindingPattern

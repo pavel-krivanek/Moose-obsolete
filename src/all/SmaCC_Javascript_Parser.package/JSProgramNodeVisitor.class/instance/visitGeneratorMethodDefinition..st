@@ -1,3 +1,0 @@
-generated
-visitGeneratorMethodDefinition: aGeneratorMethodDefinition
-	^ self visitMethodDefinition: aGeneratorMethodDefinition

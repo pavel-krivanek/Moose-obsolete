@@ -1,3 +1,0 @@
-accessing-classes
-matrixClass
-	self subclassResponsibility.

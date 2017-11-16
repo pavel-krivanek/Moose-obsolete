@@ -1,3 +1,0 @@
-testing
-isFieldAlias
-	^ true

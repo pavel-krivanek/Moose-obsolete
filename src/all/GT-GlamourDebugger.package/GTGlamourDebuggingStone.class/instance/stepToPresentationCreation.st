@@ -1,4 +1,0 @@
-actions
-stepToPresentationCreation
-	
-	^ self stepToGlamourValueBlock

@@ -1,3 +1,0 @@
-accessing
-victimClass
-	^classDelegator target

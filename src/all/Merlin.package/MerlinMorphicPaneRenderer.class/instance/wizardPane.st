@@ -1,4 +1,0 @@
-accessing
-wizardPane
-
-	^ wizardPane

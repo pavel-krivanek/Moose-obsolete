@@ -1,3 +1,0 @@
-Represents some preprocessor statements of interest: #ifdef, #define, ...
-
-Notable exception: #include which is represented as an Association

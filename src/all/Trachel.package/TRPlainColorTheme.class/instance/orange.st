@@ -1,3 +1,0 @@
-constants
-orange
-	^ Color orange

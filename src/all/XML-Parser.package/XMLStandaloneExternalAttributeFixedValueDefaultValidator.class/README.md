@@ -1,1 +1,0 @@
-This class will make sure the value of a standalone externally defined attribute is present and that it matches a fixed default value (the #FIXED constraint).

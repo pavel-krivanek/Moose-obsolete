@@ -1,3 +1,0 @@
-hooks
-label
-	^ 'Package evolution'

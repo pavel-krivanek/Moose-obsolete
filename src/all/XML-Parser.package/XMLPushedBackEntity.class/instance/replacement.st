@@ -1,3 +1,0 @@
-accessing
-replacement
-	^ entity replacement

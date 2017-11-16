@@ -1,1 +1,0 @@
-An abstract base class for XML highlighter text styler decorators. Subclasses need to implement #highlightingParse:onSuccess:onError: .

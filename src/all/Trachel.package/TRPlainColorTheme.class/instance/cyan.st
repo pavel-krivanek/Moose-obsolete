@@ -1,3 +1,0 @@
-constants
-cyan
-	^ Color cyan

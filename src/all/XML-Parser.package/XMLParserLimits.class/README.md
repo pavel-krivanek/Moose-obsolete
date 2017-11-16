@@ -1,1 +1,0 @@
-This class places security limits on input. Setting a limit to nil disables it, and removeAll disables all.

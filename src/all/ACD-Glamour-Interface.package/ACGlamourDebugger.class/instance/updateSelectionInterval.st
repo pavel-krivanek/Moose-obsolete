@@ -1,3 +1,0 @@
-updating
-updateSelectionInterval
-	self updateReceiverCodeSelection

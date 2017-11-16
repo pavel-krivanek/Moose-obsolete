@@ -1,4 +1,0 @@
-*Merlin
-meValue: anArgument
-
-	^ self

@@ -1,1 +1,0 @@
-This class writes the external IDs for doctype declarations and markup declarations, either as "PUBLIC " followed by the public and system ID literals separated by spaces or "SYSTEM " followed by the system ID literal.

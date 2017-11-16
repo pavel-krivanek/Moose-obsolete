@@ -1,1 +1,0 @@
-I am interaction builder that provides some extra interactions specific for RTGrapher/RTData, such as dynamic decorators.

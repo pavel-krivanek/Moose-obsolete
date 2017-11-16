@@ -1,3 +1,0 @@
-accessing
-alphaNumericCharacters
-	^ 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'

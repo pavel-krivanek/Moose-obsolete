@@ -1,1 +1,0 @@
-I am a class that display general information about how to report a bug

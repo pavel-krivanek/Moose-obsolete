@@ -1,3 +1,0 @@
-keywords
-kwDo
-	^ 'do' asParser

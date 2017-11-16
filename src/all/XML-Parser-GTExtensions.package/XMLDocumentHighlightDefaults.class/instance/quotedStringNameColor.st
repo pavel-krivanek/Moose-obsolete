@@ -1,3 +1,0 @@
-defaults
-quotedStringNameColor
-	^ self class defaultQuotedStringNameColor

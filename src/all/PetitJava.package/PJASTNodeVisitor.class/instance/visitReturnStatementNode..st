@@ -1,3 +1,0 @@
-visitor-doubleDispatching
-visitReturnStatementNode: aReturnStatementNode
-	self visitNode: aReturnStatementNode expression

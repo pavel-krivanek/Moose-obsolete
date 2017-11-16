@@ -1,3 +1,0 @@
-defaults
-defaultElementHandlerFactoryClass
-	^ SAX2ElementHandlerFactory

@@ -1,3 +1,0 @@
-hooks
-description
-	^ 'MultiPile support'

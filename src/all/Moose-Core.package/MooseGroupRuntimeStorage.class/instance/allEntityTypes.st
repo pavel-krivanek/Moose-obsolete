@@ -1,3 +1,0 @@
-adding
-allEntityTypes
-	^ byType keys

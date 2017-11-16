@@ -1,1 +1,0 @@
-I am a simple animation when an element or group of elements is added to the a view

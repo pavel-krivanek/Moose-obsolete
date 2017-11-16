@@ -1,3 +1,0 @@
-testing
-isProcessing
-	^ false

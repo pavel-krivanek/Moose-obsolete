@@ -1,3 +1,0 @@
-visiting - operators
-visitSubtractionExpression: aSubtractionExpression
-	^ self visitBinaryOperatorExpression: aSubtractionExpression

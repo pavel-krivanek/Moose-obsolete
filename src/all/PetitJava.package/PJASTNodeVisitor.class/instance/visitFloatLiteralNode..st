@@ -1,3 +1,0 @@
-visitor-doubleDispatching
-visitFloatLiteralNode: aIntegerLiteralNode
-	self subclassResponsibility

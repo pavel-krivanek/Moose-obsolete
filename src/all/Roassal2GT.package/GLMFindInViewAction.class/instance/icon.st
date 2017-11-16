@@ -1,3 +1,0 @@
-hooks
-icon
-	^ GLMUIThemeExtraIcons glamorousInspect

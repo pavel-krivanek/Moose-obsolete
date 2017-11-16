@@ -1,1 +1,0 @@
-An abstract and portable test case for sets.

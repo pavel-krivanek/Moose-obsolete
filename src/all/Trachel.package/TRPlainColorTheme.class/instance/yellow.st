@@ -1,3 +1,0 @@
-constants
-yellow
-	^ Color yellow

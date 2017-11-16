@@ -1,1 +1,0 @@
-A pushed-back non-qualified name token, to be read by nextNCName.

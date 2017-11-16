@@ -1,3 +1,0 @@
-private
-removeDFAStateTransitions
-	dfaStateTransitions := nil

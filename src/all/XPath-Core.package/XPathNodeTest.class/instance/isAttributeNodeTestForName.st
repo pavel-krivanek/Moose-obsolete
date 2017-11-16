@@ -1,3 +1,0 @@
-testing
-isAttributeNodeTestForName
-	^ false

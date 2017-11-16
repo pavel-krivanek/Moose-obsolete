@@ -1,3 +1,0 @@
-accessing
-elementNester
-	^ self newElementNester

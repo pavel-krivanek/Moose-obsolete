@@ -1,4 +1,0 @@
-handling
-handleNamespaceNodeTestForLocalName: aLocalName
-	self startNodeTest.
-	expressionParserHandler handleNamespaceNodeTestForLocalName: aLocalName.

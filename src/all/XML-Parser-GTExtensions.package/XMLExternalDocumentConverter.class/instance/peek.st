@@ -1,3 +1,0 @@
-private 
-peek
-	^ streamReader peek

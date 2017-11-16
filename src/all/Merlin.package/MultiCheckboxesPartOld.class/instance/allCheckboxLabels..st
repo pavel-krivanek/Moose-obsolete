@@ -1,4 +1,0 @@
-accessing
-allCheckboxLabels: aCollectionOfString
-
-	^ allCheckboxLabels 

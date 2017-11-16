@@ -1,3 +1,0 @@
-converting
-asSortedCollection
-	^ self entityStorage asSortedCollection

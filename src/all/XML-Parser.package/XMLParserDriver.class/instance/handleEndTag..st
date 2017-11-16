@@ -1,2 +1,0 @@
-handling
-handleEndTag: anElement

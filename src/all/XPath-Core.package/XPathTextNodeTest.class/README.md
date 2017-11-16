@@ -1,1 +1,0 @@
-This is a class for the 'text()' type test.

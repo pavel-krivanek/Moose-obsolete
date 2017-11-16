@@ -1,4 +1,0 @@
-*GT-PetitParserDebugger
-debugRoot
-
-	^ self

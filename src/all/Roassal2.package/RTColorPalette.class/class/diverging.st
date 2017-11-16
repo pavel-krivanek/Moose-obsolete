@@ -1,4 +1,0 @@
-palettes
-diverging
-
-	^ RTCPDiverging new

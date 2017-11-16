@@ -1,1 +1,0 @@
-Node representing an if statement. If with and without else are both covere by this node

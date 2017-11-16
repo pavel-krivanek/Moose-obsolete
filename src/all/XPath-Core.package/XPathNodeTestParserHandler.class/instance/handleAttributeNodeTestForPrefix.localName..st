@@ -1,2 +1,0 @@
-handling
-handleAttributeNodeTestForPrefix: aPrefix localName: aLocalName

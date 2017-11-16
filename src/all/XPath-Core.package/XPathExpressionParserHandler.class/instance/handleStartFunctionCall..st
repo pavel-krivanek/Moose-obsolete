@@ -1,2 +1,0 @@
-handling - functions
-handleStartFunctionCall: aFunctionName

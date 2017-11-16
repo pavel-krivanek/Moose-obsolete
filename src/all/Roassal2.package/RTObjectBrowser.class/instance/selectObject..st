@@ -1,3 +1,0 @@
-acctions
-selectObject: anObject
-	

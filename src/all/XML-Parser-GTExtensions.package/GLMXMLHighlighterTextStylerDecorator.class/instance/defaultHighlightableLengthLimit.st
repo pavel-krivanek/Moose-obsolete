@@ -1,3 +1,0 @@
-accessing
-defaultHighlightableLengthLimit
-	^ 100000

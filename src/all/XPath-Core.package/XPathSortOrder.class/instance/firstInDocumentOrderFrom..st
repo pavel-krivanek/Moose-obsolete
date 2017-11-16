@@ -1,3 +1,0 @@
-accessing
-firstInDocumentOrderFrom: aNodeSet
-	self subclassResponsibility

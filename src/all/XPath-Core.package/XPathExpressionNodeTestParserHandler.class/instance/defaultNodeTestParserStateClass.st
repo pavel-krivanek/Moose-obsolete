@@ -1,3 +1,0 @@
-defaults
-defaultNodeTestParserStateClass
-	^ currentAxis defaultNodeTestParserStateClass

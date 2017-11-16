@@ -1,1 +1,0 @@
-I am a class that allows you to use a elastic box in a View, this box is a tool that allows you to zoom in or zoom out in a view.

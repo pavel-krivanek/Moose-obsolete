@@ -1,3 +1,0 @@
-private
-emptyAttributeDictionary
-	^ self class emptyAttributeDictionary

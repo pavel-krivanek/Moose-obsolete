@@ -1,1 +1,0 @@
-XPath contains substring function.

@@ -1,3 +1,0 @@
-accessing
-absolute
-	^ '/absolute/path'

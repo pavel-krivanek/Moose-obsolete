@@ -1,3 +1,0 @@
-accessing
-comparableNegativeInfinityValue
-	^ Float xpathNegativeInfinity asXPathComparable

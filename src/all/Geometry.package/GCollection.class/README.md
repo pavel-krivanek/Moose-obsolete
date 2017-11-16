@@ -1,1 +1,0 @@
-I am a collection of several shapes. Useful for finding an intersection of a more complex shape.

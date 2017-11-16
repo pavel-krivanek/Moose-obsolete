@@ -1,3 +1,0 @@
-configuration
-withSelfLoop
-	allowSelfLoop := true.

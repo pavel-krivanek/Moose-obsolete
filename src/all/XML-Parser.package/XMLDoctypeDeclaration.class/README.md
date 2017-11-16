@@ -1,1 +1,0 @@
-This class represents a <!DOCTYPE ...> declaration. It stores the root element name, public/system ID, and its nodes are the internal subset.

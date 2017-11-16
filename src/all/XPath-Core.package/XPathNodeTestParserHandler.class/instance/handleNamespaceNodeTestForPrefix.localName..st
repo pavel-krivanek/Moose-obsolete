@@ -1,2 +1,0 @@
-handling
-handleNamespaceNodeTestForPrefix: aPrefix localName: aLocalName

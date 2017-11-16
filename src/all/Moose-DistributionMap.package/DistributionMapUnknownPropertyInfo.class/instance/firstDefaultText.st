@@ -1,4 +1,0 @@
-accessing
-firstDefaultText 
-
-	^ 'propVal isNil'

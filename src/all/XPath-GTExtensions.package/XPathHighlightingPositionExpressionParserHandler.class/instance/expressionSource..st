@@ -1,3 +1,0 @@
-accessing
-expressionSource: anExpressionSourceString
-	expressionSource := anExpressionSourceString

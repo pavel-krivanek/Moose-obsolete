@@ -1,3 +1,0 @@
-private
-dfaStateCache
-	^ dfaStateCache

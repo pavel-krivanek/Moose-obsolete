@@ -1,3 +1,0 @@
-allDependencies
-testProviderClassesIntoMyPackage
-	self assert: (self c15FullReferencerOutSide queryAllOutgoing atScope: FAMIXType) withinMyPackage isEmpty

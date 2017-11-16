@@ -1,3 +1,0 @@
-public
-trMorphClass
-	^ TRMorph

@@ -1,1 +1,0 @@
-This stores the source as an actual string variable. It is to be used when it is not possible to link to the actual source.

@@ -1,3 +1,0 @@
-accessing
-errorInstance
-	^ errorInstance

@@ -1,4 +1,0 @@
-running
-resultClass
-
-	^ RBClassEnvironment 

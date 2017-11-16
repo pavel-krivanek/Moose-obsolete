@@ -1,3 +1,0 @@
-accessing
-addStructureWithDeclaredType: aStructuralEntity
-	structuresWithDeclaredType add: aStructuralEntity

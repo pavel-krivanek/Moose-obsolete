@@ -1,1 +1,0 @@
-This is a base class for element class mappers. Subclasses need to implement the abstract methods to register and lookup classes mapped to element names, namespace URIs, and attributes.

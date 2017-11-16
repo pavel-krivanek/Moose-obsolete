@@ -1,1 +1,0 @@
-A FAMIXMultipleFileAnchor is  source anchor that connects a sourced entity to several source files anchors like in the case of .c and .h files

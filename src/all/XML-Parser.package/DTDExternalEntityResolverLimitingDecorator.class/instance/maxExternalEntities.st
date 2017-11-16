@@ -1,3 +1,0 @@
-configuring
-maxExternalEntities
-	^ self externalEntityResolver maxExternalEntities

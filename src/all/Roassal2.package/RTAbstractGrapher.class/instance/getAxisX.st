@@ -1,3 +1,0 @@
-private - accessing
-getAxisX
-	^ axisConfigurationX

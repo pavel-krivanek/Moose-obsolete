@@ -1,3 +1,0 @@
-accessing
-center
-	^ circle center

@@ -1,1 +1,0 @@
-Abstract class for the pad or bar builders

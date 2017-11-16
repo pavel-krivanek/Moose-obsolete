@@ -1,1 +1,0 @@
-This is a class for automatic encoding detectors for streams that infers encodings from byte order marks (BOM) or implicit UTF-16/32 encodings from null bytes before or after the first ASCII character.

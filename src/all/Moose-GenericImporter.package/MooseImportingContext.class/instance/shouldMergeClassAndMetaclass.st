@@ -1,4 +1,0 @@
-import options
-shouldMergeClassAndMetaclass
-	
-	^mergeClassAndMetaclass

@@ -1,3 +1,0 @@
-hooks
-interactionsToBeRegistered
-	^ Array with: RTGrapherSelectRangeContextInteraction with: RTResizeableViewContextInteraction "with: RTSelectableElementsContextInteraction" 

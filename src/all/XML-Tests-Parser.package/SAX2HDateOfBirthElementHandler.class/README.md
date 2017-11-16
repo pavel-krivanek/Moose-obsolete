@@ -1,1 +1,0 @@
-Handler for the sample <person> <date-of-birth> element.

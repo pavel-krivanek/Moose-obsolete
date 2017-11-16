@@ -1,3 +1,0 @@
-others
-lineContinues
-	^ $\asParser, newline

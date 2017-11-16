@@ -1,1 +1,0 @@
-Used by attribute validators to validate attribute references to unparsed entities and notations.

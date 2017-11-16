@@ -1,1 +1,0 @@
-An alias dedicated to the use of a field variable.

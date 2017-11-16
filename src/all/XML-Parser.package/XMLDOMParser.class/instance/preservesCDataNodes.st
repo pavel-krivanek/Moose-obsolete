@@ -1,3 +1,0 @@
-configuring
-preservesCDataNodes
-	^ self configuration preservesCDataNodes

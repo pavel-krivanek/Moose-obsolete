@@ -1,3 +1,0 @@
-private
-hasNodeList: aNodeList
-	^ false

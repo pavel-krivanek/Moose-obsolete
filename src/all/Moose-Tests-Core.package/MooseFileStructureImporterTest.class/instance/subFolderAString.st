@@ -1,3 +1,0 @@
-setup
-subFolderAString
-	^ 'folders/subfolderA/'

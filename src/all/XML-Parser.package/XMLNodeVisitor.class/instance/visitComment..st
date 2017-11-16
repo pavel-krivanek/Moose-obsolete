@@ -1,3 +1,0 @@
-visiting
-visitComment: aComment
-	^ aComment

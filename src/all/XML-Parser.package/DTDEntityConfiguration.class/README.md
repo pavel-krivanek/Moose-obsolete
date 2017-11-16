@@ -1,1 +1,0 @@
-This class contains configurations for entity replacement/retrieval. It is separate from XMLConfiguration so it is only lazy initialized when needed and saves memory.

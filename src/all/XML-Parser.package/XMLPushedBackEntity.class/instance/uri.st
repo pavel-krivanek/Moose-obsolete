@@ -1,3 +1,0 @@
-accessing
-uri
-	^ entity uri

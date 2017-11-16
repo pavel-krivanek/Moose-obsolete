@@ -1,1 +1,0 @@
-This is a base class for XML document validators.

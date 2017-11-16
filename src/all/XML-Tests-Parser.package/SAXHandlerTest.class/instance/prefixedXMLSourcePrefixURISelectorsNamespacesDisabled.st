@@ -1,3 +1,0 @@
-accessing
-prefixedXMLSourcePrefixURISelectorsNamespacesDisabled
-	^ self removeNamespaceSelectorsFrom: self prefixedXMLSourcePrefixURISelectors

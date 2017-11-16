@@ -1,1 +1,0 @@
-This is a base class for parser drivers. Subclasses should override any of the "handling" or "handling - dtd" messages sent by tokenizers to parse tokens.

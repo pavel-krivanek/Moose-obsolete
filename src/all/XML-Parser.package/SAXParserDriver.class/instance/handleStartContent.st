@@ -1,3 +1,0 @@
-handling
-handleStartContent
-	self saxHandler startContent

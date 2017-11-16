@@ -1,3 +1,0 @@
-accessing
-allOutgoingAssociationTypes
-	^ Set new

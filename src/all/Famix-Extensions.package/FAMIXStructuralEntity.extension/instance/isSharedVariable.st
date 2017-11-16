@@ -1,4 +1,0 @@
-*Famix-Extensions
-isSharedVariable
-
-	^ false

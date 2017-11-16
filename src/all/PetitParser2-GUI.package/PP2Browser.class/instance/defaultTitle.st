@@ -1,3 +1,0 @@
-building
-defaultTitle
-	^ 'PetitParser Browser'

@@ -1,3 +1,0 @@
-moosequery-queries-incoming
-queryIncomingTypeDeclarations
-	^ MooseQueryResult new

@@ -1,4 +1,0 @@
-methods
-basicMethodTwo
-
-	^ 4

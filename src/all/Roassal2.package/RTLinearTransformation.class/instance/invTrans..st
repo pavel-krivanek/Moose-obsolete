@@ -1,3 +1,0 @@
-hooks
-invTrans: value
-	^ value

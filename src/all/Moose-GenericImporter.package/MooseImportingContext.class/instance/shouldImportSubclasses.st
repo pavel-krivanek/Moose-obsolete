@@ -1,4 +1,0 @@
-import options
-shouldImportSubclasses
-	
-	^importSubclasses

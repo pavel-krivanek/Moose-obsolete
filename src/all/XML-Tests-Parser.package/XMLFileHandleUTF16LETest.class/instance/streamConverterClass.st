@@ -1,3 +1,0 @@
-accessing
-streamConverterClass
-	^ XMLUTF16LittleEndianStreamConverter

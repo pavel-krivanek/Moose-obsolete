@@ -1,3 +1,0 @@
-auxiliary
-mergeClass
-	^self subclassResponsibility

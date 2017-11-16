@@ -1,3 +1,0 @@
-whitespace
-any
-	^ #any asParser

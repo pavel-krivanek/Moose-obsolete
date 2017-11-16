@@ -1,3 +1,0 @@
-*Famix-Java
-hasInnerClassImplementingMethods
-	^ self innerClassesImplementingMethods isNotEmpty

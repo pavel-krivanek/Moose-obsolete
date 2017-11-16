@@ -1,1 +1,0 @@
-This class represents the parsed internal and external subset of a DTD taken together.

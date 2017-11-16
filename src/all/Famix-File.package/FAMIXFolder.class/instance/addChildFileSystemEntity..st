@@ -1,3 +1,0 @@
-add/remove
-addChildFileSystemEntity: aFileOrFolder
-	self childrenFileSystemEntities add: aFileOrFolder

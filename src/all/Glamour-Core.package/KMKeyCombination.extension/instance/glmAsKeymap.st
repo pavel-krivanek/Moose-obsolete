@@ -1,3 +1,0 @@
-*Glamour-Core
-glmAsKeymap
-	^ self

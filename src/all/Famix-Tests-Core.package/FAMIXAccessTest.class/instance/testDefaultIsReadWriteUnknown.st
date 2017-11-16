@@ -1,3 +1,0 @@
-tests
-testDefaultIsReadWriteUnknown
-	self assert: self actualClass new isReadWriteUnknown

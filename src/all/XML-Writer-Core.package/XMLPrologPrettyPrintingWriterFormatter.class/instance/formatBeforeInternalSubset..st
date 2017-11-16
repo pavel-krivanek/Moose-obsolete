@@ -1,3 +1,0 @@
-formatting
-formatBeforeInternalSubset: aDoctypeDeclarationWriter
-	self indent

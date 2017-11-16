@@ -1,3 +1,0 @@
-testing
-isXMLConvertingStreamAdapter
-	^ true

@@ -1,1 +1,0 @@
-Handler for the sample <books> <book> <isbn> element.

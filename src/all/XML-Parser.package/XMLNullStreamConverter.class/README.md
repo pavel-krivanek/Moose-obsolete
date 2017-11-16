@@ -1,1 +1,0 @@
-A stream converter that does no encoding or decoding.

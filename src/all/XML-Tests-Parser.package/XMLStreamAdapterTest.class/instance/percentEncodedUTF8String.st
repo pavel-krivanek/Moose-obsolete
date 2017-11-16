@@ -1,3 +1,0 @@
-accessing
-percentEncodedUTF8String
-	^ self class percentEncodedUTF8String

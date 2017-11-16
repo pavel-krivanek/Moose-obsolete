@@ -1,3 +1,0 @@
-namespacing
-undeclareDefaultNamespace
-	self undeclarePrefix: ''

@@ -1,1 +1,0 @@
-I am a base class for (drag and) drop events attached to the drop target elements.

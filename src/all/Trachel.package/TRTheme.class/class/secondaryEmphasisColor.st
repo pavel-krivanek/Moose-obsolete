@@ -1,3 +1,0 @@
-generic
-secondaryEmphasisColor
-	^ self green

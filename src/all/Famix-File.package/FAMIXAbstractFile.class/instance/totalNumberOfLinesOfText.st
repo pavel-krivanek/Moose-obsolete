@@ -1,3 +1,0 @@
-properties
-totalNumberOfLinesOfText
-	^ self subclassResponsibility

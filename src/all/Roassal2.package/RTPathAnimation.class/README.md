@@ -1,1 +1,0 @@
-I am a class to move elements position in a SVG path

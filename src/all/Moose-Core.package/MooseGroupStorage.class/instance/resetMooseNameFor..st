@@ -1,3 +1,0 @@
-private
-resetMooseNameFor: anEntity
-	anEntity privateClearMooseName

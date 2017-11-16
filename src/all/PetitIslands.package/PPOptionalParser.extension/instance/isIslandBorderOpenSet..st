@@ -1,3 +1,0 @@
-*petitislands
-isIslandBorderOpenSet: set
-	^ false

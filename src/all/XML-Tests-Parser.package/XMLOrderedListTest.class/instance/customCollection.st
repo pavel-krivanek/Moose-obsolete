@@ -1,3 +1,0 @@
-accessing
-customCollection
-	^ XMLStubOrderedListCustomCollection new

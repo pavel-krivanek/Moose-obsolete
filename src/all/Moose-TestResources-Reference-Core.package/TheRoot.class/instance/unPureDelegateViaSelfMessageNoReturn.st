@@ -1,4 +1,0 @@
-delegating
-unPureDelegateViaSelfMessageNoReturn
-
-	 self xxx unPureDelegateViaSelfMessageNoReturn

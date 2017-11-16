@@ -1,3 +1,0 @@
-testing
-hasEmbeddedStringMarkup
-	^ hasEmbeddedStringMarkup
