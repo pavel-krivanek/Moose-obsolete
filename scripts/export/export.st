@@ -29,9 +29,10 @@ groups := result groupedBy: [ :each | each value  ].
 		"dirName := (originalRepositories associations detect: [ :each | 
 			each value = repo description ]) key."
 		dirName := 'all'.
-		IceMetadatalessFileTreeWriter
+		TonelWriter fileOUt: version on: (exportDir / dirName) asFileReference ensureCreateDirectory.
+		"IceMetadatalessFileTreeWriter
 			fileOut: (version)
-			on: (MCFileTreeRepository new directory: (exportDir / dirName) asFileReference ensureCreateDirectory).
+			on: (MCFileTreeRepository new directory: (exportDir / dirName) asFileReference ensureCreateDirectory)."
 	 ]
 ].
 
