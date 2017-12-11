@@ -4,7 +4,7 @@ A RTHorizontalTimelineDecoratorTest is a test class for testing the behavior of 
 Class {
 	#name : #RTHorizontalTimelineDecoratorTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-Timeline-Tests
+	#category : #'Roassal2-Builder-Timeline-Tests'
 }
 
 { #category : #tests }

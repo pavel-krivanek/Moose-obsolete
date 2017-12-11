@@ -1,1 +1,1 @@
-Package { #name : #GToolkit-Tests-Examples }
+Package { #name : #'GToolkit-Tests-Examples' }

@@ -47,7 +47,7 @@ Class {
 		'dynamicTypeTokens',
 		'andToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -245,7 +245,7 @@ SwiftAssignmentOperatorNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftAssignmentOperatorNode >> initialize [
 	super initialize.
 	equalTokens := OrderedCollection new: 2.

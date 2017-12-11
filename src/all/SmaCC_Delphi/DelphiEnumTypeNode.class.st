@@ -7,7 +7,7 @@ Class {
 		'commas',
 		'right'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -35,7 +35,7 @@ DelphiEnumTypeNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiEnumTypeNode >> initialize [
 	super initialize.
 	names := OrderedCollection new: 2.

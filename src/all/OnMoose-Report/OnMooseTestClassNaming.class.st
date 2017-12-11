@@ -4,7 +4,7 @@ self openOn: MooseModel root allModels last
 Class {
 	#name : #OnMooseTestClassNaming,
 	#superclass : #REPMooseQueryConcern,
-	#category : #OnMoose-Report
+	#category : #'OnMoose-Report'
 }
 
 { #category : #accessing }

@@ -26,10 +26,10 @@ Class {
 		'booleanOperators',
 		'cyclomaticNumber2'
 	],
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIXMetrics >> classNameFromMethod [
 	"this is a hack but it's working - doru :)"
 
@@ -101,7 +101,7 @@ RBVisitorForFAMIXMetrics >> cyclomaticNumber: anObject [
 	cyclomaticNumber := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RBVisitorForFAMIXMetrics >> initialize [
 	
 	super initialize.
@@ -208,7 +208,7 @@ RBVisitorForFAMIXMetrics >> processMethod: aMethodEntity usingImporter: anImport
 	parseTreeOrNil isNil ifFalse: [self visitNode: parseTreeOrNil]" self visitMethodNode: parseTree ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RBVisitorForFAMIXMetrics >> resetMetricValues [
 	
 	self numberOfMessageSends: 0.

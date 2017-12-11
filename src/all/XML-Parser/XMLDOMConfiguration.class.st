@@ -10,7 +10,7 @@ Class {
 		'preservesIgnorableWhitespace',
 		'nodeFactory'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #accessing }

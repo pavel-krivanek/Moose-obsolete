@@ -6,7 +6,7 @@ Class {
 		'intent',
 		'extent'
 	],
-	#category : #Moose-Algos-FormalConceptAnalysis
+	#category : #'Moose-Algos-FormalConceptAnalysis'
 }
 
 { #category : #'instance creation' }
@@ -30,7 +30,7 @@ MalFormalConcept >> extent [
 	^extent
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalFormalConcept >> extent: anObject [
 	
 	extent := anObject
@@ -42,7 +42,7 @@ MalFormalConcept >> intent [
 	^intent
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalFormalConcept >> intent: anObject [
 	
 	intent := anObject
@@ -66,7 +66,7 @@ MalFormalConcept >> objects [
 	^context objects selectMask: extent
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalFormalConcept >> on: formalContext [
 	
 	context := formalContext

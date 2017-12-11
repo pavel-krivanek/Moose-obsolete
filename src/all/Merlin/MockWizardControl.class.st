@@ -1,7 +1,7 @@
 Class {
 	#name : #MockWizardControl,
 	#superclass : #WizardControl,
-	#category : #Merlin-Tests
+	#category : #'Merlin-Tests'
 }
 
 { #category : #open }

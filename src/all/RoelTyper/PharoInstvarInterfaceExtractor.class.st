@@ -5,7 +5,7 @@ Class {
 		'blockTempsMapping',
 		'blocksLimits'
 	],
-	#category : #RoelTyper-Pharo
+	#category : #'RoelTyper-Pharo'
 }
 
 { #category : #'as yet unclassified' }
@@ -140,7 +140,7 @@ PharoInstvarInterfaceExtractor >> removeBlockMapping [
 	blockTempsMapping removeLast
 ]
 
-{ #category : #opcodes-control }
+{ #category : #'opcodes-control' }
 PharoInstvarInterfaceExtractor >> send: selector numArgs: na [
 	"selector = #shapeBoundsAt:ifPresent: ifTrue: [self halt]".
 	^self nativeSend: selector numArgs: na 

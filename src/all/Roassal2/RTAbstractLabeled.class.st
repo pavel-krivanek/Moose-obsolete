@@ -16,7 +16,7 @@ Class {
 		'labelTrachel',
 		'shouldBeInTheBack'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #public }

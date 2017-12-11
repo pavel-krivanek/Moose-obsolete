@@ -6,7 +6,7 @@ Class {
 		'guid',
 		'components'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -45,7 +45,7 @@ DelphiInterfaceTypeNode >> guid: aDelphiGuidNode [
 		ifTrue: [ self guid parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiInterfaceTypeNode >> initialize [
 	super initialize.
 	components := OrderedCollection new: 2.

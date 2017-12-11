@@ -80,7 +80,7 @@ The existing methods and more specifically atTypeScope, atPackageScope:, within:
 "
 Trait {
 	#name : #TMetaLevelDependency,
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #accessing }

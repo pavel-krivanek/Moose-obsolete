@@ -1,7 +1,7 @@
 Class {
 	#name : #GTGlamourStepToPresentationBuildAction,
 	#superclass : #DebugAction,
-	#category : #GT-GlamourDebugger
+	#category : #'GT-GlamourDebugger'
 }
 
 { #category : #registration }
@@ -29,7 +29,7 @@ GTGlamourStepToPresentationBuildAction >> executeAction [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 GTGlamourStepToPresentationBuildAction >> initialize [
 
 	self label: 'Next presentation build'.

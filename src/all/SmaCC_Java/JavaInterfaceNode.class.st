@@ -13,7 +13,7 @@ Class {
 		'declarations',
 		'rightBrace'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -68,7 +68,7 @@ JavaInterfaceNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaInterfaceNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

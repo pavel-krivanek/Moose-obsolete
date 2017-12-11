@@ -26,7 +26,7 @@ Class {
 		'blockTraversal',
 		'blockArgs'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #private }
@@ -74,7 +74,7 @@ InstvarInterfaceExtractor >> method: aMethod [
 	copied := #()
 ]
 
-{ #category : #opcodes-control }
+{ #category : #'opcodes-control' }
 InstvarInterfaceExtractor >> nativeSend: selector numArgs: na [ 
 	| receiver args |
 	args := stack removeLast: na.
@@ -178,7 +178,7 @@ InstvarInterfaceExtractor >> saveStacks [
 	^saveStacks
 ]
 
-{ #category : #opcodes-control }
+{ #category : #'opcodes-control' }
 InstvarInterfaceExtractor >> send: selector numArgs: na [ 
 	^self 
 		nativeSend: selector

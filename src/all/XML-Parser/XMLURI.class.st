@@ -22,7 +22,7 @@ Class {
 	#classVars : [
 		'UnreservedCharacters'
 	],
-	#category : #XML-Parser-URI
+	#category : #'XML-Parser-URI'
 }
 
 { #category : #'instance creation' }

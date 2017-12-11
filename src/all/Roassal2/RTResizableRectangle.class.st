@@ -12,7 +12,7 @@ Class {
 		'cornerDirections',
 		'oppositeCorners'
 	],
-	#category : #Roassal2-Interactions-Resize
+	#category : #'Roassal2-Interactions-Resize'
 }
 
 { #category : #accessing }

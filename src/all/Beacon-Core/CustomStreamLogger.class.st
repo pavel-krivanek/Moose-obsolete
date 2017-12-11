@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'stream'
 	],
-	#category : #Beacon-Core-Loggers
+	#category : #'Beacon-Core-Loggers'
 }
 
 { #category : #'instance creation' }

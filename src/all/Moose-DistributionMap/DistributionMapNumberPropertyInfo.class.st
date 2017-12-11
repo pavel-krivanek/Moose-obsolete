@@ -1,7 +1,7 @@
 Class {
 	#name : #DistributionMapNumberPropertyInfo,
 	#superclass : #DistributionMapPropertyInfo,
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #accessing }

@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'count'
 	],
-	#category : #Grease-Core
+	#category : #'Grease-Core'
 }
 
 { #category : #accessing }

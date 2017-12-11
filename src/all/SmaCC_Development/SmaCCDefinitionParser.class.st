@@ -13,10 +13,10 @@ Class {
 		'grammar',
 		'defaultClasses'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCDefinitionParser class >> cacheId [
 	^'2017-12-09T09:50:23.979001-06:00'
 ]
@@ -454,7 +454,7 @@ Term
 	;"
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCDefinitionParser class >> scannerClass [
 	^SmaCCDefinitionScanner
 ]
@@ -464,12 +464,12 @@ SmaCCDefinitionParser class >> startingStateForFile [
 	^ 1
 ]
 
-{ #category : #private-strings }
+{ #category : #'private-strings' }
 SmaCCDefinitionParser >> allCharacters [
 	^ SmaCCGrammar allCharacters
 ]
 
-{ #category : #private-strings }
+{ #category : #'private-strings' }
 SmaCCDefinitionParser >> carriageReturnString [
 	^ SmaCCCharacterSet with: (Character value: 13)
 ]
@@ -518,7 +518,7 @@ SmaCCDefinitionParser >> createDefaultClassesForSymbol: aString [
 	defaultClasses := OrderedCollection new
 ]
 
-{ #category : #private-strings }
+{ #category : #'private-strings' }
 SmaCCDefinitionParser >> formFeedString [
 	^ SmaCCCharacterSet with: (Character value: 12)
 ]
@@ -534,7 +534,7 @@ SmaCCDefinitionParser >> generateImplicitToken: aSmaCCToken [
 	^ node
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDefinitionParser >> grammar: aSmaCCGrammar [
 	grammar := aSmaCCGrammar.
 	scannerDefinition := SmaCCScannerDefinition new.
@@ -563,7 +563,7 @@ SmaCCDefinitionParser >> hexValueFrom: aStream [
 	^ value
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDefinitionParser >> initialize [
 	super initialize.
 	self grammar: SmaCCGrammar new.
@@ -588,7 +588,7 @@ SmaCCDefinitionParser >> isWhitespace: each [
 	^ self whitespaceValues includes: each asInteger
 ]
 
-{ #category : #private-strings }
+{ #category : #'private-strings' }
 SmaCCDefinitionParser >> newlineString [
 	^ SmaCCCharacterSet with: (Character value: 10)
 ]
@@ -1128,7 +1128,7 @@ SmaCCDefinitionParser >> symbolNames [
 	^ #('"("' '"|"' '"*"' '"error"' '"+"' '")"' '"?"' '<scopes>' '<excludes>' '<root>' '<hierarchy>' '<attributes>' '<prefix>' '<suffix>' '<left>' '<right>' '<nonassoc>' '<id>' '<start>' '<glr>' '<ignorecase>' '<ignorevariables>' '<annotate_tokens>' '<whitespace>' '<tokenname>' '<symbolname>' '<keyword>' '<comment>' '<code>' '<variablename>' '<production>' '<directive>' '<semicolon>' '<backslashcharacter>' '<characterblock>' '<repeat>' '<character>' '<anycharacter>' '<classLeft>' '<classRight>' 'RightLine' 'NonAssociativeLine' 'IdMethodLine' 'DirectiveLine' 'GLR' 'IgnoreCase' 'IgnoredVariables' 'AnnotateTokens' 'ProductionRule' 'LeftLine' 'ExcludeScopesLine' 'Rule' 'ExcludeScopes' 'B e g i n' 'File' 'ClassList' 'Rules' 'IvarList' 'SuffixLine' 'PrefixLine' 'AttributesLine' 'TokenList' 'SuperclassLine' 'RootClassLine' 'Term' 'Scopes' 'IdTokens' 'ScopesLine' 'StartingTokens' 'EndDirective' 'StartDirective' 'IgnoredVariableList' 'Directive' 'Symbol' 'StartRegex' 'Regex' 'EndRegex' 'RegexTerm' 'StartProduction' 'ParserRules' 'EndProduction' 'ParserRule' 'Terms' 'E O F' 'error' 'RegexRule' 'StartLine')
 ]
 
-{ #category : #private-strings }
+{ #category : #'private-strings' }
 SmaCCDefinitionParser >> tabString [
 	^ SmaCCCharacterSet withAll: '	'
 ]
@@ -1284,7 +1284,7 @@ SmaCCDefinitionParser >> verifyCodeToken: codeToken for: aSmaCCRHS [
 	^ aSmaCCRHS
 ]
 
-{ #category : #private-strings }
+{ #category : #'private-strings' }
 SmaCCDefinitionParser >> verticalTabString [
 	^ SmaCCCharacterSet with: (Character value: 11)
 ]

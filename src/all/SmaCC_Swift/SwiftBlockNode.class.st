@@ -6,7 +6,7 @@ Class {
 		'statements',
 		'rightBraceToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -19,7 +19,7 @@ SwiftBlockNode >> compositeNodeVariables [
 	^ #(#statements)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftBlockNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

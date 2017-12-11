@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCReplaceExpressionVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #generated }

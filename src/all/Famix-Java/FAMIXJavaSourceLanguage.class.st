@@ -4,7 +4,7 @@ FAMIXJavaSourceLanguage represents the Java programming language in which an ent
 Class {
 	#name : #FAMIXJavaSourceLanguage,
 	#superclass : #FAMIXSourceLanguage,
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
 { #category : #meta }

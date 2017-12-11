@@ -12,7 +12,7 @@ Class {
 		'rightParen',
 		'statement'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -64,7 +64,7 @@ JavaForEachStatementNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaForEachStatementNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

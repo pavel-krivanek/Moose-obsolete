@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'columns'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #accessing }
@@ -49,7 +49,7 @@ MalColumnMatrix >> columns [
 	^columns
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalColumnMatrix >> initializeRows: m columns: n [
 	
 	columns := Array new: n.

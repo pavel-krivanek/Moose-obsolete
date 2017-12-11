@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'webClientResponse'
 	],
-	#category : #XML-Parser-HTTP
+	#category : #'XML-Parser-HTTP'
 }
 
 { #category : #accessing }

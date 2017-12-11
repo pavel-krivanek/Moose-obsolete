@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'serverType'
 	],
-	#category : #Moose-TestResources-LAN
+	#category : #'Moose-TestResources-LAN'
 }
 
-{ #category : #sending-receiving }
+{ #category : #'sending-receiving' }
 LANOutputServer >> accept: thePacket [ 
 	"I first see if the packet is for me. If it is, I output it. Otherwise, I pass it on" 
 	 

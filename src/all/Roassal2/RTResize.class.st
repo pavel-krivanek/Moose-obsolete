@@ -17,7 +17,7 @@ Adjust the size of the Elements.
 Class {
 	#name : #RTResize,
 	#superclass : #RTAbstractElementHandling,
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #'accessing - computed' }

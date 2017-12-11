@@ -9,7 +9,7 @@ Class {
 		'notations',
 		'notationAttributeValidators'
 	],
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #'instance creation' }

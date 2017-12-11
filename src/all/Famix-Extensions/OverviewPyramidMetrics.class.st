@@ -12,7 +12,7 @@ Class {
 		'andc',
 		'ahh'
 	],
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #'instance creation' }
@@ -96,7 +96,7 @@ OverviewPyramidMetrics >> locNom [
 			self truncatedFloatForFraction: (self loc/self nom) ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OverviewPyramidMetrics >> model: aMooseModel [
 	| allModelMethods allModelClasses |
 	MooseCustomTask

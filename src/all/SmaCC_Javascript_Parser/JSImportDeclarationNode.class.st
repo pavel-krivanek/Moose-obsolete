@@ -9,7 +9,7 @@ Class {
 		'from',
 		'semicolon'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -72,7 +72,7 @@ JSImportDeclarationNode >> imports: anOrderedCollection [
 	imports := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSImportDeclarationNode >> initialize [
 	super initialize.
 	imports := OrderedCollection new: 2.

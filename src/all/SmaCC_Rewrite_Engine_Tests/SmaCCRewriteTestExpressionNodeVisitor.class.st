@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCRewriteTestExpressionNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : #SmaCC_Rewrite_Engine_Tests
+	#category : #'SmaCC_Rewrite_Engine_Tests'
 }
 
 { #category : #generated }

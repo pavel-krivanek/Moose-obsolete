@@ -9,7 +9,7 @@ Class {
 		'commas',
 		'rightParen'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -52,7 +52,7 @@ JavaAnnotationNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaAnnotationNode >> initialize [
 	super initialize.
 	values := OrderedCollection new: 2.

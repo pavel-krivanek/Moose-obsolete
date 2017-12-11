@@ -20,7 +20,7 @@ Class {
 		'variableDefinitions',
 		'grammar'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -60,7 +60,7 @@ SmaCCGrammarItem >> grammar [
 	^ grammar
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammarItem >> grammar: aSmaCCGrammar [
 	grammar := aSmaCCGrammar
 ]

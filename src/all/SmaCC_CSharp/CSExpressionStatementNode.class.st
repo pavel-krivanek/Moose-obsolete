@@ -5,7 +5,7 @@ Class {
 		'expression',
 		'semicolonToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'annotations'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #public }

@@ -9,7 +9,7 @@ Class {
 		'trachelCanvas',
 		'blockToExecute'
 	],
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #actions }
@@ -49,13 +49,13 @@ RTNopAnimation >> repeat [
 	animatedValue timer repeat.
 ]
 
-{ #category : #waiting-specific }
+{ #category : #'waiting-specific' }
 RTNopAnimation >> start [
 	animatedValue start.
 	trachelCanvas signalUpdate
 ]
 
-{ #category : #waiting-specific }
+{ #category : #'waiting-specific' }
 RTNopAnimation >> waitFor: seconds [
 	animatedValue := TRVIAnimatedValue new
 							evaluator: [ :t | blockToExecute value ];
@@ -64,7 +64,7 @@ RTNopAnimation >> waitFor: seconds [
 	
 ]
 
-{ #category : #waiting-specific }
+{ #category : #'waiting-specific' }
 RTNopAnimation >> waitFor: seconds after: aBlock [
 	animatedValue := TRVIAnimatedValue new
 							evaluator: [ :t | ];

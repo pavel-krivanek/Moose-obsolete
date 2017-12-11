@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLNestedStreamReaderTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-Streams
+	#category : #'XML-Tests-Parser-Streams'
 }
 
 { #category : #asserting }

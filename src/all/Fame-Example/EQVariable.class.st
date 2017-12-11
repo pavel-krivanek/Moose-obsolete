@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'identifier'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
 { #category : #'As yet unclassified' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #FMPragmaProcessorTestDummy,
 	#superclass : #Object,
-	#category : #Fame-Tests-Core
+	#category : #'Fame-Tests-Core'
 }
 
 { #category : #'as yet unclassified' }

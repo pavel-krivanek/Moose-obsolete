@@ -1,7 +1,7 @@
 Class {
 	#name : #TRVIManagedTimeExample,
 	#superclass : #TRObject,
-	#category : #Trachel-Viva
+	#category : #'Trachel-Viva'
 }
 
 { #category : #examples }

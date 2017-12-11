@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : #Arki-Reporter-Browser
+	#category : #'Arki-Reporter-Browser'
 }
 
 { #category : #opening }

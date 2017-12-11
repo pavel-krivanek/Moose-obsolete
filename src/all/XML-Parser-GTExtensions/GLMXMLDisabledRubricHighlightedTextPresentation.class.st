@@ -4,7 +4,7 @@ A disabled version of the superclass.
 Class {
 	#name : #GLMXMLDisabledRubricHighlightedTextPresentation,
 	#superclass : #GLMRubricHighlightedTextPresentation,
-	#category : #XML-Parser-GTExtensions-Highlighting-Parser
+	#category : #'XML-Parser-GTExtensions-Highlighting-Parser'
 }
 
 { #category : #rendering }

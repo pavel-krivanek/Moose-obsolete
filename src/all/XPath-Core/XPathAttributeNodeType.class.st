@@ -4,7 +4,7 @@ This is a class for the attribute node type.
 Class {
 	#name : #XPathAttributeNodeType,
 	#superclass : #XPathNodeType,
-	#category : #XPath-Core-Types
+	#category : #'XPath-Core-Types'
 }
 
 { #category : #testing }

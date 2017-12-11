@@ -34,7 +34,7 @@ Class {
 	#classInstVars : [
 		'nullCamera'
 	],
-	#category : #Trachel-Core
+	#category : #'Trachel-Core'
 }
 
 { #category : #public }

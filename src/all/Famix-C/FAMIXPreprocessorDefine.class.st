@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'macro'
 	],
-	#category : #Famix-C
+	#category : #'Famix-C'
 }
 
 { #category : #'as yet unclassified' }

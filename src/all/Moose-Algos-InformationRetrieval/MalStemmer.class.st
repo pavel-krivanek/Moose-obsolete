@@ -15,7 +15,7 @@ Class {
 	#classVars : [
 		'English'
 	],
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
 { #category : #stemming }
@@ -30,7 +30,7 @@ MalStemmer class >> stem: aString [
 	^self English stem: aString
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalStemmer >> cache [
 	"Answer the cache of stemmed words."
 	
@@ -39,7 +39,7 @@ MalStemmer >> cache [
 		ifFalse: [cache]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalStemmer >> performStemming: aString [
 	"Perform the stemming of a string."
 	

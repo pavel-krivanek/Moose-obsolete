@@ -6,7 +6,7 @@ This factory just uses the default handler class SAX2ElementHandler for all elem
 Class {
 	#name : #SAX2ElementHandlerFactory,
 	#superclass : #Object,
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #accessing }

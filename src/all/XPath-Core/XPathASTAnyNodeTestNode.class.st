@@ -4,7 +4,7 @@ This is an AST node class for the 'node()' type test for any node.
 Class {
 	#name : #XPathASTAnyNodeTestNode,
 	#superclass : #XPathASTNodeTestNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

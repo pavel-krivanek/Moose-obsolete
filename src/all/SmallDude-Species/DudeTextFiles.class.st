@@ -4,7 +4,7 @@ this class tells the Detector that we are analyzing simple text files so only mi
 Class {
 	#name : #DudeTextFiles,
 	#superclass : #DudeEntitySpesifics,
-	#category : #SmallDude-Species
+	#category : #'SmallDude-Species'
 }
 
 { #category : #parsing }

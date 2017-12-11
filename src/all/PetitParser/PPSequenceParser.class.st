@@ -4,7 +4,7 @@ A parser that parses a sequence of parsers.
 Class {
 	#name : #PPSequenceParser,
 	#superclass : #PPListParser,
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #operators }
@@ -12,7 +12,7 @@ PPSequenceParser >> , aRule [
 	^ self copyWith: aRule
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPSequenceParser >> map: aBlock [
 	^ aBlock numArgs = self children size
 		ifTrue: [ self ==> [ :nodes | aBlock valueWithArguments: nodes ] ]
@@ -36,7 +36,7 @@ PPSequenceParser >> parseOn: aPPContext [
 	^ elements
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPSequenceParser >> permutation: anArrayOfIntegers [
 	"Answer a permutation of the receivers sequence."
 	

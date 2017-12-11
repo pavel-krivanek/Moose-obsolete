@@ -33,10 +33,10 @@ Class {
 	#classInstVars : [
 		'entityDependencies'
 	],
-	#category : #Moose-GenericImporter
+	#category : #'Moose-GenericImporter'
 }
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> allDependentsOf: aKey [
 	
 	^self
@@ -44,7 +44,7 @@ MooseImportingContext class >> allDependentsOf: aKey [
 		alreadyIn: Set new
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> allDependentsOf: aKey alreadyIn: aSet [
 	
 	(self entityDependencies at: aKey)
@@ -221,111 +221,111 @@ MooseImportingContext class >> entityDependencies: aDictionary [
 	entityDependencies := aDictionary
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importAccessAndDependents [
 	
 	^self allDependentsOf: self importingAccess
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importArgumentAndDependents [
 	
 	^self allDependentsOf: self importingArgument
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importAttributeAndDependents [
 	
 	^self allDependentsOf: self importingAttribute
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importClassAndDependents [
 	
 	^self allDependentsOf: self importingClass
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importClassExtensionAndDependents [
 	
 	^self allDependentsOf: self importingClassExtension 
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importComment [
 	
 	^ self allDependentsOf:  self importingComment
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importFileAndDependents [
 	
 	^self allDependentsOf: self importingFile
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importFolderAndDependents [
 	
 	^self allDependentsOf: self importingFolder
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importFormalParameterAndDependents [
 	
 	^self allDependentsOf: self importingFormalParameter
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importGlobalVariableAndDependents [
 	
 	^self allDependentsOf: self importingGlobalVariable
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importImplicitVariableAndDependents [
 	
 	^self allDependentsOf: self importingImplicitVariable
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importInheritanceAndDependents [
 	
 	^self allDependentsOf: self importingInheritance
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importInvocationAndDependents [
 	
 	^self allDependentsOf: self importingInvocation
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importLiteralAndDependents [
 	
 	^self allDependentsOf: self importingLiteral
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importLocalVariableAndDependents [
 	
 	^self allDependentsOf: self importingLocalVariable
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importMethodAndDependents [
 	"self importMethodAndDependents"
 	
 	^self allDependentsOf: self importingMethod
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importNamespace [
 	"self importNamespace"
 	
 	^self allDependentsOf: self importingNamespace
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext class >> importPackage [
 	
 	^ Set with: self importingPackage
@@ -490,21 +490,21 @@ MooseImportingContext >> entityKindsToBeExtracted: anObject [
 	entityKindsToBeExtracted := anObject
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importAccess [
 	"in fact you check the dependents of the dependents"
 	
 	self entityKindsToBeExtracted addAll: self class importAccessAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importArgument [
 	
 	self entityKindsToBeExtracted
 		addAll: self class importArgumentAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importAttribute [
 	"in fact you check the dependents of the dependents"
 	
@@ -512,20 +512,20 @@ MooseImportingContext >> importAttribute [
 		addAll: self class importAttributeAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importClass [
 	"in fact you check the dependents of the dependents"
 	
 	self entityKindsToBeExtracted addAll: self class importClassAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importClassExtension [
 	
 	self entityKindsToBeExtracted addAll: self class importClassExtensionAndDependents 
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importClassMethodInheritance [
 	
 	self entityKindsToBeExtracted addAll: self class importClassAndDependents.
@@ -534,7 +534,7 @@ MooseImportingContext >> importClassMethodInheritance [
 		addAll: self class importInheritanceAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importClassMethodInheritanceAttribute [
 	
 	self entityKindsToBeExtracted addAll: self class importClassAndDependents.
@@ -545,7 +545,7 @@ MooseImportingContext >> importClassMethodInheritanceAttribute [
 		addAll: self class importAttributeAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importClassMethodInheritanceAttributeAccess [
 	
 	self entityKindsToBeExtracted addAll: self class importClassAndDependents.
@@ -557,7 +557,7 @@ MooseImportingContext >> importClassMethodInheritanceAttributeAccess [
 	self entityKindsToBeExtracted addAll: self class importAccessAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importClassMethodInheritanceAttributeAccessInvocation [
 	
 	self entityKindsToBeExtracted addAll: self class importClassAndDependents.
@@ -571,28 +571,28 @@ MooseImportingContext >> importClassMethodInheritanceAttributeAccessInvocation [
 		addAll: self class importInvocationAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importComment [
 	"in fact you check the dependents of the dependents"
 	
 	self entityKindsToBeExtracted addAll: self class importComment
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importFile [
 	"in fact you check the dependents of the dependents"
 	
 	self entityKindsToBeExtracted addAll: self class importFileAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importFolder [
 	"in fact you check the dependents of the dependents"
 	
 	self entityKindsToBeExtracted addAll: self class importFolderAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importFormalParameter [
 	"in fact you check the dependents of the dependents"
 	
@@ -600,7 +600,7 @@ MooseImportingContext >> importFormalParameter [
 		addAll: self class importFormalParameterAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importGlobalVariable [
 	"in fact you check the dependents of the dependents"
 	
@@ -608,7 +608,7 @@ MooseImportingContext >> importGlobalVariable [
 		addAll: self class importGlobalVariableAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importImplicitVariable [
 	"in fact you check the dependents of the dependents"
 	
@@ -616,7 +616,7 @@ MooseImportingContext >> importImplicitVariable [
 		addAll: self class importImplicitVariableAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importInheritance [
 	"in fact you check the dependents of the dependents"
 	
@@ -624,7 +624,7 @@ MooseImportingContext >> importInheritance [
 		addAll: self class importInheritanceAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importInvocation [
 	"in fact you check the dependents of the dependents"
 	
@@ -632,13 +632,13 @@ MooseImportingContext >> importInvocation [
 		addAll: self class importInvocationAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importLiteral [
 	
 	self entityKindsToBeExtracted addAll: self class importLiteralAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importLocalVariable [
 	"in fact you check the dependents of the dependents"
 	
@@ -646,13 +646,13 @@ MooseImportingContext >> importLocalVariable [
 		addAll: self class importLocalVariableAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importMaximum [
 	
 	self entityKindsToBeExtracted: self maximum
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importMaximumExceptLiteral [
 	" self new importMaximumExceptLiteral "
 	
@@ -662,21 +662,21 @@ MooseImportingContext >> importMaximumExceptLiteral [
 	self entityKindsToBeExtracted: set
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importMethod [
 	"in fact you check the dependents of the dependents"
 	
 	self entityKindsToBeExtracted addAll: self class importMethodAndDependents
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importNamespace [
 	"just import a package and nothing else"
 	
 	self entityKindsToBeExtracted addAll: self class importNamespace
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> importPackage [
 	"just import a package and nothing else"
 	
@@ -785,7 +785,7 @@ MooseImportingContext >> importingPackage [
 	^self class importingPackage
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseImportingContext >> initialize [
 
 	self entityKindsToBeExtracted: Set new.
@@ -795,7 +795,7 @@ MooseImportingContext >> initialize [
 	importSubclasses := true.
 ]
 
-{ #category : #importing-filters }
+{ #category : #'importing-filters' }
 MooseImportingContext >> maximum [
 	
 	| all |

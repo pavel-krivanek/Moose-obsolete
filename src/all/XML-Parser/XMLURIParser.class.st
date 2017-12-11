@@ -16,7 +16,7 @@ Class {
 		'SchemeDelimiters',
 		'UserInfoDelimiters'
 	],
-	#category : #XML-Parser-URI
+	#category : #'XML-Parser-URI'
 }
 
 { #category : #'class initialization' }

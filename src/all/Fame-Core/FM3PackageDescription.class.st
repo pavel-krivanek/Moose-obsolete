@@ -8,10 +8,10 @@ Class {
 		'classes',
 		'extensions'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FM3PackageDescription class >> annotation [
 	<MSEClass: #'Package' super: #FM3Element>
 	<package: #FM3>
@@ -24,13 +24,13 @@ FM3PackageDescription class >> gtExampleBasic [
 	^ self new
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3PackageDescription >> at: aString [
 	aString isSymbol ifTrue: [ self error ].
 	^ self classNamed: aString
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3PackageDescription >> classNamed: aString [
 	^ classes byName: aString ifAbsent: nil
 ]

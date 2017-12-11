@@ -8,7 +8,7 @@ Class {
 		'bits',
 		'size'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'logical operations' }
@@ -46,7 +46,7 @@ MalBooleanVector >> getBits [
 	^bits
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalBooleanVector >> initializeSize: aSize [
 	
 	bits := 0.

@@ -17,7 +17,7 @@ Class {
 		'typeArgLeft',
 		'typeArgRight'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -84,7 +84,7 @@ JavaNewNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen #lt #gt)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaNewNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

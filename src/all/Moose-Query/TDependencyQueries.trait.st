@@ -56,10 +56,10 @@ Examples
 "
 Trait {
 	#name : #TDependencyQueries,
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> createFromTo: anInOutSymbol [
 	self
 		deprecated:
@@ -70,17 +70,17 @@ TDependencyQueries >> createFromTo: anInOutSymbol [
 				ifTrue: [ #to ] ]
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> createIncomingQueryResultWith: aCollection [
 	^ MooseIncomingQueryResult on: self withAll: aCollection
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> createOutgoingQueryResultWith: aCollection [
 	^ MooseOutgoingQueryResult on: self withAll: aCollection
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 TDependencyQueries >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -89,7 +89,7 @@ TDependencyQueries >> incomingTypeDeclarations [
 	^ self explicitRequirement
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 TDependencyQueries >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -98,7 +98,7 @@ TDependencyQueries >> outgoingTypeDeclarations [
 	^ self explicitRequirement
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> query: anInOutSymbol with: aFAMIXClassAssociation [
 	"Query all the incoming or outgoing associations of the FAMIXClassAssociation class for the receiver and its children.
 
@@ -112,7 +112,7 @@ TDependencyQueries >> query: anInOutSymbol with: aFAMIXClassAssociation [
 	^ (MooseQueryCalculator direction: anInOutSymbol) query: aFAMIXClassAssociation for: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryAll: anInOutSymbol [
 	"Query all the incoming or outgoing associations of the receiver or its children.
 
@@ -126,7 +126,7 @@ TDependencyQueries >> queryAll: anInOutSymbol [
 	^ (MooseQueryCalculator direction: anInOutSymbol) queryAllFor: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryAllIncoming [
 	"Query all the incoming associations of the receiver and its children.
 
@@ -138,7 +138,7 @@ TDependencyQueries >> queryAllIncoming [
 	^ (MooseQueryCalculator strategy: MooseQueryIncomingDirectionStrategy) queryAllFor: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryAllLocal: anInOutSymbol [
 	"Query all the incoming or outgoing associations of the receiver.
 	This method differ from #queryAll: in the fact that it will not check the associations of the reicever's children.
@@ -153,7 +153,7 @@ TDependencyQueries >> queryAllLocal: anInOutSymbol [
 	^ (MooseQueryCalculator direction: anInOutSymbol) queryAllLocalFor: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryAllLocalIncoming [
 	"Query all the incoming associations of the receiver.
 	This method differ from #queryAllIncoming in the fact that it will not check the associations of the reicever's children.
@@ -166,7 +166,7 @@ TDependencyQueries >> queryAllLocalIncoming [
 	^ (MooseQueryCalculator strategy: MooseQueryIncomingDirectionStrategy) queryAllLocalFor: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryAllLocalOutgoing [
 	"Query all the outgoing associations of the receiver.
 	This method differ from #queryAllOutgoing in the fact that it will not check the associations of the reicever's children.
@@ -179,7 +179,7 @@ TDependencyQueries >> queryAllLocalOutgoing [
 	^ (MooseQueryCalculator strategy: MooseQueryOutgoingDirectionStrategy) queryAllLocalFor: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryAllOutgoing [
 	"Query all the outgoing associations of the receiver and its children.
 
@@ -191,7 +191,7 @@ TDependencyQueries >> queryAllOutgoing [
 	^ (MooseQueryCalculator strategy: MooseQueryOutgoingDirectionStrategy) queryAllFor: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryIncoming: aFAMIXClassAssociation [
 	"Query all the incoming associations of the FAMIXClassAssociation class for the receiver and its children.
 
@@ -203,7 +203,7 @@ TDependencyQueries >> queryIncoming: aFAMIXClassAssociation [
 	^ (MooseQueryCalculator strategy: MooseQueryIncomingDirectionStrategy) query: aFAMIXClassAssociation for: self
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 TDependencyQueries >> queryIncomingDependencies [
 	"Associations + typeDeclaractions"
 
@@ -212,7 +212,7 @@ TDependencyQueries >> queryIncomingDependencies [
 		yourself
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 TDependencyQueries >> queryIncomingTypeDeclarations [
 	"This method should return the incoming type declarations that are not represented in FAMIX and that cannot be query by a generic algorithme.
 	
@@ -221,7 +221,7 @@ TDependencyQueries >> queryIncomingTypeDeclarations [
 	^ self createIncomingQueryResultWith: (self queryIncomingTypeDeclarationsIn: OrderedCollection new) asSet
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 TDependencyQueries >> queryIncomingTypeDeclarationsIn: aCollection [
 	"This method could be more readable but it needs to be really performant"
 
@@ -235,7 +235,7 @@ TDependencyQueries >> queryIncomingTypeDeclarationsIn: aCollection [
 	^ aCollection
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryLocal: anInOutSymbol with: aFAMIXClassAssociation [
 	"Query all the incoming or outgoing associations of the FAMIXClassAssociation class for the receiver.
 	This method differ from #query:with: in the fact that it will not check the associations of the reicever's children.
@@ -250,7 +250,7 @@ TDependencyQueries >> queryLocal: anInOutSymbol with: aFAMIXClassAssociation [
 	^ (MooseQueryCalculator direction: anInOutSymbol) queryLocal: aFAMIXClassAssociation for: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryLocalIncoming: aFAMIXClassAssociation [
 	"Query all the incoming associations of the FAMIXClassAssociation class for the receiver.
 	This method differ from #queryIncoming: in the fact that it will not check the associations of the reicever's children.
@@ -263,7 +263,7 @@ TDependencyQueries >> queryLocalIncoming: aFAMIXClassAssociation [
 	^ (MooseQueryCalculator strategy: MooseQueryIncomingDirectionStrategy) queryLocal: aFAMIXClassAssociation for: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryLocalOutgoing: aFAMIXClassAssociation [
 	"Query all the outgoing associations of the FAMIXClassAssociation class for the receiver.
 	This method differ from #queryOutgoing: in the fact that it will not check the associations of the reicever's children.
@@ -276,7 +276,7 @@ TDependencyQueries >> queryLocalOutgoing: aFAMIXClassAssociation [
 	^ (MooseQueryCalculator strategy: MooseQueryOutgoingDirectionStrategy) queryLocal: aFAMIXClassAssociation for: self
 ]
 
-{ #category : #moosequery-queries-generic }
+{ #category : #'moosequery-queries-generic' }
 TDependencyQueries >> queryOutgoing: aFAMIXClassAssociation [
 	"Query all the outgoing associations of the FAMIXClassAssociation class for the receiver and its children.
 	
@@ -288,7 +288,7 @@ TDependencyQueries >> queryOutgoing: aFAMIXClassAssociation [
 	^ (MooseQueryCalculator strategy: MooseQueryOutgoingDirectionStrategy) query: aFAMIXClassAssociation for: self
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 TDependencyQueries >> queryOutgoingDependencies [
 	"Associations + typeDeclarations"
 
@@ -297,7 +297,7 @@ TDependencyQueries >> queryOutgoingDependencies [
 		yourself
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 TDependencyQueries >> queryOutgoingTypeDeclarations [
 	"This method should return the outgoing type declarations that are not represented in FAMIX and that cannot be query by a generic algorithme.
 	
@@ -306,7 +306,7 @@ TDependencyQueries >> queryOutgoingTypeDeclarations [
 	^ self createOutgoingQueryResultWith: (self queryOutgoingTypeDeclarationsIn: OrderedCollection new) asSet
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 TDependencyQueries >> queryOutgoingTypeDeclarationsIn: aCollection [
 	"This method could be more readable but it needs to be really performant"
 

@@ -12,7 +12,7 @@ Class {
 		'codeGenerator',
 		'reduceTable'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -31,7 +31,7 @@ SmaCCGrammarCompiler >> actionForState: anInteger on: aSmaCCSymbol [
 	^ self idForAction: action state: anInteger on: aSmaCCSymbol
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammarCompiler >> buildDefinition: definitionString [
 	| parser |
 	scannerCompiler grammar: self grammar.
@@ -79,7 +79,7 @@ SmaCCGrammarCompiler >> codeGenerator [
 		ifNil: [ self codeGenerator: SmaCCSmalltalkCodeGenerator new ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammarCompiler >> codeGenerator: aSmaCCCodeGenerator [
 	codeGenerator := aSmaCCCodeGenerator.
 	self grammar codeGenerator: aSmaCCCodeGenerator.
@@ -229,7 +229,7 @@ SmaCCGrammarCompiler >> indexOfState: newState [
 	^ newStateIndex
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammarCompiler >> initialize [
 	super initialize.
 	scannerCompiler := SmaCCScannerCompiler new.

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'containingClassHistory'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
 { #category : #'instance creation' }

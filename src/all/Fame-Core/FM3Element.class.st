@@ -10,10 +10,10 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FM3Element class >> annotation [
 	<abstract>
 	<MSEClass: #'Element' super: #Object>

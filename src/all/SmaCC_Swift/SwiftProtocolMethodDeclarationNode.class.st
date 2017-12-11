@@ -43,7 +43,7 @@ Class {
 		'bangTokens',
 		'typeTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -186,7 +186,7 @@ SwiftProtocolMethodDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftProtocolMethodDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

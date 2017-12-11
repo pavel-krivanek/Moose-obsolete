@@ -1,10 +1,10 @@
 Class {
 	#name : #DelphiFormParser,
 	#superclass : #SmaCCGLRParser,
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 DelphiFormParser class >> cacheId [
 	^'2017-11-29T08:05:50.221075-06:00'
 ]
@@ -151,7 +151,7 @@ DelphiFormParser class >> fileExtensionType [
 	^ 'Delphi form files'
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 DelphiFormParser class >> scannerClass [
 	^DelphiFormScanner
 ]

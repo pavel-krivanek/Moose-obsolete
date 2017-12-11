@@ -4,7 +4,7 @@ A stream converter for big endian UTF-32 streams, and the default converter clas
 Class {
 	#name : #XMLUTF32BigEndianStreamConverter,
 	#superclass : #XMLUTF32StreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #basic }

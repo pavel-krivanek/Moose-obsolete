@@ -8,7 +8,7 @@ Class {
 		'statements',
 		'semicolons'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -62,7 +62,7 @@ DelphiExceptNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiExceptNode >> initialize [
 	super initialize.
 	exceptionCases := OrderedCollection new: 2.

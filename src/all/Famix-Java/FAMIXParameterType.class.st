@@ -11,10 +11,10 @@ Where AClass is a ParameterizableClass. A, B and C are ParameterType of AClass.
 Class {
 	#name : #FAMIXParameterType,
 	#superclass : #FAMIXType,
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXParameterType class >> annotation [
 	<MSEClass: #ParameterType super: #FAMIXType>
 	<package: #FAMIX>

@@ -1,7 +1,7 @@
 Class {
 	#name : #REPHtml,
 	#superclass : #REPReporter,
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #private }

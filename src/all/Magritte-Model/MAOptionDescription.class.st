@@ -7,20 +7,20 @@ Class {
 	#instVars : [
 		'options'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAOptionDescription class >> defaultExtensible [
 	^ false
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAOptionDescription class >> defaultOptions [
 	^ OrderedCollection new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAOptionDescription class >> defaultSorted [
 	^ false
 ]
@@ -30,12 +30,12 @@ MAOptionDescription >> acceptMagritte: aVisitor [
 	aVisitor visitOptionDescription: self
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MAOptionDescription >> allOptions [
 	^ self prepareOptions: self options copy
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MAOptionDescription >> allOptionsWith: anObject [
 	^ self prepareOptions: ((self shouldNotInclude: anObject)
 		ifFalse: [ self options copyWith: anObject ]
@@ -62,13 +62,13 @@ MAOptionDescription >> beUnsorted [
 	self sorted: false
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAOptionDescription >> descriptionDefault [
 	<magritteDescription>
 	^ nil
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAOptionDescription >> descriptionExtensible [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -79,7 +79,7 @@ MAOptionDescription >> descriptionExtensible [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAOptionDescription >> descriptionOptions [
 	<magritteDescription>
 	^ MAMemoDescription new
@@ -90,7 +90,7 @@ MAOptionDescription >> descriptionOptions [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAOptionDescription >> descriptionSorted [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -101,12 +101,12 @@ MAOptionDescription >> descriptionSorted [
 		yourself
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAOptionDescription >> extensible [
 	^ self propertyAt: #extensible ifAbsent: [ self class defaultExtensible ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAOptionDescription >> extensible: aBoolean [
 	self propertyAt: #extensible put: aBoolean
 ]
@@ -152,13 +152,13 @@ MAOptionDescription >> optionsAndLabels: aCollection [
 		into: [ :result :assoc | result add: assoc; yourself ])
 ]
 
-{ #category : #accessing-textual }
+{ #category : #'accessing-textual' }
 MAOptionDescription >> optionsTextual [
 	^ (self reference toStringCollection: self options)
 		asMultilineString
 ]
 
-{ #category : #accessing-textual }
+{ #category : #'accessing-textual' }
 MAOptionDescription >> optionsTextual: aString [
 	| lines |
 	lines := (aString ifNil: [ String new ]) lines.
@@ -181,7 +181,7 @@ MAOptionDescription >> prepareOptions: aCollection [
 				yourself ]
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MAOptionDescription >> shouldNotInclude: anObject [
 	^ self isExtensible not or: [ anObject isNil or: [ self options includes: anObject ] ]
 ]
@@ -191,17 +191,17 @@ MAOptionDescription >> sortBlock [
 	^ [ :a :b | (self reference toString: a) caseInsensitiveLessOrEqual: (self reference toString: b) ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAOptionDescription >> sorted [
 	^ self propertyAt: #sorted ifAbsent: [ self class defaultSorted ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAOptionDescription >> sorted: aBoolean [
 	self propertyAt: #sorted put: aBoolean
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAOptionDescription >> undefined: aString [
 	super undefined: aString.
 	self reference isNil

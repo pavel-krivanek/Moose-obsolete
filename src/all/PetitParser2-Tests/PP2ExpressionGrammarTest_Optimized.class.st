@@ -1,5 +1,5 @@
 Class {
-	#name : #PP2ExpressionGrammarTest_Optimized,
+	#name : #'PP2ExpressionGrammarTest_Optimized',
 	#superclass : #PP2CompositeNodeTest,
 	#traits : 'TPP2ExpressionGrammarTest',
 	#classTraits : 'TPP2ExpressionGrammarTest classTrait',

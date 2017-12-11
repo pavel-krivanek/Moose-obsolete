@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'myMorph'
 	],
-	#category : #Roassal2GT-Glamour
+	#category : #'Roassal2GT-Glamour'
 }
 
 { #category : #rendering }

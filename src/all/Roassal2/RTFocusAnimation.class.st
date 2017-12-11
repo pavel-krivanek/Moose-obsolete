@@ -9,7 +9,7 @@ Class {
 		'anime1',
 		'anime2'
 	],
-	#category : #Roassal2-Builder-CircularMap
+	#category : #'Roassal2-Builder-CircularMap'
 }
 
 { #category : #'instance creation' }

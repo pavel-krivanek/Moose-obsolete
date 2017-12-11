@@ -5,7 +5,7 @@ This class create a world menu item to open the examples
 Class {
 	#name : #RTExampleBrowser,
 	#superclass : #RTAbstractWorldMenu,
-	#category : #Roassal2-MorphSpecific-Menu
+	#category : #'Roassal2-MorphSpecific-Menu'
 }
 
 { #category : #menu }

@@ -4,7 +4,7 @@ Class {
 	#category : 'PetitParser2-Tutorial'
 }
 
-{ #category : #pillar-support }
+{ #category : #'pillar-support' }
 PP2Tutorial >> definitionFor: aClass [
 	^ aClass definition
 ]
@@ -19,7 +19,7 @@ PP2Tutorial >> export: class [
 	(name, '.st') asFileReference moveTo: (('build/', name, '.st') asFileReference).
 ]
 
-{ #category : #pillar-support }
+{ #category : #'pillar-support' }
 PP2Tutorial >> printAsCode: aString stream: stream [
 	stream nextPutAll: '[[[';
 		lf;
@@ -57,17 +57,17 @@ PP2Tutorial >> source [
 	^ PP2Sources current htmlSample 
 ]
 
-{ #category : #pillar-support }
+{ #category : #'pillar-support' }
 PP2Tutorial >> sourceFor: selector [
 	^ self sourceFor: selector in: self class
 ]
 
-{ #category : #pillar-support }
+{ #category : #'pillar-support' }
 PP2Tutorial >> sourceFor: selector in: class [
 	^ class name, '>>', (class methodNamed: selector) sourceCode
 ]
 
-{ #category : #pillar-support }
+{ #category : #'pillar-support' }
 PP2Tutorial >> sourceForScript: selector [
 	| lines |
 	lines := Character cr split: (self sourceFor: selector).
@@ -77,7 +77,7 @@ PP2Tutorial >> sourceForScript: selector [
 	^ Character cr join: lines.
 ]
 
-{ #category : #pillar-support }
+{ #category : #'pillar-support' }
 PP2Tutorial >> testResultFor: selector in: class [
 	"
 		self new testResultFor: #testText in: WebGrammarTest
@@ -86,7 +86,7 @@ PP2Tutorial >> testResultFor: selector in: class [
 
 ]
 
-{ #category : #pillar-support }
+{ #category : #'pillar-support' }
 PP2Tutorial >> testResultsFor: selectorArray in: class [
 	"
 		self new testResultsFor: #(#testText #testJavascript) in: WebGrammarTest

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'lastChar'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #private }

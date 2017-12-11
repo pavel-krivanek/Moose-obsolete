@@ -5,7 +5,7 @@ Class {
 		'_leftParens',
 		'_rightParens'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -38,7 +38,7 @@ JavaExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#_leftParens #_rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaExpressionNode >> initialize [
 	super initialize.
 	_leftParens := OrderedCollection new: 2.

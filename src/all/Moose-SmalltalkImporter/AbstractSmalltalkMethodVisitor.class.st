@@ -7,7 +7,7 @@ Class {
 		'famixMethod',
 		'theClass'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #'instance creation' }
@@ -18,7 +18,7 @@ AbstractSmalltalkMethodVisitor class >> on: importer [
 		yourself
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> classifyMethodNode: aMethodNode [ 
 	 
 	self matchGetter: aMethodNode. 
@@ -45,7 +45,7 @@ AbstractSmalltalkMethodVisitor >> createReferenceTo: aNamedEntity [
 	^ ref
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> extractCommentsFromNode: aSequenceNode [
 
 	| comment |
@@ -82,7 +82,7 @@ AbstractSmalltalkMethodVisitor >> initializeForMethod: aMethod inClass: aClass [
 
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchConstant: aMethodNode [ 
 	aMethodNode body isSequence 
 		ifTrue: 
@@ -94,7 +94,7 @@ AbstractSmalltalkMethodVisitor >> matchConstant: aMethodNode [
 								ifTrue: [famixMethod kind: #constant]]]]
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchConstructor: aMethodNode [ 
 	 
 	famixMethod category notNil 
@@ -103,7 +103,7 @@ AbstractSmalltalkMethodVisitor >> matchConstructor: aMethodNode [
 				ifTrue: [famixMethod kind: #constructor]]
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchGetter: aMethodNode [ 
 	 
 	| return attribute | 
@@ -126,7 +126,7 @@ AbstractSmalltalkMethodVisitor >> matchGetter: aMethodNode [
 													[attribute class = FAMIXAttribute ifTrue: [famixMethod kind: #getter]]]]]]]
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchSetter: aMethodNode [ 
 	 
 	| assignment attribute | 

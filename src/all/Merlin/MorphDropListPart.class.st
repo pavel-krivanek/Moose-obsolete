@@ -1,7 +1,7 @@
 Class {
 	#name : #MorphDropListPart,
 	#superclass : #DropListPart,
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #'*merlin-rendering' }

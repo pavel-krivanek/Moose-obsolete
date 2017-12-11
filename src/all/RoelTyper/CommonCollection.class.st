@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'collection'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #'as yet unclassified' }

@@ -10,7 +10,7 @@ Class {
 		'value',
 		'index'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -155,7 +155,7 @@ MalAccumulator >> index [
 	^index
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalAccumulator >> merge: anAccumulator [
 	
 	size := size + anAccumulator size.
@@ -180,7 +180,7 @@ MalAccumulator >> printOn: stream [
 		print: value
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalAccumulator >> resetValue: aValue [
 	
 	size := 0.
@@ -188,13 +188,13 @@ MalAccumulator >> resetValue: aValue [
 	value := aValue
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalAccumulator >> setAccumulateBlock: aBlock [
 	
 	accumulateBlock := aBlock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalAccumulator >> setValue: aValue [
 	
 	size := 0.

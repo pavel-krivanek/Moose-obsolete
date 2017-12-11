@@ -12,7 +12,7 @@ Class {
 		'statements',
 		'rightBrace'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -45,7 +45,7 @@ JSMethodDefinitionNode >> ignoredTokenVariables [
 	^ #(#left #right #leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSMethodDefinitionNode >> initialize [
 	super initialize.
 	parameters := OrderedCollection new: 2.

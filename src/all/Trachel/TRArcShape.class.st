@@ -15,7 +15,7 @@ Class {
 		'topLeft',
 		'bottomRight'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #visitor }

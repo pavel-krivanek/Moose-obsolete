@@ -18,7 +18,7 @@ Class {
 		'currentId',
 		'cachedInterval'
 	],
-	#category : #SmaCC_Source_Editing
+	#category : #'SmaCC_Source_Editing'
 }
 
 { #category : #'instance creation' }
@@ -338,7 +338,7 @@ SmaCCString >> indexFor: anIndex [
 		ifFalse: [ anIndex index ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCString >> initialize [
 	super initialize.
 	firstSentinel := self intervalClass from: 1 to: 0 string: ''.
@@ -536,7 +536,7 @@ SmaCCString >> node: aSmaCCParseNode [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCString >> on: aString [
 	| firstInterval |
 	firstInterval := self intervalClass

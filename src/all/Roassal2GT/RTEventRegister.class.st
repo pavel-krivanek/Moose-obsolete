@@ -1,7 +1,7 @@
 Class {
 	#name : #RTEventRegister,
 	#superclass : #RTObject,
-	#category : #Roassal2GT-EventCollector
+	#category : #'Roassal2GT-EventCollector'
 }
 
 { #category : #'class initialization' }

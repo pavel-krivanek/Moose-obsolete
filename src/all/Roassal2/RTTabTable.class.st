@@ -9,7 +9,7 @@ Class {
 		'values',
 		'firstRow'
 	],
-	#category : #Roassal2-Table
+	#category : #'Roassal2-Table'
 }
 
 { #category : #data }
@@ -328,7 +328,7 @@ RTTabTable >> convertColumnsAsInteger: collectionOfIntegers [
 	^ self convertColumns: collectionOfIntegers to: [ :s | s asNumber asInteger ]
 ]
 
-{ #category : #private-utility }
+{ #category : #'private-utility' }
 RTTabTable >> convertFromNameToIndexIfNecessary: anObject [
 	"anObject could be a number (to indicate a column index) or a string"
 	"The method return the index"
@@ -339,7 +339,7 @@ RTTabTable >> convertFromNameToIndexIfNecessary: anObject [
 			self indexOfName: anObject ]
 ]
 
-{ #category : #private-utility }
+{ #category : #'private-utility' }
 RTTabTable >> detectDelimiterIn: aString [
 	| options first second |
 	aString lines size = 0
@@ -382,7 +382,7 @@ RTTabTable >> gather: columnIndex using: twoArgBlock [
 	values := d values
 ]
 
-{ #category : #gt-inspector-extension }
+{ #category : #'gt-inspector-extension' }
 RTTabTable >> gtInspectorTableIn: composite [
 	<gtInspectorPresentationOrder: 30>
 	| tbl titles |

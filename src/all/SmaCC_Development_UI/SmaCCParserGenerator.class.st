@@ -20,7 +20,7 @@ Class {
 	#classVars : [
 		'ShowPrecedenceConflicts'
 	],
-	#category : #SmaCC_Development_UI
+	#category : #'SmaCC_Development_UI'
 }
 
 { #category : #specs }

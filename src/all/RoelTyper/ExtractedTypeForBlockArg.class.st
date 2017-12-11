@@ -5,7 +5,7 @@ Class {
 		'lives',
 		'compiledMethod'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #'as yet unclassified' }
@@ -38,7 +38,7 @@ ExtractedTypeForBlockArg >> initialize [
 	lives := OrderedCollection with: (ExtractedTypeForTmp new)
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedTypeForBlockArg >> interface [
 	^(lives inject: Set new into: [:ord :et | ord addAll: (et interface); yourself ]) asOrderedCollection
 ]

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'history'
 	],
-	#category : #Moose-Tests-Hismo
+	#category : #'Moose-Tests-Hismo'
 }
 
 { #category : #initialization }

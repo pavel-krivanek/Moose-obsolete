@@ -6,7 +6,7 @@ Class {
 		'classTypes',
 		'commas'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -46,7 +46,7 @@ JavaThrowsNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaThrowsNode >> initialize [
 	super initialize.
 	classTypes := OrderedCollection new: 2.

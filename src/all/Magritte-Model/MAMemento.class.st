@@ -8,7 +8,7 @@ Class {
 		'model',
 		'description'
 	],
-	#category : #Magritte-Model-Memento
+	#category : #'Magritte-Model-Memento'
 }
 
 { #category : #'instance creation' }

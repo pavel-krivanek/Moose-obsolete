@@ -15,7 +15,7 @@ Class {
 		'rootModel',
 		'metaTower'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #meta }
@@ -25,12 +25,12 @@ MooseModel class >> annotation [
 
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> export: aModel to: aStream [
 	self export: aModel withMetamodel: self meta to: aStream
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> export: aModel withMetamodel: aMetamodel to: aStream [ 
 	| tower repository |
 	tower := FMCompleteTower new.
@@ -40,7 +40,7 @@ MooseModel class >> export: aModel withMetamodel: aMetamodel to: aStream [
 	tower model exportOn: aStream
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> exportMetamodel: aMetamodel to: aStream [
 
 	aMetamodel exportOn: aStream
@@ -53,7 +53,7 @@ MooseModel class >> exportMetamodel: aMetamodel to: aStream [
 "
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> exportMetamodelTo: aStream [
 
 	self exportMetamodel: self meta to: aStream
@@ -88,12 +88,12 @@ MooseModel class >> generateClassesFrom: aCollection inPackage: aString [
 	generator previewChanges
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> importFrom: aStream [
 	^ self importFrom: aStream withMetamodel: self meta
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> importFrom: aStream filteredBy: anImportingContext [ 
 	^self 
 		importFrom: aStream
@@ -101,7 +101,7 @@ MooseModel class >> importFrom: aStream filteredBy: anImportingContext [
 		filteredBy: anImportingContext
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> importFrom: aStream withMetamodel: aMetamodel [
 
 	| tower importer |
@@ -115,7 +115,7 @@ MooseModel class >> importFrom: aStream withMetamodel: aMetamodel [
 	^ tower model
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> importFrom: aStream withMetamodel: aMetamodel filteredBy: anImportingContext [
 
 	| tower importer famixElementNames importerFilter |
@@ -139,14 +139,14 @@ MooseModel class >> importFrom: aStream withMetamodel: aMetamodel filteredBy: an
 	^ tower model
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> importFromMSEStream: aStream [
 	^ self new
 		importFromMSEStream: aStream;
 		yourself
 ]
 
-{ #category : #import-export }
+{ #category : #'import-export' }
 MooseModel class >> importMetamodelFrom: aStream [
 
 	| tower generator |
@@ -403,7 +403,7 @@ MooseModel >> includes: anItem [
 	^ self includesID: anItem mooseID
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseModel >> initialize [ 
 	 
 	super initialize. 

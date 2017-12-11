@@ -13,7 +13,7 @@ b object: v.
 Class {
 	#name : #RTExperimentalExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #'public - generation' }

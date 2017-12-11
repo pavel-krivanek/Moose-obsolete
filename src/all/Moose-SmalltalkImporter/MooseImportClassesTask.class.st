@@ -16,7 +16,7 @@ Class {
 		'classes',
 		'classExtensions'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #adding }
@@ -79,7 +79,7 @@ MooseImportClassesTask >> description [
 		expandMacrosWith: self classes size
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseImportClassesTask >> initialize [
 	super initialize. 
 	classes := IdentitySet new. 

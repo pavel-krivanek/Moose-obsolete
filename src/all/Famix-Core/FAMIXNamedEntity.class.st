@@ -28,7 +28,7 @@ Class {
 		'allIncomingAssociationTypes',
 		'allOutgoingAssociationTypes'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #accessing }
@@ -137,7 +137,7 @@ FAMIXNamedEntity >> hasUniqueMooseNameInModel [
 	^true
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXNamedEntity >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -171,7 +171,7 @@ FAMIXNamedEntity >> isStub: aBoolean [
 	isStub := aBoolean
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> methodScope [
 	"Empty default scope"
 	^ nil
@@ -190,7 +190,7 @@ FAMIXNamedEntity >> modifiers: aSet [
 	modifiers := aSet
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 	"checks whether receiver is equal to anEntity at the given scope.
 	  For example, a class could be equal to a method at the packageScope, i.e. they belong to the same package.
@@ -221,13 +221,13 @@ FAMIXNamedEntity >> name: aString [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> namespaceScope [
 	"Empty default scope"
 	^ nil
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXNamedEntity >> outgoingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -238,7 +238,7 @@ FAMIXNamedEntity >> outgoingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> packageScope [
 	"Empty default scope"
 	^ nil
@@ -283,18 +283,18 @@ FAMIXNamedEntity >> resetMooseName [
 	self children do: [ :entity | entity resetMooseName ]
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> selectWithinYourScope: aMooseQueryResult [
 	self subclassResponsibility
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> typeScope [
 	"Empty default scope"
 	^ nil
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> yourScope [
 	"Empty default scope"
 	^ nil

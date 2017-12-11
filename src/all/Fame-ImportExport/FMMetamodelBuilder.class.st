@@ -6,7 +6,7 @@ Class {
 		'stack',
 		'serial'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #DSL }
@@ -46,7 +46,7 @@ FMMetamodelBuilder >> derivedProperty: name withMany: typeName opposite: opposit
 	self property: name type: typeName opposite: oppositeName multivalued: true derived: true
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMMetamodelBuilder >> initialize [
 	
 	indexDict := Dictionary"<String,Integer>" new.

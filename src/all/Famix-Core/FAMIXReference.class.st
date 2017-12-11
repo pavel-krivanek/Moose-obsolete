@@ -18,7 +18,7 @@ Class {
 		'source',
 		'target'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -28,7 +28,7 @@ FAMIXReference class >> annotation [
 	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXReference class >> source: source target: target [
 	^ self new source: source; target: target
 ]

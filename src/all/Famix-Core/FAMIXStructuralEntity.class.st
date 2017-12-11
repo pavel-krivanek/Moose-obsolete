@@ -8,7 +8,7 @@ Class {
 		'declaredType',
 		'incomingAccesses'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -58,23 +58,23 @@ FAMIXStructuralEntity >> incomingAccesses: anAccess [
 	incomingAccesses value: anAccess
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXStructuralEntity >> initialize [
 	super initialize.
 	incomingAccesses := FMNullMultivalueLink on: self opposite: #variable: selector: #incomingAccesses.
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXStructuralEntity >> namespaceScope [
 	^ self subclassResponsibility
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXStructuralEntity >> outgoingTypeDeclarations [
 	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXStructuralEntity >> packageScope [
 
 	| cs |
@@ -83,7 +83,7 @@ FAMIXStructuralEntity >> packageScope [
 	^ (cs isNil) ifTrue: [nil] ifFalse: [cs packageScope]
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXStructuralEntity >> typeScope [
 
 	^ self belongsTo typeScope 

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'namespaceScope'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #private }

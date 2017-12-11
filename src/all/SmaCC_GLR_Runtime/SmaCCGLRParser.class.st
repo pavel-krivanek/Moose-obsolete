@@ -28,7 +28,7 @@ Class {
 	#classInstVars : [
 		'cachedTrees'
 	],
-	#category : #SmaCC_GLR_Runtime
+	#category : #'SmaCC_GLR_Runtime'
 }
 
 { #category : #accessing }
@@ -212,7 +212,7 @@ SmaCCGLRParser >> initialParserState [
 	^ state
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGLRParser >> initialize [
 	super initialize.
 	states := OrderedCollection new.

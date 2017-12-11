@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'configuration'
 	],
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #'instance creation' }
@@ -28,7 +28,7 @@ ProjectVersionWizard >> configuration: aClass [
 	configuration := aClass.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ProjectVersionWizard >> initializeContent: shouldUpdateProject [
 
 	| versions |
@@ -42,7 +42,7 @@ ProjectVersionWizard >> initializeContent: shouldUpdateProject [
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ProjectVersionWizard >> initializeSourcePaneWith: versions [
 	
 	| sourcePane part1 part2 currentVersion |		
@@ -60,7 +60,7 @@ ProjectVersionWizard >> initializeSourcePaneWith: versions [
 	^ sourcePane
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ProjectVersionWizard >> initializeVersionPaneWith: versions [
 
 	| lastPane part3 part4 part5 part6 |

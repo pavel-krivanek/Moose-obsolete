@@ -20,7 +20,7 @@ Class {
 		'processId',
 		'properties'
 	],
-	#category : #Beacon-Core-Signals
+	#category : #'Beacon-Core-Signals'
 }
 
 { #category : #accessing }

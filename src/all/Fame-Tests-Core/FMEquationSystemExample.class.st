@@ -1,7 +1,7 @@
 Class {
 	#name : #FMEquationSystemExample,
 	#superclass : #TestCase,
-	#category : #Fame-Tests-Core
+	#category : #'Fame-Tests-Core'
 }
 
 { #category : #'As yet unclassified' }

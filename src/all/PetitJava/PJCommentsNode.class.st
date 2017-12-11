@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'comment'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #'as yet unclassified' }

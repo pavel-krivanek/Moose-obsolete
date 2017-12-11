@@ -7,7 +7,7 @@ Class {
 		'nextButtonActions',
 		'terminateButtonActions'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #updating }
@@ -59,7 +59,7 @@ MerlinMorphicPaneRenderer >> forwardSign [
 	^ 'Next >>'
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MerlinMorphicPaneRenderer >> initialize [
 
 	super initialize.

@@ -11,7 +11,7 @@ Class {
 		'parentType',
 		'hasClassScope'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -66,7 +66,7 @@ FAMIXMethod >> hasClassScope: aBoolean [
 	hasClassScope := aBoolean
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXMethod >> initialize [
 	super initialize.
 	hasClassScope := false
@@ -91,19 +91,19 @@ FAMIXMethod >> kind: aSymbol [
 	^kind := kindSymbol
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXMethod >> methodScope [
 "This is a special case, only meaningful when using #withoutSelfLoops. Rejecting self loops with a method means rejecting recursive calls."
 
 	^ self
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXMethod >> namespaceScope [
 	^ self parentType namespaceScope
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXMethod >> packageScope [
 
 	^ self parentPackage ifNil:[ 
@@ -134,13 +134,13 @@ FAMIXMethod >> parentType: aType [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXMethod >> typeScope [
 
 	^ self parentType 
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXMethod >> yourScope [
 
 	^ #methodScope

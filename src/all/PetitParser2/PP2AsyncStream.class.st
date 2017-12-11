@@ -25,7 +25,7 @@ PP2AsyncStream >> atEnd [
 	^ queue isEmpty and: closed
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 PP2AsyncStream >> close [
 	closed := true.
 	"I need to queue some character at the end, because next is waiting for an input"

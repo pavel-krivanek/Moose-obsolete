@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'mergedStates'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }
@@ -59,7 +59,7 @@ SmaCCNFAtoDFA >> eliminateDuplicateTransitionsIn: aSmaCCNode [
 	self setTransitionsOn: aSmaCCNode to: newTransitions
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNFAtoDFA >> initialize [
 	super initialize.
 	mergedStates := Dictionary new

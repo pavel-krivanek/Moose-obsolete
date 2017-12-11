@@ -4,7 +4,7 @@ This class is useful to contains objects for which their class have overriden #=
 Class {
 	#name : #RTIdentityGroup,
 	#superclass : #RTGroup,
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #public }

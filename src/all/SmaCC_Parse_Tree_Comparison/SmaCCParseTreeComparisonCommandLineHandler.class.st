@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCParseTreeComparisonCommandLineHandler,
 	#superclass : #CommandLineHandler,
-	#category : #SmaCC_Parse_Tree_Comparison
+	#category : #'SmaCC_Parse_Tree_Comparison'
 }
 
 { #category : #accessing }

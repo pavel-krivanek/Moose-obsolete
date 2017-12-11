@@ -21,7 +21,7 @@ Class {
 		'annotationType',
 		'attributes'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #accessing }
@@ -91,7 +91,7 @@ FAMIXAnnotationInstance >> belongsTo [
 	^ self annotatedEntity
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXAnnotationInstance >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -100,7 +100,7 @@ FAMIXAnnotationInstance >> incomingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXAnnotationInstance >> initialize [
 	super initialize.
 	attributes := FMNullMultivalueLink on: self opposite: #parentAnnotationInstance: selector: #attributes
@@ -129,7 +129,7 @@ FAMIXAnnotationInstance >> name [
 				<< ' on ' << self annotatedEntity name ]
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXAnnotationInstance >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	

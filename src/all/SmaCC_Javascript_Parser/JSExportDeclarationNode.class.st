@@ -15,7 +15,7 @@ Class {
 		'declaration',
 		'defaultToken'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -102,7 +102,7 @@ JSExportDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolon #leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSExportDeclarationNode >> initialize [
 	super initialize.
 	specifiers := OrderedCollection new: 2.

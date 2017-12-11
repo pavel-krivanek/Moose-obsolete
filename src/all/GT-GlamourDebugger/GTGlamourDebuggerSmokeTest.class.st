@@ -1,7 +1,7 @@
 Class {
 	#name : #GTGlamourDebuggerSmokeTest,
 	#superclass : #GTDebuggerSmokeTest,
-	#category : #GT-GlamourDebugger
+	#category : #'GT-GlamourDebugger'
 }
 
 { #category : #accessing }

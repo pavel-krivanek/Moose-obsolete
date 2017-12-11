@@ -8,7 +8,7 @@ Class {
 		'highlights',
 		'defaultHighlight'
 	],
-	#category : #XML-Parser-GTExtensions-Highlighting
+	#category : #'XML-Parser-GTExtensions-Highlighting'
 }
 
 { #category : #accessing }

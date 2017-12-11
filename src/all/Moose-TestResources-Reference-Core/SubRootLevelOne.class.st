@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'mk'
 	],
-	#category : #Moose-TestResources-Reference-Core
+	#category : #'Moose-TestResources-Reference-Core'
 }
 
 { #category : #'accessing superclassinstance on class side' }

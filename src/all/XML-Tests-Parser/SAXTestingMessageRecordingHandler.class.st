@@ -9,7 +9,7 @@ Class {
 		'isInCDataSectionResults',
 		'hasParserResults'
 	],
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #accessing }

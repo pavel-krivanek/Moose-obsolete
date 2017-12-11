@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'parent'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -18,7 +18,7 @@ MalSmartMapping class >> on: parent [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalSmartMapping >> isRoot [
 	
 	^parent isNil
@@ -44,7 +44,7 @@ MalSmartMapping >> nameForKey: key [
 		ifFalse: [parent nameForKey: (self atKey: key)]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalSmartMapping >> setParent: mapping [
 	
 	^parent := mapping

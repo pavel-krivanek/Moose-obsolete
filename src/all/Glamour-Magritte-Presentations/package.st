@@ -1,1 +1,1 @@
-Package { #name : #Glamour-Magritte-Presentations }
+Package { #name : #'Glamour-Magritte-Presentations' }

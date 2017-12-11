@@ -8,7 +8,7 @@ Class {
 		'name',
 		'uri'
 	],
-	#category : #XPath-Core-DOM
+	#category : #'XPath-Core-DOM'
 }
 
 { #category : #'instance creation' }

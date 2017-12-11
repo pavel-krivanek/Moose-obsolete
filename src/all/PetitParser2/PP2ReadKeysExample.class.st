@@ -30,7 +30,7 @@ PP2ReadKeysExample >> buildWindow [
 	self addMorph: keyMorph fullFrame: LayoutFrame identity.
 ]
 
-{ #category : #open/close }
+{ #category : #'open/close' }
 PP2ReadKeysExample >> close [
 	keyMorph close.
 	super close
@@ -61,7 +61,7 @@ PP2ReadKeysExample >> nextPutAll: aString [
 	self changed: #contents.
 ]
 
-{ #category : #open/close }
+{ #category : #'open/close' }
 PP2ReadKeysExample >> open [
 	super open.
 	keyMorph takeKeyboardFocus.

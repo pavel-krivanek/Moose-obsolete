@@ -5,7 +5,7 @@ All events have a timestamp.
 Class {
 	#name : #GTDebuggerRecorderEvent,
 	#superclass : #GTBasicRecorderEvent,
-	#category : #GT-Debugger-EventRecorder-Events
+	#category : #'GT-Debugger-EventRecorder-Events'
 }
 
 { #category : #'instance creation' }

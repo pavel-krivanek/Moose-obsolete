@@ -4,7 +4,7 @@ A parser that succeeds only at the end of the input stream.
 Class {
 	#name : #PPEndOfInputParser,
 	#superclass : #PPDelegateParser,
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #operators }

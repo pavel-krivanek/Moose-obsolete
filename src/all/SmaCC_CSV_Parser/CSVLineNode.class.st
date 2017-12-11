@@ -5,7 +5,7 @@ Class {
 		'values',
 		'commas'
 	],
-	#category : #SmaCC_CSV_Parser
+	#category : #'SmaCC_CSV_Parser'
 }
 
 { #category : #generated }
@@ -28,7 +28,7 @@ CSVLineNode >> compositeTokenVariables [
 	^ #(#values #commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSVLineNode >> initialize [
 	super initialize.
 	values := OrderedCollection new: 2.

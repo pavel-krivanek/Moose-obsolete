@@ -4,7 +4,7 @@ A GETDistributionTest is a test class for testing the behavior of GETDistributio
 Class {
 	#name : #RTDistributionTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Utility
+	#category : #'Roassal2-Utility'
 }
 
 { #category : #tests }

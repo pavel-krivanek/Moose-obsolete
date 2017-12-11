@@ -6,7 +6,7 @@ Class {
 		'containingNamespaceHistory',
 		'namespaceHistories'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
 { #category : #'instance creation' }

@@ -17,7 +17,7 @@ Class {
 		'referenceHistory',
 		'parentHistory'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
 { #category : #'instance creation' }

@@ -6,7 +6,7 @@ Class {
 		'previousItemSets',
 		'grammar'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -85,7 +85,7 @@ SmaCCItemSet >> hash [
 		into: [ :sum :each | sum bitXor: each hash ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCItemSet >> initialize [
 	(self class superclass canUnderstand: #initialize)
 		ifTrue: [ super initialize ].
@@ -207,7 +207,7 @@ SmaCCItemSet >> printOn: aStream [
 				cr ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCItemSet >> type: aSymbol [
 	type := aSymbol
 ]

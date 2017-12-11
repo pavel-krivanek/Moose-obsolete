@@ -8,7 +8,7 @@ Class {
 		'packages',
 		'rDataSets'
 	],
-	#category : #Roassal2-Table
+	#category : #'Roassal2-Table'
 }
 
 { #category : #accessing }

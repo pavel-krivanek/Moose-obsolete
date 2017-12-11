@@ -6,5 +6,5 @@ Packages that are using Seaside-Platform should usually subclass GRNotification 
 Class {
 	#name : #GRNotification,
 	#superclass : #Notification,
-	#category : #Grease-Core-Exceptions
+	#category : #'Grease-Core-Exceptions'
 }

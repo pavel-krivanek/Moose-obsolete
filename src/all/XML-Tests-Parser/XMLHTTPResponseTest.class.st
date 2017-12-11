@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLHTTPResponseTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-HTTP
+	#category : #'XML-Tests-Parser-HTTP'
 }
 
 { #category : #tests }

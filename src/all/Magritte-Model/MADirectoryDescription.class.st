@@ -1,7 +1,7 @@
 Class {
 	#name : #MADirectoryDescription,
 	#superclass : #MAFileDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
 { #category : #acessing }

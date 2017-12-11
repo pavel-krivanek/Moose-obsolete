@@ -5,7 +5,7 @@ Class {
 		'labels',
 		'statements'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ CSSwitchSectionNode >> compositeNodeVariables [
 	^ #(#labels #statements)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSSwitchSectionNode >> initialize [
 	super initialize.
 	labels := OrderedCollection new: 2.

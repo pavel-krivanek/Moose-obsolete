@@ -5,7 +5,7 @@ Class {
 		'nonIdentityOrderedAssociations',
 		'identityOrderedAssociations'
 	],
-	#category : #Collections-Tests-OrderPreservingDictionary
+	#category : #'Collections-Tests-OrderPreservingDictionary'
 }
 
 { #category : #testing }

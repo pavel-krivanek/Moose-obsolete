@@ -1,7 +1,7 @@
 Class {
 	#name : #TRMouseDraggingTest,
 	#superclass : #TRTest,
-	#category : #Trachel-Tests
+	#category : #'Trachel-Tests'
 }
 
 { #category : #tests }

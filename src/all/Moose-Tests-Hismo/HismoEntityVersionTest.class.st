@@ -1,7 +1,7 @@
 Class {
 	#name : #HismoEntityVersionTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-Hismo
+	#category : #'Moose-Tests-Hismo'
 }
 
 { #category : #tests }

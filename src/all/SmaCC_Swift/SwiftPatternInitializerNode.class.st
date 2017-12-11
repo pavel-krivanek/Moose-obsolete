@@ -33,7 +33,7 @@ Class {
 		'asTokens',
 		'equalToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -156,7 +156,7 @@ SwiftPatternInitializerNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftPatternInitializerNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

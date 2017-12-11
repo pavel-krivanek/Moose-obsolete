@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'patternToken'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #'instance creation' }

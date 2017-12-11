@@ -4,10 +4,10 @@ Class {
 	#classInstVars : [
 		'keywords'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 JSParser class >> cacheId [
 	^'2017-11-29T08:17:34.055296-06:00'
 ]
@@ -1000,7 +1000,7 @@ JSParser class >> keywords [
 				asSet collect: [ :each | each asString ] ]
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 JSParser class >> scannerClass [
 	^JSScanner
 ]

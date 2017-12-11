@@ -2,10 +2,10 @@ Class {
 	#name : #DudeBooleanVector,
 	#superclass : #MalVector,
 	#type : #bytes,
-	#category : #SmallDude-Utils
+	#category : #'SmallDude-Utils'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeBooleanVector class >> new: size [ 
 	 
 	^(self basicNew: size) 

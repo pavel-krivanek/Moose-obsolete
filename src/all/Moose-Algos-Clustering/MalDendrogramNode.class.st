@@ -9,7 +9,7 @@ Class {
 		'right',
 		'threshold'
 	],
-	#category : #Moose-Algos-Clustering
+	#category : #'Moose-Algos-Clustering'
 }
 
 { #category : #'instance creation' }

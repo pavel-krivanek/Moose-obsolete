@@ -1,7 +1,7 @@
 Class {
 	#name : #RTColorInterpolator,
 	#superclass : #RTInterpolator,
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #accessing }

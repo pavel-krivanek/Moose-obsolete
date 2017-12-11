@@ -42,7 +42,7 @@ Class {
 	#classInstVars : [
 		'keywordMap'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #'class initialization' }
@@ -179,7 +179,7 @@ SmaCCScanner >> errorTokenId [
 	^ self subclassResponsibility
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCScanner >> initialize [
 	super initialize.
 	outputStream := WriteStream with: String new.
@@ -219,7 +219,7 @@ SmaCCScanner >> next [
 	^ self scanForToken
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCScanner >> on: aStream [
 	stream := aStream.
 	start := stream position

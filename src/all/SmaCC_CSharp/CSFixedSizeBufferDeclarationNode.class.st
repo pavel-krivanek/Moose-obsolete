@@ -9,7 +9,7 @@ Class {
 		'declarators',
 		'semicolonToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -66,7 +66,7 @@ CSFixedSizeBufferDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolonToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSFixedSizeBufferDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

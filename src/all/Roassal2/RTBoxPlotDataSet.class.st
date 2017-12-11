@@ -15,7 +15,7 @@ Class {
 		'showMean',
 		'meanShape'
 	],
-	#category : #Roassal2-Builder-BoxPlot
+	#category : #'Roassal2-Builder-BoxPlot'
 }
 
 { #category : #accessing }

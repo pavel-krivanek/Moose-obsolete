@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'SystemCompilerClass'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #compiling }

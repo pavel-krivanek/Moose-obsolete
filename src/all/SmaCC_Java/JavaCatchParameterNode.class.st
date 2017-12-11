@@ -7,7 +7,7 @@ Class {
 		'bars',
 		'variable'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -35,7 +35,7 @@ JavaCatchParameterNode >> compositeTokenVariables [
 	^ #(#bars)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaCatchParameterNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

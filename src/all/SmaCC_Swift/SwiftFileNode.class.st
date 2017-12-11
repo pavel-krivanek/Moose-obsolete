@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'statements'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -17,7 +17,7 @@ SwiftFileNode >> compositeNodeVariables [
 	^ #(#statements)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftFileNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

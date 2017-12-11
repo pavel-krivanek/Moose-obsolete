@@ -15,7 +15,7 @@ self open
 Class {
 	#name : #PPBrowser,
 	#superclass : #GLMCompositePresentation,
-	#category : #PetitGui-Core
+	#category : #'PetitGui-Core'
 }
 
 { #category : #accessing }

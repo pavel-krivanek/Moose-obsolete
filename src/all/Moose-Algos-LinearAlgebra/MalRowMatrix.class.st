@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'rows'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #accessing }
@@ -39,7 +39,7 @@ MalRowMatrix >> columnSize [
 		ifFalse: [rows first size]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalRowMatrix >> initializeRows: m columns: n [
 	
 	rows := Array new: m.

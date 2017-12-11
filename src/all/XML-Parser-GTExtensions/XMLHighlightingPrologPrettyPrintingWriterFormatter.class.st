@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'highlighter'
 	],
-	#category : #XML-Parser-GTExtensions-Highlighting-Writer
+	#category : #'XML-Parser-GTExtensions-Highlighting-Writer'
 }
 
 { #category : #private }

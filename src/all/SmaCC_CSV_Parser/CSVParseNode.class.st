@@ -1,7 +1,7 @@
 Class {
 	#name : #CSVParseNode,
 	#superclass : #SmaCCParseNode,
-	#category : #SmaCC_CSV_Parser
+	#category : #'SmaCC_CSV_Parser'
 }
 
 { #category : #generated }

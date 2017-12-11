@@ -8,7 +8,7 @@ Class {
 		'animatedValue',
 		'trachelCanvas'
 	],
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #'instance creation' }

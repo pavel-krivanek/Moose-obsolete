@@ -6,23 +6,23 @@ Class {
 		'lineno',
 		'entity'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine class >> annotation [
 	<MSEClass: #SourceCodeLine super: #FAMIXEntity>
 	<package: #Dude>
 	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine class >> newText: aString inEntity: entitySource [ 
 	 
 	^self new initializeText: aString inEntity: entitySource
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine class >> newText: aString lineno: anInt inEntity: entitySource [ 
 	 
 	^self new initializeText: aString lineno: anInt inEntity: entitySource
@@ -34,7 +34,7 @@ DudeSourceCodeLine >> entity [
 	^entity
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine >> initializeText: aString inEntity: anEntity [ 
 	 
 	text := aString. 
@@ -42,7 +42,7 @@ DudeSourceCodeLine >> initializeText: aString inEntity: anEntity [
 	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine >> initializeText: aString lineno: anInt inEntity: anEntity [ 
 	 
 	text := aString.

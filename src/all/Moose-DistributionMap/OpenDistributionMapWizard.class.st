@@ -8,7 +8,7 @@ Class {
 		'compositeParts',
 		'distributionMapElements'
 	],
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #'computing - possible properties' }
@@ -54,7 +54,7 @@ OpenDistributionMapWizard >> groupMetaClass [
 	^ MooseModel meta elements detect: [:each | each isFM3Class and: [each implementingClass = self groupClass ] ] ifNone: [].
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> initializePropertyValuesPane: aWizardPane [
 	| dropListPart |
 	dropListPart := (DropListPart new)
@@ -69,7 +69,7 @@ OpenDistributionMapWizard >> initializePropertyValuesPane: aWizardPane [
 	aWizardPane row: dropListPart associatedTo: #numberOfProperties
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> initializePropertyValuesPane: aWizardPane numberOfProp: outputValue [ 
 
 	1 to: outputValue do: [ :index | 
@@ -138,7 +138,7 @@ OpenDistributionMapWizard >> propertyColorMap [
 	^ result
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> propertyColorPartWithDefault: index [
 	^ (MorphDropListPart new)
 		inGroupboxNamed: 'Color';
@@ -153,7 +153,7 @@ OpenDistributionMapWizard >> propertyColorPartWithDefault: index [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> propertyMapperDefaultTextFromIndex: aNumber [
 
  	aNumber = 1
@@ -161,19 +161,19 @@ OpenDistributionMapWizard >> propertyMapperDefaultTextFromIndex: aNumber [
 		ifFalse: [^ self propertyMapperSecondDefaultText]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> propertyMapperFirstDefaultText [
 
 	^ (DistributionMapPropertyInfo fromComputationBlock: self propertyBlockOrSelector andElements: self distributionMapElements) firstDefaultText 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> propertyMapperSecondDefaultText [
 
 	^ (DistributionMapPropertyInfo fromComputationBlock: (self propertyBlockOrSelector) andElements: self distributionMapElements) secondDefaultText 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> propertyNamePartWithDefault: aString [
 	^ (TextFieldPart new)
 		inGroupboxNamed: 'Property name';
@@ -182,7 +182,7 @@ OpenDistributionMapWizard >> propertyNamePartWithDefault: aString [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> propertyValueMapperPartFromIndex: index [
 
 	^ (TextFieldPart new)
@@ -211,7 +211,7 @@ OpenDistributionMapWizard >> propertyValuesMap [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 OpenDistributionMapWizard >> useDefaultColorsPart [
 	^ (CheckboxPart new)
 		label: 'Use a default color for each disctinct value (will only diplay the first ten)';

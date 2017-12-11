@@ -10,7 +10,7 @@ Class {
 		'protocols',
 		'method'
 	],
-	#category : #PetitGui-Refactoring
+	#category : #'PetitGui-Refactoring'
 }
 
 { #category : #'instance creation' }

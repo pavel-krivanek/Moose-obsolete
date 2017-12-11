@@ -12,7 +12,7 @@ Class {
 		'isGeneratingDerivedMethods',
 		'skipDerivedMethods'
 	],
-	#category : #Fame-SmalltalkBinding
+	#category : #'Fame-SmalltalkBinding'
 }
 
 { #category : #visiting }
@@ -51,7 +51,7 @@ FMAbstractCodeGenerator >> acceptFameProperty: fameProperty [
 	self perform: selector contents asSymbol with: fameProperty.
 ]
 
-{ #category : #compiling-names }
+{ #category : #'compiling-names' }
 FMAbstractCodeGenerator >> annotationStringForProperty: property [
 	| ann |
 	property type notNil should beTrue.
@@ -65,14 +65,14 @@ FMAbstractCodeGenerator >> annotationStringForProperty: property [
 	^ ann
 ]
 
-{ #category : #compiling-names }
+{ #category : #'compiling-names' }
 FMAbstractCodeGenerator >> categoryNameFor: fameClass [ 
 	^self defaultCategory isNil
 			ifTrue: [ fameClass package name asString ]
 			ifFalse: [ self defaultCategory ]
 ]
 
-{ #category : #compiling-names }
+{ #category : #'compiling-names' }
 FMAbstractCodeGenerator >> classNameFor: fameClass [ 
 	^fameClass isBuiltIn 
 		ifTrue: [ fameClass name ]
@@ -165,7 +165,7 @@ FMAbstractCodeGenerator >> ensureClass: fameClass superclass: rbSuperclass [
 	^ rbClass0
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMAbstractCodeGenerator >> initialize [
 	model := FMUtil default createRBModel.
 	self classNamePrefix: ''.
@@ -186,12 +186,12 @@ FMAbstractCodeGenerator >> initializeProperty: fameProperty with: value [
 	instVarNames add: instVarName
 ]
 
-{ #category : #compiling-names }
+{ #category : #'compiling-names' }
 FMAbstractCodeGenerator >> instvarNameFor: fameProperty [ 
 	^fameProperty name asSymbol
 ]
 
-{ #category : #compiling-names }
+{ #category : #'compiling-names' }
 FMAbstractCodeGenerator >> methodNameFor: fameProperty [
 	^fameProperty name asSymbol
 ]
@@ -201,12 +201,12 @@ FMAbstractCodeGenerator >> model [
 	^model
 ]
 
-{ #category : #compiling-names }
+{ #category : #'compiling-names' }
 FMAbstractCodeGenerator >> oppositeNameFor: fameProperty [
 	^fameProperty opposite name asSymbol
 ]
 
-{ #category : #compiling-names }
+{ #category : #'compiling-names' }
 FMAbstractCodeGenerator >> parameterNameFor: fameProperty [
 	| name stream |
 	name := fameProperty name.

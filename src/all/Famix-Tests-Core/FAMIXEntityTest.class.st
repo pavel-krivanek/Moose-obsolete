@@ -4,7 +4,7 @@ I am the generic class for all the tests for famix entities
 Class {
 	#name : #FAMIXEntityTest,
 	#superclass : #TestCase,
-	#category : #Famix-Tests-Core
+	#category : #'Famix-Tests-Core'
 }
 
 { #category : #asserting }

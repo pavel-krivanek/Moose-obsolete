@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'sourcedEntities'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -32,7 +32,7 @@ FAMIXSourceLanguage >> format: aSourceString from: anEntity [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXSourceLanguage >> initialize [
 	super initialize.
 	sourcedEntities := FMNullMultivalueLink on: self opposite: #declaredSourceLanguage: selector: #sourcedEntities

@@ -4,7 +4,7 @@ This is an AST node class for the 'processing-instruction()' type test.
 Class {
 	#name : #XPathASTPINodeTestNode,
 	#superclass : #XPathASTNodeTestNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

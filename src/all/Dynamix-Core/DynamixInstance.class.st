@@ -10,7 +10,7 @@ Class {
 		'aliases',
 		'type'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }
@@ -19,27 +19,27 @@ DynamixInstance class >> annotation [
 	<package: #Dynamix>
 ]
 
-{ #category : #accessing-aliases }
+{ #category : #'accessing-aliases' }
 DynamixInstance >> aliases [
 	^aliases ifNil: [ aliases := OrderedCollection new ]
 ]
 
-{ #category : #accessing-aliases }
+{ #category : #'accessing-aliases' }
 DynamixInstance >> aliases: anObject [
 	aliases := anObject
 ]
 
-{ #category : #accessing-aliases }
+{ #category : #'accessing-aliases' }
 DynamixInstance >> argumentAliases [
 	^self aliases select: [ :each | each isArgumentAlias ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixInstance >> clientInstance [
 	^ self
 ]
 
-{ #category : #accessing-aliases }
+{ #category : #'accessing-aliases' }
 DynamixInstance >> fieldAliases [
 	^self aliases select: [ :each | each isFieldAlias]
 ]
@@ -57,7 +57,7 @@ DynamixInstance >> instanceCreator [
 		alias creator ifNotNil: [ :activation | activation trace ] ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixInstance >> instantiationTimestamp [
 	^self rootAlias
 		ifNotNil: [ :alias | alias timestamp ]
@@ -69,7 +69,7 @@ DynamixInstance >> isInstance [
 	^ true
 ]
 
-{ #category : #accessing-aliases }
+{ #category : #'accessing-aliases' }
 DynamixInstance >> namedAliases [
 	^self fieldAliases, self tempAliases, self argumentAliases
 ]
@@ -101,13 +101,13 @@ DynamixInstance >> printOn: aStream [
 	ifFalse: [ aStream nextPutAll: 'Class not in Model'].
 ]
 
-{ #category : #accessing-aliases }
+{ #category : #'accessing-aliases' }
 DynamixInstance >> rootAlias [
 	self aliases isEmpty ifTrue: [ ^nil ].
 	^ self aliases detect: [ :each | each ancestor isNil ].
 ]
 
-{ #category : #accessing-aliases }
+{ #category : #'accessing-aliases' }
 DynamixInstance >> tempAliases [
 	^self aliases select: [ :each | each isTempAlias]
 ]

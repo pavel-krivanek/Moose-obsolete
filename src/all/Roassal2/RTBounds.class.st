@@ -9,7 +9,7 @@ Class {
 		'indeces',
 		'maxCircles'
 	],
-	#category : #Roassal2-Builder-CircularMap
+	#category : #'Roassal2-Builder-CircularMap'
 }
 
 { #category : #public }

@@ -4,7 +4,7 @@ This class validates standalone externally defined attributes with lists of unpa
 Class {
 	#name : #XMLStandaloneExternalEntitiesAttributeValidator,
 	#superclass : #XMLEntitiesAttributeValidator,
-	#category : #XML-Parser-Validation-Standalone
+	#category : #'XML-Parser-Validation-Standalone'
 }
 
 { #category : #testing }

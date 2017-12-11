@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseModelRoassalPaintingsExtensionsTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-RoassalPaintings
+	#category : #'Moose-Tests-RoassalPaintings'
 }
 
 { #category : #util }

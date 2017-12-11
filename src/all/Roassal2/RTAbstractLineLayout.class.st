@@ -49,7 +49,7 @@ Class {
 		'horizontallyStretchable',
 		'verticallyStretchable'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #testing }
@@ -185,7 +185,7 @@ RTAbstractLineLayout >> horizontallyStretchable [
 	^ horizontallyStretchable
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractLineLayout >> initialize [
 	
 	super initialize.

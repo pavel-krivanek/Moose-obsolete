@@ -7,7 +7,7 @@ Class {
 		'entity',
 		'fragmentLength'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
 { #category : #'instance creation' }
@@ -83,7 +83,7 @@ DudeSourceCodeFragment >> entity [
 	^entity
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeFragment >> entity: anEntity beginLine: aLong endLine: anotherLong fragmentLength: aFragmentLength [ 
 	 
 	entity := anEntity. 

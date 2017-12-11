@@ -16,7 +16,7 @@ Class {
 	#instVars : [
 		'layers'
 	],
-	#category : #Moose-Algos-Lattice
+	#category : #'Moose-Algos-Lattice'
 }
 
 { #category : #'instance creation' }

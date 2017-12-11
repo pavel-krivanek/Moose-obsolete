@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'tree'
 	],
-	#category : #DeepTraverser-Tests-Transformed-To-Examples
+	#category : #'DeepTraverser-Tests-Transformed-To-Examples'
 }
 
 { #category : #private }

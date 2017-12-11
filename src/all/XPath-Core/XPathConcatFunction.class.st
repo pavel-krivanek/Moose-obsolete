@@ -4,7 +4,7 @@ XPath string concatenation function. Concatenates two or more strings.
 Class {
 	#name : #XPathConcatFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

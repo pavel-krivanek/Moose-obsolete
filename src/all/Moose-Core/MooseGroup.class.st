@@ -8,7 +8,7 @@ The goal of this abstraction is to provide a home for behavior that is specific 
 Class {
 	#name : #MooseGroup,
 	#superclass : #MooseAbstractGroup,
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'instance creation' }
@@ -68,14 +68,14 @@ MooseGroup class >> withKnownType: anSTClass withAll: collection [
 	^ (anSTClass new: collection size) initializeWithAll: collection
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseGroup >> , aGroup [
 	^ (self copy) 
 		addAll: aGroup; 
 		yourself
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseGroup >> add: anElement [ 
 	 
 	super add: anElement. 
@@ -83,14 +83,14 @@ MooseGroup >> add: anElement [
 	^ anElement 
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseGroup >> addAll: collection [ 
 	 
 	self entityStorage addAll: collection. 
 	self updateTypeAccordingToEntities
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseGroup >> addLast: anEntity [ 
 	 
 	^self add: anEntity
@@ -182,14 +182,14 @@ MooseGroup >> indexOf: anEntity [
 	^self entities indexOf: anEntity
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseGroup >> initialize: capacity [ 
 	 
 	self initialize. 
 	self description: 'Group'
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseGroup >> initializeWithAll: aCollection [
 	self entityStorage addAll: aCollection.
 ]
@@ -263,7 +263,7 @@ MooseGroup >> printOn: aStream [
 "	
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseGroup >> readStream [ 
 	 
 	^self entities readStream
@@ -274,14 +274,14 @@ MooseGroup >> reject: aBlock [
 	^ self species withAll: (self entities reject: aBlock)
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseGroup >> remove: anItem [ 
 	 
 	self removeEntity: anItem. 
 	self updateTypeAccordingToEntities
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseGroup >> removeAll: collection [ 
 	 
 	collection do: [:each | self removeEntity: each]. 

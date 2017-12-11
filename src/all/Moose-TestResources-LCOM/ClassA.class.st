@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'a1'
 	],
-	#category : #Moose-TestResources-LCOM
+	#category : #'Moose-TestResources-LCOM'
 }
 
 { #category : #stub }

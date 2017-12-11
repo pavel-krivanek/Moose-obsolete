@@ -4,7 +4,7 @@ A stream converter for little endian UTF-16 streams.
 Class {
 	#name : #XMLUTF16LittleEndianStreamConverter,
 	#superclass : #XMLUTF16StreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #basic }

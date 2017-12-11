@@ -38,7 +38,7 @@ Class {
 		'finalActionBlock',
 		'renderer'
 	],
-	#category : #Merlin-Core
+	#category : #'Merlin-Core'
 }
 
 { #category : #'addition / removal' }
@@ -103,7 +103,7 @@ WizardControl >> information: aSymbol withValue: value [
 		put: value
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardControl >> initialize [
 	
 	super initialize.

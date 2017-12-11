@@ -8,7 +8,7 @@ Class {
 		'highlighter',
 		'encoding'
 	],
-	#category : #XML-Parser-GTExtensions-Highlighting-Parser
+	#category : #'XML-Parser-GTExtensions-Highlighting-Parser'
 }
 
 { #category : #converting }

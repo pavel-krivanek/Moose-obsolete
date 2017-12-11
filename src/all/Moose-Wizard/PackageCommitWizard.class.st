@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'packages'
 	],
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #'instance creation' }
@@ -42,7 +42,7 @@ PackageCommitWizard >> goferCommitPackage: wCopy with: commitMessage [
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 PackageCommitWizard >> initializeContent: workingCopies [
 
 	| lastPane messagePart packagesPart |

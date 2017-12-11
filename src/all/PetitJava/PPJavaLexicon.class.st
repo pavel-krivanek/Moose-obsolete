@@ -79,7 +79,7 @@ Class {
 		'falseToken',
 		'nullToken'
 	],
-	#category : #PetitJava-Core
+	#category : #'PetitJava-Core'
 }
 
 { #category : #accessing }
@@ -111,51 +111,51 @@ PPJavaLexicon >> asToken: aParser [
 	^aParser javaToken
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> binaryExponent [
 
  ^ binaryExponentIndicator , signedInteger
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> binaryExponentIndicator [
 
   ^ PP2PredicateObjectNode anyOf: 'pP'
 ]
 
-{ #category : #grammar-literals-boolean }
+{ #category : #'grammar-literals-boolean' }
 PPJavaLexicon >> booleanLiteral [ 
 
  ^ trueToken / falseToken
 ]
 
-{ #category : #grammar-literals-character }
+{ #category : #'grammar-literals-character' }
 PPJavaLexicon >> characterLiteral [ 
 
  ^ ($' asPParser , ( escapeSequence / singleCharacter ), $' asPParser) javaToken
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> charactersInLine [   
 
 	^ inputCharacter plus
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> comment [
 	"traditional -> /*
 	 endOfLine -> //"
 	^ traditionalComment / endOfLineComment
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> commentTail [
 
 	^ 	('*' asPParser , commentTailStar ) /
 		(notStar , commentTail)
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> commentTailStar [ 
 
 	^ ('/' asPParser ) /
@@ -163,7 +163,7 @@ PPJavaLexicon >> commentTailStar [
 	  (notStarNotSlash , commentTail )
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> decimalFloatingPointLiteral [
 
 	|dot|
@@ -180,19 +180,19 @@ PPJavaLexicon >> decimalFloatingPointLiteral [
 		  (exponentPart optional , floatTypeSuffix) ))
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> decimalIntegerLiteral [
 
  ^ decimalNumeral , (integerTypeSuffix optional)
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> decimalNumeral [ 
 
 	^($0 asPParser) / (nonZeroDigit , digits optional) 
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> digits [ 
 	"digit is already defined, no need to redefine it"
 	^#digit asPParser plus
@@ -204,73 +204,73 @@ PPJavaLexicon >> emptySquaredParenthesis [
 	^ self asToken: '[' asPParser trim, ']' asPParser
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> endOfLineComment [ 
 
 	^ '//' asPParser , charactersInLine optional
 ]
 
-{ #category : #grammar-literals-escape }
+{ #category : #'grammar-literals-escape' }
 PPJavaLexicon >> escapeSequence [ 
 
 	^ ($\ asPParser , (PP2PredicateObjectNode anyOf: 'btnfr""''\' ) ) /
 	   octalEscape 
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> exponentIndicator [
 
   ^ PP2PredicateObjectNode anyOf: 'eE'
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> exponentPart [
 
  ^ exponentIndicator , signedInteger
 ]
 
-{ #category : #grammar-literals-boolean }
+{ #category : #'grammar-literals-boolean' }
 PPJavaLexicon >> falseToken [
 	^ ('false' asPParser , #word asPParser not) javaToken
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> floatTypeSuffix [
 
 	^ PP2PredicateObjectNode anyOf: 'fFdD'
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> floatingPointLiteral [
 
   ^ (hexadecimalFloatingPointLiteral / decimalFloatingPointLiteral) javaToken
 ]
 
-{ #category : #grammar-unicode-escapes }
+{ #category : #'grammar-unicode-escapes' }
 PPJavaLexicon >> hexDigit [ 
 
 	^#hex asPParser
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> hexDigits [ 
 
 	^hexDigit plus
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> hexIntegerLiteral [ 
 
   ^ hexNumeral , (integerTypeSuffix optional)
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> hexNumeral [ 
 
 	^$0 asPParser, (PP2PredicateObjectNode anyOf: 'xX' ), hexDigits
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> hexSignificand [ 
 	|dot|
 	dot := $. asPParser.
@@ -279,19 +279,19 @@ PPJavaLexicon >> hexSignificand [
     ($0 asPParser , (PP2PredicateObjectNode anyOf: 'xX') , hexDigits optional , dot , hexDigits )
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> hexadecimalFloatingPointLiteral [
 
  ^ hexSignificand , binaryExponent , floatTypeSuffix optional
 ]
 
-{ #category : #grammar-identifiers }
+{ #category : #'grammar-identifiers' }
 PPJavaLexicon >> identifier [ 
 
 	^  self asToken: (((keyword not) , (booleanLiteral not) , (nullLiteral not) , identifierChars ))
 ]
 
-{ #category : #grammar-identifiers }
+{ #category : #'grammar-identifiers' }
 PPJavaLexicon >> identifierChars [
 	
 	^ javaLetter plus , javaLetterOrDigit star
@@ -360,62 +360,62 @@ PPJavaLexicon >> initializeSeparators [
 		(separators at: key) def: (key asPParser)]
 ]
 
-{ #category : #grammar-input }
+{ #category : #'grammar-input' }
 PPJavaLexicon >> input [
 
 	^ (inputElements optional) , (sub optional)
 ]
 
-{ #category : #grammar-lineTerminators }
+{ #category : #'grammar-lineTerminators' }
 PPJavaLexicon >> inputCharacter [ 
 
 	^(lineTerminator not) , unicodeInputCharacter ==> #second
 ]
 
-{ #category : #grammar-input }
+{ #category : #'grammar-input' }
 PPJavaLexicon >> inputElement [
 
 	^ whiteSpace / comment / javaToken
 ]
 
-{ #category : #grammar-input }
+{ #category : #'grammar-input' }
 PPJavaLexicon >> inputElements [
 
 	^ inputElement plus
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> integerLiteral [
 
   ^ (hexIntegerLiteral / octalIntegerLiteral / decimalIntegerLiteral) javaToken
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> integerTypeSuffix [
 
 	^ PP2PredicateObjectNode anyOf: 'lL'
 ]
 
-{ #category : #grammar-identifiers }
+{ #category : #'grammar-identifiers' }
 PPJavaLexicon >> javaLetter [
 
 	^ (#letter asPParser) / (PP2PredicateObjectNode anyOf: '_$')
 ]
 
-{ #category : #grammar-identifiers }
+{ #category : #'grammar-identifiers' }
 PPJavaLexicon >> javaLetterOrDigit [
 
 	^ javaLetter / (#digit asPParser)
 ]
 
-{ #category : #grammar-input }
+{ #category : #'grammar-input' }
 PPJavaLexicon >> javaToken [
 
 
 	^ identifier / keyword / literal / separator / operator
 ]
 
-{ #category : #grammar-keywords }
+{ #category : #'grammar-keywords' }
 PPJavaLexicon >> keyword [
 
 		| keywordParsers |
@@ -426,7 +426,7 @@ PPJavaLexicon >> keyword [
 	"Modified (format): / 21-04-2015 / 15:27:29 / Jan Vrany <jan.vrany@fit.cvut.cz>"
 ]
 
-{ #category : #grammar-lineTerminators }
+{ #category : #'grammar-lineTerminators' }
 PPJavaLexicon >> lineTerminator [
 
 	self flag: 'Hack alert - should be fixed immediately in PJTraditionalCommentsNode>>comment:'.
@@ -437,73 +437,73 @@ PPJavaLexicon >> lineTerminator [
 	"Modified: / 21-04-2015 / 17:16:50 / Jan Vrany <jan.vrany@fit.cvut.cz>"
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PPJavaLexicon >> literal [
 	"a literal must be a single token. Whitespaces are not allowed inside the literal"
 	
 	^ nullLiteral / booleanLiteral / floatingPointLiteral / integerLiteral / characterLiteral / stringLiteral
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> nonZeroDigit [ 
 
 	^PP2PredicateObjectNode anyOf: '123456789'.
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> notStar [
 
 	^  ('*' asPParser not , inputCharacter)/lineTerminator
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> notStarNotSlash [  
 
 	^ lineTerminator / ((PP2PredicateObjectNode anyOf: '*/') not , inputCharacter )
 ]
 
-{ #category : #grammar-literals-null }
+{ #category : #'grammar-literals-null' }
 PPJavaLexicon >> nullLiteral [ 
 
  ^ nullToken
 ]
 
-{ #category : #grammar-literals-boolean }
+{ #category : #'grammar-literals-boolean' }
 PPJavaLexicon >> nullToken [
 	^ ('null' asPParser , #word asPParser not) javaToken
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> octalDigit [ 
 
 	^PP2PredicateObjectNode anyOf: '01234567'
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> octalDigits [
 
 	^ octalDigit plus
 ]
 
-{ #category : #grammar-literals-escape }
+{ #category : #'grammar-literals-escape' }
 PPJavaLexicon >> octalEscape [
 
 	^ $\ asPParser , ( (zeroToThree , octalDigit , octalDigit) / (octalDigit , octalDigit optional) )
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> octalIntegerLiteral [ 
 
  ^ octalNumeral , (integerTypeSuffix optional)
 ]
 
-{ #category : #grammar-literals-integer }
+{ #category : #'grammar-literals-integer' }
 PPJavaLexicon >> octalNumeral [ 
 
 	^($0 asPParser) , octalDigits
 ]
 
-{ #category : #grammar-operators }
+{ #category : #'grammar-operators' }
 PPJavaLexicon >> operator [
 		| operatorParsers |
 		
@@ -513,30 +513,30 @@ PPJavaLexicon >> operator [
 	"Modified: / 21-04-2015 / 15:26:21 / Jan Vrany <jan.vrany@fit.cvut.cz>"
 ]
 
-{ #category : #grammar-unicode-escapes }
+{ #category : #'grammar-unicode-escapes' }
 PPJavaLexicon >> rawInputCharacter [
 
 	^#any asPParser
 ]
 
-{ #category : #grammar-separators }
+{ #category : #'grammar-separators' }
 PPJavaLexicon >> separator [	
 	^self asToken: (PP2PredicateObjectNode anyOf: '(){}[];,.' )
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> sign [
 
   ^ PP2PredicateObjectNode anyOf: '-+'
 ]
 
-{ #category : #grammar-literals-floating }
+{ #category : #'grammar-literals-floating' }
 PPJavaLexicon >> signedInteger [
 
   ^ sign optional , digits
 ]
 
-{ #category : #grammar-literals-character }
+{ #category : #'grammar-literals-character' }
 PPJavaLexicon >> singleCharacter [ 	
 
 	^( PP2PredicateObjectNode anyOf: '''\') not , inputCharacter ==> #second
@@ -549,26 +549,26 @@ PPJavaLexicon >> start [
 	^ input end
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaLexicon >> stringCharacter [
 		
 	^ ( ( PP2PredicateObjectNode anyOf: '"\') not , inputCharacter ==> #second ) /
 	   escapeSequence 
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaLexicon >> stringCharacters [
 
 	^ stringCharacter plus
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaLexicon >> stringLiteral [ 
 
  ^ ($" asPParser , stringCharacters optional , $" asPParser) javaToken
 ]
 
-{ #category : #grammar-input }
+{ #category : #'grammar-input' }
 PPJavaLexicon >> sub [
 
 	^ (Character value: 26) asPParser 
@@ -582,35 +582,35 @@ PPJavaLexicon >> tokenFor: aString [
 							ifAbsent: [operators at: aString] ])
 ]
 
-{ #category : #grammar-comments }
+{ #category : #'grammar-comments' }
 PPJavaLexicon >> traditionalComment [
 
 	^ '/*' asPParser , commentTail
 ]
 
-{ #category : #grammar-literals-boolean }
+{ #category : #'grammar-literals-boolean' }
 PPJavaLexicon >> trueToken [
 	^ ('true' asPParser , #word asPParser not) javaToken
 ]
 
-{ #category : #grammar-unicode-escapes }
+{ #category : #'grammar-unicode-escapes' }
 PPJavaLexicon >> unicodeEscape [
 
 	^ $\ asPParser , unicodeMarker , hexDigit , hexDigit , hexDigit , hexDigit
 ]
 
-{ #category : #grammar-unicode-escapes }
+{ #category : #'grammar-unicode-escapes' }
 PPJavaLexicon >> unicodeInputCharacter [
 	 ^ unicodeEscape / rawInputCharacter
 ]
 
-{ #category : #grammar-unicode-escapes }
+{ #category : #'grammar-unicode-escapes' }
 PPJavaLexicon >> unicodeMarker [
 
 	^$u asPParser plus
 ]
 
-{ #category : #grammar-whiteSpace }
+{ #category : #'grammar-whiteSpace' }
 PPJavaLexicon >> whiteSpace [
 
 	^ (Character space asPParser ) /
@@ -619,7 +619,7 @@ PPJavaLexicon >> whiteSpace [
 		lineTerminator 
 ]
 
-{ #category : #grammar-literals-escape }
+{ #category : #'grammar-literals-escape' }
 PPJavaLexicon >> zeroToThree [
 
 	^PP2PredicateObjectNode anyOf: '0123'

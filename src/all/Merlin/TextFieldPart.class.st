@@ -10,7 +10,7 @@ Class {
 		'returnSuffixAndPrefix',
 		'horizontalSize'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #'instance creation' }
@@ -38,7 +38,7 @@ TextFieldPart >> horizontalSize: anInteger [
 	horizontalSize := anInteger
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TextFieldPart >> initialize [ 
 
 	super initialize.
@@ -48,7 +48,7 @@ TextFieldPart >> initialize [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TextFieldPart >> initialize: defaultText [
 
 	self initialize.

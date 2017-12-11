@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'partialColumns'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #accessing }
@@ -44,7 +44,7 @@ MalSymetricMatrix >> columnSize [
 	^partialColumns size
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalSymetricMatrix >> initializeRows: m columns: n [
 	
 	m = n ifFalse: [Array new noMatchError].

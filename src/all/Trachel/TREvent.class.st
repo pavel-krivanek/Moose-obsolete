@@ -21,7 +21,7 @@ Class {
 		'position',
 		'morph'
 	],
-	#category : #Trachel-Events
+	#category : #'Trachel-Events'
 }
 
 { #category : #accessing }

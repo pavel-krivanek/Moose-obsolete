@@ -1,7 +1,7 @@
 Class {
 	#name : #RTUMLClassBuilderTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-UML
+	#category : #'Roassal2-Builder-UML'
 }
 
 { #category : #tests }

@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'default'
 	],
-	#category : #PetitXPath-Core
+	#category : #'PetitXPath-Core'
 }
 
 { #category : #'instance creation' }

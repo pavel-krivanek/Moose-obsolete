@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'hits'
 	],
-	#category : #Moose-Tests-Algos-Graph
+	#category : #'Moose-Tests-Algos-Graph'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalHitsFixtureTest >> initialize [
 
 	self setUp

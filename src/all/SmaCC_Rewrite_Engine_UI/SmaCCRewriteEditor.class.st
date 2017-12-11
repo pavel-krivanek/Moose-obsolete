@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'treeInitializer'
 	],
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #private }
@@ -111,13 +111,13 @@ SmaCCRewriteEditor >> deleteRule: aRewrite [
 	self update
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteEditor >> initialize [
 	super initialize.
 	treeInitializer := [ :tree |  ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteEditor >> treeInitializer: aBlock [
 	treeInitializer := aBlock
 ]

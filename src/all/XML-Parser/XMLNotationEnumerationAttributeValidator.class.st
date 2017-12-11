@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'unparedEntityValidator'
 	],
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #defaults }

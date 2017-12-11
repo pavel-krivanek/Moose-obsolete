@@ -10,7 +10,7 @@ Class {
 		'endLine',
 		'endColumn'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
 { #category : #meta }

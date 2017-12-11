@@ -8,7 +8,7 @@ Class {
 		'commas',
 		'semicolon'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -41,7 +41,7 @@ JavaFieldDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaFieldDeclarationNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

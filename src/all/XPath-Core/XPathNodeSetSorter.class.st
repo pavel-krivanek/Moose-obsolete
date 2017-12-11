@@ -13,7 +13,7 @@ Class {
 		'mustVisitAttributes',
 		'totalSorted'
 	],
-	#category : #XPath-Core-DOM
+	#category : #'XPath-Core-DOM'
 }
 
 { #category : #'instance creation' }

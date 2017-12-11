@@ -5,7 +5,7 @@ Class {
 		'statements',
 		'semicolons'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -23,7 +23,7 @@ DelphiCodeSectionNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiCodeSectionNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

@@ -5,7 +5,7 @@ Class {
 		'tempFileManager',
 		'currentWorkingDirectoryFileHandle'
 	],
-	#category : #XML-Tests-Parser-Files
+	#category : #'XML-Tests-Parser-Files'
 }
 
 { #category : #testing }

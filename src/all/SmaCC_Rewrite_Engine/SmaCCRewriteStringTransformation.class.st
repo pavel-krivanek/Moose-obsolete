@@ -5,7 +5,7 @@ Class {
 		'string',
 		'expression'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -21,7 +21,7 @@ SmaCCRewriteStringTransformation >> expression [
 		ifNil: [ expression := SmaCCReplaceExpressionParser parse: self string ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteStringTransformation >> initialize [
 	super initialize.
 	string := ''
@@ -35,12 +35,12 @@ SmaCCRewriteStringTransformation >> saveOn: aStream [
 		nextPutAll: '<<<'
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteStringTransformation >> string [
 	^ string ifNil: [ '' ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteStringTransformation >> string: aString [
 	string := aString.
 	expression := nil.

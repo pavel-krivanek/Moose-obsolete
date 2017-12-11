@@ -34,7 +34,7 @@ Class {
 		'shouldCreateJS',
 		'maxSizeForString'
 	],
-	#category : #Roassal2-Exporter-HTML5
+	#category : #'Roassal2-Exporter-HTML5'
 }
 
 { #category : #'as yet unclassified' }
@@ -127,7 +127,7 @@ RTHTML5Exporter >> createJS [
 	[ self to: s writeText: self roassalJSContent ] ensure: [ s close ].
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTHTML5Exporter >> createStream [
 	| dir  filename |
 	dir := self directory.
@@ -147,7 +147,7 @@ RTHTML5Exporter >> defaultFileName [
 	^ 'index.html'
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTHTML5Exporter >> defaultMarginScale [
 	self marginScale: 0.1.
 ]
@@ -202,7 +202,7 @@ v := b view.
 "
 ]
 
-{ #category : #public-exporting }
+{ #category : #'public-exporting' }
 RTHTML5Exporter >> export: aView [
 	"This is a public method"
 	fileName := self createStream.
@@ -210,7 +210,7 @@ RTHTML5Exporter >> export: aView [
 	^ fileName
 ]
 
-{ #category : #public-exporting }
+{ #category : #'public-exporting' }
 RTHTML5Exporter >> export: aView toStream: aStream [
 
 	self assert: [ aStream isStream ].
@@ -269,7 +269,7 @@ RTHTML5Exporter >> getIFrameDefFromView: aView label: aLabelAsString directory: 
 		height="', (aView canvas encompassingRectangle height * (aView canvas camera scale + self marginScale )) printString,'"></iframe>' 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTHTML5Exporter >> initialize [
 	super initialize.
 	self exportFixedShapes: true.

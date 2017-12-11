@@ -1,10 +1,10 @@
 Class {
 	#name : #CSVParser,
 	#superclass : #SmaCCParser,
-	#category : #SmaCC_CSV_Parser
+	#category : #'SmaCC_CSV_Parser'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CSVParser class >> cacheId [
 	^'2016-10-24T21:05:29.488919-05:00'
 ]
@@ -117,7 +117,7 @@ CSVParser class >> parseFileWithoutHeader: aFilename [
 	^ lines
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CSVParser class >> scannerClass [
 	^CSVScanner
 ]

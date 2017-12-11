@@ -4,7 +4,7 @@ I model the action of opening the debugger.
 Class {
 	#name : #GTDebuggerRecorderOpenEvent,
 	#superclass : #GTDebuggerRecorderEvent,
-	#category : #GT-Debugger-EventRecorder-Events
+	#category : #'GT-Debugger-EventRecorder-Events'
 }
 
 { #category : #'instance creation' }

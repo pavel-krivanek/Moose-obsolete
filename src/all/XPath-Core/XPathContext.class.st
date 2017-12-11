@@ -16,7 +16,7 @@ Class {
 	#classInstVars : [
 		'defaultFunctions'
 	],
-	#category : #XPath-Core
+	#category : #'XPath-Core'
 }
 
 { #category : #accessing }

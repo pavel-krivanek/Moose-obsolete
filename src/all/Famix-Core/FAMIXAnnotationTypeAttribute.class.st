@@ -22,7 +22,7 @@ Class {
 	#instVars : [
 		'annotationAttributeInstances'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -45,7 +45,7 @@ FAMIXAnnotationTypeAttribute >> annotationAttributeInstances: anObject [
 	annotationAttributeInstances value: anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXAnnotationTypeAttribute >> initialize [
 	super initialize.
 	annotationAttributeInstances := FMNullMultivalueLink on: self opposite: #annotationTypeAttribute: selector: #annotationAttributeInstances

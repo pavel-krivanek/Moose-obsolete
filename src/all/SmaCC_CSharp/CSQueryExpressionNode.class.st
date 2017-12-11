@@ -27,7 +27,7 @@ Class {
 		'byTokens',
 		'groupByExpressions'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -186,7 +186,7 @@ CSQueryExpressionNode >> inTokens: anOrderedCollection [
 	inTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSQueryExpressionNode >> initialize [
 	super initialize.
 	fromTokens := OrderedCollection new: 2.

@@ -7,7 +7,7 @@ Class {
 		'commas',
 		'rightBrace'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -40,7 +40,7 @@ JavaElementArrayInitializerNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaElementArrayInitializerNode >> initialize [
 	super initialize.
 	values := OrderedCollection new: 2.

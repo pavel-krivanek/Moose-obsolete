@@ -10,7 +10,7 @@ Class {
 		'color',
 		'background'
 	],
-	#category : #Roassal2-Builder-Menu
+	#category : #'Roassal2-Builder-Menu'
 }
 
 { #category : #accesing }
@@ -51,7 +51,7 @@ RTMenuItem >> execute: m [
 	self after ifNotNil: [self after value: m.]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTMenuItem >> initialize [
 	super initialize.
 	selected := false.

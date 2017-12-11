@@ -6,16 +6,16 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalPorterStemmer,
 	#superclass : #MalAbstractStemmer,
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> isVowelAt: anIndex [
 	
 	^#eaoiuy includes: (string at: anIndex)
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> performStemming: aString [
 	"Performs the Porter stemming algrothim. More see:
 	M. Porter, An algorithm for suffix stripping, Program (1980)/ Vol. 14, No. 3, 130-137"
@@ -38,7 +38,7 @@ MalPorterStemmer >> performStemming: aString [
 	^string
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> preprocessing [
 	
 	string first = $y ifTrue: [string at: 1 put: $Y].
@@ -50,7 +50,7 @@ MalPorterStemmer >> preprocessing [
 				ifTrue: [string at: index put: $Y]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> stemEndsWithConsonantVowelConsonant [
 	
 	^cursor >= 3
@@ -62,7 +62,7 @@ MalPorterStemmer >> stemEndsWithConsonantVowelConsonant [
 							[(self isVowelAt: cursor - 1) and: [self isConsonantAt: cursor - 2]]]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> stemEndsWithDoubleConsonant [
 	"comment stating purpose of message"
 	
@@ -72,7 +72,7 @@ MalPorterStemmer >> stemEndsWithDoubleConsonant [
 				and: [self isConsonantAt: cursor]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> stemIncludesVowel [
 	"comment stating purpose of message"
 	
@@ -82,7 +82,7 @@ MalPorterStemmer >> stemIncludesVowel [
 	^false
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step1a [
 	"comment stating purpose of message"
 	
@@ -112,7 +112,7 @@ MalPorterStemmer >> step1a [
 					^nil]]"
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step1b [
 	"comment stating purpose of message"
 	
@@ -145,7 +145,7 @@ MalPorterStemmer >> step1b [
 				ifTrue: [self setSuffix: 'e']]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step1c [
 	
 	(((self endsWith: 'y') or: [self endsWith: 'Y'])
@@ -156,7 +156,7 @@ MalPorterStemmer >> step1c [
 				put: $i]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step2 [
 	"comment stating purpose of message"
 	
@@ -169,7 +169,7 @@ MalPorterStemmer >> step2 [
 					^nil]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step3 [
 	
 	#(#(#ative #'') #(#icate #ic) #(#alize #al) #(#iciti #ic) #(#ical #ic) #(#ness #'') #(#ful #''))
@@ -181,7 +181,7 @@ MalPorterStemmer >> step3 [
 					^nil]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step4 [
 	#(#ement #ance #ence #able #ible #ment)
 		do: [ :rule | 
@@ -205,7 +205,7 @@ MalPorterStemmer >> step4 [
 					^ nil ] ]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step5a [
 	
 	cursor := string size - 1.
@@ -219,7 +219,7 @@ MalPorterStemmer >> step5a [
 			^nil]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalPorterStemmer >> step5b [
 	
 	cursor := string size.

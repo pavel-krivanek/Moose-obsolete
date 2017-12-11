@@ -6,7 +6,7 @@ Class {
 		'questionMarkToken',
 		'arguments'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -45,7 +45,7 @@ CSNullConditionalElementAccessNode >> compositeNodeVariables [
 	^ #(#arguments #expressions)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSNullConditionalElementAccessNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

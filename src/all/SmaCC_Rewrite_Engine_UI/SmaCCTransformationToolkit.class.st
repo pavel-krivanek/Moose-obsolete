@@ -6,7 +6,7 @@ Class {
 		'resultsList',
 		'previewResult'
 	],
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #actions }
@@ -310,7 +310,7 @@ SmaCCTransformationToolkit >> gotoRewritesTab [
 	self pane lastActivePresentation: self rewritesPresentation
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCTransformationToolkit >> initialize [
 	super initialize.
 	self model: SmaCCTransformationToolkitModel new

@@ -5,7 +5,7 @@ Class {
 		'list',
 		'listMorph'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #'accessing - morph contents' }

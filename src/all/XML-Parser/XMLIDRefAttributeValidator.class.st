@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'elementIDValidator'
 	],
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #defaults }

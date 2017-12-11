@@ -5,7 +5,7 @@ Class {
 		'model',
 		'systemWindows'
 	],
-	#category : #Moose-Tests-Finder
+	#category : #'Moose-Tests-Finder'
 }
 
 { #category : #utils }

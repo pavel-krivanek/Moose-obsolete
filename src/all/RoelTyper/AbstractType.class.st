@@ -8,7 +8,7 @@ Class {
 		'nbOfCorrectTypes',
 		'nbOfIncorrectTypes'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #'instance creation' }
@@ -50,7 +50,7 @@ AbstractType >> conflictingSelectorsWith: anExtractedType [
 	^conflictingSelectors
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 AbstractType >> initialize [
 	"Do nothing, but give subclasses the chance to override."
 

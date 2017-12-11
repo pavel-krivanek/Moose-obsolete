@@ -17,7 +17,7 @@ Class {
 		'equalGreaterThanToken',
 		'expression'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -95,7 +95,7 @@ CSPropertyDeclarationNode >> getAccessor: aCSGetAccessorDeclarationNode [
 		ifTrue: [ self getAccessor parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSPropertyDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

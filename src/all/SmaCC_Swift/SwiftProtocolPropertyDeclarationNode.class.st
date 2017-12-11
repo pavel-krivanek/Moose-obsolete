@@ -39,7 +39,7 @@ Class {
 		'getToken',
 		'setToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -152,7 +152,7 @@ SwiftProtocolPropertyDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftProtocolPropertyDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

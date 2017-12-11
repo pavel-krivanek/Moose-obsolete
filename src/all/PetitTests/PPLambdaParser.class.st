@@ -7,35 +7,35 @@ Class {
 		'application',
 		'variable'
 	],
-	#category : #PetitTests-Examples
+	#category : #'PetitTests-Examples'
 }
 
-{ #category : #curch-booleans }
+{ #category : #'curch-booleans' }
 PPLambdaParser class >> and [
 	^ self parse: '\p.\q.((p q) p)'
 ]
 
-{ #category : #curch-booleans }
+{ #category : #'curch-booleans' }
 PPLambdaParser class >> false [
 	^ self parse: '\x.\y.y'
 ]
 
-{ #category : #curch-booleans }
+{ #category : #'curch-booleans' }
 PPLambdaParser class >> ifthenelse [
 	^ self parse: '\p.p'
 ]
 
-{ #category : #curch-booleans }
+{ #category : #'curch-booleans' }
 PPLambdaParser class >> not [
 	^ self parse: '\p.\a.\b.((p b) a)'
 ]
 
-{ #category : #curch-booleans }
+{ #category : #'curch-booleans' }
 PPLambdaParser class >> or [
 	^ self parse: '\p.\q.((p p) q)'
 ]
 
-{ #category : #curch-booleans }
+{ #category : #'curch-booleans' }
 PPLambdaParser class >> true [
 	^ self parse: '\x.\y.x'
 ]

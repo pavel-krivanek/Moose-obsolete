@@ -6,5 +6,5 @@ Class {
 		'a2',
 		'a3'
 	],
-	#category : #Moose-TestResources-LCOM
+	#category : #'Moose-TestResources-LCOM'
 }

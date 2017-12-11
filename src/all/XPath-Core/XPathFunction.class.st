@@ -16,7 +16,7 @@ Class {
 	#classInstVars : [
 		'prototype'
 	],
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #composition }

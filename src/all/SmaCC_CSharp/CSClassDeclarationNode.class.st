@@ -18,7 +18,7 @@ Class {
 		'rightBraceToken',
 		'semicolon'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -117,7 +117,7 @@ CSClassDeclarationNode >> ignoredTokenVariables [
 	^ #(#commaToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSClassDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

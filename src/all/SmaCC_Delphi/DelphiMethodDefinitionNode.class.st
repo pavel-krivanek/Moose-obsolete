@@ -7,7 +7,7 @@ Class {
 		'block',
 		'semicolon'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -65,7 +65,7 @@ DelphiMethodDefinitionNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiMethodDefinitionNode >> initialize [
 	super initialize.
 	definitions := OrderedCollection new: 2.

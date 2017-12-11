@@ -1,10 +1,10 @@
 Class {
 	#name : #MooseImportingContextAllCheckboxesDisplayedPart,
 	#superclass : #MooseImportingContextPart,
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseImportingContextAllCheckboxesDisplayedPart >> initialize [
 
 	super initialize.

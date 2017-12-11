@@ -23,7 +23,7 @@ Class {
 		'LFCharacter',
 		'NullReadStream'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #'class initialization' }

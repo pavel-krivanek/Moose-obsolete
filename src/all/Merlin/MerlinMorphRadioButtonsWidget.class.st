@@ -5,7 +5,7 @@ Class {
 		'radioButtons',
 		'labelsAndModels'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #'accessing - morph' }

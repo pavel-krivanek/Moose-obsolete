@@ -6,7 +6,7 @@ Class {
 		'_attributes',
 		'declarations'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -55,7 +55,7 @@ CSCompilationUnitNode >> directives: anOrderedCollection [
 	self setParents: self directives to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSCompilationUnitNode >> initialize [
 	super initialize.
 	directives := OrderedCollection new: 2.

@@ -7,10 +7,10 @@ Class {
 	#instVars : [
 		'stream'
 	],
-	#category : #Athens-SVG
+	#category : #'Athens-SVG'
 }
 
-{ #category : #parsing-public }
+{ #category : #'parsing-public' }
 ASConverter >> nextNumber [
 	"read the number from stream.
 	or answer nil if not successfull"

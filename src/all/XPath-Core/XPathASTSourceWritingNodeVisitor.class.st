@@ -4,7 +4,7 @@ This class is a writing AST visitor that writes the AST as XPath source code tha
 Class {
 	#name : #XPathASTSourceWritingNodeVisitor,
 	#superclass : #XPathASTWritingNodeVisitor,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #private }

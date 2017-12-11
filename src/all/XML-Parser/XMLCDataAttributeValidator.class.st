@@ -4,7 +4,7 @@ This class validates CDATA attributes, which are not whitespace-normalized furth
 Class {
 	#name : #XMLCDataAttributeValidator,
 	#superclass : #XMLAttributeValidator,
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #defaults }

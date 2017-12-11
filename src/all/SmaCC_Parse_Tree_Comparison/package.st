@@ -1,1 +1,1 @@
-Package { #name : #SmaCC_Parse_Tree_Comparison }
+Package { #name : #'SmaCC_Parse_Tree_Comparison' }

@@ -15,7 +15,7 @@ Class {
 		'eventOverseer',
 		'theme'
 	],
-	#category : #Trachel-Core
+	#category : #'Trachel-Core'
 }
 
 { #category : #visitor }

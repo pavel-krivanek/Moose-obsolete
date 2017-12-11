@@ -4,7 +4,7 @@ XPath name function. Returns expanded name or local name of a node or empty stri
 Class {
 	#name : #XPathNameFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

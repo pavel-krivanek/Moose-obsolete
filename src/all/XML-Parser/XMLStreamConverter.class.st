@@ -18,7 +18,7 @@ Class {
 	#classInstVars : [
 		'encodingNames'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #basic }

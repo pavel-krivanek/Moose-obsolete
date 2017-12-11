@@ -15,7 +15,7 @@ Class {
 		'commas',
 		'declaration'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -100,7 +100,7 @@ JSForStatementNode >> initialExpression: aJSExpressionNode [
 		ifTrue: [ self initialExpression parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSForStatementNode >> initialize [
 	super initialize.
 	semicolons := OrderedCollection new: 2.

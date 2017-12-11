@@ -4,10 +4,10 @@ I am a description of dates, possible values are instances of ==Date==. My visua
 Class {
 	#name : #MADateDescription,
 	#superclass : #MAMagnitudeDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADateDescription class >> defaultDisplayProperty [
 	^ [ :aDateOrNil | 
 				aDateOrNil
@@ -15,7 +15,7 @@ MADateDescription class >> defaultDisplayProperty [
 					ifNil: [ '' ] ]
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADateDescription class >> defaultKind [
 	^ Date
 ]

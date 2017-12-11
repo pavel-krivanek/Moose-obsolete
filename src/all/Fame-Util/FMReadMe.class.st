@@ -1,7 +1,7 @@
 Class {
 	#name : #FMReadMe,
 	#superclass : #Object,
-	#category : #Fame-Util
+	#category : #'Fame-Util'
 }
 
 { #category : #'useful scripts' }

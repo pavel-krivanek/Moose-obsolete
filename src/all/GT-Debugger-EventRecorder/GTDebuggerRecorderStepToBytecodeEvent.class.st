@@ -7,7 +7,7 @@ GTStepToBytecodeDebugAction
 Class {
 	#name : #GTDebuggerRecorderStepToBytecodeEvent,
 	#superclass : #GTDebuggerRecorderDebugActionEvent,
-	#category : #GT-Debugger-EventRecorder-Events
+	#category : #'GT-Debugger-EventRecorder-Events'
 }
 
 { #category : #accessing }

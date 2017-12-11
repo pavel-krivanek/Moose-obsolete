@@ -9,7 +9,7 @@ Class {
 		'throws',
 		'semicolon'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -41,7 +41,7 @@ JavaAbstractMethodDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaAbstractMethodDeclarationNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

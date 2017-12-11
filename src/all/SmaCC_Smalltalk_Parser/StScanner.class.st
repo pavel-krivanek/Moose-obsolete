@@ -1,10 +1,10 @@
 Class {
 	#name : #StScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Smalltalk_Parser
+	#category : #'SmaCC_Smalltalk_Parser'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 StScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(20 'false' 12) #(20 'nil' 14) #(20 'true' 11) #(26 '||' 15))

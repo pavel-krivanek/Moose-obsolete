@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'rejectedPackages'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #private }

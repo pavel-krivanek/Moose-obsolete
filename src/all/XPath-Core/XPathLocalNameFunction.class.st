@@ -4,7 +4,7 @@ XPath local name function.
 Class {
 	#name : #XPathLocalNameFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

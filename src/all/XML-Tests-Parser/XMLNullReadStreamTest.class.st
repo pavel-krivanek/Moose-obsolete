@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLNullReadStreamTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-Streams
+	#category : #'XML-Tests-Parser-Streams'
 }
 
 { #category : #'instance creation' }

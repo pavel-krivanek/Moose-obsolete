@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'b'
 	],
-	#category : #Roassal2-Builder-Legend
+	#category : #'Roassal2-Builder-Legend'
 }
 
 { #category : #running }

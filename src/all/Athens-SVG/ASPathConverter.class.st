@@ -23,7 +23,7 @@ Class {
 		'min',
 		'max'
 	],
-	#category : #Athens-SVG
+	#category : #'Athens-SVG'
 }
 
 { #category : #'path commands' }

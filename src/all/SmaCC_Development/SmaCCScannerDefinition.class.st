@@ -6,7 +6,7 @@ Class {
 		'states',
 		'excludeStates'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -42,7 +42,7 @@ SmaCCScannerDefinition >> includesTokenNamed: aString [
 	^ tokens includesKey: aString
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCScannerDefinition >> initialize [
 	super initialize.
 	tokens := Dictionary new.

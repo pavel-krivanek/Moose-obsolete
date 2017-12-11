@@ -17,7 +17,7 @@ Class {
 		'priority',
 		'builtDescription'
 	],
-	#category : #Magritte-Model-Builder
+	#category : #'Magritte-Model-Builder'
 }
 
 { #category : #accessing }

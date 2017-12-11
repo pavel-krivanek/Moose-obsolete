@@ -41,7 +41,7 @@ PP2PredicateTest >> parsedCharacterSet: aParser [
 	^ result contents
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PP2PredicateTest >> testAny [
 	| parser |
 	parser := #any asPParser.
@@ -52,7 +52,7 @@ PP2PredicateTest >> testAny [
 	self assert: parser fail: ''
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PP2PredicateTest >> testAnyExceptAnyOf [
 	| parser |
 	parser := PP2PredicateObjectNode noneOf: #($: $,).
@@ -63,7 +63,7 @@ PP2PredicateTest >> testAnyExceptAnyOf [
 	self assert: parser fail: ','
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PP2PredicateTest >> testAnyOf [
 	| parser |
 	parser := PP2PredicateObjectNode anyOf: #($a $z).
@@ -73,7 +73,7 @@ PP2PredicateTest >> testAnyOf [
 	self assert: parser fail: 'x'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testBlank [
 	| parser |
 	parser := #blank asPParser.
@@ -85,7 +85,7 @@ PP2PredicateTest >> testBlank [
 	self assert: parser fail: (String with: Character cr)
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testChar [
 	| parser |
 	parser := $* asPParser.
@@ -97,7 +97,7 @@ PP2PredicateTest >> testChar [
 	self assert: parser fail: 'a'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testDigit [
 	| parser |
 	parser := #digit asPParser.
@@ -108,7 +108,7 @@ PP2PredicateTest >> testDigit [
 	self assert: parser fail: 'a'
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PP2PredicateTest >> testExpect [
 	| parser |
 	parser := PP2PredicateObjectNode expect: $a message: '$a expected'.
@@ -118,7 +118,7 @@ PP2PredicateTest >> testExpect [
 	self assert: parser fail: ''
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testHex [
 	| parser |
 	parser := #hex asPParser.
@@ -136,7 +136,7 @@ PP2PredicateTest >> testHex [
 	self assert: parser fail: 'g'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testLetter [
 	| parser |
 	parser := #letter asPParser.
@@ -147,7 +147,7 @@ PP2PredicateTest >> testLetter [
 	self assert: parser fail: '0'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testNewline [
 	| parser |
 	parser := #newline asPParser.
@@ -158,7 +158,7 @@ PP2PredicateTest >> testNewline [
 	self assert: parser fail: ' '
 ]
 
-{ #category : #testing-sequence }
+{ #category : #'testing-sequence' }
 PP2PredicateTest >> testSequenceParser [
 	| parser |
 	parser := PP2PredicateSequenceNode
@@ -182,7 +182,7 @@ PP2PredicateTest >> testSequenceParser [
 	self assert: parser fail: 'Ab'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testSpace [
 	| parser |
 	parser := #space asPParser.
@@ -193,7 +193,7 @@ PP2PredicateTest >> testSpace [
 	self assert: parser fail: 'a'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PP2PredicateTest >> testWord [
 	| parser |
 	parser := #word asPParser.

@@ -4,10 +4,10 @@ Class {
 	#classInstVars : [
 		'keywords'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 JavaParser class >> cacheId [
 	^'2017-11-29T08:19:30.675907-06:00'
 ]
@@ -1074,7 +1074,7 @@ JavaParser class >> keywords [
 				asSet ]
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 JavaParser class >> scannerClass [
 	^JavaScanner
 ]

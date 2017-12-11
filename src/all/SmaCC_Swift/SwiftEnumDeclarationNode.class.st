@@ -60,7 +60,7 @@ Class {
 		'inoutTokens',
 		'subscriptTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -334,7 +334,7 @@ SwiftEnumDeclarationNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftEnumDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

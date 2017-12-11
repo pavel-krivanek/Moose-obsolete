@@ -5,7 +5,7 @@ Class {
 		'rightHandSide',
 		'leftHandSide'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
 { #category : #'As yet unclassified' }

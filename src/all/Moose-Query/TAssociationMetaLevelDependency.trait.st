@@ -5,7 +5,7 @@ Trait {
 	#name : #TAssociationMetaLevelDependency,
 	#traits : 'TMetaLevelDependency',
 	#classTraits : 'TMetaLevelDependency classTrait',
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #accessing }

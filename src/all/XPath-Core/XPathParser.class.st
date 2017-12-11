@@ -9,7 +9,7 @@ Class {
 		'readStream',
 		'writeStream'
 	],
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #'instance creation' }

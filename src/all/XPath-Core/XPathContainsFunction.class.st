@@ -4,7 +4,7 @@ XPath contains substring function.
 Class {
 	#name : #XPathContainsFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

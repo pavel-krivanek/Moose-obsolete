@@ -14,7 +14,7 @@ Class {
 		'count',
 		'context'
 	],
-	#category : #PetitParser-Core
+	#category : #'PetitParser-Core'
 }
 
 { #category : #'instance creation' }
@@ -33,7 +33,7 @@ PPMemento >> contextMemento: aPPContextMemento [
 
 ]
 
-{ #category : #accessing-readonly }
+{ #category : #'accessing-readonly' }
 PPMemento >> count [
 	^ count
 ]

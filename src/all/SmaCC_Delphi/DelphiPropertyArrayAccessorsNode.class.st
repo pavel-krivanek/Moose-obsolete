@@ -7,7 +7,7 @@ Class {
 		'semicolons',
 		'right'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -37,7 +37,7 @@ DelphiPropertyArrayAccessorsNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiPropertyArrayAccessorsNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

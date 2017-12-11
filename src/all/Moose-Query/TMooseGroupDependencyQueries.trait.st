@@ -3,7 +3,7 @@ This trait provides a common, paradigm agnostic vocabulary to query dependencies
 "
 Trait {
 	#name : #TMooseGroupDependencyQueries,
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #querying }

@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCStepToNextNodeAction,
 	#superclass : #SmaCCTransformationToolkitDebugAction,
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #registration }

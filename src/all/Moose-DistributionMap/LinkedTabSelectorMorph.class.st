@@ -10,7 +10,7 @@ Class {
 		'firstSideLink',
 		'secondSideLink'
 	],
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #accessing }

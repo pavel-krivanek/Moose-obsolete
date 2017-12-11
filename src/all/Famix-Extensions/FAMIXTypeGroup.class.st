@@ -4,7 +4,7 @@ FAMIXTypeGroup is a MooseGroup containing only FAMIX enities of type FAMIXType.
 Class {
 	#name : #FAMIXTypeGroup,
 	#superclass : #MooseGroup,
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #meta }

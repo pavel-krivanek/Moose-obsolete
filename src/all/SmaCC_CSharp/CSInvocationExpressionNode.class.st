@@ -8,7 +8,7 @@ Class {
 		'commaTokens',
 		'rightParenToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -62,7 +62,7 @@ CSInvocationExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens #_leftParens #_rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSInvocationExpressionNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

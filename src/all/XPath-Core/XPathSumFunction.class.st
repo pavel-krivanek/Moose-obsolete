@@ -4,7 +4,7 @@ XPath node set sum function.
 Class {
 	#name : #XPathSumFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

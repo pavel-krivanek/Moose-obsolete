@@ -6,7 +6,7 @@ Class {
 		'values',
 		'arrayStop'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }
@@ -39,7 +39,7 @@ GstArrayLiteralNode >> compositeNodeVariables [
 	^ #(#values)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 GstArrayLiteralNode >> initialize [
 	super initialize.
 	values := OrderedCollection new: 2.

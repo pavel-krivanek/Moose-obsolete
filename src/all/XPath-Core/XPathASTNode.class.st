@@ -10,7 +10,7 @@ Class {
 		'parent',
 		'type'
 	],
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #private }

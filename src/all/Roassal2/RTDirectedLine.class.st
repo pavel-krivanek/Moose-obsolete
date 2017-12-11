@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'offset'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #initialization }

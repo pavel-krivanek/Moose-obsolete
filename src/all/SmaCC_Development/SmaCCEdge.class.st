@@ -18,7 +18,7 @@ Class {
 		'toNode',
 		'transitionObjects'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -127,12 +127,12 @@ SmaCCEdge >> to [
 	^ toNode
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCEdge >> to: aSmaCCNode [
 	toNode := aSmaCCNode
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCEdge >> to: aSmaCCNode on: aStringOrNil [
 	toNode := aSmaCCNode.
 	transitionObjects := aStringOrNil

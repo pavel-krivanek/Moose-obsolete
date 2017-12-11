@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'callbacks'
 	],
-	#category : #Trachel-Core
+	#category : #'Trachel-Core'
 }
 
 { #category : #callbacks }

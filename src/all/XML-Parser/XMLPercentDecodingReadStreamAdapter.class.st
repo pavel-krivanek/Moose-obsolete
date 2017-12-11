@@ -4,7 +4,7 @@ A read stream adapter that decodes streams encoded with  sequences of ""%HH"" by
 Class {
 	#name : #XMLPercentDecodingReadStreamAdapter,
 	#superclass : #XMLDecodingReadStreamAdapter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #testing }

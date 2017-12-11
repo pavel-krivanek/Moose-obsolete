@@ -7,7 +7,7 @@ Class {
 	#category : 'GToolkit-Examples-Runtime'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GtCurrentExampleContext class >> defaultValue [
 	^ nil
 ]
@@ -24,7 +24,7 @@ GtCurrentExampleContext class >> value [
 	^ self signal
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GtCurrentExampleContext >> defaultAction [
 	^ self class defaultValue
 ]

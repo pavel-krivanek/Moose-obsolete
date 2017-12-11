@@ -4,10 +4,10 @@ I am a description of Smalltalk classes, possible values can be any of ==Smallta
 Class {
 	#name : #MAClassDescription,
 	#superclass : #MAElementDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAClassDescription class >> defaultKind [
 	^ Class
 ]

@@ -4,10 +4,10 @@ I am an abstract description for all basic description types.
 Class {
 	#name : #MAElementDescription,
 	#superclass : #MADescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAElementDescription class >> defaultDisplayProperty [
 	^ #greaseString
 ]
@@ -40,7 +40,7 @@ MAElementDescription >> default: anObject [
 	self propertyAt: #default put: anObject
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAElementDescription >> display: aBlockOrSymbol [
 	"Transform how the file is converted to a string.
 	aSymbol
@@ -51,7 +51,7 @@ MAElementDescription >> display: aBlockOrSymbol [
 	self propertyAt: #displayBlockOrSymbol put: aBlockOrSymbol.
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAElementDescription >> displayBlockOrSymbol [
 	^self propertyAt: #displayBlockOrSymbol ifAbsent: [ self class defaultDisplayProperty ]
 ]

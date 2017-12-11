@@ -5,7 +5,7 @@ Class {
 		'hismoImporter',
 		'datePattern'
 	],
-	#category : #Moose-Test-HismoImporter
+	#category : #'Moose-Test-HismoImporter'
 }
 
 { #category : #private }

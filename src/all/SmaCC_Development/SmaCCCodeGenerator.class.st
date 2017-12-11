@@ -70,7 +70,7 @@ Class {
 	#classInstVars : [
 		'codeTemplates'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'code generation templates' }
@@ -113,7 +113,7 @@ SmaCCCodeGenerator class >> typeName [
 	^ nil
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> acceptCharacterEdge: aSmaCCCharacterEdge seen: aCollection [
 	| stream |
 	stream := WriteStream with: String new.
@@ -135,7 +135,7 @@ SmaCCCodeGenerator >> acceptCharacterEdge: aSmaCCCharacterEdge seen: aCollection
 	^ stream contents
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> acceptStateEdge: aSmaCCStateEdge [
 	self subclassResponsibility
 ]
@@ -187,7 +187,7 @@ SmaCCCodeGenerator >> addVariable: aSmaCCVariableDefinition forDefinition: aSmaC
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> ambiguousTableEntryFor: aCollection [
 	| entry |
 	entry := aCollection asArray.
@@ -209,7 +209,7 @@ SmaCCCodeGenerator >> argumentIndex: anInteger subIndex: subIndex [
 		index: subIndex
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> asStatement: methodMap forNode: aSmaCCNode lastNeedsReturn: aBoolean [
 	| transitions seen |
 	aSmaCCNode hasSimpleLoop
@@ -271,7 +271,7 @@ SmaCCCodeGenerator >> basicCompileSourceFor: aSmaCCReduceAction [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> closestIsExpressionsFor: aSmaCCCharacterEdge seen: anObject [
 	self subclassResponsibility
 ]
@@ -310,7 +310,7 @@ SmaCCCodeGenerator >> commonSupertypeOf: aCollection [
 		into: [ :sum :each | self commonSupertypeBetween: sum and: each ]
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileAcceptNodeMethodFor: aSmaCCVisitorClassDefinition rootNode: aSmaCCClassDefinition [
 	"Only needed if we are using a brain dead type system"
 
@@ -340,7 +340,7 @@ SmaCCCodeGenerator >> compileAcceptVisitorMethod: aSmaCCNodeClassDefinition visi
 		compileMethodIn: aSmaCCNodeClassDefinition modelClass
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileAmbiguousTransitions [
 	| stream |
 	ambiguousActions isEmpty
@@ -366,7 +366,7 @@ SmaCCCodeGenerator >> compileAmbiguousTransitions [
 		compileMethodWithoutFormattingIn: parserClass
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileCacheId [
 ]
 
@@ -375,12 +375,12 @@ SmaCCCodeGenerator >> compileChanges [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileChildrenMethod: aSmaCCNodeClassDefinition [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileCopyInContextMethod: aSmaCCNodeClassDefinition [
 	self subclassResponsibility
 ]
@@ -395,24 +395,24 @@ SmaCCCodeGenerator >> compileDefinitionComment: aString [
 	self compileMethodWithoutFormattingIn: parserClass theMetaClass
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileEmptySymbolTokenId: emptySymbolId [
 	self
 		compileTokenIdMethodNamed: 'emptySymbolToken'
 		withId: emptySymbolId
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileEqualMethod: aSmaCCNodeClassDefinition [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileErrorSymbolTokenId: errorTokenId [
 	self compileTokenIdMethodNamed: 'errorToken' withId: errorTokenId
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileGetterAndSetter: aSmaCCVariableDefinition forDefinition: aSmaCCNodeClassDefinition [
 	| type typeName variableName definer |
 	variableName := self
@@ -457,12 +457,12 @@ SmaCCCodeGenerator >> compileGetterAndSetter: aSmaCCVariableDefinition forDefini
 		compileMethodIn: aSmaCCNodeClassDefinition modelClass
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileHashMethod: aSmaCCNodeClassDefinition [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileIgnoreCaseMethods [
 	self grammar ignoreCase
 		ifFalse: [ ^ self ].
@@ -479,22 +479,22 @@ SmaCCCodeGenerator >> compileIgnoreCaseMethods [
 		compileMethodIn: scannerClass
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileInitializeMethod: aSmaCCNodeClassDefinition [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileKeywordInitializerUsing: keywordMapDictionary [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileMatchInContextMethod: aSmaCCNodeClassDefinition [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileMethodIn: modelClass [
 	self subclassResponsibility
 ]
@@ -504,7 +504,7 @@ SmaCCCodeGenerator >> compileMethodWithoutFormattingIn: modelClass [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileNode: aSmaCCNode [
 	| methodNodes methodMap |
 	methodNodes := self statesToMakeIntoMethodsFor: aSmaCCNode.
@@ -541,12 +541,12 @@ SmaCCCodeGenerator >> compileOptimizedMethodIn: modelClass [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compilePostCopyMethod: aSmaCCNodeClassDefinition [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileReductionActions [
 	
 ]
@@ -588,7 +588,7 @@ SmaCCCodeGenerator >> compileSourceFor: aSmaCCReduceAction [
 		ifAbsentPut: [ self basicCompileSourceFor: aSmaCCReduceAction ]
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileStartingStateIds: startingStates [
 	startingStates
 		keysAndValuesDo:
@@ -604,14 +604,14 @@ SmaCCCodeGenerator >> compileStartingStateIds: startingStates [
 				compileMethodIn: parserClass theMetaClass ]
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileSymbolNames [
 	| names |
 	names := grammar symbols collect: [ :each | each name ].
 	self compileSymbolNames: names asArray
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileSymbolNames: anArray [
 	self
 		startPublicVirtualMethod;
@@ -621,7 +621,7 @@ SmaCCCodeGenerator >> compileSymbolNames: anArray [
 		compileMethodIn: self parserClass
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileSymbolTypes [
 	| names |
 	names := grammar symbols
@@ -637,12 +637,12 @@ SmaCCCodeGenerator >> compileSymbolTypes [
 	self compileSymbolTypes: names asArray
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileSymbolTypes: anArray [
 	
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> compileTokenIdMethodNamed: aString withId: symbolId [
 	self
 		startPublicOverrideMethod;
@@ -652,7 +652,7 @@ SmaCCCodeGenerator >> compileTokenIdMethodNamed: aString withId: symbolId [
 		compileMethodIn: scannerClass
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> compileTransitionTable: transitionTable [
 	| stream |
 	stream := self outputStream.
@@ -674,12 +674,12 @@ SmaCCCodeGenerator >> compileTransitionTable: transitionTable [
 	self compileAmbiguousTransitions
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileVariablesMethods: aSmaCCNodeClassDefinition [
 	
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCCodeGenerator >> compileVisitMethodFor: aSmaCCNodeClassDefinition visitor: aSmaCCVisitorClassDefinition [
 	| tempName |
 	self
@@ -760,7 +760,7 @@ SmaCCCodeGenerator >> createVariableArrayFor: aSmaCCRHS [
 						to: (self newCollectionOfSize: 2)) ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCodeGenerator >> defaultCategory: aSymbol [
 	defaultCategory := aSymbol
 ]
@@ -775,7 +775,7 @@ SmaCCCodeGenerator >> defaultReductionSource [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> defineClass: aString asSubclassOf: aSmaCCClass [
 	self subclassResponsibility
 ]
@@ -800,7 +800,7 @@ SmaCCCodeGenerator >> endMethod [
 	self codeStream nextPutAll: self endMethodString
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> glrParserClass: aClassOrString [
 	| name existingClass superclass |
 	name := (aClassOrString isKindOf: Behavior)
@@ -825,7 +825,7 @@ SmaCCCodeGenerator >> grammar: aSmaCCGrammar [
 	grammar := aSmaCCGrammar
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> initialMethodStatesFor: aSmaCCNode [
 	| allStates incoming |
 	allStates := aSmaCCNode allStates.
@@ -848,19 +848,19 @@ SmaCCCodeGenerator >> initialMethodStatesFor: aSmaCCNode [
 						and: [ (incoming at: each ifAbsent: [ #() ]) size > 1 ] ] ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCodeGenerator >> initialize [
 	super initialize.
 	reduceActionCache := Dictionary new.
 	ambiguousActions := OrderedCollection new
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> initializeArrayContentsToNull: aSmaCCRHS [
 	
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> initializeResultForReduceAction: aSmaCCRHS [
 	^ self
 		newArrayOfSize: aSmaCCRHS productionSymbol variableDefinitions size
@@ -896,7 +896,7 @@ SmaCCCodeGenerator >> methodNameFor: aString [
 	^ aString
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> methodNameMap: aSmaCCNode forMethods: methodNodes [
 	| index methodMap |
 	methodMap := Dictionary new.
@@ -913,7 +913,7 @@ SmaCCCodeGenerator >> methodNameMap: aSmaCCNode forMethods: methodNodes [
 	^ methodMap
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> minMaxPairsFor: aSmaCCCharacterEdge without: isSelectors [
 	| start last pairs charsLeft |
 	charsLeft := aSmaCCCharacterEdge transitionObjects
@@ -946,7 +946,7 @@ SmaCCCodeGenerator >> namespaceName [
 	^ ''
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> nextPut: aCharacter [
 	self codeStream nextPut: aCharacter
 ]
@@ -984,22 +984,22 @@ SmaCCCodeGenerator >> objectClass [
 	^ model classFor: Object
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> outputInvertedMatchFor: aSmaCCCharacterEdge on: stream [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> outputIsSelector: isSelector on: stream [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> outputMatchFor: aSmaCCCharacterEdge on: aStream without: aSelector [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> outputMatchFor: aSmaCCCharacterEdge seen: aCollection on: stream [
 	| isSelectors |
 	isSelectors := self
@@ -1034,7 +1034,7 @@ SmaCCCodeGenerator >> parserClass [
 	^ parserClass
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> parserClass: aClassOrString [
 	| name existingClass superclass |
 	name := (aClassOrString isKindOf: Behavior)
@@ -1052,7 +1052,7 @@ SmaCCCodeGenerator >> parserClass: aClassOrString [
 	parserClass := self defineClass: name asSubclassOf: superclass
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> possiblyGuardNil: each around: aBlock [
 	each isAlwaysAssigned
 		ifTrue: [ aBlock value ]
@@ -1065,7 +1065,7 @@ SmaCCCodeGenerator >> possiblyGuardNil: each around: aBlock [
 				ensure: [ self nextPutStatement: self endConditionalString ] ]
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> processTransitionTable: transitionTable [
 	| table |
 	table := OrderedCollection new.
@@ -1188,17 +1188,17 @@ SmaCCCodeGenerator >> resetCodeStream [
 	codeStream := nil
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> scannerActionFor: aString [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> scannerClass: aString [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> selectorMap: aDictionary [
 	self subclassResponsibility
 ]
@@ -1223,7 +1223,7 @@ SmaCCCodeGenerator >> send: selectorString to: receiverString with: firstArgumen
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCCodeGenerator >> setGetterMethodNameTo: aSmaCCVariableDefinition withName: variableName [
 	aSmaCCVariableDefinition
 		getterMethodName: (self methodNameFor: variableName)
@@ -1275,7 +1275,7 @@ SmaCCCodeGenerator >> singleVariableCollectionFor: reduceCode [
 	^self codeStream contents
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> sortedTransitionsForNode: aSmaCCNode [
 	^ aSmaCCNode transitions
 		asSortedCollection:
@@ -1295,7 +1295,7 @@ SmaCCCodeGenerator >> sortedTransitionsForNode: aSmaCCNode [
 												or: [ a transitionObjects size = b transitionObjects size and: [ a <= b ] ] ] ] ] ] ]
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> splitLargeNodes: methodStates [
 	"Split nodes that might generate long jumps that may not compile (longer than 16 bit offset)."
 
@@ -1357,7 +1357,7 @@ SmaCCCodeGenerator >> startStaticPrivateMethod [
 		nextPutAll: self private
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> statesToMakeIntoMethodsFor: aSmaCCNode [
 	| methodStates |
 	methodStates := self initialMethodStatesFor: aSmaCCNode.
@@ -1437,7 +1437,7 @@ SmaCCCodeGenerator >> variableReference: aSmaCCVariableDefinition in: aString [
 	self subclassResponsibility
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> writeMatchingCodeFor: aSmaCCNode [
 	self subclassResponsibility
 ]

@@ -1,10 +1,10 @@
 Class {
 	#name : #StParser,
 	#superclass : #SmaCCParser,
-	#category : #SmaCC_Smalltalk_Parser
+	#category : #'SmaCC_Smalltalk_Parser'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 StParser class >> cacheId [
 	^'2017-11-29T08:31:09.264146-06:00'
 ]
@@ -420,7 +420,7 @@ StParser class >> parseMethod: aString onError: aBlock [
 		onError: aBlock
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 StParser class >> scannerClass [
 	^StScanner
 ]

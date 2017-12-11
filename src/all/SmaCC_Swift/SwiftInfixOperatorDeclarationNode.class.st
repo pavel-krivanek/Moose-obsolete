@@ -13,7 +13,7 @@ Class {
 		'noneToken',
 		'rightBraceToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -46,7 +46,7 @@ SwiftInfixOperatorDeclarationNode >> infixToken: aSmaCCToken [
 	infixToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftInfixOperatorDeclarationNode >> initialize [
 	super initialize.
 	operatorTokens := OrderedCollection new: 2.

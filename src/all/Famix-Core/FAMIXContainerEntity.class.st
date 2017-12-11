@@ -10,7 +10,7 @@ Class {
 		'types',
 		'functions'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -43,7 +43,7 @@ FAMIXContainerEntity >> functions: aCollectionOfFunctions [
 	functions value: aCollectionOfFunctions
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXContainerEntity >> initialize [
 	super initialize.
 	types := FMNullMultivalueLink on: self opposite: #container: selector: #types.

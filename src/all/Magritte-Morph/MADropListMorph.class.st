@@ -1,10 +1,10 @@
 Class {
 	#name : #MADropListMorph,
 	#superclass : #MAListMorph,
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MADropListMorph >> buildMorphView [
 	
 	| list |

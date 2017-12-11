@@ -8,7 +8,7 @@ Class {
 		'from',
 		'to'
 	],
-	#category : #Roassal2-LineDecorations
+	#category : #'Roassal2-LineDecorations'
 }
 
 { #category : #running }

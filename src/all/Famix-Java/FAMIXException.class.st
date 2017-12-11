@@ -8,10 +8,10 @@ Class {
 		'exceptionClass',
 		'definingMethod'
 	],
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXException class >> annotation [
 	<MSEClass: #Exception super: #FAMIXEntity>
 	<package: #FAMIX>

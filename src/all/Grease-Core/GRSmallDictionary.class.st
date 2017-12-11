@@ -9,7 +9,7 @@ Class {
 		'keys',
 		'values'
 	],
-	#category : #Grease-Core-Collections
+	#category : #'Grease-Core-Collections'
 }
 
 { #category : #'instance creation' }

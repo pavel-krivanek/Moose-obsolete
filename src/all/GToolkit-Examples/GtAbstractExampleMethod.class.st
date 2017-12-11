@@ -102,7 +102,7 @@ GtAbstractExampleMethod >> meta: anObject [
 	meta := anObject
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtAbstractExampleMethod >> method [
 	^ self exists 
 		ifTrue: [ self methodClass >> self selector ]
@@ -139,7 +139,7 @@ GtAbstractExampleMethod >> methodClassResolver [
 		yourself
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtAbstractExampleMethod >> provider [ 
 	self exists ifFalse: [ ^ nil ].
 	^ self methodClass isMeta

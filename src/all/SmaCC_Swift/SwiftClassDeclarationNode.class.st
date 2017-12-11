@@ -25,7 +25,7 @@ Class {
 		'equalEqualTokens',
 		'declarations'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -145,7 +145,7 @@ SwiftClassDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftClassDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

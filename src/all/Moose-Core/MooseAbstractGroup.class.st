@@ -13,7 +13,7 @@ Class {
 	#instVars : [
 		'storage'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #meta }
@@ -34,7 +34,7 @@ MooseAbstractGroup >> \ aCollection [
 	^ self difference: aCollection
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseAbstractGroup >> add: anItem [ 
 
 	self entityStorage add: anItem.
@@ -42,7 +42,7 @@ MooseAbstractGroup >> add: anItem [
 	^ anItem
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseAbstractGroup >> addAll: aCollectionOfItems [ 
 	^ self subclassResponsibility
 ]
@@ -396,7 +396,7 @@ MooseAbstractGroup >> includesID: elementID [
 	^self entityStorage includesID: elementID
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseAbstractGroup >> initialize [ 
 	 
 	super initialize.
@@ -536,13 +536,13 @@ MooseAbstractGroup >> reject: rejectBlock thenCollect: collectBlock [
 	^ (self reject: rejectBlock) collect: collectBlock
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseAbstractGroup >> remove: anItem [ 
 	 
 	^self subclassResponsibility
 ]
 
-{ #category : #adding/removing }
+{ #category : #'adding/removing' }
 MooseAbstractGroup >> removeAll: aCollection [ 
 	 
 	^self subclassResponsibility

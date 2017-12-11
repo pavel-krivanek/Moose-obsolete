@@ -30,7 +30,7 @@ PP2SmalltalkParser >> array [
 			yourself ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> arrayLiteral [
 	^ super arrayLiteral
 		==> [ :nodes | 
@@ -41,7 +41,7 @@ PP2SmalltalkParser >> arrayLiteral [
 				isByteArray: false ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> arrayLiteralArray [
 	^ super arrayLiteralArray
 		==> [ :nodes | 
@@ -52,7 +52,7 @@ PP2SmalltalkParser >> arrayLiteralArray [
 				isByteArray: false ]
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkParser >> binaryExpression [
 	^ super binaryExpression map: [ :receiverNode :messageNodes | self build: receiverNode messages: messageNodes ]
 ]
@@ -66,17 +66,17 @@ PP2SmalltalkParser >> binaryToken [
 				yourself ]
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkParser >> block [
 	^ super block map: [ :leftToken :blockNode :rightToken | blockNode left: leftToken start; right: rightToken start ]
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkParser >> blockArgument [
 	^ super blockArgument ==> #second
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkParser >> blockBody [
 	^ super blockBody
 		==> [ :nodes | 
@@ -188,7 +188,7 @@ PP2SmalltalkParser >> buildString: aString [
 		with: ''''
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> byteLiteral [
 	^ super byteLiteral
 		==> [ :nodes | 
@@ -199,7 +199,7 @@ PP2SmalltalkParser >> byteLiteral [
 				isByteArray: true ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> byteLiteralArray [
 	^ super byteLiteralArray
 		==> [ :nodes | 
@@ -210,12 +210,12 @@ PP2SmalltalkParser >> byteLiteralArray [
 				isByteArray: true ]
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkParser >> cascadeExpression [
 	^ super cascadeExpression map: [ :receiverNode :messageNodes | self build: receiverNode cascade: messageNodes ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> charLiteral [
 	^ super charLiteral
 		==> [ :token | 
@@ -232,7 +232,7 @@ PP2SmalltalkParser >> expression [
 	^ super expression map: [ :variableNodes :expressionNodes | self build: expressionNodes assignment: variableNodes ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> falseLiteral [
 	^ super falseLiteral
 		==> [ :token | 
@@ -255,7 +255,7 @@ PP2SmalltalkParser >> identifierToken [
 		yourself
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkParser >> keywordExpression [
 	^ super keywordExpression map: [ :receiveNode :messageNode | self build: receiveNode messages: (Array with: messageNode) ]
 ]
@@ -295,7 +295,7 @@ PP2SmalltalkParser >> methodSequence [
 			with: (self build: tempNodes sequence: periodNodes1 , periodNodes2 , periodNodes3 , periodNodes4 , statementNodes) ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> nilLiteral [
 	^ super nilLiteral
 		==> [ :token | 
@@ -307,7 +307,7 @@ PP2SmalltalkParser >> nilLiteral [
 				yourself ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> numberLiteral [
 	^ super numberLiteral
 		==> [ :token | 
@@ -369,7 +369,7 @@ PP2SmalltalkParser >> startMethod [
 		map: [ :source :node | node source: source ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> stringLiteral [
 	^ super stringLiteral
 		==> [ :token | 
@@ -381,7 +381,7 @@ PP2SmalltalkParser >> stringLiteral [
 				yourself ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> symbolLiteral [
 	^ super symbolLiteral
 		==> [ :tokens | 
@@ -393,7 +393,7 @@ PP2SmalltalkParser >> symbolLiteral [
 				yourself ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> symbolLiteralArray [
 	^ super symbolLiteralArray
 		==> [ :token | 
@@ -405,7 +405,7 @@ PP2SmalltalkParser >> symbolLiteralArray [
 				yourself ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkParser >> trueLiteral [
 	^ super trueLiteral
 		==> [ :token | 
@@ -414,7 +414,7 @@ PP2SmalltalkParser >> trueLiteral [
 				yourself ]
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkParser >> unaryExpression [
 	^ super unaryExpression map: [ :receiverNode :messageNodes | self build: receiverNode messages: messageNodes ]
 ]

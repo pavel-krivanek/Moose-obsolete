@@ -1,1 +1,1 @@
-Package { #name : #SmaCC_Swift }
+Package { #name : #'SmaCC_Swift' }

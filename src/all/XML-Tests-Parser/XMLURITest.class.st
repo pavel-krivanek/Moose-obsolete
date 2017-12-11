@@ -9,7 +9,7 @@ Class {
 		'percentEncodedReservedCharacters',
 		'percentEncodedAlphaNumericCharacters'
 	],
-	#category : #XML-Tests-Parser-URI
+	#category : #'XML-Tests-Parser-URI'
 }
 
 { #category : #private }

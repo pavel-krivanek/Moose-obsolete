@@ -5,7 +5,7 @@ Class {
 		'next',
 		'block'
 	],
-	#category : #Grease-Core-Text
+	#category : #'Grease-Core-Text'
 }
 
 { #category : #'instance creation' }

@@ -22,7 +22,7 @@ Class {
 		'periodTokens',
 		'declarations'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -122,7 +122,7 @@ SwiftProtocolDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftProtocolDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

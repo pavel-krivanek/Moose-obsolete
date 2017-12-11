@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'parent'
 	],
-	#category : #PetitXml-Nodes
+	#category : #'PetitXml-Nodes'
 }
 
 { #category : #'instance creation' }
@@ -22,7 +22,7 @@ PPXmlNode >> attributes [
 	^ #()
 ]
 
-{ #category : #accessing-dom }
+{ #category : #'accessing-dom' }
 PPXmlNode >> childNodes [
 	"Answer the child nodes of the receiver or nil."
 
@@ -43,7 +43,7 @@ PPXmlNode >> document [
 	^ parent isNil ifFalse: [ parent document ]
 ]
 
-{ #category : #accessing-dom }
+{ #category : #'accessing-dom' }
 PPXmlNode >> firstChild [
 	"Answer the first child of the receiver or nil."
 
@@ -85,14 +85,14 @@ PPXmlNode >> isText [
 	^ false
 ]
 
-{ #category : #accessing-dom }
+{ #category : #'accessing-dom' }
 PPXmlNode >> lastChild [
 	"Answer the first child of the receiver or nil."
 
 	^ self childNodes isEmpty ifFalse: [ self childNodes last ]
 ]
 
-{ #category : #accessing-dom }
+{ #category : #'accessing-dom' }
 PPXmlNode >> nextSibling [
 	"Answer the next sibling of the receiver or nil."
 
@@ -121,7 +121,7 @@ PPXmlNode >> parent [
 	^ parent
 ]
 
-{ #category : #accessing-dom }
+{ #category : #'accessing-dom' }
 PPXmlNode >> parentNode [
 	"Answer the parent node of the receiver or nil."
 
@@ -134,7 +134,7 @@ PPXmlNode >> postCopy [
 	self setParent: nil
 ]
 
-{ #category : #accessing-dom }
+{ #category : #'accessing-dom' }
 PPXmlNode >> previousSibling [
 	"Answer the previous sibling of the receiver or nil."
 

@@ -16,7 +16,7 @@ will be useful to call into for writing to a given stream of the logger
 Class {
 	#name : #SignalSerializer,
 	#superclass : #Object,
-	#category : #Beacon-Core-Loggers
+	#category : #'Beacon-Core-Loggers'
 }
 
 { #category : #serializing }

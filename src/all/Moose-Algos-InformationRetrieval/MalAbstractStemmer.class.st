@@ -12,10 +12,10 @@ Class {
 		'r2',
 		'cursor'
 	],
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalAbstractStemmer >> endsWith: aSuffix [
 	"comment stating purpose of message"
 	
@@ -30,32 +30,32 @@ MalAbstractStemmer >> endsWith: aSuffix [
 	^true
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalAbstractStemmer >> endsWith: aSuffix in: aMark [
 	
 	^(self endsWith: aSuffix) and: [cursor >= aMark]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalAbstractStemmer >> isConsonantAt: anIndex [
 	
 	^(self isVowelAt: anIndex) not
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalAbstractStemmer >> isVowelAt: anIndex [
 	
 	self subclassResponsibility
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalAbstractStemmer >> removeSuffix [
 	"comment stating purpose of message"
 	
 	string := string copyFrom: 1 to: cursor
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalAbstractStemmer >> setMarks [
 	"All the stemmers make use of at least one of the region definitions R1 and R2. They are defined as follows: 
 		R1 is the region after the first non-vowel following a vowel, or is the null region at the end of the word if there is no such non-vowel. 
@@ -75,7 +75,7 @@ MalAbstractStemmer >> setMarks [
 	r2 := n
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalAbstractStemmer >> setSuffix: newSuffix [
 	"comment stating purpose of message"
 	

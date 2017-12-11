@@ -5,7 +5,7 @@ A RONormalizerTest is xxxxxxxxx.
 Class {
 	#name : #RTNormalizerTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-ColorNormalizer-Tests
+	#category : #'Roassal2-ColorNormalizer-Tests'
 }
 
 { #category : #'gray color' }

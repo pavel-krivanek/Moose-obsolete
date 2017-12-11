@@ -9,7 +9,7 @@ Class {
 		'timestamp',
 		'cachedLists'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -100,7 +100,7 @@ SmaCCRewriteFile >> import: aString [
 	self addTransformation: rewriteFile
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteFile >> initialize [
 	super initialize.
 	rewrites := OrderedCollection new.

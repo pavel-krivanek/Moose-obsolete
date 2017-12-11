@@ -19,7 +19,7 @@ Class {
 		'structuresWithDeclaredType',
 		'outgoingTraitUsages'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -161,12 +161,12 @@ FAMIXType >> incomingReferences: aReference [
 	incomingReferences value: aReference
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXType >> incomingTypeDeclarations [
 	^ self structuresWithDeclaredType , self behavioursWithDeclaredType collect: [ :var | MooseChefTypeDeclarationAssociation newFrom: var to: self ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXType >> initialize [
 	super initialize.
 	subInheritances := FMNullMultivalueLink on: self opposite: #superclass: selector: #subInheritances.
@@ -179,7 +179,7 @@ FAMIXType >> initialize [
 	outgoingTraitUsages := FMNullMultivalueLink on: self opposite: #user: selector: #outgoingTraitUsages
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXType >> methodScope [
 	"This only makes sense to reject self loops in #collectAtScope:"
 
@@ -199,7 +199,7 @@ FAMIXType >> methods: aMethod [
 	methods value: aMethod
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXType >> namespaceScope [
 	"we ask the container for the namespaceScope
 	because we can have classes in methods or in other classes.
@@ -220,7 +220,7 @@ FAMIXType >> outgoingTraitUsages: aCollectionOfTraitUsages [
 	outgoingTraitUsages value: aCollectionOfTraitUsages
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXType >> packageScope [
 
 	^ self parentPackage
@@ -265,7 +265,7 @@ FAMIXType >> superInheritances: anInheritance [
 	superInheritances value: anInheritance
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXType >> typeScope [
 	"all types are not classes. Redefined in FamixClass"
 

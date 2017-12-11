@@ -4,5 +4,5 @@ This is a class for internal general parsed entities with replacements that can 
 Class {
 	#name : #DTDInternalGeneralParsedEntity,
 	#superclass : #DTDInternalParsedEntity,
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }

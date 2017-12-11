@@ -4,7 +4,7 @@ This class is a SAX driver that forwards token start/end positions to a SAXHandl
 Class {
 	#name : #SAXPositionParserDriver,
 	#superclass : #SAXParserDriver,
-	#category : #XML-Parser-GTExtensions-Highlighting-Parser
+	#category : #'XML-Parser-GTExtensions-Highlighting-Parser'
 }
 
 { #category : #testing }

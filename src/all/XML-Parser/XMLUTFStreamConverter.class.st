@@ -4,7 +4,7 @@ An abstract class for Unicode stream converters.
 Class {
 	#name : #XMLUTFStreamConverter,
 	#superclass : #XMLStatelessStreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #private }

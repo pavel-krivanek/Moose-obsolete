@@ -4,7 +4,7 @@ This is a base class for literal AST nodes, nodes that represent XPath construct
 Class {
 	#name : #XPathASTLiteralNode,
 	#superclass : #XPathASTNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #converting }

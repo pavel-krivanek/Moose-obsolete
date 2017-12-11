@@ -4,7 +4,7 @@ self new browser openOn: (RBBrowserEnvironment new forPackageNames: #('Glamour')
 Class {
 	#name : #GLMSTBrowserExample,
 	#superclass : #Object,
-	#category : #Glamour-Examples-Extras
+	#category : #'Glamour-Examples-Extras'
 }
 
 { #category : #accessing }

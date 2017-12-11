@@ -1,7 +1,7 @@
 Class {
 	#name : #MalFCAElementTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-Algos-FormalConceptAnalysis
+	#category : #'Moose-Tests-Algos-FormalConceptAnalysis'
 }
 
 { #category : #initialization }

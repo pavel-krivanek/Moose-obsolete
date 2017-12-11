@@ -8,7 +8,7 @@ Class {
 		'literalValue',
 		'isLong'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #'as yet unclassified' }

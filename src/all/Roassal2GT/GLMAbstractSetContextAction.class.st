@@ -1,7 +1,7 @@
 Class {
 	#name : #GLMAbstractSetContextAction,
 	#superclass : #GLMRoassal2Action,
-	#category : #Roassal2GT-Glamour-Actions
+	#category : #'Roassal2GT-Glamour-Actions'
 }
 
 { #category : #accessing }

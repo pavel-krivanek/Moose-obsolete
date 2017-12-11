@@ -7,7 +7,7 @@ Class {
 		'string',
 		'expected'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
 { #category : #'as yet unclassified' }
@@ -46,7 +46,7 @@ PPMiniCommonMarkTest >> setUp [
 	quote := self parserInstanceFor: #quote
 ]
 
-{ #category : #test-code }
+{ #category : #'test-code' }
 PPMiniCommonMarkTest >> testCode [
 	self parse: '    abc' rule: #code.
 	self assert: result = '<code>abc
@@ -110,7 +110,7 @@ chunk3
 </code>'.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocument1 [
 	string := 
 '
@@ -128,7 +128,7 @@ Hi There
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocument2 [
 	string := 
 '
@@ -148,7 +148,7 @@ paragraph
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocument3 [
 	string := 
 '
@@ -164,7 +164,7 @@ bar
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentCode01 [
 	string := 
 '
@@ -179,7 +179,7 @@ PPMiniCommonMarkTest >> testDocumentCode01 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentCode02 [
 	string := 
 '
@@ -194,7 +194,7 @@ PPMiniCommonMarkTest >> testDocumentCode02 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentCode03 [
 	string := 
 '
@@ -207,7 +207,7 @@ PPMiniCommonMarkTest >> testDocumentCode03 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentCode04 [
 	string := 
 '
@@ -222,7 +222,7 @@ PPMiniCommonMarkTest >> testDocumentCode04 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentHeader1 [
 	string := 
 '
@@ -234,7 +234,7 @@ PPMiniCommonMarkTest >> testDocumentHeader1 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentHeader2 [
 	string := 
 '
@@ -249,7 +249,7 @@ PPMiniCommonMarkTest >> testDocumentHeader2 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentHeader3 [
 	string := 
 '
@@ -265,7 +265,7 @@ PPMiniCommonMarkTest >> testDocumentHeader3 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList01 [
 	string := 
 '
@@ -284,7 +284,7 @@ PPMiniCommonMarkTest >> testDocumentList01 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList02 [
 	string := 
 '
@@ -303,7 +303,7 @@ PPMiniCommonMarkTest >> testDocumentList02 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList03 [
 	string := 
 '
@@ -324,7 +324,7 @@ PPMiniCommonMarkTest >> testDocumentList03 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList04 [
 	string := 
 '
@@ -344,7 +344,7 @@ PPMiniCommonMarkTest >> testDocumentList04 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList05 [
 	string := 
 '
@@ -363,7 +363,7 @@ PPMiniCommonMarkTest >> testDocumentList05 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList06 [
 	string := 
 '
@@ -382,7 +382,7 @@ PPMiniCommonMarkTest >> testDocumentList06 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList07 [
 	string := 
 '
@@ -406,7 +406,7 @@ PPMiniCommonMarkTest >> testDocumentList07 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList08 [
 	string := 
 '
@@ -430,7 +430,7 @@ PPMiniCommonMarkTest >> testDocumentList08 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList09 [
 	string := 
 '
@@ -451,7 +451,7 @@ PPMiniCommonMarkTest >> testDocumentList09 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList10 [
 	string := 
 '
@@ -471,7 +471,7 @@ PPMiniCommonMarkTest >> testDocumentList10 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList11 [
 	string := 
 '
@@ -495,7 +495,7 @@ PPMiniCommonMarkTest >> testDocumentList11 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList12 [
 	string := 
 '
@@ -519,7 +519,7 @@ PPMiniCommonMarkTest >> testDocumentList12 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList13 [
 	string := 
 '
@@ -538,7 +538,7 @@ PPMiniCommonMarkTest >> testDocumentList13 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList14 [
 	string := 
 '
@@ -557,7 +557,7 @@ PPMiniCommonMarkTest >> testDocumentList14 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList15 [
 	string := 
 '
@@ -583,7 +583,7 @@ PPMiniCommonMarkTest >> testDocumentList15 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList16 [
 	string := 
 '
@@ -617,7 +617,7 @@ PPMiniCommonMarkTest >> testDocumentList16 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList17 [
 	string := 
 '
@@ -650,7 +650,7 @@ PPMiniCommonMarkTest >> testDocumentList17 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList18 [
 	string := 
 '
@@ -679,7 +679,7 @@ PPMiniCommonMarkTest >> testDocumentList18 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList19 [
 	string := 
 '
@@ -719,7 +719,7 @@ PPMiniCommonMarkTest >> testDocumentList19 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList20 [
 	string := 
 '
@@ -744,7 +744,7 @@ PPMiniCommonMarkTest >> testDocumentList20 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList21 [
 	string := 
 '
@@ -768,7 +768,7 @@ PPMiniCommonMarkTest >> testDocumentList21 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList22 [
 	string := 
 '
@@ -795,7 +795,7 @@ PPMiniCommonMarkTest >> testDocumentList22 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList23 [
 	string := 
 '
@@ -826,7 +826,7 @@ PPMiniCommonMarkTest >> testDocumentList23 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList24 [
 	string := '
 * a
@@ -850,7 +850,7 @@ PPMiniCommonMarkTest >> testDocumentList24 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList25 [
 	string := '
 - a
@@ -871,7 +871,7 @@ PPMiniCommonMarkTest >> testDocumentList25 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentList26 [
 	string := '
 - a
@@ -911,7 +911,7 @@ PPMiniCommonMarkTest >> testDocumentList26 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentParagraphs [
 	string := 
 '
@@ -927,7 +927,7 @@ bbb
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentParagraphs2 [
 	string := 
 '
@@ -946,7 +946,7 @@ ddd</p>'.
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentParagraphs3 [
 	string := 
 '
@@ -960,7 +960,7 @@ bbb</p>'.
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentParagraphs4 [
 	string := 
 '
@@ -976,7 +976,7 @@ foo
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentParagraphs5 [
 	string := 
 '
@@ -991,7 +991,7 @@ bar
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentParagraphs6 [
 	string := 
 '
@@ -1005,7 +1005,7 @@ foo
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote01 [
 	string := 
 '
@@ -1023,7 +1023,7 @@ baz</p>
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote02 [
 	string := 
 '
@@ -1041,7 +1041,7 @@ baz</p>
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote03 [
 	string := 
 '
@@ -1058,7 +1058,7 @@ PPMiniCommonMarkTest >> testDocumentQuote03 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote04 [
 	string := 
 '
@@ -1076,7 +1076,7 @@ baz</p>
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote05 [
 	string := 
 '
@@ -1094,7 +1094,7 @@ baz</p>
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote06 [
 	string := 
 '
@@ -1113,7 +1113,7 @@ PPMiniCommonMarkTest >> testDocumentQuote06 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote07 [
 	string := 
 '
@@ -1138,7 +1138,7 @@ PPMiniCommonMarkTest >> testDocumentQuote07 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote08 [
 	string := 
 '
@@ -1157,7 +1157,7 @@ PPMiniCommonMarkTest >> testDocumentQuote08 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote09 [
 	string := 
 '
@@ -1174,7 +1174,7 @@ PPMiniCommonMarkTest >> testDocumentQuote09 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote10 [
 	string := 
 '
@@ -1191,7 +1191,7 @@ baz
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote11 [
 	string := 
 '
@@ -1208,7 +1208,7 @@ baz
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote12 [
 	string := 
 '
@@ -1228,7 +1228,7 @@ bar</p>
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote13 [
 	string := 
 '
@@ -1251,7 +1251,7 @@ baz</p>
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote14 [
 	string := 
 '
@@ -1271,7 +1271,7 @@ PPMiniCommonMarkTest >> testDocumentQuote14 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-document }
+{ #category : #'test-document' }
 PPMiniCommonMarkTest >> testDocumentQuote15 [
 	string := 
 '
@@ -1288,7 +1288,7 @@ PPMiniCommonMarkTest >> testDocumentQuote15 [
 	self parse: string rule: #document to: expected.
 ]
 
-{ #category : #test-paragraph }
+{ #category : #'test-paragraph' }
 PPMiniCommonMarkTest >> testLazyParagraphPrefix [
 	self parse: '' rule: #lazyParagraphPrefix.
 	
@@ -1308,7 +1308,7 @@ PPMiniCommonMarkTest >> testLazyParagraphPrefix [
 
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testList [	
 	
 	context := PPContext new.
@@ -1374,7 +1374,7 @@ PPMiniCommonMarkTest >> testList [
 </ul>'	.	
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListBullet [
 	context := PPContext new.
 	self parse: '- ' rule: #listBullet.
@@ -1399,7 +1399,7 @@ PPMiniCommonMarkTest >> testListBullet [
 	self assert: context indentStack top literal = '    '.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListContent [
 	context := PPContext new.
 	context indentStack push: quote.
@@ -1434,7 +1434,7 @@ two</p>
 </blockquote>'.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListItem [
 	self parse: '- one' rule: #listItem.
 	
@@ -1475,7 +1475,7 @@ two</p>
 	self assert: context indentStack size = 0.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListItemCode [
 	context := PPContext new.
 	self parse: '-     one' rule: #listItem.
@@ -1485,7 +1485,7 @@ PPMiniCommonMarkTest >> testListItemCode [
 </li>'	.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListNested01 [
 
 	context := PPContext new.
@@ -1525,7 +1525,7 @@ PPMiniCommonMarkTest >> testListNested01 [
 	self assert: context indentStack isEmpty.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListNested02 [
 	
 	context := PPContext new.
@@ -1550,7 +1550,7 @@ PPMiniCommonMarkTest >> testListNested02 [
 	self assert: context indentStack isEmpty.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListNested03 [
 
 	context := PPContext new.
@@ -1579,7 +1579,7 @@ PPMiniCommonMarkTest >> testListNested03 [
 	self assert: context indentStack isEmpty.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListNested04 [
 
 	context := PPContext new.
@@ -1608,7 +1608,7 @@ PPMiniCommonMarkTest >> testListNested04 [
 	self assert: context indentStack isEmpty.
 ]
 
-{ #category : #test-lists }
+{ #category : #'test-lists' }
 PPMiniCommonMarkTest >> testListNested05 [
 
 	context := PPContext new.
@@ -1640,7 +1640,7 @@ PPMiniCommonMarkTest >> testListNested05 [
 	self assert: context indentStack isEmpty.
 ]
 
-{ #category : #test-paragraph }
+{ #category : #'test-paragraph' }
 PPMiniCommonMarkTest >> testParagraph [
 	self parse: 'abc
 def' rule: #paragraph.
@@ -1677,7 +1677,7 @@ PPMiniCommonMarkTest >> testPrefix [
 
 ]
 
-{ #category : #test-quotes }
+{ #category : #'test-quotes' }
 PPMiniCommonMarkTest >> testQuote [
 	self parse: '>' rule: #quote.
 	self assertResult: '>'.
@@ -1688,7 +1688,7 @@ PPMiniCommonMarkTest >> testQuote [
 	self fail: ('>', String cr) rule: #quote.
 ]
 
-{ #category : #test-quotes }
+{ #category : #'test-quotes' }
 PPMiniCommonMarkTest >> testQuoteBlock [
 	self parse: '> foo' rule: #quoteBlock.
 	self assert: result = '<blockquote>
@@ -1756,7 +1756,7 @@ bar
 
 ]
 
-{ #category : #test-quotes }
+{ #category : #'test-quotes' }
 PPMiniCommonMarkTest >> testQuoteDedent [
 	parser := self parserInstanceFor: #quoteDedent.
 	
@@ -1798,7 +1798,7 @@ PPMiniCommonMarkTest >> testQuoteDedent [
 	self assert: parser fail: '' end: 0.
 ]
 
-{ #category : #test-quotes }
+{ #category : #'test-quotes' }
 PPMiniCommonMarkTest >> testQuoteIndent [
 	parser := self parserInstanceFor: #quoteIndent.
 	

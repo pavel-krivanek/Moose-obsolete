@@ -1,5 +1,5 @@
 Class {
 	#name : #TRMouseLeftDragStart,
 	#superclass : #TRMouseDragStart,
-	#category : #Trachel-Events
+	#category : #'Trachel-Events'
 }

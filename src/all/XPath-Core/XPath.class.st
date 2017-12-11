@@ -60,7 +60,7 @@ Class {
 		'compiledExpressionCacheEnabled',
 		'compiledExpressionCache'
 	],
-	#category : #XPath-Core
+	#category : #'XPath-Core'
 }
 
 { #category : #clearing }

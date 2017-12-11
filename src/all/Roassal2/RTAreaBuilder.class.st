@@ -18,7 +18,7 @@ Class {
 		'lvar',
 		'tension'
 	],
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #public }

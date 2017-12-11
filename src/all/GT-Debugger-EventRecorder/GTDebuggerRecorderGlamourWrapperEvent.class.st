@@ -7,7 +7,7 @@ GTGlamourWrapperDebuggingAction
 Class {
 	#name : #GTDebuggerRecorderGlamourWrapperEvent,
 	#superclass : #GTDebuggerRecorderDebugActionEvent,
-	#category : #GT-Debugger-EventRecorder-Events
+	#category : #'GT-Debugger-EventRecorder-Events'
 }
 
 { #category : #initialization }

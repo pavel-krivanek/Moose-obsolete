@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseClassMethodsBrowser,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #'as yet unclassified' }

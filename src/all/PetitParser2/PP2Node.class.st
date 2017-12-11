@@ -1063,14 +1063,14 @@ PP2Node >> transform: aBlock suchThat: predicate [
 		visit: self
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trim [
 	"Answer a new parser that consumes spaces before and after the receiving parser."
 	
 	^ self trimSpaces
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trim: aParser [
 	"Answer a new parser that consumes and ignores aParser repeatedly before and after the receiving parser."
 	
@@ -1079,42 +1079,42 @@ PP2Node >> trim: aParser [
 		yourself
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trimBlanks [
 	"Answer a new parser that consumes spaces before and after the receiving parser."
 	
 	^ self trim: #blank asPParser star
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trimLeft [
 	"Answer a new parser that consumes spaces before and after the receiving parser."
 	
 	^ self trimSpacesLeft
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trimRight [
 	"Answer a new parser that consumes spaces before and after the receiving parser."
 	
 	^ self trimSpacesRight
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trimSpaces [
 	"Answer a new parser that consumes spaces before and after the receiving parser."
 	
 	^ self trim: #space asPParser star
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trimSpacesLeft [
 	"Answer a new parser that consumes spaces before the receiving parser."
 	
 	^ (#space asPParser star, self) ==> #second
 ]
 
-{ #category : #operators-trimming }
+{ #category : #'operators-trimming' }
 PP2Node >> trimSpacesRight [
 	"Answer a new parser that consumes spaces after the receiving parser."
 	

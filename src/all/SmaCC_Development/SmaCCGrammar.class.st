@@ -27,7 +27,7 @@ Class {
 		'TokenNameBlock',
 		'TokenNameMap'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }
@@ -278,7 +278,7 @@ SmaCCGrammar >> codeGenerator [
 	^ codeGenerator
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammar >> codeGenerator: aSmaCCCodeGenerator [
 	codeGenerator := aSmaCCCodeGenerator.
 	aSmaCCCodeGenerator grammar: self
@@ -365,7 +365,7 @@ SmaCCGrammar >> initialItemSetFor: aSmaCCSymbol [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammar >> initialize [
 	super initialize.
 	type := #LALR1.
@@ -385,7 +385,7 @@ SmaCCGrammar >> isGLR [
 	^ isGLR
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammar >> isGLR: aBoolean [
 	isGLR := aBoolean
 ]
@@ -524,7 +524,7 @@ SmaCCGrammar >> prefix [
 	^ prefix
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammar >> prefix: aString [
 	prefix := aString
 ]
@@ -544,7 +544,7 @@ SmaCCGrammar >> rootDefinition [
 	^ classDefinitions detect: [ :each | each isRoot ] ifNone: [ nil ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammar >> scannerDefinition: aSmaCCScannerDefinition [
 	scannerDefinition := aSmaCCScannerDefinition
 ]
@@ -591,7 +591,7 @@ SmaCCGrammar >> suffix [
 	^ suffix
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammar >> suffix: aString [
 	suffix := aString
 ]
@@ -621,7 +621,7 @@ SmaCCGrammar >> tokens [
 	^ scannerDefinition tokens
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammar >> type: aSmaCCSymbol [
 	type := aSmaCCSymbol
 ]

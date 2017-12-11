@@ -9,7 +9,7 @@ Class {
 		'returnType',
 		'parameters'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #'instance creation' }

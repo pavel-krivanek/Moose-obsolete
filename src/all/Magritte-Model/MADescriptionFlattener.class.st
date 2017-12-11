@@ -7,7 +7,7 @@ This description is used in a QCMultipartComponent and this is extracted since, 
 Class {
 	#name : #MADescriptionFlattener,
 	#superclass : #MADescriptionBuilder,
-	#category : #Magritte-Model-Builder
+	#category : #'Magritte-Model-Builder'
 }
 
 { #category : #visiting }
@@ -32,7 +32,7 @@ MADescriptionFlattener >> expandDescription: aDescription for: aValue [
 		self addToBuildedDescription: each for: val ]
 ]
 
-{ #category : #visiting-description }
+{ #category : #'visiting-description' }
 MADescriptionFlattener >> visitToOneRelationDescription: aDescription [
 	| sample |
 	aDescription canExpand ifFalse: [ ^ super visitToOneRelationDescription: aDescription ].

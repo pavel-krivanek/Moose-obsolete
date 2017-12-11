@@ -1,1 +1,1 @@
-Package { #name : #GT-Debugger-EventRecorder }
+Package { #name : #'GT-Debugger-EventRecorder' }

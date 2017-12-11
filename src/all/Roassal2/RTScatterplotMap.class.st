@@ -1,7 +1,7 @@
 Class {
 	#name : #RTScatterplotMap,
 	#superclass : #RTBuilder,
-	#category : #Roassal2-Builder-ScatterplotMap
+	#category : #'Roassal2-Builder-ScatterplotMap'
 }
 
 { #category : #'as yet unclassified' }

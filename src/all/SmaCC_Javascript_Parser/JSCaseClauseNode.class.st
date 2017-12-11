@@ -7,7 +7,7 @@ Class {
 		'colonToken',
 		'statements'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -59,7 +59,7 @@ JSCaseClauseNode >> ignoredTokenVariables [
 	^ #(#colonToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSCaseClauseNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

@@ -7,7 +7,7 @@ Class {
 		'child2',
 		'child11'
 	],
-	#category : #Famix-Tests-Core
+	#category : #'Famix-Tests-Core'
 }
 
 { #category : #helpers }

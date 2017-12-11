@@ -17,10 +17,10 @@ Class {
 	#instVars : [
 		'parentEnum'
 	],
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXEnumValue class >> annotation [
 	<MSEClass: #EnumValue super: #FAMIXStructuralEntity>
 	<package: #FAMIX>

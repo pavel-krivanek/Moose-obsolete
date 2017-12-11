@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'properties'
 	],
-	#category : #Magritte-Model-Core
+	#category : #'Magritte-Model-Core'
 }
 
 { #category : #testing }

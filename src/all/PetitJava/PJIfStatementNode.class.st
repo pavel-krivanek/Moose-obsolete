@@ -9,7 +9,7 @@ Class {
 		'thenPart',
 		'elsePart'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #visiting }

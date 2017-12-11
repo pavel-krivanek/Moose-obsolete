@@ -1,7 +1,7 @@
 Class {
 	#name : #PPObjectTest,
 	#superclass : #PPAbstractParserTest,
-	#category : #PetitTests-Tests
+	#category : #'PetitTests-Tests'
 }
 
 { #category : #parsers }
@@ -18,7 +18,7 @@ PPObjectTest >> string [
 		message: 'string expected'
 ]
 
-{ #category : #testing-operators }
+{ #category : #'testing-operators' }
 PPObjectTest >> testChoice [
 	| parser |
 	parser := self integer / self string.
@@ -26,7 +26,7 @@ PPObjectTest >> testChoice [
 	self assert: parser parse: #('abc') to: 'abc'
 ]
 
-{ #category : #testing-fancy }
+{ #category : #'testing-fancy' }
 PPObjectTest >> testFibonacci [
 	"This parser accepts fibonacci sequences with arbitrary start pairs."
 	
@@ -56,7 +56,7 @@ PPObjectTest >> testInteger [
 	self assert: self integer fail: #('abc')
 ]
 
-{ #category : #testing-operators }
+{ #category : #'testing-operators' }
 PPObjectTest >> testSequence [
 	| parser |
 	parser := self integer , self string.

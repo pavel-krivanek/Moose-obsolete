@@ -15,10 +15,10 @@ b
 Class {
 	#name : #RTStandardDeviationDecorator,
 	#superclass : #RTAbstractAverageDecorator,
-	#category : #Roassal2-Builder-Grapher-Decorators
+	#category : #'Roassal2-Builder-Grapher-Decorators'
 }
 
-{ #category : #drawing-hooks }
+{ #category : #'drawing-hooks' }
 RTStandardDeviationDecorator >> render [
 	| values average stdev from to |
 	values := self datasetValues.

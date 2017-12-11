@@ -5,7 +5,7 @@ Class {
 		'root',
 		'model'
 	],
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #'instance creation' }
@@ -42,7 +42,7 @@ REPConcernSpecification >> exportToHudson [
 	self root
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 REPConcernSpecification >> initialize [
 	root := REPCompositeConcern new label: 'Concerns'
 ]

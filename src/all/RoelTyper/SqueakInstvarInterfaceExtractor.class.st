@@ -1,7 +1,7 @@
 Class {
 	#name : #SqueakInstvarInterfaceExtractor,
 	#superclass : #InstvarInterfaceExtractor,
-	#category : #RoelTyper-Squeak
+	#category : #'RoelTyper-Squeak'
 }
 
 { #category : #'instruction decoding' }
@@ -167,7 +167,7 @@ SqueakInstvarInterfaceExtractor >> send: selector super: supered numArgs: number
 				numArgs: numberArguments]
 ]
 
-{ #category : #opcodes-control }
+{ #category : #'opcodes-control' }
 SqueakInstvarInterfaceExtractor >> sendSuper: selector numArgs: na [
 	stack removeLast: na + 1.
 	stack add: #computed

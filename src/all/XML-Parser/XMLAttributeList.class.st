@@ -11,7 +11,7 @@ It should be used over the default class when you want to reduce memory use at t
 Class {
 	#name : #XMLAttributeList,
 	#superclass : #XMLObservableList,
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #'instance creation' }

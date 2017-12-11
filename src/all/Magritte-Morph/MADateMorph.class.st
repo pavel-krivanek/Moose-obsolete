@@ -1,10 +1,10 @@
 Class {
 	#name : #MADateMorph,
 	#superclass : #MAElementMorph,
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MADateMorph >> buildMorphView [
 	| model |
 	model := DateModel new

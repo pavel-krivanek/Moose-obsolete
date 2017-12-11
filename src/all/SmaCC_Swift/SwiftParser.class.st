@@ -1,10 +1,10 @@
 Class {
 	#name : #SwiftParser,
 	#superclass : #SmaCCGLRParser,
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SwiftParser class >> cacheId [
 	^'2017-11-29T08:31:17.589614-06:00'
 ]
@@ -1204,7 +1204,7 @@ _union_style_enum_members
 	;"
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SwiftParser class >> scannerClass [
 	^SwiftScanner
 ]

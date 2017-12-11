@@ -14,7 +14,7 @@ Class {
 		'invocation4',
 		'invocation5'
 	],
-	#category : #Famix-Tests-Extensions
+	#category : #'Famix-Tests-Extensions'
 }
 
 { #category : #'as yet unclassified' }

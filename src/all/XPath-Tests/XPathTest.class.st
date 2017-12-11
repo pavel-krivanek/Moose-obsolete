@@ -6,7 +6,7 @@ Class {
 		'namespacedDocument',
 		'textDocument'
 	],
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #asserting }

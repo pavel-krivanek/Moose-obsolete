@@ -30,7 +30,7 @@ Class {
 		'ifThenEnd',
 		'expressionBlock'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
 { #category : #whitespaces }
@@ -141,7 +141,7 @@ PPMiniHaskellGrammar >> number [
 	^ #digit asParser plus flatten
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPMiniHaskellGrammar >> popIndent [
 	^ #restoreIl asParser
 ]
@@ -151,7 +151,7 @@ PPMiniHaskellGrammar >> print [
 	^ ('print' asParser, number trimBlanks) ==> [ :tokens | #print ]
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPMiniHaskellGrammar >> pushIndent [
 	^ #setIl asParser
 ]

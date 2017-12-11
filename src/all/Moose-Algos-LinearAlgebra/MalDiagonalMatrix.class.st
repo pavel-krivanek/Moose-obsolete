@@ -4,7 +4,7 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalDiagonalMatrix,
 	#superclass : #MalSymetricMatrix,
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -55,7 +55,7 @@ MalDiagonalMatrix >> columnSize [
 	^partialColumns size
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalDiagonalMatrix >> initializeRows: m columns: n [
 	
 	m = n ifFalse: [Array new noMatchError].

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'entityDependencies'
 	],
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #'private - utilities' }
@@ -25,7 +25,7 @@ MooseContextCheckboxesPart >> dependenciesFor: aCollectionOfContexts [
 		ifFalse: [^ self dependenciesFor: dependenciesForContext ].
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseContextCheckboxesPart >> initialize: aDictionaryWithEntityDependencies [
 
 	super initialize: (aDictionaryWithEntityDependencies keys collect: [:each | each asString]).

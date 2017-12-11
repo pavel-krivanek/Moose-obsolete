@@ -15,7 +15,7 @@ Class {
 		'char',
 		'startLine'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
 { #category : #reading }

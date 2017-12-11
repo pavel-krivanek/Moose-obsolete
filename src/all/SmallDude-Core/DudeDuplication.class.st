@@ -8,7 +8,7 @@ Class {
 		'headDiagNo',
 		'tailDiagNo'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
 { #category : #'instance creation' }
@@ -101,7 +101,7 @@ DudeDuplication >> copiedLength [
 	^copy
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDuplication >> dupCode: aCodeFragment [ 
 	 
 	duplicateCode := aCodeFragment
@@ -188,13 +188,13 @@ DudeDuplication >> expandedSignature [
 	^ xsig
 ]
 
-{ #category : #accessing-private }
+{ #category : #'accessing-private' }
 DudeDuplication >> headDiagonal [ 
 	 
 	^headDiagNo
 ]
 
-{ #category : #accessing-private }
+{ #category : #'accessing-private' }
 DudeDuplication >> headDiagonal: diagNo [ 
 	 
 	headDiagNo := diagNo
@@ -291,13 +291,13 @@ DudeDuplication >> realLength [
 	^duplicateCode fragmentLength max: referenceCode fragmentLength
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDuplication >> refCode: aCodeFragment [ 
 	 
 	referenceCode := aCodeFragment
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDuplication >> refCode: aCodeFragment dupCode: anotherCodeFragment signature: aString [ 
 	 
 	signature := aString. 
@@ -348,13 +348,13 @@ DudeDuplication >> signature [
 	^ signature
 ]
 
-{ #category : #accessing-private }
+{ #category : #'accessing-private' }
 DudeDuplication >> tailDiagonal [ 
 	 
 	^tailDiagNo
 ]
 
-{ #category : #accessing-private }
+{ #category : #'accessing-private' }
 DudeDuplication >> tailDiagonal: diagNo [ 
 	 
 	tailDiagNo := diagNo

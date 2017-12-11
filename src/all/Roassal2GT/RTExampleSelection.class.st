@@ -1,7 +1,7 @@
 Class {
 	#name : #RTExampleSelection,
 	#superclass : #GtExample,
-	#category : #Roassal2GT-Examples
+	#category : #'Roassal2GT-Examples'
 }
 
 { #category : #examples }

@@ -7,7 +7,7 @@ Class {
 		'extractedTypes',
 		'links'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #'instance creation' }
@@ -29,34 +29,34 @@ ExtractedType class >> mergerClass [
 	^AssignmentsFirstMerger
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> addAssignment: anObject [
 	(self assignments includes: anObject)
 		ifFalse: [self assignments add: anObject]
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> addLinkedExtractedType: anExtractedType [
 	 links add: anExtractedType liveExtractType
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> addReverseLinkedExtractedType: anExtractedType [
 	links add: anExtractedType liveExtractType.
 	anExtractedType liveExtractType  addLinkedExtractedType: self
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> addSend: anObject [
 	self interface add: anObject
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> assignments [
 	^assignments
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> basicExtractedTypes [
 	^extractedTypes
 ]
@@ -124,7 +124,7 @@ ExtractedType >> hasEmptyInterface [
 	^self interface isEmpty
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ExtractedType >> initialize [
 	super initialize.
 	links := Set new.
@@ -133,12 +133,12 @@ ExtractedType >> initialize [
 		assignments: OrderedCollection new.
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> interface [
 	^interface
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> interface: selectorCollection assignments: classCollection [
 	interface := selectorCollection.
 	assignments := classCollection
@@ -154,7 +154,7 @@ ExtractedType >> isExtractedResult [
 	^true
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedType >> links [
 	^links
 ]

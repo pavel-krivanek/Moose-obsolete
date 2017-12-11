@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'preferredAction'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'error handling' }
@@ -41,7 +41,7 @@ SmaCCPreferredCompositeAction >> preferredAction [
 	^ preferredAction
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCPreferredCompositeAction >> preferredAction: aSmaCCAction [
 	preferredAction := aSmaCCAction
 ]

@@ -4,7 +4,7 @@ Class {
 	#category : 'PetitParser2-Nodes'
 }
 
-{ #category : #factory-objects }
+{ #category : #'factory-objects' }
 PP2PredicateObjectNode class >> anyOf: aCollection [
 	^ self new
 		predicate: [ :each | aCollection includes: each ];
@@ -13,7 +13,7 @@ PP2PredicateObjectNode class >> anyOf: aCollection [
 		negatedMessage: 'none of ' , aCollection printString ,  'expected'
 ]
 
-{ #category : #factory-objects }
+{ #category : #'factory-objects' }
 PP2PredicateObjectNode class >> expect: anObject message: aString [
 	^ (self new)
 		predicate: [ :each | each = anObject ];
@@ -22,7 +22,7 @@ PP2PredicateObjectNode class >> expect: anObject message: aString [
 		negatedMessage: 'no ' , aString
 ]
 
-{ #category : #factory-objects }
+{ #category : #'factory-objects' }
 PP2PredicateObjectNode class >> noneOf: aCollection [
 	^ self new
 		predicate: [ :each | (aCollection includes: each) not ];

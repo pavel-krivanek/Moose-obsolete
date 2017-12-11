@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'message'
 	],
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #'instance creation' }
@@ -26,7 +26,7 @@ PPFailingParser >> message [
 	^ message
 ]
 
-{ #category : #pp-context }
+{ #category : #'pp-context' }
 PPFailingParser >> parseOn: aPPContext [
 	^ PPFailure message: message context: aPPContext
 ]

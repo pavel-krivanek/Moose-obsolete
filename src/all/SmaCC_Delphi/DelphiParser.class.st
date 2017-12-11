@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'lastInsertPosition'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 DelphiParser class >> cacheId [
 	^'2017-11-29T08:11:08.331064-06:00'
 ]
@@ -1213,7 +1213,7 @@ DelphiParser class >> fileExtensionType [
 	^ 'Delphi files'
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 DelphiParser class >> scannerClass [
 	^DelphiScanner
 ]

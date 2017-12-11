@@ -1,7 +1,7 @@
 Class {
 	#name : #MAMemoMorph,
 	#superclass : #MAElementMorph,
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
 { #category : #accessing }

@@ -1,1 +1,1 @@
-Package { #name : #GToolkit-Examples-Roassal2UI }
+Package { #name : #'GToolkit-Examples-Roassal2UI' }

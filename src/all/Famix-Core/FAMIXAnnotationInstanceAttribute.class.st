@@ -19,7 +19,7 @@ Class {
 		'annotationTypeAttribute',
 		'value'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #accessing }
@@ -54,7 +54,7 @@ FAMIXAnnotationInstanceAttribute >> annotationTypeAttribute: anAnnotationTypeAtt
 					to: anAnnotationTypeAttribute
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXAnnotationInstanceAttribute >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -70,7 +70,7 @@ FAMIXAnnotationInstanceAttribute >> name [
 		ifFalse: [ nil ]
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXAnnotationInstanceAttribute >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	

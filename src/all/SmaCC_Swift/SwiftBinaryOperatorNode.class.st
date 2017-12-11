@@ -47,7 +47,7 @@ Class {
 		'dynamicTypeTokens',
 		'andToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -245,7 +245,7 @@ SwiftBinaryOperatorNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftBinaryOperatorNode >> initialize [
 	super initialize.
 	operatorTokens := OrderedCollection new: 2.

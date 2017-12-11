@@ -7,16 +7,16 @@ Class {
 	#instVars : [
 		'entities'
 	],
-	#category : #Famix-File
+	#category : #'Famix-File'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXFile class >> annotation [
 	<MSEClass: #File super: #FAMIXAbstractFile>
 	<package: #FILE>
 ]
 
-{ #category : #add-entities }
+{ #category : #'add-entities' }
 FAMIXFile >> addEntity: famixEntity [
 	self entities add: famixEntity
 ]
@@ -77,7 +77,7 @@ FAMIXFile >> ifFileExistsDo: aBlock [
 	^ self fileExists ifTrue: [ aBlock value ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXFile >> initialize [
 	super initialize.
 	entities := OrderedCollection new

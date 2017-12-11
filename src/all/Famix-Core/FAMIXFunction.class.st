@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'container'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -54,7 +54,7 @@ FAMIXFunction >> isPublic [
 			inv sender container ~~ self container]
 ]
 
-{ #category : #moose-chef-scoping-filtering }
+{ #category : #'moose-chef-scoping-filtering' }
 FAMIXFunction >> namespaceScope [
 	^ self container 
 		ifNotNil: [ self container namespaceScope ]

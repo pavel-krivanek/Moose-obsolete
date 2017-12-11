@@ -10,7 +10,7 @@ Class {
 		'SpaceCharacter',
 		'TabCharacter'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #'class initialization' }

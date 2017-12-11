@@ -27,7 +27,7 @@ Class {
 		'colorIndex',
 		'transparency'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #initialization }

@@ -4,5 +4,5 @@ A dummy subclass of XMLString
 Class {
 	#name : #XMLFString,
 	#superclass : #XMLString,
-	#category : #XML-Tests-Parser-DOM-Factories
+	#category : #'XML-Tests-Parser-DOM-Factories'
 }

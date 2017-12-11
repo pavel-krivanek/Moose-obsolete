@@ -6,7 +6,7 @@ self openOn: MooseModel root allModels last allNamespaces
 Class {
 	#name : #MooseNamespacesCodeBrowser,
 	#superclass : #MooseCodeBrowser,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #building }

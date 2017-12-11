@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'xml'
 	],
-	#category : #PetitXPath-Tests
+	#category : #'PetitXPath-Tests'
 }
 
 { #category : #'as yet unclassified' }

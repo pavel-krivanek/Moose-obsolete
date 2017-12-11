@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'container'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }

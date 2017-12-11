@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseMetaExplorer,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #fame }

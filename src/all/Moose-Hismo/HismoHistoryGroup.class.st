@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'versions'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
 { #category : #'instance creation' }
@@ -74,7 +74,7 @@ HismoHistoryGroup >> changeTypeToDefaultType [
 	self changeTypeTo: HismoHistoryGroup
 ]
 
-{ #category : #co-change }
+{ #category : #'co-change' }
 HismoHistoryGroup >> coChangeConceptsUsing: aBlock [
 	
 	| fca |
@@ -83,7 +83,7 @@ HismoHistoryGroup >> coChangeConceptsUsing: aBlock [
 	^fca concepts
 ]
 
-{ #category : #co-change }
+{ #category : #'co-change' }
 HismoHistoryGroup >> coChangePatternsUsing: aBlock [ 
 	| concepts patterns |
 	concepts := self coChangeConceptsUsing: aBlock.

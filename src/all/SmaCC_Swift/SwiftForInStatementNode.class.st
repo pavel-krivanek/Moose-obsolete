@@ -35,7 +35,7 @@ Class {
 		'inToken',
 		'block'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -182,7 +182,7 @@ SwiftForInStatementNode >> inToken: aSmaCCToken [
 	inToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftForInStatementNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

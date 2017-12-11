@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiProgramNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }

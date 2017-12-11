@@ -4,7 +4,7 @@ This is an AST node class to wrap the root node of a parsed XPath expression.
 Class {
 	#name : #XPathASTExpressionRootNode,
 	#superclass : #XPathASTNodeWithExpression,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

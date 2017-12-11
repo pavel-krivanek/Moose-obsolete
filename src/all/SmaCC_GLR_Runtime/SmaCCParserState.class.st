@@ -21,7 +21,7 @@ Class {
 		'scannerState',
 		'attributes'
 	],
-	#category : #SmaCC_GLR_Runtime
+	#category : #'SmaCC_GLR_Runtime'
 }
 
 { #category : #'instance creation' }
@@ -128,7 +128,7 @@ SmaCCParserState >> stateStack [
 	^ stateStack
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParserState >> stateStack: stateCollection nodeStack: nodeCollection [
 	stateStack := stateCollection.
 	nodeStack := nodeCollection.

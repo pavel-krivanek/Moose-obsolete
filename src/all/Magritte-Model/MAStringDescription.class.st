@@ -4,10 +4,10 @@ I am a description of strings, possible values are instances of ==String==. My v
 Class {
 	#name : #MAStringDescription,
 	#superclass : #MAElementDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAStringDescription class >> defaultKind [
 	^ String
 ]

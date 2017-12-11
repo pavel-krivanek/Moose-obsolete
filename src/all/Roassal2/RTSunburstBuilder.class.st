@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'maxLevel'
 	],
-	#category : #Roassal2-Builder-Sunburst
+	#category : #'Roassal2-Builder-Sunburst'
 }
 
 { #category : #configuration }

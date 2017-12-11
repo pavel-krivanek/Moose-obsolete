@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'wordSeparators'
 	],
-	#category : #Roassal2-Builder-TextBuilder
+	#category : #'Roassal2-Builder-TextBuilder'
 }
 
 { #category : #initialization }

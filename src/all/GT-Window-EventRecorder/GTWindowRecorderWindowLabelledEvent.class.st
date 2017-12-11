@@ -7,7 +7,7 @@ WindowLabelled
 Class {
 	#name : #GTWindowRecorderWindowLabelledEvent,
 	#superclass : #GTWindowRecorderEvent,
-	#category : #GT-Window-EventRecorder-Events
+	#category : #'GT-Window-EventRecorder-Events'
 }
 
 { #category : #initialization }

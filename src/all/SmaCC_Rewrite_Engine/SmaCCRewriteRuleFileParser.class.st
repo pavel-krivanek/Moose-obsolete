@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'filename'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCRewriteRuleFileParser class >> cacheId [
 	^'2017-11-29T08:29:57.27669-06:00'
 ]
@@ -115,7 +115,7 @@ SmaCCRewriteRuleFileParser class >> parseFile: aString [
 		ensure: [ stream close ]
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCRewriteRuleFileParser class >> scannerClass [
 	^SmaCCRewriteRuleFileScanner
 ]

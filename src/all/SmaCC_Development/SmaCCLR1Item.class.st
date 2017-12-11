@@ -7,7 +7,7 @@ Class {
 		'followers',
 		'itemSet'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -45,7 +45,7 @@ SmaCCLR1Item >> followers [
 	^ followers
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCLR1Item >> followers: aSmaCCSymbolSet [
 	followers := aSmaCCSymbolSet
 ]
@@ -84,7 +84,7 @@ SmaCCLR1Item >> location [
 	^ location
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCLR1Item >> location: anInteger [
 	location := anInteger
 ]
@@ -163,7 +163,7 @@ SmaCCLR1Item >> rhs [
 	^ rhs
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCLR1Item >> rhs: aSmaCCRHS follow: aSmaCCSymbolCollection [
 	rhs := aSmaCCRHS.
 	location := 1.

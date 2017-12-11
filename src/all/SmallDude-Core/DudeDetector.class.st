@@ -8,10 +8,10 @@ Class {
 		'fragments',
 		'mooseModel'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector class >> new: entitySpecie from: entities andObserver: anObserver inModel: aModel [
 	^ self
 		new: entitySpecie
@@ -21,7 +21,7 @@ DudeDetector class >> new: entitySpecie from: entities andObserver: anObserver i
 		inModel: aModel
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector class >> new: entitySpecie from: entities inModel: aModel [
 	^ self
 		new: entitySpecie
@@ -31,7 +31,7 @@ DudeDetector class >> new: entitySpecie from: entities inModel: aModel [
 		inModel: aModel
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector class >> new: entitySpecie from: entities withStrategy: strategyBlock andObserver: anObserver inModel: aModel [
 	| result |
 	result := (self new
@@ -42,7 +42,7 @@ DudeDetector class >> new: entitySpecie from: entities withStrategy: strategyBlo
 	^ result
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector class >> new: entitySpecie from: entities withStrategy: strategyBlock inModel: aModel [ 
 	 
 	^self 
@@ -59,7 +59,7 @@ DudeDetector >> codeBase [
 	^codeBase
 ]
 
-{ #category : #engine-parsing }
+{ #category : #'engine-parsing' }
 DudeDetector >> codeLinesFor: anEntity withCleaner: aCleaner [
 	"retrieves source code for anEntity, then splits it in lines (keeping empty lines), then cleans it, then creates DudeSourceCodeLine for each non empty line.
 	a DudeSourceCodeLine knows its entity, the text of its line, and its line number in the original source code"
@@ -76,13 +76,13 @@ DudeDetector >> codeLinesFor: anEntity withCleaner: aCleaner [
 		thenSelect: [ :aDudeLine | aDudeLine notNil ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector >> compareStrategy: aBlock [ 
 	 
 	strategy := aBlock
 ]
 
-{ #category : #engine-private }
+{ #category : #'engine-private' }
 DudeDetector >> dupMatrixFor: rowLines and: colLines onlyUpperHalf: onlyHalf [ 
 	 
 	| rows cols matrix startCol | 
@@ -115,7 +115,7 @@ DudeDetector >> entities [
 	^ self codeBase keys asOrderedCollection
 ]
 
-{ #category : #engine-private }
+{ #category : #'engine-private' }
 DudeDetector >> exactDupFor: rowEntity and: colEntity withLength: minDupLen [
 	| matrix duplications startNo |
 	duplications := OrderedCollection new: 50.
@@ -300,7 +300,7 @@ DudeDetector >> getMultiplicationsWith: minSizeDupChain withSizeOfExactChunk: mi
 	^temp
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector >> initialize: entitySpecie from: entityList [ 
 	 
 	| aCleaner | 
@@ -321,7 +321,7 @@ DudeDetector >> initialize: entitySpecie from: entityList [
 	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector >> initialize: entitySpecie from: entityList and: strategyBlock andObserver: anObserver inModel: aModel [ 
 	 
 	self compareStrategy: strategyBlock. 
@@ -339,7 +339,7 @@ DudeDetector >> mooseModel: anObject [
 	mooseModel := anObject
 ]
 
-{ #category : #engine-private }
+{ #category : #'engine-private' }
 DudeDetector >> multisFor: rowEntity and: colEntity withChainLen: minSizeDupChain withSizeOfExactChunk: minSizeExactChunk withLineBias: maxLineBias [
 	| exacts |
 	(self codeBase at: rowEntity) ifEmpty: [ ^ nil ].
@@ -370,13 +370,13 @@ DudeDetector >> multisFor: rowEntity and: colEntity withChainLen: minSizeDupChai
 				ifTrue: [ self recordDuplication: chunk ] ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDetector >> observer: anObserver [ 
 	 
 	observer := anObserver
 ]
 
-{ #category : #engine-private }
+{ #category : #'engine-private' }
 DudeDetector >> recordDuplication: aDup [ 
 	 
 	| survivor | 
@@ -421,7 +421,7 @@ DudeDetector >> recordDuplication: aDup [
 		put: survivor
 ]
 
-{ #category : #engine-private }
+{ #category : #'engine-private' }
 DudeDetector >> recordFragment: aCodeFragment [ 
 	"eliminate redundant code fragments" 
 	 

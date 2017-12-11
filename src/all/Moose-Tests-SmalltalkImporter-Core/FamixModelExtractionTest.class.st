@@ -25,7 +25,7 @@ Class {
 		'canOriginateNodeName',
 		'methodWithEmptyBodyNodeName'
 	],
-	#category : #Moose-Tests-SmalltalkImporter-Core
+	#category : #'Moose-Tests-SmalltalkImporter-Core'
 }
 
 { #category : #auxiliary }
@@ -116,7 +116,7 @@ FamixModelExtractionTest >> assignMethods [
 				class: mseNodeClassName.
 ]
 
-{ #category : #setup-teardown }
+{ #category : #'setup-teardown' }
 FamixModelExtractionTest >> setUp [
 	self assignClasses.
 	self assignAttributes.

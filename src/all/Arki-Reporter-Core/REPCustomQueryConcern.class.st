@@ -7,7 +7,7 @@ Class {
 		'label',
 		'explanation'
 	],
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #accessing }

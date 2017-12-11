@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'codeSizeEstimate'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #comparing }
@@ -64,7 +64,7 @@ SmaCCCharacterEdge >> setClass [
 	^ SmaCCCharacterSet
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCharacterEdge >> to: aSmaCCNode on: aStringOrNil [
 	toNode := aSmaCCNode.
 	transitionObjects := aStringOrNil notNil

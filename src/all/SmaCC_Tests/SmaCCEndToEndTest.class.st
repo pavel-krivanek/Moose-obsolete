@@ -6,7 +6,7 @@ Class {
 		'currentPackage',
 		'manager'
 	],
-	#category : #SmaCC_Tests
+	#category : #'SmaCC_Tests'
 }
 
 { #category : #private }

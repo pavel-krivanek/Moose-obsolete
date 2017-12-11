@@ -9,7 +9,7 @@ Class {
 		'theSelector',
 		'time'
 	],
-	#category : #Roassal2-ExampleBrowser
+	#category : #'Roassal2-ExampleBrowser'
 }
 
 { #category : #accessing }

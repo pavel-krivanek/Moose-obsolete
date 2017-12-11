@@ -1,10 +1,10 @@
 Class {
 	#name : #MADescriptionHolder,
 	#superclass : #MAValueHolder,
-	#category : #Magritte-Model-Utility
+	#category : #'Magritte-Model-Utility'
 }
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescriptionHolder class >> descriptionClasses [
 	^ MAElementDescription withAllConcreteClasses asOrderedCollection
 ]
@@ -76,7 +76,7 @@ MADescriptionHolder class >> groupText [
 
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescriptionHolder >> descriptionValue [
 	<magritteDescription>
 	^ MASingleOptionDescription new

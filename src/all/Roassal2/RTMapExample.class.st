@@ -23,7 +23,7 @@ RTMapExample new installTitle: 'ColoredAfrica03'
 Class {
 	#name : #RTMapExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-Map
+	#category : #'Roassal2-Builder-Map'
 }
 
 { #category : #sources }

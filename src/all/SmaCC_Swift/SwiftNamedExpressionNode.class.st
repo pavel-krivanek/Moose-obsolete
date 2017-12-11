@@ -6,7 +6,7 @@ Class {
 		'colonToken',
 		'expression'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }

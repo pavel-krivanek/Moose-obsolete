@@ -1,7 +1,7 @@
 Class {
 	#name : #ACDStepToNextSubscriptionDebugAction,
 	#superclass : #DebugAction,
-	#category : #ACD-Model
+	#category : #'ACD-Model'
 }
 
 { #category : #registration }

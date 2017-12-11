@@ -12,7 +12,7 @@ Class {
 		'elementClassMapper',
 		'elementHandlerClass'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #accessing }

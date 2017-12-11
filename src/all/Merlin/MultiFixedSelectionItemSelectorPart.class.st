@@ -1,7 +1,7 @@
 Class {
 	#name : #MultiFixedSelectionItemSelectorPart,
 	#superclass : #MultiSelectionItemSelectorPart,
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #actions }

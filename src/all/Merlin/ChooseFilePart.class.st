@@ -8,7 +8,7 @@ Class {
 		'validExtensions',
 		'selectedPathName'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #accessing }
@@ -23,7 +23,7 @@ ChooseFilePart >> dialogLabel: aString [
 	dialogLabel := aString 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ChooseFilePart >> initialize [
 
 	super initialize.

@@ -6,7 +6,7 @@ Class {
 		'interfaces',
 		'commas'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -44,7 +44,7 @@ DelphiPropertyImplementsNode >> implementsToken: aSmaCCToken [
 	implementsToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiPropertyImplementsNode >> initialize [
 	super initialize.
 	interfaces := OrderedCollection new: 2.

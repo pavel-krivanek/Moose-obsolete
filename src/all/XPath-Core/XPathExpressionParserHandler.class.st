@@ -4,7 +4,7 @@ An abstract class for XPath expression parser handlers.
 Class {
 	#name : #XPathExpressionParserHandler,
 	#superclass : #XPathParserHandler,
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #'handling - operators' }

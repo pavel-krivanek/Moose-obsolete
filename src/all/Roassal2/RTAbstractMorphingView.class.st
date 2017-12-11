@@ -23,7 +23,7 @@ Class {
 		'referenceModels',
 		'afterAllTranslationsBlocks'
 	],
-	#category : #Roassal2-Interactions-MorphingView
+	#category : #'Roassal2-Interactions-MorphingView'
 }
 
 { #category : #utility }

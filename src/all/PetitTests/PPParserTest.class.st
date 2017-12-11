@@ -1,10 +1,10 @@
 Class {
 	#name : #PPParserTest,
 	#superclass : #PPAbstractParserTest,
-	#category : #PetitTests-Tests
+	#category : #'PetitTests-Tests'
 }
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testAction [
 	| block parser |
 	block := [ :char | char asUppercase ].
@@ -28,7 +28,7 @@ PPParserTest >> testAnd [
 	self assert: parser and equals: parser
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testAnswer [
 	| parser |
 	parser := $a asParser answer: $b.
@@ -49,7 +49,7 @@ PPParserTest >> testBlock [
 	self assert: parser parse: '' to: nil
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testChildren [
 	| p1 p2 p3 |
 	p1 := #lowercase asParser.
@@ -167,7 +167,7 @@ PPParserTest >> testFailing [
 	self assert: result printString equals: 'Plonk at 0'
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testFailure [
 	| failure |
 	failure := PPFailure message: 'Error' context: PPContext new at: 3.
@@ -178,7 +178,7 @@ PPParserTest >> testFailure [
 	self deny: 'foo' isPetitFailure
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testFlatten [
 	| parser |
 	parser := $a asParser flatten.
@@ -190,7 +190,7 @@ PPParserTest >> testFlatten [
 	self assert: parser fail: 'b'
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testFoldLeft2 [
 	| parser |
 	parser := #any asParser star 
@@ -203,7 +203,7 @@ PPParserTest >> testFoldLeft2 [
 	self assert: parser parse: #(a b c d e) to: #((((a b) c) d) e)
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testFoldLeft3 [
 	| parser |
 	parser := #any asParser star 
@@ -214,7 +214,7 @@ PPParserTest >> testFoldLeft3 [
 	self assert: parser parse: #(a b c d e) to: #((a b c) d e)
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testFoldRight2 [
 	| parser |
 	parser := #any asParser star 
@@ -227,7 +227,7 @@ PPParserTest >> testFoldRight2 [
 	self assert: parser parse: #(a b c d e) to: #(a (b (c (d e))))
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testFoldRight3 [
 	| parser |
 	parser := #any asParser star 
@@ -238,7 +238,7 @@ PPParserTest >> testFoldRight3 [
 	self assert: parser parse: #(a b c d e) to: #(a b (c d e))
 ]
 
-{ #category : #testing-properties }
+{ #category : #'testing-properties' }
 PPParserTest >> testHasProperty [
 	| parser |
 	parser := PPParser new.
@@ -247,7 +247,7 @@ PPParserTest >> testHasProperty [
 	self assert: (parser hasProperty: #foo)
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testListConstructor [
 	| p1 p2 p3 |
 	p1 := PPChoiceParser with: $a asParser.
@@ -308,7 +308,7 @@ PPParserTest >> testLiteralSequenceCaseInsensitive [
 	self assert: parser fail: 'abd'
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testMap1 [
 	| parser |
 	parser := #any asParser 
@@ -317,7 +317,7 @@ PPParserTest >> testMap1 [
 	self assert: parser parse: #(a) to: #(a)
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testMap2 [
 	| parser |
 	parser := (#any asParser , #any asParser) 
@@ -326,7 +326,7 @@ PPParserTest >> testMap2 [
 	self assert: parser parse: #(a b) to: #(b a)
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testMap3 [
 	| parser |
 	parser := (#any asParser , #any asParser , #any asParser)
@@ -335,7 +335,7 @@ PPParserTest >> testMap3 [
 	self assert: parser parse: #(a b c) to: #(c b a)
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testMapFail1 [
 	self
 		should: [ #any asParser map: [  ] ]
@@ -346,7 +346,7 @@ PPParserTest >> testMapFail1 [
 
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testMapFail2 [
 	self
 		should: [ (#any asParser , #any asParser) map: [ :a | ] ]
@@ -357,7 +357,7 @@ PPParserTest >> testMapFail2 [
 
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatches [
 	| parser |
 	parser := $a asParser.
@@ -369,7 +369,7 @@ PPParserTest >> testMatches [
 	self deny: (parser matches: 'b' readStream)
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatchesIn [
 	| parser result |
 	parser := $a asParser.
@@ -383,7 +383,7 @@ PPParserTest >> testMatchesIn [
 	self assert: result last equals: $a
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatchesInEmpty [
 	"Empty matches should properly advance and match at each position and at the end."
 
@@ -393,7 +393,7 @@ PPParserTest >> testMatchesInEmpty [
 	self assert: result asArray equals: #(0 1 2 3)
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatchesInOverlapping [
 	"Matches that overlap should be properly reported."
 
@@ -405,7 +405,7 @@ PPParserTest >> testMatchesInOverlapping [
 	self assert: result last equals: #($2 $3)
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatchesSkipIn [
 	| parser result |
 	parser := $a asParser.
@@ -419,7 +419,7 @@ PPParserTest >> testMatchesSkipIn [
 	self assert: result last equals: $a
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatchesSkipInOverlapping [
 	"Matches that overlap should be properly reported."
 
@@ -430,7 +430,7 @@ PPParserTest >> testMatchesSkipInOverlapping [
 	self assert: result first equals: #($1 $2)
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatchingRangesIn [
 	| input parser result |
 	input := 'a12b3'.
@@ -443,7 +443,7 @@ PPParserTest >> testMatchingRangesIn [
 	self assert: result last equals: '3'
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testMatchingSkipRangesIn [
 	| input parser result |
 	input := 'a12b3'.
@@ -736,7 +736,7 @@ PPParserTest >> testMinMaxLazy [
 	self assert: parser fail: 'abcde1234'
 ]
 
-{ #category : #testing-accessing }
+{ #category : #'testing-accessing' }
 PPParserTest >> testNamed [
 	| parser |
 	parser := PPSequenceParser new.
@@ -785,7 +785,7 @@ PPParserTest >> testOptional [
 	self assert: parser parse: 'ba' to: nil end: 0
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testParse [
 	| parser result |
 	parser := $a asParser.
@@ -801,7 +801,7 @@ PPParserTest >> testParse [
 	self assert: result position equals: 0
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testParseOnError0 [
 	| parser result seen |
 	parser := $a asParser.
@@ -812,7 +812,7 @@ PPParserTest >> testParseOnError0 [
 	self assert: seen
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testParseOnError1 [
 	| parser result seen |
 	parser := $a asParser.
@@ -829,7 +829,7 @@ PPParserTest >> testParseOnError1 [
 	self assert: seen
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testParseOnError2 [
 	| parser result seen |
 	parser := $a asParser.
@@ -846,7 +846,7 @@ PPParserTest >> testParseOnError2 [
 	self assert: seen
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPParserTest >> testParser [
 	| parser |
 	parser := PPParser new.
@@ -857,7 +857,7 @@ PPParserTest >> testParser [
 	self deny: 'foo' isPetitParser
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testPermutation [
 	| parser |
 	parser := #any asParser , #any asParser , #any asParser.
@@ -1033,7 +1033,7 @@ PPParserTest >> testPlusLazy [
 		end: 3
 ]
 
-{ #category : #testing-properties }
+{ #category : #'testing-properties' }
 PPParserTest >> testPostCopy [
 	| parser copy |
 	parser := PPParser new.
@@ -1044,7 +1044,7 @@ PPParserTest >> testPostCopy [
 	self deny: (copy propertyAt: #foo)
 ]
 
-{ #category : #testing-accessing }
+{ #category : #'testing-accessing' }
 PPParserTest >> testPrint [
 	| parser |
 	parser := PPParser new.
@@ -1063,7 +1063,7 @@ PPParserTest >> testPrint [
 	self assert: parser printString includesSubstring: 'error'
 ]
 
-{ #category : #testing-properties }
+{ #category : #'testing-properties' }
 PPParserTest >> testPropertyAt [
 	| parser |
 	parser := PPParser new.
@@ -1072,7 +1072,7 @@ PPParserTest >> testPropertyAt [
 	self assert: (parser propertyAt: #foo)
 ]
 
-{ #category : #testing-properties }
+{ #category : #'testing-properties' }
 PPParserTest >> testPropertyAtIfAbsent [
 	| parser |
 	parser := PPParser new.
@@ -1081,7 +1081,7 @@ PPParserTest >> testPropertyAtIfAbsent [
 	self assert: (parser propertyAt: #foo ifAbsent: [ false ])
 ]
 
-{ #category : #testing-properties }
+{ #category : #'testing-properties' }
 PPParserTest >> testPropertyAtIfAbsentPut [
 	| parser |
 	parser := PPParser new.
@@ -1089,7 +1089,7 @@ PPParserTest >> testPropertyAtIfAbsentPut [
 	self assert: (parser propertyAt: #foo ifAbsentPut: [ false ])
 ]
 
-{ #category : #testing-properties }
+{ #category : #'testing-properties' }
 PPParserTest >> testRemoveProperty [
 	| parser |
 	parser := PPParser new.
@@ -1098,7 +1098,7 @@ PPParserTest >> testRemoveProperty [
 	self assert: (parser removeProperty: #foo)
 ]
 
-{ #category : #testing-properties }
+{ #category : #'testing-properties' }
 PPParserTest >> testRemovePropertyIfAbsent [
 	| parser |
 	parser := PPParser new.
@@ -1161,7 +1161,7 @@ PPParserTest >> testSequence [
 	self assert: parser fail: 'bab'
 ]
 
-{ #category : #testing-fixtures }
+{ #category : #'testing-fixtures' }
 PPParserTest >> testSideEffectChoice [
 	"Adding another element to a choice should create a copy, otherwise we get unwanted side-effects."
 
@@ -1183,7 +1183,7 @@ PPParserTest >> testSideEffectChoice [
 	self assert: p3 parse: 'c'
 ]
 
-{ #category : #testing-fixtures }
+{ #category : #'testing-fixtures' }
 PPParserTest >> testSideEffectListCopy [
 	| old new |
 	old := $a asParser , $b asParser.
@@ -1195,7 +1195,7 @@ PPParserTest >> testSideEffectListCopy [
 	self assert: old children last == new children last
 ]
 
-{ #category : #testing-fixtures }
+{ #category : #'testing-fixtures' }
 PPParserTest >> testSideEffectSequence [
 	"Adding another element to a sequence should create a copy, otherwise we get unwanted side-effects."
 
@@ -1410,7 +1410,7 @@ PPParserTest >> testTimes [
 	self assert: parser parse: 'aaa' to: #($a $a) end: 2
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testToken [
 	| parser |
 	parser := $a asParser token.
@@ -1433,7 +1433,7 @@ PPParserTest >> testToken [
 	self assert: parser fail: 'b'
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testTrim [
 	| parser |
 	parser := $a asParser token trim.
@@ -1460,7 +1460,7 @@ a' toToken: 5 stop: 5.
 	self assert: parser fail: 'b'
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testTrimBlanks [
 	| parser |
 	parser := $a asParser token trimBlanks.
@@ -1487,7 +1487,7 @@ a'.
 	self assert: parser fail: 'b'.
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testTrimCustom [
 	| parser |
 	parser := $a asParser token trim: $b asParser.
@@ -1508,7 +1508,7 @@ PPParserTest >> testTrimCustom [
 	self assert: parser fail: 'b'
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testTrimSpaces [
 	| parser |
 	parser := $a asParser token trimSpaces.
@@ -1561,7 +1561,7 @@ PPParserTest >> testWrapped [
 	self assert: parser parse: 'abc' to: #(#($a $b) $c)
 ]
 
-{ #category : #testing-mapping }
+{ #category : #'testing-mapping' }
 PPParserTest >> testWrapping [
 	| parser result |
 	parser := #digit asParser plus >=> [ :stream :cc | Array with: stream position with: cc value with: stream position ].

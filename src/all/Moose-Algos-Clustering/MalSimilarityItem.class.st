@@ -4,7 +4,7 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalSimilarityItem,
 	#superclass : #MalVectorItem,
-	#category : #Moose-Algos-Clustering
+	#category : #'Moose-Algos-Clustering'
 }
 
 { #category : #'distance functions' }

@@ -38,7 +38,7 @@ Class {
 		'gridSize',
 		'strategy'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #'instance creation' }

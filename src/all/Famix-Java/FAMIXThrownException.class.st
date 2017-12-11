@@ -4,10 +4,10 @@ This is an exception explicitly thrown by a method.
 Class {
 	#name : #FAMIXThrownException,
 	#superclass : #FAMIXException,
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXThrownException class >> annotation [
 	<MSEClass: #ThrownException super: #FAMIXException>
 	<package: #FAMIX>

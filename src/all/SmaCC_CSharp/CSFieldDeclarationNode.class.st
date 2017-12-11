@@ -9,7 +9,7 @@ Class {
 		'commaTokens',
 		'semicolonToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -71,7 +71,7 @@ CSFieldDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolonToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSFieldDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

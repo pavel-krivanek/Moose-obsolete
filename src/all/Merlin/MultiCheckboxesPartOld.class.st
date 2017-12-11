@@ -9,7 +9,7 @@ Class {
 		'actionArguments',
 		'actionModel'
 	],
-	#category : #Merlin-ToBeRemoved
+	#category : #'Merlin-ToBeRemoved'
 }
 
 { #category : #'instance creation' }
@@ -102,7 +102,7 @@ MultiCheckboxesPartOld >> allCheckboxLabels: aCollectionOfString [
 	^ allCheckboxLabels 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MultiCheckboxesPartOld >> initialize: aCollectionOfLabels [
 
 	| elements |
@@ -126,7 +126,7 @@ MultiCheckboxesPartOld >> initialize: aCollectionOfLabels [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MultiCheckboxesPartOld >> initialize: aCollectionOfLabels inGroupBoxNamed: aName [
 
 	| elements |

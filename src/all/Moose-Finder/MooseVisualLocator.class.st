@@ -4,7 +4,7 @@ The MooseVisualLocator is a simple template that offers a list of classes on the
 Class {
 	#name : #MooseVisualLocator,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #building }

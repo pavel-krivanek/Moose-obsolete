@@ -13,7 +13,7 @@ Class {
 		'outputFilename',
 		'contextClass'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -23,7 +23,7 @@ SmaCCRewriteEngine class >> new [
 		yourself
 ]
 
-{ #category : #accessing-methods }
+{ #category : #'accessing-methods' }
 SmaCCRewriteEngine >> addMethodNamed: aSymbol as: aBlock [
 	methods at: aSymbol put: aBlock
 ]
@@ -33,7 +33,7 @@ SmaCCRewriteEngine >> addRewrites: aCollection [
 	aCollection do: [ :each | self rewriteRule: each ]
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteEngine >> additionalFiles [
 	^ self propertyAt: #additionalFiles ifAbsentPut: [ Dictionary new ]
 ]
@@ -60,7 +60,7 @@ SmaCCRewriteEngine >> finished [
 		ifTrue: [ self rewriteRule clearLocalVariablesIn: contextClass ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteEngine >> initialize [
 	super initialize.
 	newStarts := IdentityDictionary new.
@@ -75,7 +75,7 @@ SmaCCRewriteEngine >> markAsProcessed: aSmaCCNode [
 	processedNodes add: aSmaCCNode
 ]
 
-{ #category : #accessing-methods }
+{ #category : #'accessing-methods' }
 SmaCCRewriteEngine >> methodNamed: aSymbol [
 	^ methods at: aSymbol ifAbsent: [ nil ]
 ]
@@ -115,27 +115,27 @@ SmaCCRewriteEngine >> properties: aDictionary [
 	properties := aDictionary
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteEngine >> propertyAt: aString [
 	^ properties at: aString ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteEngine >> propertyAt: aString ifAbsent: aBlock [
 	^ properties at: aString ifAbsent: aBlock
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteEngine >> propertyAt: aString ifAbsentPut: aBlock [
 	^ properties at: aString ifAbsentPut: aBlock
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteEngine >> propertyAt: aString put: anObject [
 	^ properties at: aString put: anObject
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteEngine >> removeProperty: aString [
 	^ properties removeKey: aString ifAbsent: [ nil ]
 ]

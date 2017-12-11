@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'cache'
 	],
-	#category : #Phexample-Core
+	#category : #'Phexample-Core'
 }
 
 { #category : #dependencies }

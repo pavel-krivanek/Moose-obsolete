@@ -5,7 +5,7 @@ Class {
 		'symbols',
 		'components'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -84,7 +84,7 @@ SmaCCSymbolSet >> includes: aSmaCCSymbol [
 	^ symbols includes: aSmaCCSymbol
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSymbolSet >> initialize [
 	super initialize.
 	symbols := Set new.

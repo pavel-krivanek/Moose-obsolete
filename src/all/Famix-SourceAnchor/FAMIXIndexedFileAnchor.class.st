@@ -9,7 +9,7 @@ Class {
 		'startPos',
 		'endPos'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
 { #category : #meta }

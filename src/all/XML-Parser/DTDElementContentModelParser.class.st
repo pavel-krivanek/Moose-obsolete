@@ -14,7 +14,7 @@ Class {
 		'OperatorApplicators',
 		'SpecialCharacterParsers'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #'class initialization' }

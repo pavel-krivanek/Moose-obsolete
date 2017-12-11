@@ -4,7 +4,7 @@ This class contains some examples. These examples are not accessible from the Wo
 Class {
 	#name : #RTGeneralExample,
 	#superclass : #RTObject,
-	#category : #Roassal2-ExampleBrowser
+	#category : #'Roassal2-ExampleBrowser'
 }
 
 { #category : #animations }

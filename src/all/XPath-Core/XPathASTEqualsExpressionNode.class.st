@@ -4,7 +4,7 @@ This is an AST node class for '=' equals expressions.
 Class {
 	#name : #XPathASTEqualsExpressionNode,
 	#superclass : #XPathASTEqualityExpressionNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

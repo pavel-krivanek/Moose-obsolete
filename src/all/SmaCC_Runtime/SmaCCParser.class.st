@@ -28,7 +28,7 @@ Class {
 	#classInstVars : [
 		'cacheId'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #caching }
@@ -395,7 +395,7 @@ SmaCCParser >> hasErrorHandler [
 	^ self errorHandlerStates anySatisfy: [ :each | each ~~ 0 ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParser >> initialize [
 	super initialize.
 	nodeStack := OrderedCollection new
@@ -561,7 +561,7 @@ SmaCCParser >> scanner [
 	^ scanner
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParser >> scanner: aScanner [
 	scanner := aScanner
 ]
@@ -576,13 +576,13 @@ SmaCCParser >> scope: aSymbol [
 	scanner scope: aSymbol
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParser >> setDefaultStartingStateIfNone [
 	stateStack isNil
 		ifTrue: [ self setStartingState: self class defaultStartingState ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParser >> setStartingState: startingState [
 	stateStack := OrderedCollection with: startingState
 ]

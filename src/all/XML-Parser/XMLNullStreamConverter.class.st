@@ -4,7 +4,7 @@ A stream converter that does no encoding or decoding.
 Class {
 	#name : #XMLNullStreamConverter,
 	#superclass : #XMLStatelessStreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #testing }

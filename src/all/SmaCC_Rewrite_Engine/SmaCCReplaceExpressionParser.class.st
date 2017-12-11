@@ -1,10 +1,10 @@
 Class {
 	#name : #SmaCCReplaceExpressionParser,
 	#superclass : #SmaCCParser,
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCReplaceExpressionParser class >> cacheId [
 	^'2017-11-29T08:29:41.926877-06:00'
 ]
@@ -91,7 +91,7 @@ Characters
 	;"
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCReplaceExpressionParser class >> scannerClass [
 	^SmaCCReplaceExpressionScanner
 ]

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'xmlElement'
 	],
-	#category : #PetitXPath-Nodes
+	#category : #'PetitXPath-Nodes'
 }
 
 { #category : #'instance creation' }

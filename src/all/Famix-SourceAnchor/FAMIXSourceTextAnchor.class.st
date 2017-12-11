@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'source'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
 { #category : #meta }

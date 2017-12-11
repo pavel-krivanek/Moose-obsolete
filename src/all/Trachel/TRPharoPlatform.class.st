@@ -4,7 +4,7 @@ I am a class for pharo platform
 Class {
 	#name : #TRPharoPlatform,
 	#superclass : #TRPlatform,
-	#category : #Trachel-MorphSpecific
+	#category : #'Trachel-MorphSpecific'
 }
 
 { #category : #testing }
@@ -13,7 +13,7 @@ TRPharoPlatform class >> isActivePlatform [
 	"^ SmalltalkImage current vm isPharoVM".
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> affineTransformClass [
 	^ AthensAffineTransform
 ]
@@ -284,7 +284,7 @@ TRPharoPlatform >> drawTextPathFor: shape canvas: canvas [
 		f unlock ]
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> exampleSelectionClass [
 	^ RTExampleSelection
 ]
@@ -305,12 +305,12 @@ TRPharoPlatform >> fontListStrings [
 	^ FontChooser new fontListStrings.
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> fontMetricsClass [
 	^ CairoFontMetricsProvider
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> formCanvasClass [
 	^ FormCanvas
 ]
@@ -348,7 +348,7 @@ TRPharoPlatform >> jsonReaderClass [
 	^ NeoJSONReader
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> linearGradientClass [
 	^ LinearGradientPaint
 	
@@ -359,7 +359,7 @@ TRPharoPlatform >> materializeFromByteArray: array [
  	^ FLMaterializer materializeFromByteArray: array.
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> matrixClass [
 	^ Matrix
 ]
@@ -369,7 +369,7 @@ TRPharoPlatform >> menuMorphClass [
 	^ MenuMorph
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> messageTallyClass [
 	^ MessageTally
 ]
@@ -419,7 +419,7 @@ TRPharoPlatform >> pngReadWriterClass [
 	^ PNGReadWriter
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> polygonTesterClass [
 	^ AthensPolygonTester
 ]
@@ -587,12 +587,12 @@ TRPharoPlatform >> showTemporaryCursor: cursorOrNil [
 	World currentHand showTemporaryCursor: cursorOrNil
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> surfaceClass [
 	^ AthensCairoSurface
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPharoPlatform >> textEmphasisClass [
 	^ TextEmphasis
 ]

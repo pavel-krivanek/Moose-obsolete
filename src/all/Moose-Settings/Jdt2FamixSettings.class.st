@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'jdt2famixPath'
 	],
-	#category : #Moose-Settings
+	#category : #'Moose-Settings'
 }
 
 { #category : #'accessing settings' }

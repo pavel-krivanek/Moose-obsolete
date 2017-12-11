@@ -1,1 +1,1 @@
-Package { #name : #Moose-Tests-Algos-FormalConceptAnalysis }
+Package { #name : #'Moose-Tests-Algos-FormalConceptAnalysis' }

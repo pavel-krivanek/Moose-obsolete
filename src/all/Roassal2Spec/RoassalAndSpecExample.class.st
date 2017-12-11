@@ -8,7 +8,7 @@ Class {
 		'button2',
 		'view'
 	],
-	#category : #Roassal2Spec-Example
+	#category : #'Roassal2Spec-Example'
 }
 
 { #category : #specs }

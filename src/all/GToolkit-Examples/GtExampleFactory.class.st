@@ -40,7 +40,7 @@ GtExampleFactory class >> subjectFrom: anObject [
 		ifFalse: [ self instanceSubjectFromObject: anObject ]
 ]
 
-{ #category : #private-utils }
+{ #category : #'private-utils' }
 GtExampleFactory >> createExample: aCompiledMethod [
 	| newExample |
 	newExample := self exampleClass new.
@@ -55,12 +55,12 @@ GtExampleFactory >> createExample: aCompiledMethod [
 	^ newExample
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GtExampleFactory >> defaultExampleClass [
 	^ GtExample
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GtExampleFactory >> defaultProviderFor: aCompiledMethod [ 
 	^ aCompiledMethod methodClass isMeta
 		ifTrue: [ aCompiledMethod methodClass theNonMetaClass ]
@@ -125,7 +125,7 @@ GtExampleFactory >> initializeExample: aGTExample fromMethod: aCompiledMethod [
 
 ]
 
-{ #category : #private-init }
+{ #category : #'private-init' }
 GtExampleFactory >> initializePragmas: aCollection forExample: aGTExample [
 	aCollection do: [ :pragma | 
 		(aGTExample class canPerform: pragma keyword) ifTrue: [ 
@@ -139,12 +139,12 @@ GtExampleFactory >> initializePragmas: aCollection forExample: aGTExample [
 						yourself) ] ] ]
 ]
 
-{ #category : #private-init }
+{ #category : #'private-init' }
 GtExampleFactory >> initializePragmasFromMethod: aCompiledMethod forExample: aGTExample [
 	self initializePragmas: aCompiledMethod pragmas forExample: aGTExample
 ]
 
-{ #category : #private-init }
+{ #category : #'private-init' }
 GtExampleFactory >> initializeSubjects: aCollection forExample: aGTExample [
 	aCollection isEmptyOrNil ifTrue: [ ^ self ].
 	
@@ -159,7 +159,7 @@ GtExampleFactory >> initializeSubjects: aCollection forExample: aGTExample [
 					yourself) ] ] 
 ]
 
-{ #category : #private-init }
+{ #category : #'private-init' }
 GtExampleFactory >> initializeSubjectsForMethod: aCompiledMethod forExample: aGTExample [
 	[ self providerFor: aCompiledMethod do: [ :aProvider | 
 			(aProvider class canPerform: #gtExamplesSubjects) ifTrue: [
@@ -192,17 +192,17 @@ GtExampleFactory >> provider: anObject [
 	provider := anObject
 ]
 
-{ #category : #private-utils }
+{ #category : #'private-utils' }
 GtExampleFactory >> providerFor: aCompiledMethod [
 	^ provider ifNil: [ self defaultProviderFor: aCompiledMethod ]
 ]
 
-{ #category : #private-utils }
+{ #category : #'private-utils' }
 GtExampleFactory >> providerFor: aCompiledMethod do: aBlock1 [
 	^ self providerFor: aCompiledMethod do: aBlock1 ifNone: nil
 ]
 
-{ #category : #private-utils }
+{ #category : #'private-utils' }
 GtExampleFactory >> providerFor: aCompiledMethod do: aBlock1 ifNone: aBlock2 [
 	^ (self providerFor: aCompiledMethod)
 		ifNotNil: aBlock1

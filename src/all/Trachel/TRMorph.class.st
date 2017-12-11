@@ -15,10 +15,10 @@ Class {
 		'shapeUnderDrag',
 		'morphDropShape'
 	],
-	#category : #Trachel-MorphSpecific
+	#category : #'Trachel-MorphSpecific'
 }
 
-{ #category : #dropping/grabbing }
+{ #category : #'dropping/grabbing' }
 TRMorph >> acceptDroppingMorph: aMorph event: anEvent [
 	| trEvent relativePosition |
 	relativePosition := self relativePositionFor: anEvent.
@@ -125,7 +125,7 @@ v canvas buildMorph drawOnMockCanvas
 	self drawOn: (FormCanvas extent: self extent)
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> eventOfClass: anEventClass actionClass: anActionClass from: aMorphicEvent [
 	| relativePosition trEvent shape |
 	relativePosition := self relativePositionFor: aMorphicEvent.
@@ -140,7 +140,7 @@ TRMorph >> eventOfClass: anEventClass actionClass: anActionClass from: aMorphicE
 	^ trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> eventOfClass: anEventClass actionClass: anActionClass from: aMorphicEvent under: aShape [
 	| relativePosition shape |
 	relativePosition := self relativePositionFor: aMorphicEvent.
@@ -156,12 +156,12 @@ TRMorph >> eventOfClass: anEventClass actionClass: anActionClass from: aMorphicE
 		yourself
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> eventOfClass: anEventClass from: aMorphicEvent [
 	^ self eventOfClass: anEventClass actionClass: anEventClass from: aMorphicEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> eventOfClass: anEventClass shape: aShape from: aMorphicEvent [
 	| relativePosition trEvent |
 	relativePosition := self relativePositionFor: aMorphicEvent.
@@ -180,7 +180,7 @@ TRMorph >> eventOverseer [
 	^ trachelCanvas eventOverseer
 ]
 
-{ #category : #events-processing }
+{ #category : #'events-processing' }
 TRMorph >> handleKeyUp: anEvent [
 	super handleKeyUp: anEvent.
 	self trKeyUp: anEvent
@@ -192,13 +192,13 @@ TRMorph >> handleKeystroke: anEvent [
 	self trKeyDown: anEvent.
 ]
 
-{ #category : #events-processing }
+{ #category : #'events-processing' }
 TRMorph >> handleMouseMove: anEvent [
 	super handleMouseMove: anEvent.
 	self trMouseMove: anEvent
 ]
 
-{ #category : #events-processing }
+{ #category : #'events-processing' }
 TRMorph >> handleMouseOver: aMorphicEvent [
 	| currentElement trEvent |
 	super handleMouseOver: aMorphicEvent.
@@ -233,7 +233,7 @@ TRMorph >> handlesMouseOver: evt [
 	^ true
 ]
 
-{ #category : #events-processing }
+{ #category : #'events-processing' }
 TRMorph >> handlesMouseWheel: evt [
 	"Do I want to receive mouseWheel events?." 
 
@@ -291,7 +291,7 @@ TRMorph >> mouseEnter: evt [
 	evt wasHandled: true
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> mouseEventOfClass: defaultClass ifLeftButton: leftButtonClass ifRightButton: rightButtonClass from: aMorphicEvent [
 	| trEventClass |
 	trEventClass := defaultClass.
@@ -338,14 +338,14 @@ TRMorph >> recreateSurfaceIfNecessary [
 					trachelCanvas extent: self extent ] ]
 ]
 
-{ #category : #events-roassal }
+{ #category : #'events-roassal' }
 TRMorph >> relativePositionFor: evt [
 	"Return the position within the window"
 	^ evt position - self bounds origin
 	"^ trachelCanvas camera fromPixelToSpace: (evt position - self bounds origin) "
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> shapeForEvent: anEvent [
 	"Return the Trachel shape for the event provided as argument"
 	^ self shapeWithActionForPositionInPixels: (self relativePositionFor: anEvent)
@@ -398,14 +398,14 @@ TRMorph >> surface [
 	^ surface
 ]
 
-{ #category : #events-processing }
+{ #category : #'events-processing' }
 TRMorph >> takesKeyboardFocus [
 	"Answer whether the receiver can normally take keyboard focus."
 
 	^ true
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trKeyDown: aMorphicEvent [
 	| trEvent |
 	(aMorphicEvent commandKeyPressed and: [ aMorphicEvent keyCharacter = $w ])
@@ -419,7 +419,7 @@ TRMorph >> trKeyDown: aMorphicEvent [
 	trEvent shape announce: trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trKeyUp: aMorphicEvent [
 	| trEvent |
 	trEvent := self eventOfClass: TRKeyUp from: aMorphicEvent.
@@ -430,7 +430,7 @@ TRMorph >> trKeyUp: aMorphicEvent [
 	trEvent shape announce: trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseClick: aMorphicEvent [
 	| trEvent |
 	trEvent := self
@@ -443,7 +443,7 @@ TRMorph >> trMouseClick: aMorphicEvent [
 	self announceToEventOverseer: trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseDoubleClick: aMorphicEvent [
 	| trEvent |
 	trEvent := self
@@ -456,7 +456,7 @@ TRMorph >> trMouseDoubleClick: aMorphicEvent [
 	self announceToEventOverseer: trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseDragEnd: aMorphicEvent [
 	| trEvent dropEvent |
 	trEvent := self eventOfClass: TRMouseDragEnd from: aMorphicEvent.
@@ -476,7 +476,7 @@ TRMorph >> trMouseDragEnd: aMorphicEvent [
 	shapeUnderDrag := nil.
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseDragStart: aMorphicEvent [
 	| trEvent trEventClass trUnderDragEvent |
 	eventBeginingDragging := aMorphicEvent copy.
@@ -504,7 +504,7 @@ TRMorph >> trMouseDragStart: aMorphicEvent [
 	
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseDragging: aMorphicEvent [
 	| trEvent step underShape trUnderDragEvent overEvent |
 	eventBeginingDragging ifNil: [ ^ self ].
@@ -549,7 +549,7 @@ TRMorph >> trMouseDragging: aMorphicEvent [
 	self announceToEventOverseer: overEvent.
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseEnter: aMorphicEvent [
 	| trEvent |
 	trEvent := self eventOfClass: TRMouseEnter from: aMorphicEvent.
@@ -557,7 +557,7 @@ TRMorph >> trMouseEnter: aMorphicEvent [
 	self announceToEventOverseer: trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseLeave: aMorphicEvent [
 	| trEvent |
 	trEvent := self eventOfClass: TRMouseLeave from: aMorphicEvent.
@@ -565,7 +565,7 @@ TRMorph >> trMouseLeave: aMorphicEvent [
 	self announceToEventOverseer: trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseMove: aMorphicEvent [
 	| trEvent |
 	trEvent := self eventOfClass: TRMouseMove from: aMorphicEvent.
@@ -574,7 +574,7 @@ TRMorph >> trMouseMove: aMorphicEvent [
 	self announceToEventOverseer: trEvent
 ]
 
-{ #category : #event-processed }
+{ #category : #'event-processed' }
 TRMorph >> trMouseWheel: aMorphicEvent [
 	| trEvent |
 	trEvent := self eventOfClass: TRMouseWheelEvent from: aMorphicEvent.
@@ -590,7 +590,7 @@ TRMorph >> trachelCanvas [
 	^ trachelCanvas
 ]
 
-{ #category : #dropping/grabbing }
+{ #category : #'dropping/grabbing' }
 TRMorph >> wantsDroppedMorph: aMorph event: aMorphicEvent [
 	| shapes trEvent relativePosition wasHandled |
 	relativePosition := self relativePositionFor: aMorphicEvent.

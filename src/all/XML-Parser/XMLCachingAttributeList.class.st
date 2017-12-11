@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'attributeNodesByName'
 	],
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #private }

@@ -4,7 +4,7 @@ A stream converter for little endian UTF-32 streams.
 Class {
 	#name : #XMLUTF32LittleEndianStreamConverter,
 	#superclass : #XMLUTF32StreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #basic }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'expressions'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #generated }
@@ -39,7 +39,7 @@ SmaCCCompositeReplaceExpression >> expressions: anOrderedCollection [
 	self setParents: self expressions to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SmaCCCompositeReplaceExpression >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

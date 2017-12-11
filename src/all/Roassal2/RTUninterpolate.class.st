@@ -5,7 +5,7 @@ Class {
 		'a',
 		'b'
 	],
-	#category : #Roassal2-Builder-Grapher-Scaling
+	#category : #'Roassal2-Builder-Grapher-Scaling'
 }
 
 { #category : #'as yet unclassified' }

@@ -11,7 +11,7 @@ Class {
 		'exportFixedShapes',
 		'maxSize'
 	],
-	#category : #Roassal2-Exporter-HTML5
+	#category : #'Roassal2-Exporter-HTML5'
 }
 
 { #category : #helpers }
@@ -361,7 +361,7 @@ RTJavascriptVisitor >> visitDiamondShape: diamondShape [
 
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitDraggableInteraction: anInteraction with: anObject [
 	| list trachelBlock nest |
 	list := OrderedCollection new.
@@ -427,7 +427,7 @@ RTJavascriptVisitor >> visitGroup: aRTGroup [
 	aRTGroup accept: self.
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitHightlightableInteraction: anInt with: el [
 	stream nextPutAll: 'new RTHighlightable({'.
 	self addColor: anInt highlightedColor.
@@ -441,13 +441,13 @@ RTJavascriptVisitor >> visitHightlightableInteraction: anInt with: el [
 		stream nextPutAll: ']})'.
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitInteraction: interaction with: anObject [
 	stream nextPutAll: interaction class name.
 	
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitInteractions: anObject [
 	TRPlatform current visitInteractionsFor: self and: anObject.
 
@@ -476,7 +476,7 @@ RTJavascriptVisitor >> visitLabelShape: aLabel [
 
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitLabelledInteraction: anInt with: el [
 	stream nextPutAll: 'new RTLabelled({'.
 		self addColor: anInt color.
@@ -512,7 +512,7 @@ RTJavascriptVisitor >> visitLineShape: aLine [
 	
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitLinkView: anInt with: el [
 	| eview name st exporter |
 	eview := anInt viewFor: el.
@@ -586,7 +586,7 @@ RTJavascriptVisitor >> visitPolygonShape: aPolygon [
 	self addMatrix: aPolygon matrix.
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitPopupInteraction: anInt with: el [
 	| elements |
 	[elements := anInt createPopupFor: el] 
@@ -644,7 +644,7 @@ RTJavascriptVisitor >> visitShape: aShape [
 	aShape accept: self 
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitShowEdgeInteraction: anInt with: el [
 	|edges t |
 	t := (anInt connectToElements rtValue: el).
@@ -657,7 +657,7 @@ RTJavascriptVisitor >> visitShowEdgeInteraction: anInt with: el [
 	stream nextPutAll: ']) '.
 ]
 
-{ #category : #visitor-interactions }
+{ #category : #'visitor-interactions' }
 RTJavascriptVisitor >> visitShowLabelInteraction: anInt with: el [
 	
 	stream nextPutAll: 'new RTShowLabel(['.

@@ -5,7 +5,7 @@ Class {
 		'grammar',
 		'codeGenerator'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'regular expression construction' }
@@ -75,7 +75,7 @@ SmaCCScannerCompiler >> addSpecificREsWithoutActionsTo: aRegularExpression [
 	^ regex
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCScannerCompiler >> codeGenerator: aSmaCCCodeGenerator [
 	codeGenerator := aSmaCCCodeGenerator
 ]
@@ -93,7 +93,7 @@ SmaCCScannerCompiler >> combinedGeneralRegexes [
 	^ combinedRegex
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCScannerCompiler >> compileMethodsFor: regex [
 	| keywordmap dfa selectorMap |
 	dfa := regex asDFA.
@@ -109,7 +109,7 @@ SmaCCScannerCompiler >> compileMethodsFor: regex [
 	codeGenerator compileIgnoreCaseMethods
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCScannerCompiler >> compileScanner [
 	| regex |
 	regex := self createRegex.
@@ -117,7 +117,7 @@ SmaCCScannerCompiler >> compileScanner [
 	self compileMethodsFor: regex
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCScannerCompiler >> compileTokenIdMethods [
 	(self symbols select: [ :each | each createIdMethod ])
 		do:
@@ -154,7 +154,7 @@ SmaCCScannerCompiler >> computeSelectorMap [
 	^ selectorMap
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCScannerCompiler >> createRegex [
 	self addSpecialSymbols.
 	self addNormalSymbols.
@@ -162,7 +162,7 @@ SmaCCScannerCompiler >> createRegex [
 	^ self addSpecificREsWithoutActionsTo: self combinedGeneralRegexes
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCScannerCompiler >> filePositionSortBlock [
 	^ [ :a :b | 
 	| aRegex bRegex |
@@ -182,12 +182,12 @@ SmaCCScannerCompiler >> generalRegularExpressionsDo: aBlock [
 				ifFalse: [ aBlock value: each ] ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCScannerCompiler >> grammar: aGrammar [
 	grammar := aGrammar
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCScannerCompiler >> regularExpressionsDo: aBlock [
 	self symbols do: [ :each | each regularExpression ifNotNil: aBlock ]
 ]

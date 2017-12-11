@@ -1,7 +1,7 @@
 Class {
 	#name : #RTCacheTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Cachetor
+	#category : #'Roassal2-Cachetor'
 }
 
 { #category : #tests }

@@ -4,10 +4,10 @@ This is an exception explicitly declared as being thrown by a method.
 Class {
 	#name : #FAMIXDeclaredException,
 	#superclass : #FAMIXException,
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXDeclaredException class >> annotation [
 	<MSEClass: #DeclaredException super: #FAMIXException>
 	<package: #FAMIX>

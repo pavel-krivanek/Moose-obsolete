@@ -14,7 +14,7 @@ Class {
 		'elements',
 		'rootNodes'
 	],
-	#category : #Roassal2-Builder-Common
+	#category : #'Roassal2-Builder-Common'
 }
 
 { #category : #color }
@@ -22,7 +22,7 @@ RTAbstractTreeBuilder >> borderColor: aBlockOrObject [
 	self shape borderColor: aBlockOrObject
 ]
 
-{ #category : #default-values }
+{ #category : #'default-values' }
 RTAbstractTreeBuilder >> childrenKey [
 	^ #elements
 ]
@@ -208,7 +208,7 @@ RTAbstractTreeBuilder >> leafWeight: block [
 				w ] ].
 ]
 
-{ #category : #default-values }
+{ #category : #'default-values' }
 RTAbstractTreeBuilder >> minWeightValue [
 	^ 1
 ]

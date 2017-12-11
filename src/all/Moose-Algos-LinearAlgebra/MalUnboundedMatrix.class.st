@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'backgroundValue'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -18,7 +18,7 @@ MalUnboundedMatrix class >> on: matrix with: defaultValue [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalUnboundedMatrix >> at: row and: column [
 	
 	^[matrix at: row and: column]
@@ -26,7 +26,7 @@ MalUnboundedMatrix >> at: row and: column [
 		do: [:ex | backgroundValue]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalUnboundedMatrix >> at: row and: column put: aNumber [
 	
 	^[matrix at: row and: column put: aNumber]

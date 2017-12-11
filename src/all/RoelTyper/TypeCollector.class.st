@@ -20,7 +20,7 @@ Class {
 		'currentExtractedMethod',
 		'localTypingResults'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #'instance creation' }
@@ -341,7 +341,7 @@ TypeCollector >> newExtractor [
 	^self subclassResponsibility
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TypeCollector >> onClass: aClass [ 
 	theClass := aClass.
 	instVars := aClass allInstVarNames collect: [ :e | e asSymbol].
@@ -442,7 +442,7 @@ TypeCollector >> sendsTo: instVarName [
 	^(self typingResultsFor: instVarName) interface
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TypeCollector >> theClass [
 	^theClass
 ]
@@ -478,7 +478,7 @@ TypeCollector >> tryUsing: receiver for: selector ifNotUse: aClass [
 		ifFalse: [aClass]
 ]
 
-{ #category : #public-typing }
+{ #category : #'public-typing' }
 TypeCollector >> typeInstvarsOfClass: aClass [
 	| extractor|
 	self onClass: aClass.
@@ -494,7 +494,7 @@ TypeCollector >> typeInstvarsOfClass: aClass [
 	^self packagedResults
 ]
 
-{ #category : #public-typing }
+{ #category : #'public-typing' }
 TypeCollector >> typeTmpsIn: aCompiledMethod ofClass: aClass [
 	| extractor|
 	self onClass: aClass.

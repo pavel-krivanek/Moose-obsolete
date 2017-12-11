@@ -9,7 +9,7 @@ Class {
 		'name',
 		'cateogry'
 	],
-	#category : #PetitGui-Refactoring
+	#category : #'PetitGui-Refactoring'
 }
 
 { #category : #'instance creation' }

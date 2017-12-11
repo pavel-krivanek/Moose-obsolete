@@ -16,7 +16,7 @@ Class {
 		'dedent',
 		'nl'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
 { #category : #accessing }
@@ -24,12 +24,12 @@ PPIndentExpressionGrammar >> add [
    ^ prod , ($+ asParser olToken trimBlanks), term
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPIndentExpressionGrammar >> dedent [
 	^ nl optional, #dedentOL asParser ==> #second
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPIndentExpressionGrammar >> indent [
 	^ nl optional, #indentOL asParser ==> #second
 ]
@@ -39,7 +39,7 @@ PPIndentExpressionGrammar >> mul [
    ^ prim , ($* asParser olToken trimBlanks) , prod
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPIndentExpressionGrammar >> nl [
 	^ #newline asParser
 ]

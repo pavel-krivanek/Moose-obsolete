@@ -13,7 +13,7 @@ Class {
 		'parent',
 		'parentFactory'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #parsing }

@@ -5,7 +5,7 @@ Class {
 		'code',
 		'method'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -20,14 +20,14 @@ SmaCCRewriteCodeTransformation >> code [
 	^ code
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteCodeTransformation >> code: aString [
 	code := aString.
 	method := nil.
 	self modified
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteCodeTransformation >> initialize [
 	super initialize.
 	code := 'self continue'

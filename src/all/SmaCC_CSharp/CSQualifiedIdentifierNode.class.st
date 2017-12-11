@@ -5,7 +5,7 @@ Class {
 		'names',
 		'periodTokens'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ CSQualifiedIdentifierNode >> compositeTokenVariables [
 	^ #(#names #periodTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSQualifiedIdentifierNode >> initialize [
 	super initialize.
 	names := OrderedCollection new: 2.

@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'current'
 	],
-	#category : #Trachel-Core
+	#category : #'Trachel-Core'
 }
 
 { #category : #default }
@@ -23,7 +23,7 @@ TRPlatform class >> isActivePlatform [
 	self subclassResponsibility.
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> affineTransformClass [
 	self subclassResponsibility.
 ]
@@ -34,7 +34,7 @@ TRPlatform >> browseClass: aClass [
 	self subclassResponsibility 
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> colorFormClass [
 	"return the default colorform, can be different in other smalltalk systems"
 	self subclassResponsibility
@@ -66,7 +66,7 @@ TRPlatform >> dateAndTime [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> dateAndTimeClass [
 	"return the default class for date and time"
 	self subclassResponsibility
@@ -144,12 +144,12 @@ TRPlatform >> fontListStrings [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> formCanvasClass [
 	self subclassResponsibility.
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> formClass [
 	"return the default font class"
 	self subclassResponsibility 
@@ -167,20 +167,20 @@ TRPlatform >> getFontForSize: aNumber [
 	self subclassResponsibility.
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> httpClientRequestClass [
 	"return the default http client request class"
 	self subclassResponsibility 
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> imageExporterForType: imageType [
 	"return the class exporter for that image type"
 	self subclassResponsibility
 	
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> jsonReaderClass [
 	"return de default json reader class"
 	self subclassResponsibility
@@ -191,18 +191,18 @@ TRPlatform >> materializeFromByteArray: array [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> matrixClass [
 	self subclassResponsibility.
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> menuMorphClass [
 	"return de default menu class"
 	self subclassResponsibility 
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> messageTallyClass [
 	self subclassResponsibility
 ]
@@ -225,7 +225,7 @@ TRPlatform >> mimeEncode: aStream multiLine: aBool [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> morphClass [
 	"returns the default Morph or equivalent class in smalltalk systems"
 	self subclassResponsibility 
@@ -249,13 +249,13 @@ TRPlatform >> packageNamed: packageName [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> pngReadWriterClass [
 	"returns the default PNG Reader Writer class"
 	self subclassResponsibility 
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> polygonTesterClass [
 	self subclassResponsibility
 ]
@@ -275,12 +275,12 @@ TRPlatform >> showTemporaryCursor: cursorOrNil [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> surfaceClass [
 	self subclassResponsibility.
 ]
 
-{ #category : #accessing-classes }
+{ #category : #'accessing-classes' }
 TRPlatform >> trMorphClass [
 	"return the default TRMorph class, or visual component for other smalltalk systems"
 	self subclassResponsibility

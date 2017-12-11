@@ -58,7 +58,7 @@ GtExampleInstanceSubject >> instance: anObject [
 	instance := anObject
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExampleInstanceSubject >> theClass [
 	^ self instance class
 ]

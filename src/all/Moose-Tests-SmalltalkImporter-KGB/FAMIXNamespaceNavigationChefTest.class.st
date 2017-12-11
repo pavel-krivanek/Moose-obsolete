@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXNamespaceNavigationChefTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
+	#category : #'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
 }
 
 { #category : #allDependencies }
@@ -33,7 +33,7 @@ FAMIXNamespaceNavigationChefTest >> testClientNamespaces [
 				equalsTo: (Set with: self namespace1InteractedReferencerReferee with: self namespace3ReferencerReferee with: self namespace2FullReferee))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXNamespaceNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingReference [
 	| modelNamespaces |
 	modelNamespaces := self model allNamespaces.
@@ -55,7 +55,7 @@ FAMIXNamespaceNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingRe
 								includes: referencer ] ])
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXNamespaceNavigationChefTest >> testEachSureOutgoingReferenceImpliesASureIncomingReference [
 	| modelNamespaces |
 	modelNamespaces := self model allNamespaces.

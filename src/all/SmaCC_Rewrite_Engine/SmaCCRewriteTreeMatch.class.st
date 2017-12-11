@@ -6,7 +6,7 @@ Class {
 		'source',
 		'trees'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #testing }
@@ -24,7 +24,7 @@ SmaCCRewriteTreeMatch >> displayOn: aStream [
 				ifFalse: [ source ])
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteTreeMatch >> initialize [
 	super initialize.
 	source := ''

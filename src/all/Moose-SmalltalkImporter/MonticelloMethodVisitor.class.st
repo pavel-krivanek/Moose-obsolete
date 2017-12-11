@@ -1,7 +1,7 @@
 Class {
 	#name : #MonticelloMethodVisitor,
 	#superclass : #AbstractSmalltalkMethodVisitor,
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #private }

@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCCharacterSet,
 	#superclass : #SmaCCIntegerSet,
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -35,7 +35,7 @@ SmaCCCharacterSet >> includes: aCharacter [
 	^ super includes: aCharacter asInteger
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCharacterSet >> initializeWithAllCharactersTo: aCharacter [
 	| current index value |
 	self add: aCharacter.

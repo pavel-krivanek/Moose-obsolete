@@ -17,7 +17,7 @@ Class {
 		'deinitToken',
 		'block'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -94,7 +94,7 @@ SwiftDeinitializerDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftDeinitializerDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

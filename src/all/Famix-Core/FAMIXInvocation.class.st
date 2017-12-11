@@ -19,7 +19,7 @@ Class {
 		'signature',
 		'candidates'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -58,7 +58,7 @@ FAMIXInvocation >> from: aSender [
 	self sender: aSender
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXInvocation >> initialize [
 	super initialize.
 	signature := 'nosignature'.

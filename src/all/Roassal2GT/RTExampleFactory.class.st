@@ -1,10 +1,10 @@
 Class {
 	#name : #RTExampleFactory,
 	#superclass : #GtExampleFactory,
-	#category : #Roassal2GT-Examples
+	#category : #'Roassal2GT-Examples'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 RTExampleFactory >> defaultExampleClass [
 	^ RTExampleSelection
 ]

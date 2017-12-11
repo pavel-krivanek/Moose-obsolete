@@ -18,7 +18,7 @@ Class {
 	#classVars : [
 		'NewLineParser'
 	],
-	#category : #PetitParser-Core
+	#category : #'PetitParser-Core'
 }
 
 { #category : #initialization }
@@ -93,7 +93,7 @@ PPToken >> initializeOn: aSequenceableCollection start: aStartInteger stop: aSto
 	value := anObject
 ]
 
-{ #category : #accessing-values }
+{ #category : #'accessing-values' }
 PPToken >> inputValue [
 	"Answer the consumed input of this token."
 
@@ -115,7 +115,7 @@ PPToken >> line [
 	^ line
 ]
 
-{ #category : #accessing-values }
+{ #category : #'accessing-values' }
 PPToken >> parsedValue [
 	"Answer the parsed value of this token."
 
@@ -150,7 +150,7 @@ PPToken >> stop [
 	^ stop
 ]
 
-{ #category : #accessing-values }
+{ #category : #'accessing-values' }
 PPToken >> value [
 	self notify: 'Token>>#value is no longer supported. Instead use Token>>#inputValue'.
 	^ self inputValue

@@ -5,7 +5,7 @@ Class {
 		'expression',
 		'bangToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }

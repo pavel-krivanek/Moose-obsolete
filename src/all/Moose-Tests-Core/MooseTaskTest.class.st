@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseTaskTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-Core
+	#category : #'Moose-Tests-Core'
 }
 
 { #category : #util }

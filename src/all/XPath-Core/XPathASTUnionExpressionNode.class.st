@@ -4,7 +4,7 @@ This is an AST node class for union expressions. Both subexpressions must evalua
 Class {
 	#name : #XPathASTUnionExpressionNode,
 	#superclass : #XPathASTBinaryOperatorExpressionNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

@@ -8,7 +8,7 @@ Class {
 		'dataset',
 		'legendElements'
 	],
-	#category : #Roassal2-Builder-Grapher-Core
+	#category : #'Roassal2-Builder-Grapher-Core'
 }
 
 { #category : #'as yet unclassified' }

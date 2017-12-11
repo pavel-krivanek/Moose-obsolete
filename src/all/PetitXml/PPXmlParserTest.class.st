@@ -1,7 +1,7 @@
 Class {
 	#name : #PPXmlParserTest,
 	#superclass : #PPCompositeParserTest,
-	#category : #PetitXml-Tests
+	#category : #'PetitXml-Tests'
 }
 
 { #category : #accessing }
@@ -178,7 +178,7 @@ PPXmlParserTest >> resource [
 	^ PPXmlResource current
 ]
 
-{ #category : #testing-other }
+{ #category : #'testing-other' }
 PPXmlParserTest >> testInstantiation [
 	self should: [ PPXmlAttribute new ] raise: Error.
 	self should: [ PPXmlComment new ] raise: Error.
@@ -195,17 +195,17 @@ PPXmlParserTest >> testParseAllXml [
 		do: [ :each | self assertParseInvariant: each ]
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseComment [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?><schema><!-- comment --></schema>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseCommentWithXml [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?><schema><!-- <foo></foo> --></schema>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseComplicated [
 	self assertParseInvariant: '<?xml foo?>
 <foo>
@@ -217,46 +217,46 @@ PPXmlParserTest >> testParseComplicated [
 </foo>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseDoctype [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE freaking <schema> [ <!-- schema --> ]  >
 	<schema></schema>'
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseEmptyElement [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?><schema/>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseNamespace [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?><xs:schema></xs:schema>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseSimple [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?><schema></schema>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseSimpleAttribute [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?><schema foo="bar"></schema>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseSimpleAttributeWithSingleQuote [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?><schema foo=''bar''></schema>' 
 ]
 
-{ #category : #testing-parsing }
+{ #category : #'testing-parsing' }
 PPXmlParserTest >> testParseWithWhitsepaceAfterProlog [
 	self assertParseInvariant: '<?xml version="1.0" encoding="UTF-8"?>
 	<schema></schema>
 ' 
 ]
 
-{ #category : #testing-other }
+{ #category : #'testing-other' }
 PPXmlParserTest >> testQualifiedName [
 	| name |
 	name := PPXmlName name: 'prefix:tag'.
@@ -267,7 +267,7 @@ PPXmlParserTest >> testQualifiedName [
 	self assert: name uri isNil
 ]
 
-{ #category : #testing-other }
+{ #category : #'testing-other' }
 PPXmlParserTest >> testUnqualifiedName [
 	| name |
 	name := PPXmlName name: 'tag'.
@@ -277,7 +277,7 @@ PPXmlParserTest >> testUnqualifiedName [
 	self assert: name uri isNil
 ]
 
-{ #category : #testing-other }
+{ #category : #'testing-other' }
 PPXmlParserTest >> testUriName [
 	| name |
 	name := PPXmlName name: 'prefix:tag' uri: 'http://www.lukas-renggli.ch/'.

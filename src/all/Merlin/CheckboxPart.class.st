@@ -11,7 +11,7 @@ Class {
 		'actionModel',
 		'parentComposite'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #accessing }
@@ -78,7 +78,7 @@ CheckboxPart >> contents: newContents [
 		]  
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 CheckboxPart >> initialize [ 
 
 	super initialize.

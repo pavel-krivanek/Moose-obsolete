@@ -28,7 +28,7 @@ Class {
 		'aBlock',
 		'maxWithBlock'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #public }
@@ -96,7 +96,7 @@ RTAbstractFlowLayout >> gapSize: aSizeInPixels [
 	gapSize := aSizeInPixels
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractFlowLayout >> initialize [
 	
 	super initialize.

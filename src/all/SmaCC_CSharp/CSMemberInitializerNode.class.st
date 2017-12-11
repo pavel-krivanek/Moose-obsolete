@@ -10,7 +10,7 @@ Class {
 		'equalToken',
 		'value'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -70,7 +70,7 @@ CSMemberInitializerNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSMemberInitializerNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

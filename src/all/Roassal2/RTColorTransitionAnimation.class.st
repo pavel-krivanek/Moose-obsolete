@@ -5,7 +5,7 @@ Class {
 		'animatedValue',
 		'colorNormalizer'
 	],
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #testing }

@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'givenNotGiven'
 	],
-	#category : #Phexample-Core
+	#category : #'Phexample-Core'
 }
 
 { #category : #accessing }

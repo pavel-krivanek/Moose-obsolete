@@ -23,7 +23,7 @@ Class {
 		'ref1',
 		'methodExt'
 	],
-	#category : #Moose-Query-Test
+	#category : #'Moose-Query-Test'
 }
 
 { #category : #accessing }

@@ -8,7 +8,7 @@ Class {
 		'set',
 		'sortOrder'
 	],
-	#category : #XPath-Core-DOM
+	#category : #'XPath-Core-DOM'
 }
 
 { #category : #'instance creation' }

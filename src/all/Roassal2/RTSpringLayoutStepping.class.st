@@ -1,7 +1,7 @@
 Class {
 	#name : #RTSpringLayoutStepping,
 	#superclass : #RTForceLayoutStepping,
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #readme }

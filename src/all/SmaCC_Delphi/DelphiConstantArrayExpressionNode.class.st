@@ -9,7 +9,7 @@ Class {
 		'commas',
 		'right'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -64,7 +64,7 @@ DelphiConstantArrayExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#commas #leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiConstantArrayExpressionNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

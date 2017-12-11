@@ -1,7 +1,7 @@
 Class {
 	#name : #PPPushParser,
 	#superclass : #PPDelegateParser,
-	#category : #PetitIndent-Core
+	#category : #'PetitIndent-Core'
 }
 
 { #category : #parsing }

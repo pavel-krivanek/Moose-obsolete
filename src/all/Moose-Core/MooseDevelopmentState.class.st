@@ -12,7 +12,7 @@ Class {
 		'propertyCache',
 		'queryCache'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'accessing properties' }
@@ -154,7 +154,7 @@ MooseDevelopmentState >> includesKey: selector [
 	^propertyCache includesKey: selector
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseDevelopmentState >> initialize: aMooseEntity [ 
 	 
 	attributes := #(). 

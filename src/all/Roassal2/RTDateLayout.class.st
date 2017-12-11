@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'gapSize'
 	],
-	#category : #Roassal2-Builder-Calendar
+	#category : #'Roassal2-Builder-Calendar'
 }
 
 { #category : #hook }
@@ -43,7 +43,7 @@ RTDateLayout >> gapSize: aPoint [
 	gapSize := aPoint.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTDateLayout >> initialize [
 	super initialize.
 	self gapSize: 3.

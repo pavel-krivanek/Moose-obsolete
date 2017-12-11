@@ -1,10 +1,10 @@
 Class {
 	#name : #MAElementMorph,
 	#superclass : #MADescriptionMorph,
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MAElementMorph >> buildMorphLabel [
 	^ self stringMorph
 		contents: self magritteDescription label , ':';
@@ -12,7 +12,7 @@ MAElementMorph >> buildMorphLabel [
 		yourself
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MAElementMorph >> buildMorphRequired [
 	^ self stringMorph
 		contents: ' *';
@@ -20,7 +20,7 @@ MAElementMorph >> buildMorphRequired [
 		yourself
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MAElementMorph >> buildMorphView [
 
 	^ self stringMorph
@@ -28,7 +28,7 @@ MAElementMorph >> buildMorphView [
 		yourself
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MAElementMorph >> buildMorphViewOn: aMorph [
 
 	aMorph

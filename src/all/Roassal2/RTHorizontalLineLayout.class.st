@@ -4,7 +4,7 @@ A RTHorizontalLineLayout locates all the elements horizontally
 Class {
 	#name : #RTHorizontalLineLayout,
 	#superclass : #RTAbstractLineLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #hook }
@@ -73,7 +73,7 @@ RTHorizontalLineLayout >> doStretchVertical: aCollectionOfElements [
 		element height: (parentBounds height) ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTHorizontalLineLayout >> initialize [
 	
 	super initialize.

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'parentBehaviouralEntity'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -28,12 +28,12 @@ FAMIXParameter >> belongsTo: aBehaviouralEntity [
 	self parentBehaviouralEntity: aBehaviouralEntity 
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXParameter >> namespaceScope [
 	^ self parentBehaviouralEntity namespaceScope
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXParameter >> packageScope [
 	^ self parentBehaviouralEntity packageScope
 ]
@@ -56,7 +56,7 @@ FAMIXParameter >> parentBehaviouralEntity: aBehaviouralEntity [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXParameter >> typeScope [
 	^ self parentBehaviouralEntity typeScope
 ]

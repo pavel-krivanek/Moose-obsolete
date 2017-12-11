@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLParserLimitsTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #source }

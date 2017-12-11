@@ -5,7 +5,7 @@ Class {
 		'leftParens',
 		'rightParens'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ DelphiExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiExpressionNode >> initialize [
 	super initialize.
 	leftParens := OrderedCollection new: 2.

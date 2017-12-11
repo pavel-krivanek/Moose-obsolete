@@ -15,7 +15,7 @@ Class {
 		'UTF32LittleEndianBOM',
 		'UTF8BOM'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #'class initialization' }

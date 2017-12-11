@@ -1,10 +1,10 @@
 Class {
 	#name : #DelphiFormScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 DelphiFormScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(20 'END' 7) #(20 'FALSE' 19) #(20 'INHERITED' 3) #(20 'INLINE' 4) #(20 'ITEM' 13) #(20 'OBJECT' 8) #(20 'TRUE' 19))

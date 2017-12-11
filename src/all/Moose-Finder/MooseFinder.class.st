@@ -4,7 +4,7 @@ self new openOn: MooseModel root
 Class {
 	#name : #MooseFinder,
 	#superclass : #GLMCompositePresentation,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #utils }

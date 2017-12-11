@@ -12,10 +12,10 @@ Class {
 	#instVars : [
 		'parseSourceSelector'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 SmaCCDefinitionScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(26 'annotate_tokens' #(23 #(#directives))) #(26 'attributes' #(12 #(#directives))) #(26 'error' #(4 #(#default #directives #parser #scanner))) #(26 'excludes' #(9 #(#directives))) #(26 'glr' #(20 #(#directives))) #(26 'hierarchy' #(11 #(#directives))) #(26 'id' #(18 #(#directives))) #(26 'ignore_variables' #(22 #(#directives))) #(26 'ignorecase' #(21 #(#directives))) #(26 'left' #(15 #(#directives))) #(26 'nonassoc' #(17 #(#directives))) #(26 'prefix' #(13 #(#directives))) #(26 'right' #(16 #(#directives))) #(26 'root' #(10 #(#directives))) #(26 'scopes' #(8 #(#directives))) #(26 'start' #(19 #(#directives))) #(26 'states' #(8 #(#directives))) #(26 'suffix' #(14 #(#directives))))
@@ -54,7 +54,7 @@ SmaCCDefinitionScanner >> classRightId [
 	^ 40
 ]
 
-{ #category : #token-actions }
+{ #category : #'token-actions' }
 SmaCCDefinitionScanner >> code [
 	| code |
 	code := ''.
@@ -87,7 +87,7 @@ SmaCCDefinitionScanner >> errorTokenId [
 	^ 85
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDefinitionScanner >> initialize [
 	super initialize.
 	parseSourceSelector := #canParseSmalltalk:
@@ -98,7 +98,7 @@ SmaCCDefinitionScanner >> keywordId [
 	^ 27
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDefinitionScanner >> parseSourceSelector: aSymbol [
 	parseSourceSelector := aSymbol
 ]

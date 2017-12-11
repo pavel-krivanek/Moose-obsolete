@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'entity'
 	],
-	#category : #Metanool-Core
+	#category : #'Metanool-Core'
 }
 
 { #category : #'instance creation' }

@@ -1,1 +1,1 @@
-Package { #name : #Beacon-Syslog }
+Package { #name : #'Beacon-Syslog' }

@@ -4,7 +4,7 @@ self openOn: MooseModel root allModels last allModelClasses
 Class {
 	#name : #MooseSystemComplexityLocator,
 	#superclass : #MooseVisualLocator,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #'as yet unclassified' }

@@ -7,7 +7,7 @@ WindowExpanded
 Class {
 	#name : #GTWindowRecorderWindowExpandedEvent,
 	#superclass : #GTWindowRecorderEvent,
-	#category : #GT-Window-EventRecorder-Events
+	#category : #'GT-Window-EventRecorder-Events'
 }
 
 { #category : #testing }

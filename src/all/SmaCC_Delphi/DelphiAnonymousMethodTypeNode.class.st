@@ -10,7 +10,7 @@ Class {
 		'objectToken',
 		'modifiers'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -40,7 +40,7 @@ DelphiAnonymousMethodTypeNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiAnonymousMethodTypeNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

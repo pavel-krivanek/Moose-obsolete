@@ -4,20 +4,20 @@ I am a description of multiple options, possible options are stored within the =
 Class {
 	#name : #MAMultipleOptionDescription,
 	#superclass : #MAOptionDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAMultipleOptionDescription class >> defaultDistinct [
 	^ false
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAMultipleOptionDescription class >> defaultKind [
 	^ Collection
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAMultipleOptionDescription class >> defaultOrdered [
 	^ false
 ]
@@ -57,7 +57,7 @@ MAMultipleOptionDescription >> beUnordered [
 	self ordered: false
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAMultipleOptionDescription >> descriptionDistinct [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -68,7 +68,7 @@ MAMultipleOptionDescription >> descriptionDistinct [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAMultipleOptionDescription >> descriptionOrdered [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -79,12 +79,12 @@ MAMultipleOptionDescription >> descriptionOrdered [
 		yourself
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAMultipleOptionDescription >> distinct [
 	^ self propertyAt: #distinct ifAbsent: [ self class defaultDistinct ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAMultipleOptionDescription >> distinct: aBoolean [
 	self propertyAt: #distinct put: aBoolean
 ]
@@ -104,12 +104,12 @@ MAMultipleOptionDescription >> isOrdered [
 	^ self ordered
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAMultipleOptionDescription >> ordered [
 	^ self propertyAt: #ordered ifAbsent: [ self class defaultOrdered ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAMultipleOptionDescription >> ordered: aBoolean [
 	self propertyAt: #ordered put: aBoolean
 ]

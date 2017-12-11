@@ -10,7 +10,7 @@ Class {
 		'targetView',
 		'extent'
 	],
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #'instance creation' }

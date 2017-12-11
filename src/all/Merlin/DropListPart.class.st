@@ -9,7 +9,7 @@ Class {
 		'horizontalSize',
 		'formatBlock'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #'instance creation' }
@@ -75,7 +75,7 @@ DropListPart >> horizontalSize: anInteger [
 	horizontalSize := anInteger.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DropListPart >> initialize [ 
 
 	super initialize.  

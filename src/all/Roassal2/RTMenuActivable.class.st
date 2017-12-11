@@ -21,7 +21,7 @@ Class {
 	#instVars : [
 		'actions'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #public }

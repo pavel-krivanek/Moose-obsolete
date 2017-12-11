@@ -4,7 +4,7 @@ An abstract class for UTF-32 stream converters.
 Class {
 	#name : #XMLUTF32StreamConverter,
 	#superclass : #XMLUTFStreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #testing }

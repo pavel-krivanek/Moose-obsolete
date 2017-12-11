@@ -4,7 +4,7 @@ This is a class for internal parameter parsed entities with replacements that ca
 Class {
 	#name : #DTDInternalParameterParsedEntity,
 	#superclass : #DTDInternalParsedEntity,
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #testing }

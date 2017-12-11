@@ -4,7 +4,7 @@ A base class for read stream adapters for basic streams that support #next, #pee
 Class {
 	#name : #XMLReadStreamAdapter,
 	#superclass : #XMLStreamAdapter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #testing }

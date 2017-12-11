@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'isInterface'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -22,7 +22,7 @@ FAMIXClass class >> annotation [
 	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXClass >> initialize [
 
 	super initialize.
@@ -41,12 +41,12 @@ FAMIXClass >> isInterface: boolean [
 	isInterface := boolean
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXClass >> selectWithinYourScope: aMooseQueryResult [
 	^ aMooseQueryResult withinClass: self
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXClass >> yourScope [
 
 	^ #typeScope

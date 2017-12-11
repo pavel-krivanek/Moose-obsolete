@@ -6,7 +6,7 @@ Class {
 		'run',
 		'data'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -317,7 +317,7 @@ SmaCCIntegerSet >> includes: anInteger in: currentData startingAt: currentStart 
 				withRun: (self nextRunFrom: currentRun) ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCIntegerSet >> initialize [
 	start := 0.
 	run := self byteSize.

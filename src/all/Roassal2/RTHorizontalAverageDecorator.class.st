@@ -16,10 +16,10 @@ b.
 Class {
 	#name : #RTHorizontalAverageDecorator,
 	#superclass : #RTAbstractAverageDecorator,
-	#category : #Roassal2-Builder-Grapher-Decorators
+	#category : #'Roassal2-Builder-Grapher-Decorators'
 }
 
-{ #category : #drawing-hooks }
+{ #category : #'drawing-hooks' }
 RTHorizontalAverageDecorator >> render [
 	| values average from to |
 	values := self datasetValuesX.

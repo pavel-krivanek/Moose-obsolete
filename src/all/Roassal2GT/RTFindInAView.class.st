@@ -15,7 +15,7 @@ b
 Class {
 	#name : #RTFindInAView,
 	#superclass : #RTAbstractInteractionView,
-	#category : #Roassal2GT-Spotter
+	#category : #'Roassal2GT-Spotter'
 }
 
 { #category : #hooks }

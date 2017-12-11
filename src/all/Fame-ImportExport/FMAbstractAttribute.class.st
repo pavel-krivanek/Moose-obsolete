@@ -6,7 +6,7 @@ Class {
 		'elements',
 		'maxElementCount'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #accessing }
@@ -35,7 +35,7 @@ FMAbstractAttribute >> inferMultivalued [
 	^maxElementCount  > 1 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMAbstractAttribute >> initialize [
 	elements := Bag new.
 	maxElementCount := 0

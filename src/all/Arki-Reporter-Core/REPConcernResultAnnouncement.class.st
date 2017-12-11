@@ -4,5 +4,5 @@ Class {
 	#instVars : [
 		'concern'
 	],
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }

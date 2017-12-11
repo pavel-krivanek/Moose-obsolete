@@ -12,7 +12,7 @@ Class {
 		'definitions',
 		'code'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -106,7 +106,7 @@ DelphiImplementationSectionNode >> inTokens: anOrderedCollection [
 	inTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiImplementationSectionNode >> initialize [
 	super initialize.
 	moduleNames := OrderedCollection new: 2.

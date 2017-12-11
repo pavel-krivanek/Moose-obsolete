@@ -13,7 +13,7 @@ v
 Class {
 	#name : #RTEquidistantCircleLayout,
 	#superclass : #RTAbstractWeightedCircleLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #hook }

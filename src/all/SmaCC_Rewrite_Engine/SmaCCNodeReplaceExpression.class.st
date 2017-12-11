@@ -10,7 +10,7 @@ Class {
 		'afterPostfix',
 		'afterWhitespace'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #generated }

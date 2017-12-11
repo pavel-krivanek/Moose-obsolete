@@ -4,7 +4,7 @@ self openOn: (MooseModel root allModels last allMethods detect: [:each | each cl
 Class {
 	#name : #MooseSendersBrowser,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #'as yet unclassified' }

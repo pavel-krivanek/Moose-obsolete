@@ -7,7 +7,7 @@ Class {
 		'semicolons',
 		'right'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -37,7 +37,7 @@ DelphiRecordExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons #leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiRecordExpressionNode >> initialize [
 	super initialize.
 	fields := OrderedCollection new: 2.

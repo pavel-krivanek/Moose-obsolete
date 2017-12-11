@@ -19,7 +19,7 @@ Class {
 		'rhs',
 		'cachedTypes'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -69,14 +69,14 @@ SmaCCReduceCode >> model [
 	^ rhs model
 ]
 
-{ #category : #accessing-types }
+{ #category : #'accessing-types' }
 SmaCCReduceCode >> modelTypes: anIdentitySet [
 	cachedTypes isNil
 		ifTrue: [ cachedTypes := self basicModelTypes: anIdentitySet ].
 	^ cachedTypes
 ]
 
-{ #category : #accessing-types }
+{ #category : #'accessing-types' }
 SmaCCReduceCode >> nodeType: anIdentitySet [
 	| index |
 	index := self returnedNodeIndex.
@@ -132,7 +132,7 @@ SmaCCReduceCode >> rhs [
 	^ rhs
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCReduceCode >> rhs: aSmaCCRHS [
 	rhs := aSmaCCRHS
 ]

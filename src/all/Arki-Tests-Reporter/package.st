@@ -1,1 +1,1 @@
-Package { #name : #Arki-Tests-Reporter }
+Package { #name : #'Arki-Tests-Reporter' }

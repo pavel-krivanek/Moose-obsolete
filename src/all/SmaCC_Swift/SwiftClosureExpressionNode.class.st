@@ -37,7 +37,7 @@ Class {
 		'unownedLeftParenunsafeRightParenToken',
 		'statements'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -165,7 +165,7 @@ SwiftClosureExpressionNode >> inToken: aSmaCCToken [
 	inToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftClosureExpressionNode >> initialize [
 	super initialize.
 	leftBraceTokens := OrderedCollection new: 2.

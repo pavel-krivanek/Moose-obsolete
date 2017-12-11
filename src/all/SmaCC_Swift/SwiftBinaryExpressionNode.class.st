@@ -48,7 +48,7 @@ Class {
 		'andToken',
 		'operators'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -246,7 +246,7 @@ SwiftBinaryExpressionNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftBinaryExpressionNode >> initialize [
 	super initialize.
 	identifierTokens := OrderedCollection new: 2.

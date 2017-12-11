@@ -26,7 +26,7 @@ Class {
 	#classVars : [
 		'ExampleAnnouncer'
 	],
-	#category : #Roassal2-ExampleBrowser
+	#category : #'Roassal2-ExampleBrowser'
 }
 
 { #category : #announcement }

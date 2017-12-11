@@ -8,7 +8,7 @@ Class {
 		'commaTokens',
 		'rightBraceToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -48,7 +48,7 @@ CSAnonymousObjectCreationExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens #_leftParens #_rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSAnonymousObjectCreationExpressionNode >> initialize [
 	super initialize.
 	declarators := OrderedCollection new: 2.

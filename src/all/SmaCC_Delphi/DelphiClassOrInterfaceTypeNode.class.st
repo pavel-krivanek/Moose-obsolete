@@ -8,7 +8,7 @@ Class {
 		'right',
 		'endToken'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -46,7 +46,7 @@ DelphiClassOrInterfaceTypeNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiClassOrInterfaceTypeNode >> initialize [
 	super initialize.
 	superclasses := OrderedCollection new: 2.

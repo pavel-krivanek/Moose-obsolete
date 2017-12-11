@@ -1,7 +1,7 @@
 Class {
 	#name : #RTExperimentalExampleTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #tests }

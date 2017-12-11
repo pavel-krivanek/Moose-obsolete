@@ -9,7 +9,7 @@ Class {
 		'modifier',
 		'semicolon'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -52,7 +52,7 @@ DelphiVariableDefinitionNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiVariableDefinitionNode >> initialize [
 	super initialize.
 	names := OrderedCollection new: 2.

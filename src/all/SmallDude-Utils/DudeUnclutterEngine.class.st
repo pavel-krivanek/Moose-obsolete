@@ -6,7 +6,7 @@ Class {
 		'upperLimit',
 		'data1'
 	],
-	#category : #SmallDude-Utils
+	#category : #'SmallDude-Utils'
 }
 
 { #category : #'instance creation' }
@@ -24,7 +24,7 @@ DudeUnclutterEngine class >> new: aCollectionOfNumbers [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeUnclutterEngine >> data: aCollectionOfNumbers [ 
 	 
 	data1 := aCollectionOfNumbers
@@ -72,7 +72,7 @@ DudeUnclutterEngine >> iteration: minDist on: clutteredData [
 		ifFalse: [^clutteredData]	"changes have been made"	"no change needed"
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeUnclutterEngine >> maxIterations: numberOfIterations [ 
 	 
 	itCount := numberOfIterations
@@ -99,7 +99,7 @@ DudeUnclutterEngine >> unclutteredWith: minDist [
 		ifFalse: [^uData]	"failed"	"success"
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeUnclutterEngine >> upperBound: bound [ 
 	 
 	upperLimit := bound

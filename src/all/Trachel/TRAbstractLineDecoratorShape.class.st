@@ -16,7 +16,7 @@ Class {
 		'baseSize',
 		'percentage'
 	],
-	#category : #Trachel-ShapesForArrow
+	#category : #'Trachel-ShapesForArrow'
 }
 
 { #category : #'as yet unclassified' }

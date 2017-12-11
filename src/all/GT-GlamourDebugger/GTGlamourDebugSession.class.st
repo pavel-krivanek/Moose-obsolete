@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'rootBrowserContext'
 	],
-	#category : #GT-GlamourDebugger
+	#category : #'GT-GlamourDebugger'
 }
 
 { #category : #'predicates creation' }

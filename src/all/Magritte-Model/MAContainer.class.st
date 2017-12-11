@@ -9,15 +9,15 @@ Class {
 	#instVars : [
 		'children'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAContainer class >> defaultAccessor [
 	^ MAIdentityAccessor new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAContainer class >> defaultCollection [
 	^ OrderedCollection new
 ]
@@ -146,7 +146,7 @@ MAContainer >> descriptionBuilders: aList [
 	self propertyAt: #descriptionBuilders put: aList
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAContainer >> descriptionChildren [
 	<magritteDescription>
 	^ MAToManyRelationDescription new
@@ -159,7 +159,7 @@ MAContainer >> descriptionChildren [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAContainer >> descriptionDefault [
 	<magritteDescription>
 	^ nil

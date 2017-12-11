@@ -12,7 +12,7 @@ Class {
 		'position',
 		'scope'
 	],
-	#category : #SmaCC_GLR_Runtime
+	#category : #'SmaCC_GLR_Runtime'
 }
 
 { #category : #'instance creation' }

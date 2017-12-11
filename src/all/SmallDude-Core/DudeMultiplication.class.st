@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'duplications'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
 { #category : #'instance creation' }
@@ -22,13 +22,13 @@ DudeMultiplication class >> newFrom: aDuplication [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeMultiplication >> absorb: aDuplication [ 
 	 
 	self duplications add: aDuplication.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeMultiplication >> absorbAll: aMultiplication [ 
 	 
 	self ~= aMultiplication 

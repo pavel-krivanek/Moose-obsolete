@@ -18,7 +18,7 @@ b open.
 Class {
 	#name : #RTStackBarPlotExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-StackBarPlot
+	#category : #'Roassal2-Builder-StackBarPlot'
 }
 
 { #category : #sources }

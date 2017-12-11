@@ -1,7 +1,7 @@
 Class {
 	#name : #RTTreeMapTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-TreeMap
+	#category : #'Roassal2-Builder-TreeMap'
 }
 
 { #category : #'as yet unclassified' }

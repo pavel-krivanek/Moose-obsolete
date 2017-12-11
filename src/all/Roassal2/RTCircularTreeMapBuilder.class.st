@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'baseradius'
 	],
-	#category : #Roassal2-Builder-CircularMap
+	#category : #'Roassal2-Builder-CircularMap'
 }
 
 { #category : #accessing }
@@ -26,7 +26,7 @@ RTCircularTreeMapBuilder >> createView [
 	^ super createView @ RTDraggableView @ RTZoomableView.
 ]
 
-{ #category : #default-values }
+{ #category : #'default-values' }
 RTCircularTreeMapBuilder >> defaultBase [
 	^ 250
 ]

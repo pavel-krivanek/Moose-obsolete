@@ -4,7 +4,7 @@ XPath boolean conversion function.
 Class {
 	#name : #XPathBooleanFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

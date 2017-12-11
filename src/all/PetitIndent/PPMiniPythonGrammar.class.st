@@ -47,10 +47,10 @@ Class {
 		'ifKw',
 		'onelineString'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPMiniPythonGrammar >> align [
 	^ #prefix asParser flatten
 ]
@@ -102,7 +102,7 @@ PPMiniPythonGrammar >> compoundStmt [
 			/ classDef
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPMiniPythonGrammar >> dedent [
 	^ ((([ :context | context indentStack pop ] asParser, 
 		(emptyLine, newline) star, 
@@ -132,7 +132,7 @@ PPMiniPythonGrammar >> elseOpt [
 	==> [ :_else | _else ifNil: [ #() ] ]
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPMiniPythonGrammar >> emptyLine [
 	^  (#blank asParser / comment) star
 ]
@@ -233,7 +233,7 @@ PPMiniPythonGrammar >> ifStmt [
 	]
 ]
 
-{ #category : #indent-dedent }
+{ #category : #'indent-dedent' }
 PPMiniPythonGrammar >> indent [
 	^ (((emptyLine, newline) star, align, ((#blank asParser plus) flatten)
 	

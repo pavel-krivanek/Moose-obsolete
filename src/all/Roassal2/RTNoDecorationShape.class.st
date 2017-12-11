@@ -1,7 +1,7 @@
 Class {
 	#name : #RTNoDecorationShape,
 	#superclass : #RTLineDecorationShape,
-	#category : #Roassal2-LineDecorations
+	#category : #'Roassal2-LineDecorations'
 }
 
 { #category : #hooks }

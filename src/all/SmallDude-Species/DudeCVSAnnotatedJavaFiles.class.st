@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'cleaner'
 	],
-	#category : #SmallDude-Species
+	#category : #'SmallDude-Species'
 }
 
 { #category : #parsing }

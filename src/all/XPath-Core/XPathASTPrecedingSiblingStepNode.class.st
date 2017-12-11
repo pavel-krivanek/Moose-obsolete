@@ -4,7 +4,7 @@ This is an AST node class for 'preceding-sibling::' steps.
 Class {
 	#name : #XPathASTPrecedingSiblingStepNode,
 	#superclass : #XPathASTStepNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'properties'
 	],
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #'instance creation' }
@@ -48,14 +48,14 @@ PPParser >> // aParser [
 	^ PPLimitedChoiceParser with: self with: aParser
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> ==> aBlock [
 	"Answer a new parser that performs aBlock as action handler on success."
 
 	^ PPActionParser on: self block: aBlock
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> >=> aBlock [
 	"Answer a new parser that wraps the receiving parser with a two argument block. The first argument is the parsed stream, the second argument a continuation block on the delegate parser."
 
@@ -98,7 +98,7 @@ PPParser >> and [
 	^ PPAndParser on: self
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> answer: anObject [
 	"Answer a new parser that always returns anObject from a successful parse."
 
@@ -132,7 +132,7 @@ PPParser >> def: aParser [
 	^ self becomeForward: (aParser name: self name)
 ]
 
-{ #category : #operators-convenience }
+{ #category : #'operators-convenience' }
 PPParser >> delimitedBy: aParser [
 	"Answer a new parser that parses the receiver one or more times, separated and possibly ended by aParser."
 	
@@ -149,14 +149,14 @@ PPParser >> end [
 	^ PPEndOfInputParser on: self
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> flatten [
 	"Answer a new parser that flattens the underlying collection."
 	
 	^ PPFlattenParser on: self
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> foldLeft: aBlock [
 	"Answer a new parser that that folds the result of the receiver from left-to-right into aBlock. The argument aBlock must take two or more arguments."
 	
@@ -172,7 +172,7 @@ PPParser >> foldLeft: aBlock [
 		args first ]
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> foldRight: aBlock [
 	"Answer a new parser that that folds the result of the receiver from right-to-left into aBlock. The argument aBlock must take two or more arguments."
 
@@ -188,7 +188,7 @@ PPParser >> foldRight: aBlock [
 		args at: size ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> hasProperty: aKey [
 	"Test if the property aKey is present."
 	
@@ -214,7 +214,7 @@ PPParser >> isUnresolved [
 	^ false
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> map: aBlock [
 	"Answer a new parser that works on the receiving sequence an passes in each element as a block argument."
 	
@@ -311,21 +311,21 @@ PPParser >> matchingSkipRangesIn: anObject do: aBlock [
 		do: [ :token | aBlock value: (token start to: token stop) ]
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> max: anInteger [
 	"Answer a new parser that parses the receiver at most anInteger times."
 	
 	^ self star setMax: anInteger
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> max: anInteger greedy: aParser [
 	"Answer a new parser that parses the receiver at most anInteger times until it reaches aParser. This is a greedy non-blind implementation. aParser is not consumed."
 	
 	^ (self starGreedy: aParser) setMax: anInteger
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> max: anInteger lazy: aParser [
 	"Answer a new parser that parses the receiver at most anInteger times until it reaches aParser. This is a lazy non-blind implementation. aParser is not consumed."
 	
@@ -339,42 +339,42 @@ PPParser >> memoized [
 	^ PPMemoizedParser on: self
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> min: anInteger [
 	"Answer a new parser that parses the receiver at least anInteger times."
 	
 	^ self star setMin: anInteger
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> min: anInteger greedy: aParser [
 	"Answer a new parser that parses the receiver at least anInteger times until it reaches aParser. This is a greedy non-blind implementation. aParser is not consumed."
 	
 	^ (self starGreedy: aParser) setMin: anInteger
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> min: anInteger lazy: aParser [
 	"Answer a new parser that parses the receiver at least anInteger times until it reaches aParser. This is a lazy non-blind implementation. aParser is not consumed."
 	
 	^ (self starLazy: aParser) setMin: anInteger
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> min: aMinInteger max: aMaxInteger [
 	"Answer a new parser that parses the receiver at least aMinInteger and at most aMaxInteger times."
 	
 	^ self star setMin: aMinInteger; setMax: aMaxInteger
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> min: aMinInteger max: aMaxInteger greedy: aParser [
 	"Answer a new parser that parses the receiver at least aMinInteger and at most aMaxInteger times until it reaches aParser. This is a greedy non-blind implementation. aParser is not consumed."
 	
 	^ (self starGreedy: aParser) setMin: aMinInteger; setMax: aMaxInteger
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> min: aMinInteger max: aMaxInteger lazy: aParser [
 	"Answer a new parser that parses the receiver at least aMinInteger and at most aMaxInteger times until it reaches aParser. This is a greedy non-blind implementation. aParser is not consumed."
 	
@@ -470,21 +470,21 @@ PPParser >> parseWithContext: context [
 	
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> plus [
 	"Answer a new parser that parses the receiver one or more times."
 
 	^ self star setMin: 1
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> plusGreedy: aParser [
 	"Answer a new parser that parses the receiver one or more times until it reaches aParser. This is a greedy non-blind implementation of the star operator. aParser is not consumed."
 	
 	^ (self starGreedy: aParser) setMin: 1
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> plusLazy: aParser [
 	"Answer a new parser that parses the receiver one or more times until it reaches aParser. This is a lazy non-blind implementation of the star operator. aParser is not consumed."
 	
@@ -512,19 +512,19 @@ PPParser >> printOn: aStream [
 	aStream nextPut: $)
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> properties [
 	^ properties
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> propertyAt: aKey [
 	"Answer the property value associated with aKey."
 	
 	^ self propertyAt: aKey ifAbsent: [ self error: 'Property not found' ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> propertyAt: aKey ifAbsent: aBlock [
 	"Answer the property value associated with aKey or, if aKey isn't found, answer the result of evaluating aBlock."
 	
@@ -533,14 +533,14 @@ PPParser >> propertyAt: aKey ifAbsent: aBlock [
 		ifFalse: [ properties at: aKey ifAbsent: aBlock ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> propertyAt: aKey ifAbsentPut: aBlock [
 	"Answer the property associated with aKey or, if aKey isn't found store the result of evaluating aBlock as new value."
 	
 	^ self propertyAt: aKey ifAbsent: [ self propertyAt: aKey put: aBlock value ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> propertyAt: aKey put: anObject [
 	"Set the property at aKey to be anObject. If aKey is not found, create a new entry for aKey and set is value to anObject. Answer anObject."
 
@@ -548,14 +548,14 @@ PPParser >> propertyAt: aKey put: anObject [
 		at: aKey put: anObject
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> removeProperty: aKey [
 	"Remove the property with aKey. Answer the property or raise an error if aKey isn't found."
 	
 	^ self removeProperty: aKey ifAbsent: [ self error: 'Property not found' ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPParser >> removeProperty: aKey ifAbsent: aBlock [
 	"Remove the property with aKey. Answer the value or, if aKey isn't found, answer the result of evaluating aBlock."
 	
@@ -566,7 +566,7 @@ PPParser >> removeProperty: aKey ifAbsent: aBlock [
 	^ answer
 ]
 
-{ #category : #operators-convenience }
+{ #category : #'operators-convenience' }
 PPParser >> separatedBy: aParser [
 	"Answer a new parser that parses the receiver one or more times, separated by aParser."
 	
@@ -579,112 +579,112 @@ PPParser >> separatedBy: aParser [
 		result ]
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> star [
 	"Answer a new parser that parses the receiver zero or more times. This is a greedy and blind implementation that tries to consume as much input as possible and it does not consider what comes afterwards."
 
 	^ PPPossessiveRepeatingParser on: self
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> starGreedy: aParser [
 	"Answer a new parser that parses the receiver zero or more times until it reaches aParser. This is a greedy non-blind implementation of the star operator. aParser is not consumed."
 	
 	^ PPGreedyRepeatingParser on: self limit: aParser
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> starLazy: aParser [
 	"Answer a new parser that parses the receiver zero or more times until it reaches aParser. This is a lazy non-blind implementation of the star operator. aParser is not consumed."
 	
 	^ PPLazyRepeatingParser on: self limit: aParser
 ]
 
-{ #category : #operators-repeating }
+{ #category : #'operators-repeating' }
 PPParser >> times: anInteger [
 	"Answer a new parser that parses the receiver exactly anInteger times."
 	
 	^ self min: anInteger max: anInteger
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> token [
 	"Answer a new parser that transforms the input to a token."
 	
 	^ PPTokenParser on: self
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> token: aTokenClass [
 	"Answer a new parser that transforms the input to a token of class aTokenClass."
 	
 	^ self token tokenClass: aTokenClass
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trim [
 	"Answer a new parser that consumes spaces before and after the receiving parser."
 	
 	^ self trimSpaces
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trim: aParser [
 	"Answer a new parser that consumes and ignores aParser repeatedly before and after the receiving parser."
 	
 	^ PPTrimmingParser on: self trimmer: aParser
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trimBlanks [
 	"Answer a new parser that consumes blanks before and after the receiving parser."
 	
 	^ self trim: #blank asParser
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trimLeft [
 	"Answer a new parser that consumes spaces before the receiving parser."
 	
 	^ self trimSpacesLeft
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trimRight [
 	"Answer a new parser that consumes spaces after the receiving parser."
 	
 	^ self trimSpacesRight
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trimRight: trimmer [
 	"Answer a new parser that consumes spaces after the receiving parser."
 	
 	^ (self, trimmer star) ==> #first
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trimSpaces [
 	"Answer a new parser that consumes spaces before and after the receiving parser."
 	
 	^ self trim: #space asParser
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trimSpacesLeft [
 	"Answer a new parser that consumes spaces before the receiving parser."
 	
 	^ (#space asParser star, self) ==> #second
 ]
 
-{ #category : #operators-mapping }
+{ #category : #'operators-mapping' }
 PPParser >> trimSpacesRight [
 	"Answer a new parser that consumes spaces after the receiving parser."
 	
 	^ (self, #space asParser star) ==> #first
 ]
 
-{ #category : #operators-convenience }
+{ #category : #'operators-convenience' }
 PPParser >> withoutSeparators [
 	"Filters out the separators from a parse result produced by one of the productions #delimitedBy: or #separatedBy:."
 	

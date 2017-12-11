@@ -9,10 +9,10 @@ Class {
 		'y',
 		'y0'
 	],
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTXPPoint class >> x: x y: y y0: y1 [
 	^ self new x: x; y: y; y0: y1
 ]

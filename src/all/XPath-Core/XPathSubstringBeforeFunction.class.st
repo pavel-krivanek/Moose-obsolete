@@ -4,7 +4,7 @@ XPath function to return the substring before another substring.
 Class {
 	#name : #XPathSubstringBeforeFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

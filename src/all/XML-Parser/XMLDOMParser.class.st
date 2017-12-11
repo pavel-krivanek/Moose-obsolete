@@ -18,7 +18,7 @@ Class {
 		'nodeStack',
 		'currentScope'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #'handling - declaration' }

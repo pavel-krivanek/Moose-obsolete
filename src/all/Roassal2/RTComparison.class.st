@@ -9,7 +9,7 @@ Class {
 		'rhs',
 		'similarity'
 	],
-	#category : #Roassal2-Builder-SimilarityMatrix
+	#category : #'Roassal2-Builder-SimilarityMatrix'
 }
 
 { #category : #'as yet unclassified' }
@@ -22,7 +22,7 @@ RTComparison >> lhs [
 	^ lhs
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTComparison >> of: anObject with: anotherObject by: similarityBlock [
 	"similarityBlock should take two arguments and return a float in the range [0,1]"
 	lhs := anObject.

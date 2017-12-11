@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXAnnotationInstanceTest,
 	#superclass : #FAMIXSourcedEntityTest,
-	#category : #Famix-Tests-Core
+	#category : #'Famix-Tests-Core'
 }
 
 { #category : #helpers }

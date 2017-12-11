@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'rectangleMorph'
 	],
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MAFileMorph >> buildMorphView [
 
 	| button |

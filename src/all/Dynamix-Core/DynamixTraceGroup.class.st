@@ -5,7 +5,7 @@ A DynamixTraceGroup is a group containing traces of execution
 Class {
 	#name : #DynamixTraceGroup,
 	#superclass : #MooseGroup,
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #'as yet unclassified' }
@@ -28,7 +28,7 @@ DynamixTraceGroup >> classCoverage [
 	^aPercentage.
 ]
 
-{ #category : #all-getters }
+{ #category : #'all-getters' }
 DynamixTraceGroup >> getAllClasses [
 
 	"Get all classes associated with a group of TestCaseTraces and include in a set"
@@ -40,7 +40,7 @@ DynamixTraceGroup >> getAllClasses [
        aClassesSet].
 ]
 
-{ #category : #all-getters }
+{ #category : #'all-getters' }
 DynamixTraceGroup >> getAllMethods [
 
 	"Get all methods associated with a group of TestCaseTraces and include in a set"

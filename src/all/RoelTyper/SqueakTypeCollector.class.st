@@ -1,7 +1,7 @@
 Class {
 	#name : #SqueakTypeCollector,
 	#superclass : #TypeCollector,
-	#category : #RoelTyper-Squeak
+	#category : #'RoelTyper-Squeak'
 }
 
 { #category : #heuristics }

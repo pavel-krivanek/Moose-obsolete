@@ -22,7 +22,7 @@ Class {
 		'allChildrenTypes',
 		'allParentTypes'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }

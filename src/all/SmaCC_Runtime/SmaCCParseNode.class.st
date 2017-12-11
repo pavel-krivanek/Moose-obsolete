@@ -18,7 +18,7 @@ Class {
 		'parent',
 		'attributes'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #accessing }
@@ -203,29 +203,29 @@ SmaCCParseNode >> allVariableSelectors [
 	^ #(#tokenVariables #compositeTokenVariables #nodeVariables #compositeNodeVariables #otherVariables #ignoredTokenVariables #ignoredCompositeTokenVariables #ignoredNodeVariables #ignoredCompositeNodeVariables #ignoredOtherVariables)
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol [
 	attributes isNil
 		ifTrue: [ ^ nil ].
 	^ attributes at: aSymbol ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol ifAbsent: aBlock [
 	^ self attributes at: aSymbol ifAbsent: aBlock
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol ifAbsentPut: aBlock [
 	^ self attributes at: aSymbol ifAbsentPut: aBlock
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol put: aValue [
 	^ self attributes at: aSymbol put: aValue
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributes [
 	^ attributes ifNil: [ attributes := IdentityDictionary new ]
 ]
@@ -358,7 +358,7 @@ SmaCCParseNode >> filename: aString [
 	self attributeNamed: #filename put: aString
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParseNode >> fixParentPointers [
 	self
 		nodesDo: [ :each | 
@@ -653,7 +653,7 @@ SmaCCParseNode >> printOn: aStream [
 			nextPut: $) ]
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> removeAttributeNamed: aSymbol [
 	attributes isNil
 		ifTrue: [ ^ self ].

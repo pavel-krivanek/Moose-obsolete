@@ -31,7 +31,7 @@ Class {
 		'view',
 		'labelShape'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #'setting nesting behavior' }

@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : #SmallDude-Text
+	#category : #'SmallDude-Text'
 }
 
 { #category : #'as yet unclassified' }

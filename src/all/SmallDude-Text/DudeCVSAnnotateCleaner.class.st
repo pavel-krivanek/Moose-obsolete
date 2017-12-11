@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'lineAnnotations'
 	],
-	#category : #SmallDude-Text
+	#category : #'SmallDude-Text'
 }
 
 { #category : #parsing }
@@ -69,7 +69,7 @@ DudeCVSAnnotateCleaner class >> parseDate: aDateString [
 	^Date newDay: day month: month year: year
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeCVSAnnotateCleaner >> initialize [ 
 	 
 	lineAnnotations := nil. 

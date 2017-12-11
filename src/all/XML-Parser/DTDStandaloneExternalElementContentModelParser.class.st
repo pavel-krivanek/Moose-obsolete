@@ -4,7 +4,7 @@ This class parses standalone externally defined element content models and retur
 Class {
 	#name : #DTDStandaloneExternalElementContentModelParser,
 	#superclass : #DTDElementContentModelParser,
-	#category : #XML-Parser-DTD-Standalone
+	#category : #'XML-Parser-DTD-Standalone'
 }
 
 { #category : #defaults }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MerlinMorphSaveChooseFileWidget,
 	#superclass : #MerlinMorphChooseFileWidget,
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #accessing }

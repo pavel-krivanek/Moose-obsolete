@@ -4,7 +4,7 @@ FAMIXUnknownVariable represents some unknown entity encountered while importing 
 Class {
 	#name : #FAMIXUnknownVariable,
 	#superclass : #FAMIXStructuralEntity,
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -19,21 +19,21 @@ FAMIXUnknownVariable >> belongsTo [
 	^ nil
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXUnknownVariable >> namespaceScope [
 	"namespaceScope does not make sense for an unknown variable,
 	so we return nil"
 	^ nil
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXUnknownVariable >> packageScope [
 	"packageScope does not make sense for an unknown variable,
 	so we return nil"
 	^ nil
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXUnknownVariable >> typeScope [
 	"typeScope does not make sense for an unknown variable,
 	so we return nil"

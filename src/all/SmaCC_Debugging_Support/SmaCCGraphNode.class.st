@@ -11,7 +11,7 @@ Class {
 		'reductions',
 		'parser'
 	],
-	#category : #SmaCC_Debugging_Support
+	#category : #'SmaCC_Debugging_Support'
 }
 
 { #category : #inspecting }
@@ -114,7 +114,7 @@ SmaCCGraphNode >> gtGraphInspectorViewIn: composite [
 		initializeView: [ parser roassalViewForStack: self stack ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGraphNode >> initialize [
 	super initialize.
 	name := ''.

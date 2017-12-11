@@ -1,7 +1,7 @@
 Class {
 	#name : #TRSolarizedTheme,
 	#superclass : #TRTheme,
-	#category : #Trachel-Core-Theme
+	#category : #'Trachel-Core-Theme'
 }
 
 { #category : #hooks }

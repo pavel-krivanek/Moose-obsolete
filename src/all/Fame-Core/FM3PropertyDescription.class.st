@@ -29,10 +29,10 @@ Class {
 		'isTarget',
 		'isSource'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FM3PropertyDescription class >> annotation [
 	<MSEClass: #Property super: #FM3Element>
 	<package: #FM3>
@@ -45,13 +45,13 @@ FM3PropertyDescription class >> gtExampleBasic [
 	^ self new
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3PropertyDescription >> compiledMethod [
 
 	^ self mmClass implementingClass methodNamed: self implementingSelector
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FM3PropertyDescription >> getFrom: element [
 	"This method is meant to be used by the repository"
 
@@ -62,7 +62,7 @@ FM3PropertyDescription >> getFrom: element [
 		ifFalse: [ result ifNil: [ Array new ] ifNotNil: [ Array with: result ] ]
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FM3PropertyDescription >> getRawFrom: element [
 	"This is internal logic for retrieving the actual value of a property from an element.
 	By default call the implementing selector."
@@ -106,7 +106,7 @@ FM3PropertyDescription >> hasMmClass [
 	^class notNil
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3PropertyDescription >> hasOpposite [
 	^opposite notNil
 ]
@@ -139,7 +139,7 @@ FM3PropertyDescription >> isChildrenProperty [
 	^ self hasOpposite and: [ self opposite isContainer ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3PropertyDescription >> isComposite [
 	<MSEProperty: #composite type: #Boolean>
 	<derived>
@@ -291,7 +291,7 @@ FM3PropertyDescription >> setImplementingSelector: compiledMethod [
 	implementingSelector := compiledMethod
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FM3PropertyDescription >> setOn: element rawValue: array [
 	"This is the internal logic to set the value inside the object.
 	By default build and call a mutator for the implementing selector"
@@ -299,7 +299,7 @@ FM3PropertyDescription >> setOn: element rawValue: array [
 	element perform: self implementingSelector asMutator with: array
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FM3PropertyDescription >> setOn: element values: array [
 	"This method is meant to be used by the repository"
 

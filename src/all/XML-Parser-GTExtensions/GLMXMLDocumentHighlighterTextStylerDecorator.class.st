@@ -8,7 +8,7 @@ Class {
 		'encoding',
 		'configuration'
 	],
-	#category : #XML-Parser-GTExtensions-Highlighting-Parser
+	#category : #'XML-Parser-GTExtensions-Highlighting-Parser'
 }
 
 { #category : #accessing }

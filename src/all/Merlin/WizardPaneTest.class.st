@@ -9,7 +9,7 @@ Class {
 		'firstCheckBoxPart',
 		'secondCheckBoxPart'
 	],
-	#category : #Merlin-Tests
+	#category : #'Merlin-Tests'
 }
 
 { #category : #running }

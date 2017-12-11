@@ -1,7 +1,7 @@
 Class {
 	#name : #REPConcernStatusTest,
 	#superclass : #TestCase,
-	#category : #Arki-Tests-Reporter
+	#category : #'Arki-Tests-Reporter'
 }
 
 { #category : #testing }

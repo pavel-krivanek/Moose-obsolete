@@ -5,7 +5,7 @@ Class {
 		'timeTaken',
 		'typeResults'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #'instance creation' }
@@ -80,7 +80,7 @@ TypingResultKeeper >> forImage [
 	self forClasses: Object allSubclasses
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TypingResultKeeper >> initialize [
 	typeResults := IdentityDictionary new
 ]

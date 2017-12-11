@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'parentScope'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
@@ -25,12 +25,12 @@ FAMIXGlobalVariable >> belongsTo [
 	^ self parentScope
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXGlobalVariable >> namespaceScope [
 	^ self parentScope
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXGlobalVariable >> packageScope [
 	^ self parentPackage
 ]
@@ -53,7 +53,7 @@ FAMIXGlobalVariable >> parentScope: aScopingEntity [
 		to: aScopingEntity
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXGlobalVariable >> typeScope [
 	"typeScope does not make sense for a global variable,
 	so we return nil"

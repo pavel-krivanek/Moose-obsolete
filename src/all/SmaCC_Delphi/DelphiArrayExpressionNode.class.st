@@ -8,7 +8,7 @@ Class {
 		'commas',
 		'right'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -62,7 +62,7 @@ DelphiArrayExpressionNode >> indexes: anOrderedCollection [
 	self setParents: self indexes to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiArrayExpressionNode >> initialize [
 	super initialize.
 	indexes := OrderedCollection new: 2.

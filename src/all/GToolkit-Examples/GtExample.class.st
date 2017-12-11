@@ -52,7 +52,7 @@ GtExample >> after [
 	^ after
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> after: aSelector [
 	<gtExamplePragma>
 	<description: 'A method, implemented by the given selector, to be performed after this example has run ~ similar but not identical to teardown of sunit'>
@@ -70,13 +70,13 @@ GtExample >> allDependencies [
 	^ examples
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> arguments [
 	self flag: 'For compatibility with the previous version. Consider removing'.
 	^ #()
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> asExampleWithResult [
 	^ GtExampleWithResult new example: self
 ]
@@ -91,7 +91,7 @@ GtExample >> debug [
 	^ self debugger result
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> debugger [
 	^ GtExampleDebugger new 
 		example: self;
@@ -108,7 +108,7 @@ GtExample >> description [
 	^ description
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> description: aString [
 	<gtExamplePragma>
 	<description: 'A full description of this example'>
@@ -116,7 +116,7 @@ GtExample >> description: aString [
 	description := aString
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> directDependencies [
 	"I return the list of examples directly used within this example. The returned order is the one in which 
 	method calls denoting a dependency are present within the method defining this example. If an example is
@@ -129,7 +129,7 @@ GtExample >> directDependents [
 	^ #()
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> evaluator [
 	^ GtExampleEvaluator new 
 		example: self;
@@ -156,7 +156,7 @@ GtExample >> form: anIcon [
 	form := anIcon
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> gtExample [
 	<gtExamplePragma>
 	<description: 'This method is turned into a gtExample if provided'>
@@ -234,7 +234,7 @@ GtExample >> icon [
 	^ form ifNotNil: [ form form ]
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> icon: aSelector [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The selector must be implemented by the currently active theme'>
@@ -242,7 +242,7 @@ GtExample >> icon: aSelector [
 	self iconThemeSelector: aSelector
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> iconBase64: aString [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The icon form is described by the given base64-encoded string'>
@@ -250,7 +250,7 @@ GtExample >> iconBase64: aString [
 	form := GtExampleFormIcon fromBase64String: aString
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> iconBytes: aByteArray [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The icon form is described by the given byte-array'>
@@ -258,7 +258,7 @@ GtExample >> iconBytes: aByteArray [
 	form := GtExampleFormIcon fromByteArray: aByteArray
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> iconClass: aClassOrClassName selector: aSelector [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The method described by the given class and selector must return an icon form'>
@@ -266,7 +266,7 @@ GtExample >> iconClass: aClassOrClassName selector: aSelector [
 	form := self methodResolverClass resolve: GtExampleMethodIcon example: self className: aClassOrClassName meta: false selector: aSelector
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> iconMetaClass: aClassOrClassName selector: aSelector [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The method described by the given meta-class and selector must return an icon form'>
@@ -274,7 +274,7 @@ GtExample >> iconMetaClass: aClassOrClassName selector: aSelector [
 	form := self methodResolverClass resolve: GtExampleMethodIcon example: self className: aClassOrClassName meta: true selector: aSelector
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> iconSelector: aSelector [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The selector must return an icon form'>
@@ -284,7 +284,7 @@ GtExample >> iconSelector: aSelector [
 		yourself
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> iconSelectorBase64: aSelector [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The icon form is described by the base64 string returned by the given selector'>
@@ -294,7 +294,7 @@ GtExample >> iconSelectorBase64: aSelector [
 		yourself
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> iconThemeSelector: aSelector [
 	<gtExamplePragma>
 	<description: 'Attach an icon to this example. The selector must be implemented by the currently active theme'>
@@ -346,7 +346,7 @@ GtExample >> label [
 	^ label
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> label: aString [
 	<gtExamplePragma>
 	<description: 'A short identifier = name of this example'>
@@ -361,7 +361,7 @@ GtExample >> matchesMethod: aCompiledMethod [
 			and: [ self selector = aCompiledMethod selector ] ]
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> method [
 	^ self methodClass >> self selector
 ]
@@ -376,7 +376,7 @@ GtExample >> methodResolverClass [
 	^ GtExampleMethodResolver
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> noTest [
 	<gtExamplePragma>
 	<description: 'Do not run this example while running SUnit tests'>
@@ -384,7 +384,7 @@ GtExample >> noTest [
 	self propertyAt: #noTest put: true
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> noTestReport [
 	<gtExamplePragma>
 	<description: 'Do not run this example while running HDTestReport (not yet implemented)'>
@@ -407,19 +407,19 @@ GtExample >> propertyAt: aKey put: aValue [
 	^ properties at: aKey put: aValue
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> provider [ 
 	^ self methodClass isMeta
 		ifTrue: [ self methodClass theNonMetaClass ]
 		ifFalse: [ self methodClass theNonMetaClass new ]
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> result [
 	^ self run
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> returnValue [
 	^ self result returnValue
 ]
@@ -442,12 +442,12 @@ GtExample >> selector [
 	^ selector
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> sourceCode [
 	^ self method sourceCode
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> subject: aClassOrClassName [
 	<gtExamplePragma>
 	<description: 'Add a class-subject to the example'>
@@ -455,7 +455,7 @@ GtExample >> subject: aClassOrClassName [
 	self subjectClass: aClassOrClassName
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> subjectClass: aClassOrClassName [
 	<gtExamplePragma>
 	<description: 'Add a class-subject to the example'>
@@ -463,7 +463,7 @@ GtExample >> subjectClass: aClassOrClassName [
 	self addSubject: (self classResolverClass resolve: GtExampleClassSubject example: self className: aClassOrClassName meta: false)
 ]
 
-{ #category : #PRAGMA-SELECTORS }
+{ #category : #'PRAGMA-SELECTORS' }
 GtExample >> subjectMetaClass: aClassOrClassName [
 	<gtExamplePragma>
 	<description: 'Add a meta-class-subject to the example'>
@@ -476,7 +476,7 @@ GtExample >> subjects [
 	^ subjects asArray
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExample >> traverser [
 	^ GtExampleTraverser new 
 		example: self;

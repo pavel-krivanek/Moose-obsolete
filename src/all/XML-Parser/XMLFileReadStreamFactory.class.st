@@ -6,7 +6,7 @@ Subclasses should create read streams that return raw byte characters and not ch
 Class {
 	#name : #XMLFileReadStreamFactory,
 	#superclass : #XMLAbstractFactory,
-	#category : #XML-Parser-Files
+	#category : #'XML-Parser-Files'
 }
 
 { #category : #basic }

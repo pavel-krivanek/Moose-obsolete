@@ -17,20 +17,20 @@ Class {
 	#instVars : [
 		'actions'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
-{ #category : #accessing-actions }
+{ #category : #'accessing-actions' }
 SmaCCCompositeAction >> actions [
 	^ actions
 ]
 
-{ #category : #accessing-actions }
+{ #category : #'accessing-actions' }
 SmaCCCompositeAction >> addAction: aSmaCCAction [
 	actions add: aSmaCCAction
 ]
 
-{ #category : #accessing-actions }
+{ #category : #'accessing-actions' }
 SmaCCCompositeAction >> addActions: aSmaCCActionCollection [
 	actions addAll: aSmaCCActionCollection
 ]
@@ -45,7 +45,7 @@ SmaCCCompositeAction >> id [
 	^ self preferredAction id
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCompositeAction >> initialize [
 	super initialize.
 	actions := OrderedCollection new

@@ -32,7 +32,7 @@ Class {
 		'center',
 		'edgeBuilderDo'
 	],
-	#category : #Roassal2-Builder-BundleEdge
+	#category : #'Roassal2-Builder-BundleEdge'
 }
 
 { #category : #accessing }
@@ -40,7 +40,7 @@ RTBundleBuilder >> bezier [
 	^ bezier
 ]
 
-{ #category : #rendering-utility }
+{ #category : #'rendering-utility' }
 RTBundleBuilder >> createBezierIfNecessary: aView [
 	connectBezierBlock ifNil: [ ^ self ].
 	RTEdgeBuilder new
@@ -66,7 +66,7 @@ RTBundleBuilder >> createElements: obj using: ablock depth: depth [
 	^ e
 ]
 
-{ #category : #rendering-utility }
+{ #category : #'rendering-utility' }
 RTBundleBuilder >> createLabelFor: e view: aView [
 	| lbl |
 	lbl := label elementOn: e model.
@@ -83,7 +83,7 @@ RTBundleBuilder >> createLabelFor: e view: aView [
 
 ]
 
-{ #category : #rendering-utility }
+{ #category : #'rendering-utility' }
 RTBundleBuilder >> createSliderIfNecessary: aView [
 	| bedges slider |
 	sliderShape ifNil: [ ^ self ].
@@ -214,7 +214,7 @@ RTBundleBuilder >> layout [
 	^ layoutBuilder
 ]
 
-{ #category : #rendering-utility }
+{ #category : #'rendering-utility' }
 RTBundleBuilder >> parentOf: model view: aView [
 	| element |
 	element := view elementFromModel: model.
@@ -252,7 +252,7 @@ RTBundleBuilder >> sliderShape: aShape [
 	sliderShape := aShape
 ]
 
-{ #category : #rendering-utility }
+{ #category : #'rendering-utility' }
 RTBundleBuilder >> useBezierlineWith: ablock [
 	connectBezierBlock := ablock
 	

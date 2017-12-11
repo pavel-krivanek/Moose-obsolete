@@ -5,7 +5,7 @@ Class {
 		'left',
 		'right'
 	],
-	#category : #GT-DebuggerExtensions
+	#category : #'GT-DebuggerExtensions'
 }
 
 { #category : #'instance creation' }

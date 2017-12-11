@@ -1,7 +1,7 @@
 Class {
 	#name : #CSVParseNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : #SmaCC_CSV_Parser
+	#category : #'SmaCC_CSV_Parser'
 }
 
 { #category : #generated }

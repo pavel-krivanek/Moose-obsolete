@@ -23,7 +23,7 @@ Class {
 		'receiver',
 		'message'
 	],
-	#category : #Grease-Core-Utilities
+	#category : #'Grease-Core-Utilities'
 }
 
 { #category : #'instance creation' }

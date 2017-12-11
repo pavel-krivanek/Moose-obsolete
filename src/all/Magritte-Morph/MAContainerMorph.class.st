@@ -5,7 +5,7 @@ Class {
 		'children',
 		'answerBlock'
 	],
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
 { #category : #decorating }

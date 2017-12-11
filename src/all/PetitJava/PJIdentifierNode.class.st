@@ -7,10 +7,10 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
-{ #category : #instance-creation }
+{ #category : #'instance-creation' }
 PJIdentifierNode class >> newWithName: aString [
 	^ super new name: aString; yourself
 ]

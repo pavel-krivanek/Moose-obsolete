@@ -27,7 +27,7 @@ Class {
 		'classDict',
 		'nameDict'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
 { #category : #'instance creation' }
@@ -231,7 +231,7 @@ FMMetaRepository >> includes: element [
 	^ (element isFM3Class and: [ element isBuiltIn ]) or: [ elements includes: element ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMMetaRepository >> initialize [
 
 	super initialize.

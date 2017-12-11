@@ -14,7 +14,7 @@ Class {
 		'declarations',
 		'rightBrace'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -91,7 +91,7 @@ JavaEnumDeclarationNode >> implementsToken: aSmaCCToken [
 	implementsToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaEnumDeclarationNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

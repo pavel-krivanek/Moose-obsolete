@@ -6,7 +6,7 @@ Packages that are using Seaside-Platform should normally subclass GRObject inste
 Class {
 	#name : #GRObject,
 	#superclass : #Object,
-	#category : #Grease-Core
+	#category : #'Grease-Core'
 }
 
 { #category : #'error handling' }

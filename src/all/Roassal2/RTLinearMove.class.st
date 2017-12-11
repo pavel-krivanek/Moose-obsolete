@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'animatedValue'
 	],
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #'as yet unclassified' }

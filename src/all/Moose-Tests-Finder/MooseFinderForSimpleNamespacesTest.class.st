@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseFinderForSimpleNamespacesTest,
 	#superclass : #MooseFinderTest,
-	#category : #Moose-Tests-Finder
+	#category : #'Moose-Tests-Finder'
 }
 
 { #category : #running }

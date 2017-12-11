@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'configuration'
 	],
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #visiting }

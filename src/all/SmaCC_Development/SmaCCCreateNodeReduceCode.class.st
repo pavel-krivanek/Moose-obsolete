@@ -12,7 +12,7 @@ Class {
 		'classDefinition',
 		'index'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #comparing }
@@ -41,7 +41,7 @@ SmaCCCreateNodeReduceCode >> index [
 	^ index ifNil: [ index := rhs componentIndex ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCreateNodeReduceCode >> index: anInteger [
 	index := anInteger
 ]
@@ -51,7 +51,7 @@ SmaCCCreateNodeReduceCode >> isPullUpAction [
 	^ self index > 0
 ]
 
-{ #category : #accessing-types }
+{ #category : #'accessing-types' }
 SmaCCCreateNodeReduceCode >> nodeType: anIdentitySet [
 	^ self classDefinition
 ]

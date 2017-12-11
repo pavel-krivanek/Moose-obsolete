@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'indices'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -38,7 +38,7 @@ MalMappedVector >> at: anIndex put: aNumber [
 		put: aNumber
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMappedVector >> setIndices: aReindexing [
 	
 	indices := aReindexing ifNil: [MalNumberMapping new: vector size]

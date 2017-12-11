@@ -1,7 +1,7 @@
 Class {
 	#name : #HismoNamespaceHistoryGroup,
 	#superclass : #HismoHistoryGroup,
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
 { #category : #'instance creation' }
@@ -10,7 +10,7 @@ HismoNamespaceHistoryGroup class >> annotation [
 	<package: #Hismo>
 ]
 
-{ #category : #co-change }
+{ #category : #'co-change' }
 HismoNamespaceHistoryGroup >> parallelSemantics [
 	
 	^self

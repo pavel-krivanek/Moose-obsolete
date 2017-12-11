@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'years'
 	],
-	#category : #Moose-HismoImporter
+	#category : #'Moose-HismoImporter'
 }
 
 { #category : #hook }

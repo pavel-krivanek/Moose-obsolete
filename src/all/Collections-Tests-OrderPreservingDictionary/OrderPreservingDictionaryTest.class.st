@@ -1,7 +1,7 @@
 Class {
 	#name : #OrderPreservingDictionaryTest,
 	#superclass : #StandardOrderedDictionaryTest,
-	#category : #Collections-Tests-OrderPreservingDictionary
+	#category : #'Collections-Tests-OrderPreservingDictionary'
 }
 
 { #category : #accessing }

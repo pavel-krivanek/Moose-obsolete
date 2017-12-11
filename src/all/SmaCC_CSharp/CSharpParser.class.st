@@ -4,10 +4,10 @@ Class {
 	#classInstVars : [
 		'keywords'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CSharpParser class >> cacheId [
 	^'2017-11-29T09:02:12.430555-06:00'
 ]
@@ -2287,7 +2287,7 @@ CSharpParser class >> parseBlock: aString onError: aBlock [
 		onError: aBlock
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CSharpParser class >> scannerClass [
 	^CSharpScanner
 ]

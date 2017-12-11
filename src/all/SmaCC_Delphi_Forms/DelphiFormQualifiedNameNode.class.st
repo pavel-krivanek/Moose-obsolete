@@ -5,7 +5,7 @@ Class {
 		'names',
 		'periods'
 	],
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ DelphiFormQualifiedNameNode >> compositeTokenVariables [
 	^ #(#names #periods)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiFormQualifiedNameNode >> initialize [
 	super initialize.
 	names := OrderedCollection new: 2.

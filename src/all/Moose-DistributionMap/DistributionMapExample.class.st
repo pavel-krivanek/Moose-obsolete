@@ -6,7 +6,7 @@ Class {
 		'propertyBlock',
 		'elements'
 	],
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #public }

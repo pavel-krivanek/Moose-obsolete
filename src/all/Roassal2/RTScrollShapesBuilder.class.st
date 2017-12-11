@@ -11,7 +11,7 @@ Class {
 		'collection',
 		'scrollBuilder'
 	],
-	#category : #Roassal2-Builder-ScrollBar
+	#category : #'Roassal2-Builder-ScrollBar'
 }
 
 { #category : #'as yet unclassified' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MAComposedDescriptionBuilder,
 	#superclass : #MADescriptionBuilder,
-	#category : #Magritte-Model-Builder
+	#category : #'Magritte-Model-Builder'
 }
 
 { #category : #visiting }
@@ -20,7 +20,7 @@ MAComposedDescriptionBuilder >> visitContainer: aContainer [
 	builders do: [ :each | builtDescription := each buildFrom: builtDescription target: self target model: self model ]
 ]
 
-{ #category : #visiting-description }
+{ #category : #'visiting-description' }
 MAComposedDescriptionBuilder >> visitRelationDescription: aDescription [
 	| builders buildedReference relationValue |
 	builders := self target magritteDescription descriptionBuilders.

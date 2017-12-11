@@ -1,7 +1,7 @@
 Class {
 	#name : #FMXMLPrinter,
 	#superclass : #FMPrintClient,
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #'instance creation' }
@@ -71,7 +71,7 @@ FMXMLPrinter >> endElement: name [
 	indent := indent - 1.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMXMLPrinter >> initialize [
 	stream := nil.
 	indent := nil.

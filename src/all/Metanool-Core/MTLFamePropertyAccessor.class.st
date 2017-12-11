@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'fameProperty'
 	],
-	#category : #Metanool-Core
+	#category : #'Metanool-Core'
 }
 
 { #category : #'instance creation' }

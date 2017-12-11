@@ -1,7 +1,7 @@
 Class {
 	#name : #GTGlamourDebugger,
 	#superclass : #GTGenericStackDebugger,
-	#category : #GT-GlamourDebugger
+	#category : #'GT-GlamourDebugger'
 }
 
 { #category : #accessing }

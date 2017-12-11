@@ -8,7 +8,7 @@ DCRTResizable
 Class {
 	#name : #RTResizeCanceled,
 	#superclass : #Announcement,
-	#category : #Roassal2-Interactions-Resize
+	#category : #'Roassal2-Interactions-Resize'
 }
 
 { #category : #accessing }

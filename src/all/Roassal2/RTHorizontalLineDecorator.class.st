@@ -29,7 +29,7 @@ Add horizontal lines for some values
 Class {
 	#name : #RTHorizontalLineDecorator,
 	#superclass : #RTAbstractLineDecorator,
-	#category : #Roassal2-Builder-Grapher-Decorators
+	#category : #'Roassal2-Builder-Grapher-Decorators'
 }
 
 { #category : #drawing }

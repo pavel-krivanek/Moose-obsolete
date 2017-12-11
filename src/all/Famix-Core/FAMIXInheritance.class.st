@@ -11,7 +11,7 @@ Class {
 		'superclass',
 		'subclass'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseFinderForSimpleClassesTest,
 	#superclass : #MooseFinderTest,
-	#category : #Moose-Tests-Finder
+	#category : #'Moose-Tests-Finder'
 }
 
 { #category : #running }

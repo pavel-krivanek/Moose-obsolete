@@ -4,7 +4,7 @@ This class uses Zinc HTTP Components to implement HTTP requests and is the prefe
 Class {
 	#name : #XMLZincHTTPRequest,
 	#superclass : #XMLHTTPRequest,
-	#category : #XML-Parser-HTTP
+	#category : #'XML-Parser-HTTP'
 }
 
 { #category : #testing }

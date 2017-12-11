@@ -9,7 +9,7 @@ Class {
 		'throws',
 		'body'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -50,7 +50,7 @@ JavaMethodDeclarationNode >> declarator: aJavaProgramNode [
 		ifTrue: [ self declarator parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaMethodDeclarationNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

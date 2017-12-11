@@ -6,7 +6,7 @@ Class {
 		'layout',
 		'afterBlock'
 	],
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #updating }
@@ -34,7 +34,7 @@ RTForceLayoutStepping >> addNodes: someElements [
 		addNodes: someElements
 ]
 
-{ #category : #public-configuration }
+{ #category : #'public-configuration' }
 RTForceLayoutStepping >> addStartStopButton [
 
 	view canvas addMenu: 'Toggle Animation' callback: [

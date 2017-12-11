@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'scopes'
 	],
-	#category : #XML-Parser-Namespaces
+	#category : #'XML-Parser-Namespaces'
 }
 
 { #category : #accessing }

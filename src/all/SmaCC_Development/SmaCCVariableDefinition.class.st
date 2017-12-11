@@ -27,7 +27,7 @@ Class {
 		'PluralNameBlock',
 		'PluralNames'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }
@@ -99,7 +99,7 @@ SmaCCVariableDefinition >> baseType [
 	^ baseType
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCVariableDefinition >> baseType: modelClass [
 	baseType := modelClass
 ]
@@ -169,7 +169,7 @@ SmaCCVariableDefinition >> isCollection [
 	^ isCollection
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCVariableDefinition >> isCollection: aBoolean [
 	isCollection := aBoolean
 ]
@@ -223,7 +223,7 @@ SmaCCVariableDefinition >> variableName [
 	^ variableName
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCVariableDefinition >> variableName: aString [
 	variableName := aString
 ]

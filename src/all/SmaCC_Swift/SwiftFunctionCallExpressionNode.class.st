@@ -37,7 +37,7 @@ Class {
 		'unownedLeftParenunsafeRightParenToken',
 		'statements'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -165,7 +165,7 @@ SwiftFunctionCallExpressionNode >> inToken: aSmaCCToken [
 	inToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftFunctionCallExpressionNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

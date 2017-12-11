@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseReleaser,
 	#superclass : #Object,
-	#category : #Moose-Development-Tools
+	#category : #'Moose-Development-Tools'
 }
 
 { #category : #release }

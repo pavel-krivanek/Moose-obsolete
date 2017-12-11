@@ -4,7 +4,7 @@ A simple cross-platform interface for finding classes that may not be in the ima
 Class {
 	#name : #XMLClassFinder,
 	#superclass : #Object,
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
 
 { #category : #accessing }

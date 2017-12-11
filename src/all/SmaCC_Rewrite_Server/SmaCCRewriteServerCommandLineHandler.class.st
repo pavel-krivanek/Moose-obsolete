@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'port'
 	],
-	#category : #SmaCC_Rewrite_Server
+	#category : #'SmaCC_Rewrite_Server'
 }
 
 { #category : #accessing }

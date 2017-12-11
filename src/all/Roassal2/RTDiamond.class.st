@@ -17,7 +17,7 @@ v open
 Class {
 	#name : #RTDiamond,
 	#superclass : #RTLineDecoration,
-	#category : #Roassal2-LineDecorations
+	#category : #'Roassal2-LineDecorations'
 }
 
 { #category : #hooks }

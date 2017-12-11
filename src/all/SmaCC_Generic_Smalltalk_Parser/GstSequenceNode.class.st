@@ -8,7 +8,7 @@ Class {
 		'statements',
 		'periods'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }
@@ -31,7 +31,7 @@ GstSequenceNode >> ignoredTokenVariables [
 	^ #(#leftBar #rightBar)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 GstSequenceNode >> initialize [
 	super initialize.
 	variables := OrderedCollection new: 2.

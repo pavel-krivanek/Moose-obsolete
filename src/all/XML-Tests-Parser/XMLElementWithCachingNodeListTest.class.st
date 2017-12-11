@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLElementWithCachingNodeListTest,
 	#superclass : #XMLElementTest,
-	#category : #XML-Tests-Parser-DOM
+	#category : #'XML-Tests-Parser-DOM'
 }
 
 { #category : #accessing }

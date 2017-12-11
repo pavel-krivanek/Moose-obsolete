@@ -16,7 +16,7 @@ Class {
 		'colorArray',
 		'path'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #accessing }

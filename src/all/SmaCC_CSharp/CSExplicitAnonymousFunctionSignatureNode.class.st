@@ -7,7 +7,7 @@ Class {
 		'commaTokens',
 		'rightParenToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -35,7 +35,7 @@ CSExplicitAnonymousFunctionSignatureNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSExplicitAnonymousFunctionSignatureNode >> initialize [
 	super initialize.
 	parameters := OrderedCollection new: 2.

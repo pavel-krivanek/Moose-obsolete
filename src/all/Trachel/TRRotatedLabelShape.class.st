@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'angle'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #visitor }

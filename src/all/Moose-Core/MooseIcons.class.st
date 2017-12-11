@@ -4,7 +4,7 @@ Class {
 	#classInstVars : [
 		'icons'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #utils }

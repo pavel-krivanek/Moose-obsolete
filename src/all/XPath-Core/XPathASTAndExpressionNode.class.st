@@ -4,7 +4,7 @@ This is an AST node class for 'and' expressions. The evaluation should short-cur
 Class {
 	#name : #XPathASTAndExpressionNode,
 	#superclass : #XPathASTBinaryOperatorExpressionNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

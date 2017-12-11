@@ -14,7 +14,7 @@ Class {
 		'characters',
 		'ignoreCase'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -49,12 +49,12 @@ SmaCCCharacterRENode >> characters [
 	^ characters
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCharacterRENode >> characters: aSmaCCCharacterSet [
 	characters := aSmaCCCharacterSet
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCharacterRENode >> initialize [
 	super initialize.
 	ignoreCase := false

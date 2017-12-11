@@ -5,7 +5,7 @@ A RTHorizontalFlowLayout is a FlowLayout horizontaly arranged,  right queued at 
 Class {
 	#name : #RTHorizontalFlowLayout,
 	#superclass : #RTAbstractFlowLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #hook }
@@ -58,7 +58,7 @@ RTHorizontalFlowLayout >> doExecute: elements [
 		].
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTHorizontalFlowLayout >> initialize [
 	super initialize.
 	self alignTop.

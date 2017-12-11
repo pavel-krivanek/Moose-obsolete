@@ -1,5 +1,5 @@
 Class {
-	#name : #PP2SmalltalkGrammarTests_Optimized,
+	#name : #'PP2SmalltalkGrammarTests_Optimized',
 	#superclass : #PP2CompositeNodeTest,
 	#traits : 'TPP2SmalltalkGrammarTests',
 	#classTraits : 'TPP2SmalltalkGrammarTests classTrait',

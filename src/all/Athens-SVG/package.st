@@ -1,1 +1,1 @@
-Package { #name : #Athens-SVG }
+Package { #name : #'Athens-SVG' }

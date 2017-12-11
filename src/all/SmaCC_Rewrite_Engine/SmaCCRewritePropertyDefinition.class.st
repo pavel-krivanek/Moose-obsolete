@@ -11,7 +11,7 @@ Class {
 		'Reader',
 		'Writer'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -98,7 +98,7 @@ SmaCCRewritePropertyDefinition >> displayOn: aStream [
 				nextPutAll: ' global' ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewritePropertyDefinition >> initialize [
 	super initialize.
 	propertyNames := Set new.

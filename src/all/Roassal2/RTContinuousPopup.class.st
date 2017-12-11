@@ -9,7 +9,7 @@ Class {
 		'controlPoint',
 		'view'
 	],
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #accessing }

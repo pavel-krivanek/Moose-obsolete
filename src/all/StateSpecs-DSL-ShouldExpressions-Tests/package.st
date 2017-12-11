@@ -1,1 +1,1 @@
-Package { #name : #StateSpecs-DSL-ShouldExpressions-Tests }
+Package { #name : #'StateSpecs-DSL-ShouldExpressions-Tests' }

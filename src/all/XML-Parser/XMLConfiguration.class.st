@@ -13,7 +13,7 @@ Class {
 		'parserLimits',
 		'entityConfiguration'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #accessing }

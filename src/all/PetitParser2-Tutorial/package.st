@@ -1,1 +1,1 @@
-Package { #name : #PetitParser2-Tutorial }
+Package { #name : #'PetitParser2-Tutorial' }

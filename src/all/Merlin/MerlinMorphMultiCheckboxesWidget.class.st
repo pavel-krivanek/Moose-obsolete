@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'allCheckboxes'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #private }

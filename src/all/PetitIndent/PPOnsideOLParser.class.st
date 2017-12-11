@@ -1,7 +1,7 @@
 Class {
 	#name : #PPOnsideOLParser,
 	#superclass : #PPParser,
-	#category : #PetitIndent-Offside-rule
+	#category : #'PetitIndent-Offside-rule'
 }
 
 { #category : #analysis }

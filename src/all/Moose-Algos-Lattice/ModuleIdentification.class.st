@@ -35,10 +35,10 @@ Class {
 		'aCandidate',
 		'nodesToConsider'
 	],
-	#category : #Moose-Algos-Lattice
+	#category : #'Moose-Algos-Lattice'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ModuleIdentification class >> on: lattice [
 	
 	| identifier |
@@ -47,7 +47,7 @@ ModuleIdentification class >> on: lattice [
 	^ identifier computeModules.
 ]
 
-{ #category : #middle-phase }
+{ #category : #'middle-phase' }
 ModuleIdentification >> allAncestors: aNode [
 
 	"computes all the anscentors of a node in the lattice"
@@ -56,7 +56,7 @@ ModuleIdentification >> allAncestors: aNode [
 		select: [:each | each descendants includes: aNode].
 ]
 
-{ #category : #middle-phase }
+{ #category : #'middle-phase' }
 ModuleIdentification >> analyzeDescendantsOf: aTop [
 	"aTop is a potential module top node. The method analyzes if the descendants of the aTop only have a single connection to the top and to the bottom. If it is not so, "
 
@@ -92,7 +92,7 @@ ModuleIdentification >> candidate: anObject [
 		ifFalse: [aCandidate add: anObject].
 ]
 
-{ #category : #start-phase }
+{ #category : #'start-phase' }
 ModuleIdentification >> computeModules [
 	"computes the modules present inside a lattice. A module is a bunch of modes that are connected to the rest of the lattice through a unique top and a bottom node. The algo leaves the top node of the lattice. It then takes all nodes and analyzes its descendantes to see if the bunch forms a module.. This method triggers the detection algorithm to start on instanceVariable nodesToConsider. The algorithm is run until all nodes in the lattice are considered."
 
@@ -100,7 +100,7 @@ ModuleIdentification >> computeModules [
 	^ self moduleNodes
 ]
 
-{ #category : #middle-phase }
+{ #category : #'middle-phase' }
 ModuleIdentification >> computeNextLevelNodes: aCollection [
 	"next level nodes are all the nodes that are the descendants of the nodes in the collection and that have more than one descendants. If a node has a single descendant, it means that it is coverging to the bottom of the module, so we dont consider it."
 	
@@ -113,7 +113,7 @@ ModuleIdentification >> flushCandidate [
 	self candidate removeAll.
 ]
 
-{ #category : #middle-phase }
+{ #category : #'middle-phase' }
 ModuleIdentification >> hasOneAncestor: aNode WhichIs: aTop [	
 		"Is ancestor of an aNode the top node and is this the only ancestor of this node"
 		
@@ -123,7 +123,7 @@ ModuleIdentification >> hasOneAncestor: aNode WhichIs: aTop [
 		^ ((myAncestors size =1) and: [myAncestors includes: aTop]) 
 ]
 
-{ #category : #end-phase }
+{ #category : #'end-phase' }
 ModuleIdentification >> hasSingleBottom: aNode [
 	
 	"does the node has a single bottom and no other"
@@ -140,7 +140,7 @@ ModuleIdentification >> initializeNodes [
 
 ]
 
-{ #category : #end-phase }
+{ #category : #'end-phase' }
 ModuleIdentification >> isEndConditionWith: descNodes [
 	"do the descendants converege to a bottom node. If, so how many of those?"
 
@@ -183,7 +183,7 @@ ModuleIdentification >> moduleNodes: aColectionOfNodes [
 	(moduleNodes includesAllOf: aColectionOfNodes) ifFalse: [ moduleNodes add: aColectionOfNodes copy].
 ]
 
-{ #category : #end-phase }
+{ #category : #'end-phase' }
 ModuleIdentification >> removeFalseCandidates: descNodes [
 
 	
@@ -194,7 +194,7 @@ ModuleIdentification >> removeFalseCandidates: descNodes [
 	
 ]
 
-{ #category : #start-phase }
+{ #category : #'start-phase' }
 ModuleIdentification >> startAlgo [
 	"The method takes each node and analyzes its descendants for possible module identification. It found, the module is added to the list moduleNodes of the class and the nodes in the module are removed from the list of nodes to be considered. The algorithm is then restarted on rest of the nodes."
 	
@@ -215,7 +215,7 @@ ModuleIdentification >> startAlgo [
 	^ false.
 ]
 
-{ #category : #middle-phase }
+{ #category : #'middle-phase' }
 ModuleIdentification >> treatNextLevel: aCollection [
 	"the purpose of the method is to include the level 2 and beyond nodes in the module. The collection passed is the list of descendants nodes. See if the next level nodes' ancestors are in the list of candidates, if not flush the candidate list and stop the algo on this and the rest of the candidate nodes. Otherwise, check if the nodes converge to a single bottom. If not run the algorithm on the descendants of the collection nodes."
 

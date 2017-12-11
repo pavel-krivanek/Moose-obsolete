@@ -9,7 +9,7 @@ Class {
 		'attributes',
 		'elementFromModelCache'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #public }

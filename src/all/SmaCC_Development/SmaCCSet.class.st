@@ -5,7 +5,7 @@ Class {
 		'characters',
 		'objects'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -42,7 +42,7 @@ SmaCCSet >> includes: anObject [
 		ifFalse: [ objects includes: anObject ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSet >> initialize [
 	super initialize.
 	characters := SmaCCCharacterSet new.

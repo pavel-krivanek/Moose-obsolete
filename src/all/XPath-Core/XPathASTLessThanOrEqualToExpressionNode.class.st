@@ -4,7 +4,7 @@ This is an AST node class for '<=' less than or equal to expressions.
 Class {
 	#name : #XPathASTLessThanOrEqualToExpressionNode,
 	#superclass : #XPathASTRelationalExpressionNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

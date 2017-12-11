@@ -44,7 +44,7 @@ Class {
 		'typeTokens',
 		'block'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -201,7 +201,7 @@ SwiftFunctionDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftFunctionDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

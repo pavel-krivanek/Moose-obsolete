@@ -5,7 +5,7 @@ Class {
 		'predecessor',
 		'successor'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }
@@ -34,7 +34,7 @@ DynamixHistoricalAlias >> roleId [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixHistoricalAlias >> stopTimestamp [
 	^ self successor
 		ifNotNil: [ :alias | alias timestamp - 1 ]

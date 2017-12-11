@@ -13,10 +13,10 @@ Class {
 		'createSubdirectories',
 		'commonParentDirectory'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> addTransformation: aSmaCCAbstractRewrite under: aSmaCCRewriteFile [
 	self
 		addTransformation: aSmaCCAbstractRewrite
@@ -24,7 +24,7 @@ SmaCCTransformationToolkitModel >> addTransformation: aSmaCCAbstractRewrite unde
 		before: nil
 ]
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> addTransformation: aSmaCCAbstractRewrite under: aSmaCCRewriteFile before: anotherSmaCCAbstractRewrite [
 	anotherSmaCCAbstractRewrite isNil
 		ifTrue: [ aSmaCCRewriteFile addTransformation: aSmaCCAbstractRewrite ]
@@ -90,7 +90,7 @@ SmaCCTransformationToolkitModel >> files: aCollection [
 	self changed: #files with: aCollection
 ]
 
-{ #category : #initialize/release }
+{ #category : #'initialize/release' }
 SmaCCTransformationToolkitModel >> initialize [
 	super initialize.
 	modified := false
@@ -146,7 +146,7 @@ SmaCCTransformationToolkitModel >> localRunOn: aCollection [
 		processAllNotifying: [ :each | self changed: #resultAdded with: each ]
 ]
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> openRewriteFile: filename [
 	^ filename asFileReference exists
 		ifTrue: [ SmaCCRewriteRuleFileParser parseFile: filename ]
@@ -167,7 +167,7 @@ SmaCCTransformationToolkitModel >> outputDirectory: aString [
 	self changed: #outputDirectory with: aString
 ]
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> removeTransformation: aSmaCCAbstractRewrite [
 	aSmaCCAbstractRewrite parent
 		removeTransformation: aSmaCCAbstractRewrite.
@@ -186,7 +186,7 @@ SmaCCTransformationToolkitModel >> rewrites: aSmaCCRewrite [
 	self changed: #rewrites with: aSmaCCRewrite
 ]
 
-{ #category : #actions-running }
+{ #category : #'actions-running' }
 SmaCCTransformationToolkitModel >> runOn: tranformationFiles [
 	self runOnServer
 		ifTrue: [ self serverRunOn: tranformationFiles ]

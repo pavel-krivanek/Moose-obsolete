@@ -1,1 +1,1 @@
-Package { #name : #Collections-OrderPreservingDictionary-GTExtensions }
+Package { #name : #'Collections-OrderPreservingDictionary-GTExtensions' }

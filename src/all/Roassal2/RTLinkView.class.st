@@ -9,7 +9,7 @@ Class {
 		'viewBlock',
 		'nameBlock'
 	],
-	#category : #Roassal2-Exporter-HTML5
+	#category : #'Roassal2-Exporter-HTML5'
 }
 
 { #category : #visitor }
