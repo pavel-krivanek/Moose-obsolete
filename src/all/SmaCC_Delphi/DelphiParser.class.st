@@ -9,7 +9,7 @@ Class {
 
 { #category : #generated-accessing }
 DelphiParser class >> cacheId [
-	^'2016-10-29T07:36:03.818348+02:00'
+	^'2017-11-29T08:11:08.331064-06:00'
 ]
 
 { #category : #generated }
@@ -188,7 +188,7 @@ DelphiParser class >> definitionComment [
 	: \^ 
 	;
  <LETTER> 
-	: [a-zA-Z_üäöÜÄÖ] 
+	: <isLetter>
 	;
 <DIGIT> 
 	: [0-9] 
@@ -1093,7 +1093,7 @@ AsmBlock
 	: BeforeAsm ""ASM"" 'asmToken' ""END"" 'endToken' {{AsmBlock}} 
 	;
 BeforeAsm
-	: {parseAll ifFalse: [scanner skipToEndToken. currentState position: scanner position]. nil}
+	: {parseAll ifFalse: [scanner skipToEndToken. currentState scannerState: scanner currentState]. nil}
 	;
 Expression
 	: VariableExpression
@@ -1262,7 +1262,7 @@ DelphiParser >> actionsForCurrentToken [
 		ifTrue: [ newToken := scanner scanControlCharacter.
 			newToken notNil
 				ifTrue: [ currentToken := newToken.
-					currentState position: scanner position.
+					currentState scannerState: scanner currentState.
 					self addActionsFor: scanner controlCharacterId to: actions.
 					actions notEmpty
 						ifTrue: [ ^ actions ] ] ].
@@ -1575,7 +1575,7 @@ DelphiParser >> reduceActionForBaseCaseLabel2: nodes [
 DelphiParser >> reduceActionForBeforeAsm1: nodes [
 	parseAll
 		ifFalse: [ scanner skipToEndToken.
-			currentState position: scanner position ].
+			currentState scannerState: scanner currentState ].
 	^ nil
 ]
 

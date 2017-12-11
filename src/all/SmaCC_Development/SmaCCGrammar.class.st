@@ -20,6 +20,9 @@ Class {
 		'sentinelSymbol'
 	],
 	#classVars : [
+		'IsExpressionMap',
+		'IsExpressionMaxCharacter',
+		'IsExpressions',
 		'MaximumCharacterValue',
 		'TokenNameBlock',
 		'TokenNameMap'
@@ -29,10 +32,14 @@ Class {
 
 { #category : #accessing }
 SmaCCGrammar class >> allCharacters [
-	^ String
-		withAll:
-			((0 to: self maximumCharacterValue)
-				collect: [ :each | Character value: each ])
+	^ SmaCCCharacterSet withAllCharactersTo: (Character value: self maximumCharacterValue)
+]
+
+{ #category : #private }
+SmaCCGrammar class >> charactersFor: aSymbol [
+	| isExpressionMap |
+	isExpressionMap := self isExpressionMap.
+	^ isExpressionMap at: aSymbol ifAbsentPut: [ self generateCharacterSetFor: aSymbol ]
 ]
 
 { #category : #accessing }
@@ -73,14 +80,25 @@ SmaCCGrammar class >> defaultTokenNameMap [
 	^ map
 ]
 
+{ #category : #private }
+SmaCCGrammar class >> generateCharacterSetFor: aSelector [
+	| set |
+	set := SmaCCCharacterSet new.
+	0 to: SmaCCGrammar maximumCharacterValue do: [ :i | 
+		| ch |
+		ch := Character value: i.
+		(ch perform: aSelector)
+			ifTrue: [ set add: ch ] ].
+	^ set
+]
+
 { #category : #accessing }
 SmaCCGrammar class >> implicitToken: aString [
 	| symbol node |
 	symbol := (aString copyFrom: 2 to: aString size - 1) asSymbol.
 	(Character canUnderstand: symbol)
 		ifFalse: [ ^ nil ].
-	node := SmaCCCharacterRENode
-		characters: (self allCharacters select: [ :each | each perform: symbol ]).
+	node := SmaCCCharacterRENode characters: (self charactersFor: symbol).
 	node position: SmallInteger maxVal.	"Implicit nodes have least precedence"
 	^ node
 ]
@@ -88,6 +106,43 @@ SmaCCGrammar class >> implicitToken: aString [
 { #category : #'class initialization' }
 SmaCCGrammar class >> initialize [
 	self maximumCharacterValue: 255
+]
+
+{ #category : #accessing }
+SmaCCGrammar class >> isExpressionMap [
+	"Creates a map from selectors that start with 'is' on Character to sets of characters. This allows generated scanners to take
+	full advantage of selectors that are already implemented on Character"
+
+	(IsExpressionMap isNil or: [ IsExpressionMaxCharacter ~= SmaCCGrammar maximumCharacterValue ])
+		ifTrue: [ | selectors |
+			IsExpressionMaxCharacter := SmaCCGrammar maximumCharacterValue.
+			IsExpressionMap := Dictionary new.
+			selectors := IsExpressions
+				ifNil: [ Character selectors select: [ :each | each size > 2 and: [ (each beginsWith: 'is') and: [ each numArgs = 0 and: [ (each at: 3) isUppercase ] ] ] ] ].
+			selectors
+				do: [ :sel | 
+					| string |
+					string := self generateCharacterSetFor: sel.
+					string isEmpty
+						ifFalse: [ IsExpressionMap at: sel put: string ] ] ].
+	^ IsExpressionMap
+]
+
+{ #category : #accessing }
+SmaCCGrammar class >> isExpressions [
+	^ IsExpressions
+]
+
+{ #category : #accessing }
+SmaCCGrammar class >> isExpressions: aCollection [
+	"Assign a collection of Character is___ selectors that can be used to create the scanner. These can make the generated scanners easier to read as a test like currentCharacter isAlphaNumeric is easier to read than a test of '(currentCharacter >= $A and: [currentCharacter <= $Z]) or: [(currentCharacter >= $a and: [currentCharacter <= $z]) or: [currentCharacter >= $0 and: [currentCharacter <= $9]]]'. If the collection is nil, SmaCC will automatically create the set of all is___ methods that are in the current image. This may result in a scanner that doesn't work in a different image. If you wish to limit the selectors that can be used, you can set them here:
+	
+	self isExpressions: #(isAlphaNumeric isDigit isLetter isLiteral isLowercase isSeparator isSpecial isUppercase isVowel)
+	
+	"
+
+	IsExpressions := aCollection.
+	IsExpressionMap := nil
 ]
 
 { #category : #accessing }
@@ -338,17 +393,13 @@ SmaCCGrammar >> isGLR: aBoolean [
 { #category : #private }
 SmaCCGrammar >> keywordRegularExpressionFor: aString [
 	| regularExpressionString regex |
-	regularExpressionString := (aString copyFrom: 2 to: aString size - 1)
-		copyReplaceAll: '""'
-		with: '"'.
+	regularExpressionString := (aString copyFrom: 2 to: aString size - 1) copyReplaceAll: '""' with: '"'.
 	regex := regularExpressionString
 		inject: nil
-		into:
-			[ :sum :each | 
+		into: [ :sum :each | 
 			sum isNil
-				ifTrue: [ SmaCCCharacterRENode characters: (String with: each) ]
-				ifFalse: [ sum
-						, (SmaCCCharacterRENode characters: (String with: each)) ] ].
+				ifTrue: [ SmaCCCharacterRENode characters: (SmaCCCharacterSet with: each) ]
+				ifFalse: [ sum , (SmaCCCharacterRENode characters: (SmaCCCharacterSet with: each)) ] ].
 	regex addStates: self scannerStates.
 	^ regex
 ]

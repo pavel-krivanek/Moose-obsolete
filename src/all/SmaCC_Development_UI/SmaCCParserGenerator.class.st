@@ -87,12 +87,11 @@ SmaCCParserGenerator >> compile: aSymbol [
 		ifTrue: [ ^ UIManager default alert: 'Both classes are not specified' ].
 	messages := OrderedCollection new.
 	Cursor wait
-		showWhile:
-			[ oldCharacterSize := SmaCCGrammar maximumCharacterValue.
+		showWhile: [ oldCharacterSize := SmaCCGrammar maximumCharacterValue.
 			[ SmaCCGrammar
 				maximumCharacterValue:
 					(allowUnicode
-						ifTrue: [ 2 ** 16 - 1 ]
+						ifTrue: [ 16rE01EF ]
 						ifFalse: [ 255 ]).
 			self verifyParser
 				ifFalse: [ ^ self ].
@@ -110,19 +109,12 @@ SmaCCParserGenerator >> compile: aSymbol [
 			symbolsModel text: parserCompiler symbolsComment.
 			itemSetsModel text: parserCompiler itemSetsComment ]
 				on: SmaCCCompilationNotification
-				do:
-					[ :ex | 
-					(ShowPrecedenceConflicts
-						or: [ ('*precedence*' match: ex messageText) not ])
-						ifTrue:
-							[ messages
-								add:
-									ex messageText , (String with: Character cr with: Character cr)
-										, ex tag ].
+				do: [ :ex | 
+					(ShowPrecedenceConflicts or: [ ('*precedence*' match: ex messageText) not ])
+						ifTrue: [ messages add: ex messageText , (String with: Character cr with: Character cr) , ex tag ].
 					ex pass ].
 			messages asSortedCollection
-				do:
-					[ :each | 
+				do: [ :each | 
 					stream
 						nextPutAll: '-------------------------';
 						cr;

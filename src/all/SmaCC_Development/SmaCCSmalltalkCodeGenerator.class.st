@@ -14,7 +14,6 @@ Class {
 		'parseTreeCache'
 	],
 	#classVars : [
-		'IsExpressions',
 		'MaxJumpSize',
 		'MaxLiterals'
 	],
@@ -92,22 +91,6 @@ SmaCCSmalltalkCodeGenerator class >> initialize [
 	MaxLiterals := 30
 ]
 
-{ #category : #accessing }
-SmaCCSmalltalkCodeGenerator class >> isExpressions [
-	^ IsExpressions
-]
-
-{ #category : #accessing }
-SmaCCSmalltalkCodeGenerator class >> isExpressions: aCollection [
-	"Assign a collection of Character is___ selectors that can be used to create the scanner. These can make the generated scanners easier to read as a test like currentCharacter isAlphaNumeric is easier to read than a test of '(currentCharacter >= $A and: [currentCharacter <= $Z]) or: [(currentCharacter >= $a and: [currentCharacter <= $z]) or: [currentCharacter >= $0 and: [currentCharacter <= $9]]]'. If the collection is nil, SmaCC will automatically create the set of all is___ methods that are in the current image. This may result in a scanner that doesn't work in a different image. If you wish to limit the selectors that can be used, you can set them here:
-	
-	self isExpressions: #(isAlphaNumeric isDigit isLetter isLiteral isLowercase isSeparator isSpecial isUppercase isVowel)
-	
-	"
-
-	IsExpressions := aCollection
-]
-
 { #category : #private }
 SmaCCSmalltalkCodeGenerator class >> keywords [
 	"While Smalltalk doesn't have many keywords, we don't want to overwrite any existing method."
@@ -145,11 +128,11 @@ SmaCCSmalltalkCodeGenerator class >> typeName [
 { #category : #compiling-scanner }
 SmaCCSmalltalkCodeGenerator >> acceptStateEdge: aSmaCCStateEdge [
 	^ aSmaCCStateEdge transitionObjects size = 1
-		ifTrue: [ 'state == #'
+		ifTrue: [ 'scope == #'
 				, aSmaCCStateEdge transitionObjects asArray first ]
 		ifFalse:
 			[ '(' , aSmaCCStateEdge transitionObjects asArray storeString
-				, ' includes: state)' ]
+				, ' includes: scope)' ]
 ]
 
 { #category : #private }
@@ -671,19 +654,6 @@ SmaCCSmalltalkCodeGenerator >> formattedCode [
 ]
 
 { #category : #private }
-SmaCCSmalltalkCodeGenerator >> generateCharacterSetFor: aSelector [
-	| stream |
-	stream := WriteStream with: String new.
-	0 to: SmaCCGrammar maximumCharacterValue do:
-		[ :i | 
-		| ch |
-		ch := Character value: i.
-		(ch perform: aSelector)
-			ifTrue: [ stream nextPut: ch ] ].
-	^ stream contents
-]
-
-{ #category : #private }
 SmaCCSmalltalkCodeGenerator >> generatedMethodsIn: aRBClass [
 	^ aRBClass selectors
 		select:
@@ -709,20 +679,11 @@ SmaCCSmalltalkCodeGenerator >> initialize [
 
 { #category : #private }
 SmaCCSmalltalkCodeGenerator >> initializeIsExpressions [
-	"Creates a map from sets of characters to selectors that start with 'is' on Character. This allows generated scanners to take
-	full advantage of selectors that are already implemented on Character"
-
-	| selectors |
+	| expressions |
 	isExpressions := Dictionary new.
-	selectors := IsExpressions
-		ifNil: [ Character selectors
-				select: [ :each | each size > 2 and: [ (each beginsWith: 'is') and: [ each numArgs = 0 and: [ (each at: 3) isUppercase ] ] ] ] ].
-	selectors
-		do: [ :sel | 
-			| string |
-			string := self generateCharacterSetFor: sel.
-			string isEmpty
-				ifFalse: [ isExpressions at: string put: sel ] ]
+	expressions := SmaCCGrammar isExpressionMap.
+	(expressions keys asSortedCollection: [ :a :b | a size > b size or: [ a size = b size and: [ a > b ] ] ])
+		do: [ :key | isExpressions at: (expressions at: key) put: key ]
 ]
 
 { #category : #private }

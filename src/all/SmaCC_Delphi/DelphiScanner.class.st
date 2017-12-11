@@ -501,16 +501,14 @@ DelphiScanner >> scanForToken [
 		ifTrue: [ ^ self scan8 ].
 	currentCharacter == $&
 		ifTrue:
-			[ ^ self scanForTokenX7 ].
+			[ ^ self scanForTokenX6 ].
 	currentCharacter == $'
 		ifTrue: [ ^ self scan2 ].
 	currentCharacter == $(
 		ifTrue:
-			[ ^ self scanForTokenX12 ].
+			[ ^ self scanForTokenX11 ].
 	currentCharacter == $)
 		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
-	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
 	^ self scanForTokenX14
 ]
 
@@ -532,15 +530,6 @@ DelphiScanner >> scanForTokenX1 [
 
 { #category : #generated }
 DelphiScanner >> scanForTokenX10 [
-	self recordMatch: #(31).
-	self step.
-	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(87) ].
-	^ self reportLastMatch
-]
-
-{ #category : #generated }
-DelphiScanner >> scanForTokenX11 [
 	self recordMatch: #(8).
 	self step.
 	currentCharacter == $=
@@ -549,7 +538,7 @@ DelphiScanner >> scanForTokenX11 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX12 [
+DelphiScanner >> scanForTokenX11 [
 	self recordMatch: #(61).
 	self step.
 	currentCharacter == $*
@@ -558,7 +547,16 @@ DelphiScanner >> scanForTokenX12 [
 ]
 
 { #category : #generated }
+DelphiScanner >> scanForTokenX12 [
+	[ self recordMatch: #(135 136).
+	self step.
+	currentCharacter isAlphaNumeric ] whileTrue
+]
+
+{ #category : #generated }
 DelphiScanner >> scanForTokenX13 [
+	currentCharacter == $[
+		ifTrue: [ ^ self recordAndReportMatch: #(58) ].
 	currentCharacter == $]
 		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
 	currentCharacter == $^
@@ -573,70 +571,56 @@ DelphiScanner >> scanForTokenX13 [
 			true ] whileTrue ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan13 ].
-	(currentCharacter isXMLWhitespace
+	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp
 				or: [ currentCharacter =
 						(Character value: 26) ] ])
 		ifTrue:
-			[ ^ self scanForTokenX4 ].
-	(currentCharacter isSafeForHTTP
-		or:
-			[ 'ÄÖÜäöü' includes: currentCharacter ])
+			[ ^ self scanForTokenX3 ].
+	currentCharacter isLetter
 		ifTrue:
-			[ self scanForTokenX2 ].
+			[ self scanForTokenX12 ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 DelphiScanner >> scanForTokenX14 [
+	currentCharacter == $*
+		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
 	currentCharacter == $+
 		ifTrue:
-			[ ^ self scanForTokenX6 ].
+			[ ^ self scanForTokenX5 ].
 	currentCharacter == $,
 		ifTrue: [ ^ self recordAndReportMatch: #(50) ].
 	currentCharacter == $-
 		ifTrue:
-			[ ^ self scanForTokenX5 ].
+			[ ^ self scanForTokenX4 ].
 	currentCharacter == $.
 		ifTrue:
-			[ ^ self scanForTokenX9 ].
+			[ ^ self scanForTokenX8 ].
 	currentCharacter == $/
 		ifTrue:
-			[ ^ self scanForTokenX3 ].
+			[ ^ self scanForTokenX2 ].
 	currentCharacter == $:
 		ifTrue:
-			[ ^ self scanForTokenX11 ].
+			[ ^ self scanForTokenX10 ].
 	currentCharacter == $;
 		ifTrue: [ ^ self recordAndReportMatch: #(133) ].
 	currentCharacter == $<
 		ifTrue:
-			[ ^ self scanForTokenX8 ].
+			[ ^ self scanForTokenX7 ].
 	currentCharacter == $=
 		ifTrue: [ ^ self recordAndReportMatch: #(55) ].
 	currentCharacter == $>
 		ifTrue:
-			[ ^ self scanForTokenX10 ].
+			[ ^ self scanForTokenX9 ].
 	currentCharacter == $@
 		ifTrue: [ ^ self recordAndReportMatch: #(48) ].
-	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(58) ].
 	^ self scanForTokenX13
 ]
 
 { #category : #generated }
 DelphiScanner >> scanForTokenX2 [
-	[ self recordMatch: #(135 136).
-	self step.
-	(currentCharacter between: $0 and: $9)
-		or: [ (currentCharacter between: $A and: $Z)
-				or: [ currentCharacter == $_
-						or: [ (currentCharacter between: $a and: $z)
-								or:
-									[ 'ÄÖÜäöü' includes: currentCharacter ] ] ] ] ] whileTrue
-]
-
-{ #category : #generated }
-DelphiScanner >> scanForTokenX3 [
 	self recordMatch: #(49).
 	self step.
 	currentCharacter == $/
@@ -649,10 +633,10 @@ DelphiScanner >> scanForTokenX3 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX4 [
+DelphiScanner >> scanForTokenX3 [
 	[ self recordMatch: #(141).
 	self step.
-	currentCharacter isXMLWhitespace
+	currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp
 				or: [ currentCharacter =
 						(Character value: 26) ] ] ] whileTrue.
@@ -660,7 +644,7 @@ DelphiScanner >> scanForTokenX4 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX5 [
+DelphiScanner >> scanForTokenX4 [
 	self recordMatch: #(131).
 	self step.
 	currentCharacter == $$
@@ -673,7 +657,7 @@ DelphiScanner >> scanForTokenX5 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX6 [
+DelphiScanner >> scanForTokenX5 [
 	self recordMatch: #(132).
 	self step.
 	currentCharacter == $$
@@ -686,7 +670,7 @@ DelphiScanner >> scanForTokenX6 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX7 [
+DelphiScanner >> scanForTokenX6 [
 	self step.
 	('Oo' includes: currentCharacter)
 		ifTrue: [ self step.
@@ -708,7 +692,7 @@ DelphiScanner >> scanForTokenX7 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX8 [
+DelphiScanner >> scanForTokenX7 [
 	self recordMatch: #(32).
 	self step.
 	currentCharacter == $=
@@ -719,13 +703,22 @@ DelphiScanner >> scanForTokenX8 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX9 [
+DelphiScanner >> scanForTokenX8 [
 	self recordMatch: #(59).
 	self step.
 	currentCharacter == $.
 		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan11 ].
+	^ self reportLastMatch
+]
+
+{ #category : #generated }
+DelphiScanner >> scanForTokenX9 [
+	self recordMatch: #(31).
+	self step.
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(87) ].
 	^ self reportLastMatch
 ]
 

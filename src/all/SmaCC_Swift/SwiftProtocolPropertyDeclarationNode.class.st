@@ -99,7 +99,7 @@ SwiftProtocolPropertyDeclarationNode >> commaTokens: anOrderedCollection [
 
 { #category : #generated }
 SwiftProtocolPropertyDeclarationNode >> compositeTokenVariables [
-	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens #classTokens #mutatingTokens #nonmutatingTokens #overrideTokens #staticTokens #unownedTokens #unownedLeftParensafeRightParenTokens #unownedLeftParenunsafeRightParenTokens #weakTokens #colonTokens #periodTokens #protocolTokens #lessThanTokens #greaterThanTokens #minusGreaterThanTokens #commaTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #inoutTokens)
+	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #classTokens #mutatingTokens #nonmutatingTokens #overrideTokens #staticTokens #unownedTokens #unownedLeftParensafeRightParenTokens #unownedLeftParenunsafeRightParenTokens #weakTokens #colonTokens #full_string_literalTokens #periodTokens #protocolTokens #lessThanTokens #greaterThanTokens #minusGreaterThanTokens #commaTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #inoutTokens)
 ]
 
 { #category : #generated }
@@ -166,7 +166,6 @@ SwiftProtocolPropertyDeclarationNode >> initialize [
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
 	operatorTokens := OrderedCollection new: 2.
-	full_string_literalTokens := OrderedCollection new: 2.
 	classTokens := OrderedCollection new: 2.
 	mutatingTokens := OrderedCollection new: 2.
 	nonmutatingTokens := OrderedCollection new: 2.
@@ -177,6 +176,7 @@ SwiftProtocolPropertyDeclarationNode >> initialize [
 	unownedLeftParenunsafeRightParenTokens := OrderedCollection new: 2.
 	weakTokens := OrderedCollection new: 2.
 	colonTokens := OrderedCollection new: 2.
+	full_string_literalTokens := OrderedCollection new: 2.
 	periodTokens := OrderedCollection new: 2.
 	protocolTokens := OrderedCollection new: 2.
 	lessThanTokens := OrderedCollection new: 2.

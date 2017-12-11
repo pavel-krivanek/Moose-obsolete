@@ -294,7 +294,7 @@ SmaCCParserDebugger >> scannerProperties [
 	scanner := self scanner.
 	items := OrderedCollection new.
 	string := scanner outputStream ifNil: [ '' ] ifNotNil: [ :stream | stream contents ].
-	items add: (Array with: 'State' with: scanner state).
+	items add: (Array with: 'Scope' with: scanner scope).
 	(self currentContext receiver isKindOf: SmaCCScanner)
 		ifTrue: [ items
 				add: (Array with: 'Current Character' with: scanner currentCharacter);

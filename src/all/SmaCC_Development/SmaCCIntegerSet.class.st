@@ -24,16 +24,19 @@ SmaCCIntegerSet class >> new: aSize [
 { #category : #comparing }
 SmaCCIntegerSet >> < aSmaCCIntegerCollection [
 	| myItems i |
+	self isEmpty
+		ifTrue: [ ^ true ].
+	aSmaCCIntegerCollection isEmpty
+		ifTrue: [ ^ false ].
 	self first < aSmaCCIntegerCollection first
 		ifTrue: [ ^ true ].
 	self first > aSmaCCIntegerCollection first
 		ifTrue: [ ^ false ].
-	myItems := OrderedCollection new.
+	myItems := OrderedCollection new: self size.
 	self do: [ :each | myItems add: each ].
 	i := 1.
 	aSmaCCIntegerCollection
-		do:
-			[ :each | 
+		do: [ :each | 
 			| current |
 			i > myItems size
 				ifTrue: [ ^ true ].
@@ -53,19 +56,23 @@ SmaCCIntegerSet >> <= aSmaCCIntegerCollection [
 
 { #category : #comparing }
 SmaCCIntegerSet >> = anObject [
-	| myItems i |
+	| myItems i size |
 	self class = anObject class
 		ifFalse: [ ^ false ].
 	(self start = anObject start and: [ self run = anObject run ])
 		ifTrue: [ ^ self data = anObject data ].
+	size := self size.
+	size ~= anObject size
+		ifTrue: [ ^ false ].
+	size = 0
+		ifTrue: [ ^ true ].
 	self first = anObject first
 		ifFalse: [ ^ false ].
 	myItems := OrderedCollection new.
 	self do: [ :each | myItems add: each ].
 	i := 1.
 	anObject
-		do:
-			[ :each | 
+		do: [ :each | 
 			| current |
 			i > myItems size
 				ifTrue: [ ^ false ].
@@ -118,39 +125,56 @@ SmaCCIntegerSet >> add: anInteger [
 
 { #category : #private }
 SmaCCIntegerSet >> add: anInteger to: currentData startingAt: currentStart withRun: currentRun [
-	| newData isBits offset |
+	| newData isBits offset value |
 	currentData == 1
 		ifTrue: [ ^ 1 ].
 	isBits := currentRun = self byteSize.
 	newData := currentData == 0
-		ifTrue:
-			[ (isBits
+		ifTrue: [ (isBits
 				ifTrue: [ ByteArray ]
 				ifFalse: [ Array ]) new: self defaultRunSize withAll: 0 ]
 		ifFalse: [ currentData ].
 	offset := (anInteger - currentStart) // currentRun + 1.
 	^ isBits
-		ifTrue:
-			[ newData
-				at: offset
-				put:
-					((newData at: offset)
-						bitOr: (1 bitShift: (anInteger - currentStart) \\ currentRun)).
-			(newData allSatisfy: [ :each | each == 16rFF ])
+		ifTrue: [ newData at: offset put: (value := (newData at: offset) bitOr: (1 bitShift: (anInteger - currentStart) \\ currentRun)).
+			(value == 16rFF and: [ newData allSatisfy: [ :each | each == 16rFF ] ])
 				ifTrue: [ 1 ]
 				ifFalse: [ newData ] ]
-		ifFalse:
-			[ newData
+		ifFalse: [ newData
 				at: offset
 				put:
-					(self
+					(value := self
 						add: anInteger
 						to: (newData at: offset)
 						startingAt: currentStart + ((offset - 1) * currentRun)
 						withRun: (self nextRunFrom: currentRun)).
-			(newData allSatisfy: [ :each | each == 1 ])
+			(value == 1 and: [ newData allSatisfy: [ :each | each == 1 ] ])
 				ifTrue: [ 1 ]
 				ifFalse: [ newData ] ]
+]
+
+{ #category : #adding }
+SmaCCIntegerSet >> addAll: aCollection [
+	| otherData otherRun tempData |
+	(self class == aCollection class and: [ start = aCollection start ])
+		ifFalse: [ ^ super addAll: aCollection ].
+	data == 0
+		ifTrue: [ data := self copyData: aCollection data.
+			run := aCollection run ]
+		ifFalse: [ otherRun := aCollection run.
+			otherData := aCollection data.
+			[ run < otherRun ]
+				whileTrue: [ run := run * self defaultRunSize.
+					tempData := Array new: self defaultRunSize withAll: 0.
+					tempData at: 1 put: data.
+					data := tempData ].
+			[ run > otherRun ]
+				whileTrue: [ otherRun := otherRun * self defaultRunSize.
+					tempData := Array new: self defaultRunSize withAll: 0.
+					tempData at: 1 put: otherData.
+					otherData := tempData ].
+			data := self merge: data with: otherData ].
+	^ aCollection
 ]
 
 { #category : #private }
@@ -167,6 +191,18 @@ SmaCCIntegerSet >> copyData: anObject [
 			1 to: copy size do: [ :i | copy at: i put: (self copyData: (copy at: i)) ].
 			copy ]
 		ifFalse: [ anObject ]
+]
+
+{ #category : #private }
+SmaCCIntegerSet >> countBits: anInteger [
+	| count current |
+	count := 0.
+	current := anInteger.
+	[ current = 0 ]
+		whileFalse: [ (current bitAnd: 1) == 1
+				ifTrue: [ count := count + 1 ].
+			current := current bitShift: -1 ].
+	^ count
 ]
 
 { #category : #private }
@@ -289,6 +325,26 @@ SmaCCIntegerSet >> initialize [
 ]
 
 { #category : #private }
+SmaCCIntegerSet >> merge: myData with: otherData [
+	| value includeAll |
+	(myData = 0 or: [ otherData = 1 ])
+		ifTrue: [ ^ otherData ].
+	(myData = 1 or: [ otherData = 0 ])
+		ifTrue: [ ^ myData ].
+	includeAll := true.
+	(myData isKindOf: ByteArray)
+		ifTrue: [ 1 to: myData size do: [ :i | 
+				myData at: i put: (value := (myData at: i) bitOr: (otherData at: i)).
+				includeAll := includeAll and: [ value = 255 ] ] ]
+		ifFalse: [ 1 to: myData size do: [ :i | 
+				myData at: i put: (value := self merge: (myData at: i) with: (otherData at: i)).
+				includeAll := includeAll and: [ value = 1 ] ] ].
+	includeAll
+		ifTrue: [ ^ 1 ].
+	^ myData
+]
+
+{ #category : #private }
 SmaCCIntegerSet >> nextRunFrom: currentRun [
 	^ currentRun // self defaultRunSize
 ]
@@ -301,35 +357,27 @@ SmaCCIntegerSet >> postCopy [
 
 { #category : #private }
 SmaCCIntegerSet >> remove: anInteger from: currentData startingAt: currentStart withRun: currentRun [
-	| newData isBits offset |
+	| newData isBits offset value |
 	currentData == 0
 		ifTrue: [ ^ 0 ].
 	isBits := currentRun = self byteSize.
 	newData := currentData == 1
-		ifTrue:
-			[ isBits
+		ifTrue: [ isBits
 				ifTrue: [ ByteArray new: self defaultRunSize withAll: 16rFF ]
 				ifFalse: [ Array new: self defaultRunSize withAll: 1 ] ]
 		ifFalse: [ currentData ].
 	offset := (anInteger - currentStart) // currentRun + 1.
 	isBits
-		ifTrue:
-			[ newData
+		ifTrue: [ newData at: offset put: (value := (newData at: offset) bitAt: (anInteger - currentStart) \\ currentRun + 1 put: 0) ]
+		ifFalse: [ newData
 				at: offset
 				put:
-					((newData at: offset)
-						bitAt: (anInteger - currentStart) \\ currentRun + 1
-						put: 0) ]
-		ifFalse:
-			[ newData
-				at: offset
-				put:
-					(self
+					(value := self
 						remove: anInteger
 						from: (newData at: offset)
 						startingAt: currentStart + ((offset - 1) * currentRun)
 						withRun: (self nextRunFrom: currentRun)) ].
-	^ (newData allSatisfy: [ :each | each == 0 ])
+	^ (value = 0 and: [ newData allSatisfy: [ :each | each == 0 ] ])
 		ifTrue: [ 0 ]
 		ifFalse: [ newData ]
 ]
@@ -349,6 +397,35 @@ SmaCCIntegerSet >> remove: anInteger ifAbsent: aBlock [
 { #category : #private }
 SmaCCIntegerSet >> run [
 	^ run
+]
+
+{ #category : #enumerating }
+SmaCCIntegerSet >> select: aBlock [
+	| selected |
+	selected := self copy.
+	self
+		do: [ :each | 
+			(aBlock value: each)
+				ifFalse: [ selected remove: each ] ].
+	^ selected
+]
+
+{ #category : #accessing }
+SmaCCIntegerSet >> size [
+	^ self sizeOf: data withRun: run
+]
+
+{ #category : #private }
+SmaCCIntegerSet >> sizeOf: currentData withRun: currentRun [
+	| nextRun |
+	currentData = 0
+		ifTrue: [ ^ 0 ].
+	currentData = 1
+		ifTrue: [ ^ currentRun * self defaultRunSize ].
+	currentRun = self byteSize
+		ifTrue: [ ^ currentData inject: 0 into: [ :sum :each | sum + (self countBits: each) ] ]
+		ifFalse: [ nextRun := self nextRunFrom: currentRun.
+			^ currentData inject: 0 into: [ :sum :each | sum + (self sizeOf: each withRun: nextRun) ] ]
 ]
 
 { #category : #private }

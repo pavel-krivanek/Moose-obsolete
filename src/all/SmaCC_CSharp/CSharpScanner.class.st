@@ -837,13 +837,13 @@ CSharpScanner >> scan9 [
 
 { #category : #generated }
 CSharpScanner >> scanForToken [
-	state == #interpolatedString
+	scope == #interpolatedString
 		ifTrue:
 			[ ^ self scanForTokenX2 ].
-	state == #interpolatedVerbatimString
+	scope == #interpolatedVerbatimString
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
-	state == #default
+	scope == #default
 		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch
 ]

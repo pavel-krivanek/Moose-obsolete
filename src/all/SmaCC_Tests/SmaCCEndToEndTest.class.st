@@ -675,10 +675,10 @@ SmaCCEndToEndTest >> testExcludeScannerState [
 	self assert: (self parserClass parse: 'b').
 	self should: [ self parserClass parse: 'a' ] raise: SmaCCParserError.
 	parser := self parserClass on: (ReadStream on: 'a').
-	parser state: #a.
+	parser scope: #a.
 	self deny: parser parse.
 	parser := self parserClass on: (ReadStream on: 'b').
-	parser state: #a.
+	parser scope: #a.
 	self should: [ parser parse ] raise: SmaCCParserError
 ]
 
@@ -1875,13 +1875,13 @@ SmaCCEndToEndTest >> testRightRecursive [
 ]
 
 { #category : #tests }
-SmaCCEndToEndTest >> testScannerState [
+SmaCCEndToEndTest >> testScannerScopes [
 	| parserCompiler parser |
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
 	parserCompiler
 		buildDefinition:
-			'%states a ;
+			'%scopes a ;
 			<foo> : b;
 			a <bar> : a;
 			Start : <foo> {true} | <bar> {false};'.
@@ -1889,10 +1889,10 @@ SmaCCEndToEndTest >> testScannerState [
 	self assert: (self parserClass parse: 'b').
 	self should: [ self parserClass parse: 'a' ] raise: SmaCCParserError.
 	parser := self parserClass on: (ReadStream on: 'a').
-	parser state: #a.
+	parser scope: #a.
 	self deny: parser parse.
 	parser := self parserClass on: (ReadStream on: 'b').
-	parser state: #a.
+	parser scope: #a.
 	self assert: parser parse
 ]
 

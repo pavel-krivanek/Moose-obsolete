@@ -4,6 +4,13 @@ Class {
 	#category : #SmaCC_Development
 }
 
+{ #category : #'instance creation' }
+SmaCCCharacterSet class >> withAllCharactersTo: aCharacter [
+	^ self new
+		initializeWithAllCharactersTo: aCharacter;
+		yourself
+]
+
 { #category : #adding }
 SmaCCCharacterSet >> add: aCharacter [
 	super add: aCharacter asInteger.
@@ -26,6 +33,26 @@ SmaCCCharacterSet >> do: aBlock [
 { #category : #testing }
 SmaCCCharacterSet >> includes: aCharacter [
 	^ super includes: aCharacter asInteger
+]
+
+{ #category : #initialize-release }
+SmaCCCharacterSet >> initializeWithAllCharactersTo: aCharacter [
+	| current index value |
+	self add: aCharacter.
+	current := data.
+	[ current isKindOf: Collection ]
+		whileTrue: [ index := 1.
+			[ (value := current at: index) = 0 ]
+				whileTrue: [ current
+						at: index
+						put:
+							((current isKindOf: ByteArray)
+								ifTrue: [ 255 ]
+								ifFalse: [ 1 ]).
+					index := index + 1 ].
+			(value isKindOf: Collection)
+				ifFalse: [ current at: index put: (value bitOr: value - 1) ].
+			current := value ]
 ]
 
 { #category : #removing }

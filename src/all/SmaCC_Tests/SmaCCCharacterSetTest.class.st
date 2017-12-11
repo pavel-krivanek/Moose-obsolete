@@ -17,6 +17,23 @@ SmaCCCharacterSetTest >> supportsLargeValues [
 	^ true
 ]
 
+{ #category : #tests }
+SmaCCCharacterSetTest >> testAllCharacterRange [
+	| collection |
+	collection := SmaCCCharacterSet withAllCharactersTo: (Character value: 254).
+	self assert: collection size = 255.
+	self deny: (collection includes: (Character value: 255)).
+	self assert: (collection includes: (Character value: 254)).
+	self assert: (collection includes: (Character value: 0)).
+	self supportsLargeValues
+		ifFalse: [ ^ self ].
+	collection := SmaCCCharacterSet withAllCharactersTo: (Character value: (1 << 21) - 1).
+	self assert: collection size = (1 << 21).
+	self deny: (collection includes: (Character value: 1 << 21)).
+	self assert: (collection includes: (Character value: (1 << 21) - 1)).
+	self assert: (collection includes: (Character value: 0))
+]
+
 { #category : #private }
 SmaCCCharacterSetTest >> value: anInteger [
 	^ Character

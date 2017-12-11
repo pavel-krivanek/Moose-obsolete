@@ -100,7 +100,7 @@ MAStringReader >> visitMultipleOptionDescription: aDescription [
 { #category : #visiting-description }
 MAStringReader >> visitNumberDescription: aDescription [
 	| isContentsValid |
-	isContentsValid := NumberParser isNumber: self contents.
+	isContentsValid := NumberParser isValidNumber: self contents.
 	isContentsValid ifFalse: [ MAReadError signal ].
 	super visitNumberDescription: aDescription
 ]

@@ -4,6 +4,11 @@ Class {
 	#category : #SmaCC_Tests
 }
 
+{ #category : #testing }
+SmaCCBitCollectionTest class >> isAbstract [
+	^ self == SmaCCBitCollectionTest
+]
+
 { #category : #private }
 SmaCCBitCollectionTest >> byteSizeCollection [
 	^ (0 to: 255) collect: self
@@ -49,6 +54,31 @@ SmaCCBitCollectionTest >> testABunch [
 			(self byteSizeCollection
 				allSatisfy: [ :each | collection includes: each ]).
 	self assert: collection asArray = self byteSizeCollection asArray
+]
+
+{ #category : #tests }
+SmaCCBitCollectionTest >> testAddAll [
+	| collection large medium |
+	self supportsLargeValues
+		ifFalse: [ ^ self ].
+	large := self newCollection
+		addAll: self largeCollection;
+		yourself.
+	medium := self newCollection
+		addAll: self mediumCollection;
+		yourself.
+	collection := large copy.
+	collection addAll: medium.
+	self assert: collection size = large size.
+	collection := medium copy.
+	collection addAll: large.
+	self assert: collection size = large size.
+	collection := self newCollection.
+	collection addAll: medium.
+	self assert: collection size = medium size.
+	collection := self newCollection.
+	collection addAll: large.
+	self assert: collection size = large size
 ]
 
 { #category : #tests }

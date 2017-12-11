@@ -36,7 +36,7 @@ Class {
 		'lastOutputStreamMatchPosition',
 		'lastMatchWasEmpty',
 		'returnMatchBlock',
-		'state',
+		'scope',
 		'comments'
 	],
 	#classInstVars : [
@@ -107,7 +107,7 @@ SmaCCScanner >> checkForKeyword: aString [
 	entry isInteger
 		ifTrue: [ matchActions := entry ]
 		ifFalse:
-			[ (entry last includes: state)
+			[ (entry last includes: scope)
 				ifFalse: [ ^ self ].
 			matchActions := entry first ].
 	matchActions isInteger
@@ -184,7 +184,7 @@ SmaCCScanner >> initialize [
 	super initialize.
 	outputStream := WriteStream with: String new.
 	lastMatchWasEmpty := true.
-	state := #default.
+	scope := #default.
 	comments := OrderedCollection new
 ]
 
@@ -331,18 +331,18 @@ SmaCCScanner >> scannerError [
 ]
 
 { #category : #accessing }
+SmaCCScanner >> scope [
+	^ scope
+]
+
+{ #category : #accessing }
+SmaCCScanner >> scope: aSymbol [
+	scope := aSymbol
+]
+
+{ #category : #accessing }
 SmaCCScanner >> setPosition: anInteger [
 	^ stream position: anInteger
-]
-
-{ #category : #accessing }
-SmaCCScanner >> state [
-	^ state
-]
-
-{ #category : #accessing }
-SmaCCScanner >> state: aSymbol [
-	state := aSymbol
 ]
 
 { #category : #private }

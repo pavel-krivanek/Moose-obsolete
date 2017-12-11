@@ -18,9 +18,9 @@ Class {
 }
 
 { #category : #'instance creation' }
-SmaCCCharacterRENode class >> characters: aString [
+SmaCCCharacterRENode class >> characters: aSmaCCCharacterSet [
 	^ self new
-		assignCharacters: aString;
+		characters: aSmaCCCharacterSet;
 		yourself
 ]
 
@@ -32,23 +32,6 @@ SmaCCCharacterRENode >> asNFAStartingWith: aSmaCCNode [
 	endNode action: action.
 	startNode addEdgeTo: endNode onCharacters: characters.
 	^ endNode
-]
-
-{ #category : #private }
-SmaCCCharacterRENode >> assignCharacters: newCharacters [
-	| sortedCharacters stream |
-	sortedCharacters := newCharacters
-		asSortedCollection: [ :a :b | a asInteger < b asInteger ].
-	stream := WriteStream with: String new.
-	sortedCharacters
-		inject: nil
-		into:
-			[ :sum :each | 
-			(sum = each
-				or: [ each asInteger > SmaCCGrammar maximumCharacterValue ])
-				ifFalse: [ stream nextPut: each ].
-			each ].
-	characters := stream contents
 ]
 
 { #category : #testing }
@@ -67,8 +50,8 @@ SmaCCCharacterRENode >> characters [
 ]
 
 { #category : #initialize-release }
-SmaCCCharacterRENode >> characters: aString [
-	characters := aString
+SmaCCCharacterRENode >> characters: aSmaCCCharacterSet [
+	characters := aSmaCCCharacterSet
 ]
 
 { #category : #initialize-release }
@@ -81,14 +64,13 @@ SmaCCCharacterRENode >> initialize [
 SmaCCCharacterRENode >> makeCaseInsensitive [
 	| newCharacters |
 	ignoreCase := true.
-	newCharacters := Set new.
+	newCharacters := characters copy.
 	characters
-		do:
-			[ :each | 
+		do: [ :each | 
 			newCharacters
 				add: each asLowercase;
 				add: each asUppercase ].
-	self assignCharacters: newCharacters
+	characters := newCharacters
 ]
 
 { #category : #accessing }
@@ -129,22 +111,18 @@ SmaCCCharacterRENode >> printOn: aStream [
 	aStream nextPut: $[.
 	allCharacters := characters.
 	characters size > 128
-		ifTrue:
-			[ aStream nextPut: $^.
-			allCharacters := ((0 to: SmaCCGrammar maximumCharacterValue)
-				collect: [ :each | Character value: each ])
-				reject: [ :each | characters includes: each ] ].
+		ifTrue: [ allCharacters := ((0 to: SmaCCGrammar maximumCharacterValue) collect: [ :each | Character value: each ])
+				reject: [ :each | characters includes: each ].
+			allCharacters size < characters size
+				ifTrue: [ aStream nextPut: $^ ] ].
 	allCharacters do: [ :each | self printCharacter: each on: aStream ].
 	aStream nextPut: $]
 ]
 
 { #category : #constructing }
 SmaCCCharacterRENode >> | aSmaCCRegularExpressionNode [
-	| newCharacters |
 	(self canMergeWith: aSmaCCRegularExpressionNode)
 		ifFalse: [ ^ super | aSmaCCRegularExpressionNode ].
-	newCharacters := (characters , aSmaCCRegularExpressionNode characters)
-		asSet.
-	self assignCharacters: newCharacters.
+	characters := characters , aSmaCCRegularExpressionNode characters.
 	^ self
 ]

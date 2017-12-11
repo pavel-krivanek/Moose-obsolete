@@ -66,6 +66,11 @@ SmaCCDeferredChoice >> performOnSmaCCParser: aSmaCCParser [
 ]
 
 { #category : #accessing }
+SmaCCDeferredChoice >> possibleItems [
+	^ possibleItems
+]
+
+{ #category : #accessing }
 SmaCCDeferredChoice >> possibleItems: aSequenceableCollection [
 	possibleItems := aSequenceableCollection
 ]

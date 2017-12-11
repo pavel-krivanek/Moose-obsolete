@@ -9,7 +9,7 @@ Class {
 
 { #category : #generated-accessing }
 JSParser class >> cacheId [
-	^'2017-05-29T12:14:11.820993-05:00'
+	^'2017-11-29T08:17:34.055296-06:00'
 ]
 
 { #category : #generated }
@@ -18,7 +18,7 @@ JSParser class >> definitionComment [
 %prefix JS;
 %suffix Node;
 
-%states default template;
+%scopes default template;
 
 %start Expression Statement Script Module;
 
@@ -1063,11 +1063,11 @@ JSParser >> actionsForCurrentToken [
 								ifTrue: [ scannerState := stackItem ].
 							i := i - 1 ].
 					scannerState notNil
-						ifTrue: [ self state: scannerState.
+						ifTrue: [ self scope: scannerState.
 							self position: currentToken startPosition - 1.
 							currentToken := nil.
 							self getNextToken.
-							self state: #default.
+							self scope: #default.
 							(currentToken ids includes: scanner rightBraceId)
 								ifTrue: [ ^ actions ].
 							^ self actionsForCurrentToken ] ] ].

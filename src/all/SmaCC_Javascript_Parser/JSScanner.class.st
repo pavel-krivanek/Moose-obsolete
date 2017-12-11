@@ -703,10 +703,10 @@ JSScanner >> scan9 [
 
 { #category : #generated }
 JSScanner >> scanForToken [
-	state == #template
+	scope == #template
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
-	state == #default
+	scope == #default
 		ifTrue: [ self step.
 			currentCharacter == $!
 				ifTrue: [ ^ self scan1 ].

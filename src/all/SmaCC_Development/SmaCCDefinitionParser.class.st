@@ -18,15 +18,16 @@ Class {
 
 { #category : #generated-accessing }
 SmaCCDefinitionParser class >> cacheId [
-	^'2016-10-24T21:20:38.203124-05:00'
+	^'2017-12-09T09:50:23.979001-06:00'
 ]
 
 { #category : #generated }
 SmaCCDefinitionParser class >> definitionComment [
-"%states default scanner directives parser;
+"%scopes default scanner directives parser;
 
-directives <states>
-	: states 
+directives <scopes>
+	: scopes
+	| states 
 	;
 directives <excludes> 
 	: excludes 
@@ -174,8 +175,8 @@ DirectiveLine
 	: StartDirective <directive> Directive EndDirective <semicolon>
 	;
 Directive 
-	: ExcludeStatesLine 
-	| StatesLine
+	: ExcludeScopesLine 
+	| ScopesLine
 	| RootClassLine
 	| SuperclassLine
 	| AttributesLine
@@ -192,25 +193,25 @@ Directive
 	| AnnotateTokens
 	;
 StartDirective 
-	: 		{self state: #directives}
+	: 		{self scope: #directives}
 	;
 EndDirective 
-	: 		{self state: #default}
+	: 		{self scope: #default}
 	;
-StatesLine 
-	: <states> States
+ScopesLine 
+	: <scopes> Scopes
 	;
-States 
+Scopes 
 	: 
-	| States Symbol 
+	| Scopes Symbol 
 			{scannerDefinition addState: '2'}
 	;
-ExcludeStatesLine 
-	: <excludes> ExcludeStates
+ExcludeScopesLine 
+	: <excludes> ExcludeScopes
 	;
-ExcludeStates 
-:
-	| ExcludeStates Symbol 
+ExcludeScopes 
+	:
+	| ExcludeScopes Symbol 
 			{scannerDefinition addExcludeState: '2'}
 	;
 RootClassLine 
@@ -337,10 +338,10 @@ RegexRule
 				yourself}
 	;
 StartRegex
-	: 		{self state: #scanner}
+	: 		{self scope: #scanner}
 	;
 EndRegex
-	: 		{self state: #default}
+	: 		{self scope: #default}
 	;
 Symbol 
 	: <symbolname> 
@@ -356,9 +357,9 @@ Regex
 	;
 RegexTerm
 	: <character> 
-			{SmaCCCharacterRENode characters: '1' value}
+			{SmaCCCharacterRENode characters: (SmaCCCharacterSet withAll: '1' value)}
 	| <directive>
-			{SmaCCCharacterRENode characters: '1' value}
+			{SmaCCCharacterRENode characters: (SmaCCCharacterSet withAll: '1' value)}
 	| <anycharacter> 
 			{SmaCCCharacterRENode characters: self allCharacters}
 	| <backslashcharacter> 
@@ -370,7 +371,7 @@ RegexTerm
 	| <tokenname> 
 			{(scannerDefinition tokenNamed: '1' value ifAbsentPut: [self generateImplicitToken: '1']) copy}
 	| <symbolname> 
-			{SmaCCSequenceRENode nodes: ('1' value asOrderedCollection collect: [:each | SmaCCCharacterRENode characters: (String with: each)])}
+			{SmaCCSequenceRENode nodes: ('1' value asOrderedCollection collect: [:each | SmaCCCharacterRENode characters: (SmaCCCharacterSet with: each)])}
 	| RegexTerm ""*""	
 			{'1' repeat}
 	| RegexTerm ""+"" 
@@ -394,10 +395,10 @@ ProductionRule
 			symbol}
 	;
 StartProduction
-	: 		{self state: #parser}
+	: 		{self scope: #parser}
 	;
 EndProduction
-	: 		{self state: #default}
+	: 		{self scope: #default}
 	;
 ParserRules
 	: ParserRules ""|"" ParserRule 
@@ -470,7 +471,7 @@ SmaCCDefinitionParser >> allCharacters [
 
 { #category : #private-strings }
 SmaCCDefinitionParser >> carriageReturnString [
-	^ String with: (Character value: 13)
+	^ SmaCCCharacterSet with: (Character value: 13)
 ]
 
 { #category : #private }
@@ -519,7 +520,7 @@ SmaCCDefinitionParser >> createDefaultClassesForSymbol: aString [
 
 { #category : #private-strings }
 SmaCCDefinitionParser >> formFeedString [
-	^ String with: (Character value: 12)
+	^ SmaCCCharacterSet with: (Character value: 12)
 ]
 
 { #category : #private }
@@ -542,7 +543,7 @@ SmaCCDefinitionParser >> grammar: aSmaCCGrammar [
 
 { #category : #private }
 SmaCCDefinitionParser >> hexStringFrom: aStream [
-	^ String with: (Character value: (self hexValueFrom: aStream))
+	^ SmaCCCharacterSet with: (Character value: (self hexValueFrom: aStream))
 ]
 
 { #category : #private }
@@ -589,7 +590,7 @@ SmaCCDefinitionParser >> isWhitespace: each [
 
 { #category : #private-strings }
 SmaCCDefinitionParser >> newlineString [
-	^ String with: (Character value: 10)
+	^ SmaCCCharacterSet with: (Character value: 10)
 ]
 
 { #category : #private }
@@ -602,20 +603,15 @@ SmaCCDefinitionParser >> nodeFor: aStream [
 	char == $n
 		ifTrue: [ ^ SmaCCCharacterRENode characters: self newlineString ].
 	char == $r
-		ifTrue: [ ^ SmaCCCharacterRENode
-				characters: self carriageReturnString ].
+		ifTrue: [ ^ SmaCCCharacterRENode characters: self carriageReturnString ].
 	char == $t
 		ifTrue: [ ^ SmaCCCharacterRENode characters: self tabString ].
 	char == $v
 		ifTrue: [ ^ SmaCCCharacterRENode characters: self verticalTabString ].
 	char == $c
-		ifTrue:
-			[ ^ SmaCCCharacterRENode
-				characters:
-					(String with: (Character value: aStream next asInteger - $A asInteger)) ].
+		ifTrue: [ ^ SmaCCCharacterRENode characters: (SmaCCCharacterSet with: (Character value: aStream next asInteger - $A asInteger)) ].
 	char == $x
-		ifTrue: [ ^ SmaCCCharacterRENode
-				characters: (self hexStringFrom: aStream) ].
+		ifTrue: [ ^ SmaCCCharacterRENode characters: (self hexStringFrom: aStream) ].
 	char == $d
 		ifTrue: [ block := [ :each | self isDigit: each ] ].
 	char == $D
@@ -629,21 +625,18 @@ SmaCCDefinitionParser >> nodeFor: aStream [
 	char == $W
 		ifTrue: [ block := [ :each | (self isLetterOrDigit: each) not ] ].
 	block isNil
-		ifTrue: [ ^ SmaCCCharacterRENode characters: (String with: char) ].
-	^ SmaCCCharacterRENode
-		characters: (String withAll: (self allCharacters select: block))
+		ifTrue: [ ^ SmaCCCharacterRENode characters: (SmaCCCharacterSet with: char) ].
+	^ SmaCCCharacterRENode characters: (self allCharacters select: block)
 ]
 
 { #category : #private }
 SmaCCDefinitionParser >> parseCharacterBlock: aToken [
 	| characters aStream invert node |
-	aStream := ReadStream
-		on: (aToken value copyFrom: 2 to: aToken value size - 1).
+	aStream := ReadStream on: (aToken value copyFrom: 2 to: aToken value size - 1).
 	characters := OrderedCollection new.
 	invert := aStream peekFor: $^.
-	[ aStream atEnd ]
-		whileFalse: [ characters addAll: (self charactersFor: aStream in: aToken) ].
-	node := SmaCCCharacterRENode characters: (String withAll: characters).
+	[ aStream atEnd ] whileFalse: [ characters addAll: (self charactersFor: aStream in: aToken) ].
+	node := SmaCCCharacterRENode characters: (SmaCCCharacterSet withAll: characters).
 	invert
 		ifTrue: [ node := SmaCCNotRENode on: node ].
 	^ node
@@ -676,11 +669,11 @@ SmaCCDefinitionParser >> reduceActionForClassList2: nodes [
 
 { #category : #'generated-reduction actions' }
 SmaCCDefinitionParser >> reduceActionForEndDirective1: nodes [
-	^ self state: #default
+	^ self scope: #default
 ]
 
 { #category : #'generated-reduction actions' }
-SmaCCDefinitionParser >> reduceActionForExcludeStates2: nodes [
+SmaCCDefinitionParser >> reduceActionForExcludeScopes2: nodes [
 	^ scannerDefinition addExcludeState: (nodes at: 2)
 ]
 
@@ -854,7 +847,10 @@ SmaCCDefinitionParser >> reduceActionForRegexTerm12: nodes [
 
 { #category : #'generated-reduction actions' }
 SmaCCDefinitionParser >> reduceActionForRegexTerm2: nodes [
-	^ SmaCCCharacterRENode characters: (nodes at: 1) value
+	^ SmaCCCharacterRENode
+		characters:
+			(SmaCCCharacterSet withAll:
+				(nodes at: 1) value)
 ]
 
 { #category : #'generated-reduction actions' }
@@ -889,7 +885,8 @@ SmaCCDefinitionParser >> reduceActionForRegexTerm8: nodes [
 	^ SmaCCSequenceRENode
 		nodes:
 			((nodes at: 1) value asOrderedCollection
-				collect: [ :each | SmaCCCharacterRENode characters: (String with: each) ])
+				collect:
+					[ :each | SmaCCCharacterRENode characters: (SmaCCCharacterSet with: each) ])
 ]
 
 { #category : #'generated-reduction actions' }
@@ -924,18 +921,23 @@ SmaCCDefinitionParser >> reduceActionForRule3: nodes [
 ]
 
 { #category : #'generated-reduction actions' }
+SmaCCDefinitionParser >> reduceActionForScopes2: nodes [
+	^ scannerDefinition addState: (nodes at: 2)
+]
+
+{ #category : #'generated-reduction actions' }
 SmaCCDefinitionParser >> reduceActionForStartDirective1: nodes [
-	^ self state: #directives
+	^ self scope: #directives
 ]
 
 { #category : #'generated-reduction actions' }
 SmaCCDefinitionParser >> reduceActionForStartProduction1: nodes [
-	^ self state: #parser
+	^ self scope: #parser
 ]
 
 { #category : #'generated-reduction actions' }
 SmaCCDefinitionParser >> reduceActionForStartRegex1: nodes [
-	^ self state: #scanner
+	^ self scope: #scanner
 ]
 
 { #category : #'generated-reduction actions' }
@@ -952,11 +954,6 @@ SmaCCDefinitionParser >> reduceActionForStartingTokens2: nodes [
 		addStartingSymbol:
 			(grammar nonTerminalSymbolNamed:
 				(nodes at: 2) value)
-]
-
-{ #category : #'generated-reduction actions' }
-SmaCCDefinitionParser >> reduceActionForStates2: nodes [
-	^ scannerDefinition addState: (nodes at: 2)
 ]
 
 { #category : #'generated-reduction actions' }
@@ -1089,8 +1086,8 @@ SmaCCDefinitionParser >> reduceTable [
 	#(76 1 #liftFirstValue:) 
 	#(82 2 #reduceActionForParserRule2:) 
 	#(83 2 #reduceActionForTerms2:) 
-	#(66 2 #reduceActionForStates2:) 
-	#(53 2 #reduceActionForExcludeStates2:) 
+	#(66 2 #reduceActionForScopes2:) 
+	#(53 2 #reduceActionForExcludeScopes2:) 
 	#(56 0 #reduceActionForClassList1:) 
 	#(58 0 #reduceActionForClassList1:) 
 	#(62 2 #reduceFor:) 
@@ -1128,12 +1125,12 @@ SmaCCDefinitionParser >> reportCharacterBlockErrorForToken: aToken [
 
 { #category : #generated }
 SmaCCDefinitionParser >> symbolNames [
-	^ #('"("' '"|"' '"*"' '"error"' '"+"' '")"' '"?"' '<states>' '<excludes>' '<root>' '<hierarchy>' '<attributes>' '<prefix>' '<suffix>' '<left>' '<right>' '<nonassoc>' '<id>' '<start>' '<glr>' '<ignorecase>' '<ignorevariables>' '<annotate_tokens>' '<whitespace>' '<tokenname>' '<symbolname>' '<keyword>' '<comment>' '<code>' '<variablename>' '<production>' '<directive>' '<semicolon>' '<backslashcharacter>' '<characterblock>' '<repeat>' '<character>' '<anycharacter>' '<classLeft>' '<classRight>' 'RightLine' 'NonAssociativeLine' 'IdMethodLine' 'DirectiveLine' 'GLR' 'IgnoreCase' 'IgnoredVariables' 'AnnotateTokens' 'ProductionRule' 'LeftLine' 'ExcludeStatesLine' 'Rule' 'ExcludeStates' 'B e g i n' 'File' 'ClassList' 'Rules' 'IvarList' 'SuffixLine' 'PrefixLine' 'AttributesLine' 'TokenList' 'SuperclassLine' 'RootClassLine' 'Term' 'States' 'IdTokens' 'StatesLine' 'StartingTokens' 'EndDirective' 'StartDirective' 'IgnoredVariableList' 'Directive' 'Symbol' 'StartRegex' 'Regex' 'EndRegex' 'RegexTerm' 'StartProduction' 'ParserRules' 'EndProduction' 'ParserRule' 'Terms' 'E O F' 'error' 'RegexRule' 'StartLine')
+	^ #('"("' '"|"' '"*"' '"error"' '"+"' '")"' '"?"' '<scopes>' '<excludes>' '<root>' '<hierarchy>' '<attributes>' '<prefix>' '<suffix>' '<left>' '<right>' '<nonassoc>' '<id>' '<start>' '<glr>' '<ignorecase>' '<ignorevariables>' '<annotate_tokens>' '<whitespace>' '<tokenname>' '<symbolname>' '<keyword>' '<comment>' '<code>' '<variablename>' '<production>' '<directive>' '<semicolon>' '<backslashcharacter>' '<characterblock>' '<repeat>' '<character>' '<anycharacter>' '<classLeft>' '<classRight>' 'RightLine' 'NonAssociativeLine' 'IdMethodLine' 'DirectiveLine' 'GLR' 'IgnoreCase' 'IgnoredVariables' 'AnnotateTokens' 'ProductionRule' 'LeftLine' 'ExcludeScopesLine' 'Rule' 'ExcludeScopes' 'B e g i n' 'File' 'ClassList' 'Rules' 'IvarList' 'SuffixLine' 'PrefixLine' 'AttributesLine' 'TokenList' 'SuperclassLine' 'RootClassLine' 'Term' 'Scopes' 'IdTokens' 'ScopesLine' 'StartingTokens' 'EndDirective' 'StartDirective' 'IgnoredVariableList' 'Directive' 'Symbol' 'StartRegex' 'Regex' 'EndRegex' 'RegexTerm' 'StartProduction' 'ParserRules' 'EndProduction' 'ParserRule' 'Terms' 'E O F' 'error' 'RegexRule' 'StartLine')
 ]
 
 { #category : #private-strings }
 SmaCCDefinitionParser >> tabString [
-	^ '	'
+	^ SmaCCCharacterSet withAll: '	'
 ]
 
 { #category : #generated }
@@ -1289,7 +1286,7 @@ SmaCCDefinitionParser >> verifyCodeToken: codeToken for: aSmaCCRHS [
 
 { #category : #private-strings }
 SmaCCDefinitionParser >> verticalTabString [
-	^ String with: (Character value: 11)
+	^ SmaCCCharacterSet with: (Character value: 11)
 ]
 
 { #category : #private }

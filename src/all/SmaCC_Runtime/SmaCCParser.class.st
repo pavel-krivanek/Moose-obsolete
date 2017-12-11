@@ -129,7 +129,10 @@ SmaCCParser class >> parse: aString startingAt: anInteger onError: aBlock [
 SmaCCParser class >> parseFile: aString [
 	| stream |
 	stream := FileStream readOnlyFileNamed: aString.
-	^ [ self parseStream: stream startingAt: self defaultStartingState ]
+	^ [ (self parseStream: stream startingAt: self defaultStartingState)
+		ifNotNil: [ :each | 
+			(each isKindOf: SmaCCParseNode)
+				ifTrue: [ each filename: aString ] ] ]
 		ensure: [ stream close ]
 ]
 
@@ -563,6 +566,16 @@ SmaCCParser >> scanner: aScanner [
 	scanner := aScanner
 ]
 
+{ #category : #accessing }
+SmaCCParser >> scope [
+	^ scanner scope
+]
+
+{ #category : #accessing }
+SmaCCParser >> scope: aSymbol [
+	scanner scope: aSymbol
+]
+
 { #category : #initialize-release }
 SmaCCParser >> setDefaultStartingStateIfNone [
 	stateStack isNil
@@ -584,16 +597,6 @@ SmaCCParser >> shift: stateIndex [
 { #category : #private }
 SmaCCParser >> shiftAction [
 	^ 2r01
-]
-
-{ #category : #accessing }
-SmaCCParser >> state [
-	^ scanner state
-]
-
-{ #category : #accessing }
-SmaCCParser >> state: aSymbol [
-	scanner state: aSymbol
 ]
 
 { #category : #private }

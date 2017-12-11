@@ -29,7 +29,7 @@ SmaCCReplaceExpressionScanner >> isValidCode [
 
 { #category : #accessing }
 SmaCCReplaceExpressionScanner >> next [
-	state = #code
+	scope = #code
 		ifTrue:
 			[ self resetScanner.
 			returnMatchBlock := [ :match | ^ match ].
@@ -46,7 +46,7 @@ SmaCCReplaceExpressionScanner >> scanCode [
 			[ self isValidCode
 				ifTrue:
 					[ stream skip: -1.
-					state := #default.
+					scope := #default.
 					^ self recordAndReportMatch: (Array with: self codeExpressionId) ] ].
 	stream atEnd
 		ifTrue: [ ^ self reportLastMatch ].
@@ -55,7 +55,7 @@ SmaCCReplaceExpressionScanner >> scanCode [
 
 { #category : #generated }
 SmaCCReplaceExpressionScanner >> scanForToken [
-	state == #default
+	scope == #default
 		ifTrue: [ self step.
 			currentCharacter == $`
 				ifTrue: [ self recordMatch: #(6).
@@ -68,10 +68,10 @@ SmaCCReplaceExpressionScanner >> scanForToken [
 					self step.
 					currentCharacter ~~ $` ] whileTrue ].
 			^ self reportLastMatch ].
-	state == #expression
+	scope == #expression
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
-	state == #code
+	scope == #code
 		ifTrue: [ (self scanForString: '``')
 				ifTrue: [ ^ self recordAndReportMatch: #(7) ] ].
 	^ self reportLastMatch

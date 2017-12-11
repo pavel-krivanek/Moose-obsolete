@@ -66,7 +66,7 @@ FAMIXAnnotationType >> initialize [
 		selector: #instances.
 	attributes := FMNullMultivalueLink 
 		on: self
-		opposite: #annotationType:
+		opposite: #parentAnnotationType:
 		selector: #attributes.
 
 

@@ -6,7 +6,7 @@ Class {
 
 { #category : #generated-accessing }
 DelphiFormParser class >> cacheId [
-	^'2016-11-10T18:45:03.209079+01:00'
+	^'2017-11-29T08:05:50.221075-06:00'
 ]
 
 { #category : #generated }
@@ -23,7 +23,7 @@ DelphiFormParser class >> definitionComment [
 	: true | false
 	;
 <LETTER> 
-	: [a-zA-Z_üäöÜÄÖ] 
+	: <isLetter>
 	;
 <DIGIT> 
 	: [0-9] 

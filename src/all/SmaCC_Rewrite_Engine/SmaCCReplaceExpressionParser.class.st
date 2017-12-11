@@ -6,7 +6,7 @@ Class {
 
 { #category : #generated-accessing }
 SmaCCReplaceExpressionParser class >> cacheId [
-	^'2016-10-24T21:11:10.116055-05:00'
+	^'2017-11-29T08:29:41.926877-06:00'
 ]
 
 { #category : #generated }
@@ -59,16 +59,16 @@ NodeReplace
 	: SwitchStateToExpression <backquote> PrefixModifiers <name> 'name' PostfixModifiers SwitchStateToDefault <backquote> {{NodeReplace}}
 	;
 SwitchStateToDefault
-	: {self state: #default. nil}
+	: {self scope: #default. nil}
 	;
 SwitchStateToExpression
-	: {self state: #expression. nil}
+	: {self scope: #expression. nil}
 	;
 CodeReplace
 	: SwitchStateToCode <double_backquote> <codeExpression> 'code' SwitchStateToDefault <double_backquote> {{CodeReplace}}
 	;
 SwitchStateToCode
-	: {self state: #code. nil}
+	: {self scope: #code. nil}
 	;
 PrefixModifiers
 	: OptionalWhitespace 'beforeWhitespace' Characters 'beforePrefix' <end_of_expression_character> OptionalCharacters 'prefix'
@@ -185,19 +185,19 @@ SmaCCReplaceExpressionParser >> reduceActionForStringReplace1: nodes [
 
 { #category : #'generated-reduction actions' }
 SmaCCReplaceExpressionParser >> reduceActionForSwitchStateToCode1: nodes [
-	self state: #code.
+	self scope: #code.
 	^ nil
 ]
 
 { #category : #'generated-reduction actions' }
 SmaCCReplaceExpressionParser >> reduceActionForSwitchStateToDefault1: nodes [
-	self state: #default.
+	self scope: #default.
 	^ nil
 ]
 
 { #category : #'generated-reduction actions' }
 SmaCCReplaceExpressionParser >> reduceActionForSwitchStateToExpression1: nodes [
-	self state: #expression.
+	self scope: #expression.
 	^ nil
 ]
 

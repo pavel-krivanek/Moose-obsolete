@@ -18,7 +18,10 @@ SmaCCNFAtoDFA class >> convertToDFA: aSmaCCNode [
 SmaCCNFAtoDFA >> commonTransitionObjectsForEdges: edgeCollection [
 	^ edgeCollection
 		inject: edgeCollection first transitionObjects
-		into: [ :sum :each | sum select: [ :char | each includes: char ] ]
+		into: [ :sum :each | 
+			sum size < each transitionObjects size
+				ifTrue: [ sum select: [ :char | each includes: char ] ]
+				ifFalse: [ each transitionObjects select: [ :char | sum includes: char ] ] ]
 ]
 
 { #category : #algorithm }

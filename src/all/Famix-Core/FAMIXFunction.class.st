@@ -69,7 +69,6 @@ FAMIXFunction >> packageScope [
 
 { #category : #accessing }
 FAMIXFunction >> parentScope [
-	self deprecated: 'Please use container instead of parentScope'.
 	^ self container
 ]
 
