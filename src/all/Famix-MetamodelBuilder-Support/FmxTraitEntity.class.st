@@ -1,7 +1,7 @@
 Class {
 	#name : #FmxTraitEntity,
 	#superclass : #MooseEntity,
-	#category : #'Famix-MetamodelBuilder'
+	#category : #'Famix-MetamodelBuilder-Support'
 }
 
 { #category : #meta }

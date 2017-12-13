@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'builder'
 	],
-	#category : #'Famix-MetamodelBuilder'
+	#category : #'Famix-MetamodelBuilder-Core-Famix-MetamodelBuilder-Core'
 }
 
 { #category : #accessing }

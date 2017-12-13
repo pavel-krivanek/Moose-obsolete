@@ -69,7 +69,7 @@ Class {
 		'uNKNOWNSourceLanguage',
 		'unknownVariable'
 	],
-	#category : #'Famix-MetamodelBuilder'
+	#category : #'FamixNG-MetamodelGeneration'
 }
 
 { #category : #initialization }

@@ -6,7 +6,7 @@ Class {
 		'traitGeneralizations',
 		'classGeneralization'
 	],
-	#category : #'Famix-MetamodelBuilder'
+	#category : #'Famix-MetamodelBuilder-Core-Famix-MetamodelBuilder-Core'
 }
 
 { #category : #accessing }

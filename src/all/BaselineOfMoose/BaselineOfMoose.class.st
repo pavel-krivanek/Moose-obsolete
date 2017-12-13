@@ -439,7 +439,8 @@ BaselineOfMoose >> baselineMerlin: spec [
 BaselineOfMoose >> baselineMetamodelBuilder: spec [ 
     
 	#(
-		'Famix-MetamodelBuilder'
+		'Famix-MetamodelBuilder-Core'
+		'Famix-MetamodelBuilder-Support'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
 

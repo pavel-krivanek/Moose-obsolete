@@ -15,7 +15,7 @@ Class {
 		'builder',
 		'willGenerate'
 	],
-	#category : #'Famix-MetamodelBuilder'
+	#category : #'Famix-MetamodelBuilder-Core-Famix-MetamodelBuilder-Core'
 }
 
 { #category : #accessing }
