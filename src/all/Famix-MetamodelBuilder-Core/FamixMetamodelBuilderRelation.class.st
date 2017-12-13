@@ -9,7 +9,7 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelation >> -<> anotherClass [
 
 	| aRelation |
@@ -19,7 +19,7 @@ FamixMetamodelBuilderRelation >> -<> anotherClass [
 	^ aRelation.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelation >> <>- anotherClass [
 
 	^ self right relatedClass containsMany: anotherClass
@@ -142,21 +142,9 @@ FamixMetamodelBuilderRelation >> generatedWithMany: aRelationName [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> initialize [
-
-	cardinality := #one.
-	oppositeCardinality := #one.
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelation >> left [
 
 	^ side 
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> name [
-	^ name
 ]
 
 { #category : #accessing }

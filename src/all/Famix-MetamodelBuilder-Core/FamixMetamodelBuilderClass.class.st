@@ -2,7 +2,6 @@ Class {
 	#name : #FamixMetamodelBuilderClass,
 	#superclass : #FamixMetamodelBuilderBehavior,
 	#instVars : [
-		'generalization',
 		'traitGeneralizations',
 		'classGeneralization'
 	],

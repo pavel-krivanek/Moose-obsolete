@@ -49,7 +49,7 @@ FamixMetamodelBuilderTrait >> generateAccessors [
 
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 FamixMetamodelBuilderTrait >> initialize [
 
 	super initialize.
@@ -96,7 +96,7 @@ FamixMetamodelBuilderTrait >> slotDefinitions [
 	slotGroups := (self sides collect: [ :each | self slotFor: each ]) groupedBy: #name.
 	
 	"check that all slots with the same name have the same properties"
-	slotGroups values do: [ :similarSlots |
+	slotGroups valuesDo: [ :similarSlots |
 		self assert: (similarSlots collect: #name) asSet size = 1. ].
 		
 	^ slotGroups values collect: [ :each | each anyOne ].

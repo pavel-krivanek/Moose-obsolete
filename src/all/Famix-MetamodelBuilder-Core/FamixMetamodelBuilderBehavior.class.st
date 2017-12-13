@@ -11,13 +11,13 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderBehavior >> -<> anotherClass [
 
 	^ anotherClass containsMany: self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderBehavior >> <>- anotherClass [
 
 	^ self containsMany: anotherClass
@@ -60,7 +60,7 @@ FamixMetamodelBuilderBehavior >> builder: anObject [
 	builder := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'relations - named' }
 FamixMetamodelBuilderBehavior >> containsMany: otherClass [
 
 	| aRelation |
@@ -131,7 +131,7 @@ FamixMetamodelBuilderBehavior >> generateTraitsAssignmentsFor: aClass [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #generating }
 FamixMetamodelBuilderBehavior >> generatedManyRelation [
 
 	^ builder newRelation generatedWithMany: self pluralRelationName.

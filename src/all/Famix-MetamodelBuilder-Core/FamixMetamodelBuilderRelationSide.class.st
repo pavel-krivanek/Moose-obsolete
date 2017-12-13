@@ -68,10 +68,8 @@ FamixMetamodelBuilderRelationSide >> *-* aRelationSide [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> *-<> aRelationSide [
 
-	| aRelation |
-	
 	self container.
-	aRelation := self *- aRelationSide.
+	self *- aRelationSide.
 	
 
 	
@@ -125,10 +123,8 @@ FamixMetamodelBuilderRelationSide >> -* aRelationSide [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> -<> aRelationSide [
 
-	| aRelation |
-	
 	self container.
-	aRelation := self - aRelationSide.
+	self - aRelationSide.
 	
 
 	
@@ -137,10 +133,8 @@ FamixMetamodelBuilderRelationSide >> -<> aRelationSide [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> <>- aRelationSide [
 
-	| aRelation |
-	
 	aRelationSide container.
-	aRelation := self - aRelationSide.
+	self - aRelationSide.
 	
 
 	
@@ -149,10 +143,8 @@ FamixMetamodelBuilderRelationSide >> <>- aRelationSide [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> <>-* aRelationSide [
 
-	| aRelation |
-	
 	aRelationSide container.
-	aRelation := self -* aRelationSide.
+	self -* aRelationSide.
 	
 
 	
@@ -363,6 +355,7 @@ FamixMetamodelBuilderRelationSide >> relation: anObject [
 
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> source [
+
 	source := true.
 ]
 
@@ -373,6 +366,7 @@ FamixMetamodelBuilderRelationSide >> source: anObject [
 
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> target [
+
 	target := true.
 ]
 

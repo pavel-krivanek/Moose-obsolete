@@ -107,10 +107,10 @@ FamixMetamodelBuilder class >> famixProperties [
 { #category : #writing }
 FamixMetamodelBuilder class >> famixTraits [
 
-	| traits res |
+	| traits |
 	traits := FmxTraitEntity allSubclasses select: [ :each | each package name = 'Famix-General' ].
 
-	res := String streamContents: [ :s |
+	^ String streamContents: [ :s |
 		traits do: [ :each |
 			s << ('t', (each name withoutPrefix: #FmxT), ' := builder newTraitNamed: #', (each name withoutPrefix: #Fmx), '.').
 			s cr ] ].
@@ -133,9 +133,9 @@ FamixMetamodelBuilder class >> originalOppositeOf: aTrait slot: aSlot [
 { #category : #writing }
 FamixMetamodelBuilder class >> writeOppositeOriginalPropertiesOf: aTrait slot: aSlot to: aStream [
 
-	| original method  oppositeOriginal |
+	| method  oppositeOriginal |
 	
-	original := Smalltalk at: (#FAMIX, (aTrait name withoutPrefix: #FmxT)) asSymbol ifAbsent: [ ^ self ].
+	Smalltalk at: (#FAMIX, (aTrait name withoutPrefix: #FmxT)) asSymbol ifAbsent: [ ^ self ].
 	oppositeOriginal := self originalOppositeOf: aTrait slot: aSlot.
 	method := oppositeOriginal compiledMethodAt: aSlot inverseSlot name asSymbol ifAbsent: [ ^ self ].
 	
@@ -165,7 +165,7 @@ FamixMetamodelBuilder class >> writeOriginalPropertiesOf: original method: metho
 { #category : #writing }
 FamixMetamodelBuilder class >> writeOriginalPropertiesOf: aTrait slot: aSlot to: aStream [
 
-	| original method commentPragma messages |
+	| original method |
 	original := Smalltalk at: (#FAMIX, (aTrait name withoutPrefix: #FmxT)) asSymbol ifAbsent: [ ^ self ].
 	method := original compiledMethodAt: aSlot name asSymbol ifAbsent: [ ^ self ].
 	
@@ -231,7 +231,7 @@ FamixMetamodelBuilder >> generateAccessorsFor: relationSide in: aTrait [
 { #category : #accessing }
 FamixMetamodelBuilder >> generateGetterFor: relationSide in: aTrait [
 
-	| source commentDefinition |
+	| source |
 	
 	source := String streamContents: [ :s |
 		s nextPutAll: relationSide name; nextPutAll: ': anObject'; cr; cr.
