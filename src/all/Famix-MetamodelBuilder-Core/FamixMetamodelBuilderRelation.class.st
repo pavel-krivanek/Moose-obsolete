@@ -60,42 +60,6 @@ FamixMetamodelBuilderRelation >> from: aBlock [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> fromMany: aName toMany: anOppositeName [
-
-	name := aName asSymbol.
-	oppositeName := anOppositeName asSymbol.
-	cardinality := #many.
-	oppositeCardinality := #many.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> fromMany: aName toOne: anOppositeName [
-
-	name := aName asSymbol.
-	oppositeName := anOppositeName asSymbol.
-	cardinality := #many.
-	oppositeCardinality := #one.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> fromOne: aName toMany: anOppositeName [
-
-	name := aName asSymbol.
-	oppositeName := anOppositeName asSymbol.
-	cardinality := #one.
-	oppositeCardinality := #many.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> fromOne: aName toOne: anOppositeName [
-
-	name := aName asSymbol.
-	oppositeName := anOppositeName asSymbol.
-	cardinality := #one.
-	oppositeCardinality := #one.
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelation >> generatedMany: aRelationName [
 
 	| singular |
