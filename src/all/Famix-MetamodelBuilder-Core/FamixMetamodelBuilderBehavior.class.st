@@ -8,7 +8,7 @@ Class {
 		'realClass',
 		'willGenerate'
 	],
-	#category : #'Famix-MetamodelBuilder-Core-Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core'
 }
 
 { #category : #'as yet unclassified' }
