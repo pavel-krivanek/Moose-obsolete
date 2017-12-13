@@ -203,6 +203,7 @@ FMPragmaProcessor >> processClass: aClass ifPragmaAbsent: anErrorBlock [
 	"the description for the class"
 	meta := FM3MetaDescription new.
 	meta name: className asString.
+	superclassDict at: meta put: superclassName.
 	meta setImplementingClass: aClass.
 	pragma
 		ifNotEmpty: [ (Pragma inMethod: pragma first method named: #abstract)
@@ -214,10 +215,10 @@ FMPragmaProcessor >> processClass: aClass ifPragmaAbsent: anErrorBlock [
 					(self allowPackageNamed: packageName)
 						ifFalse: [ ^ self ].
 					packMetaDict at: meta put: packageName asString ] ].
-	superclassDict at: meta put: superclassName.
 	elements add: meta.
 	classDict at: aClass put: meta.
 	aClass methods do: [ :each | self processCompiledMethod: each ].
+	aClass slots do: [ :each | self processSlot: each in: aClass].
 	meta isFM3Class should beTrue.
 	^ meta
 ]
@@ -256,6 +257,46 @@ FMPragmaProcessor >> processCompiledMethod: aMethod [
 	(Pragma inMethod: aMethod named: #key:)
 		ifNotNil: [ prop key: ((Pragma inMethod: aMethod named: #key:) argumentAt: 1) ].
 	elements add: prop
+]
+
+{ #category : #private }
+FMPragmaProcessor >> processSlot: aSlot in: aClass [
+	| prop |
+	
+	(aSlot isFMRelationSlot) ifFalse: [
+		^ self ].
+	
+	prop := elements add: aSlot mooseProperty.
+
+	typeDict at: prop put: aSlot targetClass.
+	mmClassDict at: prop put: aClass.
+	oppositeDict at: prop put: aSlot inverseName.
+	
+	aClass methodDict at: aSlot name asSymbol ifPresent: [:aMethod | 
+		prop setImplementingSelector: aMethod selector.
+		(Pragma inMethod: aMethod named: #package:) ifNotNil: [ :p | 
+			| packageName |
+			packageName := p argumentAt: 1.
+			(self allowPackageNamed: packageName)
+				ifFalse: [ ^ self ].
+			packPropDict at: prop put: packageName ].
+
+	aClass primaryContainerTrait ifNotNil: [:aPrimaryContainerTrait |
+		(aPrimaryContainerTrait potentialPrimaryContainer = aSlot name)
+			ifTrue: [  prop isContainer: true  ] ].
+	"(Pragma inMethod: aMethod named: #container) ifNotNil: [ prop isContainer: true ]."
+
+	(Pragma inMethod: aMethod named: #derived) ifNotNil: [ prop isDerived: true ].
+	(Pragma inMethod: aMethod named: #source) ifNotNil: [ prop isSource: true ].
+	(Pragma inMethod: aMethod named: #target) ifNotNil: [ prop isTarget: true ]. 
+	(Pragma inMethod: aMethod named: #multivalued)
+		ifNotNil: [ prop isMultivalued: true ].
+	(Pragma inMethod: aMethod named: #key:)
+		ifNotNil: [ prop key: ((Pragma inMethod: aMethod named: #key:) argumentAt: 1) ].	
+].
+	elements add: prop.
+	^ prop.
+		
 ]
 
 { #category : #accessing }
@@ -327,8 +368,8 @@ FMPragmaProcessor >> validateMetaModel [
 	fullDict := OrderedCollection new.
 	oppositeDict keysAndValuesDo: [ :prop :oppName | fullDict add: (prop type attributeNamed: oppName) -> prop ].
 	wronglySetOpposites := (fullDict groupedBy: #key) select: [ :e | e size ~= 1 ].
-	self assert: wronglySetOpposites isEmpty description: 'Link to opposite links should be a bijective operation... Please check your model!'.
+"	self assert: wronglySetOpposites isEmpty description: 'Link to opposite links should be a bijective operation... Please check your model!'.
 	self
 		assert: ((fullDict groupedBy: #key) at: nil ifAbsent: [ #() ]) isEmpty
-		description: 'Some opposite links are not definied in your model.. Please check your model!'
+		description: 'Some opposite links are not definied in your model.. Please check your model!'"
 ]
