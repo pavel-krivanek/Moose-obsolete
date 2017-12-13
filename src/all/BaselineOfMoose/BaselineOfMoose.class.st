@@ -438,15 +438,10 @@ BaselineOfMoose >> baselineMerlin: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineMetamodelBuilder: spec [ 
     
-	"#(
-		'Famix-General'
-		'Famix-Compatibility'
-		'Famix-SmalltalkModel'
-		'Famix-JavaMetamodel'
-		'Famix-CppMetamodel'
-		'Famix-SQLMetamodel'
+	#(
+		'Famix-MetamodelBuilder'
 	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #all) ]]"
+		spec package: packageName with: [ spec repository: (self url: #all) ]]
 
 ]
 
