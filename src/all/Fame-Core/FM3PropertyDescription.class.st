@@ -287,6 +287,12 @@ FM3PropertyDescription >> packageName [
 ]
 
 { #category : #private }
+FM3PropertyDescription >> privOpposite: new [
+	
+	opposite := new
+]
+
+{ #category : #private }
 FM3PropertyDescription >> setImplementingSelector: compiledMethod [ 
 	implementingSelector := compiledMethod
 ]

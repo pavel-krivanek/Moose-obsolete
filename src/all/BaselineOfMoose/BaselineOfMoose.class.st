@@ -29,6 +29,7 @@ BaselineOfMoose >> baseline: spec [
 		self baselineHashtable: spec.
 		self baselineStateSpecs: spec.
 		self baselinePhexample: spec.
+		self baselineStatefulTraits: spec.
 		self baselineGhost: spec.
 		self baselineMocketry: spec.
 		self baselineFame: spec.
@@ -100,6 +101,9 @@ BaselineOfMoose >> baseline: spec [
 			'Moose-Query-Test'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
+
+		self baselineMetamodelBuilder: spec.
+		self baselineFamixNG: spec.
 
 		#(	
 			'PetitParser'
@@ -343,6 +347,21 @@ BaselineOfMoose >> baselineFame: spec [
 ]
 
 { #category : #baseline }
+BaselineOfMoose >> baselineFamixNG: spec [ 
+    
+	"#(
+		'Famix-General'
+		'Famix-Compatibility'
+		'Famix-SmalltalkModel'
+		'Famix-JavaMetamodel'
+		'Famix-CppMetamodel'
+		'Famix-SQLMetamodel'
+	) do: [ :packageName | 
+		spec package: packageName with: [ spec repository: (self url: #all) ]]"
+
+]
+
+{ #category : #baseline }
 BaselineOfMoose >> baselineGeometry: spec [ 
     
 	#(
@@ -413,6 +432,21 @@ BaselineOfMoose >> baselineMerlin: spec [
 		'Merlin'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #Merlin) ]]
+
+]
+
+{ #category : #baseline }
+BaselineOfMoose >> baselineMetamodelBuilder: spec [ 
+    
+	"#(
+		'Famix-General'
+		'Famix-Compatibility'
+		'Famix-SmalltalkModel'
+		'Famix-JavaMetamodel'
+		'Famix-CppMetamodel'
+		'Famix-SQLMetamodel'
+	) do: [ :packageName | 
+		spec package: packageName with: [ spec repository: (self url: #all) ]]"
 
 ]
 
@@ -685,6 +719,17 @@ BaselineOfMoose >> baselineStateSpecs: spec [
 		'StateSpecs-DSL-ClassWords-Tests'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #StateSpecs) ]]
+
+]
+
+{ #category : #baseline }
+BaselineOfMoose >> baselineStatefulTraits: spec [ 
+    
+	#(
+		'StatefulTraits'
+		'StatefulTraits-Tests'
+	) do: [ :packageName | 
+		spec package: packageName with: [ spec repository: (self url: #all) ]]
 
 ]
 

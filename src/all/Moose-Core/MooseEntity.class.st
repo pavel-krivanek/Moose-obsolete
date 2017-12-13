@@ -182,6 +182,12 @@ MooseEntity class >> setMooseID: anInteger [
 	MooseID := anInteger 
 ]
 
+{ #category : #'stateful traits' }
+MooseEntity class >> statefulTraits [
+
+	^ {  }
+]
+
 { #category : #meta }
 MooseEntity class >> withMooseSubclasses [
 	mooseSubClasses ifNil: [ ^self withAllSubclasses ].
