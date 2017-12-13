@@ -123,6 +123,30 @@ FamixMetamodelBuilderRelationSide >> -* aRelationSide [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderRelationSide >> -<> aRelationSide [
+
+	| aRelation |
+	
+	self container.
+	aRelation := self - aRelationSide.
+	
+
+	
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderRelationSide >> <>- aRelationSide [
+
+	| aRelation |
+	
+	aRelationSide container.
+	aRelation := self - aRelationSide.
+	
+
+	
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderRelationSide >> <>-* aRelationSide [
 
 	| aRelation |
