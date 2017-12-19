@@ -75,7 +75,7 @@ FamixMetamodelBuilderBehavior >> containsMany: otherClass [
 { #category : #generating }
 FamixMetamodelBuilderBehavior >> defaultSuperclass [
 	
-	^ MooseEntity
+	^ self environment basicSuperclass
 ]
 
 { #category : #accessing }
@@ -90,7 +90,7 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [
 	| aSuperclassName |
 	
 	aSuperclassName := self classGeneralization 
-		ifNil: [ MooseEntity name ]
+		ifNil: [ self defaultSuperclass name ]
 		ifNotNil: [ self classGeneralization realClass name ].
 
 	aRealClass classSide compile: ('annotation
@@ -108,7 +108,7 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aClass with: aBuilder [
 	| aSuperclassName |
 	
 	aSuperclassName := self classGeneralization 
-		ifNil: [ MooseEntity name ]
+		ifNil: [ self defaultSuperclass name ]
 		ifNotNil: [ self classGeneralization realClass name ].
 
 	aClass classSide compile: ('annotation

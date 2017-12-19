@@ -82,10 +82,8 @@ FamixMetamodelBuilderClass >> generateDummyWith: aBuilder [
 	
 	aClassName := (aBuilder prefix, self name) asSymbol.
 	
-	Object subclass: aClassName
-			instanceVariableNames: ''
-			classVariableNames: ''
-			package: aBuilder packageName.
+	self environment createDummyClassNamed: aClassName in: aBuilder packageName.
+
 		
 ]
 

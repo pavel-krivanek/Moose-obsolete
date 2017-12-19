@@ -180,23 +180,23 @@ FamixMetamodelBuilderRelationSide >> comment: anObject [
 	comment := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> container [
 	
 	container := true
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> container: anObject [
 	container := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> derived [
 	derived := true
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> derived: anObject [
 	derived := anObject
 ]
@@ -226,19 +226,19 @@ FamixMetamodelBuilderRelationSide >> initialize [
 
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> isContainer [
 
 	^ container
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> isDerived [
 
 	^ derived
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> isSource [
 
 	^ source
@@ -353,13 +353,13 @@ FamixMetamodelBuilderRelationSide >> relation: anObject [
 	relation := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> source [
 
 	source := true.
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> source: anObject [
 	source := anObject
 ]

@@ -48,6 +48,7 @@ Class {
 	#name : #FamixMetamodelBuilder,
 	#superclass : #Object,
 	#instVars : [
+		'environment',
 		'prefix',
 		'packageName',
 		'operations',
@@ -116,6 +117,14 @@ FamixMetamodelBuilder class >> famixTraits [
 			s cr ] ].
 	
 	"(traits collect: [:each | 't', (each name withoutPrefix: #FmxT) ]) joinUsing: ' '"
+]
+
+{ #category : #writing }
+FamixMetamodelBuilder class >> forTesting [
+
+	^ self new
+		environment: FamixMetamodelBuilderRingEnvironment new;
+		yourself.
 ]
 
 { #category : #writing }
@@ -212,6 +221,16 @@ FamixMetamodelBuilder >> ensureTraitNamed: aString [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilder >> environment [
+	^ environment
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> environment: anObject [
+	environment := anObject
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilder >> generate [
 
 	self traits do: [ :each | each generate ].
@@ -220,7 +239,7 @@ FamixMetamodelBuilder >> generate [
 
 ]
 
-{ #category : #accessing }
+{ #category : #generation }
 FamixMetamodelBuilder >> generateAccessorsFor: relationSide in: aTrait [
 
 	self generateGetterFor: relationSide in: aTrait.
@@ -228,7 +247,7 @@ FamixMetamodelBuilder >> generateAccessorsFor: relationSide in: aTrait [
 	
 ]
 
-{ #category : #accessing }
+{ #category : #generation }
 FamixMetamodelBuilder >> generateGetterFor: relationSide in: aTrait [
 
 	| source |
@@ -239,13 +258,12 @@ FamixMetamodelBuilder >> generateGetterFor: relationSide in: aTrait [
 			ifTrue: [ s tab; nextPutAll: relationSide name, ' := anObject'; cr ]
 			ifFalse: [ s tab; nextPutAll: relationSide name, ' value: anObject'; cr ] ].
 		
-	aTrait compile: source classified: 'accessing'.
-	
+	self environment compile: source in: aTrait classified: 'accessing'.	
 
 	
 ]
 
-{ #category : #accessing }
+{ #category : #generation }
 FamixMetamodelBuilder >> generateSetterFor: relationSide in: aTrait [
 
 	| source commentDefinition |
@@ -268,7 +286,7 @@ FamixMetamodelBuilder >> generateSetterFor: relationSide in: aTrait [
 		s tab; nextPutAll: '^ ';
 			nextPutAll: relationSide name.].
 		
-	aTrait compile: source classified: 'accessing'.
+	self environment compile: source in: aTrait classified: 'accessing'.	
 	
 
 	
@@ -277,10 +295,14 @@ FamixMetamodelBuilder >> generateSetterFor: relationSide in: aTrait [
 { #category : #initialization }
 FamixMetamodelBuilder >> initialize [
 
+	environment := FamixMetamodelBuilderRealEnvironment new.
+
 	operations := OrderedCollection new.
 	classes := OrderedCollection new.
 	traits := OrderedCollection new.
 	relations := OrderedCollection new.
+	
+	
 	
 ]
 
@@ -380,13 +402,12 @@ FamixMetamodelBuilder >> slotFor: aRelationSide [
 	
 	slotName := aRelationSide name.
 	opposite := aRelationSide otherSide.
-	cardinality := aRelationSide cardinality = #one
-		ifTrue: [ FMOne ]
-		ifFalse: [ FMMany ].
+	cardinality := aRelationSide cardinality.
 	type := self prefix, opposite traitName.
 	oppositeName := opposite name.
 	
-	^ slotName asSymbol => cardinality type: type asSymbol opposite: oppositeName asSymbol
+	^ self environment slotNamed: slotName asSymbol cardinality: cardinality type: type asSymbol opposite: oppositeName asSymbol
+
 	
 	
 	
@@ -399,6 +420,12 @@ FamixMetamodelBuilder >> sortedClasses [
 	^ self classes sorted: [ :a :b |
 		b allClassGeneralizations includes: a].
 
+]
+
+{ #category : #'tests support' }
+FamixMetamodelBuilder >> testingEnviornment [ 
+
+	^ self environment ringEnvironment
 ]
 
 { #category : #accessing }

@@ -16,7 +16,7 @@ FamixMetamodelBuilderTrait >> addRelationSide: aRelationSide [
 { #category : #generating }
 FamixMetamodelBuilderTrait >> classGeneralization [
 
-	^ FmxTraitEntity
+	^ self environment basicTrait
 ]
 
 { #category : #generating }
@@ -28,10 +28,7 @@ FamixMetamodelBuilderTrait >> generate [
 	
 	traitName := (self builder prefix, self name) asSymbol.
 	
-	aTrait := FmxTraitEntity subclass: traitName asSymbol
-	slots: self slotDefinitions
-	classVariables: {  }
-	category: self builder packageName.
+	aTrait := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self builder packageName.
 			
 	self realClass: aTrait.
 	
