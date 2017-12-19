@@ -89,9 +89,9 @@ FamixMetamodelBuilder class >> famixProperties [
 					FamixMetamodelBuilder writeOriginalPropertiesOf: trait slot: slot to: s.
 					s <<')'; cr.
 					s tab.
-					slot isToOneSlot not ifTrue: [ s << '*' ].
+					slot isToOneSlot ifFalse: [ s << '*' ].
 					s << '-'.
-					slot inverseSlot isToOneSlot not ifTrue: [ s << '*' ].
+					slot inverseSlot isToOneSlot ifFalse: [ s << '*' ].
 					s cr.
 					s << '((' << ('t', (slot targetClass name withoutPrefix: #FmxT)) << ' property: #' << slot inverseSlot name << ')'.
 					FamixMetamodelBuilder writeOppositeOriginalPropertiesOf: trait slot: slot to: s.

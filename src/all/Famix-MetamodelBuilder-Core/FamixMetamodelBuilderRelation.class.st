@@ -28,8 +28,8 @@ FamixMetamodelBuilderRelation >> <>- anotherClass [
 { #category : #accessing }
 FamixMetamodelBuilderRelation >> between: aName and: anOppositeName [
 
-	traitName := aName asSymbol.
-	oppositeTraitName := anOppositeName asSymbol.
+	"traitName := aName asSymbol.
+	oppositeTraitName := anOppositeName asSymbol."
 
 ]
 
@@ -112,31 +112,6 @@ FamixMetamodelBuilderRelation >> left [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> name: anObject [
-	name := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeCardinality [
-	^ oppositeCardinality
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeCardinality: anObject [
-	oppositeCardinality := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeName [
-	^ oppositeName
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeName: anObject [
-	oppositeName := anObject
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelation >> oppositeRelation [
 
 	^ self copy swapSides
@@ -150,16 +125,6 @@ FamixMetamodelBuilderRelation >> oppositeSide [
 { #category : #accessing }
 FamixMetamodelBuilderRelation >> oppositeSide: anObject [
 	oppositeSide := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeTraitName [
-	^ oppositeTraitName
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeTraitName: anObject [
-	oppositeTraitName := anObject
 ]
 
 { #category : #accessing }
