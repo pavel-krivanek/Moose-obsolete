@@ -23,6 +23,16 @@ FamixMetamodelBuilderRealEnvironment >> compile: aSource in: aClass classified: 
 ]
 
 { #category : #compiling }
+FamixMetamodelBuilderRealEnvironment >> createClassNamed: aClassName superclass: aSuperclass in: packageName [
+
+	^ aSuperclass subclass: aClassName
+			instanceVariableNames: ''
+			classVariableNames: ''
+			package: packageName.
+
+]
+
+{ #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> createDummyClassNamed: aClassName in: packageName [
 
 	^ Object subclass: aClassName

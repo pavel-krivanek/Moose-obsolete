@@ -10,19 +10,29 @@ Class {
 { #category : #accessing }
 FamixMetamodelBuilderRingEnvironment >> basicSuperclass [
 
-	^ self ringEnvironment ensureTraitNamed: #MooseEntity
+	^ self ringEnvironment ensureClassNamed: #MooseEntity
 ]
 
 { #category : #accessing }
 FamixMetamodelBuilderRingEnvironment >> basicTrait [
 
-	^ self ringEnvironment ensureTraitNamed: #FmxTraitEntity
+	^ self ringEnvironment ensureClassNamed: #FmxTraitEntity
 ]
 
 { #category : #accessing }
 FamixMetamodelBuilderRingEnvironment >> compile: aSource in: aClass classified: aProtocol [
 
 	aClass compile: aSource classified: aProtocol.
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass in: packageName [
+
+	| aClass |
+	aClass := self ringEnvironment ensureClassNamed: aClassName.
+	aClass superclass: aSuperclass.
+	aClass package: (self ringEnvironment ensurePackageNamed: packageName).
+	^ aClass
 ]
 
 { #category : #initialization }
@@ -35,7 +45,8 @@ FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots
 	| aPackage aTrait |
 	
 	aPackage := self ringEnvironment ensurePackageNamed: packageName.
-	aTrait := ringEnvironment ensureTraitNamed: traitName.
+	aTrait := ringEnvironment ensureClassNamed: traitName. 
+	aTrait superclass: self basicTrait.
 	aTrait package: aPackage.
 	aTrait layout makeResolved.
 	slots do: [ :slotInBadEnvironment |

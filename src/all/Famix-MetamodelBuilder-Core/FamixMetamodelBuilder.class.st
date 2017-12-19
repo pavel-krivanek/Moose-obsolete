@@ -124,6 +124,8 @@ FamixMetamodelBuilder class >> forTesting [
 
 	^ self new
 		environment: FamixMetamodelBuilderRingEnvironment new;
+		prefix: 'Tst';
+		packageName: 'Tst';
 		yourself.
 ]
 

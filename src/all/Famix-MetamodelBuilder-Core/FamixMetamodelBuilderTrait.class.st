@@ -16,7 +16,19 @@ FamixMetamodelBuilderTrait >> addRelationSide: aRelationSide [
 { #category : #generating }
 FamixMetamodelBuilderTrait >> classGeneralization [
 
-	^ self environment basicTrait
+	^ self builder environment basicTrait
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderTrait >> defaultSuperclass [
+	
+	^ self builder environment basicTrait
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderTrait >> generalization: anObject [
+
+	self error: 'Traits cannot have a non-default superclasss'
 ]
 
 { #category : #generating }
@@ -52,6 +64,12 @@ FamixMetamodelBuilderTrait >> initialize [
 	super initialize.
 	
 	sides := Set new.
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderTrait >> isMetamodelTrait [
+
+	^ true
 ]
 
 { #category : #generating }

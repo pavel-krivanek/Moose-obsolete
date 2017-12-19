@@ -9,30 +9,6 @@ Class {
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> --|> anObject [
-
-	self generalization: anObject.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderClass >> -|> anObject [
-
-	self generalization: anObject.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderClass >> <|- anObject [
-
-	anObject generalization: self.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderClass >> <|-- anObject [
-
-	anObject generalization: self.
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderClass >> allClassGeneralizations [
 
 	| result c g|
@@ -66,11 +42,19 @@ FamixMetamodelBuilderClass >> classGeneralization [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderClass >> classGeneralization: anObject [
+	classGeneralization := anObject
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderClass >> generalization: anObject [
 
 	anObject isSymbol
-		ifTrue: [ self traitGeneralizations add: anObject ]
-		ifFalse: [ classGeneralization := anObject ]
+		ifTrue: [ self traitGeneralizations add: (self builder ensureTraitNamed: anObject) ]
+		ifFalse: [ 
+			anObject isMetamodelTrait 
+				ifTrue: [ self traitGeneralizations add: anObject ]
+				ifFalse: [ self classGeneralization: anObject ] ]
 ]
 
 { #category : #generating }
@@ -82,7 +66,7 @@ FamixMetamodelBuilderClass >> generateDummyWith: aBuilder [
 	
 	aClassName := (aBuilder prefix, self name) asSymbol.
 	
-	self environment createDummyClassNamed: aClassName in: aBuilder packageName.
+	self builder environment createDummyClassNamed: aClassName in: aBuilder packageName.
 
 		
 ]
@@ -100,15 +84,18 @@ FamixMetamodelBuilderClass >> generateWith: aBuilder [
 		ifNil: [ self defaultSuperclass ]
 		ifNotNil: [ self classGeneralization realClass ].
 	
-	aClass := aSuperclass subclass: aClassName
-			instanceVariableNames: ''
-			classVariableNames: ''
-			package: aBuilder packageName.
+	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass in: aBuilder packageName.
 			
 	self realClass: aClass.
 	self willGenerate ifTrue: [ self generateAnnotationIn: aClass with: aBuilder ].
 	self generateTraitsAssignmentsFor: aClass.
 
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderClass >> isMetamodelClass [
+
+	^ true
 ]
 
 { #category : #generating }
@@ -121,7 +108,7 @@ FamixMetamodelBuilderClass >> subclass: aClass [
 FamixMetamodelBuilderClass >> traitGeneralizationNames [
 
 	^ self traitGeneralizations collect: [ :each |
-		self builder prefix, each ]
+		self builder prefix, each name]
 ]
 
 { #category : #accessing }

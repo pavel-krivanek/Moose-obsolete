@@ -11,6 +11,14 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> --|> anObject [
+
+	self generalization: anObject.
+	^ anObject
+
+]
+
 { #category : #'relations - arrows' }
 FamixMetamodelBuilderBehavior >> -<> anotherClass [
 
@@ -21,6 +29,14 @@ FamixMetamodelBuilderBehavior >> -<> anotherClass [
 FamixMetamodelBuilderBehavior >> <>- anotherClass [
 
 	^ self containsMany: anotherClass
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> <|-- anObject [
+
+	anObject generalization: self.
+	^ anObject
+
 ]
 
 { #category : #accessing }
@@ -75,7 +91,7 @@ FamixMetamodelBuilderBehavior >> containsMany: otherClass [
 { #category : #generating }
 FamixMetamodelBuilderBehavior >> defaultSuperclass [
 	
-	^ self environment basicSuperclass
+	^ self builder environment basicSuperclass
 ]
 
 { #category : #accessing }
@@ -89,9 +105,13 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [
 
 	| aSuperclassName |
 	
-	aSuperclassName := self classGeneralization 
-		ifNil: [ self defaultSuperclass name ]
-		ifNotNil: [ self classGeneralization realClass name ].
+	
+	aSuperclassName :=  (self classGeneralization = self defaultSuperclass) 
+		ifTrue: [ self defaultSuperclass name]
+		ifFalse: [ self classGeneralization 
+			ifNil: [ self defaultSuperclass name ]
+			ifNotNil: [ 
+				self classGeneralization realClass name ] ].
 
 	aRealClass classSide compile: ('annotation
 
@@ -143,6 +163,18 @@ FamixMetamodelBuilderBehavior >> initialize [
 	super initialize.
 	relations := OrderedCollection new.
 	willGenerate := true.
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderBehavior >> isMetamodelClass [
+
+	^ false
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderBehavior >> isMetamodelTrait [
+
+	^ false
 ]
 
 { #category : #accessing }
