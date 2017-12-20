@@ -36,6 +36,13 @@ FamixMetamodelBuilderProperty >> comment: anObject [
 	comment := anObject
 ]
 
+{ #category : #generating }
+FamixMetamodelBuilderProperty >> generateAccessorsIn: aClassOrTrait [
+
+	self generateGetterIn: aClassOrTrait.
+	self generateSetterIn: aClassOrTrait.
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderProperty >> initialize [
 

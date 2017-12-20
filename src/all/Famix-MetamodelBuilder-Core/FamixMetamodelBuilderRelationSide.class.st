@@ -76,7 +76,7 @@ FamixMetamodelBuilderRelationSide >> *-<> aRelationSide [
 FamixMetamodelBuilderRelationSide >> - aRelationSide [
 
 	| aRelation |
-	
+
 	aRelation := self builder newRelation
 		side: self;
 		oppositeSide: aRelationSide;
@@ -151,7 +151,7 @@ FamixMetamodelBuilderRelationSide >> <>-* aRelationSide [
 FamixMetamodelBuilderRelationSide >> asSlot [
 	
 	| slotName opposite |
-	
+
 	self hasRelation 
 		ifFalse: [ FamixMetamodelBuilderIncompletePropertyDefiniton signal ].
 	
@@ -239,7 +239,7 @@ FamixMetamodelBuilderRelationSide >> generateGetterIn: aClassOrTrait [
 		s tab; nextPutAll: '^ ';
 			nextPutAll: self name.].
 		
-	self environment compile: methodSource in: aClassOrTrait classified: 'accessing'.	
+	self builder environment compile: methodSource in: aClassOrTrait classified: 'accessing'.	
 	
 
 	

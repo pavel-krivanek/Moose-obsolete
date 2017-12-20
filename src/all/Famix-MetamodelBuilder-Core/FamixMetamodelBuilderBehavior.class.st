@@ -86,8 +86,8 @@ FamixMetamodelBuilderBehavior >> fullName [
 { #category : #generating }
 FamixMetamodelBuilderBehavior >> generateAccessors [
 
-	self properties do: [ :each | 
-		self builder generateAccessorsFor: each in: self realClass ]
+	self properties do: [ :each |
+		each generateAccessorsIn: self realClass. ]
 
 ]
 

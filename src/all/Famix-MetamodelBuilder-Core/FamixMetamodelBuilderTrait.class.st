@@ -10,7 +10,7 @@ Class {
 { #category : #accessing }
 FamixMetamodelBuilderTrait >> addRelationSide: aRelationSide [
 
-	sides add: aRelationSide
+	self sides add: aRelationSide
 ]
 
 { #category : #generating }
@@ -44,9 +44,8 @@ FamixMetamodelBuilderTrait >> generate [
 			
 	self realClass: aTrait.
 	
-	self willGenerate ifTrue: [ 
-		self generateAccessors.
-		self generateAnnotationIn: aTrait ].
+	self generateAccessors.
+	self generateAnnotationIn: aTrait.
 
 ]
 
@@ -95,8 +94,8 @@ FamixMetamodelBuilderTrait >> slotDefinitions [
 
 	| slotGroups |
 	
-	slotGroups := (self sides collect: [ :property | property asSlot ]) groupedBy: #name.
-	
+	slotGroups := (self properties collect: [ :property | property asSlot ]) groupedBy: #name.
+
 	"check that all slots with the same name have the same properties"
 	slotGroups valuesDo: [ :similarSlots |
 		self assert: (similarSlots collect: #name) asSet size = 1. ].

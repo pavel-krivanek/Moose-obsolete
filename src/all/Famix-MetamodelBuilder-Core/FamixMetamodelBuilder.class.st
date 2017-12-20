@@ -242,13 +242,6 @@ FamixMetamodelBuilder >> generate [
 ]
 
 { #category : #generation }
-FamixMetamodelBuilder >> generateAccessorsFor: relationSide in: aTrait [
-
-	relationSide generateGetterIn: aTrait.
-	relationSide generateSetterIn: aTrait.	
-]
-
-{ #category : #generation }
 FamixMetamodelBuilder >> generateGetterFor: relationSide in: aTrait [
 
 	| source |
