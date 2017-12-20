@@ -7,12 +7,6 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
-{ #category : #accessing }
-FamixMetamodelBuilderTrait >> addRelationSide: aRelationSide [
-
-	self sides add: aRelationSide
-]
-
 { #category : #generating }
 FamixMetamodelBuilderTrait >> classGeneralization [
 
@@ -63,43 +57,8 @@ FamixMetamodelBuilderTrait >> isMetamodelTrait [
 	^ true
 ]
 
-{ #category : #generating }
-FamixMetamodelBuilderTrait >> property: propertyName [
-
-	| aSide |
-	
-	aSide := FamixMetamodelBuilderRelationSide new
-		builder: self builder;
-		trait: self;
-		name: propertyName;
-		yourself.
-		
-	self sides add: aSide.
-	^ aSide.
-]
-
 { #category : #accessing }
 FamixMetamodelBuilderTrait >> removeRelationSide: aRelationSide [
 
 	properties remove: aRelationSide ifAbsent: [ ].
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderTrait >> sides [
-	^ self properties
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderTrait >> slotDefinitions [
-
-	| slotGroups |
-	
-	slotGroups := (self properties collect: [ :property | property asSlot ]) groupedBy: #name.
-
-	"check that all slots with the same name have the same properties"
-	slotGroups valuesDo: [ :similarSlots |
-		self assert: (similarSlots collect: #name) asSet size = 1. ].
-		
-	^ slotGroups values collect: [ :each | each anyOne ].
-
 ]

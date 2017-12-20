@@ -8,12 +8,17 @@ Class {
 }
 
 { #category : #initialization }
-FamixMetamodelBuilderRelationTest >> checkArrow: aBinarySelector from: cardinality1 to: cardinality2 containerFrom: containerFrom containerTo: containerTo [
+FamixMetamodelBuilderRelationTest >> checkArrow: aBinarySelector from: cardinality1 to: cardinality2 containerFrom: containerFrom containerTo: containerTo forTraits: aBoolean [
 
 	| tClass tComment generatedTClass generatedTComment hasContainer |
-		
-	tClass := builder newTraitNamed: #TClass. 
-	tComment := builder newTraitNamed: #TComment. 
+	
+	aBoolean 
+		ifTrue: [ 		
+			tClass := builder newTraitNamed: #TClass. 
+			tComment := builder newTraitNamed: #TComment ]
+		ifFalse: [ 
+			tClass := builder newClassNamed: #TClass. 
+			tComment := builder newClassNamed: #TComment ].		
 
 	(tClass property: #property1) perform: aBinarySelector with: (tComment property: #property2).
 	
@@ -57,6 +62,29 @@ FamixMetamodelBuilderRelationTest >> setUp [
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderRelationTest >> testClassRelations [
+
+	self checkArrow: #- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: false forTraits: false.
+	self resetBuilder.
+	self checkArrow: #*- from: 'FMOne' to: 'FMMany' containerFrom: false containerTo: false forTraits: false.
+	self resetBuilder.
+	self checkArrow: #-* from: 'FMMany' to: 'FMOne' containerFrom: false containerTo: false forTraits: false.
+	self resetBuilder.
+	self checkArrow: #*-* from: 'FMMany' to: 'FMMany' containerFrom: false containerTo: false forTraits: false.
+
+	self resetBuilder.
+	self checkArrow: #-<> from: 'FMOne' to: 'FMOne' containerFrom: true containerTo: false forTraits: false.
+	self resetBuilder.
+	self checkArrow: #<>- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: true forTraits: false.
+	
+		self resetBuilder.
+	self checkArrow: #*-<> from: 'FMOne' to: 'FMMany' containerFrom: true containerTo: false forTraits: false.
+	self resetBuilder.
+	self checkArrow: #<>-* from: 'FMMany' to: 'FMOne' containerFrom: false containerTo: true forTraits: false.
+	
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderRelationTest >> testOneToOneTraitsRelation [
 
 	| tClass tComment generatedTClass generatedTComment |
@@ -86,24 +114,24 @@ FamixMetamodelBuilderRelationTest >> testOneToOneTraitsRelation [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRelationTest >> testTraitRelation [
+FamixMetamodelBuilderRelationTest >> testTraitRelations [
 
-	self checkArrow: #- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: false.
+	self checkArrow: #- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: false forTraits: true.
 	self resetBuilder.
-	self checkArrow: #*- from: 'FMOne' to: 'FMMany' containerFrom: false containerTo: false.
+	self checkArrow: #*- from: 'FMOne' to: 'FMMany' containerFrom: false containerTo: false forTraits: true.
 	self resetBuilder.
-	self checkArrow: #-* from: 'FMMany' to: 'FMOne' containerFrom: false containerTo: false.
+	self checkArrow: #-* from: 'FMMany' to: 'FMOne' containerFrom: false containerTo: false forTraits: true.
 	self resetBuilder.
-	self checkArrow: #*-* from: 'FMMany' to: 'FMMany' containerFrom: false containerTo: false.
+	self checkArrow: #*-* from: 'FMMany' to: 'FMMany' containerFrom: false containerTo: false forTraits: true.
 
 	self resetBuilder.
-	self checkArrow: #-<> from: 'FMOne' to: 'FMOne' containerFrom: true containerTo: false.
+	self checkArrow: #-<> from: 'FMOne' to: 'FMOne' containerFrom: true containerTo: false forTraits: true.
 	self resetBuilder.
-	self checkArrow: #<>- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: true.
+	self checkArrow: #<>- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: true forTraits: true.
 	
 		self resetBuilder.
-	self checkArrow: #*-<> from: 'FMOne' to: 'FMMany' containerFrom: true containerTo: false.
+	self checkArrow: #*-<> from: 'FMOne' to: 'FMMany' containerFrom: true containerTo: false forTraits: true.
 	self resetBuilder.
-	self checkArrow: #<>-* from: 'FMMany' to: 'FMOne' containerFrom: false containerTo: true.
+	self checkArrow: #<>-* from: 'FMMany' to: 'FMOne' containerFrom: false containerTo: true forTraits: true.
 	
 ]

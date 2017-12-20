@@ -95,7 +95,7 @@ FamixMetamodelBuilderClass >> generate [
 		ifNil: [ self defaultSuperclass ]
 		ifNotNil: [ self classGeneralization realClass ].
 	
-	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass in: self builder packageName.
+	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass slots: self slotDefinitions in: self builder packageName.
 			
 	self realClass: aClass.
 	self willGenerate ifTrue: [ 

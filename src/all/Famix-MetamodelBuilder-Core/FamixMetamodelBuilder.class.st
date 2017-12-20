@@ -241,51 +241,6 @@ FamixMetamodelBuilder >> generate [
 
 ]
 
-{ #category : #generation }
-FamixMetamodelBuilder >> generateGetterFor: relationSide in: aTrait [
-
-	| source |
-	
-	source := String streamContents: [ :s |
-		s nextPutAll: relationSide name; nextPutAll: ': anObject'; cr; cr.
-		(relationSide cardinality = #one)
-			ifTrue: [ s tab; nextPutAll: relationSide name, ' := anObject'; cr ]
-			ifFalse: [ s tab; nextPutAll: relationSide name, ' value: anObject'; cr ] ].
-		
-	self environment compile: source in: aTrait classified: 'accessing'.	
-
-	
-]
-
-{ #category : #generation }
-FamixMetamodelBuilder >> generateSetterFor: relationSide in: aTrait [
-
-	| source commentDefinition |
-	
-	commentDefinition := relationSide comment
-		ifNotEmpty: [ '<MSEComment: ''{1}''>' format: { relationSide comment } ].
-
-	source := String streamContents: [ :s |
-		s nextPutAll: relationSide name; cr; cr.
-		commentDefinition  
-			ifNotEmpty: [ s tab; nextPutAll: commentDefinition; cr].
-			relationSide isContainer ifTrue: [ 
-				s tab; nextPutAll: '<container>'; cr; cr ].
-			relationSide isDerived ifTrue: [ 
-				s tab; nextPutAll: '<derived>'; cr; cr ].
-			relationSide isSource ifTrue: [ 
-				s tab; nextPutAll: '<source>'; cr; cr ].
-			relationSide isTarget ifTrue: [ 
-				s tab; nextPutAll: '<target>'; cr; cr ].
-		s tab; nextPutAll: '^ ';
-			nextPutAll: relationSide name.].
-		
-	self environment compile: source in: aTrait classified: 'accessing'.	
-	
-
-	
-]
-
 { #category : #initialization }
 FamixMetamodelBuilder >> initialize [
 

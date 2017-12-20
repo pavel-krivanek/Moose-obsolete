@@ -36,6 +36,28 @@ FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass:
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName [
+
+	| aClass |
+	aClass := self ringEnvironment ensureClassNamed: aClassName.
+	aClass superclass: aSuperclass.
+	aClass package: (self ringEnvironment ensurePackageNamed: packageName).
+	aClass layout makeResolved.
+	slots do: [ :slotInBadEnvironment |
+		| slot |
+		slot := slotInBadEnvironment isSpecial
+			ifTrue: [ 			
+				(RG2UnknownSlotDefinition named: slotInBadEnvironment name parent: aClass layout) 
+					expression: slotInBadEnvironment expression;
+					yourself ]
+			ifFalse: [ 
+				RG2InstanceVariableSlotDefinition named: slotInBadEnvironment name parent: aClass layout ].
+		aClass layout addSlot: slot ].
+	
+	^ aClass
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> createDummyClassNamed: aClassName in: packageName [
 ]
 

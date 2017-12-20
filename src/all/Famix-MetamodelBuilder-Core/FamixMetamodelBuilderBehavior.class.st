@@ -50,6 +50,12 @@ FamixMetamodelBuilderBehavior >> addRelation: aRelation with: anotherClass [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderBehavior >> addRelationSide: aRelationSide [
+
+	self sides add: aRelationSide
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderBehavior >> builder [
 	^ builder
 ]
@@ -191,6 +197,21 @@ FamixMetamodelBuilderBehavior >> properties [
 	^ properties
 ]
 
+{ #category : #generating }
+FamixMetamodelBuilderBehavior >> property: propertyName [
+
+	| aSide |
+	
+	aSide := FamixMetamodelBuilderRelationSide new
+		builder: self builder;
+		trait: self;
+		name: propertyName;
+		yourself.
+		
+	self sides add: aSide.
+	^ aSide.
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> property: propertyName type: aTypeName [
 
@@ -226,6 +247,26 @@ FamixMetamodelBuilderBehavior >> relations [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> relations: anObject [
 	relations := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> sides [
+	^ self properties
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderBehavior >> slotDefinitions [
+
+	| slotGroups |
+	
+	slotGroups := (self properties collect: [ :property | property asSlot ]) groupedBy: #name.
+
+	"check that all slots with the same name have the same properties"
+	slotGroups valuesDo: [ :similarSlots |
+		self assert: (similarSlots collect: #name) asSet size = 1. ].
+		
+	^ slotGroups values collect: [ :each | each anyOne ].
+
 ]
 
 { #category : #accessing }
