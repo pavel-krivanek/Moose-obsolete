@@ -61,8 +61,8 @@ FamixMetamodelBuilderClassTest >> testAs [
 
 	builder generate.
 
-	generatedNamed := builder testingEnviornment ask classNamed: 'TstNamed'.
-	generatedTNamed := builder testingEnviornment ask classNamed: 'TstTNamed'.
+	generatedNamed := builder testingEnvironment ask classNamed: 'TstNamed'.
+	generatedTNamed := builder testingEnvironment ask classNamed: 'TstTNamed'.
 	
 	self deny: (generatedNamed superclass = generatedTNamed).
 	method := generatedNamed classSide methodNamed: #statefulTraits.
@@ -84,8 +84,8 @@ FamixMetamodelBuilderClassTest >> testClassGeneralization [
 
 	builder generate.
 
-	generatedBehavior := builder testingEnviornment ask classNamed: 'TstBehavior'.
-	generatedClass := builder testingEnviornment ask classNamed: 'TstClass'.
+	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
+	generatedClass := builder testingEnvironment ask classNamed: 'TstClass'.
 	
 	self assert: generatedClass superclass equals: generatedBehavior.
 	annotation := generatedClass classSide methodNamed: #annotation.
@@ -106,8 +106,8 @@ FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
 
 	builder generate.
 
-	generatedBehavior := builder testingEnviornment ask classNamed: 'TstBehavior'.
-	generatedClass := builder testingEnviornment ask classNamed: 'TstClass'.
+	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
+	generatedClass := builder testingEnvironment ask classNamed: 'TstClass'.
 	
 	self assert: generatedClass superclass equals: generatedBehavior.
 	annotation := generatedClass classSide methodNamed: #annotation.
@@ -127,9 +127,9 @@ FamixMetamodelBuilderClassTest >> testMultipleAs [
 
 	builder generate.
 
-	generatedNamed := builder testingEnviornment ask classNamed: 'TstNamed'.
-	generatedTNamed := builder testingEnviornment ask classNamed: 'TstTNamed'.
-	generatedTSourced := builder testingEnviornment ask classNamed: 'TstTSourced'.
+	generatedNamed := builder testingEnvironment ask classNamed: 'TstNamed'.
+	generatedTNamed := builder testingEnvironment ask classNamed: 'TstTNamed'.
+	generatedTSourced := builder testingEnvironment ask classNamed: 'TstTSourced'.
 	
 	self deny: (generatedNamed superclass = generatedTNamed).
 	self deny: (generatedNamed superclass = generatedTSourced).
@@ -148,9 +148,9 @@ FamixMetamodelBuilderClassTest >> testMultipleClasses [
 	builder newClassNamed: #Package.
 
 	builder generate.
-	builder testingEnviornment ask classNamed: 'TstComment'.
-	builder testingEnviornment ask classNamed: 'TstMethod'.
-	builder testingEnviornment ask classNamed: 'TstPackage'.
+	builder testingEnvironment ask classNamed: 'TstComment'.
+	builder testingEnvironment ask classNamed: 'TstMethod'.
+	builder testingEnvironment ask classNamed: 'TstPackage'.
 
 ]
 
@@ -161,7 +161,7 @@ FamixMetamodelBuilderClassTest >> testSimpleClass [
 	
 	simpleClass := builder newClassNamed: #Comment.	
 	builder generate.
-	generated := builder testingEnviornment ask classNamed: 'TstComment'.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	self assert: generated notNil.
 	self assert: generated isClass.
 	self assert: generated superclass name equals: 'MooseEntity'.
@@ -177,7 +177,7 @@ FamixMetamodelBuilderClassTest >> testSimpleClassAnnotation [
 		
 	simpleClass := builder newClassNamed: #Comment.	
 	builder generate.
-	generated := builder testingEnviornment ask classNamed: 'TstComment'.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	method := generated classSide methodNamed: #annotation.
 	self assert: (method sourceCode includesSubstring: '<MSEClass: #Comment super: #MooseEntity>').
 	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
@@ -191,7 +191,7 @@ FamixMetamodelBuilderClassTest >> testSimpleClassStatefulTraits [
 	
 	simpleClass := builder newClassNamed: #Comment.	
 	builder generate.
-	generated := builder testingEnviornment ask classNamed: 'TstComment'.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	method := generated classSide methodNamed: #statefulTraits.
 	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
 	self assert: (method sourceCode includesSubstring: '^ {}').

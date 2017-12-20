@@ -236,17 +236,16 @@ FamixMetamodelBuilder >> environment: anObject [
 FamixMetamodelBuilder >> generate [
 
 	self traits do: [ :each | each generate ].
-	self sortedClasses do: [ :each | each generateDummyWith: self ].
-	self sortedClasses do: [ :each | each generateWith: self ].
+	self sortedClasses do: [ :each | each generateDummy ].
+	self sortedClasses do: [ :each | each generate ].
 
 ]
 
 { #category : #generation }
 FamixMetamodelBuilder >> generateAccessorsFor: relationSide in: aTrait [
 
-	self generateGetterFor: relationSide in: aTrait.
-	self generateSetterFor: relationSide in: aTrait.
-	
+	relationSide generateGetterIn: aTrait.
+	relationSide generateSetterIn: aTrait.	
 ]
 
 { #category : #generation }
@@ -425,7 +424,7 @@ FamixMetamodelBuilder >> sortedClasses [
 ]
 
 { #category : #'tests support' }
-FamixMetamodelBuilder >> testingEnviornment [ 
+FamixMetamodelBuilder >> testingEnvironment [
 
 	^ self environment ringEnvironment
 ]

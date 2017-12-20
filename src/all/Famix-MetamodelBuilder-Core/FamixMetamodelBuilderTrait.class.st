@@ -44,17 +44,9 @@ FamixMetamodelBuilderTrait >> generate [
 			
 	self realClass: aTrait.
 	
-	self generateAccessors.
-	
-	self willGenerate ifTrue: [ self generateAnnotationIn: aTrait ].
-
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderTrait >> generateAccessors [
-
-	self sides do: [ :each | 
-		self builder generateAccessorsFor: each in: self realClass ]
+	self willGenerate ifTrue: [ 
+		self generateAccessors.
+		self generateAnnotationIn: aTrait ].
 
 ]
 
@@ -63,7 +55,7 @@ FamixMetamodelBuilderTrait >> initialize [
 
 	super initialize.
 	
-	sides := Set new.
+
 ]
 
 { #category : #testing }
@@ -90,17 +82,12 @@ FamixMetamodelBuilderTrait >> property: propertyName [
 { #category : #accessing }
 FamixMetamodelBuilderTrait >> removeRelationSide: aRelationSide [
 
-	sides remove: aRelationSide ifAbsent: [ ].
+	properties remove: aRelationSide ifAbsent: [ ].
 ]
 
 { #category : #accessing }
 FamixMetamodelBuilderTrait >> sides [
-	^ sides
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderTrait >> sides: anObject [
-	sides := anObject
+	^ self properties
 ]
 
 { #category : #generating }
@@ -108,7 +95,7 @@ FamixMetamodelBuilderTrait >> slotDefinitions [
 
 	| slotGroups |
 	
-	slotGroups := (self sides collect: [ :each | self slotFor: each ]) groupedBy: #name.
+	slotGroups := (self sides collect: [ :property | property asSlot ]) groupedBy: #name.
 	
 	"check that all slots with the same name have the same properties"
 	slotGroups valuesDo: [ :similarSlots |
@@ -116,24 +103,4 @@ FamixMetamodelBuilderTrait >> slotDefinitions [
 		
 	^ slotGroups values collect: [ :each | each anyOne ].
 
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderTrait >> slotFor: aRelationSide [
-	
-	| slotName cardinality opposite type oppositeName |
-	
-	slotName := aRelationSide name.
-	opposite := aRelationSide otherSide.
-	cardinality := aRelationSide cardinality = #one
-		ifTrue: [ FMOne ]
-		ifFalse: [ FMMany ].
-	type := self builder prefix, opposite traitName.
-	oppositeName := opposite name.
-	
-	^ slotName asSymbol => cardinality type: type asSymbol opposite: oppositeName asSymbol
-	
-	
-	
-	
 ]

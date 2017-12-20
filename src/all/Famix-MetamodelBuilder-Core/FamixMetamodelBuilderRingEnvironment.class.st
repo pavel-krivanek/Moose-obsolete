@@ -51,8 +51,14 @@ FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots
 	aTrait layout makeResolved.
 	slots do: [ :slotInBadEnvironment |
 		| slot |
-		slot := RG2UnknownSlotDefinition named: slotInBadEnvironment name parent: aTrait layout.
-		slot := slot expression: slotInBadEnvironment expression ].
+		slot := slotInBadEnvironment isSpecial
+			ifTrue: [ 			
+				(RG2UnknownSlotDefinition named: slotInBadEnvironment name parent: aTrait layout) 
+					expression: slotInBadEnvironment expression;
+					yourself ]
+			ifFalse: [ 
+				RG2InstanceVariableSlotDefinition named: slotInBadEnvironment name parent: aTrait layout ].
+		aTrait layout addSlot: slot ].
 	^ aTrait
 ]
 
@@ -72,6 +78,12 @@ FamixMetamodelBuilderRingEnvironment >> ringEnvironment [
 { #category : #accessing }
 FamixMetamodelBuilderRingEnvironment >> ringEnvironment: anObject [
 	ringEnvironment := anObject
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName [ 
+
+	^ (RG2InstanceVariableSlotDefinition named: slotName asSymbol)
 ]
 
 { #category : #initialization }

@@ -1,0 +1,63 @@
+Class {
+	#name : #FamixMetamodelBuilderBehaviorAliasTest,
+	#superclass : #TestCase,
+	#instVars : [
+		'builder'
+	],
+	#category : #'Famix-MetamodelBuilder-Tests'
+}
+
+{ #category : #initialization }
+FamixMetamodelBuilderBehaviorAliasTest >> setUp [
+
+	builder := FamixMetamodelBuilder forTesting.
+
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderBehaviorAliasTest >> testAsIncompletePropertyWithoutRelation [
+
+	| named |
+		
+	named := builder newClassNamed: #Named.
+	named as: #TNamed property: #name.
+	
+	self should: [ builder generate ] raise: FamixMetamodelBuilderIncompletePropertyDefiniton.
+
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderBehaviorAliasTest >> testClassPropertyWithType [
+
+	| named generated method |
+		
+	named := builder newClassNamed: #Named.
+	named property: #name type: #String.
+	
+	builder generate.
+	
+	generated := builder testingEnvironment ask classNamed: 'TstNamed'.
+	method := generated instanceSide methodNamed: #name.
+	self assert: (method sourceCode includesSubstring: '<MSEProperty: #name type: #String>').
+	method := generated instanceSide methodNamed: #name:.
+	self assert: (method sourceCode includesSubstring: 'name := ').
+
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderBehaviorAliasTest >> testTraitPropertyWithType [
+
+	| named generated method |
+		
+	named := builder newTraitNamed: #TNamed.
+	named property: #name type: #String.
+	
+	builder generate.
+	
+	generated := builder testingEnvironment ask classNamed: 'TstTNamed'.
+	method := generated instanceSide methodNamed: #name.
+	self assert: (method sourceCode includesSubstring: '<MSEProperty: #name type: #String>').
+	method := generated instanceSide methodNamed: #name:.
+	self assert: (method sourceCode includesSubstring: 'name := ').
+
+]

@@ -1,19 +1,16 @@
 Class {
 	#name : #FamixMetamodelBuilderRelationSide,
-	#superclass : #Object,
+	#superclass : #FamixMetamodelBuilderProperty,
 	#instVars : [
-		'name',
 		'cardinality',
 		'trait',
-		'comment',
 		'container',
 		'relation',
 		'relatedClass',
 		'derived',
 		'source',
 		'target',
-		'builder',
-		'willGenerate'
+		'propertyType'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -150,14 +147,30 @@ FamixMetamodelBuilderRelationSide >> <>-* aRelationSide [
 	
 ]
 
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> builder [
-	^ builder
-]
+{ #category : #generating }
+FamixMetamodelBuilderRelationSide >> asSlot [
+	
+	| slotName opposite |
+	
+	self hasRelation 
+		ifFalse: [ FamixMetamodelBuilderIncompletePropertyDefiniton signal ].
+	
+	slotName := self name.
+	opposite := self otherSide.
+	
+	^ self builder environment 
+		slotNamed: slotName asSymbol 
+		cardinality: self cardinality 
+		type: (self builder prefix, opposite traitName) asSymbol 
+		opposite: opposite name asSymbol
 
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> builder: anObject [
-	builder := anObject
+	
+	
+	
+		
+	
+	
+	
 ]
 
 { #category : #accessing }
@@ -168,16 +181,6 @@ FamixMetamodelBuilderRelationSide >> cardinality [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> cardinality: anObject [
 	cardinality := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> comment [
-	^ comment
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> comment: anObject [
-	comment := anObject
 ]
 
 { #category : #properties }
@@ -213,16 +216,67 @@ FamixMetamodelBuilderRelationSide >> from [
 	^ self relation from
 ]
 
+{ #category : #generating }
+FamixMetamodelBuilderRelationSide >> generateGetterIn: aClassOrTrait [
+
+	| methodSource commentDefinition |
+	
+	commentDefinition := self comment
+		ifNotEmpty: [ '<MSEComment: ''{1}''>' format: { self comment } ].
+
+	methodSource := String streamContents: [ :s |
+		s nextPutAll: self name; cr; cr.
+		commentDefinition  
+			ifNotEmpty: [ s tab; nextPutAll: commentDefinition; cr].
+			self isContainer ifTrue: [ 
+				s tab; nextPutAll: '<container>'; cr; cr ].
+			self isDerived ifTrue: [ 
+				s tab; nextPutAll: '<derived>'; cr; cr ].
+			self isSource ifTrue: [ 
+				s tab; nextPutAll: '<source>'; cr; cr ].
+			self isTarget ifTrue: [ 
+				s tab; nextPutAll: '<target>'; cr; cr ].
+		s tab; nextPutAll: '^ ';
+			nextPutAll: self name.].
+		
+	self environment compile: methodSource in: aClassOrTrait classified: 'accessing'.	
+	
+
+	
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderRelationSide >> generateSetterIn: aClassOrTrait [
+
+	| methodSource |
+	
+	methodSource := String streamContents: [ :s |
+		s nextPutAll: self name; nextPutAll: ': anObject'; cr; cr.
+		(self cardinality = #one)
+			ifTrue: [ s tab; nextPutAll: self name, ' := anObject'; cr ]
+			ifFalse: [ s tab; nextPutAll: self name, ' value: anObject'; cr ] ].
+		
+	self builder environment compile: methodSource in: aClassOrTrait classified: 'accessing'.	
+
+	
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderRelationSide >> hasRelation [
+
+	^ self relation notNil
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> initialize [
 
+	super initialize.	
+
 	cardinality := #one.
-	comment := String new.
 	container := false.
 	derived := false.
 	target := false.
 	source := false.
-	willGenerate := true.
 
 ]
 
@@ -294,16 +348,6 @@ FamixMetamodelBuilderRelationSide >> many [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> name [
-	^ name
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> name: anObject [
-	name := anObject
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelationSide >> noContainer [
 	
 	container := false
@@ -331,6 +375,16 @@ FamixMetamodelBuilderRelationSide >> otherSide [
 	^ (aFromSide == self)
 		ifTrue: [ self relation to ]
 		ifFalse: [ aFromSide ]		
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderRelationSide >> propertyType [
+	^ propertyType
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderRelationSide >> propertyType: anObject [
+	propertyType := anObject
 ]
 
 { #category : #accessing }
@@ -406,14 +460,4 @@ FamixMetamodelBuilderRelationSide >> traitName: aString [
 
 	trait := self ensureTraitNamed: aString
 
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> willGenerate [
-	^ willGenerate
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> willGenerate: anObject [
-	willGenerate := anObject
 ]

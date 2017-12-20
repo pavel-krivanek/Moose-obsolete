@@ -52,6 +52,12 @@ FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName slots: slots
 ]
 
 { #category : #compiling }
+FamixMetamodelBuilderRealEnvironment >> slotNamed: slotName [ 
+
+	^ InstanceVariableSlot named: slotName asSymbol
+]
+
+{ #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> slotNamed: slotName cardinality: cardinality type: type opposite: oppositeName [
 
 	| cardinalityClass |

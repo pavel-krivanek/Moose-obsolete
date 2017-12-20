@@ -6,7 +6,8 @@ Class {
 		'relations',
 		'builder',
 		'realClass',
-		'willGenerate'
+		'willGenerate',
+		'properties'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -83,6 +84,14 @@ FamixMetamodelBuilderBehavior >> fullName [
 ]
 
 { #category : #generating }
+FamixMetamodelBuilderBehavior >> generateAccessors [
+
+	self properties do: [ :each | 
+		self builder generateAccessorsFor: each in: self realClass ]
+
+]
+
+{ #category : #generating }
 FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [ 
 
 	| aSuperclassName |
@@ -133,6 +142,7 @@ FamixMetamodelBuilderBehavior >> initialize [
 
 	super initialize.
 	relations := OrderedCollection new.
+	properties := OrderedCollection new.
 	willGenerate := true.
 ]
 
@@ -174,6 +184,27 @@ FamixMetamodelBuilderBehavior >> pluralRelationName [
 FamixMetamodelBuilderBehavior >> printOn: aStream [
 
 	aStream << self class name << '(' << self name asString << ')'
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> properties [
+	^ properties
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> property: propertyName type: aTypeName [
+
+	| aSide |
+	
+	aSide := FamixMetamodelBuilderTypedProperty new
+		name: propertyName;
+		builder: self builder;
+		propertyType: aTypeName asSymbol;
+		yourself.
+		
+	self properties add: aSide.
+
+	^ aSide.		
 ]
 
 { #category : #accessing }

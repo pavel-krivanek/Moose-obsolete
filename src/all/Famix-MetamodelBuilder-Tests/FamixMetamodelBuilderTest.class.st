@@ -11,8 +11,8 @@ FamixMetamodelBuilderTest >> testEmptyBuilder [
 	
 	builder := FamixMetamodelBuilder forTesting.
 	
-	self assert: builder testingEnviornment ask allClasses isEmpty.
+	self assert: builder testingEnvironment ask allClasses isEmpty.
 	builder generate.
-	self assert: builder testingEnviornment ask allClasses isEmpty.
+	self assert: builder testingEnvironment ask allClasses isEmpty.
 
 ]

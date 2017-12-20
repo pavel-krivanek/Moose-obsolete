@@ -83,6 +83,43 @@ FamixMetamodelBuilderClass >> generalization: anObject [
 ]
 
 { #category : #generating }
+FamixMetamodelBuilderClass >> generate [
+
+	| aClass aSuperclass aClassName |
+	
+	self willGenerate ifFalse: [ ^ self ].
+	
+	aClassName := (self builder prefix, self name) asSymbol.
+	
+	aSuperclass := self classGeneralization 
+		ifNil: [ self defaultSuperclass ]
+		ifNotNil: [ self classGeneralization realClass ].
+	
+	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass in: self builder packageName.
+			
+	self realClass: aClass.
+	self willGenerate ifTrue: [ 
+		self generateAccessors.
+		self generateAnnotationIn: aClass with: self builder  ].
+	self generateTraitsAssignmentsFor: aClass.
+
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderClass >> generateDummy [
+
+	| aClassName |
+	
+	self willGenerate ifFalse: [ ^ self ].
+	
+	aClassName := (self builder prefix, self name) asSymbol.
+	
+	self builder environment createDummyClassNamed: aClassName in: self builder packageName.
+
+		
+]
+
+{ #category : #generating }
 FamixMetamodelBuilderClass >> generateDummyWith: aBuilder [
 
 	| aClassName |
@@ -104,27 +141,6 @@ FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
 	<statefulTraits>
 	^ \{{1}\}' format: { (self traitNamesFromRelations, self traitNamesFromGeneralizations) joinUsing: '. ' }) 
 		classified: #meta
-
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderClass >> generateWith: aBuilder [
-
-	| aClass aSuperclass aClassName |
-	
-	self willGenerate ifFalse: [ ^ self ].
-	
-	aClassName := (aBuilder prefix, self name) asSymbol.
-	
-	aSuperclass := self classGeneralization 
-		ifNil: [ self defaultSuperclass ]
-		ifNotNil: [ self classGeneralization realClass ].
-	
-	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass in: aBuilder packageName.
-			
-	self realClass: aClass.
-	self willGenerate ifTrue: [ self generateAnnotationIn: aClass with: aBuilder ].
-	self generateTraitsAssignmentsFor: aClass.
 
 ]
 

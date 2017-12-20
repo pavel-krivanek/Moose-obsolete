@@ -22,9 +22,9 @@ FamixMetamodelBuilderTraitTest >> testMultipleTraits [
 	builder newTraitNamed: #TPackage.
 
 	builder generate.
-	builder testingEnviornment ask classNamed: 'TstTComment'.
-	builder testingEnviornment ask classNamed: 'TstTMethod'.
-	builder testingEnviornment ask classNamed: 'TstTPackage'.
+	builder testingEnvironment ask classNamed: 'TstTComment'.
+	builder testingEnvironment ask classNamed: 'TstTMethod'.
+	builder testingEnvironment ask classNamed: 'TstTPackage'.
 
 ]
 
@@ -35,7 +35,7 @@ FamixMetamodelBuilderTraitTest >> testSimpleClassAnnotation [
 		
 	simpleClass := builder newTraitNamed: #TComment.	
 	builder generate.
-	generated := builder testingEnviornment ask classNamed: 'TstTComment'.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 	method := generated classSide methodNamed: #annotation.
 	self assert: (method sourceCode includesSubstring: '<MSEClass: #TComment super: #FmxTraitEntity>').
 	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
@@ -49,7 +49,7 @@ FamixMetamodelBuilderTraitTest >> testSimpleTrait [
 	
 	builder newTraitNamed: #TComment.	
 	builder generate.
-	generated := builder testingEnviornment ask classNamed: 'TstTComment'.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 	self assert: generated notNil.
 	self assert: generated isClass.
 	self assert: generated superclass name equals: 'FmxTraitEntity'.
@@ -70,8 +70,8 @@ FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 	
 	builder generate.
 
-	generatedBehavior := builder testingEnviornment ask classNamed: 'TstBehavior'.
-	generatedTBehavior := builder testingEnviornment ask classNamed: 'TstTBehavior'.
+	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
+	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehavior'.
 	
 	self deny: (generatedBehavior superclass = generatedTBehavior).
 	method := generatedBehavior classSide methodNamed: #statefulTraits.
