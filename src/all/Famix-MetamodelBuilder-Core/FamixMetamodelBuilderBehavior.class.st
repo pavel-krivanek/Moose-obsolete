@@ -107,7 +107,7 @@ FamixMetamodelBuilderBehavior >> defaultSuperclass [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> fullName [
 
-	^ self builder prefix, self name
+	^ (self builder prefix, self name) asSymbol
 ]
 
 { #category : #generating }
@@ -156,12 +156,6 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aClass with: aBuilder [
 	^self' format: { self name. aSuperclassName. aBuilder packageName})
 		classified: 'meta'
 
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderBehavior >> generatedManyRelation [
-
-	^ builder newRelation generatedWithMany: self pluralRelationName.
 ]
 
 { #category : #accessing }
@@ -252,7 +246,7 @@ FamixMetamodelBuilderBehavior >> property: propertyName type: aTypeName [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> realClass [
 
-	^ realClass ifNil: [ Smalltalk at: (self builder prefix, self name) asSymbol  ]
+	^ realClass ifNil: [ Smalltalk at: self fullName  ]
 ]
 
 { #category : #accessing }

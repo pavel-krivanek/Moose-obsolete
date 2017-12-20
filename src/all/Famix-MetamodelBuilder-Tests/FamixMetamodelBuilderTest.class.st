@@ -1,3 +1,14 @@
+"
+coverage:
+
+blacklistClasses := { FamixMetamodelBuilderRealEnvironment. FamixMetamodelGenerator }.
+methods := 'Famix-MetamodelBuilder-Core' asPackage methods copyWithoutAll: (blacklistClasses flatCollect: #localMethods).
+
+testRunner := TestRunner new.
+testRunner instVarNamed: #packagesSelected put: #('Famix-MetamodelBuilder-Tests').
+testRunner selectSubclasses.
+testRunner collectCoverageFor: (methods collect: #asRingDefinition)
+"
 Class {
 	#name : #FamixMetamodelBuilderTest,
 	#superclass : #TestCase,

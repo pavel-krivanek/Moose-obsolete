@@ -38,7 +38,7 @@ FamixMetamodelBuilderTrait >> generate [
 	
 	self willGenerate ifFalse: [ ^ self ].
 	
-	traitName := (self builder prefix, self name) asSymbol.
+	traitName := self fullName.
 	
 	aTrait := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self builder packageName.
 			

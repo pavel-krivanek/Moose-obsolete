@@ -97,27 +97,6 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsMany [
 	self assert: generatedTWithAccesses slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
 	
 	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
-	
-"	
-	self assert: generatedTClass slots size equals: 1.
-	self assert: generatedTClass slots first name equals: #property1.
-	self assert: generatedTClass slots first expression equals: cardinality1, ' type: #TstTComment opposite: #property2'.
-	self assertCollection: generatedTClass instanceSide selectors hasSameElements: #(property1 property1:).
-	hasContainer := (generatedTClass methodNamed: #property1) sourceCode includesSubstring: '<container>'.
-	containerFrom 
-		ifTrue: [ self assert: hasContainer ]
-		ifFalse: [ self deny: hasContainer ].
-
-	self assert: generatedTComment slots size equals: 1.
-	self assert: generatedTComment slots first name equals: #property2.
-	self assert: generatedTComment slots first expression equals: cardinality2, ' type: #TstTClass opposite: #property1'.
-	self assertCollection: generatedTComment instanceSide selectors hasSameElements: #(property2 property2:).
-	hasContainer := (generatedTComment methodNamed: #property2) sourceCode includesSubstring: '<container>'.
-	containerTo
-		ifTrue: [ self assert: hasContainer ]
-		ifFalse: [ self deny: hasContainer ]."
-	
-
 ]
 
 { #category : #tests }
@@ -203,6 +182,70 @@ FamixMetamodelBuilderClassTest >> testMultipleClasses [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderClassTest >> testOwnerPropertyName [
+
+	| class |
+		
+	class := builder newClassNamed: #Variable.	
+	self assert: class ownerPropertyName equals: 'variableOwner'.
+		
+	class := builder newClassNamed: #Access.	
+	self assert: class ownerPropertyName equals: 'accessOwner'.
+
+	class := builder newClassNamed: #Method.	
+	self assert: class ownerPropertyName equals: 'methodOwner'.
+
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testPluralRelationName [
+
+	| class |
+		
+	class := builder newClassNamed: #Variable.	
+	self assert: class pluralRelationName equals: 'variables'.
+		
+	class := builder newClassNamed: #Access.	
+	self assert: class pluralRelationName equals: 'accesses'.
+
+	class := builder newClassNamed: #Method.	
+	self assert: class pluralRelationName equals: 'methods'.
+
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testRelatedOwnerTraitName [
+
+	| class |
+		
+	class := builder newClassNamed: #Variable.	
+	self assert: class relatedOwnerTraitName equals: 'TWithVariables'.
+		
+	class := builder newClassNamed: #Access.	
+	self assert: class relatedOwnerTraitName equals: 'TWithAccesses'.
+
+	class := builder newClassNamed: #Method.	
+	self assert: class relatedOwnerTraitName equals: 'TWithMethods'.
+
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testRelatedTraitName [
+
+	| class |
+		
+	class := builder newClassNamed: #Variable.	
+	self assert: class relatedTraitName equals: 'TVariable'.
+		
+	class := builder newClassNamed: #Access.	
+	self assert: class relatedTraitName equals: 'TAccess'.
+
+	class := builder newClassNamed: #Method.	
+	self assert: class relatedTraitName equals: 'TMethod'.
+
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testSimpleClass [
 
 	| simpleClass generated |
@@ -243,5 +286,21 @@ FamixMetamodelBuilderClassTest >> testSimpleClassStatefulTraits [
 	method := generated classSide methodNamed: #statefulTraits.
 	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
 	self assert: (method sourceCode includesSubstring: '^ {}').
+
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testSingularPropertyName [
+
+	| class |
+		
+	class := builder newClassNamed: #Variables.	
+	self assert: class singularPropertyName equals: 'variable'.
+		
+	class := builder newClassNamed: #Accesses.	
+	self assert: class singularPropertyName equals: 'access'.
+
+	class := builder newClassNamed: #Methods.	
+	self assert: class singularPropertyName equals: 'method'.
 
 ]

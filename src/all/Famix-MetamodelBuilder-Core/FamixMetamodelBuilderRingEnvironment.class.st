@@ -26,16 +26,6 @@ FamixMetamodelBuilderRingEnvironment >> compile: aSource in: aClass classified: 
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass in: packageName [
-
-	| aClass |
-	aClass := self ringEnvironment ensureClassNamed: aClassName.
-	aClass superclass: aSuperclass.
-	aClass package: (self ringEnvironment ensurePackageNamed: packageName).
-	^ aClass
-]
-
-{ #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName [
 
 	| aClass |

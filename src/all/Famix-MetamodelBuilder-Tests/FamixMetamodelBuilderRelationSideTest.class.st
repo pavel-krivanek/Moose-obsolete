@@ -34,11 +34,19 @@ FamixMetamodelBuilderRelationSideTest >> testProperties [
 	self assert: side isContainer.
 	side container: false.
 	self deny: side isContainer.
+	side container.
+	self assert: side isContainer.
+	side noContainer.
+	self deny: side isContainer.
 
 	self deny: side isDerived.
 	side derived.
 	self assert: side isDerived.
 	side derived: false.
+	self deny: side isDerived.
+	side derived.
+	self assert: side isDerived.
+	side notDerived.
 	self deny: side isDerived.
 
 	self deny: side isSource.
@@ -46,6 +54,18 @@ FamixMetamodelBuilderRelationSideTest >> testProperties [
 	self assert: side isSource.
 	side source: false.
 	self deny: side isSource.
+
+	self deny: side isTarget.
+	side target.
+	self assert: side isTarget.
+	side target: false.
+	self deny: side isTarget.
+
+	self deny: side isTarget.
+	side target.
+	self assert: side isTarget.
+	side target: false.
+	self deny: side isTarget.
 
 		
 ]

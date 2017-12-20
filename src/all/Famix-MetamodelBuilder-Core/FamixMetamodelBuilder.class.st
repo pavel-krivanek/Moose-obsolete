@@ -210,11 +210,6 @@ FamixMetamodelBuilder >> relations [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilder >> relations: anObject [
-	relations := anObject
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilder >> sortedClasses [
 
 	^ self classes sorted: [ :a :b |

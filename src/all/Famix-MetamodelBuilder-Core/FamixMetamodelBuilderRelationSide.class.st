@@ -298,7 +298,7 @@ FamixMetamodelBuilderRelationSide >> isSource [
 	^ source
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> isTarget [
 
 	^ target
@@ -347,13 +347,13 @@ FamixMetamodelBuilderRelationSide >> many [
 	cardinality := #many
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> noContainer [
 	
 	container := false
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> notDerived [
 	
 	derived := false
@@ -418,13 +418,13 @@ FamixMetamodelBuilderRelationSide >> source: anObject [
 	source := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> target [
 
 	target := true.
 ]
 
-{ #category : #accessing }
+{ #category : #properties }
 FamixMetamodelBuilderRelationSide >> target: anObject [
 	target := anObject
 ]

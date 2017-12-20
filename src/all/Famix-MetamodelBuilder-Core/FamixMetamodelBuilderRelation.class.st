@@ -26,14 +26,6 @@ FamixMetamodelBuilderRelation >> <>- anotherClass [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> between: aName and: anOppositeName [
-
-	"traitName := aName asSymbol.
-	oppositeTraitName := anOppositeName asSymbol."
-
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelation >> builder [
 	^ builder
 ]

@@ -95,7 +95,7 @@ FamixMetamodelBuilderClass >> generate [
 	
 	self willGenerate ifFalse: [ ^ self ].
 	
-	aClassName := (self builder prefix, self name) asSymbol.
+	aClassName := self fullName.
 	
 	aSuperclass := self classGeneralization 
 		ifNil: [ self defaultSuperclass ]
@@ -118,23 +118,9 @@ FamixMetamodelBuilderClass >> generateDummy [
 	
 	self willGenerate ifFalse: [ ^ self ].
 	
-	aClassName := (self builder prefix, self name) asSymbol.
+	aClassName := self fullName.
 	
 	self builder environment createDummyClassNamed: aClassName in: self builder packageName.
-
-		
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderClass >> generateDummyWith: aBuilder [
-
-	| aClassName |
-	
-	self willGenerate ifFalse: [ ^ self ].
-	
-	aClassName := (aBuilder prefix, self name) asSymbol.
-	
-	self builder environment createDummyClassNamed: aClassName in: aBuilder packageName.
 
 		
 ]
@@ -213,11 +199,6 @@ FamixMetamodelBuilderClass >> subclass: aClass [
 FamixMetamodelBuilderClass >> traitGeneralizations [
 
 	^ traitGeneralizations ifNil: [ traitGeneralizations := OrderedCollection new ]
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderClass >> traitGeneralizations: anObject [
-	traitGeneralizations := anObject
 ]
 
 { #category : #accessing }
