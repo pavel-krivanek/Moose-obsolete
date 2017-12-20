@@ -128,16 +128,6 @@ FamixMetamodelBuilderRelation >> oppositeSide: anObject [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> relation [
-	^ relation
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> relation: anObject [
-	relation := anObject
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelation >> right [
 
 	^ oppositeSide 

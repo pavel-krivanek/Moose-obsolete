@@ -80,3 +80,26 @@ FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 	
 
 ]
+
+{ #category : #initialization }
+FamixMetamodelBuilderTraitTest >> testUses [
+
+	| behavior tBehavior generatedBehavior generatedTBehavior method |
+	
+	behavior := builder newClassNamed: #Behavior.	
+	tBehavior := builder newTraitNamed: #TBehavior.
+
+	behavior uses: tBehavior.
+	
+	builder generate.
+
+	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
+	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehavior'.
+	
+	self deny: (generatedBehavior superclass = generatedTBehavior).
+	method := generatedBehavior classSide methodNamed: #statefulTraits.
+	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
+	self assert: (method sourceCode includesSubstring: '^ {TstTBehavior}').
+	
+
+]

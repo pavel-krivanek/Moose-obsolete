@@ -32,6 +32,12 @@ FamixMetamodelBuilderBehavior >> <>- anotherClass [
 	^ self containsMany: anotherClass
 ]
 
+{ #category : #'relations - arrows' }
+FamixMetamodelBuilderBehavior >> <>-* anotherClass [
+
+	^ self containsMany: anotherClass
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> <|-- anObject [
 
@@ -68,13 +74,28 @@ FamixMetamodelBuilderBehavior >> builder: anObject [
 { #category : #'relations - named' }
 FamixMetamodelBuilderBehavior >> containsMany: otherClass [
 
-	| aRelation |
+	| aRelation ownSide oppositeSide  |
 	
-	aRelation := otherClass generatedManyRelation.
-	aRelation side relatedClass: otherClass.
-	aRelation oppositeSide relatedClass: self.	
-	self addRelation: aRelation with: otherClass.
+	ownSide := self as: otherClass relatedOwnerTraitName property: otherClass pluralPropertyName. 
+	oppositeSide := otherClass as: otherClass relatedTraitName property: otherClass ownerPropertyName. 
+	oppositeSide container.
+	
+	aRelation := self builder newRelation
+		side: ownSide;
+		oppositeSide: oppositeSide;
+		builder: self builder;
+		yourself.	
+
+	ownSide relation: aRelation.	
+	oppositeSide relation: aRelation.
+	ownSide many.
+	
+	ownSide relatedClass ifNotNil: [ 
+		ownSide relatedClass addRelation: aRelation with: oppositeSide relatedClass ].
+	
 	^ aRelation
+	
+	
 ]
 
 { #category : #generating }

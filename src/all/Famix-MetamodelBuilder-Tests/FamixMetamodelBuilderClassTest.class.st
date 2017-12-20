@@ -73,6 +73,54 @@ FamixMetamodelBuilderClassTest >> testAs [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderClassTest >> testAutogereatedContainsMany [
+
+	| access variable generatedAccess generatedVariable generatedTAccess generatedTWithAccesses |
+	
+	access := builder newClassNamed: #Access.	
+	variable := builder newClassNamed: #Variable.	
+
+	(variable <>-* access).
+
+	builder generate.
+		
+	generatedAccess := builder testingEnvironment ask classNamed: 'TstAccess'.
+	generatedVariable := builder testingEnvironment ask classNamed: 'TstVariable'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTWithAccesses := builder testingEnvironment ask classNamed: 'TstTWithAccesses'.
+	
+	self assert: generatedAccess slots isEmpty.
+	self assert: generatedVariable slots isEmpty.
+	self assert: generatedTAccess slots first name equals: #accessOwner.
+	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTWithAccesses opposite: #accesses'.
+	self assert: generatedTWithAccesses slots first name equals: #accesses.
+	self assert: generatedTWithAccesses slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
+	
+	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	
+"	
+	self assert: generatedTClass slots size equals: 1.
+	self assert: generatedTClass slots first name equals: #property1.
+	self assert: generatedTClass slots first expression equals: cardinality1, ' type: #TstTComment opposite: #property2'.
+	self assertCollection: generatedTClass instanceSide selectors hasSameElements: #(property1 property1:).
+	hasContainer := (generatedTClass methodNamed: #property1) sourceCode includesSubstring: '<container>'.
+	containerFrom 
+		ifTrue: [ self assert: hasContainer ]
+		ifFalse: [ self deny: hasContainer ].
+
+	self assert: generatedTComment slots size equals: 1.
+	self assert: generatedTComment slots first name equals: #property2.
+	self assert: generatedTComment slots first expression equals: cardinality2, ' type: #TstTClass opposite: #property1'.
+	self assertCollection: generatedTComment instanceSide selectors hasSameElements: #(property2 property2:).
+	hasContainer := (generatedTComment methodNamed: #property2) sourceCode includesSubstring: '<container>'.
+	containerTo
+		ifTrue: [ self assert: hasContainer ]
+		ifFalse: [ self deny: hasContainer ]."
+	
+
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testClassGeneralization [
 
 	| behavior class generatedBehavior generatedClass annotation |

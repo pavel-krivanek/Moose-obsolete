@@ -61,6 +61,12 @@ FamixMetamodelBuilderClass >> as: aTraitName property: propertyName [
 	^ aSide.		
 ]
 
+{ #category : #converting }
+FamixMetamodelBuilderClass >> asTrait [
+
+	^ self builder ensureTraitNamed: self relatedTraitName
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderClass >> classGeneralization [
 	^ classGeneralization
@@ -148,6 +154,53 @@ FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
 FamixMetamodelBuilderClass >> isMetamodelClass [
 
 	^ true
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderClass >> ownerPropertyName [
+
+	^ self name uncapitalized, 'Owner'.
+	
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderClass >> pluralPropertyName [
+
+	| uncapitalized |
+	
+	uncapitalized := self name uncapitalized.
+	
+	^ (uncapitalized endsWith: 's')
+		ifFalse: [ uncapitalized, 's' ]
+		ifTrue: [ uncapitalized, 'es' ]
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderClass >> relatedOwnerTraitName [
+
+	^ 'TWith', self pluralPropertyName capitalized
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderClass >> relatedTraitName [
+
+	^ 'T', self name
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderClass >> singularPropertyName [
+
+	| uncapitalized |
+	
+	uncapitalized := self name uncapitalized.
+	
+	^ (uncapitalized endsWith: 'ses')
+		ifTrue: [uncapitalized withoutSuffix: 'es']
+		ifFalse: [ 
+			(uncapitalized endsWith: 's')
+				ifTrue: [uncapitalized withoutSuffix: 's']
+				ifFalse: [ self error: 'Property name is not in plural' ] ].
+
 ]
 
 { #category : #generating }

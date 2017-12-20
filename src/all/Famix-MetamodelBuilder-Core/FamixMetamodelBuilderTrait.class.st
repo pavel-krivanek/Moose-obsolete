@@ -7,6 +7,12 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
+{ #category : #accessing }
+FamixMetamodelBuilderTrait >> asTrait [
+
+	^ self
+]
+
 { #category : #generating }
 FamixMetamodelBuilderTrait >> classGeneralization [
 

@@ -77,7 +77,7 @@ FamixMetamodelBuilderRelationTest >> testClassRelations [
 	self resetBuilder.
 	self checkArrow: #<>- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: true forTraits: false.
 	
-		self resetBuilder.
+	self resetBuilder.
 	self checkArrow: #*-<> from: 'FMOne' to: 'FMMany' containerFrom: true containerTo: false forTraits: false.
 	self resetBuilder.
 	self checkArrow: #<>-* from: 'FMMany' to: 'FMOne' containerFrom: false containerTo: true forTraits: false.

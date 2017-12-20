@@ -97,11 +97,6 @@ FamixMetamodelBuilderRingEnvironment >> ringEnvironment [
 	^ ringEnvironment
 ]
 
-{ #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> ringEnvironment: anObject [
-	ringEnvironment := anObject
-]
-
 { #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName [ 
 
