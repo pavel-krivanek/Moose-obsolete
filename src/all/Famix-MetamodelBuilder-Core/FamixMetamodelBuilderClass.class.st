@@ -9,6 +9,12 @@ Class {
 }
 
 { #category : #accessing }
+FamixMetamodelBuilderClass >> addTraitGeneralization: aTrait [
+
+	 self traitGeneralizations add: aTrait 
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderClass >> allClassGeneralizations [
 
 	| result c g|
@@ -27,6 +33,7 @@ FamixMetamodelBuilderClass >> as: aTraitName [
 	| trait |
 	
 	trait := self builder ensureTraitNamed: aTraitName.
+	self addTraitGeneralization: trait. 
 	
 	^ FamixMetamodelBuilderClassAlias new
 		subject: self;
@@ -34,6 +41,24 @@ FamixMetamodelBuilderClass >> as: aTraitName [
 		yourself.
 		
 	
+]
+
+{ #category : #converting }
+FamixMetamodelBuilderClass >> as: aTraitName property: propertyName [
+
+	| aSide aTrait |
+	
+	aTrait := self builder ensureTraitNamed: aTraitName.
+	
+	aSide := FamixMetamodelBuilderRelationSide new
+		builder: self builder;
+		relatedClass: self;
+		traitName: aTraitName;
+		name: propertyName;
+		yourself.
+
+	aTrait sides add: aSide.
+	^ aSide.		
 ]
 
 { #category : #accessing }
@@ -50,10 +75,10 @@ FamixMetamodelBuilderClass >> classGeneralization: anObject [
 FamixMetamodelBuilderClass >> generalization: anObject [
 
 	anObject isSymbol
-		ifTrue: [ self traitGeneralizations add: (self builder ensureTraitNamed: anObject) ]
+		ifTrue: [ self addTraitGeneralization: (self builder ensureTraitNamed: anObject) ]
 		ifFalse: [ 
 			anObject isMetamodelTrait 
-				ifTrue: [ self traitGeneralizations add: anObject ]
+				ifTrue: [ self addTraitGeneralization: anObject ]
 				ifFalse: [ self classGeneralization: anObject ] ]
 ]
 
@@ -69,6 +94,17 @@ FamixMetamodelBuilderClass >> generateDummyWith: aBuilder [
 	self builder environment createDummyClassNamed: aClassName in: aBuilder packageName.
 
 		
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
+
+	aClass classSide compile: ('statefulTraits
+
+	<statefulTraits>
+	^ \{{1}\}' format: { (self traitNamesFromRelations, self traitNamesFromGeneralizations) joinUsing: '. ' }) 
+		classified: #meta
+
 ]
 
 { #category : #generating }
@@ -105,13 +141,6 @@ FamixMetamodelBuilderClass >> subclass: aClass [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> traitGeneralizationNames [
-
-	^ self traitGeneralizations collect: [ :each |
-		self builder prefix, each name]
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderClass >> traitGeneralizations [
 
 	^ traitGeneralizations ifNil: [ traitGeneralizations := OrderedCollection new ]
@@ -123,7 +152,14 @@ FamixMetamodelBuilderClass >> traitGeneralizations: anObject [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> traitNames [
+FamixMetamodelBuilderClass >> traitNamesFromGeneralizations [
+
+	^ self traitGeneralizations collect: [ :each |
+		self builder prefix, each name]
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderClass >> traitNamesFromRelations [
 
 	"returns traits defined by relations"
 

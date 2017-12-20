@@ -48,24 +48,6 @@ FamixMetamodelBuilderBehavior >> addRelation: aRelation with: anotherClass [
 	
 ]
 
-{ #category : #converting }
-FamixMetamodelBuilderBehavior >> as: aTraitName property: propertyName [
-
-	| aSide aTrait |
-	
-	aTrait := self builder ensureTraitNamed: aTraitName.
-	
-	aSide := FamixMetamodelBuilderRelationSide new
-		builder: self builder;
-		relatedClass: self;
-		traitName: aTraitName;
-		name: propertyName;
-		yourself.
-
-	aTrait sides add: aSide.
-	^ aSide.		
-]
-
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> builder [
 	^ builder
@@ -137,17 +119,6 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aClass with: aBuilder [
 	<package: #{3}>
 	^self' format: { self name. aSuperclassName. aBuilder packageName})
 		classified: 'meta'
-
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderBehavior >> generateTraitsAssignmentsFor: aClass [
-
-	aClass classSide compile: ('statefulTraits
-
-	<statefulTraits>
-	^ \{{1}\}' format: { (self traitNames, self traitGeneralizationNames) joinUsing: '. ' }) 
-		classified: #meta
 
 ]
 

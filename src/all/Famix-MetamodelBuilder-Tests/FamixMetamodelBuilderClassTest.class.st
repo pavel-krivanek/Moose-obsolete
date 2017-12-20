@@ -52,6 +52,27 @@ FamixMetamodelBuilderClassTest >> testAllClassGeneralizationsInChain [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderClassTest >> testAs [
+
+	| named generatedNamed generatedTNamed method |
+		
+	named := builder newClassNamed: #Named.
+	named as: #TNamed.	
+
+	builder generate.
+
+	generatedNamed := builder testingEnviornment ask classNamed: 'TstNamed'.
+	generatedTNamed := builder testingEnviornment ask classNamed: 'TstTNamed'.
+	
+	self deny: (generatedNamed superclass = generatedTNamed).
+	method := generatedNamed classSide methodNamed: #statefulTraits.
+	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
+	self assert: (method sourceCode includesSubstring: '^ {TstTNamed}').
+	
+
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testClassGeneralization [
 
 	| behavior class generatedBehavior generatedClass annotation |
@@ -91,6 +112,30 @@ FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
 	self assert: generatedClass superclass equals: generatedBehavior.
 	annotation := generatedClass classSide methodNamed: #annotation.
 	self assert: (annotation sourceCode includesSubstring: '<MSEClass: #Class super: #TstBehavior>').
+	
+
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testMultipleAs [
+
+	| named tNamed tSourced generatedNamed generatedTNamed generatedTSourced method |
+		
+	named := builder newClassNamed: #Named.
+	tNamed := named as: #TNamed.	
+	tSourced := named as: #TSourced.	
+
+	builder generate.
+
+	generatedNamed := builder testingEnviornment ask classNamed: 'TstNamed'.
+	generatedTNamed := builder testingEnviornment ask classNamed: 'TstTNamed'.
+	generatedTSourced := builder testingEnviornment ask classNamed: 'TstTSourced'.
+	
+	self deny: (generatedNamed superclass = generatedTNamed).
+	self deny: (generatedNamed superclass = generatedTSourced).
+	method := generatedNamed classSide methodNamed: #statefulTraits.
+	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
+	self assert: (method sourceCode includesSubstring: '^ {TstTNamed. TstTSourced}').
 	
 
 ]
