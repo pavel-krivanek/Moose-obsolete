@@ -778,7 +778,91 @@ BaselineOfMoose >> baselineZeroConf: spec [
 { #category : #baseline }
 BaselineOfMoose >> groups: spec [ 
     
+	spec group: 'BasicMetamodelling' with: #(
+			'GT-Debugger'
+			'GT-EventRecorder'
+			'GT-InspectorExtensions-Core'
+			'GT-Inspector'
+			'GT-Playground'
+			'GT-Spotter'
+			'GT-SpotterExtensions-Core'
 
+			'Glamour-Core'
+			'Glamour-FastTable'
+			'Glamour-Morphic-Brick'
+			'Glamour-Morphic-Pager'
+			'Glamour-Morphic-Renderer'
+			'Glamour-Morphic-Widgets'
+			'Glamour-Morphic-Theme'
+			'Glamour-Presentations'
+			'Glamour-Tests-Morphic'
+
+			'Moose-Algos-Graph'
+			'WebBrowser-Core'
+
+			'Grease-Core'
+			'Grease-Pharo30-Core' 
+
+			'Magritte-Model'
+			'Magritte-Pharo3-Model'
+			'Magritte-Morph'
+
+			'Hashtable'
+
+			'StateSpecs-Specs'
+			'StateSpecs-DSL-ShouldExpressions'
+			'StateSpecs-DSL-ClassWords'
+			'StateSpecs-Help'
+			'StateSpecs-Specs-Tests'
+			'StateSpecs-DSL-ShouldExpressions-Tests'
+			'StateSpecs-DSL-ClassWords-Tests'
+
+			'StatefulTraits'
+			'StatefulTraits-Tests'
+
+			'Ghost-ObjectGhost'
+			'Ghost-ClassGhost'
+			'Ghost-ObjectMutation'
+			'Ghost-ObjectGhost-Tests'
+			'Ghost-ClassGhost-Tests'
+			'Ghost-ObjectMutation-Tests'
+			'Ghost-StateSpecsSupport'
+			'Ghost-StateSpecsSupport-Tests'
+			'Ghost-GTSupport'
+
+			'Mocketry-Domain'
+			'Mocketry-Domain-Tests'
+			'Mocketry-Help'
+			'Mocketry-Specs'
+			'Mocketry-Specs-Tests'
+
+			'Fame-Core'
+			'Fame-Util'
+			'Fame-ImportExport'
+			'Fame-SmalltalkBinding'
+			'Fame-Tests-Core'
+
+			'GToolkit-Examples' 
+			'GToolkit-Examples-Dummies' 
+			'GToolkit-Examples-Extensions' 
+			'GToolkit-Examples-Roassal2UI' 
+			'GToolkit-Examples-UI' 
+			'GToolkit-Tests-Examples'
+
+			 'DeepTraverser'
+			 'DeepTraverser-Examples'
+			 'DeepTraverser-Tests'
+
+			 'RoelTyper'
+
+			'Moose-Query'
+			'Moose-Core'
+			'Famix-Core'
+
+			'Famix-MetamodelBuilder-Core'
+			'Famix-MetamodelBuilder-Support'
+
+	). 
 ]
 
 { #category : #actions }
