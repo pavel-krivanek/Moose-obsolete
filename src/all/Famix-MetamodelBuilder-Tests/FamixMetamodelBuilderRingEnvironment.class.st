@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'ringEnvironment'
 	],
-	#category : #'Famix-MetamodelBuilder-Tests'
+	#category : #'Famix-MetamodelBuilder-Tests-Support'
 }
 
 { #category : #accessing }

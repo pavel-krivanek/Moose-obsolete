@@ -162,6 +162,14 @@ FamixMetamodelBuilderClass >> pluralPropertyName [
 ]
 
 { #category : #'name conversion' }
+FamixMetamodelBuilderClass >> propertyName [
+	
+	^ self name uncapitalized.
+	
+	
+]
+
+{ #category : #'name conversion' }
 FamixMetamodelBuilderClass >> relatedOwnerTraitName [
 
 	^ 'TWith', self pluralPropertyName capitalized
