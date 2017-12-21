@@ -15,133 +15,56 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> *- aRelationSide [
 
-	| aRelation |
-	
-	aRelation := self builder newRelation
-		side: self;
-		oppositeSide: aRelationSide;
-		builder: self builder;
-		yourself.	
-
-	self relation: aRelation.	
-	aRelationSide relation: aRelation.
-	aRelationSide many.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
-	
-	^ aRelation
-	
-	
+	^ self manyToOne: aRelationSide
 ]
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> *-* aRelationSide [
 
-	| aRelation |
-	
-	aRelation := self builder newRelation
-		side: self;
-		oppositeSide: aRelationSide;
-		builder: self builder;
-		yourself.	
-
-	self relation: aRelation.	
-	aRelationSide relation: aRelation.
-	aRelationSide many.
-	self many.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass.].
-	
-	^ aRelation
-	
-	
+	^ self manyToMany: aRelationSide
 ]
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> *-<> aRelationSide [
 
-	self container.
-	self *- aRelationSide.
-	
-
+	^ self manyBelongTo: aRelationSide
 	
 ]
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> - aRelationSide [
 
-	| aRelation |
-
-	aRelation := self builder newRelation
-		side: self;
-		oppositeSide: aRelationSide;
-		builder: self builder;
-		yourself.	
-
-	self relation: aRelation.	
-	aRelationSide relation: aRelation.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
-	
-	^ aRelation
-	
-	
+	^ self oneToOne: aRelationSide
 ]
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> -* aRelationSide [
 
-	| aRelation |
-	
-	aRelation := self builder newRelation
-		side: self;
-		oppositeSide: aRelationSide;
-		builder: self builder;
-		yourself.	
-
-	self relation: aRelation.	
-	aRelationSide relation: aRelation.
-	self many.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
-	
-	^ aRelation
-	
-	
+	^ self oneToMany: aRelationSide
 ]
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> -<> aRelationSide [
 
-	self container.
-	self - aRelationSide.
-	
+	^ self oneBelongsTo: aRelationSide
 
 	
 ]
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> <>- aRelationSide [
 
-	aRelationSide container.
-	self - aRelationSide.
-	
-
+	^ self containsOne: aRelationSide
 	
 ]
 
-{ #category : #accessing }
+{ #category : #'relations - arrows' }
 FamixMetamodelBuilderRelationSide >> <>-* aRelationSide [
 
-	aRelationSide container.
-	self -* aRelationSide.
+	^ self containsMany: aRelationSide
 	
 
 	
@@ -192,6 +115,26 @@ FamixMetamodelBuilderRelationSide >> container [
 { #category : #properties }
 FamixMetamodelBuilderRelationSide >> container: anObject [
 	container := anObject
+]
+
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> containsMany: aRelationSide [
+
+	aRelationSide container.
+	self oneToMany: aRelationSide.
+	
+
+	
+]
+
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> containsOne: aRelationSide [
+
+	aRelationSide container.
+	self oneToOne: aRelationSide.
+	
+
+	
 ]
 
 { #category : #properties }
@@ -347,6 +290,50 @@ FamixMetamodelBuilderRelationSide >> many [
 	cardinality := #many
 ]
 
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> manyBelongTo: aRelationSide [
+
+	self container.
+	self manyToOne: aRelationSide.
+	
+
+	
+]
+
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> manyToMany: aRelationSide [
+
+	| aRelation |
+	
+	aRelation := self relationWith: aRelationSide.
+	aRelationSide many.
+	self many.
+	
+	self relatedClass ifNotNil: [ 
+		self relatedClass addRelation: aRelation with: aRelationSide relatedClass.].
+	
+	^ aRelation
+	
+	
+]
+
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> manyToOne: aRelationSide [
+
+	| aRelation |
+	
+	aRelation := self relationWith: aRelationSide.
+	
+	aRelationSide many.
+	
+	self relatedClass ifNotNil: [ 
+		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
+	
+	^ aRelation
+	
+	
+]
+
 { #category : #properties }
 FamixMetamodelBuilderRelationSide >> noContainer [
 	
@@ -363,6 +350,48 @@ FamixMetamodelBuilderRelationSide >> notDerived [
 FamixMetamodelBuilderRelationSide >> one [
 
 	cardinality := #one
+]
+
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> oneBelongsTo: aRelationSide [
+
+	self container.
+	self oneToOne: aRelationSide.
+	
+
+	
+]
+
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> oneToMany: aRelationSide [
+
+	| aRelation |
+	
+	aRelation := self relationWith: aRelationSide.
+
+	self many.
+	
+	self relatedClass ifNotNil: [ 
+		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
+	
+	^ aRelation
+	
+	
+]
+
+{ #category : #'relations - named' }
+FamixMetamodelBuilderRelationSide >> oneToOne: aRelationSide [
+
+	| aRelation |
+
+	aRelation := self relationWith: aRelationSide.
+	
+	self relatedClass ifNotNil: [ 
+		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
+	
+	^ aRelation
+	
+	
 ]
 
 { #category : #accessing }
@@ -405,6 +434,24 @@ FamixMetamodelBuilderRelationSide >> relation [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> relation: anObject [
 	relation := anObject
+]
+
+{ #category : #private }
+FamixMetamodelBuilderRelationSide >> relationWith: aRelationSide [
+
+	| aRelation |
+	
+	aRelation := self builder newRelation
+		side: self;
+		oppositeSide: aRelationSide;
+		builder: self builder;
+		yourself.	
+		
+	self relation: aRelation.	
+	aRelationSide relation: aRelation.
+	
+	^ aRelation
+
 ]
 
 { #category : #properties }

@@ -123,7 +123,6 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [
 
 	| aSuperclassName |
 	
-	
 	aSuperclassName :=  (self classGeneralization = self defaultSuperclass) 
 		ifTrue: [ self defaultSuperclass name]
 		ifFalse: [ self classGeneralization 
@@ -134,8 +133,8 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [
 	aRealClass classSide compile: ('annotation
 
 	<MSEClass: #{1} super: #{2}>
-	<package: #{3}>
-	^self' format: { self name. aSuperclassName. self builder packageName})
+	<package: {3}>
+	^self' format: { self name. aSuperclassName. self builder safePackageName})
 		classified: 'meta'
 
 ]

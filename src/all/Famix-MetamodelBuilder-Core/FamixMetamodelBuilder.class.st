@@ -210,6 +210,14 @@ FamixMetamodelBuilder >> relations [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilder >> safePackageName [
+	
+	^ packageName isLiteralSymbol
+		ifTrue: [ ^ '#', packageName ]
+		ifFalse: [ ^ '#''', packageName, '''' ]
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilder >> sortedClasses [
 
 	^ self classes sorted: [ :a :b |
