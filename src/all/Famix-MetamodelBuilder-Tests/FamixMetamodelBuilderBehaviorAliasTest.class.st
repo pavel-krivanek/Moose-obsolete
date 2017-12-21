@@ -45,6 +45,28 @@ FamixMetamodelBuilderBehaviorAliasTest >> testClassPropertyWithType [
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderBehaviorAliasTest >> testLink [
+
+	| access variable method sides |
+	
+	access := builder newClassNamed: #Access.	
+	variable := builder newClassNamed: #Variable.	
+	method := builder newClassNamed: #Method.	
+		
+	sides := (method as: #TWithAccesses)
+		link: #accesses -> #accessor
+		throughAssociation: (access as: #TAccess) 
+		link: #variable <- #icomingAcesses
+		with: (variable as: #TAccessible).
+		
+	sides first comment: 'This is a comment'.
+		
+	builder generate.
+	
+	"TODO: assert"
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderBehaviorAliasTest >> testTraitPropertyWithType [
 
 	| named generated method |

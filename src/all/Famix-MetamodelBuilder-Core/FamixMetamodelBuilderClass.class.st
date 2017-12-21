@@ -27,6 +27,12 @@ FamixMetamodelBuilderClass >> allClassGeneralizations [
 
 ]
 
+{ #category : #generating }
+FamixMetamodelBuilderClass >> allTraitNames [ 
+
+	^ (self traitNamesFromRelations, self traitNamesFromGeneralizations) asSet sorted
+]
+
 { #category : #converting }
 FamixMetamodelBuilderClass >> as: aTraitName [
 
@@ -131,7 +137,7 @@ FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
 	aClass classSide compile: ('statefulTraits
 
 	<statefulTraits>
-	^ \{{1}\}' format: { (self traitNamesFromRelations, self traitNamesFromGeneralizations) joinUsing: '. ' }) 
+	^ \{{1}\}' format: { self allTraitNames joinUsing: '. ' }) 
 		classified: #meta
 
 ]

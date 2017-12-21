@@ -248,43 +248,6 @@ FamixMetamodelBuilderRelationSide >> isTarget [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> link: link1 throughAssociation: anAssociationAlias link: link2 with: anAlias [
-
-"(behavior as: #TWithAccesses)
-	link: #accesses -> #accessor
-	throughAssociation: (access as: #TAccess) 
-	link: #variable -> #icomingAcesses
-	with: (variable as: #TAccessible)"
-	
-	| rel |
-	rel := self subject builder newRelation
-	from: [ :side |
-		side name: (link1 value);
-			traitName: anAssociationAlias traitName;
-			one	 ];
-	to: [ :opposite |
-		opposite 	name: link1 key;
-			traitName: self traitName;
-			many ].
-		
-anAssociationAlias subject addRelation: rel with: self subject.		
-		
-rel := self subject builder newRelation
-	from: [ :side |
-		side name: link2 key;
-			traitName: anAssociationAlias traitName;
-			one	 ];
-	to: [ :opposite |
-		opposite 	name: link2 value;
-			traitName: anAlias traitName;
-			many ].
-		
-anAssociationAlias subject addRelation: rel with: anAlias subject.		
-		
-
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelationSide >> many [
 
 	cardinality := #many

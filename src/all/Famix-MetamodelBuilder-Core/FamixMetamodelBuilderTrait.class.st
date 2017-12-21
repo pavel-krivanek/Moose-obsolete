@@ -10,7 +10,6 @@ Class {
 { #category : #generating }
 FamixMetamodelBuilderTrait >> as: aTraitName property: propertyName [
 
-	"^ (self builder ensureTraitNamed: aTraitName) property: propertyName"
 	^ self property: propertyName
 
 	

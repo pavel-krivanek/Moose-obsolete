@@ -9,22 +9,6 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelation >> -<> anotherClass [
-
-	| aRelation |
-	aRelation := anotherClass containsMany: self left relatedClass.
-	aRelation right traitName: self left traitName.
-	
-	^ aRelation.
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelation >> <>- anotherClass [
-
-	^ self right relatedClass containsMany: anotherClass
-]
-
 { #category : #accessing }
 FamixMetamodelBuilderRelation >> builder [
 	^ builder
@@ -49,52 +33,6 @@ FamixMetamodelBuilderRelation >> from: aBlock [
 		builder: self builder;
 		yourself).
 	aBlock cull: side.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> generatedMany: aRelationName [
-
-	| singular |
-	
-	singular := (aRelationName endsWith: 'es')
-		ifTrue: [aRelationName withoutSuffix: 'es']
-		ifFalse: [ 
-			(aRelationName endsWith: 's')
-				ifTrue: [aRelationName withoutSuffix: 's']
-				ifFalse: [ self error: 'Relation name is not in plural' ] ].
-			
-	^ self from: [ :aSide |
-			aSide name: singular, 'Owner';
-				traitName: 'T', singular capitalized;
-				one ];
-		to: [ :aSide |
-			aSide name: aRelationName;
-				traitName: 'TWith', aRelationName capitalized;
-				many ];
-		yourself
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelation >> generatedWithMany: aRelationName [
-
-	| singular |
-	
-	singular := (aRelationName endsWith: 'ses')
-		ifTrue: [aRelationName withoutSuffix: 'es']
-		ifFalse: [ 
-			(aRelationName endsWith: 's')
-				ifTrue: [aRelationName withoutSuffix: 's']
-				ifFalse: [ self error: 'Relation name is not in plural' ] ].
-			
-	^ self from: [ :aSide |
-			aSide name: aRelationName;
-				traitName: 'TWith', aRelationName capitalized;
-				many];
-		to: [ :aSide |
-			 aSide name: singular, 'Owner';
-				traitName: 'T', singular capitalized;
-				one ];
-		yourself
 ]
 
 { #category : #accessing }

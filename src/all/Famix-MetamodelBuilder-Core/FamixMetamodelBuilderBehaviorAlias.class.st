@@ -14,17 +14,18 @@ FamixMetamodelBuilderBehaviorAlias >> link: link1 throughAssociation: anAssociat
 "(behavior as: #TWithAccesses)
 	link: #accesses -> #accessor
 	throughAssociation: (access as: #TAccess) 
-	link: #variable -> #icomingAcesses
+	link: #variable <- #icomingAcesses
 	with: (variable as: #TAccessible)"
 	
-	| rel |
+	| rel side1 side2 side3 side4 |
 	rel := self subject builder newRelation
 	from: [ :side |
-		side name: (link1 value);
+		side1 := side name: (link1 value);
 			trait: anAssociationAlias trait;
-			one	 ];
+			one; 
+			source	 ];
 	to: [ :opposite |
-		opposite 	name: link1 key;
+		side2 := opposite name: link1 key;
 			trait: self trait;
 			many ].
 			
@@ -32,16 +33,18 @@ FamixMetamodelBuilderBehaviorAlias >> link: link1 throughAssociation: anAssociat
 			
 	rel := self subject builder newRelation
 		from: [ :side |
-			side name: link2 key;
+			side3 := side name: link2 value;
 				trait: anAssociationAlias trait;
-				one	 ];
+				one;
+				target	 ];
 		to: [ :opposite |
-			opposite 	name: link2 value;
+			side4 := opposite 	name: link2 key;
 				trait: anAlias trait;
 				many ].
 			
 	anAssociationAlias subject addRelation: rel with: anAlias subject.		
-			
+	
+	^ { side1. side2. side3. side4 }
 
 ]
 
