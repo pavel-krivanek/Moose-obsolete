@@ -7,6 +7,15 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
+{ #category : #generating }
+FamixMetamodelBuilderTrait >> as: aTraitName property: propertyName [
+
+	"^ (self builder ensureTraitNamed: aTraitName) property: propertyName"
+	^ self property: propertyName
+
+	
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderTrait >> asTrait [
 
@@ -61,6 +70,49 @@ FamixMetamodelBuilderTrait >> initialize [
 FamixMetamodelBuilderTrait >> isMetamodelTrait [
 
 	^ true
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderTrait >> ownerPropertyName [
+	
+	| uncapitalized |
+		
+	uncapitalized := (self name withoutPrefix: 'T') uncapitalized.
+	
+	^ uncapitalized, 'Owner'.
+
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderTrait >> pluralPropertyName [
+
+	| uncapitalized |
+	
+	uncapitalized := (self name withoutPrefix: 'T') uncapitalized.
+	
+	^ (uncapitalized endsWith: 's')
+		ifFalse: [ uncapitalized, 's' ]
+		ifTrue: [ uncapitalized, 'es' ]
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderTrait >> propertyName [
+	
+	^ (self name withoutPrefix: 'T') uncapitalized.
+	
+	
+]
+
+{ #category : #'name conversion' }
+FamixMetamodelBuilderTrait >> relatedOwnerTraitName [
+
+	^ self name
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderTrait >> relatedTraitName [
+
+	^ self name
 ]
 
 { #category : #accessing }
