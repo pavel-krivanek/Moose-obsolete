@@ -868,8 +868,9 @@ BaselineOfMoose >> groups: spec [
 { #category : #actions }
 BaselineOfMoose >> postload: loader package: packageSpec [
 
-	(self class environment at: #GTImageSetupCommandLineHandler) new installGTDebuggers.
-	(self class environment at: #GTImageSetupCommandLineHandler) new setPreferredSettings.
+	self class environment at: #GTImageSetupCommandLineHandler ifPresent: [:handler |  
+		handler new installGTDebuggers.
+		handler new setPreferredSettings].
 ]
 
 { #category : #actions }
