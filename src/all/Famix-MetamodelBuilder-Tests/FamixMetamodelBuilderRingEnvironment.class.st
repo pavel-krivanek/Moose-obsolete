@@ -1,10 +1,13 @@
+"
+an environment that uses Ring to simulate classes generation
+"
 Class {
 	#name : #FamixMetamodelBuilderRingEnvironment,
 	#superclass : #FamixMetamodelBuilderEnvironment,
 	#instVars : [
 		'ringEnvironment'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
 { #category : #accessing }

@@ -106,7 +106,7 @@ FamixMetamodelBuilderClass >> generate [
 	self realClass: aClass.
 	self willGenerate ifTrue: [ 
 		self generateAccessors.
-		self generateAnnotationIn: aClass with: self builder  ].
+		self generateAnnotationIn: aClass ].
 	self generateTraitsAssignmentsFor: aClass.
 
 ]

@@ -139,24 +139,6 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [
 
 ]
 
-{ #category : #generating }
-FamixMetamodelBuilderBehavior >> generateAnnotationIn: aClass with: aBuilder [
-
-	| aSuperclassName |
-	
-	aSuperclassName := self classGeneralization 
-		ifNil: [ self defaultSuperclass name ]
-		ifNotNil: [ self classGeneralization realClass name ].
-
-	aClass classSide compile: ('annotation
-
-	<MSEClass: #{1} super: #{2}>
-	<package: #{3}>
-	^self' format: { self name. aSuperclassName. aBuilder packageName})
-		classified: 'meta'
-
-]
-
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> initialize [
 
