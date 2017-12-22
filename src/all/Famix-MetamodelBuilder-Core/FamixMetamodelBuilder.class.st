@@ -126,7 +126,6 @@ FamixMetamodelBuilder >> initialize [
 
 	environment := FamixMetamodelBuilderRealEnvironment new.
 
-	operations := OrderedCollection new.
 	classes := OrderedCollection new.
 	traits := OrderedCollection new.
 	relations := OrderedCollection new.

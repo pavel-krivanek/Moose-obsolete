@@ -1,3 +1,6 @@
+"
+FamixMetamodelBuilderRealEnvironment
+"
 Class {
 	#name : #FamixMetamodelBuilderRealEnvironment,
 	#superclass : #FamixMetamodelBuilderEnvironment,

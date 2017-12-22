@@ -1,3 +1,6 @@
+"
+FamixMetamodelBuilderIncompletePropertyDefiniton
+"
 Class {
 	#name : #FamixMetamodelBuilderIncompletePropertyDefiniton,
 	#superclass : #Error,

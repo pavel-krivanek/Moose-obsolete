@@ -1,3 +1,6 @@
+"
+FamixMetamodelBuilderTrait
+"
 Class {
 	#name : #FamixMetamodelBuilderTrait,
 	#superclass : #FamixMetamodelBuilderBehavior,

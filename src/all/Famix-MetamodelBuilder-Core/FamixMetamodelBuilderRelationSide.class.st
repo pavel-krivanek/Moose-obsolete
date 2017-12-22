@@ -1,3 +1,6 @@
+"
+FamixMetamodelBuilderRelationSide
+"
 Class {
 	#name : #FamixMetamodelBuilderRelationSide,
 	#superclass : #FamixMetamodelBuilderProperty,

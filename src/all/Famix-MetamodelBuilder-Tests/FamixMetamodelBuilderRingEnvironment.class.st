@@ -83,6 +83,8 @@ FamixMetamodelBuilderRingEnvironment >> initialize [
 	super initialize.
 	
 	ringEnvironment := RG2Environment new.
+	ringEnvironment ensureClassNamed: #FMOne.
+	ringEnvironment ensureClassNamed: #FMMany.	
 ]
 
 { #category : #accessing }

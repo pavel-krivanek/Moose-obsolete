@@ -1,3 +1,6 @@
+"
+FamixMetamodelBuilderClassAlias
+"
 Class {
 	#name : #FamixMetamodelBuilderClassAlias,
 	#superclass : #FamixMetamodelBuilderBehaviorAlias,
