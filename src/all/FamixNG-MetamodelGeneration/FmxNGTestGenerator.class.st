@@ -116,45 +116,45 @@ FmxNGTestGenerator >> defineProperties [
 	((tAccess property: #accessor)
 			comment: 'Behavioural entity making the access to the variable. from-side of the association';
 			source)
-		-*
+		*-
 	((tWithAccesses property: #accesses)
 			comment: 'Accesses to variables made by this behaviour.').
 
 	((tAccess property: #variable)
 			comment: 'Variable accessed. to-side of the association';
 			target)
-		-*
+		*-
 	((tAccessible property: #incomingAccesses)
 			comment: 'All Famix accesses pointing to this structural entity').
 
 	((tAnnotationInstance property: #annotatedEntity)
 			comment: 'The NamedEntity on which the annotation occurs.';
 			container)
-		-*
+		*-
 	((tWithAnnotationInstances property: #annotationInstances)
 			comment: 'This property corresponds to the set of annotations associated to the entity').
 
 	((tAnnotationInstanceAttribute property: #parentAnnotationInstance)
 			comment: 'The instance of the annotation in which the attribute is used.';
 			container)
-		-*
+		*-
 	((tWithAnnotationInstanceAttributes property: #attributes)
 			comment: 'This corresponds to the actual values of the attributes in an AnnotationInstance').
 
 	((tAnnotationType property: #instances)
 			comment: 'Annotations of this type')
-		*-
+		-*
 	((tTypedAnnotationInstance property: #annotationType)
 			comment: 'Refers to the type of an annotation. (In some languages, Java and C#, an annotation as an explicit type). ';
 			container).
 
 	((tAnnotationType property: #annotationTypesContainer))
-		-*
+		*-
 	((tWithAnnotationTypes property: #definedAnnotationTypes)).
 
 	((tAnnotationTypeAttribute property: #annotationAttributeInstances)
 			comment: 'A collection of AnnotationInstanceAttribute which hold the usages of this attribute in actual AnnotationInstances')
-		*-
+		-*
 	((tTypedAnnotationInstanceAttribute property: #annotationTypeAttribute)
 			comment: 'This corresponds to the type of the attribute in an AnnotationInstance').
 
@@ -167,17 +167,17 @@ FmxNGTestGenerator >> defineProperties [
 	((tAttribute property: #parentType)
 			comment: 'Type declaring the attribute. belongsTo implementation';
 			container)
-		-*
+		*-
 	((tWithAttributes property: #attributes)
 			comment: 'List of attributes declared by this type.').
 
 	((tCaughtException property: #definingEntity))
-		-*
+		*-
 	((tWithCaughtExceptions property: #caughtExceptions)).
 
 	((tComment property: #container)
 			comment: 'Source code entity containing the comment')
-		-*
+		*-
 	((tWithComments property: #comments)
 			comment: 'list of comments defined in the entity').
 
@@ -186,49 +186,49 @@ FmxNGTestGenerator >> defineProperties [
 	((tWithCompilationUnit property: #compilationUnit)).
 
 	((tDeclaredException property: #definingEntity))
-		-*
+		*-
 	((tWithDeclaredExceptions property: #declaredExceptions)).
 
 	((tDereferencedInvocation property: #referencer)
 			comment: 'Structural entity that references the BehaviouralEntity invoked')
-		-*
+		*-
 	((tWithDereferencedInvocations property: #dereferencedInvocations)
 			comment: 'List of invocations performed on BehaviouralEntities referenced by this entity').
 
 	((tEnumValue property: #parentEnum)
 			comment: 'The Enum declaring this value. It offers the implementation of belongsTo';
 			container)
-		-*
+		*-
 	((tWithEnumValues property: #enumValues)).
 
 	((tException property: #exceptionClass)
 			comment: 'Class to which the exception points. It is specific to Java')
-		-*
+		*-
 	((tWithExceptions property: #exceptions)
 			comment: 'Exceptions which class is myself.').
 
 	((tFile property: #entities)
 			comment: 'List of entities defined in the file')
-		*-*
+		**-
 	((tWithFiles property: #containerFiles)
 			comment: 'List of files containing the entity').
 
 	((tFileInclude property: #source))
-		-*
+		*-
 	((tWithFileInclude property: #outgoingIncludeRelations)).
 
 	((tFileInclude property: #target))
-		-*
+		*-
 	((tWithFileInclude property: #incomingIncludeRelations)).
 
 	((tFunction property: #functionOwner))
-		-*
+		*-
 	((tWithFunctions property: #functions)).
 
 	((tGlobalVariable property: #parentScope)
 			comment: 'Scope declaring the global variable. belongsTo implementation';
 			container)
-		-*
+		*-
 	((tGlobalVariableScope property: #globalVariables)
 			comment: 'Global variables defined in the scope, if any.').
 
@@ -239,95 +239,95 @@ FmxNGTestGenerator >> defineProperties [
 	((tImplicitVariable property: #parentBehaviouralEntity)
 			comment: 'The behaviour containing this implicit variable. belongsTo implementation';
 			container)
-		-*
+		*-
 	((tWithImplicitVariables property: #implicitVariables)
 			comment: 'Implicit variables used locally by this behaviour.').
 
 	((tInvocable property: #incomingInvocations))
-		*-*
+		**-
 	((tInvocation property: #candidates)).
 
 	((tInvocation property: #sender)
 			comment: 'Behavioural entity making the call. from-side of the association';
 			source)
-		-*
+		*-
 	((tWithInvocations property: #outgoingInvocations)
 			comment: 'Outgoing invocations sent by this behaviour.').
 
 	((tInvocation property: #receiver)
 			comment: 'Named entity (variable, class...) receiving the invocation. to-side of the association')
-		-*
+		*-
 	((tInvocationsReceiver property: #receivingInvocations)
 			comment: 'List of invocations performed on this entity (considered as the receiver)').
 
 	((tLocalVariable property: #parentBehaviouralEntity)
 			comment: 'Behavioural entity declaring this local variable. belongsTo implementation';
 			container)
-		-*
+		*-
 	((tWithLocalVariables property: #localVariables)
 			comment: 'Variables locally defined by this behaviour.').
 
 	((tMethod property: #parentType)
 			comment: 'Type declaring the method. It provides the implementation for belongsTo.';
 			container)
-		-*
+		*-
 	((tWithMethods property: #methods)
 			comment: 'Methods declared by this type.').
 
 	((tModule property: #moduleFiles))
-		*-
+		-*
 	((tWithModule property: #module)).
 
 	((tNamespace property: #namespaceEntities))
-		*-
+		-*
 	((tNamespaceEntity property: #parentNamespace)).
 
 	((tNamespace property: #namespaceOwner))
-		-*
+		*-
 	((tWithNamespaces property: #namespaces)).
 
 	((tPackage property: #childEntities))
-		*-
+		-*
 	((tPackageable property: #parentPackage)).
 
 	((tPackage property: #packageOwner))
-		-*
+		*-
 	((tWithPackages property: #packages)).
 
 	((tParameter property: #parentBehaviouralEntity)
 			comment: 'Behavioural entity containing this parameter. belongsTo implementation';
 			container)
-		-*
+		*-
 	((tWithParameters property: #parameters)
 			comment: 'List of formal parameters declared by this behaviour.').
 
 	((tParameterizedType property: #parameterizableClass)
 			comment: 'Base type of this parameterized type.')
-		-*
+		*-
 	((tWithParameterizedTypes property: #parameterizedTypes)).
 
 	((tParameterizedTypeUser property: #argumentsInParameterizedTypes))
-		*-*
+		**-
 	((tWithParameterizedTypeUsers property: #arguments)).
 
 	((tReference property: #source)
 			comment: 'Source entity making the reference. from-side of the association';
 			source)
-		-*
+		*-
 	((tWithReferences property: #outgoingReferences)
 			comment: 'References from this entity to other entities.').
 
 	((tReference property: #target)
 			comment: 'Target entity referenced. to-side of the association';
 			target)
-		-*
+		*-
 	((tReferenceable property: #incomingReferences)
 			comment: 'References to this entity by other entities.').
 
 	((tScopingEntity property: #parentScope)
 			comment: 'Parent scope embedding this scope, if any.';
 			container)
-		-*
+		*-
 	((tScopingEntity property: #childScopes)
 			comment: 'Child scopes embedded in this scope, if any.').
 
@@ -340,50 +340,50 @@ FmxNGTestGenerator >> defineProperties [
 
 	((tSourceLanguage property: #sourcedEntities)
 			comment: 'References to the entities saying explicitly that are written in this language.')
-		*-
+		-*
 	((tWithSourceLanguage property: #declaredSourceLanguage)
 			comment: 'The declared SourceLanguage for the source code of this entity').
 
 	((tSub property: #supers))
-		*-*
+		**-
 	((tSuper property: #subs)).
 
 	((tSubInheritance property: #subclass))
-		-*
+		*-
 	((tWithSubInheritances property: #superInheritances)).
 
 	((tSuperInheritance property: #superclass))
-		-*
+		*-
 	((tWithSuperInheritances property: #subInheritances)).
 
 	((tTemplate property: #templateOwner))
-		-*
+		*-
 	((tWithTemplates property: #templates)).
 
 	((tTemplate property: #templateUsers))
-		*-
+		-*
 	((tTemplateUser property: #template)).
 
 	((tThrownException property: #definingEntity))
-		-*
+		*-
 	((tWithThrownExceptions property: #thrownExceptions)).
 
 	((tTrait property: #users))
-		*-*
+		*-
 	((tWithTrait property: #traits)).
 
 	((tType property: #typedEntities))
-		*-*
+		*-
 	((tWithTypes property: #types)).
 
 	((tTypeAlias property: #aliasedType)
 			comment: 'Points to the actual type.')
-		-*
+		*-
 	((tWithTypeAliases property: #typeAliases)
 			comment: 'Aliases').
 
 	((tTypedStructure property: #declaredType))
-		-*
+		*-
 	((tWithTypedStructures property: #structuresWithDeclaredType)).
 
 
