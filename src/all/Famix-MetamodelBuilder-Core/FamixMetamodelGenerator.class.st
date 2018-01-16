@@ -20,13 +20,13 @@ FamixMetamodelGenerator >> builder: anObject [
 	builder := anObject
 ]
 
-{ #category : #accessing }
+{ #category : #cleanup }
 FamixMetamodelGenerator >> cleanPackage [
 
 	self builder cleanPackage.
 ]
 
-{ #category : #accessing }
+{ #category : #definition }
 FamixMetamodelGenerator >> define [
 
 	self defineClasses.
@@ -35,19 +35,19 @@ FamixMetamodelGenerator >> define [
 	
 ]
 
-{ #category : #accessing }
+{ #category : #definition }
 FamixMetamodelGenerator >> defineClasses [
 ]
 
-{ #category : #accessing }
+{ #category : #definition }
 FamixMetamodelGenerator >> defineProperties [
 ]
 
-{ #category : #accessing }
+{ #category : #definition }
 FamixMetamodelGenerator >> defineTraits [
 ]
 
-{ #category : #accessing }
+{ #category : #generation }
 FamixMetamodelGenerator >> generate [
 
 	self define.
