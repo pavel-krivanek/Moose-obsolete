@@ -53,7 +53,10 @@ Class {
 		'packageName',
 		'classes',
 		'traits',
-		'relations'
+		'relations',
+		'classTag',
+		'traitsTag',
+		'traitTag'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -68,6 +71,18 @@ FamixMetamodelBuilder class >> forTesting [
 		yourself.
 ]
 
+{ #category : #settings }
+FamixMetamodelBuilder >> classTag [
+
+	^ classTag ifNil: [ classTag := self defaultClassTag ]
+]
+
+{ #category : #settings }
+FamixMetamodelBuilder >> classTag: aSymbol [
+
+	classTag := aSymbol
+]
+
 { #category : #accessing }
 FamixMetamodelBuilder >> classes [
 	^ classes
@@ -78,6 +93,18 @@ FamixMetamodelBuilder >> cleanPackage [
 
 	(self packageName asPackageIfAbsent: [ nil ]) 
 		ifNotNil: [:aPackage | aPackage removeFromSystem ].
+]
+
+{ #category : #'settings-default' }
+FamixMetamodelBuilder >> defaultClassTag [
+
+	^ #Entities
+]
+
+{ #category : #'settings-default' }
+FamixMetamodelBuilder >> defaultTraitTag [
+
+	^ #Traits
 ]
 
 { #category : #accessing }
@@ -238,6 +265,18 @@ FamixMetamodelBuilder >> trait: aTraitName property: propertyName [
 		name: propertyName;
 		builder: self;
 		yourself.
+]
+
+{ #category : #settings }
+FamixMetamodelBuilder >> traitTag [
+
+	^ traitTag ifNil: [ traitTag := self defaultTraitTag ]
+]
+
+{ #category : #settings }
+FamixMetamodelBuilder >> traitTag: aSymbol [
+
+	traitTag := aSymbol
 ]
 
 { #category : #accessing }

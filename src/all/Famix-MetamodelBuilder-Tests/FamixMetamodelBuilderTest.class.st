@@ -50,7 +50,6 @@ FamixMetamodelBuilderTest >> testEmptyBuilder [
 
 	| classesCount |
 	classesCount := builder testingEnvironment ask allClasses size.
-	"FMOne+superclass, FMMany+superclass"
 	builder generate.
 	self assert: builder testingEnvironment ask allClasses size equals: classesCount.
 

@@ -36,6 +36,12 @@ FamixMetamodelBuilderTrait >> defaultSuperclass [
 	^ self builder environment basicTrait
 ]
 
+{ #category : #'settings-default' }
+FamixMetamodelBuilderTrait >> defaultTag [
+
+	^ self builder traitTag
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderTrait >> generalization: anObject [
 
@@ -52,6 +58,7 @@ FamixMetamodelBuilderTrait >> generate [
 	traitName := self fullName.
 	
 	aTrait := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self builder packageName.
+	aTrait tagWith: self tag.
 			
 	self realClass: aTrait.
 	

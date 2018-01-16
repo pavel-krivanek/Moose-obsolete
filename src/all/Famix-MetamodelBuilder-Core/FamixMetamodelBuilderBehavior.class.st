@@ -10,7 +10,8 @@ Class {
 		'builder',
 		'realClass',
 		'willGenerate',
-		'properties'
+		'properties',
+		'tag'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -135,10 +136,16 @@ FamixMetamodelBuilderBehavior >> containsOne: otherClass [
 	
 ]
 
-{ #category : #generating }
+{ #category : #'settings-default' }
 FamixMetamodelBuilderBehavior >> defaultSuperclass [
 	
 	^ self builder environment basicSuperclass
+]
+
+{ #category : #'settings-default' }
+FamixMetamodelBuilderBehavior >> defaultTag [
+
+	^ self builder classTag
 ]
 
 { #category : #accessing }
@@ -406,6 +413,17 @@ FamixMetamodelBuilderBehavior >> slotDefinitions [
 		
 	^ slotGroups values collect: [ :each | each anyOne ].
 
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> tag [
+	^ tag ifNil: [ self defaultTag ]
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> tag: aSymbol [
+
+	tag := aSymbol
 ]
 
 { #category : #accessing }

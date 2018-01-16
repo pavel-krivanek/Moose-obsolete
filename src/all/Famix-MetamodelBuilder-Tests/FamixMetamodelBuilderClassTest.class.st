@@ -339,6 +339,19 @@ FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
 
 ]
 
+{ #category : #'tests - tags' }
+FamixMetamodelBuilderClassTest >> testDefaultTagForClass [
+
+	| tAccess generatedTAccess |
+
+	tAccess := builder newTraitNamed: #TAccess.	
+
+	builder generate.
+		
+	generatedTAccess := builder testingEnvironment ask classNamed: #TstTAccess.
+	self assertCollection: generatedTAccess tags hasSameElements: { builder defaultTraitTag }
+]
+
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testMultipleAs [
 
@@ -499,4 +512,70 @@ FamixMetamodelBuilderClassTest >> testSingularPropertyName [
 	class := builder newClassNamed: #Methods.	
 	self assert: class singularPropertyName equals: 'method'.
 
+]
+
+{ #category : #'tests - tags' }
+FamixMetamodelBuilderClassTest >> testTagForClass [
+
+	| access generatedAccess |
+
+	access := builder newClassNamed: #Access.	
+	access tag: #classes.
+
+	builder generate.
+		
+	generatedAccess := builder testingEnvironment ask classNamed: #TstAccess.
+	self assertCollection: generatedAccess tags hasSameElements: { #classes }
+]
+
+{ #category : #'tests - tags' }
+FamixMetamodelBuilderClassTest >> testTagForClassFromBuilder [
+
+	| access generatedAccess comment generatedComment |
+
+	access := builder newClassNamed: #Access.	
+	comment := builder newClassNamed: #Comment.	
+
+	builder classTag: #classes.
+	comment tag: #support.
+
+	builder generate.
+		
+	generatedAccess := builder testingEnvironment ask classNamed: #TstAccess.
+	generatedComment := builder testingEnvironment ask classNamed: #TstComment.
+	self assertCollection: generatedAccess tags hasSameElements: { #classes }.
+	self assertCollection: generatedComment tags hasSameElements: { #support }.
+]
+
+{ #category : #'tests - tags' }
+FamixMetamodelBuilderClassTest >> testTagForTraitFromBuilder [
+
+	| tAccess generatedTAccess tComment generatedTComment |
+
+	tAccess := builder newTraitNamed: #TAccess.	
+	tComment := builder newTraitNamed: #TComment.	
+
+	builder traitTag: #classes.
+	tComment tag: #support.
+
+	builder generate.
+		
+	generatedTAccess := builder testingEnvironment ask classNamed: #TstTAccess.
+	generatedTComment := builder testingEnvironment ask classNamed: #TstTComment.
+	self assertCollection: generatedTAccess tags hasSameElements: { #classes }.
+	self assertCollection: generatedTComment tags hasSameElements: { #support }.
+]
+
+{ #category : #'tests - tags' }
+FamixMetamodelBuilderClassTest >> testTagForTraits [
+
+	| tAccess generatedTAccess |
+
+	tAccess := builder newTraitNamed: #TAccess.	
+	tAccess tag: #support.
+
+	builder generate.
+		
+	generatedTAccess := builder testingEnvironment ask classNamed: #TstTAccess.
+	self assertCollection: generatedTAccess tags hasSameElements: { #support }
 ]
