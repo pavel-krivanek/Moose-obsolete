@@ -295,6 +295,30 @@ FamixMetamodelBuilderClassTest >> testAutogereatedOneToOne [
 	self deny: ((generatedTVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
 ]
 
+{ #category : #'tests - settings' }
+FamixMetamodelBuilderClassTest >> testBasicSuperclass [
+
+	| simpleClass generated |
+	
+	simpleClass := builder newClassNamed: #Comment.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
+	self assert: generated superclass name equals: builder defaultBasicSuperclassName.
+
+]
+
+{ #category : #'tests - settings' }
+FamixMetamodelBuilderClassTest >> testBasicTrait [
+
+	| simpleTrait generated |
+	
+	simpleTrait := builder newTraitNamed: #TComment.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
+	self assert: generated superclass name equals: builder defaultBasicTraitName.
+
+]
+
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testClassGeneralization [
 
@@ -371,6 +395,32 @@ FamixMetamodelBuilderClassTest >> testCommentOnTrait [
 	self assert: generated comment content equals: commentString.
 ]
 
+{ #category : #'tests - settings' }
+FamixMetamodelBuilderClassTest >> testCustomBasicTrait [
+
+	| simpleTrait generated |
+
+	builder basicTraitName: #CustomBasicTrait.	
+	simpleTrait := builder newTraitNamed: #TComment.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
+	self assert: generated superclass name equals: #CustomBasicTrait.	
+
+]
+
+{ #category : #'tests - settings' }
+FamixMetamodelBuilderClassTest >> testCustomSuperclass [
+
+	| simpleClass generated |
+	
+	builder basicSuperclassName: #BasicSuperclass.
+	simpleClass := builder newClassNamed: #Comment.
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
+	self assert: generated superclass name equals: 'BasicSuperclass'.
+
+]
+
 { #category : #'tests - tags' }
 FamixMetamodelBuilderClassTest >> testDefaultTagForClass [
 
@@ -392,7 +442,7 @@ FamixMetamodelBuilderClassTest >> testEmptyComment [
 	simpleClass := builder newClassNamed: #Comment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
-	self assert: generated comment content isEmpty.
+	self assert: generated comment content isEmptyOrNil.
 ]
 
 { #category : #tests }

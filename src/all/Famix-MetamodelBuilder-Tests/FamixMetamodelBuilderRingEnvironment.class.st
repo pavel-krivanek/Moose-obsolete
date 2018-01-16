@@ -13,13 +13,13 @@ Class {
 { #category : #accessing }
 FamixMetamodelBuilderRingEnvironment >> basicSuperclass [
 
-	^ self ringEnvironment ensureClassNamed: #MooseEntity
+	^ self ringEnvironment ensureClassNamed: self builder basicSuperclassName
 ]
 
 { #category : #accessing }
 FamixMetamodelBuilderRingEnvironment >> basicTrait [
 
-	^ self ringEnvironment ensureClassNamed: #FmxTraitEntity
+	^ self ringEnvironment ensureClassNamed: self builder basicTraitName
 ]
 
 { #category : #accessing }

@@ -147,13 +147,13 @@ FamixMetamodelBuilderBehavior >> containsOne: otherClass [
 	
 ]
 
-{ #category : #'settings-default' }
+{ #category : #'settings - default' }
 FamixMetamodelBuilderBehavior >> defaultSuperclass [
 	
 	^ self builder environment basicSuperclass
 ]
 
-{ #category : #'settings-default' }
+{ #category : #'settings - default' }
 FamixMetamodelBuilderBehavior >> defaultTag [
 
 	^ self builder classTag

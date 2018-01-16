@@ -10,13 +10,13 @@ Class {
 { #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> basicSuperclass [
 
-	^ MooseEntity
+	^ self class environment at: self builder basicSuperclassName
 ]
 
 { #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> basicTrait [
 
-	^ FmxTraitEntity
+	^ self class environment at: self builder basicTraitName
 ]
 
 { #category : #compiling }

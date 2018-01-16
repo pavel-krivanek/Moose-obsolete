@@ -56,7 +56,9 @@ Class {
 		'relations',
 		'classTag',
 		'traitsTag',
-		'traitTag'
+		'traitTag',
+		'basicSuperclassName',
+		'basicTraitName'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -64,11 +66,36 @@ Class {
 { #category : #'instance creation' }
 FamixMetamodelBuilder class >> forTesting [
 
-	^ self new
-		environment: FamixMetamodelBuilderRingEnvironment new;
+	| aBuilder |
+	aBuilder := self new.
+	aBuilder
+		environment: (FamixMetamodelBuilderRingEnvironment for: aBuilder);
 		prefix: 'Tst';
 		packageName: 'Tst';
 		yourself.
+	^ aBuilder.
+]
+
+{ #category : #settings }
+FamixMetamodelBuilder >> basicSuperclassName [
+
+	^ basicSuperclassName ifNil: [ basicSuperclassName := self defaultBasicSuperclassName ]
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> basicSuperclassName: anObject [
+	basicSuperclassName := anObject
+]
+
+{ #category : #settings }
+FamixMetamodelBuilder >> basicTraitName [
+
+	^ basicTraitName ifNil: [ basicTraitName := self defaultBasicTraitName ]
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> basicTraitName: anObject [
+	basicTraitName := anObject
 ]
 
 { #category : #settings }
@@ -95,13 +122,25 @@ FamixMetamodelBuilder >> cleanPackage [
 		ifNotNil: [:aPackage | aPackage removeFromSystem ].
 ]
 
-{ #category : #'settings-default' }
+{ #category : #'settings - default' }
+FamixMetamodelBuilder >> defaultBasicSuperclassName [
+
+	^ #MooseEntity
+]
+
+{ #category : #'settings - default' }
+FamixMetamodelBuilder >> defaultBasicTraitName [
+
+	^ #FmxTraitEntity
+]
+
+{ #category : #'settings - default' }
 FamixMetamodelBuilder >> defaultClassTag [
 
 	^ #Entities
 ]
 
-{ #category : #'settings-default' }
+{ #category : #'settings - default' }
 FamixMetamodelBuilder >> defaultTraitTag [
 
 	^ #Traits
@@ -151,7 +190,7 @@ FamixMetamodelBuilder >> generate [
 { #category : #initialization }
 FamixMetamodelBuilder >> initialize [
 
-	environment := FamixMetamodelBuilderRealEnvironment new.
+	environment := FamixMetamodelBuilderRealEnvironment for: self.
 
 	classes := OrderedCollection new.
 	traits := OrderedCollection new.
