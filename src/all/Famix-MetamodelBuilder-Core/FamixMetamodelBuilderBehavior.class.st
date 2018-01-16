@@ -11,7 +11,8 @@ Class {
 		'realClass',
 		'willGenerate',
 		'properties',
-		'tag'
+		'tag',
+		'comment'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -110,6 +111,16 @@ FamixMetamodelBuilderBehavior >> builder [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> builder: anObject [
 	builder := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> comment [
+	^ comment
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> comment: anObject [
+	comment := anObject
 ]
 
 { #category : #'relations - named' }

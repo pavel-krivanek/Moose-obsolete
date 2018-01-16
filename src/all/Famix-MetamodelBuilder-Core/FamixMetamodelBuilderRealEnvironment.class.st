@@ -65,6 +65,12 @@ FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName slots: slots
 ]
 
 { #category : #compiling }
+FamixMetamodelBuilderRealEnvironment >> setComment: aString for: aClass [
+
+	aClass organization comment: aString
+]
+
+{ #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> slotNamed: slotName [ 
 
 	^ InstanceVariableSlot named: slotName asSymbol

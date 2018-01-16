@@ -339,6 +339,38 @@ FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
 
 ]
 
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testComment [
+
+	| simpleClass generated commentString |
+	
+	
+	simpleClass := builder newClassNamed: #Comment.	
+	commentString := 'Simple testing class'.
+	simpleClass comment: commentString.
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
+	self assert: generated comment content equals: commentString.
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testCommentNotSpecified [
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testCommentOnTrait [
+
+	| simpleTrait generated commentString |
+	
+	
+	simpleTrait := builder newTraitNamed: #TComment.	
+	commentString := 'Simple testing class'.
+	simpleTrait comment: commentString.
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
+	self assert: generated comment content equals: commentString.
+]
+
 { #category : #'tests - tags' }
 FamixMetamodelBuilderClassTest >> testDefaultTagForClass [
 
@@ -350,6 +382,17 @@ FamixMetamodelBuilderClassTest >> testDefaultTagForClass [
 		
 	generatedTAccess := builder testingEnvironment ask classNamed: #TstTAccess.
 	self assertCollection: generatedTAccess tags hasSameElements: { builder defaultTraitTag }
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testEmptyComment [
+
+	| simpleClass generated |
+	
+	simpleClass := builder newClassNamed: #Comment.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
+	self assert: generated comment content isEmpty.
 ]
 
 { #category : #tests }

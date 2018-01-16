@@ -93,6 +93,12 @@ FamixMetamodelBuilderRingEnvironment >> ringEnvironment [
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderRingEnvironment >> setComment: aString for: aClass [
+
+	aClass comment content: aString
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName [ 
 
 	^ (RG2InstanceVariableSlotDefinition named: slotName asSymbol)
