@@ -48,13 +48,11 @@ FamixMetamodelBuilderTest >> testDoNotGenerateCurrent [
 { #category : #tests }
 FamixMetamodelBuilderTest >> testEmptyBuilder [
 
-	| builder |
-	
-	builder := FamixMetamodelBuilder forTesting.
-	
-	self assert: builder testingEnvironment ask allClasses isEmpty.
+	| classesCount |
+	classesCount := builder testingEnvironment ask allClasses size.
+	"FMOne+superclass, FMMany+superclass"
 	builder generate.
-	self assert: builder testingEnvironment ask allClasses isEmpty.
+	self assert: builder testingEnvironment ask allClasses size equals: classesCount.
 
 ]
 
