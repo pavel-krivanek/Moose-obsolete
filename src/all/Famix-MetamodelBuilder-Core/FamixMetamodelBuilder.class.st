@@ -251,7 +251,7 @@ FamixMetamodelBuilder >> newTraitNamed: aTraitName [
 
 { #category : #accessing }
 FamixMetamodelBuilder >> packageName [
-	^ packageName
+	^ packageName ifNil: [ packageName := #'FamixMetamodelBulder-Generated' ]
 ]
 
 { #category : #accessing }
