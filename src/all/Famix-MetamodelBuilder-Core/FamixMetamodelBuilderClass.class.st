@@ -127,6 +127,16 @@ FamixMetamodelBuilderClass >> generate [
 		self generateAccessors.
 		self generateAnnotationIn: aClass ].
 	self generateTraitsAssignmentsFor: aClass.
+	
+	self builder traitsFlattening ifTrue: [ 
+		| info selectors foundTraits |
+		info := StatefulTraitsMergedClassInfo on: aClass.
+		selectors := (Pragma allNamed: #statefulTraits in: aClass classSide) 
+			collect: [ :each | each method selector ].
+		foundTraits := (selectors flatCollect: [ :selector | aClass perform: selector]) asSet.
+		foundTraits do: [ :each | info addTrait: each ].
+		info merge.
+		 ]
 
 ]
 

@@ -58,7 +58,8 @@ Class {
 		'traitsTag',
 		'traitTag',
 		'basicSuperclassName',
-		'basicTraitName'
+		'basicTraitName',
+		'traitsFlattening'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -196,6 +197,8 @@ FamixMetamodelBuilder >> initialize [
 	traits := OrderedCollection new.
 	relations := OrderedCollection new.
 	
+	traitsFlattening := false.
+	
 	
 	
 ]
@@ -261,7 +264,7 @@ FamixMetamodelBuilder >> packageName: anObject [
 
 { #category : #accessing }
 FamixMetamodelBuilder >> prefix [
-	^ prefix
+	^ prefix ifNil: [ prefix := '' ]
 ]
 
 { #category : #accessing }
@@ -321,4 +324,14 @@ FamixMetamodelBuilder >> traitTag: aSymbol [
 { #category : #accessing }
 FamixMetamodelBuilder >> traits [
 	^ traits
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> traitsFlattening [
+	^ traitsFlattening
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> traitsFlattening: anObject [
+	traitsFlattening := anObject
 ]

@@ -14,7 +14,7 @@ FamixMetamodelBuilderTraitTest >> setUp [
 
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedContainsMany [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -37,7 +37,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedContainsMany [
 	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedContainsOne [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -61,7 +61,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedContainsOne [
 	self deny: ((generatedTVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedManyBelongTo [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -84,7 +84,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyBelongTo [
 	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedManyToMany [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -108,7 +108,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyToMany [
 	self deny: ((generatedTVariable methodNamed: #accesses) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedManyToOne [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -131,7 +131,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyToOne [
 	self deny: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedOneBelongsTo [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -155,7 +155,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneBelongsTo [
 	self assert: ((generatedTVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedOneToMany [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -178,7 +178,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneToMany [
 	self deny: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedOneToOne [
 
 	| access variable generatedTAccess generatedTVariable |
@@ -202,7 +202,7 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneToOne [
 	self deny: ((generatedTVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testMultipleTraits [
 
 	builder newTraitNamed: #TComment.	
@@ -216,7 +216,7 @@ FamixMetamodelBuilderTraitTest >> testMultipleTraits [
 
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testSimpleClassAnnotation [
 
 	| simpleClass generated method |
@@ -230,7 +230,7 @@ FamixMetamodelBuilderTraitTest >> testSimpleClassAnnotation [
 
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testSimpleTrait [
 
 	| generated |
@@ -246,7 +246,7 @@ FamixMetamodelBuilderTraitTest >> testSimpleTrait [
 	self assertCollection: generated classSide localSelectors sorted equals: #(annotation).
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 
 	| behavior tBehavior generatedBehavior generatedTBehavior method |
@@ -269,7 +269,7 @@ FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 
 ]
 
-{ #category : #initialization }
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testUses [
 
 	| behavior tBehavior generatedBehavior generatedTBehavior method |
