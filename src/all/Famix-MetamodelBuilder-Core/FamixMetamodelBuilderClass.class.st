@@ -37,13 +37,13 @@ FamixMetamodelBuilderClass >> allTraitNames [
 ]
 
 { #category : #converting }
-FamixMetamodelBuilderClass >> as: aTraitOrTrait [
+FamixMetamodelBuilderClass >> as: aTraitOrTraitName [
 
 	| trait |
 	
-	trait := aTraitOrTrait isString
-		ifTrue: [ self builder ensureTraitNamed: aTraitOrTrait ]
-		ifFalse: [ aTraitOrTrait ].
+	trait := aTraitOrTraitName isString
+		ifTrue: [ self builder ensureTraitNamed: aTraitOrTraitName ]
+		ifFalse: [ aTraitOrTraitName ].
 	self addTraitGeneralization: trait. 
 	
 	^ FamixMetamodelBuilderClassAlias new
@@ -55,11 +55,17 @@ FamixMetamodelBuilderClass >> as: aTraitOrTrait [
 ]
 
 { #category : #converting }
-FamixMetamodelBuilderClass >> as: aTraitName property: propertyName [
+FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 
-	| aSide aTrait |
+	| aSide aTrait aTraitName |
 	
-	aTrait := self builder ensureTraitNamed: aTraitName.
+	aTrait := aTraitOrTraitName isString
+		ifTrue: [ 
+			aTraitName := aTraitOrTraitName.
+			self builder ensureTraitNamed: aTraitOrTraitName ]
+		ifFalse: [ 
+			aTraitName := aTraitOrTraitName name.
+			aTraitOrTraitName ].
 	
 	aSide := FamixMetamodelBuilderRelationSide new
 		builder: self builder;
