@@ -131,7 +131,7 @@ FmxNGTestGenerator >> commentForTAnnotationInstance [
 	^ 'AnnotationInstance is an instance of an AnnotationType. It links an AnnotationType to an actual entity.
 
 For example, the following is an annotation instance in Smalltalk.
-<primitive: ''primAnyBitFromTo' module:'LargeIntegers''>.
+<primitive: ''primAnyBitFromTo'' module:''LargeIntegers''>.
 
 And the following is an AnnotationInstance in Java:
 @Test(timeout = 500)
@@ -809,16 +809,59 @@ FmxNGTestGenerator >> commentForTWithTypes [
 	^ ''
 ]
 
-{ #category : #initialization }
+{ #category : #definition }
 FmxNGTestGenerator >> define [
 
 	self defineTraits.
-	self defineProperties.
+	self defineRelations.
 
 ]
 
-{ #category : #initialization }
+{ #category : #definition }
 FmxNGTestGenerator >> defineProperties [
+
+	((tFile property: #name type: #String)
+		comment: 'Basic name of the entity, not full reference.').
+	
+	((tFileAnchor property: #correspondingFile type: #FAMIXFile) "FIX"
+		comment: 'File associated to this source anchor').
+	((tFileAnchor property: #encoding type: #String) "FIX - custom"
+		comment: 'A string representing the encoding of a file').
+	((tFileAnchor property: #fileName type: #String) 
+		comment: 'Name of the source file').
+
+	((tAccess property: #isWrite type: #Boolean) "FIX - custom"
+		comment: 'Write access').
+
+	((tAnnotationInstanceAttribute property: #value type: #String)
+		comment: 'Actual value of the attribute used in an annotation').
+
+	((tNamed property: #name type: #String)
+		comment: 'Basic name of the entity, not full reference.').
+	((tNamed property: #isStub type: #Boolean)
+		comment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.').
+	((tNamed property: #modifiers type: #String)
+		comment: 'Generic container for language dependent modifiers.').
+
+	((tMethod property: #timeStamp type: #String)
+		comment: 'TimeStamp of the method with author and time of the last change').
+	((tMethod property: #category type: #String) "FIX - custom, own trait?"
+		comment: 'Category of the method').
+	((tMethod property: #kind type: #String) 
+		comment: 'Tag indicating a setter, getter, constant, constructor, or abstract method').
+	((tMethod property: #hasClassScope type: #Boolean) 
+		comment: 'True if class-side method').
+
+	((tInvocation property: #signature type: #String) "FIX - custom"
+		comment: 'Signature of the message being sent').
+
+	((tComment property: #content type: #String) "FIX - custom"
+		comment: 'Content of the comment as a String').
+
+]
+
+{ #category : #definition }
+FmxNGTestGenerator >> defineRelations [
 
 	((tAccess property: #accessor)
 			comment: 'Behavioural entity making the access to the variable. from-side of the association';
@@ -1096,7 +1139,7 @@ FmxNGTestGenerator >> defineProperties [
 
 ]
 
-{ #category : #initialization }
+{ #category : #definition }
 FmxNGTestGenerator >> defineTraits [
 
 	tAccess := builder newTraitNamed: #TAccess.
