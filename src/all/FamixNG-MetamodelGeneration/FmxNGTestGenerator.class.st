@@ -102,6 +102,69 @@ Class {
 	#category : #'FamixNG-MetamodelGeneration'
 }
 
+{ #category : #comments }
+FmxNGTestGenerator >> commentForTAccess [
+
+	^ 'FAMIXAccess represents an access to a variable by a behavioural entity (for example, a function or a method). 
+
+For example if the method foo accesses the instance variable x, there is an access with the following information:
+	(i) From: aFAMIXMethod (foo)
+	(ii) To: aFAMIXAttribute (x)
+	
+aFAMIXMethod (foo) can be accessed using the message accessor (and from)
+aFAMIXAttribute (x) can be accessed using the message variable (and to). 
+
+Furthermore it can be tagged as read or write using isWrite: aBoolean.
+
+For each access in the source code, there is one famix access created even if it is from the same behavioral entity towards the same variable.'
+]
+
+{ #category : #comments }
+FmxNGTestGenerator >> commentForTAccessible [
+
+	^ ''
+]
+
+{ #category : #comments }
+FmxNGTestGenerator >> commentForTAnnotationInstance [
+
+	^ 'AnnotationInstance is an instance of an AnnotationType. It links an AnnotationType to an actual entity.
+
+For example, the following is an annotation instance in Smalltalk.
+<primitive: ''primAnyBitFromTo' module:'LargeIntegers''>.
+
+And the following is an AnnotationInstance in Java:
+@Test(timeout = 500)
+
+Instance Variables:
+	annotatedEntity	<FAMIXEntity>
+	annotationType		<FAMIXAnnotationType>'
+]
+
+{ #category : #comments }
+FmxNGTestGenerator >> commentForTAnnotationInstanceAttribute [
+
+	^ 'This models the actual value of an attribute in an AnnotationInstance.
+
+In the following AnnotationInstance of Java, timeout is an annotation instance attribute :
+@Test(timeout = 500)
+
+Instance Variables:
+	parentAnnotationInstance	<FAMIXAnnotationInstance>
+	annotationTypeAttribute	<FAMIXAnnotationTypeAttribute>
+	value	<Object>'
+]
+
+{ #category : #comments }
+FmxNGTestGenerator >> commentForTAnnotationType [
+
+	^ 'FAMIXAnnotationType represents the type of an annotation. In some languages, Java and C#, an annotation as an explicit type. An AnnotationType can have a container in which it resides.
+
+Instance Variables:
+	instances	<(FMMultivalueLink of: FAMIXAnnotationInstance)>
+	container	<FAMIXContainerEntity>'
+]
+
 { #category : #initialization }
 FmxNGTestGenerator >> define [
 
@@ -209,7 +272,7 @@ FmxNGTestGenerator >> defineProperties [
 
 	((tFile property: #entities)
 			comment: 'List of entities defined in the file')
-		**-
+		*-
 	((tWithFiles property: #containerFiles)
 			comment: 'List of files containing the entity').
 
@@ -244,7 +307,7 @@ FmxNGTestGenerator >> defineProperties [
 			comment: 'Implicit variables used locally by this behaviour.').
 
 	((tInvocable property: #incomingInvocations))
-		**-
+		*-
 	((tInvocation property: #candidates)).
 
 	((tInvocation property: #sender)
@@ -307,7 +370,7 @@ FmxNGTestGenerator >> defineProperties [
 	((tWithParameterizedTypes property: #parameterizedTypes)).
 
 	((tParameterizedTypeUser property: #argumentsInParameterizedTypes))
-		**-
+		*-
 	((tWithParameterizedTypeUsers property: #arguments)).
 
 	((tReference property: #source)
@@ -345,7 +408,7 @@ FmxNGTestGenerator >> defineProperties [
 			comment: 'The declared SourceLanguage for the source code of this entity').
 
 	((tSub property: #supers))
-		**-
+		*-
 	((tSuper property: #subs)).
 
 	((tSubInheritance property: #subclass))
@@ -393,10 +456,20 @@ FmxNGTestGenerator >> defineProperties [
 FmxNGTestGenerator >> defineTraits [
 
 	tAccess := builder newTraitNamed: #TAccess.
+	tAccess comment: self commentForTAccess.
+	
 	tAccessible := builder newTraitNamed: #TAccessible.
+	tAccessible comment: self commentForTAccessible.
+	
 	tAnnotationInstance := builder newTraitNamed: #TAnnotationInstance.
+	tAnnotationInstance comment: self commentForTAnnotationInstance.
+
 	tAnnotationInstanceAttribute := builder newTraitNamed: #TAnnotationInstanceAttribute.
+	tAnnotationInstanceAttribute comment: self commentForTAnnotationInstanceAttribute.
+
 	tAnnotationType := builder newTraitNamed: #TAnnotationType.
+	tAnnotationType comment: self commentForTAnnotationType.
+
 	tAnnotationTypeAttribute := builder newTraitNamed: #TAnnotationTypeAttribute.
 	tAssociation := builder newTraitNamed: #TAssociation.
 	tAttribute := builder newTraitNamed: #TAttribute.
@@ -488,7 +561,7 @@ FmxNGTestGenerator >> defineTraits [
 	tWithTypeAliases := builder newTraitNamed: #TWithTypeAliases.
 	tWithTypedStructures := builder newTraitNamed: #TWithTypedStructures.
 	tWithTypes := builder newTraitNamed: #TWithTypes.
-	tColumn := builder newTraitNamed: #TColumn.
+	"tColumn := builder newTraitNamed: #TColumn.
 	tForeignKey := builder newTraitNamed: #TForeignKey.
 	tFromExpression := builder newTraitNamed: #TFromExpression.
 	tOtherExpression := builder newTraitNamed: #TOtherExpression.
@@ -501,7 +574,7 @@ FmxNGTestGenerator >> defineTraits [
 	tWithFromExpressions := builder newTraitNamed: #TWithFromExpressions.
 	tWithOtherExpressions := builder newTraitNamed: #TWithOtherExpressions.
 	tWithSelectExpressions := builder newTraitNamed: #TWithSelectExpressions.
-	tWithWhereExpressions := builder newTraitNamed: #TWithWhereExpressions.
+	tWithWhereExpressions := builder newTraitNamed: #TWithWhereExpressions."
 ]
 
 { #category : #initialization }
