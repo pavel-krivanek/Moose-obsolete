@@ -20,7 +20,7 @@ FamixMetamodelGenerator class >> builderWithDefinitions [
 FamixMetamodelGenerator >> adoptBuilder: aBuilder [
 
 	aBuilder 
-		prefix: self packageName;
+		prefix: self prefix;
 		packageName: self packageName.
 
 
@@ -81,6 +81,8 @@ FamixMetamodelGenerator >> initialize [
 	super initialize.
 	
 	builder := self newBuilder.
+	self adoptBuilder: builder.
+
 ]
 
 { #category : #definition }
@@ -90,7 +92,18 @@ FamixMetamodelGenerator >> newBuilder [
 	
 	aBuilder := FamixMetamodelBuilder new.
 	
-	self adoptBuilder: aBuilder.
-
 	^ aBuilder
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> packageName [
+
+	^ #FmxNGTest
+
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> prefix [
+
+	^ self packageName
 ]
