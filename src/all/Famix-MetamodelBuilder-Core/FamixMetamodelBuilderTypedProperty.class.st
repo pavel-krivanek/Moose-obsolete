@@ -13,7 +13,7 @@ Class {
 { #category : #visitor }
 FamixMetamodelBuilderTypedProperty >> acceptVisitor: aVisitor [
 
-	^ aVisitor visitRelationSide: self.
+	^ aVisitor visitTypedProperty: self.
 ]
 
 { #category : #generating }
