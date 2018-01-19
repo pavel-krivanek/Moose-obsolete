@@ -189,9 +189,9 @@ FamixMetamodelBuilder >> flattenTraitsFor: aClass [
 { #category : #accessing }
 FamixMetamodelBuilder >> generate [
 
-	self traits do: [ :each | each generate ].
-	self sortedClasses do: [ :each | each generateDummy ].
-	self sortedClasses do: [ :each | each generate ].
+	self traits do: [ :each | each generate ] displayingProgress: 'generating traits'.
+	self sortedClasses do: [ :each | each generateDummy ] displayingProgress: 'generating dummy classes'.
+	self sortedClasses do: [ :each | each generate ] displayingProgress: 'generating classes'.
 
 ]
 
