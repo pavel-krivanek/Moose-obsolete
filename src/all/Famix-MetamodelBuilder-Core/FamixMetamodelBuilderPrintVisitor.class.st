@@ -13,12 +13,18 @@ FamixMetamodelBuilderPrintVisitor >> visitBuilder: aBuilder [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPrintVisitor >> visitClass: aClas [
+FamixMetamodelBuilderPrintVisitor >> visitClass: aClass [
 
-	Transcript tab.
-	aClas logCr.
-	
-	aClas properties do: [ :each | each acceptVisitor: self ].
+	Transcript tab; << aClass name; cr.
+	Transcript tab; << ' -|> '.
+	aClass classGeneralization ifNotNil: [ :generalization |
+		Transcript << generalization name].
+	aClass traitGeneralizations ifNotEmpty: [ :generalizations |
+		generalizations do: [ :generalization |
+			Transcript << ', ' << generalization name ]].
+	Transcript cr.
+
+	aClass properties do: [ :each | each acceptVisitor: self ].
 
 ]
 
@@ -27,15 +33,14 @@ FamixMetamodelBuilderPrintVisitor >> visitRelationSide: aRelationSide [
 
 	Transcript tab.
 	Transcript tab.
-	aRelationSide logCr.
+	aRelationSide name logCr.
 ]
 
 { #category : #visiting }
 FamixMetamodelBuilderPrintVisitor >> visitTrait: aTrait [
 
-	Transcript tab.
-	aTrait logCr.
-	
+	Transcript tab; << aTrait name; cr.
+
 	aTrait properties do: [ :each | each acceptVisitor: self ].
 
 ]

@@ -100,6 +100,10 @@ FamixMetamodelBuilderBehavior >> addRelation: aRelation with: anotherClass [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> addRelationSide: aRelationSide [
 
+	"skip duplicities"
+	(self sides anySatisfy: [ :each | each  name = aRelationSide name ])
+		ifTrue: [ ^ self ].
+
 	self sides add: aRelationSide
 ]
 
@@ -344,7 +348,7 @@ FamixMetamodelBuilderBehavior >> property: propertyName [
 		name: propertyName;
 		yourself.
 		
-	self sides add: aSide.
+	self addRelationSide: aSide.
 	^ aSide.
 ]
 

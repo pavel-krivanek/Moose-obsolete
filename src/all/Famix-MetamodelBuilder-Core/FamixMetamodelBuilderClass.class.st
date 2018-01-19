@@ -80,7 +80,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 		name: propertyName;
 		yourself.
 
-	aTrait sides add: aSide.
+	aTrait addRelationSide: aSide.
 	^ aSide.		
 ]
 
