@@ -47,17 +47,15 @@ FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 
 	stream << '}'; cr; cr.
 	
-	"Transcript tab; << aClass name; cr.
-	Transcript tab; << ' -|> '.
 	aClass classGeneralization ifNotNil: [ :generalization |
-		Transcript << generalization name].
+		stream << generalization name << ' <|-down- ' << aClass name; cr].
+	
 	aClass traitGeneralizations ifNotEmpty: [ :generalizations |
 		generalizations do: [ :generalization |
-			Transcript << ', ' << generalization name ]].
+			stream << generalization name << ' <|-down- ' << aClass name; cr ]].
 	Transcript cr.
-
-	aClass properties do: [ :each | each acceptVisitor: self ].
-"
+	
+	
 ]
 
 { #category : #visiting }
