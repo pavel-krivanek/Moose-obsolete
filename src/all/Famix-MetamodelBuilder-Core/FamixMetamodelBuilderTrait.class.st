@@ -10,6 +10,12 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
+{ #category : #visitor }
+FamixMetamodelBuilderTrait >> acceptVisitor: aVisitor [
+
+	^ aVisitor visitTrait: self.
+]
+
 { #category : #generating }
 FamixMetamodelBuilderTrait >> as: aTraitName property: propertyName [
 

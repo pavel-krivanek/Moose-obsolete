@@ -10,6 +10,12 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
+{ #category : #visitor }
+FamixMetamodelBuilderTypedProperty >> acceptVisitor: aVisitor [
+
+	^ aVisitor visitRelationSide: self.
+]
+
 { #category : #generating }
 FamixMetamodelBuilderTypedProperty >> asSlot [
 

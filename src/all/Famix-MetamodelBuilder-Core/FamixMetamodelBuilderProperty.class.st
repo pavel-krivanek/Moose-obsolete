@@ -66,6 +66,14 @@ FamixMetamodelBuilderProperty >> name: anObject [
 	name := anObject
 ]
 
+{ #category : #printing }
+FamixMetamodelBuilderProperty >> printOn: aStream [
+
+	super printOn: aStream.
+	
+	aStream << '(' << self name << ')'
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderProperty >> willGenerate [
 	^ willGenerate

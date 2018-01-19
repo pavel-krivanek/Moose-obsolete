@@ -77,6 +77,12 @@ FamixMetamodelBuilder class >> forTesting [
 	^ aBuilder.
 ]
 
+{ #category : #visitor }
+FamixMetamodelBuilder >> acceptVisitor: aVisitor [
+
+	^ aVisitor visitBuilder: self.
+]
+
 { #category : #settings }
 FamixMetamodelBuilder >> basicSuperclassName [
 
@@ -297,6 +303,13 @@ FamixMetamodelBuilder >> sortedClasses [
 
 	^ self classes sorted: [ :a :b |
 		b allClassGeneralizations includes: a].
+
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> sortedTraits [
+
+	^ self traits sorted: [ :a :b | a name <= b name].
 
 ]
 

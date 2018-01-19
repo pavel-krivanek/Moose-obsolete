@@ -73,6 +73,12 @@ FamixMetamodelBuilderRelationSide >> <>-* aRelationSide [
 	
 ]
 
+{ #category : #visitor }
+FamixMetamodelBuilderRelationSide >> acceptVisitor: aVisitor [
+
+	^ aVisitor visitRelationSide: self.
+]
+
 { #category : #generating }
 FamixMetamodelBuilderRelationSide >> asSlot [
 	
