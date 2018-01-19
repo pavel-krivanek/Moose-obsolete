@@ -810,14 +810,6 @@ FmxNGTestGenerator >> commentForTWithTypes [
 ]
 
 { #category : #definition }
-FmxNGTestGenerator >> define [
-
-	self defineTraits.
-	self defineRelations.
-
-]
-
-{ #category : #definition }
 FmxNGTestGenerator >> defineProperties [
 
 	((tFile property: #name type: #String)
@@ -852,7 +844,7 @@ FmxNGTestGenerator >> defineProperties [
 	((tMethod property: #hasClassScope type: #Boolean) 
 		comment: 'True if class-side method').
 
-	((tInvocation property: #signature type: #String) "FIX - custom"
+	((tWithSignature property: #signature type: #String) "FIX - custom"
 		comment: 'Signature of the message being sent').
 
 	((tComment property: #content type: #String) "FIX - custom"

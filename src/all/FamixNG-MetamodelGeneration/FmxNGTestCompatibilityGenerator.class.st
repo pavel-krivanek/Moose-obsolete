@@ -364,11 +364,12 @@ FmxNGTestCompatibilityGenerator >> defineHierarchy [
 ]
 
 { #category : #initialization }
-FmxNGTestCompatibilityGenerator >> initialize [
+FmxNGTestCompatibilityGenerator >> newBuilder [
 
-	super initialize.
-	
-	builder := FmxNGTestGenerator new define builder.
-	builder doNotGenerateCurrent.
+	^ (FmxNGTestGenerator builderWithDefinitions)
+		doNotGenerateCurrent;
+		yourself
+		
+		
 	
 ]

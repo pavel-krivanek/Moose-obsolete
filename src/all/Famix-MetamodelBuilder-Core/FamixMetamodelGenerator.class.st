@@ -10,6 +10,22 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
+{ #category : #'as yet unclassified' }
+FamixMetamodelGenerator class >> builderWithDefinitions [
+
+	^ self new define builder
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> adoptBuilder: aBuilder [
+
+	aBuilder 
+		prefix: self packageName;
+		packageName: self packageName.
+
+
+]
+
 { #category : #accessing }
 FamixMetamodelGenerator >> builder [
 	^ builder
@@ -29,9 +45,10 @@ FamixMetamodelGenerator >> cleanPackage [
 { #category : #definition }
 FamixMetamodelGenerator >> define [
 
-	self defineClasses.
 	self defineTraits.
+	self defineClasses.
 	self defineProperties.
+	self defineRelations.
 	
 ]
 
@@ -44,6 +61,10 @@ FamixMetamodelGenerator >> defineProperties [
 ]
 
 { #category : #definition }
+FamixMetamodelGenerator >> defineRelations [
+]
+
+{ #category : #definition }
 FamixMetamodelGenerator >> defineTraits [
 ]
 
@@ -52,4 +73,24 @@ FamixMetamodelGenerator >> generate [
 
 	self define.
 	self builder generate
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> initialize [
+
+	super initialize.
+	
+	builder := self newBuilder.
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> newBuilder [
+
+	| aBuilder |
+	
+	aBuilder := FamixMetamodelBuilder new.
+	
+	self adoptBuilder: aBuilder.
+
+	^ aBuilder
 ]
