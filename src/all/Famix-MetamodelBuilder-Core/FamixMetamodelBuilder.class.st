@@ -179,6 +179,13 @@ FamixMetamodelBuilder >> environment: anObject [
 	environment := anObject
 ]
 
+{ #category : #compiling }
+FamixMetamodelBuilder >> flattenTraitsFor: aClass [
+
+	self traitsFlattening ifTrue: [ 
+		self environment flattenTraitsFor: aClass ]
+]
+
 { #category : #accessing }
 FamixMetamodelBuilder >> generate [
 

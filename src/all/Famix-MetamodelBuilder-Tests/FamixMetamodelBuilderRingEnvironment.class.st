@@ -78,6 +78,12 @@ FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderRingEnvironment >> flattenTraitsFor: aClass [
+
+	self error: 'not supported'
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> initialize [
 
 	super initialize.
