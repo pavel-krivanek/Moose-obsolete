@@ -115,7 +115,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 	stream << '@startuml'; cr; cr.
 	self gatherTraits ifTrue: [ 
 		stream << 'together {'; cr ].
-	(self traitsToShowFrom: aBuilder) do: [ :each | each acceptVisitor: self ].
+	(aBuilder traits select: #willGenerate) do: [ :each | each acceptVisitor: self ].
 	self gatherTraits ifTrue: [ 
 		stream << '}'; cr ].
 	aBuilder sortedClasses do: [ :each | each acceptVisitor: self ].	
@@ -174,6 +174,10 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
 
 	aTrait willGenerate ifFalse: [ ^ self ].
 	
+	(self onlySingleUserOf: aTrait) ifTrue: [ 
+		aTrait properties do: [ :each | each acceptVisitor: self ].
+		^ self ].
+	
 	behaviorKey := self registerNewBehavior: aTrait.
 
 	stream << 'class ' << behaviorKey << ' as "' << aTrait name << '" << (T,orchid) >> {'; cr.
@@ -192,7 +196,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 
 { #category : #relations }
 FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
-	
+
 	relations do: [ :relation | 
 		stream << (self behaviorNameFor: relation from trait) << ' "'.
 
