@@ -9,7 +9,8 @@ Class {
 	#name : #FamixMetamodelBuilderPlantTextVisitor,
 	#superclass : #FamixMetamodelBuilderVisitor,
 	#instVars : [
-		'stream'
+		'stream',
+		'relations'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -26,6 +27,7 @@ FamixMetamodelBuilderPlantTextVisitor >> initialize [
 	super initialize.
 	
 	stream := String new writeStream.
+	relations := IdentitySet new.
 ]
 
 { #category : #visiting }
@@ -34,6 +36,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 	stream << '@startuml'; cr; cr.
 	aBuilder sortedTraits do: [ :each | each acceptVisitor: self ].
 	aBuilder sortedClasses do: [ :each | each acceptVisitor: self ].	
+	self writeRelations.	
 	stream cr; << '@enduml'; cr.
 	
 ]
@@ -41,7 +44,9 @@ FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 { #category : #visiting }
 FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 
-	stream << 'class ' << aClass name << '{'; cr.
+	aClass willGenerate ifFalse: [ ^ self ].
+
+	stream << 'class ' << aClass name << ' {'; cr.
 
 	aClass properties do: [ :each | each acceptVisitor: self ].
 
@@ -61,13 +66,16 @@ FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 { #category : #visiting }
 FamixMetamodelBuilderPlantTextVisitor >> visitRelationSide: aRelationSide [
 
-	stream tab; << '- '; << aRelationSide name; cr. 
+	relations add: aRelationSide relation.
+
 ]
 
 { #category : #visiting }
 FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
 
-	stream << 'class ' << aTrait name << '{'; cr.
+	aTrait willGenerate ifFalse: [ ^ self ].
+
+	stream << 'class ' << aTrait name << ' << (T,orchid) >> {'; cr.
 
 	aTrait properties do: [ :each | each acceptVisitor: self ].
 
@@ -79,4 +87,21 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
 FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 
 	stream tab; << '- '; << aTypedProperty propertyType; space; << aTypedProperty name; cr. 
+]
+
+{ #category : #relations }
+FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
+	
+	relations do: [ :relation | 
+		stream << relation from trait name << ' "' << relation from name << '"'.
+		
+		stream space.
+		relation from isContainer ifTrue: [ stream nextPutAll: 'o' ].
+		stream nextPutAll: '--'.
+		relation to isContainer ifTrue: [ stream nextPutAll: 'o' ].
+		stream space.
+		
+		stream << '"' << relation to name << '" ' << relation to trait name; cr.
+		]
+	
 ]
