@@ -10,7 +10,8 @@ Class {
 	#superclass : #FamixMetamodelBuilderVisitor,
 	#instVars : [
 		'stream',
-		'relations'
+		'relations',
+		'gatherTraits'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -21,6 +22,16 @@ FamixMetamodelBuilderPlantTextVisitor >> contents [
 	^ stream contents
 ]
 
+{ #category : #accessing }
+FamixMetamodelBuilderPlantTextVisitor >> gatherTraits [
+	^ gatherTraits
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderPlantTextVisitor >> gatherTraits: anObject [
+	gatherTraits := anObject
+]
+
 { #category : #initialization }
 FamixMetamodelBuilderPlantTextVisitor >> initialize [
 
@@ -28,13 +39,18 @@ FamixMetamodelBuilderPlantTextVisitor >> initialize [
 	
 	stream := String new writeStream.
 	relations := IdentitySet new.
+	gatherTraits := false.
 ]
 
 { #category : #visiting }
 FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 
 	stream << '@startuml'; cr; cr.
+	self gatherTraits ifTrue: [ 
+		stream << 'together {'; cr ].
 	aBuilder sortedTraits do: [ :each | each acceptVisitor: self ].
+	self gatherTraits ifTrue: [ 
+		stream << '}'; cr ].
 	aBuilder sortedClasses do: [ :each | each acceptVisitor: self ].	
 	self writeRelations.	
 	stream cr; << '@enduml'; cr.
@@ -93,7 +109,9 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
 	
 	relations do: [ :relation | 
-		stream << relation from trait name << ' "' << relation from name << '"'.
+		stream << relation from trait name << ' "'.
+
+		stream << relation from name; space; << relation shortCardinalityString; space; << '"'.
 		
 		stream space.
 		relation from isContainer ifTrue: [ stream nextPutAll: 'o' ].
@@ -101,7 +119,10 @@ FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
 		relation to isContainer ifTrue: [ stream nextPutAll: 'o' ].
 		stream space.
 		
-		stream << '"' << relation to name << '" ' << relation to trait name; cr.
+		stream << '"'.
+
+		stream << relation to name ; space; << relation oppositeRelation shortCardinalityString; space.
+		stream << '" ' << relation to trait name; cr.
 		]
 	
 ]

@@ -359,7 +359,7 @@ FamixMetamodelBuilderRelationSide >> oneToOne: aRelationSide [
 	aRelation := self relationWith: aRelationSide.
 	
 	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
+		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity ].
 	
 	^ aRelation
 	
@@ -396,6 +396,12 @@ FamixMetamodelBuilderRelationSide >> relatedClass [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> relatedClass: anObject [
 	relatedClass := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderRelationSide >> relatedEntity [
+
+	^ relatedClass ifNil: [ ^ trait ]
 ]
 
 { #category : #accessing }

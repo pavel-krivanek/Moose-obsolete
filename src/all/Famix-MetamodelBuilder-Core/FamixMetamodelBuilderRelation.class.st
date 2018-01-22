@@ -23,6 +23,19 @@ FamixMetamodelBuilderRelation >> builder: anObject [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderRelation >> cardinalityString [ 
+
+	^ String streamContents: [ :s |
+		self from cardinality = #many 
+			ifTrue: [ s << '*' ]
+			ifFalse: [ s << '1' ].
+		s << '..'.
+		self to cardinality = #many 
+			ifTrue: [ s << '*' ]
+			ifFalse: [ s << '1' ] ]
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderRelation >> from [
 
 	^ side 
@@ -64,6 +77,14 @@ FamixMetamodelBuilderRelation >> oppositeSide: anObject [
 FamixMetamodelBuilderRelation >> right [
 
 	^ oppositeSide 
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderRelation >> shortCardinalityString [ 
+
+	^ self from cardinality = #many 
+		ifTrue: [ '*' ]
+		ifFalse: [ '' ]
 ]
 
 { #category : #accessing }

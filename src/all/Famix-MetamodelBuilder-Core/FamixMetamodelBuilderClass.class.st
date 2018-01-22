@@ -20,7 +20,8 @@ FamixMetamodelBuilderClass >> acceptVisitor: aVisitor [
 { #category : #accessing }
 FamixMetamodelBuilderClass >> addTraitGeneralization: aTrait [
 
-	 self traitGeneralizations add: aTrait 
+	(self traitGeneralizations includes: aTrait)
+		ifFalse: [ self traitGeneralizations add: aTrait ]
 ]
 
 { #category : #accessing }
@@ -81,6 +82,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 		yourself.
 
 	aTrait addRelationSide: aSide.
+	self addTraitGeneralization: aTrait.
 	^ aSide.		
 ]
 
