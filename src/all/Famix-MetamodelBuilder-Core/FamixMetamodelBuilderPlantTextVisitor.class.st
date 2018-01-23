@@ -201,7 +201,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 FamixMetamodelBuilderPlantTextVisitor >> writeGeneralizations [
 
 	generalizationDefinitions do: [ :each| 
-		stream << (self behaviorNameFor: each key) << ' <|-down- ' << (self behaviorNameFor: each value).
+		stream << (self behaviorNameFor: each key) << ' <|-- ' << (self behaviorNameFor: each value).
 		stream cr ].
 	stream cr.
 	
