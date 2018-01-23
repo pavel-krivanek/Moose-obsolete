@@ -13,16 +13,17 @@ Class {
 		'relations',
 		'gatherTraits',
 		'behaviors',
-		'mergeTraits'
+		'mergeTraits',
+		'generalizationDefinitions'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
-{ #category : #visiting }
+{ #category : #private }
 FamixMetamodelBuilderPlantTextVisitor >> behaviorNameFor: aBehavior [
 
 	^ (behaviors associations detect: [ :each |
-		each value includes: aBehavior ]) key
+		each value includes: aBehavior ] ifNone: [ behaviors associationAt: (self registerNewBehavior: aBehavior) ]) key 
 ]
 
 { #category : #accessing }
@@ -56,6 +57,7 @@ FamixMetamodelBuilderPlantTextVisitor >> initialize [
 	gatherTraits := false.
 	behaviors := Dictionary new.
 	mergeTraits := true.
+	generalizationDefinitions := OrderedCollection new.
 ]
 
 { #category : #accessing }
@@ -119,6 +121,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 	self gatherTraits ifTrue: [ 
 		stream << '}'; cr ].
 	aBuilder sortedClasses do: [ :each | each acceptVisitor: self ].	
+	self writeGeneralizations.
 	self writeRelations.	
 	stream cr; << '@enduml'; cr.
 	
@@ -150,12 +153,12 @@ FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 	stream << '}'; cr; cr.
 	
 	aClass classGeneralization ifNotNil: [ :generalization |
-		stream << generalization name << ' <|-down- ' << aClass name; cr].
+		generalizationDefinitions add: (generalization -> aClass)].
 	
 	mergesTrait ifFalse: [ 
 		aClass traitGeneralizations ifNotEmpty: [ :generalizations |
 			generalizations do: [ :generalization |
-				stream << (self behaviorNameFor: generalization) << ' <|-down- ' << (self behaviorNameFor: aClass); cr ]]]
+				generalizationDefinitions add: (generalization -> aClass)]]]
 	
 	
 ]
@@ -192,6 +195,16 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
 FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 
 	stream tab; << '- '; << aTypedProperty propertyType; space; << aTypedProperty name; cr. 
+]
+
+{ #category : #relations }
+FamixMetamodelBuilderPlantTextVisitor >> writeGeneralizations [
+
+	generalizationDefinitions do: [ :each| 
+		stream << (self behaviorNameFor: each key) << ' <|-down- ' << (self behaviorNameFor: each value).
+		stream cr ].
+	stream cr.
+	
 ]
 
 { #category : #relations }
