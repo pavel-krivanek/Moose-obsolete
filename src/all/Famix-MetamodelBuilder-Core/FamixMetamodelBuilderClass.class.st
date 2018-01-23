@@ -166,6 +166,12 @@ FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
 ]
 
 { #category : #testing }
+FamixMetamodelBuilderClass >> hasTraitGeneralization: aTrait [
+
+	^ self traitGeneralizations includes: aTrait 
+]
+
+{ #category : #testing }
 FamixMetamodelBuilderClass >> isMetamodelClass [
 
 	^ true
@@ -251,4 +257,11 @@ FamixMetamodelBuilderClass >> traitNamesFromRelations [
 	"returns traits defined by relations"
 
 	^ (self relations collect: [ :each | self builder prefix, each side traitName ]) asSet sorted
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderClass >> usesOnlyTrait: aTrait [
+
+ 	^ (self traitGeneralizations size = 1) 
+		and: [ self traitGeneralizations first = aTrait ]	
 ]

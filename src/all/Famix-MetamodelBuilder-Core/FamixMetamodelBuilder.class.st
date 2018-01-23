@@ -123,6 +123,12 @@ FamixMetamodelBuilder >> classes [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilder >> classesToGenerate [ 
+
+	^ self classes select: #willGenerate
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilder >> cleanPackage [
 
 	(self packageName asPackageIfAbsent: [ nil ]) 
@@ -354,4 +360,10 @@ FamixMetamodelBuilder >> traitsFlattening [
 { #category : #accessing }
 FamixMetamodelBuilder >> traitsFlattening: anObject [
 	traitsFlattening := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> traitsToGenerate [ 
+
+	^ self traits select: #willGenerate.
 ]

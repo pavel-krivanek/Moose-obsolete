@@ -367,7 +367,7 @@ FmxNGTestCompatibilityGenerator >> defineHierarchy [
 FmxNGTestCompatibilityGenerator >> newBuilder [
 
 	^ (FmxNGTestGenerator builderWithDefinitions)
-		"doNotGenerateCurrent;"
+		doNotGenerateCurrent;
 		yourself
 		
 		

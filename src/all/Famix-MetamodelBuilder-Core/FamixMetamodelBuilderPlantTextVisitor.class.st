@@ -46,8 +46,8 @@ FamixMetamodelBuilderPlantTextVisitor >> contents [
 { #category : #private }
 FamixMetamodelBuilderPlantTextVisitor >> ensureBehaviorNameFor: aBehavior [
 
-	^ (behaviors associations detect: [ :each |
-		each value includes: aBehavior ] ifNone: [ behaviors associationAt: (self registerNewBehavior: aBehavior) ]) key 
+	^ (self behaviorNameOrNilFor: aBehavior)
+		ifNil: [ self registerNewBehavior: aBehavior ]
 ]
 
 { #category : #accessing }
@@ -96,7 +96,7 @@ FamixMetamodelBuilderPlantTextVisitor >> mergeTrat: aTrait withBehaviorNamed: aB
 { #category : #private }
 FamixMetamodelBuilderPlantTextVisitor >> onlySingleUserOf: aTrait [
 
-	^ ((aTrait builder classes select: #willGenerate) count: [ :aClass | (aClass traitGeneralizations size = 1) and: [aClass traitGeneralizations includes: aTrait]]) = 1
+	^ ((aTrait builder classesToGenerate) count: [ :aClass | aClass usesOnlyTrait: aTrait]) = 1
 ]
 
 { #category : #private }
@@ -104,7 +104,7 @@ FamixMetamodelBuilderPlantTextVisitor >> registerNewBehavior: aBehavior [
 
 	| key |
 	
-	key := 'behavior_', aBehavior name, (behaviors size + 1) asString.
+	key := 'behavior', (behaviors size + 1) asString.
 	behaviors at: key put: (Set with: aBehavior).
 	^ key
 	
@@ -116,13 +116,17 @@ FamixMetamodelBuilderPlantTextVisitor >> traitsToShowFrom: aBuilder [
 
 	| traitsToGenerate classesToGenerate |
 	
-	traitsToGenerate := aBuilder traits select: #willGenerate.
-	classesToGenerate := aBuilder classes select: #willGenerate.
+	traitsToGenerate := aBuilder traitsToGenerate.
+	classesToGenerate := aBuilder classesToGenerate.
 	
 	^ self mergeTraits
-		ifTrue: [ traitsToGenerate select: [ :aTrait |(classesToGenerate count: [ :aClass | aClass traitGeneralizations includes: aTrait ]) ~= 1 ]]
+		ifTrue: [ 
+			traitsToGenerate select: [ :aTrait |
+				(classesToGenerate count: [ :aClass | aClass hasTraitGeneralization: aTrait ]) ~= 1 ]]
 		ifFalse: [ traitsToGenerate ]
-
+		
+		
+	
 ]
 
 { #category : #visiting }
@@ -130,11 +134,15 @@ FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 
 	stream << '@startuml'; cr; cr.
 	stream << 'hide empty members'; cr; cr.
+	
 	self gatherTraits ifTrue: [ 
 		stream << 'together {'; cr ].
+	
 	(aBuilder traits select: #willGenerate) do: [ :each | each acceptVisitor: self ].
+	
 	self gatherTraits ifTrue: [ 
 		stream << '}'; cr ].
+	
 	aBuilder sortedClasses do: [ :each | each acceptVisitor: self ].	
 
 	self writeGeneralizations.
@@ -261,7 +269,6 @@ FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
 		stream << '"'.
 
 		stream << relation to name ; space; << relation oppositeRelation shortCardinalityString; space.
-		stream << '" ' << (self ensureBehaviorNameFor: relation to trait); cr.
-		]
+		stream << '" ' << (self ensureBehaviorNameFor: relation to trait); cr]
 	
 ]
