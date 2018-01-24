@@ -170,7 +170,7 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 FmxNGTestSmalltalkGenerator >> newBuilder [
 
 	^ (FmxNGTestGenerator builderWithDefinitions)
-		"doNotGenerateCurrent;"
+		doNotGenerateCurrent;
 		yourself
 		
 		
