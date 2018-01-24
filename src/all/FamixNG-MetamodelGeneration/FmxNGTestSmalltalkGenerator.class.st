@@ -105,14 +105,60 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 	behavior generalization: #TWithMethods. 
 	behavior generalization: #TWithComments. 
 	behavior generalization: #TReferenceable. 
-	behavior generalization: #TPackageable . 
+	behavior generalization: #TPackageable.
 
 	class generalization: behavior.
 	class generalization: #TWithSubInheritances. 
 	class generalization: #TWithSuperInheritances. 
 	class generalization: #TWithTrait. 
-	class generalization: #TWithAttributes . 
-	class generalization: #TWithTypedStructures . 
+	class generalization: #TWithAttributes.
+	class generalization: #TWithTypedStructures.
+
+	trait generalization: behavior.
+	trait generalization: #TTrait.
+
+	method generalization: namedEntity.
+	method generalization: #TMethod. 
+	method generalization: #TWithInvocations.
+	method generalization: #TInvocable.
+	method generalization: #TWithComments.
+	method generalization: #TWithReferences.
+	method generalization: #TWithAccesses.
+	method generalization: #TWithAnnotationInstances.
+	method generalization: #TPackageable.
+	method generalization: #TWithLocalVariables.
+	method generalization: #TWithParameters.
+	method generalization: #TWithImplicitVariables. 
+
+	scopingEntity generalization: namedEntity.
+	scopingEntity generalization: #TGlobalVariableScope. 
+
+	namespace generalization: scopingEntity.
+
+	package generalization: scopingEntity.
+	package generalization: #TWithComments. 
+	package generalization: #TPackage. 
+
+	variable generalization: namedEntity.
+	variable generalization: #TAccessible. 
+
+	attribute generalization: variable.
+	attribute generalization: #TAttribute. 
+
+	globalVariable generalization: variable.
+	globalVariable generalization: #TGlobalVariable. 
+	globalVariable generalization: #TTypedStructure. 
+
+	implicitVariable generalization: variable.
+	implicitVariable generalization: #TImplicitVariable. 
+
+	localVariable generalization: variable.
+	localVariable generalization: #TLocalVariable. 
+
+	parameter generalization: variable.
+	parameter generalization: #TParameter. 
+
+	unknownVariable generalization: variable.
 
 ]
 
