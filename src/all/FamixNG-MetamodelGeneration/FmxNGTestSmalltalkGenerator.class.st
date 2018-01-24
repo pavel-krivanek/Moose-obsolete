@@ -102,10 +102,10 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 	comment generalization: #TComment. 
 
 	namedEntity generalization: sourcedEntity.
+	namedEntity generalization: #TNamed. 
 	namedEntity generalization: #TInvocationsReceiver. 
 
 	behavior generalization: namedEntity.
-	behavior generalization: #TNamed. 
 	behavior generalization: #TWithMethods. 
 	behavior generalization: #TWithComments. 
 	behavior generalization: #TReferenceable. 

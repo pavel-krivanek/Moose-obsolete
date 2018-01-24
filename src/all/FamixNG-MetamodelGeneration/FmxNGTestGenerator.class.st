@@ -1449,7 +1449,7 @@ FmxNGTestGenerator >> initialize [
 { #category : #initialization }
 FmxNGTestGenerator >> packageName [
 
-	^ #FmxNGTest
+	^ #FmxSt
 ]
 
 { #category : #initialization }

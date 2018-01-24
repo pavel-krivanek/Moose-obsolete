@@ -98,7 +98,7 @@ FamixMetamodelGenerator >> newBuilder [
 { #category : #definition }
 FamixMetamodelGenerator >> packageName [
 
-	^ #FmxNGTest
+	^ #FmxSt
 
 ]
 
