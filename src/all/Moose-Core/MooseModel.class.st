@@ -6,7 +6,8 @@ Class {
 	#superclass : #MooseAbstractGroup,
 	#instVars : [
 		'sourceLanguage',
-		'name'
+		'name',
+		'metamodel'
 	],
 	#classVars : [
 		'MostRecentOwner'
@@ -437,6 +438,16 @@ MooseModel >> intersection: aGroup [
 MooseModel >> localMooseModel [ 
 	 
 	^self
+]
+
+{ #category : #accessing }
+MooseModel >> metamodel [
+	^ metamodel ifNil: [ MooseModel meta ]
+]
+
+{ #category : #accessing }
+MooseModel >> metamodel: anObject [
+	metamodel := anObject
 ]
 
 { #category : #printing }

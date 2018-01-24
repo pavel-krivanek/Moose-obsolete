@@ -12,7 +12,10 @@ Object >> hasUniqueMooseNameInModel [
 
 { #category : #'*moose-core' }
 Object >> mooseDescription [
-	^ self class asMooseDescription
+
+	^ self mooseModel 
+		ifNotNil: [:aModel | aModel metamodel descriptionOf: self class theNonMetaClass ]
+		ifNil: [ self class asMooseDescription ]
 ]
 
 { #category : #'*moose-core' }

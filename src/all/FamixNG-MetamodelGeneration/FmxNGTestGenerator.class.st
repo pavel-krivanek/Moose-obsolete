@@ -815,9 +815,10 @@ FmxNGTestGenerator >> defineProperties [
 	((tFile property: #name type: #String)
 		comment: 'Basic name of the entity, not full reference.').
 	
-	((tFileAnchor property: #correspondingFile type: #FAMIXFile) "FIX"
+	"FIX"
+"	((tFileAnchor property: #correspondingFile type: #FmxStFile) 
 		comment: 'File associated to this source anchor').
-	((tFileAnchor property: #encoding type: #String) "FIX - custom"
+"	((tFileAnchor property: #encoding type: #String) "FIX - custom"
 		comment: 'A string representing the encoding of a file').
 	((tFileAnchor property: #fileName type: #String) 
 		comment: 'Name of the source file').
