@@ -37,7 +37,7 @@ FmxNGTestSmalltalkGenerator >> defineClasses [
 
 	sourceAnchor := builder newClassNamed: #SourceAnchor.
 	sourceLanguage := builder newClassNamed: #SourceLanguage.
-	sourcedEntity := builder newClassNamed: #SourceEntity.
+	sourcedEntity := builder newClassNamed: #SourcedEntity.
 	annotationInstance := builder newClassNamed: #AnnotationInstance.
 	annotationInstanceAttribute := builder newClassNamed: #AnnotationInstanceAttribute.
 	association := builder newClassNamed: #Association.
@@ -95,6 +95,9 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 	invocation generalization: #TInvocation. 
 	invocation generalization: #TWithSignature. 
 
+	reference generalization: association.
+	reference generalization: #TReference. 
+	
 	comment generalization: sourcedEntity.
 	comment generalization: #TComment. 
 
@@ -102,6 +105,7 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 	namedEntity generalization: #TInvocationsReceiver. 
 
 	behavior generalization: namedEntity.
+	behavior generalization: #TNamed. 
 	behavior generalization: #TWithMethods. 
 	behavior generalization: #TWithComments. 
 	behavior generalization: #TReferenceable. 
