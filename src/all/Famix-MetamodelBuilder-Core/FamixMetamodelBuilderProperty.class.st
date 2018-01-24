@@ -71,7 +71,10 @@ FamixMetamodelBuilderProperty >> printOn: aStream [
 
 	super printOn: aStream.
 	
-	aStream << '(' << self name << ')'
+	aStream 
+		nextPutAll: '(';
+		nextPutAll: self name;
+		nextPutAll: ')'
 ]
 
 { #category : #accessing }

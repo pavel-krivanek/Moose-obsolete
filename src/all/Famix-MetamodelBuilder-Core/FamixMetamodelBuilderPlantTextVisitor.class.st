@@ -132,22 +132,22 @@ FamixMetamodelBuilderPlantTextVisitor >> traitsToShowFrom: aBuilder [
 { #category : #visiting }
 FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 
-	stream << '@startuml'; cr; cr.
-	stream << 'hide empty members'; cr; cr.
+	stream nextPutAll: '@startuml'; cr; cr.
+	stream nextPutAll: 'hide empty members'; cr; cr.
 	
 	self gatherTraits ifTrue: [ 
-		stream << 'together {'; cr ].
+		stream nextPutAll: 'together {'; cr ].
 	
 	(aBuilder traits select: #willGenerate) do: [ :each | each acceptVisitor: self ].
 	
 	self gatherTraits ifTrue: [ 
-		stream << '}'; cr ].
+		stream nextPutAll: '}'; cr ].
 	
 	aBuilder sortedClasses do: [ :each | each acceptVisitor: self ].	
 
 	self writeGeneralizations.
 	self writeRelations.	
-	stream cr; << '@enduml'; cr.
+	stream cr; nextPutAll: '@enduml'; cr.
 	
 ]
 
@@ -159,8 +159,8 @@ FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 	aClass willGenerate ifFalse: [ ^ self ].
 	
 	mergesTrait := self mergeTraits 
-		and: [aClass traitGeneralizations size = 1 
-		and: [ self onlySingleUserOf: aClass traitGeneralizations first]].
+		and: [ aClass traitGeneralizations size = 1 
+		and: [ self onlySingleUserOf: aClass traitGeneralizations first ]].
 	
 	displayedName := aClass name.
 
@@ -176,7 +176,12 @@ FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 	ifFalse: [ 
 	behaviorKey := self ensureBehaviorNameFor: aClass].
 
-	stream << 'class ' << behaviorKey << ' as "' << displayedName << '" {'; cr.
+	stream 
+		nextPutAll: 'class ';
+		nextPutAll: behaviorKey;
+		nextPutAll: ' as "';
+		nextPutAll: displayedName;
+		nextPutAll: '" {'; cr.
 
 	aClass properties do: [ :each | each acceptVisitor: self ].
 	
@@ -184,9 +189,9 @@ FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 		| defs |
 		defs := typedProperties select: [ :each | each key = aClass traitGeneralizations first ].
 		defs do: [ :assoc | 
-			stream << assoc value ] ].
+			stream nextPutAll: assoc value ] ].
 
-	stream << '}'; cr; cr.
+	stream nextPutAll: '}'; cr; cr.
 	
 	aClass classGeneralization ifNotNil: [ :generalization |
 		generalizationDefinitions add: (generalization -> aClass)].
@@ -222,21 +227,31 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
 		aTrait properties do: [ :each | each acceptVisitor: self ].
 		typedProperties add: (aTrait -> stream contents).
 		stream := savedStream.
-		^ self ].
-	
+		^ self ].	
 
-	stream << 'class ' << behaviorKey << ' as "' << aTrait name << '" << (T,orchid) >> {'; cr.
+	stream nextPutAll: 'class ';
+		nextPutAll: behaviorKey; 
+		nextPutAll: ' as "';
+		nextPutAll: aTrait name; 
+		nextPutAll: '" << (T,orchid) >> {'; 
+		cr.
 
 	aTrait properties do: [ :each | each acceptVisitor: self ].
 
-	stream << '}'; cr; cr.
+	stream nextPutAll: '}'; cr; cr.
 
 ]
 
 { #category : #visiting }
 FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 
-	stream tab; << '- '; << aTypedProperty propertyType; space; << aTypedProperty name; cr. 
+	stream 
+		tab; 
+		nextPutAll: '- '; 
+		nextPutAll: aTypedProperty propertyType; 
+		space; 
+		nextPutAll: aTypedProperty name; 
+		cr. 
 ]
 
 { #category : #relations }
@@ -246,8 +261,11 @@ FamixMetamodelBuilderPlantTextVisitor >> writeGeneralizations [
 		
 		(each key willGenerate and: [ each value willGenerate ])
 			ifTrue: [  
-				stream << (self ensureBehaviorNameFor: each key) << ' <|-- ' << (self ensureBehaviorNameFor: each value).
-				stream cr ]].
+				stream 
+					nextPutAll: (self ensureBehaviorNameFor: each key);
+					nextPutAll: ' <|-- ';
+					nextPutAll: (self ensureBehaviorNameFor: each value);
+					cr ]].
 	stream cr.
 	
 ]
@@ -256,19 +274,31 @@ FamixMetamodelBuilderPlantTextVisitor >> writeGeneralizations [
 FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
 
 	relations do: [ :relation | 
-		stream << (self ensureBehaviorNameFor: relation from trait) << ' "'.
-
-		stream << relation from name; space; << relation shortCardinalityString; space; << '"'.
+		stream 
+			nextPutAll: (self ensureBehaviorNameFor: relation from trait);
+			nextPutAll:  ' "';
+			nextPutAll: relation from name; 
+			space; 
+			nextPutAll: relation shortCardinalityString; 
+			space; 
+			nextPutAll: '"'.
 		
 		stream space.
-		relation from isContainer ifTrue: [ stream nextPutAll: 'o' ].
+		relation from isContainer 
+			ifTrue: [ stream nextPutAll: 'o' ].
 		stream nextPutAll: '-[#black]-'.
-		relation to isContainer ifTrue: [ stream nextPutAll: 'o' ].
+		relation to isContainer 
+			ifTrue: [ stream nextPutAll: 'o' ].
 		stream space.
 		
-		stream << '"'.
-
-		stream << relation to name ; space; << relation oppositeRelation shortCardinalityString; space.
-		stream << '" ' << (self ensureBehaviorNameFor: relation to trait); cr]
+		stream 
+			nextPutAll: '"';
+			nextPutAll: relation to name;
+			space; 
+			nextPutAll: relation oppositeRelation shortCardinalityString;
+			space;
+			nextPutAll: '" ';
+			nextPutAll: (self ensureBehaviorNameFor: relation to trait); 
+			cr]
 	
 ]

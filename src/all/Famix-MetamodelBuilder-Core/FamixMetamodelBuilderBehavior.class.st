@@ -329,7 +329,11 @@ FamixMetamodelBuilderBehavior >> pluralRelationName [
 { #category : #generating }
 FamixMetamodelBuilderBehavior >> printOn: aStream [
 
-	aStream << self class name << '(' << self name asString << ')'
+	aStream 
+		nextPutAll: self class name; 
+		nextPutAll: '(';
+		nextPutAll: self name asString;
+		nextPutAll: ')'
 ]
 
 { #category : #accessing }

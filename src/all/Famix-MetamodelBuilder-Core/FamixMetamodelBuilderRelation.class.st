@@ -27,12 +27,12 @@ FamixMetamodelBuilderRelation >> cardinalityString [
 
 	^ String streamContents: [ :s |
 		self from cardinality = #many 
-			ifTrue: [ s << '*' ]
-			ifFalse: [ s << '1' ].
-		s << '..'.
+			ifTrue: [ s nextPutAll: '*' ]
+			ifFalse: [ s nextPutAll: '1' ].
+		s nextPutAll: '..'.
 		self to cardinality = #many 
-			ifTrue: [ s << '*' ]
-			ifFalse: [ s << '1' ] ]
+			ifTrue: [ s nextPutAll: '*' ]
+			ifFalse: [ s nextPutAll: '1' ] ]
 ]
 
 { #category : #accessing }
