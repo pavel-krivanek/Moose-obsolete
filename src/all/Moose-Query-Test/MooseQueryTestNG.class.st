@@ -90,10 +90,6 @@ MooseQueryTestNG >> testChildrenSelectors [
 	self assert: class1 childrenSelectors asSet equals: #(#functions #types #attributes #methods #definedAnnotationTypes #annotationInstances #sourceAnchor) asSet
 ]
 
-{ #category : #running }
-MooseQueryTestNG >> testEmpty [
-]
-
 { #category : #tests }
 MooseQueryTestNG >> testExplicitDirectionQueryEquivalentToQueryWithDirectionSymbol [
 	"queryIncoming: is equivalent to query: #in with:"
