@@ -1115,7 +1115,7 @@ FmxNGTestGenerator >> defineRelations [
 		*-
 	((tWithTrait property: #traits)).
 
-	((tType property: #typedEntities))
+	((tType property: #typeContainer))
 		*-
 	((tWithTypes property: #types)).
 

@@ -281,10 +281,10 @@ FmxNGTestCompatibilityGenerator >> defineHierarchy [
 	multipleFileAnchor generalization: sourceAnchor.
 
 	namedEntity generalization: sourcedEntity.
+	namedEntity generalization: #TNamed.
 	namedEntity generalization: #TPackageable.
 	namedEntity generalization: #TInvocationsReceiver.
 	namedEntity generalization: #TWithAnnotationInstances.
-	namedEntity generalization: #TNamed.
 
 	namespace generalization: scopingEntity.
 	namespace generalization: #TNamespace.
