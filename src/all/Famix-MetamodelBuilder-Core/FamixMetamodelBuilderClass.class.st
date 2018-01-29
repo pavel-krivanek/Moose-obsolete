@@ -126,7 +126,7 @@ FamixMetamodelBuilderClass >> generate [
 		ifNil: [ self defaultSuperclass ]
 		ifNotNil: [ self classGeneralization realClass ].
 	
-	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass slots: self slotDefinitions in: self builder packageName.
+	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass slots: self slotDefinitions in: self packageName.
 	aClass tagWith: self tag.
 	self builder environment setComment: self comment for: aClass .
 			
@@ -149,7 +149,7 @@ FamixMetamodelBuilderClass >> generateDummy [
 	
 	aClassName := self fullName.
 	
-	self builder environment createDummyClassNamed: aClassName in: self builder packageName.
+	self builder environment createDummyClassNamed: aClassName in: self packageName.
 
 		
 ]

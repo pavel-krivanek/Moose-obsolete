@@ -63,7 +63,7 @@ FamixMetamodelBuilderTrait >> generate [
 	
 	traitName := self fullName.
 	
-	aTrait := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self builder packageName.
+	aTrait := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self packageName.
 	aTrait tagWith: self tag.
 	self builder environment setComment: self comment for: aTrait.
 			

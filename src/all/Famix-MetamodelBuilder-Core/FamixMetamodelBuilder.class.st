@@ -229,6 +229,8 @@ FamixMetamodelBuilder >> newClass [
 	
 	aClass := FamixMetamodelBuilderClass new.
 	aClass builder: self.
+	aClass prefix: self prefix.
+	aClass packageName: self packageName.
 	self classes add: aClass.
 	^ aClass
 	
@@ -259,6 +261,8 @@ FamixMetamodelBuilder >> newTrait [
 	
 	aTrait := FamixMetamodelBuilderTrait new.
 	aTrait builder: self.
+	aTrait builder: self.
+	aTrait prefix: self prefix.
 	self traits add: aTrait.
 	^ aTrait
 	

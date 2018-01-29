@@ -12,7 +12,9 @@ Class {
 		'willGenerate',
 		'properties',
 		'tag',
-		'comment'
+		'comment',
+		'prefix',
+		'packageName'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -166,7 +168,7 @@ FamixMetamodelBuilderBehavior >> defaultTag [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> fullName [
 
-	^ (self builder prefix, self name) asSymbol
+	^ (self prefix, self name) asSymbol
 ]
 
 { #category : #generating }
@@ -205,6 +207,8 @@ FamixMetamodelBuilderBehavior >> initialize [
 	relations := OrderedCollection new.
 	properties := OrderedCollection new.
 	willGenerate := true.
+	prefix := String new.
+	packageName := String new.
 ]
 
 { #category : #testing }
@@ -315,6 +319,16 @@ FamixMetamodelBuilderBehavior >> oneToOne: otherClass [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderBehavior >> packageName [
+	^ packageName
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> packageName: anObject [
+	packageName := anObject
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderBehavior >> pluralRelationName [
 	
 	| lowercase |
@@ -324,6 +338,16 @@ FamixMetamodelBuilderBehavior >> pluralRelationName [
 	^ (lowercase endsWith: 's')
 		ifFalse: [ lowercase, 's' ]
 		ifTrue: [ lowercase, 'es' ]
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> prefix [
+	^ prefix
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> prefix: anObject [
+	prefix := anObject
 ]
 
 { #category : #generating }
@@ -339,6 +363,11 @@ FamixMetamodelBuilderBehavior >> printOn: aStream [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> properties [
 	^ properties
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> properties: anObject [
+	properties := anObject
 ]
 
 { #category : #generating }

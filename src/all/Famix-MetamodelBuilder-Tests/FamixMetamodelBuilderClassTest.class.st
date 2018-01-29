@@ -320,6 +320,48 @@ FamixMetamodelBuilderClassTest >> testBasicTrait [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderClassTest >> testBuilderPackageChange [
+
+	| simpleClass generated |
+	
+	simpleClass := builder newClassNamed: #Comment.	
+	builder newClassNamed: #Comment.	
+	builder packageName: 'Another'.
+	builder newClassNamed: #Method.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
+	self assert: generated notNil.
+	self assert: generated isClass.
+	self assert: (generated package name = #Tst).
+	generated := builder testingEnvironment ask classNamed: 'TstMethod'.
+	self assert: generated notNil.
+	self assert: generated isClass.
+	self assert: (generated package name = #Another).
+
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testBuilderPrefixChange [
+
+	| simpleClass generated |
+	
+	simpleClass := builder newClassNamed: #Comment.	
+	builder newClassNamed: #Comment.	
+	builder prefix: 'Another'.
+	builder newClassNamed: #Method.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstComment'.
+	self assert: generated notNil.
+	self assert: generated isClass.
+	self assert: (generated package name = #Tst).
+	generated := builder testingEnvironment ask classNamed: 'AnotherMethod'.
+	self assert: generated notNil.
+	self assert: generated isClass.
+	self assert: (generated package name = #Tst).
+
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testClassGeneralization [
 
 	| behavior class generatedBehavior generatedClass annotation |
