@@ -486,3 +486,9 @@ FamixMetamodelBuilderRelationSide >> traitName: aString [
 	trait := self ensureTraitNamed: aString
 
 ]
+
+{ #category : #accessing }
+FamixMetamodelBuilderRelationSide >> traitPrefix [
+
+	^ self trait prefix
+]

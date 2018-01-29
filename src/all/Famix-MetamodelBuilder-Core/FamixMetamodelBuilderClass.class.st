@@ -248,7 +248,7 @@ FamixMetamodelBuilderClass >> traitGeneralizations [
 FamixMetamodelBuilderClass >> traitNamesFromGeneralizations [
 
 	^ self traitGeneralizations collect: [ :each |
-		self builder prefix, each name]
+		each fullName]
 ]
 
 { #category : #accessing }
@@ -256,7 +256,7 @@ FamixMetamodelBuilderClass >> traitNamesFromRelations [
 
 	"returns traits defined by relations"
 
-	^ (self relations collect: [ :each | self builder prefix, each side traitName ]) asSet sorted
+	^ (self relations collect: [ :each | each side trait fullName ]) asSet sorted
 ]
 
 { #category : #testing }

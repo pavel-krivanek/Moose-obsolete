@@ -261,8 +261,8 @@ FamixMetamodelBuilder >> newTrait [
 	
 	aTrait := FamixMetamodelBuilderTrait new.
 	aTrait builder: self.
-	aTrait builder: self.
 	aTrait prefix: self prefix.
+	aTrait packageName: self packageName.
 	self traits add: aTrait.
 	^ aTrait
 	
