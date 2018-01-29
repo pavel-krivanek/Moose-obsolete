@@ -988,7 +988,8 @@ FmxNGTestGenerator >> defineRelations [
 
 	((tInvocable property: #incomingInvocations))
 		*-
-	((tInvocation property: #candidates)).
+	((tInvocation property: #candidates) 
+			target).
 
 	((tInvocation property: #sender)
 			comment: 'Behavioural entity making the call. from-side of the association';

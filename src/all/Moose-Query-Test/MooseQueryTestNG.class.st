@@ -69,11 +69,11 @@ MooseQueryTestNG >> testAllOutgoing [
 
 { #category : #tests }
 MooseQueryTestNG >> testAtScope [
-	self assert: (class1 atScope: FAMIXClass) equals: {class1}.
-	self assert: (class1 atScope: FAMIXType) equals: {class1}.
-	self assert: (class1 atScope: FAMIXPackage) equals: {package1}.
+	self assert: (class1 atScope: FmxStClass) equals: {class1}.
+	self assert: (class1 atScope: FmxStType) equals: {class1}.
+	self assert: (class1 atScope: FmxStPackage) equals: {package1}.
 	self
-		assert: (class1 atScope: FAMIXScopingEntity)
+		assert: (class1 atScope: FmxStScopingEntity)
 		equals:
 			{namespace.
 			package1}
@@ -95,57 +95,57 @@ MooseQueryTestNG >> testExplicitDirectionQueryEquivalentToQueryWithDirectionSymb
 	"queryIncoming: is equivalent to query: #in with:"
 
 	self
-		assert: (method1 queryIncoming: FAMIXInvocation)
-		equals: (method1 query: #in with: FAMIXInvocation).
+		assert: (method1 queryIncoming: FmxStInvocation)
+		equals: (method1 query: #in with: FmxStInvocation).
 	self
-		assert: (class2 queryIncoming: FAMIXInvocation)
-		equals: (class2 query: #in with: FAMIXInvocation).
+		assert: (class2 queryIncoming: FmxStInvocation)
+		equals: (class2 query: #in with: FmxStInvocation).
 	"queryOutgoing: is equivalent to query: #out with:"
 	self
-		assert: (method1 queryOutgoing: FAMIXInvocation)
-		equals: (method1 query: #out with: FAMIXInvocation).
+		assert: (method1 queryOutgoing: FmxStInvocation)
+		equals: (method1 query: #out with: FmxStInvocation).
 	self
-		assert: (class2 queryOutgoing: FAMIXInvocation)
-		equals: (class2 query: #out with: FAMIXInvocation)
+		assert: (class2 queryOutgoing: FmxStInvocation)
+		equals: (class2 query: #out with: FmxStInvocation)
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testIncomingAssociationTypes [
-	self assert: var2 incomingAssociationTypes equals: {FAMIXAccess}.
+	self assert: var2 incomingAssociationTypes equals: {FmxStAccess}.
 	self
 		assert: class1 incomingAssociationTypes asSet
 		equals:
-			{FAMIXInheritance.
-			FAMIXReference.
-			FAMIXTraitUsage} asSet.
-	self assert: method1 incomingAssociationTypes equals: {FAMIXInvocation}
+			{FmxStInheritance.
+			FmxStReference.
+			"FAMIXTraitUsage"} asSet.
+	self assert: method1 incomingAssociationTypes equals: {FmxStInvocation}
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testIncomingInvocation [
 	"queryIncoming: is equivalent to query: #in with:"
 
-	self assert: (method2 queryIncoming: FAMIXInvocation) size equals: 3.
-	self assert: (method2 query: #in with: FAMIXInvocation) size equals: 3.
-	self assert: (class2 queryIncoming: FAMIXInvocation) size equals: 3.
-	self assert: (class2 query: #in with: FAMIXInvocation) size equals: 3
+	self assert: (method2 queryIncoming: FmxStInvocation) size equals: 3.
+	self assert: (method2 query: #in with: FmxStInvocation) size equals: 3.
+	self assert: (class2 queryIncoming: FmxStInvocation) size equals: 3.
+	self assert: (class2 query: #in with: FmxStInvocation) size equals: 3
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testIncomingInvocationAtScope [
 	self
-		assert: ((method2 queryIncoming: FAMIXInvocation) atScope: FAMIXPackage) size
+		assert: ((method2 queryIncoming: FmxStInvocation) atScope: FmxStPackage) size
 		equals: 2.
 	self
-		assert: ((class2 queryIncoming: FAMIXInvocation) atScope: FAMIXPackage) size
+		assert: ((class2 queryIncoming: FmxStInvocation) atScope: FmxStPackage) size
 		equals: 2
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testOutgoingAccessAtScope [
-	self assert: ((method1 queryOutgoing: FAMIXAccess) atScope: FAMIXPackage) size equals: 1.
+	self assert: ((method1 queryOutgoing: FmxStAccess) atScope: FmxStPackage) size equals: 1.
 	self
-		assert: ((method1 queryOutgoing: FAMIXAccess) atScope: FAMIXPackage) storage first
+		assert: ((method1 queryOutgoing: FmxStAccess) atScope: FmxStPackage) storage first
 		equals: package2
 ]
 
@@ -154,11 +154,11 @@ MooseQueryTestNG >> testOutgoingAccessesWithANamespaceInANamespace [
 	"queryOutgoing: is equivalent to query: #out with:"
 
 	| namespaceContainer |
-	namespaceContainer := FAMIXNamespace new
+	namespaceContainer := FmxStNamespace new
 		name: 'Test';
 		mooseModel: model;
 		addChildScope: namespace.
-	self assert: (namespaceContainer query: #out with: FAMIXAccess) size equals: 1
+	self assert: (namespaceContainer query: #out with: FmxStAccess) size equals: 1
 ]
 
 { #category : #tests }
@@ -167,50 +167,50 @@ MooseQueryTestNG >> testOutgoingAssociationTypes [
 	self
 		assert: method1 outgoingAssociationTypes asSet
 		equals:
-			{FAMIXInvocation.
-			FAMIXReference.
-			FAMIXAccess} asSet
+			{FmxStInvocation.
+			FmxStReference.
+			FmxStAccess} asSet
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testOutgoingInvocation [
 "queryOutgoing: is equivalent to query: #out with:"
-	self assert: (method1 queryOutgoing: FAMIXInvocation) size equals: 1.
-	self assert: (method1 query: #out with: FAMIXInvocation) size equals: 1.
-	self assert: (class2 queryOutgoing: FAMIXInvocation) size equals: 2.
-	self assert: (class2 query: #out with: FAMIXInvocation) size equals: 2.
+	self assert: (method1 queryOutgoing: FmxStInvocation) size equals: 1.
+	self assert: (method1 query: #out with: FmxStInvocation) size equals: 1.
+	self assert: (class2 queryOutgoing: FmxStInvocation) size equals: 2.
+	self assert: (class2 query: #out with: FmxStInvocation) size equals: 2.
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testOutgoingInvocationAtScope [
 
-	self assert: ((method2 queryOutgoing: FAMIXInvocation) atScope: FAMIXPackage) size equals: 1.
-	self assert: ((class2 queryOutgoing: FAMIXInvocation) atScope: FAMIXPackage) size equals: 1.
+	self assert: ((method2 queryOutgoing: FmxStInvocation) atScope: FmxStPackage) size equals: 1.
+	self assert: ((class2 queryOutgoing: FmxStInvocation) atScope: FmxStPackage) size equals: 1.
 
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testOutgoingInvocationWithin [
-	self assert: ((method1 queryOutgoing: FAMIXInvocation) within: class2) size equals: 1.
+	self assert: ((method1 queryOutgoing: FmxStInvocation) within: class2) size equals: 1.
 
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testQueryWith [
 "queryIncoming: is equivalent to query: #in with:"
-	self assert: (package1 query: #out with: FAMIXInvocation) size equals: 1.
+	self assert: (package1 query: #out with: FmxStInvocation) size equals: 1.
 ]
 
 { #category : #tests }
 MooseQueryTestNG >> testToScope [
-	self assert: (class1 toScope: FAMIXMethod) equals: {method1}.
+	self assert: (class1 toScope: FmxStMethod) equals: {method1}.
 	self
-		assert: (class2 toScope: FAMIXAttribute) asSet
+		assert: (class2 toScope: FmxStAttribute) asSet
 		equals:
 			{var1.
 			var2} asSet.
 	self
-		assert: (package1 toScope: FAMIXMethod)
+		assert: (package1 toScope: FmxStMethod)
 		equals:
 			{method1.
 			methodExt}
@@ -219,27 +219,27 @@ MooseQueryTestNG >> testToScope [
 { #category : #tests }
 MooseQueryTestNG >> testWithScope [
 	| result |
-	result := class1 withScope: FAMIXMethod.
+	result := class1 withScope: FmxStMethod.
 	self assert: result size equals: 1.
 	self assert: (result includes: method1).
-	result := class2 toScope: FAMIXAttribute.
+	result := class2 toScope: FmxStAttribute.
 	self assert: result size equals: 2.
 	self assert: (result includes: var1).
 	self assert: (result includes: var2).
-	result := package1 toScope: FAMIXMethod.
+	result := package1 toScope: FmxStMethod.
 	self assert: result size equals: 2.
 	self assert: (result includes: method1).
 	self assert: (result includes: methodExt).
-	result := class1 withScope: FAMIXClass.
+	result := class1 withScope: FmxStClass.
 	self assert: result size equals: 1.
 	self assert: (result includes: class1).
-	result := class1 withScope: FAMIXType.
+	result := class1 withScope: FmxStType.
 	self assert: result size equals: 1.
 	self assert: (result includes: class1).
-	result := class1 withScope: FAMIXPackage.
+	result := class1 withScope: FmxStPackage.
 	self assert: result size equals: 1.
 	self assert: (result includes: package1).
-	result := class1 withScope: FAMIXScopingEntity.
+	result := class1 withScope: FmxStScopingEntity.
 	self assert: result size equals: 2.
 	self assert: (result includes: package1).
 	self assert: (result includes: namespace)
