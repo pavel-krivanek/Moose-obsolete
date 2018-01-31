@@ -7,6 +7,9 @@ Class {
 	#instVars : [
 		'builder'
 	],
+	#classInstVars : [
+		'metamodel'
+	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
@@ -14,6 +17,22 @@ Class {
 FamixMetamodelGenerator class >> builderWithDefinitions [
 
 	^ self new define builder
+]
+
+{ #category : #accessing }
+FamixMetamodelGenerator class >> metamodel [
+	^ metamodel
+]
+
+{ #category : #accessing }
+FamixMetamodelGenerator class >> metamodel: anObject [
+	metamodel := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelGenerator class >> resetMeta [
+
+	self subclassResponsibility
 ]
 
 { #category : #definition }

@@ -32,6 +32,21 @@ Class {
 	#category : #'FamixNG-MetamodelGeneration'
 }
 
+{ #category : #accessing }
+FmxNGTestSmalltalkGenerator class >> resetMeta [
+
+	| classes tower |
+	
+	classes := #'FmxSt' asPackage definedClasses.
+	{ MooseEntity. FmxTraitEntity. MooseGroup. MooseAbstractGroup. FAMIXTypeGroup. FAMIXClassGroup } 
+		do: [ :each | classes add: each ].
+
+	tower := MooseModel metaBuilder: classes.
+	self metamodel: tower metamodel.
+
+	
+]
+
 { #category : #'instance creation' }
 FmxNGTestSmalltalkGenerator >> defineClasses [
 
