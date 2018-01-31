@@ -141,7 +141,6 @@ FamixMetamodelBuilderClass >> generate [
 	self generateTraitsAssignmentsFor: aClass.
 	
 	isHierarchyRoot ifTrue: [ 
-		self halt.
 		self generateRootMethodsIn: aClass ].
 	
 	self builder flattenTraitsFor: aClass
