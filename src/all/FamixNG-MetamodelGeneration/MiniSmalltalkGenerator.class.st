@@ -27,6 +27,7 @@ Class {
 	#name : #MiniSmalltalkGenerator,
 	#superclass : #FamixMetamodelGenerator,
 	#instVars : [
+		'entity',
 		'sourceAnchor',
 		'sourceLanguage',
 		'sourcedEntity',
@@ -66,12 +67,14 @@ MiniSmalltalkGenerator class >> packageName [
 { #category : #accessing }
 MiniSmalltalkGenerator class >> resetMetamodel [
 
+	" self resetMetamodel"
+
 	| classes tower |
 	
 	classes := self packageName asPackage definedClasses.
 	classes addAll: #'FmxNGTest' asPackage definedClasses.
 	
-	{ MooseEntity. FmxTraitEntity. MooseGroup. MooseAbstractGroup. FAMIXTypeGroup. FAMIXClassGroup } 
+	{ MooseEntity. FmxTraitEntity. MooseGroup. MooseAbstractGroup. FAMIXTypeGroup. FAMIXClassGroup. } 
 		do: [ :each | classes add: each ].
 
 	tower := MooseModel metaBuilder: classes.
@@ -83,6 +86,8 @@ MiniSmalltalkGenerator class >> resetMetamodel [
 
 { #category : #'instance creation' }
 MiniSmalltalkGenerator >> defineClasses [
+
+	entity := builder newClassNamed: #Entity.
 
 	sourceAnchor := builder newClassNamed: #SourceAnchor.
 	comment := builder newClassNamed: #Comment.
@@ -103,6 +108,10 @@ MiniSmalltalkGenerator >> defineClasses [
 
 { #category : #'instance creation' }
 MiniSmalltalkGenerator >> defineHierarchy [
+
+	entity generalization: entity.
+	sourceLanguage generalization: entity.
+	sourceAnchor generalization: entity.
 
 	sourceAnchor generalization: #TSourceAnchor.
 
@@ -140,7 +149,6 @@ MiniSmalltalkGenerator >> defineHierarchy [
 	method generalization: #TPackageable.
 
 	scopingEntity generalization: namedEntity.
-	scopingEntity generalization: #TGlobalVariableScope. 
 	scopingEntity generalization: #TWithTypes. 
 
 	namespace generalization: scopingEntity.

@@ -851,6 +851,13 @@ FmxNGTestGenerator >> defineProperties [
 	((tComment property: #content type: #String) "FIX - custom"
 		comment: 'Content of the comment as a String').
 
+	"temporary"
+	(tMethod property: #signature type: #String).
+	(tMethod property: #isAbstract type: #Boolean).
+	(tMethod property: #isPublic type: #Boolean).
+
+	(tSourceAnchor property: #pharoEntity type: #Object).
+
 ]
 
 { #category : #definition }

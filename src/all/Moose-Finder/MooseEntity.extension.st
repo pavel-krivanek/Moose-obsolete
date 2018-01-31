@@ -80,6 +80,7 @@ MooseEntity >> mooseDescriptionsOfNumberProperties [
 { #category : #'*Moose-Finder' }
 MooseEntity >> mooseFinderFameDescription: composite [
 	<moosePresentationOrder: 400>
+	self mooseDescription ifNil: [ ^ self ].
 	(self mooseDescription gtInspectorRelationsIn: composite)
 		title: 'Fame';
 		titleIcon: MooseIcons mooseFame

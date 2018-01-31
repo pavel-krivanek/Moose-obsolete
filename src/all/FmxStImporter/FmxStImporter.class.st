@@ -1,18 +1,21 @@
 Class {
 	#name : #FmxStImporter,
 	#superclass : #SmalltalkImporter,
+	#instVars : [
+		'factory'
+	],
 	#category : #FmxStImporter
 }
 
 { #category : #'private-entity-creation' }
 FmxStImporter >> basicClassCreation: aClass [
 	| class anchor |
-	class := classes at: aClass put: FmxStClass new.
+	class := classes at: aClass put: self factory klass new.
 	class name: (aClass name replaceAll: Character space with: $_).
 	class isStub: true.
 	importingContext shouldImportNamespace
 		ifTrue: [ class typeContainer: (self ensureNamespace: aClass environment) ].
-	anchor := FmxStSourceAnchor new
+	anchor := self factory sourceAnchor new
 		element: class;
 		pharoEntity: aClass;
 		yourself.
@@ -64,7 +67,7 @@ FmxStImporter >> createClass: aClass [
 			[ importingContext shouldMergeClassAndMetaclass 
 				ifFalse: [ true ]
 				ifTrue: [ aClass isMeta not ] ]) 
-					ifTrue: [ inheritance := self addEntity: FmxStInheritance new.
+					ifTrue: [ inheritance := self addEntity: self factory inheritance new.
 							inheritance superclass: (self ensureClass: aClass superclass).
 							inheritance subclass: class ]
 		].
@@ -120,8 +123,9 @@ FmxStImporter >> createGlobalVariable: name value: value [
 { #category : #'private-entity-creation' }
 FmxStImporter >> createMethod: aCompiledMethod [
 	| method thisClass anchor |
-	method := methods at: aCompiledMethod put: FmxStMethod new.
+	method := methods at: aCompiledMethod put: self factory method new.
 	method name: aCompiledMethod selector.
+	method isAbstract: false.
 	thisClass := aCompiledMethod methodClass.
 	method parentType: (self ensureClass: thisClass).
 	method signature: aCompiledMethod signature.
@@ -144,7 +148,7 @@ FmxStImporter >> createMethod: aCompiledMethod [
 		ifTrue: [ | visitor |
 			visitor := FmxStMethodVisitor on: self.
 			visitor runWith: aCompiledMethod and: method ].
-	anchor := FmxStSourceAnchor new
+	anchor := self factory sourceAnchor new
 		element: method;
 		pharoEntity: aCompiledMethod;
 		yourself.
@@ -159,7 +163,7 @@ FmxStImporter >> createNamespace: aNamespace [
 	| namespace |
 	namespace := namespaces
 		at: aNamespace asString asSymbol
-		put: FmxStNamespace new.
+		put: self factory namespace new.
 	namespace name: 'Smalltalk'.
 	^namespace
 ]
@@ -170,7 +174,7 @@ FmxStImporter >> createPackage: aPackageModel [
 	| package |
 	package := packages
 		at: aPackageModel
-		put: FmxStPackage new.
+		put: self factory package new.
 	package name: aPackageModel name.
 	package isStub: true.
 	^package
@@ -208,6 +212,12 @@ FmxStImporter >> createUnknownVariable: name [
 ]
 
 { #category : #'private-entity-creation' }
+FmxStImporter >> factory [
+
+	^ factory
+]
+
+{ #category : #'private-entity-creation' }
 FmxStImporter >> importClass: aClass [ 
 	 
 	| class comment | 
@@ -215,7 +225,8 @@ FmxStImporter >> importClass: aClass [
 		ifTrue: 
 			[class := self ensureClass: aClass. 
 			class isStub: false.
-			class attributes do: [ :each | each isStub: false ].
+			importingContext shouldImportAttribute 
+				ifTrue: [ class attributes do: [ :each | each isStub: false ] ].
 			importingContext shouldImportPackage ifTrue: [
 				class parentPackage isStub: false ].
 			importingContext shouldImportSubclasses ifTrue: [aClass subclasses do: [:each | self ensureClass: each]]. 
@@ -227,8 +238,15 @@ FmxStImporter >> importClass: aClass [
 				ifTrue: 
 					[aClass hasComment 
 						ifTrue: 
-							[comment := self addEntity: FmxStComment new. 
+							[comment := self addEntity: self factory comment new. 
 							comment content: aClass comment asString. 
 							comment container: class]]. 
 			aClass isMeta ifFalse: [self importClass: aClass class]]
+]
+
+{ #category : #'private-entity-creation' }
+FmxStImporter >> initialize [
+
+	super initialize.
+	factory := EntityClassFactory new. 
 ]

@@ -199,6 +199,7 @@ SmalltalkImporter >> createMethod: aCompiledMethod [
 	| method thisClass anchor |
 	method := methods at: aCompiledMethod put: FAMIXMethod new.
 	method name: aCompiledMethod selector.
+	method isAbstract: false.
 	thisClass := aCompiledMethod methodClass.
 	method parentType: (self ensureClass: thisClass).
 	method signature: aCompiledMethod signature.
