@@ -359,6 +359,13 @@ BaselineOfMoose >> baselineFamixNG: spec [
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]"
 
+	#(
+		'FamixNG-MetamodelGeneration'
+		'FmxStImporter'
+	) do: [ :packageName | 
+		spec package: packageName with: [ spec repository: (self url: #all) ]]
+
+
 ]
 
 { #category : #baseline }
