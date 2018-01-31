@@ -109,14 +109,14 @@ MiniSmalltalkGenerator >> defineClasses [
 { #category : #'instance creation' }
 MiniSmalltalkGenerator >> defineHierarchy [
 
-	entity generalization: entity.
-	sourceLanguage generalization: entity.
-	sourceAnchor generalization: entity.
 
+	sourceAnchor generalization: entity.
 	sourceAnchor generalization: #TSourceAnchor.
 
+	sourceLanguage generalization: entity.
 	sourceLanguage generalization: #TSourceLanguage.
 
+	sourcedEntity generalization: entity.
 	sourcedEntity generalization: #TWithSourceLanguage. 
 	sourcedEntity generalization: #TWithSourceAnchor. 
 	
