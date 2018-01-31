@@ -10,10 +10,10 @@ FAMIXPackage >> createPackagesFromCategories [
 		cat := (Smalltalk at: class instanceSide name) category.
 		famixCat := self mooseModel allPackages detect: [:each | each mooseName = cat] ifNone: [nil].
 		famixCat ifNil: [
-			famixCat := self mooseModel add: (FAMIXPackage new name: cat; stub: true)
+			famixCat := self mooseModel add: (FAMIXPackage new name: cat; isStub: true)
 		].
 		class isStub
-			ifFalse: [ famixCat stub: false ].
+			ifFalse: [ famixCat isStub: false ].
 		class localMethods do:[:aMethod |
 			aMethod parentPackage: famixCat ].
 		class parentPackage: famixCat.

@@ -134,6 +134,7 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 	behavior generalization: #TPackageable.
 
 	class generalization: behavior.
+	class generalization: #TType. 
 	class generalization: #TWithSubInheritances. 
 	class generalization: #TWithSuperInheritances. 
 	class generalization: #TWithTrait. 
@@ -158,6 +159,7 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 
 	scopingEntity generalization: namedEntity.
 	scopingEntity generalization: #TGlobalVariableScope. 
+	scopingEntity generalization: #TWithTypes. 
 
 	namespace generalization: scopingEntity.
 

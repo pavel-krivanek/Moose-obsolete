@@ -24,9 +24,3 @@ FAMIXNamedEntity >> mooseNameOn: stream [
 FAMIXNamedEntity >> removeModifier: aString [
 	modifiers remove: aString ifAbsent: []
 ]
-
-{ #category : #'*Famix-Implementation' }
-FAMIXNamedEntity >> stub: aBoolean [
-	
-	self isStub: aBoolean
-]

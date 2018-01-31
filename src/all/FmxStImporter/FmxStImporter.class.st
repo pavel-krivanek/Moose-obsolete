@@ -11,7 +11,7 @@ FmxStImporter >> basicClassCreation: aClass [
 	class name: (aClass name replaceAll: Character space with: $_).
 	class isStub: true.
 	importingContext shouldImportNamespace
-		ifTrue: [ class container: (self ensureNamespace: aClass environment) ].
+		ifTrue: [ class typeContainer: (self ensureNamespace: aClass environment) ].
 	anchor := FmxStSourceAnchor new
 		element: class;
 		pharoEntity: aClass;
@@ -30,7 +30,7 @@ FmxStImporter >> createAttribute: name for: aClass [
 	attribute := (self scopeOfClass: aClass) 
 		at: realName
 		bind: FmxStAttribute new.
-	attribute stub: true.
+	attribute isStub: true.
 	attribute name: realName asSymbol.
 	importingContext shouldMergeClassAndMetaclass 
 		ifTrue: [ attribute parentType: (self ensureClass: aClass instanceSide) ]
@@ -96,7 +96,7 @@ FmxStImporter >> createClassVarAttribute: name for: aClass [
 	(self scopeOfClass: aClass class)
 		at: name 
 		bind: attribute.
-	attribute stub: true.
+	attribute isStub: true.
 	attribute name: name asSymbol.
 	attribute parentType: (self ensureClass: aClass theNonMetaClass).
 	attribute hasClassScope: true.
@@ -172,7 +172,7 @@ FmxStImporter >> createPackage: aPackageModel [
 		at: aPackageModel
 		put: FmxStPackage new.
 	package name: aPackageModel name.
-	package stub: true.
+	package isStub: true.
 	^package
 ]
 
@@ -214,10 +214,10 @@ FmxStImporter >> importClass: aClass [
 	importingContext shouldImportClass 
 		ifTrue: 
 			[class := self ensureClass: aClass. 
-			class stub: false.
-			class attributes do: [ :each | each stub: false ].
+			class isStub: false.
+			class attributes do: [ :each | each isStub: false ].
 			importingContext shouldImportPackage ifTrue: [
-				class parentPackage stub: false ].
+				class parentPackage isStub: false ].
 			importingContext shouldImportSubclasses ifTrue: [aClass subclasses do: [:each | self ensureClass: each]]. 
 			importingContext shouldImportMethod 
 				ifTrue: 
