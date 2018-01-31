@@ -74,6 +74,28 @@ FamixMetamodelBuilderTrait >> generate [
 
 ]
 
+{ #category : #generating }
+FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass [ 
+
+	| aSuperclassName |
+	
+	aSuperclassName :=  (self classGeneralization = self defaultSuperclass) 
+		ifTrue: [ self defaultSuperclass name]
+		ifFalse: [ self classGeneralization 
+			ifNil: [ self defaultSuperclass name ]
+			ifNotNil: [ 
+				self classGeneralization realClass name ] ].
+
+	aRealClass classSide compile: ('annotation
+
+	<ignoreInTraitUsers>
+	<MSEClass: #{1} super: #{2}>
+	<package: {3}>
+	^self' format: { self name. aSuperclassName. self builder safePackageName})
+		classified: 'meta'
+
+]
+
 { #category : #initialization }
 FamixMetamodelBuilderTrait >> initialize [
 
