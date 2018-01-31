@@ -59,10 +59,19 @@ Class {
 		'traitTag',
 		'basicSuperclassName',
 		'basicTraitName',
-		'traitsFlattening'
+		'traitsFlattening',
+		'generator'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
+
+{ #category : #'instance creation' }
+FamixMetamodelBuilder class >> forGenerator: aGenerator [
+
+	^ self new
+		generator: aGenerator;
+		yourself.
+]
 
 { #category : #'instance creation' }
 FamixMetamodelBuilder class >> forTesting [
@@ -205,6 +214,16 @@ FamixMetamodelBuilder >> generate [
 	self sortedClasses do: [ :each | each generateDummy ] displayingProgress: 'generating dummy classes'.
 	self sortedClasses do: [ :each | each generate ] displayingProgress: 'generating classes'.
 
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> generator [
+	^ generator
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> generator: anObject [
+	generator := anObject
 ]
 
 { #category : #initialization }

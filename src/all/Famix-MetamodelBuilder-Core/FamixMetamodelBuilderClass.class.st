@@ -116,14 +116,18 @@ FamixMetamodelBuilderClass >> generalization: anObject [
 { #category : #generating }
 FamixMetamodelBuilderClass >> generate [
 
-	| aClass aSuperclass aClassName |
+	| aClass aSuperclass aClassName isHierarchyRoot |
 	
 	self willGenerate ifFalse: [ ^ self ].
 	
 	aClassName := self fullName.
 	
+	isHierarchyRoot := false.
+	
 	aSuperclass := self classGeneralization 
-		ifNil: [ self defaultSuperclass ]
+		ifNil: [ 
+			isHierarchyRoot := true.
+			self defaultSuperclass ]
 		ifNotNil: [ self classGeneralization realClass ].
 	
 	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass slots: self slotDefinitions in: self packageName.
@@ -135,6 +139,10 @@ FamixMetamodelBuilderClass >> generate [
 		self generateAccessors.
 		self generateAnnotationIn: aClass ].
 	self generateTraitsAssignmentsFor: aClass.
+	
+	isHierarchyRoot ifTrue: [ 
+		self halt.
+		self generateRootMethodsIn: aClass ].
 	
 	self builder flattenTraitsFor: aClass
 
@@ -152,6 +160,15 @@ FamixMetamodelBuilderClass >> generateDummy [
 	self builder environment createDummyClassNamed: aClassName in: self packageName.
 
 		
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderClass >> generateRootMethodsIn: aClass [
+
+	self builder generator ifNotNil: [ 
+		aClass classSide compile: ('metamodel
+
+	^ {1} metamodel' format: { self builder generator class name }) classified: 'meta']
 ]
 
 { #category : #generating }

@@ -21,7 +21,7 @@ FamixMetamodelGenerator class >> builderWithDefinitions [
 
 { #category : #accessing }
 FamixMetamodelGenerator class >> metamodel [
-	^ metamodel
+	^ metamodel ifNil: [ metamodel := self resetMetamodel ]
 ]
 
 { #category : #accessing }
@@ -30,7 +30,7 @@ FamixMetamodelGenerator class >> metamodel: anObject [
 ]
 
 { #category : #accessing }
-FamixMetamodelGenerator class >> resetMeta [
+FamixMetamodelGenerator class >> resetMetamodel [
 
 	self subclassResponsibility
 ]

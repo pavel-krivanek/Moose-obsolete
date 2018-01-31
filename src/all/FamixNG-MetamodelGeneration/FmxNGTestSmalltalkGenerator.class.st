@@ -33,7 +33,13 @@ Class {
 }
 
 { #category : #accessing }
-FmxNGTestSmalltalkGenerator class >> resetMeta [
+FmxNGTestSmalltalkGenerator class >> packageName [
+
+	^ #FmxSt
+]
+
+{ #category : #accessing }
+FmxNGTestSmalltalkGenerator class >> resetMetamodel [
 
 	| classes tower |
 	
@@ -43,6 +49,7 @@ FmxNGTestSmalltalkGenerator class >> resetMeta [
 
 	tower := MooseModel metaBuilder: classes.
 	self metamodel: tower metamodel.
+	^ metamodel
 
 	
 ]
@@ -186,8 +193,16 @@ FmxNGTestSmalltalkGenerator >> newBuilder [
 
 	^ (FmxNGTestGenerator builderWithDefinitions)
 		doNotGenerateCurrent;
-		yourself
+		generator: self;
+		yourself.
+	
 		
 		
 	
+]
+
+{ #category : #'instance creation' }
+FmxNGTestSmalltalkGenerator >> packageName [
+
+	^ self class packageName
 ]
