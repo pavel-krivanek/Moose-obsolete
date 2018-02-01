@@ -421,6 +421,14 @@ MooseEntity >> mooseNameOn: aStream [
 ]
 
 { #category : #accessing }
+MooseEntity >> mooseTypes [
+
+	^ { self class }
+
+	
+]
+
+{ #category : #accessing }
 MooseEntity >> name [ 
 	 
 	^#noname

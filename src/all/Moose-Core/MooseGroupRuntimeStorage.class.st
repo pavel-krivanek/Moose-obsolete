@@ -136,6 +136,7 @@ MooseGroupRuntimeStorage >> resetMooseNameFor: anEntity [
 
 { #category : #enumerating }
 MooseGroupRuntimeStorage >> selectAllWithType: aSmalltalkClass [
+
 	^ byType at: aSmalltalkClass ifAbsent: [ self class byTypeDefaultCollection ]
 ]
 
@@ -161,13 +162,14 @@ MooseGroupRuntimeStorage >> sortedCollectionList [
 
 { #category : #private }
 MooseGroupRuntimeStorage >> updateCacheOnAddingOf: anElement [
-	| key group |
-	key := anElement class.
-	group := byType
-		at: key
-		ifAbsentPut: [ self class byTypeDefaultCollection ].
+	| group |
+	anElement mooseTypes do: [ :mooseType |
+		group := byType
+			at: mooseType
+			ifAbsentPut: [ self class byTypeDefaultCollection ].
+		self sortedCollectionList at: mooseType put: false.].
 	group add: anElement.
-	self sortedCollectionList at: key put: false.
+
 	anElement hasUniqueMooseNameInModel
 		ifTrue: [ byName at: anElement mooseName asSymbol put: anElement ].
 	^ anElement

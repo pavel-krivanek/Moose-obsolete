@@ -219,6 +219,12 @@ MooseGroup >> min: aSymbolOrBlock [
 		into: [:min :each | min min: (aSymbolOrBlock value: each)]
 ]
 
+{ #category : #accessing }
+MooseGroup >> mooseDescription [
+
+	^ self mooseModel metamodel descriptionOf: self class instanceSide  
+]
+
 { #category : #printing }
 MooseGroup >> mooseDisplayStringOn: stream [
 	stream 

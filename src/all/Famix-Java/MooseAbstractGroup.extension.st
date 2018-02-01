@@ -71,13 +71,6 @@ MooseAbstractGroup >> allTestClasses [
 ]
 
 { #category : #'*Famix-Java' }
-MooseAbstractGroup >> allTestMethods [
-	<navigation: 'All test methods'>
-	<package: #Java>
-	^ self allModelMethods select: #isJUnit4Test
-]
-
-{ #category : #'*Famix-Java' }
 MooseAbstractGroup >> allThrownExceptions [
 	<navigation: 'All thrown exceptions'>
 	<package: #Java>
