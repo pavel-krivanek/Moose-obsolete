@@ -123,21 +123,6 @@ MooseModel >> overviewPyramidMetrics [
 ]
 
 { #category : #'*Famix-Extensions' }
-MooseModel >> sourceLanguage [
-	<MSEProperty: #sourceLanguage type: #FAMIXSourceLanguage>
-	<MSEComment: 'Source of the Language to which the model corresponds'>
-	^ sourceLanguage
-		ifNil: [ sourceLanguage := self allSourceLanguages
-				detect: [ :each | each isAttached not ]
-				ifNone: [ FAMIXUnknownSourceLanguage new ] ]
-]
-
-{ #category : #'*Famix-Extensions' }
-MooseModel >> sourceLanguage: aSymbol [
-	sourceLanguage := aSymbol
-]
-
-{ #category : #'*Famix-Extensions' }
 MooseModel >> unknownFAMIXClass [
 	^ self allClasses 
 		detect: [:each | each mooseName = #'unknownNamespace::UnknownClass'] 
