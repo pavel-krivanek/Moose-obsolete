@@ -285,6 +285,7 @@ FmxNGTestCompatibilityGenerator >> defineHierarchy [
 	namedEntity generalization: #TPackageable.
 	namedEntity generalization: #TInvocationsReceiver.
 	namedEntity generalization: #TWithAnnotationInstances.
+	namedEntity generalization: #TWithModifiers.
 
 	namespace generalization: scopingEntity.
 	namespace generalization: #TNamespace.

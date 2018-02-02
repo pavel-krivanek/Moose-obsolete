@@ -97,7 +97,8 @@ Class {
 		'tWithTrait',
 		'tWithTypeAliases',
 		'tWithTypedStructures',
-		'tWithTypes'
+		'tWithTypes',
+		'tWithModifiers'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -816,14 +817,14 @@ FmxNGGenerator >> defineProperties [
 		comment: 'Basic name of the entity, not full reference.').
 	
 	"FIX"
-"	((tFileAnchor property: #correspondingFile type: #FmxStFile) 
+	((tFileAnchor property: #correspondingFile type: #FmxNGTFile) 
 		comment: 'File associated to this source anchor').
-"	((tFileAnchor property: #encoding type: #String) "FIX - custom"
+	((tFileAnchor property: #encoding type: #String) 
 		comment: 'A string representing the encoding of a file').
 	((tFileAnchor property: #fileName type: #String) 
 		comment: 'Name of the source file').
 
-	((tAccess property: #isWrite type: #Boolean) "FIX - custom"
+	((tAccess property: #isWrite type: #Boolean) 
 		comment: 'Write access').
 
 	((tAnnotationInstanceAttribute property: #value type: #String)
@@ -833,7 +834,8 @@ FmxNGGenerator >> defineProperties [
 		comment: 'Basic name of the entity, not full reference.').
 	((tNamed property: #isStub type: #Boolean)
 		comment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.').
-	((tNamed property: #modifiers type: #String)
+
+	((tWithModifiers property: #modifiers type: #String)
 		comment: 'Generic container for language dependent modifiers.').
 
 	((tMethod property: #timeStamp type: #String)
@@ -845,14 +847,13 @@ FmxNGGenerator >> defineProperties [
 	((tMethod property: #hasClassScope type: #Boolean) 
 		comment: 'True if class-side method').
 
-	((tWithSignature property: #signature type: #String) "FIX - custom"
+	((tWithSignature property: #signature type: #String)
 		comment: 'Signature of the message being sent').
 
-	((tComment property: #content type: #String) "FIX - custom"
+	((tComment property: #content type: #String) 
 		comment: 'Content of the comment as a String').
 
 	"temporary"
-	(tMethod property: #signature type: #String).
 	(tMethod property: #isAbstract type: #Boolean).
 	(tMethod property: #isPublic type: #Boolean).
 
@@ -1431,6 +1432,7 @@ FmxNGGenerator >> defineTraits [
 	tWithTypes := builder newTraitNamed: #TWithTypes.
 	tWithTypes comment: self commentForTWithTypes.
 
+	tWithModifiers := builder newTraitNamed: #TWithModifiers.
 
 ]
 

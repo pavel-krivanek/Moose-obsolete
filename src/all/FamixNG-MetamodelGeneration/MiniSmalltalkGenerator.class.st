@@ -148,6 +148,7 @@ MiniSmalltalkGenerator >> defineHierarchy [
 	method generalization: #TMethod. 
 	method generalization: #TWithComments.
 	method generalization: #TPackageable.
+	method generalization: #TWithSignature.
 
 	scopingEntity generalization: namedEntity.
 	scopingEntity generalization: #TWithTypes. 
