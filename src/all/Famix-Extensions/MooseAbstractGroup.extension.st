@@ -72,8 +72,8 @@ MooseAbstractGroup >> allLocalVariables [
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allMethods [
 	<navigation: 'All methods'>
-	
-	^ self allWithType: "FmxNGTestTMethod"MiniStMethod
+
+	^ self allWithType: FmxNGTestTMethod
 ]
 
 { #category : #'*Famix-Extensions' }

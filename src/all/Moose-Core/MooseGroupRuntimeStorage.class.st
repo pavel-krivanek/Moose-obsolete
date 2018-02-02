@@ -167,8 +167,8 @@ MooseGroupRuntimeStorage >> updateCacheOnAddingOf: anElement [
 		group := byType
 			at: mooseType
 			ifAbsentPut: [ self class byTypeDefaultCollection ].
-		self sortedCollectionList at: mooseType put: false.].
-	group add: anElement.
+		self sortedCollectionList at: mooseType put: false.
+		group add: anElement.].
 
 	anElement hasUniqueMooseNameInModel
 		ifTrue: [ byName at: anElement mooseName asSymbol put: anElement ].

@@ -188,6 +188,16 @@ MooseEntity class >> statefulTraits [
 	^ {  }
 ]
 
+{ #category : #'stateful traits' }
+MooseEntity class >> usedStatefulTraits [
+
+	^ self classSide withAllSuperclasses flatCollect: [ :each | 
+		| methods |
+		methods := each localMethods select: [ :aMethod | aMethod hasPragmaNamed: #statefulTraits ].
+		methods flatCollect: [ :aMethod | aMethod origin instanceSide perform: aMethod selector ]]
+
+]
+
 { #category : #meta }
 MooseEntity class >> withMooseSubclasses [
 	mooseSubClasses ifNil: [ ^self withAllSubclasses ].
@@ -423,7 +433,7 @@ MooseEntity >> mooseNameOn: aStream [
 { #category : #accessing }
 MooseEntity >> mooseTypes [
 
-	^ { self class }
+	^ { self class }, self class usedStatefulTraits
 
 	
 ]
