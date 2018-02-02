@@ -1,5 +1,5 @@
 Class {
-	#name : #FmxNGTestGenerator,
+	#name : #FmxNGGenerator,
 	#superclass : #FamixMetamodelGenerator,
 	#instVars : [
 		'tAccess',
@@ -103,7 +103,7 @@ Class {
 }
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAccess [
+FmxNGGenerator >> commentForTAccess [
 
 	^ 'FAMIXAccess represents an access to a variable by a behavioural entity (for example, a function or a method). 
 
@@ -120,13 +120,13 @@ For each access in the source code, there is one famix access created even if it
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAccessible [
+FmxNGGenerator >> commentForTAccessible [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAnnotationInstance [
+FmxNGGenerator >> commentForTAnnotationInstance [
 
 	^ 'AnnotationInstance is an instance of an AnnotationType. It links an AnnotationType to an actual entity.
 
@@ -142,7 +142,7 @@ Instance Variables:
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAnnotationInstanceAttribute [
+FmxNGGenerator >> commentForTAnnotationInstanceAttribute [
 
 	^ 'This models the actual value of an attribute in an AnnotationInstance.
 
@@ -156,7 +156,7 @@ Instance Variables:
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAnnotationType [
+FmxNGGenerator >> commentForTAnnotationType [
 
 	^ 'FAMIXAnnotationType represents the type of an annotation. In some languages, Java and C#, an annotation as an explicit type. An AnnotationType can have a container in which it resides.
 
@@ -166,7 +166,7 @@ Instance Variables:
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAnnotationTypeAttribute [
+FmxNGGenerator >> commentForTAnnotationTypeAttribute [
 
 	^ 'This models the attribute defined in a Java AnnotationType. In Java, annotation type attributes have specific syntax and use.
 
@@ -187,7 +187,7 @@ Instance Variables:
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAssociation [
+FmxNGGenerator >> commentForTAssociation [
 
 	^ 'FAMIXAssociation is an abstract superclass for relationships between Famix named entities. It defines a polymorphic API refined by subclasses: essentially from, to, next and previous.
 
@@ -209,38 +209,38 @@ will produce two invocation associations first from method a to method b, and se
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTAttribute [
+FmxNGGenerator >> commentForTAttribute [
 
 	^ 'FAMIXAttribute represents a field of a class. It is an attribute of the parent type.
 '
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTCaughtException [
+FmxNGGenerator >> commentForTCaughtException [
 
 	^ 'This is an exception that is explicitly handled by a method. For example, in Java it is an exception that appears in a catch statement.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTComment [
+FmxNGGenerator >> commentForTComment [
 
 	^ 'FAMIXComment represents one instance of a comment (in the sense of programming language comments) for any Famix sourced entity. The commented sourced entity is called the container in the FAMIX model.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTCompilationUnit [
+FmxNGGenerator >> commentForTCompilationUnit [
 
 	^ 'I represent a compilation unit file. Typically a .c or .cpp file'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTDeclaredException [
+FmxNGGenerator >> commentForTDeclaredException [
 
 	^ 'This is an exception explicitly declared as being thrown by a method.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTDereferencedInvocation [
+FmxNGGenerator >> commentForTDereferencedInvocation [
 
 	^ 'Represents an invocation which function is contained in a pointer.
 
@@ -250,7 +250,7 @@ It has a referencer which is the pointer variable'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTEnumValue [
+FmxNGGenerator >> commentForTEnumValue [
 
 	^ 'It models the values defined in an FAMIXEnum. These are attributes of enums with default values.
 
@@ -266,68 +266,68 @@ Instance Variables:
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTException [
+FmxNGGenerator >> commentForTException [
 
 	^ 'This is the abstract representation of an Exception. It is specific to Java. It points to an exceptionClass. The class of a FAMIXException is a normal FAMIXClass.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTFile [
+FmxNGGenerator >> commentForTFile [
 
 	^ 'It represents a file in the file system.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTFileAnchor [
+FmxNGGenerator >> commentForTFileAnchor [
 
 	^ 'This offers a source anchor that connects a sourced entity to a file through a relative path stored in the fileName. In addition, the source can be further specified with a startLine and an endLine number in the file.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTFileInclude [
+FmxNGGenerator >> commentForTFileInclude [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTFunction [
+FmxNGGenerator >> commentForTFunction [
 
 	^ 'FAMIXFunction represents a behavioural entity in a procedural language.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTGlobalVariable [
+FmxNGGenerator >> commentForTGlobalVariable [
 
 	^ 'FAMIXGlobalVariable represents a global variable in the source code.
 '
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTGlobalVariableScope [
+FmxNGGenerator >> commentForTGlobalVariableScope [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTHeader [
+FmxNGGenerator >> commentForTHeader [
 
 	^ 'I represent a header file. Typically a .h or .hpp'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTImplicitVariable [
+FmxNGGenerator >> commentForTImplicitVariable [
 
 	^ 'FAMIXImplicitVariable represents a variable defined by the compiler in a context, such as self, super, thisContext.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTInvocable [
+FmxNGGenerator >> commentForTInvocable [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTInvocation [
+FmxNGGenerator >> commentForTInvocation [
 
 	^ 'FAMIXInvocation represents the invocation of a message (signature) on a receiver by a behavioural entity. 
 FAMIXInvocation has:
@@ -342,19 +342,19 @@ will produce one invocation association from current method to a variable anObje
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTInvocationsReceiver [
+FmxNGGenerator >> commentForTInvocationsReceiver [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTLocalVariable [
+FmxNGGenerator >> commentForTLocalVariable [
 
 	^ 'FAMIXLocalVariable represents a local variable in the scope of a behavioural entity.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTMethod [
+FmxNGGenerator >> commentForTMethod [
 
 	^ 'FAMIXMethod represents a behaviour in an object-oriented language.
 
@@ -362,20 +362,20 @@ A FAMIXMethod is always contained in a parentType.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTModule [
+FmxNGGenerator >> commentForTModule [
 
 	^ 'FAMIXModule represents a that basically provides a simple scoping abstraction for a .C/.CPP/.H files.
 '
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTNamed [
+FmxNGGenerator >> commentForTNamed [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTNamespace [
+FmxNGGenerator >> commentForTNamespace [
 
 	^ 'FAMIXNamespace represents a namespace from the source language. Namespaces have semantic meaning in the language so they influence the unique name of the entity.
 
@@ -385,13 +385,13 @@ When an entity is placed inside a namespace, the fully qualified name (mooseName
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTNamespaceEntity [
+FmxNGGenerator >> commentForTNamespaceEntity [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTPackage [
+FmxNGGenerator >> commentForTPackage [
 
 	^ 'FAMIXPackage represents a package in the source language, meaning that it provides a means to group entities without any baring on lexical scoping. 
 
@@ -399,19 +399,19 @@ Java extractors map Java packages to FAMIXNamespaces. They can also mirror the s
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTPackageable [
+FmxNGGenerator >> commentForTPackageable [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTParameter [
+FmxNGGenerator >> commentForTParameter [
 
 	^ 'FAMIXParameter represents one parameter in a method declaration.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTParameterizedType [
+FmxNGGenerator >> commentForTParameterizedType [
 
 	^ 'FAMIXParameterizedType represents a type with arguments. So, it is an instantiation for the use of FAMIXParameterizableClass. It can appear as a type of an attribute, a type of a local variable, a parameter of a method, a return of a method, etc.
 Example:
@@ -424,13 +424,13 @@ Where Map<String,Collection> is the FAMIXParameterizedType of anAttribute. Strin
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTParameterizedTypeUser [
+FmxNGGenerator >> commentForTParameterizedTypeUser [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTPreprocessorDefine [
+FmxNGGenerator >> commentForTPreprocessorDefine [
 
 	^ 'Represent a preprocessor #define statement
 
@@ -438,7 +438,7 @@ Knows the name of the macro defined'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTPreprocessorIfdef [
+FmxNGGenerator >> commentForTPreprocessorIfdef [
 
 	^ 'Represent a preprocessor #ifdef/#ifndef statement
 
@@ -446,7 +446,7 @@ Knows the name of the macro tested and whether it is "negated" (#ifndef) or not 
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTReference [
+FmxNGGenerator >> commentForTReference [
 
 	^ 'A FAMIXReference entity is created whenever one manipulates a class name as a variable. For example:
 (i) if the class is passed as a parameter to a method, or
@@ -462,13 +462,13 @@ Note that FAMIXReference was defined between two FAMIXContainerEntity entities. 
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTReferenceable [
+FmxNGGenerator >> commentForTReferenceable [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTScopingEntity [
+FmxNGGenerator >> commentForTScopingEntity [
 
 	^ 'FAMIXScopingEntity represents an entity defining a scope at a global level. 
 
@@ -476,13 +476,13 @@ Packages and Namespaces are two different concept in terms of scoping entity. Na
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTSourceAnchor [
+FmxNGGenerator >> commentForTSourceAnchor [
 
 	^ 'FAMIXSourceAnchor is an abstract class representing a pointer to a source. The source can be identified in multiple ways as specified by the subclasses.  The famix entity that this class is a source pointer for, is accessible via element property.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTSourceLanguage [
+FmxNGGenerator >> commentForTSourceLanguage [
 
 	^ 'FAMIXSourceLanguage represents the programming language in which an entity is written. It is used for dispatching entity actions for specific languages. For example, formatting a source text will be performed according to the language. A project may have multiple languages. 
 
@@ -491,55 +491,55 @@ One can create a default source language for a project by not associating any en
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTSub [
+FmxNGGenerator >> commentForTSub [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTSubInheritance [
+FmxNGGenerator >> commentForTSubInheritance [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTSuper [
+FmxNGGenerator >> commentForTSuper [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTSuperInheritance [
+FmxNGGenerator >> commentForTSuperInheritance [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTTemplate [
+FmxNGGenerator >> commentForTTemplate [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTTemplateUser [
+FmxNGGenerator >> commentForTTemplateUser [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTThrownException [
+FmxNGGenerator >> commentForTThrownException [
 
 	^ 'This is an exception explicitly thrown by a method.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTTrait [
+FmxNGGenerator >> commentForTTrait [
 
 	^ 'FAMIXTrait models a trait as it can be found in Pharo or PHP.'
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTType [
+FmxNGGenerator >> commentForTType [
 
 	^ 'FAMIXType is a generic class representing a type. It has several specializations for specific kinds of types, the typical one being FAMIXClass.
 A type is defined in a container (instance of FAMIXContainer). 
@@ -549,7 +549,7 @@ A type can have multiple subtypes or supertypes. These are modelled by means of 
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTTypeAlias [
+FmxNGGenerator >> commentForTTypeAlias [
 
 	^ 'This entity models a typedef in C.
 
@@ -558,259 +558,259 @@ Instance Variables:
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTTypedAnnotationInstance [
+FmxNGGenerator >> commentForTTypedAnnotationInstance [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTTypedAnnotationInstanceAttribute [
+FmxNGGenerator >> commentForTTypedAnnotationInstanceAttribute [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTTypedStructure [
+FmxNGGenerator >> commentForTTypedStructure [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithAccesses [
+FmxNGGenerator >> commentForTWithAccesses [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithAnnotationInstanceAttributes [
+FmxNGGenerator >> commentForTWithAnnotationInstanceAttributes [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithAnnotationInstances [
+FmxNGGenerator >> commentForTWithAnnotationInstances [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithAnnotationTypes [
+FmxNGGenerator >> commentForTWithAnnotationTypes [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithAttributes [
+FmxNGGenerator >> commentForTWithAttributes [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithCaughtExceptions [
+FmxNGGenerator >> commentForTWithCaughtExceptions [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithClassScope [
+FmxNGGenerator >> commentForTWithClassScope [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithComments [
+FmxNGGenerator >> commentForTWithComments [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithCompilationUnit [
+FmxNGGenerator >> commentForTWithCompilationUnit [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithDeclaredExceptions [
+FmxNGGenerator >> commentForTWithDeclaredExceptions [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithDereferencedInvocations [
+FmxNGGenerator >> commentForTWithDereferencedInvocations [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithEnumValues [
+FmxNGGenerator >> commentForTWithEnumValues [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithExceptions [
+FmxNGGenerator >> commentForTWithExceptions [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithFileInclude [
+FmxNGGenerator >> commentForTWithFileInclude [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithFiles [
+FmxNGGenerator >> commentForTWithFiles [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithFunctions [
+FmxNGGenerator >> commentForTWithFunctions [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithHeader [
+FmxNGGenerator >> commentForTWithHeader [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithImplicitVariables [
+FmxNGGenerator >> commentForTWithImplicitVariables [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithInvocations [
+FmxNGGenerator >> commentForTWithInvocations [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithLocalVariables [
+FmxNGGenerator >> commentForTWithLocalVariables [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithMethods [
+FmxNGGenerator >> commentForTWithMethods [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithModule [
+FmxNGGenerator >> commentForTWithModule [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithNamespaces [
+FmxNGGenerator >> commentForTWithNamespaces [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithPackages [
+FmxNGGenerator >> commentForTWithPackages [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithParameterizedTypeUsers [
+FmxNGGenerator >> commentForTWithParameterizedTypeUsers [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithParameterizedTypes [
+FmxNGGenerator >> commentForTWithParameterizedTypes [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithParameters [
+FmxNGGenerator >> commentForTWithParameters [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithReferences [
+FmxNGGenerator >> commentForTWithReferences [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithSignature [
+FmxNGGenerator >> commentForTWithSignature [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithSourceAnchor [
+FmxNGGenerator >> commentForTWithSourceAnchor [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithSourceLanguage [
+FmxNGGenerator >> commentForTWithSourceLanguage [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithSubInheritances [
+FmxNGGenerator >> commentForTWithSubInheritances [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithSuperInheritances [
+FmxNGGenerator >> commentForTWithSuperInheritances [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithTemplates [
+FmxNGGenerator >> commentForTWithTemplates [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithThrownExceptions [
+FmxNGGenerator >> commentForTWithThrownExceptions [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithTrait [
+FmxNGGenerator >> commentForTWithTrait [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithTypeAliases [
+FmxNGGenerator >> commentForTWithTypeAliases [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithTypedStructures [
+FmxNGGenerator >> commentForTWithTypedStructures [
 
 	^ ''
 ]
 
 { #category : #comments }
-FmxNGTestGenerator >> commentForTWithTypes [
+FmxNGGenerator >> commentForTWithTypes [
 
 	^ ''
 ]
 
 { #category : #definition }
-FmxNGTestGenerator >> defineProperties [
+FmxNGGenerator >> defineProperties [
 
 	((tFile property: #name type: #String)
 		comment: 'Basic name of the entity, not full reference.').
@@ -861,7 +861,7 @@ FmxNGTestGenerator >> defineProperties [
 ]
 
 { #category : #definition }
-FmxNGTestGenerator >> defineRelations [
+FmxNGGenerator >> defineRelations [
 
 	((tAccess property: #accessor)
 			comment: 'Behavioural entity making the access to the variable. from-side of the association';
@@ -1141,7 +1141,7 @@ FmxNGTestGenerator >> defineRelations [
 ]
 
 { #category : #definition }
-FmxNGTestGenerator >> defineTraits [
+FmxNGGenerator >> defineTraits [
 
 	tAccess := builder newTraitNamed: #TAccess.
 	tAccess comment: self commentForTAccess.
@@ -1435,7 +1435,7 @@ FmxNGTestGenerator >> defineTraits [
 ]
 
 { #category : #initialization }
-FmxNGTestGenerator >> generate [
+FmxNGGenerator >> generate [
 
 	self define.
 	self builder 
@@ -1444,25 +1444,25 @@ FmxNGTestGenerator >> generate [
 ]
 
 { #category : #initialization }
-FmxNGTestGenerator >> initialize [
+FmxNGGenerator >> initialize [
 
 	super initialize.
 
 	builder := FamixMetamodelBuilder new.
 	builder 
-		prefix: self packageName;
+		prefix: self prefix;
 		packageName: self packageName.
 
 ]
 
 { #category : #initialization }
-FmxNGTestGenerator >> packageName [
+FmxNGGenerator >> packageName [
 
-	^ #FmxNGTest
+	^ #'FmxNG-Generated'
 ]
 
 { #category : #initialization }
-FmxNGTestGenerator >> prefix [
+FmxNGGenerator >> prefix [
 
-	^ self packageName
+	^ #FmxNG
 ]

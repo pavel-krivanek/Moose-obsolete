@@ -26,29 +26,29 @@ FamixMetamodelBuilderRealEnvironment >> compile: aSource in: aClass classified: 
 ]
 
 { #category : #compiling }
-FamixMetamodelBuilderRealEnvironment >> createClassNamed: aClassName superclass: aSuperclass in: packageName [
-
-	^ aSuperclass subclass: aClassName
-			instanceVariableNames: ''
-			classVariableNames: ''
-			package: packageName.
-
-]
-
-{ #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName [
 
-	^ aSuperclass subclass: aClassName asSymbol
+	| resultantClass aSubclass |
+	
+	resultantClass := aSuperclass subclass: aClassName, 'Generated' asSymbol
 		slots: slots
 		classVariables: {  }
 		category: packageName.	
+			
+	self class environment at: aClassName asSymbol ifAbsent: [ 
+		aSubclass := resultantClass subclass: aClassName asSymbol
+			slots: {}
+			classVariables: {  }
+			category: packageName.].
+			
+	^ resultantClass
 
 ]
 
 { #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> createDummyClassNamed: aClassName in: packageName [
 
-	^ Object subclass: aClassName
+	^ Object subclass: (aClassName, #Generated) asSymbol
 			instanceVariableNames: ''
 			classVariableNames: ''
 			package: packageName.
@@ -58,10 +58,20 @@ FamixMetamodelBuilderRealEnvironment >> createDummyClassNamed: aClassName in: pa
 { #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName slots: slots in: packageName [
 
-	^ self basicTrait subclass: traitName asSymbol
+	| resultantTrait aSubTrait|
+	
+	resultantTrait := self basicTrait subclass: traitName, 'Generated' asSymbol
 		slots: slots
 		classVariables: {  }
 		category: packageName.	
+			
+	self class environment at: traitName asSymbol ifAbsent: [ 
+		aSubTrait := resultantTrait subclass: traitName asSymbol
+			slots: { }
+			classVariables: {  }
+			category: packageName. ].
+		
+	^ resultantTrait
 ]
 
 { #category : #compiling }

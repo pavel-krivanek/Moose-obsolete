@@ -2,7 +2,7 @@
 generate the general traits:
 
 | g |
-g := FmxNGTestGenerator new.
+g := FmxNGGenerator new.
 g builder traitsFlattening: false.
 g generate.
 
@@ -163,7 +163,7 @@ MiniSmalltalkGenerator >> defineHierarchy [
 { #category : #'instance creation' }
 MiniSmalltalkGenerator >> newBuilder [
 
-	^ (FmxNGTestGenerator builderWithDefinitions)
+	^ (FmxNGGenerator builderWithDefinitions)
 		doNotGenerateCurrent;
 		generator: self;
 		yourself.

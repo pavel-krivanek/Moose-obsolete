@@ -4,7 +4,7 @@ Extension { #name : #MooseAbstractGroup }
 MooseAbstractGroup >> allAccesses [
 	
 	<navigation: 'All accesses'>
-	^self allWithType: FAMIXAccess 
+	^self allWithType: FmxNGTAccess 
 ]
 
 { #category : #'*Famix-Extensions' }
@@ -24,7 +24,7 @@ MooseAbstractGroup >> allClasses [
 MooseAbstractGroup >> allComments [
 	
 	<navigation: 'All comments'>
-	^self allWithType: FAMIXComment 
+	^self allWithType: FmxNGTComment 
 	
 ]
 
@@ -73,7 +73,7 @@ MooseAbstractGroup >> allLocalVariables [
 MooseAbstractGroup >> allMethods [
 	<navigation: 'All methods'>
 
-	^ self allWithType: FmxNGTestTMethod
+	^ self allWithType: FmxNGTMethod
 ]
 
 { #category : #'*Famix-Extensions' }
@@ -135,7 +135,7 @@ MooseAbstractGroup >> allModelTypes [
 MooseAbstractGroup >> allNamespaces [
 	
 	<navigation: 'All namespaces'>
-	^self allWithSubTypesOf: FAMIXNamespace 
+	^self allWithSubTypesOf: FmxNGTNamespace 
 ]
 
 { #category : #'*Famix-Extensions' }

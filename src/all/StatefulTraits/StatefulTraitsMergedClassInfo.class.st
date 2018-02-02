@@ -128,9 +128,9 @@ StatefulTraitsMergedClassInfo >> mergeMethod: aMethod onClassSide: aBoolean [
 { #category : #merging }
 StatefulTraitsMergedClassInfo >> mergeMethodsFrom: aTrait [
 
-	aTrait traitMethods do: [ :each | self mergeMethod: each onClassSide: false ].
-	aTrait class localMethods do: [ :each | self mergeMethod: each onClassSide: true ].
-	
+	(self traitsToMergeWith: aTrait) do: [ :traitToMerge |
+		traitToMerge traitMethods do: [ :each | self mergeMethod: each onClassSide: false ].
+		traitToMerge class localMethods do: [ :each | self mergeMethod: each onClassSide: true ]]
 ]
 
 { #category : #merging }
@@ -146,15 +146,10 @@ StatefulTraitsMergedClassInfo >> mergeSlot: aSlot [
 ]
 
 { #category : #merging }
-StatefulTraitsMergedClassInfo >> mergeSlots [
-
-	
-]
-
-{ #category : #merging }
 StatefulTraitsMergedClassInfo >> mergeSlotsFrom: aTrait [
 
-	aTrait slots do: [ :each | self mergeSlot: each ].
+	(self traitsToMergeWith: aTrait) do: [ :traitToMerge |
+		traitToMerge slots do: [ :each | self mergeSlot: each ] ]
 	
 ]
 
@@ -228,4 +223,10 @@ StatefulTraitsMergedClassInfo >> traits [
 { #category : #accessing }
 StatefulTraitsMergedClassInfo >> traits: anObject [
 	traits := anObject
+]
+
+{ #category : #merging }
+StatefulTraitsMergedClassInfo >> traitsToMergeWith: aTrait [
+
+	^ (aTrait withAllSuperclasses copyWithoutAll: (self mergedClass withAllSuperclasses))
 ]

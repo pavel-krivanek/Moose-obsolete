@@ -195,7 +195,7 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 { #category : #'instance creation' }
 FmxNGTestSmalltalkGenerator >> newBuilder [
 
-	^ (FmxNGTestGenerator builderWithDefinitions)
+	^ (FmxNGGenerator builderWithDefinitions)
 		doNotGenerateCurrent;
 		generator: self;
 		yourself.
