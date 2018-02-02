@@ -72,7 +72,8 @@ MiniSmalltalkGenerator class >> resetMetamodel [
 	| classes tower |
 	
 	classes := self packageName asPackage definedClasses.
-	classes addAll: #'FmxNGTest' asPackage definedClasses.
+	classes addAll: #'FmxNG-Generated' asPackage definedClasses.
+	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
 	
 	{ FmxTraitEntity. MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup.} 
 		do: [ :each | classes add: each ].
