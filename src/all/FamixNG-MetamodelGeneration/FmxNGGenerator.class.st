@@ -1446,6 +1446,14 @@ FmxNGGenerator >> generate [
 ]
 
 { #category : #initialization }
+FmxNGGenerator >> generateWithoutCleaning [
+
+	self define.
+	self builder 
+		generate.
+]
+
+{ #category : #initialization }
 FmxNGGenerator >> initialize [
 
 	super initialize.

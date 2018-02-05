@@ -91,7 +91,18 @@ FamixMetamodelGenerator >> defineTraits [
 FamixMetamodelGenerator >> generate [
 
 	self define.
-	self builder generate
+	self builder 
+		cleanPackage;
+		generate.
+]
+
+{ #category : #generation }
+FamixMetamodelGenerator >> generateWithoutCleaning [
+
+	self define.
+	self builder 
+		generate.
+
 ]
 
 { #category : #definition }
