@@ -15,7 +15,8 @@ Class {
 		'behaviors',
 		'mergeTraits',
 		'generalizationDefinitions',
-		'typedProperties'
+		'typedProperties',
+		'traitsWithUsers'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -72,6 +73,7 @@ FamixMetamodelBuilderPlantTextVisitor >> initialize [
 	mergeTraits := true.
 	generalizationDefinitions := OrderedCollection new.
 	typedProperties := OrderedCollection new.
+	traitsWithUsers := Set new.
 ]
 
 { #category : #accessing }
@@ -111,11 +113,17 @@ FamixMetamodelBuilderPlantTextVisitor >> registerNewBehavior: aBehavior [
 	
 ]
 
+{ #category : #visiting }
+FamixMetamodelBuilderPlantTextVisitor >> selectTraitsWithUsersFrom: aBuilder [
+
+	^ traitsWithUsers := aBuilder classes flatCollect: [:each | each traitGeneralizations] as: Set
+]
+
 { #category : #private }
 FamixMetamodelBuilderPlantTextVisitor >> traitsToShowFrom: aBuilder [
 
 	| traitsToGenerate classesToGenerate |
-	
+
 	traitsToGenerate := aBuilder traitsToGenerate.
 	classesToGenerate := aBuilder classesToGenerate.
 	
@@ -137,6 +145,8 @@ FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 	
 	self gatherTraits ifTrue: [ 
 		stream nextPutAll: 'together {'; cr ].
+	
+	self selectTraitsWithUsersFrom: aBuilder.
 	
 	(aBuilder traits select: #willGenerate) do: [ :each | each acceptVisitor: self ].
 	
@@ -217,6 +227,11 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
 	| behaviorKey |
 	
 	aTrait willGenerate ifFalse: [ ^ self ].
+	
+	(traitsWithUsers includes: aTrait) ifFalse: [ ^self ].
+	
+	((aTrait builder classes flatCollect: [:each | each traitGeneralizations]) includes: aTrait)
+		ifFalse: [ ^ self ].
 
 	behaviorKey := self ensureBehaviorNameFor: aTrait.
 	
@@ -273,6 +288,8 @@ FamixMetamodelBuilderPlantTextVisitor >> writeGeneralizations [
 { #category : #relations }
 FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
 
+	| isContainer |
+
 	relations do: [ :relation | 
 		stream 
 			nextPutAll: (self ensureBehaviorNameFor: relation from trait);
@@ -283,10 +300,16 @@ FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
 			space; 
 			nextPutAll: '"'.
 		
+		isContainer := relation from isContainer or: [ relation to isContainer ].
+		
 		stream space.
 		relation from isContainer 
 			ifTrue: [ stream nextPutAll: 'o' ].
-		stream nextPutAll: '-[#black]-'.
+
+		isContainer 
+			ifTrue: [ stream nextPutAll: '-[#red]-'. ]
+			ifFalse: [ stream nextPutAll: '-[#black]-'. ].
+		
 		relation to isContainer 
 			ifTrue: [ stream nextPutAll: 'o' ].
 		stream space.

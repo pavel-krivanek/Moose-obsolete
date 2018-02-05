@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+EntityClassFactory >> classEntity [ 
+
+	^ MiniStClass
+]
+
+{ #category : #'as yet unclassified' }
 EntityClassFactory >> comment [
 
 	^ MiniStComment
@@ -14,12 +20,6 @@ EntityClassFactory >> comment [
 EntityClassFactory >> inheritance [
 
 	^ MiniStInheritance
-]
-
-{ #category : #'as yet unclassified' }
-EntityClassFactory >> klass [ 
-
-	^ MiniStClass
 ]
 
 { #category : #'as yet unclassified' }

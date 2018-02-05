@@ -10,7 +10,7 @@ Class {
 { #category : #'private-entity-creation' }
 FmxStImporter >> basicClassCreation: aClass [
 	| class anchor |
-	class := classes at: aClass put: self factory klass new.
+	class := classes at: aClass put: self factory classEntity new.
 	class name: (aClass name replaceAll: Character space with: $_).
 	class isStub: true.
 	importingContext shouldImportNamespace

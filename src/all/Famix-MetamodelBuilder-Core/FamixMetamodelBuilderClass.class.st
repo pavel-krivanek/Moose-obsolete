@@ -233,6 +233,12 @@ FamixMetamodelBuilderClass >> relatedTraitName [
 	^ 'T', self name
 ]
 
+{ #category : #accessing }
+FamixMetamodelBuilderClass >> requires: aClass [
+
+	"do nothoing for now"
+]
+
 { #category : #'name conversion' }
 FamixMetamodelBuilderClass >> singularPropertyName [
 

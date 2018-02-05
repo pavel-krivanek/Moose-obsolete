@@ -87,6 +87,28 @@ FmxNGTestSmalltalkGenerator >> defineClasses [
 	unknownVariable := builder newClassNamed: #UnknownVariable.
 	
 	self defineHierarchy.
+	self defineDependencies.
+]
+
+{ #category : #'instance creation' }
+FmxNGTestSmalltalkGenerator >> defineDependencies [
+
+	sourcedEntity requires: { sourceAnchor. sourceLanguage }.
+	annotationInstance requires: { method }.
+	annotationInstanceAttribute requires: { annotationInstance }.
+	access requires: { variable. method }.
+	inheritance requires: { behavior }.
+	invocation requires: { method }.
+	reference requires: { behavior. method }.
+	comment requires: { behavior. method }.
+	behavior requires: { package }.
+	method requires: { behavior. package }.
+	attribute requires: { behavior }.
+	implicitVariable requires: { method }.
+	localVariable requires: { method }.
+	parameter requires: { method }.
+	unknownVariable requires: { method }.
+	
 ]
 
 { #category : #'instance creation' }
@@ -196,7 +218,7 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 FmxNGTestSmalltalkGenerator >> newBuilder [
 
 	^ (FmxNGGenerator builderWithDefinitions)
-		doNotGenerateCurrent;
+		"doNotGenerateCurrent;"
 		generator: self;
 		yourself.
 	
