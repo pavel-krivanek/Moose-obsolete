@@ -13,7 +13,22 @@ Class {
 { #category : #accessing }
 FamixImportingContext >> import: aClass [
 	
-	self imports add: aClass
+	self import: aClass traversed: Set new
+	
+]
+
+{ #category : #accessing }
+FamixImportingContext >> import: aClass traversed: traversedClasses [
+
+	(traversedClasses includes: aClass)
+		ifTrue: [ ^ self ].
+		
+	self imports add: aClass.
+	traversedClasses add: aClass.
+		
+	aClass requirements do: [ :each |
+		self import: each traversed: traversedClasses ].
+	
 ]
 
 { #category : #accessing }

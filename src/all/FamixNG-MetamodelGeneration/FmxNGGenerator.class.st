@@ -103,6 +103,27 @@ Class {
 	#category : #'FamixNG-MetamodelGeneration'
 }
 
+{ #category : #accessing }
+FmxNGGenerator class >> resetMetamodel [
+
+	" self resetMetamodel"
+
+	| classes tower |
+	
+	classes := self packageName asPackage definedClasses select: [ :each | each inheritsFrom: MooseEntity ].
+	classes addAll: #'FmxNG-Generated' asPackage definedClasses.
+	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
+	
+	{ FmxTraitEntity. MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup. FamixImportingContext} 
+		do: [ :each | classes add: each ].
+
+	tower := MooseModel metaBuilder: classes.
+	self metamodel: tower metamodel.
+	^ metamodel
+
+	
+]
+
 { #category : #comments }
 FmxNGGenerator >> commentForTAccess [
 

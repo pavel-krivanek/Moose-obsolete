@@ -32,7 +32,22 @@ FamixMetamodelGenerator class >> metamodel: anObject [
 { #category : #accessing }
 FamixMetamodelGenerator class >> resetMetamodel [
 
-	self subclassResponsibility
+	" self resetMetamodel"
+
+	| classes tower |
+
+	classes := self packageName asPackage definedClasses select: [ :each | each inheritsFrom: MooseEntity ].
+	classes addAll: #'FmxNG-Generated' asPackage definedClasses.
+	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
+	
+	{ FmxTraitEntity. MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup. FamixImportingContext} 
+		do: [ :each | classes add: each ].
+
+	tower := MooseModel metaBuilder: classes.
+	self metamodel: tower metamodel.
+	^ metamodel
+
+	
 ]
 
 { #category : #definition }

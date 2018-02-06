@@ -38,24 +38,6 @@ FmxNGTestSmalltalkGenerator class >> packageName [
 	^ #FmxSt
 ]
 
-{ #category : #accessing }
-FmxNGTestSmalltalkGenerator class >> resetMetamodel [
-
-	| classes tower |
-	
-	classes := #'FmxSt' asPackage definedClasses.
-	classes addAll: #'FmxNGTest' asPackage definedClasses.
-	
-	{ MooseEntity. FmxTraitEntity. MooseGroup. MooseAbstractGroup. FAMIXTypeGroup. FAMIXClassGroup } 
-		do: [ :each | classes add: each ].
-
-	tower := MooseModel metaBuilder: classes.
-	self metamodel: tower metamodel.
-	^ metamodel
-
-	
-]
-
 { #category : #'instance creation' }
 FmxNGTestSmalltalkGenerator >> defineClasses [
 
@@ -218,7 +200,7 @@ FmxNGTestSmalltalkGenerator >> defineHierarchy [
 FmxNGTestSmalltalkGenerator >> newBuilder [
 
 	^ (FmxNGGenerator builderWithDefinitions)
-		"doNotGenerateCurrent;"
+		doNotGenerateCurrent;
 		generator: self;
 		yourself.
 	
