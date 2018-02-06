@@ -6,13 +6,13 @@ g := FmxNGGenerator new.
 g builder traitsFlattening: false.
 g generateWithoutCleaning.
 
-generate the mini Smalltalk metamodel
+generate C metamodel
 
 | g |
 g := CMetamodelGenerator  new.
 g builder traitsFlattening: true.
 g generateWithoutCleaning.
-MiniSmalltalkGenerator resetMetamodel.
+CMetamodelGenerator resetMetamodel.
 
 
 generate PlantText graphs
@@ -100,55 +100,7 @@ CMetamodelGenerator >> defineHierarchy [
 	function --|> #TWithInvocations.
 	function --|> #TInvocable.
 
-	"sourceAnchor generalization: entity.
-	sourceAnchor generalization: #TSourceAnchor.
 
-	sourceLanguage generalization: entity.
-	sourceLanguage generalization: #TSourceLanguage.
-
-	sourcedEntity generalization: entity.
-	sourcedEntity generalization: #TWithSourceLanguage. 
-	sourcedEntity generalization: #TWithSourceAnchor. 
-	
-	association generalization: sourcedEntity.
-
-	inheritance generalization: association.
-	inheritance generalization: #TSuperInheritance. 
-	inheritance generalization: #TSubInheritance. 
-
-	comment generalization: sourcedEntity.
-	comment generalization: #TComment. 
-
-	namedEntity generalization: sourcedEntity.
-	namedEntity generalization: #TNamed. 
-	namedEntity generalization: #TInvocationsReceiver. 
-
-	behavior generalization: namedEntity.
-	behavior generalization: #TWithMethods. 
-	behavior generalization: #TWithComments. 
-	behavior generalization: #TPackageable.
-
-	class generalization: behavior.
-	class generalization: #TType. 
-	class generalization: #TWithSubInheritances. 
-	class generalization: #TWithSuperInheritances. 
-
-	method generalization: namedEntity.
-	method generalization: #TMethod. 
-	method generalization: #TWithComments.
-	method generalization: #TPackageable.
-	method generalization: #TWithSignature.
-
-	scopingEntity generalization: namedEntity.
-	scopingEntity generalization: #TWithTypes. 
-
-	namespace generalization: scopingEntity.
-
-	package generalization: scopingEntity.
-	package generalization: #TWithComments. 
-	package generalization: #TPackage. 
-
-"
 ]
 
 { #category : #'instance creation' }
