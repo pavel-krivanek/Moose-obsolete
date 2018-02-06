@@ -303,14 +303,14 @@ FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
 		isContainer := relation from isContainer or: [ relation to isContainer ].
 		
 		stream space.
-		relation from isContainer 
+		relation to isContainer 
 			ifTrue: [ stream nextPutAll: 'o' ].
 
 		isContainer 
 			ifTrue: [ stream nextPutAll: '-[#red]-'. ]
 			ifFalse: [ stream nextPutAll: '-[#black]-'. ].
 		
-		relation to isContainer 
+		relation from isContainer 
 			ifTrue: [ stream nextPutAll: 'o' ].
 		stream space.
 		

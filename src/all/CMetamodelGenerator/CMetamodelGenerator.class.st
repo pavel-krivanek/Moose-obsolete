@@ -9,7 +9,7 @@ g generateWithoutCleaning.
 generate the mini Smalltalk metamodel
 
 | g |
-g := FortranGenerator  new.
+g := CMetamodelGenerator  new.
 g builder traitsFlattening: true.
 g generateWithoutCleaning.
 MiniSmalltalkGenerator resetMetamodel.
@@ -18,7 +18,7 @@ MiniSmalltalkGenerator resetMetamodel.
 generate PlantText graphs
 
 | b v |
-b := FortranGenerator builderWithDefinitions.
+b := CMetamodelGenerator builderWithDefinitions.
 v := FamixMetamodelBuilderPlantTextVisitor new.
 b acceptVisitor: v.
 v contents
