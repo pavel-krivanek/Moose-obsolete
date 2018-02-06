@@ -60,6 +60,9 @@ FamixMetamodelBuilderRealEnvironment >> createImportingcontextClassNamed: aClass
 
 	| resultantClass |
 	
+	(self class environment at: aClassName asSymbol) 
+		ifNotNil: [ :existingClass | ^ existingClass ].
+	
 	resultantClass := (self class environment at: self builder baseImportingContextName) subclass: aClassName asSymbol
 		instanceVariableNames: ''
 		classVariableNames: ''

@@ -38,9 +38,20 @@ FamixMetamodelBuilderImportingContextTest >> setUp [
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderImportingContextTest >> testDefineImport [
+
+	| localMethod |
+	
+	localMethod := generatedContext methodNamed: #importMethod.
+	self assert: (localMethod sourceCode includesSubstring: '^ self import: TstMethod').
+
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderImportingContextTest >> testGeneratedContextClass [
 
 	self assert: generatedContext notNil.
+	self assert: generatedContext superclass name = #FamixImportingContext.
 ]
 
 { #category : #initialization }
@@ -57,5 +68,21 @@ FamixMetamodelBuilderImportingContextTest >> testRequirements [
 	localMethod := generatedAccess classSide methodNamed: #requirements.
 	self assert: (localMethod sourceCode includesSubstring: '^ { TstMethod. TstVariable }').
 
+
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderImportingContextTest >> testShouldImport [
+
+	| localMethod |
+	
+	localMethod := generatedContext methodNamed: #shouldImportMethod.
+	self assert: (localMethod sourceCode includesSubstring: '^ self shouldImport: TstMethod').
+	
+	localMethod := generatedContext methodNamed: #shouldImportAccess.
+	self assert: (localMethod sourceCode includesSubstring: '^ self shouldImport: TstAccess').
+	
+	localMethod := generatedContext methodNamed: #shouldImportVariable.
+	self assert: (localMethod sourceCode includesSubstring: '^ self shouldImport: TstVariable').
 
 ]

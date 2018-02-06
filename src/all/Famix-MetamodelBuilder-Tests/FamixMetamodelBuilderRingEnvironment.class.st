@@ -59,6 +59,9 @@ FamixMetamodelBuilderRingEnvironment >> createImportingcontextClassNamed: aClass
 
 	| resultantClass |
 	
+	(self hasBehaviorNamed: aClassName asSymbol ) 
+		ifTrue: [ ^ self ringEnvironment ensureClassNamed: aClassName asSymbol ].
+	
 	resultantClass := self ringEnvironment ensureClassNamed: aClassName asSymbol.
 	resultantClass superclass: (self ringEnvironment ensureClassNamed: self builder baseImportingContextName).
 	resultantClass layout makeResolved.

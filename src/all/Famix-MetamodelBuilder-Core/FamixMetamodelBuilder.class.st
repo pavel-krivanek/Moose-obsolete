@@ -95,7 +95,7 @@ FamixMetamodelBuilder >> acceptVisitor: aVisitor [
 { #category : #accessing }
 FamixMetamodelBuilder >> baseImportingContextName [
 
-	^ #MooseImportingContext
+	^ #FamixImportingContext
 ]
 
 { #category : #accessing }
@@ -229,10 +229,42 @@ FamixMetamodelBuilder >> generate [
 ]
 
 { #category : #generating }
+FamixMetamodelBuilder >> generateImportIn: contextClass [
+
+	| source |
+
+	self sortedClasses do: [ :each | 
+		source := String streamContents: [ :s |
+			s	nextPutAll: 'import'; nextPutAll: each name; cr;
+				cr;
+				tab; nextPutAll: '^ self import: '; nextPutAll: each fullName ].
+		 self environment compile: source in: contextClass classified: 'testing' ] 
+
+]
+
+{ #category : #generating }
 FamixMetamodelBuilder >> generateImportingContext [
 
-	(self environment hasBehaviorNamed: self importingContextName) ifFalse: [ 
-		self environment createImportingcontextClassNamed: self importingContextName in: self packageName ]
+	| contextClass |
+	
+	contextClass := self environment createImportingcontextClassNamed: self importingContextName in: self packageName.
+	
+	self generateShouldImportIn: contextClass.
+	self generateImportIn: contextClass
+]
+
+{ #category : #generating }
+FamixMetamodelBuilder >> generateShouldImportIn: contextClass [
+
+	| source |
+
+	self sortedClasses do: [ :each | 
+		source := String streamContents: [ :s |
+			s	nextPutAll: 'shouldImport'; nextPutAll: each name; cr;
+				cr;
+				tab; nextPutAll: '^ self shouldImport: '; nextPutAll: each fullName ].
+		 self environment compile: source in: contextClass classified: 'testing' ] 
+
 ]
 
 { #category : #accessing }
