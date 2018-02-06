@@ -104,6 +104,12 @@ Class {
 }
 
 { #category : #accessing }
+FmxNGGenerator class >> packageName [
+
+	^ #FmxNG
+]
+
+{ #category : #accessing }
 FmxNGGenerator class >> resetMetamodel [
 
 	" self resetMetamodel"
@@ -1481,7 +1487,7 @@ FmxNGGenerator >> initialize [
 { #category : #initialization }
 FmxNGGenerator >> packageName [
 
-	^ #'FmxNG-Generated'
+	^ self class packageName
 ]
 
 { #category : #initialization }

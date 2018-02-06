@@ -143,7 +143,7 @@ FamixMetamodelGenerator >> newBuilder [
 { #category : #definition }
 FamixMetamodelGenerator >> packageName [
 
-	^ #FmxSt
+	^ self class packageName
 
 ]
 
