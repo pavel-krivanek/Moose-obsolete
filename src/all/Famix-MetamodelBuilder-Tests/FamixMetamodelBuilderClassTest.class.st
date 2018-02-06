@@ -589,6 +589,35 @@ FamixMetamodelBuilderClassTest >> testRelatedTraitName [
 
 ]
 
+{ #category : #'tests - tags' }
+FamixMetamodelBuilderClassTest >> testRequires [
+
+	| access variable method generatedAccess generatedVariable generatedMethod |
+
+	access := builder newClassNamed: #Access.	
+	variable := builder newClassNamed: #Variable.	
+	method := builder newClassNamed: #Method.	
+		
+	access requires: { method. variable }.
+		
+	builder generate.
+		
+	generatedAccess := builder testingEnvironment ask classNamed: #TstAccess.
+	generatedVariable := builder testingEnvironment ask classNamed: #TstVariable.
+	generatedMethod := builder testingEnvironment ask classNamed: #TstMethod.
+
+	method := generatedVariable classSide methodNamed: #requirements.
+	self assert: (method sourceCode includesSubstring: '^ {  }').
+
+	method := generatedMethod classSide methodNamed: #requirements.
+	self assert: (method sourceCode includesSubstring: '^ {  }').
+
+	method := generatedAccess classSide methodNamed: #requirements.
+	self assert: (method sourceCode includesSubstring: '^ { TstMethod. TstVariable }').
+
+
+]
+
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testSimpleClass [
 

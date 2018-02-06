@@ -6,7 +6,8 @@ Class {
 	#superclass : #FamixMetamodelBuilderBehavior,
 	#instVars : [
 		'traitGeneralizations',
-		'classGeneralization'
+		'classGeneralization',
+		'requirements'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -37,7 +38,13 @@ FamixMetamodelBuilderClass >> allClassGeneralizations [
 
 ]
 
-{ #category : #generating }
+{ #category : #accessing }
+FamixMetamodelBuilderClass >> allRequirementNames [ 
+
+	^ (self requirements asSet collect: #fullName) sorted
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderClass >> allTraitNames [ 
 
 	^ (self traitNamesFromRelations, self traitNamesFromGeneralizations) asSet sorted
@@ -132,13 +139,14 @@ FamixMetamodelBuilderClass >> generate [
 	
 	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass slots: self slotDefinitions in: self packageName.
 	aClass tagWith: self tag.
-	self builder environment setComment: self comment for: aClass .
+	self builder environment setComment: self comment for: aClass.
 			
 	self realClass: aClass.
 	self willGenerate ifTrue: [ 
 		self generateAccessors.
 		self generateAnnotationIn: aClass ].
 	self generateTraitsAssignmentsFor: aClass.
+	self generateRequirementsFor: aClass.
 	
 	isHierarchyRoot ifTrue: [ 
 		self generateRootMethodsIn: aClass ].
@@ -160,6 +168,15 @@ FamixMetamodelBuilderClass >> generateDummy [
 		self builder environment createDummyClassNamed: aClassName in: self packageName ]
 
 		
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderClass >> generateRequirementsFor: aClass [
+
+	aClass classSide compile: ('requirements
+
+	^ \{ {1} \}' format: { self allRequirementNames joinUsing: '. ' }) 
+		classified: #meta
 ]
 
 { #category : #generating }
@@ -186,6 +203,14 @@ FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
 FamixMetamodelBuilderClass >> hasTraitGeneralization: aTrait [
 
 	^ self traitGeneralizations includes: aTrait 
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderClass >> initialize [
+
+	super initialize.
+	
+	requirements := Set new.
 ]
 
 { #category : #testing }
@@ -234,9 +259,15 @@ FamixMetamodelBuilderClass >> relatedTraitName [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> requires: aClass [
+FamixMetamodelBuilderClass >> requirements [
 
-	"do nothoing for now"
+	^ requirements 
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderClass >> requires: collectionOfClasses [
+
+	requirements addAll: collectionOfClasses
 ]
 
 { #category : #'name conversion' }
