@@ -4,7 +4,7 @@ rce: 22987863
 Class {
 	#name : #BaselineOfMoose,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfMoose'
+	#category : #BaselineOfMoose
 }
 
 { #category : #baseline }
@@ -362,6 +362,10 @@ BaselineOfMoose >> baselineFamixNG: spec [
 	#(
 		'FamixNG-MetamodelGeneration'
 		'FmxStImporter'
+		'FmxNG-Generated'
+		'FmxNG-Traits'
+		'CMetamodelenerator'
+		'FmxC'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
 
