@@ -56,6 +56,20 @@ FamixMetamodelBuilderRealEnvironment >> createDummyClassNamed: aClassName in: pa
 ]
 
 { #category : #compiling }
+FamixMetamodelBuilderRealEnvironment >> createImportingcontextClassNamed: aClassName in: packageName [
+
+	| resultantClass |
+	
+	resultantClass := (self class environment at: self builder baseImportingContextName) subclass: aClassName asSymbol
+		instanceVariableNames: ''
+		classVariableNames: ''
+		package: packageName.	
+						
+	^ resultantClass
+
+]
+
+{ #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName slots: slots in: packageName [
 
 	| resultantTrait aSubTrait|
@@ -86,6 +100,12 @@ FamixMetamodelBuilderRealEnvironment >> flattenTraitsFor: aClass [
 		foundTraits do: [ :each | info addTrait: each ].
 		info merge ]
 
+]
+
+{ #category : #compiling }
+FamixMetamodelBuilderRealEnvironment >> hasBehaviorNamed: aClassName [
+
+	^ self class environment includesKey: aClassName
 ]
 
 { #category : #compiling }

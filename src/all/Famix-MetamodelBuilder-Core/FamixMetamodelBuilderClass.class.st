@@ -164,7 +164,7 @@ FamixMetamodelBuilderClass >> generateDummy [
 	
 	aClassName := self fullName.
 	
-	self class environment at: aClassName ifAbsent: [ 
+	(self builder environment hasBehaviorNamed: aClassName) ifFalse: [ 
 		self builder environment createDummyClassNamed: aClassName in: self packageName ]
 
 		

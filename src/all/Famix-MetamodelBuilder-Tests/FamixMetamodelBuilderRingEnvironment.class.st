@@ -55,6 +55,20 @@ FamixMetamodelBuilderRingEnvironment >> createDummyClassNamed: aClassName in: pa
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderRingEnvironment >> createImportingcontextClassNamed: aClassName in: packageName [
+
+	| resultantClass |
+	
+	resultantClass := self ringEnvironment ensureClassNamed: aClassName asSymbol.
+	resultantClass superclass: (self ringEnvironment ensureClassNamed: self builder baseImportingContextName).
+	resultantClass layout makeResolved.
+	resultantClass package: (self ringEnvironment ensurePackageNamed: packageName).
+						
+	^ resultantClass
+
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots in: packageName [
 
 	| aPackage aTrait |
@@ -84,13 +98,20 @@ FamixMetamodelBuilderRingEnvironment >> flattenTraitsFor: aClass [
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilderRingEnvironment >> hasBehaviorNamed: aClassName [
+
+	^ self ringEnvironment ask includesClassNamed: aClassName
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> initialize [
 
 	super initialize.
 	
 	ringEnvironment := RG2Environment new.
 	ringEnvironment ensureClassNamed: #FMOne.
-	ringEnvironment ensureClassNamed: #FMMany.	
+	ringEnvironment ensureClassNamed: #FMMany.		
+
 ]
 
 { #category : #accessing }

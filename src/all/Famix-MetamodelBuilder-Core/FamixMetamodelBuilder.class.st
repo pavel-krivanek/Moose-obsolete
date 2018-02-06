@@ -92,6 +92,18 @@ FamixMetamodelBuilder >> acceptVisitor: aVisitor [
 	^ aVisitor visitBuilder: self.
 ]
 
+{ #category : #accessing }
+FamixMetamodelBuilder >> baseImportingContextName [
+
+	^ #MooseImportingContext
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> baseMooseImportingContextName [
+
+	^ MooseImportingContext
+]
+
 { #category : #settings }
 FamixMetamodelBuilder >> basicSuperclassName [
 
@@ -207,13 +219,20 @@ FamixMetamodelBuilder >> flattenTraitsFor: aClass [
 		self environment flattenTraitsFor: aClass ]
 ]
 
-{ #category : #accessing }
+{ #category : #generating }
 FamixMetamodelBuilder >> generate [
 
 	self traits do: [ :each | each generate ] displayingProgress: 'generating traits'.
 	self sortedClasses do: [ :each | each generateDummy ] displayingProgress: 'generating dummy classes'.
 	self sortedClasses do: [ :each | each generate ] displayingProgress: 'generating classes'.
+	self generateImportingContext.
+]
 
+{ #category : #generating }
+FamixMetamodelBuilder >> generateImportingContext [
+
+	(self environment hasBehaviorNamed: self importingContextName) ifFalse: [ 
+		self environment createImportingcontextClassNamed: self importingContextName in: self packageName ]
 ]
 
 { #category : #accessing }
@@ -224,6 +243,12 @@ FamixMetamodelBuilder >> generator [
 { #category : #accessing }
 FamixMetamodelBuilder >> generator: anObject [
 	generator := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> importingContextName [
+
+	^ (self prefix, 'ImportingContext') asSymbol
 ]
 
 { #category : #initialization }
