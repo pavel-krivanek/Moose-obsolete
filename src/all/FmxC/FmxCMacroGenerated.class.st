@@ -22,5 +22,5 @@ FmxCMacroGenerated class >> requirements [
 FmxCMacroGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTMacro}
+	^ {}
 ]

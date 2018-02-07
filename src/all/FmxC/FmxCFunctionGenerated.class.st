@@ -26,7 +26,7 @@ FmxCFunctionGenerated class >> requirements [
 FmxCFunctionGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTFunction. FmxNGTInvocable. FmxNGTWithInvocations}
+	^ {FmxNGTInvocable. FmxNGTWithInvocations}
 ]
 
 { #category : #'_fromTrait_FmxNGTInvocableGenerated' }

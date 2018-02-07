@@ -2,9 +2,9 @@ Class {
 	#name : #FmxCEntityGenerated,
 	#superclass : #MooseEntity,
 	#instVars : [
+		'#definedIn => FMOne type: #FmxCTFile opposite: #definedEntities',
 		'#isStub',
-		'#name',
-		'#definedIn => FMOne type: #FmxCTFile opposite: #definedEntities'
+		'#name'
 	],
 	#category : #'FmxC-Entities'
 }

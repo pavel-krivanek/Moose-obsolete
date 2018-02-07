@@ -36,15 +36,8 @@ Class {
 		'cFile',
 		'hFile',
 		'tEntity',
-		'tFunction',
-		'tType',
-		'tMacro',
-		'tModule',
 		'tFile',
-		'tCFile',
-		'tHFile',
-		'invocation',
-		'tInvocation'
+		'invocation'
 	],
 	#category : #CMetamodelGenerator
 }
@@ -70,13 +63,7 @@ CMetamodelGenerator >> defineClasses [
 	invocation := builder newClassNamed: #Invocation.
 	
 	tEntity := (entity as: #TEntity) trait.
-	tFunction := (function as: #TFunction) trait.
-	tType := (type as: #TType) trait.
-	tMacro := (macro as: #TMacro) trait.
-	tModule := (module as: #TModule) trait.
 	tFile := (file as: #TFile) trait.
-	tCFile := (cFile as: #TCFile) trait.
-	tHFile := (hFile as: #THFile) trait.
 	
 	self defineHierarchy.
 ]
@@ -105,8 +92,8 @@ CMetamodelGenerator >> defineHierarchy [
 { #category : #'instance creation' }
 CMetamodelGenerator >> defineRelations [
 
-	tModule <>- tCFile.
-	tModule <>- tHFile.
+	module <>- cFile.
+	module <>- hFile.
 	
 	(tEntity property: #definedIn) *- (tFile property: #definedEntities).
 
@@ -116,7 +103,7 @@ CMetamodelGenerator >> defineRelations [
 CMetamodelGenerator >> newBuilder [
 
 	^ (FmxNGGenerator builderWithDefinitions)
-		"doNotGenerateCurrent;"
+		doNotGenerateCurrent;
 		generator: self;
 		yourself.
 	

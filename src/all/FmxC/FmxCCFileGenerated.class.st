@@ -2,7 +2,7 @@ Class {
 	#name : #FmxCCFileGenerated,
 	#superclass : #FmxCFileGenerated,
 	#instVars : [
-		'#module => FMOne type: #FmxCTModule opposite: #cFile'
+		'#module => FMOne type: #FmxCModule opposite: #cFile'
 	],
 	#category : #'FmxC-Entities'
 }
@@ -25,10 +25,10 @@ FmxCCFileGenerated class >> requirements [
 FmxCCFileGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTCFile}
+	^ {}
 ]
 
-{ #category : #'_fromTrait_FmxCTCFileGenerated' }
+{ #category : #accessing }
 FmxCCFileGenerated >> module [
 
 	<container>
@@ -36,7 +36,7 @@ FmxCCFileGenerated >> module [
 	^ module
 ]
 
-{ #category : #'_fromTrait_FmxCTCFileGenerated' }
+{ #category : #accessing }
 FmxCCFileGenerated >> module: anObject [
 
 	module := anObject

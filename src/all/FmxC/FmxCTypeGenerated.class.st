@@ -22,5 +22,5 @@ FmxCTypeGenerated class >> requirements [
 FmxCTypeGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTType}
+	^ {}
 ]

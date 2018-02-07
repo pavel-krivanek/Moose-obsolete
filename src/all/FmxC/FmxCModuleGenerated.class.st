@@ -2,8 +2,8 @@ Class {
 	#name : #FmxCModuleGenerated,
 	#superclass : #MooseEntity,
 	#instVars : [
-		'#cFile => FMOne type: #FmxCTCFile opposite: #module',
-		'#hFile => FMOne type: #FmxCTHFile opposite: #module',
+		'#cFile => FMOne type: #FmxCCFile opposite: #module',
+		'#hFile => FMOne type: #FmxCHFile opposite: #module',
 		'#isStub',
 		'#name'
 	],
@@ -34,29 +34,29 @@ FmxCModuleGenerated class >> requirements [
 FmxCModuleGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTModule. FmxNGTNamed}
+	^ {FmxNGTNamed}
 ]
 
-{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+{ #category : #accessing }
 FmxCModuleGenerated >> cFile [
 
 	^ cFile
 ]
 
-{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+{ #category : #accessing }
 FmxCModuleGenerated >> cFile: anObject [
 
 	cFile := anObject
 
 ]
 
-{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+{ #category : #accessing }
 FmxCModuleGenerated >> hFile [
 
 	^ hFile
 ]
 
-{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+{ #category : #accessing }
 FmxCModuleGenerated >> hFile: anObject [
 
 	hFile := anObject

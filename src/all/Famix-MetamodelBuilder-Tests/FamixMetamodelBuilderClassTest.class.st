@@ -113,18 +113,14 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsOne [
 		
 	generatedAccess := builder testingEnvironment ask classNamed: 'TstAccess'.
 	generatedVariable := builder testingEnvironment ask classNamed: 'TstVariable'.
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
-	self assert: generatedAccess slots isEmpty.
-	self assert: generatedVariable slots isEmpty.
-	self assert: generatedTAccess slots first name equals: #variable.
-	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #access'.
-	self assert: generatedTVariable slots first name equals: #access.
-	self assert: generatedTVariable slots first expression equals: 'FMOne type: #TstTAccess opposite: #variable'.
+	self assert: generatedAccess slots first name equals: #variable.
+	self assert: generatedAccess slots first expression equals: 'FMOne type: #TstVariable opposite: #access'.
+	self assert: generatedVariable slots first name equals: #access.
+	self assert: generatedVariable slots first expression equals: 'FMOne type: #TstAccess opposite: #variable'.
 	
-	self deny: ((generatedTVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
-	self assert: ((generatedTAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
+	self deny: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
 
 ]
 
@@ -226,18 +222,14 @@ FamixMetamodelBuilderClassTest >> testAutogereatedOneBelongsTo [
 		
 	generatedAccess := builder testingEnvironment ask classNamed: 'TstAccess'.
 	generatedVariable := builder testingEnvironment ask classNamed: 'TstVariable'.
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
-	self assert: generatedAccess slots isEmpty.
-	self assert: generatedVariable slots isEmpty.
-	self assert: generatedTAccess slots first name equals: #variable.
-	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #access'.
-	self assert: generatedTVariable slots first name equals: #access.
-	self assert: generatedTVariable slots first expression equals: 'FMOne type: #TstTAccess opposite: #variable'.
+	self assert: generatedAccess slots first name equals: #variable.
+	self assert: generatedAccess slots first expression equals: 'FMOne type: #TstVariable opposite: #access'.
+	self assert: generatedVariable slots first name equals: #access.
+	self assert: generatedVariable slots first expression equals: 'FMOne type: #TstAccess opposite: #variable'.
 	
-	self deny: ((generatedTAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
-	self assert: ((generatedTVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
+	self deny: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
 ]
 
 { #category : #tests }
@@ -281,18 +273,14 @@ FamixMetamodelBuilderClassTest >> testAutogereatedOneToOne [
 		
 	generatedAccess := builder testingEnvironment ask classNamed: 'TstAccess'.
 	generatedVariable := builder testingEnvironment ask classNamed: 'TstVariable'.
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
-	self assert: generatedAccess slots isEmpty.
-	self assert: generatedVariable slots isEmpty.
-	self assert: generatedTAccess slots first name equals: #variable.
-	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #access'.
-	self assert: generatedTVariable slots first name equals: #access.
-	self assert: generatedTVariable slots first expression equals: 'FMOne type: #TstTAccess opposite: #variable'.
+	self assert: generatedAccess slots first name equals: #variable.
+	self assert: generatedAccess slots first expression equals: 'FMOne type: #TstVariable opposite: #access'.
+	self assert: generatedVariable slots first name equals: #access.
+	self assert: generatedVariable slots first expression equals: 'FMOne type: #TstAccess opposite: #variable'.
 	
-	self deny: ((generatedTAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
-	self deny: ((generatedTVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
+	self deny: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
+	self deny: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
 ]
 
 { #category : #'tests - settings' }
