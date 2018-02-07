@@ -52,6 +52,12 @@ FamixMetamodelBuilderBehaviorAlias >> link: link1 throughAssociation: anAssociat
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderBehaviorAlias >> property: propertyName type: aTypeName [
+
+	^ self trait property: propertyName type: aTypeName
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderBehaviorAlias >> subject [
 	^ subject
 ]

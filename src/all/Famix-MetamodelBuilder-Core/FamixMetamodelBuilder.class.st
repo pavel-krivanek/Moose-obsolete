@@ -320,6 +320,15 @@ FamixMetamodelBuilder >> newClassNamed: aClassName [
 ]
 
 { #category : #initialization }
+FamixMetamodelBuilder >> newClassNamed: aClassName comment: aString [
+
+	^ (self newClassNamed: aClassName)
+		comment: aString;
+		yourself
+	
+]
+
+{ #category : #initialization }
 FamixMetamodelBuilder >> newRelation [
 
 	| aRelation |
@@ -349,6 +358,15 @@ FamixMetamodelBuilder >> newTraitNamed: aTraitName [
 
 	^ self newTrait name: aTraitName.
 
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilder >> newTraitNamed: aClassName comment: aString [
+
+	^ (self newTraitNamed: aClassName)
+		comment: aString;
+		yourself
+	
 ]
 
 { #category : #accessing }

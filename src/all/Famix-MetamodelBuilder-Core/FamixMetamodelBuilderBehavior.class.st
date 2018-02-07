@@ -109,6 +109,14 @@ FamixMetamodelBuilderBehavior >> addRelationSide: aRelationSide [
 	self sides add: aRelationSide
 ]
 
+{ #category : #converting }
+FamixMetamodelBuilderBehavior >> as: aTraitOrTraitName property: propertyName comment: aString [
+
+	^ (self as: aTraitOrTraitName property: propertyName)
+		comment: aString;
+		yourself.
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> builder [
 	^ builder
