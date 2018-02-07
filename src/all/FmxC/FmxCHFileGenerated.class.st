@@ -2,9 +2,6 @@ Class {
 	#name : #FmxCHFileGenerated,
 	#superclass : #FmxCFileGenerated,
 	#instVars : [
-		'#sender => FMOne type: #FmxNGTWithInvocations opposite: #outgoingInvocations',
-		'#candidates => FMMany type: #FmxNGTInvocable opposite: #incomingInvocations',
-		'#receiver => FMOne type: #FmxNGTInvocationsReceiver opposite: #receivingInvocations',
 		'#module => FMOne type: #FmxCTModule opposite: #hFile'
 	],
 	#category : #'FmxC-Entities'
@@ -62,7 +59,7 @@ FmxCHFileGenerated class >> requirements [
 FmxCHFileGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTHFile. FmxNGTInvocation}
+	^ {FmxCTHFile}
 ]
 
 { #category : #'_fromTrait_FmxTraitEntity' }
@@ -93,21 +90,6 @@ FmxCHFileGenerated class >> traitsGroupExcept: aSetOfTraits [
 	
 ]
 
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
-FmxCHFileGenerated >> candidates [
-
-	<target>
-
-	^ candidates
-]
-
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
-FmxCHFileGenerated >> candidates: anObject [
-
-	candidates value: anObject
-
-]
-
 { #category : #'_fromTrait_FmxCTHFileGenerated' }
 FmxCHFileGenerated >> module [
 
@@ -120,35 +102,5 @@ FmxCHFileGenerated >> module [
 FmxCHFileGenerated >> module: anObject [
 
 	module := anObject
-
-]
-
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
-FmxCHFileGenerated >> receiver [
-
-	<MSEComment: 'Named entity (variable, class...) receiving the invocation. to-side of the association'>
-	^ receiver
-]
-
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
-FmxCHFileGenerated >> receiver: anObject [
-
-	receiver := anObject
-
-]
-
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
-FmxCHFileGenerated >> sender [
-
-	<MSEComment: 'Behavioural entity making the call. from-side of the association'>
-	<source>
-
-	^ sender
-]
-
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
-FmxCHFileGenerated >> sender: anObject [
-
-	sender := anObject
 
 ]

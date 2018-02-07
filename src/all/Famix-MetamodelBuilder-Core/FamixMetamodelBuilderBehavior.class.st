@@ -487,5 +487,6 @@ FamixMetamodelBuilderBehavior >> willGenerate [
 
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> willGenerate: anObject [
+
 	willGenerate := anObject
 ]

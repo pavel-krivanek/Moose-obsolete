@@ -73,6 +73,8 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 
 	| aSide aTrait aTraitName |
 	
+	self assert: propertyName isString.
+	
 	aTrait := aTraitOrTraitName isString
 		ifTrue: [ 
 			aTraitName := aTraitOrTraitName.

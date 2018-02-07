@@ -191,14 +191,14 @@ FamixMetamodelBuilder >> doNotGenerateCurrent [
 { #category : #initialization }
 FamixMetamodelBuilder >> ensureClassNamed: aString [
 
-	^ self classes detect: [ :each | each name = aString ] ifNone: [ self newClassNamed: aString ]
+	^ self classes detect: [ :each | each name = aString and: [each prefix = self prefix]] ifNone: [ self newClassNamed: aString ]
 
 ]
 
 { #category : #initialization }
 FamixMetamodelBuilder >> ensureTraitNamed: aString [
 
-	^ self traits detect: [ :each | each name = aString ] ifNone: [ self newTraitNamed: aString ]
+	^ self traits detect: [ :each | each name = aString and: [each prefix = self prefix]] ifNone: [ self newTraitNamed: aString ]
 
 ]
 

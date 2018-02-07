@@ -19,6 +19,8 @@ FamixMetamodelBuilderTrait >> acceptVisitor: aVisitor [
 { #category : #generating }
 FamixMetamodelBuilderTrait >> as: aTraitName property: propertyName [
 
+	self assert: propertyName isString.
+	
 	^ self property: propertyName
 
 	
@@ -58,7 +60,7 @@ FamixMetamodelBuilderTrait >> generalization: anObject [
 FamixMetamodelBuilderTrait >> generate [
 
 	| aTrait traitName |
-	
+		
 	self willGenerate ifFalse: [ ^ self ].
 	
 	traitName := self fullName.

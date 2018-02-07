@@ -77,7 +77,6 @@ CMetamodelGenerator >> defineClasses [
 	tFile := (file as: #TFile) trait.
 	tCFile := (cFile as: #TCFile) trait.
 	tHFile := (hFile as: #THFile) trait.
-	tInvocation := (invocation as: #TInvocation) trait.
 	
 	self defineHierarchy.
 ]
