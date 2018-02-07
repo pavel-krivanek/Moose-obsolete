@@ -105,7 +105,7 @@ FamixMetamodelBuilderPlantTextVisitor >> onlySingleUserOf: aTrait [
 FamixMetamodelBuilderPlantTextVisitor >> registerNewBehavior: aBehavior [
 
 	| key |
-	
+
 	key := 'behavior', (behaviors size + 1) asString.
 	behaviors at: key put: (Set with: aBehavior).
 	^ key

@@ -116,7 +116,7 @@ CMetamodelGenerator >> defineRelations [
 CMetamodelGenerator >> newBuilder [
 
 	^ (FmxNGGenerator builderWithDefinitions)
-		doNotGenerateCurrent;
+		"doNotGenerateCurrent;"
 		generator: self;
 		yourself.
 	

@@ -483,7 +483,7 @@ FamixMetamodelBuilderRelationSide >> traitName [
 { #category : #accessing }
 FamixMetamodelBuilderRelationSide >> traitName: aString [
 
-	trait := self ensureLocalTraitNamed: aString
+	trait := self builder ensureLocalTraitNamed: aString
 
 ]
 

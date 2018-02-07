@@ -126,6 +126,12 @@ FamixMetamodelBuilder >> basicTraitName: anObject [
 	basicTraitName := anObject
 ]
 
+{ #category : #accessing }
+FamixMetamodelBuilder >> behaviorsCount [
+
+	^ self traits size + self sortedClasses size
+]
+
 { #category : #settings }
 FamixMetamodelBuilder >> classTag [
 
@@ -256,7 +262,9 @@ FamixMetamodelBuilder >> generate [
 	self traits do: [ :each | each generate ] displayingProgress: 'generating traits'.
 	self sortedClasses do: [ :each | each generateDummy ] displayingProgress: 'generating dummy classes'.
 	self sortedClasses do: [ :each | each generate ] displayingProgress: 'generating classes'.
-	self generateImportingContext.
+	
+	self behaviorsCount > 0
+		ifTrue: [ self generateImportingContext ]
 ]
 
 { #category : #generating }

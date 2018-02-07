@@ -16,6 +16,8 @@ FmxTraitEntity class >> annotation [
 { #category : #containers }
 FmxTraitEntity class >> potentialContainers [
 
+	<ignoreInTraitUsers>
+
 	| relations | 
 	
 	relations := self relationSlots.
@@ -30,11 +32,15 @@ FmxTraitEntity class >> potentialContainers [
 { #category : #containers }
 FmxTraitEntity class >> potentialPrimaryContainer [
 
+	<ignoreInTraitUsers>
+
 	^ self potentialContainers first.
 ]
 
 { #category : #containers }
 FmxTraitEntity class >> potentialSecondaryContainers [
+
+	<ignoreInTraitUsers>
 
 	^ {}
 ]
@@ -42,6 +48,7 @@ FmxTraitEntity class >> potentialSecondaryContainers [
 { #category : #slots }
 FmxTraitEntity class >> relationSlots [ 
 
+	<ignoreInTraitUsers>
 	^ (self slots select: [:aSlot | aSlot isFMRelationSlot]).
 
 
@@ -64,6 +71,8 @@ FmxTraitEntity class >> traitSlots [
 { #category : #accessing }
 FmxTraitEntity class >> traitsGroup [
 
+	<ignoreInTraitUsers>
+
 	"answer all traits in relation with this trait (including itself)"
 	
 	^ {self}, (self traitsGroupExcept: {self})
@@ -74,6 +83,8 @@ FmxTraitEntity class >> traitsGroup [
 { #category : #accessing }
 FmxTraitEntity class >> traitsGroupExcept: aSetOfTraits [
 	
+	<ignoreInTraitUsers>
+
 	| found targetClasses | 
 	
 	targetClasses := (self relationSlots collect: #targetClass) copyWithoutAll: aSetOfTraits.
