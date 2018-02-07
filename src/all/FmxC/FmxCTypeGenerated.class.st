@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxCTypeGenerated,
 	#superclass : #FmxCEntityGenerated,
-	#instVars : [
-		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types'
-	],
 	#category : #'FmxC-Entities'
 }
 
@@ -59,7 +56,7 @@ FmxCTypeGenerated class >> requirements [
 FmxCTypeGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTType}
+	^ {FmxCTType}
 ]
 
 { #category : #'_fromTrait_FmxTraitEntity' }
@@ -88,17 +85,4 @@ FmxCTypeGenerated class >> traitsGroupExcept: aSetOfTraits [
 	
 	
 	
-]
-
-{ #category : #'_fromTrait_FmxNGTTypeGenerated' }
-FmxCTypeGenerated >> typeContainer [
-
-	^ typeContainer
-]
-
-{ #category : #'_fromTrait_FmxNGTTypeGenerated' }
-FmxCTypeGenerated >> typeContainer: anObject [
-
-	typeContainer := anObject
-
 ]

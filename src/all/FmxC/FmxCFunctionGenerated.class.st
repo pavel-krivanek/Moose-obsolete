@@ -2,7 +2,6 @@ Class {
 	#name : #FmxCFunctionGenerated,
 	#superclass : #FmxCEntityGenerated,
 	#instVars : [
-		'#functionOwner => FMOne type: #FmxNGTWithFunctions opposite: #functions',
 		'#incomingInvocations => FMOne type: #FmxNGTInvocation opposite: #candidates',
 		'#outgoingInvocations => FMMany type: #FmxNGTInvocation opposite: #sender'
 	],
@@ -61,7 +60,7 @@ FmxCFunctionGenerated class >> requirements [
 FmxCFunctionGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTFunction. FmxNGTInvocable. FmxNGTWithInvocations}
+	^ {FmxCTFunction. FmxNGTInvocable. FmxNGTWithInvocations}
 ]
 
 { #category : #'_fromTrait_FmxTraitEntity' }
@@ -90,19 +89,6 @@ FmxCFunctionGenerated class >> traitsGroupExcept: aSetOfTraits [
 	
 	
 	
-]
-
-{ #category : #'_fromTrait_FmxNGTFunctionGenerated' }
-FmxCFunctionGenerated >> functionOwner [
-
-	^ functionOwner
-]
-
-{ #category : #'_fromTrait_FmxNGTFunctionGenerated' }
-FmxCFunctionGenerated >> functionOwner: anObject [
-
-	functionOwner := anObject
-
 ]
 
 { #category : #'_fromTrait_FmxNGTInvocableGenerated' }

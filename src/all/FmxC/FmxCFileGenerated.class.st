@@ -2,9 +2,9 @@ Class {
 	#name : #FmxCFileGenerated,
 	#superclass : #MooseEntity,
 	#instVars : [
+		'#definedEntities => FMMany type: #FmxCTEntity opposite: #definedIn',
 		'#isStub',
-		'#name',
-		'#entities => FMOne type: #FmxNGTWithFiles opposite: #containerFiles'
+		'#name'
 	],
 	#category : #'FmxC-Entities'
 }
@@ -67,7 +67,7 @@ FmxCFileGenerated class >> requirements [
 FmxCFileGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTFile. FmxNGTNamed}
+	^ {FmxCTFile. FmxNGTNamed}
 ]
 
 { #category : #'_fromTrait_FmxTraitEntity' }
@@ -98,17 +98,16 @@ FmxCFileGenerated class >> traitsGroupExcept: aSetOfTraits [
 	
 ]
 
-{ #category : #'_fromTrait_FmxNGTFileGenerated' }
-FmxCFileGenerated >> entities [
+{ #category : #'_fromTrait_FmxCTFileGenerated' }
+FmxCFileGenerated >> definedEntities [
 
-	<MSEComment: 'List of entities defined in the file'>
-	^ entities
+	^ definedEntities
 ]
 
-{ #category : #'_fromTrait_FmxNGTFileGenerated' }
-FmxCFileGenerated >> entities: anObject [
+{ #category : #'_fromTrait_FmxCTFileGenerated' }
+FmxCFileGenerated >> definedEntities: anObject [
 
-	entities := anObject
+	definedEntities value: anObject
 
 ]
 
@@ -127,7 +126,7 @@ FmxCFileGenerated >> isStub: anObject [
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTFileGenerated' }
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
 FmxCFileGenerated >> name [
 
 	<MSEProperty: #name type: #String>
@@ -135,7 +134,7 @@ FmxCFileGenerated >> name [
 	^ name
 ]
 
-{ #category : #'_fromTrait_FmxNGTFileGenerated' }
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
 FmxCFileGenerated >> name: anObject [
 
 	name := anObject

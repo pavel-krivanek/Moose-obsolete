@@ -56,7 +56,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName [
 	| trait |
 	
 	trait := aTraitOrTraitName isString
-		ifTrue: [ self builder ensureTraitNamed: aTraitOrTraitName ]
+		ifTrue: [ self builder ensureLocalTraitNamed: aTraitOrTraitName ]
 		ifFalse: [ aTraitOrTraitName ].
 	self addTraitGeneralization: trait. 
 	
@@ -78,7 +78,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 	aTrait := aTraitOrTraitName isString
 		ifTrue: [ 
 			aTraitName := aTraitOrTraitName.
-			self builder ensureTraitNamed: aTraitOrTraitName ]
+			self builder ensureLocalTraitNamed: aTraitOrTraitName ]
 		ifFalse: [ 
 			aTraitName := aTraitOrTraitName name.
 			aTraitOrTraitName ].
@@ -98,7 +98,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 { #category : #converting }
 FamixMetamodelBuilderClass >> asTrait [
 
-	^ self builder ensureTraitNamed: self relatedTraitName
+	^ self builder ensureLocalTraitNamed: self relatedTraitName
 ]
 
 { #category : #accessing }

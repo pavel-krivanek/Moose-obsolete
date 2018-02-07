@@ -191,15 +191,46 @@ FamixMetamodelBuilder >> doNotGenerateCurrent [
 { #category : #initialization }
 FamixMetamodelBuilder >> ensureClassNamed: aString [
 
+	| candidates |
+	
+	candidates := self classes select: [ :each | each name = aString].
+	
+	self assert: (candidates size <= 1).
+	
+	^ (candidates size = 1)
+		ifTrue: [ candidates anyOne ]
+		ifFalse: [ self newClassNamed: aString ]
+	
+
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilder >> ensureLocalClassNamed: aString [
+
 	^ self classes detect: [ :each | each name = aString and: [each prefix = self prefix]] ifNone: [ self newClassNamed: aString ]
+
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilder >> ensureLocalTraitNamed: aString [
+
+	^ self traits detect: [ :each | each name = aString and: [each prefix = self prefix]] ifNone: [ self newTraitNamed: aString ]
 
 ]
 
 { #category : #initialization }
 FamixMetamodelBuilder >> ensureTraitNamed: aString [
 
-	^ self traits detect: [ :each | each name = aString and: [each prefix = self prefix]] ifNone: [ self newTraitNamed: aString ]
-
+	| candidates |
+	
+	candidates := self traits select: [ :each | each name = aString].
+	
+	self assert: (candidates size <= 1).
+	
+	^ (candidates size = 1)
+		ifTrue: [ candidates anyOne ]
+		ifFalse: [ self newTraitNamed: aString ]
+	
 ]
 
 { #category : #accessing }

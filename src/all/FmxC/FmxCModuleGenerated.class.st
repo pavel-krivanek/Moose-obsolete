@@ -2,9 +2,10 @@ Class {
 	#name : #FmxCModuleGenerated,
 	#superclass : #MooseEntity,
 	#instVars : [
+		'#cFile => FMOne type: #FmxCTCFile opposite: #module',
+		'#hFile => FMOne type: #FmxCTHFile opposite: #module',
 		'#isStub',
-		'#name',
-		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module'
+		'#name'
 	],
 	#category : #'FmxC-Entities'
 }
@@ -67,7 +68,7 @@ FmxCModuleGenerated class >> requirements [
 FmxCModuleGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTModule. FmxNGTNamed}
+	^ {FmxCTModule. FmxNGTNamed}
 ]
 
 { #category : #'_fromTrait_FmxTraitEntity' }
@@ -98,6 +99,32 @@ FmxCModuleGenerated class >> traitsGroupExcept: aSetOfTraits [
 	
 ]
 
+{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+FmxCModuleGenerated >> cFile [
+
+	^ cFile
+]
+
+{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+FmxCModuleGenerated >> cFile: anObject [
+
+	cFile := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+FmxCModuleGenerated >> hFile [
+
+	^ hFile
+]
+
+{ #category : #'_fromTrait_FmxCTModuleGenerated' }
+FmxCModuleGenerated >> hFile: anObject [
+
+	hFile := anObject
+
+]
+
 { #category : #'_fromTrait_FmxNGTNamedGenerated' }
 FmxCModuleGenerated >> isStub [
 
@@ -110,19 +137,6 @@ FmxCModuleGenerated >> isStub [
 FmxCModuleGenerated >> isStub: anObject [
 
 	isStub := anObject
-
-]
-
-{ #category : #'_fromTrait_FmxNGTModuleGenerated' }
-FmxCModuleGenerated >> moduleFiles [
-
-	^ moduleFiles
-]
-
-{ #category : #'_fromTrait_FmxNGTModuleGenerated' }
-FmxCModuleGenerated >> moduleFiles: anObject [
-
-	moduleFiles value: anObject
 
 ]
 
