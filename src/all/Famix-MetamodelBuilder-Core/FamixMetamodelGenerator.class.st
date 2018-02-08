@@ -136,6 +136,7 @@ FamixMetamodelGenerator >> newBuilder [
 	| aBuilder |
 	
 	aBuilder := FamixMetamodelBuilder new.
+	aBuilder generator: self.
 	
 	^ aBuilder
 ]
