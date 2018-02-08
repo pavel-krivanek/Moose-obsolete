@@ -38,7 +38,7 @@ FamixMetamodelGenerator class >> packageName [
 { #category : #accessing }
 FamixMetamodelGenerator class >> prefix [
 
-	^ self class prefix
+	^ self packageName
 ]
 
 { #category : #accessing }

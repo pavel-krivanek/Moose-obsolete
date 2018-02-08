@@ -445,7 +445,7 @@ FamixMetamodelBuilder >> safePackageName [
 FamixMetamodelBuilder >> sortedClasses [
 
 	^ self classes sorted: [ :a :b |
-		b allClassGeneralizations includes: a].
+		a allClassGeneralizations size <= b allClassGeneralizations size ].
 
 ]
 
