@@ -30,6 +30,18 @@ FamixMetamodelGenerator class >> metamodel: anObject [
 ]
 
 { #category : #accessing }
+FamixMetamodelGenerator class >> packageName [
+
+	self subclassResponsibility
+]
+
+{ #category : #accessing }
+FamixMetamodelGenerator class >> prefix [
+
+	^ self class prefix
+]
+
+{ #category : #accessing }
 FamixMetamodelGenerator class >> resetMetamodel [
 
 	" self resetMetamodel"
