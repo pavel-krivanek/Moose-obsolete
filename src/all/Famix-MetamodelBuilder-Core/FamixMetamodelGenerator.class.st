@@ -163,5 +163,5 @@ FamixMetamodelGenerator >> packageName [
 { #category : #definition }
 FamixMetamodelGenerator >> prefix [
 
-	^ self packageName
+	^ self class prefix
 ]
