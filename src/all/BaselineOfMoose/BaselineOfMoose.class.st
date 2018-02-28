@@ -61,6 +61,7 @@ BaselineOfMoose >> baseline: spec [
 			'Famix-Implementation'
 			'Famix-Java'
 			'Famix-Smalltalk'
+			'Famix-CSharp'
 			'Moose-Query-Extensions'
 			'Moose-SmalltalkImporter'
 			'Moose-MonticelloImporter'
@@ -227,6 +228,11 @@ BaselineOfMoose >> baseline: spec [
 			'GT-PetitParserDebugger'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
+
+		#(	
+			'Fame-CSharpBinding'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Fame) ]].
 
 
 	   self groups: spec.
