@@ -1,7 +1,7 @@
 Class {
 	#name : #RTInteractiveViewContext,
 	#superclass : #RTAbstractViewContext,
-	#category : #Roassal2GT-Glamour-Context
+	#category : #'Roassal2GT-Glamour-Context'
 }
 
 { #category : #testing }

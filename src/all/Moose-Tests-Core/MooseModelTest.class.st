@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : #Moose-Tests-Core
+	#category : #'Moose-Tests-Core'
 }
 
 { #category : #util }
@@ -153,22 +153,6 @@ MooseModelTest >> testCollect [
 ]
 
 { #category : #tests }
-MooseModelTest >> testDelete [
-
-	"Raise an error since it is not in the root"
-	self should: [[MooseModel new delete] valueSupplyingAnswer: true ] raise: Error.
-	
-	model := MooseModel new.
-	self deny: (MooseModel root includes: model).
-	MooseModel root add: model.
-	self assert: (MooseModel root includes: model).
-
-	[model delete] valueSupplyingAnswer: {'Are you sure to want to delete ', model mooseName printString, '?' . true}.
-	self deny: (MooseModel root includes: model).
-
-]
-
-{ #category : #tests }
 MooseModelTest >> testDifference [
 	| t model1 model2 model3 el1 el2 el3 el4 |
 	t := OrderedCollection new.
@@ -281,17 +265,6 @@ MooseModelTest >> testIntersect [
 	self assert: (model1 intersection: MooseModel new) entities isEmpty.
 	self assert: (model1 intersection: model2) entities asArray equals: {el1}.
 	self assert: (MooseModel new intersection: MooseModel new) entities isEmpty
-]
-
-{ #category : #tests }
-MooseModelTest >> testMenuCommandOn [
-	| builder |
-	builder := PragmaMenuBuilder new.
-	self assert: builder itemList isNil.
-	MooseModel menuCommandOn: builder.
-	self assert: builder itemList isCollection.
-	self assert: builder itemList notEmpty.
-
 ]
 
 { #category : #tests }

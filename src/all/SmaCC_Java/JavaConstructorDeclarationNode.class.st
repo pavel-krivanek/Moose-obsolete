@@ -12,7 +12,7 @@ Class {
 		'throws',
 		'body'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -59,7 +59,7 @@ JavaConstructorDeclarationNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaConstructorDeclarationNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

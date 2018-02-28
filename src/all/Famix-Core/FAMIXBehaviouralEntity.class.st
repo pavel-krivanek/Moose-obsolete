@@ -23,14 +23,13 @@ Class {
 		'accesses',
 		'declaredType'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXBehaviouralEntity class >> annotation [
 	<MSEClass: #BehaviouralEntity super: #FAMIXContainerEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -122,12 +121,12 @@ FAMIXBehaviouralEntity >> incomingInvocations: anInvocation [
 	incomingInvocations value: anInvocation
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXBehaviouralEntity >> incomingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXBehaviouralEntity >> initialize [
 	super initialize.
 	outgoingInvocations := FMNullMultivalueLink on: self opposite: #sender: selector: #outgoingInvocations.
@@ -178,7 +177,7 @@ FAMIXBehaviouralEntity >> outgoingReferences: aReference [
 	outgoingReferences value: aReference
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXBehaviouralEntity >> outgoingTypeDeclarations [
 	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
 ]

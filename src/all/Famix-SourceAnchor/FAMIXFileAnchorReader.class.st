@@ -15,7 +15,7 @@ Class {
 		'char',
 		'startLine'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
 { #category : #reading }
@@ -55,8 +55,16 @@ FAMIXFileAnchorReader >> manageNewLineReturnBeforeStartFromCr: aBoolean [
 
 { #category : #reading }
 FAMIXFileAnchorReader >> read [
-	self readUntilStart.
-	fileAnchor endLine ifNil: [ writeStream nextPutAll: readStream upToEnd ] ifNotNil: [ :endLine | self readUntil: endLine ]
+	[ [ self tryToRead ]
+		on: ZnCharacterEncodingError
+		do:
+			[ "Sometime while reading characters one by one it fail, so we try to read the full file and the just the part we want."
+			self reset.
+			readStream := readStream contents readStream.
+			self tryToRead ] ]
+		on: Error
+		do:
+			[ "If the model is wrong, the file can be smaller than the model think. In that case we just stop the reading" ]
 ]
 
 { #category : #accessing }
@@ -111,6 +119,13 @@ FAMIXFileAnchorReader >> readUntilStartColumn [
 ]
 
 { #category : #reading }
+FAMIXFileAnchorReader >> reset [
+	self initialize.
+	readStream reset.
+	writeStream reset
+]
+
+{ #category : #reading }
 FAMIXFileAnchorReader >> skipNextIfLf [
 	"I will probably be called after a CR to remove a possible CRLF"
 
@@ -121,6 +136,14 @@ FAMIXFileAnchorReader >> skipNextIfLf [
 { #category : #accessing }
 FAMIXFileAnchorReader >> startLine [
 	^ startLine ifNil: [ startLine := fileAnchor startLine ifNil: [ 1 ] ]
+]
+
+{ #category : #reading }
+FAMIXFileAnchorReader >> tryToRead [
+	self readUntilStart.
+	fileAnchor endLine
+		ifNil: [ writeStream nextPutAll: readStream upToEnd ]
+		ifNotNil: [ :endLine | self readUntil: endLine ]
 ]
 
 { #category : #accessing }

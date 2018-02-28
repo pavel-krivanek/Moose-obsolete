@@ -4,7 +4,7 @@ This is a class for the 'element()' type test or for '*' type tests when the pri
 Class {
 	#name : #XPathElementNodeTest,
 	#superclass : #XPathNodeTest,
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #testing }

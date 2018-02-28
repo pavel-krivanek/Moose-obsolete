@@ -29,7 +29,7 @@ Class {
 		'full_string_literalTokens',
 		'operatorTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -132,7 +132,7 @@ SwiftProtocolAssociationTypeDeclarationNode >> identifierTokens: anOrderedCollec
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftProtocolAssociationTypeDeclarationNode >> initialize [
 	super initialize.
 	identifierTokens := OrderedCollection new: 2.

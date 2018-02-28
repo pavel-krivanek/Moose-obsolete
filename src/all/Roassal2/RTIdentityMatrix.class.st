@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'rows'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #accessing }
@@ -44,7 +44,7 @@ RTIdentityMatrix >> at: u at: v put: aBoolean [
 	row at: u put: aBoolean
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTIdentityMatrix >> initialize [
 	
 	rows := IdentityDictionary new

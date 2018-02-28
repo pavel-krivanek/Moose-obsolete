@@ -8,7 +8,7 @@ Class {
 		'highlighter',
 		'expressionSource'
 	],
-	#category : #XPath-GTExtensions-Highlighting-Parsers
+	#category : #'XPath-GTExtensions-Highlighting-Parsers'
 }
 
 { #category : #'instance creation' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #B3,
 	#superclass : #Object,
-	#category : #Moose-TestResources-PackageBlueprint-P3
+	#category : #'Moose-TestResources-PackageBlueprint-P3'
 }
 
 { #category : #'as yet unclassified' }

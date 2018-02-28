@@ -14,7 +14,7 @@ Class {
 		'definedItems',
 		'undefinedItems'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #accessing }
@@ -31,7 +31,7 @@ DelphiScanner class >> definedItems: aCollection [
 	definedItems := Set withAll: (aCollection collect: [ :each | each asUppercase ])
 ]
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 DelphiScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(135 'ABSOLUTE' 35) #(135 'ABSTRACT' 25) #(135 'AND' 47) #(135 'ARRAY' 20) #(135 'AS' 41) #(135 'ASM' 94) #(135 'ASSEMBLER' 120) #(135 'AT' 130) #(135 'BEGIN' 75) #(135 'CASE' 6) #(135 'CDECL' 129) #(135 'CLASS' 2) #(135 'CONST' 52) #(135 'CONSTRUCTOR' 74) #(135 'DEFAULT' 109) #(135 'DEPRECATED' 11) #(135 'DESTRUCTOR' 77) #(135 'DISPID' 108) #(135 'DISPINTERFACE' 19) #(135 'DIV' 34) #(135 'DO' 71) #(135 'DOWNTO' 92) #(135 'DYNAMIC' 121) #(135 'ELSE' 43) #(135 'END' 4) #(135 'EXCEPT' 81) #(135 'EXPORT' 115) #(135 'EXPORTS' 62) #(135 'EXTERNAL' 100) #(135 'FAR' 127) #(135 'FILE' 64) #(135 'FINAL' 122) #(135 'FINALIZATION' 17) #(135 'FINALLY' 91) #(135 'FOR' 26) #(135 'FORWARD' 102) #(135 'FUNCTION' 13) #(135 'GOTO' 73) #(135 'HELPER' 15) #(135 'IF' 66) #(135 'IMPLEMENTATION' 96) #(135 'IMPLEMENTS' 111) #(135 'IN' 53) #(135 'INDEX' 21) #(135 'INHERITED' 82) #(135 'INITIALIZATION' 86) #(135 'INLINE' 117) #(135 'INTERFACE' 56) #(135 'IS' 40) #(135 'LABEL' 79) #(135 'LIBRARY' 63) #(135 'LOCAL' 118) #(135 'MEM' 88) #(135 'MEMW' 83) #(135 'MESSAGE' 105) #(135 'MOD' 37) #(135 'NAME' 113) #(135 'NEAR' 128) #(135 'NODEFAULT' 112) #(135 'NOT' 16) #(135 'OBJECT' 27) #(135 'OF' 42) #(135 'ON' 80) #(135 'OPERATOR' 97) #(135 'OR' 44) #(135 'OUT' 98) #(135 'OVERLOAD' 101) #(135 'OVERRIDE' 104) #(135 'PACKED' 3) #(135 'PASCAL' 124) #(135 'PLATFORM' 12) #(135 'PRIVATE' 29) #(135 'PROCEDURE' 14) #(135 'PROGRAM' 60) #(135 'PROPERTY' 22) #(135 'PROTECTED' 24) #(135 'PUBLIC' 23) #(135 'PUBLISHED' 18) #(135 'RAISE' 90) #(135 'READ' 33) #(135 'READONLY' 107) #(135 'RECORD' 1) #(135 'REGISTER' 114) #(135 'REINTRODUCE' 123) #(135 'REPEAT' 72) #(135 'RESOURCESTRING' 54) #(135 'SAFECALL' 119) #(135 'SEALED' 28) #(135 'SET' 7) #(135 'SHL' 36) #(135 'SHR' 39) #(135 'STATIC' 116) #(135 'STDCALL' 103) #(135 'STORED' 106) #(135 'STRICT' 30) #(135 'THEN' 69) #(135 'THREADVAR' 78) #(135 'TO' 93) #(135 'TRY' 70) #(135 'TYPE' 65) #(135 'UNIT' 57) #(135 'UNSAFE' 125) #(135 'UNTIL' 67) #(135 'USES' 51) #(135 'VAR' 99) #(135 'VIRTUAL' 126) #(135 'WHILE' 95) #(135 'WITH' 68) #(135 'WRITE' 76) #(135 'WRITEONLY' 110) #(135 'XOR' 46) #(136 'ABSOLUTE' 35) #(136 'ABSTRACT' 25) #(136 'AND' 47) #(136 'ARRAY' 20) #(136 'AS' 41) #(136 'ASM' 94) #(136 'ASSEMBLER' 120) #(136 'AT' 130) #(136 'BEGIN' 75) #(136 'CASE' 6) #(136 'CDECL' 129) #(136 'CLASS' 2) #(136 'CONST' 52) #(136 'CONSTRUCTOR' 74) #(136 'DEFAULT' 109) #(136 'DEPRECATED' 11) #(136 'DESTRUCTOR' 77) #(136 'DISPID' 108) #(136 'DISPINTERFACE' 19) #(136 'DIV' 34) #(136 'DO' 71) #(136 'DOWNTO' 92) #(136 'DYNAMIC' 121) #(136 'ELSE' 43) #(136 'END' 4) #(136 'EXCEPT' 81) #(136 'EXPORT' 115) #(136 'EXPORTS' 62) #(136 'EXTERNAL' 100) #(136 'FAR' 127) #(136 'FILE' 64) #(136 'FINAL' 122) #(136 'FINALIZATION' 17) #(136 'FINALLY' 91) #(136 'FOR' 26) #(136 'FORWARD' 102) #(136 'FUNCTION' 13) #(136 'GOTO' 73) #(136 'HELPER' 15) #(136 'IF' 66) #(136 'IMPLEMENTATION' 96) #(136 'IMPLEMENTS' 111) #(136 'IN' 53) #(136 'INDEX' 21) #(136 'INHERITED' 82) #(136 'INITIALIZATION' 86) #(136 'INLINE' 117) #(136 'INTERFACE' 56) #(136 'IS' 40) #(136 'LABEL' 79) #(136 'LIBRARY' 63) #(136 'LOCAL' 118) #(136 'MEM' 88) #(136 'MEMW' 83) #(136 'MESSAGE' 105) #(136 'MOD' 37) #(136 'NAME' 113) #(136 'NEAR' 128) #(136 'NODEFAULT' 112) #(136 'NOT' 16) #(136 'OBJECT' 27) #(136 'OF' 42) #(136 'ON' 80) #(136 'OPERATOR' 97) #(136 'OR' 44) #(136 'OUT' 98) #(136 'OVERLOAD' 101) #(136 'OVERRIDE' 104) #(136 'PACKED' 3) #(136 'PASCAL' 124) #(136 'PLATFORM' 12) #(136 'PRIVATE' 29) #(136 'PROCEDURE' 14) #(136 'PROGRAM' 60) #(136 'PROPERTY' 22) #(136 'PROTECTED' 24) #(136 'PUBLIC' 23) #(136 'PUBLISHED' 18) #(136 'RAISE' 90) #(136 'READ' 33) #(136 'READONLY' 107) #(136 'RECORD' 1) #(136 'REGISTER' 114) #(136 'REINTRODUCE' 123) #(136 'REPEAT' 72) #(136 'RESOURCESTRING' 54) #(136 'SAFECALL' 119) #(136 'SEALED' 28) #(136 'SET' 7) #(136 'SHL' 36) #(136 'SHR' 39) #(136 'STATIC' 116) #(136 'STDCALL' 103) #(136 'STORED' 106) #(136 'STRICT' 30) #(136 'THEN' 69) #(136 'THREADVAR' 78) #(136 'TO' 93) #(136 'TRY' 70) #(136 'TYPE' 65) #(136 'UNIT' 57) #(136 'UNSAFE' 125) #(136 'UNTIL' 67) #(136 'USES' 51) #(136 'VAR' 99) #(136 'VIRTUAL' 126) #(136 'WHILE' 95) #(136 'WITH' 68) #(136 'WRITE' 76) #(136 'WRITEONLY' 110) #(136 'XOR' 46))
@@ -129,12 +129,12 @@ DelphiScanner >> identifierId [
 	^ 135
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DelphiScanner >> ifDefs [
 	^ ifDefs
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DelphiScanner >> initialize [
 	super initialize.
 	ifDefCount := 0.
@@ -501,16 +501,14 @@ DelphiScanner >> scanForToken [
 		ifTrue: [ ^ self scan8 ].
 	currentCharacter == $&
 		ifTrue:
-			[ ^ self scanForTokenX7 ].
+			[ ^ self scanForTokenX6 ].
 	currentCharacter == $'
 		ifTrue: [ ^ self scan2 ].
 	currentCharacter == $(
 		ifTrue:
-			[ ^ self scanForTokenX12 ].
+			[ ^ self scanForTokenX11 ].
 	currentCharacter == $)
 		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
-	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
 	^ self scanForTokenX14
 ]
 
@@ -532,15 +530,6 @@ DelphiScanner >> scanForTokenX1 [
 
 { #category : #generated }
 DelphiScanner >> scanForTokenX10 [
-	self recordMatch: #(31).
-	self step.
-	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(87) ].
-	^ self reportLastMatch
-]
-
-{ #category : #generated }
-DelphiScanner >> scanForTokenX11 [
 	self recordMatch: #(8).
 	self step.
 	currentCharacter == $=
@@ -549,7 +538,7 @@ DelphiScanner >> scanForTokenX11 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX12 [
+DelphiScanner >> scanForTokenX11 [
 	self recordMatch: #(61).
 	self step.
 	currentCharacter == $*
@@ -558,7 +547,16 @@ DelphiScanner >> scanForTokenX12 [
 ]
 
 { #category : #generated }
+DelphiScanner >> scanForTokenX12 [
+	[ self recordMatch: #(135 136).
+	self step.
+	currentCharacter isAlphaNumeric ] whileTrue
+]
+
+{ #category : #generated }
 DelphiScanner >> scanForTokenX13 [
+	currentCharacter == $[
+		ifTrue: [ ^ self recordAndReportMatch: #(58) ].
 	currentCharacter == $]
 		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
 	currentCharacter == $^
@@ -573,70 +571,56 @@ DelphiScanner >> scanForTokenX13 [
 			true ] whileTrue ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan13 ].
-	(currentCharacter isXMLWhitespace
+	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp
 				or: [ currentCharacter =
 						(Character value: 26) ] ])
 		ifTrue:
-			[ ^ self scanForTokenX4 ].
-	(currentCharacter isSafeForHTTP
-		or:
-			[ 'ÄÖÜäöü' includes: currentCharacter ])
+			[ ^ self scanForTokenX3 ].
+	currentCharacter isLetter
 		ifTrue:
-			[ self scanForTokenX2 ].
+			[ self scanForTokenX12 ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 DelphiScanner >> scanForTokenX14 [
+	currentCharacter == $*
+		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
 	currentCharacter == $+
 		ifTrue:
-			[ ^ self scanForTokenX6 ].
+			[ ^ self scanForTokenX5 ].
 	currentCharacter == $,
 		ifTrue: [ ^ self recordAndReportMatch: #(50) ].
 	currentCharacter == $-
 		ifTrue:
-			[ ^ self scanForTokenX5 ].
+			[ ^ self scanForTokenX4 ].
 	currentCharacter == $.
 		ifTrue:
-			[ ^ self scanForTokenX9 ].
+			[ ^ self scanForTokenX8 ].
 	currentCharacter == $/
 		ifTrue:
-			[ ^ self scanForTokenX3 ].
+			[ ^ self scanForTokenX2 ].
 	currentCharacter == $:
 		ifTrue:
-			[ ^ self scanForTokenX11 ].
+			[ ^ self scanForTokenX10 ].
 	currentCharacter == $;
 		ifTrue: [ ^ self recordAndReportMatch: #(133) ].
 	currentCharacter == $<
 		ifTrue:
-			[ ^ self scanForTokenX8 ].
+			[ ^ self scanForTokenX7 ].
 	currentCharacter == $=
 		ifTrue: [ ^ self recordAndReportMatch: #(55) ].
 	currentCharacter == $>
 		ifTrue:
-			[ ^ self scanForTokenX10 ].
+			[ ^ self scanForTokenX9 ].
 	currentCharacter == $@
 		ifTrue: [ ^ self recordAndReportMatch: #(48) ].
-	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(58) ].
 	^ self scanForTokenX13
 ]
 
 { #category : #generated }
 DelphiScanner >> scanForTokenX2 [
-	[ self recordMatch: #(135 136).
-	self step.
-	(currentCharacter between: $0 and: $9)
-		or: [ (currentCharacter between: $A and: $Z)
-				or: [ currentCharacter == $_
-						or: [ (currentCharacter between: $a and: $z)
-								or:
-									[ 'ÄÖÜäöü' includes: currentCharacter ] ] ] ] ] whileTrue
-]
-
-{ #category : #generated }
-DelphiScanner >> scanForTokenX3 [
 	self recordMatch: #(49).
 	self step.
 	currentCharacter == $/
@@ -649,10 +633,10 @@ DelphiScanner >> scanForTokenX3 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX4 [
+DelphiScanner >> scanForTokenX3 [
 	[ self recordMatch: #(141).
 	self step.
-	currentCharacter isXMLWhitespace
+	currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp
 				or: [ currentCharacter =
 						(Character value: 26) ] ] ] whileTrue.
@@ -660,7 +644,7 @@ DelphiScanner >> scanForTokenX4 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX5 [
+DelphiScanner >> scanForTokenX4 [
 	self recordMatch: #(131).
 	self step.
 	currentCharacter == $$
@@ -673,7 +657,7 @@ DelphiScanner >> scanForTokenX5 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX6 [
+DelphiScanner >> scanForTokenX5 [
 	self recordMatch: #(132).
 	self step.
 	currentCharacter == $$
@@ -686,7 +670,7 @@ DelphiScanner >> scanForTokenX6 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX7 [
+DelphiScanner >> scanForTokenX6 [
 	self step.
 	('Oo' includes: currentCharacter)
 		ifTrue: [ self step.
@@ -708,7 +692,7 @@ DelphiScanner >> scanForTokenX7 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX8 [
+DelphiScanner >> scanForTokenX7 [
 	self recordMatch: #(32).
 	self step.
 	currentCharacter == $=
@@ -719,13 +703,22 @@ DelphiScanner >> scanForTokenX8 [
 ]
 
 { #category : #generated }
-DelphiScanner >> scanForTokenX9 [
+DelphiScanner >> scanForTokenX8 [
 	self recordMatch: #(59).
 	self step.
 	currentCharacter == $.
 		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan11 ].
+	^ self reportLastMatch
+]
+
+{ #category : #generated }
+DelphiScanner >> scanForTokenX9 [
+	self recordMatch: #(31).
+	self step.
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(87) ].
 	^ self reportLastMatch
 ]
 

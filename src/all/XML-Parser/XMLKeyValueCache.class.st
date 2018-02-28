@@ -9,8 +9,13 @@ Class {
 		'maxSize',
 		'mutex'
 	],
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
+
+{ #category : #testing }
+XMLKeyValueCache class >> canBeImplemented [
+	^ true
+]
 
 { #category : #defaults }
 XMLKeyValueCache class >> defaultMaxSize [
@@ -19,7 +24,7 @@ XMLKeyValueCache class >> defaultMaxSize [
 
 { #category : #'instance creation' }
 XMLKeyValueCache class >> maxSize: anInteger [
-	^ self implementation basicNew initialize setMaxSize: anInteger
+	^ self implementationNew setMaxSize: anInteger
 ]
 
 { #category : #'instance creation' }

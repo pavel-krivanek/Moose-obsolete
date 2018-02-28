@@ -1,7 +1,7 @@
 Class {
 	#name : #PaneColumn,
 	#superclass : #PaneAbstractLine,
-	#category : #Merlin-PartsLayout
+	#category : #'Merlin-PartsLayout'
 }
 
 { #category : #'*Merlin-Rendering' }

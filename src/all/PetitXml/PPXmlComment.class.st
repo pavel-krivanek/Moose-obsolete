@@ -4,7 +4,7 @@ An XML comment node.
 Class {
 	#name : #PPXmlComment,
 	#superclass : #PPXmlData,
-	#category : #PetitXml-Nodes
+	#category : #'PetitXml-Nodes'
 }
 
 { #category : #testing }

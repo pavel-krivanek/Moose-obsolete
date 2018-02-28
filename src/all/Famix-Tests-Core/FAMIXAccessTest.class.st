@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXAccessTest,
 	#superclass : #FAMIXAssociationTest,
-	#category : #Famix-Tests-Core
+	#category : #'Famix-Tests-Core'
 }
 
 { #category : #helpers }

@@ -4,10 +4,10 @@ I am a description of timestamps, possible values are instances of ==TimeStamp==
 Class {
 	#name : #MATimeStampDescription,
 	#superclass : #MAMagnitudeDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MATimeStampDescription class >> defaultKind [
 	^ GRPlatform current magritteTimeStampClass
 ]

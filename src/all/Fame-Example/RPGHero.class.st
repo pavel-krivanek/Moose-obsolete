@@ -6,17 +6,16 @@ Class {
 		'talisman',
 		'kills'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 RPGHero class >> annotation [
 	<MSEClass: #Hero super: #Object>
 	<package: #RPG>
-	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #initialization }
 RPGHero >> initialize [
 	super initialize.
 	twin := nil.

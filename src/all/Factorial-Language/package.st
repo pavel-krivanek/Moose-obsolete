@@ -1,1 +1,1 @@
-Package { #name : #Factorial-Language }
+Package { #name : #'Factorial-Language' }

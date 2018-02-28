@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'models'
 	],
-	#category : #Roassal2-Builder-Simon
+	#category : #'Roassal2-Builder-Simon'
 }
 
 { #category : #initialization }
@@ -50,7 +50,7 @@ RTSimon >> models: objects [
 	view addAll: elements
 ]
 
-{ #category : #public-ui }
+{ #category : #'public-ui' }
 RTSimon >> open [
 	^ view canvas open
 ]

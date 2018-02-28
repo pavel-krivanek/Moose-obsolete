@@ -7,7 +7,7 @@ Class {
 		'commas',
 		'right'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -35,7 +35,7 @@ DelphiInstantiatedGenericVariableExpressionNode >> ignoredCompositeTokenVariable
 	^ #(#commas #leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiInstantiatedGenericVariableExpressionNode >> initialize [
 	super initialize.
 	typeArguments := OrderedCollection new: 2.

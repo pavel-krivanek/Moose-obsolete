@@ -18,7 +18,7 @@ Class {
 	#instVars : [
 		'head'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #public }

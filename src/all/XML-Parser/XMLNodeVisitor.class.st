@@ -4,7 +4,7 @@ This is a base class for DOM node tree visitors. Subclasses can implement any of
 Class {
 	#name : #XMLNodeVisitor,
 	#superclass : #Object,
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #visiting }

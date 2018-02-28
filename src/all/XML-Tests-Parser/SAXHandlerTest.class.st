@@ -1,7 +1,7 @@
 Class {
 	#name : #SAXHandlerTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #accessing }
@@ -653,6 +653,13 @@ SAXHandlerTest >> testMaxEntityReplacementDepth [
 ]
 
 { #category : #tests }
+SAXHandlerTest >> testNew [
+	self
+		should: [SAXHandler new]
+		raise: Error
+]
+
+{ #category : #tests }
 SAXHandlerTest >> testOn [
 	| parser oldConfiguraiton |
 
@@ -776,22 +783,22 @@ SAXHandlerTest >> testReplacesContentEntityReferences [
 ]
 
 { #category : #tests }
-SAXHandlerTest >> testRequiresDocumentConstraints [
+SAXHandlerTest >> testRequiresSchema [
 	| parser |
 
 	(parser := SAXHandler on: '') isValidating: false.
-	self deny: parser requiresDocumentConstraints.
+	self deny: parser requiresSchema.
 
 	"enabling should force validation"
 	self
-		assert: (parser requiresDocumentConstraints: true) == parser;
-		assert: parser requiresDocumentConstraints;
+		assert: (parser requiresSchema: true) == parser;
+		assert: parser requiresSchema;
 		assert: parser isValidating.
 
 	self
 		assert: (parser isValidating: false) == parser;
 		deny: parser isValidating;
-		deny: parser requiresDocumentConstraints.
+		deny: parser requiresSchema.
 ]
 
 { #category : #tests }

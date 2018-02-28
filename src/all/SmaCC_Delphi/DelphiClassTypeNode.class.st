@@ -5,7 +5,7 @@ Class {
 		'implicitClassSection',
 		'sections'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -32,7 +32,7 @@ DelphiClassTypeNode >> implicitClassSection: aDelphiImplicitClassSectionNode [
 		ifTrue: [ self implicitClassSection parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiClassTypeNode >> initialize [
 	super initialize.
 	sections := OrderedCollection new: 2.

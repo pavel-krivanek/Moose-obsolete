@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'labelColor'
 	],
-	#category : #Roassal2-Builder-Grapher-Decorators
+	#category : #'Roassal2-Builder-Grapher-Decorators'
 }
 
 { #category : #configuration }

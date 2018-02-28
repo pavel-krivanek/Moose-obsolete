@@ -1,7 +1,7 @@
 Class {
 	#name : #PhexampleTodoTest,
 	#superclass : #Phexample,
-	#category : #Phexample-Test
+	#category : #'Phexample-Test'
 }
 
 { #category : #private }

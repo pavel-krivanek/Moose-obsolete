@@ -5,7 +5,7 @@ Class {
 		'nodes',
 		'kruskal'
 	],
-	#category : #Moose-Tests-Algos-Graph
+	#category : #'Moose-Tests-Algos-Graph'
 }
 
 { #category : #running }

@@ -5,7 +5,7 @@ Class {
 		'labels',
 		'statements'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ JavaSwitchBlockStatementGroupNode >> compositeNodeVariables [
 	^ #(#labels #statements)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaSwitchBlockStatementGroupNode >> initialize [
 	super initialize.
 	labels := OrderedCollection new: 2.

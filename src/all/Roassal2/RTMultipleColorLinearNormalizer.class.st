@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'normalizers'
 	],
-	#category : #Roassal2-ColorNormalizerOBSOLETE
+	#category : #'Roassal2-ColorNormalizerOBSOLETE'
 }
 
 { #category : #'instance creation' }
@@ -23,7 +23,7 @@ RTMultipleColorLinearNormalizer class >> valueRange: anArrayOfNumbers colorRange
 	^ self new valueRange: anArrayOfNumbers colorRange: anArrayOfColors
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RTMultipleColorLinearNormalizer >> detectNormalizerFor: aValue [
 
 	normalizers keysAndValuesDo: [:range :norm |
@@ -32,7 +32,7 @@ RTMultipleColorLinearNormalizer >> detectNormalizerFor: aValue [
 	self error: aValue asString, ' not in declared ranges'
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTMultipleColorLinearNormalizer >> initialize [
 
 	command := #yourself
@@ -47,7 +47,7 @@ RTMultipleColorLinearNormalizer >> rtValue: anEntity [
 	^ (self detectNormalizerFor: value) rtValue: value
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTMultipleColorLinearNormalizer >> valueRange: anArrayOfNumbers colorRange: anArrayOfColors [
 	" {1. 2. 3} {Color red. Color yellow. Color green}"
 	

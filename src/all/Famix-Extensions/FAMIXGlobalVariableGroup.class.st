@@ -4,14 +4,13 @@ FAMIXGlobalVariableGroup is a MooseGroup containing only FAMIX enities of type F
 Class {
 	#name : #FAMIXGlobalVariableGroup,
 	#superclass : #MooseGroup,
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #meta }
 FAMIXGlobalVariableGroup class >> annotation [
 	<MSEClass: #GlobalVariableGroup super: #MooseGroup>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #'as yet unclassified' }

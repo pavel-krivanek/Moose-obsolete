@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'production'
 	],
-	#category : #GT-PetitParserDebugger
+	#category : #'GT-PetitParserDebugger'
 }
 
 { #category : #private }

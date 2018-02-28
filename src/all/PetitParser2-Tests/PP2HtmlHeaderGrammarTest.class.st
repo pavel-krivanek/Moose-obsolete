@@ -24,7 +24,7 @@ PP2HtmlHeaderGrammarTest >> testHtmlFragmentNoHeader [
 	self fail: '<html><body>foobar</body></html>' rule: #htmlFragment
 ]
 
-{ #category : #tests-integration }
+{ #category : #'tests-integration' }
 PP2HtmlHeaderGrammarTest >> testZincClientIntegration [
 	| byteStream stream |
 	byteStream := ZnClient new

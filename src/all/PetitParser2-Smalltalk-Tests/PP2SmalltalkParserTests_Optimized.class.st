@@ -1,6 +1,6 @@
 Class {
-	#name : #PP2SmalltalkParserTests_Optimized,
-	#superclass : #PP2SmalltalkGrammarTests_Optimized,
+	#name : #'PP2SmalltalkParserTests_Optimized',
+	#superclass : #'PP2SmalltalkGrammarTests_Optimized',
 	#traits : 'TPP2SmalltalkParserTests',
 	#classTraits : 'TPP2SmalltalkParserTests classTrait',
 	#category : 'PetitParser2-Smalltalk-Tests-Core'

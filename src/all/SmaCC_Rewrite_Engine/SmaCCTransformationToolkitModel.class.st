@@ -13,10 +13,10 @@ Class {
 		'createSubdirectories',
 		'commonParentDirectory'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> addTransformation: aSmaCCAbstractRewrite under: aSmaCCRewriteFile [
 	self
 		addTransformation: aSmaCCAbstractRewrite
@@ -24,7 +24,7 @@ SmaCCTransformationToolkitModel >> addTransformation: aSmaCCAbstractRewrite unde
 		before: nil
 ]
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> addTransformation: aSmaCCAbstractRewrite under: aSmaCCRewriteFile before: anotherSmaCCAbstractRewrite [
 	anotherSmaCCAbstractRewrite isNil
 		ifTrue: [ aSmaCCRewriteFile addTransformation: aSmaCCAbstractRewrite ]
@@ -90,10 +90,11 @@ SmaCCTransformationToolkitModel >> files: aCollection [
 	self changed: #files with: aCollection
 ]
 
-{ #category : #initialize/release }
+{ #category : #'initialize/release' }
 SmaCCTransformationToolkitModel >> initialize [
 	super initialize.
-	modified := false
+	modified := false.
+	rewrites := SmaCCRewriteFile new
 ]
 
 { #category : #accessing }
@@ -146,7 +147,7 @@ SmaCCTransformationToolkitModel >> localRunOn: aCollection [
 		processAllNotifying: [ :each | self changed: #resultAdded with: each ]
 ]
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> openRewriteFile: filename [
 	^ filename asFileReference exists
 		ifTrue: [ SmaCCRewriteRuleFileParser parseFile: filename ]
@@ -167,7 +168,7 @@ SmaCCTransformationToolkitModel >> outputDirectory: aString [
 	self changed: #outputDirectory with: aString
 ]
 
-{ #category : #actions-rewrites }
+{ #category : #'actions-rewrites' }
 SmaCCTransformationToolkitModel >> removeTransformation: aSmaCCAbstractRewrite [
 	aSmaCCAbstractRewrite parent
 		removeTransformation: aSmaCCAbstractRewrite.
@@ -186,7 +187,7 @@ SmaCCTransformationToolkitModel >> rewrites: aSmaCCRewrite [
 	self changed: #rewrites with: aSmaCCRewrite
 ]
 
-{ #category : #actions-running }
+{ #category : #'actions-running' }
 SmaCCTransformationToolkitModel >> runOn: tranformationFiles [
 	self runOnServer
 		ifTrue: [ self serverRunOn: tranformationFiles ]
@@ -344,6 +345,22 @@ SmaCCTransformationToolkitModel >> serverRunOn: aCollection [
 										+ (serverStream next << 16) + (serverStream next << 24))
 								asString) ] ]
 		ensure: [ socket close ]
+]
+
+{ #category : #running }
+SmaCCTransformationToolkitModel >> terminateServer [
+	| socket serverStream |
+	socket := Socket newTCP
+		connectTo: (NetNameResolver addressForName: self serverName) port: self serverPort;
+		yourself.
+	(serverStream := SocketStream on: socket) binary.
+	[ serverStream
+		nextPut: $E asInteger;
+		flush.
+	[ serverStream next ]
+		on: Error
+		do: [ :ex | "We should get here when the server quits" ex return ] ]
+		ensure: [ serverStream close ]
 ]
 
 { #category : #public }

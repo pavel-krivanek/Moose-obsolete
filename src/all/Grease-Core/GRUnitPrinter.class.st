@@ -7,7 +7,7 @@ Class {
 		'units',
 		'base'
 	],
-	#category : #Grease-Core-Text
+	#category : #'Grease-Core-Text'
 }
 
 { #category : #'instance creation' }

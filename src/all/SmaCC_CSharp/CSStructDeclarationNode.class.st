@@ -17,7 +17,7 @@ Class {
 		'rightBraceToken',
 		'semicolon'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -101,7 +101,7 @@ CSStructDeclarationNode >> identifierToken: aSmaCCToken [
 	identifierToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSStructDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

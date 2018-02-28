@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLParserTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #source }
@@ -2647,34 +2647,6 @@ XMLParserTest >> testDoctypeDeclarationWhitespace [
 			self
 				shouldnt: [SAXHandler parse: each, '<test/>']
 				raise: XMLWellFormednessException].
-]
-
-{ #category : #tests }
-XMLParserTest >> testDocumentConstraintsRequired [
-	self
-		shouldnt: [
-			(SAXHandler on: '<!DOCTYPE root [<!ELEMENT root EMPTY>]><root/>')
-				requiresDocumentConstraints: true;
-				parseDocument]
-		raise: XMLValidationException.
-	self
-		should: [
-			(SAXHandler on: '<root/>')
-				requiresDocumentConstraints: true;
-				parseDocument]
-		raise: XMLValidationException.
-	self
-		should: [
-			(SAXHandler on: '
-				<!DOCTYPE root [
-					<!ENTITY one "two">
-					<!ENTITY % three "four">
-					<!NOTATION five PUBLIC "six">
-					<!--seven-->]>
-				<root/>')
-				requiresDocumentConstraints: true;
-				parseDocument]
-		raise: XMLValidationException.
 ]
 
 { #category : #tests }
@@ -5427,6 +5399,34 @@ XMLParserTest >> testProcessingInstructionWhitespace [
 	self
 		shouldnt: [SAXHandler parse: '<pi><?target ?data  ?></pi>']
 		raise: XMLWellFormednessException.
+]
+
+{ #category : #tests }
+XMLParserTest >> testSchemaRequired [
+	self
+		shouldnt: [
+			(SAXHandler on: '<!DOCTYPE root [<!ELEMENT root EMPTY>]><root/>')
+				requiresSchema: true;
+				parseDocument]
+		raise: XMLValidationException.
+	self
+		should: [
+			(SAXHandler on: '<root/>')
+				requiresSchema: true;
+				parseDocument]
+		raise: XMLValidationException.
+	self
+		should: [
+			(SAXHandler on: '
+				<!DOCTYPE root [
+					<!ENTITY one "two">
+					<!ENTITY % three "four">
+					<!NOTATION five PUBLIC "six">
+					<!--seven-->]>
+				<root/>')
+				requiresSchema: true;
+				parseDocument]
+		raise: XMLValidationException.
 ]
 
 { #category : #tests }

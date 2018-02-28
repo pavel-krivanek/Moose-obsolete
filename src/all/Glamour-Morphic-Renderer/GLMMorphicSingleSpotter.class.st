@@ -11,7 +11,7 @@ Class {
 		'answer',
 		'parent'
 	],
-	#category : #Glamour-Morphic-Renderer-Spotter
+	#category : #'Glamour-Morphic-Renderer-Spotter'
 }
 
 { #category : #'instance creation' }
@@ -113,12 +113,12 @@ GLMMorphicSingleSpotter >> isEnabled [
 		ifFalse: [ self listIndex > 0 ]
 ]
 
-{ #category : #accessing-list }
+{ #category : #'accessing-list' }
 GLMMorphicSingleSpotter >> listIndex [
 	^ listIndex
 ]
 
-{ #category : #accessing-list }
+{ #category : #'accessing-list' }
 GLMMorphicSingleSpotter >> listIndex: anInteger [
 	anInteger isZero not ifTrue: [
 		parent selectionIn: self.].
@@ -132,28 +132,28 @@ GLMMorphicSingleSpotter >> listIndex: anInteger [
 	self changed: #listIndex; changed: #isEnabled
 ]
 
-{ #category : #accessing-list }
+{ #category : #'accessing-list' }
 GLMMorphicSingleSpotter >> listLabels [
 	^ listLabels
 ]
 
-{ #category : #accessing-list }
+{ #category : #'accessing-list' }
 GLMMorphicSingleSpotter >> listSelection [
 	^ listValues at: self listIndex ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-list }
+{ #category : #'accessing-list' }
 GLMMorphicSingleSpotter >> listSelection: anObject [
 
 	self listIndex: (listValues indexOf: anObject ifAbsent: [ 0 ])
 ]
 
-{ #category : #accessing-list }
+{ #category : #'accessing-list' }
 GLMMorphicSingleSpotter >> listValues [
 	^ listValues
 ]
 
-{ #category : #accessing-list }
+{ #category : #'accessing-list' }
 GLMMorphicSingleSpotter >> listValues: aCollection [
 	| previous |
 	previous := self listSelection.
@@ -227,12 +227,12 @@ GLMMorphicSingleSpotter >> parent: anObject [
 	parent := anObject
 ]
 
-{ #category : #accessing-text }
+{ #category : #'accessing-text' }
 GLMMorphicSingleSpotter >> text [
 	^ text
 ]
 
-{ #category : #accessing-text }
+{ #category : #'accessing-text' }
 GLMMorphicSingleSpotter >> text: aString [
 	text = aString
 		ifTrue: [ ^ self ].

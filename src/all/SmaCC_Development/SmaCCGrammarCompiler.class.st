@@ -12,15 +12,8 @@ Class {
 		'codeGenerator',
 		'reduceTable'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
-
-{ #category : #'instance creation' }
-SmaCCGrammarCompiler class >> new [
-	^ super new
-		initialize;
-		yourself
-]
 
 { #category : #'action table' }
 SmaCCGrammarCompiler >> actionForState: anInteger on: aSmaCCSymbol [
@@ -31,7 +24,7 @@ SmaCCGrammarCompiler >> actionForState: anInteger on: aSmaCCSymbol [
 	^ self idForAction: action state: anInteger on: aSmaCCSymbol
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammarCompiler >> buildDefinition: definitionString [
 	| parser |
 	scannerCompiler grammar: self grammar.
@@ -79,7 +72,7 @@ SmaCCGrammarCompiler >> codeGenerator [
 		ifNil: [ self codeGenerator: SmaCCSmalltalkCodeGenerator new ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammarCompiler >> codeGenerator: aSmaCCCodeGenerator [
 	codeGenerator := aSmaCCCodeGenerator.
 	self grammar codeGenerator: aSmaCCCodeGenerator.
@@ -229,7 +222,7 @@ SmaCCGrammarCompiler >> indexOfState: newState [
 	^ newStateIndex
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGrammarCompiler >> initialize [
 	super initialize.
 	scannerCompiler := SmaCCScannerCompiler new.
@@ -268,8 +261,7 @@ SmaCCGrammarCompiler >> multipleActionTableRow: row [
 
 { #category : #'action table' }
 SmaCCGrammarCompiler >> optimizeTransitionTable: anArray [
-	| newTable |
-	newTable := anArray
+	^ anArray
 		collect: [ :row | 
 			row
 				collect: [ :action | 
@@ -278,8 +270,7 @@ SmaCCGrammarCompiler >> optimizeTransitionTable: anArray [
 						ifTrue: [ newShiftAction := self optimizedShiftFrom: row to: (action bitShift: -2) inTable: anArray ].
 					newShiftAction notNil
 						ifTrue: [ newShiftAction ]
-						ifFalse: [ action ] ] ].
-	^ newTable
+						ifFalse: [ action ] ] ]
 ]
 
 { #category : #'action table' }

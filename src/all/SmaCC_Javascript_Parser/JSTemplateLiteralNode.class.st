@@ -5,7 +5,7 @@ Class {
 		'parts',
 		'expressions'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -35,7 +35,7 @@ JSTemplateLiteralNode >> expressions: anOrderedCollection [
 	self setParents: self expressions to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSTemplateLiteralNode >> initialize [
 	super initialize.
 	parts := OrderedCollection new: 2.

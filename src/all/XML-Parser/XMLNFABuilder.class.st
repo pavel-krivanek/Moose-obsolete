@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'fragmentStack'
 	],
-	#category : #XML-Parser-Validation-DFA
+	#category : #'XML-Parser-Validation-DFA'
 }
 
 { #category : #building }

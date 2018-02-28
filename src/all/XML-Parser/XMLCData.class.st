@@ -4,7 +4,7 @@ This class represents a preserved <![CDATA[...]]> section. By default these are 
 Class {
 	#name : #XMLCData,
 	#superclass : #XMLString,
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #visiting }

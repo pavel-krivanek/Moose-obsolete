@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'mockElements'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #updating }

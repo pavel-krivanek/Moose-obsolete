@@ -10,7 +10,7 @@ Class {
 		'fileContents',
 		'fileSuffix'
 	],
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #'instance creation' }

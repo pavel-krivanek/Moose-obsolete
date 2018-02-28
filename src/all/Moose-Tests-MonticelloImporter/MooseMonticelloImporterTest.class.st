@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'importer'
 	],
-	#category : #Moose-Tests-MonticelloImporter
+	#category : #'Moose-Tests-MonticelloImporter'
 }
 
 { #category : #accessing }

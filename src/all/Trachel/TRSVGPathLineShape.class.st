@@ -6,7 +6,7 @@ Class {
 		'from',
 		'to'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #private }

@@ -1,7 +1,7 @@
 Class {
 	#name : #PPXmlResource,
 	#superclass : #PPParserResource,
-	#category : #PetitXml-Tests
+	#category : #'PetitXml-Tests'
 }
 
 { #category : #accessing }
@@ -16,7 +16,7 @@ PPXmlResource >> allXsdDefinitions [
 		collect: [ :each | self perform: each methodSelector ]
 ]
 
-{ #category : #accessing-xml }
+{ #category : #'accessing-xml' }
 PPXmlResource >> bookstoreXml [
 	<xml: #bookstoreXsd>
 	
@@ -33,7 +33,7 @@ PPXmlResource >> bookstoreXml [
 </bookstore>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> elementFormXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -60,7 +60,7 @@ PPXmlResource >> elementFormXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> elementReferencesXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -96,7 +96,7 @@ PPXmlResource >> elementReferencesXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> externalAttributesXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -124,7 +124,7 @@ PPXmlResource >> externalAttributesXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> forwardRefXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -238,7 +238,7 @@ PPXmlResource >> forwardRefXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> getBalanceXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -292,7 +292,7 @@ PPXmlResource >> getBalanceXsd [
 </xsd:schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> groupXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -330,7 +330,7 @@ PPXmlResource >> groupXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> importAuxXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -352,7 +352,7 @@ PPXmlResource >> importAuxXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> importBaseXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -370,7 +370,7 @@ PPXmlResource >> importBaseXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> includeWithNamespaceXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -388,7 +388,7 @@ PPXmlResource >> includeWithNamespaceXsd [
 </xs:schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> includeWithoutNamespaceXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -408,7 +408,7 @@ PPXmlResource >> includeWithoutNamespaceXsd [
 </xs:schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> listXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -434,7 +434,7 @@ PPXmlResource >> listXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> mixedContentXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -458,7 +458,7 @@ PPXmlResource >> mixedContentXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> notationXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -499,7 +499,7 @@ PPXmlResource >> notationXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> restrictionXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -533,7 +533,7 @@ PPXmlResource >> restrictionXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xml }
+{ #category : #'accessing-xml' }
 PPXmlResource >> shiporderXml [
 	<xml: #shiporderXsd>
 	
@@ -571,7 +571,7 @@ PPXmlResource >> shiporderXml [
 </purchaseOrder>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> shiporderXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -645,7 +645,7 @@ PPXmlResource >> shiporderXsd [
 </xsd:schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> simpleContentExtensionXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -673,7 +673,7 @@ PPXmlResource >> simpleContentExtensionXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> subgroupXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -701,7 +701,7 @@ PPXmlResource >> subgroupXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> unionXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -721,7 +721,7 @@ PPXmlResource >> unionXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> unqualifiedTypesXsd [
 	<xml: #xsdXsd>
 	<xsd>
@@ -745,7 +745,7 @@ PPXmlResource >> unqualifiedTypesXsd [
 </schema>'
 ]
 
-{ #category : #accessing-xsd }
+{ #category : #'accessing-xsd' }
 PPXmlResource >> xsdXsd [
 	<xml: #xsdXsd>
 	<xsd>

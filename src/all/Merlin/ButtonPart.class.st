@@ -5,7 +5,7 @@ Class {
 		'buttonLabel',
 		'buttonEnabled'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #accessing }
@@ -26,7 +26,7 @@ ButtonPart >> enable [
 	buttonEnabled := true.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ButtonPart >> initialize [
 
 	super initialize.

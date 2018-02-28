@@ -15,7 +15,7 @@ Class {
 		'highlightColor',
 		'unhighlightColor'
 	],
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #util }

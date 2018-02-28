@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'statements'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #accessing }
@@ -23,7 +23,7 @@ PJBlockNode >> addStatement: aStatement [
 	statements add: aStatement
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 PJBlockNode >> initialize [
 	statements := OrderedCollection new
 ]

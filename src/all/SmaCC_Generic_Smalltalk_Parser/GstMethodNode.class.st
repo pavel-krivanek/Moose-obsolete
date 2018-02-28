@@ -6,7 +6,7 @@ Class {
 		'variables',
 		'body'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }
@@ -38,7 +38,7 @@ GstMethodNode >> compositeTokenVariables [
 	^ #(#selectorParts)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 GstMethodNode >> initialize [
 	super initialize.
 	selectorParts := OrderedCollection new: 2.

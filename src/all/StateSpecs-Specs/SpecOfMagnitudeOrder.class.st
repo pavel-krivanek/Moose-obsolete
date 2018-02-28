@@ -25,7 +25,7 @@ SpecOfMagnitudeOrder class >> than: aMagnidude strong: aBoolean [
 		yourself 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SpecOfMagnitudeOrder >> initialize [ 
 	super initialize.
 	isStrong := false.

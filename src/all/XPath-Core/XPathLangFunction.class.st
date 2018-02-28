@@ -4,7 +4,7 @@ XPath lang() function to test if the context node is in the scope of an xml:lang
 Class {
 	#name : #XPathLangFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

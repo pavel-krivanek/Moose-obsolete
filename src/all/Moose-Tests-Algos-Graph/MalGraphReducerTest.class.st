@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'graphReducer'
 	],
-	#category : #Moose-Tests-Algos-Graph
+	#category : #'Moose-Tests-Algos-Graph'
 }
 
 { #category : #'private - utility' }

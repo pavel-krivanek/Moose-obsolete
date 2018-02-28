@@ -1,7 +1,7 @@
 Class {
 	#name : #TRBoxShape,
 	#superclass : #TRAbstractBoxShape,
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #visitor }

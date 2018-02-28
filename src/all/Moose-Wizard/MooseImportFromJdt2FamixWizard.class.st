@@ -4,7 +4,7 @@ Class {
 	#classVars : [
 		'JavaProjectPath'
 	],
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #'class initialization' }
@@ -44,7 +44,7 @@ MooseImportFromJdt2FamixWizard >> generateMseFile: mseFileName forProject: javaP
 				(verveineJPath asFileReference / 'jdt2famix.sh') fullName})
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseImportFromJdt2FamixWizard >> initialize [
 	 
 	| wizardPane1 wizardPart1 wizardPane2 wizardPart2 |

@@ -4,10 +4,10 @@ I am a description of date and times, possible values are instances of ==DateAnd
 Class {
 	#name : #MADateAndTimeDescription,
 	#superclass : #MAMagnitudeDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADateAndTimeDescription class >> defaultKind [
 	^ DateAndTime
 ]

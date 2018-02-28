@@ -6,7 +6,7 @@ Class {
 		'isId',
 		'id'
 	],
-	#category : #Athens-SVG
+	#category : #'Athens-SVG'
 }
 
 { #category : #'as yet unclassified' }

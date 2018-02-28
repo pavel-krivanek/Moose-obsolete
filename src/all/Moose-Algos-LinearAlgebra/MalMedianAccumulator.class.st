@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'values'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -45,7 +45,7 @@ MalMedianAccumulator >> firstQuartil [
 	^values at: (values size / 4) asInteger
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMedianAccumulator >> initialize [
 	
 	values := SortedCollection new

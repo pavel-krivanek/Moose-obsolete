@@ -5,7 +5,7 @@ Class {
 		'regularExpression',
 		'createIdMethod'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #private }
@@ -23,7 +23,7 @@ SmaCCTerminalSymbol >> createIdMethod: aBoolean [
 	createIdMethod := aBoolean
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCTerminalSymbol >> initialize [
 	super initialize.
 	firstTerminals add: self.

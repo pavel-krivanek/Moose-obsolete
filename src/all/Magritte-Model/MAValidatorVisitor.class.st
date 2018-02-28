@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'object'
 	],
-	#category : #Magritte-Model-Visitor
+	#category : #'Magritte-Model-Visitor'
 }
 
 { #category : #'instance creation' }
@@ -50,7 +50,7 @@ MAValidatorVisitor >> visit: aDescription [
 	
 ]
 
-{ #category : #visiting-descriptions }
+{ #category : #'visiting-descriptions' }
 MAValidatorVisitor >> visitContainer: aDescription [
 	| errors |
 	super visitContainer: aDescription.
@@ -69,7 +69,7 @@ MAValidatorVisitor >> visitContainer: aDescription [
 			signal: aDescription label ]
 ]
 
-{ #category : #visiting-descriptions }
+{ #category : #'visiting-descriptions' }
 MAValidatorVisitor >> visitDescription: aDescription [
 	self validate: self object using: aDescription
 ]

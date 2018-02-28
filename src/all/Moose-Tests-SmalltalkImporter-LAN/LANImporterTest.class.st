@@ -1,7 +1,7 @@
 Class {
 	#name : #LANImporterTest,
 	#superclass : #LANAbstractImportTest,
-	#category : #Moose-Tests-SmalltalkImporter-LAN
+	#category : #'Moose-Tests-SmalltalkImporter-LAN'
 }
 
 { #category : #tests }

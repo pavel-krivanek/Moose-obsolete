@@ -12,13 +12,13 @@ Class {
 	#instVars : [
 		'parseSourceSelector'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 SmaCCDefinitionScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(26 'annotate_tokens' #(23 #(#directives))) #(26 'attributes' #(12 #(#directives))) #(26 'error' #(4 #(#default #directives #parser #scanner))) #(26 'excludes' #(9 #(#directives))) #(26 'glr' #(20 #(#directives))) #(26 'hierarchy' #(11 #(#directives))) #(26 'id' #(18 #(#directives))) #(26 'ignore_variables' #(22 #(#directives))) #(26 'ignorecase' #(21 #(#directives))) #(26 'left' #(15 #(#directives))) #(26 'nonassoc' #(17 #(#directives))) #(26 'prefix' #(13 #(#directives))) #(26 'right' #(16 #(#directives))) #(26 'root' #(10 #(#directives))) #(26 'start' #(19 #(#directives))) #(26 'states' #(8 #(#directives))) #(26 'suffix' #(14 #(#directives))))
+	#(#(26 'annotate_tokens' #(23 #(#directives))) #(26 'attributes' #(12 #(#directives))) #(26 'error' #(4 #(#default #directives #parser #scanner))) #(26 'excludes' #(9 #(#directives))) #(26 'glr' #(20 #(#directives))) #(26 'hierarchy' #(11 #(#directives))) #(26 'id' #(18 #(#directives))) #(26 'ignore_variables' #(22 #(#directives))) #(26 'ignorecase' #(21 #(#directives))) #(26 'left' #(15 #(#directives))) #(26 'nonassoc' #(17 #(#directives))) #(26 'prefix' #(13 #(#directives))) #(26 'right' #(16 #(#directives))) #(26 'root' #(10 #(#directives))) #(26 'scopes' #(8 #(#directives))) #(26 'start' #(19 #(#directives))) #(26 'states' #(8 #(#directives))) #(26 'suffix' #(14 #(#directives))))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -54,7 +54,7 @@ SmaCCDefinitionScanner >> classRightId [
 	^ 40
 ]
 
-{ #category : #token-actions }
+{ #category : #'token-actions' }
 SmaCCDefinitionScanner >> code [
 	| code |
 	code := ''.
@@ -87,7 +87,7 @@ SmaCCDefinitionScanner >> errorTokenId [
 	^ 85
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDefinitionScanner >> initialize [
 	super initialize.
 	parseSourceSelector := #canParseSmalltalk:
@@ -98,7 +98,7 @@ SmaCCDefinitionScanner >> keywordId [
 	^ 27
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDefinitionScanner >> parseSourceSelector: aSymbol [
 	parseSourceSelector := aSymbol
 ]
@@ -130,19 +130,15 @@ SmaCCDefinitionScanner >> scan10 [
 SmaCCDefinitionScanner >> scan11 [
 	self step.
 	currentCharacter == Character newPage
-		ifTrue:
-			[ ^ self scan11X5 ].
+		ifTrue: [ ^ self scan11X5 ].
 	currentCharacter == $"
-		ifTrue:
-			[ ^ self scan11X12 ].
+		ifTrue: [ ^ self scan11X12 ].
 	currentCharacter == $#
-		ifTrue:
-			[ ^ self scan11X2 ].
+		ifTrue: [ ^ self scan11X2 ].
 	currentCharacter == $%
 		ifTrue: [ ^ self recordAndReportMatch: #(32 37) ].
 	currentCharacter == $'
-		ifTrue:
-			[ ^ self scan11X8 ].
+		ifTrue: [ ^ self scan11X8 ].
 	currentCharacter == $(
 		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $)
@@ -219,36 +215,28 @@ SmaCCDefinitionScanner >> scan11X12 [
 { #category : #generated }
 SmaCCDefinitionScanner >> scan11X13 [
 	currentCharacter == $/
-		ifTrue:
-			[ ^ self scan11X11 ].
+		ifTrue: [ ^ self scan11X11 ].
 	currentCharacter == $:
-		ifTrue:
-			[ ^ self scan11X10 ].
+		ifTrue: [ ^ self scan11X10 ].
 	currentCharacter == $;
 		ifTrue: [ ^ self recordAndReportMatch: #(33 37) ].
 	currentCharacter == $<
-		ifTrue:
-			[ ^ self scan11X7 ].
+		ifTrue: [ ^ self scan11X7 ].
 	currentCharacter == $?
 		ifTrue: [ ^ self recordAndReportMatch: #(7 37) ].
 	currentCharacter == $[
-		ifTrue:
-			[ ^ self scan11X3 ].
+		ifTrue: [ ^ self scan11X3 ].
 	currentCharacter == $\
-		ifTrue:
-			[ ^ self scan11X1 ].
+		ifTrue: [ ^ self scan11X1 ].
 	currentCharacter == ${
-		ifTrue:
-			[ ^ self scan11X6 ].
+		ifTrue: [ ^ self scan11X6 ].
 	currentCharacter == $|
 		ifTrue: [ ^ self recordAndReportMatch: #(2 37) ].
 	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp ])
-		ifTrue:
-			[ ^ self scan11X9 ].
+		ifTrue: [ ^ self scan11X9 ].
 	(currentCharacter isLetter or: [ currentCharacter == $_ ])
-		ifTrue:
-			[ ^ self scan11X4 ].
+		ifTrue: [ ^ self scan11X4 ].
 	^ self recordAndReportMatch: #(37)
 ]
 
@@ -454,12 +442,12 @@ SmaCCDefinitionScanner >> scan9 [
 
 { #category : #generated }
 SmaCCDefinitionScanner >> scanForToken [
-	state == #parser
+	scope == #parser
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
-	state == #scanner
+	scope == #scanner
 		ifTrue: [ ^ self scan11 ].
-	(#(#default #directives) includes: state)
+	(#(#default #directives) includes: scope)
 		ifTrue: [ self step.
 			currentCharacter == $"
 				ifTrue: [ ^ self scan1 ].

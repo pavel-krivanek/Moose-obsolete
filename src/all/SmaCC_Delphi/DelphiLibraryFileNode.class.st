@@ -15,7 +15,7 @@ Class {
 		'main',
 		'period'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -80,7 +80,7 @@ DelphiLibraryFileNode >> inTokens: anOrderedCollection [
 	inTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiLibraryFileNode >> initialize [
 	super initialize.
 	semicolons := OrderedCollection new: 2.

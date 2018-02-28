@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : #Moose-Tests-Finder
+	#category : #'Moose-Tests-Finder'
 }
 
 { #category : #tests }

@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'typeNames'
 	],
-	#category : #SmaCC_C_Parser
+	#category : #'SmaCC_C_Parser'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 CScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(76 'auto' 69) #(76 'break' 48) #(76 'case' 38) #(76 'char' 71) #(76 'const' 40) #(76 'continue' 47) #(76 'default' 39) #(76 'do' 54) #(76 'double' 61) #(76 'else' 46) #(76 'enum' 45) #(76 'extern' 58) #(76 'float' 67) #(76 'for' 49) #(76 'goto' 50) #(76 'if' 42) #(76 'int' 68) #(76 'long' 66) #(76 'register' 72) #(76 'return' 19) #(76 'short' 70) #(76 'signed' 56) #(76 'sizeof' 24) #(76 'static' 65) #(76 'struct' 43) #(76 'switch' 52) #(76 'typedef' 57) #(76 'union' 44) #(76 'unsigned' 51) #(76 'void' 73) #(76 'volatile' 41) #(76 'while' 53))
@@ -64,7 +64,7 @@ CScanner >> errorTokenId [
 	^ 149
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 CScanner >> initialize [
 	super initialize.
 	typeNames := Set new

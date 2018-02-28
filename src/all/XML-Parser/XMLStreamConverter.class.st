@@ -8,9 +8,6 @@ The class #basicEncodingNames method should return a basic list of names for the
 Class {
 	#name : #XMLStreamConverter,
 	#superclass : #Object,
-	#instVars : [
-		'encoding'
-	],
 	#classVars : [
 		'EncodingNamesAndClassesCache',
 		'PreferredClasses'
@@ -18,12 +15,17 @@ Class {
 	#classInstVars : [
 		'encodingNames'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
+
+{ #category : #defaults }
+XMLStreamConverter class >> abstractClass [
+	^ XMLStreamConverter
+]
 
 { #category : #basic }
 XMLStreamConverter class >> basicByteOrderMarkBytes [
-	^ #()
+	^ #[]
 ]
 
 { #category : #basic }
@@ -40,7 +42,14 @@ XMLStreamConverter class >> basicEncodingNames [
 { #category : #accessing }
 XMLStreamConverter class >> byteOrderMark [
 	"avoid #asString and #newFrom: for GS portability"
-	^ String withAll: (self basicByteOrderMarkBytes collect: [:each | each asCharacter])
+	^ String streamContents: [:stream |
+		self byteOrderMarkBytes do: [:each |
+			stream nextPut: each asCharacter]]
+]
+
+{ #category : #accessing }
+XMLStreamConverter class >> byteOrderMarkBytes [
+	^ self basicByteOrderMarkBytes asByteArray
 ]
 
 { #category : #testing }
@@ -52,7 +61,8 @@ XMLStreamConverter class >> canConvertEncoding: anEncodingName [
 	production rule for <?xml ...?> 'encoding' attributes disallows
 	whitespace, and the HTML parser removes it from <meta> charset
 	attributes before converting, so we just convert it to lowercase"
-	^ self basicCanConvertEncoding: anEncodingName asLowercase
+	^ self isAbstractClass not
+		and: [self basicCanConvertEncoding: anEncodingName asLowercase]
 ]
 
 { #category : #accessing }
@@ -69,6 +79,11 @@ XMLStreamConverter class >> classForEncoding: anEncodingName [
 		put: (self findClassForEncoding: anEncodingName).
 ]
 
+{ #category : #convenience }
+XMLStreamConverter class >> decode: aStringOrByteArray [
+	^ self new decode: aStringOrByteArray
+]
+
 { #category : #'instance creation' }
 XMLStreamConverter class >> default [
 	^ self defaultClass new
@@ -76,12 +91,17 @@ XMLStreamConverter class >> default [
 
 { #category : #defaults }
 XMLStreamConverter class >> defaultClass [
-	^ XMLUTF8StreamConverter
+	^ XMLImplicitUTF8StreamConverter
 ]
 
 { #category : #defaults }
 XMLStreamConverter class >> defaultEncoding [
 	^ self defaultClass primaryEncodingName
+]
+
+{ #category : #convenience }
+XMLStreamConverter class >> encode: aString [
+	^ self new encode: aString
 ]
 
 { #category : #accessing }
@@ -142,6 +162,11 @@ XMLStreamConverter class >> initialize [
 ]
 
 { #category : #testing }
+XMLStreamConverter class >> isAbstractClass [
+	^ self == self abstractClass
+]
+
+{ #category : #testing }
 XMLStreamConverter class >> isDefaultClass [
 	^ self == self defaultClass
 ]
@@ -184,8 +209,11 @@ XMLStreamConverter class >> preferredClasses [
 		ifNil: [
 			PreferredClasses :=
 				IdentitySet new
-					addAll: XMLUTFStreamConverter allSubclasses;
-					add: XMLByteStreamConverter;
+					addAll:
+						(XMLUTFStreamConverter allSubclasses reject: [:each |
+							each isAbstractClass]);
+					add: XMLLatin1StreamConverter;
+					add: XMLASCIIStreamConverter;
 					yourself]
 ]
 
@@ -206,6 +234,24 @@ XMLStreamConverter class >> primaryEncodingName [
 { #category : #converting }
 XMLStreamConverter >> asXMLStreamConverter [
 	^ self
+]
+
+{ #category : #convenience }
+XMLStreamConverter >> decode: aStringOrByteArray [
+	^ (XMLDecodingReadStreamAdapter
+		on: aStringOrByteArray readStream
+		streamConverter: self)
+			contents
+]
+
+{ #category : #convenience }
+XMLStreamConverter >> encode: aString [
+	^ (XMLEncodingWriteStreamAdapter
+		on: (ByteArray new: aString size) writeStream
+		streamConverter: self)
+			nextPutByteOrderMark;
+			nextPutAll: aString;
+			contents
 ]
 
 { #category : #accessing }
@@ -238,6 +284,11 @@ XMLStreamConverter >> isDefault [
 ]
 
 { #category : #testing }
+XMLStreamConverter >> isImplicit [
+	^ false
+]
+
+{ #category : #testing }
 XMLStreamConverter >> isNull [
 	^ false
 ]
@@ -254,8 +305,8 @@ XMLStreamConverter >> nextPut: aCharacter toStream: aStream [
 
 { #category : #encoding }
 XMLStreamConverter >> nextPutByteOrderMarkToStream: aStream [
-	self class basicByteOrderMarkBytes do: [:each |
-		aStream basicNextPutByte: each]
+	self class byteOrderMarkBytes do: [:each |
+		aStream nextPut: each]
 ]
 
 { #category : #printing }

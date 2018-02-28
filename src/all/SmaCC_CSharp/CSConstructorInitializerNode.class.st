@@ -10,7 +10,7 @@ Class {
 		'rightParenToken',
 		'thisToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -70,7 +70,7 @@ CSConstructorInitializerNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSConstructorInitializerNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

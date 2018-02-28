@@ -1,7 +1,7 @@
 Class {
 	#name : #FMParserClient,
 	#superclass : #Object,
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #parsing }

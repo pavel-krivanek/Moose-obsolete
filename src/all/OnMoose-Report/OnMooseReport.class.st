@@ -6,7 +6,7 @@ self openOn: MooseModel root allModels first.
 Class {
 	#name : #OnMooseReport,
 	#superclass : #REPReport,
-	#category : #OnMoose-Report
+	#category : #'OnMoose-Report'
 }
 
 { #category : #opening }

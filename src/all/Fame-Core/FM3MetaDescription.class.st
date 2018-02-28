@@ -26,12 +26,12 @@ Class {
 		'number',
 		'string'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FM3MetaDescription class >> annotation [
-	<MSEClass: #'Class' super: #FM3Element>
+	<MSEClass: #Class super: #FM3Element>
 	<package: #FM3>
 
 ]
@@ -166,7 +166,7 @@ FM3MetaDescription class >> stringClass [
 	^class
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allAttributes [
 	<MSEProperty: #allAttributes type: 'FM3.Property'>
 	<multivalued>
@@ -187,40 +187,40 @@ FM3MetaDescription >> allAttributesDo: block [
 		self superclass allAttributesDo: block ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allAttributesNotDerived [
 	^ self allAttributes reject: [ :attr | attr isDerived ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allComplexAttributes [
 
 	^ self allAttributes reject: [:attr | attr type isPrimitive ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allComplexAttributesNotDerived [
 	^ self allAttributes reject: [ :attr | attr type isPrimitive or: [ attr isDerived ] ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allComplexAttributesWithOpposite [
 	^ self allAttributes reject: [ :attr | attr type isPrimitive or: [ attr hasOpposite not ] ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allContainerAttributes [
 	^ self allAttributes select: #isContainer
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allPrimitiveAttributes [
 
 	^ self allAttributes select: [:attr | 
 		attr type notNil and: [attr type isPrimitive ]]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> allPrimitiveAttributesNotDerived [
 	^ self allAttributes select: [ :attr | attr type notNil and: [ attr type isPrimitive and: [ attr isDerived not ] ] ]
 ]
@@ -267,19 +267,19 @@ FM3MetaDescription >> anonymousReturnTrue [
 	^true
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> at: aString [
 	aString isSymbol ifTrue: [ self error ].
 	^ self attributeNamed: aString
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> attributeNamed: aString [
 
 	^self attributeNamed: aString ifAbsent: nil
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> attributeNamed: aString ifAbsent: aBlock [
 	"Cyril: I remove the #asString because it is longer to convert it ourself than to let the = manage it."
 
@@ -304,13 +304,13 @@ FM3MetaDescription >> attributes: anObject [
 	attributes value: anObject
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> attributesNamed: aListOfSymbol [
 	
 	^ aListOfSymbol collect: [ :each | self attributeNamed: each ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> complexAttributes [
 
 	^ self attributes reject: [:attr | attr type isPrimitive ]
@@ -424,7 +424,7 @@ FM3MetaDescription >> inheritsFrom: aClass [
 	^ false
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FM3MetaDescription >> initialize [
 
 	attributes := FMMultivalueLink on: self opposite: #mmClass:.
@@ -461,7 +461,7 @@ FM3MetaDescription >> isFM3Class [
 	^true
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> isPrimitive [
 	<MSEProperty: #primitive type: #'Boolean'>
 	<derived>
@@ -469,7 +469,7 @@ FM3MetaDescription >> isPrimitive [
 	^false
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> isRoot [
 	<MSEProperty: #root type: #'Boolean'>
 	<derived>
@@ -482,14 +482,14 @@ FM3MetaDescription >> owner [
 	^self package
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> ownerAttribute [
 	self flag: #FIXME.
 	self flag: 'It is possible that several containers exists for a given entity -> we have not a tree, but we should not get cycles at ALL'.
 	^self allAttributes detect: #isContainer ifNone: [ nil ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> ownerAttributes [
 
 	^self allAttributes select: #isContainer 
@@ -518,7 +518,7 @@ FM3MetaDescription >> packageName [
 	^ self package name
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FM3MetaDescription >> primitiveAttributes [
 
 	^ self attributes select: [:attr | attr type isPrimitive ]

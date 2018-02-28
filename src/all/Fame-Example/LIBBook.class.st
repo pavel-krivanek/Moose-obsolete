@@ -5,14 +5,14 @@ Class {
 		'title',
 		'authors'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 LIBBook class >> annotation [
 	<MSEClass: #Book super: #Object>
 	<package: #LIB>
-	^self
+	
 ]
 
 { #category : #accessing }
@@ -26,7 +26,7 @@ LIBBook >> authors: aPerson [
 	authors value: aPerson
 ]
 
-{ #category : #initialize-release }
+{ #category : #initialization }
 LIBBook >> initialize [
 	super initialize.
 	title := nil.

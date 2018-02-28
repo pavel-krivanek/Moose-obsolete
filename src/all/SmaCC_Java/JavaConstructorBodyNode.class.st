@@ -7,7 +7,7 @@ Class {
 		'statements',
 		'rightBrace'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -39,7 +39,7 @@ JavaConstructorBodyNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaConstructorBodyNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

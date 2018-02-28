@@ -58,7 +58,7 @@ Class {
 		'semicolon_trimmed',
 		'eof'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
 { #category : #for }

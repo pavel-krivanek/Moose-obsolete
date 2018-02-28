@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'threshold'
 	],
-	#category : #SmallDude-Utils
+	#category : #'SmallDude-Utils'
 }
 
 { #category : #'instance creation' }
@@ -34,7 +34,7 @@ DudeLevenshteinDistanceStrategy >> getStrategyBlock [
 	^aBlock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeLevenshteinDistanceStrategy >> initialize [ 
 	"Initialize a newly created instance. This method must answer the receiver." 
 	" *** Edit the following to properly initialize instance variables ***" 
@@ -131,7 +131,7 @@ DudeLevenshteinDistanceStrategy >> subFirstString: string1 firstPos: int1 second
 		ifFalse: [^1]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeLevenshteinDistanceStrategy >> threshold: aDouble [ 
 	 
 	threshold := aDouble. 

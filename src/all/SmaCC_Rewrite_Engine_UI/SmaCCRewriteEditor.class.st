@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'treeInitializer'
 	],
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #private }
@@ -13,14 +13,15 @@ SmaCCRewriteEditor >> addFileRuleTo: aRewriteFile [
 	aRewriteFile isNil
 		ifTrue: [ ^ self ].
 	filename := UITheme current
-		chooseFullFileNameIn: UITheme builder
+		fileSaveIn: UITheme builder
 		title: 'Enter rewrite rule file name'
 		extensions: #('rw')
-		path: nil
-		preview: nil.
+		path: nil.
 	filename isNil
 		ifTrue: [ ^ self ].
-	rewrite := SmaCCRewriteFile new filename: filename.
+	rewrite := filename asFileReference exists
+		ifTrue: [ SmaCCRewriteRuleFileParser parseFile: filename ]
+		ifFalse: [ SmaCCRewriteFile new filename: filename ].
 	self addRewrite: rewrite to: aRewriteFile
 ]
 
@@ -111,13 +112,13 @@ SmaCCRewriteEditor >> deleteRule: aRewrite [
 	self update
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteEditor >> initialize [
 	super initialize.
 	treeInitializer := [ :tree |  ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteEditor >> treeInitializer: aBlock [
 	treeInitializer := aBlock
 ]

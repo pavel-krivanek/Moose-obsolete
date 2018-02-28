@@ -7,8 +7,13 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
+
+{ #category : #defaults }
+XMLStatelessStreamConverter class >> abstractClass [
+	^ XMLStatelessStreamConverter
+]
 
 { #category : #accessing }
 XMLStatelessStreamConverter class >> instance [

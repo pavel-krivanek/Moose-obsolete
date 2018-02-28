@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'documents'
 	],
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
 { #category : #example }
@@ -109,7 +109,7 @@ MalCorpus >> documents [
 	^documents keys
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalCorpus >> initialize [
 	
 	documents := Dictionary new

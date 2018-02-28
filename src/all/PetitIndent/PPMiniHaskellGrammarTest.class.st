@@ -5,15 +5,15 @@ Class {
 		'statementBlock',
 		'context'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> assert: aParser parse: anInput [
 	result := super assert: aParser parse: anInput
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> assert: aParser parse: anInput end: anEnd [
 	result := super assert: aParser parse: anInput end: anEnd
 ]
@@ -35,7 +35,7 @@ PPMiniHaskellGrammarTest >> setUp [
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDo1 [
 	| string |
 
@@ -49,7 +49,7 @@ do print 1
 	self assert: result size = 3.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDo2 [
 	| string |
 
@@ -71,7 +71,7 @@ print 4
 	self assert: result second = #print.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDo3 [
 	| string |
 
@@ -94,7 +94,7 @@ print 4'.
 	self assert: result fourth = #print.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDo4 [
 	| string |
 
@@ -111,7 +111,7 @@ do print 1
 	self assert: result first size = 3.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDo5 [
 	| string |
 	string := 
@@ -124,7 +124,7 @@ PPMiniHaskellGrammarTest >> testDo5 [
 	self assert: result size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDo6 [
 	| string |
 	string := 
@@ -137,7 +137,7 @@ print 2'.
 	self assert: result size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDoNested1 [
 	| string |
 	string := 
@@ -152,7 +152,7 @@ PPMiniHaskellGrammarTest >> testDoNested1 [
 	self assert: result third size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDoNested2 [
 	| string |
 	string := 
@@ -168,7 +168,7 @@ PPMiniHaskellGrammarTest >> testDoNested2 [
 	self assert: result third size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testDoNested3 [
 	| string |
 	string := 
@@ -185,7 +185,7 @@ PPMiniHaskellGrammarTest >> testDoNested3 [
 	self assert: result third size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf01 [
 	| string |
 
@@ -198,7 +198,7 @@ PPMiniHaskellGrammarTest >> testIf01 [
 	self assert: result third first = #print.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf02 [
 	| string |
 
@@ -216,7 +216,7 @@ if foo
 	self assert: result third first = #print.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf03 [
 	| string |
 
@@ -229,7 +229,7 @@ else print 2'.
 	self fail: string rule: #if.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf04 [
 	| string |
 
@@ -247,7 +247,7 @@ if foo
 	self assert: result third size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf05 [
 	| string |
 
@@ -271,7 +271,7 @@ if foo
 	self assert: result second = #print.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf06 [
 	| string |
 
@@ -285,7 +285,7 @@ else print 3
 	self parse: string rule: #if.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf07 [
 	| string |
 
@@ -310,7 +310,7 @@ if foo
 	self assert: result third size = 3.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf08 [
 	| string |
 
@@ -332,7 +332,7 @@ if foo
 	self assert: result third isNil.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf09 [
 	| string |
 
@@ -356,7 +356,7 @@ if foo
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testIf10 [
 	| string |
 	string := 
@@ -372,7 +372,7 @@ if foo then print 1
 	self assert: result third first = #print.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testLet1 [
 	| string |
 	string := 
@@ -384,7 +384,7 @@ let a = 1
 	self assert: result size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testLet2 [
 	| string |
 	string := 
@@ -396,7 +396,7 @@ let a = 1
 	self fail: string rule: #let.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testLet3 [
 	| string |
 
@@ -411,7 +411,7 @@ let
 	self assert: result size = 2.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniHaskellGrammarTest >> testStatementBlock [
 	statementBlock := self parserInstanceFor: #statementBlock.
 	

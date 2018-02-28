@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'nodeClassDefinitions'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -40,7 +40,7 @@ SmaCCVisitorClassDefinition >> name [
 	^ self modelClass name
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCVisitorClassDefinition >> nodeClassDefinitions: aCollection [
 	nodeClassDefinitions := aCollection
 ]

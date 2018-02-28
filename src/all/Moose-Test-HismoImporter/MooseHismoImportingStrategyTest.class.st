@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseHismoImportingStrategyTest,
 	#superclass : #TestCase,
-	#category : #Moose-Test-HismoImporter
+	#category : #'Moose-Test-HismoImporter'
 }
 
 { #category : #tests }

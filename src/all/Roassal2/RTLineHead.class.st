@@ -4,7 +4,7 @@ A DCRTLineHead is a handler of head of a line
 Class {
 	#name : #RTLineHead,
 	#superclass : #RTExtremityLineDecoration,
-	#category : #Roassal2-LineDecorations
+	#category : #'Roassal2-LineDecorations'
 }
 
 { #category : #converting }

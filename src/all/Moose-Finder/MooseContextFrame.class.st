@@ -29,7 +29,7 @@ Class {
 		'dialogWindow',
 		'builder'
 	],
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #'instance creation' }
@@ -135,7 +135,7 @@ MooseContextFrame >> getSelectedContexts [
 	^ result
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseContextFrame >> initialize [
 
 	contextSelected := self allContexts.

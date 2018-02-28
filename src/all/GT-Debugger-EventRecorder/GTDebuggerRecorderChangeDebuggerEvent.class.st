@@ -7,7 +7,7 @@ GTChangeDebuggerAction
 Class {
 	#name : #GTDebuggerRecorderChangeDebuggerEvent,
 	#superclass : #GTDebuggerRecorderDebugActionEvent,
-	#category : #GT-Debugger-EventRecorder-Events
+	#category : #'GT-Debugger-EventRecorder-Events'
 }
 
 { #category : #private }

@@ -29,7 +29,7 @@ Class {
 	#instVars : [
 		'composedShapeSelection'
 	],
-	#category : #Roassal2-AttachPoint
+	#category : #'Roassal2-AttachPoint'
 }
 
 { #category : #'public - hooks' }

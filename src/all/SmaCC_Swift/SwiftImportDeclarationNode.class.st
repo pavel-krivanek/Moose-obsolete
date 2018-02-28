@@ -24,7 +24,7 @@ Class {
 		'funcToken',
 		'periodTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -117,7 +117,7 @@ SwiftImportDeclarationNode >> importToken: aSmaCCToken [
 	importToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftImportDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

@@ -11,7 +11,7 @@ Class {
 		'incrTrigger',
 		'endTrigger'
 	],
-	#category : #SmallDude-Utils
+	#category : #'SmallDude-Utils'
 }
 
 { #category : #default }
@@ -117,7 +117,7 @@ DudeObserver >> progress [
 	^currentStep
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeObserver >> reset [ 
 	 
 	currentStep := 0. 
@@ -163,7 +163,7 @@ DudeObserver >> stepCount [
 	^stepCount
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeObserver >> stepCount: totalStepCount [ 
 	 
 	stepCount := totalStepCount
@@ -176,13 +176,13 @@ DudeObserver >> stop [
 	lastTriggerTime := Time secondClock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeObserver >> triggerCount: triggerSteps [ 
 	 
 	triggerCount := triggerSteps
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeObserver >> triggerOnStart: startBlock onEnd: endBlock onIncrement: incrBlock [ 
 	 
 	startTrigger := startBlock. 

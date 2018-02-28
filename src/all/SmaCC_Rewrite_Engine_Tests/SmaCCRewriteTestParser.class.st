@@ -1,10 +1,10 @@
 Class {
 	#name : #SmaCCRewriteTestParser,
 	#superclass : #SmaCCGLRParser,
-	#category : #SmaCC_Rewrite_Engine_Tests
+	#category : #'SmaCC_Rewrite_Engine_Tests'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCRewriteTestParser class >> cacheId [
 	^'2016-10-09T15:01:25.352626-05:00'
 ]
@@ -50,7 +50,7 @@ Expression
 	;"
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 SmaCCRewriteTestParser class >> scannerClass [
 	^SmaCCRewriteTestScanner
 ]

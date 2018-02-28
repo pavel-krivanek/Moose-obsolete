@@ -10,7 +10,7 @@ Class {
 		'systemID',
 		'baseURI'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #'instance creation' }
@@ -62,7 +62,8 @@ DTDUnresolvedExternalParsedEntityReplacement >> resolveForExternalEntity: anExte
 			baseURI: self baseURI.
 
 	anExternalEntity
-		resolvedReplacement: (self resolver resolveExternalEntityURI: externalEntityURI);
+		resolvedReplacement:
+			(self resolver resolveExternalEntityURI: externalEntityURI);
 		uri: externalEntityURI asString;
 		unresolvedReplacement: nil.
 ]

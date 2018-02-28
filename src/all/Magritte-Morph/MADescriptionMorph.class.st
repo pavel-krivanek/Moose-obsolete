@@ -7,7 +7,7 @@ Class {
 		'parent',
 		'morph'
 	],
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
 { #category : #'instance creation' }
@@ -82,7 +82,7 @@ MADescriptionMorph >> buttonMorph: aSelector [
 	^ button
 ]
 
-{ #category : #private-morphic }
+{ #category : #'private-morphic' }
 MADescriptionMorph >> buttonState [
 	^ true
 ]
@@ -92,12 +92,12 @@ MADescriptionMorph >> commit [
 	self memento commit
 ]
 
-{ #category : #accessing-configuration }
+{ #category : #'accessing-configuration' }
 MADescriptionMorph >> defaultBackgroundColor [
 	^ self magritteDescription morphColor
 ]
 
-{ #category : #accessing-configuration }
+{ #category : #'accessing-configuration' }
 MADescriptionMorph >> defaultSpacerSize [
 	^ 5
 ]
@@ -112,7 +112,7 @@ MADescriptionMorph >> memento [
 	^ memento
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MADescriptionMorph >> model [
 	^ self memento model
 ]
@@ -127,7 +127,7 @@ MADescriptionMorph >> parent [
 	^ parent
 ]
 
-{ #category : #private-morphic }
+{ #category : #'private-morphic' }
 MADescriptionMorph >> perform: selector orSendTo: otherTarget [
 	^ (self respondsTo: selector)
 		ifTrue: [ self perform: selector ]
@@ -151,7 +151,7 @@ MADescriptionMorph >> reset [
 	self memento reset
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MADescriptionMorph >> root [
 	^ self parent isNil
 		ifTrue: [ self ]

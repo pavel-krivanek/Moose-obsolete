@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'items'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -17,7 +17,7 @@ JSModuleNode >> compositeNodeVariables [
 	^ #(#items)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSModuleNode >> initialize [
 	super initialize.
 	items := OrderedCollection new: 2.

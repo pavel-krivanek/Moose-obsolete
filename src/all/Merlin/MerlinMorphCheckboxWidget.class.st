@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'checkboxMorph'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #'accessing - morph contents' }

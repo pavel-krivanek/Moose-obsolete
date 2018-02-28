@@ -20,7 +20,7 @@ Class {
 		'expression',
 		'semicolonToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -103,7 +103,7 @@ CSIndexerDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolonToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSIndexerDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

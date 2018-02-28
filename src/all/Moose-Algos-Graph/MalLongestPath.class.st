@@ -15,7 +15,7 @@ Class {
 		'leafNodes',
 		'maxIterations'
 	],
-	#category : #Moose-Algos-Graph
+	#category : #'Moose-Algos-Graph'
 }
 
 { #category : #computing }
@@ -51,14 +51,14 @@ MalLongestPath >> edgeClass [
 	^ MalGraphEdge
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalLongestPath >> initialize [
 	super initialize.
 	maxIterations := -1.
 	previousRanks := OrderedCollection new
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalLongestPath >> initializeRootNodes [
 	self computeRootNodes.
 	self setRanks: self rootNodes at: 0

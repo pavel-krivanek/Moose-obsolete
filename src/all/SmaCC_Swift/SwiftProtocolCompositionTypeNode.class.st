@@ -9,7 +9,7 @@ Class {
 		'commaTokens',
 		'greaterThanTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -52,7 +52,7 @@ SwiftProtocolCompositionTypeNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftProtocolCompositionTypeNode >> initialize [
 	super initialize.
 	lessThanTokens := OrderedCollection new: 2.

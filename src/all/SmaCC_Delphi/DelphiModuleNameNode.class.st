@@ -5,7 +5,7 @@ Class {
 		'names',
 		'periods'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ DelphiModuleNameNode >> compositeTokenVariables [
 	^ #(#names #periods)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiModuleNameNode >> initialize [
 	super initialize.
 	names := OrderedCollection new: 2.

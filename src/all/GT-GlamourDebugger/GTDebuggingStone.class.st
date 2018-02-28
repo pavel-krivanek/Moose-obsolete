@@ -5,7 +5,7 @@ Class {
 		'pragma',
 		'session'
 	],
-	#category : #GT-GlamourDebugger
+	#category : #'GT-GlamourDebugger'
 }
 
 { #category : #'instance creation' }

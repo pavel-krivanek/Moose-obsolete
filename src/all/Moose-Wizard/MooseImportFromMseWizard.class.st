@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseImportFromMseWizard,
 	#superclass : #WizardControl,
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #example }
@@ -11,7 +11,7 @@ MooseImportFromMseWizard class >> example [
 	self new open.
 ]
 
-{ #category : #private-utilities }
+{ #category : #'private-utilities' }
 MooseImportFromMseWizard >> createImportingContext [
 	<lint: 'String concatenation instead of streams' rationale: 'few concatenations' author: 'cyrille.delaunay'>
 	"return an object ImportingContext coorresponding to the context selected by the user and the choice of merging or not classes and metaclasses "
@@ -25,7 +25,7 @@ MooseImportFromMseWizard >> createImportingContext [
 	^ tmpImportingContext
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseImportFromMseWizard >> initialize [
 	 
 	| wizardPane1 wizardPart1 wizardPane2 wizardPart2 wizardPart3 wizardPart3Collection |

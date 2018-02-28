@@ -32,7 +32,7 @@ GtExampleSubject >> gtDisplayOn: aStream [
 	self gtDisplayValidityOn: aStream
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExampleSubject >> gtExamplesContained [
 	^ Smalltalk gtExamplesContained select: [ :each | each hasSubject: self ]
 ]

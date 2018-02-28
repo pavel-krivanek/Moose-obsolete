@@ -1,5 +1,5 @@
 Class {
 	#name : #NameOfSubclass,
 	#superclass : #Object,
-	#category : #Moose-TestResources-LCOM
+	#category : #'Moose-TestResources-LCOM'
 }

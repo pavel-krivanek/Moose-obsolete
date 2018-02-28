@@ -9,7 +9,7 @@ Class {
 		'name',
 		'semicolon'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -44,7 +44,7 @@ CSInterfaceEventDeclarationNode >> eventToken: aSmaCCToken [
 	eventToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSInterfaceEventDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

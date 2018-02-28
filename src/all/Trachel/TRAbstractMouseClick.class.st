@@ -1,5 +1,5 @@
 Class {
 	#name : #TRAbstractMouseClick,
 	#superclass : #TRAbstractMouseEvent,
-	#category : #Trachel-Events
+	#category : #'Trachel-Events'
 }

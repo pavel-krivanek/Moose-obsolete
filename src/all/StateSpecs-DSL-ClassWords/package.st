@@ -1,1 +1,1 @@
-Package { #name : #StateSpecs-DSL-ClassWords }
+Package { #name : #'StateSpecs-DSL-ClassWords' }

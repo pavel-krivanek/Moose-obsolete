@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'window'
 	],
-	#category : #Moose-Tests-RoassalPaintings
+	#category : #'Moose-Tests-RoassalPaintings'
 }
 
 { #category : #running }

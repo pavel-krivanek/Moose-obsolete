@@ -7,7 +7,7 @@ WindowOpened
 Class {
 	#name : #GTWindowRecorderWindowOpenedEvent,
 	#superclass : #GTWindowRecorderEvent,
-	#category : #GT-Window-EventRecorder-Events
+	#category : #'GT-Window-EventRecorder-Events'
 }
 
 { #category : #testing }

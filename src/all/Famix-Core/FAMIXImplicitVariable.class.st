@@ -7,14 +7,13 @@ Class {
 	#instVars : [
 		'parentBehaviouralEntity'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXImplicitVariable class >> annotation [
 	<MSEClass: #ImplicitVariable super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-	^ self
 ]
 
 { #category : #accessing }
@@ -39,12 +38,12 @@ FAMIXImplicitVariable >> container: aBehaviouralEntity [
 	^ self parentBehaviouralEntity: aBehaviouralEntity
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXImplicitVariable >> namespaceScope [
 	^ self parentBehaviouralEntity namespaceScope
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXImplicitVariable >> packageScope [
 	^ self parentBehaviouralEntity packageScope
 ]
@@ -68,7 +67,7 @@ FAMIXImplicitVariable >> parentBehaviouralEntity: aBehaviouralEntity [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXImplicitVariable >> typeScope [
 	^ self parentBehaviouralEntity typeScope
 ]

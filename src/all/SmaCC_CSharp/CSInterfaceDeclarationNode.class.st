@@ -17,7 +17,7 @@ Class {
 		'rightBrace',
 		'semicolon'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -91,7 +91,7 @@ CSInterfaceDeclarationNode >> declarations: anOrderedCollection [
 	self setParents: self declarations to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSInterfaceDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

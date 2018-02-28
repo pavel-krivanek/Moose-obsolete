@@ -9,8 +9,13 @@ Class {
 	#classInstVars : [
 		'implementation'
 	],
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
+
+{ #category : #testing }
+XMLAbstractFactory class >> canBeImplemented [
+	^ false
+]
 
 { #category : #clearing }
 XMLAbstractFactory class >> clearAllImplementations [
@@ -23,14 +28,17 @@ XMLAbstractFactory class >> clearAllImplementations [
 
 { #category : #finding }
 XMLAbstractFactory class >> findSupportedImplementation [
-	self isSupportedImplementation
-		ifTrue: [^ self].
+	self canBeImplemented
+		ifTrue: [
+			self isSupportedImplementation
+				ifTrue: [^ self].
 
-	self preferredImplementation isSupportedImplementation
-		ifTrue: [^ self preferredImplementation].
-	self allSubclassesDo: [:each |
-		each isSupportedImplementation
-			ifTrue: [^ each]].
+			(self preferredImplementation notNil
+				and: [self preferredImplementation isSupportedImplementation])
+				ifTrue: [^ self preferredImplementation].
+			self allSubclassesDo: [:each |
+				each isSupportedImplementation
+					ifTrue: [^ each]]].
 
 	^ nil.
 ]
@@ -58,6 +66,11 @@ XMLAbstractFactory class >> implementation: aClassOrNil [
 	implementation := aClassOrNil
 ]
 
+{ #category : #'instance creation' }
+XMLAbstractFactory class >> implementationNew [
+	^ self implementation basicNew initialize
+]
+
 { #category : #'class initialization' }
 XMLAbstractFactory class >> initialize [
 	"self initialize"
@@ -72,15 +85,15 @@ XMLAbstractFactory class >> isSupportedImplementation [
 
 { #category : #'instance creation' }
 XMLAbstractFactory class >> new [
-	^ self implementation basicNew initialize
+	^ self implementationNew
 ]
 
 { #category : #finding }
 XMLAbstractFactory class >> noSupportedImplementationFound [
-	self subclassResponsibility
+	Error signal: 'No implementation available'
 ]
 
 { #category : #defaults }
 XMLAbstractFactory class >> preferredImplementation [
-	self subclassResponsibility
+	^ nil
 ]

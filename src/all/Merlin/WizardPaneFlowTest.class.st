@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'dropListSelectedValue'
 	],
-	#category : #Merlin-Tests
+	#category : #'Merlin-Tests'
 }
 
 { #category : #tests }

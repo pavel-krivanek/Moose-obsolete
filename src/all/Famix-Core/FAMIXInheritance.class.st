@@ -11,14 +11,13 @@ Class {
 		'superclass',
 		'subclass'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXInheritance class >> annotation [
 	<MSEClass: #Inheritance super: #FAMIXAssociation>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'converter'
 	],
-	#category : #Grease-Pharo30-Core
+	#category : #'Grease-Pharo30-Core'
 }
 
 { #category : #'instance creation' }

@@ -7,10 +7,10 @@ Class {
 		'containingNamespaceHistory',
 		'containingPackageHistory'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #initialize }
+{ #category : #meta }
 HismoClassHistory class >> annotation [
 	<MSEClass: #ClassHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

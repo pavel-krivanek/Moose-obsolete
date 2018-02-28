@@ -6,5 +6,5 @@ Packages that are using Seaside-Platform should usually subclass GRError instead
 Class {
 	#name : #GRError,
 	#superclass : #Error,
-	#category : #Grease-Core-Exceptions
+	#category : #'Grease-Core-Exceptions'
 }

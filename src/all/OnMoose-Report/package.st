@@ -1,1 +1,1 @@
-Package { #name : #OnMoose-Report }
+Package { #name : #'OnMoose-Report' }

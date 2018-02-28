@@ -9,7 +9,7 @@ Class {
 		'columnSize',
 		'mapBlock'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -57,7 +57,7 @@ MalMatrixView >> columnSize [
 	^columnSize
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixView >> initializeRows: m columns: n [
 	
 	rowSize := m.
@@ -70,7 +70,7 @@ MalMatrixView >> rowSize [
 	^rowSize
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixView >> setMapBlock: block [
 	
 	^mapBlock := block

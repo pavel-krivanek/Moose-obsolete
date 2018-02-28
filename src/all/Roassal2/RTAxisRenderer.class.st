@@ -9,10 +9,10 @@ Class {
 		'config',
 		'builder'
 	],
-	#category : #Roassal2-Builder-Grapher-Core
+	#category : #'Roassal2-Builder-Grapher-Core'
 }
 
-{ #category : #rendering-utility }
+{ #category : #'rendering-utility' }
 RTAxisRenderer >> addAllToView: roassalElements [
 	self builder view addAll: roassalElements
 ]
@@ -47,7 +47,7 @@ RTAxisRenderer >> addTicksFrom: toPosition to: fromPosition [
 	^ ticks
 ]
 
-{ #category : #rendering-utility }
+{ #category : #'rendering-utility' }
 RTAxisRenderer >> addToView: roassalElement [
 	self builder view add: roassalElement
 ]
@@ -57,7 +57,7 @@ RTAxisRenderer >> areTicksCentered [
 	^ config ticksCentered
 ]
 
-{ #category : #public-rendering }
+{ #category : #'public-rendering' }
 RTAxisRenderer >> axisFrom: fromPosition to: toPosition [
 	"THIS IS A PUBLIC METHOD"
 
@@ -65,7 +65,7 @@ RTAxisRenderer >> axisFrom: fromPosition to: toPosition [
 	self axisFrom: fromPosition to: toPosition width: 1
 ]
 
-{ #category : #public-rendering }
+{ #category : #'public-rendering' }
 RTAxisRenderer >> axisFrom: fromPosition to: toPosition width: lineThicknessInPixels [
 	"THIS IS A PUBLIC METHOD"
 
@@ -146,12 +146,12 @@ RTAxisRenderer >> defaultLabelColor [
 	^ config color
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> getStringFromNumber: aNumber [
 	^ config getStringFromNumber: aNumber
 ]
 
-{ #category : #public-rendering }
+{ #category : #'public-rendering' }
 RTAxisRenderer >> insertTitleIfNecessaryTo: toPosition [
 	| lbl |
 	self title notEmpty
@@ -166,12 +166,12 @@ RTAxisRenderer >> labelFontHeight [
 	^ config labelFontHeight 
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> maxValue [
 	^ config maxValue
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> minValue [
 	^ config minValue
 ]
@@ -181,22 +181,22 @@ RTAxisRenderer >> moveLabel: label againstTick: aTick [
 	self positionLabel value: label value: aTick
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> numberOfLabels [
 	^ config numberOfLabels
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> numberOfTicks [
 	^ config numberOfTicks
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> positionLabel [
 	^ config positionLabel
 ]
 
-{ #category : #public-rendering }
+{ #category : #'public-rendering' }
 RTAxisRenderer >> rotateLabelIfNecessary: label [
 	"Rotate and position the label if necessary"
 	config areLabelRotated ifFalse: [ ^ self ].
@@ -205,12 +205,12 @@ RTAxisRenderer >> rotateLabelIfNecessary: label [
 								(label width / -2 * config labelRotation degreesToRadians sin)) "+ (5 @ 0)".
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> tickIntervalForLabel [
 	^ config tickIntervalForLabel
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTAxisRenderer >> title [
 	^ config title
 ]

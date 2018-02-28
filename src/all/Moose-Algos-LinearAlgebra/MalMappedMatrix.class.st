@@ -8,7 +8,7 @@ Class {
 		'columnMap',
 		'rowMap'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -74,13 +74,13 @@ MalMappedMatrix >> rowSize [
 	^rowMap size
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMappedMatrix >> setColumnMap: mapping [
 	
 	columnMap := mapping ifNil: [MalNumberMapping new: matrix columnSize]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMappedMatrix >> setRowMap: mapping [
 	
 	rowMap := mapping ifNil: [MalNumberMapping new: matrix rowSize]

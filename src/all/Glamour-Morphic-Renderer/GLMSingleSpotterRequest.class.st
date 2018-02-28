@@ -9,7 +9,7 @@ Class {
 		'labelBlock',
 		'iconBlock'
 	],
-	#category : #Glamour-Morphic-Renderer-Spotter
+	#category : #'Glamour-Morphic-Renderer-Spotter'
 }
 
 { #category : #utilities }
@@ -72,7 +72,7 @@ GLMSingleSpotterRequest >> default: aString [
 	default := aString
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 GLMSingleSpotterRequest >> defaultAction [
 	^(GLMMorphicSingleSpotter openOn: self) answer
 ]

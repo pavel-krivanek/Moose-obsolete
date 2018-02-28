@@ -6,7 +6,7 @@ Class {
 		'namespacedDocument',
 		'textDocument'
 	],
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #asserting }
@@ -1283,6 +1283,15 @@ XPathTest >> testInvalidNumberTokenizing [
 	self
 		should: ['1.2.' asXPath evaluate]
 		raise: XPathSyntaxException.
+]
+
+{ #category : #tests }
+XPathTest >> testInvalidOperatorTokenizing [
+	#('1 ortwo 3' '1 andtwo 3' '1 divtwo 3' '1 modtwo 3' '1 ! 3')
+		do: [:each |
+			self
+				should: [each asXPath evaluate]
+				raise: XPathSyntaxException]
 ]
 
 { #category : #tests }

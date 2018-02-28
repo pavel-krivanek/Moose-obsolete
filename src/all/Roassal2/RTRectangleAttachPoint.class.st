@@ -23,7 +23,7 @@ v
 Class {
 	#name : #RTRectangleAttachPoint,
 	#superclass : #RTContinuousAttachPoint,
-	#category : #Roassal2-AttachPoint
+	#category : #'Roassal2-AttachPoint'
 }
 
 { #category : #private }

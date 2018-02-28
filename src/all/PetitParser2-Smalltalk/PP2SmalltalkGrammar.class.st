@@ -111,17 +111,17 @@ PP2SmalltalkGrammar >> array [
 	^ ${ asPParser smalltalkToken , (expression delimitedBy: periodToken) optional , $} asPParser smalltalkToken
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> arrayItem [
 	^ literal / symbolLiteralArray / arrayLiteralArray / byteLiteralArray
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> arrayLiteral [
 	^ '#(' asPParser smalltalkToken , arrayItem star , $) asPParser smalltalkToken
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> arrayLiteralArray [
 	^ $( asPParser smalltalkToken , arrayItem star , $) asPParser smalltalkToken
 ]
@@ -141,12 +141,12 @@ PP2SmalltalkGrammar >> binary [
 	^ (PP2PredicateObjectNode anyOf: '!%&*+,-/<=>?@\|~') plus
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> binaryExpression [
 	^ unaryExpression , binaryMessage star
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> binaryMessage [
 	^ (binaryToken , unaryExpression) ==> [ :nodes | 
 		Array 
@@ -154,7 +154,7 @@ PP2SmalltalkGrammar >> binaryMessage [
 			with: (Array with: nodes second) ]
 ]
 
-{ #category : #grammar-methods }
+{ #category : #'grammar-methods' }
 PP2SmalltalkGrammar >> binaryMethod [
 	^ (binaryToken , variable) ==> [ :nodes | 
 		Array 
@@ -162,7 +162,7 @@ PP2SmalltalkGrammar >> binaryMethod [
 			with: (Array with: nodes second) ]
 ]
 
-{ #category : #grammar-pragmas }
+{ #category : #'grammar-pragmas' }
 PP2SmalltalkGrammar >> binaryPragma [
 	^ (binaryToken , arrayItem) ==> [ :nodes | 
 		Array 
@@ -175,52 +175,52 @@ PP2SmalltalkGrammar >> binaryToken [
 	^ binary smalltalkToken
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkGrammar >> block [
 	^ $[ asPParser smalltalkToken , blockBody , $] asPParser smalltalkToken
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkGrammar >> blockArgument [
 	^ $: asPParser smalltalkToken , variable
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkGrammar >> blockArguments [
 	^ blockArgumentsWith / blockArgumentsWithout
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkGrammar >> blockArgumentsWith [
 	^ blockArgument plus , ($| asPParser smalltalkToken / ($] asPParser smalltalkToken and ==> [ :node | nil ]))
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkGrammar >> blockArgumentsWithout [
 	^ nil asPParser ==> [ :nodes | Array with: #() with: nil ]
 ]
 
-{ #category : #grammar-blocks }
+{ #category : #'grammar-blocks' }
 PP2SmalltalkGrammar >> blockBody [
 	^ blockArguments , sequence
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> byteLiteral [
 	^ '#[' asPParser smalltalkToken , numberLiteral star , $] asPParser smalltalkToken
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> byteLiteralArray [
 	^ $[ asPParser smalltalkToken , numberLiteral star , $] asPParser smalltalkToken
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> cascadeExpression [
 	^ keywordExpression , cascadeMessage star
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> cascadeMessage [
 	^ $; asPParser smalltalkToken , message
 ]
@@ -230,7 +230,7 @@ PP2SmalltalkGrammar >> char [
 	^ $$ asPParser , #any asPParser
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> charLiteral [
 	^ charToken
 ]
@@ -245,7 +245,7 @@ PP2SmalltalkGrammar >> expression [
 	^ assignment star , cascadeExpression
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> falseLiteral [
 	^ falseToken
 ]
@@ -279,12 +279,12 @@ PP2SmalltalkGrammar >> keyword [
 	^ identifier , $: asPParser
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> keywordExpression [
 	^ binaryExpression , keywordMessage optional
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> keywordMessage [
 	^ (keywordToken , binaryExpression) plus ==> [ :nodes | 
 		Array 
@@ -292,7 +292,7 @@ PP2SmalltalkGrammar >> keywordMessage [
 			with: (nodes collect: [ :each | each second ]) ]
 ]
 
-{ #category : #grammar-methods }
+{ #category : #'grammar-methods' }
 PP2SmalltalkGrammar >> keywordMethod [
 	^ (keywordToken , variable) plus ==> [ :nodes | 
 		Array 
@@ -300,7 +300,7 @@ PP2SmalltalkGrammar >> keywordMethod [
 			with: (nodes collect: [ :each | each second ]) ]
 ]
 
-{ #category : #grammar-pragmas }
+{ #category : #'grammar-pragmas' }
 PP2SmalltalkGrammar >> keywordPragma [
 	^ (keywordToken , arrayItem) plus ==> [ :nodes | 
 		Array 
@@ -343,7 +343,7 @@ PP2SmalltalkGrammar >> multiword [
 	^ keyword plus
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> nilLiteral [
 	^ nilToken
 ]
@@ -366,7 +366,7 @@ PP2SmalltalkGrammar >> number [
 	] asPParser
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> numberLiteral [
 	^ numberToken
 ]
@@ -416,7 +416,7 @@ PP2SmalltalkGrammar >> pragma [
 	^ $< asPParser smalltalkToken , pragmaMessage , $> asPParser smalltalkToken
 ]
 
-{ #category : #grammar-pragmas }
+{ #category : #'grammar-pragmas' }
 PP2SmalltalkGrammar >> pragmaMessage [
 	^ keywordPragma / unaryPragma / binaryPragma
 ]
@@ -479,7 +479,7 @@ PP2SmalltalkGrammar >> string [
 		yourself
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> stringLiteral [
 	^ stringToken
 ]
@@ -494,14 +494,14 @@ PP2SmalltalkGrammar >> symbol [
 	^ unary / binary / multiword / string
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> symbolLiteral [
 	"This is totally fucked up: The Pharo compiler allows multiple #, arbitrary spaces between the # and the symbol, as well as comments inbetween. And yes, it is used."
 
 	^ $# asPParser smalltalkToken plus , symbol smalltalkToken ==> [ :tokens | tokens first copyWith: tokens last ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> symbolLiteralArray [
 	^ symbol smalltalkToken
 ]
@@ -511,7 +511,7 @@ PP2SmalltalkGrammar >> temporaries [
 	^ ($| asPParser smalltalkToken , variable star , $| asPParser smalltalkToken) optional ==> [ :nodes | nodes ifNil: [ #() ] ]
 ]
 
-{ #category : #grammar-literals }
+{ #category : #'grammar-literals' }
 PP2SmalltalkGrammar >> trueLiteral [
 	^ trueToken
 ]
@@ -526,12 +526,12 @@ PP2SmalltalkGrammar >> unary [
 	^ identifier , $: asPParser not
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> unaryExpression [
 	^ primary , unaryMessage star
 ]
 
-{ #category : #grammar-messages }
+{ #category : #'grammar-messages' }
 PP2SmalltalkGrammar >> unaryMessage [
 	^ unaryToken ==> [ :node | 
 		Array 
@@ -539,7 +539,7 @@ PP2SmalltalkGrammar >> unaryMessage [
 			with: Array new ]
 ]
 
-{ #category : #grammar-methods }
+{ #category : #'grammar-methods' }
 PP2SmalltalkGrammar >> unaryMethod [
 	^ identifierToken ==> [ :node | 
 		Array 
@@ -547,7 +547,7 @@ PP2SmalltalkGrammar >> unaryMethod [
 			with: Array new ]
 ]
 
-{ #category : #grammar-pragmas }
+{ #category : #'grammar-pragmas' }
 PP2SmalltalkGrammar >> unaryPragma [
 	^ identifierToken ==> [ :node | 
 		Array 

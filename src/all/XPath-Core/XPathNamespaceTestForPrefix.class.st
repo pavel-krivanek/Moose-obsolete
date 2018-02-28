@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'prefix'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }

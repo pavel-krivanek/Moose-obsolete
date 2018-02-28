@@ -1,1 +1,1 @@
-Package { #name : #Moose-MonticelloImporter }
+Package { #name : #'Moose-MonticelloImporter' }

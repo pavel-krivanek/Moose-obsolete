@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'lastAddedTo'
 	],
-	#category : #XML-Parser-Validation-DFA
+	#category : #'XML-Parser-Validation-DFA'
 }
 
 { #category : #adding }

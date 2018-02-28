@@ -12,7 +12,7 @@ Class {
 		'unupdatedListMorph',
 		'labelMorph'
 	],
-	#category : #Glamour-Tests-Morphic
+	#category : #'Glamour-Tests-Morphic'
 }
 
 { #category : #tests }
@@ -22,6 +22,7 @@ GLMUpdateMorphicTest >> expectedFailures [
 
 { #category : #tests }
 GLMUpdateMorphicTest >> setUp [
+	super setUp.
 	announcer := Announcer new.
 	entity := OrderedCollection with: 1 with: 2 with: 3.
 	browser := GLMTabulator new.

@@ -8,7 +8,7 @@ Class {
 	#pools : [
 		'LANPool'
 	],
-	#category : #Moose-TestResources-LAN
+	#category : #'Moose-TestResources-LAN'
 }
 
 { #category : #'instance creation' }
@@ -17,7 +17,7 @@ LANNode class >> new [
 	^super new initialize
 ]
 
-{ #category : #sending-receiving }
+{ #category : #'sending-receiving' }
 LANNode >> accept: thePacket [ 
 	"Having received the packet, send it on. This is the default behavior." 
 	"My subclasses will probably override this method to do something special" 
@@ -43,7 +43,7 @@ LANNode >> canOutput [
 	^false
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 LANNode >> initialize [ 
 	"This is the default initialize method that is always called when new instances are created. My  
 	subclasses will likely override this method to be initialized." 
@@ -98,7 +98,7 @@ LANNode >> printOn: aStream [
 	self nextNode ifNotNil: [ aStream nextPutAll: ', pointing to ' , self nextNode name printString ]
 ]
 
-{ #category : #sending-receiving }
+{ #category : #'sending-receiving' }
 LANNode >> send: thePacket [ 
 	"Display debug information in the Transcript, then send the packet to the node which whom I  
 	communicate" 

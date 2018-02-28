@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'localName'
 	],
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #'instance creation' }
@@ -18,7 +18,7 @@ XPathASTAttributeNodeTestForPrefixAndLocalNameNode class >> prefix: aPrefix loca
 
 { #category : #visiting }
 XPathASTAttributeNodeTestForPrefixAndLocalNameNode >> acceptNodeVisitor: aNodeVisitor [
-	^ aNodeVisitor visitAttributeTestForPrefixAndLocalName: self
+	^ aNodeVisitor visitAttributeNodeTestForPrefixAndLocalName: self
 ]
 
 { #category : #testing }

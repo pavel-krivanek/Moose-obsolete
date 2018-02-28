@@ -10,14 +10,13 @@ Class {
 	#instVars : [
 		'sourcedEntities'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXSourceLanguage class >> annotation [
 	<MSEClass: #SourceLanguage super: #FAMIXEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -32,7 +31,7 @@ FAMIXSourceLanguage >> format: aSourceString from: anEntity [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXSourceLanguage >> initialize [
 	super initialize.
 	sourcedEntities := FMNullMultivalueLink on: self opposite: #declaredSourceLanguage: selector: #sourcedEntities

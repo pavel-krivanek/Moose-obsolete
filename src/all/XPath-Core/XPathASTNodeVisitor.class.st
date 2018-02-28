@@ -9,7 +9,7 @@ Class {
 		'predicateIterator',
 		'stepIterator'
 	],
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #private }
@@ -140,14 +140,14 @@ XPathASTNodeVisitor >> visitAttributeNodeTestForPrefix: anAttributeNodeTestForPr
 	^ self visitNodeTest: anAttributeNodeTestForPrefix
 ]
 
+{ #category : #'visiting - node tests' }
+XPathASTNodeVisitor >> visitAttributeNodeTestForPrefixAndLocalName: anAttributeNodeTestForPrefixAndLocalName [
+	^ self visitNodeTest: anAttributeNodeTestForPrefixAndLocalName
+]
+
 { #category : #'visiting - steps' }
 XPathASTNodeVisitor >> visitAttributeStep: anAttributeStep [
 	^ self visitStep: anAttributeStep
-]
-
-{ #category : #'visiting - node tests' }
-XPathASTNodeVisitor >> visitAttributeTestForPrefixAndLocalName: anAttributeNodeTestForPrefixAndLocalName [
-	^ self visitNodeTest: anAttributeNodeTestForPrefixAndLocalName
 ]
 
 { #category : #'visiting - operators' }

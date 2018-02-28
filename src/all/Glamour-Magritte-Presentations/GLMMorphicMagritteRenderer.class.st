@@ -5,7 +5,7 @@ Class {
 		'scrollPane',
 		'containerMorphClass'
 	],
-	#category : #Glamour-Magritte-Presentations
+	#category : #'Glamour-Magritte-Presentations'
 }
 
 { #category : #rendering }

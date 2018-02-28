@@ -30,7 +30,7 @@ Class {
 		'globals',
 		'furthestFailure'
 	],
-	#category : #PetitParser-Core
+	#category : #'PetitParser-Core'
 }
 
 { #category : #'as yet unclassified' }
@@ -71,14 +71,14 @@ PPContext >> furthestFailure [
 	^ furthestFailure
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> globalAt: aKey [
 	"Answer the global property value associated with aKey."
 	
 	^ self globalAt: aKey ifAbsent: [ self error: 'Property not found' ]
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> globalAt: aKey ifAbsent: aBlock [
 	"Answer the global property value associated with aKey or, if aKey isn't found, answer the result of evaluating aBlock."
 	
@@ -87,14 +87,14 @@ PPContext >> globalAt: aKey ifAbsent: aBlock [
 		ifFalse: [ globals at: aKey ifAbsent: aBlock ]
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> globalAt: aKey ifAbsentPut: aBlock [
 	"Answer the global property associated with aKey or, if aKey isn't found store the result of evaluating aBlock as new value."
 	
 	^ self globalAt: aKey ifAbsent: [ self globalAt: aKey put: aBlock value ]
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> globalAt: aKey put: anObject [
 	"Set the global property at aKey to be anObject. If aKey is not found, create a new entry for aKey and set is value to anObject. Answer anObject."
 
@@ -102,19 +102,19 @@ PPContext >> globalAt: aKey put: anObject [
 		at: aKey put: anObject
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> globals [
 	^ globals
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> hasGlobal: aKey [
 	"Test if the global property aKey is present."
 	
 	^ globals notNil and: [ globals includesKey: aKey ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> hasProperty: aKey [
 	"Test if the property aKey is present."
 	
@@ -203,19 +203,19 @@ PPContext >> printOn: aStream [
 	stream printOn: aStream
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> properties [
 	^ properties 
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> propertyAt: aKey [
 	"Answer the property value associated with aKey."
 	
 	^ self propertyAt: aKey ifAbsent: [ self error: 'Property not found' ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> propertyAt: aKey ifAbsent: aBlock [
 	"Answer the property value associated with aKey or, if aKey isn't found, answer the result of evaluating aBlock."
 	
@@ -224,14 +224,14 @@ PPContext >> propertyAt: aKey ifAbsent: aBlock [
 		ifFalse: [ properties at: aKey ifAbsent: aBlock ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> propertyAt: aKey ifAbsentPut: aBlock [
 	"Answer the property associated with aKey or, if aKey isn't found store the result of evaluating aBlock as new value."
 	
 	^ self propertyAt: aKey ifAbsent: [ self propertyAt: aKey put: aBlock value ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> propertyAt: aKey put: anObject [
 	"Set the property at aKey to be anObject. If aKey is not found, create a new entry for aKey and set is value to anObject. Answer anObject."
 
@@ -260,14 +260,14 @@ PPContext >> rememberProperties: aPPContextMemento [
 	].
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> removeGlobal: aKey [
 	"Remove the property with aKey. Answer the property or raise an error if aKey isn't found."
 	
 	^ self removeGlobal: aKey ifAbsent: [ self error: 'Property not found' ]
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PPContext >> removeGlobal: aKey ifAbsent: aBlock [
 	"Remove the global property with aKey. Answer the value or, if aKey isn't found, answer the result of evaluating aBlock."
 	
@@ -278,14 +278,14 @@ PPContext >> removeGlobal: aKey ifAbsent: aBlock [
 	^ answer
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> removeProperty: aKey [
 	"Remove the property with aKey. Answer the property or raise an error if aKey isn't found."
 	
 	^ self removeProperty: aKey ifAbsent: [ self error: 'Property not found' ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 PPContext >> removeProperty: aKey ifAbsent: aBlock [
 	"Remove the property with aKey. Answer the value or, if aKey isn't found, answer the result of evaluating aBlock."
 	

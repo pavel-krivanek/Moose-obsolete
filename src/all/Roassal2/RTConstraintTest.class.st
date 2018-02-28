@@ -5,7 +5,7 @@ Class {
 		'shape2',
 		'shape1'
 	],
-	#category : #Roassal2-Core-Tests
+	#category : #'Roassal2-Core-Tests'
 }
 
 { #category : #running }

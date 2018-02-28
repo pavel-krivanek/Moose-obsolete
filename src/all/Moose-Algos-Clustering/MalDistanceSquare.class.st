@@ -10,7 +10,7 @@ Class {
 		'items',
 		'dendrogram'
 	],
-	#category : #Moose-Algos-Clustering
+	#category : #'Moose-Algos-Clustering'
 }
 
 { #category : #constants }
@@ -88,7 +88,7 @@ MalDistanceSquare >> distanceBlock: anObject [
 	distanceBlock := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalDistanceSquare >> initialize: vectorA and: vectorB using: aDistanceBlock [
 	
 	items := nil.
@@ -104,7 +104,7 @@ MalDistanceSquare >> initialize: vectorA and: vectorB using: aDistanceBlock [
 						value: (vectorB at: row)]]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalDistanceSquare >> initialize: someItems using: aDistanceBlock [
 	
 	items := someItems.

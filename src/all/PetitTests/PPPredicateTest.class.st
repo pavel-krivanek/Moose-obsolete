@@ -1,7 +1,7 @@
 Class {
 	#name : #PPPredicateTest,
 	#superclass : #PPAbstractParserTest,
-	#category : #PetitTests-Tests
+	#category : #'PetitTests-Tests'
 }
 
 { #category : #utilities }
@@ -36,7 +36,7 @@ PPPredicateTest >> parsedCharacterSet: aParser [
 	^ result contents
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PPPredicateTest >> testAny [
 	| parser |
 	parser := #any asParser.
@@ -47,7 +47,7 @@ PPPredicateTest >> testAny [
 	self assert: parser fail: ''
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PPPredicateTest >> testAnyExceptAnyOf [
 	| parser |
 	parser := PPPredicateObjectParser anyExceptAnyOf: #($: $,).
@@ -58,7 +58,7 @@ PPPredicateTest >> testAnyExceptAnyOf [
 	self assert: parser fail: ','
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PPPredicateTest >> testAnyOf [
 	| parser |
 	parser := PPPredicateObjectParser anyOf: #($a $z).
@@ -68,7 +68,7 @@ PPPredicateTest >> testAnyOf [
 	self assert: parser fail: 'x'
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PPPredicateTest >> testBetweenAnd [
 	| parser |
 	parser := PPPredicateObjectParser between: $b and: $d.
@@ -80,7 +80,7 @@ PPPredicateTest >> testBetweenAnd [
 	self assert: parser fail: 'e'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testBlank [
 	| parser |
 	parser := #blank asParser.
@@ -92,7 +92,7 @@ PPPredicateTest >> testBlank [
 	self assert: parser fail: (String with: Character cr)
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testChar [
 	| parser |
 	parser := $* asParser.
@@ -104,7 +104,7 @@ PPPredicateTest >> testChar [
 	self assert: parser fail: 'a'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testCr [
 	| parser |
 	parser := #cr asParser.
@@ -112,7 +112,7 @@ PPPredicateTest >> testCr [
 	self assert: parser parse: (String with: (Character codePoint: 13)) to: (Character codePoint: 13)
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testDigit [
 	| parser |
 	parser := #digit asParser.
@@ -123,7 +123,7 @@ PPPredicateTest >> testDigit [
 	self assert: parser fail: 'a'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testEndOfFile [
 	| parser |
 	parser := (#letter asParser / #blank asParser) star, #eof asParser.
@@ -137,7 +137,7 @@ PPPredicateTest >> testEndOfFile [
 
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testEndOfLine [
 	| cr crlf lf parser |
 	cr := Character cr asString.
@@ -167,7 +167,7 @@ PPPredicateTest >> testEndOfLine [
 
 ]
 
-{ #category : #testing-objects }
+{ #category : #'testing-objects' }
 PPPredicateTest >> testExpect [
 	| parser |
 	parser := PPPredicateObjectParser expect: $a.
@@ -177,7 +177,7 @@ PPPredicateTest >> testExpect [
 	self assert: parser fail: ''
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testHex [
 	| parser |
 	parser := #hex asParser.
@@ -195,7 +195,7 @@ PPPredicateTest >> testHex [
 	self assert: parser fail: 'g'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testLetter [
 	| parser |
 	parser := #letter asParser.
@@ -206,7 +206,7 @@ PPPredicateTest >> testLetter [
 	self assert: parser fail: '0'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testLf [
 	| parser |
 	parser := #lf asParser.
@@ -214,7 +214,7 @@ PPPredicateTest >> testLf [
 	self assert: parser parse: (String with: Character lf) to: Character lf
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testLowercase [
 	| parser |
 	parser := #lowercase asParser.
@@ -226,7 +226,7 @@ PPPredicateTest >> testLowercase [
 	self assert: parser fail: '0'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testNewline [
 	| parser |
 	parser := #newline asParser.
@@ -255,7 +255,7 @@ PPPredicateTest >> testOnMessage [
 	self assert: parser fail: 'a'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testPunctuation [
 	| parser |
 	parser := #punctuation asParser.
@@ -267,7 +267,7 @@ PPPredicateTest >> testPunctuation [
 	self assert: parser fail: '1'
 ]
 
-{ #category : #testing-sequence }
+{ #category : #'testing-sequence' }
 PPPredicateTest >> testSequenceParser [
 	| parser |
 	parser := PPPredicateSequenceParser
@@ -291,7 +291,7 @@ PPPredicateTest >> testSequenceParser [
 	self assert: parser fail: 'Ab'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testSpace [
 	| parser |
 	parser := #space asParser.
@@ -302,7 +302,7 @@ PPPredicateTest >> testSpace [
 	self assert: parser fail: 'a'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testStartOfLine [
 	| cr crlf lf parser |
 	cr := Character cr asString.
@@ -331,7 +331,7 @@ PPPredicateTest >> testStartOfLine [
 
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testStartOfLogicalLine [
 	| parser |
 	parser := #startOfLogicalLine asParser, #any asParser star.
@@ -346,7 +346,7 @@ PPPredicateTest >> testStartOfLogicalLine [
 	self assert: parser parse: '	lorem'.
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testStartOfWord [
 	| parser |
 	parser := #startOfWord asParser, #word asParser plus.
@@ -368,7 +368,7 @@ PPPredicateTest >> testStartOfWord [
 	self assert: parser fail: '.'.
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testTab [
 	| parser |
 	parser := #tab asParser.
@@ -376,7 +376,7 @@ PPPredicateTest >> testTab [
 	self assert: parser parse: (String with: Character tab) to: Character tab
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testUppercase [
 	| parser |
 	parser := #uppercase asParser.
@@ -388,7 +388,7 @@ PPPredicateTest >> testUppercase [
 	self assert: parser fail: '0'
 ]
 
-{ #category : #testing-chars }
+{ #category : #'testing-chars' }
 PPPredicateTest >> testWord [
 	| parser |
 	parser := #word asParser.

@@ -4,7 +4,7 @@ The null codec always returns the original streams. It assumes that the outside 
 Class {
 	#name : #GRNullCodec,
 	#superclass : #GRCodec,
-	#category : #Grease-Core-Text
+	#category : #'Grease-Core-Text'
 }
 
 { #category : #private }

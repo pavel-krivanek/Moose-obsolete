@@ -5,7 +5,7 @@ Class {
 		'leftParens',
 		'rightParens'
 	],
-	#category : #SmaCC_Rewrite_Engine_Tests
+	#category : #'SmaCC_Rewrite_Engine_Tests'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ SmaCCRewriteTestExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SmaCCRewriteTestExpressionNode >> initialize [
 	super initialize.
 	leftParens := OrderedCollection new: 2.

@@ -5,10 +5,10 @@ Class {
 		'history1',
 		'history2'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoCoChangeHistory class >> annotation [
 	<MSEClass: #CoChangeHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

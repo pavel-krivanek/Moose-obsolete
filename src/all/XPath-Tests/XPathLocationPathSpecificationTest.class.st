@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'specificationDocument'
 	],
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #running }

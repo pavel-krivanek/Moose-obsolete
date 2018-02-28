@@ -4,7 +4,7 @@ I am an abstract test class for the tests of FAMIXAbstractFileAnchor's subclasse
 Class {
 	#name : #FAMIXAbstractFileAnchorTest,
 	#superclass : #FAMIXSourceAnchorTest,
-	#category : #Famix-Tests-Core
+	#category : #'Famix-Tests-Core'
 }
 
 { #category : #testing }

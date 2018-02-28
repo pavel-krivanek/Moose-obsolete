@@ -7,7 +7,7 @@ Class {
 		'subComponents',
 		'groupBoxName'
 	],
-	#category : #Merlin-PartsLayout
+	#category : #'Merlin-PartsLayout'
 }
 
 { #category : #'instance creation' }
@@ -29,7 +29,7 @@ PaneAbstractLine >> inGroupboxNamed: aString [
 	groupBoxName := aString.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 PaneAbstractLine >> initialize [
 
 	subComponents := OrderedCollection new.

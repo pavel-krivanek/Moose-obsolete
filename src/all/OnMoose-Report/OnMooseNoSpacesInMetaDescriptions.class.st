@@ -1,7 +1,7 @@
 Class {
 	#name : #OnMooseNoSpacesInMetaDescriptions,
 	#superclass : #REPMooseQueryConcern,
-	#category : #OnMoose-Report
+	#category : #'OnMoose-Report'
 }
 
 { #category : #accessing }

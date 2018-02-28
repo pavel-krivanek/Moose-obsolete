@@ -4,7 +4,7 @@ An abstract class for function prototype parser handlers.
 Class {
 	#name : #XPathFunctionPrototypeParserHandler,
 	#superclass : #XPathParserHandler,
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #handling }

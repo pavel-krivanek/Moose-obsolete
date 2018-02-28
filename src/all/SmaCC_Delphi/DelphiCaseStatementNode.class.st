@@ -9,7 +9,7 @@ Class {
 		'elseToken',
 		'endToken'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -66,7 +66,7 @@ DelphiCaseStatementNode >> expression: aDelphiExpressionNode [
 		ifTrue: [ self expression parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiCaseStatementNode >> initialize [
 	super initialize.
 	options := OrderedCollection new: 2.

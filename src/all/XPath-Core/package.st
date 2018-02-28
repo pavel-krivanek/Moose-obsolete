@@ -1,1 +1,1 @@
-Package { #name : #XPath-Core }
+Package { #name : #'XPath-Core' }

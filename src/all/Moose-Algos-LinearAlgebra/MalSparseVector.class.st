@@ -14,7 +14,7 @@ Class {
 		'size',
 		'contents'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #adding }
@@ -88,13 +88,13 @@ MalSparseVector >> dotProduct: aVector [
 	^sum
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalSparseVector >> initializeContents: anAssociationArray [
 	
 	contents := anAssociationArray
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalSparseVector >> initializeSize: aSize [
 
 	self flag: #importChange. "replace ArrayList with OrderedCollection"

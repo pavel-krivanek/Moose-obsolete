@@ -1,6 +1,6 @@
 Extension { #name : #REPConcern }
 
-{ #category : #'*arki-reporter-browser' }
+{ #category : #'*Arki-Reporter-Browser' }
 REPConcern >> browser [
 	| browser |
 	browser := GLMTabulator new.
@@ -12,7 +12,15 @@ REPConcern >> browser [
 	^ browser 
 ]
 
-{ #category : #'*arki-reporter-browser' }
+{ #category : #'*Arki-Reporter-Browser' }
+REPConcern >> gtInspectorExplanationIn: composite [
+	<gtInspectorPresentationOrder: 9>
+	composite text
+		title: 'Explanation';
+		display: [ self explanation ]
+]
+
+{ #category : #'*Arki-Reporter-Browser' }
 REPConcern >> open [
 	| spec |
 	spec := REPConcernSpecification on: self model.

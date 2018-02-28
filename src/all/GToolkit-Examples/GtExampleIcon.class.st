@@ -17,7 +17,7 @@ GtExampleIcon >> basicForm [
 	^ self subclassResponsibility
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExampleIcon >> form [ 
 	"I return the icon created by the associated method."
 	^ self exists

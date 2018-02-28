@@ -1,1 +1,1 @@
-Package { #name : #Moose-Tests-Algos-HierarchicalGraph }
+Package { #name : #'Moose-Tests-Algos-HierarchicalGraph' }

@@ -8,7 +8,7 @@ Class {
 		'serial',
 		'builder'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #private }

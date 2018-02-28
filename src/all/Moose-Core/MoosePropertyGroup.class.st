@@ -12,14 +12,13 @@ Class {
 		'originalGroup',
 		'propertySymbolOrBlock'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 MoosePropertyGroup class >> annotation [
 	<MSEClass: #PropertyGroup super: #MooseGroup>
 	<package: #Moose>
-	^self
 ]
 
 { #category : #'instance creation' }

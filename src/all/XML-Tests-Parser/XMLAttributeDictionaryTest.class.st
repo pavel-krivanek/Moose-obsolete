@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLAttributeDictionaryTest,
 	#superclass : #OrderPreservingStringDictionaryTest,
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #accessing }

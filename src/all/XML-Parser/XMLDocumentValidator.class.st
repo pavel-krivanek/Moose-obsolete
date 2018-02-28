@@ -8,7 +8,7 @@ Class {
 		'elementValidatorStack',
 		'defaultXMLIDValidator'
 	],
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #accessing }

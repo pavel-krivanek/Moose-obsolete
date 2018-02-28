@@ -1,7 +1,7 @@
 Class {
 	#name : #REPMooseQueryConcern,
 	#superclass : #REPComputedConcern,
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #accessing }
@@ -16,6 +16,16 @@ REPMooseQueryConcern >> computeStatus [
 					self result isEmpty 
 						ifTrue: [REPConcernSuccessStatus new concern: self ]
 						ifFalse: [REPConcernFailureStatus new concern: self ] ] ]
+]
+
+{ #category : #'as yet unclassified' }
+REPMooseQueryConcern >> gtDisplayOn: stream [
+	stream nextPutAll: self explanation.
+	self status isFailureStatus ifTrue: [ 
+		stream 
+			space;
+			nextPutAll: self result size asString;
+			nextPutAll: ' violations' ]
 ]
 
 { #category : #accessing }

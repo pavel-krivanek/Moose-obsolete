@@ -4,7 +4,7 @@ This class is the default node factory. Its accessor messages return the classes
 Class {
 	#name : #XMLNodeFactory,
 	#superclass : #Object,
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #converting }

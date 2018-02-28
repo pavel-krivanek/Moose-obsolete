@@ -6,12 +6,11 @@ FAMIXLeafEntity is the abstract superclass for source code entities that do not 
 Class {
 	#name : #FAMIXLeafEntity,
 	#superclass : #FAMIXNamedEntity,
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXLeafEntity class >> annotation [
 	<MSEClass: #LeafEntity super: #FAMIXNamedEntity>
 	<package: #FAMIX>
-	^self
 ]

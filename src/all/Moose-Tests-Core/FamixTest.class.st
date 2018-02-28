@@ -1,7 +1,7 @@
 Class {
 	#name : #FamixTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-Core
+	#category : #'Moose-Tests-Core'
 }
 
 { #category : #tests }
@@ -108,5 +108,6 @@ FamixTest >> testSourcesAnchorsAreNotDuplicatedAfterExport [
 	tempFile := (FileSystem memory / 'export-test.mse') ensureCreateFile.
 	model exportToMSEStream: tempFile writeStream.
 	importedModel := MooseModel new importFromMSEStream: tempFile readStream.
-	self assert: importedModel size equals: model size
+	self assert: importedModel size equals: model size.
+	self assert: importedModel allClasses anyOne sourceAnchor notNil
 ]

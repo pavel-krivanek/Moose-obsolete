@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXClassNavigationChefTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
+	#category : #'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
 }
 
 { #category : #allIncomingInvocations }
@@ -147,7 +147,7 @@ FAMIXClassNavigationChefTest >> testClientPackages [
 	self assert: ((self c14ReferencerOutSideRefereeOutSide queryAllIncoming withoutSelfLoops atScope: FAMIXPackage) equalsTo: (Set with: p2 with: p8))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingReference [
 	| modelClasses |
 	modelClasses := self model allClasses.
@@ -167,7 +167,7 @@ FAMIXClassNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingRefere
 					[ :referencer | (referencer queryAllOutgoingInvocations atScope: FAMIXNamespace) allSatisfy: [ :referenced | (referenced queryAllIncomingInvocations atScope: FAMIXType) includes: referencer ] ])
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testEachStaticOutgoingReferenceImpliesAStaticIncomingReference [
 	| modelClasses |
 	modelClasses := self model allClasses.
@@ -181,7 +181,7 @@ FAMIXClassNavigationChefTest >> testEachStaticOutgoingReferenceImpliesAStaticInc
 				allSatisfy: [ :referencer | (referencer queryOutgoingReferences atScope: FAMIXPackage) allSatisfy: [ :referenced | (referenced queryIncomingReferences atScope: FAMIXType) includes: referencer ] ])
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testEachSureOutgoingReferenceImpliesASureIncomingReference [
 	| modelClasses |
 	modelClasses := self model allClasses.
@@ -200,7 +200,7 @@ FAMIXClassNavigationChefTest >> testEachSureOutgoingReferenceImpliesASureIncomin
 					[ :referencer | (referencer querySureOutgoingInvocations atScope: FAMIXNamespace) allSatisfy: [ :referenced | (referenced querySureIncomingInvocations atScope: FAMIXType) includes: referencer ] ])
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testIncomingReferencesAreEitherPotentialOrSureOrStatic [
 	| modelClasses |
 	modelClasses := self model allClasses.
@@ -382,7 +382,7 @@ FAMIXClassNavigationChefTest >> testOppositesOfCompositeQueryResult [
 						yourself))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testOutgoingReferencesAreEitherPotentialOrSureOrStatic [
 	| modelClasses |
 	modelClasses := self model allClasses.
@@ -1539,7 +1539,7 @@ FAMIXClassNavigationChefTest >> testSureReferencedClasses [
 						with: self c11FullRefereeOutSide))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testSureReferencedClassesIncludeAllStaticReferencedClasses [
 	self assert: (self model allClasses allSatisfy: [ :referencer | (referencer queryAllOutgoing atScope: FAMIXType) includesAll: (referencer queryStaticOutgoingAssociations atScope: FAMIXType) ])
 ]
@@ -1642,7 +1642,7 @@ FAMIXClassNavigationChefTest >> testSureReferencedNamespaces [
 						yourself))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testSureReferencedNamespacesTest [
 	| modelClasses |
 	modelClasses := self model allClasses.
@@ -1709,7 +1709,7 @@ FAMIXClassNavigationChefTest >> testSureReferencingClasses [
 						with: self c13FullRefereeInSideOutSide))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXClassNavigationChefTest >> testSureReferencingClassesIncludeAllStaticReferencingClasses [
 	| modelClasses |
 	modelClasses := self model allClasses.

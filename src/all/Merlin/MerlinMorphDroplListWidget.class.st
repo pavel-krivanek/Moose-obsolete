@@ -5,7 +5,7 @@ Class {
 		'dropList',
 		'formatDictionary'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #'accessing - morph contents' }

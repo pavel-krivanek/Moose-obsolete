@@ -29,6 +29,19 @@ GtExampleGroup >> collect: aBlockClosure [
 ]
 
 { #category : #enumerating }
+GtExampleGroup >> directDependenciesFor: aGtExampleWithResult [
+	| dependencies |
+	dependencies := aGtExampleWithResult directDependencies.
+	^ dependencies collect: [ :eachGtExample | 
+		self examples 
+			detect: [ :eachGtExampleWithResult | 
+				(eachGtExampleWithResult methodClass = eachGtExample methodClass)
+					and: [ eachGtExampleWithResult selector = eachGtExample selector ] ]
+			ifFound: [ :eachGtExampleWithResult | eachGtExampleWithResult ]
+			ifNone: [ eachGtExample asExampleWithResult ] ].
+]
+
+{ #category : #enumerating }
 GtExampleGroup >> do: aBlock [ 
 	^ self examples do: aBlock
 ]
@@ -71,17 +84,13 @@ GtExampleGroup >> gtInspectorExamplesIn: composite [
 	composite wrapper with: [:w | 
 		w 
 			title: 'Examples (' , self examples size gtDisplayString , ')';
-			act: [ :wrapper | 
-						self examples do: [ :each | each ignoreTest ifFalse: [ each run ] ] 
-							displayingProgress: 'Running examples ...'.
-						wrapper update ]
-						on: $R
-						entitled: 'Run all';
+			addAction: self newRunAllAction;
 			show: [ :anotherComposite | 
-				anotherComposite fastTable
+				anotherComposite fastTreeTable
 					display: [ self examples ];
 					icon: [ :each | each icon ];
 					"sorted: [ :a :b | a statusText < b statusText ];"
+					children: [ :each | self directDependenciesFor: each ];
 					column: 'Status'
 						evaluated: [ :each | '' ]
 						width: 100
@@ -90,11 +99,21 @@ GtExampleGroup >> gtInspectorExamplesIn: composite [
 					column: 'Result'
 						evaluated: [ :each | '' ]
 						width: 120
-						tags: [ :each | {each resultOrErrorName} ];
-					column: 'Selector' evaluated: [ :each | each example selector ];
+						tags: [ :each | {each resultOrErrorName} ]
+						sortedBy: [ :a :b | a resultOrErrorName < b resultOrErrorName ];
+					column: 'Selector' 
+						evaluated: [ :each | each example selector ];
 					column: 'Class'
 						evaluated: [ :each | '' ]
-						tags: [ :each | {each example methodClass instanceSide name} ];
+						tags: [ :each | { 
+							each example methodClass instanceSide name. 
+							each example methodProtocol } ]
+						sortedBy: [ :a :b | 
+							(a example methodClass instanceSide name 
+							<= b example methodClass instanceSide name) and: [ 
+								a example methodProtocol <= b example methodProtocol ] ];
+					enableFilter: [ :example :pattern | 
+						self matchesExampleWithResult: example withPattern: pattern ];
 					selectionAct: [ :list | 
 						list rawSelection run.
 						list update.
@@ -116,6 +135,25 @@ GtExampleGroup >> gtInspectorExamplesIn: composite [
 { #category : #testing }
 GtExampleGroup >> isCollection [
 	^ true
+]
+
+{ #category : #testing }
+GtExampleGroup >> matchesExampleWithResult: aGtExampleWithResult withPattern: patternString [ 
+	^ aGtExampleWithResult example selector 
+			includesSubstring: patternString caseSensitive: false 
+]
+
+{ #category : #'instance creation' }
+GtExampleGroup >> newRunAllAction [
+	^ GLMGenericAction new
+				action: [ :wrapper | 
+						self examples do: [ :each | each ignoreTest ifFalse: [ each run ] ] 
+							displayingProgress: 'Running examples ...'.
+						wrapper update ]; 
+				shortcut: $R; 
+				showTitle: 'Run all';
+				iconName: #testGreen;
+				yourself
 ]
 
 { #category : #enumerating }

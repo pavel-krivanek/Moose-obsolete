@@ -60,7 +60,7 @@ Class {
 		'inoutTokens',
 		'subscriptTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -147,7 +147,7 @@ SwiftEnumDeclarationNode >> compositeNodeVariables [
 
 { #category : #generated }
 SwiftEnumDeclarationNode >> compositeTokenVariables [
-	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens #lessThanTokens #colonTokens #commaTokens #greaterThanTokens #periodTokens #protocolTokens #whereTokens #equalEqualTokens #importTokens #typealiasTokens #structTokens #classTokens #enumTokens #varTokens #funcTokens #mutatingTokens #nonmutatingTokens #overrideTokens #staticTokens #unownedTokens #unownedLeftParensafeRightParenTokens #unownedLeftParenunsafeRightParenTokens #weakTokens #letTokens #minusGreaterThanTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #getTokens #setTokens #equalTokens #willSetTokens #didSetTokens #inoutTokens #deinitTokens #extensionTokens #caseTokens #convenienceTokens #initTokens #subscriptTokens)
+	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens #lessThanTokens #colonTokens #commaTokens #greaterThanTokens #periodTokens #protocolTokens #whereTokens #equalEqualTokens #importTokens #typealiasTokens #structTokens #classTokens #enumTokens #varTokens #funcTokens #mutatingTokens #nonmutatingTokens #overrideTokens #staticTokens #unownedTokens #unownedLeftParensafeRightParenTokens #unownedLeftParenunsafeRightParenTokens #weakTokens #letTokens #minusGreaterThanTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #getTokens #setTokens #equalTokens #willSetTokens #didSetTokens #deinitTokens #extensionTokens #caseTokens #initTokens #subscriptTokens #convenienceTokens #inoutTokens)
 ]
 
 { #category : #generated }
@@ -334,7 +334,7 @@ SwiftEnumDeclarationNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftEnumDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.
@@ -386,14 +386,14 @@ SwiftEnumDeclarationNode >> initialize [
 	expressions := OrderedCollection new: 2.
 	willSetTokens := OrderedCollection new: 2.
 	didSetTokens := OrderedCollection new: 2.
-	inoutTokens := OrderedCollection new: 2.
 	deinitTokens := OrderedCollection new: 2.
 	extensionTokens := OrderedCollection new: 2.
 	caseTokens := OrderedCollection new: 2.
 	declarations := OrderedCollection new: 2.
-	convenienceTokens := OrderedCollection new: 2.
 	initTokens := OrderedCollection new: 2.
 	subscriptTokens := OrderedCollection new: 2.
+	convenienceTokens := OrderedCollection new: 2.
+	inoutTokens := OrderedCollection new: 2.
 ]
 
 { #category : #generated }

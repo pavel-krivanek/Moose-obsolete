@@ -46,7 +46,7 @@ Class {
 		'statements',
 		'dynamicTypeTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -234,7 +234,7 @@ SwiftPostfixSelfExpressionNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftPostfixSelfExpressionNode >> initialize [
 	super initialize.
 	identifierTokens := OrderedCollection new: 2.

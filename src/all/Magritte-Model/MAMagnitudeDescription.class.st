@@ -4,15 +4,15 @@ I am an abstract description for subclasses of ==Magnitude==. The range of accep
 Class {
 	#name : #MAMagnitudeDescription,
 	#superclass : #MAElementDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAMagnitudeDescription class >> defaultMax [
 	^ nil
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAMagnitudeDescription class >> defaultMin [
 	^ nil
 ]
@@ -22,7 +22,7 @@ MAMagnitudeDescription >> acceptMagritte: aVisitor [
 	aVisitor visitMagnitudeDescription: self
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAMagnitudeDescription >> descriptionMax [
 	<magritteDescription>
 	^ self class new
@@ -32,7 +32,7 @@ MAMagnitudeDescription >> descriptionMax [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAMagnitudeDescription >> descriptionMin [
 	<magritteDescription>
 	^ self class new
@@ -84,7 +84,7 @@ MAMagnitudeDescription >> min: aMinimumObject max: aMaximumObject [
 	self min: aMinimumObject; max: aMaximumObject
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MAMagnitudeDescription >> rangeErrorMessage [
 	| min max |
 	^ self propertyAt: #rangeErrorMessage ifAbsent: [
@@ -97,12 +97,12 @@ MAMagnitudeDescription >> rangeErrorMessage [
 			ifTrue: [ ^ 'Input must be below or equal to ' , max ] ]
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MAMagnitudeDescription >> rangeErrorMessage: aString [
 	self propertyAt: #rangeErrorMessage put: aString
 ]
 
-{ #category : #validation-private }
+{ #category : #'validation-private' }
 MAMagnitudeDescription >> validateSpecific: anObject [
 	super validateSpecific: anObject.
 	(self isWithinRange: anObject)

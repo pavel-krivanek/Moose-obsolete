@@ -35,7 +35,7 @@ Class {
 		'getToken',
 		'setToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -175,7 +175,7 @@ SwiftSubscriptDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftSubscriptDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

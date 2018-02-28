@@ -5,7 +5,7 @@ Class {
 		'resourceStringToken',
 		'definitions'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -30,7 +30,7 @@ DelphiResourceStringListNode >> definitions: anOrderedCollection [
 	self setParents: self definitions to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiResourceStringListNode >> initialize [
 	super initialize.
 	definitions := OrderedCollection new: 2.

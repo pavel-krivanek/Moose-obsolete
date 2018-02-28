@@ -5,10 +5,10 @@ Class {
 		'subHistory',
 		'superHistory'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoInheritanceDefinitionHistory class >> annotation [
 	<MSEClass: #InheritanceDefinitionHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

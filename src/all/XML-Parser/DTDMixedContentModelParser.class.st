@@ -4,7 +4,7 @@ This class parses mixed content declarations like ""(#PCDATA|one|two)*"" using a
 Class {
 	#name : #DTDMixedContentModelParser,
 	#superclass : #DTDContentModelParser,
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #parsing }

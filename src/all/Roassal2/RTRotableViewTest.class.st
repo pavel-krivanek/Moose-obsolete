@@ -6,7 +6,7 @@ Class {
 		'v',
 		'r'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #running }

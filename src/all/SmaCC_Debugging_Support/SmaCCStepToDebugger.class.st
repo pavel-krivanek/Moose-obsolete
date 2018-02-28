@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCStepToDebugger,
 	#superclass : #SmaCCDebuggingAction,
-	#category : #SmaCC_Debugging_Support
+	#category : #'SmaCC_Debugging_Support'
 }
 
 { #category : #registration }
@@ -41,7 +41,7 @@ SmaCCStepToDebugger >> executeAction [
 		ifTrue: [ self debugger debug: self interruptedContext using: self debuggerClass ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCStepToDebugger >> initialize [
 	super initialize.
 	self needsUpdate: false

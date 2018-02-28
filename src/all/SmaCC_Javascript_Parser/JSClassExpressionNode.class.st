@@ -10,7 +10,7 @@ Class {
 		'elements',
 		'rightBrace'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -60,7 +60,7 @@ JSClassExpressionNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSClassExpressionNode >> initialize [
 	super initialize.
 	elements := OrderedCollection new: 2.

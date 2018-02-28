@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'attributeSpec'
 	],
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
 
 { #category : #'instance creation' }

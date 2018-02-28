@@ -1,7 +1,7 @@
 Class {
 	#name : #RTRectanglePackaLayouTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Layouts-Tests
+	#category : #'Roassal2-Layouts-Tests'
 }
 
 { #category : #tests }

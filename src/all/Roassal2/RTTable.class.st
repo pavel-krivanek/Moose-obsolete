@@ -1,7 +1,7 @@
 Class {
 	#name : #RTTable,
 	#superclass : #RTTabTable,
-	#category : #Roassal2-Table
+	#category : #'Roassal2-Table'
 }
 
 { #category : #'as yet unclassified' }

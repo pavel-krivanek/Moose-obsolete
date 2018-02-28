@@ -14,20 +14,18 @@ To adapt your Famix entity to this new API, you just need to add the pragma cont
 Class {
 	#name : #FAMIXEntity,
 	#superclass : #MooseEntity,
-	#traits : 'TMetaLevelDependency',
-	#classTraits : 'TMetaLevelDependency classTrait',
-	#classInstVars : [
-		'childrenAccessors',
-		'parentSelectors',
-		'allChildrenTypes',
-		'allParentTypes'
-	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXEntity class >> annotation [
 	<MSEClass: #Entity super: #Object>
 	<package: #FAMIX>
-	^self
+]
+
+{ #category : #accessing }
+FAMIXEntity >> belongsTo [
+	"Return the primary container of the entity if it exist"
+	
+	^ self subclassResponsibility
 ]

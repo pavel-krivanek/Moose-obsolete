@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'cache'
 	],
-	#category : #Magritte-Model-Memento
+	#category : #'Magritte-Model-Memento'
 }
 
 { #category : #testing }

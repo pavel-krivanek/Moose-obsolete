@@ -9,14 +9,13 @@ Class {
 		'compilationUnit',
 		'header'
 	],
-	#category : #Famix-C
+	#category : #'Famix-C'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXModule class >> annotation [
 	<MSEClass: #Module super: #FAMIXScopingEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

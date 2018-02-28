@@ -4,7 +4,7 @@ This is an AST node class for the 'attribute()' type test or for the '*' type te
 Class {
 	#name : #XPathASTAttributeNodeTestNode,
 	#superclass : #XPathASTNodeTestNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

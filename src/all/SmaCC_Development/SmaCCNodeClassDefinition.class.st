@@ -15,7 +15,7 @@ Class {
 		'variables',
 		'extraAttributes'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -39,7 +39,7 @@ SmaCCNodeClassDefinition >> addVariable: aSmaCCVariableDefinition [
 		forDefinition: self
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> baseTypeOf: aVariableName [
 	| allTypes aRBRootNamespace |
 	aRBRootNamespace := class model.
@@ -61,7 +61,7 @@ SmaCCNodeClassDefinition >> baseTypeOf: aVariableName [
 			current ]
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> calculateCommonSubclassVariables [
 	| allSubclassVars includedVariables |
 	allSubclassVars := Bag new.
@@ -73,7 +73,7 @@ SmaCCNodeClassDefinition >> calculateCommonSubclassVariables [
 		select: [ :each | includedVariables includes: each ]
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> collectionVariableDefinitions [
 	^ self variableDefinitions select: [ :each | each isCollection ]
 ]
@@ -162,7 +162,7 @@ SmaCCNodeClassDefinition >> extraAttributes [
 	^ extraAttributes
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNodeClassDefinition >> extraAttributes: aCollection [
 	extraAttributes := aCollection
 ]
@@ -178,7 +178,7 @@ SmaCCNodeClassDefinition >> grammar [
 	^ grammar
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNodeClassDefinition >> initialize [
 	super initialize.
 	productions := OrderedCollection new.
@@ -221,7 +221,7 @@ SmaCCNodeClassDefinition >> isLocalVariable: aSmaCCVariableDefinition [
 				isNil ]
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> modelTypesForVariable: aVariableName [
 	| allTypes |
 	allTypes := Set new.
@@ -240,7 +240,7 @@ SmaCCNodeClassDefinition >> nodeVariableDefinitions [
 		select: [ :each | each isBasePossibleNodeType ]
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> productionVariables [
 	| vars |
 	vars := productions collect: [ :each | each variableDefinitions ].
@@ -252,7 +252,7 @@ SmaCCNodeClassDefinition >> productions [
 	^ productions
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> removeDuplicateSubclassVariables [
 	variables
 		do:
@@ -264,7 +264,7 @@ SmaCCNodeClassDefinition >> removeDuplicateSubclassVariables [
 						ifFalse: [ sub removeInstanceVariable: each variableName ] ] ]
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> removeInstanceVariable: aString [
 	| variable |
 	variable := self variableDefinitions
@@ -281,7 +281,7 @@ SmaCCNodeClassDefinition >> rootClassName [
 	^ SmaCCParseNode name
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> subclassProductionVariables [
 	| vars |
 	vars := self withAllSubclasses
@@ -294,7 +294,7 @@ SmaCCNodeClassDefinition >> tempNodeName [
 	^ self temporaryNameFor: grammar rootDefinition name
 ]
 
-{ #category : #private-variables }
+{ #category : #'private-variables' }
 SmaCCNodeClassDefinition >> variableDefinitionNamed: aString [
 	^ self variableDefinitions
 		detect: [ :each | each variableName = aString ]

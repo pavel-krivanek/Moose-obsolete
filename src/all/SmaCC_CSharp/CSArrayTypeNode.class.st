@@ -5,7 +5,7 @@ Class {
 		'type',
 		'rankSpecifiers'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ CSArrayTypeNode >> compositeNodeVariables [
 	^ #(#rankSpecifiers)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSArrayTypeNode >> initialize [
 	super initialize.
 	rankSpecifiers := OrderedCollection new: 2.

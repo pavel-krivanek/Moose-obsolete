@@ -6,7 +6,7 @@ Class {
 		'expression',
 		'nodefaultToken'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }

@@ -4,7 +4,7 @@ This is a class for the 'namespace()' type test or for '*' type tests when the p
 Class {
 	#name : #XPathNamespaceTest,
 	#superclass : #XPathNodeTest,
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #testing }

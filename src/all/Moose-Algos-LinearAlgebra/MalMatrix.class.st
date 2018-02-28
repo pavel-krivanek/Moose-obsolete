@@ -4,7 +4,7 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalMatrix,
 	#superclass : #Object,
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #accessing }
@@ -632,7 +632,7 @@ MalMatrix >> hash [
 		bitXor: (self at: self dimension) hash
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrix >> initializeRows: m columns: n [
 	
 	^self subclassResponsibility

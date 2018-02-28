@@ -5,7 +5,7 @@ Class {
 		'constToken',
 		'definitions'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -40,7 +40,7 @@ DelphiConstantListNode >> definitions: anOrderedCollection [
 	self setParents: self definitions to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiConstantListNode >> initialize [
 	super initialize.
 	definitions := OrderedCollection new: 2.

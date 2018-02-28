@@ -1,7 +1,7 @@
 Class {
 	#name : #CSProgramNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }

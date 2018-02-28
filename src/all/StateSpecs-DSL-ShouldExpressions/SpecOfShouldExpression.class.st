@@ -144,8 +144,8 @@ SpecOfShouldExpression >> haveSize: aNumber [
 ]
 
 { #category : #expressions }
-SpecOfShouldExpression >> include: anObject [ 
-	^self verify: (SpecOfCollectionContents requiredItem: anObject)
+SpecOfShouldExpression >> include: anObjectOrSpec [
+	^ self verify: (SpecOfCollectionContents requiredItem: anObjectOrSpec)
 ]
 
 { #category : #expressions }

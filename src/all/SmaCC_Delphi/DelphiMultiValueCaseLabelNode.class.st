@@ -5,7 +5,7 @@ Class {
 		'labels',
 		'commas'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -33,7 +33,7 @@ DelphiMultiValueCaseLabelNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiMultiValueCaseLabelNode >> initialize [
 	super initialize.
 	labels := OrderedCollection new: 2.

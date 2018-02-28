@@ -4,7 +4,7 @@ Non-standard; added for completeness with starts-with().
 Class {
 	#name : #XPathEndsWithFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

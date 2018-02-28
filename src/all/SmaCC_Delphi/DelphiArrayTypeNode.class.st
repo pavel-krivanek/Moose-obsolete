@@ -12,7 +12,7 @@ Class {
 		'type',
 		'constToken'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -72,7 +72,7 @@ DelphiArrayTypeNode >> indexes: anOrderedCollection [
 	self setParents: self indexes to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiArrayTypeNode >> initialize [
 	super initialize.
 	indexes := OrderedCollection new: 2.

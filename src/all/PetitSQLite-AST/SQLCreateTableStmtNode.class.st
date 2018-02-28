@@ -5,7 +5,7 @@ Class {
 		'columns',
 		'constraints'
 	],
-	#category : #PetitSQLite-AST
+	#category : #'PetitSQLite-AST'
 }
 
 { #category : #'as yet unclassified' }

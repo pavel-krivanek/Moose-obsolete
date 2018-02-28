@@ -22,7 +22,7 @@ Class {
 	#classVars : [
 		'UnreservedCharacters'
 	],
-	#category : #XML-Parser-URI
+	#category : #'XML-Parser-URI'
 }
 
 { #category : #'instance creation' }
@@ -201,7 +201,7 @@ XMLURI >> addRawPathSegmentsFrom: aURI [
 
 { #category : #converting }
 XMLURI >> asRetrievableResource [
-	^ self isLocalURI
+	^ self isLocal
 		ifTrue: [self asXMLFileHandle]
 		ifFalse: [self asXMLHTTPRequest]
 ]
@@ -228,12 +228,18 @@ XMLURI >> asString [
 
 { #category : #converting }
 XMLURI >> asXMLFileHandle [
-	^ self path asXMLFileHandle 
+	self isLocal
+		ifFalse: [self errorCannotConvertURIToFileHandle].
+	^ self path asXMLFileHandle.
 ]
 
 { #category : #converting }
 XMLURI >> asXMLHTTPRequest [
-	^ self asString asXMLHTTPRequest
+	(self isHTTP
+		or: [self isHTTPS
+			or: [self isRelative]])
+		ifFalse: [self errorCannotConvertURIToHTTPRequest].
+	^ self asString asXMLHTTPRequest.
 ]
 
 { #category : #converting }
@@ -371,6 +377,20 @@ XMLURI >> copyWithUserInfo: aString [
 	^ self copy rawUserInfo: (self percentEncode: aString)
 ]
 
+{ #category : #private }
+XMLURI >> errorCannotConvertURIToFileHandle [
+	XMLFileException
+		formatSignal: 'Cannot convert non-local URI to file handle: {1}'
+		with: self asString
+]
+
+{ #category : #private }
+XMLURI >> errorCannotConvertURIToHTTPRequest [
+	XMLHTTPException
+		formatSignal: 'Cannot convert URI to HTTP request: {1}'
+		with: self asString
+]
+
 { #category : #accessing }
 XMLURI >> fragment [
 	"Returns the percent-decoded URI fragment (everything after the '#') or
@@ -379,12 +399,12 @@ XMLURI >> fragment [
 	^ self percentDecode: self rawFragment
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLURI >> get [
 	^ self asRetrievableResource get
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLURI >> getUpToLimit: aMaxSize decoding: aBoolean [
 	^ self asRetrievableResource
 		getUpToLimit: aMaxSize
@@ -520,15 +540,39 @@ XMLURI >> isEmpty [
 ]
 
 { #category : #testing }
-XMLURI >> isFileURI [
+XMLURI >> isFile [
 	^ self scheme = 'file'
 ]
 
+{ #category : #deprecated }
+XMLURI >> isFileURI [
+	"will be deprecated; use #isFile instead"
+
+	^ self isFile
+]
+
 { #category : #testing }
-XMLURI >> isLocalURI [
-	^ self isFileURI
+XMLURI >> isHTTP [
+	^ self scheme = 'http'
+]
+
+{ #category : #testing }
+XMLURI >> isHTTPS [
+	^ self scheme = 'https'
+]
+
+{ #category : #testing }
+XMLURI >> isLocal [
+	^ self isFile
 		or: [self isRelative
 			and: [self hasHost not]]
+]
+
+{ #category : #deprecated }
+XMLURI >> isLocalURI [
+	"will be deprecated; use #isLocal instead"
+
+	^ self isLocal
 ]
 
 { #category : #testing }
@@ -636,8 +680,9 @@ XMLURI >> percentAndPlusEncode: aString [
 					ifTrue: [writeStream nextPut: $+]
 					ifFalse: [writeStream nextPut: nextChar]]
 			ifFalse: [
-				(XMLPercentEncodingWriteStreamAdapter on: writeStream)
-					nextPut: nextChar]].
+				(XMLEncodingWriteStreamAdapter on:
+					(XMLPercentEncodingWriteStreamAdapter on: writeStream))
+						nextPut: nextChar]].
 	^ writeStream contents.
 ]
 
@@ -665,7 +710,9 @@ XMLURI >> percentDecode: aString [
 XMLURI >> percentDecodeNextFrom: aReadStream on: aWriteStream [
 	| readStreamAdapter |
 
-	readStreamAdapter := XMLPercentDecodingReadStreamAdapter on: aReadStream.
+	readStreamAdapter :=
+		XMLDecodingReadStreamAdapter
+			on: (XMLPercentDecodingReadStreamAdapter on: aReadStream).
 	[readStreamAdapter atEnd]
 		whileFalse: [aWriteStream nextPut: readStreamAdapter next].
 ]
@@ -680,7 +727,8 @@ XMLURI >> percentEncode: aString [
 		(UnreservedCharacters includes: (nextChar := aString at: i))
 			ifTrue: [writeStream nextPut: nextChar]
 			ifFalse: [
-				(XMLPercentEncodingWriteStreamAdapter on: writeStream)
+				(XMLEncodingWriteStreamAdapter on:
+					(XMLPercentEncodingWriteStreamAdapter on: writeStream))
 					nextPut: nextChar]].
 	^ writeStream contents.
 ]
@@ -827,10 +875,10 @@ XMLURI >> queryAt: aKey [
 
 { #category : #accessing }
 XMLURI >> queryAt: aKey ifAbsent: aBlock [
-	"Returns the last percent/plus-decoded value of the query string
+	"Returns the first percent/plus-decoded value of the query string
 	parameter aKey or the value of aBlock if there isn't one"
 
-	self rawQuery reverseDo: [:each |
+	self rawQuery do: [:each |
 		(self percentAndPlusDecode: each key) = aKey
 			ifTrue: [^ self percentAndPlusDecode: each value]].
 	^ aBlock value.
@@ -867,17 +915,8 @@ XMLURI >> queryKeysAndValuesDo: aTwoArgumentBlock [
 
 { #category : #enumerating }
 XMLURI >> queryKeysDo: aBlock [
-	| enumeratedKeys |
-
-	enumeratedKeys := Set new: self rawQuery size.
-	self rawQuery do: [:each | | decodedKey oldSize |
-		decodedKey := self percentAndPlusDecode: each key.
-		"checking the size after is faster than an #includes: test before"
-		oldSize := enumeratedKeys size.
-		(enumeratedKeys
-			add: decodedKey;
-			size) > oldSize
-			ifTrue: [aBlock value: decodedKey]].
+	self rawQuery do: [:each |
+		aBlock value: (self percentAndPlusDecode: each key)]
 ]
 
 { #category : #accessing }
@@ -1003,12 +1042,12 @@ XMLURI >> scheme: aString [
 	scheme := aString
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLURI >> streamGet [
 	^ self asRetrievableResource streamGet
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLURI >> streamGetUpToLimit: aMaxSize decoding: aBoolean [
 	^ self asRetrievableResource
 		streamGetUpToLimit: aMaxSize

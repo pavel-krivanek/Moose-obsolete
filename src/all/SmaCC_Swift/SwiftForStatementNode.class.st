@@ -11,7 +11,7 @@ Class {
 		'leftParenToken',
 		'rightParenToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -78,7 +78,7 @@ SwiftForStatementNode >> incrementExpression: anObject [
 	incrementExpression := anObject
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftForStatementNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

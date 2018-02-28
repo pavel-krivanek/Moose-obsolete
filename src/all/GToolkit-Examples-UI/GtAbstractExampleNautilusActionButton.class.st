@@ -68,5 +68,6 @@ GtAbstractExampleNautilusActionButton >> actionOrder [
 GtAbstractExampleNautilusActionButton >> isActionHandled [
 	^ self class isAbstract not 
 		and: [ self class isEnabled
-			and: [ method isGTExampleMethod ] ]
+			and: [ method methodClass isTrait not
+				and: [ method isGTExampleMethod ] ] ]
 ]

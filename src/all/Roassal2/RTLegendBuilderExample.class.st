@@ -28,7 +28,7 @@ lb build.
 Class {
 	#name : #RTLegendBuilderExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-Legend
+	#category : #'Roassal2-Builder-Legend'
 }
 
 { #category : #sources }

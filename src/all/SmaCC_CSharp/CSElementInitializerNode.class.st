@@ -7,7 +7,7 @@ Class {
 		'commaTokens',
 		'rightBraceToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -47,7 +47,7 @@ CSElementInitializerNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSElementInitializerNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

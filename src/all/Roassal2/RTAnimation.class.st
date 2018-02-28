@@ -14,7 +14,7 @@ Class {
 		'cycleLength',
 		'element'
 	],
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #actions }

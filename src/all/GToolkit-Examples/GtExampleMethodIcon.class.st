@@ -53,7 +53,7 @@ GtExampleMethodIcon >> exists [
 			and: [ self class class includesSelector: self converter ] ]
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GtExampleMethodIcon >> form [
 	"I return the icon created by the associated method."
 	^ self exists

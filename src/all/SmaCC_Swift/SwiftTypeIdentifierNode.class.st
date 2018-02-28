@@ -8,7 +8,7 @@ Class {
 		'greaterThanTokens',
 		'periodTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -51,7 +51,7 @@ SwiftTypeIdentifierNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftTypeIdentifierNode >> initialize [
 	super initialize.
 	identifierTokens := OrderedCollection new: 2.

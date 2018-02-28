@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'serializer'
 	],
-	#category : #Beacon-Core-Loggers
+	#category : #'Beacon-Core-Loggers'
 }
 
 { #category : #defaults }

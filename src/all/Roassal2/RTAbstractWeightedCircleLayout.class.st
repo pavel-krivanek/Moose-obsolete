@@ -4,7 +4,7 @@ I am the abstract root class of weighted circle layout. Look at the class commen
 Class {
 	#name : #RTAbstractWeightedCircleLayout,
 	#superclass : #RTCircleLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #hook }

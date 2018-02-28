@@ -6,7 +6,7 @@ Class {
 		'questionMark',
 		'token'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }

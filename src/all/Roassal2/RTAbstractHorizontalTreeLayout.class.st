@@ -5,7 +5,7 @@ A ROAbstractHorizontalTreeLayout is xxxxxxxxx.
 Class {
 	#name : #RTAbstractHorizontalTreeLayout,
 	#superclass : #RTAbstractRegularTreeLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #testing }
@@ -13,7 +13,7 @@ RTAbstractHorizontalTreeLayout class >> isAbstract [
 	^ self = RTAbstractHorizontalTreeLayout
 ]
 
-{ #category : #hook-private }
+{ #category : #'hook-private' }
 RTAbstractHorizontalTreeLayout >> computeChildrenFor: aNode [
 	self subclassResponsibility
 ]
@@ -31,7 +31,7 @@ RTAbstractHorizontalTreeLayout >> horizontallyReverse: elements [
 	self inverseAttachPointIfNecessary
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractHorizontalTreeLayout >> initialize [
 	super initialize.
 	verticalGap := 3.
@@ -58,7 +58,7 @@ RTAbstractHorizontalTreeLayout >> inverseAttachPointIfNecessary [
 		ifTrue: [ self inverseAttachPoint ]
 ]
 
-{ #category : #hook-private }
+{ #category : #'hook-private' }
 RTAbstractHorizontalTreeLayout >> layout: aNodeCollection atPoint: aPoint atLayer: aNumber [
 	| treeSize childrenPosition x y middleOfTree |
 	aNodeCollection isEmpty ifTrue: [ ^ 0 ].

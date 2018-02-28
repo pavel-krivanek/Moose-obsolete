@@ -5,14 +5,14 @@ Class {
 		'librarian',
 		'books'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 LIBLibrary class >> annotation [
 	<MSEClass: #Library super: #Object>
 	<package: #LIB>
-	^self
+	
 ]
 
 { #category : #accessing }
@@ -26,7 +26,7 @@ LIBLibrary >> books: aBook [
 	books := aBook
 ]
 
-{ #category : #initialize-release }
+{ #category : #initialization }
 LIBLibrary >> initialize [
 	super initialize.
 	librarian := nil.

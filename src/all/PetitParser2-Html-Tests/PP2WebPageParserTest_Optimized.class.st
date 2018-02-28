@@ -1,5 +1,5 @@
 Class {
-	#name : #PP2WebPageParserTest_Optimized,
+	#name : #'PP2WebPageParserTest_Optimized',
 	#superclass : #PP2WebPageGrammarTest,
 	#traits : 'TPP2WebPageParserTest',
 	#classTraits : 'TPP2WebPageParserTest classTrait',

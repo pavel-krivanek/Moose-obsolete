@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'byName'
 	],
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #'instance creation' }
@@ -39,6 +39,11 @@ REPStakeholder >> , aStakeholder [
 { #category : #accessing }
 REPStakeholder >> asString [
 	^ self name
+]
+
+{ #category : #accessing }
+REPStakeholder >> asStrings [
+	^ {self asString}
 ]
 
 { #category : #accessing }

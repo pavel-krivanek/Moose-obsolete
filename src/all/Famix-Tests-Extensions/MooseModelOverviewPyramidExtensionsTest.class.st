@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseModelOverviewPyramidExtensionsTest,
 	#superclass : #TestCase,
-	#category : #Famix-Tests-Extensions
+	#category : #'Famix-Tests-Extensions'
 }
 
 { #category : #util }

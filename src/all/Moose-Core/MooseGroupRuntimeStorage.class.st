@@ -34,7 +34,7 @@ Class {
 		'byType',
 		'sortedCollectionList'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'as yet unclassified' }
@@ -89,7 +89,7 @@ MooseGroupRuntimeStorage >> elements [
 	^ elements
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseGroupRuntimeStorage >> initialize: capacity [ 
 	 
 	byType := Dictionary new: 24.

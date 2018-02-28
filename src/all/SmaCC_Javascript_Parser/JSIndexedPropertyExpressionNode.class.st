@@ -7,7 +7,7 @@ Class {
 		'fieldExpression',
 		'rightBracket'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -51,7 +51,7 @@ JSIndexedPropertyExpressionNode >> ignoredTokenVariables [
 	^ #(#leftBracket #rightBracket)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSIndexedPropertyExpressionNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

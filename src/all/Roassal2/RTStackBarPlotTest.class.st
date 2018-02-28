@@ -1,7 +1,7 @@
 Class {
 	#name : #RTStackBarPlotTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-StackBarPlot
+	#category : #'Roassal2-Builder-StackBarPlot'
 }
 
 { #category : #tests }

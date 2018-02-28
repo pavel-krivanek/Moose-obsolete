@@ -7,7 +7,7 @@ Class {
 		'totalCount',
 		'doneSemaphore'
 	],
-	#category : #SmaCC_Rewrite_Engine_Command_Line
+	#category : #'SmaCC_Rewrite_Engine_Command_Line'
 }
 
 { #category : #accessing }
@@ -17,9 +17,13 @@ SmaCCRewriteEngineCommandLineHandler class >> commandName [
 
 { #category : #activation }
 SmaCCRewriteEngineCommandLineHandler >> activate [
-	self arguments size >= 1
-		ifTrue: [ ^ self runFile: self arguments first ].
-	self exitFailure: 'Please provide rewrite file to run.'
+	self configurationFilename ifNotNil: [ :filename | ^ self runFile: filename ].
+	self exitFailure: 'Please provide rewrite file to run: --file=filename.rwc'
+]
+
+{ #category : #activation }
+SmaCCRewriteEngineCommandLineHandler >> configurationFilename [
+	^ self optionAt: 'file' ifAbsent: [ self arguments detect: [ :each | each first ~= '-' ] ifNone: [ nil ] ]
 ]
 
 { #category : #activation }
@@ -31,9 +35,19 @@ SmaCCRewriteEngineCommandLineHandler >> finished: aSmaCCRewriteResult [
 				nextPutAll: aSmaCCRewriteResult filename;
 				nextPutAll: ': ';
 				nextPutAll: aSmaCCRewriteResult errorString;
-				cr ].
+				nextPutAll: String crlf ].
 	totalCount = doneCount
 		ifTrue: [ doneSemaphore signal ]
+]
+
+{ #category : #testing }
+SmaCCRewriteEngineCommandLineHandler >> isLocal [
+	^ self hasOption: 'local'
+]
+
+{ #category : #testing }
+SmaCCRewriteEngineCommandLineHandler >> isServer [
+	^ self hasOption: 'server'
 ]
 
 { #category : #activation }
@@ -48,8 +62,10 @@ SmaCCRewriteEngineCommandLineHandler >> run: aSmaCCTransformationToolkitModel [
 			self exitSuccess ].
 	doneSemaphore := Semaphore new.
 	aSmaCCTransformationToolkitModel addDependent: self.
-	aSmaCCTransformationToolkitModel localRunOn: aSmaCCTransformationToolkitModel files.
+	aSmaCCTransformationToolkitModel perform: self runType with: aSmaCCTransformationToolkitModel files.
 	doneSemaphore wait.
+	self shouldTerminateServer
+		ifTrue: [ aSmaCCTransformationToolkitModel terminateServer ].
 	^ (Exit status: failingFiles) signal
 ]
 
@@ -61,6 +77,20 @@ SmaCCRewriteEngineCommandLineHandler >> runFile: aString [
 		on: Error
 		do: [ :ex | ^ self exitFailure: 'Unable to load file: ' , aString ].
 	self run: model
+]
+
+{ #category : #activation }
+SmaCCRewriteEngineCommandLineHandler >> runType [
+	self isLocal
+		ifTrue: [ ^ #localRunOn: ].
+	self isServer
+		ifTrue: [ ^ #localRunOn: ].
+	^ #runOn:
+]
+
+{ #category : #testing }
+SmaCCRewriteEngineCommandLineHandler >> shouldTerminateServer [
+	^ self hasOption: 'terminate'
 ]
 
 { #category : #activation }

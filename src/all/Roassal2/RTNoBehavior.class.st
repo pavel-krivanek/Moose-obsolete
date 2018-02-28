@@ -4,7 +4,7 @@ Class {
 	#classVars : [
 		'Instance'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #accessing }

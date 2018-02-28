@@ -22,12 +22,12 @@ Class {
 
 { #category : #accessing }
 AbstractZeroConfBashScript class >> baseUrl [
-	^ 'http://get.pharo.org' asZnUrl
+	^ 'https://get.pharo.org' asZnUrl
 ]
 
 { #category : #accessing }
 AbstractZeroConfBashScript class >> fileBaseUrl [
-	^ 'http://files.pharo.org' asZnUrl
+	^ 'https://files.pharo.org' asZnUrl
 ]
 
 { #category : #combining }
@@ -230,6 +230,7 @@ AbstractZeroConfBashScript >> formattedUrl [
 	"Return a formatted url where $+ is not urlencoded"
 	| pathString |
 	^ String streamContents: [ :s|
+		s << self url scheme << '://'.
 		self url printAuthorityOn: s.
 		pathString := self url pathPrintString.
 		"do not print a single /"
@@ -389,8 +390,11 @@ AbstractZeroConfBashScript >> generateHtmlHeader [
 	self 
 		<< '#<html><head><!--'; cr;
 		<< '# The line above makes a fake HTML document out of this bash script'; cr; cr;
-		<< '#This zero conf script was generated from the sources found in:'; cr; tab;
+		<< '#This zero conf script was generated from the sources found in:'; cr;
+		<< '#';
+		tab;
 		<< 'https://github.com/pharo-project/pharo-zeroconf'; cr.
+
 ]
 
 { #category : #'script generation html' }

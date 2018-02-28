@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'streamConverter'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #'instance creation' }
@@ -19,24 +19,21 @@ XMLEncodingWriteStreamAdapter class >> on: aStream [
 
 { #category : #'instance creation' }
 XMLEncodingWriteStreamAdapter class >> on: aStream streamConverter: aStreamConverter [
-	^ self new
-		on: aStream;
+	^ (self basicOn:
+		(aStream isXMLBinaryOrExternalStream
+			ifTrue: [aStream]
+			ifFalse: [XMLStringWriteStreamAdapter on: aStream]))
 		streamConverter: aStreamConverter
-]
-
-{ #category : #private }
-XMLEncodingWriteStreamAdapter >> basicNextPut: aCharacter [
-	stream nextPut: aCharacter
-]
-
-{ #category : #private }
-XMLEncodingWriteStreamAdapter >> basicNextPutByte: aByteValue [
-	self basicNextPut: (Character value: aByteValue)
 ]
 
 { #category : #testing }
 XMLEncodingWriteStreamAdapter >> hasDefaultStreamConverter [
 	^ streamConverter isDefault
+]
+
+{ #category : #testing }
+XMLEncodingWriteStreamAdapter >> hasImplicitStreamConverter [
+	^ streamConverter isImplicit
 ]
 
 { #category : #testing }
@@ -53,7 +50,7 @@ XMLEncodingWriteStreamAdapter >> isXMLConvertingStreamAdapter [
 XMLEncodingWriteStreamAdapter >> nextPut: aCharacter [
 	streamConverter
 		nextPut: aCharacter
-		toStream: self.
+		toStream: stream.
 	^ aCharacter.
 ]
 
@@ -64,22 +61,21 @@ XMLEncodingWriteStreamAdapter >> nextPutAll: aCollection [
 	aCollection do: [:each |
 		streamConverter
 			nextPut: each
-			toStream: self].
+			toStream: stream].
 	^ aCollection.
 ]
 
 { #category : #accessing }
 XMLEncodingWriteStreamAdapter >> nextPutByteOrderMark [
-	streamConverter nextPutByteOrderMarkToStream: self
+	streamConverter nextPutByteOrderMarkToStream: stream
 ]
 
 { #category : #printing }
-XMLEncodingWriteStreamAdapter >> printOn: aStream [
-	super printOn: aStream.
+XMLEncodingWriteStreamAdapter >> printStreamOn: aStream [
+	super printStreamOn: aStream.
 	aStream
-		nextPut: $(;
-		print: streamConverter;
-		nextPut: $).
+		nextPutAll: ', ';
+		print: streamConverter.
 ]
 
 { #category : #accessing }

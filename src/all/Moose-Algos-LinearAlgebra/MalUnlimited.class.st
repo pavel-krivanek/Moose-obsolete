@@ -8,7 +8,7 @@ Class {
 		'Negative',
 		'Positive'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'as yet unclassified' }

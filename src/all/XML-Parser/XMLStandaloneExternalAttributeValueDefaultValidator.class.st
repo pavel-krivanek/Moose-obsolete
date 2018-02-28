@@ -4,7 +4,7 @@ This class will make sure the value of a standalone externally defined attribute
 Class {
 	#name : #XMLStandaloneExternalAttributeValueDefaultValidator,
 	#superclass : #XMLAttributeValueDefaultValidator,
-	#category : #XML-Parser-Validation-Standalone
+	#category : #'XML-Parser-Validation-Standalone'
 }
 
 { #category : #private }

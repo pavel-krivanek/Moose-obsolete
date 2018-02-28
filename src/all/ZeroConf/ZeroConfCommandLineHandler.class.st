@@ -195,6 +195,13 @@ ZeroConfCommandLineHandler >> index64Script [
 	^ indexScript.
 ]
 
+{ #category : #accessing }
+ZeroConfCommandLineHandler >> indexLinkTo564HtmlOn: s [
+	s 
+		<< '<h2>Pharo 64bit version</h2>'; cr;
+		<< 'Pharo 64bit versions can be found here: <a href="https://get.pharo.org/64">https://get.pharo.org/64</a>'.
+]
+
 { #category : #'accessing scripts' }
 ZeroConfCommandLineHandler >> indexScript [
 	"the index.html is a special script that downloads the current stable release of Pharo with the VM.
@@ -202,8 +209,9 @@ ZeroConfCommandLineHandler >> indexScript [
 	| indexScript |
 	indexScript := self defaultScript. 
 	indexScript additionalHtmlHelp: (String streamContents: [ :s |
-			self indexScriptExamplesHtmlOn: s.
-			self otherScriptsHtmlOn: s ] ).
+		self indexLinkTo564HtmlOn: s.
+		self indexScriptExamplesHtmlOn: s.
+		self otherScriptsHtmlOn: s ] ).
 	indexScript 
 		basename: 'index.html';
 		url: indexScript baseUrl.

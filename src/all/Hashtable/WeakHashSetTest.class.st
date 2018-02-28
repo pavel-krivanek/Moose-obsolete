@@ -1,7 +1,7 @@
 Class {
 	#name : #WeakHashSetTest,
 	#superclass : #HashSetTest,
-	#category : #Hashtable-Test
+	#category : #'Hashtable-Test'
 }
 
 { #category : #running }

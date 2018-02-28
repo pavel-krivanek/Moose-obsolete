@@ -7,7 +7,7 @@ Class {
 		'identifier',
 		'arrayLevel'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #visiting }

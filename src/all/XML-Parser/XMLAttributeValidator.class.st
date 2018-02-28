@@ -12,7 +12,7 @@ Class {
 	#classVars : [
 		'NormalizedSpace'
 	],
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #'instance creation' }
@@ -296,6 +296,10 @@ XMLAttributeValidator >> validateAttributes: aDictionary [
 							attributeAssociation value.
 					self isStandaloneExternal
 						ifTrue: [
+							"since further normalization just condences multiple spaces
+							to single spaces and removes trailing and leading spaces,
+							comparing the sizes after is enough to detect if it was
+							done"
 							normalizedValue size = attributeAssociation value size
 								ifFalse: [
 									self errorNormalizedStandaloneExternalAttribute]]]

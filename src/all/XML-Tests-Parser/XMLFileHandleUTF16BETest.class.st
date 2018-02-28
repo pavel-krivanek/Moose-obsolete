@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLFileHandleUTF16BETest,
 	#superclass : #XMLFileHandleTest,
-	#category : #XML-Tests-Parser-Files
+	#category : #'XML-Tests-Parser-Files'
 }
 
 { #category : #accessing }
@@ -11,7 +11,7 @@ XMLFileHandleUTF16BETest >> decodedFileContents [
 
 { #category : #accessing }
 XMLFileHandleUTF16BETest >> encodedFileContents [
-	^ XMLStreamAdapterTest encodedUTF16BEString
+	^ XMLStreamAdapterTest encodedUTF16BEBinary
 ]
 
 { #category : #accessing }

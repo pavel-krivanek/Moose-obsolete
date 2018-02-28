@@ -3,18 +3,13 @@ This is a read stream that raises errors if sent peek or next when atEnd, which 
 "
 Class {
 	#name : #XMLExceptionRaisingReadStream,
-	#superclass : #Object,
+	#superclass : #XMLAbstractReadStream,
 	#instVars : [
 		'stream',
 		'wasClosed'
 	],
-	#category : #XML-Tests-Parser-Streams
+	#category : #'XML-Tests-Parser-Streams'
 }
-
-{ #category : #'instance creation' }
-XMLExceptionRaisingReadStream class >> on: aCollection [
-	^ self new on: aCollection
-]
 
 { #category : #testing }
 XMLExceptionRaisingReadStream >> atEnd [
@@ -35,6 +30,13 @@ XMLExceptionRaisingReadStream >> close [
 	wasClosed := true.
 ]
 
+{ #category : #accessing }
+XMLExceptionRaisingReadStream >> contents [
+	stream atEnd
+		ifTrue: [self errorAtEndStreamCannotBeSent: #contents].
+	^ stream contents.
+]
+
 { #category : #private }
 XMLExceptionRaisingReadStream >> errorAtEndStreamCannotBeSent: aSelector [
 	Error signal:
@@ -49,12 +51,8 @@ XMLExceptionRaisingReadStream >> errorClosedStreamCannotBeSent: aSelector [
 
 { #category : #testing }
 XMLExceptionRaisingReadStream >> isBinary [
-	^ false
-]
-
-{ #category : #testing }
-XMLExceptionRaisingReadStream >> isStream [
-	^ true
+	^ (stream respondsTo: #isBinary)
+		and: [stream isBinary]
 ]
 
 { #category : #accessing }

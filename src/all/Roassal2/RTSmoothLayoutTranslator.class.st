@@ -19,7 +19,7 @@ Class {
 		'move',
 		'nbCycles'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #testing }
@@ -28,7 +28,7 @@ RTSmoothLayoutTranslator >> hasCompleted [
 	^ move hasCompleted
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTSmoothLayoutTranslator >> initialize [ 
 	super initialize.
 	

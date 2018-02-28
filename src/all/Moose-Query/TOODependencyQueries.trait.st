@@ -6,5 +6,5 @@ Trait {
 	#name : #TOODependencyQueries,
 	#traits : 'TDependencyQueries',
 	#classTraits : 'TDependencyQueries classTrait',
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }

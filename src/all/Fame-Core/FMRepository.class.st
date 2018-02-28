@@ -34,7 +34,7 @@ Class {
 		'elements',
 		'metamodel'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
 { #category : #'instance creation' }
@@ -134,7 +134,7 @@ FMRepository >> compositeRemove: element [
 	self postRemove: element.
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FMRepository >> containerOf: element [ 
 	| meta property |
 	meta := self metaDescriptionOf: element.
@@ -221,7 +221,7 @@ FMRepository >> exportString [
 	^printer stream contents
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FMRepository >> get: propertyOrName element: element [ 
 
 	^(self coerceProperty: propertyOrName receiver: element) getFrom: element
@@ -267,14 +267,14 @@ FMRepository >> includes: element [
 	^ elements includes: element
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMRepository >> initialize [
 
 	elements := IdentitySet new.
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMRepository >> initialize: aMetamodel [
 
 	self initialize.
@@ -297,7 +297,7 @@ FMRepository >> isMetamodel [
 	^false
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FMRepository >> metaDescriptionOf: element [ 
 
 	^(element isKindOf: FMRuntimeElement) 
@@ -347,7 +347,7 @@ FMRepository >> selectKindOf: smalltalkOrFameClass [
 		ifFalse: [ self elements select: [ :each | (self metaDescriptionOf: each) = smalltalkOrFameClass ] ]
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 FMRepository >> set: propertyOrName element: element values: values [ 
 	
 	^(self coerceProperty: propertyOrName receiver: element) setOn: element values: values 

@@ -4,7 +4,7 @@ Tests for class RTDoubleSlider
 Class {
 	#name : #RTDoubleSliderTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-UI-Slider
+	#category : #'Roassal2-Builder-UI-Slider'
 }
 
 { #category : #tests }

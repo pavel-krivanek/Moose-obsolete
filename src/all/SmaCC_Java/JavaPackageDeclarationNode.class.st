@@ -7,7 +7,7 @@ Class {
 		'name',
 		'semicolon'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -37,7 +37,7 @@ JavaPackageDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaPackageDeclarationNode >> initialize [
 	super initialize.
 	annotations := OrderedCollection new: 2.

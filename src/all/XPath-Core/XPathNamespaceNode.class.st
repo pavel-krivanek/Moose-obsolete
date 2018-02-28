@@ -8,7 +8,7 @@ Class {
 		'name',
 		'uri'
 	],
-	#category : #XPath-Core-DOM
+	#category : #'XPath-Core-DOM'
 }
 
 { #category : #'instance creation' }
@@ -77,8 +77,9 @@ XPathNamespaceNode >> hasPrefix [
 
 { #category : #comparing }
 XPathNamespaceNode >> hash [
-	^ (self species hash bitXor: self name hash)
-		bitXor: self uri hash
+	^ (self species hash bitXor:
+		self name hash) bitXor:
+			self uri hash
 ]
 
 { #category : #testing }

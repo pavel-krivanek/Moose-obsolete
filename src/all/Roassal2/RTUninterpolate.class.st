@@ -1,3 +1,9 @@
+"
+I am the basic uninterpolator, my subclasses are
+
+CAUninterpolateClamp
+CAUninterpolateNumber
+"
 Class {
 	#name : #RTUninterpolate,
 	#superclass : #RTObject,
@@ -5,10 +11,10 @@ Class {
 		'a',
 		'b'
 	],
-	#category : #Roassal2-Builder-Grapher-Scaling
+	#category : #'Roassal2-Builder-Grapher-Scaling'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #interpolating }
 RTUninterpolate class >> uninterpolate: aNum1 and: aNum2 [
 	^ self new uninterpolate: aNum1 and: aNum2.
 	

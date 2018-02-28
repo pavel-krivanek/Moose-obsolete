@@ -8,18 +8,16 @@ Class {
 		'module',
 		'headers'
 	],
-	#category : #Famix-C
+	#category : #'Famix-C'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXCompilationUnit class >> annotation [
 	<MSEClass: #CompilationUnit super: #FAMIXCFile>
 	<package: #FAMIX>
-	^self
-
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXCompilationUnit >> initialize [
 	super initialize.
 	headers := OrderedCollection new.

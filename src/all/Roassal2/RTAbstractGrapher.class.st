@@ -13,7 +13,7 @@ Class {
 		'withOrigin',
 		'yOffset'
 	],
-	#category : #Roassal2-Builder-Grapher-Core
+	#category : #'Roassal2-Builder-Grapher-Core'
 }
 
 { #category : #adding }
@@ -31,7 +31,7 @@ RTAbstractGrapher >> adjustXAxisIfNecessary [
 
 ]
 
-{ #category : #public-axis }
+{ #category : #'public-axis' }
 RTAbstractGrapher >> axisX [
 	axisConfigurationX ifNil: [
 		axisConfigurationX := self createAxisConfiguration ].
@@ -40,7 +40,7 @@ RTAbstractGrapher >> axisX [
 	^ axisConfigurationX
 ]
 
-{ #category : #private-axis }
+{ #category : #'private-axis' }
 RTAbstractGrapher >> axisXFrom: aPoint to: anotherPoint [
 	"Draw the axis from aPoint to anotherPoint"
 	axisConfigurationX fromPoint: aPoint.
@@ -53,7 +53,7 @@ RTAbstractGrapher >> axisXFrom: aPoint to: anotherPoint [
 
 ]
 
-{ #category : #public-axis }
+{ #category : #'public-axis' }
 RTAbstractGrapher >> axisY [
 	axisConfigurationY ifNil: [
 		axisConfigurationY := self createAxisConfiguration ].
@@ -62,7 +62,7 @@ RTAbstractGrapher >> axisY [
 	^ axisConfigurationY
 ]
 
-{ #category : #private-axis }
+{ #category : #'private-axis' }
 RTAbstractGrapher >> axisYFrom: aPoint to: anotherPoint [
 	"Draw the axis from aPoint to anotherPoint"
 	axisConfigurationY fromPoint: aPoint.

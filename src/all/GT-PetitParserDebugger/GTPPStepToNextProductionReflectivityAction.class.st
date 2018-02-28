@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPStepToNextProductionReflectivityAction,
 	#superclass : #GTPPReflectivityStepDebugAction,
-	#category : #GT-PetitParserDebugger
+	#category : #'GT-PetitParserDebugger'
 }
 
 { #category : #registration }

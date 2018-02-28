@@ -47,6 +47,18 @@ GtExampleWithResult >> gtInspectorActionReturnValue [
 	^ self example gtInspectorActionReturnValue
 ]
 
+{ #category : #'as yet unclassified' }
+GtExampleWithResult >> gtInspectorActions [
+	^ super gtInspectorActions addAll: self example gtInspectorActions; yourself
+]
+
+{ #category : #ui }
+GtExampleWithResult >> gtInspectorPresentationsIn: composite inContext: aGTInspector [
+	"we collect all presentations from the wrapped example"
+	super gtInspectorPresentationsIn: composite inContext: aGTInspector.
+	self example gtInspectorPresentationsIn: composite inContext: aGTInspector
+]
+
 { #category : #ui }
 GtExampleWithResult >> gtInspectorSourceIn: composite [
 	<gtInspectorPresentationOrder: 0>
@@ -119,6 +131,11 @@ GtExampleWithResult >> resultOrErrorName [
 { #category : #public }
 GtExampleWithResult >> run [
 	^ self result: self example run
+]
+
+{ #category : #accessing }
+GtExampleWithResult >> selector [
+	^ self example selector
 ]
 
 { #category : #printing }

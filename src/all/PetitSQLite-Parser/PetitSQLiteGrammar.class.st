@@ -151,7 +151,7 @@ Class {
 		'comment',
 		'label'
 	],
-	#category : #PetitSQLite-Parser
+	#category : #'PetitSQLite-Parser'
 }
 
 { #category : #'as yet unclassified' }
@@ -285,14 +285,14 @@ PetitSQLiteGrammar >> columnConstraint [
 	foreignKeyClause ).
 ]
 
-{ #category : #constraints-elements }
+{ #category : #'constraints-elements' }
 PetitSQLiteGrammar >> columnConstraintPrimaryKey [
 	"http://www.sqlite.org/syntaxdiagrams.html#column-constraint"
 	
 	^primaryKey , (asc / desc) optional , conflictClause , autoincrement optional
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> columnDef [
 	"http://www.sqlite.org/syntaxdiagrams.html#column-def"
 	"constraint negate has been putted to mismatch the starting of a tableConstraint definition"
@@ -300,7 +300,7 @@ PetitSQLiteGrammar >> columnDef [
 	^tableConstraint not , identifier , typeName optional , columnConstraint star.
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> columnTypes [ 
 	^
 	'VARCHAR2' asPParser caseInsensitive trim /
@@ -338,7 +338,7 @@ PetitSQLiteGrammar >> comment [
 	^'COMMENT ON' asPParser , $; asPParser negate plus
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> complexIdentifier [
 	^ (identifier , $. asPParser) optional , identifier
 ]
@@ -430,7 +430,7 @@ PetitSQLiteGrammar >> database [
 	^'DATABASE' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> date [
 	"Oracle format"
 	^(#digit asPParser times: 4) flatten , $- asPParser , (#digit asPParser times: 2) flatten , $- asPParser , (#digit asPParser times: 2) flatten
@@ -485,7 +485,7 @@ PetitSQLiteGrammar >> explain [
 	^'EXPLAIN' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> expression [
 	"Complete implementation of http://www.sqlite.org/lang_expr.html"
 
@@ -546,7 +546,7 @@ PetitSQLiteGrammar >> expressionInRoundParentheses [
 	^$( asPParser trim , expression , $) asPParser trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> expressionTerm [
 	^( 
 	($( asPParser trim ,  selectStatement , $) asPParser trim) /
@@ -560,7 +560,7 @@ PetitSQLiteGrammar >> fail [
 	^'FAIL' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> floatingPointLiteral [
 	self flag: #TODO.
 	^integerLiteral , $. asPParser trim , integerLiteral
@@ -579,13 +579,13 @@ PetitSQLiteGrammar >> foreignKeyClause [
 	(foreignKeyClauseOnPart / ( match , identifier )) star , foreignKeyClauseNotPart optional.
 ]
 
-{ #category : #clause-elements }
+{ #category : #'clause-elements' }
 PetitSQLiteGrammar >> foreignKeyClauseNotPart [
 
 	^notElem optional , deferrable , ( (initially , deferred) / (initially , immediate) ) optional
 ]
 
-{ #category : #clause-elements }
+{ #category : #'clause-elements' }
 PetitSQLiteGrammar >> foreignKeyClauseOnPart [
 
 	^on , (delete / update ) ,
@@ -606,7 +606,7 @@ PetitSQLiteGrammar >> groupBy [
 	^'GROUP BY' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> identifier [
 	^ (keyword not , ((#letter asPParser / $_ asPParser / #digit asPParser / $$ asPParser / '://' asPParser / $< asPParser / $% asPParser / $# asPParser / $> asPParser / $@ asPParser / $: asPParser) plus flatten trim)) ==>  #second
 ]
@@ -642,7 +642,7 @@ PetitSQLiteGrammar >> indexed [
 	^'INDEXED' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> indexedColumn [
 	^ identifier , ( collate , identifier ) optional , ( asc / desc ) optional.
 ]
@@ -703,7 +703,7 @@ PetitSQLiteGrammar >> insertStatement [
 	)
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> integerLiteral [
 	^#digit asPParser plus flatten trim
 ]
@@ -713,14 +713,14 @@ PetitSQLiteGrammar >> into [
 	^'INTO' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> joinConstraint [ 
 	"http://www.sqlite.org/syntaxdiagrams.html#join-constraint"
 	^(	(on , expression) /
 		('USING' asPParser caseInsensitive trim , identifiersInRoundParentheses)) optional
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> joinOperator [
 	"http://www.sqlite.org/syntaxdiagrams.html#join-op"
 	^$, asPParser trim /
@@ -731,7 +731,7 @@ PetitSQLiteGrammar >> joinOperator [
 	'JOIN' asPParser caseInsensitive trim).
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> joinSource [
 	"http://www.sqlite.org/syntaxdiagrams.html#join-source"
 	^singleSource ,
@@ -756,7 +756,7 @@ PetitSQLiteGrammar >> label [
 	^'LABEL ON' asPParser , $; asPParser negate plus
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> literalValue [
 	"http://www.sqlite.org/syntaxdiagrams.html#literal-value"
 	"It is really important the order how those elements because most of them are prefix for someone else "
@@ -846,7 +846,7 @@ PetitSQLiteGrammar >> punctuation [
 			yourself.
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> qualifiedTableName [
 	^(identifier , $. asPParser) optional , identifier , ((indexed , by , identifier) / notIndexed) optional 
 ]
@@ -876,7 +876,7 @@ PetitSQLiteGrammar >> restrict [
 	^'RESTRICT' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> resultColumn [
 	"http://www.sqlite.org/syntaxdiagrams.html#result-column"
 
@@ -897,7 +897,7 @@ PetitSQLiteGrammar >> select [
 	^'SELECT' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> selectCore [
 	"http://www.sqlite.org/syntaxdiagrams.html#select-core"
 	^ select , 
@@ -921,12 +921,12 @@ PetitSQLiteGrammar >> set [
 	^'SET' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> signedNumber [
 	^($+ asPParser trim / $- asPParser trim ) optional , ( floatingPointLiteral / integerLiteral ) trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> singleSource [
 	"http://www.sqlite.org/syntaxdiagrams.html#single-source"
 	
@@ -936,21 +936,21 @@ PetitSQLiteGrammar >> singleSource [
 	singleSourceIdentifierPart
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> singleSourceIdentifierPart [
 	"http://www.sqlite.org/syntaxdiagrams.html#single-source"
 	
 	^complexIdentifier , (as optional , identifier) optional , ((indexed , by , identifier) / notIndexed ) optional
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> singleSourceJoinSourceInRBPart [
 	"http://www.sqlite.org/syntaxdiagrams.html#single-source"
 	
 	^$( asPParser trim , joinSource , $) asPParser trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> singleSourceSelectStmtInRBPart [
 	"http://www.sqlite.org/syntaxdiagrams.html#single-source"
 	
@@ -990,7 +990,7 @@ PetitSQLiteGrammar >> table [
 	^'TABLE' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> tableColumnsDefinition [
 	^( ( columnDef separatedBy: $, asPParser trim ) ,  ( $, asPParser trim , tableConstraint ) star )
 ]
@@ -1005,21 +1005,21 @@ PetitSQLiteGrammar >> tableConstraint [
 	tableConstraintCheckPart ).
 ]
 
-{ #category : #constraints-elements }
+{ #category : #'constraints-elements' }
 PetitSQLiteGrammar >> tableConstraintCheckPart [
 	"http://www.sqlite.org/syntaxdiagrams.html#table-constraint"
 	
 	^check , expressionInRoundParentheses
 ]
 
-{ #category : #constraints-elements }
+{ #category : #'constraints-elements' }
 PetitSQLiteGrammar >> tableConstraintForeignKeyPart [
 	"http://www.sqlite.org/syntaxdiagrams.html#table-constraint"
 	
 	^ foreignKey , identifiersInRoundParentheses , foreignKeyClause
 ]
 
-{ #category : #constraints-elements }
+{ #category : #'constraints-elements' }
 PetitSQLiteGrammar >> tableConstraintPrimaryKeyPart [
 	"http://www.sqlite.org/syntaxdiagrams.html#table-constraint"
 	
@@ -1036,29 +1036,29 @@ PetitSQLiteGrammar >> temporary [
 	^'TEMPORARY' asPParser caseInsensitive trim
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> time [
 	"Oracle format"
 	^(#digit asPParser times: 2) flatten , $: asPParser , (#digit asPParser times: 2) flatten , $: asPParser , (#digit asPParser times: 2) flatten
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> timestamp [
 	^timestampOracleFormat / timestampDB2Format
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> timestampDB2Format [
 	^date , $- asPParser , ((#digit asPParser times: 2) flatten , $. asPParser , (#digit asPParser times: 2) flatten , $. asPParser , (#digit asPParser times: 2) flatten , ($. asPParser , #digit asPParser plus) optional flatten)
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> timestampOracleFormat [
 	"Oracle format"
 	 ^date , whitespace , time
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteGrammar >> typeName [
 	"http://www.sqlite.org/syntaxdiagrams.html#type-name"
 	^columnTypes , (	($( asPParser trim , signedNumber , $, asPParser trim , signedNumber , $) asPParser trim) /

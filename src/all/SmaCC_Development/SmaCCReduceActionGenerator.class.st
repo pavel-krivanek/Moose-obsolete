@@ -9,7 +9,7 @@ Class {
 		'currentIndex',
 		'currentSymbol'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }

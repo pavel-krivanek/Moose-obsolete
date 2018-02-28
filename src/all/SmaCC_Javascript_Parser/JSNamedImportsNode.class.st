@@ -7,7 +7,7 @@ Class {
 		'specifiers',
 		'commas'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -40,7 +40,7 @@ JSNamedImportsNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSNamedImportsNode >> initialize [
 	super initialize.
 	specifiers := OrderedCollection new: 2.

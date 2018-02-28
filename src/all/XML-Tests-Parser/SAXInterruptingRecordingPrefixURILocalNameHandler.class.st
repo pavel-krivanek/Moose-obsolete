@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'interruptOn'
 	],
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #private }

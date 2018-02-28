@@ -11,7 +11,7 @@ Class {
 		'semicolon',
 		'values'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -69,7 +69,7 @@ DelphiInterfaceSectionNode >> inTokens: anOrderedCollection [
 	inTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiInterfaceSectionNode >> initialize [
 	super initialize.
 	moduleNames := OrderedCollection new: 2.

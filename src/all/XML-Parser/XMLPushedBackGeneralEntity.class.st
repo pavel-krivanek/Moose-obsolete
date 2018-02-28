@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'totalOpenElements'
 	],
-	#category : #XML-Parser-Drivers
+	#category : #'XML-Parser-Drivers'
 }
 
 { #category : #nesting }

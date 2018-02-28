@@ -46,7 +46,7 @@ Class {
 		'statements',
 		'dynamicTypeTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -234,7 +234,7 @@ SwiftPrefixExpressionNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftPrefixExpressionNode >> initialize [
 	super initialize.
 	operatorTokens := OrderedCollection new: 2.

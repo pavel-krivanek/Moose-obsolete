@@ -1,1 +1,1 @@
-Package { #name : #Collections-OrderPreservingDictionary }
+Package { #name : #'Collections-OrderPreservingDictionary' }

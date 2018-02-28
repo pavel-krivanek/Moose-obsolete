@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'ds'
 	],
-	#category : #Moose-Tests-Algos-Graph
+	#category : #'Moose-Tests-Algos-Graph'
 }
 
 { #category : #'as yet unclassified' }

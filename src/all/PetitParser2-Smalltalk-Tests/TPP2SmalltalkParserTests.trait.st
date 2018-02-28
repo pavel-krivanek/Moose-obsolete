@@ -16,7 +16,7 @@ TPP2SmalltalkParserTests >> parserClass [
 	^ PP2SmalltalkParser
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testArgumentsBlock1 [
 	super testArgumentsBlock1.
 	self assert: self result isBlock.
@@ -27,7 +27,7 @@ TPP2SmalltalkParserTests >> testArgumentsBlock1 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testArgumentsBlock2 [
 	super testArgumentsBlock2.
 	self assert: self result isBlock.
@@ -40,7 +40,7 @@ TPP2SmalltalkParserTests >> testArgumentsBlock2 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testArgumentsBlock3 [
 	super testArgumentsBlock3.
 	self assert: self result isBlock.
@@ -93,21 +93,21 @@ TPP2SmalltalkParserTests >> testArray4 [
 	self assert: self result statements last selector equals: #bar
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral1 [
 	super testArrayLiteral1.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: #()
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral10 [
 	super testArrayLiteral10.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: #(#(1 2) #(1 2 3))
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral11 [
 	super testArrayLiteral11.
 	self assert: self result isLiteralNode.
@@ -118,42 +118,42 @@ TPP2SmalltalkParserTests >> testArrayLiteral11 [
 	self assert: self result value last size equals: 3
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral2 [
 	super testArrayLiteral2.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: #(1)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral3 [
 	super testArrayLiteral3.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: #(1 2)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral4 [
 	super testArrayLiteral4.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: #(true false nil)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral5 [
 	super testArrayLiteral5.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: #($a)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral6 [
 	super testArrayLiteral6.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: #(1.2)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral7 [
 	super testArrayLiteral7.
 	self assert: self result isLiteralNode.
@@ -161,7 +161,7 @@ TPP2SmalltalkParserTests >> testArrayLiteral7 [
 	self result value do: [ :each | self assert: each isSymbol ]
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral8 [
 	super testArrayLiteral8.
 	self assert: self result isLiteralNode.
@@ -170,7 +170,7 @@ TPP2SmalltalkParserTests >> testArrayLiteral8 [
 	self assert: self result value first isSymbol not
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testArrayLiteral9 [
 	super testArrayLiteral9.
 	self assert: self result isLiteralNode.
@@ -230,7 +230,7 @@ TPP2SmalltalkParserTests >> testAssignment6 [
 	self assert: self result value value name equals: 'c'
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryExpression1 [
 	super testBinaryExpression1.
 	self assert: self result isMessage.
@@ -241,7 +241,7 @@ TPP2SmalltalkParserTests >> testBinaryExpression1 [
 	self assert: self result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryExpression2 [
 	super testBinaryExpression2.
 	self assert: self result isMessage.
@@ -256,7 +256,7 @@ TPP2SmalltalkParserTests >> testBinaryExpression2 [
 	self assert: self result arguments first value equals: 3
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryExpression3 [
 	super testBinaryExpression3.
 	self assert: self result isMessage.
@@ -269,7 +269,7 @@ TPP2SmalltalkParserTests >> testBinaryExpression3 [
 	self assert: self result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryExpression4 [
 	super testBinaryExpression4.
 	self assert: self result isMessage.
@@ -282,7 +282,7 @@ TPP2SmalltalkParserTests >> testBinaryExpression4 [
 	self assert: self result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryExpression5 [
 	super testBinaryExpression5.
 	self assert: self result isMessage.
@@ -295,7 +295,7 @@ TPP2SmalltalkParserTests >> testBinaryExpression5 [
 	self assert: self result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryMethod1 [
 	super testBinaryMethod1.
 	self assert: self result isMethod.
@@ -308,7 +308,7 @@ TPP2SmalltalkParserTests >> testBinaryMethod1 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryMethod2 [
 	super testBinaryMethod2.
 	self assert: self result isMethod.
@@ -321,7 +321,7 @@ TPP2SmalltalkParserTests >> testBinaryMethod2 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryMethod3 [
 	super testBinaryMethod3.
 	self assert: self result isMethod.
@@ -334,7 +334,7 @@ TPP2SmalltalkParserTests >> testBinaryMethod3 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryMethod4 [
 	super testBinaryMethod4.
 	self assert: self result isMethod.
@@ -347,7 +347,7 @@ TPP2SmalltalkParserTests >> testBinaryMethod4 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testBinaryMethod5 [
 	super testBinaryMethod5.
 	self assert: self result isMethod.
@@ -360,7 +360,7 @@ TPP2SmalltalkParserTests >> testBinaryMethod5 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testBlock1 [
 	super testBlock1.
 	self assert: self result isBlock.
@@ -369,7 +369,7 @@ TPP2SmalltalkParserTests >> testBlock1 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testByteLiteral1 [
 	super testByteLiteral1.
 	self assert: self result isLiteralNode.
@@ -377,7 +377,7 @@ TPP2SmalltalkParserTests >> testByteLiteral1 [
 	self assert: self result value isEmpty
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testByteLiteral2 [
 	super testByteLiteral2.
 	self assert: self result isLiteralNode.
@@ -386,7 +386,7 @@ TPP2SmalltalkParserTests >> testByteLiteral2 [
 	self assert: self result value first equals: 0
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testByteLiteral3 [
 	super testByteLiteral3.
 	self assert: self result isLiteralNode.
@@ -395,7 +395,7 @@ TPP2SmalltalkParserTests >> testByteLiteral3 [
 	self assert: self result value first equals: 255
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testByteLiteral4 [
 	super testByteLiteral4.
 	self assert: self result isLiteralNode.
@@ -405,7 +405,7 @@ TPP2SmalltalkParserTests >> testByteLiteral4 [
 	self assert: self result value last equals: 2
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testByteLiteral5 [
 	super testByteLiteral5.
 	self assert: self result isLiteralNode.
@@ -416,7 +416,7 @@ TPP2SmalltalkParserTests >> testByteLiteral5 [
 	self assert: self result value last equals: 255
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testCascadeExpression1 [
 	super testCascadeExpression1.
 	self assert: self result isCascade.
@@ -430,7 +430,7 @@ TPP2SmalltalkParserTests >> testCascadeExpression1 [
 	self assert: self result messages second keywordsPositions equals: #(8) asIntegerArray
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testCascadeExpression2 [
 	super testCascadeExpression2.
 	self assert: self result isCascade.
@@ -451,7 +451,7 @@ TPP2SmalltalkParserTests >> testCascadeExpression2 [
 	self assert: self result messages third keywordsPositions equals: #(30) asIntegerArray
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testCascadeExpression3 [
 	super testCascadeExpression3.
 	self assert: self result isCascade.
@@ -468,21 +468,21 @@ TPP2SmalltalkParserTests >> testCascadeExpression3 [
 	self assert: self result messages second arguments size equals: 1
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testCharLiteral1 [
 	super testCharLiteral1.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: $a
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testCharLiteral2 [
 	super testCharLiteral2.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: Character space
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testCharLiteral3 [
 	super testCharLiteral3.
 	self assert: self result isLiteralNode.
@@ -534,7 +534,7 @@ TPP2SmalltalkParserTests >> testComment5 [
 	self assert: self result arguments first isValue
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testComplexBlock1 [
 	super testComplexBlock1.
 	self assert: self result isBlock.
@@ -543,7 +543,7 @@ TPP2SmalltalkParserTests >> testComplexBlock1 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testComplexBlock2 [
 	super testComplexBlock2.
 	self assert: self result isBlock.
@@ -552,7 +552,7 @@ TPP2SmalltalkParserTests >> testComplexBlock2 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testKeywordExpression1 [
 	super testKeywordExpression1.
 	self assert: self result isMessage.
@@ -565,7 +565,7 @@ TPP2SmalltalkParserTests >> testKeywordExpression1 [
 	self assert: self result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testKeywordExpression2 [
 	super testKeywordExpression2.
 	self assert: self result isMessage.
@@ -579,7 +579,7 @@ TPP2SmalltalkParserTests >> testKeywordExpression2 [
 	self assert: self result arguments second value equals: 3
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testKeywordExpression3 [
 	super testKeywordExpression3.
 	self assert: self result isMessage.
@@ -595,7 +595,7 @@ TPP2SmalltalkParserTests >> testKeywordExpression3 [
 	self assert: self result arguments third value equals: 4
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testKeywordMethod1 [
 	super testKeywordMethod1.
 	self assert: self result isMethod.
@@ -608,7 +608,7 @@ TPP2SmalltalkParserTests >> testKeywordMethod1 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testKeywordMethod2 [
 	super testKeywordMethod2.
 	self assert: self result isMethod.
@@ -623,7 +623,7 @@ TPP2SmalltalkParserTests >> testKeywordMethod2 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testKeywordMethod3 [
 	super testKeywordMethod3.
 	self assert: self result isMethod.
@@ -640,7 +640,7 @@ TPP2SmalltalkParserTests >> testKeywordMethod3 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testKeywordMethod4 [
 	super testKeywordMethod4.
 	self assert: self result isMethod.
@@ -702,7 +702,7 @@ TPP2SmalltalkParserTests >> testMethod3 [
 	self assert: self result body statements first value arguments first isVariable
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral1 [
 	super testNumberLiteral1.
 	self assert: self result isLiteralNode.
@@ -710,7 +710,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral1 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral10 [
 	super testNumberLiteral10.
 	self assert: self result isLiteralNode.
@@ -718,7 +718,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral10 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral11 [
 	super testNumberLiteral11.
 	self assert: self result isLiteralNode.
@@ -726,7 +726,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral11 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral12 [
 	super testNumberLiteral12.
 	self assert: self result isLiteralNode.
@@ -734,7 +734,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral12 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral13 [
 	super testNumberLiteral13.
 	self assert: self result isLiteralNode.
@@ -742,7 +742,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral13 [
 	self assert: self result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral14 [
 	super testNumberLiteral14.
 	self assert: self result isLiteralNode.
@@ -750,14 +750,14 @@ TPP2SmalltalkParserTests >> testNumberLiteral14 [
 	self assert: self result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral15 [
 	super testNumberLiteral15.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: 1 / 2
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral2 [
 	super testNumberLiteral2.
 	self assert: self result isLiteralNode.
@@ -765,7 +765,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral2 [
 	self assert: self result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral3 [
 	super testNumberLiteral3.
 	self assert: self result isLiteralNode.
@@ -773,7 +773,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral3 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral4 [
 	super testNumberLiteral4.
 	self assert: self result isLiteralNode.
@@ -781,7 +781,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral4 [
 	self assert: self result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral5 [
 	super testNumberLiteral5.
 	self assert: self result isLiteralNode.
@@ -789,7 +789,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral5 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral6 [
 	super testNumberLiteral6.
 	self assert: self result isLiteralNode.
@@ -797,7 +797,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral6 [
 	self assert: self result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral7 [
 	super testNumberLiteral7.
 	self assert: self result isLiteralNode.
@@ -805,7 +805,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral7 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral8 [
 	super testNumberLiteral8.
 	self assert: self result isLiteralNode.
@@ -813,7 +813,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral8 [
 	self assert: self result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testNumberLiteral9 [
 	super testNumberLiteral9.
 	self assert: self result isLiteralNode.
@@ -821,7 +821,7 @@ TPP2SmalltalkParserTests >> testNumberLiteral9 [
 	self assert: self result value isFloat
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma1 [
 	super testPragma1.
 	self 
@@ -832,7 +832,7 @@ TPP2SmalltalkParserTests >> testPragma1 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma10 [
 	super testPragma10.
 	self 
@@ -843,7 +843,7 @@ TPP2SmalltalkParserTests >> testPragma10 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma11 [
 	super testPragma11.
 	self 
@@ -854,7 +854,7 @@ TPP2SmalltalkParserTests >> testPragma11 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma12 [
 	super testPragma12.
 	self 
@@ -865,7 +865,7 @@ TPP2SmalltalkParserTests >> testPragma12 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma13 [
 	super testPragma13.
 	self 
@@ -876,7 +876,7 @@ TPP2SmalltalkParserTests >> testPragma13 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma14 [
 	super testPragma14.
 	self 
@@ -887,7 +887,7 @@ TPP2SmalltalkParserTests >> testPragma14 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma15 [
 	super testPragma15.
 	self 
@@ -898,7 +898,7 @@ TPP2SmalltalkParserTests >> testPragma15 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma16 [
 	super testPragma16.
 	self 
@@ -909,7 +909,7 @@ TPP2SmalltalkParserTests >> testPragma16 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma17 [
 	super testPragma17.
 	self 
@@ -920,7 +920,7 @@ TPP2SmalltalkParserTests >> testPragma17 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma18 [
 	super testPragma18.
 	self 
@@ -931,7 +931,7 @@ TPP2SmalltalkParserTests >> testPragma18 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma2 [
 	super testPragma2.
 	self 
@@ -943,7 +943,7 @@ TPP2SmalltalkParserTests >> testPragma2 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma3 [
 	super testPragma3.
 	self assert: self result pragmas format: #('<foo>').
@@ -952,7 +952,7 @@ TPP2SmalltalkParserTests >> testPragma3 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma4 [
 	super testPragma4.
 	self assert: self result pragmas format: #('<foo>').
@@ -961,7 +961,7 @@ TPP2SmalltalkParserTests >> testPragma4 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma5 [
 	super testPragma5.
 	self assert: self result pragmas format: #('<foo>' '<bar>').
@@ -971,7 +971,7 @@ TPP2SmalltalkParserTests >> testPragma5 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma6 [
 	super testPragma6.
 	self 
@@ -982,7 +982,7 @@ TPP2SmalltalkParserTests >> testPragma6 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma7 [
 	super testPragma7.
 	self 
@@ -993,7 +993,7 @@ TPP2SmalltalkParserTests >> testPragma7 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma8 [
 	super testPragma8.
 	self 
@@ -1004,7 +1004,7 @@ TPP2SmalltalkParserTests >> testPragma8 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 TPP2SmalltalkParserTests >> testPragma9 [
 	super testPragma9.
 	self 
@@ -1029,7 +1029,7 @@ TPP2SmalltalkParserTests >> testSequence1 [
 	self assert: self result statements second value equals: 2
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testSimpleBlock1 [
 	super testSimpleBlock1.
 	self assert: self result isBlock.
@@ -1038,7 +1038,7 @@ TPP2SmalltalkParserTests >> testSimpleBlock1 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testSimpleBlock2 [
 	super testSimpleBlock2.
 	self assert: self result isBlock.
@@ -1047,7 +1047,7 @@ TPP2SmalltalkParserTests >> testSimpleBlock2 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testSimpleBlock3 [
 	super testSimpleBlock3.
 	self assert: self result isBlock.
@@ -1056,28 +1056,28 @@ TPP2SmalltalkParserTests >> testSimpleBlock3 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSpecialLiteral1 [
 	super testSpecialLiteral1.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: true
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSpecialLiteral2 [
 	super testSpecialLiteral2.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: false
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSpecialLiteral3 [
 	super testSpecialLiteral3.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: nil
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testStatementBlock1 [
 	super testStatementBlock1.
 	self assert: self result isBlock.
@@ -1086,7 +1086,7 @@ TPP2SmalltalkParserTests >> testStatementBlock1 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testStatementBlock2 [
 	super testStatementBlock2.
 	self assert: self result isBlock.
@@ -1095,7 +1095,7 @@ TPP2SmalltalkParserTests >> testStatementBlock2 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 TPP2SmalltalkParserTests >> testStatementBlock3 [
 	super testStatementBlock3.
 	self assert: self result isBlock.
@@ -1219,28 +1219,28 @@ TPP2SmalltalkParserTests >> testStatements9 [
 	self assert: self result isEmpty.
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testStringLiteral1 [
 	super testStringLiteral1.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: ''
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testStringLiteral2 [
 	super testStringLiteral2.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: 'ab'
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testStringLiteral3 [
 	super testStringLiteral3.
 	self assert: self result isLiteralNode.
 	self assert: self result value equals: 'ab''cd'
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral1 [
 	super testSymbolLiteral1.
 	self assert: self result isLiteralNode.
@@ -1248,7 +1248,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral1 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral2 [
 	super testSymbolLiteral2.
 	self assert: self result isLiteralNode.
@@ -1256,7 +1256,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral2 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral3 [
 	super testSymbolLiteral3.
 	self assert: self result isLiteralNode.
@@ -1264,7 +1264,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral3 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral4 [
 	super testSymbolLiteral4.
 	self assert: self result isLiteralNode.
@@ -1272,7 +1272,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral4 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral5 [
 	super testSymbolLiteral5.
 	self assert: self result isLiteralNode.
@@ -1280,7 +1280,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral5 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral6 [
 	super testSymbolLiteral6.
 	self assert: self result isLiteralNode.
@@ -1288,7 +1288,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral6 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral7 [
 	super testSymbolLiteral7.
 	self assert: self result isLiteralNode.
@@ -1296,7 +1296,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral7 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral8 [
 	super testSymbolLiteral8.
 	self assert: self result isLiteralNode.
@@ -1304,7 +1304,7 @@ TPP2SmalltalkParserTests >> testSymbolLiteral8 [
 	self assert: self result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 TPP2SmalltalkParserTests >> testSymbolLiteral9 [
 	super testSymbolLiteral9.
 	self assert: self result isLiteralNode.
@@ -1348,7 +1348,7 @@ TPP2SmalltalkParserTests >> testTemporaries3 [
 	self assert: self result statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testUnaryExpression1 [
 	super testUnaryExpression1.
 	self assert: self result isMessage.
@@ -1358,7 +1358,7 @@ TPP2SmalltalkParserTests >> testUnaryExpression1 [
 	self assert: self result arguments isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testUnaryExpression2 [
 	super testUnaryExpression2.
 	self assert: self result isMessage.
@@ -1373,7 +1373,7 @@ TPP2SmalltalkParserTests >> testUnaryExpression2 [
 	self assert: self result arguments isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testUnaryMethod1 [
 	super testUnaryMethod1.
 	self assert: self result isMethod.
@@ -1384,7 +1384,7 @@ TPP2SmalltalkParserTests >> testUnaryMethod1 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testUnaryMethod2 [
 	super testUnaryMethod2.
 	self assert: self result isMethod.
@@ -1395,7 +1395,7 @@ TPP2SmalltalkParserTests >> testUnaryMethod2 [
 	self assert: self result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testUnaryMethod3 [
 	super testUnaryMethod3.
 	self assert: self result isMethod.
@@ -1406,7 +1406,7 @@ TPP2SmalltalkParserTests >> testUnaryMethod3 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testUnaryMethod4 [
 	super testUnaryMethod4.
 	self assert: self result isMethod.
@@ -1417,7 +1417,7 @@ TPP2SmalltalkParserTests >> testUnaryMethod4 [
 	self assert: self result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 TPP2SmalltalkParserTests >> testUnaryMethod5 [
 	super testUnaryMethod5.
 	self assert: self result isMethod.

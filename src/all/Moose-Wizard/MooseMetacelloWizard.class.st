@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'configuration'
 	],
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #'instance creation' }
@@ -70,7 +70,7 @@ MooseMetacelloWizard >> defaultVersionSelector: aVersionNumberString commitType:
 				nextPut: $: ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseMetacelloWizard >> initializeContent: shouldUpdateProject [
 
 	| versions |
@@ -84,7 +84,7 @@ MooseMetacelloWizard >> initializeContent: shouldUpdateProject [
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseMetacelloWizard >> initializeSourcePaneWith: versions [
 	
 	| sourcePane part1 part2 currentVersion |		
@@ -112,7 +112,7 @@ MooseMetacelloWizard >> initializeSourcePaneWith: versions [
 	^ sourcePane
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseMetacelloWizard >> initializeVersionPaneWith: versions [
 
 	| wizardControl firstPane part1 part2 lastPane part3 part4 part5 part6 secondPane part7 |

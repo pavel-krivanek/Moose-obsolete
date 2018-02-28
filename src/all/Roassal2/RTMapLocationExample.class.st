@@ -19,7 +19,7 @@ b view canvas'
 Class {
 	#name : #RTMapLocationExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-Map
+	#category : #'Roassal2-Builder-Map'
 }
 
 { #category : #sources }

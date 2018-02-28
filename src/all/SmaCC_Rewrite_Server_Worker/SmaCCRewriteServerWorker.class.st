@@ -8,7 +8,7 @@ Class {
 		'remotePrefix',
 		'localPrefix'
 	],
-	#category : #SmaCC_Rewrite_Server_Worker
+	#category : #'SmaCC_Rewrite_Server_Worker'
 }
 
 { #category : #running }

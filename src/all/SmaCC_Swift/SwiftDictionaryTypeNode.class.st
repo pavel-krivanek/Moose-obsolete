@@ -27,7 +27,7 @@ Class {
 		'full_string_literalTokens',
 		'operatorTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -120,7 +120,7 @@ SwiftDictionaryTypeNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftDictionaryTypeNode >> initialize [
 	super initialize.
 	leftBracketTokens := OrderedCollection new: 2.

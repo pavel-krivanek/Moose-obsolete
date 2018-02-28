@@ -1,10 +1,10 @@
 Class {
 	#name : #CParser,
 	#superclass : #SmaCCParser,
-	#category : #SmaCC_C_Parser
+	#category : #'SmaCC_C_Parser'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CParser class >> cacheId [
 	^'2016-10-09T14:57:38.893256-05:00'
 ]
@@ -425,7 +425,7 @@ CParser class >> fileExtensionType [
 	^ 'C files'
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CParser class >> scannerClass [
 	^CScanner
 ]

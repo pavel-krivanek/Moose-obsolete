@@ -19,7 +19,7 @@ Class {
 		'gapSize',
 		'lineItemsCountBlock'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #public }
@@ -81,7 +81,7 @@ RTAbstractGridLayout class >> withLineItemsCount: aBlock [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractGridLayout >> defaultGapSize [
 	^ 5
 ]
@@ -110,7 +110,7 @@ RTAbstractGridLayout >> gapSize: anInteger [
 	gapSize := anInteger
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractGridLayout >> initialize [
 	super initialize.
 	gapSize := self defaultGapSize.

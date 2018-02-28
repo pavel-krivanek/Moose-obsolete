@@ -5,7 +5,7 @@ Class {
 		'model',
 		'importingContext'
 	],
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #accessing }
@@ -20,7 +20,7 @@ FAMIXImportingVisitor >> importingContext: anImportingContext [
 	importingContext := anImportingContext 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXImportingVisitor >> initialize [
 
 	importingContext := MooseImportingContext new importMaximum  

@@ -17,10 +17,10 @@ Class {
 		'referenceHistory',
 		'parentHistory'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoAbstractHistory class >> annotation [
 	<MSEClass: #AbstractHistory super: #FAMIXEntity>
 	<package: #Hismo>

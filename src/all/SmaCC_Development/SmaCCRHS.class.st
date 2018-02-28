@@ -8,7 +8,7 @@ Class {
 		'nodeClassDefinition',
 		'productionSymbol'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #comparing }
@@ -173,7 +173,7 @@ SmaCCRHS >> indexOfVariable: aString [
 	^ (variableNameMap at: aString ifAbsent: [ ^ nil ]) first
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRHS >> initialize [
 	super initialize.
 	collection := OrderedCollection new.
@@ -249,7 +249,7 @@ SmaCCRHS >> size [
 	^ collection size
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRHS >> symbol: aSmaCCNonTerminalSymbol [
 	productionSymbol := aSmaCCNonTerminalSymbol
 ]

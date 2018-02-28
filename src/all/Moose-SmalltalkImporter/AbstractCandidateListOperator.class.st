@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'groups'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #running }

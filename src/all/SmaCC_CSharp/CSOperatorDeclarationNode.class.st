@@ -16,7 +16,7 @@ Class {
 		'explicitToken',
 		'body'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -105,7 +105,7 @@ CSOperatorDeclarationNode >> implicitToken: aSmaCCToken [
 	implicitToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSOperatorDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

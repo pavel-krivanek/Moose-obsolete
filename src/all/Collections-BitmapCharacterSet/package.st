@@ -1,1 +1,1 @@
-Package { #name : #Collections-BitmapCharacterSet }
+Package { #name : #'Collections-BitmapCharacterSet' }

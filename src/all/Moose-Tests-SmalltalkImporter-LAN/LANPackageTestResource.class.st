@@ -1,7 +1,7 @@
 Class {
 	#name : #LANPackageTestResource,
 	#superclass : #MooseModelTestResource,
-	#category : #Moose-Tests-SmalltalkImporter-LAN
+	#category : #'Moose-Tests-SmalltalkImporter-LAN'
 }
 
 { #category : #hook }

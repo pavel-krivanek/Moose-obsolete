@@ -7,23 +7,23 @@ Class {
 		'referenceModel',
 		'mooseModel'
 	],
-	#category : #SmallDude-Tests-Text
+	#category : #'SmallDude-Tests-Text'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDummyEntity class >> name: aString code: anotherString [ 
 	 
 	^self new name: aString code: anotherString
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDummyEntity class >> new [ 
 	"Answer a newly created and initialized instance." 
 	 
 	^super new
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDummyEntity class >> wrappedName: eName code: code [ 
 	 
 	^self name: eName code: code
@@ -41,7 +41,7 @@ DudeDummyEntity >> mooseName [
 	^name
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeDummyEntity >> name: aString code: anotherString [ 
 	 
 	name := aString. 

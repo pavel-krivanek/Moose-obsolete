@@ -11,7 +11,7 @@ Class {
 		'foundA0',
 		'foundB0'
 	],
-	#category : #Moose-Algos-Clustering
+	#category : #'Moose-Algos-Clustering'
 }
 
 { #category : #'instance creation' }
@@ -86,7 +86,7 @@ MalClusteringData >> findMinimum [
 					foundA0 := columnVector found]]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalClusteringData >> initialize: distanceMatrix [
 	
 	partialColumns := distanceMatrix copyClusteringData
@@ -100,7 +100,7 @@ MalClusteringData >> initialize: distanceMatrix [
 		do: [:n | (partialColumns at: n) unsetAt: n]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalClusteringData >> initializeRows: m columns: n [
 	
 	^self shouldNotImplement

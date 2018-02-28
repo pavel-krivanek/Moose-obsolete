@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'parent'
 	],
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #visiting }
@@ -125,8 +125,9 @@ XMLNode >> configuration [
 
 { #category : #accessing }
 XMLNode >> contentString [
- 	"Returns the combined content strings of all descendants with space inserted
-	when one string has no trailing space and the next has no leading space.
+ 	"Returns a combined string of all descendant string values with spaces inserted
+	for readability when one string has no trailing space and the next has no
+	leading space.
 
 	See also #rawContentString."
 
@@ -294,13 +295,14 @@ XMLNode >> isElementNamedAny: aNameCollection [
 ]
 
 { #category : #testing }
-XMLNode >> isInLanguage: aLanguage [
+XMLNode >> isInLanguage: aLanguageTag [
 	"Returns true if one of the ancestor elements of the receiver has an xml:lang
-	attribute, and if the value is an IETF language tag that matches aLanguage
-	or if its first ('-' separated) subtag matches aLanguage."
+	attribute, and if the value is an IETF language tag, like 'en-US', that matches
+	aLanguageTag. Matching is case-insensitive, and aLanguageTag can be partial,
+	like 'en', and use wildcards, like 'en-*'"
 
 	^ self hasParent
-		and: [self parent isInLanguage: aLanguage]
+		and: [self parent isInLanguage: aLanguageTag]
 ]
 
 { #category : #testing }
@@ -595,8 +597,8 @@ XMLNode >> printedWithoutSelfClosingTags [
 
 { #category : #accessing }
 XMLNode >> rawContentString [
- 	"Returns the combined content string of all descendants without
-	spaces inserted.
+ 	"Returns a combined string of all descendant string values without any spaces
+	inserted for readability.
 	
 	See also #contentString"
 

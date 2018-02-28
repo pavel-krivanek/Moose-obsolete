@@ -8,7 +8,7 @@ Class {
 		'names',
 		'comparisonBlock'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -55,13 +55,13 @@ MalNameMapping >> do: aBlock [
 		do: [:each | aBlock value: each]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalNameMapping >> forEquality [
 	
 	self setComparisonBlock: [:a :b | a = b]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalNameMapping >> forIdentity [
 	
 	self setComparisonBlock: [:a :b | a == b]
@@ -73,7 +73,7 @@ MalNameMapping >> includesName: name [
 	^names contains: [:each | comparisonBlock value: each value: name]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalNameMapping >> initialize [
 	
 	names := OrderedCollection new
@@ -114,7 +114,7 @@ MalNameMapping >> names [
 	^names
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalNameMapping >> setComparisonBlock: aComparisonBlock [
 	
 	^comparisonBlock := aComparisonBlock

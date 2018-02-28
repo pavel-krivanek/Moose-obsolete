@@ -5,7 +5,7 @@ Class {
 		'from',
 		'to'
 	],
-	#category : #Moose-Tests-Algos-HierarchicalGraph
+	#category : #'Moose-Tests-Algos-HierarchicalGraph'
 }
 
 { #category : #'instance creation' }

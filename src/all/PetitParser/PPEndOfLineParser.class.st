@@ -4,7 +4,7 @@ A PPEndOfLineParser is a parser that does not fail, if the stream position is at
 Class {
 	#name : #PPEndOfLineParser,
 	#superclass : #PPParser,
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #parsing }

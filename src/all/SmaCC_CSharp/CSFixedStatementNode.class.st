@@ -10,7 +10,7 @@ Class {
 		'rightParenToken',
 		'statement'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -60,7 +60,7 @@ CSFixedStatementNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSFixedStatementNode >> initialize [
 	super initialize.
 	declarators := OrderedCollection new: 2.

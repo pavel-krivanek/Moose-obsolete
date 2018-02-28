@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'collection'
 	],
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #private }

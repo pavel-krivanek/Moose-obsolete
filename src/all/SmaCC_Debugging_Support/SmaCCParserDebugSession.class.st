@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'rootContext'
 	],
-	#category : #SmaCC_Debugging_Support
+	#category : #'SmaCC_Debugging_Support'
 }
 
 { #category : #testing }
@@ -14,8 +14,7 @@ SmaCCParserDebugSession >> isActive [
 
 { #category : #accessing }
 SmaCCParserDebugSession >> parser [
-	^ self rootContext notNil
-		ifTrue: [ self rootContext receiver ]
+	^ self rootContext ifNotNil: [ :context | context receiver ]
 ]
 
 { #category : #accessing }

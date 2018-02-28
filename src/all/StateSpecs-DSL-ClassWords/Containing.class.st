@@ -10,8 +10,8 @@ Class {
 }
 
 { #category : #'specs creation' }
-Containing class >> item: anObject [ 
-	^SpecOfCollectionContents requiredItem: anObject
+Containing class >> item: anObjectOrSpec [ 
+	^SpecOfCollectionContents requiredItem: anObjectOrSpec
 ]
 
 { #category : #'specs creation' }

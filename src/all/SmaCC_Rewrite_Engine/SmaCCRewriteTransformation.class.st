@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'HaltBlock'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #accessing }

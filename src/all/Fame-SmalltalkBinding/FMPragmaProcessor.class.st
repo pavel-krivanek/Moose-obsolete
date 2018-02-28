@@ -48,7 +48,7 @@ Class {
 	#classVars : [
 		'ShouldValidateMetaModel'
 	],
-	#category : #Fame-SmalltalkBinding
+	#category : #'Fame-SmalltalkBinding'
 }
 
 { #category : #'class initialization' }

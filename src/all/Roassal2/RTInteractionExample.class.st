@@ -8,7 +8,7 @@ self new installTitle: 'GroupOfGroups'
 Class {
 	#name : #RTInteractionExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-ExampleBrowser
+	#category : #'Roassal2-ExampleBrowser'
 }
 
 { #category : #sources }

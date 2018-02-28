@@ -7,6 +7,6 @@ Class {
 	#category : 'GToolkit-Examples'
 }
 
-{ #category : #meta-data }
+{ #category : #'meta-data' }
 ManifestGToolkitExamples class >> description [ ^ 'I contain the code implementation of the Gtoolkit Examples engine.'
 ]

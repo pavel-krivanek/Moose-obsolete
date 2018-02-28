@@ -8,14 +8,13 @@ Class {
 	#instVars : [
 		'pharoEntity'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
 { #category : #meta }
 FAMIXPharoAnchor class >> annotation [
 	<MSEClass: #PharoAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #initialization }

@@ -147,7 +147,7 @@ Class {
 		'finally',
 		'initializerDeclaration'
 	],
-	#category : #PetitJava-Core
+	#category : #'PetitJava-Core'
 }
 
 { #category : #'as yet unclassified' }
@@ -160,20 +160,20 @@ PPJavaSyntax class >> parseMethod: aString onError: aBlock [
 	^ self new parseMethod: aString onError: aBlock
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> additiveExpression [
 
 	^ multiplicativeExpression , 
 	(( (self tokenFor: '+') / (self tokenFor: '-') ) , multiplicativeExpression ) star
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> andExpression [
 
 	^ equalityExpression , ((self tokenFor: '&') , equalityExpression) star
 ]
 
-{ #category : #grammar-annotations }
+{ #category : #'grammar-annotations' }
 PPJavaSyntax >> annotation [ 
 
 	^(self tokenFor: '@') , qualifiedName ,
@@ -182,7 +182,7 @@ PPJavaSyntax >> annotation [
 		(self tokenFor: ')') ) optional
 ]
 
-{ #category : #grammar-annotations }
+{ #category : #'grammar-annotations' }
 PPJavaSyntax >> annotationMethodDeclaration [
 	self flag: 'check whether method modifiers are the right modifiers to use'.
 	
@@ -194,7 +194,7 @@ PPJavaSyntax >> annotationMethodDeclaration [
 	(self tokenFor: ';')
 ]
 
-{ #category : #grammar-annotations }
+{ #category : #'grammar-annotations' }
 PPJavaSyntax >> annotationTypeBody [
 
 	^ (self tokenFor: '{')  ,
@@ -202,7 +202,7 @@ PPJavaSyntax >> annotationTypeBody [
 	(self tokenFor: '}')
 ]
 
-{ #category : #grammar-annotations }
+{ #category : #'grammar-annotations' }
 PPJavaSyntax >> annotationTypeDeclaration [ 
 
 	^ interfaceModifiers , (self tokenFor: '@'),
@@ -211,7 +211,7 @@ PPJavaSyntax >> annotationTypeDeclaration [
 	annotationTypeBody
 ]
 
-{ #category : #grammar-annotations }
+{ #category : #'grammar-annotations' }
 PPJavaSyntax >> annotationTypeElementDeclaration [
 	
 	^ annotationMethodDeclaration
@@ -222,7 +222,7 @@ PPJavaSyntax >> annotationTypeElementDeclaration [
 	/ (self tokenFor: ';')
 ]
 
-{ #category : #grammar-annotations }
+{ #category : #'grammar-annotations' }
 PPJavaSyntax >> annotations [ 
 	
 	^ annotation plus
@@ -257,7 +257,7 @@ PPJavaSyntax >> arrayInitializer [
 	   (self tokenFor: '}')
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> assertStatement [ 
 
 	^ (self tokenFor: 'assert') , expression , 
@@ -265,7 +265,7 @@ PPJavaSyntax >> assertStatement [
 	(self tokenFor: ';')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> assignmentOperator [ 
 
 	^ (self tokenFor: '=')
@@ -283,7 +283,7 @@ PPJavaSyntax >> assignmentOperator [
 		
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> basicForStatement [
 
 	^ (self tokenFor: 'for') ,
@@ -304,7 +304,7 @@ PPJavaSyntax >> block [
 	 (self tokenFor: '}')
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> blockStatement [  
 
 	^ localVariableDeclarationStatement
@@ -312,19 +312,19 @@ PPJavaSyntax >> blockStatement [
 	/ statement
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> blockStatements [
 
 	^ (blockStatement star).
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> breakStatement [ 
 
 	^ (self tokenFor: 'break') , identifier optional , (self tokenFor: ';')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> castExpression [
 
 	^ ((self tokenFor: '('), 
@@ -336,7 +336,7 @@ PPJavaSyntax >> castExpression [
 		(self tokenFor: ')'), unaryExpressionNotPlusMinus )
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> catchClause [
 
 	^ (self tokenFor: 'catch') ,
@@ -347,19 +347,19 @@ PPJavaSyntax >> catchClause [
 	
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> catches [  
 
 		^ catchClause plus
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> classBody [ 
 
 	^ (self tokenFor: '{') , classBodyDeclaration star , (self tokenFor: '}')
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> classBodyDeclaration [ 
 
 	^ (self tokenFor: ';')
@@ -377,14 +377,14 @@ PPJavaSyntax >> classCreatorRest [
 	^	arguments , classBody optional
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> classDeclaration [ 
 
 	^ normalClassDeclaration 
 	/ enumDeclaration
 ]
 
-{ #category : #grammar-modifiers }
+{ #category : #'grammar-modifiers' }
 PPJavaSyntax >> classModifierNotAnnotation [
 
 	^	(self tokenFor: 'abstract') 
@@ -397,21 +397,21 @@ PPJavaSyntax >> classModifierNotAnnotation [
 		
 ]
 
-{ #category : #grammar-modifiers }
+{ #category : #'grammar-modifiers' }
 PPJavaSyntax >> classModifiers [
 
 	^ (classModifierNotAnnotation 
 		/annotation) star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> classOrInterfaceDeclaration [
 
 	^ classDeclaration 
 	/ interfaceDeclaration
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> classOrInterfaceType [ 
 
 	^ identifier ,
@@ -425,28 +425,28 @@ PPJavaSyntax >> compilationUnit [
 	^ (annotations optional, packageDeclaration) optional , importDeclaration star , typeDeclaration plus
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> conditionalAndExpression [ 
 
 	^inclusiveOrExpression ,
 	((self tokenFor: '&&'), inclusiveOrExpression ) star
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> conditionalExpression [ 
 
 	^conditionalOrExpression ,
 	((self tokenFor: '?'), expression , (self tokenFor: ':'), conditionalExpression ) optional
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> conditionalOrExpression [ 
 
 	^conditionalAndExpression ,
 	((self tokenFor: '||'), conditionalAndExpression ) star
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> constructorDeclaration [
 
 	^ constructorModifiers optional , 
@@ -461,7 +461,7 @@ PPJavaSyntax >> constructorDeclaration [
 	
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> constructorModifiers [ 
 
 	^ ((self tokenFor: 'protected')
@@ -470,7 +470,7 @@ PPJavaSyntax >> constructorModifiers [
 		/ annotation) plus
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> continueStatement [ 
 
 	^ (self tokenFor: 'continue') , identifier optional , (self tokenFor: ';')
@@ -490,7 +490,7 @@ PPJavaSyntax >> creator [
 		/	arrayCreator
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> doStatement [
 
 	^(self tokenFor: 'do') , statement ,
@@ -529,7 +529,7 @@ PPJavaSyntax >> elementValuePairs [
 	^ elementValuePair , ((self tokenFor: ',') , elementValuePair ) star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> ellipsisParameterDecl [
 
 	^ variableModifiers ,
@@ -538,13 +538,13 @@ PPJavaSyntax >> ellipsisParameterDecl [
 	identifier
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> emptyStatement [ 
 
 	^ (self tokenFor: ';')
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> enhancedForStatement [
 
 	^ (self tokenFor: 'for') , 
@@ -558,7 +558,7 @@ PPJavaSyntax >> enhancedForStatement [
 	statement
 ]
 
-{ #category : #grammar-classes-enum }
+{ #category : #'grammar-classes-enum' }
 PPJavaSyntax >> enumBody [ 
 
 	^ (self tokenFor: '{') ,
@@ -568,25 +568,25 @@ PPJavaSyntax >> enumBody [
 		(self tokenFor: '}')
 ]
 
-{ #category : #grammar-classes-enum }
+{ #category : #'grammar-classes-enum' }
 PPJavaSyntax >> enumBodyDeclarations [ 
 
 	^ (self tokenFor: ';') , classBodyDeclaration star
 ]
 
-{ #category : #grammar-classes-enum }
+{ #category : #'grammar-classes-enum' }
 PPJavaSyntax >> enumConstant [
 
 	^ annotations optional , identifier , arguments optional , classBody optional 
 ]
 
-{ #category : #grammar-classes-enum }
+{ #category : #'grammar-classes-enum' }
 PPJavaSyntax >> enumConstants [ 
 
 	^ enumConstant , ((self tokenFor: ',') , enumConstant) star
 ]
 
-{ #category : #grammar-classes-enum }
+{ #category : #'grammar-classes-enum' }
 PPJavaSyntax >> enumDeclaration [ 
 
 	^ classModifiers ,
@@ -596,14 +596,14 @@ PPJavaSyntax >> enumDeclaration [
 	   enumBody
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> equalityExpression [
 
 	^ instanceofExpression , 
 	(((self tokenFor: '!=') / (self tokenFor: '==')) , instanceofExpression) star
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> exclusiveOrExpression [
 
 	^ andExpression , ((self tokenFor: '^') , andExpression) star
@@ -625,20 +625,20 @@ PPJavaSyntax >> explicitConstructorInvocation [
 		(self tokenFor: ';')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> expression [ 
 
 	^ conditionalExpression , 
 	(assignmentOperator , expression) optional
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> expressionList [ 
 
 	^ expression , ((self tokenFor: ','), expression ) star
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> expressionStatement [ 
 
 	^ expression , (self tokenFor: ';')
@@ -658,13 +658,13 @@ PPJavaSyntax >> fieldAccessExpression [
 	)plus.
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> fieldDeclaration [
 		
 		^ fieldModifiers , type , variableDeclarators , (self tokenFor: ';')
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> fieldModifiers [
 
 	^ ((self tokenFor: 'volatile') /
@@ -682,28 +682,28 @@ PPJavaSyntax >> finally [
 ^ ((self tokenFor: 'finally'), block).
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> floatingPointType [
 	^ (self tokenFor: 'float')
 		/ (self tokenFor: 'double').
 		
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> forInit [
 
 	^ localVariableDeclaration 
 	/ expressionList 
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> forStatement [
 
 	^ enhancedForStatement 
 	/ basicForStatement
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> formalParameter [ 
 
 	^ variableModifiers ,
@@ -712,7 +712,7 @@ PPJavaSyntax >> formalParameter [
 	emptySquaredParenthesis star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> formalParameterDecls [
 	
 	^ ellipsisParameterDecl
@@ -720,7 +720,7 @@ PPJavaSyntax >> formalParameterDecls [
 	/  normalParametersDecls 
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> formalParameters [ 
 
 	^ (self tokenFor: '(') ,
@@ -728,7 +728,7 @@ PPJavaSyntax >> formalParameters [
 	(self tokenFor: ')')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> identifierSuffix [ 
 
 	^ (		emptySquaredParenthesis plus , (self tokenFor: '.'), (self tokenFor: 'class'))
@@ -749,7 +749,7 @@ PPJavaSyntax >> identifierWithAccessors [
 	identifierSuffix optional
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> ifStatement [
 
 	^(self tokenFor: 'if') , parExpression , statement , 
@@ -766,14 +766,14 @@ PPJavaSyntax >> importDeclaration [
 	(self tokenFor: ';')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> inclusiveOrExpression [
 
 	^ exclusiveOrExpression , 
 	((self tokenFor: '|') , exclusiveOrExpression) star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> initializerDeclaration [
 
 	^ ((self tokenFor: 'static') optional , block)	
@@ -789,7 +789,7 @@ PPJavaSyntax >> innerCreator [
 		classCreatorRest 
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> instanceofExpression [
 
 	^  relationalExpression , 
@@ -805,13 +805,13 @@ PPJavaSyntax >> integralType [
 		/ (self tokenFor: 'char')
 ]
 
-{ #category : #grammar-classes-interface }
+{ #category : #'grammar-classes-interface' }
 PPJavaSyntax >> interfaceBody [
 
 	^ (self tokenFor: '{') , interfaceBodyDeclaration star , (self tokenFor: '}')
 ]
 
-{ #category : #grammar-classes-interface }
+{ #category : #'grammar-classes-interface' }
 PPJavaSyntax >> interfaceBodyDeclaration [ 
 
 	^ interfaceFieldDeclaration
@@ -821,14 +821,14 @@ PPJavaSyntax >> interfaceBodyDeclaration [
 	/ (self tokenFor: ';')
 ]
 
-{ #category : #grammar-classes-interface }
+{ #category : #'grammar-classes-interface' }
 PPJavaSyntax >> interfaceDeclaration [ 
 
 	^normalInterfaceDeclaration 
 	/ annotationTypeDeclaration
 ]
 
-{ #category : #grammar-classes-interface }
+{ #category : #'grammar-classes-interface' }
 PPJavaSyntax >> interfaceFieldDeclaration [ 
 
 	^ fieldModifiers , 
@@ -837,7 +837,7 @@ PPJavaSyntax >> interfaceFieldDeclaration [
 	(self tokenFor: ';')
 ]
 
-{ #category : #grammar-classes-interface }
+{ #category : #'grammar-classes-interface' }
 PPJavaSyntax >> interfaceMethodDeclaration [ 
 
 	^ methodModifiers ,
@@ -850,7 +850,7 @@ PPJavaSyntax >> interfaceMethodDeclaration [
 	(self tokenFor: ';')
 ]
 
-{ #category : #grammar-classes-interface }
+{ #category : #'grammar-classes-interface' }
 PPJavaSyntax >> interfaceModifiers [
 
 	^ ((self tokenFor: 'abstract')
@@ -874,32 +874,32 @@ PPJavaSyntax >> jsuper [
 	^ (self tokenFor: 'extends') , type
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> labeledStatement [ 
 
 	^ identifier , (self tokenFor: ':') , statement 
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> localVariableDeclaration [
 
 	^ variableModifiers , type , variableDeclarators 
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> localVariableDeclarationStatement [
 
 	^ localVariableDeclaration , (self tokenFor: ';')
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> methodDeclaration [
 
 	^ constructorDeclaration 
 	/ methodNotConstructorDeclaration
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> methodModifierNotAnnotation [
 
 	^ (self tokenFor: 'abstract')
@@ -913,14 +913,14 @@ PPJavaSyntax >> methodModifierNotAnnotation [
 		/ (self tokenFor: 'synchronized') 
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> methodModifiers [ 
 
 	^ (	methodModifierNotAnnotation
 		/ annotation) star
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> methodNotConstructorDeclaration [
 
 	^ methodModifiers,
@@ -933,7 +933,7 @@ PPJavaSyntax >> methodNotConstructorDeclaration [
 	   (block / (self tokenFor: ';'))
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> multiplicativeExpression [
 
 	^ unaryExpression , 
@@ -950,7 +950,7 @@ PPJavaSyntax >> nonWildcardTypeArguments [
 	(self tokenFor: '>')
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> normalClassDeclaration [ 
 
 	^ classModifiers , (self tokenFor: 'class') , identifier ,
@@ -960,7 +960,7 @@ PPJavaSyntax >> normalClassDeclaration [
 		classBody
 ]
 
-{ #category : #grammar-classes-interface }
+{ #category : #'grammar-classes-interface' }
 PPJavaSyntax >> normalInterfaceDeclaration [
 
 	^ interfaceModifiers , 
@@ -971,7 +971,7 @@ PPJavaSyntax >> normalInterfaceDeclaration [
 	interfaceBody
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> normalParameterDecl [
 
 	^ variableModifiers ,
@@ -980,14 +980,14 @@ PPJavaSyntax >> normalParameterDecl [
 	emptySquaredParenthesis star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> normalParametersDecls [
 	
 	^ normalParameterDecl , 
 		((self tokenFor: ',') , normalParameterDecl) star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> normalParametersWithElipsisDecls [
 	
 	^ (normalParameterDecl , 
@@ -995,7 +995,7 @@ PPJavaSyntax >> normalParametersWithElipsisDecls [
 		ellipsisParameterDecl
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> numericType [ 
 	^  integralType / floatingPointType
 ]
@@ -1006,18 +1006,18 @@ PPJavaSyntax >> packageDeclaration [
 	^ (self tokenFor: 'package') , qualifiedName , (self tokenFor: ';')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> parExpression [
 
 	^ (self tokenFor: '(') , expression , (self tokenFor: ')')
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> parseMethod: aString [ 
 	^ self parseMethod: aString onError: [ :msg :pos | self error: msg ]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> parseMethod: aString onError: aBlock [
 	^ startMethodDeclaration parse: aString onError: aBlock
 ]
@@ -1040,12 +1040,12 @@ PPJavaSyntax >> primary [
 			
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> primaryWithselectors [
 	^ primary, selector star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> primitiveType [ 
 
 	^ (self tokenFor: 'boolean')  / numericType
@@ -1058,20 +1058,20 @@ PPJavaSyntax >> qualifiedName [
 	^ identifier , ((self tokenFor: '.'), identifier ) star
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> qualifiedNameList [ 
 
 	^ qualifiedName , ((self tokenFor: ',') , qualifiedName ) star
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> relationalExpression [
 
 	^  shiftExpression , 
 	(relationalOperator , shiftExpression) star
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> relationalOperator [
 
 	^ (self tokenFor: '<=')
@@ -1080,13 +1080,13 @@ PPJavaSyntax >> relationalOperator [
 	/	(self tokenFor: '>')
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> returnStatement [ 
 
 	^ (self tokenFor: 'return') , expression optional , (self tokenFor: ';')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> selector [ 
 
 	^	(	(self tokenFor: '.') , identifier, arguments optional )
@@ -1096,14 +1096,14 @@ PPJavaSyntax >> selector [
 		/(	(self tokenFor: '['), expression , (self tokenFor: ']'))
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> shiftExpression [
 
 	^ additiveExpression,
 	(shiftOperator , additiveExpression) star
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> shiftOperator [ 
 	self flag: 'maybe it should be detokenized, check the behavior with javac'.
 
@@ -1119,13 +1119,13 @@ PPJavaSyntax >> start [
 	^ compilationUnit end
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> startMethodDeclaration [
 
 	^ methodDeclaration end
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> statement [ 
 
 	^ statementWithoutTrailingSubstatement
@@ -1141,13 +1141,13 @@ PPJavaSyntax >> statement [
 	
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> statementWithoutTrailingSubstatement [ 
 
 	^ (block/ emptyStatement/ expressionStatement/assertStatement/switchStatement/ doStatement/ breakStatement).
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> superSuffix [ 
 
 	^ arguments 
@@ -1156,20 +1156,20 @@ PPJavaSyntax >> superSuffix [
 		arguments optional)
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> switchBlockStatementGroup [
 	
 	^ switchLabel , blockStatement star
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> switchLabel [ 
 
 	^ ((self tokenFor: 'case') , expression , (self tokenFor: ':'))
 	/ ((self tokenFor: 'default'), (self tokenFor: ':'))
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> switchStatement [
 
 	^(self tokenFor: 'switch') , parExpression , 
@@ -1178,25 +1178,25 @@ PPJavaSyntax >> switchStatement [
 	(self tokenFor: '}')
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> synchronizedStatement [ 
 
 	^ (self tokenFor: 'synchronized') , parExpression , block
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> throwStatement [ 
 
 	^ (self tokenFor: 'throw') , expression , (self tokenFor: ';')
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaSyntax >> throws [ 
 
 	^ (self tokenFor: 'throws') , qualifiedNameList
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> tryStatement [ 
 
 	^ (self tokenFor: 'try') , block ,
@@ -1206,7 +1206,7 @@ PPJavaSyntax >> tryStatement [
 	).
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> type [ 
 
 	^ (	classOrInterfaceType 
@@ -1215,14 +1215,14 @@ PPJavaSyntax >> type [
 	emptySquaredParenthesis star
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> typeArgument [ 
 
 	^ type
 	/ wildcard
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> typeArguments [ 
 
 	^ (self tokenFor: '<') , 
@@ -1263,7 +1263,7 @@ PPJavaSyntax >> typeParameters [
 		(self tokenFor: '>')
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> unaryExpression [ 
 
 	^ (((self tokenFor: '++')
@@ -1282,19 +1282,19 @@ PPJavaSyntax >> unaryExpressionNotPlusMinus [
 	 /unaryPostfixExpression
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> unaryNegationExpression [
 	^ ((self tokenFor: '~') / (self tokenFor: '!')), unaryExpression
 ]
 
-{ #category : #grammar-expressions }
+{ #category : #'grammar-expressions' }
 PPJavaSyntax >> unaryPostfixExpression [
 	^ primaryWithselectors,
 	  ( (self tokenFor: '++')
 	   /(self tokenFor: '--')) optional
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> variableDeclarator [ 
 
 	^ identifier ,
@@ -1302,7 +1302,7 @@ PPJavaSyntax >> variableDeclarator [
 	((self tokenFor: '=') , variableInitializer) optional
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> variableDeclarators [
 
 	^ variableDeclarator , ((self tokenFor: ','), variableDeclarator) star
@@ -1315,20 +1315,20 @@ PPJavaSyntax >> variableInitializer [
 	/	expression	
 ]
 
-{ #category : #grammar-modifiers }
+{ #category : #'grammar-modifiers' }
 PPJavaSyntax >> variableModifiers [ 
 
 	^((self tokenFor: 'final') 
 	  / annotation) star
 ]
 
-{ #category : #grammar-statements }
+{ #category : #'grammar-statements' }
 PPJavaSyntax >> whileStatement [
 
 	^(self tokenFor: 'while') , parExpression , statement
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaSyntax >> wildcard [ 
 
 	^ (self tokenFor: '?') ,

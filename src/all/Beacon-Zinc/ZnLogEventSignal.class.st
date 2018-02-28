@@ -19,7 +19,7 @@ Class {
 	#instVars : [
 		'target'
 	],
-	#category : #Beacon-Zinc
+	#category : #'Beacon-Zinc'
 }
 
 { #category : #'instance creation' }

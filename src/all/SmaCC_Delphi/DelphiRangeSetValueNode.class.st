@@ -6,7 +6,7 @@ Class {
 		'dots',
 		'toValue'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }

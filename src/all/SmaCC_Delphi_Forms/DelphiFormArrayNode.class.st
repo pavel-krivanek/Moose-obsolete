@@ -6,7 +6,7 @@ Class {
 		'values',
 		'right'
 	],
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
 { #category : #generated }
@@ -19,7 +19,7 @@ DelphiFormArrayNode >> compositeNodeVariables [
 	^ #(#values)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiFormArrayNode >> initialize [
 	super initialize.
 	values := OrderedCollection new: 2.

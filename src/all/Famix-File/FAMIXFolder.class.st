@@ -4,16 +4,16 @@ It represents a folder in the file system. It can contain other files or folders
 Class {
 	#name : #FAMIXFolder,
 	#superclass : #FAMIXAbstractFile,
-	#category : #Famix-File
+	#category : #'Famix-File'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXFolder class >> annotation [
 	<MSEClass: #Folder super: #FAMIXAbstractFile>
 	<package: #FILE>
 ]
 
-{ #category : #add/remove }
+{ #category : #'add/remove' }
 FAMIXFolder >> addChildFileSystemEntity: aFileOrFolder [
 	self childrenFileSystemEntities add: aFileOrFolder
 ]

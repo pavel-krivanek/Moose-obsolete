@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLWriteStreamAdapterTest,
 	#superclass : #XMLStreamAdapterTest,
-	#category : #XML-Tests-Parser-Streams
+	#category : #'XML-Tests-Parser-Streams'
 }
 
 { #category : #testing }
@@ -14,14 +14,9 @@ XMLWriteStreamAdapterTest >> contentsFromCharacter: aCharacter [
 	^ aCharacter asString
 ]
 
-{ #category : #accessing }
-XMLWriteStreamAdapterTest >> inputCollection [
-	^ 'test'
-]
-
-{ #category : #accessing }
-XMLWriteStreamAdapterTest >> outputCollection [
-	^ 'test'
+{ #category : #testing }
+XMLWriteStreamAdapterTest >> isBinary [
+	^ self expectsBinaryInput
 ]
 
 { #category : #accessing }

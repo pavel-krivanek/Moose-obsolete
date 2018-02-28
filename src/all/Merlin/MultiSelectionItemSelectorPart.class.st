@@ -5,7 +5,7 @@ Class {
 		'initialListSelections',
 		'selectionListSelections'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #'control - initial list' }
@@ -92,7 +92,7 @@ MultiSelectionItemSelectorPart >> initialListSelectionAt: anIndex put: value [
 	^ initialListSelections at: anIndex put: value
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MultiSelectionItemSelectorPart >> initialize [
 
 	super initialize.

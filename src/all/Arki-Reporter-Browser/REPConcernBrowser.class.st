@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'root'
 	],
-	#category : #Arki-Reporter-Browser
+	#category : #'Arki-Reporter-Browser'
 }
 
 { #category : #'as yet unclassified' }

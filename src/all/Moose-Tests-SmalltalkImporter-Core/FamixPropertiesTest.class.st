@@ -1,7 +1,7 @@
 Class {
 	#name : #FamixPropertiesTest,
 	#superclass : #LANAbstractImportTest,
-	#category : #Moose-Tests-SmalltalkImporter-Core
+	#category : #'Moose-Tests-SmalltalkImporter-Core'
 }
 
 { #category : #testing }
@@ -86,8 +86,8 @@ FamixPropertiesTest >> testClassComments [
 
 { #category : #testing }
 FamixPropertiesTest >> testClassHierarchy [
-	self assert: (self nodeClass propertyNamed: #numberOfChildren) equals: 2.
-	self assert: self nodeClass numberOfChildren equals: (self nodeClass propertyNamed: #numberOfChildren).
+	self assert: (self nodeClass propertyNamed: #numberOfSubclasses) equals: 2.
+	self assert: self nodeClass numberOfSubclasses equals: (self nodeClass propertyNamed: #numberOfSubclasses).
 	self assert: self nodeClass totalNumberOfChildren equals: 4.
 	self assert: self nodeClass hierarchyNestingLevel equals: 1
 ]

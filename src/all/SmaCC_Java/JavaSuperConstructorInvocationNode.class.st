@@ -11,7 +11,7 @@ Class {
 		'primary',
 		'period'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -56,7 +56,7 @@ JavaSuperConstructorInvocationNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen #semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaSuperConstructorInvocationNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

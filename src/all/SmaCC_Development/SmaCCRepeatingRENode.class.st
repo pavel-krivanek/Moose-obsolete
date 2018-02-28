@@ -14,7 +14,7 @@ Class {
 		'minimumMatches',
 		'maximumMatches'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -65,7 +65,7 @@ SmaCCRepeatingRENode >> asNFAStartingWith: aSmaCCNode [
 	^ endNode
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRepeatingRENode >> component: aSmaCCRegularExpressionNode minimum: minInteger maximum: maxInteger [
 	node := aSmaCCRegularExpressionNode.
 	minimumMatches := minInteger.

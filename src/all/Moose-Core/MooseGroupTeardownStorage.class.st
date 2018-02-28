@@ -8,7 +8,7 @@ Class {
 	#classVars : [
 		'Tombstone'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #adding }

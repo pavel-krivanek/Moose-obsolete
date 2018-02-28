@@ -7,7 +7,7 @@ Class {
 		'labels',
 		'rightBrace'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -25,7 +25,7 @@ JavaSwitchBlockNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaSwitchBlockNode >> initialize [
 	super initialize.
 	statementGroups := OrderedCollection new: 2.

@@ -6,10 +6,10 @@ Class {
 		'packageHistories',
 		'containingPackageHistory'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoPackageHistory class >> annotation [
 	<MSEClass: #PackageHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

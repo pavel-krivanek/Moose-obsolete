@@ -1,1 +1,1 @@
-Package { #name : #Famix-SourceAnchor }
+Package { #name : #'Famix-SourceAnchor' }

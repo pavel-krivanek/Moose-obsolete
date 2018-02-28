@@ -9,7 +9,7 @@ Class {
 		'columnNumber',
 		'baseURI'
 	],
-	#category : #XML-Parser-Exceptions
+	#category : #'XML-Parser-Exceptions'
 }
 
 { #category : #accessing }

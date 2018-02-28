@@ -4,7 +4,7 @@ An XML text node.
 Class {
 	#name : #PPXmlText,
 	#superclass : #PPXmlData,
-	#category : #PetitXml-Nodes
+	#category : #'PetitXml-Nodes'
 }
 
 { #category : #testing }

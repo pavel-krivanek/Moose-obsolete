@@ -6,7 +6,7 @@ Class {
 		'noRows',
 		'noColumns'
 	],
-	#category : #SmallDude-Utils
+	#category : #'SmallDude-Utils'
 }
 
 { #category : #accessing }
@@ -34,7 +34,7 @@ DudeBooleanMatrix >> columnSize [
 	^noColumns
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeBooleanMatrix >> initializeRows: m columns: n [ 
 	" 
 	[ C1 D1 E1 F1 G1 ]	 
@@ -83,7 +83,7 @@ DudeBooleanMatrix >> rowSize [
 	^noRows
 ]
 
-{ #category : #coord-transform }
+{ #category : #'coord-transform' }
 DudeBooleanMatrix >> transformDiagNo: diagNo andDiagIndex: diagIx andDo: aBlock [ 
 	" 
 	[ C1 D1 E1 F1 G1 ]	 
@@ -108,7 +108,7 @@ DudeBooleanMatrix >> transformDiagNo: diagNo andDiagIndex: diagIx andDo: aBlock 
 	^aBlock value: row value: col
 ]
 
-{ #category : #coord-transform }
+{ #category : #'coord-transform' }
 DudeBooleanMatrix >> transformRow: row andColumn: col andDo: aBlock [ 
 	" 
 	[ C1 D1 E1 F1 G1 ]	 

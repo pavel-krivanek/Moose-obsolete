@@ -8,7 +8,7 @@ Class {
 		'commas',
 		'rightParen'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -41,7 +41,7 @@ JavaMethodDeclaratorNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaMethodDeclaratorNode >> initialize [
 	super initialize.
 	parameters := OrderedCollection new: 2.

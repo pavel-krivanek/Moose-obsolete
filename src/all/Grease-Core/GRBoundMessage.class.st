@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'arguments'
 	],
-	#category : #Grease-Core-Utilities
+	#category : #'Grease-Core-Utilities'
 }
 
 { #category : #'instance creation' }

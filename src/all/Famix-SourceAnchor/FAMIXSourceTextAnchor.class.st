@@ -7,14 +7,13 @@ Class {
 	#instVars : [
 		'source'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
 { #category : #meta }
 FAMIXSourceTextAnchor class >> annotation [
 	<MSEClass: #SourceTextAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

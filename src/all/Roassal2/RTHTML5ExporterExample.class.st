@@ -4,7 +4,7 @@ Examples of HTML exporter
 Class {
 	#name : #RTHTML5ExporterExample,
 	#superclass : #RTObject,
-	#category : #Roassal2-Exporter-HTML5
+	#category : #'Roassal2-Exporter-HTML5'
 }
 
 { #category : #private }

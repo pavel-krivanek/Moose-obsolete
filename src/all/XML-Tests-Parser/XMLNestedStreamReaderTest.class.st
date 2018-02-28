@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLNestedStreamReaderTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-Streams
+	#category : #'XML-Tests-Parser-Streams'
 }
 
 { #category : #asserting }
@@ -178,6 +178,14 @@ XMLNestedStreamReaderTest >> testIsBinary [
 { #category : #tests }
 XMLNestedStreamReaderTest >> testIsStream [
 	self assert: self newStreamReaderOnSourceXML isStream
+]
+
+{ #category : #tests }
+XMLNestedStreamReaderTest >> testIsXMLBinaryOrExternalStream [
+	| streamReader |
+
+	streamReader := self newStreamReaderOnSourceXML.
+	self assert: streamReader isXMLBinaryOrExternalStream = streamReader isBinary.
 ]
 
 { #category : #tests }

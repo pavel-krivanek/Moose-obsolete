@@ -1,1 +1,1 @@
-Package { #name : #Ghost-StateSpecsSupport }
+Package { #name : #'Ghost-StateSpecsSupport' }

@@ -5,7 +5,7 @@ Class {
 		'dialogWindow',
 		'builder'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #accessing }
@@ -32,7 +32,7 @@ MerlinMorphicRenderer >> doOpen: aDialogWindow [
 	self builder openModal: aDialogWindow.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MerlinMorphicRenderer >> initialize [
 
 	super initialize.

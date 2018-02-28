@@ -4,12 +4,12 @@ A stream converter for big endian UTF-16 streams, and the default converter clas
 Class {
 	#name : #XMLUTF16BigEndianStreamConverter,
 	#superclass : #XMLUTF16StreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #basic }
 XMLUTF16BigEndianStreamConverter class >> basicByteOrderMarkBytes [
-	^ #(16rFE 16rFF)
+	^ #[16rFE 16rFF]
 ]
 
 { #category : #basic }
@@ -26,14 +26,17 @@ XMLUTF16BigEndianStreamConverter >> isBigEndian [
 { #category : #basic }
 XMLUTF16BigEndianStreamConverter >> nextPutTwoBytes: anInteger toStream: aStream [
 	aStream
-		basicNextPutByte: ((anInteger bitShift: -8) bitAnd: 16rFF);
-		basicNextPutByte: (anInteger bitAnd: 16rFF)
+		nextPut: ((anInteger bitShift: -8) bitAnd: 16rFF);
+		nextPut: (anInteger bitAnd: 16rFF)
 ]
 
 { #category : #basic }
 XMLUTF16BigEndianStreamConverter >> nextTwoBytesFromStream: aStream [
-	^ ((aStream basicNext
-			ifNil: [^ nil]) asciiValue bitShift: 8) +
-		(aStream basicNext
-			ifNil: [self errorBadCharacterEncoding]) asciiValue
+	| firstByte |
+
+	firstByte := aStream next asInteger bitShift: 8.
+
+	aStream atEnd
+		ifTrue: [self errorBadCharacterEncoding].
+	^ firstByte + aStream next asInteger.
 ]

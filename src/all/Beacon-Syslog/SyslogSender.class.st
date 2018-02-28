@@ -24,7 +24,7 @@ Class {
 		'facility',
 		'hostName'
 	],
-	#category : #Beacon-Syslog
+	#category : #'Beacon-Syslog'
 }
 
 { #category : #defaults }

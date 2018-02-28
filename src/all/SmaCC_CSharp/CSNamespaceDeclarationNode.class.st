@@ -10,7 +10,7 @@ Class {
 		'rightBraceToken',
 		'semicolon'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -61,7 +61,7 @@ CSNamespaceDeclarationNode >> identifier: aCSQualifiedIdentifierNode [
 		ifTrue: [ self identifier parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSNamespaceDeclarationNode >> initialize [
 	super initialize.
 	directives := OrderedCollection new: 2.

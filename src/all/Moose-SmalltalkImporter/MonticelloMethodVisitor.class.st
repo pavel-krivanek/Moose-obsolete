@@ -1,7 +1,7 @@
 Class {
 	#name : #MonticelloMethodVisitor,
 	#superclass : #AbstractSmalltalkMethodVisitor,
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #private }
@@ -18,5 +18,5 @@ MonticelloMethodVisitor >> resolve: name [
 		ifAbsent: nil.
 	object ~~ nil ifTrue: [ ^ object ].
 	
-	^importer ensureClass: name
+	^importer ensureClass: name asSymbol
 ]

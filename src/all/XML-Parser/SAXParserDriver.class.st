@@ -19,7 +19,7 @@ Class {
 		'hasUnhandledReservedAttributes',
 		'externalEntityResolver'
 	],
-	#category : #XML-Parser-Drivers
+	#category : #'XML-Parser-Drivers'
 }
 
 { #category : #'instance creation' }
@@ -692,7 +692,7 @@ SAXParserDriver >> usesNamespaces [
 
 { #category : #private }
 SAXParserDriver >> validateRootElement: anElement [
-	self saxHandler requiresDocumentConstraints
+	self saxHandler requiresSchema
 		ifTrue: [
 			(self validator hasElementValidators
 				or: [self validator hasAttributeValidators])

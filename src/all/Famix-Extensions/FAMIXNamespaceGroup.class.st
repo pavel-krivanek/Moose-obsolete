@@ -4,14 +4,13 @@ FAMIXNamespaceGroup is a MooseGroup containing only FAMIX enities of type FAMIXN
 Class {
 	#name : #FAMIXNamespaceGroup,
 	#superclass : #MooseGroup,
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #meta }
 FAMIXNamespaceGroup class >> annotation [
 	<MSEClass: #NamespaceGroup super: #MooseGroup>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #algorithms }

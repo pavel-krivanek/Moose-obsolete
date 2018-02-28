@@ -6,7 +6,7 @@ Class {
 		'imports',
 		'typeDeclarations'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -31,7 +31,7 @@ JavaProgramFileNode >> imports: anOrderedCollection [
 	self setParents: self imports to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaProgramFileNode >> initialize [
 	super initialize.
 	imports := OrderedCollection new: 2.

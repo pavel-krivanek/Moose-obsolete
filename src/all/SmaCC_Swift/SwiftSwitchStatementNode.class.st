@@ -37,7 +37,7 @@ Class {
 		'full_string_literalTokens',
 		'operatorTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -175,7 +175,7 @@ SwiftSwitchStatementNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftSwitchStatementNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

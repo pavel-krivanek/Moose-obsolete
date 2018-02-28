@@ -21,7 +21,7 @@ Class {
 		'precedence',
 		'firstTerminals'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #variables }
@@ -98,7 +98,7 @@ SmaCCSymbol >> firstTerminals [
 	^ firstTerminals
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSymbol >> initialize [
 	super initialize.
 	firstTerminals := Set new
@@ -129,7 +129,7 @@ SmaCCSymbol >> name [
 	^ name
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSymbol >> name: aString [
 	name := aString
 ]

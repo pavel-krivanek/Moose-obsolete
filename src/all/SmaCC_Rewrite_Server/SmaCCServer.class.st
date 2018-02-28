@@ -6,7 +6,7 @@ Class {
 		'availableServers',
 		'registeredServers'
 	],
-	#category : #SmaCC_Rewrite_Server
+	#category : #'SmaCC_Rewrite_Server'
 }
 
 { #category : #'instance creation' }
@@ -35,6 +35,11 @@ SmaCCServer >> nextPutInteger: anInteger on: aStream [
 ]
 
 { #category : #running }
+SmaCCServer >> port [
+	^ socket localPort
+]
+
+{ #category : #running }
 SmaCCServer >> process: aSocket [
 	| type socketStream |
 	socketStream := SocketStream on: aSocket.
@@ -46,6 +51,8 @@ SmaCCServer >> process: aSocket [
 		ifTrue: [ ^ self register: socketStream ].
 	type = $1 asInteger
 		ifTrue: [ ^ self processRequest: socketStream ].
+	type = $E asInteger
+		ifTrue: [ Exit signalSuccess ].
 	self error: 'Invalid request'
 ]
 
@@ -138,9 +145,12 @@ SmaCCServer >> startOn: anInteger [
 		setOption: 'TCP_NODELAY' value: 1;
 		setOption: 'SO_SNDBUF' value: 4096;
 		setOption: 'SO_RCVBUF' value: 4096.
-	socket listenOn: anInteger backlogSize: 50.
-	[ self run ]
-		ensure: [ socket close ]
+	socket listenOn: anInteger backlogSize: 50
+]
+
+{ #category : #running }
+SmaCCServer >> stop [
+	socket close
 ]
 
 { #category : #running }

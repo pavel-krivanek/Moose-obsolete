@@ -81,7 +81,7 @@ ZeroConfPrefixedScript >> generateScripts [
 	^ self prefixScripts, self scripts
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ZeroConfPrefixedScript >> initialize [
 	prefixScripts := OrderedCollection new.
 	inlinePrefixScripts := false.

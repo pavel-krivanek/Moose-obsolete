@@ -7,7 +7,7 @@ WindowActivated
 Class {
 	#name : #GTWindowRecorderWindowActivatedEvent,
 	#superclass : #GTWindowRecorderEvent,
-	#category : #GT-Window-EventRecorder-Events
+	#category : #'GT-Window-EventRecorder-Events'
 }
 
 { #category : #testing }

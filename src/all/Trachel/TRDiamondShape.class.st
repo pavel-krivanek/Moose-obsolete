@@ -6,7 +6,7 @@ Class {
 		'right',
 		'end'
 	],
-	#category : #Trachel-ShapesForArrow
+	#category : #'Trachel-ShapesForArrow'
 }
 
 { #category : #visitor }

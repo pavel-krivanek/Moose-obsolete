@@ -1,7 +1,7 @@
 Class {
 	#name : #LatticeTests,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-Algos-Lattice
+	#category : #'Moose-Tests-Algos-Lattice'
 }
 
 { #category : #initialize }

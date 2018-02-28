@@ -76,12 +76,12 @@ PP2InMemoryContext >> debugResult [
 	]
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PP2InMemoryContext >> globals [
 	^ globals
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PP2InMemoryContext >> globals: anObject [
 	^ globals := anObject
 ]

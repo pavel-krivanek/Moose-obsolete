@@ -1,1 +1,1 @@
-Package { #name : #Moose-TestResources-KGB-P12FullReferencer }
+Package { #name : #'Moose-TestResources-KGB-P12FullReferencer' }

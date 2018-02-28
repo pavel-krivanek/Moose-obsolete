@@ -11,7 +11,7 @@ Class {
 		'interval',
 		'transformation'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -90,9 +90,9 @@ SmaCCRewriteResult >> asSocketString [
 		ifTrue:
 			[ stream
 				nextPutAll: 'INTERVAL=';
-				print: interval start;
+				print: interval first;
 				nextPut: $-;
-				print: interval stop;
+				print: interval last;
 				nextPut: null ].
 	transformation notNil
 		ifTrue:

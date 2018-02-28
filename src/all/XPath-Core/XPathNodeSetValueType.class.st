@@ -4,7 +4,7 @@ This is an XPath type class for XPathNodeSet values.
 Class {
 	#name : #XPathNodeSetValueType,
 	#superclass : #XPathValueType,
-	#category : #XPath-Core-Types
+	#category : #'XPath-Core-Types'
 }
 
 { #category : #testing }

@@ -4,7 +4,7 @@ This class validates Nmtoken name attributes.
 Class {
 	#name : #XMLNmtokenAttributeValidator,
 	#superclass : #XMLAttributeValidator,
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #defaults }

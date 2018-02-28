@@ -14,7 +14,7 @@ Class {
 	#instVars : [
 		'levels'
 	],
-	#category : #Moose-Algos-HierarchicalGraph
+	#category : #'Moose-Algos-HierarchicalGraph'
 }
 
 { #category : #creation }
@@ -270,7 +270,7 @@ MalHierarchicalGraph >> findNode: aModel ifAbsent: aBlock [
 	^ self nodeWrapping: aModel ifAbsent: aBlock.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalHierarchicalGraph >> initialize [
 	self reset.
 

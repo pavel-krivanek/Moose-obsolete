@@ -4,7 +4,7 @@ self open
 Class {
 	#name : #MooseMetaBrowser,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #opening }

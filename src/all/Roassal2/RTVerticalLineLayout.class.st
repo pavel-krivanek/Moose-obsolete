@@ -4,7 +4,7 @@ A RTVerticalLineLayout locates all the elements vertically
 Class {
 	#name : #RTVerticalLineLayout,
 	#superclass : #RTAbstractLineLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #hook }
@@ -72,7 +72,7 @@ RTVerticalLineLayout >> doStretchVertical: aCollectionOfElements [
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTVerticalLineLayout >> initialize [
 	
 	super initialize.

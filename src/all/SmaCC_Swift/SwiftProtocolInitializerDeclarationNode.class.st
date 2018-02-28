@@ -35,7 +35,7 @@ Class {
 		'varTokens',
 		'periodPeriodPeriodTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -178,7 +178,7 @@ SwiftProtocolInitializerDeclarationNode >> initToken: aSmaCCToken [
 	initToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftProtocolInitializerDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.

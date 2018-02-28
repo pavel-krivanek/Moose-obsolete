@@ -27,7 +27,7 @@ Class {
 		'typeTokens',
 		'periodPeriodPeriodTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -120,7 +120,7 @@ SwiftTupleTypeNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftTupleTypeNode >> initialize [
 	super initialize.
 	leftParenTokens := OrderedCollection new: 2.

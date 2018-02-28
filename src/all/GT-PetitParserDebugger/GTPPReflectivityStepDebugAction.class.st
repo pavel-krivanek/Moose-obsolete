@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPReflectivityStepDebugAction,
 	#superclass : #GTReflectivityDebugAction,
-	#category : #GT-PetitParserDebugger
+	#category : #'GT-PetitParserDebugger'
 }
 
 { #category : #testing }

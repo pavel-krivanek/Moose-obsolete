@@ -5,7 +5,7 @@ A ROAbstractVerticalTreeLayout is xxxxxxxxx.
 Class {
 	#name : #RTAbstractVerticalTreeLayout,
 	#superclass : #RTAbstractRegularTreeLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #testing }
@@ -13,7 +13,7 @@ RTAbstractVerticalTreeLayout class >> isAbstract [
 	^ self = RTAbstractVerticalTreeLayout
 ]
 
-{ #category : #hook-private }
+{ #category : #'hook-private' }
 RTAbstractVerticalTreeLayout >> computeChildrenFor: aNode [
 	self subclassResponsibility
 ]
@@ -23,7 +23,7 @@ RTAbstractVerticalTreeLayout >> defaultAttachPoint [
 	^ RTVerticalAttachPoint new
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractVerticalTreeLayout >> initialize [
 	super initialize.
 	verticalGap := 20.
@@ -50,7 +50,7 @@ RTAbstractVerticalTreeLayout >> inverseAttachPointIfNecessary [
 		ifTrue: [ self inverseAttachPoint ]
 ]
 
-{ #category : #hook-private }
+{ #category : #'hook-private' }
 RTAbstractVerticalTreeLayout >> layout: aNodeCollection atPoint: aPoint atLayer: aNumber [
 	| treeSize childrenPosition x y middleOfTree |
 	aNodeCollection isEmpty ifTrue: [ ^ 0 ].

@@ -7,7 +7,7 @@ Class {
 		'children',
 		'level'
 	],
-	#category : #Moose-Tests-Algos-HierarchicalGraph
+	#category : #'Moose-Tests-Algos-HierarchicalGraph'
 }
 
 { #category : #accessing }
@@ -20,7 +20,7 @@ MalHgTestModelSimple >> children: anObject [
 	children := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalHgTestModelSimple >> initialize [
 	children := OrderedCollection new.
 ]

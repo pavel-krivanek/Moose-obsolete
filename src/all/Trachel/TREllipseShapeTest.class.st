@@ -4,7 +4,7 @@ A TREllipseShapeTest is a test class for testing the behavior of TREllipseShape
 Class {
 	#name : #TREllipseShapeTest,
 	#superclass : #TRTest,
-	#category : #Trachel-Tests
+	#category : #'Trachel-Tests'
 }
 
 { #category : #tests }

@@ -4,7 +4,7 @@ This class validates standalone externally defined attributes with lists of ID r
 Class {
 	#name : #XMLStandaloneExternalIDRefsAttributeValidator,
 	#superclass : #XMLIDRefsAttributeValidator,
-	#category : #XML-Parser-Validation-Standalone
+	#category : #'XML-Parser-Validation-Standalone'
 }
 
 { #category : #testing }

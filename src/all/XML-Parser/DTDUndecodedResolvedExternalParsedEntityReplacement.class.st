@@ -8,14 +8,14 @@ Class {
 		'rawContents',
 		'encoding'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #'instance creation' }
-DTDUndecodedResolvedExternalParsedEntityReplacement class >> rawContents: aRawContentsString [
+DTDUndecodedResolvedExternalParsedEntityReplacement class >> rawContents: aString [
 	^ self
-		rawContents: aRawContentsString
-		encoding: XMLStreamConverter defaultEncoding
+		rawContents: aString
+		encoding: ''
 ]
 
 { #category : #'instance creation' }

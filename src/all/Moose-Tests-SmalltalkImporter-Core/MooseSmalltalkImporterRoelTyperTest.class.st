@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseSmalltalkImporterRoelTyperTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-SmalltalkImporter-Core
+	#category : #'Moose-Tests-SmalltalkImporter-Core'
 }
 
 { #category : #tests }

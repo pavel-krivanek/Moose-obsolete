@@ -4,8 +4,13 @@ An abstract class for Unicode stream converters.
 Class {
 	#name : #XMLUTFStreamConverter,
 	#superclass : #XMLStatelessStreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
+
+{ #category : #defaults }
+XMLUTFStreamConverter class >> abstractClass [
+	^ XMLUTFStreamConverter
+]
 
 { #category : #private }
 XMLUTFStreamConverter >> errorBadCharacterValue: aValue [
@@ -26,7 +31,10 @@ XMLUTFStreamConverter >> nextFromStream: aStream [
 
 	codePoint := self nextCodePointFromStream: aStream.
 	[codePoint == 16rFEFF] "the BOM code point"
-		whileTrue: [codePoint := self nextCodePointFromStream: aStream].
+		whileTrue: [
+			aStream atEnd
+				ifTrue: [^ nil].
+			codePoint := self nextCodePointFromStream: aStream].
 	^ codePoint
-		ifNotNil: [Character value: codePoint].
+		ifNotNil: [codePoint asCharacter].
 ]

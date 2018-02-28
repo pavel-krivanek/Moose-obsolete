@@ -8,7 +8,7 @@ Class {
 		'commas',
 		'gt'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -63,7 +63,7 @@ JavaTypeNameNode >> ignoredTokenVariables [
 	^ #(#lt #gt)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaTypeNameNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

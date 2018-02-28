@@ -13,7 +13,7 @@ This class essentially implements the iterative version of the following recursi
 Class {
 	#name : #PPGreedyRepeatingParser,
 	#superclass : #PPLimitedRepeatingParser,
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #parsing }

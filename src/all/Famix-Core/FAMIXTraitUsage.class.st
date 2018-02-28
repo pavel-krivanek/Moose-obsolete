@@ -5,15 +5,13 @@ Class {
 		'user',
 		'trait'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXTraitUsage class >> annotation [
 	<MSEClass: #TraitUsage super: #FAMIXAssociation>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }

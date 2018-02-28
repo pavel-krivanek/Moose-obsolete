@@ -22,7 +22,7 @@ e @ RTDraggable.
 Class {
 	#name : #RTConstraintExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-ExampleBrowser
+	#category : #'Roassal2-ExampleBrowser'
 }
 
 { #category : #sources }

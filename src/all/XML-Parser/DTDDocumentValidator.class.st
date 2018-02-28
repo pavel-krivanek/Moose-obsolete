@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'doctypeDefinition'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #'instance creation' }

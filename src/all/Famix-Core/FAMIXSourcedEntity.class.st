@@ -7,14 +7,13 @@ Class {
 	#instVars : [
 		'sourceAnchor'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXSourcedEntity class >> annotation [
 	<MSEClass: #SourcedEntity super: #FAMIXEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -59,6 +58,11 @@ FAMIXSourcedEntity >> declaredSourceLanguage: aSourceLanguage [
 				update: #sourcedEntities
 				from: self declaredSourceLanguage
 				to: aSourceLanguage)
+]
+
+{ #category : #accessing }
+FAMIXSourcedEntity >> removeComment: aComment [
+	self comments remove: aComment
 ]
 
 { #category : #accessing }

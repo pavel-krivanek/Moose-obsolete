@@ -1,1 +1,1 @@
-Package { #name : #Moose-Tests-Algos-Clustering }
+Package { #name : #'Moose-Tests-Algos-Clustering' }

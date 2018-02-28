@@ -9,7 +9,7 @@ Class {
 		'colonColonToken',
 		'periodTokens'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -62,7 +62,7 @@ CSUnboundTypeNameNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSUnboundTypeNameNode >> initialize [
 	super initialize.
 	identifierTokens := OrderedCollection new: 2.

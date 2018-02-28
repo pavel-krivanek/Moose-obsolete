@@ -4,8 +4,13 @@ An abstract class for UTF-16 stream converters.
 Class {
 	#name : #XMLUTF16StreamConverter,
 	#superclass : #XMLUTFStreamConverter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
+
+{ #category : #defaults }
+XMLUTF16StreamConverter class >> abstractClass [
+	^ XMLUTF16StreamConverter
+]
 
 { #category : #testing }
 XMLUTF16StreamConverter >> isBigEndian [
@@ -16,16 +21,22 @@ XMLUTF16StreamConverter >> isBigEndian [
 XMLUTF16StreamConverter >> nextCodePointFromStream: aStream [
 	| codePoint lowSurrogate |
 
-	(codePoint := self nextTwoBytesFromStream: aStream)
-		ifNil: [^ nil].
+	aStream atEnd
+		ifTrue: [^ nil].
 
 	"code points U+10000 to U+10FFFF are encoded with surrogate pairs,
 	while those < U+10000 are encoded directly"
-	(codePoint < 16rD800
+	((codePoint := self nextTwoBytesFromStream: aStream) < 16rD800
 		or: [codePoint > 16rDFFF])
-		ifTrue: [^ codePoint].
+		ifTrue: [
+			codePoint > 16r10FFFF
+				ifTrue: [self errorBadCharacterValue: codePoint].
+			^ codePoint].
 
 	codePoint > 16rDBFF "max high surrogate"
+		ifTrue: [self errorBadCharacterEncoding].
+
+	aStream atEnd
 		ifTrue: [self errorBadCharacterEncoding].
 	(lowSurrogate := self nextTwoBytesFromStream: aStream)
 		ifNil: [self errorBadCharacterEncoding].
@@ -45,7 +56,7 @@ XMLUTF16StreamConverter >> nextCodePointFromStream: aStream [
 XMLUTF16StreamConverter >> nextPut: aCharacter toStream: aStream [
 	| codePoint |
 
-	(codePoint := aCharacter asciiValue) < 16r10000
+	(codePoint := aCharacter asInteger) < 16r10000
 		ifTrue: [
 			"check for the reserved surrogate pair code points"
 			(codePoint >= 16rD800

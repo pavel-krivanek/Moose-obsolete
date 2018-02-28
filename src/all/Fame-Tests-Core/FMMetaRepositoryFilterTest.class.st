@@ -6,10 +6,10 @@ Class {
 		'libModel',
 		'rpgModel'
 	],
-	#category : #Fame-Tests-Core
+	#category : #'Fame-Tests-Core'
 }
 
-{ #category : #buidling-models }
+{ #category : #'buidling-models' }
 FMMetaRepositoryFilterTest >> buildEQ [
 
 	| builder |
@@ -30,7 +30,7 @@ FMMetaRepositoryFilterTest >> buildEQ [
 	^ builder asMetamodel 
 ]
 
-{ #category : #buidling-models }
+{ #category : #'buidling-models' }
 FMMetaRepositoryFilterTest >> buildLIB [
 
 	| builder |
@@ -46,7 +46,7 @@ FMMetaRepositoryFilterTest >> buildLIB [
 	^ builder asMetamodel 
 ]
 
-{ #category : #buidling-models }
+{ #category : #'buidling-models' }
 FMMetaRepositoryFilterTest >> buildRPG [
 
 	| builder |
@@ -61,7 +61,7 @@ FMMetaRepositoryFilterTest >> buildRPG [
 	^ builder asMetamodel 
 ]
 
-{ #category : #tests-export }
+{ #category : #'tests-export' }
 FMMetaRepositoryFilterTest >> createLIBModelWithClass: class [
 
 	| tower repository model filteredMetamodel stream filter importer |
@@ -95,7 +95,7 @@ FMMetaRepositoryFilterTest >> createLIBModelWithClass: class [
 	^ tower model
 ]
 
-{ #category : #tests-export }
+{ #category : #'tests-export' }
 FMMetaRepositoryFilterTest >> disabledBecauseItFailsOnTheServerInHeadlessModetestExportLIBBookWithPartialMetamodel [
 	| model entity |
 	model := self createLIBModelWithClass: LIBBook.
@@ -110,7 +110,7 @@ FMMetaRepositoryFilterTest >> disabledBecauseItFailsOnTheServerInHeadlessModetes
 	self assert: entity isEmpty
 ]
 
-{ #category : #tests-export }
+{ #category : #'tests-export' }
 FMMetaRepositoryFilterTest >> disabledBecauseItFailsOnTheServerInHeadlessModetestExportLIBLibraryWithPartialMetamodel [
 	| model entity |
 	model := self createLIBModelWithClass: LIBLibrary.
@@ -125,7 +125,7 @@ FMMetaRepositoryFilterTest >> disabledBecauseItFailsOnTheServerInHeadlessModetes
 	self assert: entity size equals: 1
 ]
 
-{ #category : #tests-export }
+{ #category : #'tests-export' }
 FMMetaRepositoryFilterTest >> disabledBecauseItFailsOnTheServerInHeadlessModetestExportLIBPersonWithPartialMetamodel [
 	| model entity |
 	model := self createLIBModelWithClass: LIBPerson.
@@ -148,7 +148,7 @@ FMMetaRepositoryFilterTest >> setUp [
 	rpgModel := self buildRPG.
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testAnnotationTypes [
 
 	| repo package class property properties visitor repoFM3 |
@@ -202,7 +202,7 @@ FMMetaRepositoryFilterTest >> testAnnotationTypes [
 
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testBookMetamodel [
 	
 	| or m repo fm3 visitor repoFM3 |
@@ -223,7 +223,7 @@ FMMetaRepositoryFilterTest >> testBookMetamodel [
 	repo elements anyOne name should = #Book
 ]
 
-{ #category : #tests-basic }
+{ #category : #'tests-basic' }
 FMMetaRepositoryFilterTest >> testClassWithoutPackage [
 	
 	| aClassWithoutPackage repo visitor |
@@ -238,7 +238,7 @@ FMMetaRepositoryFilterTest >> testClassWithoutPackage [
 	self shouldnt: [visitor run ] raise: Error
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testExportAsMSE [
 	
 	| repo visitor repoFM3 printer |
@@ -256,7 +256,7 @@ FMMetaRepositoryFilterTest >> testExportAsMSE [
 	printer stream contents first should = $(
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testExportAsXML [
 	
 	| repo visitor repoFM3 printer |
@@ -274,7 +274,7 @@ FMMetaRepositoryFilterTest >> testExportAsXML [
 	printer stream contents first should = $<
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testFM3 [
 	| fm3 repoFM3 visitor |
 	
@@ -289,7 +289,7 @@ FMMetaRepositoryFilterTest >> testFM3 [
 	fm3 metamodel should = fm3
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testFM3Classes [
 	
 	| fm3 names visitor repoFM3 |
@@ -310,7 +310,7 @@ FMMetaRepositoryFilterTest >> testFM3Classes [
 "	self should: [ fm3 descriptionOf: FMMetaRepositoryTest ] raise: Error"
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testFM3IsComplete [
 	"More information about FM3 may be found on http://smallwiki.unibe.ch/fame/fm3/"
 
@@ -355,7 +355,7 @@ FMMetaRepositoryFilterTest >> testFM3IsComplete [
 	(names select: [ :n | n beginsWith: 'FM3.' ]) size should = 25
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testFM3NewVersion [
 	"The current implementation of FameSystem does not provide a scope for its repository"
 
@@ -398,7 +398,7 @@ FMMetaRepositoryFilterTest >> testFM3NewVersion [
 	(names select: [ :n | n beginsWith: 'FM3' ]) size should = 26
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testImporter [
 
 	| fm3 repoFM3 visitor string repo imp |
@@ -421,7 +421,7 @@ FMMetaRepositoryFilterTest >> testImporter [
 	repo elements anyOne fullName should = 'Office'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQCompound [
 
 	| repo names visitor |
@@ -446,7 +446,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQCompound [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQEquation [
 
 	| repo names visitor |
@@ -471,7 +471,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQEquation [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQEquationSystem [
 
 	| repo names visitor |
@@ -495,7 +495,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQEquationSystem [
 	names should include: 'EQ.Operator'
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQExpression [
 
 	| repo names visitor |
@@ -520,7 +520,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQExpression [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQIdentifier [
 
 	| repo names visitor |
@@ -545,7 +545,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQIdentifier [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQNumerical [
 
 	| repo names visitor |
@@ -570,7 +570,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQNumerical [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQOperator [
 
 	| repo names visitor |
@@ -595,7 +595,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQOperator [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQSimple [
 
 	| repo names visitor |
@@ -620,7 +620,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQSimple [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeEQVariable [
 
 	| repo names visitor |
@@ -645,7 +645,7 @@ FMMetaRepositoryFilterTest >> testIncludeEQVariable [
 	names should not include: 'EQ.EquationSystem'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeLIBBook [
 
 	| repo names visitor |
@@ -664,7 +664,7 @@ FMMetaRepositoryFilterTest >> testIncludeLIBBook [
 	names should not include: 'LIB.Library'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeLIBLibrary [
 
 	| repo names visitor |
@@ -682,7 +682,7 @@ FMMetaRepositoryFilterTest >> testIncludeLIBLibrary [
 	names should include: 'LIB.Book'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeLIBPerson [
 
 	| repo names visitor |
@@ -701,7 +701,7 @@ FMMetaRepositoryFilterTest >> testIncludeLIBPerson [
 	names should not include: 'LIB.Library'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeRPGDragon [
 
 	| repo names visitor |
@@ -719,7 +719,7 @@ FMMetaRepositoryFilterTest >> testIncludeRPGDragon [
 	names should include: 'RPG.Treasure'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeRPGHero [
 
 	| repo names visitor |
@@ -737,7 +737,7 @@ FMMetaRepositoryFilterTest >> testIncludeRPGHero [
 	names should include: 'RPG.Treasure'.
 ]
 
-{ #category : #test-include-fameexamples }
+{ #category : #'test-include-fameexamples' }
 FMMetaRepositoryFilterTest >> testIncludeRPGTreasure [
 
 	| repo names visitor |
@@ -755,7 +755,7 @@ FMMetaRepositoryFilterTest >> testIncludeRPGTreasure [
 	names should include: 'RPG.Treasure'.
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testResolving [
 	
 	| or m fm3 visitor repoFM3 |
@@ -775,7 +775,7 @@ FMMetaRepositoryFilterTest >> testResolving [
 	or repository elements anyOne isFM3Class should beTrue
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testResolvingId [
 	
 	| or m fm3 visitor repoFM3 |
@@ -803,7 +803,7 @@ FMMetaRepositoryFilterTest >> testResolvingId [
 	or repository elements size should = 2
 ]
 
-{ #category : #tests-metarepository }
+{ #category : #'tests-metarepository' }
 FMMetaRepositoryFilterTest >> testResolvingMultiArgs [
 	
 	| or pack ref2 ref4 ref5 repo fm3 visitor repoFM3 |

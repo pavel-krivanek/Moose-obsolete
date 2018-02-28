@@ -33,7 +33,7 @@ Class {
 		'eventHandler',
 		'currentIteraction'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #public }
@@ -121,7 +121,7 @@ RTLayout >> fatherOf: aNode put: aValue [
 	aNode attributes at: #father put: aValue
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTLayout >> initialize [
 	super initialize.
 	translator := RTLayoutTranslator default.

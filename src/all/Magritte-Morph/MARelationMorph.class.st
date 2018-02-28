@@ -5,10 +5,10 @@ Class {
 		'selected',
 		'selectedIndex'
 	],
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MARelationMorph >> addSelectListTo: aMorph [
 
 	| list |
@@ -21,7 +21,7 @@ MARelationMorph >> addSelectListTo: aMorph [
 	aMorph addMorphBack: list
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MARelationMorph >> buildClassChooser [
 
 	| items |
@@ -29,26 +29,26 @@ MARelationMorph >> buildClassChooser [
 	^ UITheme current builder newDropListFor: self list: items getSelected: #selectedIndex setSelected: #selectedIndex: help: ''.
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MARelationMorph >> buildMorph [
 
 	self flag: 'hook for testing. delete me before committing. spd.'.
 	^ super buildMorph.
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MARelationMorph >> buildMorphViewOn: aMorph [
 
 	self flag: 'hook for testing. delete me before committing. spd.'.
 	^ super buildMorphViewOn: aMorph
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MARelationMorph >> buildSelectButton [
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MARelationMorph >> classes [
 
 	^ self magritteDescription classes.

@@ -22,7 +22,7 @@ Class {
 	#classVars : [
 		'Void'
 	],
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
 { #category : #'instance creation' }
@@ -55,7 +55,7 @@ MalTermScanner >> atEnd [
 	^term isNil
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalTermScanner >> initialize [
 	
 	buffer := String new writeStream

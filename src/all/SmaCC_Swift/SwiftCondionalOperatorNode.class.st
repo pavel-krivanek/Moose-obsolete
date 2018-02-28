@@ -48,7 +48,7 @@ Class {
 		'dynamicTypeTokens',
 		'andToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -246,7 +246,7 @@ SwiftCondionalOperatorNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftCondionalOperatorNode >> initialize [
 	super initialize.
 	questionMarkTokens := OrderedCollection new: 2.

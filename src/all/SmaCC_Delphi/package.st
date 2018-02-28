@@ -1,1 +1,1 @@
-Package { #name : #SmaCC_Delphi }
+Package { #name : #'SmaCC_Delphi' }

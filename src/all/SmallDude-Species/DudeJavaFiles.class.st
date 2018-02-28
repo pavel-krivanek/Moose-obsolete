@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeJavaFiles,
 	#superclass : #DudeCStyleFiles,
-	#category : #SmallDude-Species
+	#category : #'SmallDude-Species'
 }
 
 { #category : #parsing }

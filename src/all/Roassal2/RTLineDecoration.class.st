@@ -12,7 +12,7 @@ Class {
 		'baseSize',
 		'percentage'
 	],
-	#category : #Roassal2-LineDecorations
+	#category : #'Roassal2-LineDecorations'
 }
 
 { #category : #accessing }

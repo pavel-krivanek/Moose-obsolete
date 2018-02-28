@@ -105,7 +105,7 @@ SpecOfObjectState >> failureDescription: anObject [
 	failureDescription := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SpecOfObjectState >> initialize [
 	denial := false
 ]

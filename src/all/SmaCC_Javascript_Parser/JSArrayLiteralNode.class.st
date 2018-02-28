@@ -7,7 +7,7 @@ Class {
 		'rightBracket',
 		'expressions'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -52,7 +52,7 @@ JSArrayLiteralNode >> ignoredTokenVariables [
 	^ #(#leftBracket #rightBracket)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSArrayLiteralNode >> initialize [
 	super initialize.
 	commas := OrderedCollection new: 2.

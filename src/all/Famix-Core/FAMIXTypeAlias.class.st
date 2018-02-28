@@ -10,15 +10,13 @@ Class {
 	#instVars : [
 		'aliasedType'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXTypeAlias class >> annotation [
 	<MSEClass: #TypeAlias super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }

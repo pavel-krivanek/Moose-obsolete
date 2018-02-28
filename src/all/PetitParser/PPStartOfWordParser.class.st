@@ -8,7 +8,7 @@ Word characters are any alphanumeric characters.
 Class {
 	#name : #PPStartOfWordParser,
 	#superclass : #PPParser,
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #'as yet unclassified' }

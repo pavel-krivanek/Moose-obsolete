@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
+	#category : #'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
 }
 
 { #category : #setup }
@@ -189,7 +189,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 
 ]
 
-{ #category : #famix-class }
+{ #category : #'famix-class' }
 MooseChefTypeDeclarationAssociationTest >> testFamixClassIncomingTypeDeclarations [
 	self
 		assert:
@@ -227,7 +227,7 @@ MooseChefTypeDeclarationAssociationTest >> testFamixClassIncomingTypeDeclaration
 				atScope: FAMIXType) includes: (self model entityNamed: 'C3'))
 ]
 
-{ #category : #famix-class }
+{ #category : #'famix-class' }
 MooseChefTypeDeclarationAssociationTest >> testFamixClassOutgoingTypeDeclarations [
 	self
 		assert:
@@ -248,7 +248,7 @@ MooseChefTypeDeclarationAssociationTest >> testFamixClassOutgoingTypeDeclaration
 			((self model entityNamed: 'C3') queryOutgoingTypeDeclarations opposites includes: (self model entityNamed: 'C3'))
 ]
 
-{ #category : #famix-class }
+{ #category : #'famix-class' }
 MooseChefTypeDeclarationAssociationTest >> testFamixClassTypeDeclarationsWithoutSelfLoops [
 	self
 		assert:
@@ -277,13 +277,13 @@ MooseChefTypeDeclarationAssociationTest >> testFamixClassTypeDeclarationsWithout
 				includes: (self model entityNamed: 'C2'))
 ]
 
-{ #category : #famix-method }
+{ #category : #'famix-method' }
 MooseChefTypeDeclarationAssociationTest >> testFamixMethodIncomingTypeDeclarations [
 	self assert: (self model entityNamed: 'C1.m1()') queryIncomingTypeDeclarations size equals: 0.
 	self assert: (self model entityNamed: 'C2.m3(C2,C3)') queryIncomingTypeDeclarations size equals: 0
 ]
 
-{ #category : #famix-method }
+{ #category : #'famix-method' }
 MooseChefTypeDeclarationAssociationTest >> testFamixMethodOutgoingTypeDeclarations [
 	self assert: (self model entityNamed: 'C2.m2()') queryOutgoingTypeDeclarations opposites size equals: 2.
 	self
@@ -305,7 +305,7 @@ MooseChefTypeDeclarationAssociationTest >> testFamixMethodOutgoingTypeDeclaratio
 
 ]
 
-{ #category : #famix-method }
+{ #category : #'famix-method' }
 MooseChefTypeDeclarationAssociationTest >> testFamixMethodTypeDeclarationsWithoutSelfLoops [
 	self
 		assert:
@@ -330,7 +330,7 @@ MooseChefTypeDeclarationAssociationTest >> testFamixMethodTypeDeclarationsWithou
 				includes: (self model entityNamed: 'C3'))
 ]
 
-{ #category : #famix-package }
+{ #category : #'famix-package' }
 MooseChefTypeDeclarationAssociationTest >> testFamixPackageIncomingTypeDeclarations [
 	self
 		assert:
@@ -347,7 +347,7 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageIncomingTypeDeclarati
 				atScope: FAMIXPackage) includes: (self model entityNamed: 'p2'))
 ]
 
-{ #category : #famix-package }
+{ #category : #'famix-package' }
 MooseChefTypeDeclarationAssociationTest >> testFamixPackageOutgoingTypeDeclarations [
 	self
 		assert:
@@ -364,7 +364,7 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageOutgoingTypeDeclarati
 				atScope: FAMIXPackage) includes: (self model entityNamed: 'p2'))
 ]
 
-{ #category : #famix-package }
+{ #category : #'famix-package' }
 MooseChefTypeDeclarationAssociationTest >> testFamixPackageTypeDeclarationsWithoutSelfLoops [
 	self
 		assert:

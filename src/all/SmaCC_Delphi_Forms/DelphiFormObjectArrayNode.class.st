@@ -6,7 +6,7 @@ Class {
 		'items',
 		'right'
 	],
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
 { #category : #generated }
@@ -19,7 +19,7 @@ DelphiFormObjectArrayNode >> compositeNodeVariables [
 	^ #(#items)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiFormObjectArrayNode >> initialize [
 	super initialize.
 	items := OrderedCollection new: 2.

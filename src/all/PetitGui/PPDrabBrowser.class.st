@@ -12,7 +12,7 @@ Class {
 		'output',
 		'rootClass'
 	],
-	#category : #PetitGui-Core
+	#category : #'PetitGui-Core'
 }
 
 { #category : #browse }
@@ -46,7 +46,7 @@ PPDrabBrowser >> browseClassesOn: aBrowser [
 			on: $b entitled: 'Browse (b)'
 ]
 
-{ #category : #browse-static }
+{ #category : #'browse-static' }
 PPDrabBrowser >> browseCyclesOn: aBrowser [
 	aBrowser list
 		title: 'Cycles';
@@ -81,7 +81,7 @@ PPDrabBrowser >> browseDynamicOn: aBrowser [
 
 ]
 
-{ #category : #browse-static }
+{ #category : #'browse-static' }
 PPDrabBrowser >> browseExampleOn: aBrowser [
 	aBrowser text
 		title: 'Example';
@@ -89,7 +89,7 @@ PPDrabBrowser >> browseExampleOn: aBrowser [
 		display: [ :parsers | self production example ]
 ]
 
-{ #category : #browse-static }
+{ #category : #'browse-static' }
 PPDrabBrowser >> browseFirstOn: aBrowser [
 	aBrowser list
 		title: 'First';
@@ -98,7 +98,7 @@ PPDrabBrowser >> browseFirstOn: aBrowser [
 		display: [ :parsers | self production firstSet ]
 ]
 
-{ #category : #browse-static }
+{ #category : #'browse-static' }
 PPDrabBrowser >> browseFollowOn: aBrowser [
 	aBrowser list
 		title: 'Follow';
@@ -112,7 +112,7 @@ PPDrabBrowser >> browseFollowOn: aBrowser [
 				ifAbsent: [ Array with: nil asParser ] ]
 ]
 
-{ #category : #browse-static }
+{ #category : #'browse-static' }
 PPDrabBrowser >> browseGraphOn: aBrowser [
 	aBrowser morph
 		title: 'Graph';
@@ -125,7 +125,7 @@ PPDrabBrowser >> browseGraphOn: aBrowser [
 			morph ]
 ]
 
-{ #category : #browse-dynamic }
+{ #category : #'browse-dynamic' }
 PPDrabBrowser >> browseInputOn: aBrowser [
 	aBrowser text
 		useExplicitNotNil;
@@ -159,7 +159,7 @@ PPDrabBrowser >> browseOn: aComposite [
 		andShow: [ :composite | self browsePartsOn: composite ]
 ]
 
-{ #category : #browse-dynamic }
+{ #category : #'browse-dynamic' }
 PPDrabBrowser >> browseOutputOn: aBrowser [
 	aBrowser text
 		title: 'Result';
@@ -259,7 +259,7 @@ PPDrabBrowser >> browseSelectorsOn: aBrowser [
 			on: $b entitled: 'Browse (b)'
 ]
 
-{ #category : #browse-static }
+{ #category : #'browse-static' }
 PPDrabBrowser >> browseSourceOn: aBrowser [
 	aBrowser pharoMethod
 		title: 'Source';
@@ -290,7 +290,7 @@ PPDrabBrowser >> browseStaticOn: aBrowser [
 	self browseExampleOn: aBrowser
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 PPDrabBrowser >> initialize [
 	super initialize.
 	input := String new.
@@ -311,7 +311,7 @@ PPDrabBrowser >> performRefactoring: aRefactoring [
 	^ PPRefactoringUtils new performRefactoring: aRefactoring
 ]
 
-{ #category : #accessing-view }
+{ #category : #'accessing-view' }
 PPDrabBrowser >> production [
 	| parser |
 	^ (parser := self selectedClass new)
@@ -329,34 +329,34 @@ PPDrabBrowser >> rootModel [
 	^ self subclassesOf: self rootClass
 ]
 
-{ #category : #accessing-view }
+{ #category : #'accessing-view' }
 PPDrabBrowser >> selectedClass [
 	^ ((browser paneNamed: #class) port: #selection) value
 ]
 
-{ #category : #accessing-view }
+{ #category : #'accessing-view' }
 PPDrabBrowser >> selectedClass: aClass [
 	((browser paneNamed: #class) update; port: #selection) value: aClass
 ]
 
-{ #category : #accessing-view }
+{ #category : #'accessing-view' }
 PPDrabBrowser >> selectedSelector [
 	^ ((browser paneNamed: #selector) port: #selection) value
 ]
 
-{ #category : #accessing-view }
+{ #category : #'accessing-view' }
 PPDrabBrowser >> selectedSelector: aSelector [
 	((browser paneNamed: #selector) update; port: #selection) value: aSelector
 ]
 
-{ #category : #accessing-view }
+{ #category : #'accessing-view' }
 PPDrabBrowser >> sourceCode [
 	^ (self selectedClass ifNil: [ ^ String new ]) 
 		sourceCodeAt: (self selectedSelector ifNil: [ #start ])
 		ifAbsent: [ String new ]
 ]
 
-{ #category : #accessing-view }
+{ #category : #'accessing-view' }
 PPDrabBrowser >> sourceCode: aString in: aClass [
 	| tree source selector |
 	tree := RBParser parseMethod: aString onError: [ :msg :pos | nil ].

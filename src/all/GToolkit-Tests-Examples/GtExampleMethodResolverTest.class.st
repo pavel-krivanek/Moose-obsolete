@@ -27,7 +27,7 @@ GtExampleMethodResolverTest >> assert: aGTExampleMethod class: aClass classNamed
 	self assert: aGTExampleMethod exists.
 ]
 
-{ #category : #tests-convenience }
+{ #category : #'tests-convenience' }
 GtExampleMethodResolverTest >> testResolveByName [
 	| method |
 	method := GtExampleMethodResolver resolve: GtExampleMethodAfter example: nil className: #GtExampleMethodResolver meta: false selector: #selector.
@@ -41,7 +41,7 @@ GtExampleMethodResolverTest >> testResolveByName [
 	self assert: method class: GtExampleMethodResolver classNamed: 'GtExampleMethodResolver' meta: false selector: #selector.
 ]
 
-{ #category : #tests-convenience }
+{ #category : #'tests-convenience' }
 GtExampleMethodResolverTest >> testResolveMetaByName [
 	| method |
 	method := GtExampleMethodResolver resolve: GtExampleMethodAfter example: nil className: #GtExampleMethodResolver meta: true selector: #resolve:example:selector:.
@@ -55,7 +55,7 @@ GtExampleMethodResolverTest >> testResolveMetaByName [
 	self assert: method class: GtExampleMethodResolver class classNamed: 'GtExampleMethodResolver class' meta: true selector: #resolve:example:selector:.
 ]
 
-{ #category : #tests-convenience }
+{ #category : #'tests-convenience' }
 GtExampleMethodResolverTest >> testResolveMetaByNameWithSystemCompatibility [
 	| method |
 	method := GtExampleMethodResolver resolve: GtExampleMethodAfter example: nil className: 'GtExampleMethodResolver class' meta: true selector: #resolve:example:selector:.

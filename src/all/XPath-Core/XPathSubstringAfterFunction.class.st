@@ -4,7 +4,7 @@ XPath function to return the substring after another substring.
 Class {
 	#name : #XPathSubstringAfterFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

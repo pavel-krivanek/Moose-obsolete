@@ -5,7 +5,7 @@ Class {
 		'textEntry',
 		'textEntryContents'
 	],
-	#category : #Merlin-ToBeRemoved
+	#category : #'Merlin-ToBeRemoved'
 }
 
 { #category : #'instance creation' }
@@ -14,7 +14,7 @@ ListSelectorWithSelectionBySmalltalkExpression class >> on: collectionOfItems [
 	^ (super on: collectionOfItems ) addSmalltalkExpressionRowToPackageSelector ; yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ListSelectorWithSelectionBySmalltalkExpression >> addSmalltalkExpressionRowToPackageSelector [
 	self 
 		addRowWithAll: { 

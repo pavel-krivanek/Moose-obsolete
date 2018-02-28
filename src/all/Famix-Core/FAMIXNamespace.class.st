@@ -8,37 +8,28 @@ When an entity is placed inside a namespace, the fully qualified name (mooseName
 Class {
 	#name : #FAMIXNamespace,
 	#superclass : #FAMIXScopingEntity,
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXNamespace class >> annotation [
 	<MSEClass: #Namespace super: #FAMIXScopingEntity>
 	<package: #FAMIX>
-	
-	^self
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamespace >> namespaceScope [
 
 	^ self 
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamespace >> packageScope [
 
 	self shouldNotImplement
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamespace >> selectWithinYourScope: aMooseQueryResult [
 	^ aMooseQueryResult withinNamespace: self
-]
-
-{ #category : #moosechef-scoping-filtering }
-FAMIXNamespace >> yourScope [
-
-	^ #namespaceScope
-
 ]

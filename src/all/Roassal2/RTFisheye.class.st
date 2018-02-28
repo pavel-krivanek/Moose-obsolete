@@ -13,7 +13,7 @@ Class {
 		'position',
 		'view'
 	],
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #'as yet unclassified' }

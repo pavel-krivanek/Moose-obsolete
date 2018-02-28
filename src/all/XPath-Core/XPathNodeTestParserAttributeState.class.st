@@ -4,7 +4,7 @@ A state for parsing node tests where attributes are the principal node type.
 Class {
 	#name : #XPathNodeTestParserAttributeState,
 	#superclass : #XPathNodeTestParserState,
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #handling }

@@ -19,7 +19,7 @@ Class {
 		'shouldUseNiceLabelsForY',
 		'legendBuilder'
 	],
-	#category : #Roassal2-Builder-Grapher-Core
+	#category : #'Roassal2-Builder-Grapher-Core'
 }
 
 { #category : #'public - adding' }

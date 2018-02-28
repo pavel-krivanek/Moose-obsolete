@@ -4,53 +4,27 @@ Abstract, do not run.
 Class {
 	#name : #XMLStreamAdapterTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-Streams
+	#category : #'XML-Tests-Parser-Streams'
 }
 
 { #category : #converting }
-XMLStreamAdapterTest class >> asciiToUTF16BE: anASCIIString [
-	^ String streamContents: [:stream |
-		anASCIIString do: [:each |
-			stream
-				nextPut: 0 asCharacter;
-				nextPut: each]]
-]
-
-{ #category : #converting }
-XMLStreamAdapterTest class >> asciiToUTF16LE: anASCIIString [
-	^ String streamContents: [:stream |
-		anASCIIString do: [:each |
-			stream
-				nextPut: each;
-				nextPut: 0 asCharacter]]
-]
-
-{ #category : #converting }
-XMLStreamAdapterTest class >> asciiToUTF32BE: anASCIIString [
-	^ String streamContents: [:stream |
-		anASCIIString do: [:each |
-			stream
-				nextPut: 0 asCharacter;
-				nextPut: 0 asCharacter;
-				nextPut: 0 asCharacter;
-				nextPut: each]]
-]
-
-{ #category : #converting }
-XMLStreamAdapterTest class >> asciiToUTF32LE: anASCIIString [
-	^ String streamContents: [:stream |
-		anASCIIString do: [:each |
-			stream
-				nextPut: each;
-				nextPut: 0 asCharacter;
-				nextPut: 0 asCharacter;
-				nextPut: 0 asCharacter]]
+XMLStreamAdapterTest class >> binaryFrom: aCollection [
+	aCollection class == ByteArray
+		ifTrue: [^ aCollection]
+		ifFalse: [
+			^ ByteArray streamContents: [:stream |
+				aCollection do: [:each |
+					stream nextPut: each asInteger]]]
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest class >> decodedByteString [
-	"avoid ASCII null for GS compatibility"
-	^ self stringFrom: #(16r01 16r0F 16r10 16rFF)
+XMLStreamAdapterTest class >> decodedASCIIString [
+	^ self stringFrom: self encodedASCIIBinary
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest class >> decodedLatin1String [
+	^ self stringFrom: self encodedLatin1Binary
 ]
 
 { #category : #accessing }
@@ -67,68 +41,71 @@ XMLStreamAdapterTest class >> decodedUTF32String [
 { #category : #accessing }
 XMLStreamAdapterTest class >> decodedUTF8String [
 	^ self stringFrom:
-		#(16r7F 16r80 16r7FF 16r800 16rFFFF 16r10000 16r10FFFF)
+		#(16r01 16r0F 16r7F 16r80 16r7FF 16r800 16rFEFE 16rFFFF 16r10000 16r10FFFF)
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest class >> encodedByteString [
-	^ self decodedByteString
+XMLStreamAdapterTest class >> encodedASCIIBinary [
+	^ (16r01 to: 16r7F) asByteArray
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest class >> encodedUTF16BEString [
-	^ self stringFrom:
-		#(16r00 16rFF
-			16r01 16r00
-			16rD7 16rFF
-			16rE0 16r00
-			16rFF 16rFF
-			16rD8 16r00 16rDC 16r00 "first surrogate pair"
-			16rD8 16r01 16rDC 16r37
-			16rD8 16r52 16rDF 16r62
-			16rDB 16rFF 16rDF 16rFF) "last surrogate pair"
+XMLStreamAdapterTest class >> encodedLatin1Binary [
+	^ (16r01 to: 16rFF) asByteArray
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest class >> encodedUTF16LEString [
-	^ self stringFrom:
-		#(16rFF 16r00
-			16r00 16r01
-			16rFF 16rD7
-			16r00 16rE0
-			16rFF 16rFF
-			16r00 16rD8 16r00 16rDC "first surrogate pair"
-			16r01 16rD8 16r37 16rDC
-			16r52 16rD8 16r62 16rDF
-			16rFF 16rDB 16rFF 16rDF) "last surrogate pair"
+XMLStreamAdapterTest class >> encodedUTF16BEBinary [
+	^ #[16r00 16rFF
+		16r01 16r00
+		16rD7 16rFF
+		16rE0 16r00
+		16rFF 16rFF
+		16rD8 16r00 16rDC 16r00 "first surrogate pair"
+		16rD8 16r01 16rDC 16r37
+		16rD8 16r52 16rDF 16r62
+		16rDB 16rFF 16rDF 16rFF] "last surrogate pair"
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest class >> encodedUTF32BEString [
-	^ self stringFrom:
-		#(16r00 16r00 16r00 16rFE
-			16r00 16r00 16rD7 16rFE
-			16r00 16r10 16rFF 16rFF)
+XMLStreamAdapterTest class >> encodedUTF16LEBinary [
+	^ #[16rFF 16r00
+		16r00 16r01
+		16rFF 16rD7
+		16r00 16rE0
+		16rFF 16rFF
+		16r00 16rD8 16r00 16rDC "first surrogate pair"
+		16r01 16rD8 16r37 16rDC
+		16r52 16rD8 16r62 16rDF
+		16rFF 16rDB 16rFF 16rDF] "last surrogate pair"
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest class >> encodedUTF32LEString [
-	^ self stringFrom:
-		#(16rFE 16r00 16r00 16r00
-			16rFE 16rD7 16r00 16r00
-			16rFF 16rFF 16r10 16r00)
+XMLStreamAdapterTest class >> encodedUTF32BEBinary [
+	^ #[16r00 16r00 16r00 16rFE
+		16r00 16r00 16rD7 16rFE
+		16r00 16r10 16rFF 16rFF]
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest class >> encodedUTF8String [
-	^ self stringFrom:
-		#(16r7F
-			16rC2 16r80
-			16rDF 16rBF
-			16rE0 16rA0 16r80
-			16rEF 16rBF 16rBF
-			16rF0 16r90 16r80 16r80
-			16rF4 16r8F 16rBF 16rBF)
+XMLStreamAdapterTest class >> encodedUTF32LEBinary [
+	^ #[16rFE 16r00 16r00 16r00
+		16rFE 16rD7 16r00 16r00
+		16rFF 16rFF 16r10 16r00]
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest class >> encodedUTF8Binary [
+	^ #[16r01
+		16r0F
+		16r7F
+		16rC2 16r80
+		16rDF 16rBF
+		16rE0 16rA0 16r80
+		16rEF 16rBB 16rBE
+		16rEF 16rBF 16rBF
+		16rF0 16r90 16r80 16r80
+		16rF4 16r8F 16rBF 16rBF]
 ]
 
 { #category : #testing }
@@ -140,16 +117,17 @@ XMLStreamAdapterTest class >> isAbstract [
 XMLStreamAdapterTest class >> percentEncodeCharacter: aCharacter [
 	| hexString |
 
-	(hexString := aCharacter asciiValue printStringHex asUppercase) size > 1
+	(hexString := aCharacter asInteger printStringHex asUppercase) size > 1
 		ifTrue: [^ '%', hexString]
 		ifFalse: [^ '%0', hexString]
 ]
 
-{ #category : #accessing }
-XMLStreamAdapterTest class >> percentEncodedUTF8String [
+{ #category : #converting }
+XMLStreamAdapterTest class >> percentEncodeCharacters: aCharacterCollection [
 	^ String streamContents: [:stream |
-		self encodedUTF8String do: [:each |
-			stream nextPutAll: (self percentEncodeCharacter: each)]]
+		aCharacterCollection do: [:each |
+			stream nextPutAll:
+				(self percentEncodeCharacter: each)]]
 ]
 
 { #category : #testing }
@@ -159,13 +137,52 @@ XMLStreamAdapterTest class >> shouldInheritSelectors [
 
 { #category : #converting }
 XMLStreamAdapterTest class >> stringFrom: aCollection [
-	"avoid asString for portability"
-	^ String withAll: (aCollection collect: [:each | each asCharacter])
+	aCollection isString
+		ifTrue: [^ aCollection]
+		ifFalse: [
+			"avoid #asString for GS portability"
+			^ String streamContents: [:stream |
+				aCollection do: [:each |
+					stream nextPut: each asCharacter]]]
+]
+
+{ #category : #converting }
+XMLStreamAdapterTest >> asExpectedInput: aCollection [
+	^ self expectsBinaryInput
+		ifTrue: [self binaryFrom: aCollection]
+		ifFalse: [self stringFrom: aCollection]
+]
+
+{ #category : #converting }
+XMLStreamAdapterTest >> asExpectedOutput: aCollection [
+	^ self expectsBinaryOutput
+		ifTrue: [self binaryFrom: aCollection]
+		ifFalse: [self stringFrom: aCollection]
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> decodedByteString [
-	^ self class decodedByteString
+XMLStreamAdapterTest >> basicInputCollection [
+	^ 'test'
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest >> basicOutputCollection [
+	^ self basicInputCollection
+]
+
+{ #category : #converting }
+XMLStreamAdapterTest >> binaryFrom: aCollection [
+	^ self class binaryFrom: aCollection
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest >> decodedASCIIString [
+	^ self class decodedASCIIString
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest >> decodedLatin1String [
+	^ self class decodedLatin1String
 ]
 
 { #category : #accessing }
@@ -184,33 +201,63 @@ XMLStreamAdapterTest >> decodedUTF8String [
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> encodedByteString [
-	^ self class encodedByteString
+XMLStreamAdapterTest >> emptyOutputCollection [
+	^ self outputCollection copyEmpty
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> encodedUTF16BEString [
-	^ self class encodedUTF16BEString
+XMLStreamAdapterTest >> encodedASCIIBinary [
+	^ self class encodedASCIIBinary
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> encodedUTF16LEString [
-	^ self class encodedUTF16LEString
+XMLStreamAdapterTest >> encodedLatin1Binary [
+	^ self class encodedLatin1Binary
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> encodedUTF32BEString [
-	^ self class encodedUTF32BEString
+XMLStreamAdapterTest >> encodedUTF16BEBinary [
+	^ self class encodedUTF16BEBinary
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> encodedUTF32LEString [
-	^ self class encodedUTF32LEString
+XMLStreamAdapterTest >> encodedUTF16LEBinary [
+	^ self class encodedUTF16LEBinary
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> encodedUTF8String [
-	^ self class encodedUTF8String
+XMLStreamAdapterTest >> encodedUTF32BEBinary [
+	^ self class encodedUTF32BEBinary
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest >> encodedUTF32LEBinary [
+	^ self class encodedUTF32LEBinary
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest >> encodedUTF8Binary [
+	^ self class encodedUTF8Binary
+]
+
+{ #category : #testing }
+XMLStreamAdapterTest >> expectsBinaryInput [
+	^ false
+]
+
+{ #category : #testing }
+XMLStreamAdapterTest >> expectsBinaryOutput [
+	^ false
+]
+
+{ #category : #accessing }
+XMLStreamAdapterTest >> inputCollection [
+	^ self asExpectedInput: self basicInputCollection
+]
+
+{ #category : #testing }
+XMLStreamAdapterTest >> isBinary [
+	^ false
 ]
 
 { #category : #'instance creation' }
@@ -234,8 +281,8 @@ XMLStreamAdapterTest >> newStreamOn: aCollection [
 ]
 
 { #category : #accessing }
-XMLStreamAdapterTest >> percentEncodedUTF8String [
-	^ self class percentEncodedUTF8String
+XMLStreamAdapterTest >> outputCollection [
+	^ self asExpectedOutput: self basicOutputCollection
 ]
 
 { #category : #accessing }
@@ -267,7 +314,7 @@ XMLStreamAdapterTest >> testClose [
 
 { #category : #tests }
 XMLStreamAdapterTest >> testIsBinary [
-	self deny: self newStreamAdapter isBinary
+	self assert: self newStreamAdapter isBinary = self isBinary
 ]
 
 { #category : #tests }
@@ -276,8 +323,23 @@ XMLStreamAdapterTest >> testIsStream [
 ]
 
 { #category : #tests }
+XMLStreamAdapterTest >> testIsXMLBinaryOrExternalStream [
+	| streamAdapter |
+
+	streamAdapter := self newStreamAdapter.
+	self assert: streamAdapter isXMLBinaryOrExternalStream = streamAdapter isBinary.
+]
+
+{ #category : #tests }
 XMLStreamAdapterTest >> testIsXMLConvertingStreamAdapter [
 	self deny: self newStreamAdapter isXMLConvertingStreamAdapter
+]
+
+{ #category : #tests }
+XMLStreamAdapterTest >> testNew [
+	self
+		should: [self streamClass new]
+		raise: Error
 ]
 
 { #category : #tests }

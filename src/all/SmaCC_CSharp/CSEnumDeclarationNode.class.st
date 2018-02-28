@@ -16,7 +16,7 @@ Class {
 		'equal',
 		'value'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -98,7 +98,7 @@ CSEnumDeclarationNode >> equal: aSmaCCToken [
 	equal := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSEnumDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

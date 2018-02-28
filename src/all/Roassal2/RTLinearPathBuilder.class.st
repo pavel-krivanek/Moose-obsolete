@@ -4,7 +4,7 @@ A simple clase for create Lines in SVG
 Class {
 	#name : #RTLinearPathBuilder,
 	#superclass : #RTLinePathBuilder,
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #'as yet unclassified' }

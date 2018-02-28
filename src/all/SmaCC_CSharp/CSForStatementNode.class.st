@@ -11,7 +11,7 @@ Class {
 		'rightParenToken',
 		'statement'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -48,7 +48,7 @@ CSForStatementNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolonTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSForStatementNode >> initialize [
 	super initialize.
 	semicolonTokens := OrderedCollection new: 2.

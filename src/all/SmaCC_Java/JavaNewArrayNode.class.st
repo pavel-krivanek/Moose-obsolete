@@ -9,7 +9,7 @@ Class {
 		'rightBrackets',
 		'initializer'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -39,7 +39,7 @@ JavaNewArrayNode >> ignoredCompositeTokenVariables [
 	^ #(#leftBrackets #rightBrackets #_leftParens #_rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaNewArrayNode >> initialize [
 	super initialize.
 	dimExpressions := OrderedCollection new: 2.

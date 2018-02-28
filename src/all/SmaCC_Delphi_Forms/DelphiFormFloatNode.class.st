@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiFormFloatNode,
 	#superclass : #DelphiFormLiteralNode,
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
 { #category : #generated }

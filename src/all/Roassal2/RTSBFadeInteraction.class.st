@@ -15,10 +15,10 @@ Class {
 		'action',
 		'stillInSunburst'
 	],
-	#category : #Roassal2-Builder-Sunburst
+	#category : #'Roassal2-Builder-Sunburst'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTSBFadeInteraction class >> action: ablock [
 	| inst |
 	inst := self new.

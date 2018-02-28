@@ -10,7 +10,7 @@ Class {
 		'elseToken',
 		'elseStatement'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }

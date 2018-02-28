@@ -14,7 +14,7 @@ Class {
 		'possibleItems',
 		'choiceBlock'
 	],
-	#category : #SmaCC_GLR_Runtime
+	#category : #'SmaCC_GLR_Runtime'
 }
 
 { #category : #accessing }
@@ -63,6 +63,11 @@ SmaCCDeferredChoice >> choiceBlock: aBlock [
 SmaCCDeferredChoice >> performOnSmaCCParser: aSmaCCParser [
 	^ (choiceBlock value: possibleItems value: aSmaCCParser)
 		performOnSmaCCParser: aSmaCCParser
+]
+
+{ #category : #accessing }
+SmaCCDeferredChoice >> possibleItems [
+	^ possibleItems
 ]
 
 { #category : #accessing }

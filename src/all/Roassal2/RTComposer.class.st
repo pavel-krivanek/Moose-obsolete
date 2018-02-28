@@ -34,7 +34,7 @@ Class {
 		'backgrounds',
 		'names'
 	],
-	#category : #Roassal2-Builder-Composer
+	#category : #'Roassal2-Builder-Composer'
 }
 
 { #category : #accessing }
@@ -73,13 +73,13 @@ RTComposer >> getGroup: groupId [
 	^mapping at: groupId.
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> group [
 	"Define a new group with the elements added to the view using a computed name"
 	^ self group: ('group', (mapping size asString)) asSymbol
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> group: aName [
 	"Define a new group with the elements added to the view"
 	| group |
@@ -100,14 +100,14 @@ RTComposer >> initialize [
 	names := OrderedCollection new.
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> layout: aLayout [
 	"Layout all the group of elements"
 	aLayout on: groups.
 
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> move: name1 above: name2 [
 	
 	| g1 g2 |
@@ -117,7 +117,7 @@ RTComposer >> move: name1 above: name2 [
 	g1 translateBy: 0 @ gap negated
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> move: name1 below: name2 [
 	
 	| g1 g2 |
@@ -127,7 +127,7 @@ RTComposer >> move: name1 below: name2 [
 	g1 translateBy: 0 @ gap
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> move: name1 belowAlignFromLeft: name2 [
 	
 	| g1 g2 |
@@ -136,7 +136,7 @@ RTComposer >> move: name1 belowAlignFromLeft: name2 [
 	TRConstraint move: g1 belowAlignFromLeft: g2 gap: gap.
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> move: name1 onTheLeftOf: name2 [
 	
 	| g1 g2 |
@@ -146,7 +146,7 @@ RTComposer >> move: name1 onTheLeftOf: name2 [
 	g1 translateBy: gap negated @ 0
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> move: name1 onTheRightBelowOf: name2 [
 	
 	| g1 g2 |
@@ -156,7 +156,7 @@ RTComposer >> move: name1 onTheRightBelowOf: name2 [
 	g1 translateBy: 0 @ gap
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> move: name1 onTheRightOf: name2 [
 	
 	| g1 g2 |
@@ -166,7 +166,7 @@ RTComposer >> move: name1 onTheRightOf: name2 [
 	g1 translateBy: gap @ 0
 ]
 
-{ #category : #public-naming }
+{ #category : #'public-naming' }
 RTComposer >> nameBelowGroup: aName as: title [
 	"Give a title to a group.
 	
@@ -203,7 +203,7 @@ compo view
 	^ lbl
 ]
 
-{ #category : #public-naming }
+{ #category : #'public-naming' }
 RTComposer >> nameGroup: aName as: title [
 	| label |
 	label := (RTLabel new text: title) element.
@@ -225,31 +225,31 @@ RTComposer >> newElementsAsGroup [
 "	^ RTGroup withAll: (view elements copyWithoutAll: self allGroupedElements)"
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> open [
 	^ view open
 ]
 
-{ #category : #public-interaction }
+{ #category : #'public-interaction' }
 RTComposer >> propagateHighlight [
 
 	self newElementsAsGroup @ RTHighlightable allSibblings.
 ]
 
-{ #category : #public-interaction }
+{ #category : #'public-interaction' }
 RTComposer >> propagateHighlightToAll [
 	"Highlight all the elements that have the same model"
 	mapping value do: [ :g | g @ RTHighlightable allSibblings ]
 ]
 
-{ #category : #public-interaction }
+{ #category : #'public-interaction' }
 RTComposer >> propagateHighlightUsing: aBlock [
 	"Highlight all the elements return by aBlock. 
 	 The aBlock variable is evaluated for a Roassal element"
 	mapping value do: [ :g | g @ (RTHighlightable new highlightElements: aBlock) ]
 ]
 
-{ #category : #public-background }
+{ #category : #'public-background' }
 RTComposer >> removeAllBackgrounds [
 	"removes all the backgrounds currently drawn for all the existing groups
 	ex:
@@ -259,7 +259,7 @@ RTComposer >> removeAllBackgrounds [
 	backgrounds removeAll.
 ]
 
-{ #category : #public-naming }
+{ #category : #'public-naming' }
 RTComposer >> removeAllNames [
 	"removes all the names present in the current view
 	ex:
@@ -270,7 +270,7 @@ RTComposer >> removeAllNames [
 	names removeAll.
 ]
 
-{ #category : #public-layout }
+{ #category : #'public-layout' }
 RTComposer >> removeGroup: groupId [
 	| elements |
 	
@@ -286,7 +286,7 @@ RTComposer >> removeGroup: groupId [
 
 ]
 
-{ #category : #public-background }
+{ #category : #'public-background' }
 RTComposer >> setBackgroundColor: aColor forGroup: aName [
 
 	| backgroundBox g outterGap |

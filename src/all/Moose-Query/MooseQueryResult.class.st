@@ -13,7 +13,7 @@ Class {
 		'storage',
 		'receiver'
 	],
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #'instance creation' }
@@ -71,7 +71,7 @@ MooseQueryResult >> do: aBlock [
 	^ storage do: aBlock 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> gtInspectorItemsIn: composite [
 	^ composite list
 		title: 'Items';
@@ -89,14 +89,14 @@ MooseQueryResult >> gtInspectorItemsIn: composite [
 		helpMessage: 'Quick selection field. Given your INPUT, it executes: self select: [:each | INPUT ]'
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> initialize [
 
 	super initialize.
 	self initialize: OrderedCollection new
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> initialize: aCollectionForStorage [
 
 	storage := aCollectionForStorage 
@@ -115,7 +115,7 @@ MooseQueryResult >> intersection: aCollection [
 	^ result
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> newObjectResultWith: aCollection [
 
 	^ MooseObjectQueryResult on: self receiver withAll: aCollection

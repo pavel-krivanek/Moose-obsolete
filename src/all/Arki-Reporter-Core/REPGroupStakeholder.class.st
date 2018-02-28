@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'stakeholders'
 	],
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #'instance creation' }
@@ -22,6 +22,11 @@ REPGroupStakeholder >> addAll: aCollection [
 { #category : #accessing }
 REPGroupStakeholder >> asString [
 	^ ', ' join: (stakeholders collect: [:each | each asString])
+]
+
+{ #category : #accessing }
+REPGroupStakeholder >> asStrings [
+	^ stakeholders flatCollect: [:each | each asStrings]
 ]
 
 { #category : #initialize }

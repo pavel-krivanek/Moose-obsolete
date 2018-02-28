@@ -1,27 +1,27 @@
 Class {
 	#name : #MTLAnnotationDescription,
 	#superclass : #FM3PropertyDescription,
-	#category : #Metanool-Core
+	#category : #'Metanool-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 MTLAnnotationDescription class >> annotation [
 	<MSEClass: #Annotation super: #FM3Element>
 	<package: #FM3>
 
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 MTLAnnotationDescription >> getRawFrom: element [
 	^ element privateState attributeAt: self name ifAbsent: [nil]
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 MTLAnnotationDescription >> setOn: element rawValue: value [
 	element privateState attributeAt: self name put: value
 ]
 
-{ #category : #accessing-meta }
+{ #category : #'accessing-meta' }
 MTLAnnotationDescription >> setOn: element values: array [
 	"This method is used by the repository"
 

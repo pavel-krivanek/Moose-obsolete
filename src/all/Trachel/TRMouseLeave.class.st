@@ -5,5 +5,5 @@ Target: entered element
 Class {
 	#name : #TRMouseLeave,
 	#superclass : #TRAbstractMouseEvent,
-	#category : #Trachel-Events
+	#category : #'Trachel-Events'
 }

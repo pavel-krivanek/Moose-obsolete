@@ -4,10 +4,10 @@ Class {
 	#classInstVars : [
 		'rewriter'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 SmaCCRewriteRuleFileScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(13 'Import' 2) #(13 'Parser' 4))

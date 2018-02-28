@@ -1,7 +1,7 @@
 Class {
 	#name : #MAExternalEditorMorph,
 	#superclass : #MAOneToOneMorph,
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
 { #category : #testing }

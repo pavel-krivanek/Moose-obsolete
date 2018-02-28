@@ -29,7 +29,7 @@ Class {
 		'lowColor',
 		'highColor'
 	],
-	#category : #Roassal2-ColorNormalizerOBSOLETE
+	#category : #'Roassal2-ColorNormalizerOBSOLETE'
 }
 
 { #category : #'instance creation' }
@@ -104,7 +104,7 @@ RTNColorLinearNormalizer >> highColorFor: anEntity [
 	^highColor rtValue: anEntity
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTNColorLinearNormalizer >> initialize [
 	
 	super initialize.

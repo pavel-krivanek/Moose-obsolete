@@ -6,23 +6,22 @@ Class {
 		'lineno',
 		'entity'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 DudeSourceCodeLine class >> annotation [
 	<MSEClass: #SourceCodeLine super: #FAMIXEntity>
 	<package: #Dude>
-	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine class >> newText: aString inEntity: entitySource [ 
 	 
 	^self new initializeText: aString inEntity: entitySource
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine class >> newText: aString lineno: anInt inEntity: entitySource [ 
 	 
 	^self new initializeText: aString lineno: anInt inEntity: entitySource
@@ -34,7 +33,14 @@ DudeSourceCodeLine >> entity [
 	^entity
 ]
 
-{ #category : #initialize-release }
+{ #category : #printing }
+DudeSourceCodeLine >> gtDisplayOn: stream [
+	 
+	stream nextPutAll: 'a SourceCodeLine: '.
+	self text notNil ifTrue: [ stream nextPutAll: self text ]
+]
+
+{ #category : #'initialize-release' }
 DudeSourceCodeLine >> initializeText: aString inEntity: anEntity [ 
 	 
 	text := aString. 
@@ -42,7 +48,7 @@ DudeSourceCodeLine >> initializeText: aString inEntity: anEntity [
 	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeLine >> initializeText: aString lineno: anInt inEntity: anEntity [ 
 	 
 	text := aString.
@@ -60,13 +66,6 @@ DudeSourceCodeLine >> lineno [
 { #category : #accessing }
 DudeSourceCodeLine >> lineno: anInt [
 	lineno := anInt
-]
-
-{ #category : #printing }
-DudeSourceCodeLine >> mooseDisplayStringOn: stream [
-	 
-	stream nextPutAll: 'a SourceCodeLine: '.
-	self text notNil ifTrue: [ stream nextPutAll: self text ]
 ]
 
 { #category : #printing }

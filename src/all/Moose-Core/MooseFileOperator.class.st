@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'rootFolder'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #running }

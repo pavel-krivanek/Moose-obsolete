@@ -16,7 +16,7 @@ Class {
 		'parentMenus',
 		'closingSubmenuFlag'
 	],
-	#category : #Roassal2-Builder-Menu
+	#category : #'Roassal2-Builder-Menu'
 }
 
 { #category : #public }
@@ -133,7 +133,10 @@ RTMenuBuilder >> enterSubmenuOf: lbl [
 	
 	labels := menu items collect: [ :item | | m |
 		m := nil.
-		m := self menu: item label background: (Color white alpha:0) callback: [ 
+		m := self menu: item label 
+			background: Color transparent 
+			highlightColor: Color transparent 
+			callback: [ 
 			item execute: m.
 			menu isLocked ifFalse: [ menu hideAll ] ].
 		item menu: m.

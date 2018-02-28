@@ -1,15 +1,8 @@
 Class {
 	#name : #SmaCCGraphAlgorithm,
 	#superclass : #Object,
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
-
-{ #category : #'instance creation' }
-SmaCCGraphAlgorithm class >> new [
-	^ super new
-		initialize;
-		yourself
-]
 
 { #category : #nodes }
 SmaCCGraphAlgorithm >> createMergedNodeFrom: nodeCollection [

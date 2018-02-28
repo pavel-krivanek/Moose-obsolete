@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'string'
 	],
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #'instance creation' }
@@ -29,7 +29,7 @@ XMLString >> addContent: aStringOrStringNode [
 	self append: aStringOrStringNode
 ]
 
-{ #category : #appending/prepending }
+{ #category : #'appending/prepending' }
 XMLString >> append: aStringOrStringNode [
 	string :=
 		string
@@ -132,7 +132,7 @@ XMLString >> isWhitespace [
 	^ self string isXMLWhitespace
 ]
 
-{ #category : #splitting/merging }
+{ #category : #'splitting/merging' }
 XMLString >> mergeAdjacent [
 	"merges a string node with adjacent string nodes in parent"
 	| siblingNodes selfIndex adjacentNode |
@@ -161,7 +161,7 @@ XMLString >> notEmpty [
 	^ self string notEmpty
 ]
 
-{ #category : #appending/prepending }
+{ #category : #'appending/prepending' }
 XMLString >> prepend: aStringOrStringNode [
 	string :=
 		string
@@ -208,7 +208,7 @@ XMLString >> sortKey [
 	^ self string
 ]
 
-{ #category : #splitting/merging }
+{ #category : #'splitting/merging' }
 XMLString >> splitAt: anOffset [
 	| newNode |
 

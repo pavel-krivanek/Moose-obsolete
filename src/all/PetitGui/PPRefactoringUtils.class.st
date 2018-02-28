@@ -4,7 +4,7 @@ PPBrowser support class that actually performs the reactorings.
 Class {
 	#name : #PPRefactoringUtils,
 	#superclass : #Object,
-	#category : #PetitGui-Core
+	#category : #'PetitGui-Core'
 }
 
 { #category : #'private refactoring' }

@@ -4,7 +4,7 @@ A TRPolygonShapeTest is a test class for testing the behavior of TRPolygonShape
 Class {
 	#name : #TRPolygonShapeTest,
 	#superclass : #TRTest,
-	#category : #Trachel-Tests
+	#category : #'Trachel-Tests'
 }
 
 { #category : #tests }

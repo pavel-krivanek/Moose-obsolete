@@ -4,7 +4,7 @@ A simple class to export Roassal and trachel packages to visualworks
 Class {
 	#name : #Roassal2VW,
 	#superclass : #Object,
-	#category : #Roassal2-ExporterVW
+	#category : #'Roassal2-ExporterVW'
 }
 
 { #category : #accesing }
@@ -29,6 +29,10 @@ Roassal2VW >> blacklist [
 	TRDarkTheme >> #trachelCanvasColor.
 	TRTheme class >> #infer.
 	RTMondrianTest >> #testNodesError.
+	ClassDescription >> #rtmethods.
+	ClassDescription >> #oldestMethod.
+	ClassDescription >> #ageInDays.
+	ClassDescription >> #gotMethodOnDay:.
 	 }
 ]
 

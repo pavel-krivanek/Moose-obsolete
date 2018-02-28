@@ -1,7 +1,7 @@
 Class {
 	#name : #SequenceableCollectionComparator,
 	#superclass : #Object,
-	#category : #Phexample-ShouldPlugins
+	#category : #'Phexample-ShouldPlugins'
 }
 
 { #category : #'as yet unclassified' }

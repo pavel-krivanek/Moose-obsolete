@@ -1,7 +1,7 @@
 Class {
 	#name : #MPImportJavaSourceFilesWithJdt2FamixCommand,
 	#superclass : #MPImportCommand,
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #hooks }

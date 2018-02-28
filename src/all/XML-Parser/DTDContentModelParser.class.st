@@ -8,7 +8,7 @@ Class {
 		'element',
 		'contentModel'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #'instance creation' }

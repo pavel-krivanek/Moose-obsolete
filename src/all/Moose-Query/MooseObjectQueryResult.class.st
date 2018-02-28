@@ -4,18 +4,12 @@ MooseObjectQueryResult hold the result of queries that return objects (e.g. oppo
 Class {
 	#name : #MooseObjectQueryResult,
 	#superclass : #MooseQueryResult,
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #filtering }
 MooseObjectQueryResult >> atScope: aClassFamix [
-	| basicResult noNilResult |
-	basicResult := self storage collect: [ :entity | entity atScope: aClassFamix ].	
-		
-	"we can get nil in results when the wanted scope does not make
-	sense for an entity. So, we reject the nils"
-	noNilResult := (basicResult reject: [ :each | each isNil ]) flattened.
-	^ self newObjectResultWith: noNilResult asSet
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :entity | entity atScope: aClassFamix in: res ]) asSet
 ]
 
 { #category : #filtering }
@@ -45,24 +39,12 @@ MooseObjectQueryResult >> primCollectAtScope: aScopeSymbol [
 
 { #category : #filtering }
 MooseObjectQueryResult >> toScope: aClassFamix [
-	| basicResult noNilResult |
-	basicResult := self storage collect: [ :entity | entity toScope: aClassFamix ].	
-		
-	"we can get nil in results when the wanted scope does not make
-	sense for an entity. So, we reject the nils"
-	noNilResult := (basicResult reject: [ :each | each isNil ]) flattened.
-	^ self newObjectResultWith: noNilResult asSet
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :entity | entity toScope: aClassFamix in: res ]) asSet
 ]
 
 { #category : #filtering }
 MooseObjectQueryResult >> withScope: aClassFamix [
-	| basicResult noNilResult |
-	basicResult := self storage collect: [ :entity | entity withScope: aClassFamix ].	
-		
-	"we can get nil in results when the wanted scope does not make
-	sense for an entity. So, we reject the nils"
-	noNilResult := (basicResult reject: [ :each | each isNil ]) flattened.
-	^ self newObjectResultWith: noNilResult asSet
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :entity | entity withScope: aClassFamix in: res ]) asSet
 ]
 
 { #category : #filtering }

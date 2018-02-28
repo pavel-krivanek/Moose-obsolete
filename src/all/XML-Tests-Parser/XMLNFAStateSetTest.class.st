@@ -6,7 +6,7 @@ Class {
 		'disjointStates',
 		'absentState'
 	],
-	#category : #XML-Tests-Parser-Validation-DFA
+	#category : #'XML-Tests-Parser-Validation-DFA'
 }
 
 { #category : #testing }

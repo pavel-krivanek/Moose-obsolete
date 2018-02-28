@@ -19,14 +19,13 @@ Class {
 		'signature',
 		'candidates'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXInvocation class >> annotation [
 	<MSEClass: #Invocation super: #FAMIXAssociation>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -58,7 +57,7 @@ FAMIXInvocation >> from: aSender [
 	self sender: aSender
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXInvocation >> initialize [
 	super initialize.
 	signature := 'nosignature'.

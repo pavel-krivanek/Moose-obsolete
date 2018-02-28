@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'isGLR'
 	],
-	#category : #SmaCC_Debugging_Support
+	#category : #'SmaCC_Debugging_Support'
 }
 
 { #category : #accessing }
@@ -242,8 +242,7 @@ SmaCCParserDebugger >> parserStack [
 	states := self parser stateStack.
 	nodes := self parser nodeStack.
 	items := OrderedCollection new.
-	(1 to: states size - 1)
-		collect: [ :i | items addFirst: (Array with: (self symbolForTransitionFrom: (states at: i) to: (states at: i + 1)) with: (nodes at: i)) ].
+	1 to: states size - 1 do: [ :i | items addFirst: (Array with: (self symbolForTransitionFrom: (states at: i) to: (states at: i + 1)) with: (nodes at: i)) ].
 	context := self session context
 		findContextSuchThat: [ :each | (each receiver isKindOf: SmaCCParser) and: [ each selector = #performReduceMethod:with: ] ].
 	context notNil
@@ -251,8 +250,7 @@ SmaCCParserDebugger >> parserStack [
 			reduceContext := context findContextSuchThat: [ :each | (each receiver isKindOf: SmaCCParser) and: [ each selector = #reduce: ] ].
 			items addFirst: #('' '').
 			(context tempAt: 2) size to: 1 by: -1 do: [ :i | items addFirst: (Array with: 'nodes at: ' , i printString with: ((context tempAt: 2) at: i)) ].
-			items
-				addFirst: (Array with: 'Reducing:' with: (self parser symbolNameFor: (reduceContext receiver reduceTable at: (reduceContext tempAt: 1)) first)) ].
+			items addFirst: (Array with: 'Reducing:' with: (self parser symbolNameFor: (reduceContext receiver reduceTable at: (reduceContext tempAt: 1)) first)) ].
 	self parser currentToken
 		ifNotNil: [ :token | 
 			| stream |
@@ -294,7 +292,7 @@ SmaCCParserDebugger >> scannerProperties [
 	scanner := self scanner.
 	items := OrderedCollection new.
 	string := scanner outputStream ifNil: [ '' ] ifNotNil: [ :stream | stream contents ].
-	items add: (Array with: 'State' with: scanner state).
+	items add: (Array with: 'Scope' with: scanner scope).
 	(self currentContext receiver isKindOf: SmaCCScanner)
 		ifTrue: [ items
 				add: (Array with: 'Current Character' with: scanner currentCharacter);

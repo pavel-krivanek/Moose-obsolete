@@ -1,7 +1,7 @@
 Class {
 	#name : #DeepGraph2TraverserTest,
 	#superclass : #DeepTraverserGraphTest,
-	#category : #DeepTraverser-Tests-Transformed-To-Examples
+	#category : #'DeepTraverser-Tests-Transformed-To-Examples'
 }
 
 { #category : #'as yet unclassified' }

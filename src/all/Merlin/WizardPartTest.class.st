@@ -1,7 +1,7 @@
 Class {
 	#name : #WizardPartTest,
 	#superclass : #TestCase,
-	#category : #Merlin-Tests
+	#category : #'Merlin-Tests'
 }
 
 { #category : #'as yet unclassified' }

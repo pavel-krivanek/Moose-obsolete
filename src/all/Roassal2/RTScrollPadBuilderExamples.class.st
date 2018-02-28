@@ -4,7 +4,7 @@ Give it a try, inspect the comments
 Class {
 	#name : #RTScrollPadBuilderExamples,
 	#superclass : #RTObject,
-	#category : #Roassal2-Builder-ScrollBar
+	#category : #'Roassal2-Builder-ScrollBar'
 }
 
 { #category : #examples }

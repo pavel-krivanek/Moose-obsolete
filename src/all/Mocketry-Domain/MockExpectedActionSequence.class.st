@@ -43,7 +43,7 @@ MockExpectedActionSequence >> executeFor: anOccurredMessage [
 	^actions last executeFor: anOccurredMessage
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MockExpectedActionSequence >> initialize [
 	actions := OrderedCollection new
 ]

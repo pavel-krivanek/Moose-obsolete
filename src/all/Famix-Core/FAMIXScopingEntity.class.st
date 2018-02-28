@@ -11,14 +11,13 @@ Class {
 		'parentScope',
 		'childScopes'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXScopingEntity class >> annotation [
 	<MSEClass: #ScopingEntity super: #FAMIXContainerEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -62,14 +61,14 @@ FAMIXScopingEntity >> globalVariables: aGlobalVariable [
 	globalVariables value: aGlobalVariable
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXScopingEntity >> initialize [
 	super initialize.
 	childScopes := FMNullMultivalueLink on: self opposite: #parentScope: selector: #childScopes.
 	globalVariables := FMNullMultivalueLink on: self opposite: #parentScope: selector: #globalVariables.
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXScopingEntity >> methodScope [
 	"This only makes sense to reject self loops in #collectAtScope:"
 
@@ -94,7 +93,7 @@ FAMIXScopingEntity >> parentScope: aScopingEntity [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXScopingEntity >> typeScope [
 	"This only makes sense to reject self loops in #collectAtScope:"
 	^ self classes

@@ -4,7 +4,7 @@ RTData renders bars and dots in vertical way
 Class {
 	#name : #RTHorizontalData,
 	#superclass : #RTData,
-	#category : #Roassal2-Builder-Grapher-Core
+	#category : #'Roassal2-Builder-Grapher-Core'
 }
 
 { #category : #hooks }

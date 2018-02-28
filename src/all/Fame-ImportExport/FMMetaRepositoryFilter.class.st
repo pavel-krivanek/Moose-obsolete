@@ -5,7 +5,7 @@ Class {
 		'newMetaRepository',
 		'classes'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #accessing }
@@ -20,7 +20,7 @@ FMMetaRepositoryFilter >> classes: anObject [
 	classes := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMMetaRepositoryFilter >> initialize [
 	
 	newMetaRepository := FMMetaRepository basicNew.

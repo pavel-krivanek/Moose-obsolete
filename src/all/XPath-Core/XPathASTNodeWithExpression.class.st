@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'expression'
 	],
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #'instance creation' }

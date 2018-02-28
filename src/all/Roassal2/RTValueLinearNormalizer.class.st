@@ -19,10 +19,10 @@ Class {
 		'minScale',
 		'maxScale'
 	],
-	#category : #Roassal2-ColorNormalizerOBSOLETE
+	#category : #'Roassal2-ColorNormalizerOBSOLETE'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTValueLinearNormalizer >> initialize [
 
 	super initialize.

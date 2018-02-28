@@ -4,7 +4,7 @@ Abstract, do not run.
 Class {
 	#name : #XMLStreamConverterTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-Streams
+	#category : #'XML-Tests-Parser-Streams'
 }
 
 { #category : #testing }
@@ -33,7 +33,7 @@ XMLStreamConverterTest >> caseInvertedEncodingNameFrom: anEncodingName [
 
 { #category : #accessing }
 XMLStreamConverterTest >> defaultClass [
-	^ XMLUTF8StreamConverter
+	^ XMLImplicitUTF8StreamConverter
 ]
 
 { #category : #accessing }
@@ -53,6 +53,11 @@ XMLStreamConverterTest >> encodingNamesWithCaseInversions [
 				(encodingNamesWithCaseInversions add:
 					(self caseInvertedEncodingNameFrom: each)))].
 	^ encodingNamesWithCaseInversions.
+]
+
+{ #category : #testing }
+XMLStreamConverterTest >> isImplicit [
+	^ false
 ]
 
 { #category : #'instance creation' }
@@ -76,6 +81,18 @@ XMLStreamConverterTest >> streamConverterClass [
 ]
 
 { #category : #tests }
+XMLStreamConverterTest >> testAbstractClass [
+	| streamConverterClass |
+
+	streamConverterClass := self streamConverterClass.
+	self assert:
+		streamConverterClass abstractClass ==
+			(self isImplicit
+				ifTrue: [streamConverterClass superclass superclass]
+				ifFalse: [streamConverterClass superclass])
+]
+
+{ #category : #tests }
 XMLStreamConverterTest >> testAsXMLStreamConverter [
 	| streamConverter |
 
@@ -93,7 +110,13 @@ XMLStreamConverterTest >> testCanConvertEncoding [
 
 { #category : #tests }
 XMLStreamConverterTest >> testDefault [
-	self assert: self streamConverterClass default class == self defaultClass
+	| streamConverter |
+
+	streamConverter := self streamConverterClass default.
+	self
+		assert: streamConverter class == self defaultClass;
+		assert: streamConverter isDefault;
+		assert: streamConverter isImplicit.
 ]
 
 { #category : #tests }
@@ -117,6 +140,20 @@ XMLStreamConverterTest >> testEncoding [
 ]
 
 { #category : #tests }
+XMLStreamConverterTest >> testIsAbstractClass [
+	| streamConverterClass |
+
+	streamConverterClass := self streamConverterClass.
+	self deny: streamConverterClass isAbstractClass.
+	self isImplicit
+		ifTrue: [streamConverterClass := streamConverterClass superclass].
+	[streamConverterClass == XMLStreamConverter]
+		whileFalse: [
+			streamConverterClass := streamConverterClass superclass.
+			self assert: streamConverterClass isAbstractClass].
+]
+
+{ #category : #tests }
 XMLStreamConverterTest >> testIsDefault [
 	self streamConverterClass == self defaultClass
 		ifTrue: [self assert: self newStreamConverter isDefault]
@@ -128,6 +165,13 @@ XMLStreamConverterTest >> testIsDefaultClass [
 	self streamConverterClass == self defaultClass
 		ifTrue: [self assert: self streamConverterClass isDefaultClass]
 		ifFalse: [self deny: self streamConverterClass isDefaultClass]
+]
+
+{ #category : #tests }
+XMLStreamConverterTest >> testIsImplicit [
+	self isImplicit
+		ifTrue: [self assert: self newStreamConverter isImplicit]
+		ifFalse: [self deny: self newStreamConverter isImplicit]
 ]
 
 { #category : #tests }

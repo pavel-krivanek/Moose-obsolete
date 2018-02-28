@@ -14,7 +14,7 @@ Class {
 		'constraintClauses',
 		'semicolon'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -66,7 +66,7 @@ CSInterfaceMethodDeclarationNode >> constraintClauses: anOrderedCollection [
 	self setParents: self constraintClauses to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSInterfaceMethodDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

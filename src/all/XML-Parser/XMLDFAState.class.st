@@ -10,7 +10,7 @@ Class {
 		'dfaStateTransitions',
 		'hasNonDeterminism'
 	],
-	#category : #XML-Parser-Validation-DFA
+	#category : #'XML-Parser-Validation-DFA'
 }
 
 { #category : #'instance creation' }

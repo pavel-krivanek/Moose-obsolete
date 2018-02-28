@@ -4,7 +4,7 @@ This is a base class for attribute specifications. Subclasses need to implement 
 Class {
 	#name : #XMLAttributeSpec,
 	#superclass : #Object,
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
 
 { #category : #converting }

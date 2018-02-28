@@ -1,1 +1,1 @@
-Package { #name : #XPath-GTExtensions }
+Package { #name : #'XPath-GTExtensions' }

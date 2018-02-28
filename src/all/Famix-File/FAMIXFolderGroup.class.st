@@ -4,14 +4,13 @@ FAMIXFolderGroup is a MooseGroup containing only FAMIX enities of type FAMIXFold
 Class {
 	#name : #FAMIXFolderGroup,
 	#superclass : #MooseGroup,
-	#category : #Famix-File
+	#category : #'Famix-File'
 }
 
 { #category : #meta }
 FAMIXFolderGroup class >> annotation [
 	<MSEClass: #FolderGroup super: #MooseGroup>
 	<package: #FILE>
-	^self
 ]
 
 { #category : #'accessing computed' }

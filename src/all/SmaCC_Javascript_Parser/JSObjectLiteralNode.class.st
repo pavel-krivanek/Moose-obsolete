@@ -7,7 +7,7 @@ Class {
 		'definitions',
 		'commas'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -52,7 +52,7 @@ JSObjectLiteralNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSObjectLiteralNode >> initialize [
 	super initialize.
 	definitions := OrderedCollection new: 2.

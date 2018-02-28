@@ -14,7 +14,7 @@ Class {
 		'description',
 		'slots'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
 { #category : #'instance creation' }
@@ -56,7 +56,7 @@ FMRuntimeElement >> description: anObject [
 	description := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMRuntimeElement >> initialize [
 
 	slots := IdentityDictionary new.

@@ -4,7 +4,7 @@ A state for parsing the <?xml ...?> token.
 Class {
 	#name : #XMLXMLDeclarationState,
 	#superclass : #XMLPrologState,
-	#category : #XML-Parser-Drivers
+	#category : #'XML-Parser-Drivers'
 }
 
 { #category : #testing }

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'borderRadius'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #accessing }

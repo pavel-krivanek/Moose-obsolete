@@ -1,1 +1,1 @@
-Package { #name : #SmaCC_C_Parser }
+Package { #name : #'SmaCC_C_Parser' }

@@ -4,7 +4,7 @@ Evalaute the following code to verify the complete image.
 Class {
 	#name : #PPSmalltalkClassesTests,
 	#superclass : #PPCompositeParserTest,
-	#category : #PetitSmalltalk-Tests
+	#category : #'PetitSmalltalk-Tests'
 }
 
 { #category : #utilities }
@@ -98,7 +98,7 @@ PPSmalltalkClassesTests >> testMagnitude [
 	self verifyClass: Fraction
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPSmalltalkClassesTests >> testParseExpression [
 	result := self parserClass parseExpression: '1 + 2'.
 	self assert: result isMessage.
@@ -114,7 +114,7 @@ PPSmalltalkClassesTests >> testParseExpression [
 	self should: [ self parserClass parseExpression: '1 + ' ] raise: Error
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPSmalltalkClassesTests >> testParseMethod [
 	result := self parserClass parseMethod: 'do 1 + 2'.
 	self assert: result isMethod.

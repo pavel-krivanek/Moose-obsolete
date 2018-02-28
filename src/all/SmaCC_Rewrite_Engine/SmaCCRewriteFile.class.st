@@ -9,15 +9,8 @@ Class {
 		'timestamp',
 		'cachedLists'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
-
-{ #category : #'instance creation' }
-SmaCCRewriteFile class >> new [
-	^ super new
-		initialize;
-		yourself
-]
 
 { #category : #comparing }
 SmaCCRewriteFile >> = anObject [
@@ -47,8 +40,11 @@ SmaCCRewriteFile >> clearLocalVariablesIn: aClass [
 
 { #category : #accessing }
 SmaCCRewriteFile >> currentFileTimestamp [
-	^ filename
-		ifNotNil: [ :name | name asFileReference modificationTime ]
+	^ filename isNil
+		ifTrue: [ nil ]
+		ifFalse: [ filename asFileReference exists
+				ifTrue: [ filename asFileReference modificationTime ]
+				ifFalse: [ nil ] ]
 ]
 
 { #category : #accessing }
@@ -59,6 +55,8 @@ SmaCCRewriteFile >> directory [
 
 { #category : #printing }
 SmaCCRewriteFile >> displayOn: aStream [
+	filename isNil
+		ifTrue: [ ^ aStream nextPutAll: '...new file...' ].
 	aStream nextPutAll: filename asFileReference basename
 ]
 
@@ -100,7 +98,7 @@ SmaCCRewriteFile >> import: aString [
 	self addTransformation: rewriteFile
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteFile >> initialize [
 	super initialize.
 	rewrites := OrderedCollection new.

@@ -1,7 +1,7 @@
 Class {
 	#name : #JavaProgramNodeVisitor,
 	#superclass : #SmaCCParseNodeVisitor,
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }

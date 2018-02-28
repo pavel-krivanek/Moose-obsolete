@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'cc'
 	],
-	#category : #Moose-Tests-Algos-Graph
+	#category : #'Moose-Tests-Algos-Graph'
 }
 
 { #category : #running }
@@ -13,7 +13,7 @@ MalCyclesCoverageTest >> setUp [
 	cc := MalCyclesCoverage new.
 ]
 
-{ #category : #tests-cse }
+{ #category : #'tests-cse' }
 MalCyclesCoverageTest >> testAseCircuitWithCse [
 	"
 	self debug: #testAseCircuitWithCse 
@@ -29,7 +29,7 @@ MalCyclesCoverageTest >> testAseCircuitWithCse [
 
 ]
 
-{ #category : #tests-sed }
+{ #category : #'tests-sed' }
 MalCyclesCoverageTest >> testAseCircuitWithSed [
 	"
 	self debug: #testAseCircuitWithSed 
@@ -45,7 +45,7 @@ MalCyclesCoverageTest >> testAseCircuitWithSed [
 
 ]
 
-{ #category : #tests-snd }
+{ #category : #'tests-snd' }
 MalCyclesCoverageTest >> testAseCircuitWithSnd [
 	"
 	self debug: #testAseCircuitWithSnd 
@@ -60,7 +60,7 @@ MalCyclesCoverageTest >> testAseCircuitWithSnd [
 
 ]
 
-{ #category : #tests-cse }
+{ #category : #'tests-cse' }
 MalCyclesCoverageTest >> testAseSccWithCse [
 	"
 	self debug: #testAseSccWithCse 
@@ -78,7 +78,7 @@ MalCyclesCoverageTest >> testAseSccWithCse [
 	self assert: (#($e $a $b $d) hasEqualElements: cse circuits fourth).
 ]
 
-{ #category : #tests-sed }
+{ #category : #'tests-sed' }
 MalCyclesCoverageTest >> testAseSccWithSed [
 	"
 	self debug: #testAseScc 
@@ -96,7 +96,7 @@ MalCyclesCoverageTest >> testAseSccWithSed [
 
 ]
 
-{ #category : #tests-snd }
+{ #category : #'tests-snd' }
 MalCyclesCoverageTest >> testAseSccWithSnd [
 	"
 	self debug: #testAseSccWithSnd 

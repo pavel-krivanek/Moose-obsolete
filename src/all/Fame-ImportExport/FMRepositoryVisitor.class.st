@@ -11,7 +11,7 @@ Class {
 		'roots',
 		'lastUpdate'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #'instance creation' }
@@ -103,7 +103,7 @@ FMRepositoryVisitor >> indexOf: each [
 	^index at: each ifAbsentPut: [ index size + 1 ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMRepositoryVisitor >> initialize [
 	"Gofer new squeaksource: 'ht'; addPackage: 'Hashtable'; load."
 	index := IdentityHashTable new.

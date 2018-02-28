@@ -15,7 +15,7 @@ Class {
 		'stream',
 		'blacklist'
 	],
-	#category : #Roassal2-ExporterVW
+	#category : #'Roassal2-ExporterVW'
 }
 
 { #category : #accesing }

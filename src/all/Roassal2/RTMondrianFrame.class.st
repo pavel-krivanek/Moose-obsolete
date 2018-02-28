@@ -34,7 +34,7 @@ Class {
 		'elements',
 		'childrenFrame'
 	],
-	#category : #Roassal2-Builder-Mondrian
+	#category : #'Roassal2-Builder-Mondrian'
 }
 
 { #category : #adding }
@@ -82,7 +82,7 @@ RTMondrianFrame >> numberOfChildrenFrames [
 	^ childrenFrame size
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTMondrianFrame >> numberOfElements [
 	^ elements size
 ]

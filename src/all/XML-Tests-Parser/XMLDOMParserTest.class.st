@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLDOMParserTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #source }

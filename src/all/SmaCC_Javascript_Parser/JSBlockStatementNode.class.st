@@ -6,7 +6,7 @@ Class {
 		'statements',
 		'rightBrace'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -24,7 +24,7 @@ JSBlockStatementNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSBlockStatementNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

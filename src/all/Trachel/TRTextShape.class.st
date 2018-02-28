@@ -5,7 +5,7 @@ Class {
 		'text',
 		'font'
 	],
-	#category : #Trachel-MorphSpecific
+	#category : #'Trachel-MorphSpecific'
 }
 
 { #category : #visitor }

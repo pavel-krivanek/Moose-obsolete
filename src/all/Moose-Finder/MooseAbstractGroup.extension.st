@@ -13,7 +13,7 @@ MooseAbstractGroup >> mooseFinderListIn: composite [
 		beMultiple;
 		showOnly: 50;
 		display: #mooseInterestingEntity;
-		sortBlock: [ :a :b | a mooseDisplayString < b mooseDisplayString ];
+		sortBlock: [ :a :b | a gtDisplayString < b gtDisplayString ];
 		send:
 				[ :each | 
 			each isNil
@@ -21,7 +21,7 @@ MooseAbstractGroup >> mooseFinderListIn: composite [
 				ifFalse: [ each size = 1
 						ifTrue: [ each first ]
 						ifFalse: [ each asMooseGroup ] ] ];
-		format: #mooseDisplayString;
+		format: #gtDisplayString;
 		icon: #mooseIcon;
 		title: [ :each | each mooseInterestingEntity size asString , ' items' ];
 		titleIcon: MooseIcons mooseList;

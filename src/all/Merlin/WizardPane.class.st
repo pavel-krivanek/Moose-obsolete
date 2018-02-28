@@ -39,7 +39,7 @@ Class {
 		'conditions',
 		'failingConditions'
 	],
-	#category : #Merlin-Core
+	#category : #'Merlin-Core'
 }
 
 { #category : #'instance creation' }
@@ -55,7 +55,7 @@ WizardPane >> adaptSize [
 	"self builder openModal: self dialogWindow."
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> addPart: aWizardPart associatedTo: aSymbol [ 
 	"when a wizard part is added to a WizardPane, an output is associated to it. Each part is associate to only one output"
 	
@@ -68,7 +68,7 @@ WizardPane >> addPart: aWizardPart associatedTo: aSymbol [
 		put: aSymbol.
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> addPart: aWizardPart associatedTo: aSymbol requiring: aCollectionOfSymbols [ 
 	"when a wizard part is added to a WizardPane, an output is associated to it. Each part is associate to only one output but can require several inputs specified by aCollectionOfSymbols"
 
@@ -100,7 +100,7 @@ WizardPane >> checkForEnablingNextButton [
 	self disableNextButton.
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> column: aBlockOrAPart [
 	mainPaneLine
 		ifNotNil: [ :aPaneRow | aPaneRow column: aBlockOrAPart ]
@@ -108,7 +108,7 @@ WizardPane >> column: aBlockOrAPart [
 			mainPaneLine column: aBlockOrAPart ]
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> column: aWizardPart associatedTo: aSymbol [
 
 	"use this method to add a part (using aBlockOrAPart as a WizardPart) or several parts (using aBlockOrAPart as a block ([:row | row column: aPart ; column: anotherPart]) ) to the pane, in a new row. You should always manage the layout of the pane in the same way: you decide to divide the pane in rows and for each row you can add several columns. In this case you will always use a method begining with 'way'. If you decide to divide you pane in columns, you will always use a method begining with: 'column:'. If you try another way to dispatch the parts, the order you might want will not be guaranteed "
@@ -128,7 +128,7 @@ WizardPane >> column: aWizardPart associatedTo: aSymbol [
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> column: aWizardPart associatedTo: aSymbol requiring: aCollectionOfSymbols [
 
 	"use this method to add a part (using aBlockOrAPart as a WizardPart) or several parts (using aBlockOrAPart as a block ([:row | row column: aPart ; column: anotherPart]) ) to the pane, in a new row. You should always manage the layout of the pane in the same way: you decide to divide the pane in rows and for each row you can add several columns. In this case you will always use a method begining with 'way'. If you decide to divide you pane in columns, you will always use a method begining with: 'column:'. If you try another way to dispatch the parts, the order you might want will not be guaranteed "
@@ -148,7 +148,7 @@ WizardPane >> column: aWizardPart associatedTo: aSymbol requiring: aCollectionOf
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> column: aWizardPart requiring: aCollectionOfSymbols [
 
 	"use this method to add a part (using aBlockOrAPart as a WizardPart) or several parts (using aBlockOrAPart as a block ([:row | row column: aPart ; column: anotherPart]) ) to the pane, in a new row. You should always manage the layout of the pane in the same way: you decide to divide the pane in rows and for each row you can add several columns. In this case you will always use a method begining with 'way'. If you decide to divide you pane in columns, you will always use a method begining with: 'column:'. If you try another way to dispatch the parts, the order you might want will not be guaranteed "
@@ -350,7 +350,7 @@ WizardPane >> hasChanged: aWizardPart [
 		]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardPane >> initialize [
 	"by default, the dialog window is a new empty pluggable dialog window "
 
@@ -485,7 +485,7 @@ WizardPane >> refresh [
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> removeAllParts [
 	
 
@@ -564,7 +564,7 @@ WizardPane >> retrievePartsOutputs [
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> row: aBlockOrAPart [
 
 	"use this method to add a part (using aBlockOrAPart as a WizardPart) or several parts (using aBlockOrAPart as a block ([:row | row column: aPart ; column: anotherPart]) ) to the pane, in a new row. You should always manage the layout of the pane in the same way: you decide to divide the pane in rows and for each row you can add several columns. In this case you will always use methods begining with 'row'. If you decide to divide your pane in columns, you will always use methods begining with: 'column:'. If you try another way to dispatch the parts, the order you  want might not be guaranteed "
@@ -583,7 +583,7 @@ WizardPane >> row: aBlockOrAPart [
 
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> row: aWizardPart associatedTo: aSymbol [
 	"use this method to add a part (using aBlockOrAPart as a WizardPart) or several parts (using aBlockOrAPart as a block ([:row | row column: aPart ; column: anotherPart]) ) to the pane, in a new row. You should always manage the layout of the pane in the same way: you decide to divide the pane in rows and for each row you can add several columns. In this case you will always use a method begining with 'way'. If you decide to divide you pane in columns, you will always use a method begining with: 'column:'. If you try another way to dispatch the parts, the order you might want will not be guaranteed "
 
@@ -596,7 +596,7 @@ WizardPane >> row: aWizardPart associatedTo: aSymbol [
 	self setPart: aWizardPart associatedTo: aSymbol
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> row: aWizardPart associatedTo: aSymbol requiring: aCollectionOfSymbols [
 
 	"use this method to add a part (using aBlockOrAPart as a WizardPart) or several parts (using aBlockOrAPart as a block ([:row | row column: aPart ; column: anotherPart]) ) to the pane, in a new row. You should always manage the layout of the pane in the same way: you decide to divide the pane in rows and for each row you can add several columns. In this case you will always use a method begining with 'way'. If you decide to divide you pane in columns, you will always use a method begining with: 'column:'. If you try another way to dispatch the parts, the order you might want will not be guaranteed "
@@ -616,7 +616,7 @@ WizardPane >> row: aWizardPart associatedTo: aSymbol requiring: aCollectionOfSym
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> row: aWizardPart  requiring: aCollectionOfSymbols [
 
 	"use this method to add a part (using aBlockOrAPart as a WizardPart) or several parts (using aBlockOrAPart as a block ([:row | row column: aPart ; column: anotherPart]) ) to the pane, in a new row. You should always manage the layout of the pane in the same way: you decide to divide the pane in rows and for each row you can add several columns. In this case you will always use a method begining with 'way'. If you decide to divide you pane in columns, you will always use a method begining with: 'column:'. If you try another way to dispatch the parts, the order you might want will not be guaranteed "
@@ -636,7 +636,7 @@ WizardPane >> row: aWizardPart  requiring: aCollectionOfSymbols [
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> setPart: aWizardPart [ 
 
 	wizardParts add: aWizardPart.
@@ -646,7 +646,7 @@ WizardPane >> setPart: aWizardPart [
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> setPart: aWizardPart associatedTo: aSymbol [ 
 
 	self setPart: aWizardPart.	
@@ -658,7 +658,7 @@ WizardPane >> setPart: aWizardPart associatedTo: aSymbol [
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> setPart: aWizardPart associatedTo: aSymbol requiring: aCollectionOfSymbols [
 
 	self setPart: aWizardPart  associatedTo: aSymbol.
@@ -669,7 +669,7 @@ WizardPane >> setPart: aWizardPart associatedTo: aSymbol requiring: aCollectionO
 	
 ]
 
-{ #category : #addition-removal }
+{ #category : #'addition-removal' }
 WizardPane >> setPart: aWizardPart requiring: aCollectionOfSymbols [
 
 	self setPart: aWizardPart.

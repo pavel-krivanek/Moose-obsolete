@@ -4,7 +4,7 @@ I model the action of changing the selection in the stack pane of the debugger.
 Class {
 	#name : #GTDebuggerRecorderStackSelectionChangedEvent,
 	#superclass : #GTDebuggerRecorderEvent,
-	#category : #GT-Debugger-EventRecorder-Events
+	#category : #'GT-Debugger-EventRecorder-Events'
 }
 
 { #category : #initialization }

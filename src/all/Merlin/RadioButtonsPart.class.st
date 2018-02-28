@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'option'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #accessing }

@@ -27,7 +27,7 @@ Class {
 		'edges',
 		'trCanvas'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #visitor }
@@ -171,7 +171,7 @@ RTView >> cleanAll [
 	
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> edgeFromModel: anObject [
 	"Return an edge that corresponds to the object provided as parameter. If none is found, then return nil"
 	^ edges detect: [ :edge | edge model = anObject ] ifNone: [ nil ]
@@ -185,7 +185,7 @@ RTView >> edges [
 	^ edges copy
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> elementFromModel: anObject [
 	"
 	:: Object -> RTElement
@@ -203,14 +203,14 @@ RTView >> elements [
 	^ RTGroup withAll: elements
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> elementsFromModel: anObject [
 	"Return an element that corresponds to the object provided as parameter. If none is found, then return nil"
 	^ elements elementsFromModel: anObject
 
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> elementsFromModels: objects [
 	"Return elements that corresponds to the objects provided as parameter. If none is found, then return an empty collection"
 	^ elements elementsFromModels: objects
@@ -235,13 +235,13 @@ RTView >> isView [
 	^ true
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> numberOfEdges [
 	"Return the number of edges containde in the view"
 	^ edges size
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> numberOfElements [
 	^ elements size
 ]
@@ -429,14 +429,14 @@ RTView >> signalUpdate [
 	^ self canvas signalUpdate
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> theme [
 	"Return the theme currently used. A theme is an instance of a subclass of TRAbstractTheme"
 
 	^ self canvas theme
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> trachelShape [
 	"
 	:: Void -> String
@@ -444,7 +444,7 @@ RTView >> trachelShape [
 	^ TRNoShape instance
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 RTView >> view [
 	"This method is meant to be used polymorphically with builders.
 	Thus, regardless of whether we get a raw view or a builder, we 

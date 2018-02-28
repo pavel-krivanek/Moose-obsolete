@@ -17,11 +17,10 @@ Class {
 		'stateStack',
 		'nodeStack',
 		'isAccepted',
-		'position',
 		'scannerState',
 		'attributes'
 	],
-	#category : #SmaCC_GLR_Runtime
+	#category : #'SmaCC_GLR_Runtime'
 }
 
 { #category : #'instance creation' }
@@ -32,11 +31,10 @@ SmaCCParserState class >> stateStack: stateStack nodeStack: nodeStack [
 ]
 
 { #category : #'instance creation' }
-SmaCCParserState class >> stateStack: stateStack nodeStack: nodeStack scannerState: aSymbol position: anInteger [
+SmaCCParserState class >> stateStack: stateStack nodeStack: nodeStack scannerState: aSmaCCScannerState [
 	^ self new
 		stateStack: stateStack nodeStack: nodeStack;
-		scannerState: aSymbol;
-		position: anInteger;
+		scannerState: aSmaCCScannerState;
 		yourself
 ]
 
@@ -62,10 +60,7 @@ SmaCCParserState >> attributeNamed: aSymbol put: aValue [
 
 { #category : #testing }
 SmaCCParserState >> canBeMergedWith: aSmaCCParserState [
-	^ self stateStack = aSmaCCParserState stateStack
-		and:
-			[ self position = aSmaCCParserState position
-				and: [ self scannerState = aSmaCCParserState scannerState ] ]
+	^ self stateStack = aSmaCCParserState stateStack and: [ self scannerState = aSmaCCParserState scannerState ]
 ]
 
 { #category : #comparing }
@@ -101,16 +96,6 @@ SmaCCParserState >> nodeStack [
 	^ nodeStack
 ]
 
-{ #category : #accessing }
-SmaCCParserState >> position [
-	^ position
-]
-
-{ #category : #accessing }
-SmaCCParserState >> position: anObject [
-	position := anObject
-]
-
 { #category : #copying }
 SmaCCParserState >> postCopy [
 	super postCopy.
@@ -142,7 +127,7 @@ SmaCCParserState >> stateStack [
 	^ stateStack
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParserState >> stateStack: stateCollection nodeStack: nodeCollection [
 	stateStack := stateCollection.
 	nodeStack := nodeCollection.

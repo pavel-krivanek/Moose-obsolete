@@ -7,15 +7,13 @@ Class {
 	#instVars : [
 		'module'
 	],
-	#category : #Famix-C
+	#category : #'Famix-C'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXHeader class >> annotation [
-	<MSEClass: #Header super: #'FAMIXCFile'>
+	<MSEClass: #Header super: #FAMIXCFile>
 	<package: #FAMIX>
-	^self
-
 ]
 
 { #category : #testing }

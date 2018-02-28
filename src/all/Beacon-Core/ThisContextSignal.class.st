@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'stack'
 	],
-	#category : #Beacon-Core-Signals
+	#category : #'Beacon-Core-Signals'
 }
 
 { #category : #'instance creation' }

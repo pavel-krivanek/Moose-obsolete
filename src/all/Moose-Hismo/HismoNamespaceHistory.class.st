@@ -6,10 +6,10 @@ Class {
 		'containingNamespaceHistory',
 		'namespaceHistories'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoNamespaceHistory class >> annotation [
 	<MSEClass: #NamespaceHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

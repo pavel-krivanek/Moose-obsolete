@@ -5,7 +5,7 @@ Class {
 		'builder',
 		'shapes'
 	],
-	#category : #Roassal2-Builder-Common
+	#category : #'Roassal2-Builder-Common'
 }
 
 { #category : #running }

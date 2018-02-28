@@ -7,7 +7,7 @@ Class {
 		'variableDeclarations',
 		'commas'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -35,7 +35,7 @@ JavaLocalVariableDeclarationNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaLocalVariableDeclarationNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

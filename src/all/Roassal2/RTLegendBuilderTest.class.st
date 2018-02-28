@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'b'
 	],
-	#category : #Roassal2-Builder-Legend
+	#category : #'Roassal2-Builder-Legend'
 }
 
 { #category : #running }
@@ -158,6 +158,20 @@ RTLegendBuilderTest >> testaddColorFading02 [
 	
 	self assert: lb view numberOfElements equals: 52.
 
+]
+
+{ #category : #tests }
+RTLegendBuilderTest >> testaddColoredtext [
+
+	| lb |
+	lb := RTLegendBuilder new.
+	lb addColoredText: 'hello' color: Color red.
+	lb build.
+	
+	self assert: lb view numberOfElements equals: 2.
+	self assert: lb view canvas shapes first class equals: TRBoxShape.
+	self assert: lb view canvas shapes second class equals: TRLabelShape.
+	self assert: lb view canvas shapes second color equals: Color red.
 ]
 
 { #category : #tests }

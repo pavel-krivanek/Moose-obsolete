@@ -6,7 +6,7 @@ Class {
 		'label',
 		'explanation'
 	],
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #accessing }
@@ -39,7 +39,7 @@ REPCompositeConcern >> explanation: anObject [
 	explanation := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 REPCompositeConcern >> initialize [
 	super initialize.
 	children := OrderedCollection new

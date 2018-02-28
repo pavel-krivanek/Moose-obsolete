@@ -9,7 +9,7 @@ SpecOfDSLClassWordsTests >> testContainingItem [
 	| spec |
 	spec := Containing item: #collectionItem.
 	self assert: spec class = SpecOfCollectionContents.
-	self assert: spec requiredItem == #collectionItem
+	self assert: spec requiredItem requiredValue == #collectionItem.
 ]
 
 { #category : #tests }

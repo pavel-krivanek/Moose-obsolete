@@ -5,7 +5,7 @@ Class {
 		'currentIndex',
 		'wizardControl'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #accessing }

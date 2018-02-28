@@ -4,7 +4,7 @@ This class validates standalone externally defined ID attributes that must have 
 Class {
 	#name : #XMLStandaloneExternalIDAttributeValidator,
 	#superclass : #XMLIDAttributeValidator,
-	#category : #XML-Parser-Validation-Standalone
+	#category : #'XML-Parser-Validation-Standalone'
 }
 
 { #category : #testing }

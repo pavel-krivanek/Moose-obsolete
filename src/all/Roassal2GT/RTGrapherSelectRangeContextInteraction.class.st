@@ -1,7 +1,7 @@
 Class {
 	#name : #RTGrapherSelectRangeContextInteraction,
 	#superclass : #RTAbstractContextInteraction,
-	#category : #Roassal2GT-Glamour-Roassal-Interaction
+	#category : #'Roassal2GT-Glamour-Roassal-Interaction'
 }
 
 { #category : #hooks }

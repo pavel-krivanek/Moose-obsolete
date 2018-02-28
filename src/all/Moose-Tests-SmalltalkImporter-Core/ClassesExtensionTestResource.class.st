@@ -1,7 +1,7 @@
 Class {
 	#name : #ClassesExtensionTestResource,
 	#superclass : #MooseModelTestResource,
-	#category : #Moose-Tests-SmalltalkImporter-Core
+	#category : #'Moose-Tests-SmalltalkImporter-Core'
 }
 
 { #category : #hook }

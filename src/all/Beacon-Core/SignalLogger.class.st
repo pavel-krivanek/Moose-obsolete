@@ -47,7 +47,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : #Beacon-Core-Loggers
+	#category : #'Beacon-Core-Loggers'
 }
 
 { #category : #'instance creation' }

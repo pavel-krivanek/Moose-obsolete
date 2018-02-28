@@ -1,10 +1,10 @@
 Class {
 	#name : #FAMIXPackageNavigationTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : #Moose-Tests-SmalltalkImporter-KGB
+	#category : #'Moose-Tests-SmalltalkImporter-KGB'
 }
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXPackageNavigationTest >> testClientClasses [ 
 	 
 	| p5 | 
@@ -20,7 +20,7 @@ FAMIXPackageNavigationTest >> testClientClasses [
 						with: self c3ReferencerInSideRefereeOutSide))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXPackageNavigationTest >> testClientPackages [ 
 	 
 	| p1 p2 p3 p5 p7 | 
@@ -34,7 +34,7 @@ FAMIXPackageNavigationTest >> testClientPackages [
 			(p5 clientPackages equalsTo: (Set with: p1 with: p2 with: p7 with: p3))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXPackageNavigationTest >> testProviderClasses [ 
 	 
 	| p8 | 
@@ -49,7 +49,7 @@ FAMIXPackageNavigationTest >> testProviderClasses [
 						with: self c14ReferencerOutSideRefereeOutSide))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXPackageNavigationTest >> testProviderPackages [ 
 	 
 	| p7 p8 p10 p11 pEx | 

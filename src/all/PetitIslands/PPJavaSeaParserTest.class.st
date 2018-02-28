@@ -1,7 +1,7 @@
 Class {
 	#name : #PPJavaSeaParserTest,
 	#superclass : #PPCompositeParserTest,
-	#category : #PetitIslands-Examples
+	#category : #'PetitIslands-Examples'
 }
 
 { #category : #'as yet unclassified' }

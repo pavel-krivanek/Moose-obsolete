@@ -1,7 +1,7 @@
 Class {
 	#name : #RTSankeyAttachPoint,
 	#superclass : #RTAttachPoint,
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #'public - hooks' }

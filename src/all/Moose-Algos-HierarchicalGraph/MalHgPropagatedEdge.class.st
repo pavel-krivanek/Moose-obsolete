@@ -7,5 +7,5 @@ Instance Variables
 Class {
 	#name : #MalHgPropagatedEdge,
 	#superclass : #MalGraphEdge,
-	#category : #Moose-Algos-HierarchicalGraph
+	#category : #'Moose-Algos-HierarchicalGraph'
 }

@@ -4,13 +4,11 @@ It represents a primitive type. For example, int or char are modeled using Primi
 Class {
 	#name : #FAMIXPrimitiveType,
 	#superclass : #FAMIXType,
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXPrimitiveType class >> annotation [
 	<MSEClass: #PrimitiveType super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]

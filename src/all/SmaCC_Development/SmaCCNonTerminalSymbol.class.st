@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'productions'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }
@@ -24,7 +24,7 @@ SmaCCNonTerminalSymbol >> calculateFirstTerminals [
 	^ initialSize ~= firstTerminals size
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNonTerminalSymbol >> initialize [
 	super initialize.
 	productions := OrderedCollection new

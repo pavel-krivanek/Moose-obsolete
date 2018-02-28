@@ -1,7 +1,7 @@
 Class {
 	#name : #ASShape,
 	#superclass : #ASElement,
-	#category : #Athens-SVG
+	#category : #'Athens-SVG'
 }
 
 { #category : #'as yet unclassified' }

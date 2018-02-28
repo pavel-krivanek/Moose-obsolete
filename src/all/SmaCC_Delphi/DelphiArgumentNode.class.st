@@ -10,7 +10,7 @@ Class {
 		'equal',
 		'value'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -58,7 +58,7 @@ DelphiArgumentNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiArgumentNode >> initialize [
 	super initialize.
 	names := OrderedCollection new: 2.

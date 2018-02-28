@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'a'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #parsing }
@@ -52,7 +52,7 @@ FMDebugClient >> exportString [
 	^printer stream contents.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMDebugClient >> initialize [
 	self reset
 ]
@@ -81,7 +81,7 @@ FMDebugClient >> replayOn: aParseClient [
 			withArguments: each allButFirst ].
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMDebugClient >> reset [
 	a := #()
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #PetitSQLiteASTNodesParser,
 	#superclass : #PetitSQLiteGrammar,
-	#category : #PetitSQLite-Parser
+	#category : #'PetitSQLite-Parser'
 }
 
 { #category : #'as yet unclassified' }
@@ -31,7 +31,7 @@ PetitSQLiteASTNodesParser >> alterTable [
 		alterTableNode]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> alterTableConstraintFKOracle [
 	^ super alterTableConstraintFKOracle
 		==> [ :token | 
@@ -56,7 +56,7 @@ PetitSQLiteASTNodesParser >> alterTableConstraintFKOracle [
 			newConstr ]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> alterTableConstraintPKOracle [
 	^ super alterTableConstraintPKOracle
 		==> [ :token | 
@@ -71,7 +71,7 @@ PetitSQLiteASTNodesParser >> alterTableConstraintPKOracle [
 			newConstr ]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> alterTableConstraintUnique [
 	^ super alterTableConstraintUnique
 		==> [ :token | 
@@ -118,7 +118,7 @@ PetitSQLiteASTNodesParser >> columnDef [
 			colNode ]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> complexIdentifier [
 	^super complexIdentifier
 	
@@ -197,7 +197,7 @@ PetitSQLiteASTNodesParser >> expressionInRoundParentheses [
 	^super expressionInRoundParentheses ==> #second
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> floatingPointLiteral [ 
 	^super floatingPointLiteral ==> [ :token | (token first , token second asString , token third) value asNumber. ].
 
@@ -226,7 +226,7 @@ PetitSQLiteASTNodesParser >> insertStatement [
 			insertStmt ]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> joinSource [  
 	^super joinSource ==> [ :token |
 		| selectNode | 
@@ -290,7 +290,7 @@ PetitSQLiteASTNodesParser >> tableConstraint [
 			token second ]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> tableConstraintCheckPart [
 	^super tableConstraintCheckPart ==> [:token | 
 		| newConstr |
@@ -303,7 +303,7 @@ PetitSQLiteASTNodesParser >> tableConstraintCheckPart [
 		newConstr]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> tableConstraintForeignKeyPart [ 
 
 	^super tableConstraintForeignKeyPart ==> [:token | 
@@ -326,7 +326,7 @@ PetitSQLiteASTNodesParser >> tableConstraintForeignKeyPart [
 		newConstr]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> tableConstraintPrimaryKeyPart [
 	^super tableConstraintPrimaryKeyPart ==> [:token | 
 		| newConstr |
@@ -356,7 +356,7 @@ PetitSQLiteASTNodesParser >> tableConstraintPrimaryKeyPart [
 		newConstr]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> typeName [ 
 	^super typeName ==> [ :token |
 		token second isNil
@@ -376,7 +376,7 @@ PetitSQLiteASTNodesParser >> typeName [
 		]
 ]
 
-{ #category : #statements-elements }
+{ #category : #'statements-elements' }
 PetitSQLiteASTNodesParser >> updateStatement [
 	^super updateStatement ==>[:token |
 		| updateStmt |

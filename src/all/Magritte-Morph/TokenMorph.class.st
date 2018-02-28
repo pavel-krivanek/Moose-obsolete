@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'object'
 	],
-	#category : #Magritte-Morph-Morphs
+	#category : #'Magritte-Morph-Morphs'
 }
 
 { #category : #'instance creation' }

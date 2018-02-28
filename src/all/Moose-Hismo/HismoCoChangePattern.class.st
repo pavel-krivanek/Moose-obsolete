@@ -6,10 +6,10 @@ Class {
 		'histories',
 		'versions'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoCoChangePattern class >> annotation [
 	<MSEClass: #CoChangePattern super: #MooseGroup>
 	<package: #Hismo>
@@ -51,7 +51,7 @@ HismoCoChangePattern >> printOn: aStream [
 	
 	versions
 		do:
-			[:each | aStream nextPutAll: (each history indexOf: each) mooseDisplayString]
+			[:each | (each history indexOf: each) gtDisplayOn: aStream]
 		separatedBy: [aStream nextPutAll: ',']
 ]
 

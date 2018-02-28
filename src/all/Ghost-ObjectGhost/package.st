@@ -1,1 +1,1 @@
-Package { #name : #Ghost-ObjectGhost }
+Package { #name : #'Ghost-ObjectGhost' }

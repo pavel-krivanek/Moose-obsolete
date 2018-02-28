@@ -5,7 +5,7 @@ A PPStartOfLogicalLineParser is that does not fail, if the stream position is at
 Class {
 	#name : #PPStartOfLogicalLineParser,
 	#superclass : #PPParser,
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #'as yet unclassified' }

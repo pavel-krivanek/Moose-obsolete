@@ -6,18 +6,19 @@ FAMIXContainerEntity is the abstract superclass for source code entities contain
 Class {
 	#name : #FAMIXContainerEntity,
 	#superclass : #FAMIXNamedEntity,
+	#traits : 'TOODependencyQueries - {#incomingTypeDeclarations. #outgoingTypeDeclarations}',
+	#classTraits : 'TOODependencyQueries classTrait',
 	#instVars : [
 		'types',
 		'functions'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXContainerEntity class >> annotation [
 	<MSEClass: #ContainerEntity super: #FAMIXNamedEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -43,11 +44,20 @@ FAMIXContainerEntity >> functions: aCollectionOfFunctions [
 	functions value: aCollectionOfFunctions
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXContainerEntity >> initialize [
 	super initialize.
 	types := FMNullMultivalueLink on: self opposite: #container: selector: #types.
 	functions := FMNullMultivalueLink on: self opposite: #container: selector: #functions
+]
+
+{ #category : #accessing }
+FAMIXContainerEntity >> numberOfChildren [
+	<MSEProperty: #numberOfChildren type: #Number>
+	<MSEComment: 'Number of direct children entities in the containment tree.'>
+	<derived>
+	
+	^ self children size
 ]
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ This class is an OrderPreservingStringDictionary for XML attributes that returns
 Class {
 	#name : #XMLAttributeDictionary,
 	#superclass : #OrderPreservingStringDictionary,
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #converting }

@@ -1,7 +1,7 @@
 Class {
 	#name : #RTScaleTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-Grapher-Scaling-Tests
+	#category : #'Roassal2-Builder-Grapher-Scaling-Tests'
 }
 
 { #category : #tests }
@@ -53,4 +53,27 @@ RTScaleTest >> testLogarithmScale [
 	self assert: ((s scale: 100) closeTo: 97.66288475582019).
 	
 	self assert: ((s invert: 10) closeTo: 5166.754427175983)
+]
+
+{ #category : #tests }
+RTScaleTest >> testScalePolyLinear [
+	| linear |
+	linear := RTScale linear
+		domain: #(0 0.5 1);
+		range: #(10 80 10).
+	self 
+		assert: (linear scale: 0) equals: 10;
+		assert: (linear scale: 0.5) equals: 80;
+		assert: (linear scale: 1) equals: 10;
+		assert: (linear scale: 1.5) equals: -60.
+	linear := RTScale linear
+		domain: #(0 0.5 1);
+		range: #('white' 'black' 'white').
+	self 
+		assert: (linear scale: 0) equals: Color white;
+		assert: (linear scale: 0.25) equals: Color gray;
+		assert: (linear scale: 0.75) equals: Color gray.
+	
+	
+	
 ]

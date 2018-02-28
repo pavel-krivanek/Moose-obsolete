@@ -6,7 +6,7 @@ Class {
 		'todoOpposite',
 		'todoClass'
 	],
-	#category : #Fame-SmalltalkBinding
+	#category : #'Fame-SmalltalkBinding'
 }
 
 { #category : #private }
@@ -28,7 +28,7 @@ FMIncrementalPragmaProcessor >> hasPendingTodos [
 	^todoClass isEmpty not and: [ todoOpposite isEmpty not ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMIncrementalPragmaProcessor >> initialize [
 	todoOpposite := Set new.
 	todoClass := Set new.

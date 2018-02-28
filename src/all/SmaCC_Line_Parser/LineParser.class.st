@@ -1,10 +1,10 @@
 Class {
 	#name : #LineParser,
 	#superclass : #SmaCCParser,
-	#category : #SmaCC_Line_Parser
+	#category : #'SmaCC_Line_Parser'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 LineParser class >> cacheId [
 	^'2016-10-24T21:10:55.598665-05:00'
 ]
@@ -33,7 +33,7 @@ Line
 	;"
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 LineParser class >> scannerClass [
 	^LineScanner
 ]

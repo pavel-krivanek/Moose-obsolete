@@ -5,10 +5,10 @@ Class {
 		'rightHandSide',
 		'leftHandSide'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQEquation class >> annotation [
 	<MSEClass: #Equation super: #Object>
 	<package: #EQ>

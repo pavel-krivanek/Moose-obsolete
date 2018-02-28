@@ -4,7 +4,7 @@ This class parses XPath number literals like '1.0', '.0', '1.', and '-1.0'. If t
 Class {
 	#name : #XPathNumberParser,
 	#superclass : #XPathParser,
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #private }

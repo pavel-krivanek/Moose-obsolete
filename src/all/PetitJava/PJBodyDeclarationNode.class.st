@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'modifiers'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #visiting }

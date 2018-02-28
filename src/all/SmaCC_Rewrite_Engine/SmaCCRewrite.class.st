@@ -7,7 +7,7 @@ Class {
 		'transformation',
 		'engine'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -45,7 +45,7 @@ SmaCCRewrite >> displayOn: aStream [
 		ifFalse: [ match displayOn: aStream ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewrite >> engine: aSmaCCRewriteEngine [
 	engine := aSmaCCRewriteEngine
 ]

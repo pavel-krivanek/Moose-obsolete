@@ -10,7 +10,7 @@ Class {
 	#classVars : [
 		'Coefficients'
 	],
-	#category : #Roassal2-ColorNormalizer
+	#category : #'Roassal2-ColorNormalizer'
 }
 
 { #category : #'instance creation' }

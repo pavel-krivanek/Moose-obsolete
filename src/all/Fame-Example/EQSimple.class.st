@@ -1,12 +1,12 @@
 Class {
 	#name : #EQSimple,
 	#superclass : #EQExpression,
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQSimple class >> annotation [
-	<MSEClass: 'Simple' super: #EQExpression >
-	<package: 'EQ'>
+	<MSEClass: #Simple super: #EQExpression >
+	<package: #EQ>
 	<abstract>
 ]

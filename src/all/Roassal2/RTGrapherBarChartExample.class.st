@@ -29,7 +29,7 @@ b axisX numberOfTicks: 4.
 Class {
 	#name : #RTGrapherBarChartExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-Grapher-Examples
+	#category : #'Roassal2-Builder-Grapher-Examples'
 }
 
 { #category : #sources }

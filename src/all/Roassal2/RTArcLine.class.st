@@ -29,7 +29,7 @@ Class {
 		'distance',
 		'head'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #accessing }

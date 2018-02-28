@@ -1,1 +1,1 @@
-Package { #name : #ACD-Glamour-Interface }
+Package { #name : #'ACD-Glamour-Interface' }

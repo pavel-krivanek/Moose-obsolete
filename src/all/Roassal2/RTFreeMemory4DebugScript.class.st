@@ -24,7 +24,7 @@ ReferenceFinder findPathToInstanceOf: AthensCairoSurface.
 Class {
 	#name : #RTFreeMemory4DebugScript,
 	#superclass : #RTUsefulScript,
-	#category : #Roassal2-Plugins
+	#category : #'Roassal2-Plugins'
 }
 
 { #category : #accessing }

@@ -1,1 +1,1 @@
-Package { #name : #Moose-TestResources-Reference-PackageOne }
+Package { #name : #'Moose-TestResources-Reference-PackageOne' }

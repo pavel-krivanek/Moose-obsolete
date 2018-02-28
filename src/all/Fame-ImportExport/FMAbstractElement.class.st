@@ -6,7 +6,7 @@ Class {
 		'attributes',
 		'serial'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #accessing }
@@ -14,7 +14,7 @@ FMAbstractElement >> attributes [
 	^ attributes
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMAbstractElement >> initialize [
 	
 	attributes := Dictionary new.

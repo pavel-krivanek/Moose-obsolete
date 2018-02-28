@@ -8,7 +8,7 @@ Class {
 		'dedent',
 		'code'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
 { #category : #'as yet unclassified' }
@@ -36,7 +36,7 @@ PPMiniPythonGrammarTest >> setUp [
 	context := PPContext new.
 ]
 
-{ #category : #test-indentation }
+{ #category : #'test-indentation' }
 PPMiniPythonGrammarTest >> testAlign [
 	align := self parserInstanceFor: #align.
 	
@@ -53,7 +53,7 @@ PPMiniPythonGrammarTest >> testAlign [
 	self assert: align parse: '      ' end: 4.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testBrackets [
 	self parse: '[ foo ]' rule: #brackets.
 	self parse: '{ foo }' rule: #brackets.	
@@ -67,17 +67,17 @@ PPMiniPythonGrammarTest >> testBrackets [
 	self parse: '( foo () bar)' rule: #brackets.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testBrackets2 [
 	self parse: '(")")' rule: #brackets.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testBrackets3 [
 	self parse: '["id rexl", "punct", r"""foobar.]/"]jkl;ky"""]' rule: #brackets.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testClass01 [
 
 self parse: 
@@ -96,7 +96,7 @@ self parse:
 	
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testClass02 [
 
 self parse: 
@@ -109,7 +109,7 @@ self parse:
 	
 ]
 
-{ #category : #test-indentation }
+{ #category : #'test-indentation' }
 PPMiniPythonGrammarTest >> testDedent [
 	dedent := self parserInstanceFor: #dedent.
 
@@ -176,19 +176,19 @@ PPMiniPythonGrammarTest >> testEmptyLine [
 	self assert: parser parse: '   '.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testEmptyStatement [
 	self parse: '
 ' rule: #emptyStatement.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testEmptyStatement2 [
 	self parse: '   # foo comment
 ' rule: #emptyStatement.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testExpression [
 	true ifTrue: [ ^ 'not yet in a grammar' ].
 	
@@ -198,14 +198,14 @@ PPMiniPythonGrammarTest >> testExpression [
 	self parse: 'a + (b) + c' rule: #expression.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testExpressionList [
 	true ifTrue: [ ^ 'not yet in a grammar' ].
 
 	self parse: 'x < y , x == y' rule: #expressionList.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile01 [
 	code := '
 name = raw_input(''What is your name?\n'')
@@ -218,7 +218,7 @@ print ''Hi, %s.'' % name
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile02 [
 	code := '
 friends = [''john'', ''pat'', ''gary'', ''michael'']
@@ -233,7 +233,7 @@ for i, name in enumerate(friends):
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile03 [
 	code := '
 def greet(name):
@@ -252,7 +252,7 @@ greet(''Bob'')
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile04 [
 	code := '
 import re
@@ -273,7 +273,7 @@ for test_string in [''555-1212'', ''ILL-EGAL'']:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile05 [
 	code := '
 prices = {''apple'': 0.40, ''banana'': 0.50}
@@ -291,7 +291,7 @@ print ''I owe the grocer $%.2f'' % grocery_bill
 	
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile06 [
 	code := '
 class BankAccount(object):
@@ -329,7 +329,7 @@ print'
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile07 [
 	code := '
 # indent your Python code to put into an email
@@ -359,7 +359,7 @@ for file_name in sorted(python_files):
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile08 [
 	code := '
 BOARD_SIZE = 8
@@ -421,7 +421,7 @@ print'
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile09 [
 	code := '
 if foobar :
@@ -444,7 +444,7 @@ print
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFile10 [
 	code := '
 if foobar :
@@ -472,7 +472,7 @@ print
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testForStmt [
 
 	self parse: 
@@ -497,7 +497,7 @@ PPMiniPythonGrammarTest >> testForStmt [
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testForStmt2 [
 
 	self parse: 
@@ -526,7 +526,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testForStmt3 [
 
 self parse: 
@@ -562,7 +562,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testForStmt4 [
 
 self parse: 
@@ -593,7 +593,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testForStmt5 [
 
 self fail: 
@@ -607,7 +607,7 @@ self fail:
 ' rule: #forStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testForStmt6 [
 
 self parse: 
@@ -620,7 +620,7 @@ self parse:
 	self assert: result second first = #print.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef [
 
 self parse: 
@@ -638,7 +638,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef10 [
 
 self parse: 
@@ -656,7 +656,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef2 [
 
 self parse: 
@@ -675,7 +675,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef3 [
 
 self parse: 
@@ -700,7 +700,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef4 [
 
 self parse: 
@@ -721,7 +721,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef5 [
 
 self parse: 
@@ -741,7 +741,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef6 [
 
 self fail: 
@@ -752,7 +752,7 @@ def _fd()
 ' rule: #funcDef.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef7 [
 
 self parse: 
@@ -776,7 +776,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef8 [
 
 self parse: 
@@ -798,7 +798,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testFuncDef9 [
 
 self parse: 
@@ -849,14 +849,14 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIdentifier [
 	self parse: 'foo' rule: #identifier.
 	self parse: '__eq__' rule: #identifier.
 	self parse: '_' rule: #identifier.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt01 [
 
 	self parse: 
@@ -880,7 +880,7 @@ PPMiniPythonGrammarTest >> testIfStmt01 [
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt02 [
 
 	self parse: 
@@ -901,7 +901,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt03 [
 
 	self parse: 
@@ -926,7 +926,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt04 [
 
 	self parse: 
@@ -948,7 +948,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt05 [
 
 self parse: 
@@ -972,7 +972,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt06 [
 
 self fail: 
@@ -984,7 +984,7 @@ self fail:
 ' rule: #ifStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt07 [
 
 self fail: 
@@ -999,7 +999,7 @@ else :
 ' rule: #ifStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt08 [
 
 self fail: 
@@ -1014,7 +1014,7 @@ else :
 ' rule: #ifStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt09 [
 
 self fail: 
@@ -1029,7 +1029,7 @@ self fail:
 ' rule: #ifStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt10 [
 
 self parse: 
@@ -1065,7 +1065,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt11 [
 
 self parse: 
@@ -1101,7 +1101,7 @@ else :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt12 [
 
 self parse: 
@@ -1123,7 +1123,7 @@ else:  # py3
 	self assert: result third size = 3.	
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt13 [
 
 self fail: 
@@ -1133,7 +1133,7 @@ if if_modified:
 ' rule: #ifStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt14 [
 
 	self parse: 
@@ -1156,7 +1156,7 @@ PPMiniPythonGrammarTest >> testIfStmt14 [
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testIfStmt15 [
 
 	self parse: 
@@ -1179,7 +1179,7 @@ PPMiniPythonGrammarTest >> testIfStmt15 [
 
 ]
 
-{ #category : #test-indentation }
+{ #category : #'test-indentation' }
 PPMiniPythonGrammarTest >> testIndent [
 "	parser := self parserInstanceFor: #indent.
 	align := self parserInstanceFor: #align.
@@ -1195,21 +1195,21 @@ PPMiniPythonGrammarTest >> testIndent [
     foo' rule: #indent to: '  ' end: 0.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testMultilineComment [
 	self parse: '"""
 		whatever
 	"""' rule: #multilineComment.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testMultilineCommentSingleQuot [
 	self parse: '''''''
 		whatever
 	''''''' rule: #multilineComment.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testPrintStmt [
 
 	self parse: 'print 1' rule: #printStmt.
@@ -1217,36 +1217,36 @@ PPMiniPythonGrammarTest >> testPrintStmt [
 	self parse: 'print abc' rule: #printStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testPrintStmt2 [
 
 	self parse: 'print "%d items processed (%s)" % (fileinput.lineno(),
                                                    fileinput.filename())' rule: #printStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testStatement [
 
 	self parse: 'print y' rule: #statement.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testString [
 	self parse: '"foo:"' rule: #string.
 	self parse: '''foo: ''' rule: #string.	
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testString2 [
 	self parse: '''foo\''s: ''' rule: #string.	
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testString3 [
 	self parse: '"\\"' rule: #string.	
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testSuite [
 
 	self parse: 
@@ -1254,7 +1254,7 @@ PPMiniPythonGrammarTest >> testSuite [
     print test' rule: #suite.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testSuite2 [
 
 self parse: 
@@ -1284,7 +1284,7 @@ self parse:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry1Stmt [
 
 self parse: 
@@ -1311,7 +1311,7 @@ except :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry1Stmt2 [
 
 self parse: 
@@ -1353,7 +1353,7 @@ finally:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry1Stmt3 [
 
 self parse: 
@@ -1401,7 +1401,7 @@ finally :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry1Stmt4 [
 
 self parse: 
@@ -1443,7 +1443,7 @@ finally :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry1Stmt5 [
 
 self parse: 
@@ -1475,7 +1475,7 @@ except BailOut:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry1Stmt6 [
 
 self parse: 
@@ -1509,7 +1509,7 @@ finally:
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry1Stmt7 [
 
 self parse: 
@@ -1536,7 +1536,7 @@ except :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testTry2Stmt1 [
 
 self parse: 
@@ -1559,7 +1559,7 @@ finally :
 
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testUnknownStmt [
 	parser := self parserInstanceFor: #unknownStmt.
 	
@@ -1572,7 +1572,7 @@ PPMiniPythonGrammarTest >> testUnknownStmt [
 		baz ]'.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testUnknownStmt2 [
 	parser := self parserInstanceFor: #unknownStmt.
 	
@@ -1580,12 +1580,12 @@ PPMiniPythonGrammarTest >> testUnknownStmt2 [
             self.message == other.message'.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testUnknownStmt3 [
 	self parse: 'return toUnicode(r"""fkjdf;jkdla;fjdf""")' rule: #unknownStmt.
 ]
 
-{ #category : #test-grammar }
+{ #category : #'test-grammar' }
 PPMiniPythonGrammarTest >> testWhatever01 [
 	
 	parser := self parserInstanceFor: #whatever.

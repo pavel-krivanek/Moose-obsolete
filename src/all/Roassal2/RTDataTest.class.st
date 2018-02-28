@@ -1,7 +1,7 @@
 Class {
 	#name : #RTDataTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-Grapher-Tests
+	#category : #'Roassal2-Builder-Grapher-Tests'
 }
 
 { #category : #tests }

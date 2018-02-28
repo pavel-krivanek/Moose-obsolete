@@ -1,1 +1,1 @@
-Package { #name : #XPath-Tests }
+Package { #name : #'XPath-Tests' }

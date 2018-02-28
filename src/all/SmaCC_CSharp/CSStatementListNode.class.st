@@ -5,7 +5,7 @@ Class {
 		'expressions',
 		'commaTokens'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -45,7 +45,7 @@ CSStatementListNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSStatementListNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

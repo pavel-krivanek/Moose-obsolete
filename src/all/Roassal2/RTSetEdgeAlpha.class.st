@@ -33,7 +33,7 @@ Class {
 		'lowAlpha',
 		'evaluationBlock'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #initialization }

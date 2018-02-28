@@ -4,5 +4,5 @@ Class {
 	#classVars : [
 		'LANEditor'
 	],
-	#category : #Moose-TestResources-LAN
+	#category : #'Moose-TestResources-LAN'
 }

@@ -74,12 +74,12 @@ PP2Context >> debugResult [
 	]
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PP2Context >> globals [
 	^ globals
 ]
 
-{ #category : #accessing-globals }
+{ #category : #'accessing-globals' }
 PP2Context >> globals: anObject [
 	^ globals := anObject
 ]

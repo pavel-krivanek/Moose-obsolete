@@ -5,7 +5,7 @@ Class {
 		'selectedOption',
 		'formatBlock'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #'accessing - wizard management' }

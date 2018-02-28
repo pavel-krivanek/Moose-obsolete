@@ -11,7 +11,7 @@ It should be used over the default class when you want to reduce memory use at t
 Class {
 	#name : #XMLAttributeList,
 	#superclass : #XMLObservableList,
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #'instance creation' }
@@ -173,9 +173,11 @@ XMLAttributeList >> attributeValueAt: aName [
 
 { #category : #private }
 XMLAttributeList >> attributeValueAt: aName ifAbsent: aBlock [
-	^ (self
-		at: (self indexOfAttribute: aName)
-		ifAbsent: [^ aBlock value]) value
+	| i |
+
+	^ (i := self indexOfAttributeValueAt: aName) > 0
+		ifTrue: [(self at: i) value]
+		ifFalse: [aBlock value]
 ]
 
 { #category : #private }
@@ -183,16 +185,25 @@ XMLAttributeList >> attributeValueAt: aName ifAbsentPut: aBlock [
 	^ self
 		attributeValueAt: aName
 		ifAbsent: [
-			self
-				attributeValueAt: aName
-				put: aBlock value]
+			"use #addToCopyLast:, since we know it's not in the collection"
+			(self addToCopyLast:
+				(self attributeClass
+					name: aName
+					value: aBlock value)) value]
 ]
 
 { #category : #private }
 XMLAttributeList >> attributeValueAt: aName put: aValue [
-	(self includesAttribute: aName)
-		ifTrue: [(self attributeNodeAt: aName) value: aValue]
-		ifFalse: [self addAttributeName: aName value: aValue].
+	| i |
+
+	(i := self indexOfAttributeValueAt: aName) > 0
+		ifTrue: [(self at: i) value: aValue]
+		ifFalse: [
+			"use #addToCopyLast: since we know it's not already in the collection"
+			self addToCopyLast:
+				(self attributeClass
+					name: aName
+					value: aValue)].
 	^ aValue.
 ]
 
@@ -233,7 +244,7 @@ XMLAttributeList >> duplicateIndexOf: aNode notAt: anIndex [
 
 { #category : #testing }
 XMLAttributeList >> includesAttribute: aName [
-	^ (self indexOfAttribute: aName) > 0
+	^ (self indexOfAttributeValueAt: aName) > 0
 ]
 
 { #category : #testing }
@@ -254,8 +265,11 @@ XMLAttributeList >> includesAttributeNode: aName namespaceURI: aURI [
 ]
 
 { #category : #private }
-XMLAttributeList >> indexOfAttribute: aName [
-	"to:do: for speed, because this is used for attribute lookup"
+XMLAttributeList >> indexOfAttributeValueAt: aName [
+	"Returns the index of the attribute value with the exact name of aName"
+
+	"this needs to be fast, for #attributeValueAt:... methods, so
+	use #to:do: for speed"
 	1 to: collection size do: [:i | | node |
 		(node := collection at: i) name = aName
 			ifTrue: [^ i]].
@@ -264,14 +278,14 @@ XMLAttributeList >> indexOfAttribute: aName [
 
 { #category : #removing }
 XMLAttributeList >> removeAttribute: aName [
-	^ (self removeAt: (self indexOfAttribute: aName)) value
+	^ (self removeAt: (self indexOfAttributeValueAt: aName)) value
 ]
 
 { #category : #removing }
 XMLAttributeList >> removeAttribute: aName ifAbsent: aBlock [
 	| i |
 
-	(i := self indexOfAttribute: aName) > 0
+	(i := self indexOfAttributeValueAt: aName) > 0
 		ifTrue: [^ (self removeAt: i) value]
 		ifFalse: [^ aBlock value].
 ]

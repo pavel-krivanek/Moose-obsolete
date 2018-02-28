@@ -5,7 +5,7 @@ Class {
 		'stepsize',
 		'testsize'
 	],
-	#category : #Hashtable-Test
+	#category : #'Hashtable-Test'
 }
 
 { #category : #finding }
@@ -106,7 +106,7 @@ DictionarySpeedTest >> asSelector: aClass [
 	^ ( 'test' , aClass name, '0n:' ) asSymbol
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DictionarySpeedTest >> initialize [
 	super initialize.
 	self stepsize: 100.

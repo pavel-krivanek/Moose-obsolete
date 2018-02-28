@@ -23,7 +23,7 @@ Class {
 		'ref1',
 		'methodExt'
 	],
-	#category : #Moose-Query-Test
+	#category : #'Moose-Query-Test'
 }
 
 { #category : #accessing }
@@ -56,6 +56,13 @@ MooseQueryTest >> setUp [
 ]
 
 { #category : #tests }
+MooseQueryTest >> testAllChildren [
+	self assert: package2 allChildren size equals: 7.
+	self assert: class2 allChildren size equals: 6.
+	self assert: method2 allChildren size equals: 1
+]
+
+{ #category : #tests }
 MooseQueryTest >> testAllIncoming [
 	self assert: method2 queryAllIncoming size equals: 3.
 	self assert: class2 queryAllIncoming size equals: 7
@@ -65,6 +72,14 @@ MooseQueryTest >> testAllIncoming [
 MooseQueryTest >> testAllOutgoing [
 	self assert: method2 queryAllOutgoing size equals: 2.
 	self assert: class2 queryAllOutgoing size equals: 3
+]
+
+{ #category : #tests }
+MooseQueryTest >> testAllParents [
+	self assert: package2 allParents size equals: 0.
+	self assert: class2 allParents size equals: 1.
+	self assert: method2 allParents size equals: 2.
+	self assert: var2 allParents size equals: 2
 ]
 
 { #category : #tests }
@@ -83,6 +98,14 @@ MooseQueryTest >> testAtScope [
 MooseQueryTest >> testBelongsToMethod [
 	self assert: class1 class belongsToMethod isNil.
 	self assert: method1 class belongsToMethod isNotNil.
+]
+
+{ #category : #tests }
+MooseQueryTest >> testChildren [
+	self assert: package2 children size equals: 1.
+	self assert: package2 children anyOne equals: class2.
+	self assert: class1 children size equals: 1.
+	self assert: class1 children anyOne equals: method1.
 ]
 
 { #category : #tests }
@@ -193,6 +216,14 @@ MooseQueryTest >> testOutgoingInvocationAtScope [
 MooseQueryTest >> testOutgoingInvocationWithin [
 	self assert: ((method1 queryOutgoing: FAMIXInvocation) within: class2) size equals: 1.
 
+]
+
+{ #category : #tests }
+MooseQueryTest >> testParents [
+	self assert: class2 parents size equals: 1.
+	self assert: class2 parents anyOne equals: package2.
+	self assert: method1 parents size equals: 1.
+	self assert: method1 parents anyOne equals: class1.
 ]
 
 { #category : #tests }

@@ -17,7 +17,7 @@ Class {
 		'__COLUMN__Token',
 		'__FUNCTION__Token'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -120,7 +120,7 @@ SwiftLiteralExpressionNode >> full_string_literalToken: aSmaCCToken [
 	full_string_literalToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftLiteralExpressionNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

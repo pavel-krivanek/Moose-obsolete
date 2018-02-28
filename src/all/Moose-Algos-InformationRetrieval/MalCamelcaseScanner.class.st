@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'next'
 	],
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
 { #category : #example }
@@ -20,7 +20,7 @@ MalCamelcaseScanner class >> bible [
 		allTerms
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalCamelcaseScanner >> onStream: input [
 
 	super onStream: input.

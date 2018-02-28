@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'literalValue'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #'instance creation' }

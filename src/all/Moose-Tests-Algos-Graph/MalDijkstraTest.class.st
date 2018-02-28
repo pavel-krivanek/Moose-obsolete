@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'dijsktra'
 	],
-	#category : #Moose-Tests-Algos-Graph
+	#category : #'Moose-Tests-Algos-Graph'
 }
 
 { #category : #running }

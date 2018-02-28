@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'borderStyle'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #visitor }

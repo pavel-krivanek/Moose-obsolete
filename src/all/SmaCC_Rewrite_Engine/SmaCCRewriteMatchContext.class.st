@@ -13,7 +13,7 @@ Class {
 		'SilentProperties',
 		'Uninitialized'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #compiling }
@@ -72,7 +72,7 @@ SmaCCRewriteMatchContext class >> uninitializedValue [
 	^ Uninitialized
 ]
 
-{ #category : #accessing-methods }
+{ #category : #'accessing-methods' }
 SmaCCRewriteMatchContext >> addGlobalProperty: aSymbol withValueFrom: aBlock [
 	rewriteEngine rewriteRule propertyAt: aSymbol ifAbsentPut: aBlock.
 	self
@@ -83,7 +83,7 @@ SmaCCRewriteMatchContext >> addGlobalProperty: aSymbol withValueFrom: aBlock [
 		as: [ :value | rewriteEngine rewriteRule propertyAt: aSymbol put: value ]
 ]
 
-{ #category : #accessing-methods }
+{ #category : #'accessing-methods' }
 SmaCCRewriteMatchContext >> addMethodNamed: aSymbol as: aBlock [
 	rewriteEngine addMethodNamed: aSymbol as: aBlock
 ]
@@ -114,7 +114,7 @@ SmaCCRewriteMatchContext >> addNewlineWhitespace: aString to: source [
 	^ outputStream contents
 ]
 
-{ #category : #accessing-methods }
+{ #category : #'accessing-methods' }
 SmaCCRewriteMatchContext >> addProperty: aSymbol withValue: anObject [
 	| property |
 	property := anObject.
@@ -124,7 +124,7 @@ SmaCCRewriteMatchContext >> addProperty: aSymbol withValue: anObject [
 		as: [ :value | property := value ]
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteMatchContext >> additionalFiles [
 	^ rewriteEngine additionalFiles
 ]
@@ -208,7 +208,7 @@ SmaCCRewriteMatchContext >> computeStringFor: value [
 		ifFalse: [ value ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteMatchContext >> context: aDictionary [
 	aDictionary
 		keysAndValuesDo:
@@ -306,7 +306,7 @@ SmaCCRewriteMatchContext >> deleteWithWhitespaceBefore: anObject [
 	self delete: anObject
 ]
 
-{ #category : #accessing-methods }
+{ #category : #'accessing-methods' }
 SmaCCRewriteMatchContext >> doesNotUnderstand: aMessage [
 	| method |
 	method := rewriteEngine methodNamed: aMessage selector.
@@ -332,7 +332,7 @@ SmaCCRewriteMatchContext >> doesNotUnderstand: aMessage [
 	^ method valueWithArguments: aMessage arguments
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteMatchContext >> forNode: aSmaCCParseNode rewriter: aSmaCCRewriteEngine continuation: aBlock [
 	rewriteEngine := aSmaCCRewriteEngine.
 	match := aSmaCCParseNode.
@@ -373,7 +373,7 @@ SmaCCRewriteMatchContext >> hasChildAtStartOf: anObject [
 	^ self hasChild: anObject position: #startPosition
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteMatchContext >> initializeGlobalProperty: aSymbol withValueFrom: aBlock [
 	(self class classPool at: aSymbol ifAbsent: [ nil ]) == SmaCCRewriteMatchContext uninitializedValue
 		ifTrue: [ self class classPool at: aSymbol put: aBlock value ]
@@ -674,27 +674,27 @@ SmaCCRewriteMatchContext >> processChildren: aCollection [
 	aCollection do: [ :each | self processChild: each ]
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteMatchContext >> propertyAt: aString [
 	^ rewriteEngine propertyAt: aString
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteMatchContext >> propertyAt: aString ifAbsent: aBlock [
 	^ rewriteEngine propertyAt: aString ifAbsent: aBlock
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteMatchContext >> propertyAt: aString ifAbsentPut: aBlock [
 	^ rewriteEngine propertyAt: aString ifAbsentPut: aBlock
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteMatchContext >> propertyAt: aString put: anObject [
 	^ rewriteEngine propertyAt: aString put: anObject
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCRewriteMatchContext >> removeProperty: aString [
 	^ rewriteEngine removeProperty: aString
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #RTAbstractPluginTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Plugins
+	#category : #'Roassal2-Plugins'
 }
 
 { #category : #tests }

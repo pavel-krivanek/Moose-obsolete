@@ -4,7 +4,7 @@ This class encapsulates the logic of constructing a Roassal view with a class bl
 Class {
 	#name : #FAMIXSystemNestingMap,
 	#superclass : #Object,
-	#category : #Moose-RoassalPaintings
+	#category : #'Moose-RoassalPaintings'
 }
 
 { #category : #rendering }

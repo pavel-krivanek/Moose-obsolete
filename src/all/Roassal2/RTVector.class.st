@@ -9,7 +9,7 @@ Class {
 		'y',
 		'z'
 	],
-	#category : #Roassal2-Builder-CircularMap
+	#category : #'Roassal2-Builder-CircularMap'
 }
 
 { #category : #arithmetic }

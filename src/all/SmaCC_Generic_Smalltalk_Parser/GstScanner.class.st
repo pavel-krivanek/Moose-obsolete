@@ -1,10 +1,10 @@
 Class {
 	#name : #GstScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 GstScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
 	#(#(15 'false' 7) #(15 'nil' 6) #(15 'true' 5))
@@ -260,17 +260,13 @@ GstScanner >> scan7 [
 	currentCharacter == $.
 		ifTrue: [ ^ self scan5 ].
 	currentCharacter == $0
-		ifTrue:
-			[ ^ self scan7X9 ].
+		ifTrue: [ ^ self scan7X9 ].
 	currentCharacter == $1
-		ifTrue:
-			[ ^ self scan7X8 ].
+		ifTrue: [ ^ self scan7X8 ].
 	currentCharacter == $2
-		ifTrue:
-			[ ^ self scan7X7 ].
+		ifTrue: [ ^ self scan7X7 ].
 	currentCharacter == $3
-		ifTrue:
-			[ ^ self scan7X6 ].
+		ifTrue: [ ^ self scan7X6 ].
 	^ self scan7X11
 ]
 
@@ -312,20 +308,15 @@ GstScanner >> scan7X10 [
 { #category : #generated }
 GstScanner >> scan7X11 [
 	currentCharacter == $4
-		ifTrue:
-			[ ^ self scan7X5 ].
+		ifTrue: [ ^ self scan7X5 ].
 	currentCharacter == $5
-		ifTrue:
-			[ ^ self scan7X4 ].
+		ifTrue: [ ^ self scan7X4 ].
 	currentCharacter == $6
-		ifTrue:
-			[ ^ self scan7X3 ].
+		ifTrue: [ ^ self scan7X3 ].
 	currentCharacter == $7
-		ifTrue:
-			[ ^ self scan7X2 ].
+		ifTrue: [ ^ self scan7X2 ].
 	currentCharacter == $8
-		ifTrue:
-			[ ^ self scan7X1 ].
+		ifTrue: [ ^ self scan7X1 ].
 	currentCharacter isDigit
 		ifTrue: [ self recordMatch: #(25).
 			self step.

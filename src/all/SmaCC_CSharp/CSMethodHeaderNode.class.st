@@ -16,7 +16,7 @@ Class {
 		'rightParenToken',
 		'constraintClauses'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -68,7 +68,7 @@ CSMethodHeaderNode >> constraintClauses: anOrderedCollection [
 	self setParents: self constraintClauses to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSMethodHeaderNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

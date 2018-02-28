@@ -1,1 +1,1 @@
-Package { #name : #GT-PetitParserDebugger }
+Package { #name : #'GT-PetitParserDebugger' }

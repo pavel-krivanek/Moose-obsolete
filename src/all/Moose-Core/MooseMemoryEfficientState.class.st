@@ -13,7 +13,7 @@ Class {
 		'entity',
 		'propertyCache'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'accessing properties' }
@@ -107,7 +107,7 @@ MooseMemoryEfficientState >> includesKey: selector [
 	^ propertyCache includesKey: selector
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseMemoryEfficientState >> initialize: aMooseEntity [
 	attributes := #().
 	propertyCache := SmallDictionary new.

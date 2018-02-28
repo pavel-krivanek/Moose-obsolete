@@ -1,1 +1,1 @@
-Package { #name : #Grease-Core }
+Package { #name : #'Grease-Core' }

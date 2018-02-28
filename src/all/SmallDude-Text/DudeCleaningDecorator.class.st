@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'nextComponent'
 	],
-	#category : #SmallDude-Text
+	#category : #'SmallDude-Text'
 }
 
 { #category : #'instance creation' }
@@ -31,7 +31,7 @@ DudeCleaningDecorator >> clean: aStringList [
 	^newStr
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeCleaningDecorator >> initialize [ 
 	"Initialize a newly created instance. This method must answer the receiver." 
 	" *** Edit the following to properly initialize instance variables ***" 
@@ -40,7 +40,7 @@ DudeCleaningDecorator >> initialize [
 	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeCleaningDecorator >> next: aCleaningDecorator [ 
 	 
 	nextComponent := aCleaningDecorator

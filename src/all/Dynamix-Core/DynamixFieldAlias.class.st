@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'attribute'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }

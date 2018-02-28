@@ -10,7 +10,7 @@ Class {
 		'namespace',
 		'period'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -48,7 +48,7 @@ DelphiQualifiedNameNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiQualifiedNameNode >> initialize [
 	super initialize.
 	genericTypeArguments := OrderedCollection new: 2.

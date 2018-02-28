@@ -1,6 +1,6 @@
 Trait {
 	#name : #TLANInterface,
-	#category : #Moose-TestResources-LAN
+	#category : #'Moose-TestResources-LAN'
 }
 
 { #category : #'as yet unclassified' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #RTKiviatBuilderTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Builder-Kiviat
+	#category : #'Roassal2-Builder-Kiviat'
 }
 
 { #category : #tests }

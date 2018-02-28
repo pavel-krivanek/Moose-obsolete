@@ -12,7 +12,7 @@ Class {
 		'title',
 		'metricNormalizer'
 	],
-	#category : #Roassal2-Builder-Common
+	#category : #'Roassal2-Builder-Common'
 }
 
 { #category : #accessing }
@@ -154,12 +154,12 @@ RTBuilder >> normalizer [
 	^ metricNormalizer
 ]
 
-{ #category : #public-ui }
+{ #category : #'public-ui' }
 RTBuilder >> open [
 	^ self openIn: view
 ]
 
-{ #category : #public-ui }
+{ #category : #'public-ui' }
 RTBuilder >> openIn: aView [
 	self build.
 	^ aView openTitled: title
@@ -172,7 +172,7 @@ RTBuilder >> postCopy [
 	interactionBuilder := interactionBuilder copy.
 ]
 
-{ #category : #public-ui }
+{ #category : #'public-ui' }
 RTBuilder >> render [
 	self renderIn: self view
 ]

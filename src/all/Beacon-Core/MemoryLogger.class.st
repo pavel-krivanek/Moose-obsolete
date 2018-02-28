@@ -26,7 +26,7 @@ Class {
 		'announcer',
 		'mutex'
 	],
-	#category : #Beacon-Core-Loggers
+	#category : #'Beacon-Core-Loggers'
 }
 
 { #category : #registering }

@@ -34,7 +34,7 @@ Class {
 		'shouldPopulateSelection',
 		'newViewBlock'
 	],
-	#category : #Roassal2GT-Glamour
+	#category : #'Roassal2GT-Glamour'
 }
 
 { #category : #'scripting actions' }
@@ -50,7 +50,7 @@ GLMRoassal2Presentation >> act: aBlock entitled: aString categorized: anotherStr
 				yourself)
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 GLMRoassal2Presentation >> defaultActions [
 	GLMRoassal2Action initializePresentation: self
 ]
@@ -65,7 +65,7 @@ GLMRoassal2Presentation >> getContextFor: aView [
 	^ context
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 GLMRoassal2Presentation >> initialize [ 
 	super initialize.
 	newViewBlock := [ RTView new ].
@@ -89,7 +89,7 @@ GLMRoassal2Presentation >> newViewBlock [
 	^ newViewBlock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 GLMRoassal2Presentation >> openIfPossible: fileName [
 	"
 	By Sean

@@ -10,7 +10,7 @@ Class {
 		'z',
 		'animation'
 	],
-	#category : #Roassal2-Builder-CircularMap
+	#category : #'Roassal2-Builder-CircularMap'
 }
 
 { #category : #public }

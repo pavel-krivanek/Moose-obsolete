@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'nodeMap'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #algorithm }
@@ -60,7 +60,7 @@ SmaCCEpsilonRemoval >> epsilonReachableNodesFrom: aSmaCCNode [
 	^ reachable
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCEpsilonRemoval >> initialize [
 	super initialize.
 	nodeMap := Dictionary new

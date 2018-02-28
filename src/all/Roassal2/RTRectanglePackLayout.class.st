@@ -25,10 +25,10 @@ Class {
 		'padding',
 		'bounds'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
-{ #category : #space-calculation }
+{ #category : #'space-calculation' }
 RTRectanglePackLayout >> bestSpaceFor: anElement [
 	| elementsPadedBox suitableSpaces |
 	
@@ -83,7 +83,7 @@ RTRectanglePackLayout >> doExecute: elements [
 		displayingProgress: 'Laying out elements'
 ]
 
-{ #category : #space-calculation }
+{ #category : #'space-calculation' }
 RTRectanglePackLayout >> extentByInserting: aRectangle into: aSpace [
 	| futureCorner |
 	futureCorner := aSpace origin + aRectangle extent.
@@ -106,7 +106,7 @@ RTRectanglePackLayout >> gap: anObject [
 	gap := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTRectanglePackLayout >> initialize [
 	super initialize.
 	gap := 0.2
@@ -132,7 +132,7 @@ RTRectanglePackLayout >> padding: anObject [
 	self gap: anObject
 ]
 
-{ #category : #space-calculation }
+{ #category : #'space-calculation' }
 RTRectanglePackLayout >> recalculateFreeSpacesWith: anElement [
 	freeSpace := freeSpace inject: Set new into: [ :set :space |
 		 set

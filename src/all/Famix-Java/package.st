@@ -1,1 +1,1 @@
-Package { #name : #Famix-Java }
+Package { #name : #'Famix-Java' }

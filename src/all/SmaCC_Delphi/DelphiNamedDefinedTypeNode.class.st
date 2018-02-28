@@ -12,7 +12,7 @@ Class {
 		'modifier',
 		'semicolon'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -65,7 +65,7 @@ DelphiNamedDefinedTypeNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiNamedDefinedTypeNode >> initialize [
 	super initialize.
 	genericTypeArguments := OrderedCollection new: 2.

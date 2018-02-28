@@ -10,7 +10,7 @@ Class {
 		'tag',
 		'filter'
 	],
-	#category : #PetitXPath-Nodes
+	#category : #'PetitXPath-Nodes'
 }
 
 { #category : #'instance creation' }

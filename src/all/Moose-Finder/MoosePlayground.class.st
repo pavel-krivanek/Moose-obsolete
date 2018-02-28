@@ -4,7 +4,7 @@ self open
 Class {
 	#name : #MoosePlayground,
 	#superclass : #GTPlayground,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #'world menu' }

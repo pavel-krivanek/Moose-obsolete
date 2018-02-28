@@ -12,7 +12,7 @@ Full Example:
 Class {
 	#name : #ContextStackSignal,
 	#superclass : #ThisContextSignal,
-	#category : #Beacon-Core-Signals
+	#category : #'Beacon-Core-Signals'
 }
 
 { #category : #initialize }

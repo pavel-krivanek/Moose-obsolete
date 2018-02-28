@@ -28,7 +28,7 @@ Class {
 		'dashes',
 		'capStyle'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #heads }
