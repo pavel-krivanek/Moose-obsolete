@@ -92,6 +92,7 @@ BaselineOfMoose >> baseline: spec [
 			'Moose-TestResources-KGB-P11FullReferee' "dependency"
 			'Moose-TestResources-KGB-P13FullReferencer'
 			'Moose-TestResources-KGB-P14FullReferee'
+			'Moose-TestResources-KGB-PExtensions'
 			'Moose-TestResources-PackageBlueprint-P1'
 			'Moose-TestResources-PackageBlueprint-P2'
 			'Moose-TestResources-PackageBlueprint-P3'
