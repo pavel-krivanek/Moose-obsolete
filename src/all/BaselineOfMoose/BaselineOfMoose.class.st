@@ -18,10 +18,10 @@ BaselineOfMoose >> baseline: spec [
 		
 		self baselinePharoOverrides: spec. 
 		
-		#(	
+		"#(	
 			'WebBrowser-Core'
 		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #WebBrowser) ]].
+			spec package: packageName with: [ spec repository: (self url: #WebBrowser) ]]."
 		
 
 		self baselineGrease: spec. 
