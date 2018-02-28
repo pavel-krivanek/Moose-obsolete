@@ -234,7 +234,27 @@ BaselineOfMoose >> baseline: spec [
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Fame) ]].
 
+		#(	
+			'Collections-OrderPreservingDictionaryGTExtensions'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #OrderPreservingDictionary) ]].
 
+		#(	
+			'Magritte-GT'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Magritte3) ]].
+
+		#(	
+			'StateSpecs-GTTools'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #StateSpecs) ]].
+
+		#(	
+			'XML-ParserGTExtensions'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #XMLParser) ]].
+			
+			
 	   self groups: spec.
 	]
 ]
@@ -403,7 +423,10 @@ BaselineOfMoose >> baselineMagritte3: spec [
 	#(
 		'Magritte-Model'
 		'Magritte-Pharo3-Model'
+		'Magritte-Files-Model'
+		'Magritte-Traits-Model'
 		'Magritte-Morph'
+		'Magritte-FileSystem'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #Magritte3) ]]
 
