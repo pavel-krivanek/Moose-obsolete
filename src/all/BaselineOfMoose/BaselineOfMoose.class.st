@@ -16,12 +16,13 @@ BaselineOfMoose >> baseline: spec [
 		spec preLoadDoIt: #'preload:package:'.
 		spec postLoadDoIt: #'postload:package:'.
 		
-		self baselinePharoOverrides: spec. 
+		"self baselinePharoOverrides: spec. "
 		
 		#(	
 			'WebBrowser-Core'
 		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #WebBrowser) ]].
+			(SystemVersion current major < 7) ifTrue: [
+			  spec package: packageName with: [ spec repository: (self url: #WebBrowser) ]]].
 		
 
 		self baselineGrease: spec. 
@@ -120,8 +121,9 @@ BaselineOfMoose >> baseline: spec [
 			"'Morphic-Widgets-FastTable'"
 			'Glamour-FastTable'
 			'Glamour-Magritte-Presentations'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #Glamour) ]].
+		) do: [ :packageName |
+			(SystemVersion current major < 7) ifTrue: [
+			  spec package: packageName with: [ spec repository: (self url: #Glamour) ]]].
 		
 		self baselinePetitParser2: spec.
 		self baselineGeometry: spec.
@@ -139,7 +141,8 @@ BaselineOfMoose >> baseline: spec [
 			'GT-EventRecorder'
 			'GT-Window-EventRecorder'
 		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
+			(SystemVersion current major < 7) ifTrue: [
+			  spec package: packageName with: [ spec repository: (self url: #GToolkit)] ]].
 
 		self baselineBeacon: spec.
 		
@@ -596,35 +599,38 @@ BaselineOfMoose >> baselinePetitSQLParser: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselinePharoOverrides: spec [ 
     
-	#(	
-		'GT-Debugger'
-		'GT-EventRecorder'
-		'GT-InspectorExtensions-Core'
-		'GT-Inspector'
-		'GT-Playground'
-		'GT-Spotter'
-		'GT-SpotterExtensions-Core'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
+       #(      
+               'GT-Debugger'
+               'GT-EventRecorder'
+               'GT-InspectorExtensions-Core'
+               'GT-Inspector'
+               'GT-Playground'
+               'GT-Spotter'
+               'GT-SpotterExtensions-Core'
+       ) do: [ :packageName | 
+               spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
 
-	#(	
-		'Glamour-Core'
-		'Glamour-FastTable'
-		'Glamour-Morphic-Brick'
-		'Glamour-Morphic-Pager'
-		'Glamour-Morphic-Renderer'
-		'Glamour-Morphic-Widgets'
-		'Glamour-Morphic-Theme'
-		'Glamour-Presentations'
-		'Glamour-Tests-Morphic'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #Glamour) ]].
+       #(      
+               'Glamour-Core'
+               'Glamour-FastTable'
+               'Glamour-Morphic-Brick'
+               'Glamour-Morphic-Pager'
+               'Glamour-Morphic-Renderer'
+               'Glamour-Morphic-Widgets'
+               'Glamour-Morphic-Theme'
+               'Glamour-Presentations'
+               'Glamour-Tests-Morphic'
+       ) do: [ :packageName | 
+               spec package: packageName with: [ spec repository: (self url: #Glamour) ]].
 
-	#(	
-		'Moose-Algos-Graph'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #MooseAlgos) ]].
-			
+       #(      
+               'Moose-Algos-Graph'
+       ) do: [ :packageName | 
+	    (SystemVersion current major < 7) ifTrue: [
+               spec package: packageName with: [ spec repository: (self url: #MooseAlgos) ]]].
+                       
+                               
+				
 
 ]
 
@@ -790,26 +796,7 @@ BaselineOfMoose >> baselineZeroConf: spec [
 BaselineOfMoose >> groups: spec [ 
     
 	spec group: 'BasicMetamodelling' with: #(
-			"'GT-Debugger'
-			'GT-EventRecorder'
-			'GT-InspectorExtensions-Core'
-			'GT-Inspector'
-			'GT-Playground'
-			'GT-Spotter'
-			'GT-SpotterExtensions-Core'
-
-			'Glamour-Core'
-			'Glamour-FastTable'
-			'Glamour-Morphic-Brick'
-			'Glamour-Morphic-Pager'
-			'Glamour-Morphic-Renderer'
-			'Glamour-Morphic-Widgets'
-			'Glamour-Morphic-Theme'
-			'Glamour-Presentations'
-			'Glamour-Tests-Morphic'"
-
 			'Moose-Algos-Graph'
-			'WebBrowser-Core'
 
 			'Grease-Core'
 			'Grease-Pharo30-Core' 
