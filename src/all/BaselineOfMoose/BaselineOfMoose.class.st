@@ -790,7 +790,7 @@ BaselineOfMoose >> baselineZeroConf: spec [
 BaselineOfMoose >> groups: spec [ 
     
 	spec group: 'BasicMetamodelling' with: #(
-			'GT-Debugger'
+			"'GT-Debugger'
 			'GT-EventRecorder'
 			'GT-InspectorExtensions-Core'
 			'GT-Inspector'
@@ -806,7 +806,7 @@ BaselineOfMoose >> groups: spec [
 			'Glamour-Morphic-Widgets'
 			'Glamour-Morphic-Theme'
 			'Glamour-Presentations'
-			'Glamour-Tests-Morphic'
+			'Glamour-Tests-Morphic'"
 
 			'Moose-Algos-Graph'
 			'WebBrowser-Core'
