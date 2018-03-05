@@ -108,3 +108,11 @@ Object >> mooseMenuMorph [
 Object >> mooseName [
 	^ self printString
 ]
+
+{ #category : #'*Moose-Core' }
+Object >> mooseTypes [
+
+	^ { self class }
+
+	
+]
