@@ -203,6 +203,66 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneToOne [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderTraitTest >> testCustomPackageForUserClasses [
+
+	| simpleClass generated userClass |
+	
+	builder packageNameForUserClasses: 'Custom'.
+	
+	simpleClass := builder newTraitNamed: #TComment.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
+	userClass := builder testingEnvironment ask classNamed: 'TstTComment'.
+
+	self assert: (generated package name = #Tst).
+	self assert: (userClass package name = #Custom).
+	
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderTraitTest >> testCustomPackageForUserClassesChanged [
+
+	| simpleClass generated userClass generatedAccess accessUserClass |
+	
+	builder packageNameForUserClasses: 'Custom'.
+	
+	simpleClass := builder newTraitNamed: #TComment.	
+
+	builder packageNameForUserClasses: 'Custom2'.
+
+	simpleClass := builder newTraitNamed: #TAccess.	
+
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
+	userClass := builder testingEnvironment ask classNamed: 'TstTComment'.
+	generatedAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
+	accessUserClass := builder testingEnvironment ask classNamed: 'TstTAccess'.
+
+	self assert: (generated package name = #Tst).
+	self assert: (userClass package name = #Custom).
+	self assert: (generatedAccess package name = #Tst).
+	self assert: (accessUserClass package name = #Custom2).
+
+
+	
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderTraitTest >> testDefaultPackageForUserClasses [
+
+	| simpleClass generated userClass |
+	
+	simpleClass := builder newTraitNamed: #TComment.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
+	userClass := builder testingEnvironment ask classNamed: 'TstTComment'.
+
+	self assert: (generated package name = #Tst).
+	self assert: (userClass package name = #Tst).
+	
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testMultipleTraits [
 
 	builder newTraitNamed: #TComment.	

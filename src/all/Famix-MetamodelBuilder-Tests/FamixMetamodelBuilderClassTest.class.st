@@ -447,6 +447,51 @@ FamixMetamodelBuilderClassTest >> testCustomBasicTrait [
 
 ]
 
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testCustomPackageForUserClasses [
+
+	| simpleClass generated userClass |
+	
+	builder packageNameForUserClasses: 'Custom'.
+	
+	simpleClass := builder newClassNamed: #Comment.	
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstCommentGenerated'.
+	userClass := builder testingEnvironment ask classNamed: 'TstComment'.
+
+	self assert: (generated package name = #Tst).
+	self assert: (userClass package name = #Custom).
+	
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testCustomPackageForUserClassesChanged [
+
+	| simpleClass generated userClass generatedAccess accessUserClass |
+	
+	builder packageNameForUserClasses: 'Custom'.
+	
+	simpleClass := builder newClassNamed: #Comment.	
+
+	builder packageNameForUserClasses: 'Custom2'.
+
+	simpleClass := builder newClassNamed: #Access.	
+
+	builder generate.
+	generated := builder testingEnvironment ask classNamed: 'TstCommentGenerated'.
+	userClass := builder testingEnvironment ask classNamed: 'TstComment'.
+	generatedAccess := builder testingEnvironment ask classNamed: 'TstAccessGenerated'.
+	accessUserClass := builder testingEnvironment ask classNamed: 'TstAccess'.
+
+	self assert: (generated package name = #Tst).
+	self assert: (userClass package name = #Custom).
+	self assert: (generatedAccess package name = #Tst).
+	self assert: (accessUserClass package name = #Custom2).
+
+
+	
+]
+
 { #category : #'tests - settings' }
 FamixMetamodelBuilderClassTest >> testCustomSuperclass [
 

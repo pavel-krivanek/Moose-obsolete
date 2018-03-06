@@ -15,7 +15,8 @@ Class {
 		'tag',
 		'comment',
 		'prefix',
-		'packageName'
+		'packageName',
+		'packageNameForUserClasses'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -338,6 +339,16 @@ FamixMetamodelBuilderBehavior >> packageName [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> packageName: anObject [
 	packageName := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> packageNameForUserClasses [
+	^ packageNameForUserClasses ifNil: [ self packageName ]
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> packageNameForUserClasses: anObject [
+	packageNameForUserClasses := anObject
 ]
 
 { #category : #accessing }

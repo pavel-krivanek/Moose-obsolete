@@ -347,6 +347,7 @@ FamixMetamodelBuilder >> newClass [
 	aClass builder: self.
 	aClass prefix: self prefix.
 	aClass packageName: self packageName.
+	aClass packageNameForUserClasses: self packageNameForUserClasses.
 	self classes add: aClass.
 	^ aClass
 	
@@ -388,6 +389,7 @@ FamixMetamodelBuilder >> newTrait [
 	aTrait builder: self.
 	aTrait prefix: self prefix.
 	aTrait packageName: self packageName.
+	aTrait packageNameForUserClasses: self packageNameForUserClasses.
 	self traits add: aTrait.
 	^ aTrait
 	
