@@ -219,13 +219,20 @@ FamixMetamodelBuilderTraitTest >> testMultipleTraits [
 { #category : #tests }
 FamixMetamodelBuilderTraitTest >> testSimpleClassAnnotation [
 
-	| simpleClass generated method |
+	| simpleClass generated method userTrait |
 		
 	simpleClass := builder newTraitNamed: #TComment.	
 	builder generate.
+
 	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
+	userTrait := builder testingEnvironment ask classNamed: 'TstTComment'.
+
 	method := generated classSide methodNamed: #annotation.
 	self assert: (method sourceCode includesSubstring: '<MSEClass: #TCommentGenerated super: #FmxTraitEntity>').
+	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
+
+	method := userTrait classSide methodNamed: #annotation.
+	self assert: (method sourceCode includesSubstring: '<MSEClass: #TComment super: #TstTCommentGenerated>').
 	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
 
 ]

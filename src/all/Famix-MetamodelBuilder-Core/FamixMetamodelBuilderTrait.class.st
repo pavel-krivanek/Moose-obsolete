@@ -77,7 +77,7 @@ FamixMetamodelBuilderTrait >> generate [
 	
 	self generateAccessors.
 	self generateAnnotationIn: aTrait as: self name, 'Generated' superclass: nil.
-	self generateAnnotationIn: userClass as: self name superclass: userClass.
+	self generateAnnotationIn: userClass as: self name superclass: aTrait.
 
 ]
 
@@ -86,12 +86,15 @@ FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName supercl
 
 	| aSuperclassName |
 	
-	aSuperclassName :=  (self classGeneralization = self defaultSuperclass) 
-		ifTrue: [ self defaultSuperclass name]
-		ifFalse: [ self classGeneralization 
-			ifNil: [ self defaultSuperclass name ]
-			ifNotNil: [ 
-				self classGeneralization realClass name ] ].
+	aSuperclassName := aSuperclass  
+		ifNotNil: [ aSuperclass name ]
+		ifNil: [ 
+		aSuperclassName := (self classGeneralization = self defaultSuperclass) 
+			ifTrue: [ self defaultSuperclass name]
+			ifFalse: [ self classGeneralization 
+				ifNil: [ self defaultSuperclass name ]
+				ifNotNil: [ 
+					self classGeneralization realClass name ] ] ].
 
 	aRealClass classSide compile: ('annotation
 
