@@ -152,8 +152,8 @@ FamixMetamodelBuilderClass >> generate [
 	
 	self willGenerate ifTrue: [ 
 		self generateAccessors.
-		self generateAnnotationIn: aClass as: self name, 'Generated' .
-		self generateAnnotationIn: userClass as: self name. ].
+		self generateAnnotationIn: aClass as: self name, 'Generated' superclass: nil.
+		self generateAnnotationIn: userClass as: self name superclass: aClass. ].
 	self generateTraitsAssignmentsFor: aClass.
 	self generateRequirementsFor: aClass.
 	

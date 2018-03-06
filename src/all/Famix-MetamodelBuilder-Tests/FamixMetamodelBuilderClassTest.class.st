@@ -368,13 +368,17 @@ FamixMetamodelBuilderClassTest >> testClassGeneralization [
 	self assert: generatedClass superclass equals: userBehavior.
 	annotation := generatedClass classSide methodNamed: #annotation.
 	self assert: (annotation sourceCode includesSubstring: '<MSEClass: #ClassGenerated super: #TstBehavior>').
+	
+	self assert: userBehavior superclass equals: generatedBehavior.
+	annotation := userBehavior classSide methodNamed: #annotation.
+	self assert: (annotation sourceCode includesSubstring: '<MSEClass: #Behavior super: #TstBehaviorGenerated>').	
 
 ]
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
 
-	| behavior class generatedBehavior generatedClass userBehavior annotation |
+	| behavior class generatedBehavior generatedClass userBehavior annotation userClass |
 	
 	behavior := builder newClassNamed: #Behavior.	
 	class := builder newClassNamed: #Class.
@@ -386,10 +390,16 @@ FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
 	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehaviorGenerated'.
 	userBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
 	generatedClass := builder testingEnvironment ask classNamed: 'TstClassGenerated'.
+	userClass := builder testingEnvironment ask classNamed: 'TstClass'.
 	
 	self assert: generatedClass superclass equals: userBehavior.
 	annotation := generatedClass classSide methodNamed: #annotation.
 	self assert: (annotation sourceCode includesSubstring: '<MSEClass: #ClassGenerated super: #TstBehavior>').
+	
+	self assert: userClass superclass equals: generatedClass.
+	annotation := userClass classSide methodNamed: #annotation.
+	self assert: (annotation sourceCode includesSubstring: '<MSEClass: #Class super: #TstClassGenerated>').
+
 ]
 
 { #category : #tests }

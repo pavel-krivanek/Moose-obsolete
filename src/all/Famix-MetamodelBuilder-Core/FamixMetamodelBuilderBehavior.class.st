@@ -189,37 +189,19 @@ FamixMetamodelBuilderBehavior >> generateAccessors [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [ 
+FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass [
 
 	| aSuperclassName |
 	
-	aSuperclassName :=  (self classGeneralization = self defaultSuperclass) 
-		ifTrue: [ self defaultSuperclass name]
-		ifFalse: [ self classGeneralization 
-			ifNil: [ self defaultSuperclass name ]
-			ifNotNil: [ 
-				self classGeneralization realUserClass name ] ].
-
-	aRealClass classSide compile: ('annotation
-
-	<MSEClass: #{1} super: #{2}>
-	<package: {3}>
-	^self' format: { self name. aSuperclassName. self builder safePackageName})
-		classified: 'meta'
-
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass as: aName [
-
-	| aSuperclassName |
-	
-	aSuperclassName :=  (self classGeneralization = self defaultSuperclass) 
-		ifTrue: [ self defaultSuperclass name]
-		ifFalse: [ self classGeneralization 
-			ifNil: [ self defaultSuperclass name ]
-			ifNotNil: [ 
-				self classGeneralization realUserClass name ] ].
+	aSuperclassName := aSuperclass  
+		ifNotNil: [ aSuperclass name ]
+		ifNil: [ 
+			(self classGeneralization = self defaultSuperclass) 
+				ifTrue: [ self defaultSuperclass name]
+				ifFalse: [ self classGeneralization 
+					ifNil: [ self defaultSuperclass name ]
+					ifNotNil: [ 
+						self classGeneralization realUserClass name ] ] ].
 
 	aRealClass classSide compile: ('annotation
 

@@ -76,13 +76,13 @@ FamixMetamodelBuilderTrait >> generate [
 	self realUserClass: userClass.
 	
 	self generateAccessors.
-	self generateAnnotationIn: aTrait as: self name, 'Generated'.
-	self generateAnnotationIn: userClass as: self name.
+	self generateAnnotationIn: aTrait as: self name, 'Generated' superclass: nil.
+	self generateAnnotationIn: userClass as: self name superclass: userClass.
 
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName [ 
+FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass [
 
 	| aSuperclassName |
 	
