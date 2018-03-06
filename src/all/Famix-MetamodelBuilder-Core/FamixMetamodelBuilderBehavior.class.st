@@ -9,6 +9,7 @@ Class {
 		'relations',
 		'builder',
 		'realClass',
+		'realUserClass',
 		'willGenerate',
 		'properties',
 		'tag',
@@ -197,13 +198,34 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass [
 		ifFalse: [ self classGeneralization 
 			ifNil: [ self defaultSuperclass name ]
 			ifNotNil: [ 
-				self classGeneralization realClass name ] ].
+				self classGeneralization realUserClass name ] ].
 
 	aRealClass classSide compile: ('annotation
 
 	<MSEClass: #{1} super: #{2}>
 	<package: {3}>
 	^self' format: { self name. aSuperclassName. self builder safePackageName})
+		classified: 'meta'
+
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass as: aName [
+
+	| aSuperclassName |
+	
+	aSuperclassName :=  (self classGeneralization = self defaultSuperclass) 
+		ifTrue: [ self defaultSuperclass name]
+		ifFalse: [ self classGeneralization 
+			ifNil: [ self defaultSuperclass name ]
+			ifNotNil: [ 
+				self classGeneralization realUserClass name ] ].
+
+	aRealClass classSide compile: ('annotation
+
+	<MSEClass: #{1} super: #{2}>
+	<package: {3}>
+	^self' format: { aName. aSuperclassName. self builder safePackageName})
 		classified: 'meta'
 
 ]
@@ -418,6 +440,16 @@ FamixMetamodelBuilderBehavior >> realClass [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> realClass: anObject [
 	realClass := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> realUserClass [
+	^ realUserClass
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> realUserClass: anObject [
+	realUserClass := anObject
 ]
 
 { #category : #private }

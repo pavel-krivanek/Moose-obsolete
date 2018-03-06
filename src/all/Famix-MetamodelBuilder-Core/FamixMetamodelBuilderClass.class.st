@@ -125,7 +125,7 @@ FamixMetamodelBuilderClass >> generalization: anObject [
 { #category : #generating }
 FamixMetamodelBuilderClass >> generate [
 
-	| aClass aSuperclass aClassName isHierarchyRoot |
+	| aClass aSuperclass aClassName isHierarchyRoot userClass |
 	
 	self willGenerate ifFalse: [ ^ self ].
 	
@@ -137,16 +137,23 @@ FamixMetamodelBuilderClass >> generate [
 		ifNil: [ 
 			isHierarchyRoot := true.
 			self defaultSuperclass ]
-		ifNotNil: [ self classGeneralization realClass ].
+		ifNotNil: [ self classGeneralization realUserClass ].
 	
-	aClass := self builder environment createClassNamed: aClassName superclass: aSuperclass slots: self slotDefinitions in: self packageName.
+	aClass := self builder environment createClassNamed: aClassName, 'Generated' superclass: aSuperclass slots: self slotDefinitions in: self packageName overwrite: false.
+	
+	userClass := self builder environment createClassNamed: aClassName superclass: aClass slots: {} in: self packageName overwrite: true.
+	
 	aClass tagWith: self tag.
+	userClass tagWith: self tag.
 	self builder environment setComment: self comment for: aClass.
 			
 	self realClass: aClass.
+	self realUserClass: userClass.
+	
 	self willGenerate ifTrue: [ 
 		self generateAccessors.
-		self generateAnnotationIn: aClass ].
+		self generateAnnotationIn: aClass as: self name, 'Generated' .
+		self generateAnnotationIn: userClass as: self name. ].
 	self generateTraitsAssignmentsFor: aClass.
 	self generateRequirementsFor: aClass.
 	

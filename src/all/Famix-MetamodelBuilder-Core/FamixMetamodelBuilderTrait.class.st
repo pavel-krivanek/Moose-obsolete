@@ -59,25 +59,30 @@ FamixMetamodelBuilderTrait >> generalization: anObject [
 { #category : #generating }
 FamixMetamodelBuilderTrait >> generate [
 
-	| aTrait traitName |
+	| aTrait traitName userClass |
 		
 	self willGenerate ifFalse: [ ^ self ].
 	
 	traitName := self fullName.
 	
-	aTrait := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self packageName.
+	aTrait := self builder environment createTraitNamed: traitName, 'Generated' asSymbol slots: self slotDefinitions in: self packageName overwrite: true.
+	userClass := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self packageName overwrite: false.
+
+
 	aTrait tagWith: self tag.
 	self builder environment setComment: self comment for: aTrait.
 			
 	self realClass: aTrait.
+	self realUserClass: userClass.
 	
 	self generateAccessors.
-	self generateAnnotationIn: aTrait.
+	self generateAnnotationIn: aTrait as: self name, 'Generated'.
+	self generateAnnotationIn: userClass as: self name.
 
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass [ 
+FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName [ 
 
 	| aSuperclassName |
 	
@@ -93,7 +98,7 @@ FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass [
 	<ignoreInTraitUsers>
 	<MSEClass: #{1} super: #{2}>
 	<package: {3}>
-	^self' format: { self name. aSuperclassName. self builder safePackageName})
+	^self' format: { aName. aSuperclassName. self builder safePackageName})
 		classified: 'meta'
 
 ]

@@ -51,6 +51,7 @@ Class {
 		'environment',
 		'prefix',
 		'packageName',
+		'packageNameForUserClasses',
 		'classes',
 		'traits',
 		'relations',
@@ -416,6 +417,16 @@ FamixMetamodelBuilder >> packageName [
 { #category : #accessing }
 FamixMetamodelBuilder >> packageName: anObject [
 	packageName := anObject
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> packageNameForUserClasses [
+	^ packageNameForUserClasses ifNil: [ self packageName ]
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> packageNameForUserClasses: anObject [
+	packageNameForUserClasses := anObject
 ]
 
 { #category : #accessing }

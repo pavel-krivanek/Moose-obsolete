@@ -38,10 +38,10 @@ FamixMetamodelBuilderTest >> testDoNotGenerateCurrent [
 	
 	builder generate.
 	
-	self deny: (builder testingEnvironment ask includesClassNamed: 'TstBehavior').
-	self deny: (builder testingEnvironment ask includesClassNamed: 'TstTBehavior').
-	self assert: (builder testingEnvironment ask includesClassNamed: 'TstClass').
-	self assert: (builder testingEnvironment ask includesClassNamed: 'TstTClass').
+	self deny: (builder testingEnvironment ask includesClassNamed: 'TstBehaviorGenerated').
+	self deny: (builder testingEnvironment ask includesClassNamed: 'TstTBehaviorGenerated').
+	self assert: (builder testingEnvironment ask includesClassNamed: 'TstClassGenerated').
+	self assert: (builder testingEnvironment ask includesClassNamed: 'TstTClassGenerated').
 
 ]
 

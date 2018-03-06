@@ -24,8 +24,8 @@ FamixMetamodelBuilderRelationTest >> checkArrow: aBinarySelector from: cardinali
 	
 	builder generate.
 	
-	generatedTClass := builder testingEnvironment ask classNamed: 'TstTClass'.
-	generatedTComment := builder testingEnvironment ask classNamed: 'TstTComment'.
+	generatedTClass := builder testingEnvironment ask classNamed: 'TstTClassGenerated'.
+	generatedTComment := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
 	
 	self assert: generatedTClass slots size equals: 1.
 	self assert: generatedTClass slots first name equals: #property1.
@@ -96,8 +96,8 @@ FamixMetamodelBuilderRelationTest >> testOneToOneTraitsRelation [
 	
 	builder generate.
 	
-	generatedTClass := builder testingEnvironment ask classNamed: 'TstTClass'.
-	generatedTComment := builder testingEnvironment ask classNamed: 'TstTComment'.
+	generatedTClass := builder testingEnvironment ask classNamed: 'TstTClassGenerated'.
+	generatedTComment := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
 	
 	self assert: generatedTClass slots size equals: 1.
 	self assert: generatedTClass slots first name equals: #property1.

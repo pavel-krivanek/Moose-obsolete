@@ -29,9 +29,15 @@ FamixMetamodelBuilderRingEnvironment >> compile: aSource in: aClass classified: 
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName [
+FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName overwrite: shouldOverwrite [
 
-	| aClass |
+	| aClass existingClass |
+	
+	existingClass := self ringEnvironment ask behaviorNamed: aClassName asSymbol.
+	
+	(existingClass notNil and: [ shouldOverwrite not]) 
+		ifTrue: [ ^ existingClass ].
+		
 	aClass := self ringEnvironment ensureClassNamed: aClassName.
 	aClass superclass: aSuperclass.
 	aClass package: (self ringEnvironment ensurePackageNamed: packageName).
@@ -46,7 +52,7 @@ FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass:
 			ifFalse: [ 
 				RG2InstanceVariableSlotDefinition named: slotInBadEnvironment name parent: aClass layout ].
 		aClass layout addSlot: slot ].
-	
+
 	^ aClass
 ]
 
@@ -72,10 +78,15 @@ FamixMetamodelBuilderRingEnvironment >> createImportingcontextClassNamed: aClass
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots in: packageName [
+FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
 
-	| aPackage aTrait |
+	| aPackage aTrait existingClass |
+
+	existingClass := self ringEnvironment ask behaviorNamed: traitName asSymbol.
 	
+	(existingClass notNil and: [ shouldOverwrite not]) 
+		ifTrue: [ ^ existingClass ].
+
 	aPackage := self ringEnvironment ensurePackageNamed: packageName.
 	aTrait := ringEnvironment ensureClassNamed: traitName. 
 	aTrait superclass: self basicTrait.
@@ -91,6 +102,7 @@ FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots
 			ifFalse: [ 
 				RG2InstanceVariableSlotDefinition named: slotInBadEnvironment name parent: aTrait layout ].
 		aTrait layout addSlot: slot ].
+	
 	^ aTrait
 ]
 

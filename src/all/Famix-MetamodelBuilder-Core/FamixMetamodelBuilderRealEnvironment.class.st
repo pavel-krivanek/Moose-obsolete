@@ -26,21 +26,20 @@ FamixMetamodelBuilderRealEnvironment >> compile: aSource in: aClass classified: 
 ]
 
 { #category : #compiling }
-FamixMetamodelBuilderRealEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName [
+FamixMetamodelBuilderRealEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName overwrite: shouldOverwrite [
 
-	| resultantClass aSubclass |
+	| resultantClass existingClass |
 	
-	resultantClass := aSuperclass subclass: aClassName, 'Generated' asSymbol
+	existingClass := self class environment at: aClassName asSymbol.
+	
+	(existingClass notNil and: [ shouldOverwrite not]) 
+		ifTrue: [ ^ existingClass ].
+	
+	resultantClass := aSuperclass subclass: aClassName asSymbol
 		slots: slots
 		classVariables: {  }
 		category: packageName.	
-			
-	self class environment at: aClassName asSymbol ifAbsent: [ 
-		aSubclass := resultantClass subclass: aClassName asSymbol
-			slots: {}
-			classVariables: {  }
-			category: packageName.].
-			
+				
 	^ resultantClass
 
 ]
