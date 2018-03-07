@@ -1,5 +1,17 @@
 Class {
 	#name : #FmxNGTParameter,
-	#superclass : #FmxNGTParameterGenerated,
+	#superclass : #FmxTraitEntity,
+	#instVars : [
+		'#parentBehaviouralEntity => FMOne type: #FmxNGTWithParameters opposite: #parameters'
+	],
 	#category : #'FmxNG-Traits'
 }
+
+{ #category : #meta }
+FmxNGTParameter class >> annotation [
+
+	<ignoreInTraitUsers>
+	<MSEClass: #TParameter super: #FmxNGTParameterGenerated>
+	<package: #'FmxNG-Generated'>
+	^self
+]

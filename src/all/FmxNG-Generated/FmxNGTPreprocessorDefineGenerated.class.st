@@ -13,7 +13,7 @@ Class {
 FmxNGTPreprocessorDefineGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TPreprocessorDefine super: #FmxTraitEntity>
+	<MSEClass: #TPreprocessorDefineGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

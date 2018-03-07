@@ -161,6 +161,10 @@ FamixMetamodelBuilder >> cleanPackage [
 
 	(self packageName asPackageIfAbsent: [ nil ]) 
 		ifNotNil: [:aPackage | aPackage removeFromSystem ].
+	
+	(self packageName = self packageNameForUserClasses) ifFalse: [ 
+		(self packageNameForUserClasses asPackageIfAbsent: [ nil ]) 
+			ifNotNil: [:aPackage | aPackage removeFromSystem ]].	
 ]
 
 { #category : #'settings - default' }
@@ -260,6 +264,7 @@ FamixMetamodelBuilder >> flattenTraitsFor: aClass [
 { #category : #generating }
 FamixMetamodelBuilder >> generate [
 
+	self registerPackages.
 	self traits do: [ :each | each generate ] displayingProgress: 'generating traits'.
 	self sortedClasses do: [ :each | each generateDummy ] displayingProgress: 'generating dummy classes'.
 	self sortedClasses do: [ :each | each generate ] displayingProgress: 'generating classes'.
@@ -313,8 +318,9 @@ FamixMetamodelBuilder >> generator [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilder >> generator: anObject [
-	generator := anObject
+FamixMetamodelBuilder >> generator: aGenerator [
+	generator := aGenerator.
+
 ]
 
 { #category : #accessing }
@@ -439,6 +445,15 @@ FamixMetamodelBuilder >> prefix [
 { #category : #accessing }
 FamixMetamodelBuilder >> prefix: anObject [
 	prefix := anObject
+]
+
+{ #category : #'as yet unclassified' }
+FamixMetamodelBuilder >> registerPackages [
+	
+	self environment registerPackage: self packageName.
+	
+	(self packageName = self packageNameForUserClasses) ifFalse: [ 
+		self environment registerPackage: self packageNameForUserClasses. ]
 ]
 
 { #category : #accessing }

@@ -27,7 +27,7 @@ Class {
 FmxNGTAccessGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TAccess super: #FmxTraitEntity>
+	<MSEClass: #TAccessGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

@@ -11,7 +11,7 @@ Class {
 FmxNGTInvocableGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TInvocable super: #FmxTraitEntity>
+	<MSEClass: #TInvocableGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

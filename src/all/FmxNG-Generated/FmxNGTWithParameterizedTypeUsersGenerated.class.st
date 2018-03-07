@@ -11,7 +11,7 @@ Class {
 FmxNGTWithParameterizedTypeUsersGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithParameterizedTypeUsers super: #FmxTraitEntity>
+	<MSEClass: #TWithParameterizedTypeUsersGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

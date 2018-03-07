@@ -22,7 +22,7 @@ Class {
 FmxNGTMethodGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TMethod super: #FmxTraitEntity>
+	<MSEClass: #TMethodGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

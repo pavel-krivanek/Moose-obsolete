@@ -31,7 +31,7 @@ Class {
 FmxNGTAssociationGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TAssociation super: #FmxTraitEntity>
+	<MSEClass: #TAssociationGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

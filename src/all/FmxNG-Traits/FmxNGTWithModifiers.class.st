@@ -1,8 +1,20 @@
 Class {
 	#name : #FmxNGTWithModifiers,
-	#superclass : #FmxNGTWithModifiersGenerated,
+	#superclass : #FmxTraitEntity,
+	#instVars : [
+		'modifiers'
+	],
 	#category : #'FmxNG-Traits'
 }
+
+{ #category : #meta }
+FmxNGTWithModifiers class >> annotation [
+
+	<ignoreInTraitUsers>
+	<MSEClass: #TWithModifiers super: #FmxNGTWithModifiersGenerated>
+	<package: #'FmxNG-Generated'>
+	^self
+]
 
 { #category : #adding }
 FmxNGTWithModifiers >> addModifier: aString [

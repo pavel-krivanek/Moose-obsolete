@@ -15,7 +15,7 @@ Class {
 FmxNGTAttributeGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TAttribute super: #FmxTraitEntity>
+	<MSEClass: #TAttributeGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

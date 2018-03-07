@@ -14,7 +14,7 @@ Class {
 FmxNGTLocalVariableGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TLocalVariable super: #FmxTraitEntity>
+	<MSEClass: #TLocalVariableGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

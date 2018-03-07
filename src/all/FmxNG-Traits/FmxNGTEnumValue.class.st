@@ -1,5 +1,17 @@
 Class {
 	#name : #FmxNGTEnumValue,
-	#superclass : #FmxNGTEnumValueGenerated,
+	#superclass : #FmxTraitEntity,
+	#instVars : [
+		'#parentEnum => FMOne type: #FmxNGTWithEnumValues opposite: #enumValues'
+	],
 	#category : #'FmxNG-Traits'
 }
+
+{ #category : #meta }
+FmxNGTEnumValue class >> annotation [
+
+	<ignoreInTraitUsers>
+	<MSEClass: #TEnumValue super: #FmxNGTEnumValueGenerated>
+	<package: #'FmxNG-Generated'>
+	^self
+]

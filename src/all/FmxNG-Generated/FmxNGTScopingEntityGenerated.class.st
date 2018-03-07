@@ -17,7 +17,7 @@ Class {
 FmxNGTScopingEntityGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TScopingEntity super: #FmxTraitEntity>
+	<MSEClass: #TScopingEntityGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

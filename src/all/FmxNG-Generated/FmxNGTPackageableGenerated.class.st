@@ -11,7 +11,7 @@ Class {
 FmxNGTPackageableGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TPackageable super: #FmxTraitEntity>
+	<MSEClass: #TPackageableGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

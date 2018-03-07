@@ -8,7 +8,7 @@ Class {
 FmxNGTWithClassScopeGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithClassScope super: #FmxTraitEntity>
+	<MSEClass: #TWithClassScopeGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

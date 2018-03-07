@@ -16,7 +16,7 @@ Class {
 FmxNGTFileAnchorGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TFileAnchor super: #FmxTraitEntity>
+	<MSEClass: #TFileAnchorGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

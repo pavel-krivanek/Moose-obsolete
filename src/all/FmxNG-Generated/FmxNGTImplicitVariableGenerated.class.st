@@ -14,7 +14,7 @@ Class {
 FmxNGTImplicitVariableGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TImplicitVariable super: #FmxTraitEntity>
+	<MSEClass: #TImplicitVariableGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

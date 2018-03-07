@@ -45,7 +45,19 @@ Class {
 { #category : #accessing }
 CMetamodelGenerator class >> packageName [
 
-	^ #FmxC
+	^ #'FmxC-Generated'
+]
+
+{ #category : #accessing }
+CMetamodelGenerator class >> packageNameForUserClasses [
+
+	^ #'FmxC-Entities'
+]
+
+{ #category : #accessing }
+CMetamodelGenerator class >> prefix [
+
+	^ #'FmxC'
 ]
 
 { #category : #definition }

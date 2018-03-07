@@ -12,7 +12,7 @@ Class {
 FmxNGTTemplateGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TTemplate super: #FmxTraitEntity>
+	<MSEClass: #TTemplateGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

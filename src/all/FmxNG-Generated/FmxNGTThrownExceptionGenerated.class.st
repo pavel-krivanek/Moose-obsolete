@@ -14,7 +14,7 @@ Class {
 FmxNGTThrownExceptionGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TThrownException super: #FmxTraitEntity>
+	<MSEClass: #TThrownExceptionGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

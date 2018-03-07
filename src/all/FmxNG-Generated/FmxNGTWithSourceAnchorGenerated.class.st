@@ -11,7 +11,7 @@ Class {
 FmxNGTWithSourceAnchorGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithSourceAnchor super: #FmxTraitEntity>
+	<MSEClass: #TWithSourceAnchorGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

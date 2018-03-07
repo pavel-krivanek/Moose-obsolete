@@ -30,7 +30,7 @@ FamixMetamodelBuilderRealEnvironment >> createClassNamed: aClassName superclass:
 
 	| resultantClass existingClass |
 	
-	existingClass := self class environment at: aClassName asSymbol.
+	existingClass := self class environment at: aClassName asSymbol ifAbsent: [nil].
 	
 	(existingClass notNil and: [ shouldOverwrite not]) 
 		ifTrue: [ ^ existingClass ].
@@ -47,10 +47,10 @@ FamixMetamodelBuilderRealEnvironment >> createClassNamed: aClassName superclass:
 { #category : #compiling }
 FamixMetamodelBuilderRealEnvironment >> createDummyClassNamed: aClassName in: packageName [
 
-	^ Object subclass: (aClassName, #Generated) asSymbol
+	"^ Object subclass: (aClassName, #Generated) asSymbol
 			instanceVariableNames: ''
 			classVariableNames: ''
-			package: packageName.
+			package: packageName."
 
 ]
 
@@ -73,11 +73,16 @@ FamixMetamodelBuilderRealEnvironment >> createImportingcontextClassNamed: aClass
 ]
 
 { #category : #compiling }
-FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName slots: slots in: packageName [
+FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
 
-	| resultantTrait aSubTrait|
+	| resultantTrait aSubTrait existingClass|
 	
-	resultantTrait := self basicTrait subclass: traitName, 'Generated' asSymbol
+	existingClass := self class environment at: traitName asSymbol ifAbsent: [nil].
+	
+	(existingClass notNil and: [ shouldOverwrite not]) 
+		ifTrue: [ ^ existingClass ].
+
+	resultantTrait := self basicTrait subclass: traitName asSymbol
 		slots: slots
 		classVariables: {  }
 		category: packageName.	
@@ -109,6 +114,19 @@ FamixMetamodelBuilderRealEnvironment >> flattenTraitsFor: aClass [
 FamixMetamodelBuilderRealEnvironment >> hasBehaviorNamed: aClassName [
 
 	^ self class environment includesKey: aClassName
+]
+
+{ #category : #'public registration' }
+FamixMetamodelBuilderRealEnvironment >> registerPackage: aPackageName [
+
+	| packageObject |
+
+	(RPackageOrganizer default packageNames includes: aPackageName) ifTrue: [ 
+		^ aPackageName asPackage ].
+	
+	packageObject := RPackageOrganizer default packageClass named: aPackageName.
+	RPackageOrganizer default  registerPackage: packageObject.
+	^ packageObject
 ]
 
 { #category : #compiling }

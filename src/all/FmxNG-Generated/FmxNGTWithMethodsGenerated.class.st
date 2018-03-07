@@ -11,7 +11,7 @@ Class {
 FmxNGTWithMethodsGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithMethods super: #FmxTraitEntity>
+	<MSEClass: #TWithMethodsGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

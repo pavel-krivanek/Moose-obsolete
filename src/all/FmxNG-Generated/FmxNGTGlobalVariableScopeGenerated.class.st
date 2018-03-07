@@ -11,7 +11,7 @@ Class {
 FmxNGTGlobalVariableScopeGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TGlobalVariableScope super: #FmxTraitEntity>
+	<MSEClass: #TGlobalVariableScopeGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

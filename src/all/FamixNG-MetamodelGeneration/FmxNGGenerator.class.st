@@ -106,7 +106,13 @@ Class {
 { #category : #accessing }
 FmxNGGenerator class >> packageName [
 
-	^ #FmxNG
+	^ #'FmxNG-Generated'
+]
+
+{ #category : #accessing }
+FmxNGGenerator class >> packageNameForUserClasses [
+
+	^ #'FmxNG-Traits'
 ]
 
 { #category : #accessing }
@@ -1480,7 +1486,8 @@ FmxNGGenerator >> initialize [
 	builder := FamixMetamodelBuilder new.
 	builder 
 		prefix: self prefix;
-		packageName: self packageName.
+		packageName: self packageName;
+		packageNameForUserClasses: self packageNameForUserClasses.
 
 ]
 

@@ -368,7 +368,8 @@ BaselineOfMoose >> baselineFamixNG: spec [
 		'FmxNG-Generated'
 		'FmxNG-Traits'
 		'CMetamodelGenerator'
-		'FmxC'
+		'FmxC-Generated'
+		'FmxC-Entities'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
 

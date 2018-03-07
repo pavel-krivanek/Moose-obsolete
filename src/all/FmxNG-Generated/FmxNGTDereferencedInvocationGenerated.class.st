@@ -18,7 +18,7 @@ Class {
 FmxNGTDereferencedInvocationGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TDereferencedInvocation super: #FmxTraitEntity>
+	<MSEClass: #TDereferencedInvocationGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

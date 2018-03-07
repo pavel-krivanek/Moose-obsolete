@@ -11,7 +11,7 @@ Class {
 FmxNGTInvocationsReceiverGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TInvocationsReceiver super: #FmxTraitEntity>
+	<MSEClass: #TInvocationsReceiverGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

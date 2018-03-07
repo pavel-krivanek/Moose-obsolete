@@ -24,7 +24,7 @@ Class {
 FmxNGTEnumValueGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TEnumValue super: #FmxTraitEntity>
+	<MSEClass: #TEnumValueGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

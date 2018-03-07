@@ -12,7 +12,7 @@ Class {
 FmxNGTWithFileIncludeGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithFileInclude super: #FmxTraitEntity>
+	<MSEClass: #TWithFileIncludeGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

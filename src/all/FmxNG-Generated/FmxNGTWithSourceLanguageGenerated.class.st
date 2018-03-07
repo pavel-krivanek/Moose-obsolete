@@ -11,7 +11,7 @@ Class {
 FmxNGTWithSourceLanguageGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithSourceLanguage super: #FmxTraitEntity>
+	<MSEClass: #TWithSourceLanguageGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

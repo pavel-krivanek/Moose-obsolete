@@ -11,7 +11,7 @@ Class {
 FmxNGTWithEnumValuesGenerated class >> annotation [
 
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithEnumValues super: #FmxTraitEntity>
+	<MSEClass: #TWithEnumValuesGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
 ]

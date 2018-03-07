@@ -1,8 +1,22 @@
 Class {
 	#name : #FmxNGTFileAnchor,
-	#superclass : #FmxNGTFileAnchorGenerated,
+	#superclass : #FmxTraitEntity,
+	#instVars : [
+		'encoding',
+		'correspondingFile',
+		'fileName'
+	],
 	#category : #'FmxNG-Traits'
 }
+
+{ #category : #meta }
+FmxNGTFileAnchor class >> annotation [
+
+	<ignoreInTraitUsers>
+	<MSEClass: #TFileAnchor super: #FmxNGTFileAnchorGenerated>
+	<package: #'FmxNG-Generated'>
+	^self
+]
 
 { #category : #accessing }
 FmxNGTFileAnchor >> encoding [

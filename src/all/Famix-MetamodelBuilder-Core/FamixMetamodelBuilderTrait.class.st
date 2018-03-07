@@ -65,9 +65,8 @@ FamixMetamodelBuilderTrait >> generate [
 	
 	traitName := self fullName.
 	
-	aTrait := self builder environment createTraitNamed: traitName, 'Generated' asSymbol slots: self slotDefinitions in: self packageName overwrite: true.
+	aTrait := self builder environment createTraitNamed: (traitName, 'Generated') asSymbol slots: self slotDefinitions in: self packageName overwrite: true.
 	userClass := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self packageNameForUserClasses overwrite: false.
-
 
 	aTrait tagWith: self tag.
 	self builder environment setComment: self comment for: aTrait.

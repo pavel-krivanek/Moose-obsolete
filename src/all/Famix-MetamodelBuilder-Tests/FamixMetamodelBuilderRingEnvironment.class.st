@@ -129,6 +129,13 @@ FamixMetamodelBuilderRingEnvironment >> initialize [
 
 ]
 
+{ #category : #'public registration' }
+FamixMetamodelBuilderRingEnvironment >> registerPackage: aPackageName [
+
+	^ self ringEnvironment ensurePackageNamed: aPackageName.
+
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderRingEnvironment >> ringEnvironment [
 	^ ringEnvironment
