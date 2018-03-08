@@ -105,6 +105,17 @@ GTPlayground class >> isGTPlaygroundEnabled [
 	^ GTPlaygroundEnabledStatus ifNil: [ GTPlaygroundEnabledStatus := Smalltalk tools workspace = self ]
 ]
 
+{ #category : #'world menu' }
+GTPlayground class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: Smalltalk tools workspace title asSymbol)
+		parent: #MostUsedTools;
+		action: [ Smalltalk tools openWorkspace ];
+		order: 0.3;
+		keyText: 'o, w';
+		icon: Smalltalk tools workspace taskbarIcon
+]
+
 { #category : #'instance creation' }
 GTPlayground class >> open [
 	"self open"
@@ -332,7 +343,6 @@ GTPlayground >> codeIn: a [
 				iconName: #glamorousMore;
 				title: 'Play pages';
 				yourself);
-		with: [ :presentation | self pageActionsIn: presentation ];
 		dynamicActionsOnSelection: [ self contextMenuActions ];
 		onChangeOfPort: #text
 			act: [ :text :page | 
@@ -386,9 +396,8 @@ GTPlayground >> compose [
 	GTInspector isStepRefreshEnabled ifTrue: [
 		self wantsAutomaticRefresh: true.
 		self wantsSteps: true.
-		self stepTime: GTInspector stepRefreshRate ].
+		self stepTime: GTInspector stepRefreshRate ]
 	
-	self playgroundActionsIn: self.
 ]
 
 { #category : #'building actions' }
@@ -448,50 +457,6 @@ GTPlayground >> openOn: aPage [
 			not to minization or maximization"
 			self class setPreferredExtentIfWanted: window extent ] ].
 	^ window
-]
-
-{ #category : #accessing }
-GTPlayground >> pageActionPragma [
-	^ #pageAction
-]
-
-{ #category : #'building actions' }
-GTPlayground >> pageActions [
-	^ (Pragma
-		allNamed: self pageActionPragma
-		from: self class
-		to: Object)
-		collect:
-			[ :eachPragma | self perform: eachPragma methodSelector ]
-]
-
-{ #category : #'building actions' }
-GTPlayground >> pageActionsIn: aGLMPharoScriptPresentation [ 
-	"Build Page actions that appears next to the page title."
-	self pageActions do: [ :eachAction | 
-		aGLMPharoScriptPresentation addAction: eachAction ]
-]
-
-{ #category : #accessing }
-GTPlayground >> playgroundActionPragma [
-	^ #playgroundAction
-]
-
-{ #category : #'building actions' }
-GTPlayground >> playgroundActions [
-	^ (Pragma
-		allNamed: self playgroundActionPragma
-		from: self class
-		to: Object)
-		collect:
-			[ :eachPragma | self perform: eachPragma methodSelector ]
-]
-
-{ #category : #'building actions' }
-GTPlayground >> playgroundActionsIn: aGTPlayground [ 
-	"Build Playground actions that appears on the title bar."
-	self playgroundActions do: [ :eachAction | 
-		aGTPlayground addAction: eachAction ]
 ]
 
 { #category : #'accessing-dynamic' }

@@ -125,6 +125,17 @@ GTSpotter class >> markOpened [
 	wasOpened := true
 ]
 
+{ #category : #'world menu' }
+GTSpotter class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: #Spotter)
+		action: [ GTSpotterGlobalShortcut openGlobalSpotter ];
+		keyText: 'Shift + Enter';
+		order: 0.7;
+		parent: #MostUsedTools;
+		iconName: #smallFindIcon
+]
+
 { #category : #'instance creation' }
 GTSpotter class >> on: anObject [
 	

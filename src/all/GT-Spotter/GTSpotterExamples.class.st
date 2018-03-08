@@ -17,14 +17,14 @@ GTSpotterExamples class >> gtExampleBasic [
 ]
 
 { #category : #'examples - filtering' }
-GTSpotterExamples class >> gtExampleCustomImplementorsSearch [
+GTSpotterExamples class >> gtExampleCustomImplementorsSearchOn: aSpotter [
 	<gtExample>
 	<label: 'Custom implementors search'>
 	<description: 'A spotter for searching through the implementors of a 
 	method that overrides properties of the search step.'>
-	| spotter |
-	spotter := self gtExampleOnCompliedMethod.	
-	^ spotter
+	<dependsOn: #gtExampleOnCompliedMethod>
+	
+	^ aSpotter
 		processorsFilter: (GTSpotterMethodListProcessorFilter new 
 			allowProcessorsFrom: CompiledMethod>>#spotterForImplementorsFor: 
 			configuredWith: [ :aProcessor | aProcessor
@@ -35,15 +35,15 @@ GTSpotterExamples class >> gtExampleCustomImplementorsSearch [
 ]
 
 { #category : #'examples - filtering' }
-GTSpotterExamples class >> gtExampleCustomImplementorsSearchWithNavigation [
+GTSpotterExamples class >> gtExampleCustomImplementorsSearchWithNavigationOn: aSpotter [
 	<gtExample>
 	<label: 'Custom implementors search with navigation'>
 	<description: 'A spotter for searching through the implementors of a method that 
 	overrides properties of the search step and enables the Collection 
 	processor for items (to allow dive in).'>
-	| spotter |
-	spotter := self gtExampleOnCompliedMethod.
-	^ spotter
+	<dependsOn: #gtExampleOnCompliedMethod>
+	
+	^ aSpotter
 		processorsFilter: (GTSpotterMethodListProcessorFilter new 
 			allowProcessorsFrom: Collection>>#spotterItemsFor:;
 			allowProcessorsFrom: CompiledMethod>>#spotterForImplementorsFor: 
@@ -55,26 +55,26 @@ GTSpotterExamples class >> gtExampleCustomImplementorsSearchWithNavigation [
 ]
 
 { #category : #'examples - filtering' }
-GTSpotterExamples class >> gtExampleHelpSearch [
+GTSpotterExamples class >> gtExampleHelpSearchOn: aSpotter [
 	<gtExample>
 	<label: 'Help search'>
 	<description: 'A spotter for searching through help pages.'>
-	| spotter |
-	spotter := self gtExampleBasic.	
-	^ spotter
+	<dependsOn: #gtExampleBasic>
+	
+	^ aSpotter
 		filterByMethods: {
 			GTSpotter>>#spotterForHelpTopicFor:.
 			HelpTopic>>#spotterForHelpTopicFor:}
 ]
 
 { #category : #'examples - filtering' }
-GTSpotterExamples class >> gtExampleImplementorsSearch [
+GTSpotterExamples class >> gtExampleImplementorsSearchOn: aSpotter [
 	<gtExample>
 	<label: 'Implementors search on single method'>
 	<description: 'A spotter for searching through the implementors of a method.'>
-	| spotter |
-	spotter := self gtExampleOnCompliedMethod.
-	^ spotter
+	<dependsOn: #gtExampleOnCompliedMethod>
+	
+	^ aSpotter
 		filterByMethods: {
 			CompiledMethod>>#spotterForImplementorsFor:}
 ]
@@ -87,25 +87,25 @@ GTSpotterExamples class >> gtExampleOnCompliedMethod [
 ]
 
 { #category : #'examples - basic' }
-GTSpotterExamples class >> gtExampleWithOneStep [
+GTSpotterExamples class >> gtExampleWithOneStepFrom: aSpotter [
 	<gtExample>
 	<label: 'Spotter object with one step'>
-	| step spotter |
-	spotter := self gtExampleBasic.
-	step := GTSpotterStep new spotter: spotter.
-	spotter steps add: step.
-	spotter currentStep: step.
-	^ spotter
+	<dependsOn: #gtExampleBasic>
+	| step |
+	step := GTSpotterStep new spotter: aSpotter.
+	aSpotter steps add: step.
+	aSpotter currentStep: step.
+	^ aSpotter
 ]
 
 { #category : #'examples - filtering' }
-GTSpotterExamples class >> gtExampleWorldMenuSearchOn [
+GTSpotterExamples class >> gtExampleWorldMenuSearchOn: aSpotter [
 	<gtExample>
 	<label: 'World menu search'>
 	<description: 'A spotter for searching through the world menu'>
-	| spotter |
-	spotter := self gtExampleBasic.
-	^ spotter
+	<dependsOn: #gtExampleBasic>
+
+	^ aSpotter
 		filterByMethods: {
 			GTSpotter>>#spotterWorldMenuFor:}
 	
