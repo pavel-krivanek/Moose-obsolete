@@ -12,3 +12,9 @@ FmxNGTAccess class >> annotation [
 	<package: #'FmxNG-Generated'>
 	^self
 ]
+
+{ #category : #accessing }
+FmxNGTAccess >> isWrite [
+
+	^ super isWrite ifNil: [ false ]
+]
