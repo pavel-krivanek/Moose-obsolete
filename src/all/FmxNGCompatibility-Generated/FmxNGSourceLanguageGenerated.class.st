@@ -27,3 +27,17 @@ FmxNGSourceLanguageGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTSourceLanguage}
 ]
+
+{ #category : #'_fromTrait_FmxNGTSourceLanguageGenerated' }
+FmxNGSourceLanguageGenerated >> sourcedEntities [
+
+	<MSEComment: 'References to the entities saying explicitly that are written in this language.'>
+	^ sourcedEntities
+]
+
+{ #category : #'_fromTrait_FmxNGTSourceLanguageGenerated' }
+FmxNGSourceLanguageGenerated >> sourcedEntities: anObject [
+
+	sourcedEntities value: anObject
+
+]

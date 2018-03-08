@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGCompilationUnitGenerated,
 	#superclass : #FmxNGCFile,
 	#instVars : [
-		'#compilationUnitOwner => FMOne type: #FmxNGTWithCompilationUnit opposite: #compilationUnit',
-		'#module => FMOne type: #FmxNGTModule opposite: #moduleFiles'
+		'#module => FMOne type: #FmxNGTModule opposite: #moduleFiles',
+		'#compilationUnitOwner => FMOne type: #FmxNGTWithCompilationUnit opposite: #compilationUnit'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -27,4 +27,30 @@ FmxNGCompilationUnitGenerated class >> statefulTraits [
 
 	<statefulTraits>
 	^ {FmxNGTCompilationUnit. FmxNGTWithModule}
+]
+
+{ #category : #'_fromTrait_FmxNGTCompilationUnitGenerated' }
+FmxNGCompilationUnitGenerated >> compilationUnitOwner [
+
+	^ compilationUnitOwner
+]
+
+{ #category : #'_fromTrait_FmxNGTCompilationUnitGenerated' }
+FmxNGCompilationUnitGenerated >> compilationUnitOwner: anObject [
+
+	compilationUnitOwner := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithModuleGenerated' }
+FmxNGCompilationUnitGenerated >> module [
+
+	^ module
+]
+
+{ #category : #'_fromTrait_FmxNGTWithModuleGenerated' }
+FmxNGCompilationUnitGenerated >> module: anObject [
+
+	module := anObject
+
 ]

@@ -30,3 +30,63 @@ FmxNGInvocationGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTInvocation. FmxNGTWithSignature}
 ]
+
+{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+FmxNGInvocationGenerated >> candidates [
+
+	<target>
+
+	^ candidates
+]
+
+{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+FmxNGInvocationGenerated >> candidates: anObject [
+
+	candidates value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+FmxNGInvocationGenerated >> receiver [
+
+	<MSEComment: 'Named entity (variable, class...) receiving the invocation. to-side of the association'>
+	^ receiver
+]
+
+{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+FmxNGInvocationGenerated >> receiver: anObject [
+
+	receiver := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+FmxNGInvocationGenerated >> sender [
+
+	<MSEComment: 'Behavioural entity making the call. from-side of the association'>
+	<source>
+
+	^ sender
+]
+
+{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+FmxNGInvocationGenerated >> sender: anObject [
+
+	sender := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithSignatureGenerated' }
+FmxNGInvocationGenerated >> signature [
+
+	<MSEProperty: #signature type: #String>
+	<MSEComment: 'Signature of the message being sent'>
+	^ signature
+]
+
+{ #category : #'_fromTrait_FmxNGTWithSignatureGenerated' }
+FmxNGInvocationGenerated >> signature: anObject [
+
+	signature := anObject
+
+]

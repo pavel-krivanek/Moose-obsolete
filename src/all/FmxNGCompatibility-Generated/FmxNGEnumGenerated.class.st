@@ -27,3 +27,16 @@ FmxNGEnumGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTWithEnumValues}
 ]
+
+{ #category : #'_fromTrait_FmxNGTWithEnumValuesGenerated' }
+FmxNGEnumGenerated >> enumValues [
+
+	^ enumValues
+]
+
+{ #category : #'_fromTrait_FmxNGTWithEnumValuesGenerated' }
+FmxNGEnumGenerated >> enumValues: anObject [
+
+	enumValues value: anObject
+
+]

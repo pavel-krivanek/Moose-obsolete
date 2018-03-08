@@ -27,3 +27,17 @@ FmxNGDereferencedInvocationGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTDereferencedInvocation}
 ]
+
+{ #category : #'_fromTrait_FmxNGTDereferencedInvocationGenerated' }
+FmxNGDereferencedInvocationGenerated >> referencer [
+
+	<MSEComment: 'Structural entity that references the BehaviouralEntity invoked'>
+	^ referencer
+]
+
+{ #category : #'_fromTrait_FmxNGTDereferencedInvocationGenerated' }
+FmxNGDereferencedInvocationGenerated >> referencer: anObject [
+
+	referencer := anObject
+
+]

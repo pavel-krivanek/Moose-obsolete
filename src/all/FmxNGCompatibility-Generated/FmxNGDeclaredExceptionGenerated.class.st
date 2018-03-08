@@ -27,3 +27,16 @@ FmxNGDeclaredExceptionGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTDeclaredException}
 ]
+
+{ #category : #'_fromTrait_FmxNGTDeclaredExceptionGenerated' }
+FmxNGDeclaredExceptionGenerated >> definingEntity [
+
+	^ definingEntity
+]
+
+{ #category : #'_fromTrait_FmxNGTDeclaredExceptionGenerated' }
+FmxNGDeclaredExceptionGenerated >> definingEntity: anObject [
+
+	definingEntity := anObject
+
+]

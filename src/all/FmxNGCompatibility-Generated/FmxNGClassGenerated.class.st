@@ -27,3 +27,17 @@ FmxNGClassGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTWithExceptions}
 ]
+
+{ #category : #'_fromTrait_FmxNGTWithExceptionsGenerated' }
+FmxNGClassGenerated >> exceptions [
+
+	<MSEComment: 'Exceptions which class is myself.'>
+	^ exceptions
+]
+
+{ #category : #'_fromTrait_FmxNGTWithExceptionsGenerated' }
+FmxNGClassGenerated >> exceptions: anObject [
+
+	exceptions value: anObject
+
+]

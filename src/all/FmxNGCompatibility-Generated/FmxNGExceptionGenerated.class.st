@@ -27,3 +27,17 @@ FmxNGExceptionGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTException}
 ]
+
+{ #category : #'_fromTrait_FmxNGTExceptionGenerated' }
+FmxNGExceptionGenerated >> exceptionClass [
+
+	<MSEComment: 'Class to which the exception points. It is specific to Java'>
+	^ exceptionClass
+]
+
+{ #category : #'_fromTrait_FmxNGTExceptionGenerated' }
+FmxNGExceptionGenerated >> exceptionClass: anObject [
+
+	exceptionClass := anObject
+
+]

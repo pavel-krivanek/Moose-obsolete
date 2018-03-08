@@ -28,3 +28,33 @@ FmxNGSourceAnchorGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTSourceAnchor}
 ]
+
+{ #category : #'_fromTrait_FmxNGTSourceAnchorGenerated' }
+FmxNGSourceAnchorGenerated >> element [
+
+	<MSEComment: 'Enable the accessibility to the famix entity that this class is a source pointer for'>
+	<container>
+
+	^ element
+]
+
+{ #category : #'_fromTrait_FmxNGTSourceAnchorGenerated' }
+FmxNGSourceAnchorGenerated >> element: anObject [
+
+	element := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTSourceAnchorGenerated' }
+FmxNGSourceAnchorGenerated >> pharoEntity [
+
+	<MSEProperty: #pharoEntity type: #Object>
+	^ pharoEntity
+]
+
+{ #category : #'_fromTrait_FmxNGTSourceAnchorGenerated' }
+FmxNGSourceAnchorGenerated >> pharoEntity: anObject [
+
+	pharoEntity := anObject
+
+]

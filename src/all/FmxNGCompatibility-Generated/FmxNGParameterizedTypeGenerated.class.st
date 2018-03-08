@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGParameterizedTypeGenerated,
 	#superclass : #FmxNGType,
 	#instVars : [
-		'#parameterizableClass => FMOne type: #FmxNGTWithParameterizedTypes opposite: #parameterizedTypes',
-		'#arguments => FMMany type: #FmxNGTParameterizedTypeUser opposite: #argumentsInParameterizedTypes'
+		'#arguments => FMMany type: #FmxNGTParameterizedTypeUser opposite: #argumentsInParameterizedTypes',
+		'#parameterizableClass => FMOne type: #FmxNGTWithParameterizedTypes opposite: #parameterizedTypes'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -27,4 +27,31 @@ FmxNGParameterizedTypeGenerated class >> statefulTraits [
 
 	<statefulTraits>
 	^ {FmxNGTParameterizedType. FmxNGTWithParameterizedTypeUsers}
+]
+
+{ #category : #'_fromTrait_FmxNGTWithParameterizedTypeUsersGenerated' }
+FmxNGParameterizedTypeGenerated >> arguments [
+
+	^ arguments
+]
+
+{ #category : #'_fromTrait_FmxNGTWithParameterizedTypeUsersGenerated' }
+FmxNGParameterizedTypeGenerated >> arguments: anObject [
+
+	arguments value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTParameterizedTypeGenerated' }
+FmxNGParameterizedTypeGenerated >> parameterizableClass [
+
+	<MSEComment: 'Base type of this parameterized type.'>
+	^ parameterizableClass
+]
+
+{ #category : #'_fromTrait_FmxNGTParameterizedTypeGenerated' }
+FmxNGParameterizedTypeGenerated >> parameterizableClass: anObject [
+
+	parameterizableClass := anObject
+
 ]

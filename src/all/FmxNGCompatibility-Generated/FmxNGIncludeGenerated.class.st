@@ -28,3 +28,29 @@ FmxNGIncludeGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTFileInclude}
 ]
+
+{ #category : #'_fromTrait_FmxNGTFileIncludeGenerated' }
+FmxNGIncludeGenerated >> source [
+
+	^ source
+]
+
+{ #category : #'_fromTrait_FmxNGTFileIncludeGenerated' }
+FmxNGIncludeGenerated >> source: anObject [
+
+	source := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTFileIncludeGenerated' }
+FmxNGIncludeGenerated >> target [
+
+	^ target
+]
+
+{ #category : #'_fromTrait_FmxNGTFileIncludeGenerated' }
+FmxNGIncludeGenerated >> target: anObject [
+
+	target := anObject
+
+]

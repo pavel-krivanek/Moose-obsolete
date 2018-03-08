@@ -30,9 +30,47 @@ FmxNGAbstractFileAnchorGenerated class >> statefulTraits [
 	^ {FmxNGTFileAnchor}
 ]
 
-{ #category : #'_fromTrait_FmxNGTFileAnchor' }
+{ #category : #'_fromTrait_FmxNGTFileAnchorGenerated' }
+FmxNGAbstractFileAnchorGenerated >> correspondingFile [
+
+	<MSEProperty: #correspondingFile type: #FmxNGTFile>
+	<MSEComment: 'File associated to this source anchor'>
+	^ correspondingFile
+]
+
+{ #category : #'_fromTrait_FmxNGTFileAnchorGenerated' }
+FmxNGAbstractFileAnchorGenerated >> correspondingFile: anObject [
+
+	correspondingFile := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTFileAnchorGenerated' }
 FmxNGAbstractFileAnchorGenerated >> encoding [
+
 	<MSEProperty: #encoding type: #String>
 	<MSEComment: 'A string representing the encoding of a file'>
-	^ encoding ifNil: [ encoding := self detectEncoding ]
+	^ encoding
+]
+
+{ #category : #'_fromTrait_FmxNGTFileAnchorGenerated' }
+FmxNGAbstractFileAnchorGenerated >> encoding: anObject [
+
+	encoding := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTFileAnchorGenerated' }
+FmxNGAbstractFileAnchorGenerated >> fileName [
+
+	<MSEProperty: #fileName type: #String>
+	<MSEComment: 'Name of the source file'>
+	^ fileName
+]
+
+{ #category : #'_fromTrait_FmxNGTFileAnchorGenerated' }
+FmxNGAbstractFileAnchorGenerated >> fileName: anObject [
+
+	fileName := anObject
+
 ]

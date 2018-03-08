@@ -28,3 +28,31 @@ FmxNGAssociationGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTAssociation}
 ]
+
+{ #category : #'_fromTrait_FmxNGTAssociationGenerated' }
+FmxNGAssociationGenerated >> next [
+
+	<MSEComment: 'Next association in an ordered collection of associations. Currently not supported by the Moose importer'>
+	^ next
+]
+
+{ #category : #'_fromTrait_FmxNGTAssociationGenerated' }
+FmxNGAssociationGenerated >> next: anObject [
+
+	next := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTAssociationGenerated' }
+FmxNGAssociationGenerated >> previous [
+
+	<MSEComment: 'Previous association in an ordered collection of associations. Currently not supported by the Moose importer'>
+	^ previous
+]
+
+{ #category : #'_fromTrait_FmxNGTAssociationGenerated' }
+FmxNGAssociationGenerated >> previous: anObject [
+
+	previous := anObject
+
+]

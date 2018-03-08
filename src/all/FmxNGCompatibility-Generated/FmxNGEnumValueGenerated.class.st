@@ -27,3 +27,19 @@ FmxNGEnumValueGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTEnumValue}
 ]
+
+{ #category : #'_fromTrait_FmxNGTEnumValueGenerated' }
+FmxNGEnumValueGenerated >> parentEnum [
+
+	<MSEComment: 'The Enum declaring this value. It offers the implementation of belongsTo'>
+	<container>
+
+	^ parentEnum
+]
+
+{ #category : #'_fromTrait_FmxNGTEnumValueGenerated' }
+FmxNGEnumValueGenerated >> parentEnum: anObject [
+
+	parentEnum := anObject
+
+]

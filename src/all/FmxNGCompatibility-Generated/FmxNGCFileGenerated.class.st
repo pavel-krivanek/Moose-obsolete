@@ -28,3 +28,29 @@ FmxNGCFileGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTWithFileInclude}
 ]
+
+{ #category : #'_fromTrait_FmxNGTWithFileIncludeGenerated' }
+FmxNGCFileGenerated >> incomingIncludeRelations [
+
+	^ incomingIncludeRelations
+]
+
+{ #category : #'_fromTrait_FmxNGTWithFileIncludeGenerated' }
+FmxNGCFileGenerated >> incomingIncludeRelations: anObject [
+
+	incomingIncludeRelations value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithFileIncludeGenerated' }
+FmxNGCFileGenerated >> outgoingIncludeRelations [
+
+	^ outgoingIncludeRelations
+]
+
+{ #category : #'_fromTrait_FmxNGTWithFileIncludeGenerated' }
+FmxNGCFileGenerated >> outgoingIncludeRelations: anObject [
+
+	outgoingIncludeRelations value: anObject
+
+]

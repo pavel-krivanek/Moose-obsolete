@@ -27,3 +27,16 @@ FmxNGHeaderGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTHeader}
 ]
+
+{ #category : #'_fromTrait_FmxNGTHeaderGenerated' }
+FmxNGHeaderGenerated >> headerOwner [
+
+	^ headerOwner
+]
+
+{ #category : #'_fromTrait_FmxNGTHeaderGenerated' }
+FmxNGHeaderGenerated >> headerOwner: anObject [
+
+	headerOwner := anObject
+
+]

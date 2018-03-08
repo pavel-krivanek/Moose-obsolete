@@ -28,3 +28,29 @@ FmxNGNamespaceGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTNamespace}
 ]
+
+{ #category : #'_fromTrait_FmxNGTNamespaceGenerated' }
+FmxNGNamespaceGenerated >> namespaceEntities [
+
+	^ namespaceEntities
+]
+
+{ #category : #'_fromTrait_FmxNGTNamespaceGenerated' }
+FmxNGNamespaceGenerated >> namespaceEntities: anObject [
+
+	namespaceEntities value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTNamespaceGenerated' }
+FmxNGNamespaceGenerated >> namespaceOwner [
+
+	^ namespaceOwner
+]
+
+{ #category : #'_fromTrait_FmxNGTNamespaceGenerated' }
+FmxNGNamespaceGenerated >> namespaceOwner: anObject [
+
+	namespaceOwner := anObject
+
+]

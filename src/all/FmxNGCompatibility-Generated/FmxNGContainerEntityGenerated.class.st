@@ -2,9 +2,9 @@ Class {
 	#name : #FmxNGContainerEntityGenerated,
 	#superclass : #FmxNGNamedEntity,
 	#instVars : [
-		'#definedAnnotationTypes => FMMany type: #FmxNGTAnnotationType opposite: #annotationTypesContainer',
 		'#types => FMMany type: #FmxNGTType opposite: #typeContainer',
-		'#functions => FMMany type: #FmxNGTFunction opposite: #functionOwner'
+		'#functions => FMMany type: #FmxNGTFunction opposite: #functionOwner',
+		'#definedAnnotationTypes => FMMany type: #FmxNGTAnnotationType opposite: #annotationTypesContainer'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -28,4 +28,43 @@ FmxNGContainerEntityGenerated class >> statefulTraits [
 
 	<statefulTraits>
 	^ {FmxNGTWithAnnotationTypes. FmxNGTWithFunctions. FmxNGTWithTypes}
+]
+
+{ #category : #'_fromTrait_FmxNGTWithAnnotationTypesGenerated' }
+FmxNGContainerEntityGenerated >> definedAnnotationTypes [
+
+	^ definedAnnotationTypes
+]
+
+{ #category : #'_fromTrait_FmxNGTWithAnnotationTypesGenerated' }
+FmxNGContainerEntityGenerated >> definedAnnotationTypes: anObject [
+
+	definedAnnotationTypes value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithFunctionsGenerated' }
+FmxNGContainerEntityGenerated >> functions [
+
+	^ functions
+]
+
+{ #category : #'_fromTrait_FmxNGTWithFunctionsGenerated' }
+FmxNGContainerEntityGenerated >> functions: anObject [
+
+	functions value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithTypesGenerated' }
+FmxNGContainerEntityGenerated >> types [
+
+	^ types
+]
+
+{ #category : #'_fromTrait_FmxNGTWithTypesGenerated' }
+FmxNGContainerEntityGenerated >> types: anObject [
+
+	types value: anObject
+
 ]

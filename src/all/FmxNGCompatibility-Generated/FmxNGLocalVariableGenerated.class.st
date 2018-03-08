@@ -27,3 +27,19 @@ FmxNGLocalVariableGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTLocalVariable}
 ]
+
+{ #category : #'_fromTrait_FmxNGTLocalVariableGenerated' }
+FmxNGLocalVariableGenerated >> parentBehaviouralEntity [
+
+	<MSEComment: 'Behavioural entity declaring this local variable. belongsTo implementation'>
+	<container>
+
+	^ parentBehaviouralEntity
+]
+
+{ #category : #'_fromTrait_FmxNGTLocalVariableGenerated' }
+FmxNGLocalVariableGenerated >> parentBehaviouralEntity: anObject [
+
+	parentBehaviouralEntity := anObject
+
+]

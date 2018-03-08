@@ -27,3 +27,16 @@ FmxNGParameterizableClassGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTWithParameterizedTypes}
 ]
+
+{ #category : #'_fromTrait_FmxNGTWithParameterizedTypesGenerated' }
+FmxNGParameterizableClassGenerated >> parameterizedTypes [
+
+	^ parameterizedTypes
+]
+
+{ #category : #'_fromTrait_FmxNGTWithParameterizedTypesGenerated' }
+FmxNGParameterizableClassGenerated >> parameterizedTypes: anObject [
+
+	parameterizedTypes value: anObject
+
+]

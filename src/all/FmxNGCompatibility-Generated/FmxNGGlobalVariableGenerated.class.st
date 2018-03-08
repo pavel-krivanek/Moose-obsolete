@@ -27,3 +27,19 @@ FmxNGGlobalVariableGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTGlobalVariable}
 ]
+
+{ #category : #'_fromTrait_FmxNGTGlobalVariableGenerated' }
+FmxNGGlobalVariableGenerated >> parentScope [
+
+	<MSEComment: 'Scope declaring the global variable. belongsTo implementation'>
+	<container>
+
+	^ parentScope
+]
+
+{ #category : #'_fromTrait_FmxNGTGlobalVariableGenerated' }
+FmxNGGlobalVariableGenerated >> parentScope: anObject [
+
+	parentScope := anObject
+
+]

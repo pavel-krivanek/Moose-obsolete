@@ -27,3 +27,19 @@ FmxNGParameterGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTParameter}
 ]
+
+{ #category : #'_fromTrait_FmxNGTParameterGenerated' }
+FmxNGParameterGenerated >> parentBehaviouralEntity [
+
+	<MSEComment: 'Behavioural entity containing this parameter. belongsTo implementation'>
+	<container>
+
+	^ parentBehaviouralEntity
+]
+
+{ #category : #'_fromTrait_FmxNGTParameterGenerated' }
+FmxNGParameterGenerated >> parentBehaviouralEntity: anObject [
+
+	parentBehaviouralEntity := anObject
+
+]

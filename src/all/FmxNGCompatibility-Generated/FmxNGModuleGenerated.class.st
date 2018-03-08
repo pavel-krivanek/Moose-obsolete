@@ -2,9 +2,9 @@ Class {
 	#name : #FmxNGModuleGenerated,
 	#superclass : #FmxNGScopingEntity,
 	#instVars : [
-		'#compilationUnit => FMOne type: #FmxNGTCompilationUnit opposite: #compilationUnitOwner',
+		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module',
 		'#header => FMOne type: #FmxNGTHeader opposite: #headerOwner',
-		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module'
+		'#compilationUnit => FMOne type: #FmxNGTCompilationUnit opposite: #compilationUnitOwner'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -28,4 +28,43 @@ FmxNGModuleGenerated class >> statefulTraits [
 
 	<statefulTraits>
 	^ {FmxNGTModule. FmxNGTWithCompilationUnit. FmxNGTWithHeader}
+]
+
+{ #category : #'_fromTrait_FmxNGTWithCompilationUnitGenerated' }
+FmxNGModuleGenerated >> compilationUnit [
+
+	^ compilationUnit
+]
+
+{ #category : #'_fromTrait_FmxNGTWithCompilationUnitGenerated' }
+FmxNGModuleGenerated >> compilationUnit: anObject [
+
+	compilationUnit := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithHeaderGenerated' }
+FmxNGModuleGenerated >> header [
+
+	^ header
+]
+
+{ #category : #'_fromTrait_FmxNGTWithHeaderGenerated' }
+FmxNGModuleGenerated >> header: anObject [
+
+	header := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTModuleGenerated' }
+FmxNGModuleGenerated >> moduleFiles [
+
+	^ moduleFiles
+]
+
+{ #category : #'_fromTrait_FmxNGTModuleGenerated' }
+FmxNGModuleGenerated >> moduleFiles: anObject [
+
+	moduleFiles value: anObject
+
 ]

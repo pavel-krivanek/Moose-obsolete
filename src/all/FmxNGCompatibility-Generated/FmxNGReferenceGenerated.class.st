@@ -28,3 +28,35 @@ FmxNGReferenceGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTReference}
 ]
+
+{ #category : #'_fromTrait_FmxNGTReferenceGenerated' }
+FmxNGReferenceGenerated >> source [
+
+	<MSEComment: 'Source entity making the reference. from-side of the association'>
+	<source>
+
+	^ source
+]
+
+{ #category : #'_fromTrait_FmxNGTReferenceGenerated' }
+FmxNGReferenceGenerated >> source: anObject [
+
+	source := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTReferenceGenerated' }
+FmxNGReferenceGenerated >> target [
+
+	<MSEComment: 'Target entity referenced. to-side of the association'>
+	<target>
+
+	^ target
+]
+
+{ #category : #'_fromTrait_FmxNGTReferenceGenerated' }
+FmxNGReferenceGenerated >> target: anObject [
+
+	target := anObject
+
+]

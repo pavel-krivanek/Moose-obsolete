@@ -2,12 +2,12 @@ Class {
 	#name : #FmxNGNamedEntityGenerated,
 	#superclass : #FmxNGSourcedEntity,
 	#instVars : [
-		'#modifiers',
 		'#receivingInvocations => FMMany type: #FmxNGTInvocation opposite: #receiver',
+		'#annotationInstances => FMMany type: #FmxNGTAnnotationInstance opposite: #annotatedEntity',
 		'#isStub',
 		'#name',
 		'#parentPackage => FMOne type: #FmxNGTPackage opposite: #childEntities',
-		'#annotationInstances => FMMany type: #FmxNGTAnnotationInstance opposite: #annotatedEntity'
+		'#modifiers'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -39,6 +39,20 @@ FmxNGNamedEntityGenerated >> addModifier: aString [
 	<MSEProperty: #modifiers type: #String> "Really?"
 	<MSEComment: 'Generic container for language dependent modifiers.'>
 	^ modifiers ifNil: [ modifiers := Set new ]
+]
+
+{ #category : #'_fromTrait_FmxNGTWithAnnotationInstancesGenerated' }
+FmxNGNamedEntityGenerated >> annotationInstances [
+
+	<MSEComment: 'This property corresponds to the set of annotations associated to the entity'>
+	^ annotationInstances
+]
+
+{ #category : #'_fromTrait_FmxNGTWithAnnotationInstancesGenerated' }
+FmxNGNamedEntityGenerated >> annotationInstances: anObject [
+
+	annotationInstances value: anObject
+
 ]
 
 { #category : #'_fromTrait_FmxNGTWithModifiers' }
@@ -87,6 +101,78 @@ FmxNGNamedEntityGenerated >> isPublic [
 	<MSEComment: 'Flag true for entities accessible from anywhere. Language dependent.'>	
 
 	^ self modifiers includes: #public
+]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGNamedEntityGenerated >> isStub [
+
+	<MSEProperty: #isStub type: #Boolean>
+	<MSEComment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.'>
+	^ isStub
+]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGNamedEntityGenerated >> isStub: anObject [
+
+	isStub := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithModifiersGenerated' }
+FmxNGNamedEntityGenerated >> modifiers [
+
+	<MSEProperty: #modifiers type: #String>
+	<MSEComment: 'Generic container for language dependent modifiers.'>
+	^ modifiers
+]
+
+{ #category : #'_fromTrait_FmxNGTWithModifiersGenerated' }
+FmxNGNamedEntityGenerated >> modifiers: anObject [
+
+	modifiers := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGNamedEntityGenerated >> name [
+
+	<MSEProperty: #name type: #String>
+	<MSEComment: 'Basic name of the entity, not full reference.'>
+	^ name
+]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGNamedEntityGenerated >> name: anObject [
+
+	name := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTPackageableGenerated' }
+FmxNGNamedEntityGenerated >> parentPackage [
+
+	^ parentPackage
+]
+
+{ #category : #'_fromTrait_FmxNGTPackageableGenerated' }
+FmxNGNamedEntityGenerated >> parentPackage: anObject [
+
+	parentPackage := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTInvocationsReceiverGenerated' }
+FmxNGNamedEntityGenerated >> receivingInvocations [
+
+	<MSEComment: 'List of invocations performed on this entity (considered as the receiver)'>
+	^ receivingInvocations
+]
+
+{ #category : #'_fromTrait_FmxNGTInvocationsReceiverGenerated' }
+FmxNGNamedEntityGenerated >> receivingInvocations: anObject [
+
+	receivingInvocations value: anObject
+
 ]
 
 { #category : #'_fromTrait_FmxNGTWithModifiers' }

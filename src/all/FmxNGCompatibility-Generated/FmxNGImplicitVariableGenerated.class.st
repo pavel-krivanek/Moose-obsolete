@@ -27,3 +27,19 @@ FmxNGImplicitVariableGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTImplicitVariable}
 ]
+
+{ #category : #'_fromTrait_FmxNGTImplicitVariableGenerated' }
+FmxNGImplicitVariableGenerated >> parentBehaviouralEntity [
+
+	<MSEComment: 'The behaviour containing this implicit variable. belongsTo implementation'>
+	<container>
+
+	^ parentBehaviouralEntity
+]
+
+{ #category : #'_fromTrait_FmxNGTImplicitVariableGenerated' }
+FmxNGImplicitVariableGenerated >> parentBehaviouralEntity: anObject [
+
+	parentBehaviouralEntity := anObject
+
+]

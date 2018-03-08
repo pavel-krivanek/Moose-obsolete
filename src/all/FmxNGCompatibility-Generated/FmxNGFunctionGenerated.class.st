@@ -27,3 +27,16 @@ FmxNGFunctionGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTFunction}
 ]
+
+{ #category : #'_fromTrait_FmxNGTFunctionGenerated' }
+FmxNGFunctionGenerated >> functionOwner [
+
+	^ functionOwner
+]
+
+{ #category : #'_fromTrait_FmxNGTFunctionGenerated' }
+FmxNGFunctionGenerated >> functionOwner: anObject [
+
+	functionOwner := anObject
+
+]

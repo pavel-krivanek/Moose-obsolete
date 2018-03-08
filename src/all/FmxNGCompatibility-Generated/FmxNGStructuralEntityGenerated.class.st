@@ -2,9 +2,9 @@ Class {
 	#name : #FmxNGStructuralEntityGenerated,
 	#superclass : #FmxNGLeafEntity,
 	#instVars : [
-		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable',
+		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType',
 		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer',
-		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType'
+		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -28,4 +28,45 @@ FmxNGStructuralEntityGenerated class >> statefulTraits [
 
 	<statefulTraits>
 	^ {FmxNGTAccessible. FmxNGTTypedStructure. FmxNGTWithDereferencedInvocations}
+]
+
+{ #category : #'_fromTrait_FmxNGTTypedStructureGenerated' }
+FmxNGStructuralEntityGenerated >> declaredType [
+
+	^ declaredType
+]
+
+{ #category : #'_fromTrait_FmxNGTTypedStructureGenerated' }
+FmxNGStructuralEntityGenerated >> declaredType: anObject [
+
+	declaredType := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTWithDereferencedInvocationsGenerated' }
+FmxNGStructuralEntityGenerated >> dereferencedInvocations [
+
+	<MSEComment: 'List of invocations performed on BehaviouralEntities referenced by this entity'>
+	^ dereferencedInvocations
+]
+
+{ #category : #'_fromTrait_FmxNGTWithDereferencedInvocationsGenerated' }
+FmxNGStructuralEntityGenerated >> dereferencedInvocations: anObject [
+
+	dereferencedInvocations value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTAccessibleGenerated' }
+FmxNGStructuralEntityGenerated >> incomingAccesses [
+
+	<MSEComment: 'All Famix accesses pointing to this structural entity'>
+	^ incomingAccesses
+]
+
+{ #category : #'_fromTrait_FmxNGTAccessibleGenerated' }
+FmxNGStructuralEntityGenerated >> incomingAccesses: anObject [
+
+	incomingAccesses value: anObject
+
 ]

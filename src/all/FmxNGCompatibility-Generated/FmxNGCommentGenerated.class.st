@@ -29,11 +29,31 @@ FmxNGCommentGenerated class >> statefulTraits [
 	^ {FmxNGTComment}
 ]
 
-{ #category : #'_fromTrait_FmxNGTComment' }
+{ #category : #'_fromTrait_FmxNGTCommentGenerated' }
+FmxNGCommentGenerated >> container [
+
+	<MSEComment: 'Source code entity containing the comment'>
+	^ container
+]
+
+{ #category : #'_fromTrait_FmxNGTCommentGenerated' }
+FmxNGCommentGenerated >> container: anObject [
+
+	container := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTCommentGenerated' }
 FmxNGCommentGenerated >> content [
 
 	<MSEProperty: #content type: #String>
 	<MSEComment: 'Content of the comment as a String'>
-	"^ self privateState attributeAt: #content ifAbsent: [  ]"
 	^ content
+]
+
+{ #category : #'_fromTrait_FmxNGTCommentGenerated' }
+FmxNGCommentGenerated >> content: anObject [
+
+	content := anObject
+
 ]

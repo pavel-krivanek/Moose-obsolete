@@ -27,3 +27,16 @@ FmxNGCaughtExceptionGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTCaughtException}
 ]
+
+{ #category : #'_fromTrait_FmxNGTCaughtExceptionGenerated' }
+FmxNGCaughtExceptionGenerated >> definingEntity [
+
+	^ definingEntity
+]
+
+{ #category : #'_fromTrait_FmxNGTCaughtExceptionGenerated' }
+FmxNGCaughtExceptionGenerated >> definingEntity: anObject [
+
+	definingEntity := anObject
+
+]

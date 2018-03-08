@@ -28,3 +28,33 @@ FmxNGCUSTOMSourceLanguageGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTNamed}
 ]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGCUSTOMSourceLanguageGenerated >> isStub [
+
+	<MSEProperty: #isStub type: #Boolean>
+	<MSEComment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.'>
+	^ isStub
+]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGCUSTOMSourceLanguageGenerated >> isStub: anObject [
+
+	isStub := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGCUSTOMSourceLanguageGenerated >> name [
+
+	<MSEProperty: #name type: #String>
+	<MSEComment: 'Basic name of the entity, not full reference.'>
+	^ name
+]
+
+{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+FmxNGCUSTOMSourceLanguageGenerated >> name: anObject [
+
+	name := anObject
+
+]

@@ -28,3 +28,29 @@ FmxNGPackageGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTPackage}
 ]
+
+{ #category : #'_fromTrait_FmxNGTPackageGenerated' }
+FmxNGPackageGenerated >> childEntities [
+
+	^ childEntities
+]
+
+{ #category : #'_fromTrait_FmxNGTPackageGenerated' }
+FmxNGPackageGenerated >> childEntities: anObject [
+
+	childEntities value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTPackageGenerated' }
+FmxNGPackageGenerated >> packageOwner [
+
+	^ packageOwner
+]
+
+{ #category : #'_fromTrait_FmxNGTPackageGenerated' }
+FmxNGPackageGenerated >> packageOwner: anObject [
+
+	packageOwner := anObject
+
+]

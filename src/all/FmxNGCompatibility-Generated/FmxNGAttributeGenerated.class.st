@@ -27,3 +27,19 @@ FmxNGAttributeGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTAttribute. FmxNGTWithClassScope}
 ]
+
+{ #category : #'_fromTrait_FmxNGTAttributeGenerated' }
+FmxNGAttributeGenerated >> parentType [
+
+	<MSEComment: 'Type declaring the attribute. belongsTo implementation'>
+	<container>
+
+	^ parentType
+]
+
+{ #category : #'_fromTrait_FmxNGTAttributeGenerated' }
+FmxNGAttributeGenerated >> parentType: anObject [
+
+	parentType := anObject
+
+]

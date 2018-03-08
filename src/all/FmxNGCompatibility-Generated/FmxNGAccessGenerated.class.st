@@ -30,10 +30,49 @@ FmxNGAccessGenerated class >> statefulTraits [
 	^ {FmxNGTAccess}
 ]
 
-{ #category : #'_fromTrait_FmxNGTAccess' }
+{ #category : #'_fromTrait_FmxNGTAccessGenerated' }
+FmxNGAccessGenerated >> accessor [
+
+	<MSEComment: 'Behavioural entity making the access to the variable. from-side of the association'>
+	<source>
+
+	^ accessor
+]
+
+{ #category : #'_fromTrait_FmxNGTAccessGenerated' }
+FmxNGAccessGenerated >> accessor: anObject [
+
+	accessor := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTAccessGenerated' }
 FmxNGAccessGenerated >> isWrite [
 
 	<MSEProperty: #isWrite type: #Boolean>
 	<MSEComment: 'Write access'>
-	^ isWrite ifNil: [ false ]
+	^ isWrite
+]
+
+{ #category : #'_fromTrait_FmxNGTAccessGenerated' }
+FmxNGAccessGenerated >> isWrite: anObject [
+
+	isWrite := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTAccessGenerated' }
+FmxNGAccessGenerated >> variable [
+
+	<MSEComment: 'Variable accessed. to-side of the association'>
+	<target>
+
+	^ variable
+]
+
+{ #category : #'_fromTrait_FmxNGTAccessGenerated' }
+FmxNGAccessGenerated >> variable: anObject [
+
+	variable := anObject
+
 ]

@@ -28,3 +28,30 @@ FmxNGAnnotationTypeGenerated class >> statefulTraits [
 	<statefulTraits>
 	^ {FmxNGTAnnotationType}
 ]
+
+{ #category : #'_fromTrait_FmxNGTAnnotationTypeGenerated' }
+FmxNGAnnotationTypeGenerated >> annotationTypesContainer [
+
+	^ annotationTypesContainer
+]
+
+{ #category : #'_fromTrait_FmxNGTAnnotationTypeGenerated' }
+FmxNGAnnotationTypeGenerated >> annotationTypesContainer: anObject [
+
+	annotationTypesContainer := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTAnnotationTypeGenerated' }
+FmxNGAnnotationTypeGenerated >> instances [
+
+	<MSEComment: 'Annotations of this type'>
+	^ instances
+]
+
+{ #category : #'_fromTrait_FmxNGTAnnotationTypeGenerated' }
+FmxNGAnnotationTypeGenerated >> instances: anObject [
+
+	instances value: anObject
+
+]

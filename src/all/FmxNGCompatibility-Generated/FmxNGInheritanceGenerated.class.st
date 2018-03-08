@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGInheritanceGenerated,
 	#superclass : #FmxNGAssociation,
 	#instVars : [
-		'#subclass => FMOne type: #FmxNGTWithSubInheritances opposite: #superInheritances',
-		'#superclass => FMOne type: #FmxNGTWithSuperInheritances opposite: #subInheritances'
+		'#superclass => FMOne type: #FmxNGTWithSuperInheritances opposite: #subInheritances',
+		'#subclass => FMOne type: #FmxNGTWithSubInheritances opposite: #superInheritances'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -27,4 +27,30 @@ FmxNGInheritanceGenerated class >> statefulTraits [
 
 	<statefulTraits>
 	^ {FmxNGTSubInheritance. FmxNGTSuperInheritance}
+]
+
+{ #category : #'_fromTrait_FmxNGTSubInheritanceGenerated' }
+FmxNGInheritanceGenerated >> subclass [
+
+	^ subclass
+]
+
+{ #category : #'_fromTrait_FmxNGTSubInheritanceGenerated' }
+FmxNGInheritanceGenerated >> subclass: anObject [
+
+	subclass := anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTSuperInheritanceGenerated' }
+FmxNGInheritanceGenerated >> superclass [
+
+	^ superclass
+]
+
+{ #category : #'_fromTrait_FmxNGTSuperInheritanceGenerated' }
+FmxNGInheritanceGenerated >> superclass: anObject [
+
+	superclass := anObject
+
 ]
