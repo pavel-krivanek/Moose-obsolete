@@ -38,7 +38,7 @@ FmxNGGlobalVariable >> isPublic [
 
 { #category : #'Famix-C' }
 FmxNGGlobalVariable >> parentModule [
-	<MSEProperty: #parentModule type: #FAMIXModule>
+	<MSEProperty: #parentModule type: #FmxNGModule>
 	<MSEComment: 'Module (typically a file) defining the global variable.'>
 	^ self privateState 		
 		attributeAt: #parentModule

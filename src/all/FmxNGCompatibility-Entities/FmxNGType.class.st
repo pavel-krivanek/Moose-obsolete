@@ -214,7 +214,7 @@ FmxNGType >> anySuperclass [
 
 { #category : #'Famix-Java' }
 FmxNGType >> argumentsInParameterizedTypes [
-	<MSEProperty: #argumentsInParameterizedTypes type: #FAMIXParameterizedType opposite: #arguments>
+	<MSEProperty: #argumentsInParameterizedTypes type: #FmxNGParameterizedType opposite: #arguments>
 	<multivalued> <derived>
 	<MSEComment: 'Arguments of parameterized types that point to this type.'>
 	
@@ -268,7 +268,7 @@ FmxNGType >> clientPackages [
 
 { #category : #'Famix-Extensions' }
 FmxNGType >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
+	<MSEProperty: #clientTypes type: #FmxNGType>
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on (inherit, staticly access, or use some methods of) the receiver'>
@@ -1418,7 +1418,7 @@ FmxNGType >> providerPackages [
 
 { #category : #'Famix-Extensions' }
 FmxNGType >> providerTypes [
-	<MSEProperty: #providerTypes type: #FAMIXType>
+	<MSEProperty: #providerTypes type: #FmxNGType>
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>

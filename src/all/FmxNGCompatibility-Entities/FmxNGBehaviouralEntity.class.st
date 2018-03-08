@@ -55,7 +55,7 @@ FmxNGBehaviouralEntity >> addParameter: aParameter [
 
 { #category : #'Famix-Extensions' }
 FmxNGBehaviouralEntity >> clientBehaviours [
-	<MSEProperty: #clientBehaviours type: #FAMIXBehaviouralEntity> <multivalued> <derived>
+	<MSEProperty: #clientBehaviours type: #FmxNGBehaviouralEntity> <multivalued> <derived>
 	<MSEComment: 'All behaviours that depend on the receiver'>
 	^ self invokingBehaviours 
 ]
@@ -273,7 +273,7 @@ FmxNGBehaviouralEntity >> numberOfStatements: aNumber [
 
 { #category : #'Famix-Extensions' }
 FmxNGBehaviouralEntity >> providerBehaviours [
-	<MSEProperty: #providerBehaviours type: #FAMIXBehaviouralEntity> <derived> <multivalued>
+	<MSEProperty: #providerBehaviours type: #FmxNGBehaviouralEntity> <derived> <multivalued>
 	<MSEComment: 'All behaviours that the receiver depends on'>
 
 	^ self invokedBehaviours 

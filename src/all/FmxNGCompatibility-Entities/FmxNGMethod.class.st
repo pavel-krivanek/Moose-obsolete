@@ -130,11 +130,11 @@ FmxNGMethod >> clientPackages [
 
 { #category : #'Famix-Extensions' }
 FmxNGMethod >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
+	<MSEProperty: #clientTypes type: #FmxNGType>
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGType) withoutSelfLoops
 ]
 
 { #category : #'Famix-Implementation' }
@@ -191,7 +191,7 @@ FmxNGMethod >> innerClassesImplementingMethods [
 
 { #category : #'Famix-Extensions' }
 FmxNGMethod >> invokedMethods [
-	<MSEProperty: #invokedMethods type: #FAMIXMethod> <derived> <multivalued>
+	<MSEProperty: #invokedMethods type: #FmxNGMethod> <derived> <multivalued>
 	<MSEComment: 'The methods invoked by the receiver'>
 	
 	^ self invokedBehaviours select: [ :each | each isMethod ]
@@ -199,7 +199,7 @@ FmxNGMethod >> invokedMethods [
 
 { #category : #'Famix-Extensions' }
 FmxNGMethod >> invokingMethods [
-	<MSEProperty: #invokingMethods type: #FAMIXMethod> <derived> <multivalued>
+	<MSEProperty: #invokingMethods type: #FmxNGMethod> <derived> <multivalued>
 	<MSEComment: 'The methods invoking the receiver'>
 
 	^ self invokingBehaviours select: [ :each | each isMethod ]

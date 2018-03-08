@@ -1,6 +1,10 @@
 Class {
 	#name : #FmxNGCUSTOMSourceLanguageGenerated,
 	#superclass : #FmxNGSourceLanguage,
+	#instVars : [
+		'isStub',
+		'name'
+	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
 
@@ -22,5 +26,5 @@ FmxNGCUSTOMSourceLanguageGenerated class >> requirements [
 FmxNGCUSTOMSourceLanguageGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {}
+	^ {FmxNGTNamed}
 ]

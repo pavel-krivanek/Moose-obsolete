@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGClass,
 	#superclass : #FmxNGClassGenerated,
-	#instVars : [
-		'isInterface'
-	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 

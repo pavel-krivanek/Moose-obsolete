@@ -20,7 +20,7 @@ FmxNGStructuralEntity >> accept: aVisitor [
 
 { #category : #accessing }
 FmxNGStructuralEntity >> accessors [
-	<MSEProperty: #accessors type: #FAMIXBehaviouralEntity> <multivalued> <derived>
+	<MSEProperty: #accessors type: #FmxNGBehaviouralEntity> <multivalued> <derived>
 	^ (self incomingAccesses collectAsSet: [ :each | each accessor ]) asMooseGroup
 ]
 

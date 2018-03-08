@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGAttribute,
 	#superclass : #FmxNGAttributeGenerated,
-	#instVars : [
-		'hasClassScope'
-	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
