@@ -1,6 +1,6 @@
 Class {
 	#name : #FmxNGTWithClassScope,
-	#superclass : #FmxTraitEntity,
+	#superclass : #FmxNGTWithClassScopeGenerated,
 	#category : #'FmxNG-Traits'
 }
 

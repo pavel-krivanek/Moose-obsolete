@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithTypes,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#types => FMMany type: #FmxNGTType opposite: #typeContainer'
-	],
+	#superclass : #FmxNGTWithTypesGenerated,
 	#category : #'FmxNG-Traits'
 }
 

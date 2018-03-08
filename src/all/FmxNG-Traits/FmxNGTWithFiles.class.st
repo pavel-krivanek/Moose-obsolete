@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithFiles,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#containerFiles => FMMany type: #FmxNGTFile opposite: #entities'
-	],
+	#superclass : #FmxNGTWithFilesGenerated,
 	#category : #'FmxNG-Traits'
 }
 

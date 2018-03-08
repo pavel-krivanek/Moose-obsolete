@@ -1,10 +1,6 @@
 Class {
 	#name : #FmxNGTTemplate,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#templateUsers => FMMany type: #FmxNGTTemplateUser opposite: #template',
-		'#templateOwner => FMOne type: #FmxNGTWithTemplates opposite: #templates'
-	],
+	#superclass : #FmxNGTTemplateGenerated,
 	#category : #'FmxNG-Traits'
 }
 

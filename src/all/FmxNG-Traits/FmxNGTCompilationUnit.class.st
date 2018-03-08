@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTCompilationUnit,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#compilationUnitOwner => FMOne type: #FmxNGTWithCompilationUnit opposite: #compilationUnit'
-	],
+	#superclass : #FmxNGTCompilationUnitGenerated,
 	#category : #'FmxNG-Traits'
 }
 

@@ -1,10 +1,6 @@
 Class {
 	#name : #FmxNGTWithFileInclude,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#incomingIncludeRelations => FMMany type: #FmxNGTFileInclude opposite: #target',
-		'#outgoingIncludeRelations => FMMany type: #FmxNGTFileInclude opposite: #source'
-	],
+	#superclass : #FmxNGTWithFileIncludeGenerated,
 	#category : #'FmxNG-Traits'
 }
 

@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTAttribute,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parentType => FMOne type: #FmxNGTWithAttributes opposite: #attributes'
-	],
+	#superclass : #FmxNGTAttributeGenerated,
 	#category : #'FmxNG-Traits'
 }
 

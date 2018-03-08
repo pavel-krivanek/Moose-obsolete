@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTNamespaceEntity,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parentNamespace => FMOne type: #FmxNGTNamespace opposite: #namespaceEntities'
-	],
+	#superclass : #FmxNGTNamespaceEntityGenerated,
 	#category : #'FmxNG-Traits'
 }
 

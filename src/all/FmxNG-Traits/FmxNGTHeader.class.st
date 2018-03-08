@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTHeader,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#headerOwner => FMOne type: #FmxNGTWithHeader opposite: #header'
-	],
+	#superclass : #FmxNGTHeaderGenerated,
 	#category : #'FmxNG-Traits'
 }
 

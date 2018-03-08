@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTPackageable,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parentPackage => FMOne type: #FmxNGTPackage opposite: #childEntities'
-	],
+	#superclass : #FmxNGTPackageableGenerated,
 	#category : #'FmxNG-Traits'
 }
 

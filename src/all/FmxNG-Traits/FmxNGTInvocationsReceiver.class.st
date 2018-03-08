@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTInvocationsReceiver,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#receivingInvocations => FMMany type: #FmxNGTInvocation opposite: #receiver'
-	],
+	#superclass : #FmxNGTInvocationsReceiverGenerated,
 	#category : #'FmxNG-Traits'
 }
 

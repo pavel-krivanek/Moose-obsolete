@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithSourceAnchor,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#sourceAnchor => FMOne type: #FmxNGTSourceAnchor opposite: #element'
-	],
+	#superclass : #FmxNGTWithSourceAnchorGenerated,
 	#category : #'FmxNG-Traits'
 }
 

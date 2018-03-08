@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithSourceLanguage,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#declaredSourceLanguage => FMOne type: #FmxNGTSourceLanguage opposite: #sourcedEntities'
-	],
+	#superclass : #FmxNGTWithSourceLanguageGenerated,
 	#category : #'FmxNG-Traits'
 }
 

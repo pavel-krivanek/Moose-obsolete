@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTAccessible,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable'
-	],
+	#superclass : #FmxNGTAccessibleGenerated,
 	#category : #'FmxNG-Traits'
 }
 

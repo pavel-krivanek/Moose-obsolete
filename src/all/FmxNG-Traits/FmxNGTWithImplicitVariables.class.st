@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithImplicitVariables,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#implicitVariables => FMMany type: #FmxNGTImplicitVariable opposite: #parentBehaviouralEntity'
-	],
+	#superclass : #FmxNGTWithImplicitVariablesGenerated,
 	#category : #'FmxNG-Traits'
 }
 

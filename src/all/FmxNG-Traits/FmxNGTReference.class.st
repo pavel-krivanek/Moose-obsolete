@@ -1,10 +1,6 @@
 Class {
 	#name : #FmxNGTReference,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#target => FMOne type: #FmxNGTReferenceable opposite: #incomingReferences',
-		'#source => FMOne type: #FmxNGTWithReferences opposite: #outgoingReferences'
-	],
+	#superclass : #FmxNGTReferenceGenerated,
 	#category : #'FmxNG-Traits'
 }
 

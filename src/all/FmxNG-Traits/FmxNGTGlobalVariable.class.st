@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTGlobalVariable,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parentScope => FMOne type: #FmxNGTGlobalVariableScope opposite: #globalVariables'
-	],
+	#superclass : #FmxNGTGlobalVariableGenerated,
 	#category : #'FmxNG-Traits'
 }
 

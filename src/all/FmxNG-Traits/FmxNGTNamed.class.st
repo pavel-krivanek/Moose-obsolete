@@ -1,10 +1,6 @@
 Class {
 	#name : #FmxNGTNamed,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'isStub',
-		'name'
-	],
+	#superclass : #FmxNGTNamedGenerated,
 	#category : #'FmxNG-Traits'
 }
 

@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithComments,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#comments => FMMany type: #FmxNGTComment opposite: #container'
-	],
+	#superclass : #FmxNGTWithCommentsGenerated,
 	#category : #'FmxNG-Traits'
 }
 

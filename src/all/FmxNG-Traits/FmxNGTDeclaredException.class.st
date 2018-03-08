@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTDeclaredException,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#definingEntity => FMOne type: #FmxNGTWithDeclaredExceptions opposite: #declaredExceptions'
-	],
+	#superclass : #FmxNGTDeclaredExceptionGenerated,
 	#category : #'FmxNG-Traits'
 }
 

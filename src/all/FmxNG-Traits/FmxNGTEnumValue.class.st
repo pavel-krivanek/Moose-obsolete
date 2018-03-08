@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTEnumValue,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parentEnum => FMOne type: #FmxNGTWithEnumValues opposite: #enumValues'
-	],
+	#superclass : #FmxNGTEnumValueGenerated,
 	#category : #'FmxNG-Traits'
 }
 

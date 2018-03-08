@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTFunction,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#functionOwner => FMOne type: #FmxNGTWithFunctions opposite: #functions'
-	],
+	#superclass : #FmxNGTFunctionGenerated,
 	#category : #'FmxNG-Traits'
 }
 

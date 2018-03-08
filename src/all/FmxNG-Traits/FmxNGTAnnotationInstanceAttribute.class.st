@@ -1,10 +1,6 @@
 Class {
 	#name : #FmxNGTAnnotationInstanceAttribute,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#value',
-		'#parentAnnotationInstance => FMOne type: #FmxNGTWithAnnotationInstanceAttributes opposite: #attributes'
-	],
+	#superclass : #FmxNGTAnnotationInstanceAttributeGenerated,
 	#category : #'FmxNG-Traits'
 }
 

@@ -1,6 +1,6 @@
 Class {
 	#name : #FmxNGTPreprocessorIfdef,
-	#superclass : #FmxTraitEntity,
+	#superclass : #FmxNGTPreprocessorIfdefGenerated,
 	#category : #'FmxNG-Traits'
 }
 

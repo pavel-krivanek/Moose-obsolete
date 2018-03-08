@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTTypedStructure,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType'
-	],
+	#superclass : #FmxNGTTypedStructureGenerated,
 	#category : #'FmxNG-Traits'
 }
 

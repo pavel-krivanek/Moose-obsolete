@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTModule,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module'
-	],
+	#superclass : #FmxNGTModuleGenerated,
 	#category : #'FmxNG-Traits'
 }
 

@@ -73,16 +73,18 @@ FamixMetamodelBuilderRealEnvironment >> createImportingcontextClassNamed: aClass
 ]
 
 { #category : #compiling }
-FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
+FamixMetamodelBuilderRealEnvironment >> createTraitNamed: traitName superclass: aSuperclass slots: slots in: packageName overwrite: shouldOverwrite [
 
-	| resultantTrait aSubTrait existingClass|
+	| resultantTrait aSubTrait existingClass basicTrait |
+	
+	basicTrait := aSuperclass ifNil: [ self basicTrait ].
 	
 	existingClass := self class environment at: traitName asSymbol ifAbsent: [nil].
 	
 	(existingClass notNil and: [ shouldOverwrite not]) 
 		ifTrue: [ ^ existingClass ].
 
-	resultantTrait := self basicTrait subclass: traitName asSymbol
+	resultantTrait := basicTrait subclass: traitName asSymbol
 		slots: slots
 		classVariables: {  }
 		category: packageName.	

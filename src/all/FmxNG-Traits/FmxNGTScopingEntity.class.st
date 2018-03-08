@@ -1,10 +1,6 @@
 Class {
 	#name : #FmxNGTScopingEntity,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parentScope => FMOne type: #FmxNGTScopingEntity opposite: #childScopes',
-		'#childScopes => FMMany type: #FmxNGTScopingEntity opposite: #parentScope'
-	],
+	#superclass : #FmxNGTScopingEntityGenerated,
 	#category : #'FmxNG-Traits'
 }
 

@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTParameterizedType,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parameterizableClass => FMOne type: #FmxNGTWithParameterizedTypes opposite: #parameterizedTypes'
-	],
+	#superclass : #FmxNGTParameterizedTypeGenerated,
 	#category : #'FmxNG-Traits'
 }
 

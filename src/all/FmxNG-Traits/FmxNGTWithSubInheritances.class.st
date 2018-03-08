@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithSubInheritances,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass'
-	],
+	#superclass : #FmxNGTWithSubInheritancesGenerated,
 	#category : #'FmxNG-Traits'
 }
 

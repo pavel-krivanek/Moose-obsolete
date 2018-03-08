@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTTypeAlias,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#aliasedType => FMOne type: #FmxNGTWithTypeAliases opposite: #typeAliases'
-	],
+	#superclass : #FmxNGTTypeAliasGenerated,
 	#category : #'FmxNG-Traits'
 }
 

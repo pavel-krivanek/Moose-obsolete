@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTDereferencedInvocation,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#referencer => FMOne type: #FmxNGTWithDereferencedInvocations opposite: #dereferencedInvocations'
-	],
+	#superclass : #FmxNGTDereferencedInvocationGenerated,
 	#category : #'FmxNG-Traits'
 }
 

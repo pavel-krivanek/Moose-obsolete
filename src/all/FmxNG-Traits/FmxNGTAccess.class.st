@@ -1,11 +1,6 @@
 Class {
 	#name : #FmxNGTAccess,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#accessor => FMOne type: #FmxNGTWithAccesses opposite: #accesses',
-		'#isWrite',
-		'#variable => FMOne type: #FmxNGTAccessible opposite: #incomingAccesses'
-	],
+	#superclass : #FmxNGTAccessGenerated,
 	#category : #'FmxNG-Traits'
 }
 
@@ -16,12 +11,4 @@ FmxNGTAccess class >> annotation [
 	<MSEClass: #TAccess super: #FmxNGTAccessGenerated>
 	<package: #'FmxNG-Generated'>
 	^self
-]
-
-{ #category : #accessing }
-FmxNGTAccess >> isWrite [
-
-	<MSEProperty: #isWrite type: #Boolean>
-	<MSEComment: 'Write access'>
-	^ isWrite ifNil: [ false ]
 ]

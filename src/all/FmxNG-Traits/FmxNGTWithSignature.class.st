@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithSignature,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'signature'
-	],
+	#superclass : #FmxNGTWithSignatureGenerated,
 	#category : #'FmxNG-Traits'
 }
 

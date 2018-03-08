@@ -1,9 +1,6 @@
 Class {
 	#name : #FmxNGTWithParameters,
-	#superclass : #FmxTraitEntity,
-	#instVars : [
-		'#parameters => FMMany type: #FmxNGTParameter opposite: #parentBehaviouralEntity'
-	],
+	#superclass : #FmxNGTWithParametersGenerated,
 	#category : #'FmxNG-Traits'
 }
 
