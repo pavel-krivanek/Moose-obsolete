@@ -233,6 +233,7 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	cSourceLanguage generalization: sourceLanguage.
 
 	cUSTOMSourceLanguage generalization: sourceLanguage.
+	cUSTOMSourceLanguage generalization: #TNamed.
 
 	caughtException generalization: exception.
 	caughtException generalization: #TCaughtException.
