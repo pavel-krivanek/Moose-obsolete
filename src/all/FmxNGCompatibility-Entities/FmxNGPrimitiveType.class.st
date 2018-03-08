@@ -11,3 +11,8 @@ FmxNGPrimitiveType class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #testing }
+FmxNGPrimitiveType >> isPrimitiveType [
+	^true
+]

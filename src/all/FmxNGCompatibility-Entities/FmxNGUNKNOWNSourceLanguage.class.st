@@ -11,3 +11,8 @@ FmxNGUNKNOWNSourceLanguage class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #testing }
+FmxNGUNKNOWNSourceLanguage >> isUnknown [ 
+	^ true
+]

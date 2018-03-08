@@ -11,3 +11,22 @@ FmxNGUnknownVariable class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #'Famix-Extensions' }
+FmxNGUnknownVariable >> accept: aVisitor [
+
+	aVisitor visitUnknownVariable: self
+]
+
+{ #category : #accessing }
+FmxNGUnknownVariable >> belongsTo [
+	^ nil
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGUnknownVariable >> copyFrom: anEntity within: aVisitor [
+
+	super copyFrom: anEntity within: aVisitor.
+	self container: (aVisitor visit: anEntity container).
+
+]

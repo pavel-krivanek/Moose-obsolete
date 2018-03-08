@@ -11,3 +11,38 @@ FmxNGLocalVariable class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #'Famix-Extensions' }
+FmxNGLocalVariable >> accept: aVisitor [
+
+	aVisitor visitLocalVariable: self
+]
+
+{ #category : #accessing }
+FmxNGLocalVariable >> belongsTo [
+
+	^ self parentBehaviouralEntity
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGLocalVariable >> mooseNameOn: stream [ 
+	| parent |
+	parent := self parentBehaviouralEntity.
+	parent ifNotNil: 
+		[ parent mooseNameOn: stream.
+		stream nextPut: $. ].
+	self name ifNotNil: [stream nextPutAll: self name]
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGLocalVariable >> printOn: stream [ 
+	| parent |
+	self name ifNotNil: [ stream nextPutAll: self name ].
+	stream nextPutAll: ' (local variable'.
+	parent := self parentBehaviouralEntity.
+	parent ifNotNil: [
+		stream nextPutAll: ' in '.
+		parent printOn: stream ].
+	stream nextPut: $)
+
+]

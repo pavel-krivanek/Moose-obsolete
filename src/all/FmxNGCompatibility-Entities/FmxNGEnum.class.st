@@ -11,3 +11,13 @@ FmxNGEnum class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #accessing }
+FmxNGEnum >> values [
+	^ self enumValues
+]
+
+{ #category : #accessing }
+FmxNGEnum >> values: anObject [
+	self enumValues: anObject
+]

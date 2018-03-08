@@ -11,3 +11,24 @@ FmxNGAnnotationType class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #'accessing-query' }
+FmxNGAnnotationType >> annotatedEntities [
+	^ self instances collect: [:each | each annotatedEntity ]
+]
+
+{ #category : #'accessing-query' }
+FmxNGAnnotationType >> annotatedEntitiesGroup [
+	<navigation: 'Annotated entities'>
+	^ self annotatedEntities asMooseGroup
+]
+
+{ #category : #accessing }
+FmxNGAnnotationType >> belongsTo [
+	^ self typeContainer
+]
+
+{ #category : #'Moose-Finder' }
+FmxNGAnnotationType >> mooseIcon [ 
+	^ MooseIcons famixAnnotationType
+]

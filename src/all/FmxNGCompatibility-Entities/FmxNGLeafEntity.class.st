@@ -11,3 +11,9 @@ FmxNGLeafEntity class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #visiting }
+FmxNGLeafEntity >> accept: aVisitor [
+
+	aVisitor visitLeafEntity: self
+]

@@ -11,3 +11,8 @@ FmxNGParameterType class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #testing }
+FmxNGParameterType >> isParameterType [
+	^ true
+]

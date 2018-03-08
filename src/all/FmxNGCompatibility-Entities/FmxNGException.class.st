@@ -11,3 +11,10 @@ FmxNGException class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #printing }
+FmxNGException >> mooseNameOn: aStream [ 
+	aStream nextPutAll: (self class name removePrefix: 'FAMIX').
+	aStream nextPut: $-.
+	self exceptionClass notNil ifTrue: [self exceptionClass mooseNameOn: aStream]
+]
