@@ -1,7 +1,14 @@
+"
+g := FmxNGCompatibilityGenerator  new.
+g builder traitsFlattening: true.
+g generateWithoutCleaning.
+FmxNGCompatibilityGenerator resetMetamodel.
+"
 Class {
-	#name : #FmxNGTestCompatibilityGenerator,
+	#name : #FmxNGCompatibilityGenerator,
 	#superclass : #FamixMetamodelGenerator,
 	#instVars : [
+		'entity',
 		'abstractFile',
 		'abstractFileAnchor',
 		'access',
@@ -72,9 +79,28 @@ Class {
 	#category : #'FamixNG-MetamodelGeneration'
 }
 
-{ #category : #initialization }
-FmxNGTestCompatibilityGenerator >> defineClasses [
+{ #category : #accessing }
+FmxNGCompatibilityGenerator class >> packageName [
 
+	^ #'FmxNGCompatibility-Generated'
+]
+
+{ #category : #accessing }
+FmxNGCompatibilityGenerator class >> packageNameForUserClasses [
+
+	^ #'FmxNGCompatibility-Entities'
+]
+
+{ #category : #accessing }
+FmxNGCompatibilityGenerator class >> prefix [
+
+	^ #'FmxNG'
+]
+
+{ #category : #initialization }
+FmxNGCompatibilityGenerator >> defineClasses [
+
+	entity := builder newClassNamed: #Entity.
 	abstractFile := builder newClassNamed: #AbstractFile.
 	abstractFileAnchor := builder newClassNamed: #AbstractFileAnchor.
 	access := builder newClassNamed: #Access.
@@ -146,10 +172,18 @@ FmxNGTestCompatibilityGenerator >> defineClasses [
 ]
 
 { #category : #initialization }
-FmxNGTestCompatibilityGenerator >> defineHierarchy [
+FmxNGCompatibilityGenerator >> defineHierarchy [
 
+	entity <|-- abstractFile.
+	entity <|-- file.
+	entity <|-- folder.
+	entity <|-- sourceAnchor.
+	entity <|-- sourceLanguage.
+	entity <|-- sourcedEntity.	
+	entity <|-- exception.
+	
 	abstractFile generalization: namedEntity.
-
+	
 	abstractFileAnchor generalization: sourceAnchor.
 	abstractFileAnchor generalization: #TFileAnchor.
 
@@ -365,18 +399,13 @@ FmxNGTestCompatibilityGenerator >> defineHierarchy [
 ]
 
 { #category : #initialization }
-FmxNGTestCompatibilityGenerator >> newBuilder [
+FmxNGCompatibilityGenerator >> newBuilder [
 
 	^ (FmxNGGenerator builderWithDefinitions)
 		doNotGenerateCurrent;
+		generator: self;
 		yourself
 		
 		
 	
-]
-
-{ #category : #initialization }
-FmxNGTestCompatibilityGenerator >> packageName [
-
-	^ #FmxNGCompatibility
 ]
