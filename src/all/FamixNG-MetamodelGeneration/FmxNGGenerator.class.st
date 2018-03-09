@@ -890,7 +890,7 @@ FmxNGGenerator >> defineProperties [
 	(tMethod property: #isAbstract type: #Boolean).
 	(tMethod property: #isPublic type: #Boolean).
 
-	(tSourceAnchor property: #pharoEntity type: #Object).
+	"(tSourceAnchor property: #pharoEntity type: #Object)."
 
 ]
 
