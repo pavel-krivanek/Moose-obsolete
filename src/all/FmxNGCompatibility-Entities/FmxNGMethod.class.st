@@ -1,6 +1,9 @@
 Class {
 	#name : #FmxNGMethod,
 	#superclass : #FmxNGMethodGenerated,
+	#classVars : [
+		'ShouldSearchForSmalltalkCodeInImage'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -10,6 +13,16 @@ FmxNGMethod class >> annotation [
 	<MSEClass: #Method super: #FmxNGMethodGenerated>
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
+]
+
+{ #category : #meta }
+FmxNGMethod class >> shouldSearchForSmalltalkCodeInImage [
+	^ ShouldSearchForSmalltalkCodeInImage ifNil: [ ShouldSearchForSmalltalkCodeInImage := true ]
+]
+
+{ #category : #meta }
+FmxNGMethod class >> shouldSearchForSmalltalkCodeInImage: anObject [
+	ShouldSearchForSmalltalkCodeInImage := anObject
 ]
 
 { #category : #'Famix-Extensions' }
@@ -182,6 +195,12 @@ FmxNGMethod >> hierarchyNestingLevel: aNumber [
 FmxNGMethod >> implementMethod [
 	^ self belongsTo implementedInterfaces
 		collect: [ :each | each implementationOf: self signature ]
+]
+
+{ #category : #initialization }
+FmxNGMethod >> initialize [
+	super initialize.
+	hasClassScope := false
 ]
 
 { #category : #'Famix-Java' }

@@ -130,6 +130,11 @@ FmxNGBehaviouralEntity >> hasEmptyBody [
 	^ self numberOfAccesses = 0 and: [ self numberOfOutgoingInvocations = 0 ]
 ]
 
+{ #category : #'moosequery-queries-incoming' }
+FmxNGBehaviouralEntity >> incomingTypeDeclarations [
+	^ {}
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGBehaviouralEntity >> invokedBehaviours [
 	^ self queryAllOutgoingInvocations opposites
@@ -271,10 +276,23 @@ FmxNGBehaviouralEntity >> numberOfStatements: aNumber [
 	self privateState propertyAt: #numberOfStatements put: aNumber
 ]
 
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGBehaviouralEntity >> outgoingTypeDeclarations [
+	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGBehaviouralEntity >> providerBehaviours [
 	<MSEProperty: #providerBehaviours type: #FmxNGBehaviouralEntity> <derived> <multivalued>
 	<MSEComment: 'All behaviours that the receiver depends on'>
 
 	^ self invokedBehaviours 
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGBehaviouralEntity >> signature: aString [
+
+	super signature: aString.
+	self resetMooseName
+
 ]

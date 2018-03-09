@@ -52,11 +52,39 @@ FmxNGFunction >> mooseNameOn: stream [
 		ifNil: [ self name ifNotNil: [ stream nextPutAll: self name] ]
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGFunction >> namespaceScope [
+	^ self container 
+		ifNotNil: [ self container namespaceScope ]
+]
+
 { #category : #testing }
 FmxNGFunction >> packageScope [
 	"No package scope for functions"
 
 	^ nil
+]
+
+{ #category : #'Famix-C' }
+FmxNGFunction >> parentModule [
+	<MSEProperty: #parentModule type: #FAMIXModule>
+	<MSEComment: 'Module (typically a file) defining the function.'>
+	^ self privateState 		
+		attributeAt: #parentModule
+		ifAbsentPut: [ nil ]
+]
+
+{ #category : #'Famix-C' }
+FmxNGFunction >> parentModule: aModule [
+	^ self privateState 		
+		attributeAt: #parentModule
+		put: (
+			FMMultivalueLink 
+				on: self
+				update: #functions
+				from: self parentModule
+				to: aModule
+			 )
 ]
 
 { #category : #accessing }
