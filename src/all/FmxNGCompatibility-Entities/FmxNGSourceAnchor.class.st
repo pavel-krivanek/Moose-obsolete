@@ -1,6 +1,8 @@
 Class {
 	#name : #FmxNGSourceAnchor,
 	#superclass : #FmxNGSourceAnchorGenerated,
+	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
+	#classTraits : 'TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 

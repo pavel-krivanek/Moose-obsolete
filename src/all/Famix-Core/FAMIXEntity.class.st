@@ -14,8 +14,6 @@ To adapt your Famix entity to this new API, you just need to add the pragma cont
 Class {
 	#name : #FAMIXEntity,
 	#superclass : #MooseEntity,
-	#traits : 'TMetaLevelDependency',
-	#classTraits : 'TMetaLevelDependency classTrait',
 	#classInstVars : [
 		'childrenAccessors',
 		'parentSelectors',

@@ -12,6 +12,22 @@ FmxNGEntity class >> annotation [
 	^self
 ]
 
+{ #category : #MQ }
+FmxNGEntity class >> resetMSEProperties [
+	"
+	self resetMSEProperties
+		"
+
+	self allSubclasses
+		do: [ :aSubClass | 
+			aSubClass resetMooseQueryCaches.]
+]
+
+{ #category : #MQ }
+FmxNGEntity class >> resetMooseQueryCaches [
+	"Here do nothing. Customize in subclasses."
+]
+
 { #category : #accessing }
 FmxNGEntity >> belongsTo [
 	"Return the primary container of the entity if it exist"
