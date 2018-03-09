@@ -81,6 +81,13 @@ FmxNGInvocation >> gtDisplayOn: aStream [
 ]
 
 { #category : #'Famix-Extensions' }
+FmxNGInvocation >> initialize [
+
+	super initialize.
+	signature := 'nosignature'.
+]
+
+{ #category : #'Famix-Extensions' }
 FmxNGInvocation >> isAPotentialInvocation [
 	"test if the sender is a potential invocation"
 	| invokedMtdSignature invoRVar invokedMtd |

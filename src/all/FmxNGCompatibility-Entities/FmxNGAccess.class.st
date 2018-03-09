@@ -15,15 +15,16 @@ FmxNGAccess class >> annotation [
 { #category : #'Famix-Extensions' }
 FmxNGAccess >> accept: aVisitor [
 
-	aVisitor visitInheritance: self
+	aVisitor visitAccess: self
 ]
 
 { #category : #'Famix-Extensions' }
 FmxNGAccess >> copyFrom: anEntity within: aVisitor [
 
 	super copyFrom: anEntity within: aVisitor.
-	self superclass: (aVisitor visit: anEntity superclass).
-	self subclass: (aVisitor visit: anEntity subclass).
+	self isWrite: anEntity isWrite.
+	self accessor: (aVisitor visit: anEntity accessor).
+	self variable: (aVisitor visit: anEntity variable).
 ]
 
 { #category : #'instance creation' }
@@ -36,8 +37,8 @@ FmxNGAccess >> from: anAccessor [
 	self accessor: anAccessor 
 ]
 
-{ #category : #'Famix-Implementation' }
-FmxNGAccess >> isInheritance [ 
+{ #category : #testing }
+FmxNGAccess >> isAccess [
 	^true
 ]
 
@@ -57,6 +58,12 @@ FmxNGAccess >> isReadWriteUnknown [
 	^ isWrite isNil
 ]
 
+{ #category : #'instance creation' }
+FmxNGAccess >> isWrite [
+
+	^ super isWrite ifNil: [ false ]
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGAccess >> mooseNameOn: aStream [
 	self subclass ifNotNil: [ aStream nextPutAll: self subclass name ].
@@ -67,7 +74,7 @@ FmxNGAccess >> mooseNameOn: aStream [
 { #category : #'Famix-Implementation' }
 FmxNGAccess >> printOn: aStream [
 	super printOn: aStream.
-	aStream nextPutAll: ' (Inheritance)'
+	aStream nextPutAll: ' (Access)'
 ]
 
 { #category : #'instance creation' }

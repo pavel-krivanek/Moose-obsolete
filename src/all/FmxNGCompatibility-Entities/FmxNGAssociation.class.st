@@ -1,6 +1,8 @@
 Class {
 	#name : #FmxNGAssociation,
 	#superclass : #FmxNGAssociationGenerated,
+	#traits : 'TAssociationMetaLevelDependency',
+	#classTraits : 'TAssociationMetaLevelDependency classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -44,11 +46,37 @@ FmxNGAssociation >> copyFrom: anEntity within: aVisitor [
 	"self previous: (aVisitor visit: anEntity previous)."
 ]
 
+{ #category : #accessing }
+FmxNGAssociation >> from [
+	"Polymorphic accessor to the entity originating the association.
+	It should be refined by subclasses by delegating to a concrete property.
+	This property should always remain derived."
+	
+	<MSEProperty: #from type: #FmxNGEntity> <derived>
+	<MSEComment: 'Generic accessor to the entity originating the association. Refined by subclasses'>
+	^ self subclassResponsibility
+]
+
 { #category : #printing }
 FmxNGAssociation >> gtDisplayOn: aStream [
 	self from gtDisplayOn: aStream.
 	aStream nextPutAll: ' -> '.
 	self to gtDisplayOn: aStream	
+]
+
+{ #category : #testing }
+FmxNGAssociation >> isAssociation [ 
+	^true
+]
+
+{ #category : #'Moose-Finder' }
+FmxNGAssociation >> mooseFinderSourceTextIn: composite [
+	<moosePresentationOrder: 20>
+	composite text
+			title: 'Source';
+			titleIcon: MooseIcons mooseSourceText;
+			when: [ self from notNil and: [self from sourceText notEmpty ]];
+			format: [ self from formattedSourceText ]
 ]
 
 { #category : #accessing }

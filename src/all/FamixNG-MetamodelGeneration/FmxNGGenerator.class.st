@@ -1030,6 +1030,7 @@ FmxNGGenerator >> defineRelations [
 	((tInvocable property: #incomingInvocations))
 		*-
 	((tInvocation property: #candidates) 
+			comment: 'List of candidate behavioural entities for receiving the invocation';
 			target).
 
 	((tInvocation property: #sender)
