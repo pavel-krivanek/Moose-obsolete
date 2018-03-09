@@ -30,6 +30,12 @@ FmxNGComment >> asFAMIXComment [
 	^ self
 ]
 
+{ #category : #accessing }
+FmxNGComment >> belongsTo [
+	
+	^ self container
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGComment >> copyFrom: anEntity within: aVisitor [
 
@@ -50,6 +56,14 @@ FmxNGComment >> gtDisplayOn: aStream [
 		nextPutAll: '" in '.
 	self belongsTo notNil ifTrue: [
 		self belongsTo gtDisplayOn: aStream ]
+]
+
+{ #category : #printing }
+FmxNGComment >> printOn: aStream [
+	self sourceText ifNotNil: [ :sourceText | aStream nextPutAll: (sourceText contractTo: 50) ].
+	aStream nextPutAll: ' (comment on '.
+	self container printOn: aStream.
+	aStream nextPut: $)
 ]
 
 { #category : #'Famix-Extensions' }
