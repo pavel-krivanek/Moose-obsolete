@@ -44,3 +44,11 @@ FmxNGParameterizedType >> mooseNameOn: aStream [
 	aStream nextPut: $>.  
 
 ]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGParameterizedType >> namespaceScope [
+	"we ask the namespaceScope of the parameterizable class"
+	
+	^ self parameterizableClass ifNotNil: [
+		self parameterizableClass namespaceScope ]
+]

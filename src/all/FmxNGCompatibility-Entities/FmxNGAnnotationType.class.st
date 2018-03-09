@@ -25,7 +25,19 @@ FmxNGAnnotationType >> annotatedEntitiesGroup [
 
 { #category : #accessing }
 FmxNGAnnotationType >> belongsTo [
-	^ self typeContainer
+	^ self annotationTypesContainer
+]
+
+{ #category : #accessing }
+FmxNGAnnotationType >> container [
+
+	^ self annotationTypesContainer
+]
+
+{ #category : #accessing }
+FmxNGAnnotationType >> container: anObject [
+
+	^ self annotationTypesContainer: anObject
 ]
 
 { #category : #'Moose-Finder' }

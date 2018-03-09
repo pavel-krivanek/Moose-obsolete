@@ -296,6 +296,20 @@ FmxNGPackage >> extensionMethods [
 		ifAbsentPut: [ self childEntities select: [ :child | child isMethod ]]
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGPackage >> historicalUniqueName [
+	^ (self parentPackage isNil 
+		ifTrue: [ self name ]
+		ifFalse: [ self parentPackage historicalUniqueName , '.' , self name ]) asSymbol
+]
+
+{ #category : #initialization }
+FmxNGPackage >> initialize [
+	super initialize.
+	self isPackage: true.
+
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGPackage >> instability [
 	"I =	Ce(P)/(Ce(P)+Ca(P)), in the range [0, 1]. 0 means package is maximally stable (i.e., no dependency to other packages and can not change without big consequences), 1 means it is unstable."
@@ -365,6 +379,13 @@ FmxNGPackage >> mooseIcon [
 	^ MooseIcons famixPackage
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGPackage >> namespaceScope [
+
+	self shouldNotImplement 
+
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGPackage >> numberOfClasses [
 	<MSEProperty: #numberOfClasses type: #Number>
@@ -427,6 +448,12 @@ FmxNGPackage >> numberOfMethods: aNumber [
 	self privateState propertyAt: #numberOfMethods put: aNumber
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGPackage >> packageScope [
+
+	^ self
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGPackage >> printOn: aStream [ 
 	| parent |
@@ -469,6 +496,11 @@ FmxNGPackage >> relativeImportanceForSystem [
 							]
 						ifFalse: [0]
 						]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGPackage >> selectWithinYourScope: aMooseQueryResult [
+	^ aMooseQueryResult withinPackage: self
 ]
 
 { #category : #'Famix-Extensions' }

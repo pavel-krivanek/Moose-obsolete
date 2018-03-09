@@ -75,3 +75,28 @@ FmxNGStructuralEntity >> localAccesses [
 			ent belongsTo = attrclass ifTrue: [localAccesses add: anAccess]].
 	^localAccesses
 ]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGStructuralEntity >> namespaceScope [
+	^ self subclassResponsibility
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGStructuralEntity >> outgoingTypeDeclarations [
+	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGStructuralEntity >> packageScope [
+
+	| cs |
+	cs := self typeScope.
+	
+	^ (cs isNil) ifTrue: [nil] ifFalse: [cs packageScope]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGStructuralEntity >> typeScope [
+
+	^ self belongsTo typeScope 
+]

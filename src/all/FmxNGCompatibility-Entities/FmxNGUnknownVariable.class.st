@@ -30,3 +30,24 @@ FmxNGUnknownVariable >> copyFrom: anEntity within: aVisitor [
 	self container: (aVisitor visit: anEntity container).
 
 ]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGUnknownVariable >> namespaceScope [
+	"namespaceScope does not make sense for an unknown variable,
+	so we return nil"
+	^ nil
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGUnknownVariable >> packageScope [
+	"packageScope does not make sense for an unknown variable,
+	so we return nil"
+	^ nil
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGUnknownVariable >> typeScope [
+	"typeScope does not make sense for an unknown variable,
+	so we return nil"
+	^ nil
+]

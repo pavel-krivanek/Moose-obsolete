@@ -36,6 +36,16 @@ FmxNGGlobalVariable >> isPublic [
 			inv accessor parentScope ~~ self parentScope]
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGGlobalVariable >> namespaceScope [
+	^ self parentScope
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGGlobalVariable >> packageScope [
+	^ self parentPackage
+]
+
 { #category : #'Famix-C' }
 FmxNGGlobalVariable >> parentModule [
 	<MSEProperty: #parentModule type: #FmxNGModule>
@@ -65,4 +75,12 @@ FmxNGGlobalVariable >> printOn: aStream [
 		aStream nextPut: $. ].
 	self name ifNotNil: [ aStream nextPutAll: self name ].
 	aStream nextPutAll: ' (Global Variable)'
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGGlobalVariable >> typeScope [
+	"typeScope does not make sense for a global variable,
+	so we return nil"
+
+	^ nil
 ]

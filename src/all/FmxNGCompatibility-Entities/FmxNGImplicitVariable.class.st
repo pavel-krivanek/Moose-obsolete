@@ -61,6 +61,16 @@ FmxNGImplicitVariable >> mooseNameOn: stream [
 	self name ifNotNil: [ stream nextPutAll: self name ]
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGImplicitVariable >> namespaceScope [
+	^ self parentBehaviouralEntity namespaceScope
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGImplicitVariable >> packageScope [
+	^ self parentBehaviouralEntity packageScope
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGImplicitVariable >> printOn: aStream [ 
 	| parent |
@@ -70,4 +80,9 @@ FmxNGImplicitVariable >> printOn: aStream [
 		  aStream nextPut: $. ].
 	self name ifNotNil: [ aStream nextPutAll: self name ].
 	aStream nextPutAll: ' (ImplicitVariable)'
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGImplicitVariable >> typeScope [
+	^ self parentBehaviouralEntity typeScope
 ]

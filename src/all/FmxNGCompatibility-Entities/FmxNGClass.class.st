@@ -1,6 +1,9 @@
 Class {
 	#name : #FmxNGClass,
 	#superclass : #FmxNGClassGenerated,
+	#instVars : [
+		'isInterface'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -120,6 +123,13 @@ FmxNGClass >> inheritedClassesOutOfMyPackage [
 	^ #()
 ]
 
+{ #category : #initialization }
+FmxNGClass >> initialize [
+
+	super initialize.
+	isInterface := false
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGClass >> isADirectSubclassOf: aClass [ 
 	 
@@ -199,7 +209,7 @@ FmxNGClass >> isInvokedBy: anInvocation [
 		ifTrue: 
 			[anInvocation candidateList 
 				anySatisfy: 
-					[:mtd | mtd class name = #mxStMethod and: [mtd belongsTo == self]]] 
+					[:mtd | mtd class name = #FmxStMethod and: [mtd belongsTo == self]]] 
 		ifFalse: [false]
 ]
 

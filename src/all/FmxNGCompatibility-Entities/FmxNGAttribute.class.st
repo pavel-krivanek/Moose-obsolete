@@ -1,6 +1,9 @@
 Class {
 	#name : #FmxNGAttribute,
 	#superclass : #FmxNGAttributeGenerated,
+	#instVars : [
+		'hasClassScope'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -97,6 +100,13 @@ FmxNGAttribute >> hierarchyNestingLevel: aNumber [
 	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
 ]
 
+{ #category : #initialization }
+FmxNGAttribute >> initialize [
+	super initialize.
+	hasClassScope := false.
+
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGAttribute >> isAttribute [
 	^ true
@@ -122,6 +132,11 @@ FmxNGAttribute >> mooseNameOn: aStream [
 		[ parent mooseNameOn: aStream.
 		aStream nextPut: $. ].
 	self name ifNotNil: [ aStream nextPutAll: self name ].
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGAttribute >> namespaceScope [
+	^ self parentType namespaceScope
 ]
 
 { #category : #'Famix-Extensions' }
@@ -179,6 +194,11 @@ FmxNGAttribute >> numberOfLocalAccesses [
 		computedAs: [self localAccesses size]
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGAttribute >> packageScope [
+	^ self parentType packageScope
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGAttribute >> printOn: aStream [ 
 	| parent |
@@ -194,4 +214,9 @@ FmxNGAttribute >> printOn: aStream [
 FmxNGAttribute >> readAccesses [
 	
 	^self incomingAccesses select: [:each | each isRead]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGAttribute >> typeScope [
+	^ self parentType
 ]

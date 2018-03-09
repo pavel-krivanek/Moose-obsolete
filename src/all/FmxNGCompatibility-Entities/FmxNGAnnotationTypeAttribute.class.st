@@ -11,3 +11,16 @@ FmxNGAnnotationTypeAttribute class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #accessing }
+FmxNGAnnotationTypeAttribute >> parentAnnotationType [
+	<MSEProperty: #parentAnnotationType type: #FAMIXAnnotationType> <derived> 
+	<MSEComment: 'This is an alias pointing to the AnnotationType that defines this attribute'>
+
+	^ self parentType
+]
+
+{ #category : #accessing }
+FmxNGAnnotationTypeAttribute >> parentAnnotationType: anAnnotationType [
+	self parentType: anAnnotationType
+]

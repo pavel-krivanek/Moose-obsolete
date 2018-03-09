@@ -13,6 +13,20 @@ FmxNGNamespace class >> annotation [
 ]
 
 { #category : #'Famix-Extensions' }
+FmxNGNamespace >> abstractness [
+	"Abstractness is the ratio between the number of abstract classes and the total number of classes in a package, in the range [0, 1]. 0 means the package is fully concrete, 1 it is fully abstract."
+	<MSEProperty: #abstractness type: #Number>
+	<derived>
+	<MSEComment: 'Abstractness of a namespace'>
+
+	| nsClasses |
+	nsClasses := self allClasses select: [:c | c isInstanceSide].
+	(nsClasses size == 0) ifTrue: [^nil].
+	
+	^ (nsClasses select: [:c | c isAbstract]) size / (nsClasses size) asFloat
+]
+
+{ #category : #'Famix-Extensions' }
 FmxNGNamespace >> abstractness: aNumber [
 
 	self privateState propertyAt: #abstractness put: aNumber
@@ -361,6 +375,12 @@ FmxNGNamespace >> numberOfNonInterfacesClasses: aNumber [
 	self privateState propertyAt: #numberOfNonInterfacesClasses put: aNumber
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGNamespace >> packageScope [
+
+	self shouldNotImplement
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGNamespace >> printOn: aStream [ 
 	self belongsTo ifNotNil: [:parent |
@@ -386,6 +406,11 @@ FmxNGNamespace >> providerTypes [
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>
 	^ (self queryAllOutgoing atScope: FmxNGType) withoutSelfLoops
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGNamespace >> selectWithinYourScope: aMooseQueryResult [
+	^ aMooseQueryResult withinNamespace: self
 ]
 
 { #category : #'Famix-Extensions' }

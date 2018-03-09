@@ -528,6 +528,11 @@ FmxNGType >> incomingAccessesGroup [
 				withDescription: 'Incoming accesses to ' , self mooseName]
 ]
 
+{ #category : #'moosequery-queries-incoming' }
+FmxNGType >> incomingTypeDeclarations [
+	^ self structuresWithDeclaredType , self behavioursWithDeclaredType collect: [ :var | MooseChefTypeDeclarationAssociation newFrom: var to: self ]
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGType >> inheritedAttributes [
 	| inheritedAttrs |
@@ -780,6 +785,13 @@ FmxNGType >> lookUp: aMethodSignature [
 	^searchedM
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGType >> methodScope [
+	"This only makes sense to reject self loops in #collectAtScope:"
+
+	^ self methods
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGType >> methodsDo: aBlock [
 	self methods do: aBlock
@@ -858,6 +870,16 @@ FmxNGType >> mooseNameOn: aStream [
 				nextPut: $:;
 				nextPut: $: ].
 	self name ifNotNil: [aStream nextPutAll: self name]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGType >> namespaceScope [
+	"we ask the container for the namespaceScope
+	because we can have classes in methods or in other classes.
+	Thus, we need to traverse recursively until we reach a namespace"
+	
+	^ self container 
+		ifNotNil: [ self container namespaceScope ]
 ]
 
 { #category : #'Famix-Extensions' }
@@ -1376,6 +1398,12 @@ FmxNGType >> overridingMethods [
 	^ self methods select: #isOverriding
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGType >> packageScope [
+
+	^ self parentPackage
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGType >> parentScope [
 	"Polymorphic alias to mimic GlobalVariable#parentScope and similar"
@@ -1558,6 +1586,13 @@ FmxNGType >> totalNumberOfChildren [
 FmxNGType >> totalNumberOfChildren: aNumber [
 
 	self privateState propertyAt: #totalNumberOfChildren put: aNumber
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGType >> typeScope [
+	"all types are not classes. Redefined in FamixClass"
+
+	^ self
 ]
 
 { #category : #'Famix-Implementation' }

@@ -11,3 +11,17 @@ FmxNGParameterizableClass class >> annotation [
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]
+
+{ #category : #generated }
+FmxNGParameterizableClass >> parameters [
+	<MSEProperty: #parameters type: #FAMIXParameterType> <multivalued> <derived>
+	<MSEComment: 'Parameter types of this class.'>
+	
+	^self types select: [:each | each isParameterType]
+]
+
+{ #category : #generated }
+FmxNGParameterizableClass >> parameters: aCollection [
+
+	self privateState attributeAt: #parameters put: aCollection
+]
