@@ -11,7 +11,7 @@ Class {
 
 { #category : #meta }
 FAMIXCppSourceLanguage class >> annotation [
-	<MSEClass: #CppSourceLanguage super: #FAMIXCSourceLanguage>
+	<MSEClass: #CppSourceLanguage super: #FmxNGCSourceLanguage>
 	<package: #FAMIX>
 	^self
 ]

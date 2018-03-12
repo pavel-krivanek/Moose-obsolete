@@ -262,8 +262,8 @@ MooseModel class >> ownerOf: element [
 MooseModel class >> resetMeta [
 	"self resetMeta"
 
-	FAMIXEntity resetMSEProperties.
-	FAMIXNamedEntity resetMSEProperties.
+	FmxNGEntity resetMSEProperties.
+	FmxNGNamedEntity resetMSEProperties.
 	
 	metaTower := nil.
 	^self meta
@@ -353,7 +353,7 @@ MooseModel >> cacheMooseGroups [
 MooseModel >> detectEncodingOfAllFileAnchors [
 	"I can be execute to reduce the time of detection of the encoding of each file anchor because multiple file anchor can point to the same file."
 
-	(((self allWithSubTypesOf: FAMIXAbstractFileAnchor) asOrderedCollection reject: #privateHasEncoding) groupedBy: #fileName)
+	(((self allWithSubTypesOf: FmxNGAbstractFileAnchor) asOrderedCollection reject: #privateHasEncoding) groupedBy: #fileName)
 		valuesDo: [ :anchors | 
 			| encoding |
 			encoding := anchors anyOne detectEncoding.

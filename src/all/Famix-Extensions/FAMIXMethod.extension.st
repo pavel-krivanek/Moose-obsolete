@@ -30,14 +30,14 @@ FAMIXMethod >> clientMethods [
 FAMIXMethod >> clientNamespaces [
 	"returns a set of all the namespaces that depend on the receiver"
 
-	^ (self queryAllIncoming atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
 FAMIXMethod >> clientPackages [
 	"returns a set of all the packages that depend on the receiver"
 
-	^ (self queryAllIncoming atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGPackage) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -46,7 +46,7 @@ FAMIXMethod >> clientTypes [
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGType) withoutSelfLoops
 ]
 
 { #category : #'*Famix-Extensions' }
@@ -187,14 +187,14 @@ FAMIXMethod >> providerMethods [
 FAMIXMethod >> providerNamespaces [
 	"returns a set of all the namespaces that the receiver depends on the receiver"
 
-	^ (self queryAllOutgoing atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
 FAMIXMethod >> providerPackages [
 	"returns a set of all the packages that the receiver depends on the receiver"
 
-	^ (self queryAllOutgoing atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGPackage) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -203,5 +203,5 @@ FAMIXMethod >> providerTypes [
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>
-	^ (self queryAllOutgoing atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGType) withoutSelfLoops
 ]

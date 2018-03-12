@@ -486,7 +486,7 @@ MooseAbstractGroup >> notEmpty [
 MooseAbstractGroup >> numberOfAssociations [
 	<MSEProperty: #numberOfAssociations type: #Number>
 	<MSEComment: 'The total number of associations'>
-	^ (self allWithSubTypesOf: FAMIXAssociation) size
+	^ (self allWithSubTypesOf: FmxNGAssociation) size
 ]
 
 { #category : #accessing }

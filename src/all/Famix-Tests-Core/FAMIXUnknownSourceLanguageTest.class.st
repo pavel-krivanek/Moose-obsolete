@@ -6,7 +6,7 @@ Class {
 
 { #category : #tests }
 FAMIXUnknownSourceLanguageTest >> actualClass [
-	^ FAMIXUnknownSourceLanguage 
+	^ FmxNGUNKNOWNSourceLanguage 
 ]
 
 { #category : #tests }

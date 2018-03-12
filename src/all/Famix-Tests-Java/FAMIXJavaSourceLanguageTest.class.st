@@ -20,10 +20,10 @@ FAMIXJavaSourceLanguageTest >> testIsJava [
 
 { #category : #tests }
 FAMIXJavaSourceLanguageTest >> testIsUnknown [
-	self assert: FAMIXJavaSourceLanguage new isUnknown not
+	self assert: FmxNGJAVASourceLanguage new isUnknown not
 ]
 
 { #category : #tests }
 FAMIXJavaSourceLanguageTest >> testName [
-	self assert: FAMIXJavaSourceLanguage new name equals: 'Java'
+	self assert: FmxNGJAVASourceLanguage new name equals: 'Java'
 ]

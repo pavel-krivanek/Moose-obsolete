@@ -31,7 +31,7 @@ FAMIXNamespace >> afferentCoupling [
 	<MSEProperty: #afferentCoupling type: #Number>
 	<derived>
 	<MSEComment: 'Afferent Coupling of a namespace Afferent is the number of classes that depend upon this namespace'>
-	^ ((self queryAllIncoming atScope: FAMIXType) outOfMyNamespace select: [ :c | c isInstanceSide ]) size
+	^ ((self queryAllIncoming atScope: FmxNGType) outOfMyNamespace select: [ :c | c isInstanceSide ]) size
 ]
 
 { #category : #'*famix-extensions-metrics' }
@@ -57,7 +57,7 @@ FAMIXNamespace >> bunchCohesion [
 	(myClasses := self classes) union: (myClasses flatCollect: [ :c | c allRecursiveTypes ]).
 	myClasses size == 0
 		ifTrue: [ ^ nil ].
-	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) withinMyNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + each size ].
+	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGType) withinMyNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + each size ].
 	^ intraConnectivities / myClasses size squared asFloat
 ]
 
@@ -80,11 +80,11 @@ FAMIXNamespace >> bunchCouplingWith: aNamespace [
 		ifTrue: [ ^ nil ].
 
 	"All outgoing dependencies"
-	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) withinNamespace: aNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + each size ].
+	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGType) withinNamespace: aNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + each size ].
 
 	"Plus all incoming dependencies"
 	interConnectivities := interConnectivities
-		+ ((myClasses collect: [ :c | (c queryIncomingDependencies atScope: FAMIXType) withinNamespace: aNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + each size ]).
+		+ ((myClasses collect: [ :c | (c queryIncomingDependencies atScope: FmxNGType) withinNamespace: aNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + each size ]).
 	^ interConnectivities / (2 * myClasses size * otherClasses size) asFloat
 ]
 
@@ -101,13 +101,13 @@ FAMIXNamespace >> bunchCouplingWithAll [
 		ifTrue: [ ^ nil ].
 
 	"All outgoing dependencies"
-	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) outOfMyNamespace ])
+	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGType) outOfMyNamespace ])
 		inject: 0
 		into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ].
 
 	"Plus all incoming dependencies"
 	interConnectivities := interConnectivities
-		+ ((myClasses collect: [ :c | (c queryIncomingDependencies atScope: FAMIXType) outOfMyNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ]).
+		+ ((myClasses collect: [ :c | (c queryIncomingDependencies atScope: FmxNGType) outOfMyNamespace ]) inject: 0 into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ]).
 	^ interConnectivities / (2 * myClasses size * (allClasses size - myClasses size)) asFloat
 ]
 
@@ -126,7 +126,7 @@ FAMIXNamespace >> clientClasses [
 FAMIXNamespace >> clientNamespaces [
 	"MooseCook was: ^ self inheritedByNamespaces union: self invokingNamespaces"
 
-	^ (self queryAllIncoming atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -135,7 +135,7 @@ FAMIXNamespace >> clientTypes [
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGType) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-accessing' }
@@ -178,7 +178,7 @@ FAMIXNamespace >> efferentCoupling [
 	<MSEComment:
 		'Efferent coupling for a module is the number of classes it depends upon'>
 	^ ((self queryOutgoingDependencies outOfMyNamespace
-		atScope: FAMIXType) select: [ :c | c isInstanceSide ]) size
+		atScope: FmxNGType) select: [ :c | c isInstanceSide ]) size
 ]
 
 { #category : #'*famix-extensions-metrics' }
@@ -220,7 +220,7 @@ FAMIXNamespace >> martinCohesion [
 	myClasses := (myClasses union: (myClasses flatCollect: [ :c | c allRecursiveTypes ])) select: [ :c | c isInstanceSide ].
 	myClasses size == 0
 		ifTrue: [ ^ nil ].
-	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) withoutSelfLoops withinMyNamespace ])
+	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGType) withoutSelfLoops withinMyNamespace ])
 		inject: 0
 		into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ].
 	^ ((intraConnectivities + 1) / myClasses size) asFloat
@@ -326,7 +326,7 @@ FAMIXNamespace >> providerClasses [
 FAMIXNamespace >> providerNamespaces [
 	"MooseCook was: ^ self inheritedNamespaces union: self invokedNamespaces"
 
-	^ (self queryAllOutgoing atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -335,7 +335,7 @@ FAMIXNamespace >> providerTypes [
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>
-	^ (self queryAllOutgoing atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGType) withoutSelfLoops
 ]
 
 { #category : #'*Famix-Extensions' }

@@ -9,7 +9,7 @@ FAMIXNamespaceGroupPaintingTest >> testViewHierarchy [
 
 	| group |
 	group := FAMIXNamespaceGroup new.
-	group add: FAMIXNamespace new.
-	group add: FAMIXNamespace new.
+	group add: FmxNGNamespace new.
+	group add: FmxNGNamespace new.
 	group viewHierarchy delete
 ]

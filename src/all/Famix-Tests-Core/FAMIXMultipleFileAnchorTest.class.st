@@ -9,7 +9,7 @@ Class {
 
 { #category : #helpers }
 FAMIXMultipleFileAnchorTest >> actualClass [
-	^ FAMIXMultipleFileAnchor
+	^ FmxNGMultipleFileAnchor
 ]
 
 { #category : #tests }
@@ -17,16 +17,16 @@ FAMIXMultipleFileAnchorTest >> testContainerFiles [
 	| anchor file1 file2 |
 	anchor := self actualClass new
 		addSourceAnchor:
-			(FAMIXFileAnchor new
+			(FmxNGFileAnchor new
 				correspondingFile:
-					(file1 := FAMIXFile new
+					(file1 := FmxNGFile new
 						name: 'test';
 						yourself);
 				yourself);
 		addSourceAnchor:
-			(FAMIXFileAnchor new
+			(FmxNGFileAnchor new
 				correspondingFile:
-					(file2 := FAMIXFile new
+					(file2 := FmxNGFile new
 						name: 'test2';
 						yourself);
 				yourself);
@@ -41,8 +41,8 @@ FAMIXMultipleFileAnchorTest >> testContainerFilesWithoutFileReferenced [
 
 	| anchor |
 	anchor := self actualClass new
-		addSourceAnchor: FAMIXFileAnchor new;
-		addSourceAnchor: FAMIXFileAnchor new;
+		addSourceAnchor: FmxNGFileAnchor new;
+		addSourceAnchor: FmxNGFileAnchor new;
 		yourself.
 	self assert: anchor containerFiles size equals: 0
 ]

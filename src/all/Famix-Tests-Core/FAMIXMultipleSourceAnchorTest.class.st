@@ -9,7 +9,7 @@ Class {
 
 { #category : #initialization }
 FAMIXMultipleSourceAnchorTest >> setUp [
-	multipleFileAnchor := FAMIXMultipleFileAnchor new mooseModel: MooseModel new.
+	multipleFileAnchor := FmxNGMultipleFileAnchor new mooseModel: MooseModel new.
 	(1 to: 2) do: [:each | multipleFileAnchor addFileAnchorWithPath: 'aFileName']
 ]
 
@@ -27,7 +27,7 @@ FAMIXMultipleSourceAnchorTest >> testAdditionOfFiles [
 { #category : #tests }
 FAMIXMultipleSourceAnchorTest >> testMultipleSourceAnchorEntity [
 	| class |
-	class := FAMIXClass new mooseModel: MooseModel new; defineMultiSourceAnchorWithPath: 'aClassName'.
+	class := FmxNGClass new mooseModel: MooseModel new; defineMultiSourceAnchorWithPath: 'aClassName'.
 	self assert: class sourceAnchor allFiles size equals: 1.
 ]
 

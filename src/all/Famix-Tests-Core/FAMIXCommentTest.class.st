@@ -6,18 +6,18 @@ Class {
 
 { #category : #helpers }
 FAMIXCommentTest >> actualClass [
-	^ FAMIXComment
+	^ FmxNGComment
 ]
 
 { #category : #tests }
 FAMIXCommentTest >> testAddingComment [
 	| cls |
-	cls := FAMIXClass new.
+	cls := FmxNGClass new.
 	cls name: 'AClass'.
 	self assert: cls mooseName == #AClass.
 	self assert: cls comments isEmpty.
 	cls addComment: 'This is a comment'.
-	self assert: (cls comments allSatisfy: [ :c | c isKindOf: FAMIXComment ]).
+	self assert: (cls comments allSatisfy: [ :c | c isKindOf: FmxNGComment ]).
 	self assert: (cls comments at: 1) content equals: 'This is a comment'
 ]
 
@@ -32,7 +32,7 @@ FAMIXCommentTest >> testSourceText [
 	self assert: comment sourceText isEmpty.
 	comment
 		sourceAnchor:
-			(FAMIXSourceTextAnchor new
+			(FmxNGSourceTextAnchor new
 				source: 'something';
 				yourself).
 	self assert: comment sourceText equals: 'something'

@@ -98,7 +98,7 @@ FmxNGPackage >> bunchCouplingWith: aPackage [
 	"Plus all incoming dependencies"
 	interConnectivities := interConnectivities
 		+
-			((myClasses collect: [ :c | (c queryIncomingDependencies atScope: FAMIXType) withinPackage: aPackage ])
+			((myClasses collect: [ :c | (c queryIncomingDependencies atScope: FmxNGType) withinPackage: aPackage ])
 				inject: 0
 				into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ]).
 	^ interConnectivities / (2 * myClasses size * otherClasses size) asFloat
@@ -116,7 +116,7 @@ FmxNGPackage >> bunchCouplingWithAll [
 		ifTrue: [ ^ nil ].
 
 	"All outgoing dependencies"
-	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) outOfMyPackage ])
+	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGType) outOfMyPackage ])
 		inject: 0
 		into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ].
 
@@ -205,7 +205,7 @@ FmxNGPackage >> createPackagesFromCategories [
 		cat := (Smalltalk at: class instanceSide name) category.
 		famixCat := self mooseModel allPackages detect: [:each | each mooseName = cat] ifNone: [nil].
 		famixCat ifNil: [
-			famixCat := self mooseModel add: (FAMIXPackage new name: cat; stub: true)
+			famixCat := self mooseModel add: (FmxNGPackage new name: cat; stub: true)
 		].
 		class isStub
 			ifFalse: [ famixCat stub: false ].

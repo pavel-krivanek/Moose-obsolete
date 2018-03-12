@@ -14,9 +14,9 @@ MoosePropertyGroupTest >> model [
 MoosePropertyGroupTest >> testBasic [
 	|  allClasses propertyGroup |
 	allClasses := {
-		FAMIXClass new numberOfLinesOfCode: 10.
-		FAMIXClass new numberOfLinesOfCode: 20.
-		FAMIXClass new numberOfLinesOfCode: 30 } asMooseGroup.
+		FmxNGClass new numberOfLinesOfCode: 10.
+		FmxNGClass new numberOfLinesOfCode: 20.
+		FmxNGClass new numberOfLinesOfCode: 30 } asMooseGroup.
 	propertyGroup := MoosePropertyGroup
 		withAll: (allClasses copyFrom: 1 to: 2)
 		from: allClasses

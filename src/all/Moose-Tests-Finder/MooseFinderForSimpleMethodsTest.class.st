@@ -8,10 +8,10 @@ Class {
 MooseFinderForSimpleMethodsTest >> buildModel [ 
 	| class |
 	model := MooseModel new.
-	class := FAMIXClass new.
+	class := FmxNGClass new.
 	class 
-		addMethod: (FAMIXMethod new name: 'name1');
-		addMethod: (FAMIXMethod new name: 'name2');
-		addMethod: (FAMIXMethod new name: 'name3').
+		addMethod: (FmxNGMethod new name: 'name1');
+		addMethod: (FmxNGMethod new name: 'name2');
+		addMethod: (FmxNGMethod new name: 'name3').
 
 ]

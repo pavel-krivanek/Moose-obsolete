@@ -6,13 +6,13 @@ Class {
 
 { #category : #helpers }
 FAMIXAnnotationInstanceTest >> actualClass [
-	^ FAMIXAnnotationInstance
+	^ FmxNGAnnotationInstance
 ]
 
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testAnnotatedEntityBackPointer [
 	| entity instance |
-	entity := FAMIXNamedEntity new.
+	entity := FmxNGNamedEntity new.
 	instance := self actualClass new.
 	instance annotatedEntity: entity.
 	self assert: entity annotationInstances size equals: 1.
@@ -22,7 +22,7 @@ FAMIXAnnotationInstanceTest >> testAnnotatedEntityBackPointer [
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testAnnotationType [
 	| type instance |
-	type := FAMIXAnnotationType new.
+	type := FmxNGAnnotationType new.
 	instance := self actualClass new.
 	instance annotationType: type.
 	self assert: type instances size equals: 1
@@ -31,9 +31,9 @@ FAMIXAnnotationInstanceTest >> testAnnotationType [
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testMooseName [
 	| entity type instance |
-	type := FAMIXAnnotationType new.
+	type := FmxNGAnnotationType new.
 	type name: 'AnAnnotationType'.
-	entity := FAMIXNamedEntity new.
+	entity := FmxNGNamedEntity new.
 	entity name: 'AnEntity'.
 	instance := self actualClass new.
 	instance annotationType: type.
@@ -44,16 +44,16 @@ FAMIXAnnotationInstanceTest >> testMooseName [
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testMooseNameWithAttributes [
 	| entity type instance attributeType attributeInstance |
-	type := FAMIXAnnotationType new.
+	type := FmxNGAnnotationType new.
 	type name: 'AnAnnotationType'.
-	attributeType := FAMIXAnnotationTypeAttribute new.
+	attributeType := FmxNGAnnotationTypeAttribute new.
 	attributeType name: 'attribute'.
-	entity := FAMIXNamedEntity new.
+	entity := FmxNGNamedEntity new.
 	entity name: 'AnEntity'.
 	instance := self actualClass new.
 	instance annotationType: type.
 	instance annotatedEntity: entity.
-	attributeInstance := FAMIXAnnotationInstanceAttribute new.
+	attributeInstance := FmxNGAnnotationInstanceAttribute new.
 	attributeInstance parentAnnotationInstance: instance.
 	attributeInstance annotationTypeAttribute: attributeType.
 	attributeInstance value: 'value'.

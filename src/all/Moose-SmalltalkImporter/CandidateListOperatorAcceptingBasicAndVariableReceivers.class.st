@@ -34,7 +34,7 @@ CandidateListOperatorAcceptingBasicAndVariableReceivers >> computeCandidateListF
 				ifTrue: 
 					[^self computeCandidateListFor: anInvocation withBaseClass: receiver].
 				
-			(receiver class = FAMIXAttribute and: [receiver isSharedVariable not])
+			(receiver class = FmxNGAttribute and: [receiver isSharedVariable not])
 				ifTrue:
 					["Transcript show: receiver belongsTo name, '-->', receiver name, '  - roelTyperResult :- ',"(self computeInstanceVariableCandidateListFor: anInvocation ) "sString, '//////      '"].
 				

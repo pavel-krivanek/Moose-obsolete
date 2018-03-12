@@ -97,7 +97,7 @@ FmxNGInvocation >> isAPotentialInvocation [
 			
 	invoRVar ifNil:[^true].
 	
-	(invoRVar isImplicitVariable or: [invoRVar class = FAMIXClass]) ifFalse:[^true].
+	(invoRVar isImplicitVariable or: [invoRVar class = FmxNGClass]) ifFalse:[^true].
 	
 	(invoRVar isImplicitVariable 
 	 and: [(invoRVar isSelf or: [invoRVar isSuper]) not]) ifTrue:[^true].
@@ -116,7 +116,7 @@ FmxNGInvocation >> isASureInvocation [
 	| invoRVar |
 	invoRVar := self receiver.
 	^(invoRVar notNil) and: 
-			[invoRVar class = FAMIXClass or: [invoRVar isImplicitVariable and: [invoRVar isSelf or: [invoRVar isSuper]]]]
+			[invoRVar class = FmxNGClass or: [invoRVar isImplicitVariable and: [invoRVar isSelf or: [invoRVar isSuper]]]]
 ]
 
 { #category : #'Famix-Implementation' }

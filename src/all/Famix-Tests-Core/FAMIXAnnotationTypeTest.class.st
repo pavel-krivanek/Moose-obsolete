@@ -6,14 +6,14 @@ Class {
 
 { #category : #helpers }
 FAMIXAnnotationTypeTest >> actualClass [
-	^ FAMIXAnnotationType
+	^ FmxNGAnnotationType
 ]
 
 { #category : #tests }
 FAMIXAnnotationTypeTest >> testInstances [
 	| type instance |
 	type := self actualClass new.
-	instance := FAMIXAnnotationInstance new.
+	instance := FmxNGAnnotationInstance new.
 	type instances: (OrderedCollection with: instance).
 	self assert: type instances size equals: 1.
 	self assert: instance annotationType equals: type
@@ -25,7 +25,7 @@ FAMIXAnnotationTypeTest >> testMooseName [
 	annotationType := self actualClass new.
 	annotationType name: 'XYZ'.
 	self assert: annotationType mooseName equals: 'XYZ'.
-	namespace := FAMIXNamespace new.
+	namespace := FmxNGNamespace new.
 	namespace name: 'abc'.
 	annotationType container: namespace.
 	self assert: annotationType mooseName equals: 'abc::XYZ'

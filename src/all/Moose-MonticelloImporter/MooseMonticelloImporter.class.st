@@ -35,9 +35,9 @@ MooseMonticelloImporter >> assertPackageName: packageName [
 MooseMonticelloImporter >> createClassNamed: classNameSymbol ivs: varNameStrings superclassName: superclassName [
 	"The superclass is not set here. This is done later"
 	| famixClass |
-	famixClass := FAMIXClass new name: classNameSymbol asSymbol.
+	famixClass := FmxNGClass new name: classNameSymbol asSymbol.
 	varNameStrings do: [:varName | 
-		famixClass addAttribute: (FAMIXAttribute new name: varName asSymbol)].
+		famixClass addAttribute: (FmxNGAttribute new name: varName asSymbol)].
 	self targetModel add: famixClass.
 	famixClass propertyNamed: #superclassName put: superclassName.						
 	^ famixClass
@@ -182,7 +182,7 @@ MooseMonticelloImporter >> setSuperclassesAndCreateStubs [
 	self targetModel allClasses do: 
 		[ :famixClass | 
 		superclass := self ensureClassNamed: (famixClass propertyNamed: #superclassName).
-		famixInheritance := FAMIXInheritance new
+		famixInheritance := FmxNGInheritance new
 			subclass: famixClass;
 			superclass: superclass.
 		famixClass addSuperInheritance: famixInheritance.

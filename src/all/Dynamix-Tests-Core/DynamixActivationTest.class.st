@@ -22,7 +22,7 @@ DynamixActivationTest >> testArguments [
 DynamixActivationTest >> testBehaviour [
 	| activation behaviour |
 	activation := DynamixActivation new.
-	behaviour := FAMIXBehaviouralEntity new.
+	behaviour := FmxNGBehaviouralEntity new.
 	activation behaviour: behaviour.
 	self assert: behaviour activations size = 1.
 	self assert: behaviour activations first = activation

@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXTypeAliasTest >> actualClass [
-	^ FAMIXTypeAlias
+	^ FmxNGTypeAlias
 ]
 
 { #category : #tests }
@@ -17,7 +17,7 @@ FAMIXTypeAliasTest >> expectedFailures [
 { #category : #tests }
 FAMIXTypeAliasTest >> testAliasOpposite [
 	| type alias |
-	type := FAMIXType new.
+	type := FmxNGType new.
 	self assert: type typeAliases isEmpty.
 	alias := self actualClass new
 		aliasedType: type;
@@ -30,10 +30,10 @@ FAMIXTypeAliasTest >> testAliasOpposite [
 { #category : #tests }
 FAMIXTypeAliasTest >> testAliasSubclasses [
 	| type subtype alias |
-	subtype := FAMIXType new name: 'SubType'.
-	type := FAMIXType new name: 'Type'.
+	subtype := FmxNGType new name: 'SubType'.
+	type := FmxNGType new name: 'Type'.
 	
-	FAMIXInheritance new
+	FmxNGInheritance new
 		subclass: subtype;
 		superclass: type.
 		
@@ -53,16 +53,16 @@ FAMIXTypeAliasTest >> testAliasSubclasses [
 FAMIXTypeAliasTest >> testAliasSuperclasses [
 	| type supertype alias model |
 	model := MooseModel new.
-	model sourceLanguage: FAMIXCSourceLanguage new.
-	supertype := FAMIXType new
+	model sourceLanguage: FmxNGCSourceLanguage new.
+	supertype := FmxNGType new
 		name: 'SuperType';
 		mooseModel: model;
 		yourself.
-	type := FAMIXType new
+	type := FmxNGType new
 		name: 'Type';
 		mooseModel: model;
 		yourself.
-	FAMIXInheritance new
+	FmxNGInheritance new
 		mooseModel: model;
 		superclass: supertype;
 		subclass: type.
@@ -80,7 +80,7 @@ FAMIXTypeAliasTest >> testAliasSuperclasses [
 { #category : #tests }
 FAMIXTypeAliasTest >> testAllTypeAliases [
 	| type alias aliasalias |
-	type := FAMIXType new name: 'Type'.
+	type := FmxNGType new name: 'Type'.
 	alias := self actualClass new name: 'Alias'.
 	alias aliasedType: type.
 	aliasalias := self actualClass new name: 'Alias'.
@@ -103,7 +103,7 @@ FAMIXTypeAliasTest >> testNullAliasedType [
 { #category : #tests }
 FAMIXTypeAliasTest >> testRealType [
 	| type alias aliasalias |
-	type := FAMIXType new name: 'Type'.
+	type := FmxNGType new name: 'Type'.
 	alias := self actualClass new
 		name: 'Alias';
 		aliasedType: type;
@@ -120,15 +120,15 @@ FAMIXTypeAliasTest >> testRealType [
 { #category : #tests }
 FAMIXTypeAliasTest >> testSuperclassesIncludingAlias [
 	| type supertype alias subalias |
-	supertype := FAMIXType new name: 'SuperType'.
-	type := FAMIXType new name: 'Type'.
-	FAMIXInheritance new
+	supertype := FmxNGType new name: 'SuperType'.
+	type := FmxNGType new name: 'Type'.
+	FmxNGInheritance new
 		superclass: supertype;
 		subclass: type.
 	alias := self actualClass new name: 'Alias'.
 	alias aliasedType: type.
 	subalias := self actualClass new name: 'SubType'.
-	FAMIXInheritance new
+	FmxNGInheritance new
 		subclass: subalias;
 		superclass: alias.
 	self assert: supertype subclassHierarchy size equals: 3.

@@ -31,7 +31,7 @@ AbstractSmalltalkMethodVisitor >> classifyMethodNode: aMethodNode [
 AbstractSmalltalkMethodVisitor >> createAccessTo: aNamedEntity writing: isWriteAccess [
 	| access |
 	
-	access := FAMIXAccess new.
+	access := FmxNGAccess new.
 	access isWrite: isWriteAccess ; variable: aNamedEntity ; accessor: self methodEntity.
 	^ access
 ]
@@ -40,7 +40,7 @@ AbstractSmalltalkMethodVisitor >> createAccessTo: aNamedEntity writing: isWriteA
 AbstractSmalltalkMethodVisitor >> createReferenceTo: aNamedEntity [
 	| ref |
 	
-	ref := FAMIXReference new.
+	ref := FmxNGReference new.
 	ref source: self methodEntity ; target: (self resolveInstanceSide: aNamedEntity).
 	^ ref
 ]
@@ -54,7 +54,7 @@ AbstractSmalltalkMethodVisitor >> extractCommentsFromNode: aSequenceNode [
 			[aSequenceNode comments
 				do:
 					[:eachComment | 
-					comment := FAMIXComment new.
+					comment := FmxNGComment new.
 					comment content: (aSequenceNode source 
 										copyFrom: eachComment start
 										to: eachComment stop) asString.
@@ -123,7 +123,7 @@ AbstractSmalltalkMethodVisitor >> matchGetter: aMethodNode [
 												ifAbsent: nil. 
 											attribute notNil 
 												ifTrue: 
-													[attribute class = FAMIXAttribute ifTrue: [famixMethod kind: #getter]]]]]]]
+													[attribute class = FmxNGAttribute ifTrue: [famixMethod kind: #getter]]]]]]]
 ]
 
 { #category : #'method-classifying' }
@@ -145,7 +145,7 @@ AbstractSmalltalkMethodVisitor >> matchSetter: aMethodNode [
 										ifAbsent: nil. 
 									attribute notNil 
 										ifTrue: 
-											[attribute class = FAMIXAttribute 
+											[attribute class = FmxNGAttribute 
 												ifTrue: 
 													[assignment value isVariable 
 														ifTrue: 
@@ -176,7 +176,7 @@ AbstractSmalltalkMethodVisitor >> resolve: name [
 AbstractSmalltalkMethodVisitor >> resolveInstanceSide: aNamedEntity [
 	"We ensure that a reference to a metaclass is considered as a reference to the class itself"
 
-	((aNamedEntity isKindOf: FAMIXClass) and: ['*_class' match: aNamedEntity name])
+	((aNamedEntity isKindOf: FmxNGClass) and: ['*_class' match: aNamedEntity name])
 		ifTrue: [| className |
 				className := aNamedEntity name removeSuffix: '_class'.
 				^ importer ensureClass: (Smalltalk at: className asSymbol) ]
@@ -214,7 +214,7 @@ AbstractSmalltalkMethodVisitor >> visitAssignmentNode: anAssignmentNode [
 	| access | 
 	importer importingContext shouldImportAccess 
 		ifTrue: 
-			[access := FAMIXAccess new. 
+			[access := FmxNGAccess new. 
 			access isWrite: true.
 			access variable: (self resolve: anAssignmentNode variable name). 
 			access accessor: self methodEntity.
@@ -232,7 +232,7 @@ AbstractSmalltalkMethodVisitor >> visitBlockNode: aBlockNode [
 			[aBlockNode arguments 
 				do: 
 					[:aVariableNode |  
-					local := FAMIXLocalVariable new. 
+					local := FmxNGLocalVariable new. 
 					local name: aVariableNode name asSymbol. 
 					local parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: local. 
@@ -258,7 +258,7 @@ AbstractSmalltalkMethodVisitor >> visitMessageNode: aMessageNode [
 	| invocation | 
 	importer importingContext shouldImportInvocation 
 		ifTrue: 
-			[invocation := FAMIXInvocation new. 
+			[invocation := FmxNGInvocation new. 
 			invocation sender: self methodEntity. 
 			
 			invocation signature: (FAMIXNameResolver signatureFromSmalltalkSelectorOn: aMessageNode selector).
@@ -291,7 +291,7 @@ AbstractSmalltalkMethodVisitor >> visitMethodNode: aMethodNode [
 			[aMethodNode arguments 
 				do: 
 					[:aVariableNode | | argument | 
-					argument := FAMIXParameter new. 
+					argument := FmxNGParameter new. 
 					argument name: aVariableNode name asSymbol. 
 					argument parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: argument. 
@@ -319,13 +319,13 @@ AbstractSmalltalkMethodVisitor >> visitNode: aNode [
 AbstractSmalltalkMethodVisitor >> visitPragmaNode: aPragmaNode [
 	| annotationInstance annotationType |
 	annotationType := self importer ensureAnnotationType: aPragmaNode.
-	annotationInstance := FAMIXAnnotationInstance new.
+	annotationInstance := FmxNGAnnotationInstance new.
 	annotationInstance annotationType: annotationType.
 	self importer addEntity: annotationInstance.
 	annotationInstance annotatedEntity: self methodEntity.
 	aPragmaNode arguments doWithIndex: [:each :i |
 		| attribute |
-		attribute := FAMIXAnnotationInstanceAttribute new.
+		attribute := FmxNGAnnotationInstanceAttribute new.
 		attribute value: each value.
 		attribute parentAnnotationInstance: annotationInstance.
 		attribute annotationTypeAttribute: (annotationInstance annotationType attributes at: i).
@@ -349,7 +349,7 @@ AbstractSmalltalkMethodVisitor >> visitSequenceNode: aSequenceNode [
 			[aSequenceNode temporaries 
 				do: 
 					[:aVariableNode |  
-					local := FAMIXLocalVariable new. 
+					local := FmxNGLocalVariable new. 
 					local name: aVariableNode name asSymbol. 
 					local parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: local. 
@@ -375,7 +375,7 @@ AbstractSmalltalkMethodVisitor >> visitVariableNode: aVariableNode [
 				access := self createAccessTo: global writing: false]
 			ifFalse: [
 				namedEntity := self resolve: aVariableNode name.
-				access := (namedEntity isKindOf: FAMIXContainerEntity)
+				access := (namedEntity isKindOf: FmxNGContainerEntity)
 					ifTrue: [ self createReferenceTo: namedEntity ]
 					ifFalse: [ self createAccessTo: namedEntity writing: false ] ].
 		importer addEntity: access ].

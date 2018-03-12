@@ -32,7 +32,7 @@ MooseSmalltalkImporterSubclassesTest >> pharoImporterTask: anObject [
 MooseSmalltalkImporterSubclassesTest >> setUp [
 	model := MooseModel new.	
 	model name: 'Test'.
-	model sourceLanguage: FAMIXSmalltalkSourceLanguage new.
+	model sourceLanguage: FmxNGSMALLTALKSourceLanguage new.
 	pharoImporterTask := MoosePharoImporterTask new
 		importerClass: SmalltalkImporter;
 		doNotRunCandidateOperator; 

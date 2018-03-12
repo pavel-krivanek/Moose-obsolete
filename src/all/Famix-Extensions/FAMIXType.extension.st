@@ -43,7 +43,7 @@ FAMIXType >> clientNamespaces [
 
 	"Moose cook was: ^ self inheritedByNamespaces union: self invokingNamespaces"
 
-	^ (self queryAllIncoming atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -52,7 +52,7 @@ FAMIXType >> clientPackages [
 
 	"Moose cook was: ^ self inheritedByPackages union: self invokingPackages"
 
-	^ (self queryAllIncoming atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGPackage) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -61,7 +61,7 @@ FAMIXType >> clientTypes [
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on (inherit, staticly access, or use some methods of) the receiver'>
-	^ (self queryAllIncoming atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGType) withoutSelfLoops
 ]
 
 { #category : #'*Famix-Extensions' }
@@ -741,7 +741,7 @@ FAMIXType >> providerNamespaces [
 
 	"Moose cook was: ^ self inheritedNamespaces union: self invokedNamespaces"
 
-	^ (self queryAllOutgoing atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -750,7 +750,7 @@ FAMIXType >> providerPackages [
 
 	"Moose cook was: ^ self inheritedPackages union: self invokedPackages"
 
-	^ (self queryAllOutgoing atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGPackage) withoutSelfLoops
 ]
 
 { #category : #'*famix-extensions-nav All Dependencies' }
@@ -759,7 +759,7 @@ FAMIXType >> providerTypes [
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>
-	^ (self queryAllOutgoing atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGType) withoutSelfLoops
 ]
 
 { #category : #'*Famix-Extensions' }

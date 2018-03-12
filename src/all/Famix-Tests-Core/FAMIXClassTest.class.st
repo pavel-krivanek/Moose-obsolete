@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXClassTest >> actualClass [
-	^ FAMIXClass
+	^ FmxNGClass
 ]
 
 { #category : #tests }

@@ -16,7 +16,7 @@ MooseModel >> inferNamespaceParentsBasedOnNames [
 					detect: [ :x | parentName = x mooseName ]
 					ifNone: [ 
 						| newNamespace |
-						newNamespace := FAMIXNamespace new name: parentName.
+						newNamespace := FmxNGNamespace new name: parentName.
 						namespaces add: newNamespace. 
 						self add: newNamespace ].
 				currentPosition := currentPosition + 2 ].

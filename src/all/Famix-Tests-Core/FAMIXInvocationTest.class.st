@@ -6,5 +6,5 @@ Class {
 
 { #category : #helpers }
 FAMIXInvocationTest >> actualClass [
-	^ FAMIXInvocation
+	^ FmxNGInvocation
 ]

@@ -100,10 +100,10 @@ FmxNGClass >> containsTheReceiverOf: anInvocation [
 	 
 	^anInvocation receivingVariable notNil 
 		ifTrue: 
-			[anInvocation receivingVariable class name = #FAMIXClass 
+			[anInvocation receivingVariable class name = #FmxNGClass 
 				ifTrue: [anInvocation receivingVariable == self] 
 				ifFalse: 
-					[anInvocation receivingVariable class name = #FAMIXImplicitVariable 
+					[anInvocation receivingVariable class name = #FmxNGImplicitVariable 
 						ifTrue: [anInvocation receivingVariable belongsTo == self] 
 						ifFalse: [false]]] 
 		ifFalse: [false]

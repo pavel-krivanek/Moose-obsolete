@@ -21,7 +21,7 @@ MooseQueryResultTest >> actualClass [
 MooseQueryResultTest >> newSimpleInstance [
 	^ self actualClass
 		on:
-			(FAMIXMethod new
+			(FmxNGMethod new
 				signature: 'A';
 				name: 'A';
 				yourself)

@@ -18,7 +18,7 @@ MooseFileStructureImporter >> completeImport: folders [
 			folder := FAMIXFolder named: each filedIn: nil. 
 			self importContentsInFolderNamed: (FileSystem disk referenceTo: each) filedInFolder: folder. 
 			self mooseModel add: folder]. 
-	self mooseModel sourceLanguage: FAMIXUnknownSourceLanguage new
+	self mooseModel sourceLanguage: FmxNGUNKNOWNSourceLanguage new
 ]
 
 { #category : #private }

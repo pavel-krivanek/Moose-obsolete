@@ -64,7 +64,7 @@ FAMIXStepwiseImporterTest >> testClassVariable [
 	importer runCandidateOperator.
 	importer model: model; addFromPackagesNamed: (MooseScripts packageNamesFor: 'Morphic*'); runWithProgress.
 	 
-	self shouldnt: [(model entities select: [:e | e isKindOf: FAMIXUnknownVariable ]) do: #typeScope ] raise: Error
+	self shouldnt: [(model entities select: [:e | e isKindOf: FmxNGUnknownVariable ]) do: #typeScope ] raise: Error
 ]
 
 { #category : #tests }
@@ -174,7 +174,7 @@ FAMIXStepwiseImporterTest >> testImportClassAndMethodAndMergeItsMetaclass [
 	importer := importTask run.
 	importedMethods := importer methods values.
 	self assert: importedMethods size equals: 13.
-	self assert: importedMethods first class equals: FAMIXMethod
+	self assert: importedMethods first class equals: FmxNGMethod
 ]
 
 { #category : #tests }
@@ -253,7 +253,7 @@ FAMIXStepwiseImporterTest >> testImportNamespace [
 		run;
 		yourself.
 	nap := model entityNamed: #Smalltalk.
-	self assert: nap class equals: FAMIXNamespace
+	self assert: nap class equals: FmxNGNamespace
 ]
 
 { #category : #tests }
@@ -269,7 +269,7 @@ FAMIXStepwiseImporterTest >> testImportOneClassAndItsMetaclass [
 	importer := importTask run.
 	importedClasses := importer classes.
 	self assert: importedClasses values size equals: 6.
-	self assert: (importedClasses at: LANNode) class equals: FAMIXClass
+	self assert: (importedClasses at: LANNode) class equals: FmxNGClass
 ]
 
 { #category : #tests }
@@ -290,7 +290,7 @@ FAMIXStepwiseImporterTest >> testImportOneClassAndMergeItsMetaclass [
 	importer := importTask run.
 	importedClasses := importer classes.
 	self assert: importedClasses values asSet size equals: 3.
-	self assert: (importedClasses at: LANNode) class equals: FAMIXClass
+	self assert: (importedClasses at: LANNode) class equals: FmxNGClass
 ]
 
 { #category : #tests }
@@ -311,7 +311,7 @@ FAMIXStepwiseImporterTest >> testImportOneClassAndMethodAndMergeItsMetaclass [
 	importer := importTask run.
 	importedMethods := importer methods values.
 	self assert: importedMethods size equals: 13.
-	self assert: importedMethods first class equals: FAMIXMethod
+	self assert: importedMethods first class equals: FmxNGMethod
 ]
 
 { #category : #tests }

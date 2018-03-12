@@ -37,8 +37,8 @@ LANImporterTest >> testAccessReification [
 	self model allAccesses 
 		do: 
 			[:each |  
-			self assert: (each accessor isKindOf: FAMIXMethod). 
-			self assert: (each variable isKindOf: FAMIXStructuralEntity) ]
+			self assert: (each accessor isKindOf: FmxNGMethod). 
+			self assert: (each variable isKindOf: FmxNGStructuralEntity) ]
 ]
 
 { #category : #tests }
@@ -216,8 +216,8 @@ LANImporterTest >> testInheritanceReification [
 	self assert: inheritances isEmpty not.
 	inheritances do: 
 			[:each |  
-			self assert: (each superclass isKindOf: FAMIXClass). 
-			self assert: (each subclass isKindOf: FAMIXClass)]
+			self assert: (each superclass isKindOf: FmxNGClass). 
+			self assert: (each subclass isKindOf: FmxNGClass)]
 ]
 
 { #category : #tests }
@@ -242,10 +242,10 @@ LANImporterTest >> testInheritsFrom [
 LANImporterTest >> testInvocationReification [
 	self model allInvocations
 		do: [ :each | 
-			self assert: (each sender isKindOf: FAMIXMethod).
+			self assert: (each sender isKindOf: FmxNGMethod).
 			each candidates
 				do: [ :eachCandidate | 
-					self assert: (eachCandidate isKindOf: FAMIXMethod).
+					self assert: (eachCandidate isKindOf: FmxNGMethod).
 					self assert: eachCandidate signature equals: each signature ] ]
 ]
 
@@ -343,14 +343,14 @@ LANImporterTest >> testNamespace [
 
 	| namespace |
 	namespace := self model entityNamed: #Smalltalk.
-	self assert: namespace class equals: FAMIXNamespace
+	self assert: namespace class equals: FmxNGNamespace
 ]
 
 { #category : #tests }
 LANImporterTest >> testNamespaceReification [ 
 	 
 	self model allClasses 
-		do: [:each | self assert: (each belongsTo isKindOf: FAMIXNamespace)]
+		do: [:each | self assert: (each belongsTo isKindOf: FmxNGNamespace)]
 ]
 
 { #category : #tests }
@@ -376,7 +376,7 @@ LANImporterTest >> testPackageReification [
 	self new testPackageReification
 	"
 
-	self model allClasses do: [ :each | self assert: (each parentPackage isKindOf: FAMIXPackage) ].
+	self model allClasses do: [ :each | self assert: (each parentPackage isKindOf: FmxNGPackage) ].
 	self model allPackages
 		do: [ :each | each localClasses do: [ :eachClass | self assert: eachClass parentPackage equals: each ] ].
 	self assert: (self model allPackages entityNamed: #'Moose-TestResources-LAN') localClasses size equals: 20

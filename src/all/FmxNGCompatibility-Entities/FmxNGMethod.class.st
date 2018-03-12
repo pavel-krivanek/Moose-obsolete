@@ -463,14 +463,14 @@ FmxNGMethod >> providerMethods [
 FmxNGMethod >> providerNamespaces [
 	"returns a set of all the namespaces that the receiver depends on the receiver"
 
-	^ (self queryAllOutgoing atScope: FAMIXNamespace) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
 { #category : #'Famix-Extensions' }
 FmxNGMethod >> providerPackages [
 	"returns a set of all the packages that the receiver depends on the receiver"
 
-	^ (self queryAllOutgoing atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGPackage) withoutSelfLoops
 ]
 
 { #category : #'Famix-Extensions' }

@@ -12,41 +12,41 @@ MooseChefTypeDeclarationAssociationTest class >> importModel [
 	 
 	| p1 p2 c1 c2 c3 m1 m2 m3 m4 a1 a2 |
 	
-	p1 := FAMIXPackage new name: 'p1' ; yourself.
-	p2 := FAMIXPackage new name: 'p2' ; yourself.
+	p1 := FmxNGPackage new name: 'p1' ; yourself.
+	p2 := FmxNGPackage new name: 'p2' ; yourself.
 	
-	c1 := FAMIXClass new
+	c1 := FmxNGClass new
 			name: 'c1' ;
 			container: p1 ;
 			yourself.
-	c2 := FAMIXClass new
+	c2 := FmxNGClass new
 			name: 'c2' ;
 			container: p1 ;
 			yourself.
-	c3 := FAMIXClass new
+	c3 := FmxNGClass new
 			name: 'c3' ;
 			container: p2 ;
 			yourself.
 
-	m1 := FAMIXMethod new
+	m1 := FmxNGMethod new
 			name: 'm1' ;
 			signature: 'm1()' ;
 			container: c1 ;
 			declaredType: c2 ;
 			yourself.
-	m2 := FAMIXMethod new
+	m2 := FmxNGMethod new
 			name: 'm2' ;
 			signature: 'm2()' ;
 			container: c2 ;
 			declaredType: c3 ;
 			yourself.
-	m3 := FAMIXMethod new
+	m3 := FmxNGMethod new
 			name: 'm3' ;
 			signature: 'm3()' ;
 			container: c2 ;
 			declaredType: c1 ;
 			yourself.
-	m4 := FAMIXMethod new
+	m4 := FmxNGMethod new
 			name: 'm4' ;
 			signature: 'm4()' ;
 			container: c3 ;
@@ -80,26 +80,26 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 	 
 	| p1 p2 c1 c2 c3 m1 m2 m3 m4 at1 at2 pr1 pr2 v1 |
 		
-	p1 := FAMIXPackage new name: 'p1' ; stub: true ; yourself.
-	p2 := FAMIXPackage new name: 'p2' ; stub: true ; yourself.
+	p1 := FmxNGPackage new name: 'p1' ; stub: true ; yourself.
+	p2 := FmxNGPackage new name: 'p2' ; stub: true ; yourself.
 
-	c1 := FAMIXClass new
+	c1 := FmxNGClass new
 			stub: true ;
 			name: 'C1' ;
 			parentPackage: p1 ;
 			yourself.
-	c2 := FAMIXClass new
+	c2 := FmxNGClass new
 			stub: true ;
 			name: 'C2' ;
 			parentPackage: p1 ;
 			yourself.
-	c3 := FAMIXClass new
+	c3 := FmxNGClass new
 			stub: true ;
 			name: 'C3' ;
 			parentPackage: p2 ;
 			yourself.
 
-	m1 := FAMIXMethod new
+	m1 := FmxNGMethod new
 			stub: true ;
 			name: 'm1' ;
 			signature: 'm1()' ;
@@ -107,7 +107,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			parentPackage: p1 ;
 			declaredType: c2 ;
 			yourself.
-	m2 := FAMIXMethod new
+	m2 := FmxNGMethod new
 			stub: true ;
 			name: 'm2' ;
 			signature: 'm2()' ;
@@ -115,7 +115,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			parentPackage: p1 ;
 			declaredType: c3 ;
 			yourself.
-	m3 := FAMIXMethod new
+	m3 := FmxNGMethod new
 			stub: true ;
 			name: 'm3' ;
 			signature: 'm3(C2,C3)' ;
@@ -123,7 +123,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			parentPackage: p1 ;
 			declaredType: c1 ;
 			yourself.
-	m4 := FAMIXMethod new
+	m4 := FmxNGMethod new
 			stub: true ;
 			name: 'm4' ;
 			signature: 'm4()' ;
@@ -132,7 +132,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			declaredType: c3 ;
 			yourself.
 		
-	v1 := FAMIXLocalVariable new
+	v1 := FmxNGLocalVariable new
 			stub: true ;
 			name: 'v1' ;
 			parentBehaviouralEntity: m2 ;
@@ -140,14 +140,14 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			declaredType: c1 ;
 			yourself.
 
-	pr1 := FAMIXParameter new
+	pr1 := FmxNGParameter new
 			stub: true ;
 			name: 'pr1' ;
 			parentBehaviouralEntity: m3 ;
 			parentPackage: p1 ;
 			declaredType: c2 ;
 			yourself.
-	pr2 := FAMIXParameter new
+	pr2 := FmxNGParameter new
 			stub: true ;
 			name: 'pr2' ;
 			parentBehaviouralEntity: m3 ;
@@ -155,14 +155,14 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			declaredType: c3 ;
 			yourself.
 		
-	at1 := FAMIXAttribute new
+	at1 := FmxNGAttribute new
 			stub: true ;
 			name: 'at1' ;
 			parentType: c1 ;
 			parentPackage: p1 ;
 			declaredType: c3 ;
 			yourself.
-	at2 := FAMIXAttribute new
+	at2 := FmxNGAttribute new
 			stub: true ;
 			name: 'at2' ;
 			parentType: c3 ;
@@ -194,37 +194,37 @@ MooseChefTypeDeclarationAssociationTest >> testFamixClassIncomingTypeDeclaration
 	self
 		assert:
 			((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FAMIXType) size
+				atScope: FmxNGType) size
 		equals: 3.
 	self
 		assert:
 			(((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FAMIXType) includes: (self model entityNamed: 'C1')).
+				atScope: FmxNGType) includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			(((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FAMIXType) includes: (self model entityNamed: 'C2')).
+				atScope: FmxNGType) includes: (self model entityNamed: 'C2')).
 	self
 		assert:
 			(((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FAMIXType) includes: (self model entityNamed: 'C3')).
+				atScope: FmxNGType) includes: (self model entityNamed: 'C3')).
 	self
 		assert:
 			((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FAMIXType) size
+				atScope: FmxNGType) size
 		equals: 3.
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FAMIXType) includes: (self model entityNamed: 'C1')).
+				atScope: FmxNGType) includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FAMIXType) includes: (self model entityNamed: 'C2')).
+				atScope: FmxNGType) includes: (self model entityNamed: 'C2')).
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FAMIXType) includes: (self model entityNamed: 'C3'))
+				atScope: FmxNGType) includes: (self model entityNamed: 'C3'))
 ]
 
 { #category : #'famix-class' }
@@ -253,27 +253,27 @@ MooseChefTypeDeclarationAssociationTest >> testFamixClassTypeDeclarationsWithout
 	self
 		assert:
 			((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				withoutSelfLoops atScope: FAMIXType) size
+				withoutSelfLoops atScope: FmxNGType) size
 		equals: 2.
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				withoutSelfLoops atScope: FAMIXType)
+				withoutSelfLoops atScope: FmxNGType)
 				includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				withoutSelfLoops atScope: FAMIXType)
+				withoutSelfLoops atScope: FmxNGType)
 				includes: (self model entityNamed: 'C2')).
 	self
 		assert:
 			((self model entityNamed: 'C3') queryOutgoingTypeDeclarations
-				withoutSelfLoops atScope: FAMIXType) size
+				withoutSelfLoops atScope: FmxNGType) size
 		equals: 1.
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryOutgoingTypeDeclarations
-				withoutSelfLoops atScope: FAMIXType)
+				withoutSelfLoops atScope: FmxNGType)
 				includes: (self model entityNamed: 'C2'))
 ]
 
@@ -315,18 +315,18 @@ MooseChefTypeDeclarationAssociationTest >> testFamixMethodTypeDeclarationsWithou
 	self
 		assert:
 			(((self model entityNamed: 'C2.m3(C2,C3)')
-				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FAMIXType)
+				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FmxNGType)
 				includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			((self model entityNamed: 'C2.m3(C2,C3)')
-				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FAMIXType)
+				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FmxNGType)
 				size
 		equals: 3.
 	self
 		assert:
 			(((self model entityNamed: 'C2.m3(C2,C3)')
-				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FAMIXType)
+				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FmxNGType)
 				includes: (self model entityNamed: 'C3'))
 ]
 
@@ -335,16 +335,16 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageIncomingTypeDeclarati
 	self
 		assert:
 			((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FAMIXPackage) size
+				atScope: FmxNGPackage) size
 		equals: 2.
 	self
 		assert:
 			(((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FAMIXPackage) includes: (self model entityNamed: 'p1')).
+				atScope: FmxNGPackage) includes: (self model entityNamed: 'p1')).
 	self
 		assert:
 			(((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FAMIXPackage) includes: (self model entityNamed: 'p2'))
+				atScope: FmxNGPackage) includes: (self model entityNamed: 'p2'))
 ]
 
 { #category : #'famix-package' }
@@ -352,16 +352,16 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageOutgoingTypeDeclarati
 	self
 		assert:
 			((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FAMIXPackage) size
+				atScope: FmxNGPackage) size
 		equals: 2.
 	self
 		assert:
 			(((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FAMIXPackage) includes: (self model entityNamed: 'p1')).
+				atScope: FmxNGPackage) includes: (self model entityNamed: 'p1')).
 	self
 		assert:
 			(((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FAMIXPackage) includes: (self model entityNamed: 'p2'))
+				atScope: FmxNGPackage) includes: (self model entityNamed: 'p2'))
 ]
 
 { #category : #'famix-package' }
@@ -369,21 +369,21 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageTypeDeclarationsWitho
 	self
 		assert:
 			((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FAMIXPackage) withoutSelfLoops size
+				atScope: FmxNGPackage) withoutSelfLoops size
 		equals: 1.
 	self
 		assert:
 			(((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FAMIXPackage) withoutSelfLoops
+				atScope: FmxNGPackage) withoutSelfLoops
 				includes: (self model entityNamed: 'p1')).
 	self
 		assert:
 			((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FAMIXPackage) withoutSelfLoops size
+				atScope: FmxNGPackage) withoutSelfLoops size
 		equals: 1.
 	self
 		assert:
 			(((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FAMIXPackage) withoutSelfLoops
+				atScope: FmxNGPackage) withoutSelfLoops
 				includes: (self model entityNamed: 'p2'))
 ]

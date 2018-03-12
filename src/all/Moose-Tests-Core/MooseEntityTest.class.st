@@ -62,11 +62,11 @@ MooseEntityTest >> testAllPropertySelectors [
 	model := MooseModel new.
 	self assert: (MooseEntity allPropertySelectorsComputableIn: model) equals: IdentityDictionary new.
 	model := FAMIXTypeGroup new.
-	class := FAMIXClass new name: 'AClass'.
+	class := FmxNGClass new name: 'AClass'.
 	model add: class.
 	self assert: (MooseEntity allPropertySelectorsComputableIn: model) equals: IdentityDictionary new.
 	model := MooseAbstractGroup new.
-	class := FAMIXClass new name: 'AClass'.
+	class := FmxNGClass new name: 'AClass'.
 	model add: class.
 	self assert: (MooseEntity allPropertySelectorsComputableIn: model) equals: IdentityDictionary new
 ]
@@ -87,9 +87,9 @@ MooseEntityTest >> testAnnotation [
 { #category : #tests }
 MooseEntityTest >> testAsMooseFinderItemNamed [
 	| entity1 entity2 model model2 |
-	entity1 := FAMIXType new.
+	entity1 := FmxNGType new.
 	entity1 name: 'hello'.
-	entity2 := FAMIXType new.
+	entity2 := FmxNGType new.
 	entity2 name: 'hello2'.
 	model := MooseModel new.
 	model
@@ -135,8 +135,8 @@ MooseEntityTest >> testEntityBackLink [
 MooseEntityTest >> testGroupFor [
 
 	| entity1 entity2 model classGroup methodGroup |
-	entity1 := FAMIXClass new.
-	entity2 := FAMIXClass new.
+	entity1 := FmxNGClass new.
+	entity2 := FmxNGClass new.
 
 	model := MooseModel new.
 	model addAll: {entity1 . entity2}.

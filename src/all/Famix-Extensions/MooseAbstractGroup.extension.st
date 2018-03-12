@@ -11,13 +11,13 @@ MooseAbstractGroup >> allAccesses [
 MooseAbstractGroup >> allAttributes [
 	
 	<navigation: 'All attributes'>
-	^self allWithType: FAMIXAttribute 
+	^self allWithType: FmxNGAttribute 
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allClasses [
 	<navigation: 'All classes'>
-	^ self allWithSubTypesOf: FAMIXClass ofGroupClass: FAMIXClassGroup
+	^ self allWithSubTypesOf: FmxNGClass ofGroupClass: FAMIXClassGroup
 ]
 
 { #category : #'*Famix-Extensions' }
@@ -31,42 +31,42 @@ MooseAbstractGroup >> allComments [
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allFunctions [
 	<navigation: 'All functions'>
-	^ self allWithType: FAMIXFunction
+	^ self allWithType: FmxNGFunction
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allGlobalVariables [
 	
 	<navigation: 'All global variables'>
-	^self allWithType: FAMIXGlobalVariable 
+	^self allWithType: FmxNGGlobalVariable 
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allImplicitVariables [
 	
 	<navigation: 'All implicit variables'>
-	^self allWithType: FAMIXImplicitVariable 
+	^self allWithType: FmxNGImplicitVariable 
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allInheritanceDefinitions [
 	
 	<navigation: 'All inheritances'>
-	^self allWithType: FAMIXInheritance 
+	^self allWithType: FmxNGInheritance 
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allInvocations [
 	
 	<navigation: 'All invocations'>
-	^self allWithType: FAMIXInvocation 
+	^self allWithType: FmxNGInvocation 
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allLocalVariables [
 	
 	<navigation: 'All local variables'>
-	^self allWithType: FAMIXLocalVariable 
+	^self allWithType: FmxNGLocalVariable 
 ]
 
 { #category : #'*Famix-Extensions' }
@@ -142,41 +142,41 @@ MooseAbstractGroup >> allNamespaces [
 MooseAbstractGroup >> allPackages [
 	
 	<navigation: 'All packages'>
-	^self allWithSubTypesOf: FAMIXPackage 
+	^self allWithSubTypesOf: FmxNGPackage 
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allParameters [
 	
 	<navigation: 'All parameters'>
-	^self allWithType: FAMIXParameter 
+	^self allWithType: FmxNGParameter 
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allPrimitiveTypes [
 	
 	<navigation: 'All primitive types'>
-	^(self allWithType: FAMIXPrimitiveType) sorted: [:a :b | a name < b name]; yourself
+	^(self allWithType: FmxNGPrimitiveType) sorted: [:a :b | a name < b name]; yourself
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allReferences [
 	
 	<navigation: 'All references'>
-	^self allWithType: FAMIXReference  
+	^self allWithType: FmxNGReference  
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allTypes [
 	<navigation: 'All types'>
-	^ self allWithSubTypesOf: FAMIXType ofGroupClass: FAMIXTypeGroup
+	^ self allWithSubTypesOf: FmxNGType ofGroupClass: FAMIXTypeGroup
 ]
 
 { #category : #'*Famix-Extensions' }
 MooseAbstractGroup >> allUnknownVariables [
 	
 	<navigation: 'All unknown variables'>
-	^self allWithType: FAMIXUnknownVariable 
+	^self allWithType: FmxNGUnknownVariable 
 ]
 
 { #category : #'*Famix-Extensions' }

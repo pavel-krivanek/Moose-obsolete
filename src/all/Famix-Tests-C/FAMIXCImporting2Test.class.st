@@ -58,7 +58,7 @@ FAMIXCImporting2Test >> testBasic [
 FAMIXCImporting2Test >> testClassInContainer [	
 	| cls module |
 	cls := model entityNamed: #'Siconos::MyClass'.
-	module := model entities detect: [ :e | e class == FAMIXPackage ].
+	module := model entities detect: [ :e | e class == FmxNGPackage ].
 	self assert: cls belongsTo equals: module.
 
 ]
@@ -66,14 +66,14 @@ FAMIXCImporting2Test >> testClassInContainer [
 { #category : #tests }
 FAMIXCImporting2Test >> testCompilationUnitIncludes [
 	| cu header |
-	cu := model entities detect: [ :e | e class == FAMIXCompilationUnit ].
-	header := model entities detect: [ :e | e class == FAMIXHeader ].
+	cu := model entities detect: [ :e | e class == FmxNGCompilationUnit ].
+	header := model entities detect: [ :e | e class == FmxNGHeader ].
 	self assert: cu notNil.
 	self assert: cu name equals: 'example.cpp'.
 	self assert: cu numberOfIncludes equals: 1.
 	self assert: cu outgoingIncludeRelations size equals: 1.
 	self assert: cu outgoingIncludeRelations anyOne notNil.
-	self assert: cu outgoingIncludeRelations anyOne class equals: FAMIXInclude.
+	self assert: cu outgoingIncludeRelations anyOne class equals: FmxNGInclude.
 	self assert: cu outgoingIncludeRelations anyOne from equals: cu.
 	self assert: cu outgoingIncludeRelations anyOne to equals: header.
 ]

@@ -6,5 +6,5 @@ Class {
 
 { #category : #helpers }
 FAMIXInheritanceTest >> actualClass [
-	^ FAMIXInheritance
+	^ FmxNGInheritance
 ]

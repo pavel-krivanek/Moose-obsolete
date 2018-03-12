@@ -44,7 +44,7 @@ FAMIXMultipleFileAnchor >> allFiles: aCollection [
 FAMIXMultipleFileAnchor >> createAnchorWithPath: aPath [
 	self
 		addSourceAnchor:
-			(FAMIXFileAnchor new
+			(FmxNGFileAnchor new
 				fileName: aPath;
 				mooseModel: self mooseModel;
 				yourself)

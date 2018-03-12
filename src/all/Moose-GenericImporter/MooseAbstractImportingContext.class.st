@@ -38,7 +38,7 @@ MooseAbstractImportingContext >> allSubclassTypesNotAbstractFor: aFM3Property [
 			[ implementingClass := aFM3Property type implementingClass.
 			implementingClass allSubclasses do:
 					[ :each | 
-					each = FAMIXPrimitiveType ifFalse:
+					each = FmxNGPrimitiveType ifFalse:
 							[ (self hasSubclasses: each asMooseDescription) ifFalse:
 									[ (meta includes: each asMooseDescription) ifTrue: [ result add: each asMooseDescription name ] ] ] ] ]
 		ifFalse: [ (meta includes: aFM3Property type) ifTrue: [ result add: aFM3Property type name ] ].

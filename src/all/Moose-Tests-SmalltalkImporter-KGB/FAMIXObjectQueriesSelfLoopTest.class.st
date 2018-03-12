@@ -9,11 +9,11 @@ FAMIXObjectQueriesSelfLoopTest >> testClassObjectTests [
 	self
 		assert:
 			((self c1FullReferencerOutSide queryAllIncomingInvocations
-				atScope: FAMIXType) includes: self c1FullReferencerOutSide).
+				atScope: FmxNGType) includes: self c1FullReferencerOutSide).
 	self
 		deny:
 			((self c1FullReferencerOutSide queryAllIncomingInvocations
-				atScope: FAMIXType) withoutSelfLoops
+				atScope: FmxNGType) withoutSelfLoops
 				includes: self c1FullReferencerOutSide)
 ]
 
@@ -22,10 +22,10 @@ FAMIXObjectQueriesSelfLoopTest >> testPackageObjectTests [
 	self
 		assert:
 			((self packageP1FullReferencer queryAllIncomingInvocations
-				atScope: FAMIXPackage) includes: self packageP1FullReferencer).
+				atScope: FmxNGPackage) includes: self packageP1FullReferencer).
 	self
 		deny:
 			((self packageP1FullReferencer queryAllIncomingInvocations
-				atScope: FAMIXType) withoutSelfLoops
+				atScope: FmxNGType) withoutSelfLoops
 				includes: self packageP1FullReferencer)
 ]

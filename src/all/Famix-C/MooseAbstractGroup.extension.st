@@ -3,17 +3,17 @@ Extension { #name : #MooseAbstractGroup }
 { #category : #'*Famix-C' }
 MooseAbstractGroup >> allHeaders [
 	<navigation: 'All headers'>
-	^ self allWithType: FAMIXHeader  
+	^ self allWithType: FmxNGHeader  
 ]
 
 { #category : #'*Famix-C' }
 MooseAbstractGroup >> allModules [
 	<navigation: 'All modules'>
-	^ self allWithType: FAMIXModule  
+	^ self allWithType: FmxNGModule  
 ]
 
 { #category : #'*Famix-C' }
 MooseAbstractGroup >> allTypeAliases [
 	<navigation: 'All type aliases'>
-	^ self allWithType: FAMIXTypeAlias
+	^ self allWithType: FmxNGTypeAlias
 ]

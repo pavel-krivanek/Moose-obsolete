@@ -72,10 +72,10 @@ FAMIXClass >> containsTheReceiverOf: anInvocation [
 	 
 	^anInvocation receivingVariable notNil 
 		ifTrue: 
-			[anInvocation receivingVariable class name = #FAMIXClass 
+			[anInvocation receivingVariable class name = #FmxNGClass 
 				ifTrue: [anInvocation receivingVariable == self] 
 				ifFalse: 
-					[anInvocation receivingVariable class name = #FAMIXImplicitVariable 
+					[anInvocation receivingVariable class name = #FmxNGImplicitVariable 
 						ifTrue: [anInvocation receivingVariable belongsTo == self] 
 						ifFalse: [false]]] 
 		ifFalse: [false]
@@ -84,7 +84,7 @@ FAMIXClass >> containsTheReceiverOf: anInvocation [
 { #category : #'*famix-extensions-HierarchyTesting' }
 FAMIXClass >> isADirectSubclassOf: aClass [ 
 	 
-	aClass class = FAMIXClass 
+	aClass class = FmxNGClass 
 		ifTrue: [^aClass directSubclasses includes: self] 
 		ifFalse: [^false]
 ]
@@ -92,7 +92,7 @@ FAMIXClass >> isADirectSubclassOf: aClass [
 { #category : #'*famix-extensions-HierarchyTesting' }
 FAMIXClass >> isADirectSuperclassOf: aClass [ 
 	 
-	aClass class = FAMIXClass 
+	aClass class = FmxNGClass 
 		ifTrue: [^aClass superclass = self] 
 		ifFalse: [^false]
 ]
@@ -100,7 +100,7 @@ FAMIXClass >> isADirectSuperclassOf: aClass [
 { #category : #'*famix-extensions-HierarchyTesting' }
 FAMIXClass >> isASubclassOf: aClass [ 
 	 
-	^aClass class = FAMIXClass 
+	^aClass class = FmxNGClass 
 		ifTrue: [aClass subclassHierarchyGroup includes: self] 
 		ifFalse: [false]
 ]
@@ -108,7 +108,7 @@ FAMIXClass >> isASubclassOf: aClass [
 { #category : #'*famix-extensions-HierarchyTesting' }
 FAMIXClass >> isASuperclassOf: aClass [ 
 	 
-	^aClass class = FAMIXClass 
+	^aClass class = FmxNGClass 
 		ifTrue: [aClass superclassHierarchyGroup includes: self] 
 		ifFalse: [false]
 ]
@@ -133,7 +133,7 @@ FAMIXClass >> isInvokedBy: anInvocation [
 		ifTrue: 
 			[anInvocation candidateList 
 				anySatisfy: 
-					[:mtd | mtd class name = #FAMIXMethod and: [mtd belongsTo == self]]] 
+					[:mtd | mtd class name = #FmxNGMethod and: [mtd belongsTo == self]]] 
 		ifFalse: [false]
 ]
 

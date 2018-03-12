@@ -9,7 +9,7 @@ DynamixInstanceTest >> testInstanceType [
 	| instance1 instance2 type |
 	instance1 := DynamixInstance new.
 	instance2 := DynamixInstance new.
-	type := FAMIXType new.
+	type := FmxNGType new.
 	type instances: {instance1}.
 	type instances add: instance2.
 	self assert: instance1 type = type.
@@ -24,7 +24,7 @@ DynamixInstanceTest >> testTypeInstance [
 	| instance1 instance2 type |
 	instance1 := DynamixInstance new.
 	instance2 := DynamixInstance new.
-	type := FAMIXType new.
+	type := FmxNGType new.
 	instance1 type: type.
 	instance2 type: type.
 	self assert: type instances size = 2.

@@ -4,7 +4,7 @@ Extension { #name : #MooseModel }
 MooseModel >> allSourceLanguages [
 	| result |
 	result := MooseGroup new.
-	FAMIXSourceLanguage
+	FmxNGSourceLanguage
 		withAllSubclassesDo: [ :each | result addAll: (self allWithType: each) ].
 	^ result
 ]
@@ -128,7 +128,7 @@ MooseModel >> unknownFAMIXClass [
 		detect: [:each | each mooseName = #'unknownNamespace::UnknownClass'] 
 		ifNone: [
 			self add: (
-				FAMIXClass new 
+				FmxNGClass new 
 					name: 'UnknownClass'; 
 					container: self unknownFAMIXNamespace; 
 					isStub: true; 
@@ -142,7 +142,7 @@ MooseModel >> unknownFAMIXNamespace [
 		detect: [ :each | each mooseName = #unknownNamespace ]
 		ifNone: [ self
 				add:
-					(FAMIXNamespace new
+					(FmxNGNamespace new
 						name: 'unknownNamespace';
 						isStub: true;
 						yourself) ]

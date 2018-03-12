@@ -6,5 +6,5 @@ Class {
 
 { #category : #helpers }
 FAMIXReferenceTest >> actualClass [
-	^ FAMIXReference
+	^ FmxNGReference
 ]

@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXFunctionTest >> actualClass [
-	^ FAMIXFunction
+	^ FmxNGFunction
 ]
 
 { #category : #tests }
@@ -16,7 +16,7 @@ FAMIXFunctionTest >> testHandlingOfWrongSourceAnchor [
 
 	| function |
 	function := self actualClass new.
-	function sourceAnchor: (FAMIXSourceTextAnchor new source: 'pathtosomefile').
+	function sourceAnchor: (FmxNGSourceTextAnchor new source: 'pathtosomefile').
 	self assert: function sourceText equals: 'pathtosomefile'
 ]
 

@@ -25,7 +25,7 @@ FAMIXSourceAnchorTest >> testImportFileAnchors [
 	self assert: model entities size equals: 4.
 	self assert: model allClasses first sourceAnchor notNil.
 	self assert: model allClasses first sourceAnchor mooseModel == model.
-	self assert: (model allClasses first sourceAnchor isKindOf: FAMIXSourceAnchor).
+	self assert: (model allClasses first sourceAnchor isKindOf: FmxNGSourceAnchor).
 	self assert: model allClasses first sourceAnchor fileName equals: 'afile'.
 	aMethod := model allMethods first.
 	self assert: aMethod hasSourceAnchor.

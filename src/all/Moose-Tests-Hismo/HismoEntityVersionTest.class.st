@@ -7,7 +7,7 @@ Class {
 { #category : #tests }
 HismoEntityVersionTest >> testIsStub [
 	| versionEntity version |
-	versionEntity := FAMIXClass new. 
+	versionEntity := FmxNGClass new. 
 	version := HismoEntityVersion new.
 	version versionEntity: versionEntity.
 	self assert: version isStub not.
