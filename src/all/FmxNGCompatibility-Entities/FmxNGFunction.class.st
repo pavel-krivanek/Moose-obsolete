@@ -67,7 +67,7 @@ FmxNGFunction >> packageScope [
 
 { #category : #'Famix-C' }
 FmxNGFunction >> parentModule [
-	<MSEProperty: #parentModule type: #FAMIXModule>
+	<MSEProperty: #parentModule type: #FmxNGModule>
 	<MSEComment: 'Module (typically a file) defining the function.'>
 	^ self privateState 		
 		attributeAt: #parentModule

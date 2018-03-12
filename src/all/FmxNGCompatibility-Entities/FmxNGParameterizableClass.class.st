@@ -14,7 +14,7 @@ FmxNGParameterizableClass class >> annotation [
 
 { #category : #generated }
 FmxNGParameterizableClass >> parameters [
-	<MSEProperty: #parameters type: #FAMIXParameterType> <multivalued> <derived>
+	<MSEProperty: #parameters type: #FmxNGParameterType> <multivalued> <derived>
 	<MSEComment: 'Parameter types of this class.'>
 	
 	^self types select: [:each | each isParameterType]

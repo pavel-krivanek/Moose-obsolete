@@ -65,7 +65,7 @@ FmxNGNamedEntityGenerated >> isStub: anObject [
 { #category : #'_fromTrait_FmxNGTWithModifiers' }
 FmxNGNamedEntityGenerated >> modifiers [
 
-	<MSEProperty: #modifiers type: #String>
+	<MSEProperty: #modifiers type: #String> <multivalued>
 	<MSEComment: 'Generic container for language dependent modifiers.'>
 	^ modifiers
 ]

@@ -9,7 +9,8 @@ Class {
 		'stream',
 		'tally',
 		'reminderDict',
-		'serialDict'
+		'serialDict',
+		'nameTranslator'
 	],
 	#category : #'Fame-ImportExport'
 }
@@ -50,7 +51,13 @@ FMImporter >> beginDocument [
 { #category : #parsing }
 FMImporter >> beginElement: name [ 
 	
-	stack push: (FMFutureElement with: self name: name)
+	| translatedName |
+	
+	translatedName := self nameTranslator
+		ifNotNil: [ :aTranslator | aTranslator at: name ifAbsent: [ name ]]
+		ifNil: [ name ].
+	
+	stack push: (FMFutureElement with: self name: translatedName)
 ]
 
 { #category : #private }
@@ -104,6 +111,16 @@ FMImporter >> metamodel [
 { #category : #accessing }
 FMImporter >> model [
 	^model
+]
+
+{ #category : #accessing }
+FMImporter >> nameTranslator [
+	^ nameTranslator
+]
+
+{ #category : #accessing }
+FMImporter >> nameTranslator: anObject [
+	nameTranslator := anObject
 ]
 
 { #category : #parsing }

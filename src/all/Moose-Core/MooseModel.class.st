@@ -141,6 +141,21 @@ MooseModel class >> importFrom: aStream withMetamodel: aMetamodel filteredBy: an
 ]
 
 { #category : #'import-export' }
+MooseModel class >> importFrom: aStream withMetamodel: aMetamodel translationDictionary: translationDict [
+
+	| tower importer |
+	tower := FMCompleteTower new.
+	tower metamodel addAll: aMetamodel elements.
+	importer := MSEImporter new.
+	importer repository: tower model.
+	importer stream: aStream.
+	importer nameTranslator: translationDict.
+	importer run.
+	tower model updateCache.
+	^ tower model
+]
+
+{ #category : #'import-export' }
 MooseModel class >> importFromMSEStream: aStream [
 	^ self new
 		importFromMSEStream: aStream;
