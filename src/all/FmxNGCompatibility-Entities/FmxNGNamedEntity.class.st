@@ -195,6 +195,15 @@ FmxNGNamedEntity >> incomingTypeDeclarations [
 	^ {}
 ]
 
+{ #category : #initialization }
+FmxNGNamedEntity >> initialize [
+
+	super initialize.
+	isStub := false.
+	modifiers := Set new.
+
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGNamedEntity >> isAbstract [
 	<MSEProperty: #isAbstract type: #Boolean> <derived>
