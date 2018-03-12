@@ -76,7 +76,7 @@ Class {
 		'uNKNOWNSourceLanguage',
 		'unknownVariable'
 	],
-	#category : #'FamixNG-MetamodelGeneration'
+	#category : #'FmxNGCompatibility-Generator'
 }
 
 { #category : #accessing }
