@@ -55,7 +55,8 @@ Class {
 		'MooseID'
 	],
 	#classInstVars : [
-		'mooseSubClasses'
+		'mooseSubClasses',
+		'usedStatefulTraits'
 	],
 	#category : #'Moose-Core'
 }
@@ -191,11 +192,14 @@ MooseEntity class >> statefulTraits [
 { #category : #'stateful traits' }
 MooseEntity class >> usedStatefulTraits [
 
-	^ self classSide withAllSuperclasses flatCollect: [ :each | 
+	^ usedStatefulTraits ifNil: [ usedStatefulTraits := 
+
+	self classSide withAllSuperclasses flatCollect: [ :each | 
 		| methods |
 		methods := each localMethods select: [ :aMethod | aMethod hasPragmaNamed: #statefulTraits ].
-		methods flatCollect: [ :aMethod | aMethod origin instanceSide perform: aMethod selector ]]
+		methods flatCollect: [ :aMethod | aMethod origin instanceSide perform: aMethod selector ]]]
 
+	
 ]
 
 { #category : #meta }

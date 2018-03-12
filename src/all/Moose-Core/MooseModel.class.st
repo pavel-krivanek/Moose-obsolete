@@ -185,13 +185,8 @@ MooseModel class >> menuCommandOn: aBuilder [
 
 { #category : #meta }
 MooseModel class >> meta [
-	"
-	self meta.
-	self resetMeta.
-	self metaTower.
-	"
 	
-	^self metaTower metamodel
+	^ FmxNGCompatibilityGenerator metamodel
 ]
 
 { #category : #meta }
@@ -549,7 +544,7 @@ MooseModel >> silentlyAdd: anElement [
 { #category : #'entity collection' }
 MooseModel >> silentlyAddAll: entities [ 
 	 
-	entities do: [:each | self addNoAnnounce: each].
+	entities do: [:each | self addNoAnnounce: each] displayingProgress: 'import'.
 	^entities
 ]
 
