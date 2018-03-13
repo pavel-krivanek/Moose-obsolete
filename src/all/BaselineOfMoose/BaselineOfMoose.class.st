@@ -12,6 +12,10 @@ BaselineOfMoose >> baseline: spec [
     
 	<baseline> 
        
+	| repository |
+
+	repository := self packageRepositoryURL.
+
 	spec for: #common do: [ 
 		spec preLoadDoIt: #'preload:package:'.
 		spec postLoadDoIt: #'postload:package:'.
@@ -48,8 +52,19 @@ BaselineOfMoose >> baseline: spec [
 		self baselineRoelTyper: spec.
 		
 		#(	
-			'Moose-Query'
 			'Moose-Core'
+			'Moose-Query'
+			'Famix-MetamodelBuilder-Core'
+			'Famix-MetamodelBuilder-Support'
+			'Famix-MetamodelBuilder-Support'
+			'FmxNG-Generated'			
+			'FmxNG-Traits'			
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
+
+		spec baseline: 'FmxNGCompatibility' with: [spec repository: repository].
+		
+		#(	
 			'Famix-Core'
 			'Moose-Hismo'
 			'Moose-HismoImporter'
@@ -862,6 +877,34 @@ BaselineOfMoose >> groups: spec [
 			'Famix-MetamodelBuilder-Support'
 
 	). 
+]
+
+{ #category : #accessing }
+BaselineOfMoose >> packageRepository [
+
+	" Tries to determine a repository from which the baseline is being loaded. Useful for 
+	refering other baselines in the same repository. "
+	
+	^ (self class package mcWorkingCopy repositoryGroup repositories reject: [:each | each = MCCacheRepository uniqueInstance]) 
+		ifNotEmpty: [ :repositories | repositories anyOne ]
+		ifEmpty: [ nil ]
+
+
+	
+]
+
+{ #category : #accessing }
+BaselineOfMoose >> packageRepositoryURL [
+
+	" Tries to determine a repository URL from which the baseline is being loaded. Useful for 
+	refering other baselines in the same repository. "
+
+	^ self packageRepository
+		ifNotNil: [ :aRepository | aRepository description ]
+		ifNil: [ '' ]
+
+
+	
 ]
 
 { #category : #actions }

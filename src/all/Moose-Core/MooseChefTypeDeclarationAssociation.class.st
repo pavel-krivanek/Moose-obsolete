@@ -12,7 +12,7 @@ Class {
 		'from',
 		'to'
 	],
-	#category : #'Famix-Core'
+	#category : #'Moose-Core'
 }
 
 { #category : #'instance creation' }

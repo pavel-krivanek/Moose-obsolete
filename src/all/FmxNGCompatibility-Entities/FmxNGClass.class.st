@@ -31,19 +31,6 @@ FmxNGClass >> accessedAttributes [
 	^ self methodsWithoutSutbsAndConstructors asOrderedCollection flatCollect: [ :method | method accessedAttributes ]
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGClass >> browseSource [
-	<menuItem: 'Source' category: 'Browse'>
-	| browser |
-	self mooseModel isSmalltalk 
-		ifTrue: [ (Smalltalk at: self name) browse ]
-	ifFalse: [ 
-		browser := MooseNamespacesCodeBrowser new browser.
-		browser openOn: (self mooseModel allNamespaces select: #isRoot).
-		(browser pane port: #focusOnClass) value: self.
-		 ]
-]
-
 { #category : #'Famix-Extensions' }
 FmxNGClass >> calculateLCOM2 [
 	
@@ -109,20 +96,6 @@ FmxNGClass >> containsTheReceiverOf: anInvocation [
 		ifFalse: [false]
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGClass >> inheritedClasses [
-	
-	self flag: #fixme.
-	^ #()
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGClass >> inheritedClassesOutOfMyPackage [
-	
-	self flag: #fixme.
-	^ #()
-]
-
 { #category : #initialization }
 FmxNGClass >> initialize [
 
@@ -166,11 +139,6 @@ FmxNGClass >> isASuperclassOf: aClass [
 FmxNGClass >> isAccessedBy: anAccess [ 
 	 
 	^anAccess accesses == self
-]
-
-{ #category : #'Famix-Implementation' }
-FmxNGClass >> isClass [
-	^ true
 ]
 
 { #category : #'Famix-Java' }
@@ -246,21 +214,6 @@ FmxNGClass >> methodsWithoutSutbsAndConstructors [
 		each isStub not and: [each isConstructor not]]) asSet
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGClass >> mooseIcon [
-	^ self isInterface 
-		ifTrue: [ MooseIcons famixInterface ]
-		ifFalse: [ MooseIcons famixClass ]
-]
-
-{ #category : #'Famix-Implementation' }
-FmxNGClass >> smalltalkClass [ 
-	"Returns the associated smalltalk class if it exist in the system."
-	
-	^ FAMIXNameResolver smalltalkClassFromFamixClassName: 
-			self name  ifAbsent: [nil] 
-]
-
 { #category : #'Famix-Smalltalk' }
 FmxNGClass >> sourceText [
 	self flag: 'This code should be delegated to the FAMIXPharoAnchor'.
@@ -277,32 +230,4 @@ FmxNGClass >> sourceText [
 { #category : #'Famix-Extensions' }
 FmxNGClass >> structuralChildren [
 	^ (OrderedCollection withAll: self methods), self attributes
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGClass >> sureInvokedClasses [
-	
-	self flag: #fixme.
-	^ self queryAllOutgoingInvocations opposites
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGClass >> sureInvokedClassesInto: aFAMIXPackage [ 
-	
-	self flag: #fixme.
-	^ self sureInvokedClasses
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGClass >> sureInvokingClasses [
-	
-	self flag: #fixme.
-	^ self queryAllIncomingInvocations opposites
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGClass >> sureInvokingClassesInto: aFAMIXPackage [ 
-	
-	self flag: #fixme.
-	^ self sureInvokingClasses
 ]

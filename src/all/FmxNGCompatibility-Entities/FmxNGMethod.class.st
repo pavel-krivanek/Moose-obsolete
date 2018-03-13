@@ -69,24 +69,6 @@ FmxNGMethod >> belongsTo: aType [
 	self parentType
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGMethod >> browseSource [
-	<menuItem: 'Source' category: 'Browse'>
-	
-	|class browser |
-	self mooseModel isSmalltalk ifTrue: [
-		class := Smalltalk at: self parentType instanceSide name asSymbol.
-		self hasClassScope
-			ifFalse: [ Smalltalk tools browser openOnClass: class selector: self name ]
-			ifTrue: [ Smalltalk tools browser openOnClass: class class selector: self name ]
-		]
-	ifFalse: [ 
-		browser := MooseNamespacesCodeBrowser new browser.
-		browser openOn: (self mooseModel allNamespaces select: #isRoot).
-		(browser pane port: #focusOnMethod) value: self.
-		 ]
-]
-
 { #category : #'Famix-Smalltalk' }
 FmxNGMethod >> category [
 	<MSEProperty: #category type: #String>
@@ -102,24 +84,6 @@ FmxNGMethod >> category: aString [
 	self privateState attributeAt: #category put: aString
 
 	
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGMethod >> classBlueprintFillColor [
-	
-	self isPureAccessor ifTrue: [ ^ Color orange].
-	
-	self isSetter ifTrue: [ ^ Color red].
-
-	self isGetter ifTrue: [ ^ Color orange].
-
-	self isAbstract ifTrue: [ ^ Color cyan].
-
-	self isOverriding ifTrue: [ ^ Color brown].
-
-	self isConstant ifTrue: [ ^ Color gray].
-	
-	^ Color white.
 ]
 
 { #category : #'Famix-Extensions' }
@@ -391,11 +355,6 @@ FmxNGMethod >> isSurelyInvokedBy: aFAMIXMethod [
 	^false
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGMethod >> mooseIcon [ 
-	^ MooseIcons famixMethod
-]
-
 { #category : #'Famix-Implementation' }
 FmxNGMethod >> mooseNameOn: stream [ 
 	| parent |
@@ -506,13 +465,6 @@ FmxNGMethod >> sourceText [
 				on: Error
 				do: [ super sourceText ]	"probably class is not in the system" ]
 		ifFalse: [ super sourceText ]
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGMethod >> sureInvokedClasses [
-	
-	self flag: #fixme.
-	^ #()
 ]
 
 { #category : #'Famix-Smalltalk' }

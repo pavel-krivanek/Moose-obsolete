@@ -184,12 +184,6 @@ MooseModel class >> menuCommandOn: aBuilder [
 ]
 
 { #category : #meta }
-MooseModel class >> meta [
-	
-	^ FmxNGCompatibilityGenerator metamodel
-]
-
-{ #category : #meta }
 MooseModel class >> metaBuilder: aCollectionOfClasses [
 	"I take as parameter a collection of classes described with Fame pragmas"
 
@@ -251,18 +245,6 @@ MooseModel class >> ownerOf: element [
 		ifNotNil: [ :elementID | 
 			MostRecentOwner ifNotNil: [ :model | (model includesID: elementID) ifTrue: [ ^ model ] ].
 			self allInstances detect: [ :model | model includesID: elementID ] ifFound: [ :model | MostRecentOwner := model ] ifNone: [ nil ] ]
-]
-
-{ #category : #meta }
-MooseModel class >> resetMeta [
-	"self resetMeta"
-
-	FmxNGEntity resetMSEProperties.
-	FmxNGNamedEntity resetMSEProperties.
-	
-	metaTower := nil.
-	^self meta
-	
 ]
 
 { #category : #'root model' }
@@ -342,17 +324,6 @@ MooseModel >> cacheMooseGroups [
 			]
 		description: ('Caching <1p> groups in Moose model' expandMacrosWith: selectors size)
 		length: selectors size
-]
-
-{ #category : #actions }
-MooseModel >> detectEncodingOfAllFileAnchors [
-	"I can be execute to reduce the time of detection of the encoding of each file anchor because multiple file anchor can point to the same file."
-
-	(((self allWithSubTypesOf: FmxNGAbstractFileAnchor) asOrderedCollection reject: #privateHasEncoding) groupedBy: #fileName)
-		valuesDo: [ :anchors | 
-			| encoding |
-			encoding := anchors anyOne detectEncoding.
-			anchors do: [ :anchor | anchor encoding: encoding ] ]
 ]
 
 { #category : #'set operations' }

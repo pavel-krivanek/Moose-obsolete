@@ -12,21 +12,6 @@ FmxNGType class >> annotation [
 	^self
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> abstractMethods [
-	"Used for the class blueprint
-	Alexandre.Bergel 3/28/2009 12:10"
-	^ self methods select: #isAbstract
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> abstractMethodsGroup [
-	<navigation: 'Abstract methods'>
-	
-	^ FAMIXMethodGroup 	withAll: (self abstractMethods)
-							withDescription: 'Abstract methods in ', self name
-]
-
 { #category : #'Famix-Extensions' }
 FmxNGType >> accept: aVisitor [
 
@@ -43,20 +28,6 @@ FmxNGType >> accessTo: aFAMIXPackageOrFAMIXClass [
 								and:[aFAMIXPackageOrFAMIXClass isAccessedBy: access]].
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> accessorMethods [
-	
-	^ self methods select: #isPureAccessor
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> accessorMethodsGroup [
-	<navigation: 'Accessor methods'>
-	
-	^ FAMIXMethodGroup 	withAll: (self accessorMethods)
-							withDescription: 'Pure accessors in ', self name
-]
-
 { #category : #accessing }
 FmxNGType >> addAttribute: anAttribute [
 	attributes add: anAttribute
@@ -65,28 +36,6 @@ FmxNGType >> addAttribute: anAttribute [
 { #category : #accessing }
 FmxNGType >> addBehaviourWithDeclaredType: aBehaviour [
 	self structuresWithDeclaredType add: aBehaviour
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> addBlueprintLegendOn: view [
-
-	| lb |
-	lb := RTLegendBuilder new.
-	lb onDemand.
-	lb view: view.
-
-	lb addColoredText: 'Class Blueprint' color: Color black.
-	lb addText: 'large box = class'.
-	lb addText: 'Each class is composed of 5 part, from left to right'.
-	lb addText: '  constructor, public methods, private methods, accessors, variables'.
-	lb addLineColor: Color cyan text: 'variable access'.
-	lb addLineColor: Color gray text: 'method invocation'.
-	lb addColor: Color red text: 'Setter'.
-	lb addColor: Color orange text: 'Getter'.
-	lb addColor: Color cyan text: 'Abstract'.
-	lb addColor: Color brown text: 'Overriding'.
-	lb addColor: Color gray text: 'Constant'.
-	lb build.
 ]
 
 { #category : #accessing }
@@ -275,20 +224,6 @@ FmxNGType >> clientTypes [
 	^ (self queryAllIncoming atScope: FmxNGType) withoutSelfLoops
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> constantMethods [
-	"Used for the class blueprint
-	Alexandre.Bergel 3/28/2009 12:10"
-	^ self methods select: #isConstant
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> constructors [
-	"Used for the class blueprint
-	Alexandre.Bergel 3/28/2009 12:10"
-	^ self methods select: #isConstructor
-]
-
 { #category : #accessing }
 FmxNGType >> container [
 
@@ -313,11 +248,6 @@ FmxNGType >> copyFrom: anEntity within: aVisitor [
 	anEntity methods do: [:m|
 		self addMethod: (aVisitor visit: m) ].
 
-]
-
-{ #category : #'Moose-SmalltalkImporter' }
-FmxNGType >> createReferenceFrom: aBehaviouralEntity [
-	^ FmxNGReference source: aBehaviouralEntity target: self
 ]
 
 { #category : #'Famix-Implementation' }
@@ -349,18 +279,6 @@ FmxNGType >> extendedMethods [
 
 	^  self privateState cacheAt: #extendedMethods
 							ifAbsentPut: [ self methods select: [ :m| m isExtension ] ]
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> externalFanin [
-
-	^ self clientClassesOutOfMyPackage size
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> externalFanout [
-
-	^ self providerClassesOutOfMyPackage size
 ]
 
 { #category : #'Famix-Extensions' }
@@ -395,54 +313,6 @@ FmxNGType >> fanOut [
 FmxNGType >> fanOut: aNumber [
 
 	self privateState propertyAt: #fanOut put: aNumber
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> fanRatio [
-
-	^ self fanIn / (self fanIn + self fanOut)
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> fanTotal [
-
-	^ self fanIn + self fanOut
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> fanType [
-
-	^ self externalFanin >= self internalFanin
-			ifTrue: [
-				self externalFanout >= self internalFanout
-					ifTrue: [#eFieFo]
-					ifFalse: [#eFiiFo]]
-			ifFalse: [
-				self externalFanout >= self internalFanout
-					ifTrue: [#iFieFo]
-					ifFalse: [#iFiiFo]]
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> faninBalance [
-
-	| fanin |
-	fanin := self fanIn.
-	^ fanin = 0 	ifTrue: [0]
-					ifFalse: [(self externalFanin - self internalFanin) / self fanIn]
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> fanoutBalance [
-
-	^ (self externalFanout - self internalFanout) / self fanOut
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> getterMethods [
-	"Used for the class blueprint
-	Alexandre.Bergel 3/28/2009 12:10"
-	^ self methods select: #isGetter
 ]
 
 { #category : #'Famix-Extensions' }
@@ -481,11 +351,6 @@ FmxNGType >> hierarchyNestingLevel [
 FmxNGType >> hierarchyNestingLevel: aNumber [
 
 	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> implementationMethods [
-	^ self methods select: #isInternalImplementation
 ]
 
 { #category : #'Famix-Implementation' }
@@ -580,12 +445,6 @@ FmxNGType >> inheritsFrom: aClass [
 	^ false
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> initializers [
-
-	^ self methods select: #isInitializer
-]
-
 { #category : #'Famix-Smalltalk' }
 FmxNGType >> instanceSide [
 	^self isClassSide
@@ -593,44 +452,6 @@ FmxNGType >> instanceSide [
 			[self mooseModel allClasses
 				entityNamed: (self mooseName removeSuffix: '_class') asSymbol]
 		ifFalse: [self]
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> interfaceMethods [
-	^ self methods select: [:each | each isInternalImplementation not & each isInitializer not & each isPureAccessor not]
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> internalFanin [
-
-	^ self clientClassesIntoMyPackage size
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> internalFanout [
-
-	^ self providerClassesIntoMyPackage size
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> internalInvocations [
-
-	^ self outgoingInvocationsGroup select: [:each | 
-				each candidates anySatisfy: [:c|
-					c belongsTo == self ]].
-
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> internalLayerInvocations [
-
-	^ self outgoingInvocationsGroup select: [:each | 
-			each sender isInternalImplementation and: [ "internal sender"
-				each candidates anySatisfy: [:cand|
-					cand belongsTo == self and: [ "class candidate"
-						each sender ~= cand and: [ "no recursive call"
-							cand isInternalImplementation ]]]]] "internal candidate"
-
 ]
 
 { #category : #'Famix-Extensions' }
@@ -803,60 +624,6 @@ FmxNGType >> methodsGroup [
 	^MooseGroup
 		withAll: self methods
 		withDescription: 'Methods from ' , self mooseName
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderAttributesIn: composite [
-	<moosePresentationOrder: 20>
-	composite table
-			title: 'Attributes';
-			titleIcon: MooseIcons famixAttributeGroup;
-			display: [ self attributes ];
-			column: 'Name' evaluated: #name;
-			column: 'Declared type' evaluated: [ :each | each declaredType gtDisplayString ];
-			column: 'Modifiers' evaluated: [ '' ] tags: #modifiers;
-			when: [ self attributes notEmpty ];
-			selectionPopulate: #selection  
-				entitled: 'Open declared type' 
-				with:  [ :table | table selection declaredType ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderBlueprintIn: composite [
-	<moosePresentationOrder: 20>
-	composite roassal2 
-			title: 'Blueprint';
-			titleIcon: MooseIcons mooseBlueprint;
-			painting: [ :view :each | 
-				view @ RTDraggableView.
-				each mooseInterestingEntity viewBlueprintOn: view.
-				self addBlueprintLegendOn: view.
- ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderHierarchyIn: composite [
-	<moosePresentationOrder: 20>
-	composite roassal2
-			title: 'Hierarchy';
-			titleIcon: MooseIcons mooseSystemComplexity;
-			initializeView: [ RTMondrian new ];
-			painting: [ :b | self viewHierarchyOn: b ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderMethodsIn: composite [
-	<moosePresentationOrder: 20>
-	composite table
-			title: 'Methods';
-			titleIcon: MooseIcons famixMethodGroup;
-			display: [ self methods ];
-			column: 'Name' evaluated: #signature;
-			column: 'Declared type' evaluated: [ :each | each declaredType gtDisplayString ];
-			when: [ self methods notEmpty ];
-			selectionPopulate: #selection  
-				entitled: 'Open declared type' 
-				with:  [ :table | table selection declaredType ]
 ]
 
 { #category : #'Famix-Implementation' }
@@ -1391,13 +1158,6 @@ FmxNGType >> outgoingInvocationsGroup [
 				withDescription: 'Outgoing invocations from ' , self mooseName]
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> overridingMethods [
-	"Used for the class blueprint
-	Alexandre.Bergel 3/28/2009 12:10"
-	^ self methods select: #isOverriding
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FmxNGType >> packageScope [
 
@@ -1457,13 +1217,6 @@ FmxNGType >> providerTypes [
 FmxNGType >> realType [
 	"All types except the alias ones are real"
 	^ self 
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> setterMethods [
-	"Used for the class blueprint
-	Alexandre.Bergel 3/28/2009 12:10"
-	^ self methods select: #isSetter
 ]
 
 { #category : #'Famix-Implementation' }
@@ -1602,67 +1355,6 @@ FmxNGType >> understands: signature [
 	self withSuperclassesDo: [:each | 
 		(each implements: signature) ifTrue: [^true]].
 	^false
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewBlueprint [
-	<menuItem: 'Class blueprint' category: 'Visualize'>
-	| view |
-	view := RTView new.
-	view @ RTDraggableView.
-	self viewBlueprintOn: view.
-	^ view open
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewBlueprintOn: view [
-	^ FAMIXClassBlueprint new view: self on: view
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewHierarchyOn: view [
-	| hierarchy |
-	hierarchy :=		(self withDeepCollect: [:each | each directSubclasses]), 
-						(self deepCollect: [:each | each directSuperclasses reject: [:c | c isInterface]]).
-	hierarchy asMooseGroup 
-		viewSimpleSystemComplexityWithSelection: { self } 
-		height: [ :c | c numberOfMethods ] 
-		width: [ :c | c numberOfAttributes ] 
-		color: [ :c | c numberOfLinesOfCode ] 
-		on: view.
-
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewTypeNestingGraphOn: view [
-	| visitor |
-	visitor := FAMIXAttributesGraphTraverser new .
-	self accept: visitor.
-	view nodes: visitor value graph nodes.
-	view edges: visitor value graph nodes from: #yourself toAll: #nextNodes.
-	view horizontalDominanceTreeLayout
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewUML [
-	<menuItem: 'UML class diagram' category: 'Visualize'> 
-	
-	| view |
-	view := RTUMLClassBuilder new.
-	self viewUMLOn: view.
-	^ view openWithToolbarEntitled: 'UML class diagram'
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewUMLOn: view [
-
-	view
-		addObjects: {self};
-		classname: #name;
-		instanceVariables: #attributes;
-		methodsNames: #methods;
-		methodselector: #name;
-		superclass: nil
 ]
 
 { #category : #'Famix-Extensions' }
