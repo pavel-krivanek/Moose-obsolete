@@ -1032,7 +1032,7 @@ FmxNGGenerator >> defineRelations [
 			comment: 'Implicit variables used locally by this behaviour.').
 
 	((tInvocable property: #incomingInvocations))
-		*-
+		*-*
 	((tInvocation property: #candidates) 
 			comment: 'List of candidate behavioural entities for receiving the invocation';
 			target).

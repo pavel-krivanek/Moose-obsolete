@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'#outgoingInvocations => FMMany type: #FmxNGTInvocation opposite: #sender',
 		'#implicitVariables => FMMany type: #FmxNGTImplicitVariable opposite: #parentBehaviouralEntity',
-		'#incomingInvocations => FMOne type: #FmxNGTInvocation opposite: #candidates',
+		'#incomingInvocations => FMMany type: #FmxNGTInvocation opposite: #candidates',
 		'#signature',
 		'#parameters => FMMany type: #FmxNGTParameter opposite: #parentBehaviouralEntity',
 		'#accesses => FMMany type: #FmxNGTAccess opposite: #accessor',
@@ -101,7 +101,7 @@ FmxNGBehaviouralEntityGenerated >> incomingInvocations [
 { #category : #'_fromTrait_FmxNGTInvocableGenerated' }
 FmxNGBehaviouralEntityGenerated >> incomingInvocations: anObject [
 
-	incomingInvocations := anObject
+	incomingInvocations value: anObject
 
 ]
 

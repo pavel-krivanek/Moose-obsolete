@@ -2,7 +2,7 @@ Class {
 	#name : #FmxNGTInvocableGenerated,
 	#superclass : #FmxTraitEntity,
 	#instVars : [
-		'#incomingInvocations => FMOne type: #FmxNGTInvocation opposite: #candidates'
+		'#incomingInvocations => FMMany type: #FmxNGTInvocation opposite: #candidates'
 	],
 	#category : #'FmxNG-Generated-Traits'
 }
@@ -25,6 +25,6 @@ FmxNGTInvocableGenerated >> incomingInvocations [
 { #category : #accessing }
 FmxNGTInvocableGenerated >> incomingInvocations: anObject [
 
-	incomingInvocations := anObject
+	incomingInvocations value: anObject
 
 ]
