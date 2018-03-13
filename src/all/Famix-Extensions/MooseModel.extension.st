@@ -124,12 +124,12 @@ MooseModel >> overviewPyramidMetrics [
 
 { #category : #'*Famix-Extensions' }
 MooseModel >> sourceLanguage [
-	<MSEProperty: #sourceLanguage type: #FAMIXSourceLanguage>
+	<MSEProperty: #sourceLanguage type: #FmxNGSourceLanguage>
 	<MSEComment: 'Source of the Language to which the model corresponds'>
 	^ sourceLanguage
 		ifNil: [ sourceLanguage := self allSourceLanguages
 				detect: [ :each | each isAttached not ]
-				ifNone: [ FAMIXUnknownSourceLanguage new ] ]
+				ifNone: [ FmxNGUNKNOWNSourceLanguage new ] ]
 ]
 
 { #category : #'*Famix-Extensions' }
