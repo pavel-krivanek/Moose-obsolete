@@ -3,8 +3,8 @@ Class {
 	#superclass : #FmxNGScopingEntity,
 	#instVars : [
 		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module',
-		'#header => FMOne type: #FmxNGTHeader opposite: #headerOwner',
-		'#compilationUnit => FMOne type: #FmxNGTCompilationUnit opposite: #compilationUnitOwner'
+		'#compilationUnit => FMOne type: #FmxNGTCompilationUnit opposite: #compilationUnitOwner',
+		'#header => FMOne type: #FmxNGTHeader opposite: #headerOwner'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

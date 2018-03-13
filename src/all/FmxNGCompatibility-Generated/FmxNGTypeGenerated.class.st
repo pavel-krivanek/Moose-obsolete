@@ -2,15 +2,15 @@ Class {
 	#name : #FmxNGTypeGenerated,
 	#superclass : #FmxNGNamedEntity,
 	#instVars : [
-		'#argumentsInParameterizedTypes => FMOne type: #FmxNGTWithParameterizedTypeUsers opposite: #arguments',
-		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass',
-		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass',
-		'#attributes => FMMany type: #FmxNGTAttribute opposite: #parentType',
-		'#incomingReferences => FMMany type: #FmxNGTReference opposite: #target',
 		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types',
-		'#typeAliases => FMMany type: #FmxNGTTypeAlias opposite: #aliasedType',
+		'#methods => FMMany type: #FmxNGTMethod opposite: #parentType',
 		'#structuresWithDeclaredType => FMMany type: #FmxNGTTypedStructure opposite: #declaredType',
-		'#methods => FMMany type: #FmxNGTMethod opposite: #parentType'
+		'#attributes => FMMany type: #FmxNGTAttribute opposite: #parentType',
+		'#typeAliases => FMMany type: #FmxNGTTypeAlias opposite: #aliasedType',
+		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass',
+		'#argumentsInParameterizedTypes => FMOne type: #FmxNGTWithParameterizedTypeUsers opposite: #arguments',
+		'#incomingReferences => FMMany type: #FmxNGTReference opposite: #target',
+		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -146,6 +146,9 @@ FmxNGTypeGenerated >> typeAliases: anObject [
 
 { #category : #'_fromTrait_FmxNGTTypeGenerated' }
 FmxNGTypeGenerated >> typeContainer [
+
+	<MSEComment: 'Container entity to which this type belongs to. Container is a namespace, not a package (Smalltalk).'>
+	<container>
 
 	^ typeContainer
 ]

@@ -2,9 +2,9 @@ Class {
 	#name : #FmxNGStructuralEntityGenerated,
 	#superclass : #FmxNGLeafEntity,
 	#instVars : [
-		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType',
+		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable',
 		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer',
-		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable'
+		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

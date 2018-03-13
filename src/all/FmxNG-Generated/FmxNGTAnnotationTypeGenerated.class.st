@@ -27,6 +27,9 @@ FmxNGTAnnotationTypeGenerated class >> annotation [
 { #category : #accessing }
 FmxNGTAnnotationTypeGenerated >> annotationTypesContainer [
 
+	<MSEComment: 'Container in which an AnnotationType may reside'>
+	<container>
+
 	^ annotationTypesContainer
 ]
 

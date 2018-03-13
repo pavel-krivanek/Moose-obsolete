@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGContainerEntityGenerated,
 	#superclass : #FmxNGNamedEntity,
 	#instVars : [
-		'#types => FMMany type: #FmxNGTType opposite: #typeContainer',
 		'#functions => FMMany type: #FmxNGTFunction opposite: #functionOwner',
+		'#types => FMMany type: #FmxNGTType opposite: #typeContainer',
 		'#definedAnnotationTypes => FMMany type: #FmxNGTAnnotationType opposite: #annotationTypesContainer'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'

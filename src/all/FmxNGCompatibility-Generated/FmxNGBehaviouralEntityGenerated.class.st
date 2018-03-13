@@ -2,16 +2,16 @@ Class {
 	#name : #FmxNGBehaviouralEntityGenerated,
 	#superclass : #FmxNGContainerEntity,
 	#instVars : [
-		'#incomingInvocations => FMOne type: #FmxNGTInvocation opposite: #candidates',
+		'#outgoingInvocations => FMMany type: #FmxNGTInvocation opposite: #sender',
 		'#implicitVariables => FMMany type: #FmxNGTImplicitVariable opposite: #parentBehaviouralEntity',
+		'#incomingInvocations => FMOne type: #FmxNGTInvocation opposite: #candidates',
+		'#signature',
+		'#parameters => FMMany type: #FmxNGTParameter opposite: #parentBehaviouralEntity',
+		'#accesses => FMMany type: #FmxNGTAccess opposite: #accessor',
 		'#localVariables => FMMany type: #FmxNGTLocalVariable opposite: #parentBehaviouralEntity',
-		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType',
 		'#outgoingReferences => FMMany type: #FmxNGTReference opposite: #source',
 		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer',
-		'#outgoingInvocations => FMMany type: #FmxNGTInvocation opposite: #sender',
-		'#accesses => FMMany type: #FmxNGTAccess opposite: #accessor',
-		'#parameters => FMMany type: #FmxNGTParameter opposite: #parentBehaviouralEntity',
-		'#signature'
+		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

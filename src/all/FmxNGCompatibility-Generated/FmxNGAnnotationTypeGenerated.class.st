@@ -32,6 +32,9 @@ FmxNGAnnotationTypeGenerated class >> statefulTraits [
 { #category : #'_fromTrait_FmxNGTAnnotationTypeGenerated' }
 FmxNGAnnotationTypeGenerated >> annotationTypesContainer [
 
+	<MSEComment: 'Container in which an AnnotationType may reside'>
+	<container>
+
 	^ annotationTypesContainer
 ]
 

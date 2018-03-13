@@ -28,6 +28,25 @@ FmxNGEnumValueGenerated class >> statefulTraits [
 	^ {FmxNGTEnumValue}
 ]
 
+{ #category : #'_fromTrait_FmxNGTEnumValue' }
+FmxNGEnumValueGenerated >> belongsTo [
+
+	^ self parentEnum
+]
+
+{ #category : #'_fromTrait_FmxNGTEnumValue' }
+FmxNGEnumValueGenerated >> mooseNameOn: aStream [
+	(self belongsTo isNotNil and: [ self belongsTo name isNotNil ])
+		ifTrue: [ self belongsTo mooseNameOn: aStream.
+			aStream << self mooseNameSeparator ].
+	super mooseNameOn: aStream
+]
+
+{ #category : #'_fromTrait_FmxNGTEnumValue' }
+FmxNGEnumValueGenerated >> mooseNameSeparator [
+	^ '::'
+]
+
 { #category : #'_fromTrait_FmxNGTEnumValueGenerated' }
 FmxNGEnumValueGenerated >> parentEnum [
 
@@ -42,4 +61,10 @@ FmxNGEnumValueGenerated >> parentEnum: anObject [
 
 	parentEnum := anObject
 
+]
+
+{ #category : #'_fromTrait_FmxNGTEnumValue' }
+FmxNGEnumValueGenerated >> parentType [ 
+
+	^ self parentEnum
 ]

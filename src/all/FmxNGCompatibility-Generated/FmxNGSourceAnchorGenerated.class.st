@@ -2,8 +2,7 @@ Class {
 	#name : #FmxNGSourceAnchorGenerated,
 	#superclass : #FmxNGEntity,
 	#instVars : [
-		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor',
-		'#pharoEntity'
+		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

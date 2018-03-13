@@ -139,9 +139,9 @@ FamixMetamodelBuilderClass >> generate [
 			self defaultSuperclass ]
 		ifNotNil: [ self classGeneralization realUserClass ].
 	
-	aClass := self builder environment createClassNamed: (aClassName, 'Generated') asSymbol superclass: aSuperclass slots: self slotDefinitions in: self packageName overwrite: false.
+	aClass := self builder environment createClassNamed: (aClassName, 'Generated') asSymbol superclass: aSuperclass slots: self slotDefinitions in: self packageName overwrite: true.
 	
-	userClass := self builder environment createClassNamed: aClassName superclass: aClass slots: {} in: self packageNameForUserClasses overwrite: true.
+	userClass := self builder environment createClassNamed: aClassName superclass: aClass slots: {} in: self packageNameForUserClasses overwrite: false.
 	
 	aClass tagWith: self tag.
 	userClass tagWith: self tag.

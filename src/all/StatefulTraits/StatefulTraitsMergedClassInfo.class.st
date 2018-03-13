@@ -140,7 +140,8 @@ StatefulTraitsMergedClassInfo >> mergeSlot: aSlot [
 	newSlot := aSlot copy.
 	[(self mergedClass hasSlotNamed: newSlot name) 
 		ifTrue: [ self mergedClass removeSlot: (self mergedClass slotNamed: newSlot name) ] ] ifError: [  ].
-	self mergedClass addSlot: newSlot.
+	(self mergedClass hasSlotNamed: newSlot name) 
+		ifFalse: [ self mergedClass addSlot: newSlot ].
 	self slots add: newSlot name.
 
 ]

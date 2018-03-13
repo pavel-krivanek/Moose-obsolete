@@ -2,10 +2,10 @@ Class {
 	#name : #FmxNGSourcedEntityGenerated,
 	#superclass : #FmxNGEntity,
 	#instVars : [
-		'#comments => FMMany type: #FmxNGTComment opposite: #container',
-		'#declaredSourceLanguage => FMOne type: #FmxNGTSourceLanguage opposite: #sourcedEntities',
 		'#sourceAnchor => FMOne type: #FmxNGTSourceAnchor opposite: #element',
-		'#containerFiles => FMMany type: #FmxNGTFile opposite: #entities'
+		'#containerFiles => FMMany type: #FmxNGTFile opposite: #entities',
+		'#comments => FMMany type: #FmxNGTComment opposite: #container',
+		'#declaredSourceLanguage => FMOne type: #FmxNGTSourceLanguage opposite: #sourcedEntities'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

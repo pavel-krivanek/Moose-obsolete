@@ -62,15 +62,15 @@ FmxNGNamedEntityGenerated >> isStub: anObject [
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTWithModifiers' }
+{ #category : #'_fromTrait_FmxNGTWithModifiersGenerated' }
 FmxNGNamedEntityGenerated >> modifiers [
 
-	<MSEProperty: #modifiers type: #String> <multivalued>
+	<MSEProperty: #modifiers type: #String>
 	<MSEComment: 'Generic container for language dependent modifiers.'>
 	^ modifiers
 ]
 
-{ #category : #'_fromTrait_FmxNGTWithModifiers' }
+{ #category : #'_fromTrait_FmxNGTWithModifiersGenerated' }
 FmxNGNamedEntityGenerated >> modifiers: anObject [
 
 	modifiers := anObject
@@ -94,6 +94,9 @@ FmxNGNamedEntityGenerated >> name: anObject [
 
 { #category : #'_fromTrait_FmxNGTPackageableGenerated' }
 FmxNGNamedEntityGenerated >> parentPackage [
+
+	<MSEComment: 'Package containing the entity in the code structure (if applicable)'>
+	<container>
 
 	^ parentPackage
 ]

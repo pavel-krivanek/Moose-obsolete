@@ -10,8 +10,8 @@ Class {
 		'#kind',
 		'#isAbstract',
 		'#caughtExceptions => FMMany type: #FmxNGTCaughtException opposite: #definingEntity',
-		'#thrownExceptions => FMMany type: #FmxNGTThrownException opposite: #definingEntity',
-		'#declaredExceptions => FMMany type: #FmxNGTDeclaredException opposite: #definingEntity'
+		'#declaredExceptions => FMMany type: #FmxNGTDeclaredException opposite: #definingEntity',
+		'#thrownExceptions => FMMany type: #FmxNGTThrownException opposite: #definingEntity'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
