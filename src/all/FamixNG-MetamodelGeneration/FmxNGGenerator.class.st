@@ -934,7 +934,9 @@ FmxNGGenerator >> defineRelations [
 
 	((tAnnotationType property: #annotationTypesContainer))
 		*-
-	((tWithAnnotationTypes property: #definedAnnotationTypes)).
+	((tWithAnnotationTypes property: #definedAnnotationTypes)
+		comment: 'Container in which an AnnotationType may reside';
+		container).
 
 	((tAnnotationTypeAttribute property: #annotationAttributeInstances)
 			comment: 'A collection of AnnotationInstanceAttribute which hold the usages of this attribute in actual AnnotationInstances')
@@ -1005,7 +1007,9 @@ FmxNGGenerator >> defineRelations [
 		*-
 	((tWithFileInclude property: #incomingIncludeRelations)).
 
-	((tFunction property: #functionOwner))
+	((tFunction property: #functionOwner)
+		comment: 'The container defining the function. The function is placed in a container, because certain languages can nest functions in functions.';
+		container)
 		*-
 	((tWithFunctions property: #functions)).
 
@@ -1074,7 +1078,9 @@ FmxNGGenerator >> defineRelations [
 
 	((tPackage property: #childEntities))
 		-*
-	((tPackageable property: #parentPackage)).
+	((tPackageable property: #parentPackage)
+		comment: 'Package containing the entity in the code structure (if applicable)';
+		container).
 
 	((tPackage property: #packageOwner))
 		*-
@@ -1158,7 +1164,9 @@ FmxNGGenerator >> defineRelations [
 		*-
 	((tWithTrait property: #traits)).
 
-	((tType property: #typeContainer))
+	((tType property: #typeContainer)
+		comment: 'Container entity to which this type belongs to. Container is a namespace, not a package (Smalltalk).';
+		container)
 		*-
 	((tWithTypes property: #types)).
 

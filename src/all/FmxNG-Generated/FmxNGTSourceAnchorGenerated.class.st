@@ -5,8 +5,7 @@ Class {
 	#name : #FmxNGTSourceAnchorGenerated,
 	#superclass : #FmxTraitEntity,
 	#instVars : [
-		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor',
-		'#pharoEntity'
+		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor'
 	],
 	#category : #'FmxNG-Generated-Traits'
 }

@@ -19,6 +19,9 @@ FmxNGTPackageableGenerated class >> annotation [
 { #category : #accessing }
 FmxNGTPackageableGenerated >> parentPackage [
 
+	<MSEComment: 'Package containing the entity in the code structure (if applicable)'>
+	<container>
+
 	^ parentPackage
 ]
 

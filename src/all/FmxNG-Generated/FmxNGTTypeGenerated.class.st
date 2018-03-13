@@ -26,6 +26,9 @@ FmxNGTTypeGenerated class >> annotation [
 { #category : #accessing }
 FmxNGTTypeGenerated >> typeContainer [
 
+	<MSEComment: 'Container entity to which this type belongs to. Container is a namespace, not a package (Smalltalk).'>
+	<container>
+
 	^ typeContainer
 ]
 
