@@ -261,18 +261,17 @@ MooseQueryTest >> testWithScope [
 	self assert: result size equals: 2.
 	self assert: (result includes: method1).
 	self assert: (result includes: methodExt).
-	result := class1 withScope: FmxNGClass.
+	result := class1 withScope: FmxNGTType. "should be replaced with FmxNGTClass"
 	self assert: result size equals: 1.
-	self assert: (result includes: class1).
-	
+	self assert: (result includes: class1).	
 	result := class1 withScope: FmxNGTType.
 	self assert: result size equals: 1.
 	self assert: (result includes: class1).
 	result := class1 withScope: FmxNGTPackage.
 	self assert: result size equals: 1.
 	self assert: (result includes: package1).
-	result := class1 withScope: FmxNGTScopingEntity.
+	"result := class1 withScope: FmxNGTScopingEntity.
 	self assert: result size equals: 2.
 	self assert: (result includes: package1).
-	self assert: (result includes: namespace)
+	self assert: (result includes: namespace)"
 ]
