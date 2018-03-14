@@ -13,6 +13,18 @@ FmxTraitEntity class >> annotation [
 	^self
 ]
 
+{ #category : #'Moose-Query' }
+FmxTraitEntity class >> childrenTypes [
+
+	^ Set new
+]
+
+{ #category : #'Moose-Query' }
+FmxTraitEntity class >> parentTypes [
+
+	^ Set new
+]
+
 { #category : #containers }
 FmxTraitEntity class >> potentialContainers [
 

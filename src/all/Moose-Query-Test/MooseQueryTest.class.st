@@ -134,14 +134,14 @@ MooseQueryTest >> testExplicitDirectionQueryEquivalentToQueryWithDirectionSymbol
 
 { #category : #tests }
 MooseQueryTest >> testIncomingAssociationTypes [
-	self assert: var2 incomingAssociationTypes equals: {FmxNGAccess}.
+	self assert: var2 incomingAssociationTypes equals: {FmxNGTAccess}.
 	self
 		assert: class1 incomingAssociationTypes asSet
 		equals:
-			{FmxNGInheritance.
-			FmxNGReference.
-			FmxNGTraitUsage} asSet.
-	self assert: method1 incomingAssociationTypes equals: {FmxNGInvocation}
+			{FmxNGTSuperInheritance.
+			FmxNGTReference."
+			FmxNGTraitUsage"} asSet.
+	self assert: method1 incomingAssociationTypes equals: {FmxNGTInvocation}
 ]
 
 { #category : #tests }
@@ -157,18 +157,18 @@ MooseQueryTest >> testIncomingInvocation [
 { #category : #tests }
 MooseQueryTest >> testIncomingInvocationAtScope [
 	self
-		assert: ((method2 queryIncoming: FmxNGTInvocation) atScope: FmxNGTPackage) size
+		assert: ((method2 queryIncoming: FmxNGTInvocation) atScope: FmxNGPackage) size
 		equals: 2.
 	self
-		assert: ((class2 queryIncoming: FmxNGTInvocation) atScope: FmxNGTPackage) size
+		assert: ((class2 queryIncoming: FmxNGTInvocation) atScope: FmxNGPackage) size
 		equals: 2
 ]
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingAccessAtScope [
-	self assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGTPackage) size equals: 1.
+	self assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGPackage) size equals: 1.
 	self
-		assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGTPackage) storage first
+		assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGPackage) storage first
 		equals: package2
 ]
 
@@ -207,8 +207,8 @@ MooseQueryTest >> testOutgoingInvocation [
 { #category : #tests }
 MooseQueryTest >> testOutgoingInvocationAtScope [
 
-	self assert: ((method2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGTPackage) size equals: 1.
-	self assert: ((class2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGTPackage) size equals: 1.
+	self assert: ((method2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGPackage) size equals: 1.
+	self assert: ((class2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGPackage) size equals: 1.
 
 ]
 
@@ -250,7 +250,7 @@ MooseQueryTest >> testToScope [
 { #category : #tests }
 MooseQueryTest >> testWithScope [
 	| result |
-	result := class1 withScope: FmxNGTMethod.
+	result := class1 withScope: FmxNGMethod.
 	self assert: result size equals: 1.
 	self assert: (result includes: method1).
 	result := class2 toScope: FmxNGTAttribute.
