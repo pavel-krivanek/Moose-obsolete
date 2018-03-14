@@ -148,27 +148,27 @@ MooseQueryTest >> testIncomingAssociationTypes [
 MooseQueryTest >> testIncomingInvocation [
 	"queryIncoming: is equivalent to query: #in with:"
 
-	self assert: (method2 queryIncoming: FmxNGInvocation) size equals: 3.
-	self assert: (method2 query: #in with: FmxNGInvocation) size equals: 3.
-	self assert: (class2 queryIncoming: FmxNGInvocation) size equals: 3.
-	self assert: (class2 query: #in with: FmxNGInvocation) size equals: 3
+	self assert: (method2 queryIncoming: FmxNGTInvocation) size equals: 3.
+	self assert: (method2 query: #in with: FmxNGTInvocation) size equals: 3.
+	self assert: (class2 queryIncoming: FmxNGTInvocation) size equals: 3.
+	self assert: (class2 query: #in with: FmxNGTInvocation) size equals: 3
 ]
 
 { #category : #tests }
 MooseQueryTest >> testIncomingInvocationAtScope [
 	self
-		assert: ((method2 queryIncoming: FmxNGInvocation) atScope: FmxNGPackage) size
+		assert: ((method2 queryIncoming: FmxNGTInvocation) atScope: FmxNGTPackage) size
 		equals: 2.
 	self
-		assert: ((class2 queryIncoming: FmxNGInvocation) atScope: FmxNGPackage) size
+		assert: ((class2 queryIncoming: FmxNGTInvocation) atScope: FmxNGTPackage) size
 		equals: 2
 ]
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingAccessAtScope [
-	self assert: ((method1 queryOutgoing: FmxNGAccess) atScope: FmxNGPackage) size equals: 1.
+	self assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGTPackage) size equals: 1.
 	self
-		assert: ((method1 queryOutgoing: FmxNGAccess) atScope: FmxNGPackage) storage first
+		assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGTPackage) storage first
 		equals: package2
 ]
 
@@ -181,34 +181,34 @@ MooseQueryTest >> testOutgoingAccessesWithANamespaceInANamespace [
 		name: 'Test';
 		mooseModel: model;
 		addChildScope: namespace.
-	self assert: (namespaceContainer query: #out with: FmxNGAccess) size equals: 1
+	self assert: (namespaceContainer query: #out with: FmxNGTAccess) size equals: 1
 ]
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingAssociationTypes [
-	self assert: class1 outgoingAssociationTypes asSet equals: {FmxNGInheritance} asSet.
+	self assert: class1 outgoingAssociationTypes asSet equals: {FmxNGTSubInheritance} asSet.
 	self
 		assert: method1 outgoingAssociationTypes asSet
 		equals:
-			{FmxNGInvocation.
-			FmxNGReference.
-			FmxNGAccess} asSet
+			{FmxNGTInvocation.
+			FmxNGTReference.
+			FmxNGTAccess} asSet
 ]
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingInvocation [
 "queryOutgoing: is equivalent to query: #out with:"
-	self assert: (method1 queryOutgoing: FmxNGInvocation) size equals: 1.
-	self assert: (method1 query: #out with: FmxNGInvocation) size equals: 1.
-	self assert: (class2 queryOutgoing: FmxNGInvocation) size equals: 2.
-	self assert: (class2 query: #out with: FmxNGInvocation) size equals: 2.
+	self assert: (method1 queryOutgoing: FmxNGTInvocation) size equals: 1.
+	self assert: (method1 query: #out with: FmxNGTInvocation) size equals: 1.
+	self assert: (class2 queryOutgoing: FmxNGTInvocation) size equals: 2.
+	self assert: (class2 query: #out with: FmxNGTInvocation) size equals: 2.
 ]
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingInvocationAtScope [
 
-	self assert: ((method2 queryOutgoing: FmxNGInvocation) atScope: FmxNGPackage) size equals: 1.
-	self assert: ((class2 queryOutgoing: FmxNGInvocation) atScope: FmxNGPackage) size equals: 1.
+	self assert: ((method2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGTPackage) size equals: 1.
+	self assert: ((class2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGTPackage) size equals: 1.
 
 ]
 
@@ -229,7 +229,7 @@ MooseQueryTest >> testParents [
 { #category : #tests }
 MooseQueryTest >> testQueryWith [
 "queryIncoming: is equivalent to query: #in with:"
-	self assert: (package1 query: #out with: FmxNGInvocation) size equals: 1.
+	self assert: (package1 query: #out with: FmxNGTInvocation) size equals: 1.
 ]
 
 { #category : #tests }
@@ -250,27 +250,27 @@ MooseQueryTest >> testToScope [
 { #category : #tests }
 MooseQueryTest >> testWithScope [
 	| result |
-	result := class1 withScope: FmxNGMethod.
+	result := class1 withScope: FmxNGTMethod.
 	self assert: result size equals: 1.
 	self assert: (result includes: method1).
-	result := class2 toScope: FmxNGAttribute.
+	result := class2 toScope: FmxNGTAttribute.
 	self assert: result size equals: 2.
 	self assert: (result includes: var1).
 	self assert: (result includes: var2).
-	result := package1 toScope: FmxNGMethod.
+	result := package1 toScope: FmxNGTMethod.
 	self assert: result size equals: 2.
 	self assert: (result includes: method1).
 	self assert: (result includes: methodExt).
 	result := class1 withScope: FmxNGClass.
 	self assert: result size equals: 1.
 	self assert: (result includes: class1).
-	result := class1 withScope: FmxNGType.
+	result := class1 withScope: FmxNGTType.
 	self assert: result size equals: 1.
 	self assert: (result includes: class1).
 	result := class1 withScope: FmxNGPackage.
 	self assert: result size equals: 1.
 	self assert: (result includes: package1).
-	result := class1 withScope: FmxNGScopingEntity.
+	result := class1 withScope: FmxNGTScopingEntity.
 	self assert: result size equals: 2.
 	self assert: (result includes: package1).
 	self assert: (result includes: namespace)
