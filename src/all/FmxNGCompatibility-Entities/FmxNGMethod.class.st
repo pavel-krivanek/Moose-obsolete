@@ -355,6 +355,13 @@ FmxNGMethod >> isSurelyInvokedBy: aFAMIXMethod [
 	^false
 ]
 
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGMethod >> methodScope [
+"This is a special case, only meaningful when using #withoutSelfLoops. Rejecting self loops with a method means rejecting recursive calls."
+
+	^ self
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGMethod >> mooseNameOn: stream [ 
 	| parent |
@@ -366,6 +373,11 @@ FmxNGMethod >> mooseNameOn: stream [
 		ifNotNil: [ stream nextPutAll: self signature ]
 		ifNil: [ 
 			self name ifNotNil: [ stream nextPutAll: self name] ]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGMethod >> namespaceScope [
+	^ self parentType namespaceScope
 ]
 
 { #category : #'Famix-Extensions' }
@@ -391,6 +403,18 @@ FmxNGMethod >> numberOfInvokedMethods [
 { #category : #'Famix-Implementation' }
 FmxNGMethod >> overridesMethod [
 	^ self belongsTo superclassHierarchy collect: [ :each | each implementationOf: self signature ] thenSelect: #isNotNil
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGMethod >> packageScope [
+
+	^ self parentPackage ifNil:[ 
+		|cl|
+		cl := self parentType.
+		cl isNil 
+			ifTrue:[nil]
+			ifFalse:[cl packageScope]
+	]
 ]
 
 { #category : #'Famix-Implementation' }
@@ -480,4 +504,10 @@ FmxNGMethod >> timeStamp [
 FmxNGMethod >> timeStamp: aTimeStamp [
 
 	self privateState attributeAt: #timeStamp put: aTimeStamp
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGMethod >> typeScope [
+
+	^ self parentType 
 ]
