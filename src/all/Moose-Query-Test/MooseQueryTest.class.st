@@ -214,7 +214,7 @@ MooseQueryTest >> testOutgoingInvocationAtScope [
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingInvocationWithin [
-	self assert: ((method1 queryOutgoing: FmxNGInvocation) within: class2) size equals: 1.
+	self assert: ((method1 queryOutgoing: FmxNGTInvocation) within: class2) size equals: 1.
 
 ]
 
@@ -250,7 +250,7 @@ MooseQueryTest >> testToScope [
 { #category : #tests }
 MooseQueryTest >> testWithScope [
 	| result |
-	result := class1 withScope: FmxNGMethod.
+	result := class1 withScope: FmxNGTMethod.
 	self assert: result size equals: 1.
 	self assert: (result includes: method1).
 	result := class2 toScope: FmxNGTAttribute.
@@ -264,10 +264,11 @@ MooseQueryTest >> testWithScope [
 	result := class1 withScope: FmxNGClass.
 	self assert: result size equals: 1.
 	self assert: (result includes: class1).
+	
 	result := class1 withScope: FmxNGTType.
 	self assert: result size equals: 1.
 	self assert: (result includes: class1).
-	result := class1 withScope: FmxNGPackage.
+	result := class1 withScope: FmxNGTPackage.
 	self assert: result size equals: 1.
 	self assert: (result includes: package1).
 	result := class1 withScope: FmxNGTScopingEntity.

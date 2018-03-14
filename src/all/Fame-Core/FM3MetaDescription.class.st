@@ -310,6 +310,12 @@ FM3MetaDescription >> attributesNamed: aListOfSymbol [
 	^ aListOfSymbol collect: [ :each | self attributeNamed: each ]
 ]
 
+{ #category : #accessing }
+FM3MetaDescription >> attributesTogetherWithGenerated [
+
+	^ self attributes, super attributes
+]
+
 { #category : #'accessing-query' }
 FM3MetaDescription >> complexAttributes [
 

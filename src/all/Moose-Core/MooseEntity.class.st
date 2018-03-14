@@ -244,6 +244,14 @@ MooseEntity >> announcer: anAnnouncer [
 ]
 
 { #category : #accessing }
+MooseEntity >> attributesTogetherWithGenerated [
+
+	"HACK: we need to collect all attributes from the pair generated class - user class"
+	^ self class mooseDescription attributes,
+	  self class superclass mooseDescription attributes
+]
+
+{ #category : #accessing }
 MooseEntity >> bookmarkAs: aString [
 	"Adds myself in the cache of the mooseModel and mark it as a bookmark"
 	| group |

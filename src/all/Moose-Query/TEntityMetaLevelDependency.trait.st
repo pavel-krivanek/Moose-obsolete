@@ -199,7 +199,7 @@ TEntityMetaLevelDependency >> atScope: aClassFAMIX [
 
 { #category : #private }
 TEntityMetaLevelDependency >> atScope: aClassFAMIX in: aCollection [
-	(self isKindOf: aClassFAMIX)
+	(self isOfType: aClassFAMIX)
 		ifTrue: [ aCollection add: self ]
 		ifFalse: [ "The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 			| selectors |
@@ -260,6 +260,12 @@ TEntityMetaLevelDependency >> incomingMSEProperties [
 	^ self class incomingMSEProperties 
 ]
 
+{ #category : #private }
+TEntityMetaLevelDependency >> isOfType: aClassFAMIX [
+	
+	^ ((self mooseTypes flatCollect: #withAllSuperclasses as: Set) includes: aClassFAMIX)
+]
+
 { #category : #accessing }
 TEntityMetaLevelDependency >> outgoingAssociationTypes [
 	^ self class outgoingAssociationTypes
@@ -318,7 +324,7 @@ TEntityMetaLevelDependency >> toScope: aClassFAMIX [
 
 { #category : #private }
 TEntityMetaLevelDependency >> toScope: aClassFAMIX in: aCollection [
-	(self isKindOf: aClassFAMIX)
+	(self isOfType: aClassFAMIX)
 		ifTrue: [ aCollection add: self ]
 		ifFalse: [ "The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 			| selectors |
