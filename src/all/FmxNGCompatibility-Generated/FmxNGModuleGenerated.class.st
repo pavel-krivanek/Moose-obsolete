@@ -2,9 +2,9 @@ Class {
 	#name : #FmxNGModuleGenerated,
 	#superclass : #FmxNGScopingEntity,
 	#instVars : [
-		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module',
+		'#header => FMOne type: #FmxNGTHeader opposite: #headerOwner',
 		'#compilationUnit => FMOne type: #FmxNGTCompilationUnit opposite: #compilationUnitOwner',
-		'#header => FMOne type: #FmxNGTHeader opposite: #headerOwner'
+		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

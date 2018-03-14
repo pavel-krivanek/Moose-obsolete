@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGAnnotationTypeAttributeGenerated,
 	#superclass : #FmxNGAttribute,
 	#instVars : [
-		'#annotationTypeAttribute => FMOne type: #FmxNGTAnnotationTypeAttribute opposite: #annotationAttributeInstances',
-		'#annotationAttributeInstances => FMMany type: #FmxNGTTypedAnnotationInstanceAttribute opposite: #annotationTypeAttribute'
+		'#annotationAttributeInstances => FMMany type: #FmxNGTTypedAnnotationInstanceAttribute opposite: #annotationTypeAttribute',
+		'#annotationTypeAttribute => FMOne type: #FmxNGTAnnotationTypeAttribute opposite: #annotationAttributeInstances'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

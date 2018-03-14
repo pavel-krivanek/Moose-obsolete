@@ -2,12 +2,12 @@ Class {
 	#name : #FmxNGNamedEntityGenerated,
 	#superclass : #FmxNGSourcedEntity,
 	#instVars : [
-		'#receivingInvocations => FMMany type: #FmxNGTInvocation opposite: #receiver',
 		'#annotationInstances => FMMany type: #FmxNGTAnnotationInstance opposite: #annotatedEntity',
 		'#isStub',
 		'#name',
 		'#parentPackage => FMOne type: #FmxNGTPackage opposite: #childEntities',
-		'#modifiers'
+		'#modifiers',
+		'#receivingInvocations => FMMany type: #FmxNGTInvocation opposite: #receiver'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

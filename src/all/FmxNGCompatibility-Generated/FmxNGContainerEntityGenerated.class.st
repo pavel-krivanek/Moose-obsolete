@@ -2,9 +2,9 @@ Class {
 	#name : #FmxNGContainerEntityGenerated,
 	#superclass : #FmxNGNamedEntity,
 	#instVars : [
-		'#functions => FMMany type: #FmxNGTFunction opposite: #functionOwner',
 		'#types => FMMany type: #FmxNGTType opposite: #typeContainer',
-		'#definedAnnotationTypes => FMMany type: #FmxNGTAnnotationType opposite: #annotationTypesContainer'
+		'#definedAnnotationTypes => FMMany type: #FmxNGTAnnotationType opposite: #annotationTypesContainer',
+		'#functions => FMMany type: #FmxNGTFunction opposite: #functionOwner'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

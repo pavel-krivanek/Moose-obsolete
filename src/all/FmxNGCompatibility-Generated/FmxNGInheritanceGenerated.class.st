@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGInheritanceGenerated,
 	#superclass : #FmxNGAssociation,
 	#instVars : [
-		'#superclass => FMOne type: #FmxNGTWithSuperInheritances opposite: #subInheritances',
-		'#subclass => FMOne type: #FmxNGTWithSubInheritances opposite: #superInheritances'
+		'#subclass => FMOne type: #FmxNGTWithSubInheritances opposite: #superInheritances',
+		'#superclass => FMOne type: #FmxNGTWithSuperInheritances opposite: #subInheritances'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

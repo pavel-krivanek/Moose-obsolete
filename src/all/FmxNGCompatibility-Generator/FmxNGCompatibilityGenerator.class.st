@@ -379,7 +379,7 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	thrownException generalization: exception.
 	thrownException generalization: #TThrownException.
 
-	type generalization: namedEntity.
+	type generalization: containerEntity.
 	type generalization: #TType.
 	type generalization: #TReferenceable.
 	type generalization: #TWithTypedStructures.

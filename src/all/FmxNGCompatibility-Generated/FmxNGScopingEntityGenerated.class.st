@@ -2,9 +2,9 @@ Class {
 	#name : #FmxNGScopingEntityGenerated,
 	#superclass : #FmxNGContainerEntity,
 	#instVars : [
+		'#globalVariables => FMMany type: #FmxNGTGlobalVariable opposite: #parentScope',
 		'#parentScope => FMOne type: #FmxNGTScopingEntity opposite: #childScopes',
-		'#childScopes => FMMany type: #FmxNGTScopingEntity opposite: #parentScope',
-		'#globalVariables => FMMany type: #FmxNGTGlobalVariable opposite: #parentScope'
+		'#childScopes => FMMany type: #FmxNGTScopingEntity opposite: #parentScope'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

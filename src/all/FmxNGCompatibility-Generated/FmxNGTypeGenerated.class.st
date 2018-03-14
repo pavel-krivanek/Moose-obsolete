@@ -1,16 +1,16 @@
 Class {
 	#name : #FmxNGTypeGenerated,
-	#superclass : #FmxNGNamedEntity,
+	#superclass : #FmxNGContainerEntity,
 	#instVars : [
 		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types',
 		'#methods => FMMany type: #FmxNGTMethod opposite: #parentType',
-		'#structuresWithDeclaredType => FMMany type: #FmxNGTTypedStructure opposite: #declaredType',
-		'#attributes => FMMany type: #FmxNGTAttribute opposite: #parentType',
-		'#typeAliases => FMMany type: #FmxNGTTypeAlias opposite: #aliasedType',
 		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass',
-		'#argumentsInParameterizedTypes => FMOne type: #FmxNGTWithParameterizedTypeUsers opposite: #arguments',
 		'#incomingReferences => FMMany type: #FmxNGTReference opposite: #target',
-		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass'
+		'#attributes => FMMany type: #FmxNGTAttribute opposite: #parentType',
+		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass',
+		'#typeAliases => FMMany type: #FmxNGTTypeAlias opposite: #aliasedType',
+		'#argumentsInParameterizedTypes => FMOne type: #FmxNGTWithParameterizedTypeUsers opposite: #arguments',
+		'#structuresWithDeclaredType => FMMany type: #FmxNGTTypedStructure opposite: #declaredType'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
@@ -18,7 +18,7 @@ Class {
 { #category : #meta }
 FmxNGTypeGenerated class >> annotation [
 
-	<MSEClass: #TypeGenerated super: #FmxNGNamedEntity>
+	<MSEClass: #TypeGenerated super: #FmxNGContainerEntity>
 	<package: #'FmxNGCompatibility-Generated'>
 	^self
 ]

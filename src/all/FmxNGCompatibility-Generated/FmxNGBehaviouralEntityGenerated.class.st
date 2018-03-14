@@ -7,11 +7,11 @@ Class {
 		'#incomingInvocations => FMMany type: #FmxNGTInvocation opposite: #candidates',
 		'#signature',
 		'#parameters => FMMany type: #FmxNGTParameter opposite: #parentBehaviouralEntity',
-		'#accesses => FMMany type: #FmxNGTAccess opposite: #accessor',
+		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType',
 		'#localVariables => FMMany type: #FmxNGTLocalVariable opposite: #parentBehaviouralEntity',
 		'#outgoingReferences => FMMany type: #FmxNGTReference opposite: #source',
 		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer',
-		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType'
+		'#accesses => FMMany type: #FmxNGTAccess opposite: #accessor'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
