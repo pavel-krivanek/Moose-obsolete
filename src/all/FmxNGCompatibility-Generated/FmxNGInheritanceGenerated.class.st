@@ -32,6 +32,8 @@ FmxNGInheritanceGenerated class >> statefulTraits [
 { #category : #'_fromTrait_FmxNGTSubInheritanceGenerated' }
 FmxNGInheritanceGenerated >> subclass [
 
+	<source>
+
 	^ subclass
 ]
 
@@ -44,6 +46,8 @@ FmxNGInheritanceGenerated >> subclass: anObject [
 
 { #category : #'_fromTrait_FmxNGTSuperInheritanceGenerated' }
 FmxNGInheritanceGenerated >> superclass [
+
+	<target>
 
 	^ superclass
 ]

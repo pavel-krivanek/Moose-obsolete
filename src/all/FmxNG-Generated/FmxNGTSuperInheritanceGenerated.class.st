@@ -19,6 +19,8 @@ FmxNGTSuperInheritanceGenerated class >> annotation [
 { #category : #accessing }
 FmxNGTSuperInheritanceGenerated >> superclass [
 
+	<target>
+
 	^ superclass
 ]
 

@@ -1140,11 +1140,13 @@ FmxNGGenerator >> defineRelations [
 		*-
 	((tSuper property: #subs)).
 
-	((tSubInheritance property: #subclass))
+	((tSubInheritance property: #subclass)
+		source)
 		*-
 	((tWithSubInheritances property: #superInheritances)).
 
-	((tSuperInheritance property: #superclass))
+	((tSuperInheritance property: #superclass)
+		target)
 		*-
 	((tWithSuperInheritances property: #subInheritances)).
 

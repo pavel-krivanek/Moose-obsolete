@@ -19,6 +19,8 @@ FmxNGTSubInheritanceGenerated class >> annotation [
 { #category : #accessing }
 FmxNGTSubInheritanceGenerated >> subclass [
 
+	<source>
+
 	^ subclass
 ]
 
