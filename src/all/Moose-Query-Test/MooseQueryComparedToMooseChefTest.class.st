@@ -38,10 +38,10 @@ MooseQueryComparedToMooseChefTest >> testIncomingAccesses [
 { #category : #tests }
 MooseQueryComparedToMooseChefTest >> testIncomingInheritances [
 	self
-		assert: (class2 queryIncoming: FmxNGTSubInheritance) asSet
+		assert: (class2 queryIncoming: FmxNGTSuperInheritance) asSet
 		equals: (class2 createIncomingQueryResultWith: class2 subInheritances) asSet.
 	self
-		assert: (package2 queryIncoming: FmxNGTSubInheritance) asSet
+		assert: (package2 queryIncoming: FmxNGTSuperInheritance) asSet
 		equals: (package2 createIncomingQueryResultWith: (package2 classes flatCollect: [ :c | c subInheritances ])) asSet.
 	self
 		assert: (namespace queryIncoming: FmxNGTSubInheritance) asSet
@@ -113,10 +113,10 @@ MooseQueryComparedToMooseChefTest >> testOutgoingAccesses [
 { #category : #tests }
 MooseQueryComparedToMooseChefTest >> testOutgoingInheritances [
 	self
-		assert: (class1 queryOutgoing: FmxNGTSuperInheritance) asSet
+		assert: (class1 queryOutgoing: FmxNGTSubInheritance) asSet
 		equals: (class1 createOutgoingQueryResultWith: class1 superInheritances) asSet.
 	self
-		assert: (package1 queryOutgoing: FmxNGTSuperInheritance) asSet
+		assert: (package1 queryOutgoing: FmxNGTSubInheritance) asSet
 		equals: (package1 createOutgoingQueryResultWith: (package1 classes flatCollect: [ :c | c superInheritances ])) asSet.
 	self assert: (method2 queryOutgoing: FmxNGTSuperInheritance) asSet equals: Array empty asSet
 ]
