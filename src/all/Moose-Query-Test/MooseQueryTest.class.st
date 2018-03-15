@@ -136,11 +136,11 @@ MooseQueryTest >> testExplicitDirectionQueryEquivalentToQueryWithDirectionSymbol
 MooseQueryTest >> testIncomingAssociationTypes [
 	self assert: var2 incomingAssociationTypes equals: {FmxNGTAccess}.
 	self
-		assert: class1 incomingAssociationTypes asSet
+		assertCollection: (class1 incomingAssociationTypes collect: #name) sorted
 		equals:
-			{FmxNGTSuperInheritance.
-			FmxNGTReference."
-			FmxNGTraitUsage"} asSet.
+			{#FmxNGTSuperInheritance.
+			#FmxNGTReference.
+			#FmxNGTTraitUsage} sorted.
 	self assert: method1 incomingAssociationTypes equals: {FmxNGTInvocation}
 ]
 
