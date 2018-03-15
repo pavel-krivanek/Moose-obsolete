@@ -74,7 +74,9 @@ Class {
 		'type',
 		'typeAlias',
 		'uNKNOWNSourceLanguage',
-		'unknownVariable'
+		'unknownVariable',
+		'trait',
+		'traitUsage'
 	],
 	#category : #'FmxNGCompatibility-Generator'
 }
@@ -167,6 +169,8 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	typeAlias := builder newClassNamed: #TypeAlias.
 	uNKNOWNSourceLanguage := builder newClassNamed: #UNKNOWNSourceLanguage.
 	unknownVariable := builder newClassNamed: #UnknownVariable.
+	trait := builder newClassNamed: #Trait.
+	traitUsage := builder newClassNamed: #TraitUsage.
 
 	self defineHierarchy.
 ]
@@ -396,6 +400,13 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	uNKNOWNSourceLanguage generalization: sourceLanguage.
 
 	unknownVariable generalization: structuralEntity.
+	
+	trait generalization: type.
+	trait generalization: #TTrait.
+	
+	traitUsage generalization: association.
+	traitUsage generalization: #TTraitUsage.
+	
 
 ]
 

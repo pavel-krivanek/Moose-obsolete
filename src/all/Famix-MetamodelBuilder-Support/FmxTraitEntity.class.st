@@ -16,12 +16,14 @@ FmxTraitEntity class >> annotation [
 { #category : #'Moose-Query' }
 FmxTraitEntity class >> childrenTypes [
 
+	<ignoreInTraitUsers>
 	^ Set new
 ]
 
 { #category : #'Moose-Query' }
 FmxTraitEntity class >> parentTypes [
 
+	<ignoreInTraitUsers>
 	^ Set new
 ]
 

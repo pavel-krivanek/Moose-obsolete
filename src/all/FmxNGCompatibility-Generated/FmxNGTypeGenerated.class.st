@@ -3,6 +3,7 @@ Class {
 	#superclass : #FmxNGContainerEntity,
 	#instVars : [
 		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types',
+		'#outgoingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #user',
 		'#methods => FMMany type: #FmxNGTMethod opposite: #parentType',
 		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass',
 		'#incomingReferences => FMMany type: #FmxNGTReference opposite: #target',
@@ -88,6 +89,19 @@ FmxNGTypeGenerated >> methods [
 FmxNGTypeGenerated >> methods: anObject [
 
 	methods value: anObject
+
+]
+
+{ #category : #'_fromTrait_FmxNGTTypeGenerated' }
+FmxNGTypeGenerated >> outgoingTraitUsages [
+
+	^ outgoingTraitUsages
+]
+
+{ #category : #'_fromTrait_FmxNGTTypeGenerated' }
+FmxNGTypeGenerated >> outgoingTraitUsages: anObject [
+
+	outgoingTraitUsages value: anObject
 
 ]
 
