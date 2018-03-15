@@ -20,8 +20,6 @@ will produce two invocation associations first from method a to method b, and se
 Class {
 	#name : #FAMIXAssociation,
 	#superclass : #FAMIXSourcedEntity,
-	#traits : 'TAssociationMetaLevelDependency',
-	#classTraits : 'TAssociationMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes}',
 	#instVars : [
 		'previous',
 		'next'

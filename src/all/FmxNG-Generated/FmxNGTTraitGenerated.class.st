@@ -5,7 +5,8 @@ Class {
 	#name : #FmxNGTTraitGenerated,
 	#superclass : #FmxTraitEntity,
 	#instVars : [
-		'#users => FMOne type: #FmxNGTWithTrait opposite: #traits'
+		'#traitOwner => FMOne type: #FmxNGTWithTrait opposite: #traits',
+		'#incomingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #trait'
 	],
 	#category : #'FmxNG-Generated-Traits'
 }
@@ -20,14 +21,27 @@ FmxNGTTraitGenerated class >> annotation [
 ]
 
 { #category : #accessing }
-FmxNGTTraitGenerated >> users [
+FmxNGTTraitGenerated >> incomingTraitUsages [
 
-	^ users
+	^ incomingTraitUsages
 ]
 
 { #category : #accessing }
-FmxNGTTraitGenerated >> users: anObject [
+FmxNGTTraitGenerated >> incomingTraitUsages: anObject [
 
-	users := anObject
+	incomingTraitUsages value: anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTTraitGenerated >> traitOwner [
+
+	^ traitOwner
+]
+
+{ #category : #accessing }
+FmxNGTTraitGenerated >> traitOwner: anObject [
+
+	traitOwner := anObject
 
 ]

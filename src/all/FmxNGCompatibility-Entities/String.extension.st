@@ -1,6 +1,6 @@
 Extension { #name : #String }
 
-{ #category : #'*Famix-Core' }
+{ #category : #'*FmxNGCompatibility-Entities-Entities' }
 String >> asFAMIXComment [
 	^ FmxNGComment content: self
 ]

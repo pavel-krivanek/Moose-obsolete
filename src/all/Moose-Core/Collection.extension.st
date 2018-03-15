@@ -19,3 +19,9 @@ Collection >> commonSuperclass [
 			common := common superclass ]].
 	^common
 ]
+
+{ #category : #'*Moose-Core' }
+Collection >> mooseIncludes: anObject [
+
+	^ self includes: anObject 
+]

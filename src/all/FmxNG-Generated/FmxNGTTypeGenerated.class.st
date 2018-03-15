@@ -9,7 +9,8 @@ Class {
 	#name : #FmxNGTTypeGenerated,
 	#superclass : #FmxTraitEntity,
 	#instVars : [
-		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types'
+		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types',
+		'#outgoingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #user'
 	],
 	#category : #'FmxNG-Generated-Traits'
 }
@@ -21,6 +22,19 @@ FmxNGTTypeGenerated class >> annotation [
 	<MSEClass: #TTypeGenerated super: #FmxTraitEntity>
 	<package: #'FmxNG-Generated'>
 	^self
+]
+
+{ #category : #accessing }
+FmxNGTTypeGenerated >> outgoingTraitUsages [
+
+	^ outgoingTraitUsages
+]
+
+{ #category : #accessing }
+FmxNGTTypeGenerated >> outgoingTraitUsages: anObject [
+
+	outgoingTraitUsages value: anObject
+
 ]
 
 { #category : #accessing }

@@ -10,8 +10,6 @@ It can also return the list of invocations performed on this entity (considered 
 Class {
 	#name : #FAMIXNamedEntity,
 	#superclass : #FAMIXSourcedEntity,
-	#traits : 'TOODependencyQueries + TEntityMetaLevelDependency',
-	#classTraits : 'TOODependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes})',
 	#instVars : [
 		'name',
 		'isStub',

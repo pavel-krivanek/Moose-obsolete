@@ -54,6 +54,7 @@ Class {
 		'tTemplateUser',
 		'tThrownException',
 		'tTrait',
+		'tTraitUsage',
 		'tType',
 		'tTypeAlias',
 		'tTypedAnnotationInstance',
@@ -98,7 +99,8 @@ Class {
 		'tWithTypeAliases',
 		'tWithTypedStructures',
 		'tWithTypes',
-		'tWithModifiers'
+		'tWithModifiers',
+		'y'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -1162,9 +1164,20 @@ FmxNGGenerator >> defineRelations [
 		*-
 	((tWithThrownExceptions property: #thrownExceptions)).
 
-	((tTrait property: #users))
+	((tTrait property: #traitOwner))
 		*-
 	((tWithTrait property: #traits)).
+
+	((tTrait property: #incomingTraitUsages))
+		-*
+	((tTraitUsage property: #trait)
+		source).
+
+	((tType property: #outgoingTraitUsages))
+		-*
+	((tTraitUsage property: #user)
+		target).
+
 
 	((tType property: #typeContainer)
 		comment: 'Container entity to which this type belongs to. Container is a namespace, not a package (Smalltalk).';
@@ -1343,6 +1356,9 @@ FmxNGGenerator >> defineTraits [
 
 	tTrait := builder newTraitNamed: #TTrait.
 	tTrait comment: self commentForTTrait.
+
+	tTraitUsage := builder newTraitNamed: #TTraitUsage.
+
 
 	tType := builder newTraitNamed: #TType.
 	tType comment: self commentForTType.

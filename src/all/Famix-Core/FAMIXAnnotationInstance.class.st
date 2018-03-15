@@ -14,8 +14,6 @@ Instance Variables:
 Class {
 	#name : #FAMIXAnnotationInstance,
 	#superclass : #FAMIXSourcedEntity,
-	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes} + TDependencyQueries classTrait',
 	#instVars : [
 		'annotatedEntity',
 		'annotationType',

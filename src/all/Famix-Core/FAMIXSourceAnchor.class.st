@@ -4,8 +4,6 @@ FAMIXSourceAnchor is an abstract class representing a pointer to a source. The s
 Class {
 	#name : #FAMIXSourceAnchor,
 	#superclass : #FAMIXEntity,
-	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'TDependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes})',
 	#instVars : [
 		'element'
 	],

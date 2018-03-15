@@ -397,6 +397,12 @@ MooseEntity >> mooseID [
 ]
 
 { #category : #accessing }
+MooseEntity >> mooseIncludes: anObject [
+
+	^ self = anObject
+]
+
+{ #category : #accessing }
 MooseEntity >> mooseModel [
 	"Answers the model containing the current entity"
 	^ self privateState model

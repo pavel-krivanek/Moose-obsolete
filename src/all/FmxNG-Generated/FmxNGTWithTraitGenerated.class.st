@@ -2,7 +2,7 @@ Class {
 	#name : #FmxNGTWithTraitGenerated,
 	#superclass : #FmxTraitEntity,
 	#instVars : [
-		'#traits => FMMany type: #FmxNGTTrait opposite: #users'
+		'#traits => FMMany type: #FmxNGTTrait opposite: #traitOwner'
 	],
 	#category : #'FmxNG-Generated-Traits'
 }
