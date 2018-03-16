@@ -26,8 +26,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedContainsMany [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #accessOwner.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
@@ -49,8 +49,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedContainsOne [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #variable.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #access'.
@@ -73,8 +73,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyBelongTo [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #accessOwner.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
@@ -96,8 +96,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyToMany [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #variables.
 	self assert: generatedTAccess slots first expression equals: 'FMMany type: #TstTVariable opposite: #accesses'.
@@ -120,8 +120,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyToOne [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #accessOwner.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
@@ -143,8 +143,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneBelongsTo [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #variable.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #access'.
@@ -167,8 +167,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneToMany [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #accessOwner.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
@@ -190,8 +190,8 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneToOne [
 
 	builder generate.
 		
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariableGenerated'.
+	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
 	self assert: generatedTAccess slots first name equals: #variable.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #access'.
@@ -205,43 +205,37 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneToOne [
 { #category : #tests }
 FamixMetamodelBuilderTraitTest >> testCustomPackageForUserClasses [
 
-	| simpleClass generated userClass |
+	| simpleClass generated |
 	
-	builder packageNameForUserClasses: 'Custom'.
+	builder packageName: 'Custom'.
 	
 	simpleClass := builder newTraitNamed: #TComment.	
 	builder generate.
-	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
-	userClass := builder testingEnvironment ask classNamed: 'TstTComment'.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 
-	self assert: (generated package name = #Tst).
-	self assert: (userClass package name = #Custom).
+	self assert: generated package name equals: #Custom.
 	
 ]
 
 { #category : #tests }
 FamixMetamodelBuilderTraitTest >> testCustomPackageForUserClassesChanged [
 
-	| simpleClass generated userClass generatedAccess accessUserClass |
+	| simpleClass generated generatedAccess  |
 	
-	builder packageNameForUserClasses: 'Custom'.
+	builder packageName: 'Custom'.
 	
 	simpleClass := builder newTraitNamed: #TComment.	
 
-	builder packageNameForUserClasses: 'Custom2'.
+	builder packageName: 'Custom2'.
 
 	simpleClass := builder newTraitNamed: #TAccess.	
 
 	builder generate.
-	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
-	userClass := builder testingEnvironment ask classNamed: 'TstTComment'.
-	generatedAccess := builder testingEnvironment ask classNamed: 'TstTAccessGenerated'.
-	accessUserClass := builder testingEnvironment ask classNamed: 'TstTAccess'.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
+	generatedAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
 
-	self assert: (generated package name = #Tst).
-	self assert: (userClass package name = #Custom).
-	self assert: (generatedAccess package name = #Tst).
-	self assert: (accessUserClass package name = #Custom2).
+	self assert: (generated package name = #Custom).
+	self assert: (generatedAccess package name = #Custom2).
 
 
 	
@@ -250,14 +244,12 @@ FamixMetamodelBuilderTraitTest >> testCustomPackageForUserClassesChanged [
 { #category : #tests }
 FamixMetamodelBuilderTraitTest >> testDefaultPackageForUserClasses [
 
-	| simpleClass generated userClass |
+	| simpleClass  userClass |
 	
 	simpleClass := builder newTraitNamed: #TComment.	
 	builder generate.
-	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
 	userClass := builder testingEnvironment ask classNamed: 'TstTComment'.
 
-	self assert: (generated package name = #Tst).
 	self assert: (userClass package name = #Tst).
 	
 ]
@@ -279,21 +271,17 @@ FamixMetamodelBuilderTraitTest >> testMultipleTraits [
 { #category : #tests }
 FamixMetamodelBuilderTraitTest >> testSimpleClassAnnotation [
 
-	| simpleClass generated method userTrait |
+	| simpleClass generated method |
 		
 	simpleClass := builder newTraitNamed: #TComment.	
 	builder generate.
 
-	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
-	userTrait := builder testingEnvironment ask classNamed: 'TstTComment'.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 
 	method := generated classSide methodNamed: #annotation.
-	self assert: (method sourceCode includesSubstring: '<MSEClass: #TCommentGenerated super: #FmxTraitEntity>').
+	self assert: (method sourceCode includesSubstring: '<MSEClass: #TComment super: #FmxTraitEntity>').
 	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
 
-	method := userTrait classSide methodNamed: #annotation.
-	self assert: (method sourceCode includesSubstring: '<MSEClass: #TComment super: #TstTCommentGenerated>').
-	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
 
 ]
 
@@ -304,7 +292,7 @@ FamixMetamodelBuilderTraitTest >> testSimpleTrait [
 	
 	builder newTraitNamed: #TComment.	
 	builder generate.
-	generated := builder testingEnvironment ask classNamed: 'TstTCommentGenerated'.
+	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 	self assert: generated notNil.
 	self assert: generated isClass.
 	self assert: generated superclass name equals: 'FmxTraitEntity'.
@@ -325,8 +313,8 @@ FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 	
 	builder generate.
 
-	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehaviorGenerated'.
-	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehaviorGenerated'.
+	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
+	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehavior'.
 	
 	self deny: (generatedBehavior superclass = generatedTBehavior).
 	method := generatedBehavior classSide methodNamed: #statefulTraits.
@@ -348,8 +336,8 @@ FamixMetamodelBuilderTraitTest >> testUses [
 	
 	builder generate.
 
-	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehaviorGenerated'.
-	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehaviorGenerated'.
+	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
+	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehavior'.
 	
 	self deny: (generatedBehavior superclass = generatedTBehavior).
 	method := generatedBehavior classSide methodNamed: #statefulTraits.

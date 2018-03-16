@@ -51,7 +51,6 @@ Class {
 		'environment',
 		'prefix',
 		'packageName',
-		'packageNameForUserClasses',
 		'classes',
 		'traits',
 		'relations',
@@ -161,10 +160,6 @@ FamixMetamodelBuilder >> cleanPackage [
 
 	(self packageName asPackageIfAbsent: [ nil ]) 
 		ifNotNil: [:aPackage | aPackage removeFromSystem ].
-	
-	(self packageName = self packageNameForUserClasses) ifFalse: [ 
-		(self packageNameForUserClasses asPackageIfAbsent: [ nil ]) 
-			ifNotNil: [:aPackage | aPackage removeFromSystem ]].	
 ]
 
 { #category : #'settings - default' }
@@ -353,7 +348,6 @@ FamixMetamodelBuilder >> newClass [
 	aClass builder: self.
 	aClass prefix: self prefix.
 	aClass packageName: self packageName.
-	aClass packageNameForUserClasses: self packageNameForUserClasses.
 	self classes add: aClass.
 	^ aClass
 	
@@ -395,7 +389,6 @@ FamixMetamodelBuilder >> newTrait [
 	aTrait builder: self.
 	aTrait prefix: self prefix.
 	aTrait packageName: self packageName.
-	aTrait packageNameForUserClasses: self packageNameForUserClasses.
 	self traits add: aTrait.
 	^ aTrait
 	
@@ -428,16 +421,6 @@ FamixMetamodelBuilder >> packageName: anObject [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilder >> packageNameForUserClasses [
-	^ packageNameForUserClasses ifNil: [ self packageName ]
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> packageNameForUserClasses: anObject [
-	packageNameForUserClasses := anObject
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilder >> prefix [
 	^ prefix ifNil: [ prefix := '' ]
 ]
@@ -452,8 +435,6 @@ FamixMetamodelBuilder >> registerPackages [
 	
 	self environment registerPackage: self packageName.
 	
-	(self packageName = self packageNameForUserClasses) ifFalse: [ 
-		self environment registerPackage: self packageNameForUserClasses. ]
 ]
 
 { #category : #accessing }

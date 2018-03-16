@@ -112,12 +112,6 @@ FmxNGGenerator class >> packageName [
 ]
 
 { #category : #accessing }
-FmxNGGenerator class >> packageNameForUserClasses [
-
-	^ #'FmxNG-Traits'
-]
-
-{ #category : #accessing }
 FmxNGGenerator class >> resetMetamodel [
 
 	" self resetMetamodel"
@@ -1513,8 +1507,7 @@ FmxNGGenerator >> initialize [
 	builder := FamixMetamodelBuilder new.
 	builder 
 		prefix: self prefix;
-		packageName: self packageName;
-		packageNameForUserClasses: self packageNameForUserClasses.
+		packageName: self packageName.
 
 ]
 

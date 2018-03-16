@@ -36,12 +36,6 @@ FamixMetamodelGenerator class >> packageName [
 ]
 
 { #category : #accessing }
-FamixMetamodelGenerator class >> packageNameForUserClasses [
-
-	^ self packageName
-]
-
-{ #category : #accessing }
 FamixMetamodelGenerator class >> prefix [
 
 	^ self packageName
@@ -55,9 +49,6 @@ FamixMetamodelGenerator class >> resetMetamodel [
 	| classes tower |
 
 	classes := self packageName asPackage definedClasses select: [ :each | each inheritsFrom: MooseEntity ].
-	
-	(self packageName = self packageNameForUserClasses) ifFalse: [ 
-		classes addAll: (self packageNameForUserClasses asPackage definedClasses select: [ :each | each inheritsFrom: MooseEntity ]) ].
 	
 	classes addAll: #'FmxNG-Generated' asPackage definedClasses.
 	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
@@ -77,9 +68,7 @@ FamixMetamodelGenerator >> adoptBuilder: aBuilder [
 
 	aBuilder 
 		prefix: self prefix;
-		packageName: self packageName;
-		packageNameForUserClasses: self packageNameForUserClasses.
-
+		packageName: self packageName.
 
 ]
 
@@ -169,12 +158,6 @@ FamixMetamodelGenerator >> packageName [
 
 	^ self class packageName
 
-]
-
-{ #category : #definition }
-FamixMetamodelGenerator >> packageNameForUserClasses [
-
-	^ self class packageNameForUserClasses
 ]
 
 { #category : #definition }

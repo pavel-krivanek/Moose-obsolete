@@ -88,12 +88,6 @@ FmxNGCompatibilityGenerator class >> packageName [
 ]
 
 { #category : #accessing }
-FmxNGCompatibilityGenerator class >> packageNameForUserClasses [
-
-	^ #'FmxNGCompatibility-Entities'
-]
-
-{ #category : #accessing }
 FmxNGCompatibilityGenerator class >> prefix [
 
 	^ #'FmxNG'

@@ -36,7 +36,7 @@ FamixMetamodelBuilderBehaviorAliasTest >> testClassPropertyWithType [
 	
 	builder generate.
 	
-	generated := builder testingEnvironment ask classNamed: 'TstNamedGenerated'.
+	generated := builder testingEnvironment ask classNamed: 'TstNamed'.
 	method := generated instanceSide methodNamed: #name.
 	self assert: (method sourceCode includesSubstring: '<MSEProperty: #name type: #String>').
 	method := generated instanceSide methodNamed: #name:.
@@ -76,7 +76,7 @@ FamixMetamodelBuilderBehaviorAliasTest >> testTraitPropertyWithType [
 	
 	builder generate.
 	
-	generated := builder testingEnvironment ask classNamed: 'TstTNamedGenerated'.
+	generated := builder testingEnvironment ask classNamed: 'TstTNamed'.
 	method := generated instanceSide methodNamed: #name.
 	self assert: (method sourceCode includesSubstring: '<MSEProperty: #name type: #String>').
 	method := generated instanceSide methodNamed: #name:.

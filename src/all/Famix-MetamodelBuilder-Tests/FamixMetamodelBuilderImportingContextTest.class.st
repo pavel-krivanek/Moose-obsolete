@@ -29,9 +29,9 @@ FamixMetamodelBuilderImportingContextTest >> setUp [
 		
 	builder generate.
 		
-	generatedAccess := builder testingEnvironment ask classNamed: #TstAccessGenerated.
-	generatedVariable := builder testingEnvironment ask classNamed: #TstVariableGenerated.
-	generatedMethod := builder testingEnvironment ask classNamed: #TstMethodGenerated.
+	generatedAccess := builder testingEnvironment ask classNamed: #TstAccess.
+	generatedVariable := builder testingEnvironment ask classNamed: #TstVariable.
+	generatedMethod := builder testingEnvironment ask classNamed: #TstMethod.
 
 	generatedContext := builder testingEnvironment ask classNamed: #TstImportingContext.
 
