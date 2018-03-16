@@ -41,6 +41,7 @@ FamixMetamodelBuilderTypedProperty >> generateGetterIn: aClassOrTrait [
 	methodSource := String streamContents: [ :s |
 		s nextPutAll: self name; cr; cr.
 		s tab; nextPutAll: propertyDefinition; cr.
+		s tab; nextPutAll: '<generated>'; cr.
 		commentDefinition  
 			ifNotEmpty: [ s tab; nextPutAll: commentDefinition; cr].
 		s tab; nextPutAll: '^ ';
@@ -59,6 +60,7 @@ FamixMetamodelBuilderTypedProperty >> generateSetterIn: aClassOrTrait [
 	
 	methodSource := String streamContents: [ :s |
 		s nextPutAll: self name; nextPutAll: ': anObject'; cr; cr.
+		s tab; nextPutAll: '<generated>'; cr.
 		s tab; nextPutAll: self name, ' := anObject'; cr 	].
 		
 	self builder environment compile: methodSource in: aClassOrTrait classified: 'accessing'.

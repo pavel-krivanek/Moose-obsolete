@@ -17,6 +17,7 @@ FamixMetamodelBuilderClassTest >> checkGeneralizationWithAnnotations [
 	self assert: generatedClass superclass equals: generatedBehavior.
 	annotation := generatedClass classSide methodNamed: #annotation.
 	self assert: (annotation sourceCode includesSubstring: '<MSEClass: #Class super: #TstBehavior>').
+	self assert: (annotation sourceCode includesSubstring: '<generated>').
 	
 
 ]
@@ -81,6 +82,7 @@ FamixMetamodelBuilderClassTest >> testAs [
 	self deny: (generatedNamed superclass = generatedTNamed).
 	method := generatedNamed classSide methodNamed: #statefulTraits.
 	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
+	self assert: (method sourceCode includesSubstring: '<generated>').
 	self assert: (method sourceCode includesSubstring: '^ {TstTNamed}').
 	
 
@@ -111,6 +113,8 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsMany [
 	self assert: generatedTWithAccesses slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
 	
 	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<generated>').
+	
 ]
 
 { #category : #tests }
@@ -134,7 +138,9 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsOne [
 	self assert: generatedVariable slots first expression equals: 'FMOne type: #TstAccess opposite: #variable'.
 	
 	self deny: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<generated>').
 	self assert: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<generated>').
 
 ]
 
@@ -163,7 +169,9 @@ FamixMetamodelBuilderClassTest >> testAutogereatedManyBelongTo [
 	self assert: generatedTVariable slots first expression equals: 'FMOne type: #TstTWithVariables opposite: #variables'.
 	
 	self deny: ((generatedTWithVariables methodNamed: #variables) sourceCode includesSubstring: '<container>').
-	self assert: ((generatedTVariable methodNamed: #variableOwner) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedTWithVariables methodNamed: #variables) sourceCode includesSubstring: '<generated>').
+	self assert: ((generatedTVariable methodNamed: #variableOwner) sourceCode includesSubstring: '<container>').	
+	self assert: ((generatedTVariable methodNamed: #variableOwner) sourceCode includesSubstring: '<generated>').
 ]
 
 { #category : #tests }
@@ -191,7 +199,9 @@ FamixMetamodelBuilderClassTest >> testAutogereatedManyToMany [
 	self assert: generatedTWithAccesses slots first expression equals: 'FMMany type: #TstTWithVariables opposite: #variables'.
 	
 	self deny: ((generatedTWithVariables methodNamed: #variables) sourceCode includesSubstring: '<container>').
-	self deny: ((generatedTWithAccesses methodNamed: #accesses) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedTWithVariables methodNamed: #variables) sourceCode includesSubstring: '<generated>').
+	self deny: ((generatedTWithAccesses methodNamed: #accesses) sourceCode includesSubstring: '<container>').	
+	self assert: ((generatedTWithAccesses methodNamed: #accesses) sourceCode includesSubstring: '<generated>').
 ]
 
 { #category : #tests }
@@ -219,7 +229,9 @@ FamixMetamodelBuilderClassTest >> testAutogereatedManyToOne [
 	self assert: generatedTVariable slots first expression equals: 'FMOne type: #TstTWithVariables opposite: #variables'.
 	
 	self deny: ((generatedTWithVariables methodNamed: #variables) sourceCode includesSubstring: '<container>').
-	self deny: ((generatedTVariable methodNamed: #variableOwner) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedTWithVariables methodNamed: #variables) sourceCode includesSubstring: '<generated>').
+	self deny: ((generatedTVariable methodNamed: #variableOwner) sourceCode includesSubstring: '<container>').	
+	self assert: ((generatedTVariable methodNamed: #variableOwner) sourceCode includesSubstring: '<generated>').
 ]
 
 { #category : #tests }
@@ -243,7 +255,9 @@ FamixMetamodelBuilderClassTest >> testAutogereatedOneBelongsTo [
 	self assert: generatedVariable slots first expression equals: 'FMOne type: #TstAccess opposite: #variable'.
 	
 	self deny: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
-	self assert: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<generated>').
+	self assert: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').	
+	self assert: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<generated>').
 ]
 
 { #category : #tests }
@@ -270,7 +284,8 @@ FamixMetamodelBuilderClassTest >> testAutogereatedOneToMany [
 	self assert: generatedTWithAccesses slots first name equals: #accesses.
 	self assert: generatedTWithAccesses slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
 	
-	self deny: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	self deny: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').	
+	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<generated>').
 ]
 
 { #category : #tests }
@@ -294,7 +309,9 @@ FamixMetamodelBuilderClassTest >> testAutogereatedOneToOne [
 	self assert: generatedVariable slots first expression equals: 'FMOne type: #TstAccess opposite: #variable'.
 	
 	self deny: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
-	self deny: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedAccess methodNamed: #variable) sourceCode includesSubstring: '<generated>').
+	self deny: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<container>').	
+	self assert: ((generatedVariable methodNamed: #access) sourceCode includesSubstring: '<generated>').
 ]
 
 { #category : #'tests - settings' }
@@ -546,8 +563,9 @@ FamixMetamodelBuilderClassTest >> testMultipleAs [
 	self deny: (generatedNamed superclass = generatedTSourced).
 	method := generatedNamed classSide methodNamed: #statefulTraits.
 	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
+	self assert: (method sourceCode includesSubstring: '<generated>').
 	self assert: (method sourceCode includesSubstring: '^ {TstTNamed. TstTSourced}').
-	
+
 
 ]
 
@@ -655,6 +673,7 @@ FamixMetamodelBuilderClassTest >> testSimpleClassAnnotation [
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	method := generated classSide methodNamed: #annotation.
 	self assert: (method sourceCode includesSubstring: '<MSEClass: #Comment super: #MooseEntity>').
+	self assert: (method sourceCode includesSubstring: '<generated>').
 	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
 
 ]
@@ -669,6 +688,7 @@ FamixMetamodelBuilderClassTest >> testSimpleClassStatefulTraits [
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	method := generated classSide methodNamed: #statefulTraits.
 	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
+	self assert: (method sourceCode includesSubstring: '<generated>').
 	self assert: (method sourceCode includesSubstring: '^ {}').
 
 ]

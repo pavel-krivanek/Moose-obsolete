@@ -277,6 +277,7 @@ FamixMetamodelBuilder >> generateImportIn: contextClass [
 		source := String streamContents: [ :s |
 			s	nextPutAll: 'import'; nextPutAll: each name; cr;
 				cr;
+				tab; nextPutAll: '<generated>';
 				tab; nextPutAll: '^ self import: '; nextPutAll: each fullName ].
 		 self environment compile: source in: contextClass classified: 'testing' ] 
 
@@ -302,6 +303,7 @@ FamixMetamodelBuilder >> generateShouldImportIn: contextClass [
 		source := String streamContents: [ :s |
 			s	nextPutAll: 'shouldImport'; nextPutAll: each name; cr;
 				cr;
+				tab; nextPutAll: '<generated>';
 				tab; nextPutAll: '^ self shouldImport: '; nextPutAll: each fullName ].
 		 self environment compile: source in: contextClass classified: 'testing' ] 
 

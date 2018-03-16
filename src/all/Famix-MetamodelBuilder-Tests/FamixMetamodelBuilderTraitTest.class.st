@@ -341,6 +341,7 @@ FamixMetamodelBuilderTraitTest >> testUses [
 	
 	self deny: (generatedBehavior superclass = generatedTBehavior).
 	method := generatedBehavior classSide methodNamed: #statefulTraits.
+	self assert: (method sourceCode includesSubstring: '<generated>').
 	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
 	self assert: (method sourceCode includesSubstring: '^ {TstTBehavior}').
 	

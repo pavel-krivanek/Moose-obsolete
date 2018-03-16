@@ -179,6 +179,7 @@ FamixMetamodelBuilderClass >> generateRequirementsFor: aClass [
 
 	aClass classSide compile: ('requirements
 
+	<generated>
 	^ \{ {1} \}' format: { self allRequirementNames joinUsing: '. ' }) 
 		classified: #meta
 ]
@@ -189,6 +190,7 @@ FamixMetamodelBuilderClass >> generateRootMethodsIn: aClass [
 	self builder generator ifNotNil: [ 
 		aClass classSide compile: ('metamodel
 
+	<generated>
 	^ {1} metamodel' format: { self builder generator class name }) classified: 'meta']
 ]
 
@@ -198,6 +200,7 @@ FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
 	aClass classSide compile: ('statefulTraits
 
 	<statefulTraits>
+	<generated>
 	^ \{{1}\}' format: { self allTraitNames joinUsing: '. ' }) 
 		classified: #meta
 
