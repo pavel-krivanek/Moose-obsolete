@@ -50,6 +50,7 @@ BaselineOfMoose >> baseline: spec [
 		
 		self baselineDeepTraverser: spec.
 		self baselineRoelTyper: spec.
+		self baselineRing2: spec.
 		
 		#(	
 			'Moose-Core'
@@ -57,6 +58,7 @@ BaselineOfMoose >> baseline: spec [
 			'Famix-MetamodelBuilder-Core'
 			'Famix-MetamodelBuilder-Support'
 			'Famix-MetamodelBuilder-Support'
+			'Famix-MetamodelBuilder-Tests'
 			'FmxNG-Generated'			
 			'FmxNG-Traits'			
 		) do: [ :packageName | 
@@ -658,6 +660,13 @@ BaselineOfMoose >> baselinePhexample: spec [
 		 'Phexample'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #Phexample) ]]
+
+]
+
+{ #category : #baseline }
+BaselineOfMoose >> baselineRing2: spec [ 
+    
+	spec baseline: 'Ring2' with: [spec repository: 'github://pavel-krivanek/Ring2:devMerge-integration/src'].
 
 ]
 
