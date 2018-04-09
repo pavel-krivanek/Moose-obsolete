@@ -2,6 +2,7 @@ Class {
 	#name : #FmxNGMethodGenerated,
 	#superclass : #FmxNGBehaviouralEntity,
 	#instVars : [
+		'#caughtExceptions => FMMany type: #FmxNGTCaughtException opposite: #definingEntity',
 		'#declaredExceptions => FMMany type: #FmxNGTDeclaredException opposite: #definingEntity',
 		'#thrownExceptions => FMMany type: #FmxNGTThrownException opposite: #definingEntity',
 		'#category',
@@ -10,8 +11,7 @@ Class {
 		'#isPublic',
 		'#timeStamp',
 		'#kind',
-		'#isAbstract',
-		'#caughtExceptions => FMMany type: #FmxNGTCaughtException opposite: #definingEntity'
+		'#isAbstract'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

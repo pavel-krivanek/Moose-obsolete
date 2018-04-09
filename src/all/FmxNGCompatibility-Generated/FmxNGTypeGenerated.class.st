@@ -2,16 +2,16 @@ Class {
 	#name : #FmxNGTypeGenerated,
 	#superclass : #FmxNGContainerEntity,
 	#instVars : [
-		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types',
-		'#outgoingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #user',
-		'#methods => FMMany type: #FmxNGTMethod opposite: #parentType',
-		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass',
+		'#structuresWithDeclaredType => FMMany type: #FmxNGTTypedStructure opposite: #declaredType',
 		'#incomingReferences => FMMany type: #FmxNGTReference opposite: #target',
-		'#attributes => FMMany type: #FmxNGTAttribute opposite: #parentType',
-		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass',
 		'#typeAliases => FMMany type: #FmxNGTTypeAlias opposite: #aliasedType',
 		'#argumentsInParameterizedTypes => FMOne type: #FmxNGTWithParameterizedTypeUsers opposite: #arguments',
-		'#structuresWithDeclaredType => FMMany type: #FmxNGTTypedStructure opposite: #declaredType'
+		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass',
+		'#attributes => FMMany type: #FmxNGTAttribute opposite: #parentType',
+		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass',
+		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types',
+		'#outgoingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #user',
+		'#methods => FMMany type: #FmxNGTMethod opposite: #parentType'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

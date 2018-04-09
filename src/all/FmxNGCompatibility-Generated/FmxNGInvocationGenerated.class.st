@@ -2,10 +2,10 @@ Class {
 	#name : #FmxNGInvocationGenerated,
 	#superclass : #FmxNGAssociation,
 	#instVars : [
-		'#signature',
 		'#sender => FMOne type: #FmxNGTWithInvocations opposite: #outgoingInvocations',
 		'#candidates => FMMany type: #FmxNGTInvocable opposite: #incomingInvocations',
-		'#receiver => FMOne type: #FmxNGTInvocationsReceiver opposite: #receivingInvocations'
+		'#receiver => FMOne type: #FmxNGTInvocationsReceiver opposite: #receivingInvocations',
+		'#signature'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

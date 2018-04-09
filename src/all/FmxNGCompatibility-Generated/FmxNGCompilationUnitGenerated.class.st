@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGCompilationUnitGenerated,
 	#superclass : #FmxNGCFile,
 	#instVars : [
-		'#module => FMOne type: #FmxNGTModule opposite: #moduleFiles',
-		'#compilationUnitOwner => FMOne type: #FmxNGTWithCompilationUnit opposite: #compilationUnit'
+		'#compilationUnitOwner => FMOne type: #FmxNGTWithCompilationUnit opposite: #compilationUnit',
+		'#module => FMOne type: #FmxNGTModule opposite: #moduleFiles'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

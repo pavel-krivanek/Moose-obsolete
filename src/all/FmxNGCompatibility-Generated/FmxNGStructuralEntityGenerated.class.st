@@ -3,8 +3,8 @@ Class {
 	#superclass : #FmxNGLeafEntity,
 	#instVars : [
 		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable',
-		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer',
-		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType'
+		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType',
+		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }

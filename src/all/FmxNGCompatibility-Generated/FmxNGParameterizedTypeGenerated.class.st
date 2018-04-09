@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGParameterizedTypeGenerated,
 	#superclass : #FmxNGType,
 	#instVars : [
-		'#parameterizableClass => FMOne type: #FmxNGTWithParameterizedTypes opposite: #parameterizedTypes',
-		'#arguments => FMMany type: #FmxNGTParameterizedTypeUser opposite: #argumentsInParameterizedTypes'
+		'#arguments => FMMany type: #FmxNGTParameterizedTypeUser opposite: #argumentsInParameterizedTypes',
+		'#parameterizableClass => FMOne type: #FmxNGTWithParameterizedTypes opposite: #parameterizedTypes'
 	],
 	#category : #'FmxNGCompatibility-Generated-Entities'
 }
