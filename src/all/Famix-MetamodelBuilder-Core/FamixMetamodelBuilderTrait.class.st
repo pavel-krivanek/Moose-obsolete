@@ -101,7 +101,7 @@ FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName supercl
 	<MSEClass: #{1} super: #{2}>
 	<package: {3}>
 	^self' format: { aName. aSuperclassName. self builder safePackageName})
-		classified: 'meta'
+		classified: 'meta' notifying: nil
 
 ]
 
