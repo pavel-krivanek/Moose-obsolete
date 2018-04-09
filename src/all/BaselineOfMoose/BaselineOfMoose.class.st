@@ -666,7 +666,7 @@ BaselineOfMoose >> baselinePhexample: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineRing2: spec [ 
     
-	spec baseline: 'Ring2' with: [spec repository: 'github://pavel-krivanek/Ring2:devMerge-integration/src'].
+	spec baseline: 'Ring2' with: [spec repository: 'github://pavel-krivanek/Ring2:changesResolver/src'].
 
 ]
 

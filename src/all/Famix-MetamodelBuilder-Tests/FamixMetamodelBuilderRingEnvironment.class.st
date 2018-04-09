@@ -46,11 +46,11 @@ FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass:
 		| slot |
 		slot := slotInBadEnvironment isSpecial
 			ifTrue: [ 			
-				(RG2UnknownSlotDefinition named: slotInBadEnvironment name parent: aClass layout) 
+				(RGUnknownSlot named: slotInBadEnvironment name parent: aClass layout) 
 					expression: slotInBadEnvironment expression;
 					yourself ]
 			ifFalse: [ 
-				RG2InstanceVariableSlotDefinition named: slotInBadEnvironment name parent: aClass layout ].
+				RGInstanceVariableSlot named: slotInBadEnvironment name parent: aClass layout ].
 		aClass layout addSlot: slot ].
 
 	^ aClass
@@ -96,11 +96,11 @@ FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots
 		| slot |
 		slot := slotInBadEnvironment isSpecial
 			ifTrue: [ 			
-				(RG2UnknownSlotDefinition named: slotInBadEnvironment name parent: aTrait layout) 
+				(RGUnknownSlot named: slotInBadEnvironment name parent: aTrait layout) 
 					expression: slotInBadEnvironment expression;
 					yourself ]
 			ifFalse: [ 
-				RG2InstanceVariableSlotDefinition named: slotInBadEnvironment name parent: aTrait layout ].
+				RGInstanceVariableSlot named: slotInBadEnvironment name parent: aTrait layout ].
 		aTrait layout addSlot: slot ].
 	
 	^ aTrait
@@ -123,7 +123,7 @@ FamixMetamodelBuilderRingEnvironment >> initialize [
 
 	super initialize.
 	
-	ringEnvironment := RG2Environment new.
+	ringEnvironment := RGEnvironment new.
 	ringEnvironment ensureClassNamed: #FMOne.
 	ringEnvironment ensureClassNamed: #FMMany.		
 
@@ -150,7 +150,7 @@ FamixMetamodelBuilderRingEnvironment >> setComment: aString for: aClass [
 { #category : #initialization }
 FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName [ 
 
-	^ (RG2InstanceVariableSlotDefinition named: slotName asSymbol)
+	^ (RGInstanceVariableSlot named: slotName asSymbol)
 ]
 
 { #category : #initialization }
@@ -162,7 +162,7 @@ FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName cardinality: cardina
 		ifTrue: [ #FMOne ]
 		ifFalse: [ #FMMany ].
 		
-	^ (RG2UnknownSlotDefinition named: slotName asSymbol)
+	^ (RGUnknownSlot named: slotName asSymbol)
 		 expression: ('{1} type: #{2} opposite: #{3}' 
 			format: { cardinalityClassName. type. oppositeName}) 
 ]
