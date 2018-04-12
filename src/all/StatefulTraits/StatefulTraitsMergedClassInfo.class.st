@@ -67,9 +67,9 @@ StatefulTraitsMergedClassInfo >> cleanMergedClass [
 		select: [ :each | each beginsWith: '_fromTrait_' ] 
 		thenDo: [ :each | mergedClass removeProtocol: each ].
 		
-	mergedClass class protocols 
+	mergedClass classSide protocols 
 		select: [ :each | each beginsWith: '_fromTrait_' ] 
-		thenDo: [ :each | mergedClass class removeProtocol: each ].
+		thenDo: [ :each | mergedClass classSide removeProtocol: each ].
 ]
 
 { #category : #initialization }
@@ -118,7 +118,7 @@ StatefulTraitsMergedClassInfo >> mergeMethod: aMethod onClassSide: aBoolean [
 	tag := '_fromTrait_', className.	
 		
 	targetClass := aBoolean 
-		ifTrue: [ self mergedClass class ]
+		ifTrue: [ self mergedClass classSide ]
 		ifFalse: [ self mergedClass ].
 		
 	newMethodSelector := targetClass compile: prefix, aMethod sourceCode classified: tag.
@@ -138,10 +138,10 @@ StatefulTraitsMergedClassInfo >> mergeSlot: aSlot [
 
 	| newSlot |
 	newSlot := aSlot copy.
-	[(self mergedClass hasSlotNamed: newSlot name) 
+	[(self mergedClass allSlots anySatisfy: [:slot | slot name = newSlot name]) 
 		ifTrue: [ self mergedClass removeSlot: (self mergedClass slotNamed: newSlot name) ] ] ifError: [  ].
-	(self mergedClass hasSlotNamed: newSlot name) 
-		ifFalse: [ self mergedClass addSlot: newSlot ].
+	(self mergedClass allSlots anySatisfy: [:slot | slot name = newSlot name]) 
+		ifFalse: [ self mergedClass layout addSlot: newSlot ].
 	self slots add: newSlot name.
 
 ]
@@ -202,7 +202,7 @@ StatefulTraitsMergedClassInfo >> methodRemoved: anEvent [
 	(self traits includes: method methodClass instanceSide) ifTrue: [ 
 		method methodClass isClassSide
 			ifFalse: [ mergedClass removeSelector: method selector ]
-			ifTrue: [ mergedClass class removeSelector: method selector   ].].
+			ifTrue: [ mergedClass classSide removeSelector: method selector   ].].
 	
 ]
 

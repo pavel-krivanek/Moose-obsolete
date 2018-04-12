@@ -12,9 +12,9 @@ StatefulTraitsMergedClassInfoTests >> reset [
 		select: [ :each | each beginsWith: '_fromTrait_' ] 
 		thenDo: [ :each | StatefulTraitsTestingMergedClass removeProtocol: each ].
 		
-	StatefulTraitsTestingMergedClass class protocols 
+	StatefulTraitsTestingMergedClass classSide protocols 
 		select: [ :each | each beginsWith: '_fromTrait_' ] 
-		thenDo: [ :each | StatefulTraitsTestingMergedClass class removeProtocol: each ].
+		thenDo: [ :each | StatefulTraitsTestingMergedClass classSide removeProtocol: each ].
 			
 	Object subclass: #StatefulTraitsTestingMergedClass
 		slots: { #var1. #var2 }
@@ -54,7 +54,7 @@ StatefulTraitsMergedClassInfoTests >> testMerge [
 	
 	self assert: StatefulTraitsTestingMergedClass slotNames sorted equals: #(var1 var2).
 	self assert: StatefulTraitsTestingMergedClass localSelectors sorted equals: #(var1 var1: var2 var2:).
-	self assert: StatefulTraitsTestingMergedClass class localSelectors isEmpty.
+	self assert: StatefulTraitsTestingMergedClass classSide localSelectors isEmpty.
 	
 	
 	info := StatefulTraitsMergedClassInfo on: c1.
@@ -72,7 +72,7 @@ var1:
 var2
 var2:).
 
-	self assert: StatefulTraitsTestingMergedClass class localSelectors sorted equals: #(aClassSideMethod).
+	self assert: StatefulTraitsTestingMergedClass classSide localSelectors sorted equals: #(aClassSideMethod).
 	
 	
 
