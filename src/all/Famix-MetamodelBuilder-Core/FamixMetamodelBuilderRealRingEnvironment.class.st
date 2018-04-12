@@ -9,15 +9,37 @@ Class {
 
 { #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to: anRGClass [
-
-	| superclass | 
-	
-	superclass := self class environment classNamed: anRGClass superclass name.
-	self halt.
+	| superclass generatedOldSlots customSlots customSlotNames slotDefinitions classDefinition slotsString definition |
+	"	superclass := self class environment classNamed: anRGClass superclass name.
 	(realClass superclass = superclass)
 		ifFalse: [ realClass superclass: superclass ].
-
-		
+"
+	generatedOldSlots := self generatedSlotsOf: realClass.
+	customSlots := realClass slots copyWithoutAll: generatedOldSlots.
+	customSlotNames := customSlots collect: #name.
+	slotDefinitions := ((anRGClass slots
+		reject: [ :each | customSlotNames includes: each name ])
+		collect: #definitionString) asOrderedCollection.
+	slotDefinitions addAll: (customSlots collect: #definitionString).
+	slotDefinitions := slotDefinitions sorted.
+	slotsString := '{' , (slotDefinitions joinUsing: '. ') , '}'.
+	definition := '{superclass} subclass: #{className} 
+		slots: {slots} 
+		classVariables: ''{classVariables}''
+		poolDictionaries: ''{poolDictionaries}''
+		category: ''{category}'''
+		format:
+			(Dictionary
+				newFrom:
+					{(#superclass -> realClass superclass name).
+					(#className -> anRGClass name).
+					(#layout -> realClass classLayout class name).
+					(#slots -> slotsString).
+					(#classVariables -> realClass classVariablesString).
+					(#poolDictionaries -> realClass sharedPoolsString).
+					(#category -> realClass category)}).
+	
+	OpalCompiler evaluate: definition.
 ]
 
 { #category : #accessing }
@@ -147,13 +169,27 @@ FamixMetamodelBuilderRealRingEnvironment >> ensurePackagesFrom: anRGEnvironment 
 
 	resolvedPackages do: [ :each |
 		(RPackageOrganizer default includesPackageNamed: each name)
-			ifFalse: [ self halt. RPackageOrganizer default registerPackageNamed: each name]].
+			ifFalse: [ RPackageOrganizer default registerPackageNamed: each name]].
 ]
 
 { #category : #initialization }
 FamixMetamodelBuilderRealRingEnvironment >> flattenTraitsFor: aClass [
 
 
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> generatedSlotsOf: aRealClass [
+
+	| slotNames |
+	
+	slotNames := (aRealClass canUnderstand: #generatedSlotNames)
+		ifTrue: [ aRealClass generatedSlotNames ]
+		ifFalse: [ Array new ].
+		
+	^ (slotNames collect: [ :slotName | aRealClass slotNamed: slotName ifFound: [ :slot | slot ] ifNone: nil ]) select: #notNil.
+	
+	
 ]
 
 { #category : #initialization }
