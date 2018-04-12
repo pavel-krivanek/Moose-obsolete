@@ -60,7 +60,8 @@ Class {
 		'basicSuperclassName',
 		'basicTraitName',
 		'traitsFlattening',
-		'generator'
+		'generator',
+		'generateImportingContext'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -90,6 +91,12 @@ FamixMetamodelBuilder class >> forTesting [
 FamixMetamodelBuilder >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitBuilder: self.
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> apply [
+
+	self environment apply
 ]
 
 { #category : #accessing }
@@ -265,7 +272,9 @@ FamixMetamodelBuilder >> generate [
 	self sortedClasses do: [ :each | each generate ] displayingProgress: 'generating classes'.
 	
 	self behaviorsCount > 0
-		ifTrue: [ self generateImportingContext ]
+		ifTrue: [ self generateImportingContext ].
+		
+	self apply
 ]
 
 { #category : #generating }
@@ -288,10 +297,17 @@ FamixMetamodelBuilder >> generateImportingContext [
 
 	| contextClass |
 	
+	generateImportingContext ifFalse: [ ^ self ].
+	
 	contextClass := self environment createImportingcontextClassNamed: self importingContextName in: self packageName.
 	
 	self generateShouldImportIn: contextClass.
 	self generateImportIn: contextClass
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> generateImportingContext: anObject [
+	generateImportingContext := anObject
 ]
 
 { #category : #generating }
@@ -329,13 +345,14 @@ FamixMetamodelBuilder >> importingContextName [
 { #category : #initialization }
 FamixMetamodelBuilder >> initialize [
 
-	environment := FamixMetamodelBuilderRealEnvironment for: self.
+	environment := FamixMetamodelBuilderRealRingEnvironment for: self.
 
 	classes := OrderedCollection new.
 	traits := OrderedCollection new.
 	relations := OrderedCollection new.
 	
 	traitsFlattening := false.
+	generateImportingContext := false.
 	
 	
 	
@@ -511,7 +528,17 @@ FamixMetamodelBuilder >> traitsFlattening: anObject [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilder >> traitsTag: anObject [
+	traitsTag := anObject
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilder >> traitsToGenerate [ 
 
 	^ self traits select: #willGenerate.
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> wantsToGenerateImportingContext [
+	^ generateImportingContext
 ]

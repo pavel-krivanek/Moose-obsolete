@@ -1,3 +1,10 @@
+"
+| g |
+g := FmxNGGenerator new.
+g builder traitsFlattening: false.
+g generate.
+
+"
 Class {
 	#name : #FmxNGGenerator,
 	#superclass : #FamixMetamodelGenerator,

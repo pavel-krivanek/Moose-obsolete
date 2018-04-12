@@ -19,6 +19,12 @@ FamixMetamodelBuilderEnvironment class >> for: aBuilder [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderEnvironment >> apply [
+
+
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderEnvironment >> builder [
 	^ builder
 ]
