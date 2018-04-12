@@ -10,10 +10,7 @@ Class {
 { #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to: anRGClass [
 	| superclass generatedOldSlots customSlots customSlotNames slotDefinitions classDefinition slotsString definition |
-	"	superclass := self class environment classNamed: anRGClass superclass name.
-	(realClass superclass = superclass)
-		ifFalse: [ realClass superclass: superclass ].
-"
+
 	generatedOldSlots := self generatedSlotsOf: realClass.
 	customSlots := realClass slots copyWithoutAll: generatedOldSlots.
 	customSlotNames := customSlots collect: #name.
@@ -40,6 +37,29 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 					(#category -> realClass category)}).
 	
 	OpalCompiler evaluate: definition.
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> adoptMethodsOf: realClass to: anRGClass [
+
+	| generatedMethods |
+
+	generatedMethods := Pragma allNamed: #generated in: realClass.
+	generatedMethods
+		do: [ :each | realClass removeSelector: each methodSelector ].
+	anRGClass localMethods
+		do: [ :method | 
+			(realClass localSelectors includes: method name)
+				ifFalse: [ realClass compile: method sourceCode classified: method protocol ] ].
+			
+	generatedMethods := Pragma allNamed: #generated in: realClass classSide.
+	generatedMethods
+		do: [ :each | realClass classSide removeSelector: each methodSelector ].
+	anRGClass classSide localMethods
+		do: [ :method | 
+			(realClass classSide localSelectors includes: method name)
+				ifFalse: [ realClass classSide compile: method sourceCode classified: method protocol ] ]
+			
 ]
 
 { #category : #accessing }
@@ -219,7 +239,8 @@ FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
 		ifNil: [ 
 			realClass := OpalCompiler evaluate: anRGClass definition ]
 		ifNotNil: [ 
-			self adoptClassDefinitionOf: realClass to: anRGClass ].
+			self adoptClassDefinitionOf: realClass to: anRGClass.
+			self adoptMethodsOf: realClass to: anRGClass ].
 		
 ]
 

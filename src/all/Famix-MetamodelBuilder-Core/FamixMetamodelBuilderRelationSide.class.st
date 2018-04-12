@@ -178,7 +178,7 @@ FamixMetamodelBuilderRelationSide >> generateGetterIn: aClassOrTrait [
 
 	methodSource := String streamContents: [ :s |
 		s nextPutAll: self name; cr; cr.
-		s nextPutAll: '<generated>'; cr.
+		s tab; nextPutAll: '<generated>'; cr.
 		commentDefinition  
 			ifNotEmpty: [ s tab; nextPutAll: commentDefinition; cr].
 			self isContainer ifTrue: [ 
