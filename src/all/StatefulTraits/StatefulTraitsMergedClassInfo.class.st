@@ -143,6 +143,8 @@ StatefulTraitsMergedClassInfo >> mergeSlot: aSlot [
 	(self mergedClass allSlots anySatisfy: [:slot | slot name = newSlot name]) 
 		ifFalse: [ self mergedClass layout addSlot: newSlot ].
 	self slots add: newSlot name.
+	
+	^ newSlot
 
 ]
 

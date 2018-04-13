@@ -37,6 +37,8 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 					(#category -> realClass category)}).
 	
 	OpalCompiler evaluate: definition.
+	
+	self generateSlotsDescriptionFrom: anRGClass to: realClass.
 ]
 
 { #category : #installing }
@@ -195,6 +197,24 @@ FamixMetamodelBuilderRealRingEnvironment >> ensurePackagesFrom: anRGEnvironment 
 { #category : #initialization }
 FamixMetamodelBuilderRealRingEnvironment >> flattenTraitsFor: aClass [
 
+	| info |
+	info := StatefulTraitsMergedClassInfoForRing on: aClass.
+	(aClass propertyNamed: #statefulTraits ifAbsent: [ Array new ])
+		do: [ :aTraitName | 
+			info addTrait: (aClass environment ask behaviorNamed: aTraitName) ].
+	info merge.
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGClass to: realClass [
+
+	| generatedSlots |
+	
+	generatedSlots := anRGClass layout slots select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
+	
+	realClass classSide compile: ('generatedSlots
+	^ {1}' format: { '#(', ((generatedSlots collect: #name) joinUsing: ' '), ')' }) classified: 'generator'
+		
 
 ]
 

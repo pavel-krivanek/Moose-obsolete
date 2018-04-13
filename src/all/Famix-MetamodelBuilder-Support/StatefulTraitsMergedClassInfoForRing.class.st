@@ -18,3 +18,12 @@ StatefulTraitsMergedClassInfoForRing >> mergeMethodsFrom: aTrait [
 		traitToMerge localMethods do: [ :each | self mergeMethod: each onClassSide: false ].
 		traitToMerge class localMethods do: [ :each | self mergeMethod: each onClassSide: true ]]
 ]
+
+{ #category : #merging }
+StatefulTraitsMergedClassInfoForRing >> mergeSlot: aSlot [
+
+	| newSlot |
+
+	newSlot := super mergeSlot: aSlot.
+	newSlot propertyNamed: #isGenerated put: true.
+]

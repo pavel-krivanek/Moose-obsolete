@@ -197,6 +197,8 @@ FamixMetamodelBuilderClass >> generateRootMethodsIn: aClass [
 { #category : #generating }
 FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
 
+	aClass propertyNamed: #statefulTraits put: self allTraitNames.
+
 	aClass classSide compile: ('statefulTraits
 
 	<statefulTraits>
