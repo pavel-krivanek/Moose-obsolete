@@ -114,7 +114,8 @@ FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName supercl
 					yourself ]
 			ifFalse: [ 
 				RGInstanceVariableSlot named: slotInBadEnvironment name parent: aClass layout ].
-		aClass layout addSlot: slot ].
+		aClass layout addSlot: slot.
+		slot propertyNamed: #isGenerated put: true ].
 
 	^ aClass
 ]
@@ -164,7 +165,8 @@ FamixMetamodelBuilderRealRingEnvironment >> createTraitNamed: traitName slots: s
 					yourself ]
 			ifFalse: [ 
 				RGInstanceVariableSlot named: slotInBadEnvironment name parent: aTrait layout ].
-		aTrait layout addSlot: slot ].
+		aTrait layout addSlot: slot.
+		slot propertyNamed: #isGenerated put: true ].
 	
 	^ aTrait
 ]
