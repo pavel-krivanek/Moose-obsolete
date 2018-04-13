@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGParameterizableClass class >> annotation [
-
-	<MSEClass: #ParameterizableClass super: #FmxNGParameterizableClassGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #generated }
 FmxNGParameterizableClass >> parameters [
 	<MSEProperty: #parameters type: #FmxNGParameterType> <multivalued> <derived>

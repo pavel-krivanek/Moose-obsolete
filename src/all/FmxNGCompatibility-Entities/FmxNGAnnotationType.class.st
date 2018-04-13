@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGAnnotationType class >> annotation [
-
-	<MSEClass: #AnnotationType super: #FmxNGAnnotationTypeGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #'accessing-query' }
 FmxNGAnnotationType >> annotatedEntities [
 	^ self instances collect: [:each | each annotatedEntity ]

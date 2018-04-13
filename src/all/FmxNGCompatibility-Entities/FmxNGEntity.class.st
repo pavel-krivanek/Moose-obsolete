@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGEntity class >> annotation [
-
-	<MSEClass: #Entity super: #FmxNGEntityGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #MQ }
 FmxNGEntity class >> resetMSEProperties [
 	"

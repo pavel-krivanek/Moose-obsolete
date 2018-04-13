@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGTypeAlias class >> annotation [
-
-	<MSEClass: #TypeAlias super: #FmxNGTypeAliasGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #'Famix-Implementation' }
 FmxNGTypeAlias >> allSubclassesDo: aBlock [
 	"we override this traversal because we want to

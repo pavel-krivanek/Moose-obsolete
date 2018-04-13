@@ -29,8 +29,8 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 	slotsString := '{' , (slotDefinitions joinUsing: '. ') , '}'.
 	definition := '{superclass} subclass: #{className} 
 		slots: {slots} 
-		classVariables: ''{classVariables}''
-		poolDictionaries: ''{poolDictionaries}''
+		classVariables: {classVariables}
+		poolDictionaries: ''''
 		category: ''{category}'''
 		format:
 			(Dictionary
@@ -39,7 +39,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 					(#className -> anRGClass name).
 					(#layout -> realClass classLayout class name).
 					(#slots -> slotsString).
-					(#classVariables -> realClass classVariablesString).
+					(#classVariables -> (self classVariablesStringFor: realClass)).
 					(#poolDictionaries -> realClass sharedPoolsString).
 					(#category -> realClass category)}).
 	
@@ -76,7 +76,7 @@ FamixMetamodelBuilderRealRingEnvironment >> apply [
 
 	self ensurePackagesFrom: ringEnvironment.
 	self ensureClassesFrom: ringEnvironment.
-	
+
  
 ]
 
@@ -90,6 +90,12 @@ FamixMetamodelBuilderRealRingEnvironment >> basicSuperclass [
 FamixMetamodelBuilderRealRingEnvironment >> basicTrait [
 
 	^ self ringEnvironment ensureClassNamed: self builder basicTraitName
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> classVariablesStringFor: realClass [
+
+	^ '{', ((realClass classVarNames collect: [ :each | '#', each ]) joinUsing: ' '), '}'
 ]
 
 { #category : #installing }

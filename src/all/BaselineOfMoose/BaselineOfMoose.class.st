@@ -59,7 +59,6 @@ BaselineOfMoose >> baseline: spec [
 			'Famix-MetamodelBuilder-Support'
 			'Famix-MetamodelBuilder-Support'
 			'Famix-MetamodelBuilder-Tests'
-			'FmxNG-Generated'			
 			'FmxNG-Traits'			
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
@@ -382,7 +381,6 @@ BaselineOfMoose >> baselineFamixNG: spec [
 	#(
 		'FamixNG-MetamodelGeneration'
 		'FmxStImporter'
-		'FmxNG-Generated'
 		'FmxNG-Traits'
 		'CMetamodelGenerator'
 		'FmxC-Generated'

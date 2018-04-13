@@ -6,14 +6,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGAssociation class >> annotation [
-
-	<MSEClass: #Association super: #FmxNGAssociationGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #accessing }
 FmxNGAssociation class >> sourceTypes [
 	^ sourceTypes

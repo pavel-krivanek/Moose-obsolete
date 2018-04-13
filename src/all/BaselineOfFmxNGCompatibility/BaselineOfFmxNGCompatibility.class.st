@@ -15,7 +15,6 @@ BaselineOfFmxNGCompatibility >> baseline: spec [
 
 	spec for: #common do: [
 		spec package: 'FmxNGCompatibility-Generator'.
-		spec package: 'FmxNGCompatibility-Generated'.
 		spec package: 'FmxNGCompatibility-Entities'.
 	].
 

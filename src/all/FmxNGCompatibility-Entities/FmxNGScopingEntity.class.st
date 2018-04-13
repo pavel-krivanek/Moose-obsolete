@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGScopingEntity class >> annotation [
-
-	<MSEClass: #ScopingEntity super: #FmxNGScopingEntityGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #adding }
 FmxNGScopingEntity >> addChildScope: aScopingEntity [ 
 	childScopes add: aScopingEntity

@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGUnknownVariable class >> annotation [
-
-	<MSEClass: #UnknownVariable super: #FmxNGUnknownVariableGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #'Famix-Extensions' }
 FmxNGUnknownVariable >> accept: aVisitor [
 

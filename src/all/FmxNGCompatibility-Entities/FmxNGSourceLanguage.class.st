@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGSourceLanguage class >> annotation [
-
-	<MSEClass: #SourceLanguage super: #FmxNGSourceLanguageGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #adding }
 FmxNGSourceLanguage >> addSourcedEntity: aSourcedEntity [
 	^ sourcedEntities add: aSourcedEntity

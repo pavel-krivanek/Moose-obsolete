@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGParameterizedType class >> annotation [
-
-	<MSEClass: #ParameterizedType super: #FmxNGParameterizedTypeGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #enumerating }
 FmxNGParameterizedType >> allSubclassesDo: aBlock [
 	"we override this traversal because we want to

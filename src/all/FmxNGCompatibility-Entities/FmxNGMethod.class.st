@@ -8,14 +8,6 @@ Class {
 }
 
 { #category : #meta }
-FmxNGMethod class >> annotation [
-
-	<MSEClass: #Method super: #FmxNGMethodGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
-{ #category : #meta }
 FmxNGMethod class >> shouldSearchForSmalltalkCodeInImage [
 	^ ShouldSearchForSmalltalkCodeInImage ifNil: [ ShouldSearchForSmalltalkCodeInImage := true ]
 ]

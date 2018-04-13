@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGParameter class >> annotation [
-
-	<MSEClass: #Parameter super: #FmxNGParameterGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #'Famix-Extensions' }
 FmxNGParameter >> accept: aVisitor [
 

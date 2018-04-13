@@ -5,14 +5,6 @@ Class {
 }
 
 { #category : #meta }
-FmxNGReference class >> annotation [
-
-	<MSEClass: #Reference super: #FmxNGReferenceGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
-{ #category : #meta }
 FmxNGReference class >> source: source target: target [
 	^ self new source: source; target: target
 ]

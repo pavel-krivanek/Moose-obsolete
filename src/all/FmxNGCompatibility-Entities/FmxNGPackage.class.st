@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGPackage class >> annotation [
-
-	<MSEClass: #Package super: #FmxNGPackageGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #'Famix-Implementation' }
 FmxNGPackage >> abstractClasses [
 

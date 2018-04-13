@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGComment class >> annotation [
-
-	<MSEClass: #Comment super: #FmxNGCommentGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #accessing }
 FmxNGComment class >> content: aString [
 	^ self new

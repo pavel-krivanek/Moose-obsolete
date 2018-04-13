@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGBehaviouralEntity class >> annotation [
-
-	<MSEClass: #BehaviouralEntity super: #FmxNGBehaviouralEntityGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #accessing }
 FmxNGBehaviouralEntity >> addAccess: anAccess [ 
 	accesses add: anAccess

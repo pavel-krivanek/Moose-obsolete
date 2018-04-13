@@ -4,14 +4,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGParameterType class >> annotation [
-
-	<MSEClass: #ParameterType super: #FmxNGParameterTypeGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #testing }
 FmxNGParameterType >> isParameterType [
 	^ true

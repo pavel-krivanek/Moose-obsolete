@@ -6,14 +6,6 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
-FmxNGContainerEntity class >> annotation [
-
-	<MSEClass: #ContainerEntity super: #FmxNGContainerEntityGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #visiting }
 FmxNGContainerEntity >> accept: aVisitor [
 

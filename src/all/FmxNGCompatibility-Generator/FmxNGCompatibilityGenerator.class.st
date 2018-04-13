@@ -84,7 +84,7 @@ Class {
 { #category : #accessing }
 FmxNGCompatibilityGenerator class >> packageName [
 
-	^ #'FmxNGCompatibility-Generated'
+	^ #'FmxNGCompatibility-Entities'
 ]
 
 { #category : #accessing }

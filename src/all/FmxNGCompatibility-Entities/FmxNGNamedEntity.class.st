@@ -44,14 +44,6 @@ FmxNGNamedEntity class >> allParentTypes [
 	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
 
-{ #category : #meta }
-FmxNGNamedEntity class >> annotation [
-
-	<MSEClass: #NamedEntity super: #FmxNGNamedEntityGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #accessing }
 FmxNGNamedEntity class >> belongsToMethod [
 	^ self compiledMethodAt: #belongsTo ifAbsent: nil

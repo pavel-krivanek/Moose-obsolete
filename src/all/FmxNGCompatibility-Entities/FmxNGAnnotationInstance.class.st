@@ -32,14 +32,6 @@ FmxNGAnnotationInstance class >> allParentTypes [
 	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
 
-{ #category : #meta }
-FmxNGAnnotationInstance class >> annotation [
-
-	<MSEClass: #AnnotationInstance super: #FmxNGAnnotationInstanceGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
-	^self
-]
-
 { #category : #accessing }
 FmxNGAnnotationInstance class >> childrenSelectors [
 	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
