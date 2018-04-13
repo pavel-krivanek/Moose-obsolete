@@ -1,14 +1,34 @@
 Class {
 	#name : #FmxNGTWithSuperInheritances,
-	#superclass : #FmxNGTWithSuperInheritancesGenerated,
+	#superclass : #FmxTraitEntity,
+	#instVars : [
+		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass'
+	],
 	#category : #'FmxNG-Traits'
 }
 
 { #category : #meta }
 FmxNGTWithSuperInheritances class >> annotation [
 
+	<generated>
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithSuperInheritances super: #FmxNGTWithSuperInheritancesGenerated>
-	<package: #'FmxNG-Generated'>
+	<MSEClass: #TWithSuperInheritances super: #FmxTraitEntity>
+	<generated>
+	<package: #'FmxNG-Traits'>
 	^self
+]
+
+{ #category : #accessing }
+FmxNGTWithSuperInheritances >> subInheritances [
+
+	<generated>
+	^ subInheritances
+]
+
+{ #category : #accessing }
+FmxNGTWithSuperInheritances >> subInheritances: anObject [
+
+	<generated>
+	subInheritances value: anObject
+
 ]

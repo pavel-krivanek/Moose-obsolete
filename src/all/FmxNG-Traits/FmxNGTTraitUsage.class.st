@@ -1,15 +1,21 @@
 Class {
 	#name : #FmxNGTTraitUsage,
-	#superclass : #FmxNGTTraitUsageGenerated,
+	#superclass : #FmxTraitEntity,
+	#instVars : [
+		'#trait => FMOne type: #FmxNGTTrait opposite: #incomingTraitUsages',
+		'#user => FMOne type: #FmxNGTType opposite: #outgoingTraitUsages'
+	],
 	#category : #'FmxNG-Traits'
 }
 
 { #category : #meta }
 FmxNGTTraitUsage class >> annotation [
 
+	<generated>
 	<ignoreInTraitUsers>
-	<MSEClass: #TTraitUsage super: #FmxNGTTraitUsageGenerated>
-	<package: #'FmxNG-Generated'>
+	<MSEClass: #TTraitUsage super: #FmxTraitEntity>
+	<generated>
+	<package: #'FmxNG-Traits'>
 	^self
 ]
 
@@ -31,4 +37,38 @@ FmxNGTTraitUsage >> to [
 { #category : #'instance creation' }
 FmxNGTTraitUsage >> to: anObject [
 	self trait: anObject
+]
+
+{ #category : #accessing }
+FmxNGTTraitUsage >> trait [
+
+	<generated>
+	<source>
+
+	^ trait
+]
+
+{ #category : #accessing }
+FmxNGTTraitUsage >> trait: anObject [
+
+	<generated>
+	trait := anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTTraitUsage >> user [
+
+	<generated>
+	<target>
+
+	^ user
+]
+
+{ #category : #accessing }
+FmxNGTTraitUsage >> user: anObject [
+
+	<generated>
+	user := anObject
+
 ]

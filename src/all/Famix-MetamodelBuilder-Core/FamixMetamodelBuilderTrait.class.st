@@ -94,6 +94,7 @@ FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName supercl
 
 	aRealClass classSide compile: ('annotation
 
+	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #{1} super: #{2}>
 	<generated>

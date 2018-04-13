@@ -1,14 +1,16 @@
 Class {
 	#name : #FmxNGTWithClassScope,
-	#superclass : #FmxNGTWithClassScopeGenerated,
+	#superclass : #FmxTraitEntity,
 	#category : #'FmxNG-Traits'
 }
 
 { #category : #meta }
 FmxNGTWithClassScope class >> annotation [
 
+	<generated>
 	<ignoreInTraitUsers>
-	<MSEClass: #TWithClassScope super: #FmxNGTWithClassScopeGenerated>
-	<package: #'FmxNG-Generated'>
+	<MSEClass: #TWithClassScope super: #FmxTraitEntity>
+	<generated>
+	<package: #'FmxNG-Traits'>
 	^self
 ]

@@ -205,6 +205,7 @@ FamixMetamodelBuilderRelationSide >> generateSetterIn: aClassOrTrait [
 	
 	methodSource := String streamContents: [ :s |
 		s nextPutAll: self name; nextPutAll: ': anObject'; cr; cr.
+		s tab; nextPutAll: '<generated>'; cr.
 		(self cardinality = #one)
 			ifTrue: [ s tab; nextPutAll: self name, ' := anObject'; cr ]
 			ifFalse: [ s tab; nextPutAll: self name, ' value: anObject'; cr ] ].

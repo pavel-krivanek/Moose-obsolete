@@ -1,14 +1,34 @@
 Class {
 	#name : #FmxNGTTemplateUser,
-	#superclass : #FmxNGTTemplateUserGenerated,
+	#superclass : #FmxTraitEntity,
+	#instVars : [
+		'#template => FMOne type: #FmxNGTTemplate opposite: #templateUsers'
+	],
 	#category : #'FmxNG-Traits'
 }
 
 { #category : #meta }
 FmxNGTTemplateUser class >> annotation [
 
+	<generated>
 	<ignoreInTraitUsers>
-	<MSEClass: #TTemplateUser super: #FmxNGTTemplateUserGenerated>
-	<package: #'FmxNG-Generated'>
+	<MSEClass: #TTemplateUser super: #FmxTraitEntity>
+	<generated>
+	<package: #'FmxNG-Traits'>
 	^self
+]
+
+{ #category : #accessing }
+FmxNGTTemplateUser >> template [
+
+	<generated>
+	^ template
+]
+
+{ #category : #accessing }
+FmxNGTTemplateUser >> template: anObject [
+
+	<generated>
+	template := anObject
+
 ]

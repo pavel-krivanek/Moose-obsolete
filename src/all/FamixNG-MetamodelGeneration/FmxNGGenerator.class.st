@@ -115,7 +115,7 @@ Class {
 { #category : #accessing }
 FmxNGGenerator class >> packageName [
 
-	^ #'FmxNG-Generated'
+	^ #'FmxNG-Traits'
 ]
 
 { #category : #accessing }
@@ -126,7 +126,6 @@ FmxNGGenerator class >> resetMetamodel [
 	| classes tower |
 	
 	classes := self packageName asPackage definedClasses select: [ :each | each inheritsFrom: MooseEntity ].
-	classes addAll: #'FmxNG-Generated' asPackage definedClasses.
 	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
 	
 	{ FmxTraitEntity. MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup. FamixImportingContext} 
