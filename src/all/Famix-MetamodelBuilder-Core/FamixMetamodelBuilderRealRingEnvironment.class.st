@@ -36,7 +36,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 					(#poolDictionaries -> realClass sharedPoolsString).
 					(#category -> realClass category)}).
 	
-	OpalCompiler evaluate: definition.
+	self class compiler evaluate: definition.
 	
 	self generateSlotsDescriptionFrom: anRGClass to: realClass.
 ]
@@ -67,6 +67,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptMethodsOf: realClass to: anRGCl
 { #category : #accessing }
 FamixMetamodelBuilderRealRingEnvironment >> apply [
 
+	ringEnvironment browse.
 	self ensurePackagesFrom: ringEnvironment.
 	self ensureClassesFrom: ringEnvironment.
 	
@@ -259,7 +260,7 @@ FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
 	realClass := self class environment classNamed: anRGClass name.
 	realClass 
 		ifNil: [ 
-			realClass := OpalCompiler evaluate: anRGClass definition ]
+			realClass := self class compiler evaluate: anRGClass definition ]
 		ifNotNil: [ 
 			self adoptClassDefinitionOf: realClass to: anRGClass.
 			self adoptMethodsOf: realClass to: anRGClass ].

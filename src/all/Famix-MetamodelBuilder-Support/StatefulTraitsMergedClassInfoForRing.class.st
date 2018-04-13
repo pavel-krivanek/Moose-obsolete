@@ -16,7 +16,7 @@ StatefulTraitsMergedClassInfoForRing >> mergeMethodsFrom: aTrait [
 
 	(self traitsToMergeWith: aTrait) do: [ :traitToMerge |
 		traitToMerge localMethods do: [ :each | self mergeMethod: each onClassSide: false ].
-		traitToMerge class localMethods do: [ :each | self mergeMethod: each onClassSide: true ]]
+		traitToMerge classSide localMethods do: [ :each | self mergeMethod: each onClassSide: true ]]
 ]
 
 { #category : #merging }
