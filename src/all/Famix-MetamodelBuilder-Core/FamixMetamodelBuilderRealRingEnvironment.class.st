@@ -8,6 +8,13 @@ Class {
 }
 
 { #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> adoptClassCommentOf: realClass to: anRGClass [
+	
+	anRGClass comment content isEmptyOrNil
+		ifFalse: [ realClass comment: anRGClass comment content ]
+]
+
+{ #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to: anRGClass [
 	| superclass generatedOldSlots customSlots customSlotNames slotDefinitions classDefinition slotsString definition |
 
@@ -28,7 +35,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 		format:
 			(Dictionary
 				newFrom:
-					{(#superclass -> realClass superclass name).
+					{(#superclass -> anRGClass superclass name).
 					(#className -> anRGClass name).
 					(#layout -> realClass classLayout class name).
 					(#slots -> slotsString).
@@ -276,6 +283,7 @@ FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
 			realClass := self class compiler evaluate: anRGClass definition.]
 		ifNotNil: [ 
 			self adoptClassDefinitionOf: realClass to: anRGClass. ].
+	self adoptClassCommentOf: realClass to: anRGClass.
 	self cleanClass: realClass.
 	self generateSlotsDescriptionFrom: anRGClass to: realClass.
 	self adoptMethodsOf: realClass to: anRGClass
