@@ -38,7 +38,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 	
 	self class compiler evaluate: definition.
 	
-	self generateSlotsDescriptionFrom: anRGClass to: realClass.
+	
 ]
 
 { #category : #installing }
@@ -67,7 +67,6 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptMethodsOf: realClass to: anRGCl
 { #category : #accessing }
 FamixMetamodelBuilderRealRingEnvironment >> apply [
 
-	ringEnvironment browse.
 	self ensurePackagesFrom: ringEnvironment.
 	self ensureClassesFrom: ringEnvironment.
 	
@@ -84,6 +83,19 @@ FamixMetamodelBuilderRealRingEnvironment >> basicSuperclass [
 FamixMetamodelBuilderRealRingEnvironment >> basicTrait [
 
 	^ self ringEnvironment ensureClassNamed: self builder basicTraitName
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> cleanClass: realClass [
+
+	realClass protocols 
+		select: [ :each | each beginsWith: '_fromTrait_' ] 
+		thenDo: [ :each | realClass removeProtocol: each ].
+
+	realClass classSide protocols 
+		select: [ :each | each beginsWith: '_fromTrait_' ] 
+		thenDo: [ :each | realClass classSide removeProtocol: each ].
+
 ]
 
 { #category : #accessing }
@@ -216,6 +228,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGCl
 	generatedSlots := anRGClass layout slots select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
 	
 	realClass classSide compile: ('generatedSlots
+	<generated>
 	^ {1}' format: { '#(', ((generatedSlots collect: #name) joinUsing: ' '), ')' }) classified: 'generator'
 		
 
@@ -260,11 +273,26 @@ FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
 	realClass := self class environment classNamed: anRGClass name.
 	realClass 
 		ifNil: [ 
-			realClass := self class compiler evaluate: anRGClass definition ]
+			realClass := self class compiler evaluate: anRGClass definition.]
 		ifNotNil: [ 
-			self adoptClassDefinitionOf: realClass to: anRGClass.
-			self adoptMethodsOf: realClass to: anRGClass ].
+			self adoptClassDefinitionOf: realClass to: anRGClass. ].
+	self cleanClass: realClass.
+	self generateSlotsDescriptionFrom: anRGClass to: realClass.
+	self adoptMethodsOf: realClass to: anRGClass
 		
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> leanClass: realClass [
+
+	realClass protocols 
+		select: [ :each | each beginsWith: '_fromTrait_' ] 
+		thenDo: [ :each | realClass removeProtocol: each ].
+
+	realClass classSide protocols 
+		select: [ :each | each beginsWith: '_fromTrait_' ] 
+		thenDo: [ :each | realClass classSide removeProtocol: each ].
+
 ]
 
 { #category : #'public registration' }
