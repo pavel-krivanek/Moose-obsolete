@@ -352,7 +352,7 @@ FamixMetamodelBuilder >> initialize [
 	relations := OrderedCollection new.
 	
 	traitsFlattening := false.
-	generateImportingContext := false.
+	generateImportingContext := true.
 	
 	
 	
