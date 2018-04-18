@@ -74,9 +74,11 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptMethodsOf: realClass to: anRGCl
 { #category : #accessing }
 FamixMetamodelBuilderRealRingEnvironment >> apply [
 
+ringEnvironment browse.
+"
 	self ensurePackagesFrom: ringEnvironment.
 	self ensureClassesFrom: ringEnvironment.
-
+"
  
 ]
 
@@ -118,9 +120,9 @@ FamixMetamodelBuilderRealRingEnvironment >> compile: aSource in: aClass classifi
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName overwrite: shouldOverwrite [
+FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass traitNames: traitNames slots: slots in: packageName overwrite: shouldOverwrite [
 
-	| aClass existingClass |
+	| aClass existingClass composition transformations |
 	
 	existingClass := self ringEnvironment ask behaviorNamed: aClassName asSymbol.
 	
@@ -129,6 +131,14 @@ FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName supercl
 		
 	aClass := self ringEnvironment ensureClassNamed: aClassName.
 	aClass superclass: aSuperclass.
+
+
+	composition := RGTraitComposition parent: aClass.
+	aClass traitComposition: composition.
+	transformations := RGTraitCompositionVisitor new parse: (traitNames joinUsing: ' + ') for: composition.
+	transformations do: [ :each |
+		composition addTransformation: each ].	
+	
 	aClass package: (self ringEnvironment ensurePackageNamed: packageName).
 	aClass layout makeResolved.
 	slots do: [ :slotInBadEnvironment |

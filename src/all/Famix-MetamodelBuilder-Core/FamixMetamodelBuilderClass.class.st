@@ -139,7 +139,7 @@ FamixMetamodelBuilderClass >> generate [
 			self defaultSuperclass ]
 		ifNotNil: [ self classGeneralization realClass ].
 	
-	aClass := self builder environment createClassNamed: aClassName asSymbol superclass: aSuperclass slots: self slotDefinitions in: self packageName overwrite: true.
+	aClass := self builder environment createClassNamed: aClassName asSymbol superclass: aSuperclass traitNames: self allTraitNames slots: self slotDefinitions in: self packageName overwrite: true.
 	
 	aClass tagWith: self tag.
 	self builder environment setComment: self comment for: aClass.
@@ -149,7 +149,6 @@ FamixMetamodelBuilderClass >> generate [
 	self willGenerate ifTrue: [ 
 		self generateAccessors.
 		self generateAnnotationIn: aClass as: self name superclass: nil].
-	self generateTraitsAssignmentsFor: aClass.
 	self generateRequirementsFor: aClass.
 	
 	isHierarchyRoot ifTrue: [ 
