@@ -663,7 +663,10 @@ BaselineOfMoose >> baselinePhexample: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineRing2: spec [ 
     
-	spec baseline: 'Ring2' with: [spec repository: 'github://pavel-krivanek/Ring2:changesResolver/src'].
+	spec baseline: 'Ring2' with: [
+		spec 
+			repository: 'github://pavel-krivanek/Ring2:changesResolver/src';
+			loads: #calypso 	].
 
 ]
 
@@ -819,6 +822,7 @@ BaselineOfMoose >> groups: spec [
     
 	spec group: 'BasicMetamodelling' with: #(
 
+			'Ring2'
 			'Grease-Core'
 			'Grease-Pharo30-Core' 
 
