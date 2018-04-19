@@ -178,7 +178,7 @@ FamixMetamodelBuilder >> defaultBasicSuperclassName [
 { #category : #'settings - default' }
 FamixMetamodelBuilder >> defaultBasicTraitName [
 
-	^ #FmxTraitEntity
+	^ #Trait
 ]
 
 { #category : #'settings - default' }

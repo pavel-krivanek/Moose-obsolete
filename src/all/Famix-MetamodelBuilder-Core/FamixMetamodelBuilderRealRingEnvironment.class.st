@@ -86,7 +86,6 @@ FamixMetamodelBuilderRealRingEnvironment >> apply [
 	self ensurePackagesFrom: ringEnvironment.
 	self ensureClassesFrom: ringEnvironment.
 
- 
 ]
 
 { #category : #accessing }
@@ -195,7 +194,7 @@ FamixMetamodelBuilderRealRingEnvironment >> createTraitNamed: traitName slots: s
 		ifTrue: [ ^ existingClass ].
 
 	aPackage := self ringEnvironment ensurePackageNamed: packageName.
-	aTrait := ringEnvironment ensureClassNamed: traitName. 
+	aTrait := ringEnvironment ensureTraitNamed: traitName. 
 	aTrait superclass: self basicTrait.
 	aTrait package: aPackage.
 	aTrait layout makeResolved.
