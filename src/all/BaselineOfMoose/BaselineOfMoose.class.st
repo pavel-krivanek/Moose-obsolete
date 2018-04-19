@@ -505,7 +505,6 @@ BaselineOfMoose >> baselineMocketry: spec [
 BaselineOfMoose >> baselineMooseAlgos: spec [ 
     
 	#(
-		'Moose-Algos-Graph'
 		'Moose-Tests-Algos-Graph'
 		'Moose-Algos-HierarchicalGraph'
 		'Moose-Tests-Algos-HierarchicalGraph'
