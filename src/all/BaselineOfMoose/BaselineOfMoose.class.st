@@ -818,7 +818,6 @@ BaselineOfMoose >> baselineZeroConf: spec [
 BaselineOfMoose >> groups: spec [ 
     
 	spec group: 'BasicMetamodelling' with: #(
-			'Moose-Algos-Graph'
 
 			'Grease-Core'
 			'Grease-Pharo30-Core' 
