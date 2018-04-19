@@ -33,12 +33,15 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 	slotDefinitions addAll: (customSlots collect: #definitionString).
 	slotDefinitions := slotDefinitions sorted.
 	slotsString := '{' , (slotDefinitions joinUsing: '. ') , '}'.
-	traitsString := slotDefinitions joinUsing: ' + '.
+	traitsString := traitsDefinitions 
+		ifEmpty: [ '{ }' ]
+		ifNotEmpty: [ traitsDefinitions joinUsing: ' + '. ].
+	anRGClass isTrait ifFalse: [ 
 	definition := '{superclass} subclass: #{className} 
-		using: {traits} 
+		uses: {traits} 
 		slots: {slots} 
 		classVariables: {classVariables}
-		poolDictionaries: ''''
+		poolDictionaries: ''{poolDictionaries}''
 		category: ''{category}'''
 		format:
 			(Dictionary
@@ -50,8 +53,22 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 					(#slots -> slotsString).
 					(#classVariables -> (self classVariablesStringFor: realClass)).
 					(#poolDictionaries -> realClass sharedPoolsString).
-					(#category -> realClass category)}).
-	
+					(#category -> realClass category)})]
+			ifTrue: [ 
+	definition := '{superclass} named: #{className} 
+		uses: {traits} 
+		slots: {slots} 
+		category: ''{category}'''
+		format:
+			(Dictionary
+				newFrom:
+					{(#superclass -> anRGClass superclass name).
+					(#className -> anRGClass name).
+					(#traits -> traitsString).
+					(#slots -> slotsString).
+					(#category -> realClass category)}).				
+				 ].
+
 	self class compiler evaluate: definition.
 	
 	
