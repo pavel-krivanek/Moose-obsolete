@@ -16,18 +16,26 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassCommentOf: realClass to: a
 
 { #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to: anRGClass [
-	| superclass generatedOldSlots customSlots customSlotNames slotDefinitions classDefinition slotsString definition |
+	| generatedOldSlots customSlots customTraits customTraitNames customSlotNames slotDefinitions slotsString definition generatedOldTraits traitsDefinitions traitsString |
 
 	generatedOldSlots := self generatedSlotsOf: realClass.
+	generatedOldTraits := self generatedTraitsOf: realClass.
 	customSlots := realClass slots copyWithoutAll: generatedOldSlots.
+	customTraits := realClass traitComposition transformations copyWithoutAll: generatedOldTraits.
 	customSlotNames := customSlots collect: #name.
+	customTraitNames := customTraits collect: #name.
 	slotDefinitions := ((anRGClass slots
 		reject: [ :each | customSlotNames includes: each name ])
 		collect: #definitionString) asOrderedCollection.
+	traitsDefinitions := ((anRGClass traitComposition transformations
+		reject: [ :each | customTraitNames includes: each name ])
+		collect: #asString) asOrderedCollection.
 	slotDefinitions addAll: (customSlots collect: #definitionString).
 	slotDefinitions := slotDefinitions sorted.
 	slotsString := '{' , (slotDefinitions joinUsing: '. ') , '}'.
+	traitsString := slotDefinitions joinUsing: ' + '.
 	definition := '{superclass} subclass: #{className} 
+		using: {traits} 
 		slots: {slots} 
 		classVariables: {classVariables}
 		poolDictionaries: ''''
@@ -38,6 +46,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 					{(#superclass -> anRGClass superclass name).
 					(#className -> anRGClass name).
 					(#layout -> realClass classLayout class name).
+					(#traits -> traitsString).
 					(#slots -> slotsString).
 					(#classVariables -> (self classVariablesStringFor: realClass)).
 					(#poolDictionaries -> realClass sharedPoolsString).
@@ -74,11 +83,9 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptMethodsOf: realClass to: anRGCl
 { #category : #accessing }
 FamixMetamodelBuilderRealRingEnvironment >> apply [
 
-ringEnvironment browse.
-"
 	self ensurePackagesFrom: ringEnvironment.
 	self ensureClassesFrom: ringEnvironment.
-"
+
  
 ]
 
@@ -250,9 +257,23 @@ FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGCl
 	
 	generatedSlots := anRGClass layout slots select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
 	
-	realClass classSide compile: ('generatedSlots
+	realClass classSide compile: ('generatedSlotNames
 	<generated>
 	^ {1}' format: { '#(', ((generatedSlots collect: #name) joinUsing: ' '), ')' }) classified: 'generator'
+		
+
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> generateTraitsDescriptionFrom: anRGClass to: realClass [
+
+	| generatedTraits |
+	
+	generatedTraits := anRGClass traitComposition transformations select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
+	
+	realClass classSide compile: ('generatedTraitNames
+	<generated>
+	^ {1}' format: { '#(', ((generatedTraits collect: #name) joinUsing: ' '), ')' }) classified: 'generator'
 		
 
 ]
@@ -271,6 +292,20 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedSlotsOf: aRealClass [
 	
 ]
 
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> generatedTraitsOf: aRealClass [
+
+	| traitNames |
+	
+	traitNames := (aRealClass canUnderstand: #generatedTraitNames)
+		ifTrue: [ aRealClass generatedTraitNames ]
+		ifFalse: [ Array new ].
+		
+	^ (traitNames collect: [ :traitName | aRealClass traitComposition transformations detect: [ :each | each name = traitName ] ifNone: [nil] ]) select: #notNil.
+	
+	
+]
+
 { #category : #initialization }
 FamixMetamodelBuilderRealRingEnvironment >> hasBehaviorNamed: aClassName [
 
@@ -283,6 +318,7 @@ FamixMetamodelBuilderRealRingEnvironment >> initialize [
 	super initialize.
 	
 	ringEnvironment := RGEnvironment new.
+	ringEnvironment version: 7.
 	ringEnvironment ensureClassNamed: #FMOne.
 	ringEnvironment ensureClassNamed: #FMMany.		
 
