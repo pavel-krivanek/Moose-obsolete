@@ -128,7 +128,7 @@ FamixMetamodelBuilderRealRingEnvironment >> compile: aSource in: aClass classifi
 { #category : #initialization }
 FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass traitNames: traitNames slots: slots in: packageName overwrite: shouldOverwrite [
 
-	| aClass existingClass composition transformations |
+	| aClass existingClass composition |
 	
 	existingClass := self ringEnvironment ask behaviorNamed: aClassName asSymbol.
 	
@@ -138,12 +138,10 @@ FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName supercl
 	aClass := self ringEnvironment ensureClassNamed: aClassName.
 	aClass superclass: aSuperclass.
 
-
 	composition := RGTraitComposition parent: aClass.
 	aClass traitComposition: composition.
-	transformations := RGTraitCompositionVisitor new parse: (traitNames joinUsing: ' + ') for: composition.
-	transformations do: [ :each |
-		composition addTransformation: each ].	
+	traitNames do: [ :each |
+		composition addTransformation: (self ringEnvironment ensureTraitNamed: each) ].	
 	
 	aClass package: (self ringEnvironment ensurePackageNamed: packageName).
 	aClass layout makeResolved.
