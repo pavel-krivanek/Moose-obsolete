@@ -265,13 +265,13 @@ FamixMetamodelBuilderRealRingEnvironment >> flattenTraitsFor: aClass [
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGClass to: realClass [
+FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGClass [
 
 	| generatedSlots |
 	
 	generatedSlots := anRGClass layout slots select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
 	
-	realClass classSide compile: ('generatedSlotNames
+	anRGClass classSide compile: ('generatedSlotNames
 	<generated>
 	^ {1}' format: { '#(', ((generatedSlots collect: #name) joinUsing: ' '), ')' }) classified: 'generator'
 		
@@ -279,13 +279,13 @@ FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGCl
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> generateTraitsDescriptionFrom: anRGClass to: realClass [
+FamixMetamodelBuilderRealRingEnvironment >> generateTraitsDescriptionFrom: anRGClass [
 
 	| generatedTraits |
 	
 	generatedTraits := anRGClass traitComposition transformations select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
 	
-	realClass classSide compile: ('generatedTraitNames
+	anRGClass classSide compile: ('generatedTraitNames
 	<generated>
 	^ {1}' format: { '#(', ((generatedTraits collect: #name) joinUsing: ' '), ')' }) classified: 'generator'
 		
@@ -351,7 +351,8 @@ FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
 			self adoptClassDefinitionOf: realClass to: anRGClass. ].
 	self adoptClassCommentOf: realClass to: anRGClass.
 	self cleanClass: realClass.
-	self generateSlotsDescriptionFrom: anRGClass to: realClass.
+	self generateSlotsDescriptionFrom: anRGClass.
+	self generateTraitsDescriptionFrom: anRGClass.
 	self adoptMethodsOf: realClass to: anRGClass
 		
 ]
