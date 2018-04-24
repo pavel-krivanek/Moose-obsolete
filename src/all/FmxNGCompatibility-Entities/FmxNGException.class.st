@@ -34,3 +34,10 @@ FmxNGException class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #printing }
+FmxNGException >> mooseNameOn: aStream [ 
+	aStream nextPutAll: (self class name withoutPrefix: 'FAMIX').
+	aStream nextPut: $-.
+	self exceptionClass notNil ifTrue: [self exceptionClass mooseNameOn: aStream]
+]
