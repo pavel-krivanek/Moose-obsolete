@@ -1,0 +1,42 @@
+Trait {
+	#name : #FmxNGTSuper,
+	#category : #'FmxNG-Traits-Traits'
+}
+
+{ #category : #meta }
+FmxNGTSuper classSide >> annotation [
+
+	<generated>
+	<ignoreInTraitUsers>
+	<MSEClass: #TSuper super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #generator }
+FmxNGTSuper classSide >> generatedSlotNames [
+	<generated>
+	^ #(subs)
+]
+
+{ #category : #generator }
+FmxNGTSuper classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGTSuper >> subs [
+
+	<generated>
+	^ subs
+]
+
+{ #category : #accessing }
+FmxNGTSuper >> subs: anObject [
+
+	<generated>
+	subs value: anObject
+
+]

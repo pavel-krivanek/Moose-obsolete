@@ -1,55 +1,36 @@
 Class {
 	#name : #FmxNGLocalVariable,
-	#superclass : #FmxNGLocalVariableGenerated,
+	#superclass : #FmxNGStructuralEntity,
+	#traits : 'FmxNGTLocalVariable',
+	#classTraits : 'FmxNGTLocalVariable classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #'Famix-Extensions' }
-FmxNGLocalVariable >> accept: aVisitor [
+{ #category : #meta }
+FmxNGLocalVariable class >> annotation [
 
-	aVisitor visitLocalVariable: self
+	<generated>
+	<MSEClass: #LocalVariable super: #FmxNGStructuralEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #accessing }
-FmxNGLocalVariable >> belongsTo [
-
-	^ self parentBehaviouralEntity
+{ #category : #generator }
+FmxNGLocalVariable class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #'Famix-Implementation' }
-FmxNGLocalVariable >> mooseNameOn: stream [ 
-	| parent |
-	parent := self parentBehaviouralEntity.
-	parent ifNotNil: 
-		[ parent mooseNameOn: stream.
-		stream nextPut: $. ].
-	self name ifNotNil: [stream nextPutAll: self name]
+{ #category : #generator }
+FmxNGLocalVariable class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTLocalVariable)
 ]
 
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGLocalVariable >> namespaceScope [
-	^ self parentBehaviouralEntity namespaceScope
-]
+{ #category : #meta }
+FmxNGLocalVariable class >> requirements [
 
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGLocalVariable >> packageScope [
-	^ self parentBehaviouralEntity packageScope
-]
-
-{ #category : #'Famix-Implementation' }
-FmxNGLocalVariable >> printOn: stream [ 
-	| parent |
-	self name ifNotNil: [ stream nextPutAll: self name ].
-	stream nextPutAll: ' (local variable'.
-	parent := self parentBehaviouralEntity.
-	parent ifNotNil: [
-		stream nextPutAll: ' in '.
-		parent printOn: stream ].
-	stream nextPut: $)
-
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGLocalVariable >> typeScope [
-	^ self parentBehaviouralEntity typeScope
+	<generated>
+	^ {  }
 ]

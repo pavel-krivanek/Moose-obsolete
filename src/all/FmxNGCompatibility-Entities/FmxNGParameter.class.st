@@ -1,65 +1,36 @@
 Class {
 	#name : #FmxNGParameter,
-	#superclass : #FmxNGParameterGenerated,
+	#superclass : #FmxNGStructuralEntity,
+	#traits : 'FmxNGTParameter',
+	#classTraits : 'FmxNGTParameter classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #'Famix-Extensions' }
-FmxNGParameter >> accept: aVisitor [
+{ #category : #meta }
+FmxNGParameter class >> annotation [
 
-	aVisitor visitParameter: self
+	<generated>
+	<MSEClass: #Parameter super: #FmxNGStructuralEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #accessing }
-FmxNGParameter >> belongsTo [
-
-	^ self parentBehaviouralEntity
+{ #category : #generator }
+FmxNGParameter class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #accessing }
-FmxNGParameter >> belongsTo: aBehaviouralEntity [ 
-	self parentBehaviouralEntity: aBehaviouralEntity 
+{ #category : #generator }
+FmxNGParameter class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTParameter)
 ]
 
-{ #category : #'Famix-Implementation' }
-FmxNGParameter >> mooseNameOn: stream [ 
-	| parent |
-	parent := self parentBehaviouralEntity.
-	parent ifNotNil: 
-		[ parent mooseNameOn: stream.
-		stream nextPut: $. ].
-	self name ifNotNil: [stream nextPutAll: self name]
-]
+{ #category : #meta }
+FmxNGParameter class >> requirements [
 
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGParameter >> namespaceScope [
-	^ self parentBehaviouralEntity namespaceScope
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGParameter >> packageScope [
-	^ self parentBehaviouralEntity packageScope
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGParameter >> parentType [
-	^self parentBehaviouralEntity parentType
-]
-
-{ #category : #'Famix-Implementation' }
-FmxNGParameter >> printOn: stream [ 
-	| parent |
-	self name ifNotNil: [ stream nextPutAll: self name ].
-	stream nextPutAll: ' (parameter'.
-	parent := self parentBehaviouralEntity.
-	parent ifNotNil: [
-		stream nextPutAll: ' in '.
-		parent printOn: stream ].
-	stream nextPut: $)
-
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGParameter >> typeScope [
-	^ self parentBehaviouralEntity typeScope
+	<generated>
+	^ {  }
 ]

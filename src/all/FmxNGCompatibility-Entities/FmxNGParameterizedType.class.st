@@ -1,46 +1,36 @@
 Class {
 	#name : #FmxNGParameterizedType,
-	#superclass : #FmxNGParameterizedTypeGenerated,
+	#superclass : #FmxNGType,
+	#traits : 'FmxNGTParameterizedType + FmxNGTWithParameterizedTypeUsers',
+	#classTraits : 'FmxNGTParameterizedType classTrait + FmxNGTWithParameterizedTypeUsers classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #enumerating }
-FmxNGParameterizedType >> allSubclassesDo: aBlock [
-	"we override this traversal because we want to
-	traverse the parameter type"
+{ #category : #meta }
+FmxNGParameterizedType class >> annotation [
 
-	self parameterizableClass ifNotNil: [ :a | a withSubclassesDo: aBlock ]
+	<generated>
+	<MSEClass: #ParameterizedType super: #FmxNGType>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #enumerating }
-FmxNGParameterizedType >> allSuperclassesDo: aBlock [
-	"we override this traversal because we want to
-	traverse the parameter type"
-
-	self parameterizableClass ifNotNil: [ :a | a withSuperclassesDo: aBlock ]
+{ #category : #generator }
+FmxNGParameterizedType class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #testing }
-FmxNGParameterizedType >> isParameterizedType [
-	^ true
+{ #category : #generator }
+FmxNGParameterizedType class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTParameterizedType FmxNGTWithParameterizedTypeUsers)
 ]
 
-{ #category : #'Famix-Implementation' }
-FmxNGParameterizedType >> mooseNameOn: aStream [ 
-	self parameterizableClass notNil 
-		ifTrue: [self parameterizableClass mooseNameOn: aStream].
-	aStream nextPut: $<.
-	self arguments 
-		do: [:each | each mooseNameOn: aStream]
-		separatedBy: [aStream nextPut: $,].  
-	aStream nextPut: $>.  
+{ #category : #meta }
+FmxNGParameterizedType class >> requirements [
 
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGParameterizedType >> namespaceScope [
-	"we ask the namespaceScope of the parameterizable class"
-	
-	^ self parameterizableClass ifNotNil: [
-		self parameterizableClass namespaceScope ]
+	<generated>
+	^ {  }
 ]

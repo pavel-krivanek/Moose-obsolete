@@ -1,11 +1,34 @@
 Class {
 	#name : #FmxNGLeafEntity,
-	#superclass : #FmxNGLeafEntityGenerated,
+	#superclass : #FmxNGNamedEntity,
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #visiting }
-FmxNGLeafEntity >> accept: aVisitor [
+{ #category : #meta }
+FmxNGLeafEntity class >> annotation [
 
-	aVisitor visitLeafEntity: self
+	<generated>
+	<MSEClass: #LeafEntity super: #FmxNGNamedEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
+]
+
+{ #category : #generator }
+FmxNGLeafEntity class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGLeafEntity class >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #meta }
+FmxNGLeafEntity class >> requirements [
+
+	<generated>
+	^ {  }
 ]

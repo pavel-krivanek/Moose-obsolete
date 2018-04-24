@@ -1,0 +1,150 @@
+"
+FAMIXMethod represents a behaviour in an object-oriented language.
+
+A FAMIXMethod is always contained in a parentType.
+"
+Trait {
+	#name : #FmxNGTMethod,
+	#category : #'FmxNG-Traits-Traits'
+}
+
+{ #category : #meta }
+FmxNGTMethod classSide >> annotation [
+
+	<generated>
+	<ignoreInTraitUsers>
+	<MSEClass: #TMethod super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #generator }
+FmxNGTMethod classSide >> generatedSlotNames [
+	<generated>
+	^ #(category parentType hasClassScope isPublic timeStamp kind isAbstract)
+]
+
+{ #category : #generator }
+FmxNGTMethod classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> category [
+
+	<MSEProperty: #category type: #String>
+	<generated>
+	<MSEComment: 'Category of the method'>
+	^ category
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> category: anObject [
+
+	<generated>
+	category := anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> hasClassScope [
+
+	<MSEProperty: #hasClassScope type: #Boolean>
+	<generated>
+	<MSEComment: 'True if class-side method'>
+	^ hasClassScope
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> hasClassScope: anObject [
+
+	<generated>
+	hasClassScope := anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> isAbstract [
+
+	<MSEProperty: #isAbstract type: #Boolean>
+	<generated>
+	^ isAbstract
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> isAbstract: anObject [
+
+	<generated>
+	isAbstract := anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> isPublic [
+
+	<MSEProperty: #isPublic type: #Boolean>
+	<generated>
+	^ isPublic
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> isPublic: anObject [
+
+	<generated>
+	isPublic := anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> kind [
+
+	<MSEProperty: #kind type: #String>
+	<generated>
+	<MSEComment: 'Tag indicating a setter, getter, constant, constructor, or abstract method'>
+	^ kind
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> kind: anObject [
+
+	<generated>
+	kind := anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> parentType [
+
+	<generated>
+	<MSEComment: 'Type declaring the method. It provides the implementation for belongsTo.'>
+	<container>
+
+	^ parentType
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> parentType: anObject [
+
+	<generated>
+	parentType := anObject
+
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> timeStamp [
+
+	<MSEProperty: #timeStamp type: #String>
+	<generated>
+	<MSEComment: 'TimeStamp of the method with author and time of the last change'>
+	^ timeStamp
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> timeStamp: anObject [
+
+	<generated>
+	timeStamp := anObject
+
+]

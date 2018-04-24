@@ -1,0 +1,49 @@
+"
+This entity models a typedef in C.
+
+Instance Variables:
+	aliasedType	<ProtoObject | PseudoContext>
+"
+Trait {
+	#name : #FmxNGTTypeAlias,
+	#category : #'FmxNG-Traits-Traits'
+}
+
+{ #category : #meta }
+FmxNGTTypeAlias classSide >> annotation [
+
+	<generated>
+	<ignoreInTraitUsers>
+	<MSEClass: #TTypeAlias super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #generator }
+FmxNGTTypeAlias classSide >> generatedSlotNames [
+	<generated>
+	^ #(aliasedType)
+]
+
+{ #category : #generator }
+FmxNGTTypeAlias classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGTTypeAlias >> aliasedType [
+
+	<generated>
+	<MSEComment: 'Points to the actual type.'>
+	^ aliasedType
+]
+
+{ #category : #accessing }
+FmxNGTTypeAlias >> aliasedType: anObject [
+
+	<generated>
+	aliasedType := anObject
+
+]

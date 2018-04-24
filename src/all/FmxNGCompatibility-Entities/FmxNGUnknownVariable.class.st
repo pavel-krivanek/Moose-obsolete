@@ -1,45 +1,34 @@
 Class {
 	#name : #FmxNGUnknownVariable,
-	#superclass : #FmxNGUnknownVariableGenerated,
+	#superclass : #FmxNGStructuralEntity,
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #'Famix-Extensions' }
-FmxNGUnknownVariable >> accept: aVisitor [
+{ #category : #meta }
+FmxNGUnknownVariable class >> annotation [
 
-	aVisitor visitUnknownVariable: self
+	<generated>
+	<MSEClass: #UnknownVariable super: #FmxNGStructuralEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #accessing }
-FmxNGUnknownVariable >> belongsTo [
-	^ nil
+{ #category : #generator }
+FmxNGUnknownVariable class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #'Famix-Extensions' }
-FmxNGUnknownVariable >> copyFrom: anEntity within: aVisitor [
-
-	super copyFrom: anEntity within: aVisitor.
-	self container: (aVisitor visit: anEntity container).
-
+{ #category : #generator }
+FmxNGUnknownVariable class >> generatedTraitNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGUnknownVariable >> namespaceScope [
-	"namespaceScope does not make sense for an unknown variable,
-	so we return nil"
-	^ nil
-]
+{ #category : #meta }
+FmxNGUnknownVariable class >> requirements [
 
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGUnknownVariable >> packageScope [
-	"packageScope does not make sense for an unknown variable,
-	so we return nil"
-	^ nil
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGUnknownVariable >> typeScope [
-	"typeScope does not make sense for an unknown variable,
-	so we return nil"
-	^ nil
+	<generated>
+	^ {  }
 ]

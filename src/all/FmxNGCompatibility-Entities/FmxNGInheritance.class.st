@@ -1,57 +1,36 @@
 Class {
 	#name : #FmxNGInheritance,
-	#superclass : #FmxNGInheritanceGenerated,
+	#superclass : #FmxNGAssociation,
+	#traits : 'FmxNGTSubInheritance + FmxNGTSuperInheritance',
+	#classTraits : 'FmxNGTSubInheritance classTrait + FmxNGTSuperInheritance classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #visiting }
-FmxNGInheritance >> accept: aVisitor [
+{ #category : #meta }
+FmxNGInheritance class >> annotation [
 
-	aVisitor visitInheritance: self
+	<generated>
+	<MSEClass: #Inheritance super: #FmxNGAssociation>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #visiting }
-FmxNGInheritance >> copyFrom: anEntity within: aVisitor [
-
-	super copyFrom: anEntity within: aVisitor.
-	self superclass: (aVisitor visit: anEntity superclass).
-	self subclass: (aVisitor visit: anEntity subclass).
+{ #category : #generator }
+FmxNGInheritance class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #visiting }
-FmxNGInheritance >> from [
-	^ self subclass 
+{ #category : #generator }
+FmxNGInheritance class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTSubInheritance FmxNGTSuperInheritance)
 ]
 
-{ #category : #visiting }
-FmxNGInheritance >> from: aSubclass [
-	self subclass: aSubclass 
-]
+{ #category : #meta }
+FmxNGInheritance class >> requirements [
 
-{ #category : #visiting }
-FmxNGInheritance >> isInheritance [ 
-	^true
-]
-
-{ #category : #visiting }
-FmxNGInheritance >> mooseNameOn: aStream [
-	self subclass ifNotNil: [ aStream nextPutAll: self subclass name ].
-	aStream nextPutAll: ' -> '.
-	self superclass ifNotNil: [ aStream nextPutAll: self superclass name ]
-]
-
-{ #category : #visiting }
-FmxNGInheritance >> printOn: aStream [
-	super printOn: aStream.
-	aStream nextPutAll: ' (Inheritance)'
-]
-
-{ #category : #visiting }
-FmxNGInheritance >> to [
-	^ self superclass 
-]
-
-{ #category : #visiting }
-FmxNGInheritance >> to: aSuperclass [
-	self superclass: aSuperclass
+	<generated>
+	^ {  }
 ]

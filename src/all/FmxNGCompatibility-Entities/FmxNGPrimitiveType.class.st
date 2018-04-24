@@ -1,10 +1,34 @@
 Class {
 	#name : #FmxNGPrimitiveType,
-	#superclass : #FmxNGPrimitiveTypeGenerated,
+	#superclass : #FmxNGType,
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #testing }
-FmxNGPrimitiveType >> isPrimitiveType [
-	^true
+{ #category : #meta }
+FmxNGPrimitiveType class >> annotation [
+
+	<generated>
+	<MSEClass: #PrimitiveType super: #FmxNGType>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
+]
+
+{ #category : #generator }
+FmxNGPrimitiveType class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGPrimitiveType class >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #meta }
+FmxNGPrimitiveType class >> requirements [
+
+	<generated>
+	^ {  }
 ]

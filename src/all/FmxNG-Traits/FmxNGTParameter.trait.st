@@ -1,0 +1,48 @@
+"
+FAMIXParameter represents one parameter in a method declaration.
+"
+Trait {
+	#name : #FmxNGTParameter,
+	#category : #'FmxNG-Traits-Traits'
+}
+
+{ #category : #meta }
+FmxNGTParameter classSide >> annotation [
+
+	<generated>
+	<ignoreInTraitUsers>
+	<MSEClass: #TParameter super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #generator }
+FmxNGTParameter classSide >> generatedSlotNames [
+	<generated>
+	^ #(parentBehaviouralEntity)
+]
+
+{ #category : #generator }
+FmxNGTParameter classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGTParameter >> parentBehaviouralEntity [
+
+	<generated>
+	<MSEComment: 'Behavioural entity containing this parameter. belongsTo implementation'>
+	<container>
+
+	^ parentBehaviouralEntity
+]
+
+{ #category : #accessing }
+FmxNGTParameter >> parentBehaviouralEntity: anObject [
+
+	<generated>
+	parentBehaviouralEntity := anObject
+
+]

@@ -1,78 +1,36 @@
 Class {
 	#name : #FmxNGGlobalVariable,
-	#superclass : #FmxNGGlobalVariableGenerated,
+	#superclass : #FmxNGStructuralEntity,
+	#traits : 'FmxNGTGlobalVariable',
+	#classTraits : 'FmxNGTGlobalVariable classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #'Famix-Extensions' }
-FmxNGGlobalVariable >> accept: aVisitor [
+{ #category : #meta }
+FmxNGGlobalVariable class >> annotation [
 
-	aVisitor visitGlobalVariable: self
+	<generated>
+	<MSEClass: #GlobalVariable super: #FmxNGStructuralEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #accessing }
-FmxNGGlobalVariable >> belongsTo [
-
-	^ self parentScope
+{ #category : #generator }
+FmxNGGlobalVariable class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #'Famix-Extensions' }
-FmxNGGlobalVariable >> isPrivate [
-	^ self isPublic not
+{ #category : #generator }
+FmxNGGlobalVariable class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTGlobalVariable)
 ]
 
-{ #category : #'Famix-Extensions' }
-FmxNGGlobalVariable >> isPublic [
-	"checker whether I am called outside the module in which I am defined"
-	^ self incomingAccesses anySatisfy: [:inv |
-			inv accessor parentScope ~~ self parentScope]
-]
+{ #category : #meta }
+FmxNGGlobalVariable class >> requirements [
 
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGGlobalVariable >> namespaceScope [
-	^ self parentScope
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGGlobalVariable >> packageScope [
-	^ self parentPackage
-]
-
-{ #category : #'Famix-C' }
-FmxNGGlobalVariable >> parentModule [
-	<MSEProperty: #parentModule type: #FmxNGModule>
-	<MSEComment: 'Module (typically a file) defining the global variable.'>
-	^ self privateState 		
-		attributeAt: #parentModule
-		ifAbsentPut: [ nil ]
-]
-
-{ #category : #'Famix-C' }
-FmxNGGlobalVariable >> parentModule: aModule [
-	^ self privateState 		
-		attributeAt: #parentModule
-		put: (FMMultivalueLink 
-				on: self
-				update: #globalVariables
-				from: self parentModule
-				to: aModule)
-]
-
-{ #category : #'Famix-Implementation' }
-FmxNGGlobalVariable >> printOn: aStream [ 
-	| parent |
-	parent := self belongsTo.
-	parent ifNotNil:
-		[ aStream nextPutAll: parent name.
-		aStream nextPut: $. ].
-	self name ifNotNil: [ aStream nextPutAll: self name ].
-	aStream nextPutAll: ' (Global Variable)'
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FmxNGGlobalVariable >> typeScope [
-	"typeScope does not make sense for a global variable,
-	so we return nil"
-
-	^ nil
+	<generated>
+	^ {  }
 ]

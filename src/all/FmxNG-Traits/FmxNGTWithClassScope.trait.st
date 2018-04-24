@@ -1,0 +1,27 @@
+Trait {
+	#name : #FmxNGTWithClassScope,
+	#category : #'FmxNG-Traits-Traits'
+}
+
+{ #category : #meta }
+FmxNGTWithClassScope classSide >> annotation [
+
+	<generated>
+	<ignoreInTraitUsers>
+	<MSEClass: #TWithClassScope super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #generator }
+FmxNGTWithClassScope classSide >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGTWithClassScope classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]

@@ -1,203 +1,36 @@
 Class {
 	#name : #FmxNGSourceAnchor,
-	#superclass : #FmxNGSourceAnchorGenerated,
-	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
+	#superclass : #FmxNGEntity,
+	#traits : 'FmxNGTSourceAnchor',
+	#classTraits : 'FmxNGTSourceAnchor classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #MQ }
-FmxNGSourceAnchor class >> allChildrenTypes [
-	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
-	^ {}
+{ #category : #meta }
+FmxNGSourceAnchor class >> annotation [
+
+	<generated>
+	<MSEClass: #SourceAnchor super: #FmxNGEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #accessing }
-FmxNGSourceAnchor class >> allIncomingAssociationTypes [
-   ^ Set new
-]
-
-{ #category : #accessing }
-FmxNGSourceAnchor class >> allOutgoingAssociationTypes [
-	^ Set new
-]
-
-{ #category : #MQ }
-FmxNGSourceAnchor class >> allParentTypes [
-	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
-	^ {}
-]
-
-{ #category : #MQ }
-FmxNGSourceAnchor class >> childrenSelectors [
-	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
-	^ {}
-]
-
-{ #category : #MQ }
-FmxNGSourceAnchor class >> childrenTypes [
-	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
-	^ {}
-]
-
-{ #category : #accessing }
-FmxNGSourceAnchor class >> incomingMSEProperties [
+{ #category : #generator }
+FmxNGSourceAnchor class >> generatedSlotNames [
+	<generated>
 	^ #()
 ]
 
-{ #category : #accessing }
-FmxNGSourceAnchor class >> outgoingMSEProperties [
-	^ #()
+{ #category : #generator }
+FmxNGSourceAnchor class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTSourceAnchor)
 ]
 
-{ #category : #MQ }
-FmxNGSourceAnchor class >> parentSelectors [
-	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
-	^ {}
-]
+{ #category : #meta }
+FmxNGSourceAnchor class >> requirements [
 
-{ #category : #MQ }
-FmxNGSourceAnchor class >> parentTypes [
-	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
-	^ {}
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGSourceAnchor >> accept: aVisitor [
-
-	aVisitor visitSourceAnchor: self
-]
-
-{ #category : #accessing }
-FmxNGSourceAnchor >> completeText [
-	"The complete text of a FileAnchor contains all the code of the file pointed by the source anchor. On the contrary the #sourceText return only the pant of the file concerned by the entity. For example a FAMIXFileAnchon knows the start line and end line of the source anchor into the file."
-	
-	"By default I return the sourceText because most of my subclasses will only do that."
-
-	^ self sourceText
-]
-
-{ #category : #'Famix-File' }
-FmxNGSourceAnchor >> containerFiles [
-	"I should return a collection of files corresponding to the source anchor. If there is no file just return an empty collection."
-
-	^ self subclassResponsibility
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGSourceAnchor >> copyFrom: anEntity within: aVisitor [
-
-	super copyFrom: anEntity within: aVisitor.
-	self element: (aVisitor visit: anEntity)
-]
-
-{ #category : #accessing }
-FmxNGSourceAnchor >> element: anElement [
-
-	super element: anElement.
-	element sourceAnchor = self ifFalse: [  element sourceAnchor: self ]
-
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGSourceAnchor >> incomingTypeDeclarations [
-	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	^ {}
-]
-
-{ #category : #testing }
-FmxNGSourceAnchor >> isFile [
-	^ false
-]
-
-{ #category : #testing }
-FmxNGSourceAnchor >> isMultiple [
-	^ false
-]
-
-{ #category : #accessing }
-FmxNGSourceAnchor >> lineCount [
-	"I should return the number of line in the source text of the entity."
-
-	<MSEProperty: #lineCount type: #Number>
-	<derived>
-	<MSEComment: 'The number of lines in the source text'>
-	^ self subclassResponsibility
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGSourceAnchor >> mooseFinderSourceTextIn: composite [
-	<moosePresentationOrder: 10>
-	composite text
-			title: 'Source';
-			titleIcon: MooseIcons mooseSourceTextPartial;
-			display: [ :each | each mooseInterestingEntity sourceText ];
-			when: [ :input | input mooseInterestingEntity sourceText notEmpty ]
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FmxNGSourceAnchor >> outgoingTypeDeclarations [
-	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	^ {}
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGSourceAnchor >> queryAllIncomingInvocations [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FmxNGSourceAnchor >> queryAllOutgoingInvocations [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGSourceAnchor >> queryIncomingAccesses [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGSourceAnchor >> queryIncomingReferences [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGSourceAnchor >> queryIncomingTypeDeclarations [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FmxNGSourceAnchor >> queryOutgoingAccesses [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FmxNGSourceAnchor >> queryOutgoingReferences [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FmxNGSourceAnchor >> queryOutgoingTypeDeclarations [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGSourceAnchor >> querySureIncomingInvocations [
-	^ MooseQueryResult new
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FmxNGSourceAnchor >> querySureOutgoingInvocations [
-	^ MooseQueryResult new
-]
-
-{ #category : #accessing }
-FmxNGSourceAnchor >> sourceText [
-	^ self subclassResponsibility
+	<generated>
+	^ {  }
 ]

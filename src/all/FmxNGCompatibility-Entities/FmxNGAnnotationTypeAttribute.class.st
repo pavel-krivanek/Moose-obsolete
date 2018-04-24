@@ -1,18 +1,36 @@
 Class {
 	#name : #FmxNGAnnotationTypeAttribute,
-	#superclass : #FmxNGAnnotationTypeAttributeGenerated,
+	#superclass : #FmxNGAttribute,
+	#traits : 'FmxNGTAnnotationTypeAttribute + FmxNGTTypedAnnotationInstanceAttribute',
+	#classTraits : 'FmxNGTAnnotationTypeAttribute classTrait + FmxNGTTypedAnnotationInstanceAttribute classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #accessing }
-FmxNGAnnotationTypeAttribute >> parentAnnotationType [
-	<MSEProperty: #parentAnnotationType type: #FmxNGAnnotationType> <derived> 
-	<MSEComment: 'This is an alias pointing to the AnnotationType that defines this attribute'>
+{ #category : #meta }
+FmxNGAnnotationTypeAttribute class >> annotation [
 
-	^ self parentType
+	<generated>
+	<MSEClass: #AnnotationTypeAttribute super: #FmxNGAttribute>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #accessing }
-FmxNGAnnotationTypeAttribute >> parentAnnotationType: anAnnotationType [
-	self parentType: anAnnotationType
+{ #category : #generator }
+FmxNGAnnotationTypeAttribute class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGAnnotationTypeAttribute class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTAnnotationTypeAttribute FmxNGTTypedAnnotationInstanceAttribute)
+]
+
+{ #category : #meta }
+FmxNGAnnotationTypeAttribute class >> requirements [
+
+	<generated>
+	^ {  }
 ]

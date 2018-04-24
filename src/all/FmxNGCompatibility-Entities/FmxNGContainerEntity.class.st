@@ -1,90 +1,36 @@
 Class {
 	#name : #FmxNGContainerEntity,
-	#superclass : #FmxNGContainerEntityGenerated,
-	#traits : 'TOODependencyQueries - {#incomingTypeDeclarations. #outgoingTypeDeclarations}',
-	#classTraits : 'TOODependencyQueries classTrait',
+	#superclass : #FmxNGNamedEntity,
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #visiting }
-FmxNGContainerEntity >> accept: aVisitor [
+{ #category : #meta }
+FmxNGContainerEntity class >> annotation [
 
-	aVisitor visitContainerEntity: self
+	<generated>
+	<MSEClass: #ContainerEntity super: #FmxNGNamedEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #visiting }
-FmxNGContainerEntity >> addClass: aClass [
-	
-	types add: aClass
+{ #category : #generator }
+FmxNGContainerEntity class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #accessing }
-FmxNGContainerEntity >> addFunction: aFunction [ 
-	functions add: aFunction
+{ #category : #generator }
+FmxNGContainerEntity class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTWithAnnotationTypes FmxNGTWithFunctions FmxNGTWithTypes)
 ]
 
-{ #category : #accessing }
-FmxNGContainerEntity >> addType: aType [ 
-	types add: aType
-]
+{ #category : #meta }
+FmxNGContainerEntity class >> requirements [
 
-{ #category : #accessing }
-FmxNGContainerEntity >> classes [
-	"Classes are usually seen as types from the point of view of a Container. However, there may other types (e.g. aspects) which we dont want to see as classes and are rejected by this method."
-	<navigation: 'Classes'>
-
-	^ self privateState 
-				cacheAt: #classes 
-				ifAbsentPut: [self types select: [:type| type isClass ]]
-]
-
-{ #category : #accessing }
-FmxNGContainerEntity >> copyFrom: anEntity within: aVisitor [
-
-	super copyFrom: anEntity within: aVisitor.
-	anEntity types do: [:t|
-		self addType: (aVisitor visit: t) ].
-
-	
-]
-
-{ #category : #testing }
-FmxNGContainerEntity >> isContainerEntity [
-	^ true
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGContainerEntity >> mooseFinderFunctionsIn: composite [
-	<moosePresentationOrder: 40>
-	composite list 
-		title: 'Functions';
-		titleIcon: MooseIcons famixFunctionGroup;
-		display: [ self functions ];
-		format: [ :each | each mooseName ];
-		when: [ self functions notEmpty ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGContainerEntity >> mooseFinderTypesIn: composite [
-	<moosePresentationOrder: 40>
-	composite list 
-		title: 'Types';
-		titleIcon: MooseIcons famixClassGroup;
-		display: [ self types ];
-		format: [ :each | each mooseName ];
-		when: [ self types notEmpty ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGContainerEntity >> mooseNameWithDots [
-	^ self mooseName ifNotNil: [ '.' join: (self mooseName substrings: '::') ]
-]
-
-{ #category : #accessing }
-FmxNGContainerEntity >> numberOfChildren [
-	<MSEProperty: #numberOfChildren type: #Number>
-	<MSEComment: 'Number of direct children entities in the containment tree.'>
-	<derived>
-	
-	^ self children size
+	<generated>
+	^ {  }
 ]

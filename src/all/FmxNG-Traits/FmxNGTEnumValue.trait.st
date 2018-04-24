@@ -1,0 +1,58 @@
+"
+It models the values defined in an FAMIXEnum. These are attributes of enums with default values.
+
+For example, the following Java code defines an Enum with seven EnumValues.
+
+public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, 
+    THURSDAY, FRIDAY, SATURDAY 
+}
+
+Instance Variables:
+	parentEnum	<(MultivalueLink of: FAMIXEnum)>
+"
+Trait {
+	#name : #FmxNGTEnumValue,
+	#category : #'FmxNG-Traits-Traits'
+}
+
+{ #category : #meta }
+FmxNGTEnumValue classSide >> annotation [
+
+	<generated>
+	<ignoreInTraitUsers>
+	<MSEClass: #TEnumValue super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #generator }
+FmxNGTEnumValue classSide >> generatedSlotNames [
+	<generated>
+	^ #(parentEnum)
+]
+
+{ #category : #generator }
+FmxNGTEnumValue classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGTEnumValue >> parentEnum [
+
+	<generated>
+	<MSEComment: 'The Enum declaring this value. It offers the implementation of belongsTo'>
+	<container>
+
+	^ parentEnum
+]
+
+{ #category : #accessing }
+FmxNGTEnumValue >> parentEnum: anObject [
+
+	<generated>
+	parentEnum := anObject
+
+]

@@ -1,10 +1,34 @@
 Class {
 	#name : #FmxNGUNKNOWNSourceLanguage,
-	#superclass : #FmxNGUNKNOWNSourceLanguageGenerated,
+	#superclass : #FmxNGSourceLanguage,
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #testing }
-FmxNGUNKNOWNSourceLanguage >> isUnknown [ 
-	^ true
+{ #category : #meta }
+FmxNGUNKNOWNSourceLanguage class >> annotation [
+
+	<generated>
+	<MSEClass: #UNKNOWNSourceLanguage super: #FmxNGSourceLanguage>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
+]
+
+{ #category : #generator }
+FmxNGUNKNOWNSourceLanguage class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGUNKNOWNSourceLanguage class >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #meta }
+FmxNGUNKNOWNSourceLanguage class >> requirements [
+
+	<generated>
+	^ {  }
 ]

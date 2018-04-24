@@ -1,24 +1,36 @@
 Class {
 	#name : #FmxNGEnumValue,
-	#superclass : #FmxNGEnumValueGenerated,
+	#superclass : #FmxNGStructuralEntity,
+	#traits : 'FmxNGTEnumValue',
+	#classTraits : 'FmxNGTEnumValue classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #accessing }
-FmxNGEnumValue >> belongsTo [
+{ #category : #meta }
+FmxNGEnumValue class >> annotation [
 
-	^ self parentEnum
+	<generated>
+	<MSEClass: #EnumValue super: #FmxNGStructuralEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #'Famix-Implementation' }
-FmxNGEnumValue >> mooseNameOn: aStream [
-	(self belongsTo isNotNil and: [ self belongsTo name isNotNil ])
-		ifTrue: [ self belongsTo mooseNameOn: aStream.
-			aStream << self mooseNameSeparator ].
-	super mooseNameOn: aStream
+{ #category : #generator }
+FmxNGEnumValue class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #printing }
-FmxNGEnumValue >> mooseNameSeparator [
-	^ '::'
+{ #category : #generator }
+FmxNGEnumValue class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTEnumValue)
+]
+
+{ #category : #meta }
+FmxNGEnumValue class >> requirements [
+
+	<generated>
+	^ {  }
 ]

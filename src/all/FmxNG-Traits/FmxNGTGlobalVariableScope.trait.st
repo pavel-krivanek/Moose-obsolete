@@ -1,0 +1,43 @@
+Trait {
+	#name : #FmxNGTGlobalVariableScope,
+	#category : #'FmxNG-Traits-Traits'
+}
+
+{ #category : #meta }
+FmxNGTGlobalVariableScope classSide >> annotation [
+
+	<generated>
+	<ignoreInTraitUsers>
+	<MSEClass: #TGlobalVariableScope super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #generator }
+FmxNGTGlobalVariableScope classSide >> generatedSlotNames [
+	<generated>
+	^ #(globalVariables)
+]
+
+{ #category : #generator }
+FmxNGTGlobalVariableScope classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGTGlobalVariableScope >> globalVariables [
+
+	<generated>
+	<MSEComment: 'Global variables defined in the scope, if any.'>
+	^ globalVariables
+]
+
+{ #category : #accessing }
+FmxNGTGlobalVariableScope >> globalVariables: anObject [
+
+	<generated>
+	globalVariables value: anObject
+
+]

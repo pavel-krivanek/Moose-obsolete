@@ -1,15 +1,36 @@
 Class {
 	#name : #FmxNGInclude,
-	#superclass : #FmxNGIncludeGenerated,
+	#superclass : #FmxNGAssociation,
+	#traits : 'FmxNGTFileInclude',
+	#classTraits : 'FmxNGTFileInclude classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #'instance creation' }
-FmxNGInclude >> from [	
-	^ self source
+{ #category : #meta }
+FmxNGInclude class >> annotation [
+
+	<generated>
+	<MSEClass: #Include super: #FmxNGAssociation>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #'instance creation' }
-FmxNGInclude >> to [
-	^ self target
+{ #category : #generator }
+FmxNGInclude class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGInclude class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTFileInclude)
+]
+
+{ #category : #meta }
+FmxNGInclude class >> requirements [
+
+	<generated>
+	^ {  }
 ]

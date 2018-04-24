@@ -1,55 +1,36 @@
 Class {
 	#name : #FmxNGBehaviouralEntity,
-	#superclass : #FmxNGBehaviouralEntityGenerated,
+	#superclass : #FmxNGContainerEntity,
+	#traits : 'FmxNGTInvocable + FmxNGTTypedStructure + FmxNGTWithAccesses + FmxNGTWithDereferencedInvocations + FmxNGTWithImplicitVariables + FmxNGTWithInvocations + FmxNGTWithLocalVariables + FmxNGTWithParameters + FmxNGTWithReferences + FmxNGTWithSignature',
+	#classTraits : 'FmxNGTInvocable classTrait + FmxNGTTypedStructure classTrait + FmxNGTWithAccesses classTrait + FmxNGTWithDereferencedInvocations classTrait + FmxNGTWithImplicitVariables classTrait + FmxNGTWithInvocations classTrait + FmxNGTWithLocalVariables classTrait + FmxNGTWithParameters classTrait + FmxNGTWithReferences classTrait + FmxNGTWithSignature classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #accessing }
-FmxNGBehaviouralEntity >> addAccess: anAccess [ 
-	accesses add: anAccess
+{ #category : #meta }
+FmxNGBehaviouralEntity class >> annotation [
+
+	<generated>
+	<MSEClass: #BehaviouralEntity super: #FmxNGContainerEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #accessing }
-FmxNGBehaviouralEntity >> addImplicitVariable: anImplicitVariable [
-	implicitVariables add: anImplicitVariable
+{ #category : #generator }
+FmxNGBehaviouralEntity class >> generatedSlotNames [
+	<generated>
+	^ #()
 ]
 
-{ #category : #accessing }
-FmxNGBehaviouralEntity >> addIncomingInvocation: anInvocation [
-	incomingInvocations add: anInvocation
+{ #category : #generator }
+FmxNGBehaviouralEntity class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTInvocable FmxNGTTypedStructure FmxNGTWithAccesses FmxNGTWithDereferencedInvocations FmxNGTWithImplicitVariables FmxNGTWithInvocations FmxNGTWithLocalVariables FmxNGTWithParameters FmxNGTWithReferences FmxNGTWithSignature)
 ]
 
-{ #category : #accessing }
-FmxNGBehaviouralEntity >> addLocalVariable: aLocalVariable [
-	localVariables add: aLocalVariable
-]
+{ #category : #meta }
+FmxNGBehaviouralEntity class >> requirements [
 
-{ #category : #accessing }
-FmxNGBehaviouralEntity >> addOutgoingInvocation: anInvocation [
-	outgoingInvocations add: anInvocation
-]
-
-{ #category : #accessing }
-FmxNGBehaviouralEntity >> addOutgoingReference: aReference [ 
-	outgoingReferences add: aReference
-]
-
-{ #category : #accessing }
-FmxNGBehaviouralEntity >> addParameter: aParameter [ 
-	parameters add: aParameter
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGBehaviouralEntity >> incomingTypeDeclarations [
-	^ {}
-]
-
-{ #category : #'Famix-Implementation' }
-FmxNGBehaviouralEntity >> isBehaviouralEntity [
-	^ true
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FmxNGBehaviouralEntity >> outgoingTypeDeclarations [
-	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
+	<generated>
+	^ {  }
 ]

@@ -1,19 +1,36 @@
 Class {
 	#name : #FmxNGParameterizableClass,
-	#superclass : #FmxNGParameterizableClassGenerated,
+	#superclass : #FmxNGClass,
+	#traits : 'FmxNGTWithParameterizedTypes',
+	#classTraits : 'FmxNGTWithParameterizedTypes classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #generated }
-FmxNGParameterizableClass >> parameters [
-	<MSEProperty: #parameters type: #FmxNGParameterType> <multivalued> <derived>
-	<MSEComment: 'Parameter types of this class.'>
-	
-	^self types select: [:each | each isParameterType]
+{ #category : #meta }
+FmxNGParameterizableClass class >> annotation [
+
+	<generated>
+	<MSEClass: #ParameterizableClass super: #FmxNGClass>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
 ]
 
-{ #category : #generated }
-FmxNGParameterizableClass >> parameters: aCollection [
+{ #category : #generator }
+FmxNGParameterizableClass class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
 
-	self privateState attributeAt: #parameters put: aCollection
+{ #category : #generator }
+FmxNGParameterizableClass class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTWithParameterizedTypes)
+]
+
+{ #category : #meta }
+FmxNGParameterizableClass class >> requirements [
+
+	<generated>
+	^ {  }
 ]

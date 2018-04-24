@@ -1,12 +1,36 @@
 Class {
 	#name : #FmxNGException,
-	#superclass : #FmxNGExceptionGenerated,
+	#superclass : #FmxNGEntity,
+	#traits : 'FmxNGTException',
+	#classTraits : 'FmxNGTException classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #printing }
-FmxNGException >> mooseNameOn: aStream [ 
-	aStream nextPutAll: (self class name removePrefix: 'FAMIX').
-	aStream nextPut: $-.
-	self exceptionClass notNil ifTrue: [self exceptionClass mooseNameOn: aStream]
+{ #category : #meta }
+FmxNGException class >> annotation [
+
+	<generated>
+	<MSEClass: #Exception super: #FmxNGEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
+	^self
+]
+
+{ #category : #generator }
+FmxNGException class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGException class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTException)
+]
+
+{ #category : #meta }
+FmxNGException class >> requirements [
+
+	<generated>
+	^ {  }
 ]
