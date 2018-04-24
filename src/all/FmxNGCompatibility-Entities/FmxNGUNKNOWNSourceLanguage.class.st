@@ -32,3 +32,8 @@ FmxNGUNKNOWNSourceLanguage class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGUNKNOWNSourceLanguage >> isUnknown [ 
+	^ true
+]
