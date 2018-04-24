@@ -61,10 +61,7 @@ FmxNGTAccess >> accessor: anObject [
 { #category : #accessing }
 FmxNGTAccess >> isWrite [
 
-	<MSEProperty: #isWrite type: #Boolean>
-	<generated>
-	<MSEComment: 'Write access'>
-	^ isWrite
+	^ super isWrite ifNil: [ false ]
 ]
 
 { #category : #accessing }
