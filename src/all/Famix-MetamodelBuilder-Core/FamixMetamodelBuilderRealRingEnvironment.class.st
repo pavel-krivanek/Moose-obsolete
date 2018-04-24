@@ -18,9 +18,10 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassCommentOf: realClass to: a
 FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to: anRGClass [
 	| generatedOldSlots customSlots customTraits customTraitNames customSlotNames slotDefinitions slotsString definition generatedOldTraits traitsDefinitions traitsString |
 
+
 	generatedOldSlots := self generatedSlotsOf: realClass.
 	generatedOldTraits := self generatedTraitsOf: realClass.
-	customSlots := realClass slots copyWithoutAll: generatedOldSlots.
+	customSlots := realClass localSlots copyWithoutAll: generatedOldSlots.
 	customTraits := realClass traitComposition transformations copyWithoutAll: generatedOldTraits.
 	customSlotNames := customSlots collect: #name.
 	customTraitNames := customTraits collect: #name.
@@ -70,6 +71,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 				 ].
 
 	self class compiler evaluate: definition.
+
 	
 	
 ]
@@ -283,7 +285,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generateTraitsDescriptionFrom: anRGC
 
 	| generatedTraits |
 	
-	generatedTraits := anRGClass traitComposition transformations select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
+	generatedTraits := anRGClass traitComposition transformations.
 	
 	anRGClass classSide compile: ('generatedTraitNames
 	<generated>
@@ -297,7 +299,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedSlotsOf: aRealClass [
 
 	| slotNames |
 	
-	slotNames := (aRealClass canUnderstand: #generatedSlotNames)
+	slotNames := (aRealClass classSide canUnderstand: #generatedSlotNames)
 		ifTrue: [ aRealClass generatedSlotNames ]
 		ifFalse: [ Array new ].
 		
@@ -311,7 +313,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedTraitsOf: aRealClass [
 
 	| traitNames |
 	
-	traitNames := (aRealClass canUnderstand: #generatedTraitNames)
+	traitNames := (aRealClass classSide canUnderstand: #generatedTraitNames)
 		ifTrue: [ aRealClass generatedTraitNames ]
 		ifFalse: [ Array new ].
 		
