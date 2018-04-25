@@ -32,3 +32,9 @@ FmxNGLeafEntity class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #visiting }
+FmxNGLeafEntity >> accept: aVisitor [
+
+	aVisitor visitLeafEntity: self
+]

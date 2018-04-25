@@ -32,3 +32,8 @@ FmxNGParameterType class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGParameterType >> isParameterType [
+	^ true
+]

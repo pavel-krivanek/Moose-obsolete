@@ -34,3 +34,44 @@ FmxNGParameterizedType class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #enumerating }
+FmxNGParameterizedType >> allSubclassesDo: aBlock [
+	"we override this traversal because we want to
+	traverse the parameter type"
+
+	self parameterizableClass ifNotNil: [ :a | a withSubclassesDo: aBlock ]
+]
+
+{ #category : #enumerating }
+FmxNGParameterizedType >> allSuperclassesDo: aBlock [
+	"we override this traversal because we want to
+	traverse the parameter type"
+
+	self parameterizableClass ifNotNil: [ :a | a withSuperclassesDo: aBlock ]
+]
+
+{ #category : #testing }
+FmxNGParameterizedType >> isParameterizedType [
+	^ true
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGParameterizedType >> mooseNameOn: aStream [ 
+	self parameterizableClass notNil 
+		ifTrue: [self parameterizableClass mooseNameOn: aStream].
+	aStream nextPut: $<.
+	self arguments 
+		do: [:each | each mooseNameOn: aStream]
+		separatedBy: [aStream nextPut: $,].  
+	aStream nextPut: $>.  
+
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGParameterizedType >> namespaceScope [
+	"we ask the namespaceScope of the parameterizable class"
+	
+	^ self parameterizableClass ifNotNil: [
+		self parameterizableClass namespaceScope ]
+]

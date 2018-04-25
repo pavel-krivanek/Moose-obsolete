@@ -32,3 +32,8 @@ FmxNGPrimitiveType class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGPrimitiveType >> isPrimitiveType [
+	^true
+]
