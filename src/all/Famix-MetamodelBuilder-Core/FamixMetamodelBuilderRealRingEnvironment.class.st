@@ -20,19 +20,19 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 
 
 	generatedOldSlots := self generatedSlotsOf: realClass.
-	generatedOldTraits := self generatedTraitsOf: realClass.
+	generatedOldTraits := self generatedTraitNamessOf: realClass.
 	customSlots := realClass localSlots copyWithoutAll: generatedOldSlots.
-	customTraits := realClass traitComposition transformations copyWithoutAll: generatedOldTraits.
+	customTraits := realClass traitComposition members reject: [ :e | generatedOldTraits includes: e name].
 	customSlotNames := customSlots collect: #name.
-	customTraitNames := customTraits collect: #name.
+	customTraitNames := customTraits collect: #traitCompositionExpression.
 	slotDefinitions := ((anRGClass slots
 		reject: [ :each | customSlotNames includes: each name ])
 		collect: #definitionString) asOrderedCollection.
-	traitsDefinitions := ((anRGClass traitComposition transformations
-		reject: [ :each | customTraitNames includes: each name ])
-		collect: #asString) asOrderedCollection.
+	traitsDefinitions := (anRGClass traitComposition transformations collect: #asString), 
+		customTraitNames.
 	slotDefinitions addAll: (customSlots collect: #definitionString).
 	slotDefinitions := slotDefinitions sorted.
+	
 	slotsString := '{' , (slotDefinitions joinUsing: '. ') , '}'.
 	traitsString := traitsDefinitions 
 		ifEmpty: [ '{ }' ]
@@ -304,6 +304,20 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedSlotsOf: aRealClass [
 		ifFalse: [ Array new ].
 		
 	^ (slotNames collect: [ :slotName | aRealClass slotNamed: slotName ifFound: [ :slot | slot ] ifNone: nil ]) select: #notNil.
+	
+	
+]
+
+{ #category : #installing }
+FamixMetamodelBuilderRealRingEnvironment >> generatedTraitNamessOf: aRealClass [
+
+	| traitNames |
+	
+	^ traitNames := (aRealClass classSide canUnderstand: #generatedTraitNames)
+		ifTrue: [ aRealClass generatedTraitNames ]
+		ifFalse: [ Array new ].
+		
+
 	
 	
 ]
