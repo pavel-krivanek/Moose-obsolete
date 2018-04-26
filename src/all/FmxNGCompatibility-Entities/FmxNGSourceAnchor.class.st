@@ -6,6 +6,28 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
+{ #category : #MQ }
+FmxNGSourceAnchor class >> allChildrenTypes [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
+]
+
+{ #category : #accessing }
+FmxNGSourceAnchor class >> allIncomingAssociationTypes [
+   ^ Set new
+]
+
+{ #category : #accessing }
+FmxNGSourceAnchor class >> allOutgoingAssociationTypes [
+	^ Set new
+]
+
+{ #category : #MQ }
+FmxNGSourceAnchor class >> allParentTypes [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
+]
+
 { #category : #meta }
 FmxNGSourceAnchor class >> annotation [
 
@@ -14,6 +36,18 @@ FmxNGSourceAnchor class >> annotation [
 	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
+]
+
+{ #category : #MQ }
+FmxNGSourceAnchor class >> childrenSelectors [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
+]
+
+{ #category : #MQ }
+FmxNGSourceAnchor class >> childrenTypes [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
 ]
 
 { #category : #generator }
@@ -26,6 +60,28 @@ FmxNGSourceAnchor class >> generatedSlotNames [
 FmxNGSourceAnchor class >> generatedTraitNames [
 	<generated>
 	^ #(FmxNGTSourceAnchor)
+]
+
+{ #category : #accessing }
+FmxNGSourceAnchor class >> incomingMSEProperties [
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGSourceAnchor class >> outgoingMSEProperties [
+	^ #()
+]
+
+{ #category : #MQ }
+FmxNGSourceAnchor class >> parentSelectors [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
+]
+
+{ #category : #MQ }
+FmxNGSourceAnchor class >> parentTypes [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
 ]
 
 { #category : #meta }

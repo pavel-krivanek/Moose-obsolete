@@ -6,6 +6,26 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> allChildrenTypes [
+	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> allIncomingAssociationTypes [
+   ^ self privateAllIncomingAssociationTypes
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> allOutgoingAssociationTypes [
+	^ self privateAllOutgoingAssociationTypes
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> allParentTypes [
+	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
+]
+
 { #category : #meta }
 FmxNGAnnotationInstance class >> annotation [
 
@@ -14,6 +34,22 @@ FmxNGAnnotationInstance class >> annotation [
 	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> childrenSelectors [
+	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> childrenTypes [
+	^ self privateChildrenTypes
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> dependencyFM3PropertyDescription [
+	^ self allDeclaredProperties
+		select: [ :e | e hasOpposite and: [ e opposite isSource or: [ e opposite isTarget ] ] ]
 ]
 
 { #category : #generator }
@@ -28,11 +64,57 @@ FmxNGAnnotationInstance class >> generatedTraitNames [
 	^ #(FmxNGTAnnotationInstance FmxNGTTypedAnnotationInstance FmxNGTWithAnnotationInstanceAttributes)
 ]
 
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> incomingMSEProperties [
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> outgoingAssociationTypes [
+	"Default value"
+
+	^ self privateOutgoingAssociationTypes
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> outgoingMSEProperties [
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> parentSelector [
+	self 
+		deprecated: 'Use parentSelectors instead'
+		on: 	'21 December 2016' 
+		in: 'Pharo-6.0-60328-'
+		transformWith: '`@receiver parentSelector' -> '`@receiver parentSelectors'.
+	^ self parentSelectors
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> parentSelectors [
+	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstance class >> parentTypes [
+	^ self privateParentTypes 
+]
+
 { #category : #meta }
 FmxNGAnnotationInstance class >> requirements [
 
 	<generated>
 	^ {  }
+]
+
+{ #category : #MQ }
+FmxNGAnnotationInstance class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	childrenSelectors := nil.
+	parentSelectors := nil.
+	allChildrenTypes := nil.
+	allParentTypes := nil
 ]
 
 { #category : #accessing }
