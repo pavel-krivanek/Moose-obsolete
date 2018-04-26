@@ -46,12 +46,6 @@ FmxNGAnnotationInstance class >> childrenTypes [
 	^ self privateChildrenTypes
 ]
 
-{ #category : #accessing }
-FmxNGAnnotationInstance class >> dependencyFM3PropertyDescription [
-	^ self allDeclaredProperties
-		select: [ :e | e hasOpposite and: [ e opposite isSource or: [ e opposite isTarget ] ] ]
-]
-
 { #category : #generator }
 FmxNGAnnotationInstance class >> generatedSlotNames [
 	<generated>
