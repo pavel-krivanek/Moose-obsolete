@@ -70,13 +70,6 @@ FmxNGAnnotationInstance class >> incomingMSEProperties [
 ]
 
 { #category : #accessing }
-FmxNGAnnotationInstance class >> outgoingAssociationTypes [
-	"Default value"
-
-	^ self privateOutgoingAssociationTypes
-]
-
-{ #category : #accessing }
 FmxNGAnnotationInstance class >> outgoingMSEProperties [
 	^ #()
 ]
