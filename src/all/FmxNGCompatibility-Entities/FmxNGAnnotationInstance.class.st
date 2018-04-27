@@ -3,9 +3,6 @@ Class {
 	#superclass : #FmxNGSourcedEntity,
 	#traits : 'FmxNGTAnnotationInstance + FmxNGTTypedAnnotationInstance + FmxNGTWithAnnotationInstanceAttributes + TEntityMetaLevelDependency + TDependencyQueries',
 	#classTraits : 'FmxNGTAnnotationInstance classTrait + FmxNGTTypedAnnotationInstance classTrait + FmxNGTWithAnnotationInstanceAttributes classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
-	#instVars : [
-		'#a'
-	],
 	#classInstVars : [
 		'#childrenSelectors',
 		'#allParentTypes',
