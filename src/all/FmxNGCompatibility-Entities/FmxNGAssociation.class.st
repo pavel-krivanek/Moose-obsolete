@@ -39,6 +39,18 @@ FmxNGAssociation class >> requirements [
 	^ {  }
 ]
 
+{ #category : #accessing }
+FmxNGAssociation class >> sourceTypes [
+	^ sourceTypes
+		ifNil: [ sourceTypes := self privateSourceTypes ]
+]
+
+{ #category : #accessing }
+FmxNGAssociation class >> targetTypes [
+	^ targetTypes
+		ifNil: [ targetTypes := self privateTargetTypes ]
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGAssociation >> accept: aVisitor [
 

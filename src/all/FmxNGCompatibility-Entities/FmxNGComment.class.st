@@ -16,6 +16,13 @@ FmxNGComment class >> annotation [
 	^self
 ]
 
+{ #category : #accessing }
+FmxNGComment class >> content: aString [
+	^ self new
+		content: aString;
+		yourself
+]
+
 { #category : #generator }
 FmxNGComment class >> generatedSlotNames [
 	<generated>

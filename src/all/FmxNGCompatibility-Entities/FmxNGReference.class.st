@@ -35,6 +35,11 @@ FmxNGReference class >> requirements [
 	^ {  }
 ]
 
+{ #category : #accessing }
+FmxNGReference class >> source: source target: target [
+	^ self new source: source; target: target
+]
+
 { #category : #visiting }
 FmxNGReference >> accept: aVisitor [
 
