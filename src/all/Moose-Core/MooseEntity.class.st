@@ -192,12 +192,7 @@ MooseEntity class >> statefulTraits [
 { #category : #'stateful traits' }
 MooseEntity class >> usedStatefulTraits [
 
-	^ usedStatefulTraits ifNil: [ usedStatefulTraits := 
-
-	self classSide withAllSuperclasses flatCollect: [ :each | 
-		| methods |
-		methods := each localMethods select: [ :aMethod | aMethod hasPragmaNamed: #statefulTraits ].
-		methods flatCollect: [ :aMethod | aMethod origin instanceSide perform: aMethod selector ]]]
+	^ (self instanceSide withAllSuperclasses flatCollect: [ :class | class traits ]) select: [ :trait | trait classSide includesSelector: #annotation ] 
 
 	
 ]
