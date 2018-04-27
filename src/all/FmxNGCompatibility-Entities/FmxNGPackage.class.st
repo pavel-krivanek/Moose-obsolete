@@ -35,6 +35,12 @@ FmxNGPackage class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'Famix-Implementation' }
+FmxNGPackage >> abstractClasses [
+
+	^ self classes select: [:c | c isAbstract]
+]
+
 { #category : #accessing }
 FmxNGPackage >> addChildNamedEntity: aNamedEntity [
 	childEntities add: aNamedEntity
@@ -50,6 +56,13 @@ FmxNGPackage >> childNamedEntities [
 FmxNGPackage >> childNamedEntities: aNamedEntity [
 
 	^ self childEntities: aNamedEntity
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGPackage >> classes [
+
+	^ self privateState 	cacheAt: #classes 
+							ifAbsentPut: [ self childEntities select: [ :child | child isClass ]]
 ]
 
 { #category : #'Famix-Smalltalk' }
@@ -151,6 +164,11 @@ FmxNGPackage >> localMethods [
 			ifAbsentPut: [ self classes flatCollect: [:c | c localMethods ]]
 ]
 
+{ #category : #'Famix-Implementation' }
+FmxNGPackage >> methods [
+	^ self localMethods union: self extensionMethods
+]
+
 { #category : #'Moose-Finder' }
 FmxNGPackage >> mooseIcon [ 
 	^ MooseIcons famixPackage
@@ -167,6 +185,18 @@ FmxNGPackage >> namespaceScope [
 FmxNGPackage >> packageScope [
 
 	^ self
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGPackage >> printOn: aStream [ 
+	| parent |
+	parent := self parentPackage.
+	parent ifNotNil: 
+		[ parent printOn: aStream.
+		aStream
+			nextPut: $. ].
+	self name ifNotNil: [ aStream nextPutAll: self name ].
+	aStream nextPutAll: ' (Package)'
 ]
 
 { #category : #'moose-chef-scoping-filtering' }
