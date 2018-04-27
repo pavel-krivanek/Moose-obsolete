@@ -3,6 +3,9 @@ Class {
 	#superclass : #FmxNGBehaviouralEntity,
 	#traits : 'FmxNGTMethod + FmxNGTWithCaughtExceptions + FmxNGTWithClassScope + FmxNGTWithDeclaredExceptions + FmxNGTWithThrownExceptions',
 	#classTraits : 'FmxNGTMethod classTrait + FmxNGTWithCaughtExceptions classTrait + FmxNGTWithClassScope classTrait + FmxNGTWithDeclaredExceptions classTrait + FmxNGTWithThrownExceptions classTrait',
+	#classVars : [
+		'#ShouldSearchForSmalltalkCodeInImage'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -33,6 +36,16 @@ FmxNGMethod class >> requirements [
 
 	<generated>
 	^ {  }
+]
+
+{ #category : #accessing }
+FmxNGMethod class >> shouldSearchForSmalltalkCodeInImage [
+	^ ShouldSearchForSmalltalkCodeInImage ifNil: [ ShouldSearchForSmalltalkCodeInImage := true ]
+]
+
+{ #category : #accessing }
+FmxNGMethod class >> shouldSearchForSmalltalkCodeInImage: anObject [
+	ShouldSearchForSmalltalkCodeInImage := anObject
 ]
 
 { #category : #'Famix-Extensions' }

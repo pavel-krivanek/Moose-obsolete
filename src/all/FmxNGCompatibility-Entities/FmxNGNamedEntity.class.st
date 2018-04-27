@@ -18,14 +18,59 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #meta }
+{ #category : #accessing }
+FmxNGNamedEntity class >> allChildrenTypes [
+	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> allIncomingAssociationTypes [
+	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
+
+	^ allIncomingAssociationTypes
+		ifNil: [ allIncomingAssociationTypes := self privateAllIncomingAssociationTypes ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> allOutgoingAssociationTypes [
+	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
+
+	^ allOutgoingAssociationTypes
+		ifNil: [ allOutgoingAssociationTypes := self privateAllOutgoingAssociationTypes ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> allParentTypes [
+	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
+]
+
+{ #category : #accessing }
 FmxNGNamedEntity class >> annotation [
 
-	<generated>
-	<MSEClass: #NamedEntity super: #FmxNGSourcedEntity>
-	<package: #'FmxNGCompatibility-Entities'>
-	<generated>
+	<MSEClass: #NamedEntity super: #FmxNGNamedEntityGenerated>
+	<package: #'FmxNGCompatibility-Generated'>
 	^self
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> belongsToMethod [
+	^ self compiledMethodAt: #belongsTo ifAbsent: nil
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> childrenSelectors [
+	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> childrenTypes [
+	^ self privateChildrenTypes
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> dependencyFM3PropertyDescription [
+	^ self allDeclaredProperties
+		select: [ :e | e hasOpposite and: [ e opposite isSource or: [ e opposite isTarget ] ] ]
 ]
 
 { #category : #generator }
@@ -40,11 +85,70 @@ FmxNGNamedEntity class >> generatedTraitNames [
 	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTWithAnnotationInstances FmxNGTWithModifiers)
 ]
 
+{ #category : #accessing }
+FmxNGNamedEntity class >> incomingAssociationTypes [
+	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
+
+	^ incomingAssociationTypes
+		ifNil: [ incomingAssociationTypes := self privateIncomingAssociationTypes ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> incomingMSEProperties [
+	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> incomingMSEPropertiesCache: aValue [
+	incomingMSEProperties := aValue
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> named: aString [
+	^ self new
+		name: aString;
+		yourself
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> outgoingAssociationTypes [
+	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
+
+	^ outgoingAssociationTypes
+		ifNil: [ outgoingAssociationTypes := self privateOutgoingAssociationTypes ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> outgoingMSEProperties [
+	^ outgoingMSEProperties ifNil: [ outgoingMSEProperties := self privateOutgoingMSEProperties ]
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> outgoingMSEPropertiesCache: aValue [
+	outgoingMSEProperties := aValue.
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> parentSelectors [
+	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> parentTypes [
+	^ self privateParentTypes 
+]
+
 { #category : #meta }
 FmxNGNamedEntity class >> requirements [
 
 	<generated>
 	^ {  }
+]
+
+{ #category : #accessing }
+FmxNGNamedEntity class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	childrenSelectors := parentSelectors := allChildrenTypes := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := nil
 ]
 
 { #category : #'Famix-Extensions' }
