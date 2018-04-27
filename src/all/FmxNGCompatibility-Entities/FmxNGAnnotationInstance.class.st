@@ -7,7 +7,8 @@ Class {
 		'#childrenSelectors',
 		'#allParentTypes',
 		'#allChildrenTypes',
-		'#parentSelectors'
+		'#parentSelectors',
+		'#cVar'
 	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
