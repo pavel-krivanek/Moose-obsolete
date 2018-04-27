@@ -3,6 +3,15 @@ Class {
 	#superclass : #FmxNGSourcedEntity,
 	#traits : 'FmxNGTAnnotationInstanceAttribute + FmxNGTTypedAnnotationInstanceAttribute + TEntityMetaLevelDependency + TDependencyQueries',
 	#classTraits : 'FmxNGTAnnotationInstanceAttribute classTrait + FmxNGTTypedAnnotationInstanceAttribute classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
+	#instVars : [
+		'#a'
+	],
+	#classInstVars : [
+		'#childrenSelectors',
+		'#allParentTypes',
+		'#allChildrenTypes',
+		'#parentSelectors'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
