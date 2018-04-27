@@ -12,6 +12,26 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> allChildrenTypes [
+	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> allIncomingAssociationTypes [
+   ^ self privateAllIncomingAssociationTypes
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> allOutgoingAssociationTypes [
+	^ self privateAllOutgoingAssociationTypes
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> allParentTypes [
+	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
+]
+
 { #category : #meta }
 FmxNGAnnotationInstanceAttribute class >> annotation [
 
@@ -20,6 +40,16 @@ FmxNGAnnotationInstanceAttribute class >> annotation [
 	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> childrenSelectors [
+	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> childrenTypes [
+	^ self privateChildrenTypes
 ]
 
 { #category : #generator }
@@ -34,11 +64,40 @@ FmxNGAnnotationInstanceAttribute class >> generatedTraitNames [
 	^ #(FmxNGTAnnotationInstanceAttribute FmxNGTTypedAnnotationInstanceAttribute)
 ]
 
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> incomingMSEProperties [
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> outgoingMSEProperties [
+	^ #()
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> parentSelectors [
+	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> parentTypes [
+	^ self privateParentTypes 
+]
+
 { #category : #meta }
 FmxNGAnnotationInstanceAttribute class >> requirements [
 
 	<generated>
 	^ {  }
+]
+
+{ #category : #accessing }
+FmxNGAnnotationInstanceAttribute class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	childrenSelectors := nil.
+	parentSelectors := nil.
+	allChildrenTypes := nil.
+	allParentTypes := nil
 ]
 
 { #category : #'moosequery-queries-incoming' }
