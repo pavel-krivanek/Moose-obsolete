@@ -93,6 +93,28 @@ FmxNGCompatibilityGenerator class >> prefix [
 	^ #'FmxNG'
 ]
 
+{ #category : #accessing }
+FmxNGCompatibilityGenerator class >> resetMetamodel [
+
+	" self resetMetamodel"
+
+	| classes tower |
+
+	classes := self packageName asPackage definedClasses select: [ :each | each inheritsFrom: MooseEntity ].
+	
+	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
+	
+	{ Trait. Class. ClassDescription. Behavior. 
+	MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup. FamixImportingContext} 
+		do: [ :each | classes add: each ].
+
+	tower := MooseModel metaBuilder: classes.
+	self metamodel: tower metamodel.
+	^ metamodel
+
+	
+]
+
 { #category : #initialization }
 FmxNGCompatibilityGenerator >> defineClasses [
 

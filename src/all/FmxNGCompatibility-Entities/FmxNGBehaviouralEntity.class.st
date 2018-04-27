@@ -315,7 +315,7 @@ FmxNGBehaviouralEntity >> providerBehaviours [
 { #category : #'Famix-Extensions' }
 FmxNGBehaviouralEntity >> signature: aString [
 
-	super signature: aString.
+	signature := aString.
 	self resetMooseName
 
 ]

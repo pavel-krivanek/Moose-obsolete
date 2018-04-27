@@ -44,11 +44,13 @@ FmxNGNamedEntity class >> allParentTypes [
 	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
 
-{ #category : #accessing }
+{ #category : #meta }
 FmxNGNamedEntity class >> annotation [
 
-	<MSEClass: #NamedEntity super: #FmxNGNamedEntityGenerated>
-	<package: #'FmxNGCompatibility-Generated'>
+	<generated>
+	<MSEClass: #NamedEntity super: #FmxNGSourcedEntity>
+	<package: #'FmxNGCompatibility-Entities'>
+	<generated>
 	^self
 ]
 
@@ -354,7 +356,7 @@ FmxNGNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 
 { #category : #accessing }
 FmxNGNamedEntity >> name: aString [
-	super name: aString.
+	name := aString.
 	self resetMooseName
 
 ]
