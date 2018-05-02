@@ -3,6 +3,9 @@ This is the abstract representation of an Exception. It is specific to Java. It 
 "
 Trait {
 	#name : #FmxNGTException,
+	#instVars : [
+		'#exceptionClass => FMOne type: #FmxNGTWithExceptions opposite: #exceptions'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

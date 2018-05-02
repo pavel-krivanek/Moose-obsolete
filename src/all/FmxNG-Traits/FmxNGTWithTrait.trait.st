@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithTrait,
+	#instVars : [
+		'#traits => FMMany type: #FmxNGTTrait opposite: #traitOwner'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

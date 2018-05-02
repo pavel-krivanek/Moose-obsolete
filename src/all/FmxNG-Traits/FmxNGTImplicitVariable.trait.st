@@ -3,6 +3,9 @@ FAMIXImplicitVariable represents a variable defined by the compiler in a context
 "
 Trait {
 	#name : #FmxNGTImplicitVariable,
+	#instVars : [
+		'#parentBehaviouralEntity => FMOne type: #FmxNGTWithImplicitVariables opposite: #implicitVariables'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

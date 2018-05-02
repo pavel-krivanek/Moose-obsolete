@@ -3,6 +3,9 @@ FAMIXParameter represents one parameter in a method declaration.
 "
 Trait {
 	#name : #FmxNGTParameter,
+	#instVars : [
+		'#parentBehaviouralEntity => FMOne type: #FmxNGTWithParameters opposite: #parameters'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

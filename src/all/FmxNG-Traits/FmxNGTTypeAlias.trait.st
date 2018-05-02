@@ -6,6 +6,9 @@ Instance Variables:
 "
 Trait {
 	#name : #FmxNGTTypeAlias,
+	#instVars : [
+		'#aliasedType => FMOne type: #FmxNGTWithTypeAliases opposite: #typeAliases'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

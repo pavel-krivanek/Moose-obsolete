@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithNamespaces,
+	#instVars : [
+		'#namespaces => FMMany type: #FmxNGTNamespace opposite: #namespaceOwner'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -6,6 +6,9 @@ One can create a default source language for a project by not associating any en
 "
 Trait {
 	#name : #FmxNGTSourceLanguage,
+	#instVars : [
+		'#sourcedEntities => FMMany type: #FmxNGTWithSourceLanguage opposite: #declaredSourceLanguage'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithCompilationUnit,
+	#instVars : [
+		'#compilationUnit => FMOne type: #FmxNGTCompilationUnit opposite: #compilationUnitOwner'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

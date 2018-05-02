@@ -19,6 +19,10 @@ will produce two invocation associations first from method a to method b, and se
 "
 Trait {
 	#name : #FmxNGTAssociation,
+	#instVars : [
+		'#next => FMOne type: #FmxNGTAssociation opposite: #previous',
+		'#previous => FMOne type: #FmxNGTAssociation opposite: #next'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

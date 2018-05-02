@@ -1,5 +1,9 @@
 Trait {
 	#name : #FmxNGTWithFileInclude,
+	#instVars : [
+		'#incomingIncludeRelations => FMMany type: #FmxNGTFileInclude opposite: #target',
+		'#outgoingIncludeRelations => FMMany type: #FmxNGTFileInclude opposite: #source'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

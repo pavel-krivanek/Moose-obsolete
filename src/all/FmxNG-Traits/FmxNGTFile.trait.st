@@ -3,6 +3,10 @@ It represents a file in the file system.
 "
 Trait {
 	#name : #FmxNGTFile,
+	#instVars : [
+		'#entities => FMOne type: #FmxNGTWithFiles opposite: #containerFiles',
+		'#name'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithDereferencedInvocations,
+	#instVars : [
+		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

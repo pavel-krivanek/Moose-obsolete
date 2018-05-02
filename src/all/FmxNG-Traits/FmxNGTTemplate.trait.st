@@ -1,5 +1,9 @@
 Trait {
 	#name : #FmxNGTTemplate,
+	#instVars : [
+		'#templateOwner => FMOne type: #FmxNGTWithTemplates opposite: #templates',
+		'#templateUsers => FMMany type: #FmxNGTTemplateUser opposite: #template'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

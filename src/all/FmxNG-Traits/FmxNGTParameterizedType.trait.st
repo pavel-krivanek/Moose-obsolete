@@ -10,6 +10,9 @@ Where Map<String,Collection> is the FAMIXParameterizedType of anAttribute. Strin
 "
 Trait {
 	#name : #FmxNGTParameterizedType,
+	#instVars : [
+		'#parameterizableClass => FMOne type: #FmxNGTWithParameterizedTypes opposite: #parameterizedTypes'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

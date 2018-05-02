@@ -5,6 +5,10 @@ Java extractors map Java packages to FAMIXNamespaces. They can also mirror the s
 "
 Trait {
 	#name : #FmxNGTPackage,
+	#instVars : [
+		'#childEntities => FMMany type: #FmxNGTPackageable opposite: #parentPackage',
+		'#packageOwner => FMOne type: #FmxNGTWithPackages opposite: #packages'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

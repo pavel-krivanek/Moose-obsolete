@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithImplicitVariables,
+	#instVars : [
+		'#implicitVariables => FMMany type: #FmxNGTImplicitVariable opposite: #parentBehaviouralEntity'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

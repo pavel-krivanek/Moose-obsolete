@@ -7,6 +7,10 @@ When an entity is placed inside a namespace, the fully qualified name (mooseName
 "
 Trait {
 	#name : #FmxNGTNamespace,
+	#instVars : [
+		'#namespaceEntities => FMMany type: #FmxNGTNamespaceEntity opposite: #parentNamespace',
+		'#namespaceOwner => FMOne type: #FmxNGTWithNamespaces opposite: #namespaces'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

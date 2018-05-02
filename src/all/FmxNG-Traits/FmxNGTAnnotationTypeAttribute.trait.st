@@ -18,6 +18,9 @@ Instance Variables:
 "
 Trait {
 	#name : #FmxNGTAnnotationTypeAttribute,
+	#instVars : [
+		'#annotationAttributeInstances => FMMany type: #FmxNGTTypedAnnotationInstanceAttribute opposite: #annotationTypeAttribute'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

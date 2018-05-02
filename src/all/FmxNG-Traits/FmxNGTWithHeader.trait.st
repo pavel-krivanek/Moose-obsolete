@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithHeader,
+	#instVars : [
+		'#header => FMOne type: #FmxNGTHeader opposite: #headerOwner'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithSourceAnchor,
+	#instVars : [
+		'#sourceAnchor => FMOne type: #FmxNGTSourceAnchor opposite: #element'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -3,6 +3,9 @@ FAMIXLocalVariable represents a local variable in the scope of a behavioural ent
 "
 Trait {
 	#name : #FmxNGTLocalVariable,
+	#instVars : [
+		'#parentBehaviouralEntity => FMOne type: #FmxNGTWithLocalVariables opposite: #localVariables'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -1,5 +1,9 @@
 Trait {
 	#name : #FmxNGTNamed,
+	#instVars : [
+		'isStub',
+		'name'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

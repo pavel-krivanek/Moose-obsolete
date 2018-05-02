@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithReferences,
+	#instVars : [
+		'#outgoingReferences => FMMany type: #FmxNGTReference opposite: #source'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

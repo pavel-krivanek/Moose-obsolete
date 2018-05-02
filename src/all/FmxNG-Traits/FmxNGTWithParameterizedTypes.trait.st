@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithParameterizedTypes,
+	#instVars : [
+		'#parameterizedTypes => FMMany type: #FmxNGTParameterizedType opposite: #parameterizableClass'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

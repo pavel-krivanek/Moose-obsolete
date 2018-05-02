@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTGlobalVariableScope,
+	#instVars : [
+		'#globalVariables => FMMany type: #FmxNGTGlobalVariable opposite: #parentScope'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

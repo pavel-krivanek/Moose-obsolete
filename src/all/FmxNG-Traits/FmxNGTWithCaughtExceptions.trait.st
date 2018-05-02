@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithCaughtExceptions,
+	#instVars : [
+		'#caughtExceptions => FMMany type: #FmxNGTCaughtException opposite: #definingEntity'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

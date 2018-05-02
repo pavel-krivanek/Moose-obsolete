@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTParameterizedTypeUser,
+	#instVars : [
+		'#argumentsInParameterizedTypes => FMOne type: #FmxNGTWithParameterizedTypeUsers opposite: #arguments'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

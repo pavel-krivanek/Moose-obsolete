@@ -3,6 +3,10 @@ FAMIXTrait models a trait as it can be found in Pharo or PHP.
 "
 Trait {
 	#name : #FmxNGTTrait,
+	#instVars : [
+		'#incomingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #trait',
+		'#traitOwner => FMOne type: #FmxNGTWithTrait opposite: #traits'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

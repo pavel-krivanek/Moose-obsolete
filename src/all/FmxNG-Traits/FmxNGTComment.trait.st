@@ -3,6 +3,10 @@ FAMIXComment represents one instance of a comment (in the sense of programming l
 "
 Trait {
 	#name : #FmxNGTComment,
+	#instVars : [
+		'#container => FMOne type: #FmxNGTWithComments opposite: #comments',
+		'#content'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

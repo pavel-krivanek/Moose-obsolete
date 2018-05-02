@@ -12,6 +12,11 @@ will produce one invocation association from current method to a variable anObje
 "
 Trait {
 	#name : #FmxNGTInvocation,
+	#instVars : [
+		'#candidates => FMMany type: #FmxNGTInvocable opposite: #incomingInvocations',
+		'#receiver => FMOne type: #FmxNGTInvocationsReceiver opposite: #receivingInvocations',
+		'#sender => FMOne type: #FmxNGTWithInvocations opposite: #outgoingInvocations'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

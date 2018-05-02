@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithLocalVariables,
+	#instVars : [
+		'#localVariables => FMMany type: #FmxNGTLocalVariable opposite: #parentBehaviouralEntity'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

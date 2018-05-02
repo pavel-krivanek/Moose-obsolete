@@ -5,6 +5,15 @@ A FAMIXMethod is always contained in a parentType.
 "
 Trait {
 	#name : #FmxNGTMethod,
+	#instVars : [
+		'#category',
+		'#hasClassScope',
+		'#isAbstract',
+		'#isPublic',
+		'#kind',
+		'#parentType => FMOne type: #FmxNGTWithMethods opposite: #methods',
+		'#timeStamp'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

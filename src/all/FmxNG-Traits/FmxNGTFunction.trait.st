@@ -3,6 +3,9 @@ FAMIXFunction represents a behavioural entity in a procedural language.
 "
 Trait {
 	#name : #FmxNGTFunction,
+	#instVars : [
+		'#functionOwner => FMOne type: #FmxNGTWithFunctions opposite: #functions'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

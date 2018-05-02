@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTPackageable,
+	#instVars : [
+		'#parentPackage => FMOne type: #FmxNGTPackage opposite: #childEntities'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

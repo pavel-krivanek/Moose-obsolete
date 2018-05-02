@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithTypeAliases,
+	#instVars : [
+		'#typeAliases => FMMany type: #FmxNGTTypeAlias opposite: #aliasedType'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

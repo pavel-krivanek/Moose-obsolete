@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithSourceLanguage,
+	#instVars : [
+		'#declaredSourceLanguage => FMOne type: #FmxNGTSourceLanguage opposite: #sourcedEntities'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

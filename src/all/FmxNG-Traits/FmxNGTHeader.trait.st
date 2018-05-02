@@ -3,6 +3,9 @@ I represent a header file. Typically a .h or .hpp
 "
 Trait {
 	#name : #FmxNGTHeader,
+	#instVars : [
+		'#headerOwner => FMOne type: #FmxNGTWithHeader opposite: #header'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

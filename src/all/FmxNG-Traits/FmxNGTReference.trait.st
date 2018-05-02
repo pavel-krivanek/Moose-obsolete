@@ -13,6 +13,10 @@ Note that FAMIXReference was defined between two FAMIXContainerEntity entities. 
 "
 Trait {
 	#name : #FmxNGTReference,
+	#instVars : [
+		'#source => FMOne type: #FmxNGTWithReferences opposite: #outgoingReferences',
+		'#target => FMOne type: #FmxNGTReferenceable opposite: #incomingReferences'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

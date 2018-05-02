@@ -7,6 +7,9 @@ It has a referencer which is the pointer variable
 "
 Trait {
 	#name : #FmxNGTDereferencedInvocation,
+	#instVars : [
+		'#referencer => FMOne type: #FmxNGTWithDereferencedInvocations opposite: #dereferencedInvocations'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

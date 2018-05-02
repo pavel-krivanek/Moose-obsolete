@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithComments,
+	#instVars : [
+		'#comments => FMMany type: #FmxNGTComment opposite: #container'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

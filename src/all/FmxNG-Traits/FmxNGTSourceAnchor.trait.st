@@ -3,6 +3,9 @@ FAMIXSourceAnchor is an abstract class representing a pointer to a source. The s
 "
 Trait {
 	#name : #FmxNGTSourceAnchor,
+	#instVars : [
+		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

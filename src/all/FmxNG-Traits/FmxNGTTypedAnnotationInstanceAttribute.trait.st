@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTTypedAnnotationInstanceAttribute,
+	#instVars : [
+		'#annotationTypeAttribute => FMOne type: #FmxNGTAnnotationTypeAttribute opposite: #annotationAttributeInstances'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

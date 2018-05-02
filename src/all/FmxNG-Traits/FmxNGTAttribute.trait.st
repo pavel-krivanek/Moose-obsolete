@@ -4,6 +4,9 @@ FAMIXAttribute represents a field of a class. It is an attribute of the parent t
 "
 Trait {
 	#name : #FmxNGTAttribute,
+	#instVars : [
+		'#parentType => FMOne type: #FmxNGTWithAttributes opposite: #attributes'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

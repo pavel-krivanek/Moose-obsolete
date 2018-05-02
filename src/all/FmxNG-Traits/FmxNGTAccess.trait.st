@@ -14,6 +14,12 @@ For each access in the source code, there is one famix access created even if it
 "
 Trait {
 	#name : #FmxNGTAccess,
+	#instVars : [
+		'#accessor => FMOne type: #FmxNGTWithAccesses opposite: #accesses',
+		'#isWrite',
+		'#mySlot',
+		'#variable => FMOne type: #FmxNGTAccessible opposite: #incomingAccesses'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

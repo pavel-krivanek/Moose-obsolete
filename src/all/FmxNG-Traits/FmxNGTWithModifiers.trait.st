@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithModifiers,
+	#instVars : [
+		'modifiers'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

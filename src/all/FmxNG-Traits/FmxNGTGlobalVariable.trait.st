@@ -4,6 +4,9 @@ FAMIXGlobalVariable represents a global variable in the source code.
 "
 Trait {
 	#name : #FmxNGTGlobalVariable,
+	#instVars : [
+		'#parentScope => FMOne type: #FmxNGTGlobalVariableScope opposite: #globalVariables'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

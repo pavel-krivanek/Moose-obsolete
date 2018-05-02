@@ -11,6 +11,10 @@ Instance Variables:
 "
 Trait {
 	#name : #FmxNGTAnnotationInstanceAttribute,
+	#instVars : [
+		'#parentAnnotationInstance => FMOne type: #FmxNGTWithAnnotationInstanceAttributes opposite: #attributes',
+		'#value'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

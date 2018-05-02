@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithParameters,
+	#instVars : [
+		'#parameters => FMMany type: #FmxNGTParameter opposite: #parentBehaviouralEntity'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

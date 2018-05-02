@@ -3,6 +3,9 @@ This is an exception that is explicitly handled by a method. For example, in Jav
 "
 Trait {
 	#name : #FmxNGTCaughtException,
+	#instVars : [
+		'#definingEntity => FMOne type: #FmxNGTWithCaughtExceptions opposite: #caughtExceptions'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

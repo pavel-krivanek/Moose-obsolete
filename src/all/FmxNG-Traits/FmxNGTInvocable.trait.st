@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTInvocable,
+	#instVars : [
+		'#incomingInvocations => FMMany type: #FmxNGTInvocation opposite: #candidates'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

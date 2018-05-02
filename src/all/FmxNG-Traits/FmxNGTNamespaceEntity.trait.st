@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTNamespaceEntity,
+	#instVars : [
+		'#parentNamespace => FMOne type: #FmxNGTNamespace opposite: #namespaceEntities'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

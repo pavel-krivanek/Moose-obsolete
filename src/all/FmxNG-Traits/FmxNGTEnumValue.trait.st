@@ -13,6 +13,9 @@ Instance Variables:
 "
 Trait {
 	#name : #FmxNGTEnumValue,
+	#instVars : [
+		'#parentEnum => FMOne type: #FmxNGTWithEnumValues opposite: #enumValues'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

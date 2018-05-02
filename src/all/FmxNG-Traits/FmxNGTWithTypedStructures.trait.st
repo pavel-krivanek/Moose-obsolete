@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithTypedStructures,
+	#instVars : [
+		'#structuresWithDeclaredType => FMMany type: #FmxNGTTypedStructure opposite: #declaredType'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

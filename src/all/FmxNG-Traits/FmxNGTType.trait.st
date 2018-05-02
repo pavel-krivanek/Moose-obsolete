@@ -7,6 +7,10 @@ A type can have multiple subtypes or supertypes. These are modelled by means of 
 "
 Trait {
 	#name : #FmxNGTType,
+	#instVars : [
+		'#outgoingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #user',
+		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

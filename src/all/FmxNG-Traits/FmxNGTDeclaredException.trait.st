@@ -3,6 +3,9 @@ This is an exception explicitly declared as being thrown by a method.
 "
 Trait {
 	#name : #FmxNGTDeclaredException,
+	#instVars : [
+		'#definingEntity => FMOne type: #FmxNGTWithDeclaredExceptions opposite: #declaredExceptions'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

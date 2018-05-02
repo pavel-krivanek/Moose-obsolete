@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithFiles,
+	#instVars : [
+		'#containerFiles => FMMany type: #FmxNGTFile opposite: #entities'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

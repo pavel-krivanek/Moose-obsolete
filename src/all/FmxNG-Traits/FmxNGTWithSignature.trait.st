@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithSignature,
+	#instVars : [
+		'signature'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

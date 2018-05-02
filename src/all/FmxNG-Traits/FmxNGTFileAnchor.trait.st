@@ -3,6 +3,11 @@ This offers a source anchor that connects a sourced entity to a file through a r
 "
 Trait {
 	#name : #FmxNGTFileAnchor,
+	#instVars : [
+		'correspondingFile',
+		'encoding',
+		'fileName'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

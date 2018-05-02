@@ -5,6 +5,10 @@ Packages and Namespaces are two different concept in terms of scoping entity. Na
 "
 Trait {
 	#name : #FmxNGTScopingEntity,
+	#instVars : [
+		'#childScopes => FMMany type: #FmxNGTScopingEntity opposite: #parentScope',
+		'#parentScope => FMOne type: #FmxNGTScopingEntity opposite: #childScopes'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -3,6 +3,9 @@ I represent a compilation unit file. Typically a .c or .cpp file
 "
 Trait {
 	#name : #FmxNGTCompilationUnit,
+	#instVars : [
+		'#compilationUnitOwner => FMOne type: #FmxNGTWithCompilationUnit opposite: #compilationUnit'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

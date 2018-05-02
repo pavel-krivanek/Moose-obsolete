@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTAccessible,
+	#instVars : [
+		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTSub,
+	#instVars : [
+		'#supers => FMOne type: #FmxNGTSuper opposite: #subs'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 

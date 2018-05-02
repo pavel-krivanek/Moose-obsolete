@@ -1,5 +1,8 @@
 Trait {
 	#name : #FmxNGTWithSuperInheritances,
+	#instVars : [
+		'#subInheritances => FMMany type: #FmxNGTSuperInheritance opposite: #superclass'
+	],
 	#category : #'FmxNG-Traits-Traits'
 }
 
