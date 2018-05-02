@@ -17,3 +17,4 @@ fi
 
 ./pharo $IMAGE_NAME.image eval --save  "Metacello new baseline: 'Moose'; repository: 'tonel://./Moose/src/all'; load: #BasicMetamodelling."
 
+
