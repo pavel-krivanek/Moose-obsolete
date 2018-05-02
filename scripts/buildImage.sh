@@ -13,5 +13,5 @@ if [ $# -eq 0 ]
     ./pharo Pharo.image save $IMAGE_NAME
 fi
 
-/pharo $IMAGE_NAME.image eval --save  "Metacello new baseline: 'Moose'; repository: 'tonel://./Moose/src/all'; load."
+./pharo $IMAGE_NAME.image eval --save  "Metacello new baseline: 'Moose'; repository: 'tonel://./Moose/src/all'; load: #BasicMetamodelling."
 

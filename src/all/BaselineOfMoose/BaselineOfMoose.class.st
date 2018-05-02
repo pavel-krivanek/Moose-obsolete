@@ -67,6 +67,7 @@ BaselineOfMoose >> baseline: spec [
 		
 		#(	
 			'Famix-Core'
+			'Famix-Compatibility'
 			'Moose-Hismo'
 			'Moose-HismoImporter'
 			'Moose-Test-HismoImporter'
@@ -370,7 +371,6 @@ BaselineOfMoose >> baselineFamixNG: spec [
     
 	"#(
 		'Famix-General'
-		'Famix-Compatibility'
 		'Famix-SmalltalkModel'
 		'Famix-JavaMetamodel'
 		'Famix-CppMetamodel'
