@@ -66,6 +66,8 @@ BaselineOfMoose >> baseline: spec [
 			'FmxNGCompatibility-Generator' 
 			'FmxNGCompatibility-Entities'
 			
+			'CollectionExtensions'
+			
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
 
@@ -830,6 +832,7 @@ BaselineOfMoose >> groups: spec [
 			'Ring2'
 			'Grease-Core'
 			'Grease-Pharo30-Core' 
+			'CollectionExtensions'
 
 			'Magritte-Model'
 			'Magritte-Pharo3-Model'
