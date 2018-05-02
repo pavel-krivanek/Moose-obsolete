@@ -888,6 +888,12 @@ BaselineOfMoose >> groups: spec [
 			
 			'Moose-Query-Test'
 			'Phexample'
+			
+			'FamixNG-MetamodelGeneration'
+			'FmxNG-Traits'
+			
+			#'FmxNGCompatibility-Generator' 
+			#'FmxNGCompatibility-Entities'
 
 	). 
 ]
