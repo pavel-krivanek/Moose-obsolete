@@ -895,6 +895,7 @@ BaselineOfMoose >> groups: spec [
 			'Famix-MetamodelBuilder-Core'
 			'Famix-MetamodelBuilder-Support'
 			
+			'Moose-Query-Extensions'
 			'Moose-Query-Test'
 			'Phexample'
 			
