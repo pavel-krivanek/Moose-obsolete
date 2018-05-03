@@ -55,6 +55,7 @@ BaselineOfMoose >> baseline: spec [
 		#(	
 			'Moose-Core'
 			'Moose-Query'
+			'Moose-Query-Extensions'
 			'Famix-MetamodelBuilder-Core'
 			'Famix-MetamodelBuilder-Support'
 			'Famix-MetamodelBuilder-Support'
