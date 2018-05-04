@@ -889,7 +889,6 @@ BaselineOfMoose >> groups: spec [
 
 			'Moose-Query'
 			'Moose-Core'
-			'Famix-Core'
 			'Famix-Compatibility'
 
 			'Famix-MetamodelBuilder-Core'
