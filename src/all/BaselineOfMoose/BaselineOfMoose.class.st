@@ -835,24 +835,21 @@ BaselineOfMoose >> groups: spec [
 			'Grease-Pharo30-Core' 
 			'CollectionExtensions'
 
-			'Magritte-Model'
+			"'Magritte-Model'
 			'Magritte-Pharo3-Model'
-			'Magritte-Morph'
+			'Magritte-Morph'"
 
 			'Hashtable'
 
 			'StateSpecs-Specs'
 			'StateSpecs-DSL-ShouldExpressions'
-			'StateSpecs-DSL-ClassWords'
+			"'StateSpecs-DSL-ClassWords'
 			'StateSpecs-Help'
 			'StateSpecs-Specs-Tests'
 			'StateSpecs-DSL-ShouldExpressions-Tests'
-			'StateSpecs-DSL-ClassWords-Tests'
+			'StateSpecs-DSL-ClassWords-Tests'"
 
-			'StatefulTraits'
-			'StatefulTraits-Tests'
-
-			'Ghost-ObjectGhost'
+			"'Ghost-ObjectGhost'
 			'Ghost-ClassGhost'
 			'Ghost-ObjectMutation'
 			'Ghost-ObjectGhost-Tests'
@@ -860,13 +857,13 @@ BaselineOfMoose >> groups: spec [
 			'Ghost-ObjectMutation-Tests'
 			'Ghost-StateSpecsSupport'
 			'Ghost-StateSpecsSupport-Tests'
-			'Ghost-GTSupport'
+			'Ghost-GTSupport'"
 
-			'Mocketry-Domain'
+			"'Mocketry-Domain'
 			'Mocketry-Domain-Tests'
 			'Mocketry-Help'
 			'Mocketry-Specs'
-			'Mocketry-Specs-Tests'
+			'Mocketry-Specs-Tests'"
 
 			'Fame-Core'
 			'Fame-Util'
@@ -874,18 +871,16 @@ BaselineOfMoose >> groups: spec [
 			'Fame-SmalltalkBinding'
 			'Fame-Tests-Core'
 
-			'GToolkit-Examples' 
+			"'GToolkit-Examples' 
 			'GToolkit-Examples-Dummies' 
 			'GToolkit-Examples-Extensions' 
 			'GToolkit-Examples-Roassal2UI' 
 			'GToolkit-Examples-UI' 
-			'GToolkit-Tests-Examples'
+			'GToolkit-Tests-Examples'"
 
 			 'DeepTraverser'
-			 'DeepTraverser-Examples'
-			 'DeepTraverser-Tests'
-
-			 'RoelTyper'
+			" 'DeepTraverser-Examples'
+			 'DeepTraverser-Tests'"
 
 			'Moose-Query'
 			'Moose-Core'
