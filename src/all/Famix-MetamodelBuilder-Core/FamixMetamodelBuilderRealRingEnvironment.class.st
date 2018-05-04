@@ -255,17 +255,6 @@ FamixMetamodelBuilderRealRingEnvironment >> ensurePackagesFrom: anRGEnvironment 
 			ifFalse: [ RPackageOrganizer default registerPackageNamed: each name]].
 ]
 
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> flattenTraitsFor: aClass [
-
-	| info |
-	info := StatefulTraitsMergedClassInfoForRing on: aClass.
-	(aClass propertyNamed: #statefulTraits ifAbsent: [ Array new ])
-		do: [ :aTraitName | 
-			info addTrait: (aClass environment ask behaviorNamed: aTraitName) ].
-	info merge.
-]
-
 { #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGClass [
 

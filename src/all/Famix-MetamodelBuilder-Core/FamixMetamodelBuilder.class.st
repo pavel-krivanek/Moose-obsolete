@@ -256,13 +256,6 @@ FamixMetamodelBuilder >> environment: anObject [
 	environment := anObject
 ]
 
-{ #category : #compiling }
-FamixMetamodelBuilder >> flattenTraitsFor: aClass [
-
-	self traitsFlattening ifTrue: [ 
-		self environment flattenTraitsFor: aClass ]
-]
-
 { #category : #generating }
 FamixMetamodelBuilder >> generate [
 
@@ -351,7 +344,6 @@ FamixMetamodelBuilder >> initialize [
 	traits := OrderedCollection new.
 	relations := OrderedCollection new.
 	
-	traitsFlattening := false.
 	generateImportingContext := false.
 	
 	
@@ -515,16 +507,6 @@ FamixMetamodelBuilder >> traitTag: aSymbol [
 { #category : #accessing }
 FamixMetamodelBuilder >> traits [
 	^ traits
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> traitsFlattening [
-	^ traitsFlattening
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> traitsFlattening: anObject [
-	traitsFlattening := anObject
 ]
 
 { #category : #accessing }
