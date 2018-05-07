@@ -66,6 +66,7 @@ BaselineOfMoose >> baseline: spec [
 			
 			'FmxNGCompatibility-Generator' 
 			'FmxNGCompatibility-Entities'
+			'FmxNGCompatibility-Groups'
 			
 			'CollectionExtensions'
 			
@@ -900,6 +901,7 @@ BaselineOfMoose >> groups: spec [
 			
 			'FmxNGCompatibility-Generator' 
 			'FmxNGCompatibility-Entities'
+			'FmxNGCompatibility-Groups'
 
 	). 
 ]
