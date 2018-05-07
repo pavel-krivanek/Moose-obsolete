@@ -21,18 +21,10 @@ SmaCCRewriteServerWorkerCommandLineHandler >> activate [
 { #category : #public }
 SmaCCRewriteServerWorkerCommandLineHandler >> port [
 	^ port
-		ifNil:
-			[ 
-			| arg parts |
-			arg := 'localhost'.
-			self arguments notEmpty
-				ifTrue: [ arg := self arguments last ].
-			parts := (arg substrings: ':') last.
-			port := (parts size = 2
-				and:
-					[ 
-					parts last notEmpty
-						and: [ parts last allSatisfy: [ :each | each isDigit ] ] ])
+		ifNil: [ | arg parts |
+			arg := self serverArgument.
+			parts := arg substrings: ':'.
+			port := (parts size = 2 and: [ parts last notEmpty and: [ parts last allSatisfy: [ :each | each isDigit ] ] ])
 				ifTrue: [ parts last asNumber ]
 				ifFalse: [ 36rSM ] ]
 ]
@@ -41,12 +33,12 @@ SmaCCRewriteServerWorkerCommandLineHandler >> port [
 SmaCCRewriteServerWorkerCommandLineHandler >> server [
 	^ server
 		ifNil:
-			[ 
-			| arg |
-			arg := 'localhost'.
-			self arguments notEmpty
-				ifTrue: [ arg := self arguments last ].
-			server := (arg substrings: ':') first ]
+			[ server := (self serverArgument substrings: ':') first ]
+]
+
+{ #category : #public }
+SmaCCRewriteServerWorkerCommandLineHandler >> serverArgument [
+	^ self optionAt: 'server' ifAbsent: [ 'localhost' ]
 ]
 
 { #category : #public }

@@ -211,21 +211,21 @@ ForExampleMatcher >> shouldSignalWhenBeTrueFails [
 { #category : #'examples-expecting-string' }
 ForExampleMatcher >> shouldSignalWhenBeginsWithFails [
 	[ 'abcdef' should beginWith: 'abcX' ] should 
-		signal: TestFailure 
+		signal: SpecOfFailed 
 		withMessageText: 'expected ''abcX'' but got ''abcdef'' (using beginsWith:)' 
 ]
 
 { #category : #'examples-expecting-string' }
 ForExampleMatcher >> shouldSignalWhenEndWithFails [
 	[ 'abcdef' should endWith: 'Xdef' ] should 
-		signal: TestFailure 
+		signal: SpecOfFailed 
 		withMessageText: 'expected ''Xdef'' but got ''abcdef'' (using endsWith:)' 
 ]
 
 { #category : #'examples-expecting-string' }
 ForExampleMatcher >> shouldSignalWhenMatchRegexFails [
 	[ 'aaa' should matchRegex: 'ba*' ] should 
-		signal: TestFailure 
+		signal: SpecOfFailed 
 		withMessageText: 'expected ''ba*'' but got ''aaa'' (using matchesRegex:)'
 ]
 
@@ -246,7 +246,7 @@ ForExampleMatcher >> shouldSignalWhenNotBeTrueFails [
 { #category : #'examples-expecting-string' }
 ForExampleMatcher >> shouldSignalWhenNotMatchRegexFails [
 	[ 'aaa' should not matchRegex: 'a*' ] should 
-		signal: TestFailure 
+		signal: SpecOfFailed 
 		withMessageText: 'expected not to get ''a*'' but got ''aaa'' (using matchesRegex:)'
 ]
 

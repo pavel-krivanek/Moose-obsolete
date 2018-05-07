@@ -26,7 +26,6 @@ Class {
 FAMIXInvocation class >> annotation [
 	<MSEClass: #Invocation super: #FAMIXAssociation>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

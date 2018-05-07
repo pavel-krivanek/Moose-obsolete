@@ -8,9 +8,9 @@ Class {
 	#category : #'RoelTyper-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 ExtractedTypeForBlockArg class >> forOffset: offset ofCompiledMethod: aCompiledMethod inClass: aClass [
-	^(self basicNew initialize)
+	^self new
 		tempOffset: offset;
 		ivarClass: aClass;
 		compiledMethod: aCompiledMethod;
@@ -65,8 +65,7 @@ ExtractedTypeForBlockArg >> printOn: aStream [
 
 { #category : #accessing }
 ExtractedTypeForBlockArg >> tempOffset: anOffset [
-	ivarName := anOffset.
-	"self triggerEvent: #changed"
+	ivarName := anOffset
 ]
 
 { #category : #accessing }

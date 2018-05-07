@@ -4,8 +4,21 @@ Class {
 	#instVars : [
 		'isGLR'
 	],
+	#classInstVars : [
+		'availableAutomatically'
+	],
 	#category : #'SmaCC_Debugging_Support'
 }
+
+{ #category : #accessing }
+SmaCCParserDebugger class >> availableAutomatically [
+	^ availableAutomatically ifNil: [ false ]
+]
+
+{ #category : #accessing }
+SmaCCParserDebugger class >> availableAutomatically: aBoolean [
+	availableAutomatically := aBoolean
+]
 
 { #category : #accessing }
 SmaCCParserDebugger class >> defaultTitle [
@@ -92,7 +105,8 @@ SmaCCParserDebugger >> buildInputIn: browser [
 			text := composite text.
 			text
 				title: 'Input';
-				display: [ self inputText ].
+				display: [ self inputText ];
+				withLineNumbers: true.
 			text with: [ :c | self installActionsForRootPragmas: #(#SmaCCDebuggingInputAction) in: c ] ].
 	browser transmit
 		from: #stack port: #selection;
@@ -112,8 +126,7 @@ SmaCCParserDebugger >> buildPotentialTokensIn: browser [
 		from: #stack port: #selection;
 		to: #potential;
 		transformed: [ :context | self potentialStateActions ];
-		andShow:
-				[ :composite | 
+		andShow: [ :composite | 
 			composite table
 				title: 'Possible Actions';
 				column: 'Symbol' evaluated: [ :each | each first ];
@@ -201,8 +214,9 @@ SmaCCParserDebugger >> glrParserStates [
 { #category : #private }
 SmaCCParserDebugger >> inputSelectionInterval [
 	| context receiver |
-	context := self session context
-		findContextSuchThat: [ :each | (each receiver isKindOf: SmaCCScanner) or: [ each receiver isKindOf: SmaCCParser ] ].
+	context := self session context findContextSuchThat: [ :each | (each receiver isKindOf: SmaCCScanner) or: [ each receiver isKindOf: SmaCCParser ] ].
+	context isNil
+		ifTrue: [ ^ 1 to: 0 ].
 	receiver := context receiver.
 	^ (receiver isKindOf: SmaCCParser)
 		ifTrue: [ (receiver currentToken isNil or: [ receiver currentToken startPosition isNil ])
@@ -213,11 +227,7 @@ SmaCCParserDebugger >> inputSelectionInterval [
 
 { #category : #private }
 SmaCCParserDebugger >> inputText [
-	| stream |
-	stream := self parser scanner stream.
-	^ ((stream isKindOf: PositionableStream) or: [ stream isKindOf: SmaCCLineNumberStream ])
-		ifTrue: [ stream contents ]
-		ifFalse: [ '' ]
+	^ self parser scanner debugSource
 ]
 
 { #category : #accessing }
@@ -242,8 +252,7 @@ SmaCCParserDebugger >> parserStack [
 	states := self parser stateStack.
 	nodes := self parser nodeStack.
 	items := OrderedCollection new.
-	(1 to: states size - 1)
-		collect: [ :i | items addFirst: (Array with: (self symbolForTransitionFrom: (states at: i) to: (states at: i + 1)) with: (nodes at: i)) ].
+	1 to: states size - 1 do: [ :i | items addFirst: (Array with: (self symbolForTransitionFrom: (states at: i) to: (states at: i + 1)) with: (nodes at: i)) ].
 	context := self session context
 		findContextSuchThat: [ :each | (each receiver isKindOf: SmaCCParser) and: [ each selector = #performReduceMethod:with: ] ].
 	context notNil
@@ -251,8 +260,7 @@ SmaCCParserDebugger >> parserStack [
 			reduceContext := context findContextSuchThat: [ :each | (each receiver isKindOf: SmaCCParser) and: [ each selector = #reduce: ] ].
 			items addFirst: #('' '').
 			(context tempAt: 2) size to: 1 by: -1 do: [ :i | items addFirst: (Array with: 'nodes at: ' , i printString with: ((context tempAt: 2) at: i)) ].
-			items
-				addFirst: (Array with: 'Reducing:' with: (self parser symbolNameFor: (reduceContext receiver reduceTable at: (reduceContext tempAt: 1)) first)) ].
+			items addFirst: (Array with: 'Reducing:' with: (self parser symbolNameFor: (reduceContext receiver reduceTable at: (reduceContext tempAt: 1)) first)) ].
 	self parser currentToken
 		ifNotNil: [ :token | 
 			| stream |
@@ -267,12 +275,26 @@ SmaCCParserDebugger >> parserStack [
 
 { #category : #building }
 SmaCCParserDebugger >> potentialStateActions [
-	| items |
+	| items ids |
 	items := OrderedCollection new.
 	self parser
 		actionsAndSymbolsForState: self parser stateStack last
-		do:
-			[ :action :symbol | items add: (Array with: (self parser symbolNameFor: symbol) with: (self actionLabelFor: action)) ].
+		do: [ :action :symbol | items add: (Array with: (self parser symbolNameFor: symbol) with: symbol with: (self actionLabelFor: action)) ].
+	ids := self parser currentToken ifNotNil: [ :token | token ids ] ifNil: [ #() ].
+	items := items
+		asSortedCollection: [ :a :b | 
+			| aIncluded |
+			(aIncluded := ids includes: (a at: 2)) = (ids includes: (b at: 2))
+				ifTrue: [ (a at: 2) < (b at: 2) ]
+				ifFalse: [ aIncluded ] ].
+	ids notEmpty
+		ifTrue: [ items
+				do: [ :each | 
+					(ids includes: (each at: 2))
+						ifTrue: [ each at: 1 put: each first asText allBold.
+							each at: 3 put: each last asText allBold ]
+						ifFalse: [ each at: 1 put: (each first asText makeAllColor: Color red).
+							each at: 3 put: (each last asText makeAllColor: Color red) ] ] ].
 	^ items
 ]
 
@@ -326,6 +348,17 @@ SmaCCParserDebugger >> symbolForTransitionFrom: fromState to: toState [
 
 { #category : #building }
 SmaCCParserDebugger >> tokenIntervalFor: anObject [
+	(anObject isKindOf: OrderedCollection)
+		ifTrue: [ | interval |
+			anObject
+				do: [ :each | 
+					| newInterval |
+					newInterval := self tokenIntervalFor: each.
+					interval isNil
+						ifTrue: [ interval := newInterval ]
+						ifFalse: [ newInterval notNil
+								ifTrue: [ interval := (interval first min: newInterval first) to: (interval last max: newInterval last) ] ] ].
+			^ interval ].
 	(anObject isKindOf: SmaCCToken)
 		ifTrue: [ (anObject startPosition notNil and: [ anObject startPosition > 0 ])
 				ifTrue: [ ^ anObject startPosition to: anObject stopPosition ] ].

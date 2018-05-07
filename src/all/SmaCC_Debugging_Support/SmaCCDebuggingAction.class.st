@@ -9,13 +9,28 @@ SmaCCDebuggingAction >> appliesToContext: aContext [
 	^ self session isActive
 ]
 
+{ #category : #accessing }
+SmaCCDebuggingAction >> help [
+	^ ''
+]
+
 { #category : #private }
 SmaCCDebuggingAction >> stepUntil: aBlock [
-	| context process originalContext |
+	self stepUntil: aBlock context: self session rootContext
+]
+
+{ #category : #private }
+SmaCCDebuggingAction >> stepUntil: aBlock context: rootContext [
+	| context process previousContext |
 	process := self session process.
-	originalContext := self currentContext.
-	context := originalContext.
-	[ context notNil and: [ process isTerminating not and: [ process isTerminated not and: [ aBlock value: context ] ] ] ]
-		whileFalse: [ context := process step: context ].
-	self session updateWithContext: context fromProcess: process
+	context := self currentContext.
+	(process suspendedContext findContextSuchThat: [ :c | c == context ]) ifNil: [ ^ self ].
+	previousContext := nil.
+	[ context notNil and: [ process isTerminating not and: [ process isTerminated not and: [ process suspendedContext notNil and: [ aBlock value: context ] ] ] ] ]
+		whileFalse: [ previousContext == context
+				ifFalse: [ (context findContextSuchThat: [ :c | c == rootContext ]) isNil
+						ifTrue: [ ^ self session updateContextTo: context ].
+					previousContext := context ].
+			context := process step: context ].
+	self session updateContextTo: context
 ]

@@ -1,6 +1,29 @@
 Extension { #name : #SmaCCParseNode }
 
 { #category : #'*SmaCC_Debugging_Support' }
+SmaCCParseNode >> gtAttributesIn: aComposite [
+	<gtInspectorPresentationOrder: 35>
+	| tabulator |
+	(attributes notNil and: [ attributes notEmpty ])
+		ifFalse: [ ^ self ].
+	tabulator := aComposite tabulator.
+	tabulator
+		title: 'Attributes';
+		row: #attributes.
+	tabulator transmit
+		to: #attributes;
+		andShow: [ :pres | 
+			pres fastTable
+				display: [ attributes keys asSortedCollection ];
+				column: 'Name' evaluated: [ :each | each ];
+				column: 'Value' evaluated: [ :each | self attributeNamed: each ifAbsent: [  ] ] ].
+	tabulator transmit
+		toOutsidePort: #selection;
+		from: #attributes port: #selection;
+		transformed: [ :name | self attributeNamed: name ifAbsent: [  ] ]
+]
+
+{ #category : #'*SmaCC_Debugging_Support' }
 SmaCCParseNode >> gtCollectionItems: aCollection type: aSymbol [
 	^ (1 to: aCollection size) collect: [ :i | Array with: i printString with: aSymbol with: (aCollection at: i) ]
 ]
@@ -81,4 +104,18 @@ SmaCCParseNode >> gtInspectorTreeIn: aComposite [
 								ifTrue: [ each last class name ]
 								ifFalse: [ '' ] ]
 							tags: [ :each | Array with: (each at: 2) ] ] ]
+]
+
+{ #category : #'*SmaCC_Debugging_Support' }
+SmaCCParseNode >> gtParentsIn: aComposite [
+	<gtInspectorPresentationOrder: 34>
+	parent isNil
+		ifTrue: [ ^ self ].
+	aComposite tree
+		title: 'Parents';
+		allExpanded;
+		display: [ Array with: self ];
+		children: [ :each | 
+			(each notNil and: [ each parent notNil ])
+				ifTrue: [ Array with: each parent ] ]
 ]

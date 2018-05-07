@@ -101,7 +101,7 @@ XMLAttributeValidator >> furtherNormalizeAttributeValue: aSemiNormalizedAttribut
 	on Gemstone"
 	writeStream := (String new: aSemiNormalizedAttributeValue size) writeStream.
 	isInWhitespace := false.
-	"to:do: for speed"
+	"use #to:do: for speed"
 	1 to: aSemiNormalizedAttributeValue size do: [:i | | nextChar |
 		(nextChar := aSemiNormalizedAttributeValue at: i) == NormalizedSpace
 			ifTrue: [
@@ -197,12 +197,13 @@ XMLAttributeValidator >> mustFurtherNormalizeAttributeValue [
 { #category : #printing }
 XMLAttributeValidator >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPutAll: '(<';
 		nextPutAll: self element;
-		space;
-		nextPutAll: self attribute;
-		nextPutAll: '="">)'.
+		space.
+	self defaultValidator printNameAndValueOn: aStream.
+	aStream nextPutAll: '>)'.
 ]
 
 { #category : #processing }
@@ -296,6 +297,10 @@ XMLAttributeValidator >> validateAttributes: aDictionary [
 							attributeAssociation value.
 					self isStandaloneExternal
 						ifTrue: [
+							"since further normalization just condences multiple spaces
+							to single spaces and removes trailing and leading spaces,
+							comparing the sizes after is enough to detect if it was
+							done"
 							normalizedValue size = attributeAssociation value size
 								ifFalse: [
 									self errorNormalizedStandaloneExternalAttribute]]]

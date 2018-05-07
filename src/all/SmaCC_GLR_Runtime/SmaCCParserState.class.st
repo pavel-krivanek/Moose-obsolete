@@ -17,7 +17,6 @@ Class {
 		'stateStack',
 		'nodeStack',
 		'isAccepted',
-		'position',
 		'scannerState',
 		'attributes'
 	],

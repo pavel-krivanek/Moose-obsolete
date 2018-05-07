@@ -7,7 +7,7 @@ Class {
 { #category : #'generated-initialization' }
 StScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(20 'false' 12) #(20 'nil' 14) #(20 'true' 11) #(26 '||' 15))
+	#(#(20 'false' 13) #(20 'nil' 14) #(20 'true' 15) #(26 '||' 18))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -22,12 +22,12 @@ StScanner >> binarySymbolId [
 
 { #category : #generated }
 StScanner >> emptySymbolTokenId [
-	^ 64
+	^ 67
 ]
 
 { #category : #generated }
 StScanner >> errorTokenId [
-	^ 65
+	^ 68
 ]
 
 { #category : #generated }
@@ -124,17 +124,17 @@ StScanner >> scanForToken [
 	currentCharacter == $'
 		ifTrue: [ ^ self scanForTokenX10 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(10 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2 32) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(4 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(3 32) ].
 	currentCharacter == $-
 		ifTrue: [ ^ self scanForTokenX1 ].
 	currentCharacter == $.
-		ifTrue: [ ^ self recordAndReportMatch: #(5 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(4 32) ].
 	currentCharacter == $:
 		ifTrue: [ ^ self scanForTokenX8 ].
 	currentCharacter == $;
-		ifTrue: [ ^ self recordAndReportMatch: #(2 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(7 32) ].
 	currentCharacter == $<
 		ifTrue: [ ^ self scanForTokenX5 ].
 	^ self scanForTokenX12
@@ -177,17 +177,17 @@ StScanner >> scanForTokenX12 [
 	currentCharacter == $>
 		ifTrue: [ ^ self scanForTokenX4 ].
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(17 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(10 32) ].
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(19 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11 32) ].
 	currentCharacter == $^
-		ifTrue: [ ^ self recordAndReportMatch: #(16 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(12 32) ].
 	currentCharacter == ${
-		ifTrue: [ ^ self recordAndReportMatch: #(3 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(16 32) ].
 	currentCharacter == $|
 		ifTrue: [ ^ self scanForTokenX3 ].
 	currentCharacter == $}
-		ifTrue: [ ^ self recordAndReportMatch: #(8 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(19 32) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self recordAndReportMatch: #(21 32) ].
 	currentCharacter isSeparator
@@ -215,7 +215,7 @@ StScanner >> scanForTokenX2 [
 
 { #category : #generated }
 StScanner >> scanForTokenX3 [
-	self recordMatch: #(9 26 32).
+	self recordMatch: #(17 26 32).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -229,7 +229,7 @@ StScanner >> scanForTokenX3 [
 
 { #category : #generated }
 StScanner >> scanForTokenX4 [
-	self recordMatch: #(7 26 32).
+	self recordMatch: #(9 26 32).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -243,7 +243,7 @@ StScanner >> scanForTokenX4 [
 
 { #category : #generated }
 StScanner >> scanForTokenX5 [
-	self recordMatch: #(6 26 32).
+	self recordMatch: #(8 26 32).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -291,10 +291,10 @@ StScanner >> scanForTokenX7 [
 
 { #category : #generated }
 StScanner >> scanForTokenX8 [
-	self recordMatch: #(18 32).
+	self recordMatch: #(5 32).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	^ self reportLastMatch
 ]
 

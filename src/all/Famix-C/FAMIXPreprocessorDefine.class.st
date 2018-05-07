@@ -12,11 +12,10 @@ Class {
 	#category : #'Famix-C'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 FAMIXPreprocessorDefine class >> annotation [
 	<MSEClass: #PreprocessorDefine super: #FAMIXPreprocessorStatement>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

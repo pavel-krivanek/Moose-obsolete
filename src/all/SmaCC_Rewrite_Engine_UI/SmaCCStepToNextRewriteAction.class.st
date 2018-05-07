@@ -34,3 +34,8 @@ SmaCCStepToNextRewriteAction >> executeAction [
 			context isBlockContext not
 				and: [ (self session isRewriteContext: context) and: [ (rewrites includes: (self session rewriteForContext: context)) not ] ] ]
 ]
+
+{ #category : #accessing }
+SmaCCStepToNextRewriteAction >> help [
+	^ 'Step until we get to another rewrite'
+]

@@ -38,11 +38,7 @@ AbstractSmalltalkMethodVisitor >> createAccessTo: aNamedEntity writing: isWriteA
 
 { #category : #'visitor-double dispatching' }
 AbstractSmalltalkMethodVisitor >> createReferenceTo: aNamedEntity [
-	| ref |
-	
-	ref := FmxNGReference new.
-	ref source: self methodEntity ; target: (self resolveInstanceSide: aNamedEntity).
-	^ ref
+	^ (self resolveInstanceSide: aNamedEntity) createReferenceFrom: self methodEntity  
 ]
 
 { #category : #'method-classifying' }
@@ -268,7 +264,7 @@ AbstractSmalltalkMethodVisitor >> visitMessageNode: aMessageNode [
 			aMessageNode receiver isVariable 
 				ifTrue: 
 					[invocation 
-						receiver: (self resolve: aMessageNode receiver name)]. 
+						receiver: (self resolve: aMessageNode receiver name asString)]. 
 			"aMessageNode receiver isVariable 
 				ifTrue: 
 					[invocation 
@@ -361,12 +357,10 @@ AbstractSmalltalkMethodVisitor >> visitSequenceNode: aSequenceNode [
 ]
 
 { #category : #'visitor-double dispatching' }
-AbstractSmalltalkMethodVisitor >> visitVariableNode: aVariableNode [ 
-	| access namedEntity global |
-		
-	importer importingContext shouldImportAccess ifTrue: 
-		[ 
-		"Warning! Smalltalk is both a Namespace and a GlobalVariable.
+AbstractSmalltalkMethodVisitor >> visitVariableNode: aVariableNode [
+	importer importingContext shouldImportAccess
+		ifTrue: [ | access namedEntity global |
+			"Warning! Smalltalk is both a Namespace and a GlobalVariable.
 		By default the importer resolves Smalltalk to the namespace (for class and namespace creation).
 		When we access Smalltalk as a variable, we create an access to the SmalltalkGlobalVariable instead"
 		aVariableNode name = 'Smalltalk'

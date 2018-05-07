@@ -10,11 +10,10 @@ Class {
 	#category : #'SmallDude-Core'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 DudeSourceCodeFragment class >> annotation [
 	<MSEClass: #CodeFragment super: #FAMIXEntity>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #'instance creation' }

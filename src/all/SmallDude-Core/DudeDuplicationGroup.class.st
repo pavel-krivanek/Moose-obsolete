@@ -11,7 +11,6 @@ Class {
 DudeDuplicationGroup class >> annotation [
 	<MSEClass: #DuplicationGroup super: #MooseGroup>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #'user interface' }

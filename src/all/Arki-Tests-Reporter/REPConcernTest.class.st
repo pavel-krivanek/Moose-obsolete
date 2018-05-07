@@ -20,6 +20,6 @@ REPConcernTest >> testDefaultStatus [
 
 { #category : #'as yet unclassified' }
 REPConcernTest >> testDefaults [
-	self assert: REPConcern new label = #REPConcern.
-	self assert: REPConcern new explanation = #REPConcern.
+	self assert: REPConcern new label = 'REP Concern'.
+	self assert: REPConcern new explanation = 'REP Concern'
 ]

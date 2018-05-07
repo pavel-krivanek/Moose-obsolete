@@ -8,11 +8,10 @@ Class {
 	#category : #'Dynamix-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 DynamixTraceGroup class >> annotation [
 	<MSEClass: #TraceGroup super: #MooseGroup>
 	<package: #Dynamix>
-	^self
 ]
 
 { #category : #coverage }

@@ -8,7 +8,7 @@ Class {
 	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoCoChangeVersion class >> annotation [
 	<MSEClass: #CoChangeVersion super: #HismoAbstractVersion>
 	<package: #Hismo>

@@ -16,7 +16,6 @@ Class {
 FAMIXIndexedFileAnchor class >> annotation [
 	<MSEClass: #IndexedFileAnchor super: #FAMIXAbstractFileAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #'instance creation' }

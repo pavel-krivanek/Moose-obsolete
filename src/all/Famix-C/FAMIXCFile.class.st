@@ -11,12 +11,10 @@ Class {
 	#category : #'Famix-C'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXCFile class >> annotation [
 	<MSEClass: #CFile super: #FAMIXFile>
 	<package: #FAMIX>
-	^self
-
 ]
 
 { #category : #accessing }

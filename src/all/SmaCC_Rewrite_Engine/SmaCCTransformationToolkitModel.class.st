@@ -93,7 +93,8 @@ SmaCCTransformationToolkitModel >> files: aCollection [
 { #category : #'initialize/release' }
 SmaCCTransformationToolkitModel >> initialize [
 	super initialize.
-	modified := false
+	modified := false.
+	rewrites := SmaCCRewriteFile new
 ]
 
 { #category : #accessing }
@@ -344,6 +345,22 @@ SmaCCTransformationToolkitModel >> serverRunOn: aCollection [
 										+ (serverStream next << 16) + (serverStream next << 24))
 								asString) ] ]
 		ensure: [ socket close ]
+]
+
+{ #category : #running }
+SmaCCTransformationToolkitModel >> terminateServer [
+	| socket serverStream |
+	socket := Socket newTCP
+		connectTo: (NetNameResolver addressForName: self serverName) port: self serverPort;
+		yourself.
+	(serverStream := SocketStream on: socket) binary.
+	[ serverStream
+		nextPut: $E asInteger;
+		flush.
+	[ serverStream next ]
+		on: Error
+		do: [ :ex | "We should get here when the server quits" ex return ] ]
+		ensure: [ serverStream close ]
 ]
 
 { #category : #public }

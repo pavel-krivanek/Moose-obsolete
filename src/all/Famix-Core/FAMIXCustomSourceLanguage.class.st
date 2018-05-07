@@ -21,7 +21,6 @@ Class {
 FAMIXCustomSourceLanguage class >> annotation [
 	<MSEClass: #CustomSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

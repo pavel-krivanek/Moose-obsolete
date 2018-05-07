@@ -719,11 +719,6 @@ SmaCCSmalltalkCodeGenerator >> method: aString type: anObject argumentName: firs
 		, keywords last , ' ' , secondArgumentNameString
 ]
 
-{ #category : #private }
-SmaCCSmalltalkCodeGenerator >> namespaceName [
-	^ ''
-]
-
 { #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> optimizationRewriter [
 	| rewriter |

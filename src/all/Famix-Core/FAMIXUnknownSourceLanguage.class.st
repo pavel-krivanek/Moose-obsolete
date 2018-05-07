@@ -16,7 +16,6 @@ Class {
 FAMIXUnknownSourceLanguage class >> annotation [
 	<MSEClass: #UnknownSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #testing }

@@ -29,8 +29,6 @@ Class {
 FAMIXAnnotationTypeAttribute class >> annotation [
 	<MSEClass: #AnnotationTypeAttribute super: #FAMIXAttribute>
 	<package: #FAMIX>
-
-	^self
 ]
 
 { #category : #accessing }

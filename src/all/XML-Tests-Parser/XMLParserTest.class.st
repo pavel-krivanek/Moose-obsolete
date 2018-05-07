@@ -2650,34 +2650,6 @@ XMLParserTest >> testDoctypeDeclarationWhitespace [
 ]
 
 { #category : #tests }
-XMLParserTest >> testDocumentConstraintsRequired [
-	self
-		shouldnt: [
-			(SAXHandler on: '<!DOCTYPE root [<!ELEMENT root EMPTY>]><root/>')
-				requiresDocumentConstraints: true;
-				parseDocument]
-		raise: XMLValidationException.
-	self
-		should: [
-			(SAXHandler on: '<root/>')
-				requiresDocumentConstraints: true;
-				parseDocument]
-		raise: XMLValidationException.
-	self
-		should: [
-			(SAXHandler on: '
-				<!DOCTYPE root [
-					<!ENTITY one "two">
-					<!ENTITY % three "four">
-					<!NOTATION five PUBLIC "six">
-					<!--seven-->]>
-				<root/>')
-				requiresDocumentConstraints: true;
-				parseDocument]
-		raise: XMLValidationException.
-]
-
-{ #category : #tests }
 XMLParserTest >> testElementAnyDeclaration [
 	self
 		shouldnt: [
@@ -2773,29 +2745,56 @@ XMLParserTest >> testElementContentModelBranching [
 		(self elementDeclarationsNamed: #('one' 'two' 'three' 'four' 'five')),
 		'<!ELEMENT root ((one|two),(three|four|five))>]>'.
 
-	self
-		shouldnt: [
-			SAXHandler
-				parse: dtd, '<root><one/><three/></root>';
-				parse: dtd, '<root><one/><four/></root>';
-				parse: dtd, '<root><one/><five/></root>';
-				parse: dtd, '<root><two/><three/></root>';
-				parse: dtd, '<root><two/><four/></root>';
-				parse: dtd, '<root><two/><five/></root>']
-		raise: XMLValidationException.
+	#('<root><one/><three/></root>'
+		'<root><one/><four/></root>'
+		'<root><one/><five/></root>'
+		'<root><two/><three/></root>'
+		'<root><two/><four/></root>'
+		'<root><two/><five/></root>')
+		do: [:each |
+			self
+				shouldnt: [SAXHandler parse: dtd, each]
+				raise: XMLValidationException].
 
-	self
-		should: [SAXHandler parse: dtd, '<root><one/><two/><three/></root>']
-		raise: XMLValidationException.
-	self
-		should: [SAXHandler parse: dtd, '<root><one/><three/><four/><five/></root>']
-		raise: XMLValidationException.
-	self
-		should: [SAXHandler parse: dtd, '<root><one/></root>']
-		raise: XMLValidationException.
-	self
-		should: [SAXHandler parse: dtd, '<root><four/></root>']
-		raise: XMLValidationException.
+	#('<root><one/><two/><three/></root>'
+		'<root><one/><three/><four/><five/></root>'
+		'<root><one/></root>'
+		'<root><four/></root>')
+		do: [:each |
+			self
+				should: [SAXHandler parse: dtd, each]
+				raise: XMLValidationException].
+]
+
+{ #category : #tests }
+XMLParserTest >> testElementContentModelCycles [
+	| dtd |
+
+	"this content model produces an NFA with cycles, to ensure
+	they're handled correctly"
+	dtd := '<!DOCTYPE root [',
+		(self elementDeclarationsNamed: #('one' 'two' 'three')),
+		'<!ELEMENT root (one*,two?)+>]>'.
+
+	#('<root><one/><two/></root>'
+		'<root><one/><two/><one/><two/></root>'
+		'<root><one/><two/><two/><one/></root>'
+		'<root><two/><one/><one/><two/></root>'
+		'<root><one/></root>'
+		'<root><two/></root>'
+		'<root></root>')
+		do: [:each |
+			self
+				shouldnt: [SAXHandler parse: dtd, each]
+				raise: XMLValidationException].
+
+	#('<root><one/><two/><three/></root>'
+		'<root><one/><three/><two/></root>'
+		'<root><three/></root>')
+		do: [:each |
+			self
+				should: [SAXHandler parse: dtd, each]
+				raise: XMLValidationException].
 ]
 
 { #category : #tests }
@@ -2863,24 +2862,23 @@ XMLParserTest >> testElementContentModelOptional [
 		(self elementDeclarationsNamed: #('one' 'two' 'three' 'four' 'five')),
 		'<!ELEMENT root (one?,two,three?,(four?, five)?)>]>'.
 
-	self
-		shouldnt: [
-			SAXHandler
-				parse: dtd, '<root><one/><two/><three/><four/><five/></root>';
-				parse: dtd, '<root><two/><three/></root>';
-				parse: dtd, '<root><one/><two/><three/><five/></root>';
-				parse: dtd, '<root><two/></root>';
-				parse: dtd, '<root><one/><two/></root>']
-		raise: XMLValidationException.
-	self
-		should: [SAXHandler parse: dtd, '<root><one/><three/><four/><five/></root>']
-		raise: XMLValidationException.
-	self
-		should: [SAXHandler parse: dtd, '<root><one/><two/><three/><four/></root>']
-		raise: XMLValidationException.
-	self
-		should: [SAXHandler parse: dtd, '<root><one/><two/><three/><five/><four/></root>']
-		raise: XMLValidationException.
+	#('<root><one/><two/><three/><four/><five/></root>'
+		'<root><two/><three/></root>'
+		'<root><one/><two/><three/><five/></root>'
+		'<root><two/></root>'
+		'<root><one/><two/></root>')
+		do: [:each |
+			self
+				shouldnt: [SAXHandler parse: dtd, each]
+				raise: XMLValidationException].
+
+	#('<root><one/><three/><four/><five/></root>'
+		'<root><one/><two/><three/><four/></root>'
+		'<root><one/><two/><three/><five/><four/></root>')
+		do: [:each |
+			self
+				should: [SAXHandler parse: dtd, each]
+				raise: XMLValidationException].
 ]
 
 { #category : #tests }
@@ -5430,6 +5428,34 @@ XMLParserTest >> testProcessingInstructionWhitespace [
 ]
 
 { #category : #tests }
+XMLParserTest >> testSchemaRequired [
+	self
+		shouldnt: [
+			(SAXHandler on: '<!DOCTYPE root [<!ELEMENT root EMPTY>]><root/>')
+				requiresSchema: true;
+				parseDocument]
+		raise: XMLValidationException.
+	self
+		should: [
+			(SAXHandler on: '<root/>')
+				requiresSchema: true;
+				parseDocument]
+		raise: XMLValidationException.
+	self
+		should: [
+			(SAXHandler on: '
+				<!DOCTYPE root [
+					<!ENTITY one "two">
+					<!ENTITY % three "four">
+					<!NOTATION five PUBLIC "six">
+					<!--seven-->]>
+				<root/>')
+				requiresSchema: true;
+				parseDocument]
+		raise: XMLValidationException.
+]
+
+{ #category : #tests }
 XMLParserTest >> testStandalone [
 	| xmlWithDTD standaloneXMLWithDTD resolver |
 
@@ -6528,31 +6554,49 @@ XMLParserTest >> testXMLDeclarationUnterminated [
 
 { #category : #tests }
 XMLParserTest >> testXMLDeclarationVersionAttribute [
-	#('<?xml version=""?>'
-		'<?xml version="1"?>'
-		'<?xml version="1."?>'
-		'<?xml version="1.0."?>'
-		'<?xml version="1.0.1"?>'
-		'<?xml version="10"?>'
-		'<?xml version="10."?>'
-		'<?xml version="10.00."?>'
-		'<?xml version="10.00.10"?>'
-		'<?xml version="one"?>'
-		'<?xml version="one."?>'
-		'<?xml version="one.zero."?>'
-		'<?xml version="one.zero.one"?>')
+	#(''
+		'1'
+		'1.'
+		'1.0.'
+		'1.0.1'
+		'1..'
+		'1..0'
+		'1..0..'
+		'1..0..1'
+		'.1'
+		'.1.'
+		'.1.0'
+		'.1.0.'
+		'.1.0.1'
+		' 1 '
+		' 1. '
+		' 1.0 '
+		' 1.0. '
+		' 1.0.1 '
+		'10'
+		'10.'
+		'10.00'
+		'10.00.'
+		'10.00.10'
+		'one'
+		'one.'
+		'one.zero'
+		'one.zero.'
+		'one.zero.one')
 		do: [:each |
 			self
-				should: [SAXHandler parse: each, '<test/>']
+				should: [SAXHandler parse: '<?xml version="', each, '"?><test/>']
 				raise: XMLWellFormednessException].
 
-	#('<?xml version="1.0"?>'
-		'<?xml version="1.1"?>'
-		'<?xml version="1.00"?>'
-		'<?xml version="1.10"?>')
+	#('1.0'
+		'1.1'
+		'1.00'
+		'1.10'
+		'1.000'
+		'1.100')
 		do: [:each |
 			self
-				shouldnt: [SAXHandler parse: each, '<test/>']
+				shouldnt: [SAXHandler parse: '<?xml version="', each, '"?><test/>']
 				raise: XMLWellFormednessException].
 ]
 

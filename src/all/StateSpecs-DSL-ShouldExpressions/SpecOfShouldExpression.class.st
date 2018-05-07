@@ -57,13 +57,13 @@ SpecOfShouldExpression >> be [
 
 { #category : #expressions }
 SpecOfShouldExpression >> be: anObject [ 
-	^self verify: (SpecOfIdentity to: anObject)
+	^self verify: (SpecOfIdentity requiredValue: anObject)
 ]
 
 { #category : #expressions }
 SpecOfShouldExpression >> be: anObject description: failureDescription [
 	| spec |
-	spec := (SpecOfIdentity to: anObject).
+	spec := (SpecOfIdentity requiredValue: anObject).
 	spec failureDescription: failureDescription.
 	
 	^self verify: spec
@@ -110,14 +110,34 @@ SpecOfShouldExpression >> beOrderedEqualTo: aCollection [
 ]
 
 { #category : #expressions }
+SpecOfShouldExpression >> beginWith: aString [
+	^ self verify: (SpecOfStringBeginning requiredValue: aString)
+]
+
+{ #category : #expressions }
+SpecOfShouldExpression >> beginWith: aString caseSensitive: aBool [
+	^ self verify: (SpecOfStringBeginning requiredValue: aString caseSensitive: aBool)
+]
+
+{ #category : #expressions }
+SpecOfShouldExpression >> endWith: aString [
+	^ self verify: (SpecOfStringEnding requiredValue: aString)
+]
+
+{ #category : #expressions }
+SpecOfShouldExpression >> endWith: aString caseSensitive: aBool [
+	^ self verify: (SpecOfStringEnding requiredValue: aString caseSensitive: aBool)
+]
+
+{ #category : #expressions }
 SpecOfShouldExpression >> equal: anObject [ 
-	^self verify: (SpecOfEquality to: anObject)
+	^self verify: (SpecOfEquality requiredValue: anObject)
 ]
 
 { #category : #expressions }
 SpecOfShouldExpression >> equal: anObject description: failureDescription [
 	| spec |
-	spec := (SpecOfEquality to: anObject) .
+	spec := (SpecOfEquality requiredValue: anObject) .
 	spec failureDescription: failureDescription.
 	
 	^self verify: spec
@@ -130,7 +150,7 @@ SpecOfShouldExpression >> equal: aNumber within: accuracyNumber [
 
 { #category : #expressions }
 SpecOfShouldExpression >> equalInOrder: anObject [ 
-	^self verify: (SpecOfCollectionOrderedEquality to: anObject)
+	^self verify: (SpecOfCollectionOrderedEquality requiredValue: anObject)
 ]
 
 { #category : #expressions }
@@ -144,8 +164,8 @@ SpecOfShouldExpression >> haveSize: aNumber [
 ]
 
 { #category : #expressions }
-SpecOfShouldExpression >> include: anObject [ 
-	^self verify: (SpecOfCollectionContents requiredItem: anObject)
+SpecOfShouldExpression >> include: anObjectOrSpec [
+	^ self verify: (SpecOfCollectionContents requiredItem: anObjectOrSpec)
 ]
 
 { #category : #expressions }
@@ -158,10 +178,30 @@ SpecOfShouldExpression >> includeKey: anObject [
 	^self verify: (SpecOfDictionaryKeys requiredKey: anObject)
 ]
 
+{ #category : #expressions }
+SpecOfShouldExpression >> includeSubstring: aString [
+	^ self verify: (SpecOfSubstring requiredValue: aString)
+]
+
+{ #category : #expressions }
+SpecOfShouldExpression >> includeSubstring: aString caseSensitive: aBool [
+	^ self verify: (SpecOfSubstring requiredValue: aString caseSensitive: aBool)
+]
+
 { #category : #initialization }
 SpecOfShouldExpression >> initialize [
 	super initialize.
 	withNegation := false
+]
+
+{ #category : #expressions }
+SpecOfShouldExpression >> matchRegex: aRegexString [
+	^ self verify: (SpecOfStringRegex requiredValue: aRegexString)
+]
+
+{ #category : #expressions }
+SpecOfShouldExpression >> matchRegex: aRegexString caseSensitive: aBool [
+	^ self verify: (SpecOfStringRegex requiredValue: aRegexString caseSensitive: aBool)
 ]
 
 { #category : #expressions }

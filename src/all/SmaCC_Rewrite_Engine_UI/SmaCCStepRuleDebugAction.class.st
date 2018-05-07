@@ -29,3 +29,8 @@ SmaCCStepRuleDebugAction >> defaultOrder [
 SmaCCStepRuleDebugAction >> executeAction [
 	self session stepOver: self currentContext
 ]
+
+{ #category : #accessing }
+SmaCCStepRuleDebugAction >> help [
+	^ 'Step over message'
+]

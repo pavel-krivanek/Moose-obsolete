@@ -32,7 +32,7 @@ Class {
 	#category : #'Fame-Core'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FM3PropertyDescription class >> annotation [
 	<MSEClass: #Property super: #FM3Element>
 	<package: #FM3>

@@ -8,13 +8,6 @@ Class {
 	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCSet class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #adding }
 SmaCCSet >> add: newObject [
 	^ (newObject isKindOf: Character)
@@ -27,6 +20,21 @@ SmaCCSet >> addAll: aCollection [
 	(aCollection isKindOf: SmaCCCharacterSet)
 		ifTrue: [ ^ characters addAll: aCollection ].
 	^ super addAll: aCollection
+]
+
+{ #category : #enumerating }
+SmaCCSet >> commonElementWith: aCollection [
+	| intersected |
+	characters class = aCollection class
+		ifTrue: [ intersected := characters smaccIntersect: aCollection.
+			^ intersected isEmpty
+				ifTrue: [ nil ]
+				ifFalse: [ intersected first ] ].
+	aCollection
+		do: [ :each | 
+			(self includes: each)
+				ifTrue: [ ^ each ] ].
+	^ nil
 ]
 
 { #category : #enumerating }
@@ -47,6 +55,11 @@ SmaCCSet >> initialize [
 	super initialize.
 	characters := SmaCCCharacterSet new.
 	objects := Set new
+]
+
+{ #category : #testing }
+SmaCCSet >> isEmpty [
+	^ characters isEmpty and: [ objects isEmpty ]
 ]
 
 { #category : #removing }

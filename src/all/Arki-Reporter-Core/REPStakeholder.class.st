@@ -42,6 +42,11 @@ REPStakeholder >> asString [
 ]
 
 { #category : #accessing }
+REPStakeholder >> asStrings [
+	^ {self asString}
+]
+
+{ #category : #accessing }
 REPStakeholder >> name [
 	^ name
 ]

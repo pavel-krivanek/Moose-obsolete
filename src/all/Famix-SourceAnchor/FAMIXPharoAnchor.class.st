@@ -15,7 +15,6 @@ Class {
 FAMIXPharoAnchor class >> annotation [
 	<MSEClass: #PharoAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #initialization }

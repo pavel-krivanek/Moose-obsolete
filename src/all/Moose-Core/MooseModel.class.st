@@ -174,15 +174,6 @@ MooseModel class >> importMetamodelFrom: aStream [
 
 ]
 
-{ #category : #menu }
-MooseModel class >> menuCommandOn: aBuilder [
-	<worldMenu>
-	(aBuilder item: #Moose)
-		order: 6.0; 
-		withSeparatorAfter;
-		icon: MooseIcons mooseIcon
-]
-
 { #category : #meta }
 MooseModel class >> metaBuilder: aCollectionOfClasses [
 	"I take as parameter a collection of classes described with Fame pragmas"
@@ -240,6 +231,16 @@ MooseModel class >> ownerOf: element [
 	IDs, see DictionaryStorage>>computeRanges. The main bottleneck as of now 
 	is the enumeration if all instances, hence, as a work around, we keep 
 	track of the most recent owner."
+
+	^ element mooseID
+		ifNotNil: [ :elementID | 
+			MostRecentOwner ifNotNil: [ :model | (model includesID: elementID) ifTrue: [ ^ model ] ].
+			self allInstances detect: [ :model | model includesID: elementID ] ifFound: [ :model | MostRecentOwner := model ] ifNone: [ nil ] ]
+]
+
+{ #category : #meta }
+MooseModel class >> resetMeta [
+	"self resetMeta"
 
 	^ element mooseID
 		ifNotNil: [ :elementID | 
@@ -439,7 +440,7 @@ MooseModel >> mooseDescription [
 
 { #category : #printing }
 MooseModel >> mooseDisplayStringOn: stream [
-	stream 	nextPutAll: self name
+	stream nextPutAll: self name
 ]
 
 { #category : #accessing }

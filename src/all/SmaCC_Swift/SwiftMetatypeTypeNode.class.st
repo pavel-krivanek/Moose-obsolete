@@ -77,7 +77,7 @@ SwiftMetatypeTypeNode >> commaTokens: anOrderedCollection [
 
 { #category : #generated }
 SwiftMetatypeTypeNode >> compositeTokenVariables [
-	^ #(#leftBracketTokens #identifierTokens #periodTokens #protocolTokens #lessThanTokens #greaterThanTokens #rightBracketTokens #colonTokens #minusGreaterThanTokens #commaTokens #leftParenTokens #rightParenTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #inoutTokens #_Tokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens)
+	^ #(#leftBracketTokens #rightBracketTokens #colonTokens #minusGreaterThanTokens #periodTokens #leftParenTokens #rightParenTokens #questionMarkTokens #bangTokens #protocolTokens #lessThanTokens #greaterThanTokens #typeTokens #identifierTokens #commaTokens #periodPeriodPeriodTokens #_Tokens #inoutTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #operatorTokens)
 ]
 
 { #category : #generated }
@@ -124,29 +124,29 @@ SwiftMetatypeTypeNode >> identifierTokens: anOrderedCollection [
 SwiftMetatypeTypeNode >> initialize [
 	super initialize.
 	leftBracketTokens := OrderedCollection new: 2.
-	identifierTokens := OrderedCollection new: 2.
-	periodTokens := OrderedCollection new: 2.
-	protocolTokens := OrderedCollection new: 2.
-	lessThanTokens := OrderedCollection new: 2.
-	greaterThanTokens := OrderedCollection new: 2.
 	rightBracketTokens := OrderedCollection new: 2.
 	colonTokens := OrderedCollection new: 2.
 	minusGreaterThanTokens := OrderedCollection new: 2.
-	commaTokens := OrderedCollection new: 2.
+	periodTokens := OrderedCollection new: 2.
 	leftParenTokens := OrderedCollection new: 2.
 	rightParenTokens := OrderedCollection new: 2.
 	questionMarkTokens := OrderedCollection new: 2.
 	bangTokens := OrderedCollection new: 2.
+	protocolTokens := OrderedCollection new: 2.
+	lessThanTokens := OrderedCollection new: 2.
+	greaterThanTokens := OrderedCollection new: 2.
 	typeTokens := OrderedCollection new: 2.
+	identifierTokens := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
 	periodPeriodPeriodTokens := OrderedCollection new: 2.
-	inoutTokens := OrderedCollection new: 2.
 	_Tokens := OrderedCollection new: 2.
+	inoutTokens := OrderedCollection new: 2.
 	leftBraceTokens := OrderedCollection new: 2.
 	rightBraceTokens := OrderedCollection new: 2.
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
-	operatorTokens := OrderedCollection new: 2.
 	full_string_literalTokens := OrderedCollection new: 2.
+	operatorTokens := OrderedCollection new: 2.
 ]
 
 { #category : #generated }

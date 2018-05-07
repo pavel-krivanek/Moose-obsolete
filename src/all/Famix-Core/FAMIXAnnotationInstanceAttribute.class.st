@@ -12,10 +12,18 @@ Instance Variables:
 Class {
 	#name : #FAMIXAnnotationInstanceAttribute,
 	#superclass : #FAMIXSourcedEntity,
+	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
+	#classTraits : 'TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#instVars : [
 		'parentAnnotationInstance',
 		'annotationTypeAttribute',
 		'value'
+	],
+	#classInstVars : [
+		'childrenSelectors',
+		'allParentTypes',
+		'allChildrenTypes',
+		'parentSelectors'
 	],
 	#category : #'Famix-Core'
 }
@@ -34,7 +42,6 @@ FAMIXAnnotationInstanceAttribute class >> allOutgoingAssociationTypes [
 FAMIXAnnotationInstanceAttribute class >> annotation [
 	<MSEClass: #AnnotationInstanceAttribute super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

@@ -17,8 +17,6 @@ Class {
 FAMIXTypeAlias class >> annotation [
 	<MSEClass: #TypeAlias super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }

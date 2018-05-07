@@ -18,10 +18,10 @@ MooseFinder class >> announcerFor: anObject [
 MooseFinder >> compose [
 	self pager 
 "		act: [:b | b update] icon: GLMUIThemeExtraIcons glamorousRefresh entitled: 'Update';
-"		title: [:each | 'Moose Finder on ', each mooseInterestingEntity mooseDisplayString];
+"		title: [:each | 'Moose Finder on ', each mooseInterestingEntity gtDisplayString];
 		show: [ :a :each |
 			a 	
-				title: ((each mooseInterestingEntity mooseDisplayString), ' (', 
+				title: ((each mooseInterestingEntity gtDisplayString), ' (', 
 							each mooseInterestingEntity class name, ')');
 				dynamicActions: [ :list | list entity mooseInterestingEntity mooseFinderActions ].
 			each mooseInterestingEntity mooseFinderPresentationsIn: a inContext: self.

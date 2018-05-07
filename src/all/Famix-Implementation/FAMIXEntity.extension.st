@@ -26,6 +26,11 @@ FAMIXEntity >> isClass [
 ]
 
 { #category : #'*Famix-Implementation' }
+FAMIXEntity >> isContainerEntity [
+	^ false
+]
+
+{ #category : #'*Famix-Implementation' }
 FAMIXEntity >> isFunction [
 	^false
 ]

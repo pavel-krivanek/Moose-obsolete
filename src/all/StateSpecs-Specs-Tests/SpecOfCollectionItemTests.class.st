@@ -5,6 +5,22 @@ Class {
 }
 
 { #category : #tests }
+SpecOfCollectionItemTests >> testDescriptionWhenRequiredItemIsSimpleValue [
+	| spec |
+	spec := SpecOfCollectionItem at: #expectedKey requiredItem: #value.
+	
+	self assert: spec description equals: 'should include #value at #expectedKey'
+]
+
+{ #category : #tests }
+SpecOfCollectionItemTests >> testDescriptionWhenRequiredItemIsSpec [
+	| spec |
+	spec := SpecOfCollectionItem at: #expectedKey requiredItem: (Kind of: Integer).
+	
+	self assert: spec description equals: 'should include (be a kind of Integer) at #expectedKey'
+]
+
+{ #category : #tests }
 SpecOfCollectionItemTests >> testFailedValidationWhenContainingKeyAbsent [
 	| spec result |
 

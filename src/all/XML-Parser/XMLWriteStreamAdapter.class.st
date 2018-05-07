@@ -24,6 +24,11 @@ XMLWriteStreamAdapter class >> initialize [
 	LFCharacter := Character lf.
 ]
 
+{ #category : #basic }
+XMLWriteStreamAdapter >> basicNextPut: anObject [ 
+	^ self nextPut: anObject
+]
+
 { #category : #accessing }
 XMLWriteStreamAdapter >> contents [
 	^ stream contents

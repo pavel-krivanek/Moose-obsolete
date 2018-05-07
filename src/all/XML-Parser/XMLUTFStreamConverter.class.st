@@ -7,6 +7,11 @@ Class {
 	#category : #'XML-Parser-Streams'
 }
 
+{ #category : #defaults }
+XMLUTFStreamConverter class >> abstractClass [
+	^ XMLUTFStreamConverter
+]
+
 { #category : #private }
 XMLUTFStreamConverter >> errorBadCharacterValue: aValue [
 	XMLEncodingException
@@ -26,7 +31,10 @@ XMLUTFStreamConverter >> nextFromStream: aStream [
 
 	codePoint := self nextCodePointFromStream: aStream.
 	[codePoint == 16rFEFF] "the BOM code point"
-		whileTrue: [codePoint := self nextCodePointFromStream: aStream].
+		whileTrue: [
+			aStream atEnd
+				ifTrue: [^ nil].
+			codePoint := self nextCodePointFromStream: aStream].
 	^ codePoint
-		ifNotNil: [Character value: codePoint].
+		ifNotNil: [codePoint asCharacter].
 ]

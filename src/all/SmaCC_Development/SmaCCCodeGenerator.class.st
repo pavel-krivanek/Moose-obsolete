@@ -88,13 +88,6 @@ SmaCCCodeGenerator class >> codeTemplatesArray [
 	^ #(#(#override '') #(#trueValue 'true'))
 ]
 
-{ #category : #'instance creation' }
-SmaCCCodeGenerator class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #accessing }
 SmaCCCodeGenerator class >> parseSourceSelector [
 	self subclassResponsibility
@@ -916,19 +909,19 @@ SmaCCCodeGenerator >> methodNameMap: aSmaCCNode forMethods: methodNodes [
 { #category : #'compiling-scanner' }
 SmaCCCodeGenerator >> minMaxPairsFor: aSmaCCCharacterEdge without: isSelectors [
 	| start last pairs charsLeft |
-	charsLeft := aSmaCCCharacterEdge transitionObjects
-		reject: [ :ch | isSelectors anySatisfy: [ :each | ch perform: each ] ].
+	charsLeft := aSmaCCCharacterEdge transitionObjects.
+	isSelectors notEmpty
+		ifTrue: [ charsLeft := charsLeft copy.
+			isSelectors do: [ :each | charsLeft smaccRemoveAll: (SmaCCGrammar isExpressionMap at: each) ] ].
 	pairs := OrderedCollection new.
 	charsLeft isEmpty
 		ifTrue: [ ^ pairs ].
 	last := charsLeft first.
 	start := nil.
 	charsLeft
-		do:
-			[ :each | 
+		do: [ :each | 
 			last asInteger + 1 = each asInteger
-				ifFalse:
-					[ start notNil
+				ifFalse: [ start notNil
 						ifTrue: [ pairs add: (Array with: start with: last) ].
 					start := each ].
 			last := each ].

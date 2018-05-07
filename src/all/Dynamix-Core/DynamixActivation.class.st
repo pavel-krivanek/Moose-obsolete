@@ -169,6 +169,17 @@ DynamixActivation >> compare: aCandidateSequence with: aList from: startpos [
 	^(j - 1 = aCandidateSequence size)
 ]
 
+{ #category : #printing }
+DynamixActivation >> gtDisplayOn: stream [ 
+	self behaviour isNil 
+		ifTrue: [stream nextPutAll: 'Unknown activation']
+		ifFalse: [self behaviour gtDisplayOn: stream ].
+	stream 
+		nextPutAll: ' (';
+		nextPutAll: self duration asString;
+		nextPut: $)
+]
+
 { #category : #testing }
 DynamixActivation >> hasReturnValue [
 	^self return notNil and: [ self return ~= self receiver ]
@@ -251,17 +262,6 @@ DynamixActivation >> maxDepth [
 { #category : #'accessing-derived' }
 DynamixActivation >> method [
 	^ self behaviour
-]
-
-{ #category : #printing }
-DynamixActivation >> mooseDisplayStringOn: stream [ 
-	self behaviour isNil 
-		ifTrue: [stream nextPutAll: 'Unknown activation']
-		ifFalse: [self behaviour mooseDisplayStringOn: stream ].
-	stream 
-		nextPutAll: ' (';
-		nextPutAll: self duration asString;
-		nextPut: $)
 ]
 
 { #category : #'accessing-derived' }

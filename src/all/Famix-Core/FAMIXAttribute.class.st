@@ -16,8 +16,6 @@ Class {
 FAMIXAttribute class >> annotation [
 	<MSEClass: #Attribute super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-
-	^ self
 ]
 
 { #category : #accessing }

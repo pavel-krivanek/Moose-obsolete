@@ -4,7 +4,7 @@ Class {
 	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoNamespaceVersion class >> annotation [
 	<MSEClass: #NamespaceVersion super: #HismoEntityVersion>
 	<package: #Hismo>

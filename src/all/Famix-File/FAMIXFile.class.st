@@ -10,7 +10,7 @@ Class {
 	#category : #'Famix-File'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXFile class >> annotation [
 	<MSEClass: #File super: #FAMIXAbstractFile>
 	<package: #FILE>

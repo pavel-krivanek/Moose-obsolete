@@ -8,11 +8,10 @@ Class {
 	#category : #'Fame-Example'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 LIBPerson class >> annotation [
 	<MSEClass: #Person super: #Object>
 	<package: #LIB>
-	^self
 ]
 
 { #category : #accessing }
@@ -26,7 +25,7 @@ LIBPerson >> books: aBook [
 	books value: aBook
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 LIBPerson >> initialize [
 	super initialize.
 	books := FMMultiMultivalueLink on: self opposite: #authors.

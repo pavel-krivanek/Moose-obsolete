@@ -11,7 +11,6 @@ Class {
 FAMIXJavaSourceLanguage class >> annotation [
 	<MSEClass: #JavaSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #testing }

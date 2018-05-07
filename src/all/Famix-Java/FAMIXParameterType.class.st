@@ -14,11 +14,10 @@ Class {
 	#category : #'Famix-Java'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXParameterType class >> annotation [
 	<MSEClass: #ParameterType super: #FAMIXType>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #testing }

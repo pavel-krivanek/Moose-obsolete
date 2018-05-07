@@ -18,5 +18,5 @@ MonticelloMethodVisitor >> resolve: name [
 		ifAbsent: nil.
 	object ~~ nil ifTrue: [ ^ object ].
 	
-	^importer ensureClass: name
+	^importer ensureClass: name asSymbol
 ]

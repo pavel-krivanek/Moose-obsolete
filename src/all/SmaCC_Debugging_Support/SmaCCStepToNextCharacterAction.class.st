@@ -16,6 +16,11 @@ SmaCCStepToNextCharacterAction >> defaultLabel [
 ]
 
 { #category : #accessing }
+SmaCCStepToNextCharacterAction >> help [
+	^ 'Run until we get to the character or a parse error is encountered.'
+]
+
+{ #category : #accessing }
 SmaCCStepToNextCharacterAction >> stepToIndex [
 	^ self session scanner stream position + 1
 ]

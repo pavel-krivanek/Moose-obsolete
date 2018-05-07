@@ -111,8 +111,10 @@ FAMIXMethod >> isOverriden [
 	<MSEProperty: #isOverriden type: #Boolean>
 	<derived>
 	<MSEComment: 'The method is overrided in a sub class'>
-	^ self belongsTo subclassHierarchyGroup
-		anySatisfy: [ :each | each hasMethodWithSignature: self signature ]
+	"If we have a stub and we don't have the container, we can't have the information"
+	(self belongsTo isNil and: [ self isStub ]) ifTrue: [ ^ false ].
+	
+	^ self belongsTo subclassHierarchyGroup anySatisfy: [ :each | each hasMethodWithSignature: self signature ]
 ]
 
 { #category : #'*Famix-Extensions' }
@@ -120,9 +122,10 @@ FAMIXMethod >> isOverriding [
 	<MSEProperty: #isOverriding type: #Boolean>
 	<derived>
 	<MSEComment: 'The method is overrinding a method defined in a super class'>
+	"If we have a stub and we don't have the container, we can't have the information"
+	(self belongsTo isNil and: [ self isStub ]) ifTrue: [ ^ false ].
 	
-	^self belongsTo directSuperclasses anySatisfy: [:each | 
-		each isInterface not and: [each understands: self signature]]
+	^ self belongsTo directSuperclasses anySatisfy: [ :each | each isInterface not and: [ each understands: self signature ] ]
 ]
 
 { #category : #'*famix-extensions-InvocationTesting' }

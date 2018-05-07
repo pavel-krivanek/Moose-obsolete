@@ -6,7 +6,7 @@ Class {
 
 { #category : #'generated-accessing' }
 SmaCCRewriteTestParser class >> cacheId [
-	^'2016-10-09T15:01:25.352626-05:00'
+	^'2018-03-19T12:41:17.128279-05:00'
 ]
 
 { #category : #generated }
@@ -70,7 +70,7 @@ SmaCCRewriteTestParser >> reduceActionForExpression1: nodes [
 ]
 
 { #category : #'generated-reduction actions' }
-SmaCCRewriteTestParser >> reduceActionForExpression3: nodes [
+SmaCCRewriteTestParser >> reduceActionForExpression4: nodes [
 	| result |
 	result := SmaCCRewriteTestBinaryExpressionNode new.
 	result left: (nodes at: 1).
@@ -90,40 +90,40 @@ SmaCCRewriteTestParser >> reduceActionForExpression7: nodes [
 { #category : #generated }
 SmaCCRewriteTestParser >> reduceTable [
 ^#(
-	#(14 1 #reduceActionForExpression7:) 
-	#(14 3 #reduceActionForExpression1:) 
-	#(14 3 #reduceActionForExpression3:)
+	#(12 1 #reduceActionForExpression7:) 
+	#(12 3 #reduceActionForExpression1:) 
+	#(12 3 #reduceActionForExpression4:)
 	).
 ]
 
 { #category : #generated }
 SmaCCRewriteTestParser >> symbolNames [
-	^ #('"-"' '")"' '"+"' '"*"' '"("' '"^"' '"/"' '<number>' '<whitespace>' '<patternToken>' 'B e g i n' 'error' 'E O F' 'Expression')
+	^ #('"("' '")"' '"*"' '"+"' '"-"' '"/"' '"^"' '<number>' '<whitespace>' '<patternToken>' 'B e g i n' 'Expression' 'E O F' 'error')
 ]
 
 { #category : #generated }
 SmaCCRewriteTestParser >> symbolTypes [
-	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCRewriteTestExpressionNode #SmaCCToken #SmaCCToken #SmaCCRewriteTestExpressionNode)
+	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCRewriteTestExpressionNode #SmaCCRewriteTestExpressionNode #SmaCCToken #SmaCCToken)
 ]
 
 { #category : #generated }
 SmaCCRewriteTestParser >> transitionTable [
 ^#(
-#[1 0 9 0 5 0 13 0 8 0 17 0 14] 
-#[1 0 9 0 5 0 13 0 8 0 21 0 14] 
-#[0 0 6 0 1 0 2 0 3 0 4 0 6 0 7 0 13] 
-#[1 0 25 0 1 0 29 0 3 0 33 0 4 0 37 0 6 0 41 0 7 0 0 0 13] 
-#[1 0 25 0 1 0 45 0 2 0 29 0 3 0 33 0 4 0 37 0 6 0 41 0 7] 
-#[1 0 9 0 5 0 13 0 8 0 49 0 14] 
-#[1 0 9 0 5 0 13 0 8 0 53 0 14] 
-#[1 0 9 0 5 0 13 0 8 0 57 0 14] 
-#[1 0 9 0 5 0 13 0 8 0 61 0 14] 
-#[1 0 9 0 5 0 13 0 8 0 65 0 14] 
-#[0 0 10 0 1 0 2 0 3 0 4 0 6 0 7 0 13] 
-#[1 0 14 0 1 0 14 0 2 0 14 0 3 0 33 0 4 0 37 0 6 0 41 0 7 0 14 0 13] 
-#[1 0 14 0 1 0 14 0 2 0 14 0 3 0 33 0 4 0 37 0 6 0 41 0 7 0 14 0 13] 
-#[1 0 14 0 1 0 14 0 2 0 14 0 3 0 14 0 4 0 37 0 6 0 14 0 7 0 14 0 13] 
-#[1 0 14 0 1 0 14 0 2 0 14 0 3 0 14 0 4 0 37 0 6 0 14 0 7 0 14 0 13] 
-#[1 0 14 0 1 0 14 0 2 0 14 0 3 0 14 0 4 0 37 0 6 0 14 0 7 0 14 0 13]
+#[1 0 9 0 1 0 13 0 8 0 17 0 12] 
+#[1 0 9 0 1 0 13 0 8 0 21 0 12] 
+#[0 0 6 0 2 0 3 0 4 0 5 0 6 0 7 0 13] 
+#[1 0 25 0 3 0 29 0 4 0 33 0 5 0 37 0 6 0 41 0 7 0 0 0 13] 
+#[1 0 45 0 2 0 25 0 3 0 29 0 4 0 33 0 5 0 37 0 6 0 41 0 7] 
+#[1 0 9 0 1 0 13 0 8 0 49 0 12] 
+#[1 0 9 0 1 0 13 0 8 0 53 0 12] 
+#[1 0 9 0 1 0 13 0 8 0 57 0 12] 
+#[1 0 9 0 1 0 13 0 8 0 61 0 12] 
+#[1 0 9 0 1 0 13 0 8 0 65 0 12] 
+#[0 0 10 0 2 0 3 0 4 0 5 0 6 0 7 0 13] 
+#[1 0 14 0 2 0 14 0 3 0 14 0 4 0 14 0 5 0 14 0 6 0 41 0 7 0 14 0 13] 
+#[1 0 14 0 2 0 25 0 3 0 14 0 4 0 14 0 5 0 37 0 6 0 41 0 7 0 14 0 13] 
+#[1 0 14 0 2 0 25 0 3 0 14 0 4 0 14 0 5 0 37 0 6 0 41 0 7 0 14 0 13] 
+#[1 0 14 0 2 0 14 0 3 0 14 0 4 0 14 0 5 0 14 0 6 0 41 0 7 0 14 0 13] 
+#[1 0 14 0 2 0 14 0 3 0 14 0 4 0 14 0 5 0 14 0 6 0 41 0 7 0 14 0 13]
 	).
 ]

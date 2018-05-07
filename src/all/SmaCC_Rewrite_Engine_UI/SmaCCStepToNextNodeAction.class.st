@@ -32,3 +32,8 @@ SmaCCStepToNextNodeAction >> executeAction [
 	self
 		stepUntil: [ :context | context isBlockContext not and: [ (self session isRewriteContext: context) and: [ (nodes includes: context receiver match) not ] ] ]
 ]
+
+{ #category : #accessing }
+SmaCCStepToNextNodeAction >> help [
+	^ 'Step until we get to another node'
+]

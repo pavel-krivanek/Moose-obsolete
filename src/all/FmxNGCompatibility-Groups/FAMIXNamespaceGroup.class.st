@@ -11,7 +11,6 @@ Class {
 FAMIXNamespaceGroup class >> annotation [
 	<MSEClass: #NamespaceGroup super: #MooseGroup>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #algorithms }

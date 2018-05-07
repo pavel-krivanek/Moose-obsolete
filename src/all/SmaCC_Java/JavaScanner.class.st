@@ -7,7 +7,7 @@ Class {
 { #category : #'generated-initialization' }
 JavaScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(105 'abstract' 37) #(105 'assert' 88) #(105 'boolean' 32) #(105 'break' 82) #(105 'byte' 33) #(105 'case' 58) #(105 'catch' 75) #(105 'char' 25) #(105 'class' 8) #(105 'continue' 77) #(105 'default' 14) #(105 'do' 80) #(105 'double' 27) #(105 'else' 31) #(105 'enum' 13) #(105 'extends' 9) #(105 'false' 101) #(105 'final' 38) #(105 'finally' 83) #(105 'float' 26) #(105 'for' 81) #(105 'if' 16) #(105 'implements' 10) #(105 'import' 43) #(105 'instanceof' 53) #(105 'int' 29) #(105 'interface' 18) #(105 'long' 30) #(105 'native' 39) #(105 'new' 95) #(105 'null' 104) #(105 'package' 35) #(105 'private' 41) #(105 'protected' 46) #(105 'public' 45) #(105 'return' 78) #(105 'short' 34) #(105 'static' 42) #(105 'strictfp' 7) #(105 'super' 17) #(105 'switch' 47) #(105 'synchronized' 40) #(105 'this' 22) #(105 'throw' 84) #(105 'throws' 21) #(105 'transient' 23) #(105 'true' 101) #(105 'try' 74) #(105 'void' 11) #(105 'volatile' 24) #(105 'while' 79))
+	#(#(105 'abstract' 42) #(105 'assert' 43) #(105 'boolean' 44) #(105 'break' 45) #(105 'byte' 46) #(105 'case' 47) #(105 'catch' 48) #(105 'char' 49) #(105 'class' 50) #(105 'continue' 51) #(105 'default' 52) #(105 'do' 53) #(105 'double' 54) #(105 'else' 55) #(105 'enum' 56) #(105 'extends' 57) #(105 'false' 101) #(105 'final' 58) #(105 'finally' 59) #(105 'float' 60) #(105 'for' 61) #(105 'if' 62) #(105 'implements' 63) #(105 'import' 64) #(105 'instanceof' 65) #(105 'int' 66) #(105 'interface' 67) #(105 'long' 68) #(105 'native' 69) #(105 'new' 70) #(105 'null' 104) #(105 'package' 71) #(105 'private' 72) #(105 'protected' 73) #(105 'public' 74) #(105 'return' 75) #(105 'short' 76) #(105 'static' 77) #(105 'strictfp' 78) #(105 'super' 79) #(105 'switch' 80) #(105 'synchronized' 81) #(105 'this' 82) #(105 'throw' 83) #(105 'throws' 84) #(105 'transient' 85) #(105 'true' 101) #(105 'try' 86) #(105 'void' 87) #(105 'volatile' 88) #(105 'while' 89))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -32,12 +32,12 @@ JavaScanner >> UNSIGNED_RIGHT_SHIFTId [
 
 { #category : #generated }
 JavaScanner >> emptySymbolTokenId [
-	^ 324
+	^ 327
 ]
 
 { #category : #generated }
 JavaScanner >> errorTokenId [
-	^ 325
+	^ 328
 ]
 
 { #category : #generated }
@@ -236,9 +236,9 @@ JavaScanner >> scanForToken [
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(19) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
 	currentCharacter == $*
 		ifTrue:
 			[ ^ self scanForTokenX15 ].
@@ -246,7 +246,7 @@ JavaScanner >> scanForToken [
 		ifTrue:
 			[ ^ self scanForTokenX9 ].
 	currentCharacter == $,
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(15) ].
 	^ self scanForTokenX20
 ]
 
@@ -295,12 +295,12 @@ JavaScanner >> scanForTokenX1 [
 
 { #category : #generated }
 JavaScanner >> scanForTokenX10 [
-	self recordMatch: #(89).
+	self recordMatch: #(5).
 	self step.
 	currentCharacter == $&
-		ifTrue: [ ^ self recordAndReportMatch: #(51) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(62) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 	^ self reportLastMatch
 ]
 
@@ -315,55 +315,55 @@ JavaScanner >> scanForTokenX11 [
 
 { #category : #generated }
 JavaScanner >> scanForTokenX12 [
-	self recordMatch: #(50).
+	self recordMatch: #(40).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(63) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(41) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX13 [
-	self recordMatch: #(2).
+	self recordMatch: #(31).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(54) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(32) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX14 [
-	self recordMatch: #(15).
+	self recordMatch: #(24).
 	self step.
 	currentCharacter == $:
-		ifTrue: [ ^ self recordAndReportMatch: #(92) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(25) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX15 [
-	self recordMatch: #(44).
+	self recordMatch: #(10).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(60) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX16 [
-	self recordMatch: #(72).
+	self recordMatch: #(3).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(68) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX17 [
-	self recordMatch: #(87).
+	self recordMatch: #(1).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(49) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	^ self reportLastMatch
 ]
 
@@ -378,21 +378,21 @@ JavaScanner >> scanForTokenX18 [
 { #category : #generated }
 JavaScanner >> scanForTokenX19 [
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(39) ].
 	currentCharacter == $^
 		ifTrue:
 			[ ^ self scanForTokenX12 ].
 	currentCharacter == $`
 		ifTrue: [ ^ self scan10 ].
 	currentCharacter == ${
-		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(90) ].
 	currentCharacter == $|
 		ifTrue:
 			[ ^ self scanForTokenX7 ].
 	currentCharacter == $}
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(94) ].
 	currentCharacter == $~
-		ifTrue: [ ^ self recordAndReportMatch: #(86) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(95) ].
 	currentCharacter isDigit
 		ifTrue:
 			[ ^ self scanForTokenX3 ].
@@ -408,7 +408,7 @@ JavaScanner >> scanForTokenX19 [
 
 { #category : #generated }
 JavaScanner >> scanForTokenX2 [
-	self recordMatch: #(73).
+	self recordMatch: #(22).
 	self step.
 	currentCharacter == $*
 		ifTrue: [ ^ self scan7 ].
@@ -420,7 +420,7 @@ JavaScanner >> scanForTokenX2 [
 						or: [ currentCharacter >= (Character value: 14) ] ] ] whileTrue.
 			^ self reportLastMatch ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(67) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(23) ].
 	^ self reportLastMatch
 ]
 
@@ -441,7 +441,7 @@ JavaScanner >> scanForTokenX20 [
 		ifTrue:
 			[ ^ self scanForTokenX14 ].
 	currentCharacter == $;
-		ifTrue: [ ^ self recordAndReportMatch: #(36) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
 	currentCharacter == $<
 		ifTrue:
 			[ ^ self scanForTokenX6 ].
@@ -452,11 +452,11 @@ JavaScanner >> scanForTokenX20 [
 		ifTrue:
 			[ ^ self scanForTokenX4 ].
 	currentCharacter == $?
-		ifTrue: [ ^ self recordAndReportMatch: #(59) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(36) ].
 	currentCharacter == $@
-		ifTrue: [ ^ self recordAndReportMatch: #(48) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(37) ].
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
 	^ self scanForTokenX19
 ]
 
@@ -481,67 +481,67 @@ JavaScanner >> scanForTokenX4 [
 	self recordMatch: #(96).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(71) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(33) ].
 	currentCharacter == $>
 		ifTrue: [ self recordMatch: #(97).
 			self step.
 			currentCharacter == $=
-				ifTrue: [ ^ self recordAndReportMatch: #(66) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(34) ].
 			currentCharacter == $>
 				ifTrue: [ self recordMatch: #(98).
 					self step.
 					currentCharacter == $=
-						ifTrue: [ ^ self recordAndReportMatch: #(61) ] ] ].
+						ifTrue: [ ^ self recordAndReportMatch: #(35) ] ] ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX5 [
-	self recordMatch: #(85).
+	self recordMatch: #(16).
 	self step.
 	currentCharacter == $-
-		ifTrue: [ ^ self recordAndReportMatch: #(91) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(70) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(18) ].
 	currentCharacter == $>
-		ifTrue: [ ^ self recordAndReportMatch: #(93) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(19) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX6 [
-	self recordMatch: #(56).
+	self recordMatch: #(27).
 	self step.
 	currentCharacter == $<
-		ifTrue: [ self recordMatch: #(55).
+		ifTrue: [ self recordMatch: #(28).
 			self step.
 			currentCharacter == $=
-				ifTrue: [ ^ self recordAndReportMatch: #(65) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(29) ].
 			^ self reportLastMatch ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(57) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(30) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX7 [
-	self recordMatch: #(76).
+	self recordMatch: #(91).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(64) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(92) ].
 	currentCharacter == $|
-		ifTrue: [ ^ self recordAndReportMatch: #(52) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(93) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 JavaScanner >> scanForTokenX8 [
-	self recordMatch: #(28).
+	self recordMatch: #(20).
 	self step.
 	currentCharacter == $.
 		ifTrue: [ self step.
 			currentCharacter == $.
-				ifTrue: [ ^ self recordAndReportMatch: #(20) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(21) ].
 			^ self reportLastMatch ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan4 ].
@@ -550,12 +550,12 @@ JavaScanner >> scanForTokenX8 [
 
 { #category : #generated }
 JavaScanner >> scanForTokenX9 [
-	self recordMatch: #(90).
+	self recordMatch: #(12).
 	self step.
 	currentCharacter == $+
-		ifTrue: [ ^ self recordAndReportMatch: #(94) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(69) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
 	^ self reportLastMatch
 ]
 

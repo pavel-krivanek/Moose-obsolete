@@ -423,80 +423,62 @@ XMLNodeWithElements >> descendantElementsSelect: aBlock [
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElements [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElements instead"
-
-	^ self descendantElements
+	self deprecated: 'use #descendantElements instead'.
+	^ self descendantElements.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsCollect: aBlock [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsCollect: instead"
-
-	^ self descendantElementsCollect: aBlock
+	self deprecated: 'use #descendantElementsCollect: instead'.
+	^ self descendantElementsCollect: aBlock.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsDetect: aBlock [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsDetect: instead"
-
-	^ self descendantElementsDetect: aBlock
+	self deprecated: 'use #descendantElementsDetect: instead'.
+	^ self descendantElementsDetect: aBlock.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsDetect: aBlock ifNone: anExceptionBlock [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsDetect:ifNone: instead"
-
+	self deprecated: 'use #descendantElementsDetect:ifNone: instead'.
 	^ self
 		descendantElementsDetect: aBlock
-		ifNone: anExceptionBlock
+		ifNone: anExceptionBlock.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsDo: aBlock [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsDo: instead"
-
-	^ self descendantElementsDo: aBlock
+	self deprecated: 'use #descendantElementsDo: instead'.
+	^ self descendantElementsDo: aBlock.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsNamed: aName [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsNamed: instead"
-
-	^ self descendantElementsNamed: aName
+	self deprecated: 'use #descendantElementsNamed: instead"'.
+	^ self descendantElementsNamed: aName.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsNamed: aName do: aBlock [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsNamed:do: instead"
-
+	self deprecated: 'use #descendantElementsNamed:do: instead'.
 	^ self
 		descendantElementsNamed: aName
-		do: aBlock
+		do: aBlock.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsNamed: aName namespaceURI: aURI [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsNamed:namespaceURI: instead"
-
+	self deprecated: 'use #descendantElementsNamed:namespaceURI: instead'.
 	^ self
 		descendantElementsNamed: aName
-		namespaceURI: aURI
+		namespaceURI: aURI.
 ]
 
 { #category : #deprecated }
 XMLNodeWithElements >> descendentElementsSelect: aBlock [
-	"less common alternate spelling, will be deprecated;
-	use #descendantElementsSelect: instead"
-
-	^ self descendantElementsSelect: aBlock
+	self deprecated: 'use #descendantElementsSelect: instead'.
+	^ self descendantElementsSelect: aBlock.
 ]
 
 { #category : #accessing }
@@ -933,6 +915,53 @@ XMLNodeWithElements >> rawContentStringAt: aName [
 	See also #contentStringAt:"
 
 	^ self nodes rawContentStringAt: aName
+]
+
+{ #category : #removing }
+XMLNodeWithElements >> removeAllFormattingNodes [
+	"This is a convenience method to remove formatting string nodes from the
+	receiver and descendant elements. Empty/whitespace string nodes with
+	element siblings are assumed to be formatting, unless they have at least
+	one non-empty/non-whitespace sibling string node.
+
+	WARNING: 'mixed content' elements that can have both string and element
+	children, like this:
+		<row>one<sep/> <sep/>three</row>
+	aren't properly recognized when all of the string nodes are whitespace,
+	so this:
+		<row> <sep/> <sep/> </row>
+	will become this:
+		<row><sep/><sep/></row>
+	which might not be acceptable."
+
+	| hasFormattingStringNodes hasElements |
+
+	hasFormattingStringNodes := false.
+	hasElements := false.
+	self nodesDo: [:each |
+		each isStringNode
+			ifTrue: [
+				(hasFormattingStringNodes :=
+					each isWhitespace
+						or: [each isEmpty])
+					ifFalse: [^ self]]
+			ifFalse: [
+				hasElements
+					ifFalse: [hasElements := each isElement]]].
+
+	(hasFormattingStringNodes
+		and: [hasElements])
+		ifTrue: [| nodeList |
+			nodeList := self nodes.
+			nodeList size to: 1 by: -1 do: [:i | | node |
+				((node := nodeList at: i) isStringNode
+					and: [node isWhitespace
+						or: [node isEmpty]])
+					ifTrue: [nodeList removeAt: i]]].
+	hasElements
+		ifTrue: [
+			self elementsDo: [:each |
+				each removeAllFormattingNodes]].
 ]
 
 { #category : #notifying }

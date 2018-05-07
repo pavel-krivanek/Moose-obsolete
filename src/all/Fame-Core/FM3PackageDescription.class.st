@@ -11,9 +11,9 @@ Class {
 	#category : #'Fame-Core'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FM3PackageDescription class >> annotation [
-	<MSEClass: #'Package' super: #FM3Element>
+	<MSEClass: #Package super: #FM3Element>
 	<package: #FM3>
 
 ]

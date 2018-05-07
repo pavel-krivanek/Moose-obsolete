@@ -6,6 +6,6 @@ Class {
 
 { #category : #testing }
 MooseObjectExtensionsTest >> testMooseDisplayString [
-	self assert: (Object canUnderstand: #mooseDisplayString).
-	self assert: (Object canUnderstand: #mooseDisplayStringOn:)
+	self assert: (Object canUnderstand: #gtDisplayString).
+	self assert: (Object canUnderstand: #gtDisplayOn:)
 ]

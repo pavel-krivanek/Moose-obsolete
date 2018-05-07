@@ -42,3 +42,8 @@ SmaCCStepToLocationAction >> executeAction [
 												or:
 													[ (interval last between: nextNode startPosition and: nextNode stopPosition) or: [ nextNode startPosition between: interval first and: interval last ] ] ] ] ] ] ]
 ]
+
+{ #category : #accessing }
+SmaCCStepToLocationAction >> help [
+	^ 'Step until we process a node at the current location'
+]

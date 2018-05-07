@@ -16,6 +16,11 @@ SmaCCStepToCursorAction >> defaultLabel [
 ]
 
 { #category : #accessing }
+SmaCCStepToCursorAction >> help [
+	^ 'Run until we get to the cursor position or a parse error is encountered.'
+]
+
+{ #category : #accessing }
 SmaCCStepToCursorAction >> stepToIndex [
 	^ self debugger currentInputSelectionInterval last
 ]

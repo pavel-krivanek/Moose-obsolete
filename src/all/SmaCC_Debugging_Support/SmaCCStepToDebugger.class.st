@@ -34,11 +34,16 @@ SmaCCStepToDebugger >> defaultOrder [
 	^ 200
 ]
 
-{ #category : #accessing }
+{ #category : #actions }
 SmaCCStepToDebugger >> executeAction [
-	self stepUntil: [ :context | self debuggerClass isParseContext: context ].
+	self stepUntil: [ :context | self debuggerClass isParseContext: context ] context: self session process suspendedContext.
 	(self debuggerClass isParseContext: self interruptedContext)
 		ifTrue: [ self debugger debug: self interruptedContext using: self debuggerClass ]
+]
+
+{ #category : #accessing }
+SmaCCStepToDebugger >> help [
+	^ 'Execute the current method until it starts to parse something.'
 ]
 
 { #category : #'initialize-release' }

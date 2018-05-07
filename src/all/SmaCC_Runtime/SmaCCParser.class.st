@@ -26,7 +26,8 @@ Class {
 		'nodeStack'
 	],
 	#classInstVars : [
-		'cacheId'
+		'cacheId',
+		'defaultEncoding'
 	],
 	#category : #'SmaCC_Runtime'
 }
@@ -42,6 +43,19 @@ SmaCCParser class >> checkCaches [
 		ifTrue: [ self resetCaches.
 			self scannerClass initialize.
 			cacheId := self cacheId ]
+]
+
+{ #category : #accessing }
+SmaCCParser class >> defaultEncoding [
+	^ defaultEncoding
+		ifNil: [ self == SmaCCParser
+				ifTrue: [ nil ]
+				ifFalse: [ superclass defaultEncoding ] ]
+]
+
+{ #category : #accessing }
+SmaCCParser class >> defaultEncoding: aString [
+	defaultEncoding := aString
 ]
 
 { #category : #accessing }
@@ -79,13 +93,6 @@ SmaCCParser class >> fileExtensions [
 ]
 
 { #category : #'instance creation' }
-SmaCCParser class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
-{ #category : #'instance creation' }
 SmaCCParser class >> on: aStream [
 	| parser scanner |
 	self checkCaches.
@@ -95,19 +102,19 @@ SmaCCParser class >> on: aStream [
 	^ parser
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parse: aString [
 	^ self parse: aString startingAt: self defaultStartingState
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parse: aString onError: aBlock [
 	^ [ self parse: aString ]
 		on: SmaCCParserError
 		do: (self errorBlock: aBlock)
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parse: aString startingAt: anInteger [
 	| value |
 	value := self
@@ -118,37 +125,44 @@ SmaCCParser class >> parse: aString startingAt: anInteger [
 	^ value
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parse: aString startingAt: anInteger onError: aBlock [
 	^ [ self parse: aString startingAt: anInteger ]
 		on: SmaCCParserError
 		do: (self errorBlock: aBlock)
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parseFile: aString [
-	| stream |
-	stream := FileStream readOnlyFileNamed: aString.
-	^ [ (self parseStream: stream startingAt: self defaultStartingState)
-		ifNotNil: [ :each | 
-			(each isKindOf: SmaCCParseNode)
-				ifTrue: [ each filename: aString ] ] ]
-		ensure: [ stream close ]
+	^ self parseFile: aString encoding: self defaultEncoding
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
+SmaCCParser class >> parseFile: aString encoding: encodingString [
+	^ aString asFileReference
+		readStreamDo: [ :stream | 
+			self setEncoding: encodingString on: stream.
+			(self parseStream: stream startingAt: self defaultStartingState)
+				ifNotNil: [ :each | 
+					(each isKindOf: SmaCCParseNode)
+						ifTrue: [ stream position: 0.
+							each completeSource: stream contents.
+							each filename: aString ] ] ]
+]
+
+{ #category : #parsing }
 SmaCCParser class >> parseStream: aStream [
 	^ self parseStream: aStream startingAt: self defaultStartingState
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parseStream: aStream onError: aBlock [
 	^ [ self parseStream: aStream ]
 		on: SmaCCParserError
 		do: (self errorBlock: aBlock)
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parseStream: aStream startingAt: anInteger [
 	| parser |
 	parser := self on: aStream.
@@ -156,7 +170,7 @@ SmaCCParser class >> parseStream: aStream startingAt: anInteger [
 	^ parser parse
 ]
 
-{ #category : #accessing }
+{ #category : #parsing }
 SmaCCParser class >> parseStream: aStream startingAt: anInteger onError: aBlock [
 	^ [ self parseStream: aStream startingAt: anInteger ]
 		on: SmaCCParserError
@@ -173,6 +187,22 @@ SmaCCParser class >> resetCaches [
 { #category : #accessing }
 SmaCCParser class >> scannerClass [
 	^ self subclassResponsibility
+]
+
+{ #category : #encoding }
+SmaCCParser class >> setEncoding: aString on: aStream [
+	"Handle Pharo 6/7 streaming differences"
+
+	| encoding |
+	encoding := aString ifNil: [ self defaultEncoding ifNil: [ 'utf-8' ] ].
+	(aStream respondsTo: #encoding:)
+		ifTrue: [ aStream encoding: encoding ]
+		ifFalse: [ aStream converter: (TextConverter newForEncoding: encoding) ]
+]
+
+{ #category : #encoding }
+SmaCCParser class >> setEncodingOn: aStream [
+	self setEncoding: nil on: aStream
 ]
 
 { #category : #private }

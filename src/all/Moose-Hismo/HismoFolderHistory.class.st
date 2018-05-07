@@ -4,7 +4,7 @@ Class {
 	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoFolderHistory class >> annotation [
 	<MSEClass: #FolderHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

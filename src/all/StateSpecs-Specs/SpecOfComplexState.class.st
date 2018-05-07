@@ -48,7 +48,7 @@ SpecOfComplexState >> addSpecs: aCollectionOfSpecs [
 	specs addAll: aCollectionOfSpecs 
 ]
 
-{ #category : #accessing }
+{ #category : #copying }
 SpecOfComplexState >> copy [
 	| result |
 	result := super copy.

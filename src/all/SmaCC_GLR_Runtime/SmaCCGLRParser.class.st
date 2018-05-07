@@ -227,7 +227,7 @@ SmaCCGLRParser >> isAmbiguous: action [
 
 { #category : #private }
 SmaCCGLRParser >> killState [
-	states remove: currentState.
+	states remove: currentState ifAbsent: [  ].
 	states isEmpty
 		ifTrue: [ self handleError: 0 ].
 	(states size = 1 and: [ parseAll not ])

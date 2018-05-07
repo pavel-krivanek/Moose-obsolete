@@ -7,7 +7,7 @@ Class {
 	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoModelHistory class >> annotation [
 	<MSEClass: #ModelHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

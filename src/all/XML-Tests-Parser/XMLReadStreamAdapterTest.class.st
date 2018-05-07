@@ -9,14 +9,9 @@ XMLReadStreamAdapterTest class >> isAbstract [
 	^ false
 ]
 
-{ #category : #accessing }
-XMLReadStreamAdapterTest >> inputCollection [
-	^ 'test'
-]
-
-{ #category : #accessing }
-XMLReadStreamAdapterTest >> outputCollection [
-	^ 'test'
+{ #category : #testing }
+XMLReadStreamAdapterTest >> isBinary [
+	^ self expectsBinaryOutput
 ]
 
 { #category : #accessing }
@@ -72,12 +67,33 @@ XMLReadStreamAdapterTest >> testNext [
 
 	0 to: self outputCollection size do: [:i |
 		adapter := self newStreamAdapter.
-		self assert: (adapter next: i) = (self outputCollection copyFrom: 1 to: i)].
+		self assert:
+			(adapter next: i) =
+				(self outputCollection copyFrom: 1 to: i)].
 
 	adapter := self newStreamAdapter.
-	self
-		assert: (adapter next: self outputCollection size + 1) = self outputCollection;
-		assert: (adapter next: 1) isEmpty.
+	self assert:
+		(adapter next: self outputCollection size + 1) =
+			self outputCollection.
+	self assert: (adapter next: 1) isEmpty.
+]
+
+{ #category : #tests }
+XMLReadStreamAdapterTest >> testOnIfBinaryOrExternal [
+	| basicInputCollection stream adapter |
+
+	basicInputCollection := self basicInputCollection.
+	stream := self newStreamOn: (self binaryFrom: basicInputCollection).
+	adapter := self streamAdapterClass onIfBinaryOrExternal: stream.
+	self assert: adapter class == self streamAdapterClass.
+
+	stream := self newStreamOn: (self stringFrom: basicInputCollection).
+	self assert: (self streamAdapterClass onIfBinaryOrExternal: stream) isNil.
+	[stream atEnd]
+		whileFalse: [
+			stream next.
+			self assert:
+				(self streamAdapterClass onIfBinaryOrExternal: stream) isNil].
 ]
 
 { #category : #tests }
@@ -111,10 +127,15 @@ XMLReadStreamAdapterTest >> testPeekFor [
 
 { #category : #tests }
 XMLReadStreamAdapterTest >> testPosition [
-	| adapter startPosition position |
+	| adapter startPosition endPosition position |
 
 	adapter := self newStreamAdapter.
 	startPosition := adapter position. "1 or 0 depending on the stream on GS"
+	endPosition :=
+		adapter
+			upToEnd;
+			position.
+	adapter := self newStreamAdapter.
 	position := startPosition.
 	self outputCollection do: [:each |
 		self
@@ -133,7 +154,7 @@ XMLReadStreamAdapterTest >> testPosition [
 			assert: adapter next = each;
 			assert: adapter position > position.
 		position := adapter position].
-	self assert: position = (startPosition + self inputCollection size).
+	self assert: position = endPosition.
 ]
 
 { #category : #tests }
@@ -200,12 +221,13 @@ XMLReadStreamAdapterTest >> testUpToEnd [
 
 	self outputCollection withIndexDo: [:each :i |
 		adapter := self newStreamAdapter.
-		adapter next: i.
+		adapter skip: i.
 		self
 			assert: adapter upToEnd = (self outputCollection allButFirst: i);
-			assert: adapter upToEnd = ''].
+			assert: adapter upToEnd = self emptyOutputCollection].
+
 	adapter := self newStreamAdapter.
 	self
 		assert: adapter upToEnd = self outputCollection;
-		assert: adapter upToEnd = ''.
+		assert: adapter upToEnd = self emptyOutputCollection.
 ]

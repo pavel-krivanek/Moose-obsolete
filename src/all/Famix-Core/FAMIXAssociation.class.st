@@ -20,13 +20,15 @@ will produce two invocation associations first from method a to method b, and se
 Class {
 	#name : #FAMIXAssociation,
 	#superclass : #FAMIXSourcedEntity,
+	#traits : 'TAssociationMetaLevelDependency',
+	#classTraits : 'TAssociationMetaLevelDependency classTrait',
 	#instVars : [
 		'previous',
 		'next'
 	],
 	#classInstVars : [
-		'possibleTargetClasses',
-		'possibleSourceClasses'
+		'targetTypes',
+		'sourceTypes'
 	],
 	#category : #'Famix-Core'
 }
@@ -35,19 +37,38 @@ Class {
 FAMIXAssociation class >> annotation [
 	<MSEClass: #Association super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
 FAMIXAssociation class >> possibleSourceClasses [
-	^ possibleSourceClasses
-		ifNil: [ possibleSourceClasses := self privatePossibleSourcesClasses ]
+	self 
+		deprecated: 'Use sourceTypes instead'
+		on: '23 January 2018' 
+		in: 'Moose6.1'
+		transformWith: '`@receiver possibleSourceClasses' -> '`@receiver sourceTypes'.
+	^ self sourceTypes
 ]
 
 { #category : #accessing }
 FAMIXAssociation class >> possibleTargetClasses [
-	^ possibleTargetClasses
-		ifNil: [ possibleTargetClasses := self privatePossibleTargetClasses ]
+	self 
+		deprecated: 'Use targetTypes instead'
+		on: '23 January 2018' 
+		in: 'Moose6.1'
+		transformWith: '`@receiver possibleTargetClasses' -> '`@receiver targetTypes'.
+	^ self targetTypes
+]
+
+{ #category : #accessing }
+FAMIXAssociation class >> sourceTypes [
+	^ sourceTypes
+		ifNil: [ sourceTypes := self privateSourceTypes ]
+]
+
+{ #category : #accessing }
+FAMIXAssociation class >> targetTypes [
+	^ targetTypes
+		ifNil: [ targetTypes := self privateTargetTypes ]
 ]
 
 { #category : #accessing }
@@ -69,10 +90,10 @@ FAMIXAssociation >> from [
 ]
 
 { #category : #printing }
-FAMIXAssociation >> mooseDisplayStringOn: aStream [
-	self from mooseDisplayStringOn: aStream.
+FAMIXAssociation >> gtDisplayOn: aStream [
+	self from gtDisplayOn: aStream.
 	aStream nextPutAll: ' -> '.
-	self to mooseDisplayStringOn: aStream	
+	self to gtDisplayOn: aStream	
 ]
 
 { #category : #accessing }

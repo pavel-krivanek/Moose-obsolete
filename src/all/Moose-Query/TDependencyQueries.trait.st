@@ -13,6 +13,8 @@ The actual core of the algorithms are in MooseQueryCalculator class.
 
 Most  of the generic methods takes a symbol to describe the direction. This symbol will be used to find a MooseQueryAbstactDirectionStrategy to configure a MooseQueryCalculator.
 
+For more informations: https://moosequery.ferlicot.fr/
+
 Public API and Key Messages
 --------------------
 

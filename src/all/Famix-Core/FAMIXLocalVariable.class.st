@@ -14,7 +14,6 @@ Class {
 FAMIXLocalVariable class >> annotation [
 	<MSEClass: #LocalVariable super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

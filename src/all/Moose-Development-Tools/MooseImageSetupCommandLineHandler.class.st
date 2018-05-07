@@ -28,7 +28,8 @@ MooseImageSetupCommandLineHandler >> activateWithoutSaving [
 	GTImageSetupCommandLineHandler new activateWithoutSaving.
 	self installLogo.
 	self installImageDescription.
-	self flushMCCache
+	self flushMCCache.
+	IceRepository reset
 ]
 
 { #category : #'moose utilities' }

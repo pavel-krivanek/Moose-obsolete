@@ -24,6 +24,11 @@ REPGroupStakeholder >> asString [
 	^ ', ' join: (stakeholders collect: [:each | each asString])
 ]
 
+{ #category : #accessing }
+REPGroupStakeholder >> asStrings [
+	^ stakeholders flatCollect: [:each | each asStrings]
+]
+
 { #category : #initialize }
 REPGroupStakeholder >> initialize [ 
 	stakeholders := OrderedCollection new

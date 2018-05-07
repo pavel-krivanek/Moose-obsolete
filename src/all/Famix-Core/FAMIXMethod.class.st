@@ -11,6 +11,9 @@ Class {
 		'parentType',
 		'hasClassScope'
 	],
+	#classVars : [
+		'ShouldSearchForSmalltalkCodeInImage'
+	],
 	#category : #'Famix-Core'
 }
 
@@ -18,8 +21,16 @@ Class {
 FAMIXMethod class >> annotation [
 	<MSEClass: #Method super: #FAMIXBehaviouralEntity>
 	<package: #FAMIX>
-	
-	^self
+]
+
+{ #category : #accessing }
+FAMIXMethod class >> shouldSearchForSmalltalkCodeInImage [
+	^ ShouldSearchForSmalltalkCodeInImage ifNil: [ ShouldSearchForSmalltalkCodeInImage := true ]
+]
+
+{ #category : #accessing }
+FAMIXMethod class >> shouldSearchForSmalltalkCodeInImage: anObject [
+	ShouldSearchForSmalltalkCodeInImage := anObject
 ]
 
 { #category : #accessing }

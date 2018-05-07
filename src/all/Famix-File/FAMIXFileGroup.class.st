@@ -11,5 +11,4 @@ Class {
 FAMIXFileGroup class >> annotation [
 	<MSEClass: #FileGroup super: #MooseGroup>
 	<package: #FILE>
-	^self
 ]

@@ -74,41 +74,36 @@ ExtractedType >> cleanedAssignments [
 	^assigns
 ]
 
-{ #category : #RoelTyperValidation }
+{ #category : #accessing }
 ExtractedType >> contents [
 	^self types
 ]
 
 { #category : #private }
 ExtractedType >> flattenLinks [
-	[links isEmpty]	whileFalse: [|link|
+	[links isEmpty] 
+		whileFalse: [|link|
 			link :=  links anyOne.
 			links remove: link.
 			link flattenLinks.
 			link interface
-				do: [:sel | self addSend: sel].
+				do: [ :sel | self addSend: sel ].
 			link assignments
-				do: [:assign | self addAssignment: assign]].
+				do: [ :assign | self addAssignment: assign ]].
 	
 ]
 
 { #category : #private }
 ExtractedType >> foldInterfaceTypes: interfaceClasses withAssignmentTypes: assignmentClasses [
-| tmp | 
-	"	^interfaceClasses asOrderedCollection"
 
-	"Only interface types"
-
-	"	^assignmentClasses "
-
-	"Only assignment types"
+	| tmp | 
 	assignmentClasses remove: UndefinedObject ifAbsent: [].
 	tmp:=interfaceClasses.
 	(assignmentClasses size=0 and: [
 		((interface includes: #value) 
-		or: [interface includes: #value:]) and: [interfaceClasses includes: BlockContext]]) 
-			ifTrue: [tmp:=OrderedCollection with: BlockContext]
-			ifFalse: [tmp:=interfaceClasses].
+		or: [interface includes: #value:]) and: [interfaceClasses includes: BlockClosure]]) 
+			ifTrue: [ tmp:=OrderedCollection with: BlockClosure]
+			ifFalse: [ tmp:=interfaceClasses].
 	^self class mergerClass
 		interfaceTypes: tmp
 		assignmentTypes: assignmentClasses
@@ -124,7 +119,7 @@ ExtractedType >> hasEmptyInterface [
 	^self interface isEmpty
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 ExtractedType >> initialize [
 	super initialize.
 	links := Set new.
@@ -169,8 +164,8 @@ ExtractedType >> mergeTypes [
 
 { #category : #printing }
 ExtractedType >> printInterfaceAndAssigments [
-	|s|
-	s := WriteStream on: (String new).
+	| s |
+	s := WriteStream on: String new.
 	self printInterfaceAndAssigmentsOn: s.
 	^ s contents
 ]
@@ -179,15 +174,15 @@ ExtractedType >> printInterfaceAndAssigments [
 ExtractedType >> printInterfaceAndAssigmentsOn: aStream [
 	aStream nextPutAll: 'Sends: {'.
 	self interface
-		do: [:symbol | aStream print: symbol]
-		separatedBy: [aStream space].
+		do: [ :symbol | aStream print: symbol ]
+		separatedBy: [ aStream space ].
 	aStream
 		nextPutAll: '}';
 		cr;
 		nextPutAll: 'Assignments: {'.
 	self assignments
-		do: [:symbol | aStream print: symbol]
-		separatedBy: [aStream space].
+		do: [ :symbol | aStream print: symbol ]
+		separatedBy: [ aStream space ].
 	aStream
 		nextPutAll: '}';
 		cr
@@ -203,8 +198,7 @@ ExtractedType >> printOn: aStream [
 
 { #category : #private }
 ExtractedType >> rootsUnderstanding: selectors [
-	"When the set of selectors is not empty, answer a set of the highest possible classes in the system that implement all the selectors.
-	  When the set of selectors is empty, return the empty set."
+	"When the set of selectors is not empty, answer a set of the highest possible classes in the system that implement all the selectors. When the set of selectors is empty, return the empty set."
 
 	| initialClasses nextClasses traverseStack next |
 	selectors isEmpty ifTrue: [^OrderedCollection new].

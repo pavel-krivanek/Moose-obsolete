@@ -153,7 +153,7 @@ SwiftCondionalOperatorNode >> compositeNodeVariables [
 
 { #category : #generated }
 SwiftCondionalOperatorNode >> compositeTokenVariables [
-	^ #(#questionMarkTokens #colonTokens #identifierTokens #lessThanTokens #commaTokens #greaterThanTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #leftBracketTokens #rightBracketTokens #selfTokens #periodTokens #initTokens #leftBraceTokens #leftParenTokens #rightParenTokens #inoutTokens #letTokens #_Tokens #protocolTokens #minusGreaterThanTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #equalTokens #varTokens #rightBraceTokens #operatorTokens #dynamicTypeTokens)
+	^ #(#questionMarkTokens #colonTokens #identifierTokens #lessThanTokens #commaTokens #greaterThanTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #leftBracketTokens #rightBracketTokens #selfTokens #periodTokens #initTokens #leftBraceTokens #leftParenTokens #rightParenTokens #inoutTokens #letTokens #_Tokens #minusGreaterThanTokens #bangTokens #protocolTokens #typeTokens #periodPeriodPeriodTokens #equalTokens #varTokens #rightBraceTokens #operatorTokens #dynamicTypeTokens)
 ]
 
 { #category : #generated }
@@ -272,9 +272,9 @@ SwiftCondionalOperatorNode >> initialize [
 	inoutTokens := OrderedCollection new: 2.
 	letTokens := OrderedCollection new: 2.
 	_Tokens := OrderedCollection new: 2.
-	protocolTokens := OrderedCollection new: 2.
 	minusGreaterThanTokens := OrderedCollection new: 2.
 	bangTokens := OrderedCollection new: 2.
+	protocolTokens := OrderedCollection new: 2.
 	typeTokens := OrderedCollection new: 2.
 	periodPeriodPeriodTokens := OrderedCollection new: 2.
 	equalTokens := OrderedCollection new: 2.

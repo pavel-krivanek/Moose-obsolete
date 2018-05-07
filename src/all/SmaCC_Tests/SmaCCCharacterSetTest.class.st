@@ -5,8 +5,8 @@ Class {
 }
 
 { #category : #private }
-SmaCCCharacterSetTest >> newCollection [
-	^ SmaCCCharacterSet new
+SmaCCCharacterSetTest >> setClass [
+	^ SmaCCCharacterSet
 ]
 
 { #category : #private }

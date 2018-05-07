@@ -115,12 +115,6 @@ PhexMatcher >> beTrue [
 	^self be: true
 ]
 
-{ #category : #'expecting-string' }
-PhexMatcher >> beginWith: aPrefix [
-	^self expect: aPrefix using: #beginsWith: 
-	
-]
-
 { #category : #'expecting-change' }
 PhexMatcher >> change: aBlock [ 
 	| before after |
@@ -140,12 +134,6 @@ PhexMatcher >> change: aBlock from: before to: after [
 { #category : #'TDD todos' }
 PhexMatcher >> do: aDescription [
 	TestTodo signal: aDescription
-]
-
-{ #category : #'expecting-string' }
-PhexMatcher >> endWith: aSuffix [
-	^self expect: aSuffix using: #endsWith: 
-	
 ]
 
 { #category : #'expecting-collections' }
@@ -255,12 +243,6 @@ PhexMatcher >> isShould [
 { #category : #private }
 PhexMatcher >> isShouldNot [
 	^state = #(not) or: [state = #(not be)]
-]
-
-{ #category : #'expecting-string' }
-PhexMatcher >> matchRegex: regexString [
-	
-	^self expect: regexString using: #matchesRegex:
 ]
 
 { #category : #'expecting-boolean' }

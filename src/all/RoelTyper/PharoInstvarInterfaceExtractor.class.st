@@ -1,6 +1,6 @@
 Class {
 	#name : #PharoInstvarInterfaceExtractor,
-	#superclass : #SqueakInstvarInterfaceExtractor,
+	#superclass : #InstvarInterfaceExtractor,
 	#instVars : [
 		'blockTempsMapping',
 		'blocksLimits'
@@ -8,24 +8,17 @@ Class {
 	#category : #'RoelTyper-Pharo'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #block }
 PharoInstvarInterfaceExtractor >> blockMapping [
-	^blockTempsMapping last
+	^ blockTempsMapping last
 ]
 
-{ #category : #'instruction decoding' }
-PharoInstvarInterfaceExtractor >> blockReturnTop [
-	"Return Top Of Stack bytecode."
-	"self removeBlockMapping."
-	^self pop
-]
-
-{ #category : #'as yet unclassified' }
+{ #category : #block }
 PharoInstvarInterfaceExtractor >> blocksArgsBySize [
-	^blocksLimits ifNil: [blocksLimits := OrderedCollection new]
+	^ blocksLimits ifNil: [ blocksLimits := OrderedCollection new ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #block }
 PharoInstvarInterfaceExtractor >> blocksDecrement [
 
 		blocksLimits := blocksLimits select: [:e | (e = input pc) ifTrue: [self removeBlockMapping.  false] ifFalse: [true] ]
@@ -53,7 +46,7 @@ PharoInstvarInterfaceExtractor >> extractInterfacesFrom: m addTo: aTypeCollector
 			]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #block }
 PharoInstvarInterfaceExtractor >> inABlock [
 	^blockTempsMapping isEmpty not
 ]
@@ -69,7 +62,7 @@ PharoInstvarInterfaceExtractor >> methodReturnTop [
 	^self pop
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #block }
 PharoInstvarInterfaceExtractor >> newBlockMapping [
 	blockTempsMapping add: OrderedCollection new.
 	
@@ -79,8 +72,7 @@ PharoInstvarInterfaceExtractor >> newBlockMapping [
 PharoInstvarInterfaceExtractor >> popIntoRemoteTemp: remoteTempIndex inVectorAt: tempVectorIndex [
 	"Remove Top Of Stack And Store Into Offset of Temp Vector bytecode."
 	stack removeLast
-	"collector handleAssignment: stack removeLast forTmp: (self blockMapping at: remoteTempIndex ) value
-	"
+	
 ]
 
 { #category : #'instruction decoding' }
@@ -135,7 +127,7 @@ PharoInstvarInterfaceExtractor >> pushTemporaryVariable: offset [
 		ifFalse: [stack add: #temp -> offset]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #removing }
 PharoInstvarInterfaceExtractor >> removeBlockMapping [
 	blockTempsMapping removeLast
 ]

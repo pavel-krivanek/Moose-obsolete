@@ -9,7 +9,6 @@ Class {
 
 { #category : #meta }
 FAMIXAnnotationTypeGroup class >> annotation [
-
 	<MSEClass: #AnnotationTypeGroup super: #MooseGroup>
 	<package: #FAMIX>
 

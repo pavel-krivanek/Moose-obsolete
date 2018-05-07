@@ -13,5 +13,4 @@ Class {
 FAMIXCppSourceLanguage class >> annotation [
 	<MSEClass: #CppSourceLanguage super: #FmxNGCSourceLanguage>
 	<package: #FAMIX>
-	^self
 ]

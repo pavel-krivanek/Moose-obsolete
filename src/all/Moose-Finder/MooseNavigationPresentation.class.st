@@ -56,5 +56,5 @@ MooseNavigationPresentation >> dynamicActionsIn: list [
 { #category : #private }
 MooseNavigationPresentation >> formatFor: each [
 	^ (' ' join: ((each key argumentAt: 1) piecesCutWhereCamelCase collect: #capitalized)) , ' - '
-		, (each value mooseDisplayString contractTo: 50)
+		, (each value gtDisplayString contractTo: 50)
 ]

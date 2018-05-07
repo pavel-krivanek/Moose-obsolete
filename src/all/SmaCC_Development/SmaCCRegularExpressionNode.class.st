@@ -25,13 +25,6 @@ Class {
 	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCRegularExpressionNode class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #constructing }
 SmaCCRegularExpressionNode >> , aSmaCCRegularExpressionNode [
 	^ SmaCCSequenceRENode

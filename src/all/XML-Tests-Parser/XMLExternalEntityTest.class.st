@@ -32,6 +32,8 @@ XMLExternalEntityTest class >> skippableTests [
 			testParsingExternalEntitiesLimit
 			testParsingFile
 			testParsingRetrievedURL
+			testParsingStrictXHTMLDocument
+			testParsingStrictXHTMLStyledDocument
 			testParsingURL)
 ]
 
@@ -151,6 +153,49 @@ XMLExternalEntityTest >> musicXMLDocument [
 '.
 ]
 
+{ #category : #source }
+XMLExternalEntityTest >> strictXHTMLDocumentSource [
+	^ '<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Virtual Library</title>
+  </head>
+  <body>
+    <p>Moved to <a href="http://example.org/">example.org</a>.</p>
+  </body>
+</html>'
+]
+
+{ #category : #source }
+XMLExternalEntityTest >> strictXHTMLStyledDocumentSource [
+	^ '<?xml-stylesheet href="http://www.w3.org/StyleSheets/TR/W3C-REC.css" type="text/css"?>
+<?xml-stylesheet href="#internalStyle" type="text/css"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>An internal stylesheet example</title>
+<style type="text/css" id="internalStyle">
+  code {
+    color: green;
+    font-family: monospace;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<p>
+  This is text that uses our 
+  <code>internal stylesheet</code>.
+</p>
+</body>
+</html>'
+]
+
 { #category : #accessing }
 XMLExternalEntityTest >> tempFileManager [
 	^ tempFileManager ifNil: [tempFileManager := XMLTempFileManager new]
@@ -207,7 +252,7 @@ XMLExternalEntityTest >> testOnFileNamed [
 			raise: XMLFileException.
 		self
 			assert: parser documentURI = fileHandle path;
-			assert: parser documentURI asXMLURI isLocalURI].
+			assert: parser documentURI asXMLURI isLocal].
 ]
 
 { #category : #tests }
@@ -223,7 +268,7 @@ XMLExternalEntityTest >> testOnURL [
 		raise: XMLHTTPException.
 	self
 		assert: parser documentURI = self feedURL;
-		deny: parser documentURI asXMLURI isLocalURI.
+		deny: parser documentURI asXMLURI isLocal.
 ]
 
 { #category : #tests }
@@ -485,6 +530,40 @@ XMLExternalEntityTest >> testParsingFile [
 			shouldnt: [document := XMLDOMParser parseFileNamed: fileHandle path]
 			raise: XMLFileException.
 		self assert: (document root isNamed: 'score-partwise')].
+]
+
+{ #category : #tests }
+XMLExternalEntityTest >> testParsingStrictXHTMLDocument [
+	"This uses HTTP so is skipped by default"
+
+	self
+		skipOrReturnWith: [^ self]
+		ifSkippable: #testParsingStrictXHTMLDocument.
+
+	self
+		shouldnt: [
+			(SAXHandler on: self strictXHTMLDocumentSource)
+				resolvesExternalEntities: true;
+				removeLimits;
+				parseDocument]
+		raise: XMLParserException.
+]
+
+{ #category : #tests }
+XMLExternalEntityTest >> testParsingStrictXHTMLStyledDocument [
+	"This uses HTTP so is skipped by default"
+
+	self
+		skipOrReturnWith: [^ self]
+		ifSkippable: #testParsingStrictXHTMLStyledDocument.
+
+	self
+		shouldnt: [
+			(SAXHandler on: self strictXHTMLStyledDocumentSource)
+				resolvesExternalEntities: true;
+				removeLimits;
+				parseDocument]
+		raise: XMLParserException.
 ]
 
 { #category : #tests }

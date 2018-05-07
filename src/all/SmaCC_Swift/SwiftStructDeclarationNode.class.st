@@ -70,7 +70,7 @@ SwiftStructDeclarationNode >> compositeNodeVariables [
 
 { #category : #generated }
 SwiftStructDeclarationNode >> compositeTokenVariables [
-	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens #lessThanTokens #colonTokens #commaTokens #greaterThanTokens #periodTokens #protocolTokens #equalEqualTokens)
+	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #operatorTokens #lessThanTokens #colonTokens #greaterThanTokens #commaTokens #periodTokens #protocolTokens #equalEqualTokens)
 ]
 
 { #category : #generated }
@@ -148,12 +148,12 @@ SwiftStructDeclarationNode >> initialize [
 	rightBraceTokens := OrderedCollection new: 2.
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
-	operatorTokens := OrderedCollection new: 2.
 	full_string_literalTokens := OrderedCollection new: 2.
+	operatorTokens := OrderedCollection new: 2.
 	lessThanTokens := OrderedCollection new: 2.
 	colonTokens := OrderedCollection new: 2.
-	commaTokens := OrderedCollection new: 2.
 	greaterThanTokens := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
 	periodTokens := OrderedCollection new: 2.
 	protocolTokens := OrderedCollection new: 2.
 	equalEqualTokens := OrderedCollection new: 2.

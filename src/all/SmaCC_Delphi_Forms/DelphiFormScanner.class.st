@@ -7,7 +7,7 @@ Class {
 { #category : #'generated-initialization' }
 DelphiFormScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(20 'END' 7) #(20 'FALSE' 19) #(20 'INHERITED' 3) #(20 'INLINE' 4) #(20 'ITEM' 13) #(20 'OBJECT' 8) #(20 'TRUE' 19))
+	#(#(20 'END' 12) #(20 'FALSE' 19) #(20 'INHERITED' 13) #(20 'INLINE' 14) #(20 'ITEM' 15) #(20 'OBJECT' 16) #(20 'TRUE' 19))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -22,12 +22,12 @@ DelphiFormScanner >> bytesId [
 
 { #category : #generated }
 DelphiFormScanner >> emptySymbolTokenId [
-	^ 48
+	^ 50
 ]
 
 { #category : #generated }
 DelphiFormScanner >> errorTokenId [
-	^ 49
+	^ 51
 ]
 
 { #category : #generated }
@@ -253,26 +253,26 @@ DelphiFormScanner >> scanForToken [
 	currentCharacter == $'
 		ifTrue: [ ^ self scan2 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(16) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	currentCharacter == $+
-		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
 	currentCharacter == $,
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	currentCharacter == $-
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
 	currentCharacter == $.
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	currentCharacter == $:
 		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $<
-		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
 	currentCharacter == $>
-		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
 	^ self scanForTokenX4
 ]
 
@@ -311,15 +311,15 @@ DelphiFormScanner >> scanForTokenX3 [
 { #category : #generated }
 DelphiFormScanner >> scanForTokenX4 [
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
 	currentCharacter == $`
 		ifTrue: [ ^ self scan12 ].
 	currentCharacter == ${
-		ifTrue: [ ^ self recordAndReportMatch: #(18) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
 	currentCharacter == $}
-		ifTrue: [ ^ self recordAndReportMatch: #(15) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(18) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan6 ].
 	(currentCharacter isSeparator

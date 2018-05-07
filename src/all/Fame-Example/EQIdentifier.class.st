@@ -7,7 +7,7 @@ Class {
 	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQIdentifier class >> annotation [
 	<MSEClass: #Identifier super: #Object>
 	<package: #EQ>

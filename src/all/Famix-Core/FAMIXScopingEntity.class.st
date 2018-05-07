@@ -18,7 +18,6 @@ Class {
 FAMIXScopingEntity class >> annotation [
 	<MSEClass: #ScopingEntity super: #FAMIXContainerEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

@@ -18,10 +18,7 @@ SmaCCNFAtoDFA class >> convertToDFA: aSmaCCNode [
 SmaCCNFAtoDFA >> commonTransitionObjectsForEdges: edgeCollection [
 	^ edgeCollection
 		inject: edgeCollection first transitionObjects
-		into: [ :sum :each | 
-			sum size < each transitionObjects size
-				ifTrue: [ sum select: [ :char | each includes: char ] ]
-				ifFalse: [ each transitionObjects select: [ :char | sum includes: char ] ] ]
+		into: [ :sum :each | sum smaccIntersect: each transitionObjects ]
 ]
 
 { #category : #algorithm }
@@ -94,12 +91,8 @@ SmaCCNFAtoDFA >> someDuplicateIn: edgeCollection [
 	| objects |
 	objects := SmaCCSet new.
 	edgeCollection
-		do:
-			[ :edge | 
-			edge transitionObjects
-				do: [ :each | 
-					(objects includes: each)
-						ifTrue: [ ^ each ] ].
+		do: [ :edge | 
+			(objects commonElementWith: edge transitionObjects) ifNotNil: [ :each | ^ each ].
 			objects addAll: edge transitionObjects ].
 	^ nil
 ]

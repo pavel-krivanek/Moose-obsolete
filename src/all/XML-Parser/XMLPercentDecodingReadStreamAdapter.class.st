@@ -1,32 +1,51 @@
 "
-A read stream adapter that decodes streams encoded with  sequences of ""%HH"" byte hex values for parsing URIs.
+This class percent decodes octets for URIs.
 "
 Class {
 	#name : #XMLPercentDecodingReadStreamAdapter,
-	#superclass : #XMLDecodingReadStreamAdapter,
+	#superclass : #XMLReadStreamAdapter,
 	#category : #'XML-Parser-Streams'
 }
 
 { #category : #testing }
 XMLPercentDecodingReadStreamAdapter >> atEnd [
-	^ peekChar == nil
-		and: [stream atEnd
-			or: [stream peek ~~ $%]]
+	^ stream atEnd
+		or: [stream peek ~~ $%]
 ]
 
-{ #category : #private }
-XMLPercentDecodingReadStreamAdapter >> basicNext [
-	| byteValue |
+{ #category : #testing }
+XMLPercentDecodingReadStreamAdapter >> isBinary [
+	"this stream is binary, because it reads percent-encoded octets
+	character sequences like '%HH' and returns the octet values as
+	SmallIntegers"
+	^ true
+]
+
+{ #category : #accessing }
+XMLPercentDecodingReadStreamAdapter >> next [
+	| byte |
 
 	(stream atEnd not
 		and: [stream peek == $%])
-		ifFalse: [^ nil].
-	stream next.
+		ifTrue: [
+			stream next.
+			byte :=
+				(XMLSmallIntegerReader
+					readFrom: stream
+					withBase: 16
+					upToLimit: 2)
+						ifNil: [37] "$% asciiValue"].
+	^ byte.
+]
 
-	byteValue :=
-		XMLIntegerReader
-			readFrom: stream
-			withBase: 16
-			upTo: 2.
-	^ (byteValue ifNil: [$%]) asCharacter.
+{ #category : #accessing }
+XMLPercentDecodingReadStreamAdapter >> peek [
+	| byte |
+
+	stream atEnd
+		ifFalse: [| oldPosition |
+			oldPosition := stream position.
+			byte := self next.
+			stream position: oldPosition].
+	^ byte.
 ]

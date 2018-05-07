@@ -8,10 +8,10 @@ Class {
 	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQCompound class >> annotation [
-	<MSEClass: 'Compound' super: #EQExpression >
-	<package: 'EQ'>
+	<MSEClass: #Compound super: #EQExpression >
+	<package: #EQ>
 	<abstract>
 ]
 

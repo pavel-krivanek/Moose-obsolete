@@ -227,7 +227,7 @@ DynamixEvent >> mooseFinderChildrenTreeIn: composite [
 		title: 'Children tree';
 		rootsExpanded;
 		display: [:entity | {entity mooseInterestingEntity}];
-		format: [:each | each mooseDisplayString];
+		format: [:each | each gtDisplayString];
 		children: [ :each | each children ];
 		icon: #mooseIcon
 ]

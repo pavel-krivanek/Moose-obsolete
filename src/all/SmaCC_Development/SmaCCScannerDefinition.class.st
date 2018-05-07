@@ -9,13 +9,6 @@ Class {
 	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCScannerDefinition class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #accessing }
 SmaCCScannerDefinition >> addExcludeState: aSymbol [
 	excludeStates add: aSymbol.

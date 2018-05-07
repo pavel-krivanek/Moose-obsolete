@@ -15,13 +15,6 @@ Class {
 	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCGrammarCompiler class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #'action table' }
 SmaCCGrammarCompiler >> actionForState: anInteger on: aSmaCCSymbol [
 	| action |
@@ -33,14 +26,14 @@ SmaCCGrammarCompiler >> actionForState: anInteger on: aSmaCCSymbol [
 
 { #category : #'initialize-release' }
 SmaCCGrammarCompiler >> buildDefinition: definitionString [
-	| parser |
+	| parser tree |
 	scannerCompiler grammar: self grammar.
 	parserDefinitionString := definitionString.
 	parser := SmaCCDefinitionParser on: (ReadStream on: definitionString).
-	parser scanner
-		parseSourceSelector: self codeGenerator parseSourceSelector.
-	parser grammar: grammar.
-	parser parse.
+	parser scanner parseSourceSelector: self codeGenerator parseSourceSelector.
+	tree := parser parse.
+	tree completeSource: definitionString.
+	SmaCCGrammarCreator buildGrammar: grammar from: tree.
 	grammar finishBuilding
 ]
 
@@ -268,8 +261,7 @@ SmaCCGrammarCompiler >> multipleActionTableRow: row [
 
 { #category : #'action table' }
 SmaCCGrammarCompiler >> optimizeTransitionTable: anArray [
-	| newTable |
-	newTable := anArray
+	^ anArray
 		collect: [ :row | 
 			row
 				collect: [ :action | 
@@ -278,8 +270,7 @@ SmaCCGrammarCompiler >> optimizeTransitionTable: anArray [
 						ifTrue: [ newShiftAction := self optimizedShiftFrom: row to: (action bitShift: -2) inTable: anArray ].
 					newShiftAction notNil
 						ifTrue: [ newShiftAction ]
-						ifFalse: [ action ] ] ].
-	^ newTable
+						ifFalse: [ action ] ] ]
 ]
 
 { #category : #'action table' }

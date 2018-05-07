@@ -23,13 +23,6 @@ Class {
 	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCGrammarItem class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #private }
 SmaCCGrammarItem >> annotateTokenVariables: aBlock [
 	self subclassResponsibility

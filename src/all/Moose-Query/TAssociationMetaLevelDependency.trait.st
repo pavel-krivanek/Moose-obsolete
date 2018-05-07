@@ -1,5 +1,7 @@
 "
 This trait provides a common, paradigm agnostic vocabulary to query dependencies of association entities at meta level.
+
+For more informations: https://moosequery.ferlicot.fr/
 "
 Trait {
 	#name : #TAssociationMetaLevelDependency,

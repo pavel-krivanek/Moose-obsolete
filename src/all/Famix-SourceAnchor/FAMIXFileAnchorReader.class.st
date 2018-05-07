@@ -55,8 +55,16 @@ FAMIXFileAnchorReader >> manageNewLineReturnBeforeStartFromCr: aBoolean [
 
 { #category : #reading }
 FAMIXFileAnchorReader >> read [
-	self readUntilStart.
-	fileAnchor endLine ifNil: [ writeStream nextPutAll: readStream upToEnd ] ifNotNil: [ :endLine | self readUntil: endLine ]
+	[ [ self tryToRead ]
+		on: ZnCharacterEncodingError
+		do:
+			[ "Sometime while reading characters one by one it fail, so we try to read the full file and the just the part we want."
+			self reset.
+			readStream := readStream contents readStream.
+			self tryToRead ] ]
+		on: Error
+		do:
+			[ "If the model is wrong, the file can be smaller than the model think. In that case we just stop the reading" ]
 ]
 
 { #category : #accessing }
@@ -70,10 +78,10 @@ FAMIXFileAnchorReader >> readUntil: endLine [
 		whileTrue: [ (char := readStream next) isCr
 				ifTrue: [ self increment.
 					writeStream nextPut: char.
-					(char := readStream next)
-						ifNotNil: [ char isLf
-								ifTrue: [ writeStream nextPut: char ]
-								ifFalse: [ readStream oneBack ] ] ]
+					readStream peek
+						ifNotNil: [ :char2 | 
+							char2 isLf
+								ifTrue: [ writeStream nextPut: readStream next ] ] ]
 				ifFalse: [ char isLf
 						ifTrue: [ self increment ].
 					writeStream nextPut: char ] ].
@@ -83,9 +91,7 @@ FAMIXFileAnchorReader >> readUntil: endLine [
 { #category : #reading }
 FAMIXFileAnchorReader >> readUntilEndColumn [
 	fileAnchor endColumn
-		ifNil: [ readStream next
-				ifNotNil: [ readStream oneBack.
-					[ (char := readStream next) isCr or: [ char isLf ] ] whileFalse: [ writeStream nextPut: char ] ] ]
+		ifNil: [ readStream peek ifNotNil: [ [ (char := readStream next) isCr or: [ char isLf ] ] whileFalse: [ writeStream nextPut: char ] ] ]
 		ifNotNil: [ :ec | 
 			| numberOfCharToRead |
 			numberOfCharToRead := self startLine = fileAnchor endLine
@@ -99,8 +105,8 @@ FAMIXFileAnchorReader >> readUntilStart [
 	[ lineCount < self startLine ]
 		whileTrue: [ (char := readStream next) isCr
 				ifTrue: [ self manageNewLineReturnBeforeStartFromCr: true.
-					(char := readStream next) isLf
-						ifFalse: [ readStream oneBack ] ]
+					readStream peek isLf
+						ifTrue: [ readStream next ] ]
 				ifFalse: [ char isLf
 						ifTrue: [ self manageNewLineReturnBeforeStartFromCr: false ] ] ]
 ]
@@ -111,16 +117,30 @@ FAMIXFileAnchorReader >> readUntilStartColumn [
 ]
 
 { #category : #reading }
+FAMIXFileAnchorReader >> reset [
+	self initialize.
+	readStream reset.
+	writeStream reset
+]
+
+{ #category : #reading }
 FAMIXFileAnchorReader >> skipNextIfLf [
 	"I will probably be called after a CR to remove a possible CRLF"
 
-	(char := readStream next) isLf
-		ifFalse: [ readStream oneBack ]
+	readStream peek isLf ifTrue: [ readStream next ]
 ]
 
 { #category : #accessing }
 FAMIXFileAnchorReader >> startLine [
 	^ startLine ifNil: [ startLine := fileAnchor startLine ifNil: [ 1 ] ]
+]
+
+{ #category : #reading }
+FAMIXFileAnchorReader >> tryToRead [
+	self readUntilStart.
+	fileAnchor endLine
+		ifNil: [ writeStream nextPutAll: readStream upToEnd ]
+		ifNotNil: [ :endLine | self readUntil: endLine ]
 ]
 
 { #category : #accessing }

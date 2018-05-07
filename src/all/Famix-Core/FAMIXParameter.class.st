@@ -14,7 +14,6 @@ Class {
 FAMIXParameter class >> annotation [
 	<MSEClass: #Parameter super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

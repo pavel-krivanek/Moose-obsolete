@@ -7,7 +7,7 @@ Class {
 	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQEquationSystem class >> annotation [
 	<MSEClass: #EquationSystem super: #Object>
 	<package: #EQ>

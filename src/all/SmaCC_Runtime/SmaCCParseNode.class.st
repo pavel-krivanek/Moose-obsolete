@@ -30,13 +30,6 @@ SmaCCParseNode class >> collectionVariableIn: aSmaCCParseNode collectionGetter: 
 	^ #()
 ]
 
-{ #category : #'instance creation' }
-SmaCCParseNode class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #accessing }
 SmaCCParseNode class >> variableIn: aSmaCCParseNode getter: aSymbol [
 	(aSmaCCParseNode respondsTo: aSymbol)
@@ -106,7 +99,7 @@ SmaCCParseNode >> addFirstToken: aSmaCCToken to: aCollection [
 SmaCCParseNode >> addFirstTokens: aSmaCCTokenCollection to: aCollection [
 	aSmaCCTokenCollection isNil
 		ifTrue: [ ^ self ].
-	aCollection addAll: aSmaCCTokenCollection beforeIndex: 1
+	aCollection addAllFirst: aSmaCCTokenCollection
 ]
 
 { #category : #'collection handling' }
@@ -174,6 +167,14 @@ SmaCCParseNode >> allNodesDo: nodeBlock andTokensDo: tokenBlock [
 			nodeBlock value: each.
 			each allNodesDo: nodeBlock andTokensDo: tokenBlock ]
 		andTokensDo: tokenBlock
+]
+
+{ #category : #iterating }
+SmaCCParseNode >> allNodesOfType: aClass do: nodeBlock [
+	self
+		allNodesDo: [ :each | 
+			(each isKindOf: aClass)
+				ifTrue: [ nodeBlock value: each ] ]
 ]
 
 { #category : #accessing }
@@ -811,4 +812,23 @@ SmaCCParseNode >> topParent [
 { #category : #variables }
 SmaCCParseNode >> variableSelectors [
 	^ #(#tokenVariables #compositeTokenVariables #nodeVariables #compositeNodeVariables #otherVariables)
+]
+
+{ #category : #iterating }
+SmaCCParseNode >> withAllNodesDo: nodeBlock [
+	nodeBlock value: self.
+	self allNodesDo: nodeBlock
+]
+
+{ #category : #iterating }
+SmaCCParseNode >> withAllNodesDo: nodeBlock andTokensDo: tokenBlock [
+	nodeBlock value: self.
+	self allNodesDo: nodeBlock andTokensDo: tokenBlock
+]
+
+{ #category : #iterating }
+SmaCCParseNode >> withAllNodesOfType: aClass do: nodeBlock [
+	(self isKindOf: aClass)
+		ifTrue: [ nodeBlock value: self ].
+	self allNodesOfType: aClass do: nodeBlock
 ]

@@ -27,7 +27,7 @@ REPHtml >> printConcern: aConcern [
 		stream
 			nextPutAll: '<ul>';
 			nextPutAll: '<li>';
-			nextPutAll: (('</li> <li>') join: (aConcern result asOrderedCollection collect: #mooseDisplayString));
+			nextPutAll: (('</li> <li>') join: (aConcern result asOrderedCollection collect: #gtDisplayString));
 			nextPutAll: '</li>';
 "				nextPutAll: (self encode: aConcern stringResult);
 				nextPutAll: '</li';

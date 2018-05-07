@@ -13,15 +13,10 @@ Class {
 
 { #category : #'instance creation' }
 AbstractType class >> forInstvar: iv inClass: aClass [
-	^(self basicNew initialize)
+	^ self new
 		ivarName: iv;
 		ivarClass: aClass;
 		yourself
-]
-
-{ #category : #'instance creation' }
-AbstractType class >> new [
-	^self shouldNotImplement
 ]
 
 { #category : #private }
@@ -50,7 +45,7 @@ AbstractType >> conflictingSelectorsWith: anExtractedType [
 	^conflictingSelectors
 ]
 
-{ #category : #'initialize-release' }
+{ #category : #initialization }
 AbstractType >> initialize [
 	"Do nothing, but give subclasses the chance to override."
 
@@ -85,7 +80,7 @@ AbstractType >> ivarClass [
 { #category : #accessing }
 AbstractType >> ivarClass: aClass [
 	ivarClass := aClass.
-	"self triggerEvent: #changed"
+	
 ]
 
 { #category : #accessing }
@@ -95,8 +90,7 @@ AbstractType >> ivarName [
 
 { #category : #accessing }
 AbstractType >> ivarName: aSymbol [
-	ivarName := aSymbol.
-	"self triggerEvent: #changed"
+	ivarName := aSymbol
 ]
 
 { #category : #private }
@@ -112,8 +106,8 @@ AbstractType >> printOn: aStream [
 { #category : #printing }
 AbstractType >> printTypesOn: aStream [
 	self types
-		do: [:each | aStream print: each]
-		separatedBy: [aStream nextPutAll: ' , ']
+		do: [ :each | aStream print: each ]
+		separatedBy: [ aStream nextPutAll: ' , ' ]
 ]
 
 { #category : #accessing }

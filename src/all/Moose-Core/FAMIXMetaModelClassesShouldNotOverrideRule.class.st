@@ -54,5 +54,5 @@ FAMIXMetaModelClassesShouldNotOverrideRule >> rationale [
 { #category : #accessing }
 FAMIXMetaModelClassesShouldNotOverrideRule >> selectorsThatShouldNotBeOverriden [
 
-	^ #(#mooseName #printString #mooseDisplayString)
+	^ #(#mooseName #printString #gtDisplayString)
 ]

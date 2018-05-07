@@ -9,7 +9,7 @@ Class {
 	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoNamespaceHistory class >> annotation [
 	<MSEClass: #NamespaceHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

@@ -11,7 +11,6 @@ Class {
 FAMIXUnknownVariable class >> annotation [
 	<MSEClass: #UnknownVariable super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

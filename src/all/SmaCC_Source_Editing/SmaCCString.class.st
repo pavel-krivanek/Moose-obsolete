@@ -22,13 +22,6 @@ Class {
 }
 
 { #category : #'instance creation' }
-SmaCCString class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
-{ #category : #'instance creation' }
 SmaCCString class >> on: aString [
 	^ self new
 		insert: aString at: 0;

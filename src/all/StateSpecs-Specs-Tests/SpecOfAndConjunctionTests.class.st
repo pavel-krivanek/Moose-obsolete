@@ -21,7 +21,7 @@ SpecOfAndConjunctionTests >> testCreationByBinaryMessage [
 { #category : #tests }
 SpecOfAndConjunctionTests >> testMatches [
 	| spec1 spec2 stateSpec |
-	spec1 := SpecOfEquality to: #expectedValue.
+	spec1 := SpecOfEquality requiredValue: #expectedValue.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfAndConjunction of: spec1 and: spec2.
@@ -34,7 +34,7 @@ SpecOfAndConjunctionTests >> testMatches [
 { #category : #tests }
 SpecOfAndConjunctionTests >> testValidateFailed [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: #expectedValue.
+	spec1 := SpecOfEquality requiredValue: #expectedValue.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfAndConjunction of: spec1 and: spec2.
@@ -48,7 +48,7 @@ SpecOfAndConjunctionTests >> testValidateFailed [
 { #category : #tests }
 SpecOfAndConjunctionTests >> testValidateFailed2 [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfAndConjunction of: spec1 and: spec2.
@@ -62,7 +62,7 @@ SpecOfAndConjunctionTests >> testValidateFailed2 [
 { #category : #tests }
 SpecOfAndConjunctionTests >> testValidateSuccessful [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: #expectedValue.
+	spec1 := SpecOfEquality requiredValue: #expectedValue.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfAndConjunction of: spec1 and: spec2.

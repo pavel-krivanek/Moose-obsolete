@@ -20,11 +20,10 @@ Class {
 	#category : #'Famix-Java'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXEnumValue class >> annotation [
 	<MSEClass: #EnumValue super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

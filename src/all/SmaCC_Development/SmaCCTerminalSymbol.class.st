@@ -47,6 +47,11 @@ SmaCCTerminalSymbol >> modelTypes: anIdentitySet [
 ]
 
 { #category : #accessing }
+SmaCCTerminalSymbol >> position [
+	^ self regularExpression ifNil: [ SmallInteger maxVal ] ifNotNil: [ :re | re position ifNil: [ 0 ] ]
+]
+
+{ #category : #accessing }
 SmaCCTerminalSymbol >> regularExpression [
 	^ regularExpression
 ]

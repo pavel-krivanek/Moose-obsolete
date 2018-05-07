@@ -27,5 +27,11 @@ Class {
 FAMIXEntity class >> annotation [
 	<MSEClass: #Entity super: #Object>
 	<package: #FAMIX>
-	^self
+]
+
+{ #category : #accessing }
+FAMIXEntity >> belongsTo [
+	"Return the primary container of the entity if it exist"
+	
+	^ self subclassResponsibility
 ]

@@ -10,11 +10,10 @@ Class {
 	#category : #'Famix-SourceAnchor'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 FAMIXMultipleFileAnchor class >> annotation [
 	<MSEClass: #MultipleFileAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #public }

@@ -187,14 +187,14 @@ XMLElementTest >> testAttributeNamesAndValuesDo [
 
 	element := self newNode.
 	self
-		should: [:twoArgumentBlock |
+		xmlShould: [:twoArgumentBlock |
 			element attributeNamesAndValuesDo: twoArgumentBlock]
 		enumerate: #()
 		and: #().
 
 	element := self newElementWithAttributes.
 	self
-		should: [:twoArgumentBlock |
+		xmlShould: [:twoArgumentBlock |
 			element attributeNamesAndValuesDo: twoArgumentBlock]
 		enumerate: self attributeNames
 		and: self attributeValues.
@@ -206,12 +206,12 @@ XMLElementTest >> testAttributeNamesDo [
 
 	element := self newNode.
 	self
-		should: [:block | element attributeNamesDo: block]
+		xmlShould: [:block | element attributeNamesDo: block]
 		enumerate: #().
 
 	element := self newElementWithAttributes.
 	self
-		should: [:block | element attributeNamesDo: block]
+		xmlShould: [:block | element attributeNamesDo: block]
 		enumerate: element attributeNames.
 ]
 
@@ -339,12 +339,12 @@ XMLElementTest >> testAttributeNodesDo [
 
 	element := self newNode.
 	self
-		should: [:block | element attributeNodesDo: block]
+		xmlShould: [:block | element attributeNodesDo: block]
 		enumerate: #().
 
 	element := self newElementWithAttributes.
 	self
-		should: [:block | element attributeNodesDo: block]
+		xmlShould: [:block | element attributeNodesDo: block]
 		enumerate: element attributeNodes.
 ]
 
@@ -486,7 +486,7 @@ XMLElementTest >> testCanonicalPrinting [
 
 	self assert:
 		element printString =
-			'<test xmlns:b="ns2" xmlns:a="ns1" xmlns="default" c="3" b="2" a="1" />'.
+			'<test xmlns:b="ns2" xmlns:a="ns1" xmlns="default" c="3" b="2" a="1"/>'.
 	self assert:
 		element canonicallyPrinted =
 			'<test xmlns="default" xmlns:a="ns1" xmlns:b="ns2" a="1" b="2" c="3"></test>'.
@@ -575,6 +575,33 @@ XMLElementTest >> testDeclarePrefixURI [
 			declarePrefix: 'prefix'
 			uri: 'prefixNS') == element.
 	self assert: element usesNamespaces.
+]
+
+{ #category : #tests }
+XMLElementTest >> testDeclarePrefixURIAttributes [
+	| element |
+
+	(element := self newElement)
+		attributeAt: 'name'
+		put: 'one'.
+	element
+		attributeAt: 'prefix:name'
+		put: 'two'.
+	element
+		attributeAt: 'prefixTwo:name'
+		put: 'three'.
+	self
+		shouldnt: [
+			element
+				declarePrefix: 'prefixTwo'
+				uri: element defaultNamespace]
+		raise: XMLNamespaceException.
+	self
+		should: [
+			element
+				declarePrefix: 'prefixTwo'
+				uri: (element resolvePrefix: 'prefix')]
+		raise: XMLNamespaceException.
 ]
 
 { #category : #tests }
@@ -975,25 +1002,38 @@ XMLElementTest >> testIsInLanguage [
 	| nodeWithElements |
 
 	super testIsInLanguage.
-	nodeWithElements := self newNodeWithElements.
-	nodeWithElements allNodesDo: [:each |
-		self
-			deny: (each isInLanguage: 'en-us');
-			deny: (each isInLanguage: 'EN-US');
-			deny: (each isInLanguage: 'En');
-			deny: (each isInLanguage: 'de-de');
-			deny: (each isInLanguage: 'DE-DE');
-			deny: (each isInLanguage: 'De')].
 
-	nodeWithElements attributeAt: 'xml:lang' put: 'En-Us'.
-	nodeWithElements allNodesDo: [:each |
-		self
-			assert: (each isInLanguage: 'en-us');
-			assert: (each isInLanguage: 'EN-US');
-			assert: (each isInLanguage: 'En');
-			deny: (each isInLanguage: 'de-de');
-			deny: (each isInLanguage: 'DE-DE');
-			deny: (each isInLanguage: 'De')].
+	nodeWithElements := self newNodeWithElements.
+	self languageTagsAndFilters do: [:tagAndFilters |
+		| tag matchingFilters nonMatchingFilters |
+		
+		tag := tagAndFilters first.
+		matchingFilters := tagAndFilters second.
+		nonMatchingFilters := tagAndFilters third.
+		nodeWithElements allElementsDo: [:element |
+			(matchingFilters, nonMatchingFilters) do: [:each |
+				self deny: (element isInLanguage: each)]].
+		
+		nodeWithElements
+			attributeAt: 'xml:lang'
+			put: tag.
+		nodeWithElements allElementsDo: [:element |
+			matchingFilters do: [:each |
+				self assert: (element isInLanguage: each)].
+			nonMatchingFilters do: [:each |
+				self deny: (element isInLanguage: each)].
+
+			element = nodeWithElements
+				ifFalse: [
+					"ensure it can be shadowed"
+					element
+						attributeAt: 'xml:lang'
+						put: ''.
+					(matchingFilters, nonMatchingFilters) do: [:each |
+						self deny: (element isInLanguage: each)].
+					element removeAttribute: 'xml:lang']].
+		
+		nodeWithElements removeAttribute: 'xml:lang'].
 ]
 
 { #category : #tests }
@@ -1439,7 +1479,7 @@ XMLElementTest >> testPrintingDefaultNamespaces [
 	self assert:
 		element printString =
 			('<element xmlns="default">',
-			'<element xmlns=""><empty /></element>',
+			'<element xmlns=""><empty/></element>',
 			'</element>').
 ]
 
@@ -1458,7 +1498,7 @@ XMLElementTest >> testPrintingNonRootNamespaces [
 	self assert:
 		element printString =
 			('<element>',
-			'<used:empty xmlns="defaultNS" xmlns:used="usedNS" />',
+			'<used:empty xmlns="defaultNS" xmlns:used="usedNS"/>',
 			'</element>').
 ]
 
@@ -1475,7 +1515,7 @@ XMLElementTest >> testPrintingRootNamespaces [
 	self assert:
 		element printString =
 			('<used:element xmlns="defaultNS" xmlns:used="usedNS">',
-			'<empty />',
+			'<empty/>',
 			'</used:element>').
 ]
 
@@ -1780,7 +1820,7 @@ XMLElementTest >> testWriteXMLOn [
 	| element attributes |
 
 	element := self nodeClass named: 'element'.
-	self assert: element printString = '<element />'.
+	self assert: element printString = '<element/>'.
 	
 	element addString: 'test'.
 	self assert: element printString = '<element>test</element>'.

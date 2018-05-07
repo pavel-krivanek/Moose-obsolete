@@ -2,6 +2,8 @@
 MooseQueryResult is the abstract class for holding the result of all Moose-Query queries.
 By default MooseQueryResults are assumed to contain a collection of associations between the entity in receiver and all the element in storage at the exception of  MooseObjectQueryResult.
 
+For more informations: https://moosequery.ferlicot.fr/
+
 Instance Variables:
 	storage	the elements resulting of the queries
 	receiver	the receiver of the query, necessary for example when we want to do a withoutSelfLoop
@@ -41,6 +43,23 @@ MooseQueryResult >> add: newObject [
 ]
 
 { #category : #scoping }
+MooseQueryResult >> allAtScope: aSymbol [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #scoping }
+MooseQueryResult >> allToScope: aSymbol [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #scoping }
+MooseQueryResult >> allWithScope: aSymbol [
+	^ self subclassResponsibility
+]
+
+{ #category : #scoping }
 MooseQueryResult >> atScope: aSymbol [
 
 	^ self subclassResponsibility
@@ -69,6 +88,24 @@ MooseQueryResult >> do: aBlock [
 	"Evaluate aBlock with each of the receiver's elements as the argument."
 
 	^ storage do: aBlock 
+]
+
+{ #category : #'initialize-release' }
+MooseQueryResult >> gtInspectorItemsIn: composite [
+	^ composite list
+		title: 'Items';
+		display: [ :aCollection | self sorted: [ :a :b | a printString <= b printString ] ];
+		beMultiple;
+		withSmalltalkSearch;
+		format: [ :each | GTObjectPrinter new asTruncatedTextFrom: each ];
+		send: [ :result | 
+			result isNil
+				ifTrue: [ nil ]
+				ifFalse: [ result size = 1
+						ifTrue: [ result anyOne ]
+						ifFalse: [ self species withAll: result ] ] ];
+		showOnly: 50;
+		helpMessage: 'Quick selection field. Given your INPUT, it executes: self select: [:each | INPUT ]'
 ]
 
 { #category : #'initialize-release' }

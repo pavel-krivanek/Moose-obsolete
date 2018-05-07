@@ -17,11 +17,10 @@ Class {
 	#category : #'Famix-Java'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXParameterizableClass class >> annotation [
 	<MSEClass: #ParameterizableClass super: #FAMIXClass>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #initialization }
@@ -63,3 +62,4 @@ FAMIXParameterizableClass >> yourScope [
 
 	^ #typeScope
 ]
+

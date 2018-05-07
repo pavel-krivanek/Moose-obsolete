@@ -9,11 +9,10 @@ Class {
 	#category : #'SmallDude-Core'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 DudeSourceCodeLine class >> annotation [
 	<MSEClass: #SourceCodeLine super: #FAMIXEntity>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #'initialize-release' }
@@ -32,6 +31,13 @@ DudeSourceCodeLine class >> newText: aString lineno: anInt inEntity: entitySourc
 DudeSourceCodeLine >> entity [ 
 	 
 	^entity
+]
+
+{ #category : #printing }
+DudeSourceCodeLine >> gtDisplayOn: stream [
+	 
+	stream nextPutAll: 'a SourceCodeLine: '.
+	self text notNil ifTrue: [ stream nextPutAll: self text ]
 ]
 
 { #category : #'initialize-release' }
@@ -60,13 +66,6 @@ DudeSourceCodeLine >> lineno [
 { #category : #accessing }
 DudeSourceCodeLine >> lineno: anInt [
 	lineno := anInt
-]
-
-{ #category : #printing }
-DudeSourceCodeLine >> mooseDisplayStringOn: stream [
-	 
-	stream nextPutAll: 'a SourceCodeLine: '.
-	self text notNil ifTrue: [ stream nextPutAll: self text ]
 ]
 
 { #category : #printing }

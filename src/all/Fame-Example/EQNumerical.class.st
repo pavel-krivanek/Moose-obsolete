@@ -7,10 +7,10 @@ Class {
 	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQNumerical class >> annotation [
-	<MSEClass: 'Numerical' super: #EQSimple>
-	<package: 'EQ'>
+	<MSEClass: #Numerical super: #EQSimple>
+	<package: #EQ>
 	<abstract>
 ]
 

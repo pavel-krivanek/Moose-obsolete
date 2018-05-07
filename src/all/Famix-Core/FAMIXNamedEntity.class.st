@@ -10,6 +10,8 @@ It can also return the list of invocations performed on this entity (considered 
 Class {
 	#name : #FAMIXNamedEntity,
 	#superclass : #FAMIXSourcedEntity,
+	#traits : 'TDependencyQueries + TEntityMetaLevelDependency',
+	#classTraits : 'TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
 	#instVars : [
 		'name',
 		'isStub',
@@ -19,6 +21,10 @@ Class {
 		'annotationInstances'
 	],
 	#classInstVars : [
+		'childrenSelectors',
+		'allParentTypes',
+		'allChildrenTypes',
+		'parentSelectors',
 		'outgoingMSEProperties',
 		'incomingMSEProperties',
 		'outgoingAssociationTypes',
@@ -49,8 +55,6 @@ FAMIXNamedEntity class >> allOutgoingAssociationTypes [
 FAMIXNamedEntity class >> annotation [
 	<MSEClass: #NamedEntity super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }
@@ -99,16 +103,6 @@ FAMIXNamedEntity class >> outgoingMSEPropertiesCache: aValue [
 { #category : #accessing }
 FAMIXNamedEntity class >> parentMetaclass [
 	^((self class >> #annotation) pragmas select: [ :p | p keyword = 'parentMetaClass:' ]) collect: [:p | p arguments first ]
-]
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> privateAllChildrenTypes [
-	^ (self childrenTypes withDeep: #childrenTypes collect: #yourself as: Set) asOrderedCollection
-]
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> privateAllParentTypes [
-	^ (self parentTypes withDeep: #parentTypes collect: #yourself as: Set) asOrderedCollection
 ]
 
 { #category : #accessing }
@@ -295,5 +289,11 @@ FAMIXNamedEntity >> typeScope [
 { #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> yourScope [
 	"Empty default scope"
+
+	self
+		deprecated:
+			'#yourScope was used by MooseChef for queries. Now, MooseQuery does not need it anymore. Example of code update: "myEntity queryAllIncoming perform: mySecondEntity yourScope" => "myEntity queryAllIncoming withScope: mySecondEntity class"'
+		on: '12 january 2018'
+		in: 'Moose6.1'.
 	^ nil
 ]

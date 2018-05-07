@@ -9,9 +9,8 @@ Class {
 	#category : #'Famix-C'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 FAMIXPreprocessorStatement class >> annotation [
 	<MSEClass: #PreprocessorStatement super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-	^self
 ]

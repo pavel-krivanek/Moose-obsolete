@@ -51,7 +51,7 @@ MooseVisualLocator >> classesIn: a [
 		beMultiple;
 		searchOn: [ :text :each | Smalltalk compiler evaluate: ' | entity each | each := self. entity := each.' , text for: each logged: false ];
 		showOnly: 50;
-		format: #mooseDisplayString;
+		format: #gtDisplayString;
 		dynamicActionsOnSelection: [ :list | list selection mooseInterestingEntity mooseFinderActions ];
 		dynamicActions: [ :list | list entity mooseInterestingEntity mooseFinderActions ].
 	^ a pharoScript

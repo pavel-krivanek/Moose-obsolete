@@ -8,6 +8,21 @@ Class {
 }
 
 { #category : #filtering }
+MooseObjectQueryResult >> allAtScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :entity | entity allAtScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
+MooseObjectQueryResult >> allToScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :entity | entity allToScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
+MooseObjectQueryResult >> allWithScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :entity | entity allWithScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
 MooseObjectQueryResult >> atScope: aClassFamix [
 	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :entity | entity atScope: aClassFamix in: res ]) asSet
 ]

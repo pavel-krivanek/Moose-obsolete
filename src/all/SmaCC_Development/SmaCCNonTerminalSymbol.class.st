@@ -2,7 +2,8 @@ Class {
 	#name : #SmaCCNonTerminalSymbol,
 	#superclass : #SmaCCSymbol,
 	#instVars : [
-		'productions'
+		'productions',
+		'position'
 	],
 	#category : #'SmaCC_Development'
 }
@@ -51,6 +52,16 @@ SmaCCNonTerminalSymbol >> modelTypes: anIdentitySet [
 		do: [ :each | types addAll: (each modelTypes: anIdentitySet) ].
 	anIdentitySet remove: self.
 	^ types
+]
+
+{ #category : #accessing }
+SmaCCNonTerminalSymbol >> position [
+	^ (position ifNil: [ 0 ]) + 10000000
+]
+
+{ #category : #accessing }
+SmaCCNonTerminalSymbol >> position: anInteger [
+	position ifNil: [ position := anInteger ]
 ]
 
 { #category : #accessing }

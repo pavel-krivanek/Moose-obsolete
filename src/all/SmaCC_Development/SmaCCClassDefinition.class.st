@@ -25,13 +25,6 @@ Class {
 	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCClassDefinition class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #'accessing-hierarchy' }
 SmaCCClassDefinition >> addSubclass: aSmaCCClassDefinition [
 	subclasses add: aSmaCCClassDefinition

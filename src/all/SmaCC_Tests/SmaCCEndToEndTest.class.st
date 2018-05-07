@@ -108,6 +108,44 @@ SmaCCEndToEndTest >> tearDown [
 	super tearDown
 ]
 
+{ #category : #'tests-extended syntax' }
+SmaCCEndToEndTest >> testAlternativePrecendence [
+	| parserCompiler node |
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
+	parserCompiler
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
+			%left "+";
+			%left "*";
+			%root Parse ; %prefix Foo; %suffix Node; 
+			Expression : <number> ''value'' {{Number}} 
+				| Expression ''left'' ( "+" ''op'' | "*" ''op'') Expression ''right'' {{Binary}};'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+	node := self parserClass parse: '1+2*3'.
+	self assert: node op value = '+'.
+	self assert: node right op value = '*'.
+	node := self parserClass parse: '1*2+3'.
+	self assert: node op value = '+'.
+	self assert: node left op value = '*'
+]
+
+{ #category : #'tests-extended syntax' }
+SmaCCEndToEndTest >> testAlternatives [
+	| parserCompiler node |
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
+	parserCompiler
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
+			%root Parse ; %prefix Foo; %suffix Node; 
+			Numbers : <number> ''left'' ( "+" ''op'' | "*" ''op'') <number> ''right'' {{Parse}};'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+	node := self parserClass parse: '1+2'.
+	self assert: node class name asString = 'FooParseNode'.
+	self assert: node op value = '+'.
+	node := self parserClass parse: '1*2'.
+	self assert: node op value = '*'
+]
+
 { #category : #tests }
 SmaCCEndToEndTest >> testAmbiguousReduceReduceConflict [
 	| parserCompiler |
@@ -208,6 +246,26 @@ SmaCCEndToEndTest >> testAmbiguousResults [
 				parse:
 					'1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1')
 				= 60
+]
+
+{ #category : #'tests-parse tree creation' }
+SmaCCEndToEndTest >> testAttributesTokens [
+	| compiler node |
+	(compiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
+	compiler
+		buildDefinition:
+			'<name> : \w+; <whitespace> : \s+; 
+			%annotate_tokens;
+			%root FooNode;
+			%attributes FooANode (a b);
+			A : "(" <name> "<<" "test" ")" {{FooANode}} ; '.
+	compiler compileInto: 'TestScanner' andParser: 'TestParser'.
+	node := self parserClass parse: '( foo << test )'.
+	self assert: node a isNil.
+	node a: 1.
+	node b: 2.
+	self assert: node a = 1.
+	self assert: node b = 2
 ]
 
 { #category : #'tests-parse tree creation' }
@@ -1462,8 +1520,7 @@ SmaCCEndToEndTest >> testPassThrough [
 { #category : #'tests-parse tree creation' }
 SmaCCEndToEndTest >> testPerformanceMatchCollection [
 	| parserCompiler node match fastTime slowTime |
-	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
-		defaultCategory: self class category.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
 	parserCompiler
 		buildDefinition:
 			'<number> : \d; <whitespace> : \s+; 
@@ -1475,15 +1532,30 @@ SmaCCEndToEndTest >> testPerformanceMatchCollection [
 			Expression : Number ;
 			Number : <number> ''number'' {{Number}} ;'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
-	node := self parserClass
-		parse:
-			(String new: 1000 withAll: $1) , '22' , (String new: 1000 withAll: $1).
-	fastTime := Time
-		millisecondsToRun: [ self assert: (node match: node inContext: Dictionary new) ].
-	match := self parserClass parse: '`a{beList}` 22 `b{beList}`'.
-	slowTime := Time
-		millisecondsToRun: [ self assert: (match match: node inContext: Dictionary new) ].
+	node := self parserClass parse: (String new: 1000 withAll: $1) , '22' , (String new: 1000 withAll: $1).
+	fastTime := Time millisecondsToRun: [ self assert: (node match: node inContext: Dictionary new) ].
+	match := [ self parserClass parse: '`a{beList}` 22 `b{beList}`' ]
+		on: SmaCCAmbiguousResultNotification
+		do: [ :ex | (ex tag collect: [ :each | each performOnSmaCCParser: ex parser ]) detect: [ :each | (each isKindOf: SmaCCPatternNode) not ] ifNone: [ ex tag first ] ].
+	slowTime := Time millisecondsToRun: [ self assert: (match match: node inContext: Dictionary new) ].
 	self assert: (fastTime max: 1) * 10 > slowTime
+]
+
+{ #category : #'tests-extended syntax' }
+SmaCCEndToEndTest >> testPlus [
+	| parserCompiler node |
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
+	parserCompiler
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
+			%root Parse ; %prefix Foo; %suffix Node; 
+			Numbers : <number> ''number'' ( "," ''comma'' <number> ''number'' )+ {{Parse}};'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+	node := self parserClass parse: '1,2,3,4,5,6'.
+	self assert: node class name asString = 'FooParseNode'.
+	self assert: node numbers size = 6.
+	self assert: node commas size = 5.
+	self should: [self parserClass parse: '1'] raise: SmaCCParserError
 ]
 
 { #category : #'tests-parse tree creation' }
@@ -1609,6 +1681,43 @@ SmaCCEndToEndTest >> testPullUpVariablesForLaterSymbols [
 	self assert: node numbers size = 4.
 	node := self parserClass parse: 'a'.
 	self assert: node numbers isEmpty
+]
+
+{ #category : #'tests-extended syntax' }
+SmaCCEndToEndTest >> testQuestion [
+	| parserCompiler node |
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
+	parserCompiler
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
+			%root Parse ; %prefix Foo; %suffix Node; 
+			Numbers : <number> ''number'' ( "," ''comma'' <number> ''number'' )? {{Parse}};'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+	node := self parserClass parse: '1,2'.
+	self assert: node class name asString = 'FooParseNode'.
+	self assert: node numbers size = 2.
+	self assert: node comma notNil.
+	node := self parserClass parse: '1'.
+	self assert: node numbers size = 1.
+	self assert: node comma isNil.
+	self should: [ self parserClass parse: '1,2,3' ] raise: SmaCCParserError
+]
+
+{ #category : #'tests-extended syntax' }
+SmaCCEndToEndTest >> testQuestionPrecedence [
+	| parserCompiler |
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
+	parserCompiler
+		buildDefinition:
+			'%root Parse ; %prefix Foo; %suffix Node; %annotate_tokens;
+			A : "a"? ("." "a"?)? "." "."{{}};'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+	self parserClass parse: '..'.
+	self parserClass parse: '...'.
+	self parserClass parse: 'a..'.
+	self parserClass parse: '.a..'.
+	self parserClass parse: 'a...'.
+	self parserClass parse: 'a.a..'
 ]
 
 { #category : #tests }
@@ -2060,10 +2169,29 @@ SmaCCEndToEndTest >> testSpecialCharacters [
 		ensure: [ SmaCCGrammar maximumCharacterValue: maxValue ]
 ]
 
+{ #category : #'tests-extended syntax' }
+SmaCCEndToEndTest >> testStar [
+	| parserCompiler node |
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
+	parserCompiler
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
+			%root Parse ; %prefix Foo; %suffix Node; 
+			Numbers : <number> ''number'' ( "," ''comma'' <number> ''number'' )* {{Parse}};'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+	node := self parserClass parse: '1,2,3,4,5,6'.
+	self assert: node class name asString = 'FooParseNode'.
+	self assert: node numbers size = 6.
+	self assert: node commas size = 5.
+	node := self parserClass parse: '1'.
+	self assert: node numbers size = 1.
+	self assert: node commas isEmpty
+]
+
 { #category : #tests }
 SmaCCEndToEndTest >> testTimesRepeatRewriteBug [
 	| parserCompiler |
-	parserCompiler := SmaCCGrammarCompiler new.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator defaultCategory: self class category.
 	parserCompiler buildDefinition: '<a> : <<[^>]+>>; t : <a> {true};'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	self assert: (self parserClass parse: '<<aa>>')

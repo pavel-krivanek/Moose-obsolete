@@ -8,7 +8,7 @@ Class {
 	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoEntityVersion class >> annotation [
 	<MSEClass: #EntityVersion super: #HismoAbstractVersion>
 	<package: #Hismo>
@@ -137,6 +137,19 @@ HismoEntityVersion >> evolutionOfPropertyNamed: aPropertyName [
 	^(self changeSizeFromLastVersionPropertyNamed: aPropertyName) abs
 ]
 
+{ #category : #printing }
+HismoEntityVersion >> gtDisplayOn: stream [
+	
+	((self referenceVersion isNil or: [ self referenceVersion versionEntity isNil ])
+		or: [ self versionEntity isNil ]) 
+			ifTrue: [ ^ super gtDisplayOn: stream ].
+			
+	stream 
+		nextPutAll: self referenceVersion versionEntity name;
+		nextPutAll: ' - '.
+	self versionEntity gtDisplayOn: stream
+]
+
 { #category : #comparing }
 HismoEntityVersion >> hash [
 	
@@ -156,16 +169,6 @@ HismoEntityVersion >> menu [
 	menu addItemLabel: self versionEntity mooseDescription name.
 	menu menuItems last submenu: self versionEntity menu.
 	^menu
-]
-
-{ #category : #printing }
-HismoEntityVersion >> mooseDisplayStringOn: stream [
-	
-	((self referenceVersion isNil or: [ self referenceVersion versionEntity isNil ])
-		or: [ self versionEntity isNil ]) 
-			ifTrue: [ ^ super mooseDisplayStringOn: stream ].
-			
-	stream nextPutAll: (self referenceVersion versionEntity name , ' - ', self versionEntity mooseDisplayString)
 ]
 
 { #category : #'public interface' }

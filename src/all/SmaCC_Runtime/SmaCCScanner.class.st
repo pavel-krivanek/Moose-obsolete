@@ -70,13 +70,6 @@ SmaCCScanner class >> needsLineNumbers [
 ]
 
 { #category : #'instance creation' }
-SmaCCScanner class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
-{ #category : #'instance creation' }
 SmaCCScanner class >> on: aStream [
 	^ self new
 		on:

@@ -11,7 +11,6 @@ Class {
 FAMIXCSourceLanguage class >> annotation [
 	<MSEClass: #CSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #testing }

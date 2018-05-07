@@ -18,8 +18,6 @@ Class {
 FAMIXAnnotationType class >> annotation [
 	<MSEClass: #AnnotationType super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #'accessing-query' }

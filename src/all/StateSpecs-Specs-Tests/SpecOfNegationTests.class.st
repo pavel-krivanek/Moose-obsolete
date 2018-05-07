@@ -7,7 +7,7 @@ Class {
 { #category : #tests }
 SpecOfNegationTests >> testMatches [
 	| spec1 spec2 stateSpec |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfNegation of: spec1 and: spec2.
@@ -20,7 +20,7 @@ SpecOfNegationTests >> testMatches [
 { #category : #tests }
 SpecOfNegationTests >> testValidateFailed [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfNegation of: spec1 and: spec2.
@@ -33,7 +33,7 @@ SpecOfNegationTests >> testValidateFailed [
 { #category : #tests }
 SpecOfNegationTests >> testValidateFailed2 [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfNegation of: spec1 and: spec2.
@@ -46,7 +46,7 @@ SpecOfNegationTests >> testValidateFailed2 [
 { #category : #tests }
 SpecOfNegationTests >> testValidateSuccessful [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfNegation of: spec1 and: spec2.

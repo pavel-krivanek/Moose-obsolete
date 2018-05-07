@@ -5,18 +5,18 @@ Class {
 }
 
 { #category : #accessing }
-XMLEncodingWriteStreamAdapterUTF8Test >> inputCollection [
+XMLEncodingWriteStreamAdapterUTF8Test >> basicInputCollection [
 	^ self decodedUTF8String
 ]
 
 { #category : #accessing }
-XMLEncodingWriteStreamAdapterUTF8Test >> invalidStreamCollections [
-	^ self invalidInputCollections
+XMLEncodingWriteStreamAdapterUTF8Test >> basicInvalidInputCollections [
+	^ self basicInvalidUTFInputCollections
 ]
 
 { #category : #accessing }
-XMLEncodingWriteStreamAdapterUTF8Test >> outputCollection [
-	^ self encodedUTF8String
+XMLEncodingWriteStreamAdapterUTF8Test >> basicOutputCollection [
+	^ self encodedUTF8Binary
 ]
 
 { #category : #accessing }

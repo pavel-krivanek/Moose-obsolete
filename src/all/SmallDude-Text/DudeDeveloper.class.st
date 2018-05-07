@@ -14,11 +14,10 @@ Class {
 	#category : #'SmallDude-Text'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 DudeDeveloper class >> annotation [
 	<MSEClass: #Developer super: #MooseEntity>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #accessing }

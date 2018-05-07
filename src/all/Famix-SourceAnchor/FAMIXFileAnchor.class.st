@@ -17,7 +17,6 @@ Class {
 FAMIXFileAnchor class >> annotation [
 	<MSEClass: #FileAnchor super: #FAMIXAbstractFileAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #'instance creation' }
@@ -120,7 +119,13 @@ FAMIXFileAnchor >> sourceText [
 	self sourcesAreReadable ifFalse: [ ^ '' ].
 	
 	^ self fileReference
-		binaryReadStreamDo: [ :in | String streamContents: [ :s | FAMIXFileAnchorReader readStream: (ZnCharacterReadStream on: in encoding: self encoding) for: self into: s ] ]
+		binaryReadStreamDo: [ :in | 
+			String
+				streamContents: [ :s | 
+					[ FAMIXFileAnchorReader readStream: ((ZnCharacterReadStream on: (ZnBufferedReadStream on: in) encoding: self encoding)) for: self into: s ]
+						on: MessageNotUnderstood
+						do: [ self endLine: nil.
+							s ] ] ]
 ]
 
 { #category : #accessing }

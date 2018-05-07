@@ -4,8 +4,7 @@ Class {
 	#instVars : [
 		'comment',
 		'propertyNames',
-		'globalValues',
-		'methods'
+		'globalValues'
 	],
 	#classVars : [
 		'Reader',
@@ -102,8 +101,7 @@ SmaCCRewritePropertyDefinition >> displayOn: aStream [
 SmaCCRewritePropertyDefinition >> initialize [
 	super initialize.
 	propertyNames := Set new.
-	globalValues := Dictionary new.
-	methods := Dictionary new
+	globalValues := Dictionary new
 ]
 
 { #category : #saving }

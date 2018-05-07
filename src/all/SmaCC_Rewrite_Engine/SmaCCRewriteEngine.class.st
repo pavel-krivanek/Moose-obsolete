@@ -16,13 +16,6 @@ Class {
 	#category : #'SmaCC_Rewrite_Engine'
 }
 
-{ #category : #'instance creation' }
-SmaCCRewriteEngine class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #'accessing-methods' }
 SmaCCRewriteEngine >> addMethodNamed: aSymbol as: aBlock [
 	methods at: aSymbol put: aBlock

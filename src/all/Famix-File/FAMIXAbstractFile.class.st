@@ -9,7 +9,7 @@ Class {
 	#category : #'Famix-File'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXAbstractFile class >> annotation [
 	<MSEClass: #AbstractFile super: #FAMIXEntity>
 	<package: #FILE>

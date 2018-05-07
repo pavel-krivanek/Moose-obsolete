@@ -84,7 +84,7 @@ SmaCCGrammar class >> defaultTokenNameMap [
 SmaCCGrammar class >> generateCharacterSetFor: aSelector [
 	| set |
 	set := SmaCCCharacterSet new.
-	0 to: SmaCCGrammar maximumCharacterValue do: [ :i | 
+	0 to: self maximumCharacterValue do: [ :i | 
 		| ch |
 		ch := Character value: i.
 		(ch perform: aSelector)
@@ -105,7 +105,9 @@ SmaCCGrammar class >> implicitToken: aString [
 
 { #category : #'class initialization' }
 SmaCCGrammar class >> initialize [
-	self maximumCharacterValue: 255
+	self maximumCharacterValue: 255.
+	"A good default of isExpressions -- you can set to nil to have it compute from the image"
+	self isExpressions: #(isAlphaNumeric isDigit isLetter isLiteral isLowercase isSeparator isSpecial isUppercase isVowel)
 ]
 
 { #category : #accessing }
@@ -113,9 +115,9 @@ SmaCCGrammar class >> isExpressionMap [
 	"Creates a map from selectors that start with 'is' on Character to sets of characters. This allows generated scanners to take
 	full advantage of selectors that are already implemented on Character"
 
-	(IsExpressionMap isNil or: [ IsExpressionMaxCharacter ~= SmaCCGrammar maximumCharacterValue ])
+	(IsExpressionMap isNil or: [ IsExpressionMaxCharacter ~= self maximumCharacterValue ])
 		ifTrue: [ | selectors |
-			IsExpressionMaxCharacter := SmaCCGrammar maximumCharacterValue.
+			IsExpressionMaxCharacter := self maximumCharacterValue.
 			IsExpressionMap := Dictionary new.
 			selectors := IsExpressions
 				ifNil: [ Character selectors select: [ :each | each size > 2 and: [ (each beginsWith: 'is') and: [ each numArgs = 0 and: [ (each at: 3) isUppercase ] ] ] ] ].
@@ -153,13 +155,6 @@ SmaCCGrammar class >> maximumCharacterValue [
 { #category : #accessing }
 SmaCCGrammar class >> maximumCharacterValue: anInteger [
 	MaximumCharacterValue := anInteger
-]
-
-{ #category : #'instance creation' }
-SmaCCGrammar class >> new [
-	^ super new
-		initialize;
-		yourself
 ]
 
 { #category : #accessing }
@@ -368,6 +363,7 @@ SmaCCGrammar >> initialItemSetFor: aSmaCCSymbol [
 { #category : #'initialize-release' }
 SmaCCGrammar >> initialize [
 	super initialize.
+	scannerDefinition := SmaCCScannerDefinition new.
 	type := #LALR1.
 	symbols := OrderedCollection new.
 	shiftReduceTable := Dictionary new.
@@ -542,6 +538,11 @@ SmaCCGrammar >> rightPrecedenceFor: aSmaCCSymbol [
 { #category : #accessing }
 SmaCCGrammar >> rootDefinition [
 	^ classDefinitions detect: [ :each | each isRoot ] ifNone: [ nil ]
+]
+
+{ #category : #'initialize-release' }
+SmaCCGrammar >> scannerDefinition [
+	^ scannerDefinition
 ]
 
 { #category : #'initialize-release' }

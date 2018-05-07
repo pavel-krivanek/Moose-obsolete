@@ -6,7 +6,7 @@ Class {
 
 { #category : #generated }
 SmaCCReplaceExpressionScanner >> codeExpressionId [
-	^ 13
+	^ 23
 ]
 
 { #category : #generated }

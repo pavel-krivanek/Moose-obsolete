@@ -13,3 +13,10 @@ ZnCharacterReadStream >> position [
 
 	^ self wrappedStream position
 ]
+
+{ #category : #'*Famix-SourceAnchor' }
+ZnCharacterReadStream >> reset [
+	"This will only work on stream knowing all its content. "
+
+	^ self wrappedStream reset
+]

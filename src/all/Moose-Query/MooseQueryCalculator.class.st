@@ -4,6 +4,8 @@ Description
 
 I am an object reponsible for the computation of a query. I am here to hide the implementations of queries to the entities. 
 
+For more informations: https://moosequery.ferlicot.fr/
+
 Examples
 -------------------
 	
@@ -103,18 +105,14 @@ MooseQueryCalculator >> queryLocal: aFAMIXClassAssociation for: anEntity [
 
 { #category : #query }
 MooseQueryCalculator >> queryLocal: aFAMIXClassAssociation for: anEntity in: aCollection [
-	"check that aFAMIXClassAssociation is well an incoming association type"
-
-	((self strategy associationTypesFor: anEntity) includes: aFAMIXClassAssociation) ifFalse: [ ^ aCollection ].
+	"The goal here is to get all the entity's direct associations of the class in parameter. This will not check the associations of the entity's children."
 	
-	"I know that we could use #detect:ifFound: here, but this algo takes too long on big model, so this is a speed up while the sista vm is not ready for production"
-	(self strategy msePropertiesOf: anEntity)
-		do: [ :prop | 
-			prop type implementingClass = aFAMIXClassAssociation
-				ifTrue: [ (anEntity perform: prop name)
-						ifNotNil: [ :coll | 
-							aCollection addAll: coll asCollection.
-							^ aCollection ] ] ]
+	"Note: Maybe adding a guard to check if the entity can have associations of this class could improve the perf. Currently it is not the case because there is not enough association. Maybe it could be the case in the futur, like with a PostgreSQL model."
+	
+	| properties |
+	"Instead of #to:do: we could just use #do: but this implementation is much faster. Maybe sista will remove the needs of the todo later."
+	1 to: (properties := self strategy msePropertiesOf: anEntity) size do: [ :ind | (anEntity perform: (properties at: ind) name) ifNotNil: [ :coll | aCollection addAll: (coll asCollection select: [ :each | each isKindOf: aFAMIXClassAssociation ]) ] ].
+	^ aCollection
 ]
 
 { #category : #accessing }

@@ -11,7 +11,6 @@ Class {
 FAMIXFolderGroup class >> annotation [
 	<MSEClass: #FolderGroup super: #MooseGroup>
 	<package: #FILE>
-	^self
 ]
 
 { #category : #'accessing computed' }

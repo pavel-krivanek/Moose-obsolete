@@ -1,3 +1,21 @@
+"
+The scientific documentation of RoelTyper can be found in the article
+ 
+	Fast Type Reconstruction for Dynamically Typed Programming Languages
+
+
+I'm keeping the type information. I collaborate with a TypeCollector.
+
+
+TypingResultKeeper forImage forClasses: { Array . Point }
+
+
+TypingResultKeeper calculateTypesForClass: Point
+
+
+
+TypingResultKeeper forImageExpanded
+"
 Class {
 	#name : #TypingResultKeeper,
 	#superclass : #Object,
@@ -30,11 +48,6 @@ TypingResultKeeper class >> forImageExpanded [
 	keeper := self forImage.
 	keeper withAllInstvarResultsDo: [:cl :iv :result | result types].
 	^keeper
-]
-
-{ #category : #'instance creation' }
-TypingResultKeeper class >> new [
-	^super new initialize
 ]
 
 { #category : #private }

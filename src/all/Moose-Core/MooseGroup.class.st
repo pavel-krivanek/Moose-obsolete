@@ -11,7 +11,7 @@ Class {
 	#category : #'Moose-Core'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 MooseGroup class >> annotation [
 	<MSEClass: #Group super: #MooseAbstractGroup>
 	<package: #Moose>

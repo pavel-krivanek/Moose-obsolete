@@ -17,13 +17,6 @@ SmaCCNode class >> initialize [
 	NextId := 0
 ]
 
-{ #category : #'instance creation' }
-SmaCCNode class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #comparing }
 SmaCCNode >> <= aSmaCCNode [
 	^ self id <= aSmaCCNode id

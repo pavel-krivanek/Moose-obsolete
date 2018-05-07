@@ -15,8 +15,6 @@ Class {
 FAMIXNamespace class >> annotation [
 	<MSEClass: #Namespace super: #FAMIXScopingEntity>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #'moosechef-scoping-filtering' }

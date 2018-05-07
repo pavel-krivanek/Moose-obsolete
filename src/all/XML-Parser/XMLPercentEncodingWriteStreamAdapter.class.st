@@ -1,31 +1,43 @@
 "
-A write stream adapter that encodes streams with sequences of ""%HH"" hex byte values for printing URIs.
+A write stream adapter for percent encoding octets for URIs.
 "
 Class {
 	#name : #XMLPercentEncodingWriteStreamAdapter,
-	#superclass : #XMLEncodingWriteStreamAdapter,
+	#superclass : #XMLWriteStreamAdapter,
 	#category : #'XML-Parser-Streams'
 }
 
-{ #category : #private }
-XMLPercentEncodingWriteStreamAdapter >> basicNextPut: aByteCharacter [
-	| asciiValue |
+{ #category : #testing }
+XMLPercentEncodingWriteStreamAdapter >> isBinary [
+	"this stream is binary, because it accepts binary octet values
+	and percent-encodes them as '%HH' character sequences"
+	^ true
+]
+
+{ #category : #accessing }
+XMLPercentEncodingWriteStreamAdapter >> nextPut: anObject [
+	| byte |
 
 	stream nextPut: $%.
 
 	"pad it if needed"
-	(asciiValue := aByteCharacter asciiValue) < 16
+	(byte := anObject asInteger) < 16r10
 		ifTrue: [stream nextPut: $0].
 
-	"printOn:base: on GS shows the radix, so printOn:base:showRadix:
+	"On GS, #printOn:base: shows the radix, so #printOn:base:showRadix:
 	is used instead"
-	asciiValue
+	byte
 		printOn: stream
 		base: 16
 		showRadix: false.
+	^ anObject.
 ]
 
 { #category : #accessing }
-XMLPercentEncodingWriteStreamAdapter >> nextPutByteOrderMark [
-	self shouldNotImplement
+XMLPercentEncodingWriteStreamAdapter >> nextPutAll: aCollection [
+	"can't use #to:do: here because other #nextPutAll: implementations
+	support non-sequenceable collection arguments wtih #do:"
+	aCollection do: [:each |
+		self nextPut: each].
+	^ aCollection.
 ]

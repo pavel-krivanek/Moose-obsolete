@@ -18,8 +18,6 @@ Class {
 FAMIXClass class >> annotation [
 	<MSEClass: #Class super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #'initialize-release' }
@@ -51,3 +49,4 @@ FAMIXClass >> yourScope [
 
 	^ #typeScope
 ]
+

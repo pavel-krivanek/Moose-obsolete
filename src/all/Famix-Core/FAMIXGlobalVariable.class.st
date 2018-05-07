@@ -15,8 +15,6 @@ Class {
 FAMIXGlobalVariable class >> annotation [
 	<MSEClass: #GlobalVariable super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }

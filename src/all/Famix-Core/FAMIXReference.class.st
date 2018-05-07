@@ -25,7 +25,6 @@ Class {
 FAMIXReference class >> annotation [
 	<MSEClass: #Reference super: #FAMIXAssociation>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #'initialize-release' }

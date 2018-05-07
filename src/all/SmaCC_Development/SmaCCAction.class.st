@@ -16,13 +16,6 @@ Class {
 	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCAction class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #comparing }
 SmaCCAction >> = anObject [
 	^ self class = anObject class

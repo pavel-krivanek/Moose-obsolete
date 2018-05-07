@@ -21,11 +21,6 @@ SpecOfObjectValue class >> requiredValue: anObject [
 	^self new requiredValue: anObject
 ]
 
-{ #category : #'instance creation' }
-SpecOfObjectValue class >> to: anObject [ 
-	^self requiredValue: anObject
-]
-
 { #category : #displaying }
 SpecOfObjectValue >> clauseKeyword [
 	self subclassResponsibility

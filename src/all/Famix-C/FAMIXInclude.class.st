@@ -11,11 +11,10 @@ Class {
 	#category : #'Famix-C'
 }
 
-{ #category : #'fame annotation' }
+{ #category : #meta }
 FAMIXInclude class >> annotation [
 	<MSEClass: #Include super: #FAMIXAssociation>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

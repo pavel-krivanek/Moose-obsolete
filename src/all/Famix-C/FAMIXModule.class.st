@@ -12,11 +12,10 @@ Class {
 	#category : #'Famix-C'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXModule class >> annotation [
 	<MSEClass: #Module super: #FAMIXScopingEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

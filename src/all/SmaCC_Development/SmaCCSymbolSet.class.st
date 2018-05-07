@@ -15,13 +15,6 @@ SmaCCSymbolSet class >> basedOn: aSmaCCSymbolSet [
 		yourself
 ]
 
-{ #category : #'instance creation' }
-SmaCCSymbolSet class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
 { #category : #accessing }
 SmaCCSymbolSet >> add: aSmaCCSymbol [
 	(symbols includes: aSmaCCSymbol)

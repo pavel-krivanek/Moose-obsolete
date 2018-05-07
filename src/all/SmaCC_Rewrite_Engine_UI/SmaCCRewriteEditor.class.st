@@ -13,14 +13,15 @@ SmaCCRewriteEditor >> addFileRuleTo: aRewriteFile [
 	aRewriteFile isNil
 		ifTrue: [ ^ self ].
 	filename := UITheme current
-		chooseFullFileNameIn: UITheme builder
+		fileSaveIn: UITheme builder
 		title: 'Enter rewrite rule file name'
 		extensions: #('rw')
-		path: nil
-		preview: nil.
+		path: nil.
 	filename isNil
 		ifTrue: [ ^ self ].
-	rewrite := SmaCCRewriteFile new filename: filename.
+	rewrite := filename asFileReference exists
+		ifTrue: [ SmaCCRewriteRuleFileParser parseFile: filename ]
+		ifFalse: [ SmaCCRewriteFile new filename: filename ].
 	self addRewrite: rewrite to: aRewriteFile
 ]
 

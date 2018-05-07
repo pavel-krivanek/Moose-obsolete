@@ -132,6 +132,13 @@ FAMIXScopingEntity >> isRoot [
 ]
 
 { #category : #'*Famix-Extensions' }
+FAMIXScopingEntity >> root [
+	^ self isRoot 
+		ifTrue: [ self ]
+		ifFalse: [ ^ self parentScope root ]
+]
+
+{ #category : #'*Famix-Extensions' }
 FAMIXScopingEntity >> structuralChildren [ 
 	^ (OrderedCollection withAll: self childScopes), self classes 
 ]

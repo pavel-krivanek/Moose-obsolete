@@ -7,13 +7,21 @@ MooseAbstractGroup >> asMooseFinderItemNamed: aString in: aMooseEntity [
 ]
 
 { #category : #'*moose-finder' }
+MooseAbstractGroup >> gtDisplayOn: aStream [ 
+	super gtDisplayOn: aStream.
+	aStream nextPut: $(. 
+	aStream nextPutAll: self size printString. 
+	aStream nextPut: $)
+]
+
+{ #category : #'*moose-finder' }
 MooseAbstractGroup >> mooseFinderListIn: composite [
 	<moosePresentationOrder: 1>
 	composite fastList
 		beMultiple;
 		showOnly: 50;
 		display: #mooseInterestingEntity;
-		sortBlock: [ :a :b | a mooseDisplayString < b mooseDisplayString ];
+		sortBlock: [ :a :b | a gtDisplayString < b gtDisplayString ];
 		send:
 				[ :each | 
 			each isNil
@@ -21,7 +29,7 @@ MooseAbstractGroup >> mooseFinderListIn: composite [
 				ifFalse: [ each size = 1
 						ifTrue: [ each first ]
 						ifFalse: [ each asMooseGroup ] ] ];
-		format: #mooseDisplayString;
+		format: #gtDisplayString;
 		icon: #mooseIcon;
 		title: [ :each | each mooseInterestingEntity size asString , ' items' ];
 		titleIcon: MooseIcons mooseList;

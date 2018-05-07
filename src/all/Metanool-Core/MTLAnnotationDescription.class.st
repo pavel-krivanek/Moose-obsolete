@@ -4,7 +4,7 @@ Class {
 	#category : #'Metanool-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 MTLAnnotationDescription class >> annotation [
 	<MSEClass: #Annotation super: #FM3Element>
 	<package: #FM3>

@@ -31,7 +31,7 @@ FAMIXNamespaceTest >> testMooseDisplayString [
 	{root.
 	child1.
 	child2.
-	child11} do: [ :each | self assert: each mooseDisplayString equals: each mooseName ]
+	child11} do: [ :each | self assert: each gtDisplayString equals: each mooseName ]
 ]
 
 { #category : #testing }

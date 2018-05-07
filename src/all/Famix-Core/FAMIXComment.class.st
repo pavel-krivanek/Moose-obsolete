@@ -61,7 +61,7 @@ FAMIXComment >> content: aString [
 ]
 
 { #category : #accessing }
-FAMIXComment >> mooseDisplayStringOn: aStream [
+FAMIXComment >> gtDisplayOn: aStream [
 	| preview |
 	preview := self sourceText truncate: 10.
 	preview := preview copyReplaceAll: (String with: Character cr with: Character lf) with: ' '.	
@@ -72,7 +72,7 @@ FAMIXComment >> mooseDisplayStringOn: aStream [
 		nextPutAll: preview;
 		nextPutAll: '" in '.
 	self belongsTo notNil ifTrue: [
-		self belongsTo mooseDisplayStringOn: aStream ]
+		self belongsTo gtDisplayOn: aStream ]
 ]
 
 { #category : #accessing }

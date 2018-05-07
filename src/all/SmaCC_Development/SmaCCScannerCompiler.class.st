@@ -41,8 +41,7 @@ SmaCCScannerCompiler >> addActionsFrom: aRegularExpression to: aKeywordMap at: s
 
 { #category : #'regular expression construction' }
 SmaCCScannerCompiler >> addNormalSymbols [
-	grammar
-		symbols: (self symbols asSortedCollection: self filePositionSortBlock)
+	grammar symbols: (self symbols asSortedCollection: [ :a :b | a < b ])
 ]
 
 { #category : #'regular expression construction' }
@@ -160,18 +159,6 @@ SmaCCScannerCompiler >> createRegex [
 	self addNormalSymbols.
 	self addActions.
 	^ self addSpecificREsWithoutActionsTo: self combinedGeneralRegexes
-]
-
-{ #category : #'compiling-scanner' }
-SmaCCScannerCompiler >> filePositionSortBlock [
-	^ [ :a :b | 
-	| aRegex bRegex |
-	aRegex := a regularExpression.
-	bRegex := b regularExpression.
-	bRegex isNil
-		or:
-			[ aRegex notNil
-				and: [ (aRegex position ifNil: [ 0 ]) < (bRegex position ifNil: [ 0 ]) ] ] ]
 ]
 
 { #category : #'regular expression construction' }

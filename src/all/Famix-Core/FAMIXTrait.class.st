@@ -14,8 +14,6 @@ Class {
 FAMIXTrait class >> annotation [
 	<MSEClass: #Trait super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }

@@ -30,7 +30,6 @@ Class {
 FAMIXBehaviouralEntity class >> annotation [
 	<MSEClass: #BehaviouralEntity super: #FAMIXContainerEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

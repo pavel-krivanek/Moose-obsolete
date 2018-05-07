@@ -11,7 +11,6 @@ Class {
 FAMIXGlobalVariableGroup class >> annotation [
 	<MSEClass: #GlobalVariableGroup super: #MooseGroup>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #'as yet unclassified' }

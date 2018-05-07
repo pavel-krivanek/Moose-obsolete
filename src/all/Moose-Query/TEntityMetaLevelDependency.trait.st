@@ -1,5 +1,7 @@
 "
 This trait provides a common, paradigm agnostic vocabulary to query dependencies of named entities at meta level.
+
+For more informations: https://moosequery.ferlicot.fr/
 "
 Trait {
 	#name : #TEntityMetaLevelDependency,
@@ -155,6 +157,25 @@ TEntityMetaLevelDependency >> addAllParentsIn: aCollection [
 	^ aCollection
 ]
 
+{ #category : #scoping }
+TEntityMetaLevelDependency >> allAtScope: aClassFAMIX [
+	"I am used to return all the entities at a given famix class scope that are up in the containment tree of the metamodel on multiple levels."
+
+	self flag: #todo.	"I think we do not need the #asArray cast but it will break tests. I will probably let it now then change the tests later. Step by step."
+	^ (self allAtScope: aClassFAMIX in: OrderedCollection new) asSet asArray
+]
+
+{ #category : #private }
+TEntityMetaLevelDependency >> allAtScope: aClassFAMIX in: aCollection [
+	| selectors |
+	(self isKindOf: aClassFAMIX) ifTrue: [ aCollection add: self ].	
+	
+	"The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
+	1 to: (selectors := self parentSelectors) size do: [ :ind | (self perform: (selectors at: ind)) allAtScope: aClassFAMIX in: aCollection ].
+	
+	^ aCollection
+]
+
 { #category : #accessing }
 TEntityMetaLevelDependency >> allChildren [
 	"Returns all the children and sub-children of an entity, i.e my children and those of my children, and those of the children of my children, etc"
@@ -190,16 +211,49 @@ TEntityMetaLevelDependency >> allParents [
 ]
 
 { #category : #scoping }
-TEntityMetaLevelDependency >> atScope: aClassFAMIX [
-	"I am used to return all the entities at a given famix class scope that are up in the containment tree of the metamodel"
+TEntityMetaLevelDependency >> allToScope: aClassFAMIX [
+	"I am used to return all the entities at a given famix class scope that are down in the containment tree of the metamodel on multiple levels."
 
 	self flag: #todo.	"I think we do not need the #asArray cast but it will break tests. I will probably let it now then change the tests later. Step by step."
-	^ (self atScope: aClassFAMIX in: OrderedCollection new) asArray
+	^ (self allToScope: aClassFAMIX in: OrderedCollection new) asSet asArray
+]
+
+{ #category : #private }
+TEntityMetaLevelDependency >> allToScope: aClassFAMIX in: aCollection [
+	| selectors |
+	(self isKindOf: aClassFAMIX) ifTrue: [ aCollection add: self ].	
+		
+	"The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
+	1 to: (selectors := self childrenSelectors) size do: [ :ind | (self perform: (selectors at: ind)) allToScope: aClassFAMIX in: aCollection ].
+	
+	^ aCollection
+]
+
+{ #category : #scoping }
+TEntityMetaLevelDependency >> allWithScope: aClassFAMIX [
+	"I am used to return all the entities at a given famix class scope that are up or down in the containment tree of the metamodel on multiple levels."
+
+	^ (self allWithScope: aClassFAMIX in: OrderedCollection new) asSet
+]
+
+{ #category : #private }
+TEntityMetaLevelDependency >> allWithScope: aClassFAMIX in: aCollection [
+	self allParentTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ] ifFound: [ self allAtScope: aClassFAMIX in: aCollection ].
+	self allChildrenTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ] ifFound: [ self allToScope: aClassFAMIX in: aCollection ].
+	^ aCollection
+]
+
+{ #category : #scoping }
+TEntityMetaLevelDependency >> atScope: aClassFAMIX [
+	"I am used to return all the first encountered entities at a given famix class scope that are up in the containment tree of the metamodel"
+
+	self flag: #todo.	"I think we do not need the #asArray cast but it will break tests. I will probably let it now then change the tests later. Step by step."
+	^ (self atScope: aClassFAMIX in: OrderedCollection new) asSet asArray
 ]
 
 { #category : #private }
 TEntityMetaLevelDependency >> atScope: aClassFAMIX in: aCollection [
-	(self isOfType: aClassFAMIX)
+	(self isKindOf: aClassFAMIX)
 		ifTrue: [ aCollection add: self ]
 		ifFalse: [ "The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 			| selectors |
@@ -316,15 +370,15 @@ TEntityMetaLevelDependency >> parents [
 
 { #category : #scoping }
 TEntityMetaLevelDependency >> toScope: aClassFAMIX [
-	"I am used to return all the entities at a given famix class scope that are down in the containment tree of the metamodel"
+	"I am used to return all the first encountered  entities at a given famix class scope that are down in the containment tree of the metamodel"
 
 	self flag: #todo.	"I think we do not need the #asArray cast but it will break tests. I will probably let it now then change the tests later. Step by step."
-	^ (self toScope: aClassFAMIX in: OrderedCollection new) asArray
+	^ (self toScope: aClassFAMIX in: OrderedCollection new) asSet asArray
 ]
 
 { #category : #private }
 TEntityMetaLevelDependency >> toScope: aClassFAMIX in: aCollection [
-	(self isOfType: aClassFAMIX)
+	(self isKindOf: aClassFAMIX)
 		ifTrue: [ aCollection add: self ]
 		ifFalse: [ "The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 			| selectors |
@@ -334,7 +388,7 @@ TEntityMetaLevelDependency >> toScope: aClassFAMIX in: aCollection [
 
 { #category : #scoping }
 TEntityMetaLevelDependency >> withScope: aClassFAMIX [
-	"I am used to return all the entities at a given famix class scope that are up or down in the containment tree of the metamodel"
+	"I am used to return all the first encountered  entities at a given famix class scope that are up or down in the containment tree of the metamodel"
 
 	^ (self withScope: aClassFAMIX in: OrderedCollection new) asSet
 ]

@@ -1,11 +1,27 @@
 "
 TDependencyQueryResult is a Trait that provides some common MooseChef selectors to several MooseQueryResult.
 
+For more informations: https://moosequery.ferlicot.fr/
 "
 Trait {
 	#name : #TDependencyQueryResult,
 	#category : #'Moose-Query'
 }
+
+{ #category : #filtering }
+TDependencyQueryResult >> allAtScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) allAtScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
+TDependencyQueryResult >> allToScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) allToScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
+TDependencyQueryResult >> allWithScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) allWithScope: aClassFamix in: res ]) asSet
+]
 
 { #category : #filtering }
 TDependencyQueryResult >> atScope: aClassFamix [

@@ -17,7 +17,6 @@ Class {
 FAMIXSourceLanguage class >> annotation [
 	<MSEClass: #SourceLanguage super: #FAMIXEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

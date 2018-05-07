@@ -4,7 +4,7 @@ Class {
 	#category : #'Fame-Tests-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 FMPragmaProcessorTestDummy class >> annotation [
 	<MSEClass: #FMAnnotationTest super: #Object>
 ]

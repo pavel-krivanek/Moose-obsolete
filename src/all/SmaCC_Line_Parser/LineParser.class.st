@@ -6,7 +6,7 @@ Class {
 
 { #category : #'generated-accessing' }
 LineParser class >> cacheId [
-	^'2016-10-24T21:10:55.598665-05:00'
+	^'2018-03-19T12:40:59.524922-05:00'
 ]
 
 { #category : #generated }
@@ -70,33 +70,33 @@ LineParser >> reduceActionForLines2: nodes [
 { #category : #generated }
 LineParser >> reduceTable [
 ^#(
-	#(4 0 #nil) 
-	#(4 1 #liftFirstValue:) 
-	#(6 1 #reduceActionForLines1:) 
-	#(3 1 #reduceActionForFile1:) 
-	#(6 3 #reduceActionForLines2:)
+	#(6 0 #nil) 
+	#(6 1 #liftFirstValue:) 
+	#(4 1 #reduceActionForFile1:) 
+	#(5 1 #reduceActionForLines1:) 
+	#(5 3 #reduceActionForLines2:)
 	).
 ]
 
 { #category : #generated }
 LineParser >> symbolNames [
-	^ #('<line>' '<newLine>' 'File' 'Line' 'B e g i n' 'Lines' 'E O F' 'error')
+	^ #('<line>' '<newLine>' 'B e g i n' 'File' 'Lines' 'Line' 'E O F' 'error')
 ]
 
 { #category : #generated }
 LineParser >> symbolTypes [
-	^ #(#SmaCCToken #SmaCCToken #FileNode #SmaCCToken #FileNode #OrderedCollection #SmaCCToken #SmaCCToken)
+	^ #(#SmaCCToken #SmaCCToken #FileNode #FileNode #OrderedCollection #SmaCCToken #SmaCCToken #SmaCCToken)
 ]
 
 { #category : #generated }
 LineParser >> transitionTable [
 ^#(
-#[1 0 17 0 1 0 6 0 2 0 13 0 3 0 17 0 4 0 21 0 6 0 6 0 7] 
+#[1 0 21 0 1 0 6 0 2 0 13 0 4 0 17 0 5 0 21 0 6 0 6 0 7] 
 #[0 0 10 0 2 0 7] 
 #[0 0 0 0 7] 
-#[0 0 14 0 2 0 7] 
-#[1 0 25 0 2 0 18 0 7] 
-#[1 0 29 0 1 0 6 0 2 0 29 0 4 0 6 0 7] 
+#[1 0 25 0 2 0 14 0 7] 
+#[0 0 18 0 2 0 7] 
+#[1 0 29 0 1 0 6 0 2 0 29 0 6 0 6 0 7] 
 #[0 0 22 0 2 0 7]
 	).
 ]

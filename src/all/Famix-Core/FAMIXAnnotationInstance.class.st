@@ -14,10 +14,18 @@ Instance Variables:
 Class {
 	#name : #FAMIXAnnotationInstance,
 	#superclass : #FAMIXSourcedEntity,
+	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
+	#classTraits : 'TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#instVars : [
 		'annotatedEntity',
 		'annotationType',
 		'attributes'
+	],
+	#classInstVars : [
+		'childrenSelectors',
+		'allParentTypes',
+		'allChildrenTypes',
+		'parentSelectors'
 	],
 	#category : #'Famix-Core'
 }
@@ -36,8 +44,6 @@ FAMIXAnnotationInstance class >> allOutgoingAssociationTypes [
 FAMIXAnnotationInstance class >> annotation [
 	<MSEClass: #AnnotationInstance super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-
-	^self
 ]
 
 { #category : #accessing }
@@ -124,7 +130,7 @@ FAMIXAnnotationInstance >> name [
 		streamContents: [ :stream | 
 			stream << '@'
 				<< (self annotationType ifNil: [ super name ] ifNotNil: [ :type | type name ])
-				<< ' on ' << self annotatedEntity name ]
+				<< ' on ' << (self annotatedEntity ifNotNil: #name ifNil: [ 'undefined' ]) ]
 ]
 
 { #category : #'moosequery-queries-outgoing' }

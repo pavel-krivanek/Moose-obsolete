@@ -7,7 +7,7 @@ Class {
 	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQOperator class >> annotation [
 	<MSEClass: #Operator super: #Object>
 	<package: #EQ>

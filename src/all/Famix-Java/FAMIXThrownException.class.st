@@ -7,11 +7,10 @@ Class {
 	#category : #'Famix-Java'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXThrownException class >> annotation [
 	<MSEClass: #ThrownException super: #FAMIXException>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

@@ -35,3 +35,8 @@ SmaCCSendRuleDebugAction >> executeAction [
 				ifTrue: [ first := false ]
 				ifFalse: [ self session isRewriteContext: context ] ]
 ]
+
+{ #category : #accessing }
+SmaCCSendRuleDebugAction >> help [
+	^ 'Step into message'
+]

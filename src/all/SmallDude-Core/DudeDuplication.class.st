@@ -11,11 +11,10 @@ Class {
 	#category : #'SmallDude-Core'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 DudeDuplication class >> annotation [
 	<MSEClass: #Duplication super: #FAMIXEntity>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #'instance creation - internal' }

@@ -18,6 +18,16 @@ REPMooseQueryConcern >> computeStatus [
 						ifFalse: [REPConcernFailureStatus new concern: self ] ] ]
 ]
 
+{ #category : #'as yet unclassified' }
+REPMooseQueryConcern >> gtDisplayOn: stream [
+	stream nextPutAll: self explanation.
+	self status isFailureStatus ifTrue: [ 
+		stream 
+			space;
+			nextPutAll: self result size asString;
+			nextPutAll: ' violations' ]
+]
+
 { #category : #accessing }
 REPMooseQueryConcern >> status [
 	^ [ self computeStatus ] on: Error do: [:error | 

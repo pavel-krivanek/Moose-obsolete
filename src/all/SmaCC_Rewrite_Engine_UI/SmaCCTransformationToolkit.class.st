@@ -9,6 +9,21 @@ Class {
 	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
+{ #category : #'world menu' }
+SmaCCTransformationToolkit class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: #'SmaCC Transformation Toolkit')
+		parent: #Tools;
+		order: 0.56;
+		action: [ self open ].
+	aBuilder withSeparatorAfter
+]
+
+{ #category : #opening }
+SmaCCTransformationToolkit class >> open [
+	^ self new open
+]
+
 { #category : #actions }
 SmaCCTransformationToolkit >> addDirectory [
 	| dir names match stream todo |
@@ -69,9 +84,10 @@ SmaCCTransformationToolkit >> buildConfigurationTab [
 		act: [ self loadConfiguration ] icon: GLMUIThemeExtraIcons glamorousOpen entitled: 'Load';
 		act: [ self saveConfiguration ] icon: GLMUIThemeExtraIcons glamorousSave entitled: 'Save';
 		act: [ self runAll ] icon: GLMUIThemeExtraIcons glamorousPlay entitled: 'Transform All';
-		act: [ self setOutputDirectory ] entitled: 'Set output directory...';
 		act: [ self selectInputParser ] entitled: 'Set Input Parser Class...';
 		act: [ self selectValidationParser ] entitled: 'Set Validation Parser Class...';
+		act: [ self setOutputDirectory ] entitled: 'Set output directory...';
+		act: [ self setCreateSubdirectories ] entitled: 'Create subdirectories...';
 		act: [ self setServer ] entitled: 'Set Server...';
 		act: [ self setRunOnServer ] entitled: 'Run On Server...';
 		act: [ self class new openOn: self entity ] entitled: 'Open another window';
@@ -144,7 +160,7 @@ SmaCCTransformationToolkit >> buildPreviewList: list in: presenter [
 
 { #category : #building }
 SmaCCTransformationToolkit >> buildPreviewTab [
-	| resultPresenter |
+	| resultPresenter sourcePresentation targetPresentation |
 	self dynamic
 		title: 'Preview';
 		updateOn: ValueChanged from: [ self previewResultHolder instVarNamed: 'announcer' ];
@@ -156,12 +172,13 @@ SmaCCTransformationToolkit >> buildPreviewTab [
 						column: #input;
 						column: #output ]
 					span: 2;
-				row: #rewrites.
+				row: #rewrites;
+				row: #rewriteSelection span: 0.
 			resultPresenter transmit
 				to: #input;
 				transformed: [ :each | each value ];
 				andShow: [ :presenter | 
-					presenter text
+					(presenter custom: (sourcePresentation := SmaCCTextPresentation new))
 						title: [ :result | result filename ifNil: [ 'Input' ] ifNotNil: [ :name | name asFileReference basename ] ];
 						wrapped: false;
 						withLineNumbers: true;
@@ -172,7 +189,7 @@ SmaCCTransformationToolkit >> buildPreviewTab [
 				andShow: [ :presenter | 
 					presenter dynamic
 						presentation: [ :dynamic :each | 
-							dynamic text
+							(dynamic custom: (targetPresentation := SmaCCTextPresentation new))
 								wrapped: false;
 								withLineNumbers: true;
 								initialize: [ :text | 
@@ -218,6 +235,10 @@ SmaCCTransformationToolkit >> buildPreviewTab [
 								ifTrue: [ #() ]
 								ifFalse: [ self result transformedString annotationsInNewRange: interval ])
 						in: presenter ].
+			resultPresenter transmit
+				from: #rewrites port: #selection;
+				to: #rewriteSelection;
+				transformed: [ :sel | self updateInput: sourcePresentation target: targetPresentation using: sel ].
 			presentation startOn: self previewResultHolder.
 			presentation ]
 ]
@@ -278,6 +299,18 @@ SmaCCTransformationToolkit >> debugUsingSeachBlock: searchBlock andTransformatio
 	[ self openResultFor: self selectedFile ]
 		ensure: [ SmaCCRewriteMatch haltBlock: nil.
 			SmaCCRewriteTransformation haltBlock: nil ]
+]
+
+{ #category : #actions }
+SmaCCTransformationToolkit >> ensureRewriteFilename [
+	| name |
+	self model rewrites filename isNil
+		ifTrue: [ name := self
+				promptForSaveFile: 'Save Rewrites To'
+				extensions: #('rw').
+			name isNil
+				ifTrue: [ ^ self ].
+			self model rewrites filename: name ]
 ]
 
 { #category : #accessing }
@@ -399,6 +432,16 @@ SmaCCTransformationToolkit >> promptForFile: aTitle extensions: anArray [
 		preview: nil
 ]
 
+{ #category : #private }
+SmaCCTransformationToolkit >> promptForSaveFile: aTitle extensions: anArray [
+	^ UITheme current
+		fileSaveIn: UITheme builder
+		title: aTitle
+		initialAnswer: ''
+		extensions: anArray
+		path: nil
+]
+
 { #category : #actions }
 SmaCCTransformationToolkit >> removeFiles: anArray [
 	| files |
@@ -442,8 +485,9 @@ SmaCCTransformationToolkit >> runOn: aCollection [
 
 { #category : #actions }
 SmaCCTransformationToolkit >> saveConfiguration [
+	self ensureRewriteFilename.
 	filename isNil
-		ifTrue: [ filename := self promptForFile: 'Save Configuration To' extensions: #('rwc').
+		ifTrue: [ filename := self promptForSaveFile: 'Save Configuration To' extensions: #('rwc').
 			filename isNil
 				ifTrue: [ ^ self ] ].
 	self model saveTo: filename
@@ -451,6 +495,7 @@ SmaCCTransformationToolkit >> saveConfiguration [
 
 { #category : #actions }
 SmaCCTransformationToolkit >> saveRewrites [
+	self ensureRewriteFilename.
 	self model saveRewrites
 ]
 
@@ -489,6 +534,13 @@ SmaCCTransformationToolkit >> selectedFile [
 ]
 
 { #category : #actions }
+SmaCCTransformationToolkit >> setCreateSubdirectories [
+	| createSubdirectories |
+	createSubdirectories := UITheme builder questionWithoutCancel: 'Create subdirectories'.
+	self model createSubdirectories: createSubdirectories
+]
+
+{ #category : #actions }
 SmaCCTransformationToolkit >> setOutputDirectory [
 	| dir |
 	dir := UITheme builder textEntry: 'Enter output directory name:' title: 'Directory' entryText: self model outputDirectory.
@@ -518,6 +570,17 @@ SmaCCTransformationToolkit >> update: aSymbol with: aValue [
 	super update: aSymbol with: aValue.
 	aSymbol = #resultAdded
 		ifTrue: [ self addResult: aValue ]
+]
+
+{ #category : #building }
+SmaCCTransformationToolkit >> updateInput: sourcePresentation target: targetPresentation using: selection [
+	sourcePresentation clearHighlights.
+	targetPresentation clearHighlights.
+	selection notNil
+		ifTrue: [ sourcePresentation addHighlight: (Color red alpha: 0.2) from: selection nodeInterval first to: selection nodeInterval last.
+			(self result transformedString annotationRangesFor: selection) do: [ :each | targetPresentation addHighlight: (Color red alpha: 0.2) from: each first to: each last ] ].
+	sourcePresentation updateHighlightsAndScroll.
+	targetPresentation updateHighlightsAndScroll
 ]
 
 { #category : #actions }

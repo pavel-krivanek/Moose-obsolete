@@ -18,11 +18,10 @@ Class {
 	#category : #'Famix-Java'
 }
 
-{ #category : #'initialize-release' }
+{ #category : #meta }
 FAMIXParameterizedType class >> annotation [
 	<MSEClass: #ParameterizedType super: #FAMIXType>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

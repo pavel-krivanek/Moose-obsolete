@@ -20,7 +20,7 @@ SmaCCParserStepThroughAction >> defaultOrder [
 	^ 1
 ]
 
-{ #category : #accessing }
+{ #category : #actions }
 SmaCCParserStepThroughAction >> executeAction [
 	| insidePerform performBlock |
 	performBlock := [ :context | (context receiver isKindOf: SmaCCParser) and: [ context selector = #performAction: ] ].
@@ -31,4 +31,9 @@ SmaCCParserStepThroughAction >> executeAction [
 				ifTrue: [ (context findContextSuchThat: performBlock) isNil ]
 				ifFalse: [ insidePerform := performBlock value: context.
 					false ] ]
+]
+
+{ #category : #accessing }
+SmaCCParserStepThroughAction >> help [
+	^ 'Run until we perform the next action (shift or reduce) or a parse error is encountered.'
 ]

@@ -4,9 +4,9 @@ Class {
 	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQExpression class >> annotation [
-	<MSEClass: 'Expression' super: #Object >
-	<package: 'EQ'>
+	<MSEClass: #Expression super: #Object >
+	<package: #EQ>
 	<abstract>
 ]

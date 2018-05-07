@@ -14,7 +14,6 @@ Class {
 FAMIXSourceTextAnchor class >> annotation [
 	<MSEClass: #SourceTextAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

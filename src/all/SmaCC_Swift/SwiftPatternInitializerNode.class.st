@@ -93,7 +93,7 @@ SwiftPatternInitializerNode >> commaTokens: anOrderedCollection [
 
 { #category : #generated }
 SwiftPatternInitializerNode >> compositeTokenVariables [
-	^ #(#_Tokens #colonTokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens #periodTokens #protocolTokens #lessThanTokens #greaterThanTokens #minusGreaterThanTokens #commaTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #inoutTokens #varTokens #letTokens #isTokens #asTokens)
+	^ #(#_Tokens #colonTokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #operatorTokens #minusGreaterThanTokens #periodTokens #questionMarkTokens #bangTokens #protocolTokens #lessThanTokens #greaterThanTokens #typeTokens #commaTokens #periodPeriodPeriodTokens #inoutTokens #varTokens #letTokens #isTokens #asTokens)
 ]
 
 { #category : #generated }
@@ -170,17 +170,17 @@ SwiftPatternInitializerNode >> initialize [
 	rightBraceTokens := OrderedCollection new: 2.
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
-	operatorTokens := OrderedCollection new: 2.
 	full_string_literalTokens := OrderedCollection new: 2.
+	operatorTokens := OrderedCollection new: 2.
+	minusGreaterThanTokens := OrderedCollection new: 2.
 	periodTokens := OrderedCollection new: 2.
+	questionMarkTokens := OrderedCollection new: 2.
+	bangTokens := OrderedCollection new: 2.
 	protocolTokens := OrderedCollection new: 2.
 	lessThanTokens := OrderedCollection new: 2.
 	greaterThanTokens := OrderedCollection new: 2.
-	minusGreaterThanTokens := OrderedCollection new: 2.
-	commaTokens := OrderedCollection new: 2.
-	questionMarkTokens := OrderedCollection new: 2.
-	bangTokens := OrderedCollection new: 2.
 	typeTokens := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
 	periodPeriodPeriodTokens := OrderedCollection new: 2.
 	inoutTokens := OrderedCollection new: 2.
 	varTokens := OrderedCollection new: 2.

@@ -26,7 +26,6 @@ Class {
 FAMIXType class >> annotation [
 	<MSEClass: #Type super: #FAMIXContainerEntity>
 	<package: #FAMIX>
-	^ self
 ]
 
 { #category : #accessing }

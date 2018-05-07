@@ -92,7 +92,7 @@ SwiftClosureExpressionNode >> compositeNodeVariables [
 
 { #category : #generated }
 SwiftClosureExpressionNode >> compositeTokenVariables [
-	^ #(#leftBraceTokens #leftParenTokens #rightParenTokens #inoutTokens #letTokens #_Tokens #identifierTokens #colonTokens #leftBracketTokens #periodTokens #protocolTokens #lessThanTokens #greaterThanTokens #rightBracketTokens #minusGreaterThanTokens #commaTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #equalTokens #varTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens)
+	^ #(#leftBraceTokens #leftParenTokens #rightParenTokens #inoutTokens #letTokens #_Tokens #identifierTokens #colonTokens #leftBracketTokens #rightBracketTokens #minusGreaterThanTokens #periodTokens #questionMarkTokens #bangTokens #protocolTokens #lessThanTokens #greaterThanTokens #typeTokens #commaTokens #periodPeriodPeriodTokens #equalTokens #varTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #operatorTokens)
 ]
 
 { #category : #generated }
@@ -177,16 +177,16 @@ SwiftClosureExpressionNode >> initialize [
 	identifierTokens := OrderedCollection new: 2.
 	colonTokens := OrderedCollection new: 2.
 	leftBracketTokens := OrderedCollection new: 2.
+	rightBracketTokens := OrderedCollection new: 2.
+	minusGreaterThanTokens := OrderedCollection new: 2.
 	periodTokens := OrderedCollection new: 2.
+	questionMarkTokens := OrderedCollection new: 2.
+	bangTokens := OrderedCollection new: 2.
 	protocolTokens := OrderedCollection new: 2.
 	lessThanTokens := OrderedCollection new: 2.
 	greaterThanTokens := OrderedCollection new: 2.
-	rightBracketTokens := OrderedCollection new: 2.
-	minusGreaterThanTokens := OrderedCollection new: 2.
-	commaTokens := OrderedCollection new: 2.
-	questionMarkTokens := OrderedCollection new: 2.
-	bangTokens := OrderedCollection new: 2.
 	typeTokens := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
 	periodPeriodPeriodTokens := OrderedCollection new: 2.
 	equalTokens := OrderedCollection new: 2.
 	expressions := OrderedCollection new: 2.
@@ -194,8 +194,8 @@ SwiftClosureExpressionNode >> initialize [
 	rightBraceTokens := OrderedCollection new: 2.
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
-	operatorTokens := OrderedCollection new: 2.
 	full_string_literalTokens := OrderedCollection new: 2.
+	operatorTokens := OrderedCollection new: 2.
 	statements := OrderedCollection new: 2.
 ]
 

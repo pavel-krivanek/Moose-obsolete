@@ -13,5 +13,4 @@ Class {
 FAMIXLeafEntity class >> annotation [
 	<MSEClass: #LeafEntity super: #FAMIXNamedEntity>
 	<package: #FAMIX>
-	^self
 ]

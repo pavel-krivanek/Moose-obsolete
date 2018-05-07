@@ -15,7 +15,6 @@ Class {
 FAMIXStructuralEntity class >> annotation [
 	<MSEClass: #StructuralEntity super: #FAMIXLeafEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -66,7 +65,7 @@ FAMIXStructuralEntity >> initialize [
 
 { #category : #'moosechef-scoping-filtering' }
 FAMIXStructuralEntity >> namespaceScope [
-	^ self subclassResponsibility
+	^ self parentType namespaceScope
 ]
 
 { #category : #'moosequery-queries-outgoing' }

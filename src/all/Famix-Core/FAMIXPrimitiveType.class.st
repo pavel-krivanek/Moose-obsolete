@@ -11,6 +11,4 @@ Class {
 FAMIXPrimitiveType class >> annotation [
 	<MSEClass: #PrimitiveType super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]

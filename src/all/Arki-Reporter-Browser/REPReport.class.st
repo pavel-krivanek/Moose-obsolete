@@ -45,6 +45,12 @@ REPReport >> exportAsHudsonTests [
 	REPHudson runOn: self spec
 ]
 
+{ #category : #'as yet unclassified' }
+REPReport >> gtInspectorConcernListIn: a [
+	<gtInspectorPresentationOrder: 1>
+	^ self spec root gtInspectorConcernListIn: a
+]
+
 { #category : #private }
 REPReport >> model [ 
 	"override this method to point to the model of the specification"

@@ -329,7 +329,66 @@ SpecOfShouldExpressionTests >> testSatisfyingBlock [
 ]
 
 { #category : #tests }
+SpecOfShouldExpressionTests >> testStringBeginsWithPrefix [
+	self shouldnt: ['test string' should beginWith: 'test'] raise: SpecOfFailed.
+	self shouldnt: ['test string' should beginWith: 'Test'] raise: SpecOfFailed.
+	self should: ['some test string' should beginWith: 'test'] raise: SpecOfFailed
+]
+
+{ #category : #tests }
+SpecOfShouldExpressionTests >> testStringBeginsWithPrefixCaseSensitive [
+	self shouldnt: ['test string' should beginWith: 'test' caseSensitive: true] raise: SpecOfFailed.
+	self should: ['test string' should beginWith: 'Test' caseSensitive: true] raise: SpecOfFailed.
+	self should: ['some test string' should beginWith: 'test' caseSensitive: true] raise: SpecOfFailed
+]
+
+{ #category : #tests }
+SpecOfShouldExpressionTests >> testStringEndsWithSuffix [
+	self shouldnt: ['string test' should endWith: 'test'] raise: SpecOfFailed.
+	self shouldnt: ['string test' should endWith: 'Test'] raise: SpecOfFailed.
+	self should: ['some test string' should endWith: 'test'] raise: SpecOfFailed
+]
+
+{ #category : #tests }
+SpecOfShouldExpressionTests >> testStringEndsWithSuffixCaseSensitive [
+	self shouldnt: ['string test' should endWith: 'test' caseSensitive: true] raise: SpecOfFailed.
+	self should: ['string test' should endWith: 'Test' caseSensitive: true] raise: SpecOfFailed.
+	self should: ['some test string' should endWith: 'test' caseSensitive: true] raise: SpecOfFailed
+]
+
+{ #category : #tests }
 SpecOfShouldExpressionTests >> testStringEquality [
 	self shouldnt: ['some' should equal: 'some'] raise: SpecOfFailed.
 	self should: ['1234' should equal: '1324'] raise: SpecOfFailed
+]
+
+{ #category : #tests }
+SpecOfShouldExpressionTests >> testStringIncludesSubstring [
+	self shouldnt: ['some test string' should includeSubstring: 'test'] raise: SpecOfFailed.
+	self shouldnt: ['some test string' should includeSubstring: 'Test'] raise: SpecOfFailed.
+	self should: ['some string' should includeSubstring: 'test'] raise: SpecOfFailed
+]
+
+{ #category : #tests }
+SpecOfShouldExpressionTests >> testStringIncludesSubstringCaseSensitive [
+	self shouldnt: [
+		'some test string' should includeSubstring: 'test' caseSensitive: true] raise: SpecOfFailed.
+	self should: [
+		'some test string' should includeSubstring: 'Test'  caseSensitive: true] raise: SpecOfFailed.
+	self should: [
+		'some string' should includeSubstring: 'test' caseSensitive: true] raise: SpecOfFailed
+]
+
+{ #category : #tests }
+SpecOfShouldExpressionTests >> testStringMatchesWithRegex [
+	self shouldnt: ['test string' should matchRegex: '^test'] raise: SpecOfFailed.
+	self shouldnt: ['test string' should matchRegex: '^Test'] raise: SpecOfFailed.
+	self should: ['some test string' should matchRegex: '^test'] raise: SpecOfFailed
+]
+
+{ #category : #tests }
+SpecOfShouldExpressionTests >> testStringMatchesWithRegexCaseSensitive [
+	self shouldnt: ['test string' should matchRegex: '^test' caseSensitive: true] raise: SpecOfFailed.
+	self should: ['test string' should matchRegex: '^Test' caseSensitive: true] raise: SpecOfFailed.
+	self should: ['some test string' should matchRegex: '^test' caseSensitive: true] raise: SpecOfFailed
 ]

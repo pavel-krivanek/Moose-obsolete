@@ -57,6 +57,16 @@ SmaCCSymbol class >> name: aString [
 		yourself
 ]
 
+{ #category : #testing }
+SmaCCSymbol >> < aSmaCCSymbol [
+	| myPos otherPos |
+	myPos := self position.
+	otherPos := aSmaCCSymbol position.
+	^ myPos = otherPos
+		ifTrue: [ self name < aSmaCCSymbol name ]
+		ifFalse: [ myPos < otherPos ]
+]
+
 { #category : #private }
 SmaCCSymbol >> annotateTokenVariables: aBlock [
 	self productionsDo: [ :each | each annotateTokenVariables: aBlock ]
@@ -132,6 +142,11 @@ SmaCCSymbol >> name [
 { #category : #'initialize-release' }
 SmaCCSymbol >> name: aString [
 	name := aString
+]
+
+{ #category : #accessing }
+SmaCCSymbol >> position [
+	^ self subclassResponsibility
 ]
 
 { #category : #accessing }
