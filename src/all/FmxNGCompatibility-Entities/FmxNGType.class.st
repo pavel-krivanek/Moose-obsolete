@@ -806,37 +806,6 @@ FmxNGType >> methodsGroup [
 		withDescription: 'Methods from ' , self mooseName
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderAttributesIn: composite [
-	<moosePresentationOrder: 20>
-	composite table
-			title: 'Attributes';
-			titleIcon: MooseIcons famixAttributeGroup;
-			display: [ self attributes ];
-			column: 'Name' evaluated: #name;
-			column: 'Declared type' evaluated: [ :each | each declaredType gtDisplayString ];
-			column: 'Modifiers' evaluated: [ '' ] tags: #modifiers;
-			when: [ self attributes notEmpty ];
-			selectionPopulate: #selection  
-				entitled: 'Open declared type' 
-				with:  [ :table | table selection declaredType ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderMethodsIn: composite [
-	<moosePresentationOrder: 20>
-	composite table
-			title: 'Methods';
-			titleIcon: MooseIcons famixMethodGroup;
-			display: [ self methods ];
-			column: 'Name' evaluated: #signature;
-			column: 'Declared type' evaluated: [ :each | each declaredType gtDisplayString ];
-			when: [ self methods notEmpty ];
-			selectionPopulate: #selection  
-				entitled: 'Open declared type' 
-				with:  [ :table | table selection declaredType ]
-]
-
 { #category : #'Famix-Implementation' }
 FmxNGType >> mooseNameOn: aStream [ 
 	| parent |

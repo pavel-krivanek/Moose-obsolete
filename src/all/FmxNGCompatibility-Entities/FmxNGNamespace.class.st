@@ -81,18 +81,6 @@ FmxNGNamespace >> allParentsUpTo: aNamespace [
 	^ self parentScope withAllParentsUpTo: aNamespace
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGNamespace >> browseSource [
-	<menuItem: 'Source' category: 'Browse'>
-	| browser |
-	self mooseModel isSmalltalk 
-		ifTrue: [ (Smalltalk at: self name) browse ]
-	ifFalse: [ 
-		browser := MooseNamespacesCodeBrowser new browser.
-		browser openOn: (self mooseModel allNamespaces select: #isRoot).
-		(browser pane port: #focusOnNamespace) value: self ]
-]
-
 { #category : #'Famix-Extensions' }
 FmxNGNamespace >> bunchCohesion [
 	"Computing cohesion (Bunch formula)"
@@ -278,11 +266,6 @@ FmxNGNamespace >> methods [
 			cacheAt: #methods 
 			ifAbsentPut: [ 
 				self classes flatCollect: #methods ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGNamespace >> mooseIcon [ 
-	^ MooseIcons famixNamespace
 ]
 
 { #category : #'Famix-Implementation' }

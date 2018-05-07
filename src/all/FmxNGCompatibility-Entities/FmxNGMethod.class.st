@@ -92,24 +92,6 @@ FmxNGMethod >> belongsTo: aType [
 	self parentType
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGMethod >> browseSource [
-	<menuItem: 'Source' category: 'Browse'>
-	
-	|class browser |
-	self mooseModel isSmalltalk ifTrue: [
-		class := Smalltalk at: self parentType instanceSide name asSymbol.
-		self hasClassScope
-			ifFalse: [ Smalltalk tools browser openOnClass: class selector: self name ]
-			ifTrue: [ Smalltalk tools browser openOnClass: class class selector: self name ]
-		]
-	ifFalse: [ 
-		browser := MooseNamespacesCodeBrowser new browser.
-		browser openOn: (self mooseModel allNamespaces select: #isRoot).
-		(browser pane port: #focusOnMethod) value: self.
-		 ]
-]
-
 { #category : #'Famix-Smalltalk' }
 FmxNGMethod >> category [
 	<MSEProperty: #category type: #String>
@@ -419,11 +401,6 @@ FmxNGMethod >> methodScope [
 "This is a special case, only meaningful when using #withoutSelfLoops. Rejecting self loops with a method means rejecting recursive calls."
 
 	^ self
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGMethod >> mooseIcon [ 
-	^ MooseIcons famixMethod
 ]
 
 { #category : #'Famix-Implementation' }

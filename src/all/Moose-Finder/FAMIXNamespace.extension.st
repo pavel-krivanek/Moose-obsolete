@@ -12,7 +12,7 @@ FAMIXNamespace >> browseSource [
 		(browser pane port: #focusOnNamespace) value: self ]
 ]
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXNamespace >> mooseFinderWithinHierarchyIn: composite [
 	<moosePresentationOrder: 20>
 	composite roassal2
