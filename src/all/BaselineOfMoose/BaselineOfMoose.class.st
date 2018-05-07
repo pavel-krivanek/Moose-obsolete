@@ -892,6 +892,7 @@ BaselineOfMoose >> groups: spec [
 			
 			'Moose-Query-Extensions'
 			'Moose-Query-Test'
+			'Moose-GenericImporter'
 			"'Phexample'"
 			
 			'FamixNG-MetamodelGeneration'

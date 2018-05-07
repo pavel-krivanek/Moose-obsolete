@@ -15,7 +15,7 @@ MooseFileStructureImporter >> completeImport: folders [
 		do: 
 			[:each |  
 			| folder | 
-			folder := FAMIXFolder named: each filedIn: nil. 
+			folder := FmxNGFolder named: each filedIn: nil. 
 			self importContentsInFolderNamed: (FileSystem disk referenceTo: each) filedInFolder: folder. 
 			self mooseModel add: folder]. 
 	self mooseModel sourceLanguage: FmxNGUNKNOWNSourceLanguage new
@@ -42,7 +42,7 @@ MooseFileStructureImporter >> importFileNamed: aFileName filedInFolder: aContain
 	 
 	| file | 
 		self flag: #toBeFixed.
-	file := FAMIXFile 
+	file := FmxNGFile 
 		named: aFileName basename 
 		filedIn: aContainerFolder. 
 		file parentFolder:aContainerFolder.
@@ -54,7 +54,7 @@ MooseFileStructureImporter >> importFolderNamed: aFolderName filedInFolder: aCon
 	 
 	| folder | 
 		self flag: #toBeFixed.
-	folder := FAMIXFolder 
+	folder := FmxNGFolder 
 		named: aFolderName basename 
 		filedIn: aContainerFolder. 
 	 folder parentFolder: aContainerFolder. 
