@@ -74,19 +74,6 @@ FamixMetamodelBuilder class >> forGenerator: aGenerator [
 		yourself.
 ]
 
-{ #category : #'instance creation' }
-FamixMetamodelBuilder class >> forTesting [
-
-	| aBuilder |
-	aBuilder := self new.
-	aBuilder
-		environment: (FamixMetamodelBuilderRingEnvironment for: aBuilder);
-		prefix: 'Tst';
-		packageName: 'Tst';
-		yourself.
-	^ aBuilder.
-]
-
 { #category : #visitor }
 FamixMetamodelBuilder >> acceptVisitor: aVisitor [
 
