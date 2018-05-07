@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseUtilities,
 	#superclass : #Object,
-	#category : #'Famix-Implementation'
+	#category : #'Famix-Compatibility'
 }
 
 { #category : #private }

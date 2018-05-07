@@ -4,7 +4,7 @@ FAMIXTypeGroup is a MooseGroup containing only FAMIX enities of type FAMIXType.
 Class {
 	#name : #FAMIXTypeGroup,
 	#superclass : #MooseGroup,
-	#category : #'Famix-Extensions'
+	#category : #'FmxNGCompatibility-Groups'
 }
 
 { #category : #meta }
@@ -15,7 +15,7 @@ FAMIXTypeGroup class >> annotation [
 
 ]
 
-{ #category : #'*famix-extensions-metrics' }
+{ #category : #'as yet unclassified' }
 FAMIXTypeGroup >> abstractness [
 	"Abstractness is the ratio between the number of abstract classes and the total number of classes in a package, in the range [0, 1]. 0 means the package is fully concrete, 1 it is fully abstract."
 
@@ -30,7 +30,7 @@ FAMIXTypeGroup >> abstractness [
 	^ (nsClasses select: [:c | c isAbstract]) size / (nsClasses size) asFloat
 ]
 
-{ #category : #'*famix-extensions-metrics' }
+{ #category : #'as yet unclassified' }
 FAMIXTypeGroup >> afferentCoupling [
 	"Afferent coupling for a class group is the number of external classes that depend upon this class group"
 
@@ -116,7 +116,7 @@ FAMIXTypeGroup >> averageNumberOfStatements [
 		computedAs: [(self average: [:each | each numberOfStatements]) asFloat]
 ]
 
-{ #category : #'*famix-extensions-metrics' }
+{ #category : #'as yet unclassified' }
 FAMIXTypeGroup >> bunchCohesion [
 	"Computing cohesion (Bunch formula). It is also considered anonymous and inner classes (in Java)."
 
@@ -136,7 +136,7 @@ FAMIXTypeGroup >> bunchCohesion [
 	^ intraConnectivities / cgClasses size squared asFloat
 ]
 
-{ #category : #'*famix-extensions-metrics' }
+{ #category : #'as yet unclassified' }
 FAMIXTypeGroup >> bunchCouplingWith: aClassGroup [
 	"Computing coupling (Bunch formula) from aClassGroup to receiver. It is also considered anonymous and inner classes (in Java)"
 
@@ -189,7 +189,7 @@ FAMIXTypeGroup >> commonExternalSuperclasses [
 	^result
 ]
 
-{ #category : #'*famix-extensions-metrics' }
+{ #category : #'as yet unclassified' }
 FAMIXTypeGroup >> distance [
 	"D = A + I - 1. A package should be balanced between abstractness and instability, i.e., somewhere between abstract and stable or concrete and unstable. This rule defines the main sequence by the equation A + I - 1 = 0. D is the distance to the main sequence."
 	<MSEProperty: #distance type: #Number>
@@ -204,7 +204,7 @@ FAMIXTypeGroup >> distance [
 	^ abstractness + instability - 1
 ]
 
-{ #category : #'*famix-extensions-metrics' }
+{ #category : #'as yet unclassified' }
 FAMIXTypeGroup >> efferentCoupling [
 	"Efferent coupling for a class group is the number of classes it depends upon"
 
@@ -218,7 +218,7 @@ FAMIXTypeGroup >> efferentCoupling [
 	^ (cgClasses flatCollect: [ :aClass | (aClass queryOutgoingDependencies atScope: FmxNGType) select: [ :c | (cgClasses includes: c) not and: [ c isInstanceSide ] ] ]) asSet size
 ]
 
-{ #category : #'*famix-extensions-metrics' }
+{ #category : #'as yet unclassified' }
 FAMIXTypeGroup >> instability [
 	"I =	Ce(P)/(Ce(P)+Ca(P)), in the range [0, 1]. 0 means package is maximally stable (i.e., no dependency to other packages and can not change without big consequences), 1 means it is unstable."
 	<MSEProperty: #instability type: #Number>
