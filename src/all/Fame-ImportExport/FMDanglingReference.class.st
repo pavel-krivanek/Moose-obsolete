@@ -6,7 +6,7 @@ Class {
 		'owner',
 		'pos'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #'instance creation' }
@@ -15,7 +15,7 @@ FMDanglingReference class >> with: aFutureAttribute [
 	^self new initialize: aFutureAttribute 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMDanglingReference >> initialize: aFutureAttribute [ 
 	
 	owner := aFutureAttribute.

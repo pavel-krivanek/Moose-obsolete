@@ -4,7 +4,7 @@ A MalGraphAlgorithmTest is a test class for testing the behavior of MalGraphAlgo
 Class {
 	#name : #MalGraphAlgorithmTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-Algos-Graph
+	#category : #'Moose-Tests-Algos-Graph'
 }
 
 { #category : #'tests-building - graph' }

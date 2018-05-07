@@ -4,7 +4,7 @@ This is an AST node class for the 'element()' type test or for '*' type tests wh
 Class {
 	#name : #XPathASTElementNodeTestNode,
 	#superclass : #XPathASTNodeTestNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

@@ -7,15 +7,15 @@ Class {
 	#instVars : [
 		'separators'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MATokenDescription class >> defaultKind [
 	^ Array
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MATokenDescription class >> defaultSeparators [
 	^ ' ,;', (String with: Character cr with: Character lf with: Character tab)
 ]
@@ -35,7 +35,7 @@ MATokenDescription >> acceptMagritte: aVisitor [
 	aVisitor visitTokenDescription: self
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MATokenDescription >> descriptionSeparators [
 	<magritteDescription>
 	^ MAStringDescription new

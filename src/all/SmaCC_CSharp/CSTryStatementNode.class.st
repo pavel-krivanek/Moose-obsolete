@@ -7,7 +7,7 @@ Class {
 		'clauses',
 		'finally'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -60,7 +60,7 @@ CSTryStatementNode >> finally: aCSFinallyClauseNode [
 		ifTrue: [ self finally parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSTryStatementNode >> initialize [
 	super initialize.
 	clauses := OrderedCollection new: 2.

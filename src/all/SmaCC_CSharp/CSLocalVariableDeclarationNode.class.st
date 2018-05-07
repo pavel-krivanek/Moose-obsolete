@@ -6,7 +6,7 @@ Class {
 		'declarators',
 		'commaTokens'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -46,7 +46,7 @@ CSLocalVariableDeclarationNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSLocalVariableDeclarationNode >> initialize [
 	super initialize.
 	declarators := OrderedCollection new: 2.

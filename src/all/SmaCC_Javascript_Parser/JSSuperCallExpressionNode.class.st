@@ -10,7 +10,7 @@ Class {
 		'varArguments',
 		'commas'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -70,7 +70,7 @@ JSSuperCallExpressionNode >> ignoredTokenVariables [
 	^ #(#left #right)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSSuperCallExpressionNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

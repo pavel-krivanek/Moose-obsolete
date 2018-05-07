@@ -12,7 +12,7 @@ Class {
 		'isCheckConstraint',
 		'expressionString'
 	],
-	#category : #PetitSQLite-AST
+	#category : #'PetitSQLite-AST'
 }
 
 { #category : #accessing }

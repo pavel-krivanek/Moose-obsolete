@@ -19,7 +19,7 @@ Class {
 		'dictionary',
 		'colorIndex'
 	],
-	#category : #Roassal2-ColorNormalizerOBSOLETE
+	#category : #'Roassal2-ColorNormalizerOBSOLETE'
 }
 
 { #category : #'instance creation' }
@@ -44,12 +44,12 @@ RTNIdentityNormalizer class >> withCommand: aBlock [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTNIdentityNormalizer >> colors [
 	^ Color distinctTenStrongColors
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTNIdentityNormalizer >> initialize [
 	
 	super initialize.

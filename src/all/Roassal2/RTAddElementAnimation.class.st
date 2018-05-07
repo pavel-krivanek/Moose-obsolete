@@ -12,7 +12,7 @@ Class {
 		'side',
 		'center'
 	],
-	#category : #Roassal2-Experimental
+	#category : #'Roassal2-Experimental'
 }
 
 { #category : #accessing }

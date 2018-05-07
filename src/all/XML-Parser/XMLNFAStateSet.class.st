@@ -8,7 +8,7 @@ Class {
 		'set',
 		'isAccepting'
 	],
-	#category : #XML-Parser-Validation-DFA
+	#category : #'XML-Parser-Validation-DFA'
 }
 
 { #category : #'instance creation' }
@@ -44,10 +44,11 @@ XMLNFAStateSet >> = anObject [
 		and: [self size = anObject size])
 		ifFalse: [^ false].
 
-	"avoid allSatisfy: for speed"
+	"use #do: instead of #allSatisfy: for speed"
 	self do: [:each |
 		(anObject includes: each)
 			ifFalse: [^ false]].
+
 	^ true.
 ]
 
@@ -88,7 +89,8 @@ XMLNFAStateSet >> hash [
 	hash := self species hash.
 	self size > 5
 		ifFalse: [
-			self do: [:each | hash := hash bitXor: each hash]].
+			self do: [:each |
+				hash := hash bitXor: each hash]].
 	^ hash bitXor: self size hash.
 ]
 

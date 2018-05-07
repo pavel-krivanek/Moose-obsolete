@@ -1,1 +1,1 @@
-Package { #name : #PetitSQLite-Tests-Parser }
+Package { #name : #'PetitSQLite-Tests-Parser' }

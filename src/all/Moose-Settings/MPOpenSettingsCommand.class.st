@@ -1,7 +1,7 @@
 Class {
 	#name : #MPOpenSettingsCommand,
 	#superclass : #MoosePanelCommand,
-	#category : #Moose-Settings
+	#category : #'Moose-Settings'
 }
 
 { #category : #hooks }

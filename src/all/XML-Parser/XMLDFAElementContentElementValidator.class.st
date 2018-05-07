@@ -4,7 +4,7 @@ This class validates elements that can only contain element content (no PCDATA) 
 Class {
 	#name : #XMLDFAElementContentElementValidator,
 	#superclass : #XMLDFAElementValidator,
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #testing }

@@ -5,7 +5,7 @@ Class {
 		'leftParens',
 		'rightParens'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ JSExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSExpressionNode >> initialize [
 	super initialize.
 	leftParens := OrderedCollection new: 2.

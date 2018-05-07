@@ -10,7 +10,7 @@ Class {
 		'rightParenToken',
 		'body'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -64,7 +64,7 @@ CSDestructorDeclarationNode >> identifierToken: aSmaCCToken [
 	identifierToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSDestructorDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

@@ -21,7 +21,7 @@ Class {
 		'precedence',
 		'firstTerminals'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #variables }
@@ -55,6 +55,16 @@ SmaCCSymbol class >> name: aString [
 	^ self new
 		name: aString;
 		yourself
+]
+
+{ #category : #testing }
+SmaCCSymbol >> < aSmaCCSymbol [
+	| myPos otherPos |
+	myPos := self position.
+	otherPos := aSmaCCSymbol position.
+	^ myPos = otherPos
+		ifTrue: [ self name < aSmaCCSymbol name ]
+		ifFalse: [ myPos < otherPos ]
 ]
 
 { #category : #private }
@@ -98,7 +108,7 @@ SmaCCSymbol >> firstTerminals [
 	^ firstTerminals
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSymbol >> initialize [
 	super initialize.
 	firstTerminals := Set new
@@ -129,9 +139,14 @@ SmaCCSymbol >> name [
 	^ name
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSymbol >> name: aString [
 	name := aString
+]
+
+{ #category : #accessing }
+SmaCCSymbol >> position [
+	^ self subclassResponsibility
 ]
 
 { #category : #accessing }

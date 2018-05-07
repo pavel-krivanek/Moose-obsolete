@@ -29,7 +29,7 @@ Class {
 		'originShape',
 		'conformingShape'
 	],
-	#category : #Trachel-Tests
+	#category : #'Trachel-Tests'
 }
 
 { #category : #running }

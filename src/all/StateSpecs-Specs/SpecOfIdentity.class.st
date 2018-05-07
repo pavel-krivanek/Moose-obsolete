@@ -13,6 +13,11 @@ Class {
 	#category : 'StateSpecs-Specs'
 }
 
+{ #category : #accessing }
+SpecOfIdentity class >> to: requiredValue [
+	^self requiredValue: requiredValue
+]
+
 { #category : #converting }
 SpecOfIdentity >> asSimpleValue [ 
 	^requiredValue

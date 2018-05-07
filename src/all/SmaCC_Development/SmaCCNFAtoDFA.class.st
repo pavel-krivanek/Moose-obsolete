@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'mergedStates'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }
@@ -18,7 +18,7 @@ SmaCCNFAtoDFA class >> convertToDFA: aSmaCCNode [
 SmaCCNFAtoDFA >> commonTransitionObjectsForEdges: edgeCollection [
 	^ edgeCollection
 		inject: edgeCollection first transitionObjects
-		into: [ :sum :each | sum select: [ :char | each includes: char ] ]
+		into: [ :sum :each | sum smaccIntersect: each transitionObjects ]
 ]
 
 { #category : #algorithm }
@@ -56,7 +56,7 @@ SmaCCNFAtoDFA >> eliminateDuplicateTransitionsIn: aSmaCCNode [
 	self setTransitionsOn: aSmaCCNode to: newTransitions
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNFAtoDFA >> initialize [
 	super initialize.
 	mergedStates := Dictionary new
@@ -91,12 +91,8 @@ SmaCCNFAtoDFA >> someDuplicateIn: edgeCollection [
 	| objects |
 	objects := SmaCCSet new.
 	edgeCollection
-		do:
-			[ :edge | 
-			edge transitionObjects
-				do: [ :each | 
-					(objects includes: each)
-						ifTrue: [ ^ each ] ].
+		do: [ :edge | 
+			(objects commonElementWith: edge transitionObjects) ifNotNil: [ :each | ^ each ].
 			objects addAll: edge transitionObjects ].
 	^ nil
 ]

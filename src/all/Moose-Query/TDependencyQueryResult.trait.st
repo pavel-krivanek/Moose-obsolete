@@ -1,26 +1,39 @@
 "
 TDependencyQueryResult is a Trait that provides some common MooseChef selectors to several MooseQueryResult.
 
+For more informations: https://moosequery.ferlicot.fr/
 "
 Trait {
 	#name : #TDependencyQueryResult,
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #filtering }
+TDependencyQueryResult >> allAtScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) allAtScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
+TDependencyQueryResult >> allToScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) allToScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
+TDependencyQueryResult >> allWithScope: aClassFamix [
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) allWithScope: aClassFamix in: res ]) asSet
+]
+
+{ #category : #filtering }
 TDependencyQueryResult >> atScope: aClassFamix [
-	| res |
-	res := OrderedCollection new.
-	self storage do: [ :dep | (self opposite: dep) atScope: aClassFamix in: res ].
-	^ self newObjectResultWith: res asSet
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) atScope: aClassFamix in: res ]) asSet
 ]
 
 { #category : #private }
 TDependencyQueryResult >> elementAtReceiverScope: dep [
-	"returns scope of opposite element matching the scope of the receiver.
+	"returns scope (parents and children) of opposite element matching the scope of the receiver.
 	For example, would return the class of an invoked method if query is called on a class."
 
-	^ (self opposite: dep) perform: self receiver yourScope
+	^ (self opposite: dep) withScope: self receiver
 ]
 
 { #category : #private }
@@ -91,18 +104,12 @@ TDependencyQueryResult >> sourceMethods [
 
 { #category : #filtering }
 TDependencyQueryResult >> toScope: aClassFamix [
-	| res |
-	res := OrderedCollection new.
-	self storage do: [ :dep | (self opposite: dep) toScope: aClassFamix in: res ].
-	^ self newObjectResultWith: res asSet
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) toScope: aClassFamix in: res ]) asSet
 ]
 
 { #category : #filtering }
 TDependencyQueryResult >> withScope: aClassFamix [
-	| res |
-	res := OrderedCollection new.
-	self storage do: [ :dep | (self opposite: dep) withScope: aClassFamix in: res ].
-	^ self newObjectResultWith: res asSet
+	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) withScope: aClassFamix in: res ]) asSet
 ]
 
 { #category : #filtering }

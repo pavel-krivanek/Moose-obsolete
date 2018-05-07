@@ -15,7 +15,7 @@ Class {
 		'license',
 		'url'
 	],
-	#category : #Grease-Core
+	#category : #'Grease-Core'
 }
 
 { #category : #querying }
@@ -81,7 +81,7 @@ GRPackage >> description: aString [
 	description := aString
 ]
 
-{ #category : #accessing-repositories }
+{ #category : #'accessing-repositories' }
 GRPackage >> greaseUrl [
 	^ 'http://smalltalkhub.com/mc/Seaside/Grease11/main'
 ]
@@ -151,17 +151,17 @@ GRPackage >> resolveWith: aDictionary [
 									self error: self name printString , ' depends on unknown package ' , each printString ] ] ] ] ] ] ]
 ]
 
-{ #category : #accessing-repositories }
+{ #category : #'accessing-repositories' }
 GRPackage >> seasideAddonsUrl [
 	^ 'http://smalltalkhub.com/mc/Seaside/Seaside30Addons/main'
 ]
 
-{ #category : #accessing-repositories }
+{ #category : #'accessing-repositories' }
 GRPackage >> seasideLGPLUrl [
 	^ 'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main'
 ]
 
-{ #category : #accessing-repositories }
+{ #category : #'accessing-repositories' }
 GRPackage >> seasideUrl [
 	^ 'http://smalltalkhub.com/mc/Seaside/Seaside31/main'
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #PJNameNode,
 	#superclass : #PJExpressionNode,
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #comparing }

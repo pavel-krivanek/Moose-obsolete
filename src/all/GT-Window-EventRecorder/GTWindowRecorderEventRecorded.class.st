@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'recordedEvent'
 	],
-	#category : #GT-Window-EventRecorder-Base
+	#category : #'GT-Window-EventRecorder-Base'
 }
 
 { #category : #'instance creation' }

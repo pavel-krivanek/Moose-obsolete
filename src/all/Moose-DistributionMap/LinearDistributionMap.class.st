@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'baseColor'
 	],
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #rendering }

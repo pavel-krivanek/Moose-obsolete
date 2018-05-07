@@ -6,7 +6,7 @@ Class {
 		'metamodel',
 		'metaMetamodel'
 	],
-	#category : #Fame-SmalltalkBinding
+	#category : #'Fame-SmalltalkBinding'
 }
 
 { #category : #'instance creation' }

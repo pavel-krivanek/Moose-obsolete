@@ -7,7 +7,7 @@ Class {
 		'listHeight',
 		'listWidth'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #accessing }
@@ -29,7 +29,7 @@ ListPart >> initialList: anObject [
 	list := anObject.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ListPart >> initialize [
 
 	super initialize.

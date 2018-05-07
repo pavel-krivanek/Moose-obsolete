@@ -1,13 +1,13 @@
 Class {
 	#name : #ACGlamourDebugger,
 	#superclass : #GTGenericStackDebugger,
-	#category : #ACD-Glamour-Interface
+	#category : #'ACD-Glamour-Interface'
 }
 
 { #category : #accessing }
 ACGlamourDebugger class >> defaultTitle [
 
-	^ 'Announcement'
+	^ 'Announcement Centric Debugger'
 ]
 
 { #category : #testing }
@@ -218,7 +218,7 @@ ACGlamourDebugger >> stackIn: composite [
 
 ]
 
-{ #category : #printing/formatting }
+{ #category : #'printing/formatting' }
 ACGlamourDebugger >> textAttributesForStackEntry: aContext [
 	| ctxt |
 	(self session receiverContext  == aContext )

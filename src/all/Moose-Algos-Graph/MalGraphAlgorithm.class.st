@@ -12,7 +12,7 @@ Class {
 		'edges',
 		'nodeSortBlock'
 	],
-	#category : #Moose-Algos-Graph
+	#category : #'Moose-Algos-Graph'
 }
 
 { #category : #private }
@@ -158,7 +158,7 @@ MalGraphAlgorithm >> graph [
 	^ {self nodes . self edges}
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalGraphAlgorithm >> initialize [
 	nodes := OrderedCollection new.
 	edges := OrderedCollection new.

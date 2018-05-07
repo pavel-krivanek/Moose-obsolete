@@ -1,7 +1,7 @@
 Class {
 	#name : #PPXmlDoctype,
 	#superclass : #PPXmlData,
-	#category : #PetitXml-Nodes
+	#category : #'PetitXml-Nodes'
 }
 
 { #category : #testing }

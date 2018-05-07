@@ -8,7 +8,7 @@ Class {
 		'commaTokens',
 		'greaterThan'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -58,7 +58,7 @@ CSTypeParameterListNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSTypeParameterListNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

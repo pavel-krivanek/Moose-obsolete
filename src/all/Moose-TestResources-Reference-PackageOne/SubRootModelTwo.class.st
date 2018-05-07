@@ -1,7 +1,7 @@
 Class {
 	#name : #SubRootModelTwo,
 	#superclass : #TheRoot,
-	#category : #Moose-TestResources-Reference-PackageOne
+	#category : #'Moose-TestResources-Reference-PackageOne'
 }
 
 { #category : #methods }

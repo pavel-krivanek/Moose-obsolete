@@ -6,7 +6,7 @@ Class {
 		'commaTokens',
 		'rightBracketToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -29,7 +29,7 @@ CSRankSpecifierNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSRankSpecifierNode >> initialize [
 	super initialize.
 	commaTokens := OrderedCollection new: 2.

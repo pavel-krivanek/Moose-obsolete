@@ -8,7 +8,7 @@ Class {
 		'production',
 		'class'
 	],
-	#category : #PetitGui-Refactoring
+	#category : #'PetitGui-Refactoring'
 }
 
 { #category : #'instance creation' }

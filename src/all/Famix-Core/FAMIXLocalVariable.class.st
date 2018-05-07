@@ -7,14 +7,13 @@ Class {
 	#instVars : [
 		'parentBehaviouralEntity'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXLocalVariable class >> annotation [
 	<MSEClass: #LocalVariable super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -23,12 +22,12 @@ FAMIXLocalVariable >> belongsTo [
 	^ self parentBehaviouralEntity
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXLocalVariable >> namespaceScope [
 	^ self parentBehaviouralEntity namespaceScope
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXLocalVariable >> packageScope [
 	^ self parentBehaviouralEntity packageScope
 ]
@@ -50,7 +49,7 @@ FAMIXLocalVariable >> parentBehaviouralEntity: aBehaviouralEntity [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXLocalVariable >> typeScope [
 	^ self parentBehaviouralEntity typeScope
 ]

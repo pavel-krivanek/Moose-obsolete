@@ -1,7 +1,7 @@
 Class {
 	#name : #PPXmlParser,
 	#superclass : #PPXmlGrammar,
-	#category : #PetitXml-Core
+	#category : #'PetitXml-Core'
 }
 
 { #category : #grammar }
@@ -17,7 +17,7 @@ PPXmlParser >> attributes [
 			into: [ :result :each | result addLast: each; yourself ] ]
 ]
 
-{ #category : #grammar-character }
+{ #category : #'grammar-character' }
 PPXmlParser >> characterData [
 	^ super characterData ==> [ :nodes | PPXmlText data: nodes ]
 ]

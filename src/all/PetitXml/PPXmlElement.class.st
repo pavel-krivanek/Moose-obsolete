@@ -8,7 +8,7 @@ Class {
 		'name',
 		'attributes'
 	],
-	#category : #PetitXml-Nodes
+	#category : #'PetitXml-Nodes'
 }
 
 { #category : #'instance creation' }
@@ -34,28 +34,28 @@ PPXmlElement >> = anXmlNode [
 	^ true
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 PPXmlElement >> attributeAt: aString [
 	"Answer the attribute value by name, if the node does not exist answer nil."
 	
 	^ self attributeAt: aString ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 PPXmlElement >> attributeAt: aString ifAbsent: aBlock [
 	"Answer the attribute value by name, if the node does not exist evaluate aBlock."
 	
 	^ (self attributeNodeAt: aString ifAbsent: [ ^ aBlock value ]) value
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 PPXmlElement >> attributeNodeAt: aString [
 	"Answer the attribute node by name, if the node does not exist answer nil."
 	
 	^ self attributeNodeAt: aString ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 PPXmlElement >> attributeNodeAt: aString ifAbsent: aBlock [
 	"Answer the attribute node by name, if the node does not exist evaluate aBlock."
 	

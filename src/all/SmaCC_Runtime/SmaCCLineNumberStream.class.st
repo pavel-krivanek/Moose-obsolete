@@ -17,7 +17,7 @@ Class {
 		'eolPositions',
 		'lastPosition'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #'instance creation' }
@@ -123,7 +123,7 @@ SmaCCLineNumberStream >> nextPut: anObject [
 	^ sourceStream nextPut: anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCLineNumberStream >> on: aReadStream [
 	sourceStream := aReadStream.
 	eolPositions := OrderedCollection with: aReadStream position.

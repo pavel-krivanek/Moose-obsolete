@@ -25,7 +25,7 @@ FAMIXNamespaceGroup >> viewDependenciesWithCyclesOn: view [
 			(tarjan findNode: namespace) isInCycle
 				ifTrue: [Color red]
 				ifFalse: [Color veryLightGray]].
-	view interaction popupText: #mooseDisplayString.
+	view interaction popupText: #gtDisplayString.
 	view nodes: self.
 	view shape line color: (Color gray alpha: 0.2).
 	view edges source: self connectFrom: #yourself toAll: #providerNamespaces.

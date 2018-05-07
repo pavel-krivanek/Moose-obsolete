@@ -15,7 +15,7 @@ Class {
 		'announcer',
 		'attributes'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #adding }
@@ -150,6 +150,12 @@ RTAnnounceableObject >> removeInteractionIfPresent: anInteractionClass [
 	"Remove all the callbacks associated to the interaction."
 	(self hasInteraction: anInteractionClass) ifFalse: [ ^ self ].
 	(self getInteractionsForClass: anInteractionClass) do: [ :int | self announcer unsubscribe: int ]
+]
+
+{ #category : #accessing }
+RTAnnounceableObject >> resetAnnouncer [
+	"Remove all the interaction added in the view"
+	self announcer: nil
 ]
 
 { #category : #interaction }

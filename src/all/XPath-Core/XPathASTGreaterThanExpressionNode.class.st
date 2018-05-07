@@ -4,7 +4,7 @@ This is an AST node class for '>' greater than expressions.
 Class {
 	#name : #XPathASTGreaterThanExpressionNode,
 	#superclass : #XPathASTRelationalExpressionNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

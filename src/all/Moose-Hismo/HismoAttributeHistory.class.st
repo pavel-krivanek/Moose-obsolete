@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'containingClassHistory'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoAttributeHistory class >> annotation [
 	<MSEClass: #AttributeHistory super: #HismoAbstractHistory>
 	<package: #Hismo>

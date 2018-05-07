@@ -1,7 +1,7 @@
 Class {
 	#name : #FILOStack,
 	#superclass : #Stack,
-	#category : #Moose-Tests-Algos-HierarchicalGraph
+	#category : #'Moose-Tests-Algos-HierarchicalGraph'
 }
 
 { #category : #adding }

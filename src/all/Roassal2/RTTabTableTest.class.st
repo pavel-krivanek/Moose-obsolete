@@ -5,7 +5,7 @@ Class {
 		'tab',
 		'data'
 	],
-	#category : #Roassal2-Table
+	#category : #'Roassal2-Table'
 }
 
 { #category : #running }

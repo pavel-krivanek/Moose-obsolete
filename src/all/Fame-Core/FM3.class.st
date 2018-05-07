@@ -10,7 +10,7 @@ Probably a good candidate to be remove.
 Class {
 	#name : #FM3,
 	#superclass : #Object,
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
 { #category : #accessing }

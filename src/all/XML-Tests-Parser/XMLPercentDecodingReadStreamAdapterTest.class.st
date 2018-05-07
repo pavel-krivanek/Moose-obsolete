@@ -1,25 +1,28 @@
 Class {
 	#name : #XMLPercentDecodingReadStreamAdapterTest,
-	#superclass : #XMLDecodingReadStreamAdapterTest,
-	#category : #XML-Tests-Parser-Streams
+	#superclass : #XMLReadStreamAdapterTest,
+	#category : #'XML-Tests-Parser-Streams'
 }
 
 { #category : #accessing }
-XMLPercentDecodingReadStreamAdapterTest >> inputCollection [
-	^ self percentEncodedUTF8String
+XMLPercentDecodingReadStreamAdapterTest >> basicInputCollection [
+	^ String streamContents: [:stream |
+		super basicInputCollection do: [:each |
+			stream nextPutAll:
+				(self class percentEncodeCharacter: each)]]
 ]
 
 { #category : #accessing }
-XMLPercentDecodingReadStreamAdapterTest >> outputCollection [
-	^ self decodedUTF8String
+XMLPercentDecodingReadStreamAdapterTest >> basicOutputCollection [
+	^ 'test'
+]
+
+{ #category : #testing }
+XMLPercentDecodingReadStreamAdapterTest >> expectsBinaryOutput [
+	^ true
 ]
 
 { #category : #accessing }
 XMLPercentDecodingReadStreamAdapterTest >> streamAdapterClass [
 	^ XMLPercentDecodingReadStreamAdapter
-]
-
-{ #category : #accessing }
-XMLPercentDecodingReadStreamAdapterTest >> streamConverterClass [
-	^ XMLUTF8StreamConverter
 ]

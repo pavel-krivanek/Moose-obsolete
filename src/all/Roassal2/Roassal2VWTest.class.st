@@ -4,7 +4,7 @@ A Roassal2VWTest is a test class for testing the behavior of Roassal2VW
 Class {
 	#name : #Roassal2VWTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-ExporterVW
+	#category : #'Roassal2-ExporterVW'
 }
 
 { #category : #helpers }
@@ -36,10 +36,10 @@ Roassal2VWTest >> simple [
 Roassal2VWTest >> testNoArray [
 	| t ex |
 	t := Roassal2VW new.
-	ex := RoassalExporter new.
-	ex packages: t packages.
+	ex := t exporter.
+	ex ifNil: [ ^ self ].
 	ex methods do: [ :met | 
-		self deny: (self hasArraySelector: met) 
+		self deny: (ex hasArray: met)
 			description: 'Remove brackets {} from: ',met methodClass name,'>>#', met selector.
 	 ] displayingProgress: [:met | 'Processing method: ', met selector ].
 ]

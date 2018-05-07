@@ -36,7 +36,7 @@ Class {
 		'shouldBeHorizontallyReversed',
 		'shouldBeVerticallyReversed'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #testing }
@@ -87,7 +87,7 @@ RTAbstractRegularTreeLayout >> horizontallyReverse: elements [
 		do: [ :el | el translateTo: (largeur - el position x) @ el position y ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractRegularTreeLayout >> initialize [
 	super initialize.
 	topGap := 5.
@@ -127,7 +127,7 @@ RTAbstractRegularTreeLayout >> layered [
 	self isLayered: true
 ]
 
-{ #category : #hook-private }
+{ #category : #'hook-private' }
 RTAbstractRegularTreeLayout >> layout: aNodeCollection atPoint: aPoint atLayer: anObject [
 	self subclassResponsibility
 ]

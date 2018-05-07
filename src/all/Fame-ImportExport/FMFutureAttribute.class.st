@@ -7,7 +7,7 @@ Class {
 		'values',
 		'tally'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #'instance creation' }
@@ -60,7 +60,7 @@ FMFutureAttribute >> values [
 	^values
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMFutureAttribute >> with: aFutureElement name: aString [
 
 	tally := 0.

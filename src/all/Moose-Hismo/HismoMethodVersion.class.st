@@ -1,10 +1,10 @@
 Class {
 	#name : #HismoMethodVersion,
 	#superclass : #HismoEntityVersion,
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoMethodVersion class >> annotation [
 	<MSEClass: #MethodVersion super: #HismoEntityVersion>
 	<package: #Hismo>

@@ -9,7 +9,7 @@ Class {
 		'body',
 		'rightBracket'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }
@@ -66,7 +66,7 @@ GstBlockNode >> ignoredTokenVariables [
 	^ #(#leftBracket #rightBracket)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 GstBlockNode >> initialize [
 	super initialize.
 	colons := OrderedCollection new: 2.

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'dendrogram'
 	],
-	#category : #Moose-Tests-Algos-Clustering
+	#category : #'Moose-Tests-Algos-Clustering'
 }
 
 { #category : #fixture }

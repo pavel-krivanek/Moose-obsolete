@@ -17,11 +17,16 @@ Object >> mooseDescription [
 
 { #category : #'*moose-core' }
 Object >> mooseDisplayString [
-	^ String streamContents: [:stream | self mooseDisplayStringOn: stream] 
+	^ self
+		deprecated: 'Please use #gtDisplayString instead'
+		transformWith: '`@receiver mooseDisplayString' -> '`@receiver gtDisplayString'.
 ]
 
 { #category : #'*moose-core' }
 Object >> mooseDisplayStringOn: aStream [
+	self
+		deprecated: 'Please use gtDisplayOn: instead'
+		transformWith: '`@receiver mooseDisplayStringOn: `@statements' -> '`@receiver gtDisplayOn: `@statements'.
 	^ self printOn: aStream
 ]
 

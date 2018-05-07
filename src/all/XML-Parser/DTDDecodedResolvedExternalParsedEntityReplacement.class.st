@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'contents'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #'instance creation' }
@@ -20,7 +20,7 @@ DTDDecodedResolvedExternalParsedEntityReplacement >> contents [
 	^ contents
 ]
 
-{ #category : #accessing }
+{ #category : #testing }
 DTDDecodedResolvedExternalParsedEntityReplacement >> isEmpty [
 	^ self contents isEmpty
 ]
@@ -28,6 +28,7 @@ DTDDecodedResolvedExternalParsedEntityReplacement >> isEmpty [
 { #category : #printing }
 DTDDecodedResolvedExternalParsedEntityReplacement >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self contents;

@@ -1,1 +1,1 @@
-Package { #name : #GT-Tests-Release }
+Package { #name : #'GT-Tests-Release' }

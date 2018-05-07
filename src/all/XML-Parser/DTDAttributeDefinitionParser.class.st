@@ -11,7 +11,7 @@ Class {
 		'defaultValidator',
 		'enumerationListParserClass'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #private }

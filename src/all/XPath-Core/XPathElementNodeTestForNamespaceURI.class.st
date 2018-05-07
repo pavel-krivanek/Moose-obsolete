@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'namespaceURI'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -33,6 +33,7 @@ XPathElementNodeTestForNamespaceURI >> namespaceURI: aURI [
 { #category : #printing }
 XPathElementNodeTestForNamespaceURI >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self namespaceURI;

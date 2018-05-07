@@ -5,7 +5,7 @@ Class {
 		'stringParts',
 		'interpolations'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -23,7 +23,7 @@ CSInterpolatedStringExpressionNode >> compositeTokenVariables [
 	^ #(#stringParts)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSInterpolatedStringExpressionNode >> initialize [
 	super initialize.
 	stringParts := OrderedCollection new: 2.

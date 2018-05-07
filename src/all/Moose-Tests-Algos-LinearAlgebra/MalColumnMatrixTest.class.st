@@ -4,7 +4,7 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalColumnMatrixTest,
 	#superclass : #MalMatrixTest,
-	#category : #Moose-Tests-Algos-LinearAlgebra
+	#category : #'Moose-Tests-Algos-LinearAlgebra'
 }
 
 { #category : #fixture }

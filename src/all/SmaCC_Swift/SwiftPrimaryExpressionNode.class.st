@@ -7,7 +7,7 @@ Class {
 		'commaTokens',
 		'greaterThanToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -50,7 +50,7 @@ SwiftPrimaryExpressionNode >> identifierToken: aSmaCCToken [
 	identifierToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftPrimaryExpressionNode >> initialize [
 	super initialize.
 	commaTokens := OrderedCollection new: 2.

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'parsingResult'
 	],
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #handling }

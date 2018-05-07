@@ -24,7 +24,7 @@ b build.
 Class {
 	#name : #RTMondrianExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-Mondrian
+	#category : #'Roassal2-Builder-Mondrian'
 }
 
 { #category : #sources }

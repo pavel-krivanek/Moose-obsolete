@@ -5,7 +5,7 @@ Class {
 		'graph',
 		'visited'
 	],
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #'public interface' }

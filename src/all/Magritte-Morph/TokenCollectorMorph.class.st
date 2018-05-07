@@ -12,7 +12,7 @@ Class {
 		'whenObjectsChangedBlock',
 		'factory'
 	],
-	#category : #Magritte-Morph-Morphs
+	#category : #'Magritte-Morph-Morphs'
 }
 
 { #category : #private }
@@ -26,7 +26,7 @@ TokenCollectorMorph >> accept: text [
 	self refresh
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 TokenCollectorMorph >> entryCompletion [
 
 	entryCompletion ifNotNil: [ ^ entryCompletion ].
@@ -90,7 +90,7 @@ TokenCollectorMorph >> refresh [
 					
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 TokenCollectorMorph >> stringDecoder [
 	"Test whether a string represents an object"
 	^ stringDecoder ifNil: [ stringDecoder := [ :obj :str | obj asString = str ] ]
@@ -101,7 +101,7 @@ TokenCollectorMorph >> stringDecoder: aBlock [
 	stringDecoder := aBlock
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 TokenCollectorMorph >> stringEncoder [
 	^ stringEncoder ifNil: [ stringEncoder := [ :obj | obj asString ] ]
 ]
@@ -112,7 +112,7 @@ TokenCollectorMorph >> stringEncoder: aBlock [
 	stringEncoder := aBlock
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 TokenCollectorMorph >> textInput [
 
 	textInput ifNotNil: [ ^ textInput ].
@@ -126,7 +126,7 @@ TokenCollectorMorph >> textInput [
 	^ textInput
 ]
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 TokenCollectorMorph >> tokenViewer [
 	tokenViewer ifNotNil: [ ^ tokenViewer ].
 	^ tokenViewer := Morph new

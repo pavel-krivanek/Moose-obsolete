@@ -10,7 +10,7 @@ Class {
 		'sections',
 		'rightBraceToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -37,7 +37,7 @@ CSSwitchStatementNode >> expression: aCSExpressionNode [
 		ifTrue: [ self expression parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSSwitchStatementNode >> initialize [
 	super initialize.
 	sections := OrderedCollection new: 2.

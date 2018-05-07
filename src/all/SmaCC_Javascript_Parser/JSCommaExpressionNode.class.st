@@ -5,7 +5,7 @@ Class {
 		'expressions',
 		'comma'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -45,7 +45,7 @@ JSCommaExpressionNode >> ignoredTokenVariables [
 	^ #(#comma)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSCommaExpressionNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

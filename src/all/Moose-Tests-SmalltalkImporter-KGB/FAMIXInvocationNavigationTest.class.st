@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXInvocationNavigationTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : #Moose-Tests-SmalltalkImporter-KGB
+	#category : #'Moose-Tests-SmalltalkImporter-KGB'
 }
 
 { #category : #'as yet unclassified' }

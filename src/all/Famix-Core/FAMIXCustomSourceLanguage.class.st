@@ -14,14 +14,13 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXCustomSourceLanguage class >> annotation [
 	<MSEClass: #CustomSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

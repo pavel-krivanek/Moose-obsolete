@@ -3,27 +3,17 @@ A read stream for single characters. This is faster and uses less memory than co
 "
 Class {
 	#name : #XMLSingleCharacterReadStream,
-	#superclass : #Object,
+	#superclass : #XMLAbstractReadStream,
 	#instVars : [
 		'character',
 		'atEnd'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
-
-{ #category : #'instance creation' }
-XMLSingleCharacterReadStream class >> on: aCharacter [
-	^ self new on: aCharacter
-]
 
 { #category : #testing }
 XMLSingleCharacterReadStream >> atEnd [
 	^ atEnd
-]
-
-{ #category : #private }
-XMLSingleCharacterReadStream >> basicNext [
-	^ self next
 ]
 
 { #category : #closing }
@@ -34,16 +24,6 @@ XMLSingleCharacterReadStream >> close [
 { #category : #accessing }
 XMLSingleCharacterReadStream >> contents [
 	^ String with: character
-]
-
-{ #category : #testing }
-XMLSingleCharacterReadStream >> isBinary [
-	^ false
-]
-
-{ #category : #testing }
-XMLSingleCharacterReadStream >> isStream [
-	^ true
 ]
 
 { #category : #accessing }
@@ -83,6 +63,7 @@ XMLSingleCharacterReadStream >> position: anInteger [
 { #category : #printing }
 XMLSingleCharacterReadStream >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		print: character;
@@ -92,13 +73,4 @@ XMLSingleCharacterReadStream >> printOn: aStream [
 { #category : #positioning }
 XMLSingleCharacterReadStream >> reset [
 	atEnd := false
-]
-
-{ #category : #accessing }
-XMLSingleCharacterReadStream >> upToEnd [
-	^ atEnd
-		ifTrue: [String new]
-		ifFalse: [
-			atEnd := true.
-			String with: character]
 ]

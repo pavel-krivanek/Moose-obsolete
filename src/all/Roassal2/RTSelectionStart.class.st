@@ -4,5 +4,5 @@ I am called when the event with the elastic box start over the elements in one v
 Class {
 	#name : #RTSelectionStart,
 	#superclass : #RTSelectionEvent,
-	#category : #Roassal2-Selection
+	#category : #'Roassal2-Selection'
 }

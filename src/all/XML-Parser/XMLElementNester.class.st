@@ -12,7 +12,7 @@ Class {
 		'wasRootElementEnded',
 		'isInElement'
 	],
-	#category : #XML-Parser-Drivers
+	#category : #'XML-Parser-Drivers'
 }
 
 { #category : #private }
@@ -161,6 +161,7 @@ XMLElementNester >> printElementsStartingAt: aStart stoppingAt: aStop on: aStrea
 { #category : #printing }
 XMLElementNester >> printOn: aStream [
 	super printOn: aStream.
+
 	self hasOpenElements
 		ifTrue: [
 			aStream nextPut: $(.

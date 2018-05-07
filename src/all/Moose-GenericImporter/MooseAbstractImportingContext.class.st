@@ -20,7 +20,7 @@ Class {
 	#classInstVars : [
 		'entityDependencies'
 	],
-	#category : #Moose-GenericImporter
+	#category : #'Moose-GenericImporter'
 }
 
 { #category : #'instance creation' }
@@ -45,7 +45,7 @@ MooseAbstractImportingContext >> allSubclassTypesNotAbstractFor: aFM3Property [
 	^ result
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseAbstractImportingContext >> defineEntityDependencies [
 
 	| dependenciesElements dependenciesTypes  |
@@ -121,7 +121,7 @@ MooseAbstractImportingContext >> importEntityWithDependents: aSymbol [
 	
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseAbstractImportingContext >> initialize: aCollectionOfFM3Elements [
 
 	super initialize.

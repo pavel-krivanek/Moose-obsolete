@@ -7,7 +7,7 @@ Class {
 		'conditionArguments',
 		'targetAction'
 	],
-	#category : #GT-DebuggerExtensions
+	#category : #'GT-DebuggerExtensions'
 }
 
 { #category : #actions }

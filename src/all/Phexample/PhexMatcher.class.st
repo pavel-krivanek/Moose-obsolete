@@ -25,7 +25,7 @@ Class {
 	#instVars : [
 		'state'
 	],
-	#category : #Phexample-Core
+	#category : #'Phexample-Core'
 }
 
 { #category : #initialization }
@@ -100,7 +100,7 @@ PhexMatcher >> beCloseTo: expected [
 	^ self expect: expected using: #closeTo:
 ]
 
-{ #category : #expecting-boolean }
+{ #category : #'expecting-boolean' }
 PhexMatcher >> beFalse [
 	^self be: false
 ]
@@ -110,18 +110,12 @@ PhexMatcher >> beSameAs: expected [
 	^ self be: expected
 ]
 
-{ #category : #expecting-boolean }
+{ #category : #'expecting-boolean' }
 PhexMatcher >> beTrue [
 	^self be: true
 ]
 
-{ #category : #expecting-string }
-PhexMatcher >> beginWith: aPrefix [
-	^self expect: aPrefix using: #beginsWith: 
-	
-]
-
-{ #category : #expecting-change }
+{ #category : #'expecting-change' }
 PhexMatcher >> change: aBlock [ 
 	| before after |
 	before := aBlock value.
@@ -130,7 +124,7 @@ PhexMatcher >> change: aBlock [
 	before should not equal: after.	
 ]
 
-{ #category : #expecting-change }
+{ #category : #'expecting-change' }
 PhexMatcher >> change: aBlock from: before to: after [
 	(self should: aBlock value) = before.
 	receiver value.
@@ -142,13 +136,7 @@ PhexMatcher >> do: aDescription [
 	TestTodo signal: aDescription
 ]
 
-{ #category : #expecting-string }
-PhexMatcher >> endWith: aSuffix [
-	^self expect: aSuffix using: #endsWith: 
-	
-]
-
-{ #category : #expecting-collections }
+{ #category : #'expecting-collections' }
 PhexMatcher >> equalIgnoringOrder: anotherCollection [
 	self expect: [ receiver sorted = anotherCollection sorted] 
 		describeShould:  ['Expected <1p> to equal <2p> ignoring order, but didn''t.' 
@@ -206,7 +194,7 @@ PhexMatcher >> expectedUnknownMessageToReturn: expected [
 	
 ]
 
-{ #category : #expecting-boolean }
+{ #category : #'expecting-boolean' }
 PhexMatcher >> false [
 	 ^self expectedUnknownMessageToReturn: false
 ]
@@ -257,13 +245,7 @@ PhexMatcher >> isShouldNot [
 	^state = #(not) or: [state = #(not be)]
 ]
 
-{ #category : #expecting-string }
-PhexMatcher >> matchRegex: regexString [
-	
-	^self expect: regexString using: #matchesRegex:
-]
-
-{ #category : #expecting-boolean }
+{ #category : #'expecting-boolean' }
 PhexMatcher >> nil [
 	^self be: nil
 ]
@@ -274,7 +256,7 @@ PhexMatcher >> not [
 	state := state copyWith: #not
 ]
 
-{ #category : #expecting-performance }
+{ #category : #'expecting-performance' }
 PhexMatcher >> runWithin: aDuration [ 
 	^ self
 		expect: [[receiver value.
@@ -299,12 +281,12 @@ PhexMatcher >> should: anObject [
 	^ PhexMatcher with: anObject state: state copy
 ]
 
-{ #category : #expecting-error }
+{ #category : #'expecting-error' }
 PhexMatcher >> signal: errorClass [ 
 	self raise: errorClass
 ]
 
-{ #category : #expecting-error }
+{ #category : #'expecting-error' }
 PhexMatcher >> signal: errorClass withMessageText: message [
 
 	receiver on: Exception do: [ :ex | 
@@ -333,7 +315,7 @@ PhexMatcher >> testFor: aDescription [
 	TestTodo signal: aDescription
 ]
 
-{ #category : #expecting-boolean }
+{ #category : #'expecting-boolean' }
 PhexMatcher >> true [
 	^self expectedUnknownMessageToReturn: true
 ]

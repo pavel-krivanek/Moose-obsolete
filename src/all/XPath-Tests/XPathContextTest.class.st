@@ -1,7 +1,7 @@
 Class {
 	#name : #XPathContextTest,
 	#superclass : #TestCase,
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #accessing }

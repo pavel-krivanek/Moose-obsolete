@@ -4,10 +4,10 @@ SmaCCAmbiguousAction represents several conflicting actions for a state/symbol. 
 Class {
 	#name : #SmaCCAmbiguousAction,
 	#superclass : #SmaCCCompositeAction,
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
-{ #category : #accessing-actions }
+{ #category : #'accessing-actions' }
 SmaCCAmbiguousAction >> addAction: aSmaCCAction [
 	aSmaCCAction isAmbiguous
 		ifTrue: [ actions addAll: aSmaCCAction actions ]

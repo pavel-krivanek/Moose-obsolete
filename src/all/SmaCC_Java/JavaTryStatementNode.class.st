@@ -11,7 +11,7 @@ Class {
 		'catches',
 		'finally'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -74,7 +74,7 @@ JavaTryStatementNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaTryStatementNode >> initialize [
 	super initialize.
 	resources := OrderedCollection new: 2.

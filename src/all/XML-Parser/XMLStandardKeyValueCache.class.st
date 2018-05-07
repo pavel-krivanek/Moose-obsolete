@@ -4,7 +4,7 @@ This class is the standard key-value cache implementation used on Pharo/Squeak.
 Class {
 	#name : #XMLStandardKeyValueCache,
 	#superclass : #XMLKeyValueCache,
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
 
 { #category : #testing }

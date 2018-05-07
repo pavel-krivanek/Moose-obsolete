@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'window'
 	],
-	#category : #Glamour-Tests-Morphic
+	#category : #'Glamour-Tests-Morphic'
 }
 
 { #category : #private }
@@ -97,7 +97,8 @@ GLMMorphicTest >> send: treeMorph mouseUpWithShift: aBoolean onItem: treeNodeMor
 
 { #category : #'setup - tear down' }
 GLMMorphicTest >> tearDown [
-	window ifNotNil: [window delete]
+	window ifNotNil: [ window delete ].
+	super tearDown
 ]
 
 { #category : #private }

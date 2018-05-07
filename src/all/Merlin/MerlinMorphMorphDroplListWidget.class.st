@@ -1,7 +1,7 @@
 Class {
 	#name : #MerlinMorphMorphDroplListWidget,
 	#superclass : #MerlinMorphDroplListWidget,
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #'accessing - morph contents' }

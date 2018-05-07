@@ -20,7 +20,7 @@ Class {
 		'testBlock',
 		'nodeClassName'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #comparing }
@@ -148,7 +148,7 @@ SmaCCPatternToken >> testBlock: aBlock [
 	testBlock := aBlock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCPatternToken >> value: aString start: startPositionInteger ids: aCollection [
 	super value: aString start: startPositionInteger ids: aCollection.
 	self buildStructure

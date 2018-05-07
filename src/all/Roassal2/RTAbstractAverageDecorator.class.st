@@ -7,7 +7,7 @@ Class {
 		'shapes',
 		'labelBlock'
 	],
-	#category : #Roassal2-Builder-Grapher-Decorators
+	#category : #'Roassal2-Builder-Grapher-Decorators'
 }
 
 { #category : #accessing }
@@ -78,7 +78,7 @@ RTAbstractAverageDecorator >> remove [
 	builder view signalUpdate
 ]
 
-{ #category : #drawing-hooks }
+{ #category : #'drawing-hooks' }
 RTAbstractAverageDecorator >> render [
 	self subclassResponsibility
 ]

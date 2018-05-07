@@ -5,14 +5,13 @@ Class {
 		'hoard',
 		'killedBy'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 RPGDragon class >> annotation [
 	<MSEClass: #Dragon super: #Object>
 	<package: #RPG>
-	^self
 ]
 
 { #category : #accessing }
@@ -26,7 +25,7 @@ RPGDragon >> hoard: aTreasure [
 	hoard value: aTreasure
 ]
 
-{ #category : #initialize-release }
+{ #category : #initialization }
 RPGDragon >> initialize [
 	super initialize.
 	hoard := FMMultivalueLink on: self opposite: #keeper:.

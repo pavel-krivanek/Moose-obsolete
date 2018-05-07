@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'predicates'
 	],
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #'instance creation' }

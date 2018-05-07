@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'attributeSpec'
 	],
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
 
 { #category : #'instance creation' }
@@ -38,7 +38,9 @@ XMLBasicAttributeSpec >> addAttributeName: aName value: aValue [
 
 { #category : #initialization }
 XMLBasicAttributeSpec >> initialize [
-	attributeSpec := Dictionary new
+	super initialize.
+
+	attributeSpec := Dictionary new.
 ]
 
 { #category : #matching }

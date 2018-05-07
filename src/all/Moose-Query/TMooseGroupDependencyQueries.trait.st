@@ -1,9 +1,11 @@
 "
 This trait provides a common, paradigm agnostic vocabulary to query dependencies of software entities stored in a MooseAbstractGroup.
+
+For more informations: https://moosequery.ferlicot.fr/
 "
 Trait {
 	#name : #TMooseGroupDependencyQueries,
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #querying }

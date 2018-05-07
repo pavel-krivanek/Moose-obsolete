@@ -5,7 +5,7 @@ Class {
 		'leftParens',
 		'rightParens'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ GstValueNode >> ignoredCompositeTokenVariables [
 	^ #(#leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 GstValueNode >> initialize [
 	super initialize.
 	leftParens := OrderedCollection new: 2.

@@ -10,7 +10,7 @@ Class {
 		'label',
 		'shortcut'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
 { #category : #accessing }
@@ -28,7 +28,7 @@ MAActionDescription >> enableBlock: aBlock [
 	enableBlock := aBlock.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MAActionDescription >> initialize [
 
 	super initialize.

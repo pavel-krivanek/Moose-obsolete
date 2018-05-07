@@ -1,7 +1,7 @@
 Class {
 	#name : #PPRegexTest,
 	#superclass : #TestCase,
-	#category : #PetitRegex-Tests
+	#category : #'PetitRegex-Tests'
 }
 
 { #category : #accessing }
@@ -17,7 +17,7 @@ PPRegexTest >> compileRegex: aString [
 		on: Error do: [ :err | ^ nil ]
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> henryReadme [
 	self error: 'The tests in this category are based on the ones in Henry Spencer''s regexp.c package.
 	The parser currently does not pass all these tests. The failing ones are marked with <expectedFailure>'
@@ -81,7 +81,7 @@ PPRegexTest >> runRegex: anArray [
 							withSubexpressions: (anArray at: index + 2) ] ] ]
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testCaseInsensitive [
 	| matcher |
 	
@@ -92,7 +92,7 @@ PPRegexTest >> testCaseInsensitive [
 	self assert: (matcher search: 'What do you know about THE QUICK BROWN FOX?')
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testCaseSensitive [
 	| matcher |
 	matcher := self matcherClass forString: 'the quick brown fox' ignoreCase: false.
@@ -102,7 +102,7 @@ PPRegexTest >> testCaseSensitive [
 	self deny: (matcher search: 'What do you know about THE QUICK BROWN FOX?')
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testCopyReplacingMatches [
 	"See that the match context is preserved while copying stuff between matches:"
 	
@@ -112,7 +112,7 @@ PPRegexTest >> testCopyReplacingMatches [
 		= 'foo1bbb foo'
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testCopyTranslatingMatches [
 	| matcher |
 	matcher := self matcherClass forString: '\w+'.
@@ -120,7 +120,7 @@ PPRegexTest >> testCopyTranslatingMatches [
 		= 'won si  eht   emit    '
 ]
 
-{ #category : #testing-empty }
+{ #category : #'testing-empty' }
 PPRegexTest >> testEmptyStringAtBeginningOfLine [
 	| matcher |
 	matcher := self matcherClass forString: '^'.
@@ -130,7 +130,7 @@ PPRegexTest >> testEmptyStringAtBeginningOfLine [
 		description: 'An empty string at the beginning of a line'
 ]
 
-{ #category : #testing-empty }
+{ #category : #'testing-empty' }
 PPRegexTest >> testEmptyStringAtBeginningOfWord [
 	| matcher |
 	matcher := self matcherClass forString: '\<'.
@@ -140,7 +140,7 @@ PPRegexTest >> testEmptyStringAtBeginningOfWord [
 		description: 'An empty string at the beginning of a word'
 ]
 
-{ #category : #testing-empty }
+{ #category : #'testing-empty' }
 PPRegexTest >> testEmptyStringAtEndOfLine [
 	| matcher |
 	matcher := self matcherClass forString: '$'.
@@ -150,7 +150,7 @@ PPRegexTest >> testEmptyStringAtEndOfLine [
 		description: 'An empty string at the end of a line'
 ]
 
-{ #category : #testing-empty }
+{ #category : #'testing-empty' }
 PPRegexTest >> testEmptyStringAtEndOfWord [
 	| matcher |
 	matcher := self matcherClass forString: '\>'.
@@ -160,7 +160,7 @@ PPRegexTest >> testEmptyStringAtEndOfWord [
 		description: 'An empty string at the end of a word'
 ]
 
-{ #category : #testing-empty }
+{ #category : #'testing-empty' }
 PPRegexTest >> testEmptyStringAtWordBoundary [
 	| matcher |
 	matcher := self matcherClass forString: '\b'.
@@ -170,7 +170,7 @@ PPRegexTest >> testEmptyStringAtWordBoundary [
 		description: 'An empty string at a word boundary'
 ]
 
-{ #category : #testing-empty }
+{ #category : #'testing-empty' }
 PPRegexTest >> testEmptyStringNotAtWordBoundary [
 	| matcher |
 	matcher := self matcherClass forString: '\B'.
@@ -180,7 +180,7 @@ PPRegexTest >> testEmptyStringNotAtWordBoundary [
 		description: 'An empty string not at a word boundary'
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry001 [
 	self runRegex: #('abc'
 		'abc' true (1 'abc')
@@ -191,13 +191,13 @@ PPRegexTest >> testHenry001 [
 		'ababc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry002 [
 	self runRegex: #('ab*c'
 		'abc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry003 [
 	self runRegex: #('ab*bc'
 		'abc' true (1 'abc')
@@ -205,7 +205,7 @@ PPRegexTest >> testHenry003 [
 		'abbbbc' true (1 'abbbbc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry004 [
 	self runRegex: #('ab+bc'	
 		'abbc' true (1 'abbc')
@@ -214,7 +214,7 @@ PPRegexTest >> testHenry004 [
 		'abbbbc' true (1 'abbbbc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry005 [
 	self runRegex: #('ab?bc'
 		'abbc' true (1 'abbc')
@@ -223,7 +223,7 @@ PPRegexTest >> testHenry005 [
 		'abc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry006 [
 	self runRegex: #('^abc$'
 		'abc' true (1 'abc')
@@ -231,38 +231,38 @@ PPRegexTest >> testHenry006 [
 		'aabc' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry007 [
 	self runRegex: #('^abc'
 		'abcc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry008 [
 	self runRegex: #('abc$'
 		'aabc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry009 [
 	self runRegex: #('^'
 		'abc' true nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry010 [
 	self runRegex: #('$'
 		'abc' true nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry011 [
 	self runRegex: #('a.c'
 		'abc' true (1 'abc')
 		'axc' true (1 'axc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry012 [
 	"Need to get creative to include the null character..."
 	self runRegex: #('a.*c'	
@@ -272,63 +272,63 @@ PPRegexTest >> testHenry012 [
 		'axyzd' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry013 [
 	self runRegex: #('.a.*'
 		'1234abc' true (1 '4abc')
 		'abcd' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry014 [
 	self runRegex: #('a\w+c'
 		' abbbbc ' true (1 'abbbbc')
 		'abb bc' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry015 [
 	self runRegex: #('\w+'
 		'  	foobar	quux' true (1 'foobar')
 		' 	~!@#$%^&*()-+=\|/?.>,<' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry016 [
 	self runRegex: #('a\W+c'
 		'a   c' true (1 'a   c')
 		'a bc' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry017 [
 	self runRegex: #('\W+'
 		'foo!@#$bar' true (1 '!@#$')
 		'foobar' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry018 [
 	self runRegex: #('a\s*c'
 		'a   c' true (1 'a   c')
 		'a bc' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry019 [
 	self runRegex: #('\s+'
 		'abc3457 sd' true (1 ' ')
 		'1234$^*^&asdfb' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry020 [
 	self runRegex: #('a\S*c'
 		'aqwertyc' true (1 'aqwertyc')
 		'ab c' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry021 [
 	self runRegex: #('\S+'
 		'     	asdf		' true (1 'asdf')
@@ -336,42 +336,42 @@ PPRegexTest >> testHenry021 [
 			' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry022 [
 	self runRegex: #('a\d+c'
 		'a0123456789c' true (1 'a0123456789c')
 		'a12b34c' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry023 [
 	self runRegex: #('\d+'
 		'foo@#$%123ASD #$$%^&' true (1 '123')
 		'foo!@#$asdfl;' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry024 [
 	self runRegex: #('a\D+c'
 		'aqwertyc' true (1 'aqwertyc')
 		'aqw6ertc' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry025 [
 	self runRegex: #('\D+'
 		'1234 abc 456' true (1 ' abc ')
 		'1234567890' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry026 [
 	self runRegex: #('(f|o)+\b'
 		'foo' true (1 'foo')
 		' foo ' true (1 'foo'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry027 [
 	self runRegex: #('\ba\w+' "a word beginning with an A"
 		'land ancient' true (1 'ancient')
@@ -379,7 +379,7 @@ PPRegexTest >> testHenry027 [
 		'goofy foobar' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry028 [
 
 	<expectedFailure>
@@ -389,7 +389,7 @@ PPRegexTest >> testHenry028 [
 		'quuxfoo ' true (1 'fo'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry029 [
 	self runRegex: #('\Ba\w+' "a word with an A in the middle, match at A and further"
 		'land ancient' true (1 'and')
@@ -398,7 +398,7 @@ PPRegexTest >> testHenry029 [
 		'foonix is better' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry030 [
 	self runRegex: #('fooa\>.*'
 		'fooa ' true nil
@@ -408,7 +408,7 @@ PPRegexTest >> testHenry030 [
 		'fooargh' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry031 [
 	self runRegex: #('\>.+abc'
 		' abcde fg' false nil
@@ -416,7 +416,7 @@ PPRegexTest >> testHenry031 [
 		'abcde' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry032 [
 	self runRegex: #('\<foo.*'
 		'foo' true nil
@@ -427,7 +427,7 @@ PPRegexTest >> testHenry032 [
 		'barfoo' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry033 [
 	self runRegex: #('.+\<foo'
 		'foo' false nil
@@ -435,98 +435,98 @@ PPRegexTest >> testHenry033 [
 		'abfoo' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry034 [
 	self runRegex: #('a[bc]d'
 		'abc' false nil
 		'abd' true (1 'abd'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry035 [
 	self runRegex: #('a[b-d]e'
 		'abd' false nil
 		'ace' true (1 'ace'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry036 [
 	self runRegex: #('a[b-d]'
 		'aac' true (1 'ac'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry037 [
 	self runRegex: #('a[-b]'
 		'a-' true (1 'a-'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry038 [
 	self runRegex: #('a[b-]'
 		'a-' true (1 'a-'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry039 [
 	self runRegex: #('a[a-b-c]' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry040 [
 	self runRegex: #('[k]'
 		'ab' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry041 [
 	self runRegex: #('a[b-a]' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry042 [
 	self runRegex: #('a[]b' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry043 [
 	self runRegex: #('a[' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry044 [
 	self runRegex: #('a]' 
 		'a]' true (1 'a]'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry045 [
 	self runRegex: #('a[]]b'
 		'a]b' true (1 'a]b'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry046 [
 	self runRegex: #('a[^bc]d'
 		'aed' true (1 'aed')
 		'abd' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry047 [
 	self runRegex: #('a[^-b]c'
 		'adc' true (1 'adc')
 		'a-c' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry048 [
 	self runRegex: #('a[^]b]c'
 		'a]c' false nil
 		'adc' true (1 'adc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry049 [
 	self runRegex: #('[\de]+'
 		'01234' true (1 '01234')
@@ -534,7 +534,7 @@ PPRegexTest >> testHenry049 [
 		'0123e45g78' true (1 '0123e45'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry050 [
 	self runRegex: #('[e\d]+' "reversal of the above, should be the same"
 		'01234' true (1 '01234')
@@ -542,13 +542,13 @@ PPRegexTest >> testHenry050 [
 		'0123e45g78' true (1 '0123e45'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry051 [
 	self runRegex: #('[\D]+'
 		'123abc45def78' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry052 [
 	self runRegex: #('[[:digit:]e]+'
 		'01234' true (1 '01234')
@@ -556,37 +556,37 @@ PPRegexTest >> testHenry052 [
 		'0123e45g78' true (1 '0123e45'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry053 [
 	self runRegex: #('[\s]+'
 		'2  spaces' true (1 '  '))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry054 [
 	self runRegex: #('[\S]+'
 		'  word12!@#$  ' true (1 'word12!@#$'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry055 [
 	self runRegex: #('[\w]+'
 		' 	foo123bar	45' true (1 'foo123bar'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry056 [
 	self runRegex: #('[\W]+'
 		'fii234!@#$34f' true (1 '!@#$'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry057 [
 	self runRegex: #('[^[:alnum:]]+'
 		'fii234!@#$34f' true (1 '!@#$'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry058 [
 	self runRegex: #('[%&[:alnum:]]+'
 		'foo%3' true (1 'foo%3')
@@ -594,7 +594,7 @@ PPRegexTest >> testHenry058 [
 		'!@#$' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry059 [
 	self runRegex: #('[[:alpha:]]+'
 		' 123foo3 ' true (1 'foo')
@@ -602,57 +602,57 @@ PPRegexTest >> testHenry059 [
 		'foo1b' true (1 'foo'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry060 [
 	self runRegex: #('[[:cntrl:]]+'
 		' a 1234asdf' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry061 [
 	self runRegex: #('[[:lower:]]+'
 		'UPPERlower1234' true (1 'lower')
 		'lowerUPPER' true (1 'lower'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry062 [
 	self runRegex: #('[[:upper:]]+'
 		'UPPERlower1234' true (1 'UPPER')
 		'lowerUPPER ' true (1 'UPPER'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry063 [
 	self runRegex: #('[[:space:]]+'
 		'2  spaces' true (1 '  '))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry064 [
 	self runRegex: #('[^[:space:]]+'
 		'  word12!@#$  ' true (1 'word12!@#$'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry065 [
 	self runRegex: #('[[:graph:]]+'
 		'abc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry066 [
 	self runRegex: #('[[:print:]]+'
 		'abc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry067 [
 	self runRegex: #('[^[:punct:]]+'
 		'!hello,world!' true (1 'hello'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry068 [
 	self runRegex: #('[[:xdigit:]]+'
 		'  x10FCD  ' true (1 '10FCD')
@@ -660,372 +660,372 @@ PPRegexTest >> testHenry068 [
 			true (1 'fedcba0123456789ABCDEF'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry069 [
 	self runRegex: #('ab|cd'
 		'abc' true (1 'ab')
 		'abcd' true (1 'ab'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry070 [
 	self runRegex: #('()ef'
 		'def' true (1 'ef' 2 ''))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry071 [
 	self runRegex: #('()*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry072 [
 	self runRegex: #('*a' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry073 [
 	self runRegex: #('^*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry074 [
 	self runRegex: #('$*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry075 [
 	self runRegex: #('(*)b' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry076 [
 	self runRegex: #('$b'	'b' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry077 [
 	self runRegex: #('a\' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry078 [
 	self runRegex: #('a\(b'
 		'a(b' true (1 'a(b'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry079 [
 	self runRegex: #('a\(*b'
 		'ab' true (1 'ab')
 		'a((b' true (1 'a((b'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry080 [
 	self runRegex: #('a\\b'
 		'a\b' true (1 'a\b'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry081 [
 	self runRegex: #('abc)' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry082 [
 	self runRegex: #('(abc' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry083 [
 	self runRegex: #('((a))'
 		'abc' true (1 'a' 2 'a' 3 'a'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry084 [
 	self runRegex: #('(a)b(c)'
 		'abc' true (1 'abc' 2 'a' 3 'c'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry085 [
 	self runRegex: #('a+b+c'
 		'aabbabc' true (1 'abc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry086 [
 	self runRegex: #('a**' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry087 [
 	self runRegex: #('a*?' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry088 [
 	self runRegex: #('(a*)*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry089 [
 	self runRegex: #('(a*)+' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry090 [
 	self runRegex: #('(a|)*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry091 [
 	self runRegex: #('(a*|b)*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry092 [
 	self runRegex: #('(a+|b)*'
 		'ab' true (1 'ab' 2 'b'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry093 [
 	self runRegex: #('(a+|b)+'
 		'ab' true (1 'ab' 2 'b'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry094 [
 	self runRegex: #('(a+|b)?'
 		'ab' true (1 'a' 2 'a'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry095 [
 	self runRegex: #('[^ab]*'
 		'cde' true (1 'cde'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry096 [
 	self runRegex: #('(^)*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry097 [
 	self runRegex: #('(ab|)*' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry098 [
 	self runRegex: #(')(' nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry099 [
 	self runRegex: #('' 'abc' true (1 ''))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry100 [
 	self runRegex: #('abc' '' false nil)
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry101 [
 	self runRegex: #('a*'
 		'' true '')
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry102 [
 	self runRegex: #('abcd'
 		'abcd' true (1 'abcd'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry103 [
 	self runRegex: #('a(bc)d'
 		'abcd' true (1 'abcd' 2 'bc'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry104 [
 	self runRegex: #('([abc])*d'
 		'abbbcd' true (1 'abbbcd' 2 'c'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry105 [
 	self runRegex: #('([abc])*bcd'
 		'abcd' true (1 'abcd' 2 'a'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry106 [
 	self runRegex: #('a|b|c|d|e' 'e' true (1 'e'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry107 [
 	self runRegex: #('(a|b|c|d|e)f'
 		'ef' true (1 'ef' 2 'e'))
 	"	((a*|b))*	-	c	-	-"
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry108 [
 	self runRegex: #('abcd*efg' 
 		'abcdefg' true (1 'abcdefg'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry109 [
 	self runRegex: #('ab*' 
 		'xabyabbbz' true (1 'ab')
 		'xayabbbz' true (1 'a'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry110 [
 	self runRegex: #('(ab|cd)e' 'abcde' true (1 'cde' 2 'cd'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry111 [
 	self runRegex: #('[abhgefdc]ij' 'hij' true (1 'hij'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry112 [
 	self runRegex: #('^(ab|cd)e' 'abcde' false nil)
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry113 [
 	self runRegex: #('(abc|)def' 'abcdef' true nil)
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry114 [
 	self runRegex: #('(a|b)c*d' 'abcd' true (1 'bcd' 2 'b'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry115 [
 	self runRegex: #('(ab|ab*)bc' 'abc' true (1 'abc' 2 'a'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry116 [
 	self runRegex: #('a([bc]*)c*' 'abc' true (1 'abc' 2 'bc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry117 [
 	self runRegex: #('a([bc]*)(c*d)' 'abcd' true (1 'abcd' 2 'bc' 3 'd'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry118 [
 	self runRegex: #('a([bc]+)(c*d)' 'abcd' true (1 'abcd' 2 'bc' 3 'd'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry119 [
 	self runRegex: #('a([bc]*)(c+d)' 'abcd' true (1 'abcd' 2 'b' 3 'cd'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry120 [
 	self runRegex: #('a[bcd]*dcdcde' 'adcdcde' true (1 'adcdcde'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry121 [
 	self runRegex: #('a[bcd]+dcdcde' 'adcdcde' false nil)
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry122 [
 	self runRegex: #('(ab|a)b*c' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry123 [
 	self runRegex: #('((a)(b)c)(d)' 'abcd' true (1 'abcd' 3 'a' 4 'b' 5 'd'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry124 [
 	self runRegex: #('[ -~]*' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry125 [
 	self runRegex: #('[ -~ -~]*' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry126 [
 	self runRegex: #('[ -~ -~ -~]*' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry127 [
 	self runRegex: #('[ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry128 [
 	self runRegex: #('[ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry129 [
 	self runRegex: #('[ -~ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry130 [
 	self runRegex: #('[ -~ -~ -~ -~ -~ -~ -~]*' 'abc' true (1 'abc'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry131 [
 	self runRegex: #('[a-zA-Z_][a-zA-Z0-9_]*' 'alpha' true (1 'alpha'))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry132 [
 	self runRegex: #('^a(bc+|b[eh])g|.h$' 'abh' true (1 'bh' 2 nil))
 	
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry133 [
 	self runRegex: #('(bc+d$|ef*g.|h?i(j|k))' 
 		'effgz' true (1 'effgz' 2 'effgz' 3 nil)
@@ -1035,29 +1035,29 @@ PPRegexTest >> testHenry133 [
 		'reffgz' true (1 'effgz' 2 'effgz' 3 nil))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry134 [
 	self runRegex: #('(((((((((a)))))))))' 'a' true (1 'a'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry135 [
 	self runRegex: #('multiple words of text' 
 		'uh-uh' false nil
 		'multiple words of text, yeah' true (1 'multiple words of text'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry136 [
 	self runRegex: #('(.*)c(.*)' 'abcde' true (1 'abcde' 2 'ab' 3 'de'))
 ]
 
-{ #category : #testing-henry }
+{ #category : #'testing-henry' }
 PPRegexTest >> testHenry137 [
 	self runRegex: #('\((.*), (.*)\)' '(a, b)' true (2 'a' 3 'b'))
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatches [
 	| matcher |
 	matcher := self matcherClass forString: '\w+'.
@@ -1065,7 +1065,7 @@ PPRegexTest >> testMatches [
 	self deny: (matcher matches: 'now is')
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchesIn [
 	| matcher |
 	matcher := self matcherClass forString: '\w+'.
@@ -1073,7 +1073,7 @@ PPRegexTest >> testMatchesIn [
 		= #('now' 'is' 'the' 'time')
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchesInCollect [
 	| matcher |
 	matcher := self matcherClass forString: '\w+'.
@@ -1083,7 +1083,7 @@ PPRegexTest >> testMatchesInCollect [
 			= #('won' 'si' 'eht' 'emit')
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchesInDo [
 	| matcher expected |
 	matcher := self matcherClass forString: '\w+'.
@@ -1094,7 +1094,7 @@ PPRegexTest >> testMatchesInDo [
 	self assert: expected isEmpty
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchesOnStream [
 	| matcher |
 	matcher := self matcherClass forString: '\w+'.
@@ -1102,7 +1102,7 @@ PPRegexTest >> testMatchesOnStream [
 		= #('now' 'is' 'the' 'time')
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchesOnStreamCollect [
 	| matcher |
 	matcher := self matcherClass forString: '\w+'.
@@ -1112,7 +1112,7 @@ PPRegexTest >> testMatchesOnStreamCollect [
 			= #('won' 'si' 'eht' 'emit')
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchesOnStreamDo [
 	| matcher expected |
 	matcher := self matcherClass forString: '\w+'.
@@ -1123,7 +1123,7 @@ PPRegexTest >> testMatchesOnStreamDo [
 	self assert: expected isEmpty
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchesStream [
 	| matcher |
 	matcher := self matcherClass forString: '\w+'.
@@ -1131,7 +1131,7 @@ PPRegexTest >> testMatchesStream [
 	self deny: (matcher matchesStream: 'now is' readStream)
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testMatchingRangesIn [
 	| matcher expected |
 	matcher := self matcherClass forString: '\w+'.
@@ -1172,7 +1172,7 @@ PPRegexTest >> testRegex004 [
 		'xyz' false nil)
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringAllRangesOfRegexMatches [
 	| result |
 	result := 'aabbcc' allRangesOfRegexMatches: 'b+'.
@@ -1182,7 +1182,7 @@ PPRegexTest >> testStringAllRangesOfRegexMatches [
 	
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringAllRegexMatches [
 	| result |
 	result := 'aabbcc' allRegexMatches: 'b+'.
@@ -1190,22 +1190,22 @@ PPRegexTest >> testStringAllRegexMatches [
 	self assert: result first = 'bb'
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringAsRegex [
 	self assert: 'b+' asRegex class = RxParser preferredMatcherClass
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringAsRegexIgnoringCase [
 	self assert: 'b+' asRegexIgnoringCase class = RxParser preferredMatcherClass
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringCopyWithRegexMatchesReplacedWith [
 	self assert: ('aabbcc' copyWithRegex: 'b+' matchesReplacedWith: 'X') = 'aaXcc'
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringCopyWithRegexMatchesTranslatedUsing [
 	self assert: ('aabbcc' 
 		copyWithRegex: 'b+' 
@@ -1214,33 +1214,33 @@ PPRegexTest >> testStringCopyWithRegexMatchesTranslatedUsing [
 			'X' ]) = 'aaXcc'
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringMatchesRegex [
 	self deny: ('aabbcc' matchesRegex: 'a+').
 	self deny: ('aabbcc' matchesRegex: 'b+c+').
 	self assert: ('aabbcc' matchesRegex: 'a+b+c+')
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringMatchesRegexIgnoringCase [
 	self deny: ('AABBCC' matchesRegexIgnoringCase: 'a+').
 	self deny: ('AABBCC' matchesRegexIgnoringCase: 'b+c+').
 	self assert: ('AABBCC' matchesRegexIgnoringCase: 'a+b+c+')
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringPrefixMatchesRegex [
 	self assert: ('aabbcc' prefixMatchesRegex: 'a+').
 	self deny: ('aabbcc' prefixMatchesRegex: 'b+')
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringPrefixMatchesRegexIgnoringCase [
 	self assert: ('AABBCC' prefixMatchesRegexIgnoringCase: 'a+').
 	self deny: ('AABBCC' prefixMatchesRegexIgnoringCase: 'b+')
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringRegexMatchesCollect [
 	| result |
 	result := 'aabbcc' regex: 'b+' matchesCollect: [ :each | each asUppercase ].
@@ -1248,7 +1248,7 @@ PPRegexTest >> testStringRegexMatchesCollect [
 	self assert: result first = 'BB'
 ]
 
-{ #category : #testing-extensions }
+{ #category : #'testing-extensions' }
 PPRegexTest >> testStringRegexMatchesDo [
 	| result |
 	result := OrderedCollection new.
@@ -1257,7 +1257,7 @@ PPRegexTest >> testStringRegexMatchesDo [
 	self assert: result first = 'bb'
 ]
 
-{ #category : #testing-protocol }
+{ #category : #'testing-protocol' }
 PPRegexTest >> testSubexpressionCount [
 	| matcher |
 	#(('a' 1) ('a(b)' 2) ('a(b(c))' 3) ('(a)(b)' 3) ('(a(b))*' 3)) do: [ :pair |

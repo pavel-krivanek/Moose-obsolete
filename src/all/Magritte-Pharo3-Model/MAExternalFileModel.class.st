@@ -10,7 +10,7 @@ Class {
 		'location',
 		'directory'
 	],
-	#category : #Magritte-Pharo3-Model
+	#category : #'Magritte-Pharo3-Model'
 }
 
 { #category : #accessing }
@@ -73,13 +73,13 @@ MAExternalFileModel >> database [
 	^ MAFileDatabase new.
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MAExternalFileModel >> directory [
 
 	^ directory ifNil: [ directory := self database uniqueLocation ].
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MAExternalFileModel >> file [
 	^(self directory / self filename) asFileReference
 ]
@@ -110,12 +110,12 @@ MAExternalFileModel >> postCopy [
 	self contents: previous
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MAExternalFileModel >> readStream [
 	^ self file readStream binary.
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MAExternalFileModel >> writeStream [
 	^ self file writeStream binary
 ]

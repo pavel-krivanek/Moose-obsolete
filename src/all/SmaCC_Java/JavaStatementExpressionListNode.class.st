@@ -5,7 +5,7 @@ Class {
 		'expressions',
 		'commas'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -45,7 +45,7 @@ JavaStatementExpressionListNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaStatementExpressionListNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

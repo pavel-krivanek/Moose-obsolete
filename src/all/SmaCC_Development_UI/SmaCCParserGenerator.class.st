@@ -15,12 +15,15 @@ Class {
 		'codeGeneratorType',
 		'savedDefinition',
 		'menu',
-		'optionsMenu'
+		'optionsMenu',
+		'viewItemSets',
+		'viewSymbols',
+		'viewMenu'
 	],
 	#classVars : [
 		'ShowPrecedenceConflicts'
 	],
-	#category : #SmaCC_Development_UI
+	#category : #'SmaCC_Development_UI'
 }
 
 { #category : #specs }
@@ -43,8 +46,7 @@ SmaCCParserGenerator class >> menuCommandOn: aBuilder [
 	(aBuilder item: #'SmaCC Parser Generator')
 		parent: #Tools;
 		order: 0.55;
-		action: [ self open ].
-	aBuilder withSeparatorAfter
+		action: [ self open ]
 ]
 
 { #category : #'instance creation' }
@@ -87,12 +89,11 @@ SmaCCParserGenerator >> compile: aSymbol [
 		ifTrue: [ ^ UIManager default alert: 'Both classes are not specified' ].
 	messages := OrderedCollection new.
 	Cursor wait
-		showWhile:
-			[ oldCharacterSize := SmaCCGrammar maximumCharacterValue.
+		showWhile: [ oldCharacterSize := SmaCCGrammar maximumCharacterValue.
 			[ SmaCCGrammar
 				maximumCharacterValue:
 					(allowUnicode
-						ifTrue: [ 2 ** 16 - 1 ]
+						ifTrue: [ 16rE01EF ]
 						ifFalse: [ 255 ]).
 			self verifyParser
 				ifFalse: [ ^ self ].
@@ -107,22 +108,17 @@ SmaCCParserGenerator >> compile: aSymbol [
 			stream := WriteStream on: String new.
 			[ parserCompiler createChanges.
 			parserCompiler codeGenerator compileChanges.
-			symbolsModel text: parserCompiler symbolsComment.
-			itemSetsModel text: parserCompiler itemSetsComment ]
+			viewSymbols
+				ifTrue: [ symbolsModel text: parserCompiler symbolsComment ].
+			viewItemSets
+				ifTrue: [ itemSetsModel text: parserCompiler itemSetsComment ] ]
 				on: SmaCCCompilationNotification
-				do:
-					[ :ex | 
-					(ShowPrecedenceConflicts
-						or: [ ('*precedence*' match: ex messageText) not ])
-						ifTrue:
-							[ messages
-								add:
-									ex messageText , (String with: Character cr with: Character cr)
-										, ex tag ].
+				do: [ :ex | 
+					(ShowPrecedenceConflicts or: [ ('*precedence*' match: ex messageText) not ])
+						ifTrue: [ messages add: ex messageText , (String with: Character cr with: Character cr) , ex tag ].
 					ex pass ].
 			messages asSortedCollection
-				do:
-					[ :each | 
+				do: [ :each | 
 					stream
 						nextPutAll: '-------------------------';
 						cr;
@@ -203,6 +199,8 @@ SmaCCParserGenerator >> initialize [
 	scannerClassName := ''.
 	codeGeneratorType := #Smalltalk.
 	savedDefinition := ''.
+	viewSymbols := true.
+	viewItemSets := false.
 	super initialize
 ]
 
@@ -230,6 +228,13 @@ SmaCCParserGenerator >> initializeMenubar [
 				add: 'LALR(1)' selector: #setLALR1;
 				add: 'LR(1)' selector: #setLR1;
 				yourself);
+		add: 'View'
+			subMenu:
+			(viewMenu := MenuMorph new
+				defaultTarget: self;
+				add: 'Symbols' selector: #viewSymbolsClicked;
+				add: 'Item Sets' selector: #viewItemSetsClicked;
+				yourself);
 		yourself) asSpecAdapter
 ]
 
@@ -248,7 +253,8 @@ SmaCCParserGenerator >> initializeTabModel [
 SmaCCParserGenerator >> initializeWidgets [
 	self initializeTabModel.
 	self initializeMenubar.
-	self updateOptionsMenu
+	self updateOptionsMenu.
+	self updateViewMenu
 ]
 
 { #category : #testing }
@@ -304,7 +310,9 @@ SmaCCParserGenerator >> menu [
 
 { #category : #private }
 SmaCCParserGenerator >> menuItemFor: aSymbol [
-	^ optionsMenu menuItems detect: [ :each | each selector = aSymbol ]
+	^ optionsMenu menuItems
+		detect: [ :each | each selector = aSymbol ]
+		ifNone: [ viewMenu menuItems detect: [ :each | each selector = aSymbol ] ]
 ]
 
 { #category : #initialization }
@@ -366,19 +374,6 @@ SmaCCParserGenerator >> parserClassName: aString [
 { #category : #private }
 SmaCCParserGenerator >> promptToSaveChanges [
 	^ (self confirm: 'The definition has been modified. Do you wish to retain your changes?') not
-]
-
-{ #category : #private }
-SmaCCParserGenerator >> removeCommentedPartOf: aString [
-	| inStream outStream |
-	inStream := ReadStream on: aString.
-	outStream := WriteStream with: String new.
-	inStream upTo: $".
-	[ inStream atEnd ]
-		whileFalse: [ (inStream peekFor: $")
-				ifTrue: [ outStream nextPut: $" ].
-			outStream nextPutAll: (inStream upTo: $") ].
-	^ outStream contents
 ]
 
 { #category : #accessing }
@@ -498,23 +493,13 @@ SmaCCParserGenerator >> type [
 
 { #category : #private }
 SmaCCParserGenerator >> updateDefinitionFor: parserClass [
-	| scannerClass source |
+	| scannerClass |
 	scannerClass := [ parserClass scannerClass ]
 		on: Error
 		do: [ :ex | ex return: nil ].
 	scannerClass notNil
 		ifTrue: [ self scannerClassName: scannerClass name ].
-	(parserClass class includesSelector: #definitionComment)
-		ifTrue: [ source := self removeCommentedPartOf: (parserClass class sourceCodeAt: #definitionComment) ]
-		ifFalse:
-			[ source := ''.
-			(parserClass class includesSelector: #parserDefinitionComment)
-				ifTrue: [ source := self removeCommentedPartOf: (parserClass class sourceCodeAt: #parserDefinitionComment) ].
-			(scannerClass notNil and: [ scannerClass class includesSelector: #scannerDefinitionComment ])
-				ifTrue:
-					[ source := (self removeCommentedPartOf: (scannerClass class sourceCodeAt: #scannerDefinitionComment))
-						, '\' withCRs , source ] ].
-	self definition: source.
+	self definition: parserClass definitionString.
 	messagesModel text: ''.
 	symbolsModel text: ''.
 	itemSetsModel text: ''.
@@ -553,6 +538,12 @@ SmaCCParserGenerator >> updateOptionsMenu [
 	self updateMenuItem: #setLR1 checked: self isLR1
 ]
 
+{ #category : #private }
+SmaCCParserGenerator >> updateViewMenu [
+	self updateMenuItem: #viewSymbolsClicked checked: viewSymbols.
+	self updateMenuItem: #viewItemSetsClicked checked: viewItemSets
+]
+
 { #category : #actions }
 SmaCCParserGenerator >> useUnicode [
 	allowUnicode := allowUnicode not.
@@ -571,4 +562,16 @@ SmaCCParserGenerator >> verifyParser [
 			self switchToDefinition.
 			self displayError: ex description at: ex tag position.
 			ex return: false ]
+]
+
+{ #category : #actions }
+SmaCCParserGenerator >> viewItemSetsClicked [
+	viewItemSets := viewItemSets not.
+	self updateViewMenu
+]
+
+{ #category : #actions }
+SmaCCParserGenerator >> viewSymbolsClicked [
+	viewSymbols := viewSymbols not.
+	self updateViewMenu
 ]

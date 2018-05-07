@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'sw'
 	],
-	#category : #Moose-Tests-Algos-InformationRetrieval
+	#category : #'Moose-Tests-Algos-InformationRetrieval'
 }
 
 { #category : #running }

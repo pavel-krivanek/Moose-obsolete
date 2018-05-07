@@ -1,5 +1,5 @@
 "
-I collect and assemble the types sent to instance variables for a certain class (I use the InterfaceExtractor for that), And use them to create and return TypingResults.
+I collect and assemble the types sent to instance variables for a certain class (I use the InterfaceExtractor for that), and use them to create and return TypingResults.
 
 Instance Variables:
 	assignments	<Object>	description of assignments
@@ -7,8 +7,15 @@ Instance Variables:
 	instVars	<(Palette of: (ExceptionSet | GenericException | SequenceableCollection | Signal)) | (SequenceableCollection of: (ExceptionSet | GenericException | SequenceableCollection | Signal))>	description of instVars
 	sends	<Object>	description of sends
 	theClass	<ClassDescription>	description of theClass
+			
 
+Our type-reconstruction algorithm can be decomposed into three phases:
 
+	1. interface type extraction. This phase reconstructs the types according to the messages that are being sent to the variable in the class where it is defined. This is done in two steps: first of all the set of messages sent to the variable is collected. Secondly we look through the system and find all types that understand this set of selectors. The output of this phase are the interface types.
+
+	2. assignment type extraction. This phase reconstructs the types by looking at assignments made to the variable in the class where it is defined. It collects all right-hand sides of assign- ment expressions involving the variable, and applies a series of heuristics to find the type results of these expressions. These are then collected in the assignment types.
+
+	3. merging. This phase takes the interface types and the assignment types as input, and merges them into the final type results for the variable.
 "
 Class {
 	#name : #TypeCollector,
@@ -20,7 +27,7 @@ Class {
 		'currentExtractedMethod',
 		'localTypingResults'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
 { #category : #'instance creation' }
@@ -103,7 +110,7 @@ TypeCollector >> absoluteIndexForVar: iVar [
 TypeCollector >> addAssignment: value to: index [
 	self
 		withTranslatedIndex: index
-		do: [:i | (self typingResults at: i) addAssignment: value]
+		do: [ :i | (self typingResults at: i) addAssignment: value ]
 ]
 
 { #category : #adding }
@@ -175,20 +182,20 @@ TypeCollector >> addSend: selector toTmp: index [
 
 { #category : #accessing }
 TypeCollector >> allInstVarTypes [
-	self typingResults do: [:each | each types].
-	"localTypingResults valuesDo: [:array | array do: [:et | et types]]"
+	self typingResults do: [ :each | each types ]
+	
 ]
 
 { #category : #accessing }
 TypeCollector >> allTmpTypes [
-	"self typingResults do: [:each | each types]."
-	localTypingResults valuesDo: [:array | array do: [:et | et types]]
+
+	localTypingResults valuesDo: [ :array | array do: [ :et | et types]]
 ]
 
 { #category : #accessing }
 TypeCollector >> allTypes [
-	self typingResults do: [:each | each types].
-	localTypingResults valuesDo: [:array | array do: [:et | et types]]
+	self typingResults do: [ :each | each types ].
+	localTypingResults valuesDo: [ :array | array do: [ :et | et types ]]
 ]
 
 { #category : #heuristics }
@@ -198,7 +205,7 @@ TypeCollector >> assignmentTypeOf: val [
 
 { #category : #accessing }
 TypeCollector >> assignmentsTo: instVarName [
-	^(self typingResultsFor: instVarName) flattenLinks; assignments
+	^ (self typingResultsFor: instVarName) flattenLinks; assignments
 ]
 
 { #category : #accessing }
@@ -312,7 +319,7 @@ TypeCollector >> handleAssignment: val forTmp: index in: aCompiledMethod [
 ]
 
 { #category : #heuristics }
-TypeCollector >> langueSpecificPushSendOf: selector to: rec args: args [
+TypeCollector >> languageSpecificPushSendOf: selector to: rec args: args [
 	^#computed
 ]
 
@@ -341,7 +348,7 @@ TypeCollector >> newExtractor [
 	^self subclassResponsibility
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TypeCollector >> onClass: aClass [ 
 	theClass := aClass.
 	instVars := aClass allInstVarNames collect: [ :e | e asSymbol].
@@ -367,7 +374,7 @@ TypeCollector >> packagedResults [
 	instVars size - theClass instVarNames size + 1
 		to: instVars size
 		do:
-			[:index | 
+			[ :index | 
 			results
 				at: (instVars at: index)
 				put: (self typingResults at: index)].
@@ -391,7 +398,7 @@ TypeCollector >> packagedResultsForCompiledMethod: aCompiledMethod [
 	"Note we are here voluntary excluding temporary variables that may be contained in a block contained in the compiled method. This has to be fixed somehow"
 	numberOfTemporaryVariables := (arr size - 1) min: tmpNames size.
 	1 to: numberOfTemporaryVariables do: [:i | results at: (tmpNames at: i) put: (arr at: i)].
-	results at: ('^') put: (arr last).	 
+	results at: ('^') put: arr last.	 
 	^results
 ]
 
@@ -430,19 +437,18 @@ TypeCollector >> pushSendOf: selector to: rec args: args [
 				key: #instcreation
 				value: recValue].
 	^self
-		langueSpecificPushSendOf: selector
+		languageSpecificPushSendOf: selector
 		to: rec
 		args: args
 ]
 
 { #category : #accessing }
 TypeCollector >> sendsTo: instVarName [
-	"	^self sends at: (self indexForVar: instVarName)"
 
-	^(self typingResultsFor: instVarName) interface
+	^ (self typingResultsFor: instVarName) interface
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TypeCollector >> theClass [
 	^theClass
 ]
@@ -474,11 +480,11 @@ TypeCollector >> tryUsing: receiver for: selector ifNotUse: aClass [
 	| cl |
 	cl := self assignmentTypeOf: receiver.
 	^(cl notNil and: [cl methodDict includesKey: selector])
-		ifTrue: [cl]
-		ifFalse: [aClass]
+		ifTrue: [ cl ]
+		ifFalse: [ aClass ]
 ]
 
-{ #category : #public-typing }
+{ #category : #'public-typing' }
 TypeCollector >> typeInstvarsOfClass: aClass [
 	| extractor|
 	self onClass: aClass.
@@ -487,14 +493,13 @@ TypeCollector >> typeInstvarsOfClass: aClass [
 	aClass selectorsAndMethodsDo:
 			[:sel :method |
 			currentExtractedMethod := method. 
-			"(method selector = #blockReturn:) ifTrue: [self halt]".
 			extractor
 				extractInterfacesFrom: method
 				addTo: self].
 	^self packagedResults
 ]
 
-{ #category : #public-typing }
+{ #category : #'public-typing' }
 TypeCollector >> typeTmpsIn: aCompiledMethod ofClass: aClass [
 	| extractor|
 	self onClass: aClass.
@@ -503,7 +508,6 @@ TypeCollector >> typeTmpsIn: aCompiledMethod ofClass: aClass [
 	aClass selectorsAndMethodsDo:
 			[:sel :method |
 			currentExtractedMethod := method. 
-			"(method selector = #cssClass:) ifTrue: [self halt]".
 			extractor
 				extractInterfacesFrom: method
 				addTo: self].
@@ -512,7 +516,7 @@ TypeCollector >> typeTmpsIn: aCompiledMethod ofClass: aClass [
 
 { #category : #accessing }
 TypeCollector >> typingResults [
-	^typingResults
+	^ typingResults
 ]
 
 { #category : #private }

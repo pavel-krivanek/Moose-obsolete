@@ -4,7 +4,7 @@ Edges will not be drawn if nodes are not initialized before the invocation of #e
 Class {
 	#name : #RTInvocationSequenceRule,
 	#superclass : #ReInvocationSequenceRule,
-	#category : #Roassal2-Rules
+	#category : #'Roassal2-Rules'
 }
 
 { #category : #accessing }

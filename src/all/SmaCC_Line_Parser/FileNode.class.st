@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'lines'
 	],
-	#category : #SmaCC_Line_Parser
+	#category : #'SmaCC_Line_Parser'
 }
 
 { #category : #generated }
@@ -17,7 +17,7 @@ FileNode >> compositeTokenVariables [
 	^ #(#lines)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 FileNode >> initialize [
 	super initialize.
 	lines := OrderedCollection new: 2.

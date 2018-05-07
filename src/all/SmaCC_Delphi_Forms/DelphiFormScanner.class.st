@@ -1,13 +1,13 @@
 Class {
 	#name : #DelphiFormScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 DelphiFormScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(20 'END' 7) #(20 'FALSE' 19) #(20 'INHERITED' 3) #(20 'INLINE' 4) #(20 'ITEM' 13) #(20 'OBJECT' 8) #(20 'TRUE' 19))
+	#(#(20 'END' 12) #(20 'FALSE' 19) #(20 'INHERITED' 13) #(20 'INLINE' 14) #(20 'ITEM' 15) #(20 'OBJECT' 16) #(20 'TRUE' 19))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -22,12 +22,12 @@ DelphiFormScanner >> bytesId [
 
 { #category : #generated }
 DelphiFormScanner >> emptySymbolTokenId [
-	^ 48
+	^ 50
 ]
 
 { #category : #generated }
 DelphiFormScanner >> errorTokenId [
-	^ 49
+	^ 51
 ]
 
 { #category : #generated }
@@ -74,19 +74,10 @@ DelphiFormScanner >> scan11 [
 				or: [ (currentCharacter between: $A and: $F)
 						or: [ currentCharacter between: $a and: $f ] ])
 				ifTrue: [ ^ self scan11 ] ].
-	((currentCharacter between: $G and: $Z)
-		or: [ currentCharacter == $_
-				or: [ (currentCharacter between: $g and: $z)
-						or:
-							[ 'ÄÖÜäöü' includes: currentCharacter ] ] ])
+	currentCharacter isLetter
 		ifTrue: [ [ self recordMatch: #(20).
 			self step.
-			(currentCharacter between: $0 and: $9)
-				or: [ (currentCharacter between: $A and: $Z)
-						or: [ currentCharacter == $_
-								or: [ (currentCharacter between: $a and: $z)
-										or:
-											[ 'ÄÖÜäöü' includes: currentCharacter ] ] ] ] ] whileTrue ].
+			currentCharacter isAlphaNumeric ] whileTrue ].
 	^ self reportLastMatch
 ]
 
@@ -259,23 +250,34 @@ DelphiFormScanner >> scanForToken [
 	self step.
 	currentCharacter == $#
 		ifTrue: [ ^ self scan1 ].
-	^ self scanForTokenX5
+	currentCharacter == $'
+		ifTrue: [ ^ self scan2 ].
+	currentCharacter == $(
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+	currentCharacter == $)
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+	currentCharacter == $+
+		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+	currentCharacter == $,
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+	currentCharacter == $-
+		ifTrue:
+			[ ^ self scanForTokenX1 ].
+	currentCharacter == $.
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+	currentCharacter == $:
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+	currentCharacter == $<
+		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
+	currentCharacter == $>
+		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+	^ self scanForTokenX4
 ]
 
 { #category : #generated }
 DelphiFormScanner >> scanForTokenX1 [
-	[ self recordMatch: #(20).
-	self step.
-	(currentCharacter between: $0 and: $9)
-		or: [ (currentCharacter between: $A and: $Z)
-				or: [ currentCharacter == $_
-						or: [ (currentCharacter between: $a and: $z)
-								or:
-									[ 'ÄÖÜäöü' includes: currentCharacter ] ] ] ] ] whileTrue
-]
-
-{ #category : #generated }
-DelphiFormScanner >> scanForTokenX2 [
 	self step.
 	currentCharacter isDigit
 		ifTrue: [ [ self recordMatch: #(21).
@@ -291,69 +293,46 @@ DelphiFormScanner >> scanForTokenX2 [
 ]
 
 { #category : #generated }
-DelphiFormScanner >> scanForTokenX3 [
+DelphiFormScanner >> scanForTokenX2 [
 	[ self recordMatch: #(25).
 	self step.
-	currentCharacter isMSESeparator
+	currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp ] ] whileTrue.
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
-DelphiFormScanner >> scanForTokenX4 [
-	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
-	currentCharacter == $`
-		ifTrue: [ ^ self scan12 ].
-	currentCharacter == ${
-		ifTrue: [ ^ self recordAndReportMatch: #(18) ].
-	currentCharacter == $}
-		ifTrue: [ ^ self recordAndReportMatch: #(15) ].
-	currentCharacter isDigit
-		ifTrue: [ ^ self scan6 ].
-	(currentCharacter isMSESeparator
-		or: [ currentCharacter == Character pageUp ])
-		ifTrue:
-			[ ^ self scanForTokenX3 ].
-	((currentCharacter between: $A and: $F)
-		or: [ currentCharacter between: $a and: $f ])
-		ifTrue: [ ^ self scan11 ].
-	(currentCharacter isSafeForHTTP
-		or:
-			[ 'ÄÖÜäöü' includes: currentCharacter ])
-		ifTrue:
-			[ self scanForTokenX1 ].
-	^ self reportLastMatch
+DelphiFormScanner >> scanForTokenX3 [
+	[ self recordMatch: #(20).
+	self step.
+	currentCharacter isAlphaNumeric ] whileTrue
 ]
 
 { #category : #generated }
-DelphiFormScanner >> scanForTokenX5 [
-	currentCharacter == $'
-		ifTrue: [ ^ self scan2 ].
-	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(16) ].
-	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
-	currentCharacter == $+
+DelphiFormScanner >> scanForTokenX4 [
+	currentCharacter == $[
 		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
-	currentCharacter == $,
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
-	currentCharacter == $-
+	currentCharacter == $]
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
+	currentCharacter == $`
+		ifTrue: [ ^ self scan12 ].
+	currentCharacter == ${
+		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
+	currentCharacter == $}
+		ifTrue: [ ^ self recordAndReportMatch: #(18) ].
+	currentCharacter isDigit
+		ifTrue: [ ^ self scan6 ].
+	(currentCharacter isSeparator
+		or: [ currentCharacter == Character pageUp ])
 		ifTrue:
 			[ ^ self scanForTokenX2 ].
-	currentCharacter == $.
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
-	currentCharacter == $:
-		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
-	currentCharacter == $<
-		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
-	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
-	currentCharacter == $>
-		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
-	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
-	^ self scanForTokenX4
+	((currentCharacter between: $A and: $F)
+		or: [ currentCharacter between: $a and: $f ])
+		ifTrue: [ ^ self scan11 ].
+	currentCharacter isLetter
+		ifTrue:
+			[ self scanForTokenX3 ].
+	^ self reportLastMatch
 ]
 
 { #category : #generated }

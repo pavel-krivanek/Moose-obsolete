@@ -8,10 +8,10 @@ Class {
 	#instVars : [
 		'reference'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAReferenceDescription class >> defaultReference [
 	^ MAStringDescription new
 ]
@@ -21,7 +21,7 @@ MAReferenceDescription >> acceptMagritte: aVisitor [
 	aVisitor visitReferenceDescription: self
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAReferenceDescription >> descriptionReference [
 	<magritteDescription>
 	^ MAToOneRelationDescription new

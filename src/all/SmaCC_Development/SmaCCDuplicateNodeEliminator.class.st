@@ -14,7 +14,7 @@ Class {
 		'comparisonState',
 		'root'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #algorithm }

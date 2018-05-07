@@ -42,7 +42,7 @@ text
 Class {
 	#name : #RTLabeled,
 	#superclass : #RTAbstractLabeled,
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #public }

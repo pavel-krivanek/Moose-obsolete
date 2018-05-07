@@ -6,7 +6,7 @@ Class {
 		'lines',
 		'right'
 	],
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
 { #category : #generated }
@@ -19,7 +19,7 @@ DelphiFormByteArrayNode >> compositeTokenVariables [
 	^ #(#lines)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiFormByteArrayNode >> initialize [
 	super initialize.
 	lines := OrderedCollection new: 2.

@@ -4,7 +4,7 @@ This class represents an ordered list of child nodes for an XML document or elem
 Class {
 	#name : #XMLNodeList,
 	#superclass : #XMLObservableList,
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #'instance creation' }
@@ -183,7 +183,7 @@ XMLNodeList >> elementsDetect: aBlock ifNone: anExceptionBlock [
 
 { #category : #enumerating }
 XMLNodeList >> elementsDo: aBlock [
-	"#to:do: for performance, because so many methods rely on this"
+	"use #to:do: for performance, because so many methods rely on this"
 	1 to: collection size do: [:i | | node |
 		(node := collection at: i) isElement
 			ifTrue: [aBlock value: node]]

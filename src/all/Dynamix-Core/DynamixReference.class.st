@@ -9,7 +9,7 @@ Class {
 		'activationsWithReceiver',
 		'activationsWithReturn'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }
@@ -55,7 +55,7 @@ DynamixReference >> activationsWithReturn: aCollection [
 	activationsWithReturn value: aCollection
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DynamixReference >> initialize [ 
 	super initialize.
 	activationsWithReceiver := FMMultivalueLink on: self opposite: #receiver:.

@@ -7,12 +7,22 @@ Class {
 	#instVars : [
 		'stream'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
+
+{ #category : #basic }
+XMLStreamAdapter class >> basicOn: aStream [
+	^ self basicNew initialize on: aStream
+]
+
+{ #category : #'instance creation' }
+XMLStreamAdapter class >> new [
+	self shouldNotImplement
+]
 
 { #category : #'instance creation' }
 XMLStreamAdapter class >> on: aStream [
-	^ self new on: aStream
+	^ self basicOn: aStream
 ]
 
 { #category : #closing }
@@ -37,6 +47,11 @@ XMLStreamAdapter >> isStream [
 	^ true
 ]
 
+{ #category : #testing }
+XMLStreamAdapter >> isXMLBinaryOrExternalStream [
+	^ self isBinary
+]
+
 { #category : #initialization }
 XMLStreamAdapter >> on: aStream [
 	stream := aStream
@@ -50,6 +65,20 @@ XMLStreamAdapter >> position [
 { #category : #positioning }
 XMLStreamAdapter >> position: anInteger [
 	self subclassResponsibility
+]
+
+{ #category : #printing }
+XMLStreamAdapter >> printOn: aStream [
+	super printOn: aStream.
+
+	aStream nextPut: $(.
+	self printStreamOn: aStream.
+	aStream nextPut: $).
+]
+
+{ #category : #printing }
+XMLStreamAdapter >> printStreamOn: aStream [
+	aStream print: stream
 ]
 
 { #category : #positioning }

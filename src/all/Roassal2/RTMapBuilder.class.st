@@ -68,7 +68,7 @@ Class {
 		'periodLabel',
 		'cityElements'
 	],
-	#category : #Roassal2-Builder-Map
+	#category : #'Roassal2-Builder-Map'
 }
 
 { #category : #population }
@@ -176,7 +176,7 @@ RTMapBuilder >> initialize [
 	scale := 1.
 ]
 
-{ #category : #public-ui }
+{ #category : #'public-ui' }
 RTMapBuilder >> open [
 	super open.
 	cityBuilder evolutionPeriod isEmpty ifFalse: [

@@ -11,7 +11,7 @@ stream
 Class {
 	#name : #GRNullCodecStream,
 	#superclass : #GRCodecStream,
-	#category : #Grease-Core-Text
+	#category : #'Grease-Core-Text'
 }
 
 { #category : #streaming }

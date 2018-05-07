@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCSendRuleDebugAction,
 	#superclass : #SmaCCTransformationToolkitDebugAction,
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #registration }
@@ -34,4 +34,9 @@ SmaCCSendRuleDebugAction >> executeAction [
 			first
 				ifTrue: [ first := false ]
 				ifFalse: [ self session isRewriteContext: context ] ]
+]
+
+{ #category : #accessing }
+SmaCCSendRuleDebugAction >> help [
+	^ 'Step into message'
 ]

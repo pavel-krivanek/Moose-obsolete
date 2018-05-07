@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'thisToken'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }

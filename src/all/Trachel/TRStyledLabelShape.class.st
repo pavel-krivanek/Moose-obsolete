@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'emphasis'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #utility }

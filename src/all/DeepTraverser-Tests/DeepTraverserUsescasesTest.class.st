@@ -1,7 +1,7 @@
 Class {
 	#name : #DeepTraverserUsescasesTest,
 	#superclass : #DeepTraverserGraphTest,
-	#category : #DeepTraverser-Tests-Transformed-To-Examples
+	#category : #'DeepTraverser-Tests-Transformed-To-Examples'
 }
 
 { #category : #tests }

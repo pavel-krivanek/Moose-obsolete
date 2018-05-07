@@ -6,7 +6,7 @@ Class {
 		'messages',
 		'semicolons'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }
@@ -24,7 +24,7 @@ GstCascadeNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons #leftParens #rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 GstCascadeNode >> initialize [
 	super initialize.
 	messages := OrderedCollection new: 2.

@@ -17,7 +17,7 @@ Class {
 		'semicolon',
 		'modifier'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -107,7 +107,7 @@ DelphiPropertyHeaderNode >> indexes: anOrderedCollection [
 	self setParents: self indexes to: self
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiPropertyHeaderNode >> initialize [
 	super initialize.
 	indexes := OrderedCollection new: 2.

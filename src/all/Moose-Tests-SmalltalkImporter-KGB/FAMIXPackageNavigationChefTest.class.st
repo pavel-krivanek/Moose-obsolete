@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXPackageNavigationChefTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
+	#category : #'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
 }
 
 { #category : #allDependencies }
@@ -47,7 +47,7 @@ FAMIXPackageNavigationChefTest >> testClientPackages [
 						with: p5))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXPackageNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingReference [
 	| modelPackages |
 	modelPackages := self model allPackages.
@@ -69,7 +69,7 @@ FAMIXPackageNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingRefe
 								includes: referencer ] ])
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXPackageNavigationChefTest >> testEachStaticOutgoingReferenceImpliesAStaticIncomingReference [
 	| modelPackages |
 	modelPackages := self model allPackages.
@@ -91,7 +91,7 @@ FAMIXPackageNavigationChefTest >> testEachStaticOutgoingReferenceImpliesAStaticI
 								includes: referencer ] ])
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXPackageNavigationChefTest >> testEachSureOutgoingReferenceImpliesASureIncomingReference [
 	| modelPackages |
 	modelPackages := self model allPackages.
@@ -520,7 +520,7 @@ FAMIXPackageNavigationChefTest >> testSureReferencedClasses [
 						with: self c19FullRefereeOutSide))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXPackageNavigationChefTest >> testSureReferencedClassesIncludeAllStaticReferencedClasses [
 	self
 		assert:
@@ -574,7 +574,7 @@ FAMIXPackageNavigationChefTest >> testSureReferencingClasses [
 						with: self c11FullRefereeOutSide))
 ]
 
-{ #category : #MooseKGB-TestFamix3-integralTests }
+{ #category : #'MooseKGB-TestFamix3-integralTests' }
 FAMIXPackageNavigationChefTest >> testSureReferencingClassesIncludeAllStaticReferencingClasses [ 
 	 
 	| modelPackages | 

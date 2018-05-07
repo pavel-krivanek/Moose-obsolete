@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : #Grease-Pharo30-Core
+	#category : #'Grease-Pharo30-Core'
 }
 
 { #category : #private }

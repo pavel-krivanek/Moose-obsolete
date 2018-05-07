@@ -4,7 +4,7 @@ This class parses literal ""ANY"" and ""EMPTY"" element content models and retur
 Class {
 	#name : #DTDLiteralContentModelParser,
 	#superclass : #DTDContentModelParser,
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #parsing }

@@ -14,14 +14,13 @@ Class {
 		'parseTreeCache'
 	],
 	#classVars : [
-		'IsExpressions',
 		'MaxJumpSize',
 		'MaxLiterals'
 	],
 	#classInstVars : [
 		'keywords'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }
@@ -92,22 +91,6 @@ SmaCCSmalltalkCodeGenerator class >> initialize [
 	MaxLiterals := 30
 ]
 
-{ #category : #accessing }
-SmaCCSmalltalkCodeGenerator class >> isExpressions [
-	^ IsExpressions
-]
-
-{ #category : #accessing }
-SmaCCSmalltalkCodeGenerator class >> isExpressions: aCollection [
-	"Assign a collection of Character is___ selectors that can be used to create the scanner. These can make the generated scanners easier to read as a test like currentCharacter isAlphaNumeric is easier to read than a test of '(currentCharacter >= $A and: [currentCharacter <= $Z]) or: [(currentCharacter >= $a and: [currentCharacter <= $z]) or: [currentCharacter >= $0 and: [currentCharacter <= $9]]]'. If the collection is nil, SmaCC will automatically create the set of all is___ methods that are in the current image. This may result in a scanner that doesn't work in a different image. If you wish to limit the selectors that can be used, you can set them here:
-	
-	self isExpressions: #(isAlphaNumeric isDigit isLetter isLiteral isLowercase isSeparator isSpecial isUppercase isVowel)
-	
-	"
-
-	IsExpressions := aCollection
-]
-
 { #category : #private }
 SmaCCSmalltalkCodeGenerator class >> keywords [
 	"While Smalltalk doesn't have many keywords, we don't want to overwrite any existing method."
@@ -142,14 +125,14 @@ SmaCCSmalltalkCodeGenerator class >> typeName [
 	^ #Smalltalk
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> acceptStateEdge: aSmaCCStateEdge [
 	^ aSmaCCStateEdge transitionObjects size = 1
-		ifTrue: [ 'state == #'
+		ifTrue: [ 'scope == #'
 				, aSmaCCStateEdge transitionObjects asArray first ]
 		ifFalse:
 			[ '(' , aSmaCCStateEdge transitionObjects asArray storeString
-				, ' includes: state)' ]
+				, ' includes: scope)' ]
 ]
 
 { #category : #private }
@@ -251,7 +234,7 @@ SmaCCSmalltalkCodeGenerator >> changes [
 	^ model changes
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> closestIsExpressionsFor: aSmaCCCharacterEdge seen: aCollection [
 	| expressions |
 	expressions := OrderedCollection new.
@@ -309,7 +292,7 @@ SmaCCSmalltalkCodeGenerator >> comment: aString [
 	^ '"' , (aString trim copyReplaceAll: '"' with: '""') , '"'
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> commonIfTrueCodeRewriter [
 	^ RBParseTreeRewriter new
 		replace:
@@ -330,7 +313,7 @@ SmaCCSmalltalkCodeGenerator >> commonIfTrueCodeRewriter [
 		yourself
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCSmalltalkCodeGenerator >> compileCacheId [
 	| stream |
 	stream := WriteStream with: String new.
@@ -353,27 +336,27 @@ SmaCCSmalltalkCodeGenerator >> compileChanges [
 		ifNotNil: [ :each | each initializeKeywordMap ]
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCSmalltalkCodeGenerator >> compileChildrenMethod: aSmaCCNodeClassDefinition [
 	
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCSmalltalkCodeGenerator >> compileCopyInContextMethod: aSmaCCNodeClassDefinition [
 	
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCSmalltalkCodeGenerator >> compileEqualMethod: aSmaCCNodeClassDefinition [
 	
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCSmalltalkCodeGenerator >> compileHashMethod: aSmaCCNodeClassDefinition [
 	
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> compileIgnoreCaseMethods [
 	super compileIgnoreCaseMethods.
 	self grammar ignoreCase
@@ -412,7 +395,7 @@ SmaCCSmalltalkCodeGenerator >> compileInitializeMethod: aSmaCCNodeClassDefinitio
 		classified: #'generated-initialize-release'
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> compileKeywordInitializerUsing: keywordMapDictionary [
 	| stream dataStream |
 	keywordMapDictionary isEmpty
@@ -451,7 +434,7 @@ SmaCCSmalltalkCodeGenerator >> compileKeywordInitializerUsing: keywordMapDiction
 		classified: #'generated-initialization'
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCSmalltalkCodeGenerator >> compileMatchInContextMethod: aSmaCCNodeClassDefinition [
 	
 ]
@@ -478,12 +461,12 @@ SmaCCSmalltalkCodeGenerator >> compileOptimizedMethodIn: modelClass [
 	self compileScannerTree: tree into: modelClass
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCSmalltalkCodeGenerator >> compilePostCopyMethod: aSmaCCNodeClassDefinition [
 	
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCSmalltalkCodeGenerator >> compileScannerClassIntoParser [
 	| stream |
 	stream := WriteStream with: String new.
@@ -498,7 +481,7 @@ SmaCCSmalltalkCodeGenerator >> compileScannerClassIntoParser [
 		classified: #'generated-accessing'
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> compileScannerTree: tree into: modelClass [
 	| i |
 	i := 1.
@@ -516,7 +499,7 @@ SmaCCSmalltalkCodeGenerator >> compileScannerTree: tree into: modelClass [
 	modelClass compile: tree formattedCode classified: #generated
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCSmalltalkCodeGenerator >> compileSymbolTypes: anArray [
 	self
 		startPublicVirtualMethod;
@@ -526,7 +509,7 @@ SmaCCSmalltalkCodeGenerator >> compileSymbolTypes: anArray [
 		compileMethodIn: self parserClass
 ]
 
-{ #category : #compiling-nodes }
+{ #category : #'compiling-nodes' }
 SmaCCSmalltalkCodeGenerator >> compileVariablesMethods: aSmaCCNodeClassDefinition [
 	| compileBlock allVariables class |
 	allVariables := OrderedCollection new.
@@ -594,7 +577,7 @@ SmaCCSmalltalkCodeGenerator >> compileVariablesMethods: aSmaCCNodeClassDefinitio
 			value: 'otherVariables'
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> countLiteralsIn: aParseTree [
 	| literals |
 	literals := Set new.
@@ -671,19 +654,6 @@ SmaCCSmalltalkCodeGenerator >> formattedCode [
 ]
 
 { #category : #private }
-SmaCCSmalltalkCodeGenerator >> generateCharacterSetFor: aSelector [
-	| stream |
-	stream := WriteStream with: String new.
-	0 to: SmaCCGrammar maximumCharacterValue do:
-		[ :i | 
-		| ch |
-		ch := Character value: i.
-		(ch perform: aSelector)
-			ifTrue: [ stream nextPut: ch ] ].
-	^ stream contents
-]
-
-{ #category : #private }
 SmaCCSmalltalkCodeGenerator >> generatedMethodsIn: aRBClass [
 	^ aRBClass selectors
 		select:
@@ -697,7 +667,7 @@ SmaCCSmalltalkCodeGenerator >> hasLiteralByteArrays [
 	^ true
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSmalltalkCodeGenerator >> initialize [
 	super initialize.
 	model := RBNamespace new
@@ -709,20 +679,11 @@ SmaCCSmalltalkCodeGenerator >> initialize [
 
 { #category : #private }
 SmaCCSmalltalkCodeGenerator >> initializeIsExpressions [
-	"Creates a map from sets of characters to selectors that start with 'is' on Character. This allows generated scanners to take
-	full advantage of selectors that are already implemented on Character"
-
-	| selectors |
+	| expressions |
 	isExpressions := Dictionary new.
-	selectors := IsExpressions
-		ifNil: [ Character selectors
-				select: [ :each | each size > 2 and: [ (each beginsWith: 'is') and: [ each numArgs = 0 and: [ (each at: 3) isUppercase ] ] ] ] ].
-	selectors
-		do: [ :sel | 
-			| string |
-			string := self generateCharacterSetFor: sel.
-			string isEmpty
-				ifFalse: [ isExpressions at: string put: sel ] ]
+	expressions := SmaCCGrammar isExpressionMap.
+	(expressions keys asSortedCollection: [ :a :b | a size > b size or: [ a size = b size and: [ a > b ] ] ])
+		do: [ :key | isExpressions at: (expressions at: key) put: key ]
 ]
 
 { #category : #private }
@@ -730,12 +691,12 @@ SmaCCSmalltalkCodeGenerator >> keywords [
 	^ self class keywords
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> maxJumpSize [
 	^ MaxJumpSize
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> maxLiterals [
 	^ MaxLiterals
 ]
@@ -758,12 +719,7 @@ SmaCCSmalltalkCodeGenerator >> method: aString type: anObject argumentName: firs
 		, keywords last , ' ' , secondArgumentNameString
 ]
 
-{ #category : #private }
-SmaCCSmalltalkCodeGenerator >> namespaceName [
-	^ ''
-]
-
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> optimizationRewriter [
 	| rewriter |
 	rewriter := RBParseTreeRewriter new.
@@ -850,14 +806,14 @@ SmaCCSmalltalkCodeGenerator >> optimizationRewriter [
 	^ rewriter
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputGreaterThanMatch: each on: stream [
 	stream
 		nextPutAll: 'currentCharacter >= ';
 		nextPutAll: each first storeString
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputInvertedMatchFor: aSmaCCCharacterEdge on: stream [
 	| char |
 	char := Character
@@ -872,19 +828,19 @@ SmaCCSmalltalkCodeGenerator >> outputInvertedMatchFor: aSmaCCCharacterEdge on: s
 		nextPutAll: char storeString
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputIsSelector: isSelector on: stream [
 	stream nextPutAll: 'currentCharacter ' , isSelector
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputLessThanMatch: each on: stream [
 	stream
 		nextPutAll: 'currentCharacter <= ';
 		nextPutAll: each last storeString
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputMatchFor: aSmaCCCharacterEdge on: stream without: isSelectors [
 	| pairs |
 	pairs := self
@@ -902,7 +858,7 @@ SmaCCSmalltalkCodeGenerator >> outputMatchFor: aSmaCCCharacterEdge on: stream wi
 	stream next: isSelectors size put: $]
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputMatchForTransition: each on: stream [
 	each first = each last
 		ifTrue: [ ^ self outputSingleCharacterMatch: each on: stream ].
@@ -913,7 +869,7 @@ SmaCCSmalltalkCodeGenerator >> outputMatchForTransition: each on: stream [
 	self outputRangeMatch: each on: stream
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputRangeMatch: each on: stream [
 	stream
 		nextPutAll: '(currentCharacter between: ';
@@ -923,14 +879,14 @@ SmaCCSmalltalkCodeGenerator >> outputRangeMatch: each on: stream [
 		nextPutAll: ')'
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputSingleCharacterMatch: each on: stream [
 	stream
 		nextPutAll: 'currentCharacter == ';
 		nextPutAll: each first storeString
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> outputStreamClass [
 	^ WriteStream
 ]
@@ -1068,7 +1024,7 @@ SmaCCSmalltalkCodeGenerator >> removeUnnecessaryMethodChanges [
 							do: [ :ex | ex return ] ] ] ]
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> rewriters [
 	| rewriters |
 	rewriters := OrderedCollection new.
@@ -1078,7 +1034,7 @@ SmaCCSmalltalkCodeGenerator >> rewriters [
 	^ rewriters
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> scanStringRewriter [
 	^ RBParseTreeRewriter new
 		replace:
@@ -1100,7 +1056,7 @@ SmaCCSmalltalkCodeGenerator >> scanStringRewriter [
 		yourself
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> scannerActionFor: aString [
 	| selector current |
 	aString size > 2
@@ -1182,7 +1138,7 @@ SmaCCSmalltalkCodeGenerator >> send: selectorString to: receiverString with: fir
 		, thirdArgumentString , ')'
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> splitIfTrueBranchFrom: aParseTree usingName: aSelector into: modelClass [
 	| blocks |
 	blocks := SortedCollection sortBlock: [ :a :b | a key > b key ].
@@ -1220,7 +1176,7 @@ SmaCCSmalltalkCodeGenerator >> splitIfTrueBranchFrom: aParseTree usingName: aSel
 	^ false
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> splitSequenceFrom: aParseTree usingName: aSelector into: modelClass [
 	| sequence statements |
 	statements := aParseTree body copy statements.
@@ -1271,7 +1227,7 @@ SmaCCSmalltalkCodeGenerator >> variableReference: aSmaCCVariableDefinition in: a
 	^ '(' , aString , ') ' , aSmaCCVariableDefinition getterMethodName
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCSmalltalkCodeGenerator >> writeMatchingCodeFor: aSmaCCNode [
 	| matchedItem |
 	(aSmaCCNode action notNil and: [ aSmaCCNode action size > 0 ])
@@ -1298,7 +1254,7 @@ SmaCCSmalltalkCodeGenerator >> writeMatchingCodeFor: aSmaCCNode [
 		ifTrue: [ self nextPutLine: 'self step.' ]
 ]
 
-{ #category : #compiling-parser }
+{ #category : #'compiling-parser' }
 SmaCCSmalltalkCodeGenerator >> writeTransitionTableEntry: anArray on: aStream firstIsType: aBoolean [
 	| startIndex |
 	aStream cr.

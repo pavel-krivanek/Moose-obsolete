@@ -13,7 +13,7 @@ Class {
 		'xmlnsDeclarations',
 		'attributes'
 	],
-	#category : #XML-Writer-Core
+	#category : #'XML-Writer-Core'
 }
 
 { #category : #accessing }
@@ -118,7 +118,6 @@ XMLTagWriter >> writeEpilogue [
 				formatAfterEndTag: self]
 		ifFalse: [
 			self writer
-				space;
 				nextPut: $/;
 				nextPut: $>;
 				formatAfterEndTag: self]

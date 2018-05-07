@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'scopes'
 	],
-	#category : #XML-Parser-Namespaces
+	#category : #'XML-Parser-Namespaces'
 }
 
 { #category : #accessing }
@@ -59,6 +59,7 @@ XMLNamespaceScopeAllocator >> newEmptyScope [
 { #category : #printing }
 XMLNamespaceScopeAllocator >> printOn: aStream [
 	super printOn: aStream.
+
 	self hasCurentScope
 		ifTrue: [
 			aStream

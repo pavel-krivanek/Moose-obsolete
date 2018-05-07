@@ -7,7 +7,7 @@ self new openOn: PPArithmeticParser
 Class {
 	#name : #PPParserBrowser,
 	#superclass : #GLMCompositePresentation,
-	#category : #PetitGui-Core
+	#category : #'PetitGui-Core'
 }
 
 { #category : #openning }

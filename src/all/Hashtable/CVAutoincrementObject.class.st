@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'NextHash'
 	],
-	#category : #Hashtable-Objects
+	#category : #'Hashtable-Objects'
 }
 
 { #category : #'class initialization' }
@@ -21,7 +21,7 @@ CVAutoincrementObject >> hash [
 	^hash
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 CVAutoincrementObject >> initialize [
 	super initialize.
 	NextHash = SmallInteger maxVal ifTrue: [

@@ -4,7 +4,7 @@ This is an XPath type class for any XPath value. Subclasses must implement #newF
 Class {
 	#name : #XPathValueType,
 	#superclass : #XPathType,
-	#category : #XPath-Core-Types
+	#category : #'XPath-Core-Types'
 }
 
 { #category : #testing }

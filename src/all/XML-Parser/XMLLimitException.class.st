@@ -4,5 +4,5 @@ Invoked when a security limit on input is exceeded. Use the messages in XMLParse
 Class {
 	#name : #XMLLimitException,
 	#superclass : #XMLParserException,
-	#category : #XML-Parser-Exceptions
+	#category : #'XML-Parser-Exceptions'
 }

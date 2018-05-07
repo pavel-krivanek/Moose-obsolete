@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'nodes'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -48,7 +48,7 @@ SmaCCSequenceRENode >> makeCaseInsensitive [
 	nodes do: [ :each | each makeCaseInsensitive ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSequenceRENode >> nodes: aCollection [
 	nodes := aCollection
 ]

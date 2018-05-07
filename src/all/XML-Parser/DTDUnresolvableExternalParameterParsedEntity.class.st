@@ -4,7 +4,7 @@ This is a class for unresolvable external parameter parsed entities that lazily 
 Class {
 	#name : #DTDUnresolvableExternalParameterParsedEntity,
 	#superclass : #DTDUnresolvableExternalParsedEntity,
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #testing }

@@ -15,13 +15,19 @@ Class {
 	#name : #FAMIXAnnotationInstance,
 	#superclass : #FAMIXSourcedEntity,
 	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes} + TDependencyQueries classTrait',
+	#classTraits : 'TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#instVars : [
 		'annotatedEntity',
 		'annotationType',
 		'attributes'
 	],
-	#category : #Famix-Core
+	#classInstVars : [
+		'childrenSelectors',
+		'allParentTypes',
+		'allChildrenTypes',
+		'parentSelectors'
+	],
+	#category : #'Famix-Core'
 }
 
 { #category : #accessing }
@@ -38,8 +44,6 @@ FAMIXAnnotationInstance class >> allOutgoingAssociationTypes [
 FAMIXAnnotationInstance class >> annotation [
 	<MSEClass: #AnnotationInstance super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-
-	^self
 ]
 
 { #category : #accessing }
@@ -91,7 +95,7 @@ FAMIXAnnotationInstance >> belongsTo [
 	^ self annotatedEntity
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXAnnotationInstance >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -100,7 +104,7 @@ FAMIXAnnotationInstance >> incomingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXAnnotationInstance >> initialize [
 	super initialize.
 	attributes := FMNullMultivalueLink on: self opposite: #parentAnnotationInstance: selector: #attributes
@@ -126,10 +130,10 @@ FAMIXAnnotationInstance >> name [
 		streamContents: [ :stream | 
 			stream << '@'
 				<< (self annotationType ifNil: [ super name ] ifNotNil: [ :type | type name ])
-				<< ' on ' << self annotatedEntity name ]
+				<< ' on ' << (self annotatedEntity ifNotNil: #name ifNil: [ 'undefined' ]) ]
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXAnnotationInstance >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	

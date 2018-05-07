@@ -6,7 +6,7 @@ Class {
 		'arguments',
 		'semicolons'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -36,11 +36,11 @@ DelphiProcedureHeaderNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiProcedureHeaderNode >> initialize [
 	super initialize.
-	semicolons := OrderedCollection new: 2.
 	arguments := OrderedCollection new: 2.
+	semicolons := OrderedCollection new: 2.
 ]
 
 { #category : #generated }

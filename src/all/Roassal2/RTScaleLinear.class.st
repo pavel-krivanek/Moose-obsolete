@@ -1,3 +1,6 @@
+"
+I follow the linear function
+"
 Class {
 	#name : #RTScaleLinear,
 	#superclass : #RTScale,
@@ -6,11 +9,12 @@ Class {
 		'output',
 		'input'
 	],
-	#category : #Roassal2-Builder-Grapher-Scaling
+	#category : #'Roassal2-Builder-Grapher-Scaling'
 }
 
 { #category : #accessing }
 RTScaleLinear >> clamp: x [
+	"If clamp is specified, enables or disables clamping accordingly. If clamping is disabled and the scale is passed a value outside the domain, the scale may return a value outside the range through extrapolation. If clamping is enabled, the return value of the scale is always within the scale’s range."
 	clamp := x.
 	self rescale.
 ]

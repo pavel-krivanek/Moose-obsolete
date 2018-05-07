@@ -9,7 +9,7 @@ Class {
 		'attributes',
 		'elementFromModelCache'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #public }
@@ -92,6 +92,43 @@ RTGroup >> canvas [
 RTGroup >> center [
 	"Return the center of the group"
 	^ self encompassingRectangle center
+]
+
+{ #category : #copying }
+RTGroup >> deepCopy [
+	"Create a copy of myself, and a copy of each elements and edges."
+	
+	| copyOfMyself edgesCopy |
+	copyOfMyself := self class new.
+	self do: [ :anElement |
+		copyOfMyself add: (anElement copy resetConnectedEdges; yourself).
+	].
+
+	edgesCopy := self flatCollect: #connectedEdges as: Set.
+	edgesCopy do: [ :e | 
+		| edgeC copyFrom copyTo |
+		edgeC := e copy.
+		copyFrom := copyOfMyself elementFromModel: e from model.
+		copyTo := copyOfMyself elementFromModel: e to model.
+		edgeC from: copyFrom.
+		edgeC to: copyTo.
+		"copyFrom connectedEdges add: edgeC.
+		copyTo connectedEdges add: edgeC."
+		].
+
+"	anotherCopy := self copy.	
+	copyOfMyself with: anotherCopy do: [ :elementCopy :elementOriginal |
+		| edges |
+		edges := elementOriginal connectedEdges collect: #copy.
+		edges do: [ :e | 
+			e from: (copyOfMyself detect: [ :ee | ee model = e from model ]).
+			e to: (copyOfMyself detect: [ :ee | ee model = e to model ]) ].
+		self halt.
+		elementCopy resetConnectedEdges.
+		elementCopy connectedEdges addAll: edges.
+	]."
+	^ copyOfMyself
+	
 ]
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ This is a class for the PI node type.
 Class {
 	#name : #XPathPINodeType,
 	#superclass : #XPathNodeType,
-	#category : #XPath-Core-Types
+	#category : #'XPath-Core-Types'
 }
 
 { #category : #testing }

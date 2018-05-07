@@ -1,13 +1,13 @@
 Class {
 	#name : #SwiftScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 SwiftScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(90 '->' 64) #(90 '...' 55) #(90 '==' 10) #(86 'Protocol' 56) #(86 'Type' 57) #(86 '__COLUMN__' 51) #(86 '__FILE__' 44) #(86 '__FUNCTION__' 50) #(86 '__LINE__' 47) #(86 'as' 48) #(86 'associativity' 75) #(86 'break' 34) #(86 'case' 42) #(86 'class' 4) #(86 'continue' 37) #(86 'convenience' 54) #(86 'default' 35) #(86 'deinit' 72) #(86 'didSet' 66) #(86 'do' 26) #(86 'dynamicType' 60) #(86 'else' 29) #(86 'enum' 14) #(86 'extension' 71) #(86 'fallthrough' 20) #(86 'for' 28) #(86 'func' 16) #(86 'get' 70) #(86 'if' 30) #(86 'import' 18) #(86 'in' 22) #(86 'infix' 78) #(86 'init' 68) #(86 'inout' 74) #(86 'is' 53) #(86 'left' 76) #(86 'let' 32) #(86 'mutating' 3) #(86 'none' 62) #(86 'nonmutating' 1) #(86 'operator' 80) #(86 'override' 2) #(86 'postfix' 83) #(86 'precedence' 77) #(86 'prefix' 81) #(86 'protocol' 12) #(86 'return' 11) #(86 'right' 79) #(86 'self' 61) #(86 'set' 73) #(86 'static' 5) #(86 'struct' 15) #(86 'subscript' 82) #(86 'super' 59) #(86 'switch' 40) #(86 'typealias' 21) #(86 'unowned' 9) #(86 'var' 13) #(86 'weak' 17) #(86 'where' 33) #(86 'while' 23) #(86 'willSet' 67))
+	#(#(90 '->' 7) #(90 '...' 9) #(90 '==' 14) #(86 'Protocol' 18) #(86 'Type' 19) #(86 '__COLUMN__' 23) #(86 '__FILE__' 24) #(86 '__FUNCTION__' 25) #(86 '__LINE__' 26) #(86 'as' 27) #(86 'associativity' 28) #(86 'break' 29) #(86 'case' 30) #(86 'class' 31) #(86 'continue' 32) #(86 'convenience' 33) #(86 'default' 34) #(86 'deinit' 35) #(86 'didSet' 36) #(86 'do' 37) #(86 'dynamicType' 38) #(86 'else' 39) #(86 'enum' 40) #(86 'extension' 41) #(86 'fallthrough' 42) #(86 'for' 43) #(86 'func' 44) #(86 'get' 45) #(86 'if' 46) #(86 'import' 47) #(86 'in' 48) #(86 'infix' 49) #(86 'init' 50) #(86 'inout' 51) #(86 'is' 52) #(86 'left' 53) #(86 'let' 54) #(86 'mutating' 55) #(86 'none' 56) #(86 'nonmutating' 57) #(86 'operator' 58) #(86 'override' 59) #(86 'postfix' 60) #(86 'precedence' 61) #(86 'prefix' 62) #(86 'protocol' 63) #(86 'return' 64) #(86 'right' 65) #(86 'self' 66) #(86 'set' 67) #(86 'static' 68) #(86 'struct' 69) #(86 'subscript' 70) #(86 'super' 71) #(86 'switch' 72) #(86 'typealias' 73) #(86 'unowned' 74) #(86 'var' 77) #(86 'weak' 78) #(86 'where' 79) #(86 'while' 80) #(86 'willSet' 81))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -17,12 +17,12 @@ SwiftScanner class >> initializeKeywordMap [
 
 { #category : #generated }
 SwiftScanner >> emptySymbolTokenId [
-	^ 363
+	^ 365
 ]
 
 { #category : #generated }
 SwiftScanner >> errorTokenId [
-	^ 364
+	^ 366
 ]
 
 { #category : #generated }
@@ -118,11 +118,11 @@ SwiftScanner >> scan10X1X1X1 [
 						ifTrue: [ self step.
 							currentCharacter == $s
 								ifTrue: [ (self scanForString: 'afe)')
-										ifTrue: [ ^ self recordAndReportMatch: #(8) ].
+										ifTrue: [ ^ self recordAndReportMatch: #(75) ].
 									^ self reportLastMatch ].
 							currentCharacter == $u
 								ifTrue: [ (self scanForString: 'nsafe)')
-										ifTrue: [ ^ self recordAndReportMatch: #(19) ] ].
+										ifTrue: [ ^ self recordAndReportMatch: #(76) ] ].
 							^ self reportLastMatch ].
 					((currentCharacter between: $0 and: $9)
 						or: [ (currentCharacter between: $A and: $Z)
@@ -235,8 +235,7 @@ SwiftScanner >> scan4 [
 								or: [ (currentCharacter between: $* and: $+)
 										or: [ (currentCharacter between: $- and: $/)
 												or: [ (currentCharacter between: $< and: $>)
-														or:
-															[ '^|~' includes: currentCharacter ] ] ] ] ])
+														or: [ '^|~' includes: currentCharacter ] ] ] ] ])
 						ifTrue: [ [ self recordMatch: #(90).
 							self step.
 							currentCharacter == $!
@@ -244,8 +243,7 @@ SwiftScanner >> scan4 [
 										or: [ (currentCharacter between: $* and: $+)
 												or: [ (currentCharacter between: $- and: $/)
 														or: [ (currentCharacter between: $< and: $>)
-																or:
-																	[ '^|~' includes: currentCharacter ] ] ] ] ] ]
+																or: [ '^|~' includes: currentCharacter ] ] ] ] ] ]
 								whileTrue ].
 					^ self reportLastMatch ].
 			(currentCharacter == $!
@@ -253,8 +251,7 @@ SwiftScanner >> scan4 [
 						or: [ currentCharacter == $+
 								or: [ (currentCharacter between: $- and: $.)
 										or: [ (currentCharacter between: $< and: $>)
-												or:
-													[ '^|~' includes: currentCharacter ] ] ] ] ])
+												or: [ '^|~' includes: currentCharacter ] ] ] ] ])
 				ifTrue: [ ^ self scan4 ].
 			^ self scan5 ].
 	currentCharacter == $!
@@ -262,8 +259,7 @@ SwiftScanner >> scan4 [
 				or: [ currentCharacter == $+
 						or: [ (currentCharacter between: $- and: $/)
 								or: [ (currentCharacter between: $< and: $>)
-										or:
-											[ '^|~' includes: currentCharacter ] ] ] ] ] ] whileTrue.
+										or: [ '^|~' includes: currentCharacter ] ] ] ] ] ] whileTrue.
 	^ self scan5
 ]
 
@@ -350,7 +346,7 @@ SwiftScanner >> scanForToken [
 	currentCharacter == $"
 		ifTrue: [ ^ self scan1 ].
 	currentCharacter == $#
-		ifTrue: [ ^ self recordAndReportMatch: #(58) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	currentCharacter == $$
 		ifTrue:
 			[ ^ self scanForTokenX14 ].
@@ -358,11 +354,11 @@ SwiftScanner >> scanForToken [
 		ifTrue:
 			[ ^ self scanForTokenX7 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(25) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(24) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	currentCharacter == $,
-		ifTrue: [ ^ self recordAndReportMatch: #(27) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $.
 		ifTrue:
 			[ ^ self scanForTokenX6 ].
@@ -420,7 +416,7 @@ SwiftScanner >> scanForTokenX10 [
 
 { #category : #generated }
 SwiftScanner >> scanForTokenX11 [
-	self recordMatch: #(65 86).
+	self recordMatch: #(22 86).
 	self step.
 	((currentCharacter between: $0 and: $9)
 		or: [ (currentCharacter between: $A and: $Z)
@@ -467,9 +463,9 @@ SwiftScanner >> scanForTokenX14 [
 { #category : #generated }
 SwiftScanner >> scanForTokenX15 [
 	currentCharacter == ${
-		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(82) ].
 	currentCharacter == $}
-		ifTrue: [ ^ self recordAndReportMatch: #(39) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(83) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan8 ].
 	(currentCharacter isSeparator
@@ -493,9 +489,9 @@ SwiftScanner >> scanForTokenX15 [
 { #category : #generated }
 SwiftScanner >> scanForTokenX16 [
 	currentCharacter == $:
-		ifTrue: [ ^ self recordAndReportMatch: #(36) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
 	currentCharacter == $;
-		ifTrue: [ ^ self recordAndReportMatch: #(31) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
 	currentCharacter == $<
 		ifTrue:
 			[ ^ self scanForTokenX5 ].
@@ -506,13 +502,13 @@ SwiftScanner >> scanForTokenX16 [
 		ifTrue:
 			[ ^ self scanForTokenX3 ].
 	currentCharacter == $?
-		ifTrue: [ ^ self recordAndReportMatch: #(43) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(16) ].
 	currentCharacter == $@
-		ifTrue: [ ^ self recordAndReportMatch: #(49) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(52) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(20) ].
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(46) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(21) ].
 	currentCharacter == $_
 		ifTrue:
 			[ ^ self scanForTokenX11 ].
@@ -621,7 +617,7 @@ SwiftScanner >> scanForTokenX2 [
 
 { #category : #generated }
 SwiftScanner >> scanForTokenX3 [
-	self recordMatch: #(7 90).
+	self recordMatch: #(15 90).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -644,7 +640,7 @@ SwiftScanner >> scanForTokenX3 [
 
 { #category : #generated }
 SwiftScanner >> scanForTokenX4 [
-	self recordMatch: #(69 90).
+	self recordMatch: #(13 90).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -667,7 +663,7 @@ SwiftScanner >> scanForTokenX4 [
 
 { #category : #generated }
 SwiftScanner >> scanForTokenX5 [
-	self recordMatch: #(6 90).
+	self recordMatch: #(12 90).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -690,7 +686,7 @@ SwiftScanner >> scanForTokenX5 [
 
 { #category : #generated }
 SwiftScanner >> scanForTokenX6 [
-	self recordMatch: #(41 90).
+	self recordMatch: #(8 90).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -713,7 +709,7 @@ SwiftScanner >> scanForTokenX6 [
 
 { #category : #generated }
 SwiftScanner >> scanForTokenX7 [
-	self recordMatch: #(45 90).
+	self recordMatch: #(3 90).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -736,7 +732,7 @@ SwiftScanner >> scanForTokenX7 [
 
 { #category : #generated }
 SwiftScanner >> scanForTokenX8 [
-	self recordMatch: #(63 90).
+	self recordMatch: #(1 90).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
@@ -772,5 +768,5 @@ SwiftScanner >> scanForTokenX9 [
 
 { #category : #generated }
 SwiftScanner >> tokenActions [
-	^ #(nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil #whitespace #comment nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil #initialize)
+	^ #(nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil #whitespace #comment)
 ]

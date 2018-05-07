@@ -11,7 +11,7 @@ Class {
 		'textEntryContents',
 		'textEntryMessage'
 	],
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #'instance creation' }
@@ -72,7 +72,7 @@ ItemSelectorPart >> initialListIndex: anIndex [
 	self changed: #initialListIndex.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ItemSelectorPart >> initialize [
 
 	super initialize.

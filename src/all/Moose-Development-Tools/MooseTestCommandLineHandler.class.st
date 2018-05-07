@@ -4,7 +4,7 @@ MooseTestCommandLineHandler activateWith: (CommandLineArguments withArguments: {
 Class {
 	#name : #MooseTestCommandLineHandler,
 	#superclass : #TestCommandLineHandler,
-	#category : #Moose-Development-Tools
+	#category : #'Moose-Development-Tools'
 }
 
 { #category : #accessing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #ACDSenderCalleeAction,
 	#superclass : #DebugAction,
-	#category : #ACD-Model
+	#category : #'ACD-Model'
 }
 
 { #category : #registration }

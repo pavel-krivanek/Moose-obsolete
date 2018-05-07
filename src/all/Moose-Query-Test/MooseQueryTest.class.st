@@ -23,7 +23,7 @@ Class {
 		'ref1',
 		'methodExt'
 	],
-	#category : #Moose-Query-Test
+	#category : #'Moose-Query-Test'
 }
 
 { #category : #accessing }
@@ -56,6 +56,41 @@ MooseQueryTest >> setUp [
 ]
 
 { #category : #tests }
+MooseQueryTest >> testAllAtScope [
+	| package3 |
+	self assertCollection: (class1 allAtScope: FAMIXClass) hasSameElements: {class1}.
+	self assertCollection: (class1 allAtScope: FAMIXType) hasSameElements: {class1}.
+	self assertCollection: (class1 allAtScope: FAMIXPackage) hasSameElements: {package1}.
+	self
+		assertCollection: (class1 allAtScope: FAMIXScopingEntity)
+		hasSameElements:
+			{namespace.
+			package1}.
+	package3 := FAMIXPackage new
+		name: 'package3';
+		mooseModel: model.
+	package1 parentPackage: package3.
+	self
+		assertCollection: (class1 allAtScope: FAMIXPackage)
+		hasSameElements:
+			{package1.
+			package3}.
+	self
+		assertCollection: (class1 allAtScope: FAMIXScopingEntity)
+		hasSameElements:
+			{namespace.
+			package1.
+			package3}
+]
+
+{ #category : #tests }
+MooseQueryTest >> testAllChildren [
+	self assert: package2 allChildren size equals: 7.
+	self assert: class2 allChildren size equals: 6.
+	self assert: method2 allChildren size equals: 1
+]
+
+{ #category : #tests }
 MooseQueryTest >> testAllIncoming [
 	self assert: method2 queryAllIncoming size equals: 3.
 	self assert: class2 queryAllIncoming size equals: 7
@@ -68,13 +103,91 @@ MooseQueryTest >> testAllOutgoing [
 ]
 
 { #category : #tests }
-MooseQueryTest >> testAtScope [
-	self assert: (class1 atScope: FAMIXClass) equals: {class1}.
-	self assert: (class1 atScope: FAMIXType) equals: {class1}.
-	self assert: (class1 atScope: FAMIXPackage) equals: {package1}.
+MooseQueryTest >> testAllParents [
+	self assert: package2 allParents size equals: 0.
+	self assert: class2 allParents size equals: 1.
+	self assert: method2 allParents size equals: 2.
+	self assert: var2 allParents size equals: 2
+]
+
+{ #category : #tests }
+MooseQueryTest >> testAllToScope [
+	| class3 |
+	self assertCollection: (class1 allToScope: FAMIXMethod) hasSameElements: {method1}.
 	self
-		assert: (class1 atScope: FAMIXScopingEntity)
-		equals:
+		assertCollection: (class2 allToScope: FAMIXAttribute)
+		hasSameElements:
+			{var1.
+			var2}.
+	self assertCollection: (package1 allToScope: FAMIXClass) hasSameElements: {class1}.
+	class3 := FAMIXClass new
+		name: 'class3';
+		container: class1;
+		mooseModel: model.
+	self
+		assertCollection: (class1 allToScope: FAMIXClass)
+		hasSameElements:
+			{class1.
+			class3}.
+	self
+		assertCollection: (package1 allToScope: FAMIXClass)
+		hasSameElements:
+			{class1.
+			class3}
+]
+
+{ #category : #tests }
+MooseQueryTest >> testAllWithScope [
+	| package3 class3 |
+	self assertCollection: (class1 allWithScope: FAMIXMethod) hasSameElements: {method1}.
+	self assertCollection: (class1 allWithScope: FAMIXClass) hasSameElements: {class1}.
+	self assertCollection: (class1 allWithScope: FAMIXType) hasSameElements: {class1}.
+	self assertCollection: (class1 allWithScope: FAMIXPackage) hasSameElements: {package1}.
+	self
+		assertCollection: (class1 allWithScope: FAMIXScopingEntity)
+		hasSameElements:
+			{package1.
+			namespace}.
+	package3 := FAMIXPackage new
+		name: 'package3';
+		mooseModel: model.
+	package1 parentPackage: package3.
+	class3 := FAMIXClass new
+		name: 'class3';
+		container: class1;
+		mooseModel: model.
+	self assertCollection: (class1 allWithScope: FAMIXMethod) hasSameElements: {method1}.
+	self
+		assertCollection: (class1 allWithScope: FAMIXClass)
+		hasSameElements:
+			{class1.
+			class3}.
+	self
+		assertCollection: (class1 allWithScope: FAMIXType)
+		hasSameElements:
+			{class1.
+			class3}.
+	self
+		assertCollection: (class1 allWithScope: FAMIXPackage)
+		hasSameElements:
+			{package1.
+			package3}.
+	self
+		assertCollection: (class1 allWithScope: FAMIXScopingEntity)
+		hasSameElements:
+			{package1.
+			package3.
+			namespace}
+]
+
+{ #category : #tests }
+MooseQueryTest >> testAtScope [
+	self assertCollection: (class1 atScope: FAMIXClass) hasSameElements: {class1}.
+	self assertCollection: (class1 atScope: FAMIXType) hasSameElements: {class1}.
+	self assertCollection: (class1 atScope: FAMIXPackage) hasSameElements: {package1}.
+	self
+		assertCollection: (class1 atScope: FAMIXScopingEntity)
+		hasSameElements:
 			{namespace.
 			package1}
 ]
@@ -86,8 +199,18 @@ MooseQueryTest >> testBelongsToMethod [
 ]
 
 { #category : #tests }
+MooseQueryTest >> testChildren [
+	self assert: package2 children size equals: 1.
+	self assert: package2 children anyOne equals: class2.
+	self assert: class1 children size equals: 1.
+	self assert: class1 children anyOne equals: method1.
+]
+
+{ #category : #tests }
 MooseQueryTest >> testChildrenSelectors [
-	self assert: class1 childrenSelectors asSet equals: #(#functions #types #attributes #methods #definedAnnotationTypes #annotationInstances #sourceAnchor) asSet
+	self
+		assertCollection: class1 childrenSelectors
+		hasSameElements: #(#functions #types #attributes #methods #definedAnnotationTypes #annotationInstances #sourceAnchor)
 ]
 
 { #category : #tests }
@@ -111,14 +234,14 @@ MooseQueryTest >> testExplicitDirectionQueryEquivalentToQueryWithDirectionSymbol
 
 { #category : #tests }
 MooseQueryTest >> testIncomingAssociationTypes [
-	self assert: var2 incomingAssociationTypes equals: {FAMIXAccess}.
+	self assertCollection: var2 incomingAssociationTypes hasSameElements: {FAMIXAccess}.
 	self
-		assert: class1 incomingAssociationTypes asSet
-		equals:
+		assertCollection: class1 incomingAssociationTypes
+		hasSameElements:
 			{FAMIXInheritance.
 			FAMIXReference.
-			FAMIXTraitUsage} asSet.
-	self assert: method1 incomingAssociationTypes equals: {FAMIXInvocation}
+			FAMIXTraitUsage}.
+	self assertCollection: method1 incomingAssociationTypes hasSameElements: {FAMIXInvocation}
 ]
 
 { #category : #tests }
@@ -163,13 +286,13 @@ MooseQueryTest >> testOutgoingAccessesWithANamespaceInANamespace [
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingAssociationTypes [
-	self assert: class1 outgoingAssociationTypes asSet equals: {FAMIXInheritance} asSet.
+	self assertCollection: class1 outgoingAssociationTypes hasSameElements: {FAMIXInheritance}.
 	self
-		assert: method1 outgoingAssociationTypes asSet
-		equals:
+		assertCollection: method1 outgoingAssociationTypes
+		hasSameElements:
 			{FAMIXInvocation.
 			FAMIXReference.
-			FAMIXAccess} asSet
+			FAMIXAccess}
 ]
 
 { #category : #tests }
@@ -196,6 +319,14 @@ MooseQueryTest >> testOutgoingInvocationWithin [
 ]
 
 { #category : #tests }
+MooseQueryTest >> testParents [
+	self assert: class2 parents size equals: 1.
+	self assert: class2 parents anyOne equals: package2.
+	self assert: method1 parents size equals: 1.
+	self assert: method1 parents anyOne equals: class1.
+]
+
+{ #category : #tests }
 MooseQueryTest >> testQueryWith [
 "queryIncoming: is equivalent to query: #in with:"
 	self assert: (package1 query: #out with: FAMIXInvocation) size equals: 1.
@@ -203,44 +334,53 @@ MooseQueryTest >> testQueryWith [
 
 { #category : #tests }
 MooseQueryTest >> testToScope [
-	self assert: (class1 toScope: FAMIXMethod) equals: {method1}.
+	self assertCollection: (class1 toScope: FAMIXMethod) hasSameElements: {method1}.
 	self
-		assert: (class2 toScope: FAMIXAttribute) asSet
-		equals:
+		assertCollection: (class2 toScope: FAMIXAttribute)
+		hasSameElements:
 			{var1.
-			var2} asSet.
+			var2}.
 	self
-		assert: (package1 toScope: FAMIXMethod)
-		equals:
+		assertCollection: (package1 toScope: FAMIXMethod)
+		hasSameElements:
 			{method1.
 			methodExt}
 ]
 
 { #category : #tests }
 MooseQueryTest >> testWithScope [
-	| result |
-	result := class1 withScope: FAMIXMethod.
+	self assertCollection: (class1 withScope: FAMIXMethod) hasSameElements: {method1}.
+	self
+		assertCollection: (class2 toScope: FAMIXAttribute)
+		hasSameElements:
+			{var1.
+			var2}.
+	self
+		assertCollection: (package1 toScope: FAMIXMethod)
+		hasSameElements:
+			{method1.
+			methodExt}.
+	self assertCollection: (class1 withScope: FAMIXClass) hasSameElements: {class1}.
+	self assertCollection: (class1 withScope: FAMIXType) hasSameElements: {class1}.
+	self assertCollection: (class1 withScope: FAMIXPackage) hasSameElements: {package1}.
+	self
+		assertCollection: (class1 withScope: FAMIXScopingEntity)
+		hasSameElements:
+			{package1.
+			namespace}
+]
+
+{ #category : #tests }
+MooseQueryTest >> testWithSpecializedAssociation [
+	"The goal of this test is to check that MooseQuery is also able to query specialized associations."
+
+	| invoSpecialized result |
+	invoSpecialized := MooseQueryMockSpecializedInvocation new
+		sender: method1;
+		addCandidate: method2;
+		receiver: var2;
+		mooseModel: model.
+	result := method1 query: #out with: MooseQueryMockSpecializedInvocation.
 	self assert: result size equals: 1.
-	self assert: (result includes: method1).
-	result := class2 toScope: FAMIXAttribute.
-	self assert: result size equals: 2.
-	self assert: (result includes: var1).
-	self assert: (result includes: var2).
-	result := package1 toScope: FAMIXMethod.
-	self assert: result size equals: 2.
-	self assert: (result includes: method1).
-	self assert: (result includes: methodExt).
-	result := class1 withScope: FAMIXClass.
-	self assert: result size equals: 1.
-	self assert: (result includes: class1).
-	result := class1 withScope: FAMIXType.
-	self assert: result size equals: 1.
-	self assert: (result includes: class1).
-	result := class1 withScope: FAMIXPackage.
-	self assert: result size equals: 1.
-	self assert: (result includes: package1).
-	result := class1 withScope: FAMIXScopingEntity.
-	self assert: result size equals: 2.
-	self assert: (result includes: package1).
-	self assert: (result includes: namespace)
+	self assert: result anyOne equals: invoSpecialized
 ]

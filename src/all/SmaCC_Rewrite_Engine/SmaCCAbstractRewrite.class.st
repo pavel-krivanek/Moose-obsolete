@@ -5,7 +5,7 @@ Class {
 		'parent',
 		'properties'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #changing }
@@ -33,7 +33,7 @@ SmaCCAbstractRewrite >> displayString [
 	^ stream contents
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCAbstractRewrite >> engine: aSmaCCRewriteEngine [
 	
 ]
@@ -129,27 +129,27 @@ SmaCCAbstractRewrite >> properties: aDictionary [
 	properties := aDictionary
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCAbstractRewrite >> propertyAt: aString [
 	^ self properties at: aString ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCAbstractRewrite >> propertyAt: aString ifAbsent: aBlock [
 	^ self properties at: aString ifAbsent: aBlock
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCAbstractRewrite >> propertyAt: aString ifAbsentPut: aBlock [
 	^ self properties at: aString ifAbsentPut: aBlock
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCAbstractRewrite >> propertyAt: aString put: anObject [
 	^ self properties at: aString put: anObject
 ]
 
-{ #category : #accessing-properites }
+{ #category : #'accessing-properites' }
 SmaCCAbstractRewrite >> removeProperty: aString [
 	^ self properties removeKey: aString ifAbsent: [ nil ]
 ]

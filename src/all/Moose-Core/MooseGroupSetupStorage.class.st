@@ -5,7 +5,7 @@ Class {
 	#instVars : [
 		'elements'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #adding }
@@ -28,7 +28,7 @@ MooseGroupSetupStorage >> at: uniqueName ifAbsent: exceptionBlock [
 		ifNone: exceptionBlock
 ]
 
-{ #category : #accessing-sequenceable }
+{ #category : #'accessing-sequenceable' }
 MooseGroupSetupStorage >> atIndex: index [ 
 	 
 	^elements at: index
@@ -46,25 +46,25 @@ MooseGroupSetupStorage >> elements [
 	^self asArray
 ]
 
-{ #category : #accessing-sequenceable }
+{ #category : #'accessing-sequenceable' }
 MooseGroupSetupStorage >> first [ 
 	 
 	^elements first
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseGroupSetupStorage >> initialize [ 
 	 
 	elements := OrderedCollection new: 10000
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseGroupSetupStorage >> initialize: capacity [ 
 	 
 	elements := OrderedCollection new: capacity
 ]
 
-{ #category : #accessing-sequenceable }
+{ #category : #'accessing-sequenceable' }
 MooseGroupSetupStorage >> last [ 
 	 
 	^elements last

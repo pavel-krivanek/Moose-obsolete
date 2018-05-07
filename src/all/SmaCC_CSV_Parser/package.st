@@ -1,1 +1,1 @@
-Package { #name : #SmaCC_CSV_Parser }
+Package { #name : #'SmaCC_CSV_Parser' }

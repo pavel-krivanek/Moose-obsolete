@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'nextButton'
 	],
-	#category : #Merlin-Panes
+	#category : #'Merlin-Panes'
 }
 
 { #category : #'*merlin-rendering' }

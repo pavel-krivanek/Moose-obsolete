@@ -7,25 +7,25 @@ Class {
 		'importer',
 		'targetModel'
 	],
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #public }
 RBVisitorForFAMIX >> checkThatClassIsStillCorrect [
-	"as stClass is lazy acessed we have to check that the stClass is flsuh when processing a new method on a different class"
-	
-	self stClass name = self classNameFromMethod ifFalse: [stClass := nil]
-	
+	"as stClass is lazy acessed we have to check that the stClass is flush when processing a new method on a different class"
+
+	(self stClass isNil or: [ self stClass name ~= self classNameFromMethod ])
+		ifTrue: [ stClass := nil ]
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIX >> classNameFromMethod [
 	"depending wether we are in extraction or not the way class name is accessed is different. This method allows one to deal with such point"
 	
 	self subclassResponsibility
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIX >> compiledMethod [
 	
 	| selector mooseEntity realSTClass |
@@ -43,13 +43,13 @@ RBVisitorForFAMIX >> famixNameFor: aClass [
 	^aClass mooseName
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIX >> importer [
 	
 	^importer
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIX >> importer: anObject [
 	
 	importer := anObject
@@ -74,13 +74,13 @@ RBVisitorForFAMIX >> methodBodyOn: aReadStream [
 	^self
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIX >> methodEntity [
 	
 	^methodEntity
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIX >> methodEntity: aMethodEntity [
 	
 	methodEntity := aMethodEntity
@@ -102,7 +102,7 @@ RBVisitorForFAMIX >> processMethod: aMethodEntity usingImporter: anImporter inMo
 	parseTreeOrNil isNil ifFalse: [self visitNode: parseTreeOrNil]"
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 RBVisitorForFAMIX >> stClass [
 	stClass isNil ifTrue: [
 		stClass := FAMIXNameResolver 

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'searcher'
 	],
-	#category : #PetitAnalyzer-Tests
+	#category : #'PetitAnalyzer-Tests'
 }
 
 { #category : #running }
@@ -50,7 +50,7 @@ PPSearcherTest >> testClassPattern [
 	self assert: (result allSatisfy: [ :each | each class = PPLiteralObjectParser ])
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchAction [
 	| old new |
 	old := $a asParser ==> [ :token | $b ].
@@ -60,7 +60,7 @@ PPSearcherTest >> testCopyMatchAction [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchDelegate [
 	| old new |
 	old := $a asParser token trim.
@@ -70,7 +70,7 @@ PPSearcherTest >> testCopyMatchDelegate [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchEpsilon [
 	| old new |
 	old := nil asParser.
@@ -80,7 +80,7 @@ PPSearcherTest >> testCopyMatchEpsilon [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchFailure [
 	| old new |
 	old := PPFailingParser message: 'problem'.
@@ -90,7 +90,7 @@ PPSearcherTest >> testCopyMatchFailure [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchList [
 	| old new |
 	old := $a asParser , $b asParser , $c asParser.
@@ -100,7 +100,7 @@ PPSearcherTest >> testCopyMatchList [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchLiteral [
 	| old new |
 	old := $a asParser.
@@ -110,7 +110,7 @@ PPSearcherTest >> testCopyMatchLiteral [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchPluggable [
 	| old new |
 	old := [ :stream | ] asParser.
@@ -120,7 +120,7 @@ PPSearcherTest >> testCopyMatchPluggable [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchPredicate [
 	| old new |
 	old := #word asParser.
@@ -130,7 +130,7 @@ PPSearcherTest >> testCopyMatchPredicate [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchPredicateSequence [
 	| old new |
 	old := 'foo' asParser caseInsensitive.
@@ -140,7 +140,7 @@ PPSearcherTest >> testCopyMatchPredicateSequence [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchRecursiveDelegate [
 	| old new |
 	old := PPDelegateParser new.
@@ -151,7 +151,7 @@ PPSearcherTest >> testCopyMatchRecursiveDelegate [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchRecursiveList [
 	| old new |
 	old := PPChoiceParser new.
@@ -162,7 +162,7 @@ PPSearcherTest >> testCopyMatchRecursiveList [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchRepetition [
 	| old new |
 	old := #word asParser star.
@@ -172,7 +172,7 @@ PPSearcherTest >> testCopyMatchRepetition [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchRepetitionGreedy [
 	| old new |
 	old := #word asParser starGreedy: #digit asParser.
@@ -182,7 +182,7 @@ PPSearcherTest >> testCopyMatchRepetitionGreedy [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchRepetitionLazy [
 	| old new |
 	old := #word asParser starLazy: #digit asParser.
@@ -192,7 +192,7 @@ PPSearcherTest >> testCopyMatchRepetitionLazy [
 	self deny: (old == new).
 ]
 
-{ #category : #testing-copy }
+{ #category : #'testing-copy' }
 PPSearcherTest >> testCopyMatchRepetitionMinMax [
 	| old new |
 	old := #word asParser min: 5 max: 10.
@@ -224,7 +224,7 @@ PPSearcherTest >> testKindPattern [
 	self assert: (result allSatisfy: [ :each | each class = PPLiteralObjectParser ])
 ]
 
-{ #category : #testing-lists }
+{ #category : #'testing-lists' }
 PPSearcherTest >> testListInfix [
 	| result |
 	searcher
@@ -292,7 +292,7 @@ PPSearcherTest >> testListInfix [
 	self deny: result
 ]
 
-{ #category : #testing-lists }
+{ #category : #'testing-lists' }
 PPSearcherTest >> testListPostfix [
 	| result |
 	searcher
@@ -360,7 +360,7 @@ PPSearcherTest >> testListPostfix [
 	self assert: result
 ]
 
-{ #category : #testing-lists }
+{ #category : #'testing-lists' }
 PPSearcherTest >> testListPrefix [
 	| result |
 	searcher

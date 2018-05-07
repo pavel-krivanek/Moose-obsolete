@@ -10,7 +10,7 @@ Class {
 		'loggingStream',
 		'targetModel'
 	],
-	#category : #Moose-GenericImporter
+	#category : #'Moose-GenericImporter'
 }
 
 { #category : #public }
@@ -68,7 +68,7 @@ MooseAbstractImporter >> importingContext: anObject [
 	importingContext := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseAbstractImporter >> initialize [
 	super initialize.
 	targetModel := MooseModel new.

@@ -4,7 +4,7 @@ XPath whitespace normalization function to remove leading and trailing whitespac
 Class {
 	#name : #XPathNormalizeSpaceFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

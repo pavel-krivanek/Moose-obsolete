@@ -1,1 +1,1 @@
-Package { #name : #Ghost-ObjectMutation }
+Package { #name : #'Ghost-ObjectMutation' }

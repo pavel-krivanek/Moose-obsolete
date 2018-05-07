@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'offset'
 	],
-	#category : #Roassal2-AttachPoint
+	#category : #'Roassal2-AttachPoint'
 }
 
 { #category : #initialization }

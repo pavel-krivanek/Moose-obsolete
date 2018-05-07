@@ -1,1 +1,1 @@
-Package { #name : #Moose-TestResources-PackageBlueprint-P4 }
+Package { #name : #'Moose-TestResources-PackageBlueprint-P4' }

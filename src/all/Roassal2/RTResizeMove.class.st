@@ -5,7 +5,7 @@ Class {
 		'originalExtent',
 		'animatedValue'
 	],
-	#category : #Roassal2-Animation
+	#category : #'Roassal2-Animation'
 }
 
 { #category : #actions }

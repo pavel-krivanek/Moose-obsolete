@@ -11,7 +11,7 @@ Class {
 		'setAccessor',
 		'rightBrace'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -50,7 +50,7 @@ CSInterfacePropertyDeclarationNode >> getAccessor: aCSInterfacePropertyAccessorN
 		ifTrue: [ self getAccessor parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSInterfacePropertyDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

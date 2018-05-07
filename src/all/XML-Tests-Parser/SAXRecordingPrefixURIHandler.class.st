@@ -4,7 +4,7 @@ This class records the second element events (#startElement:prefix:uri:attribute
 Class {
 	#name : #SAXRecordingPrefixURIHandler,
 	#superclass : #SAXRecordingHandler,
-	#category : #XML-Tests-Parser
+	#category : #'XML-Tests-Parser'
 }
 
 { #category : #'handling - content' }

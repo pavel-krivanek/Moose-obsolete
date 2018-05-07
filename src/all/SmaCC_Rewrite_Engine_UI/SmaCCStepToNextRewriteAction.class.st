@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCStepToNextRewriteAction,
 	#superclass : #SmaCCTransformationToolkitDebugAction,
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #registration }
@@ -33,4 +33,9 @@ SmaCCStepToNextRewriteAction >> executeAction [
 		stepUntil: [ :context | 
 			context isBlockContext not
 				and: [ (self session isRewriteContext: context) and: [ (rewrites includes: (self session rewriteForContext: context)) not ] ] ]
+]
+
+{ #category : #accessing }
+SmaCCStepToNextRewriteAction >> help [
+	^ 'Step until we get to another rewrite'
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLObservableListTest,
 	#superclass : #XMLOrderedListTest,
-	#category : #XML-Tests-Parser-DOM
+	#category : #'XML-Tests-Parser-DOM'
 }
 
 { #category : #testing }

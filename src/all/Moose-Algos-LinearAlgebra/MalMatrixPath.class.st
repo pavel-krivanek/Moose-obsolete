@@ -9,7 +9,7 @@ Class {
 		'mapBlock',
 		'size'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }
@@ -54,19 +54,19 @@ MalMatrixPath >> at: index put: aNumber [
 		put: aNumber
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixPath >> initializeSize: aSize [
 	
 	^size := aSize
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixPath >> setMapBlock: aBlock [
 	
 	^mapBlock := aBlock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixPath >> setMatrix: aMatrix [
 	
 	^matrix := aMatrix
@@ -78,7 +78,7 @@ MalMatrixPath >> size [
 	^size
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixPath >> species [
 	
 	^matrix vectorSpecies

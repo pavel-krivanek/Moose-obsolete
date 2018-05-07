@@ -15,7 +15,7 @@ Class {
 		'superToken',
 		'superPeriod'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -82,7 +82,7 @@ JavaMethodInvocationNode >> ignoredTokenVariables [
 	^ #(#lt #gt #leftParen #rightParen)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaMethodInvocationNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

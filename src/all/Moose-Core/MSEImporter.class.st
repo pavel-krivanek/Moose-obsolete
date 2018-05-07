@@ -1,7 +1,7 @@
 Class {
 	#name : #MSEImporter,
 	#superclass : #FMImporter,
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'as yet unclassified' }

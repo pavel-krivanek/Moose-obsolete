@@ -18,7 +18,7 @@ SpecOfOrDisjunctionTests >> testCreationByBinaryMessage [
 { #category : #tests }
 SpecOfOrDisjunctionTests >> testMatches [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfOrDisjunction of: spec1 and: spec2.
@@ -32,7 +32,7 @@ SpecOfOrDisjunctionTests >> testMatches [
 { #category : #tests }
 SpecOfOrDisjunctionTests >> testValidateFailed [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfOrDisjunction of: spec1 and: spec2.
@@ -45,7 +45,7 @@ SpecOfOrDisjunctionTests >> testValidateFailed [
 { #category : #tests }
 SpecOfOrDisjunctionTests >> testValidateSuccessful [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfOrDisjunction of: spec1 and: spec2.
@@ -57,7 +57,7 @@ SpecOfOrDisjunctionTests >> testValidateSuccessful [
 { #category : #tests }
 SpecOfOrDisjunctionTests >> testValidateSuccessful2 [
 	| spec1 spec2 stateSpec result |
-	spec1 := SpecOfEquality to: 2.
+	spec1 := SpecOfEquality requiredValue: 2.
 	spec2 := SpecOfObjectSuperclass requiredClass: String.
 	
 	stateSpec := SpecOfOrDisjunction of: spec1 and: spec2.

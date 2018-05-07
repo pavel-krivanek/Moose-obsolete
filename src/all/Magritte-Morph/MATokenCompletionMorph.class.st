@@ -1,10 +1,10 @@
 Class {
 	#name : #MATokenCompletionMorph,
 	#superclass : #MAListMorph,
-	#category : #Magritte-Morph-Model
+	#category : #'Magritte-Morph-Model'
 }
 
-{ #category : #private-building }
+{ #category : #'private-building' }
 MATokenCompletionMorph >> buildMorphView [
 
 	self flag: 'Obviously, the inline conditionals are horrifying. I think the nil check will go away if we set a default value'.

@@ -7,7 +7,7 @@ Class {
 		'famixMethod',
 		'theClass'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #'instance creation' }
@@ -18,7 +18,7 @@ AbstractSmalltalkMethodVisitor class >> on: importer [
 		yourself
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> classifyMethodNode: aMethodNode [ 
 	 
 	self matchGetter: aMethodNode. 
@@ -29,23 +29,19 @@ AbstractSmalltalkMethodVisitor >> classifyMethodNode: aMethodNode [
 
 { #category : #'visitor-double dispatching' }
 AbstractSmalltalkMethodVisitor >> createAccessTo: aNamedEntity writing: isWriteAccess [
-	| access |
-	
-	access := FAMIXAccess new.
-	access isWrite: isWriteAccess ; variable: aNamedEntity ; accessor: self methodEntity.
-	^ access
+	^ FAMIXAccess new
+		isWrite: isWriteAccess;
+		variable: aNamedEntity;
+		accessor: self methodEntity;
+		yourself
 ]
 
 { #category : #'visitor-double dispatching' }
 AbstractSmalltalkMethodVisitor >> createReferenceTo: aNamedEntity [
-	| ref |
-	
-	ref := FAMIXReference new.
-	ref source: self methodEntity ; target: (self resolveInstanceSide: aNamedEntity).
-	^ ref
+	^ (self resolveInstanceSide: aNamedEntity) createReferenceFrom: self methodEntity  
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> extractCommentsFromNode: aSequenceNode [
 
 	| comment |
@@ -82,7 +78,7 @@ AbstractSmalltalkMethodVisitor >> initializeForMethod: aMethod inClass: aClass [
 
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchConstant: aMethodNode [ 
 	aMethodNode body isSequence 
 		ifTrue: 
@@ -94,7 +90,7 @@ AbstractSmalltalkMethodVisitor >> matchConstant: aMethodNode [
 								ifTrue: [famixMethod kind: #constant]]]]
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchConstructor: aMethodNode [ 
 	 
 	famixMethod category notNil 
@@ -103,7 +99,7 @@ AbstractSmalltalkMethodVisitor >> matchConstructor: aMethodNode [
 				ifTrue: [famixMethod kind: #constructor]]
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchGetter: aMethodNode [ 
 	 
 	| return attribute | 
@@ -126,7 +122,7 @@ AbstractSmalltalkMethodVisitor >> matchGetter: aMethodNode [
 													[attribute class = FAMIXAttribute ifTrue: [famixMethod kind: #getter]]]]]]]
 ]
 
-{ #category : #method-classifying }
+{ #category : #'method-classifying' }
 AbstractSmalltalkMethodVisitor >> matchSetter: aMethodNode [ 
 	 
 	| assignment attribute | 
@@ -268,7 +264,7 @@ AbstractSmalltalkMethodVisitor >> visitMessageNode: aMessageNode [
 			aMessageNode receiver isVariable 
 				ifTrue: 
 					[invocation 
-						receiver: (self resolve: aMessageNode receiver name)]. 
+						receiver: (self resolve: aMessageNode receiver name asString)]. 
 			"aMessageNode receiver isVariable 
 				ifTrue: 
 					[invocation 
@@ -361,23 +357,19 @@ AbstractSmalltalkMethodVisitor >> visitSequenceNode: aSequenceNode [
 ]
 
 { #category : #'visitor-double dispatching' }
-AbstractSmalltalkMethodVisitor >> visitVariableNode: aVariableNode [ 
-	| access namedEntity global |
-		
-	importer importingContext shouldImportAccess ifTrue: 
-		[ 
-		"Warning! Smalltalk is both a Namespace and a GlobalVariable.
+AbstractSmalltalkMethodVisitor >> visitVariableNode: aVariableNode [
+	importer importingContext shouldImportAccess
+		ifTrue: [ | access namedEntity global |
+			"Warning! Smalltalk is both a Namespace and a GlobalVariable.
 		By default the importer resolves Smalltalk to the namespace (for class and namespace creation).
 		When we access Smalltalk as a variable, we create an access to the SmalltalkGlobalVariable instead"
-		aVariableNode name = 'Smalltalk'
-			ifTrue: [ 
-				global := importer ensureGlobalVariable: #SmalltalkGlobalVariable value: Smalltalk.
-				access := self createAccessTo: global writing: false]
-			ifFalse: [
-				namedEntity := self resolve: aVariableNode name.
-				access := (namedEntity isKindOf: FAMIXContainerEntity)
-					ifTrue: [ self createReferenceTo: namedEntity ]
-					ifFalse: [ self createAccessTo: namedEntity writing: false ] ].
-		importer addEntity: access ].
+			aVariableNode name = 'Smalltalk'
+				ifTrue: [ global := importer ensureGlobalVariable: #SmalltalkGlobalVariable value: Smalltalk.
+					access := self createAccessTo: global writing: false ]
+				ifFalse: [ namedEntity := self resolve: aVariableNode name asString.
+					access := namedEntity isContainerEntity
+						ifTrue: [ self createReferenceTo: namedEntity ]
+						ifFalse: [ self createAccessTo: namedEntity writing: false ] ].
+			importer addEntity: access ].
 	self extractCommentsFromNode: aVariableNode
 ]

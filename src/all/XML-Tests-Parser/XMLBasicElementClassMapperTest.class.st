@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLBasicElementClassMapperTest,
 	#superclass : #XMLElementClassMapperTest,
-	#category : #XML-Tests-Parser-Utils
+	#category : #'XML-Tests-Parser-Utils'
 }
 
 { #category : #acccessing }

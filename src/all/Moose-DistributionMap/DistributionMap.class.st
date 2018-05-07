@@ -39,7 +39,7 @@ Class {
 		'properties',
 		'defaultColors'
 	],
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #examples }
@@ -95,7 +95,7 @@ DistributionMap >> colors: aCollection [
 	colors := aCollection
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DistributionMap >> defaultColors [ 
 	"The colors that are used when nobody ever mentioned any color scheme."
 	^ defaultColors
@@ -109,7 +109,7 @@ DistributionMap >> elementsWithProperty: aPropertySelector inPart: aPart [
 		].
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DistributionMap >> initialize [
 
 	super initialize.
@@ -124,21 +124,21 @@ DistributionMap >> numberOfElementsWithProperty: aPropertySelector inPart: aPart
 	^ (self elementsWithProperty: aPropertySelector inPart: aPart)  size.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DistributionMap >> onContainers: aGroup elements: elementsBlockOrSelector properties: propertyBlockOrSelector [
 
 	super onContainers: aGroup elements: elementsBlockOrSelector properties: propertyBlockOrSelector.		
 	self orderColorMap.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DistributionMap >> onElements: aGroup containers: containersBlockOrSelector properties: propertyBlockOrSelector [
 
 	super onElements: aGroup containers: containersBlockOrSelector properties: propertyBlockOrSelector.	
 	self orderColorMap 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DistributionMap >> orderColorMap [
 
 	| propertiesAndNumberOfOccurrences result |

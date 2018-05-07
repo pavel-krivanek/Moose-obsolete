@@ -6,7 +6,7 @@ Class {
 		'colonToken',
 		'statements'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -44,7 +44,7 @@ JSDefaultClauseNode >> ignoredTokenVariables [
 	^ #(#colonToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSDefaultClauseNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

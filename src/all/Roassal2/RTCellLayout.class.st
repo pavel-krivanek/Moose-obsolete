@@ -15,7 +15,7 @@ Class {
 		'translateElement',
 		'align'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #accessing }
@@ -81,7 +81,7 @@ RTCellLayout >> inCellPosition: anObjectOrOneArgBlock [
 	inCellPosition := anObjectOrOneArgBlock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTCellLayout >> initialize [
 	super initialize.
 	self leftCentered

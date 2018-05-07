@@ -6,7 +6,7 @@ Class {
 		'labels',
 		'anscentorLabel'
 	],
-	#category : #Moose-Algos-Lattice
+	#category : #'Moose-Algos-Lattice'
 }
 
 { #category : #'as yet unclassified' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCStepToLocationAction,
 	#superclass : #SmaCCTransformationToolkitDebugAction,
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #registration }
@@ -41,4 +41,9 @@ SmaCCStepToLocationAction >> executeAction [
 										and: [ (interval first between: nextNode startPosition and: nextNode stopPosition)
 												or:
 													[ (interval last between: nextNode startPosition and: nextNode stopPosition) or: [ nextNode startPosition between: interval first and: interval last ] ] ] ] ] ] ]
+]
+
+{ #category : #accessing }
+SmaCCStepToLocationAction >> help [
+	^ 'Step until we process a node at the current location'
 ]

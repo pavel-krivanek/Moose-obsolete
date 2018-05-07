@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'source'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -42,7 +42,7 @@ SmaCCSourceReduceCode >> source [
 	^ source
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSourceReduceCode >> source: aString [
 	source := aString
 ]

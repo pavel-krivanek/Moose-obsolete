@@ -1,7 +1,7 @@
 Class {
 	#name : #SingleOptionAtLeastOneSelectionPart,
 	#superclass : #SingleOptionPart,
-	#category : #Merlin-Parts
+	#category : #'Merlin-Parts'
 }
 
 { #category : #accessing }

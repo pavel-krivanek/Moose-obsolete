@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeBooleanVectorTest,
 	#superclass : #TestCase,
-	#category : #SmallDude-Tests-Core
+	#category : #'SmallDude-Tests-Core'
 }
 
 { #category : #testing }

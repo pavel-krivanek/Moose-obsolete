@@ -1,7 +1,7 @@
 Class {
 	#name : #PPLambdaParserTest,
 	#superclass : #PPCompositeParserTest,
-	#category : #PetitTests-Tests
+	#category : #'PetitTests-Tests'
 }
 
 { #category : #accessing }
@@ -15,7 +15,7 @@ PPLambdaParserTest >> testAbstraction [
 	self assert: '\x.\y.z' is: #('x' ('y' 'z'))
 ]
 
-{ #category : #testing-curch }
+{ #category : #'testing-curch' }
 PPLambdaParserTest >> testAnd [
 	self assert: self parserClass and equals: #('p' #('q' #(#('p' 'q') 'p')))
 ]
@@ -28,27 +28,27 @@ PPLambdaParserTest >> testApplication [
 	self assert: '(x (y z))' is: #('x' ('y' 'z'))
 ]
 
-{ #category : #testing-curch }
+{ #category : #'testing-curch' }
 PPLambdaParserTest >> testFalse [
 	self assert: self parserClass false equals: #('x' #('y' 'y'))
 ]
 
-{ #category : #testing-curch }
+{ #category : #'testing-curch' }
 PPLambdaParserTest >> testIfThenElse [
 	self assert: self parserClass ifthenelse equals: #('p' 'p')
 ]
 
-{ #category : #testing-curch }
+{ #category : #'testing-curch' }
 PPLambdaParserTest >> testNot [
 	self assert: self parserClass not equals: #('p' #('a' #('b' #(#('p' 'b') 'a'))))
 ]
 
-{ #category : #testing-curch }
+{ #category : #'testing-curch' }
 PPLambdaParserTest >> testOr [
 	self assert: self parserClass or equals: #('p' #('q' #(#('p' 'p') 'q')))
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPLambdaParserTest >> testParseOnError [
 	| beenHere |
 	result := self parserClass parse: '\x. y' onError: [ self fail ].
@@ -79,7 +79,7 @@ PPLambdaParserTest >> testParseOnError [
 
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPLambdaParserTest >> testParseStartingAtOnError [
 	| beenHere |
 	result := self parserClass parse: 'x' startingAt: #variable onError: [ self fail ].
@@ -109,7 +109,7 @@ PPLambdaParserTest >> testParseStartingAtOnError [
 
 ]
 
-{ #category : #testing-utilities }
+{ #category : #'testing-utilities' }
 PPLambdaParserTest >> testProductionAt [
 	self assert: (parser productionAt: #foo) isNil.
 	self assert: (parser productionAt: #foo ifAbsent: [ true ]).
@@ -121,7 +121,7 @@ PPLambdaParserTest >> testProductionAt [
 	self assert: (parser productionAt: #variable ifAbsent: [ true ]) notNil
 ]
 
-{ #category : #testing-curch }
+{ #category : #'testing-curch' }
 PPLambdaParserTest >> testTrue [
 	self assert: self parserClass true equals: #('x' #('y' 'x'))
 ]

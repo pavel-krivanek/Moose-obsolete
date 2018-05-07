@@ -4,7 +4,7 @@ This is a class for standalone externally defined external general entities that
 Class {
 	#name : #DTDStandaloneExternalExternalGeneralParsedEntity,
 	#superclass : #DTDExternalGeneralParsedEntity,
-	#category : #XML-Parser-DTD-Standalone
+	#category : #'XML-Parser-DTD-Standalone'
 }
 
 { #category : #testing }

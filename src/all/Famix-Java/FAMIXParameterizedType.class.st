@@ -15,14 +15,13 @@ Class {
 		'arguments',
 		'parameterizableClass'
 	],
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXParameterizedType class >> annotation [
 	<MSEClass: #ParameterizedType super: #FAMIXType>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -55,7 +54,7 @@ FAMIXParameterizedType >> arguments: aCollection [
 	self resetMooseName
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXParameterizedType >> initialize [ 
 	super initialize.
 	arguments := FMMultiMultivalueLink on: self opposite: #argumentsInParameterizedTypes
@@ -78,7 +77,7 @@ FAMIXParameterizedType >> mooseNameOn: aStream [
 
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXParameterizedType >> namespaceScope [
 	"we ask the namespaceScope of the parameterizable class"
 	
@@ -103,10 +102,4 @@ FAMIXParameterizedType >> parameterizableClass: aParameterizableClass [
 		from: self parameterizableClass
 		to: aParameterizableClass.
 	self resetMooseName
-]
-
-{ #category : #moosechef-scoping-filtering }
-FAMIXParameterizedType >> yourScope [
-
-	^ #typeScope
 ]

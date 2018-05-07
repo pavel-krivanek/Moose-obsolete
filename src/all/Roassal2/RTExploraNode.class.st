@@ -47,7 +47,7 @@ Class {
 		'iconOpen',
 		'iconClose'
 	],
-	#category : #Roassal2-Builder-Explora
+	#category : #'Roassal2-Builder-Explora'
 }
 
 { #category : #adding }
@@ -97,7 +97,8 @@ RTExploraNode >> builder: myBuilder [
 
 { #category : #testing }
 RTExploraNode >> checkExpansionOnDirection: aDirection [
-	(((expandedNodes at: aDirection) collect: [ :x | x element model ]) includesAllOf: (expansion at: aDirection))
+	(((expandedNodes at: aDirection) collect: [ :x | x element model ])
+		includesAll: (expansion at: aDirection))
 		ifTrue: [ ^ self setExpandedOnDirection: aDirection ]
 		ifFalse: [ ^ false ]
 ]

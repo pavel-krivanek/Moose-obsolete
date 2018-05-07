@@ -8,7 +8,7 @@ Class {
 		'fieldDeclarations',
 		'methodDeclarations'
 	],
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #comparing }

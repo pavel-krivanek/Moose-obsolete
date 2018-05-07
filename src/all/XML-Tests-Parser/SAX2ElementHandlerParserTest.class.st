@@ -1,7 +1,7 @@
 Class {
 	#name : #SAX2ElementHandlerParserTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-ElementHandlers
+	#category : #'XML-Tests-Parser-ElementHandlers'
 }
 
 { #category : #source }

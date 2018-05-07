@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCStepRuleDebugAction,
 	#superclass : #SmaCCTransformationToolkitDebugAction,
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #registration }
@@ -28,4 +28,9 @@ SmaCCStepRuleDebugAction >> defaultOrder [
 { #category : #accessing }
 SmaCCStepRuleDebugAction >> executeAction [
 	self session stepOver: self currentContext
+]
+
+{ #category : #accessing }
+SmaCCStepRuleDebugAction >> help [
+	^ 'Step over message'
 ]

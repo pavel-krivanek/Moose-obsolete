@@ -14,12 +14,17 @@ Class {
 	#classVars : [
 		'XMLDocumentFileExtensions'
 	],
-	#category : #XML-Parser-Files
+	#category : #'XML-Parser-Files'
 }
 
 { #category : #basic }
 XMLFileHandle class >> basicCurrentWorkingDirectory [
 	self subclassResponsibility
+]
+
+{ #category : #testing }
+XMLFileHandle class >> canBeImplemented [
+	^ true
 ]
 
 { #category : #accessing }
@@ -157,14 +162,14 @@ XMLFileHandle >> extension [
 		ifFalse: [self path]) copyAfter: $.
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLFileHandle >> get [
 	^ self
 		getUpToLimit: nil
 		decoding: true
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLFileHandle >> getUpToLimit: aMaxSize decoding: aBoolean [
 	| stream contents |
 
@@ -216,6 +221,7 @@ XMLFileHandle >> path [
 { #category : #printing }
 XMLFileHandle >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self path;
@@ -249,7 +255,7 @@ XMLFileHandle >> rawWriteStream [
 XMLFileHandle >> readStream [
 	"returns a file read stream with decoding"
 
-	^ (XMLDecodingReadStreamAdapter on: self rawReadStream)
+	^ (XMLDecodingReadStreamAdapter nonDecodingOn: self rawReadStream)
 		detectEncoding
 ]
 
@@ -278,14 +284,14 @@ XMLFileHandle >> size [
 	^ self basicFileSize.
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLFileHandle >> streamGet [
 	^ self
 		streamGetUpToLimit: nil
 		decoding: true
 ]
 
-{ #category : #retrieving }
+{ #category : #resolving }
 XMLFileHandle >> streamGetUpToLimit: aMaxSize decoding: aBoolean [
 	(aMaxSize notNil
 		and: [self size > aMaxSize])

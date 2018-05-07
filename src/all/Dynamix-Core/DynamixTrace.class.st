@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }
@@ -32,7 +32,7 @@ DynamixTrace >> name: anObject [
 	name := anObject
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixTrace >> trace [ 
 	^ self
 ]

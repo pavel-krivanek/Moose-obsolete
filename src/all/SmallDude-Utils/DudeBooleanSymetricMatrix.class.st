@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeBooleanSymetricMatrix,
 	#superclass : #MalSymetricMatrix,
-	#category : #SmallDude-Utils
+	#category : #'SmallDude-Utils'
 }
 
 { #category : #accessing }
@@ -67,7 +67,7 @@ DudeBooleanSymetricMatrix >> transformRow: row andColumn: col to: block [
 	^block value: vectorNo value: vectorIndex
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeBooleanSymetricMatrix >> vectorSpecies [ 
 	 
 	^MalBooleanVector

@@ -262,7 +262,7 @@ HashTable >> includesKey: aKey [
 	^true.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 HashTable >> initialize [
 	super initialize.
 	self size: 0.

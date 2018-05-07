@@ -13,7 +13,7 @@ Class {
 		'leftBracket',
 		'rightBracket'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -66,7 +66,7 @@ JSArrowFunctionNode >> ignoredTokenVariables [
 	^ #(#left #right #leftBracket #rightBracket)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSArrowFunctionNode >> initialize [
 	super initialize.
 	parameters := OrderedCollection new: 2.

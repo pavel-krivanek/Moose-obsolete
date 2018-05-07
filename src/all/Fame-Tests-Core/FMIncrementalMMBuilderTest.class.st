@@ -5,7 +5,7 @@ Class {
 		'metamodel',
 		'builder'
 	],
-	#category : #Fame-Tests-Core
+	#category : #'Fame-Tests-Core'
 }
 
 { #category : #running }

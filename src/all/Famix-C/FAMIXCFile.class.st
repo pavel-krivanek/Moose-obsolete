@@ -8,15 +8,13 @@ Class {
 		'incomingIncludeRelations',
 		'outgoingIncludeRelations'
 	],
-	#category : #Famix-C
+	#category : #'Famix-C'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXCFile class >> annotation [
 	<MSEClass: #CFile super: #FAMIXFile>
 	<package: #FAMIX>
-	^self
-
 ]
 
 { #category : #accessing }
@@ -66,7 +64,7 @@ FAMIXCFile >> incomingIncludeRelations: aFile [
 	incomingIncludeRelations value: aFile
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXCFile >> initialize [
 	super initialize.
 	incomingIncludeRelations := FMNullMultivalueLink on: self opposite: #target: selector: #incomingIncludeRelations.

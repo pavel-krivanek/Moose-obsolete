@@ -9,7 +9,7 @@ Class {
 		'equalToken',
 		'expression'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -58,7 +58,7 @@ CSFixedParameterNode >> expression: aCSExpressionNode [
 		ifTrue: [ self expression parent: self ]
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSFixedParameterNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

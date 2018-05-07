@@ -4,14 +4,13 @@ Class {
 	#instVars : [
 		'comment',
 		'propertyNames',
-		'globalValues',
-		'methods'
+		'globalValues'
 	],
 	#classVars : [
 		'Reader',
 		'Writer'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -98,12 +97,11 @@ SmaCCRewritePropertyDefinition >> displayOn: aStream [
 				nextPutAll: ' global' ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewritePropertyDefinition >> initialize [
 	super initialize.
 	propertyNames := Set new.
-	globalValues := Dictionary new.
-	methods := Dictionary new
+	globalValues := Dictionary new
 ]
 
 { #category : #saving }

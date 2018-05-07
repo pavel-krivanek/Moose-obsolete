@@ -10,7 +10,7 @@ Class {
 		'model',
 		'args'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'instance creation' }

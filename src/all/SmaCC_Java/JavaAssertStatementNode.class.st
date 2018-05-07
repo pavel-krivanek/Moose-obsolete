@@ -8,7 +8,7 @@ Class {
 		'colon',
 		'messageExpression'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }

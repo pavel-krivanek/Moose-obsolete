@@ -4,7 +4,7 @@ A state for internal subset tokens.
 Class {
 	#name : #XMLInternalSubsetState,
 	#superclass : #XMLDoctypeDeclarationState,
-	#category : #XML-Parser-Drivers
+	#category : #'XML-Parser-Drivers'
 }
 
 { #category : #testing }
@@ -14,5 +14,5 @@ XMLInternalSubsetState >> isInternalSubsetState [
 
 { #category : #tokenizing }
 XMLInternalSubsetState >> nextTokenFrom: aTokenizer [
-	aTokenizer nextInternalSubsetToken
+	^ aTokenizer nextInternalSubsetToken
 ]

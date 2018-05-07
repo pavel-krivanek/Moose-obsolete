@@ -7,7 +7,7 @@ Class {
 		'type',
 		'name'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -32,7 +32,7 @@ CSArrayParameterNode >> compositeNodeVariables [
 	^ #(#_attributes)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSArrayParameterNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

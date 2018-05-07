@@ -7,7 +7,7 @@ Class {
 		'statement',
 		'semicolonToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }

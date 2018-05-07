@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'days'
 	],
-	#category : #Moose-HismoImporter
+	#category : #'Moose-HismoImporter'
 }
 
 { #category : #accessing }

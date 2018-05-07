@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLExceptionTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-Exceptions
+	#category : #'XML-Tests-Parser-Exceptions'
 }
 
 { #category : #asserting }

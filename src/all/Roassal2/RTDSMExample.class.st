@@ -43,10 +43,10 @@ RTDSMExample new installTitle: 'EvolutionDSM'
 Class {
 	#name : #RTDSMExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-DSM
+	#category : #'Roassal2-Builder-DSM'
 }
 
-{ #category : #example-data }
+{ #category : #'example-data' }
 RTDSMExample class >> collab [
 	^ 'time	n1	n2 	weight
 2005	Lea	Lucas	4.0
@@ -259,7 +259,7 @@ RTDSMExample class >> collab [
 2010	Hugo	Hugo	1.0'
 ]
 
-{ #category : #example-data }
+{ #category : #'example-data' }
 RTDSMExample class >> gtinspector [
 	^ 'time	n1	n2 	weight
 51	GTExample	AndreiChis	1

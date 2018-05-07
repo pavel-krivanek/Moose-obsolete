@@ -24,6 +24,16 @@ SmaCCParser >> allActionsAndSymbolsForState: stateIndex do: aBlock [
 ]
 
 { #category : #'*SmaCC_Debugging_Support' }
+SmaCCParser class >> filesWithParserErrorsIn: aDirectory [
+	^ (self sourceFilesIn: aDirectory)
+		select: [ :each | 
+			[ self parseFile: each.
+			false ]
+				on: Error
+				do: [ :ex | ex return: true ] ]
+]
+
+{ #category : #'*SmaCC_Debugging_Support' }
 SmaCCParser >> fillInGraphFromStack: nodeCollection returnTable: tableArray size: sizeInteger [
 	self
 		allActionsAndSymbolsForState: nodeCollection last state
@@ -96,7 +106,7 @@ SmaCCParser >> gtGraphInspectorViewIn: composite [
 
 { #category : #'*SmaCC_Debugging_Support' }
 SmaCCParser class >> gtGraphInspectorViewIn: composite [
-	<gtInspectorPresentationOrder: 20>
+	<gtInspectorPresentationOrder: 14>
 	self new gtGraphInspectorViewIn: composite
 ]
 
@@ -227,13 +237,21 @@ SmaCCParser >> roassalViewForStack: stack [
 ]
 
 { #category : #'*SmaCC_Debugging_Support' }
+SmaCCParser class >> sourceFilesIn: aDirectory [
+	^ aDirectory asFileReference allFiles
+		select: [ :each | 
+			| extension |
+			extension := '.' , each extension.
+			self fileExtensions includes: extension ]
+]
+
+{ #category : #'*SmaCC_Debugging_Support' }
 SmaCCParser >> symbolIdForTransitionFrom: fromState to: toState [
 	| toValue |
 	toValue := (toState bitShift: 2) bitOr: self shiftAction.
 	self
 		allActionsAndSymbolsForState: fromState
 		do: [ :action :symbol | 
-			| row |
 			toValue = action
 				ifTrue: [ ^ symbol ] ].
 	^ 0

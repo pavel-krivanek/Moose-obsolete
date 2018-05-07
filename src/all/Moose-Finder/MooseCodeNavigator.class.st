@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseCodeNavigator,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #building }

@@ -24,7 +24,7 @@ Class {
 		'funcToken',
 		'periodTokens'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -54,7 +54,7 @@ SwiftImportDeclarationNode >> classToken: aSmaCCToken [
 
 { #category : #generated }
 SwiftImportDeclarationNode >> compositeTokenVariables [
-	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens #periodTokens)
+	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #operatorTokens #periodTokens)
 ]
 
 { #category : #generated }
@@ -117,7 +117,7 @@ SwiftImportDeclarationNode >> importToken: aSmaCCToken [
 	importToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftImportDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.
@@ -130,8 +130,8 @@ SwiftImportDeclarationNode >> initialize [
 	rightBraceTokens := OrderedCollection new: 2.
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
-	operatorTokens := OrderedCollection new: 2.
 	full_string_literalTokens := OrderedCollection new: 2.
+	operatorTokens := OrderedCollection new: 2.
 	periodTokens := OrderedCollection new: 2.
 ]
 

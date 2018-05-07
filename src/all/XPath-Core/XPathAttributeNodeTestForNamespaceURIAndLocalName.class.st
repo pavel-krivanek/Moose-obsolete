@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'localName'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -34,6 +34,7 @@ XPathAttributeNodeTestForNamespaceURIAndLocalName >> localName: aLocalName [
 { #category : #printing }
 XPathAttributeNodeTestForNamespaceURIAndLocalName >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: (self localName expandWithXMLNamespaceURI: self namespaceURI);

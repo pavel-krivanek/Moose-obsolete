@@ -7,7 +7,7 @@ Class {
 		'width',
 		'height'
 	],
-	#category : #Athens-SVG
+	#category : #'Athens-SVG'
 }
 
 { #category : #'as yet unclassified' }

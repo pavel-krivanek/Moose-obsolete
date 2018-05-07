@@ -16,7 +16,7 @@ Class {
 		'ids',
 		'value'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #'instance creation' }
@@ -113,7 +113,7 @@ SmaCCToken >> value [
 	^ value
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCToken >> value: aString start: startPositionInteger ids: aCollection [
 	value := aString.
 	start := startPositionInteger.

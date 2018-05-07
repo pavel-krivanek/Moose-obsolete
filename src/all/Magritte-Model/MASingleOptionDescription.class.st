@@ -4,7 +4,7 @@ I am a description of a single option, possible values are stored within the ==o
 Class {
 	#name : #MASingleOptionDescription,
 	#superclass : #MAOptionDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
 { #category : #testing }
@@ -22,7 +22,7 @@ MASingleOptionDescription >> acceptMagritte: aVisitor [
 	aVisitor visitSingleOptionDescription: self
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MASingleOptionDescription >> descriptionGroupBy [
 	<magritteDescription>
 	^ MASymbolDescription new
@@ -33,12 +33,12 @@ MASingleOptionDescription >> descriptionGroupBy [
 		yourself
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MASingleOptionDescription >> groupBy [
 	^ self propertyAt: #groupBy ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MASingleOptionDescription >> groupBy: anAccessor [
 	"anAccessor to be sent to the options objects for getting their group."
 	

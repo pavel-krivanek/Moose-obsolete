@@ -4,7 +4,7 @@ This is a base class for node tests.
 Class {
 	#name : #XMLNodeTest,
 	#superclass : #TestCase,
-	#category : #XML-Tests-Parser-DOM
+	#category : #'XML-Tests-Parser-DOM'
 }
 
 { #category : #testing }
@@ -94,6 +94,61 @@ XMLNodeTest >> escapedString [
 ]
 
 { #category : #accessing }
+XMLNodeTest >> languageTagsAndFilters [
+	"returns an array of triplet arrays of langauge tag, matching filters,
+	and non-matching filters"
+	^ #(
+		#(''
+			#()
+			#('' 'de' 'De' 'DE' 'de'
+				'en' 'En' 'EN' '*'
+				'en-US' 'En-Us' 'EN-US' 'en-*' '*-US' '*-*'
+				'en-GB' 'En-Gb' 'EN-GB' 'de-*' '*-GB'
+				'en-US-Custom' 'EN-US-CUSTOM'
+				'en-US-*' '*-US-custom' 'en-*-Custom'
+				'en-*-*' '*-*-custom' '*-us-*'
+				'*-*-*'
+				'en-US-other' 'en-GB-custom' 'de-at-custom'
+				'de-US-*' '*-GB-Custom' 'de-*-custom'
+				'de-*-*' '*-*-other' '*-GB-*'))
+		#('en'
+			#('en' 'En' 'EN' '*')
+			#('' 'de' 'De' 'DE' 'de'
+				'en-US' 'En-Us' 'EN-US' 'en-*' '*-US' '*-*'
+				'en-GB' 'En-Gb' 'EN-GB' 'de-*' '*-GB'
+				'en-US-Custom' 'EN-US-CUSTOM'
+				'en-US-*' '*-US-custom' 'en-*-Custom'
+				'en-*-*' '*-*-custom' '*-us-*'
+				'*-*-*'
+				'en-US-other' 'en-GB-custom' 'de-at-custom'
+				'de-US-*' '*-GB-Custom' 'de-*-custom'
+				'de-*-*' '*-*-other' '*-GB-*'))
+		#('en-US'
+			#('en' 'En' 'EN' '*' 'en-US' 'En-Us' 'EN-US' 'en-*' '*-US' '*-*')
+			#('' 'de' 'De' 'DE' 'de'
+				'en-GB' 'En-Gb' 'EN-GB' 'de-*' '*-GB'
+				'en-US-Custom' 'EN-US-CUSTOM'
+				'en-US-*' '*-US-custom' 'en-*-Custom'
+				'en-*-*' '*-*-custom' '*-us-*'
+				'*-*-*'
+				'en-US-other' 'en-GB-custom' 'de-at-custom'
+				'de-US-*' '*-GB-Custom' 'de-*-custom'
+				'de-*-*' '*-*-other' '*-GB-*'))
+		#('en-US-custom'
+			#('en' 'En' 'EN' '*' 'en-US' 'En-Us' 'EN-US'
+				'en-*' '*-US' '*-*'
+				'en-US-Custom' 'EN-US-CUSTOM'
+				'en-US-*' '*-US-custom' 'en-*-Custom'
+				'en-*-*' '*-*-custom' '*-us-*'
+				'*-*-*')
+			#('' 'de' 'De' 'DE' 'de'
+				'en-GB' 'En-Gb' 'EN-GB' 'de-*' '*-GB'
+				'en-US-other' 'en-GB-custom' 'de-at-custom'
+				'de-US-*' '*-GB-Custom' 'de-*-custom'
+				'de-*-*' '*-*-other' '*-GB-*')))
+]
+
+{ #category : #accessing }
 XMLNodeTest >> markupString [
 	^ '<test name="&name;">''&value;''</test>'
 ]
@@ -163,29 +218,6 @@ XMLNodeTest >> selectListClass [
 	^ XMLNodeList
 ]
 
-{ #category : #assertions }
-XMLNodeTest >> should: aBlock enumerate: aCollection [
-	| enumerated |
-
-	enumerated := OrderedCollection new.
-	aBlock value: [:each | enumerated add: each].
-	self assert: enumerated = aCollection asOrderedCollection.
-]
-
-{ #category : #assertions }
-XMLNodeTest >> should: aBlock enumerate: aFirstCollection and: aSecondCollection [
-	| firstEnumerated secondEnumerated |
-
-	firstEnumerated := OrderedCollection new.
-	secondEnumerated := OrderedCollection new.
-	aBlock value: [:first :second |
-		firstEnumerated addLast: first.
-		secondEnumerated addLast: second].
-	self
-		assert: firstEnumerated = aFirstCollection asOrderedCollection;
-		assert: secondEnumerated = aSecondCollection asOrderedCollection.
-]
-
 { #category : #tests }
 XMLNodeTest >> testAcceptNodeVisitor [
 	| visitor node |
@@ -208,7 +240,7 @@ XMLNodeTest >> testAncestorElementsDo [
 
 	node := self newNode.
 	self
-		should: [:block |  node ancestorElementsDo: block]
+		xmlShould: [:block |  node ancestorElementsDo: block]
 		enumerate: #().
 ]
 
@@ -223,7 +255,7 @@ XMLNodeTest >> testAncestorNodesDo [
 
 	node := self newNode.
 	self
-		should: [:block |  node ancestorNodesDo: block]
+		xmlShould: [:block |  node ancestorNodesDo: block]
 		enumerate: #().
 ]
 

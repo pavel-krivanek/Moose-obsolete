@@ -9,7 +9,7 @@ Class {
 		'newTableName',
 		'constaints'
 	],
-	#category : #PetitSQLite-AST
+	#category : #'PetitSQLite-AST'
 }
 
 { #category : #accessing }

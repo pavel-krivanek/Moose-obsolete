@@ -14,7 +14,7 @@ Class {
 		'description',
 		'length'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'instance creation' }
@@ -40,7 +40,7 @@ MooseCustomTask >> length [
 	^ length
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseCustomTask >> with: aBlock description: aDescription length: aNumber [
 	computation := aBlock.
 	description := aDescription.

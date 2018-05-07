@@ -20,7 +20,7 @@ Class {
 		'duration',
 		'source'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }
@@ -29,7 +29,7 @@ DynamixEvent class >> annotation [
 	<package: #Dynamix>
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixEvent >> accumulatedLeavesDuration [
 	<MSEProperty: #accumulatedLeavesDuration type: #Number> <derived>
 	<MSEComment: 'This is a derived measure of duration that simply sums up the duration of all leaves'>
@@ -149,7 +149,7 @@ DynamixEvent >> copyChildrenFilterSelect: aBlock parent: newParent [
 		stream contents ].
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixEvent >> depth [
 	^ self isRoot
 		ifTrue: [ 0 ]
@@ -227,7 +227,7 @@ DynamixEvent >> mooseFinderChildrenTreeIn: composite [
 		title: 'Children tree';
 		rootsExpanded;
 		display: [:entity | {entity mooseInterestingEntity}];
-		format: [:each | each mooseDisplayString];
+		format: [:each | each gtDisplayString];
 		children: [ :each | each children ];
 		icon: #mooseIcon
 ]
@@ -313,7 +313,7 @@ DynamixEvent >> stop: anObject [
 	stop := anObject
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixEvent >> trace [ 
 	"the assumption is that the root of an event tree is a trace entity"
 	
@@ -322,7 +322,7 @@ DynamixEvent >> trace [
 		ifFalse: [ nil ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixEvent >> withAllChildren [
 	^ self allChildren copyWith: self
 ]

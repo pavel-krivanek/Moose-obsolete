@@ -1,1 +1,1 @@
-Package { #name : #Metanool-Core }
+Package { #name : #'Metanool-Core' }

@@ -2,13 +2,23 @@ Class {
 	#name : #SwiftTypeCastOperatorNode,
 	#superclass : #SwiftParseNode,
 	#instVars : [
-		'isToken',
+		'_isToken',
 		'type',
 		'asToken',
 		'questionMarkToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
+
+{ #category : #generated }
+SwiftTypeCastOperatorNode >> _isToken [
+	^ _isToken
+]
+
+{ #category : #generated }
+SwiftTypeCastOperatorNode >> _isToken: aSmaCCToken [
+	_isToken := aSmaCCToken
+]
 
 { #category : #generated }
 SwiftTypeCastOperatorNode >> acceptVisitor: aParseVisitor [
@@ -23,16 +33,6 @@ SwiftTypeCastOperatorNode >> asToken [
 { #category : #generated }
 SwiftTypeCastOperatorNode >> asToken: aSmaCCToken [
 	asToken := aSmaCCToken
-]
-
-{ #category : #generated }
-SwiftTypeCastOperatorNode >> isToken [
-	^ isToken
-]
-
-{ #category : #generated }
-SwiftTypeCastOperatorNode >> isToken: aSmaCCToken [
-	isToken := aSmaCCToken
 ]
 
 { #category : #generated }
@@ -52,7 +52,7 @@ SwiftTypeCastOperatorNode >> questionMarkToken: aSmaCCToken [
 
 { #category : #generated }
 SwiftTypeCastOperatorNode >> tokenVariables [
-	^ #(#isToken #asToken #questionMarkToken)
+	^ #(#_isToken #asToken #questionMarkToken)
 ]
 
 { #category : #generated }

@@ -1,10 +1,10 @@
 Class {
 	#name : #HismoClassHistoryGroup,
 	#superclass : #HismoHistoryGroup,
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoClassHistoryGroup class >> annotation [
 	<MSEClass: #ClassHistoryGroup super: #HismoHistoryGroup>
 	<package: #Hismo>

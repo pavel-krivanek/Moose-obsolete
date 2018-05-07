@@ -47,7 +47,7 @@ Class {
 		'dynamicTypeTokens',
 		'andToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -152,7 +152,7 @@ SwiftBinaryOperatorNode >> compositeNodeVariables [
 
 { #category : #generated }
 SwiftBinaryOperatorNode >> compositeTokenVariables [
-	^ #(#operatorTokens #identifierTokens #lessThanTokens #commaTokens #greaterThanTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #leftBracketTokens #rightBracketTokens #colonTokens #selfTokens #periodTokens #initTokens #leftBraceTokens #leftParenTokens #rightParenTokens #inoutTokens #letTokens #_Tokens #protocolTokens #minusGreaterThanTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #equalTokens #varTokens #rightBraceTokens #dynamicTypeTokens)
+	^ #(#operatorTokens #identifierTokens #lessThanTokens #commaTokens #greaterThanTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #leftBracketTokens #rightBracketTokens #colonTokens #selfTokens #periodTokens #initTokens #leftBraceTokens #leftParenTokens #rightParenTokens #inoutTokens #letTokens #_Tokens #minusGreaterThanTokens #questionMarkTokens #bangTokens #protocolTokens #typeTokens #periodPeriodPeriodTokens #equalTokens #varTokens #rightBraceTokens #dynamicTypeTokens)
 ]
 
 { #category : #generated }
@@ -245,7 +245,7 @@ SwiftBinaryOperatorNode >> initTokens: anOrderedCollection [
 	initTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftBinaryOperatorNode >> initialize [
 	super initialize.
 	operatorTokens := OrderedCollection new: 2.
@@ -271,10 +271,10 @@ SwiftBinaryOperatorNode >> initialize [
 	inoutTokens := OrderedCollection new: 2.
 	letTokens := OrderedCollection new: 2.
 	_Tokens := OrderedCollection new: 2.
-	protocolTokens := OrderedCollection new: 2.
 	minusGreaterThanTokens := OrderedCollection new: 2.
 	questionMarkTokens := OrderedCollection new: 2.
 	bangTokens := OrderedCollection new: 2.
+	protocolTokens := OrderedCollection new: 2.
 	typeTokens := OrderedCollection new: 2.
 	periodPeriodPeriodTokens := OrderedCollection new: 2.
 	equalTokens := OrderedCollection new: 2.

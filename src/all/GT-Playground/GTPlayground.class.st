@@ -24,7 +24,7 @@ Class {
 		'PreferredExtent',
 		'RememberPreferredExtent'
 	],
-	#category : #GT-Playground
+	#category : #'GT-Playground'
 }
 
 { #category : #menu }
@@ -34,7 +34,7 @@ GTPlayground class >> contextMenuBasicActionsFor: aPlayground [
 	^ aPlayground codePresentation defaultSelectionActions 
 ]
 
-{ #category : #compatibility-tools }
+{ #category : #'compatibility-tools' }
 GTPlayground class >> edit: aString label: aLabel [
 
 "Open a new playground with the given contents"
@@ -105,6 +105,17 @@ GTPlayground class >> isGTPlaygroundEnabled [
 	^ GTPlaygroundEnabledStatus ifNil: [ GTPlaygroundEnabledStatus := Smalltalk tools workspace = self ]
 ]
 
+{ #category : #'world menu' }
+GTPlayground class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: Smalltalk tools workspace title asSymbol)
+		parent: #MostUsedTools;
+		action: [ Smalltalk tools openWorkspace ];
+		order: 0.3;
+		keyText: 'o, w';
+		icon: Smalltalk tools workspace taskbarIcon
+]
+
 { #category : #'instance creation' }
 GTPlayground class >> open [
 	"self open"
@@ -141,7 +152,7 @@ GTPlayground class >> openContents: aString label: aLabel [
 	^ self openOn: page
 ]
 
-{ #category : #compatibility-tools }
+{ #category : #'compatibility-tools' }
 GTPlayground class >> openLabel: aLabel [
 	| page |
 
@@ -332,6 +343,7 @@ GTPlayground >> codeIn: a [
 				iconName: #glamorousMore;
 				title: 'Play pages';
 				yourself);
+		with: [ :presentation | self pageActionsIn: presentation ];
 		dynamicActionsOnSelection: [ self contextMenuActions ];
 		onChangeOfPort: #text
 			act: [ :text :page | 
@@ -339,7 +351,7 @@ GTPlayground >> codeIn: a [
 			text clearUserEdits ]
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GTPlayground >> codePresentation [
 
 	^ self inspectorPresentation firstPresentation
@@ -385,8 +397,9 @@ GTPlayground >> compose [
 	GTInspector isStepRefreshEnabled ifTrue: [
 		self wantsAutomaticRefresh: true.
 		self wantsSteps: true.
-		self stepTime: GTInspector stepRefreshRate ]
+		self stepTime: GTInspector stepRefreshRate ].
 	
+	self playgroundActionsIn: self.
 ]
 
 { #category : #'building actions' }
@@ -405,24 +418,24 @@ GTPlayground >> contextMenuPragma [
 	^ #playgroundContextMenu
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GTPlayground >> currentBindings [ 
 
 	^ self codePresentation currentBindings
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GTPlayground >> currentBindingsSorted [
 
 	^ self currentBindings associations asSortedCollection: [ :first :second | first key < second key ]
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GTPlayground >> defaultPlaygroundTitle [
 	^ 'Playground'
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 GTPlayground >> inspectorPresentation [
 
 	^ self presentations first 
@@ -448,7 +461,53 @@ GTPlayground >> openOn: aPage [
 	^ window
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #accessing }
+GTPlayground >> pageActionPragma [
+	^ #pageActionOrder:
+]
+
+{ #category : #'building actions' }
+GTPlayground >> pageActions [
+	^ (Pragma
+		allNamed: self pageActionPragma
+		from: self class
+		to: Object
+		sortedByArgument: 1)
+		collect:
+			[ :eachPragma | self perform: eachPragma methodSelector ]
+]
+
+{ #category : #'building actions' }
+GTPlayground >> pageActionsIn: aGLMPharoScriptPresentation [ 
+	"Build Page actions that appears next to the page title."
+	self pageActions do: [ :eachAction | 
+		aGLMPharoScriptPresentation addAction: eachAction ]
+]
+
+{ #category : #accessing }
+GTPlayground >> playgroundActionPragma [
+	^ #playgroundActionOrder:
+]
+
+{ #category : #'building actions' }
+GTPlayground >> playgroundActions [
+	^ (Pragma
+		allNamed: self playgroundActionPragma
+		from: self class
+		to: Object
+		sortedByArgument: 1)
+		collect:
+			[ :eachPragma | self perform: eachPragma methodSelector ]
+]
+
+{ #category : #'building actions' }
+GTPlayground >> playgroundActionsIn: aGTPlayground [ 
+	"Build Playground actions that appears on the title bar."
+	self playgroundActions do: [ :eachAction | 
+		aGTPlayground addAction: eachAction ]
+]
+
+{ #category : #'accessing-dynamic' }
 GTPlayground >> removeBinding: anAssociation [
 
 	|bindings|

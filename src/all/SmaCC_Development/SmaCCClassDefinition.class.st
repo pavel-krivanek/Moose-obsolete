@@ -22,17 +22,10 @@ Class {
 		'superclass',
 		'isRoot'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
-{ #category : #'instance creation' }
-SmaCCClassDefinition class >> new [
-	^ super new
-		initialize;
-		yourself
-]
-
-{ #category : #accessing-hierarchy }
+{ #category : #'accessing-hierarchy' }
 SmaCCClassDefinition >> addSubclass: aSmaCCClassDefinition [
 	subclasses add: aSmaCCClassDefinition
 ]
@@ -57,12 +50,12 @@ SmaCCClassDefinition >> fullName [
 	^ self codeGenerator namespaceName , self name
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCClassDefinition >> grammar: aSmaCCGrammar [
 	grammar := aSmaCCGrammar
 ]
 
-{ #category : #accessing-hierarchy }
+{ #category : #'accessing-hierarchy' }
 SmaCCClassDefinition >> hierarchyCount [
 	^ superclass isNil
 		ifTrue: [ 0 ]
@@ -77,7 +70,7 @@ SmaCCClassDefinition >> hierarchyIncludes: aSmaCCClassDefinition [
 				and: [ superclass hierarchyIncludes: aSmaCCClassDefinition ] ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCClassDefinition >> initialize [
 	super initialize.
 	isRoot := false.
@@ -102,7 +95,7 @@ SmaCCClassDefinition >> modelClass [
 	^ class
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCClassDefinition >> modelClass: aRBClass [
 	class := aRBClass
 ]
@@ -112,7 +105,7 @@ SmaCCClassDefinition >> name [
 	^ name
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCClassDefinition >> name: anObject [
 	name := anObject
 ]
@@ -126,7 +119,7 @@ SmaCCClassDefinition >> printOn: aStream [
 		nextPut: $)
 ]
 
-{ #category : #accessing-hierarchy }
+{ #category : #'accessing-hierarchy' }
 SmaCCClassDefinition >> removeSubclass: aSmaCCClassDefinition [
 	subclasses remove: aSmaCCClassDefinition ifAbsent: [  ]
 ]
@@ -136,7 +129,7 @@ SmaCCClassDefinition >> rootClassName [
 	^ Object name
 ]
 
-{ #category : #accessing-hierarchy }
+{ #category : #'accessing-hierarchy' }
 SmaCCClassDefinition >> subclasses [
 	^ subclasses
 ]
@@ -146,7 +139,7 @@ SmaCCClassDefinition >> superclass [
 	^ superclass
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCClassDefinition >> superclass: anObject [
 	superclass notNil
 		ifTrue: [ superclass removeSubclass: self ].
@@ -174,7 +167,7 @@ SmaCCClassDefinition >> temporaryVariableName [
 	^ self temporaryNameFor: self name
 ]
 
-{ #category : #accessing-hierarchy }
+{ #category : #'accessing-hierarchy' }
 SmaCCClassDefinition >> withAllSubclasses [
 	| classes index |
 	classes := OrderedCollection with: self.

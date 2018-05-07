@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'components'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -29,7 +29,7 @@ DelphiClassSectionNode >> compositeNodeVariables [
 	^ #(#components)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiClassSectionNode >> initialize [
 	super initialize.
 	components := OrderedCollection new: 2.

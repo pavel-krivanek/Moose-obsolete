@@ -8,7 +8,7 @@ Class {
 		'group',
 		'shape'
 	],
-	#category : #Roassal2-Selection
+	#category : #'Roassal2-Selection'
 }
 
 { #category : #accessing }

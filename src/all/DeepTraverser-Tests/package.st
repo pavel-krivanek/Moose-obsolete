@@ -1,1 +1,1 @@
-Package { #name : #DeepTraverser-Tests }
+Package { #name : #'DeepTraverser-Tests' }

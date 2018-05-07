@@ -12,7 +12,7 @@ Class {
 		'min',
 		'max'
 	],
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #initialization }

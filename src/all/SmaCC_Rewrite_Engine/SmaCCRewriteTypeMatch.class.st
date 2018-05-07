@@ -7,7 +7,7 @@ Class {
 		'method',
 		'enableDebug'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }
@@ -65,7 +65,7 @@ SmaCCRewriteTypeMatch >> enableDebug: aBoolean [
 	enableDebug := aBoolean
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteTypeMatch >> initialize [
 	super initialize.
 	nodeClass := SmaCCParseNode.
@@ -112,7 +112,7 @@ SmaCCRewriteTypeMatch >> nodeClass [
 	^ nodeClass
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRewriteTypeMatch >> nodeClass: aClass [
 	nodeClass := aClass.
 	self modified

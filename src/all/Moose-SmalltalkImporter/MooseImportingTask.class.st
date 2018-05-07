@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'importerClass'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #accessing }
@@ -33,7 +33,7 @@ MooseImportingTask >> importerClass: anObject [
 	importerClass := anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseImportingTask >> initialize [
 	super initialize.
 	importerClass := self defaultImporterClass

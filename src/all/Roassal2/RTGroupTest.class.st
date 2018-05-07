@@ -1,7 +1,7 @@
 Class {
 	#name : #RTGroupTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Core-Tests
+	#category : #'Roassal2-Core-Tests'
 }
 
 { #category : #tests }
@@ -88,6 +88,32 @@ RTGroupTest >> testCache04 [
 	
 	es addAll: (RTBox elementsOn: #(1)). 
 	self assert: (es elementsFromModel: 1) size equals: 2.
+]
+
+{ #category : #'tests - copying' }
+RTGroupTest >> testDeepCopy [
+
+	| b g shallowCopy deepCopy edge copyEdge |
+	b := RTMondrian new.
+	b nodes: (1 to: 10).
+	b edges connectFrom: [ :v | v // 2 ].
+	b layout tree.
+	b build.
+	
+	g := b view elements.
+	self assert: g size equals: 10.
+	
+	deepCopy := g deepCopy.
+	self assert: g ~~ deepCopy.
+	self assert: g first ~~ deepCopy first.
+
+	self assert: g first model equals: deepCopy first model.
+	self assert: g first connectedEdges size equals: deepCopy first connectedEdges size.
+
+	"We test the edges"
+	edge := g first connectedEdges first.
+	copyEdge := deepCopy first connectedEdges first.
+	self assert: edge ~~ copyEdge.
 ]
 
 { #category : #tests }
@@ -212,6 +238,24 @@ RTGroupTest >> testResizingAndMinimumSize [
 	g width: -4.
 	self assert: g encompassingRectangle extent equals: ((1 @ 40.0)).
 
+]
+
+{ #category : #'tests - copying' }
+RTGroupTest >> testShallowCopy [
+
+	| b g shallowCopy |
+	b := RTMondrian new.
+	b nodes: (1 to: 10).
+	b edges connectFrom: [ :v | v // 2 ].
+	b layout tree.
+	b build.
+	
+	g := b view elements.
+	self assert: g size equals: 10.
+	
+	shallowCopy := g copy.
+	self assert: g ~~ shallowCopy.
+	self assert: g first == shallowCopy first.
 ]
 
 { #category : #tests }

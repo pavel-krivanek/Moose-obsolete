@@ -15,7 +15,7 @@ Class {
 	#classVars : [
 		'AxisSpecifiers'
 	],
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #private }
@@ -170,6 +170,7 @@ XPathExpressionParserAxis >> lookupAxisSpecifier [
 { #category : #printing }
 XPathExpressionParserAxis >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self axisSpecifier;

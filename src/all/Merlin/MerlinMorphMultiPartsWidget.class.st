@@ -5,7 +5,7 @@ Class {
 		'tabGroup',
 		'partsMerlinWidgets'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #'accessing - wizard management' }

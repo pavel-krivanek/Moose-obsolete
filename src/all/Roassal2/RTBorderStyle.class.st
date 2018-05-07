@@ -23,7 +23,7 @@ Class {
 	#instVars : [
 		'style'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #styles }

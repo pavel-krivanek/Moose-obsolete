@@ -24,7 +24,7 @@ Class {
 		'maxLayer',
 		'maxAbcissa'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #algorithm }
@@ -69,14 +69,14 @@ RTClusterLayout >> doExecute: nodeElements [
 	
 ]
 
-{ #category : #drawing-general }
+{ #category : #'drawing-general' }
 RTClusterLayout >> draw: aNode [
 
 	(self childrenFor: aNode) do: [ :e | self draw: e ].
 	translator translateTopLeftOf: aNode to: (Point r: maxLayer - (self layerOf: aNode) * verticalGap theta: (maxAbcissa - (self xOf: aNode) / maxAbcissa) * 2 * Float pi )
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTClusterLayout >> initialize [ 
 
 	super initialize.
@@ -85,7 +85,7 @@ RTClusterLayout >> initialize [
 	externalLayer := OrderedCollection new
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTClusterLayout >> initializeNode: aNode [
 
 	|children|

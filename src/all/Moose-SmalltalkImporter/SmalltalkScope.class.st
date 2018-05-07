@@ -5,7 +5,7 @@ Class {
 		'dictionary',
 		'parent'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #'instance creation' }
@@ -32,7 +32,7 @@ SmalltalkScope >> do: aBlock [
 	dictionary do: aBlock
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmalltalkScope >> initialize [ 
 
 	super initialize. 

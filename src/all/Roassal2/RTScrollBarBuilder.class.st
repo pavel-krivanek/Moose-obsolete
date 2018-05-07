@@ -16,7 +16,7 @@ width: to set a static size of width.
 Class {
 	#name : #RTScrollBarBuilder,
 	#superclass : #RTAbstractScrollBuilder,
-	#category : #Roassal2-Builder-ScrollBar
+	#category : #'Roassal2-Builder-ScrollBar'
 }
 
 { #category : #adding }

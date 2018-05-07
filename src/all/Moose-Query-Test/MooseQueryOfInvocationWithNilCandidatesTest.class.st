@@ -5,7 +5,7 @@ Class {
 		'model',
 		'class'
 	],
-	#category : #Moose-Query-Test
+	#category : #'Moose-Query-Test'
 }
 
 { #category : #running }

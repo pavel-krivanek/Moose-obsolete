@@ -1,3 +1,6 @@
+"
+I represent a bilinear range for 2 limits, start and end
+"
 Class {
 	#name : #RTScaleBilinear,
 	#superclass : #RTScale,
@@ -5,7 +8,7 @@ Class {
 		'u',
 		'i'
 	],
-	#category : #Roassal2-Builder-Grapher-Scaling
+	#category : #'Roassal2-Builder-Grapher-Scaling'
 }
 
 { #category : #hooks }

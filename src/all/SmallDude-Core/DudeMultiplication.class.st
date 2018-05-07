@@ -4,14 +4,13 @@ Class {
 	#instVars : [
 		'duplications'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 DudeMultiplication class >> annotation [
 	<MSEClass: #Multiplication super: #FAMIXEntity>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #'instance creation' }
@@ -22,13 +21,13 @@ DudeMultiplication class >> newFrom: aDuplication [
 		yourself
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeMultiplication >> absorb: aDuplication [ 
 	 
 	self duplications add: aDuplication.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeMultiplication >> absorbAll: aMultiplication [ 
 	 
 	self ~= aMultiplication 
@@ -97,6 +96,16 @@ DudeMultiplication >> getNumberOfLines [
 		into: [:result :elem | result + elem fragmentLength]
 ]
 
+{ #category : #accessing }
+DudeMultiplication >> gtDisplayOn: stream [
+	 
+	| name | 
+	name := ''. 
+	self fragments 
+		do: [:fragment | name := name , ' [' , fragment shortName , ']']. 
+	stream nextPutAll: ('Instances:' , name)
+]
+
 { #category : #query }
 DudeMultiplication >> hasAny: prop withValue: val [ 
 	 
@@ -161,16 +170,6 @@ DudeMultiplication >> isMultiplicationOfTwoOf: aGroup [
 	self multiplyingEntities 
 		do: [:each | (aGroup includes: each) ifTrue: [count := count + 1]]. 
 	^count > 1
-]
-
-{ #category : #accessing }
-DudeMultiplication >> mooseDisplayStringOn: stream [
-	 
-	| name | 
-	name := ''. 
-	self fragments 
-		do: [:fragment | name := name , ' [' , fragment shortName , ']']. 
-	stream nextPutAll: ('Instances:' , name)
 ]
 
 { #category : #accessing }

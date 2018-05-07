@@ -7,7 +7,7 @@ Class {
 	#classVars : [
 		'EntityCache'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #clearing }

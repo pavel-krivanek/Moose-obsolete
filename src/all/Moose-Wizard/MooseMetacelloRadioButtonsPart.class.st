@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'option'
 	],
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #'radio buttons model' }
@@ -33,7 +33,7 @@ MooseMetacelloRadioButtonsPart >> defaultSelection: aSymbol [
 		ifFalse: [ self beMainDev ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseMetacelloRadioButtonsPart >> initialize [ 
 	
 	super initialize.

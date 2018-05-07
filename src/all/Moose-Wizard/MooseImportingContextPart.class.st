@@ -24,7 +24,7 @@ Class {
 		'detailContextButton',
 		'contextFrame'
 	],
-	#category : #Moose-Wizard
+	#category : #'Moose-Wizard'
 }
 
 { #category : #actions }
@@ -57,7 +57,7 @@ MooseImportingContextPart >> displayContextFrameInsideTheContextBox [
 	"groupBox addContentMorph: (self newRowWith:{ self newReduceContextButton} )"
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseImportingContextPart >> initialize [
 
 	super initialize.

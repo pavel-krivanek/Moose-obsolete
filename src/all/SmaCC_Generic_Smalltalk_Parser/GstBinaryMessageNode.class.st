@@ -5,7 +5,7 @@ Class {
 		'selectorPart',
 		'value'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }

@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'instance'
 	],
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #accessing }

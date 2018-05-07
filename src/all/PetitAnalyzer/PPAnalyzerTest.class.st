@@ -1,7 +1,7 @@
 Class {
 	#name : #PPAnalyzerTest,
 	#superclass : #PPAbstractParserTest,
-	#category : #PetitAnalyzer-Tests
+	#category : #'PetitAnalyzer-Tests'
 }
 
 { #category : #accessing }
@@ -137,17 +137,17 @@ PPAnalyzerTest >> testAllParsers [
 	self assert: p3 allParsers size equals: 3
 ]
 
-{ #category : #testing-cycleset }
+{ #category : #'testing-cycleset' }
 PPAnalyzerTest >> testCycleSetGrammarA [
 	self grammarA do: [ :each | self assert: each cycleSet isEmpty ]
 ]
 
-{ #category : #testing-cycleset }
+{ #category : #'testing-cycleset' }
 PPAnalyzerTest >> testCycleSetGrammarB [
 	self grammarB do: [ :each | self assert: each cycleSet isEmpty ]
 ]
 
-{ #category : #testing-cycleset }
+{ #category : #'testing-cycleset' }
 PPAnalyzerTest >> testCycleSetGrammarC [
 	| grammar cycleSet |
 	grammar := self grammarC.
@@ -156,7 +156,7 @@ PPAnalyzerTest >> testCycleSetGrammarC [
 	self assert: (cycleSet includes: grammar)
 ]
 
-{ #category : #testing-cycleset }
+{ #category : #'testing-cycleset' }
 PPAnalyzerTest >> testCycleSetGrammarD [
 	| grammar cycleSet |
 	grammar := self grammarD.
@@ -173,7 +173,7 @@ PPAnalyzerTest >> testCycleSetGrammarD [
 	self assert: (cycleSet includes: (grammar at: #B))
 ]
 
-{ #category : #testing-cycleset }
+{ #category : #'testing-cycleset' }
 PPAnalyzerTest >> testCycleSetGrammarE [
 	| grammar cycleSet |
 	grammar := self grammarE.
@@ -182,7 +182,7 @@ PPAnalyzerTest >> testCycleSetGrammarE [
 	self assert: (cycleSet includes: grammar)
 ]
 
-{ #category : #testing-cycleset }
+{ #category : #'testing-cycleset' }
 PPAnalyzerTest >> testCycleSetInChoice [
 	| parser cycleSet |
 	parser := PPUnresolvedParser new.
@@ -197,7 +197,7 @@ PPAnalyzerTest >> testCycleSetInChoice [
 	self assert: (cycleSet includes: parser)
 ]
 
-{ #category : #testing-cycleset }
+{ #category : #'testing-cycleset' }
 PPAnalyzerTest >> testCycleSetInSequence [
 	| parser cycleSet |
 	parser := PPUnresolvedParser new.
@@ -216,7 +216,7 @@ PPAnalyzerTest >> testCycleSetInSequence [
 	self assert: cycleSet isEmpty
 ]
 
-{ #category : #testing-transform }
+{ #category : #'testing-transform' }
 PPAnalyzerTest >> testDelegateReplace [
 	| one other delegate |
 	one := $a asParser.
@@ -234,7 +234,7 @@ PPAnalyzerTest >> testDelegateReplace [
 	self assert: delegate children first == other
 ]
 
-{ #category : #testing-firstset }
+{ #category : #'testing-firstset' }
 PPAnalyzerTest >> testFirstSetExpression [
 	| grammar |
 	grammar := PPArithmeticParser new.
@@ -249,7 +249,7 @@ PPAnalyzerTest >> testFirstSetExpression [
 	self assert: grammar terms firstSet includes: '(-0123456789' epsilon: false
 ]
 
-{ #category : #testing-firstset }
+{ #category : #'testing-firstset' }
 PPAnalyzerTest >> testFirstSetGrammarA [
 	| grammar |
 	grammar := self grammarA.
@@ -263,7 +263,7 @@ PPAnalyzerTest >> testFirstSetGrammarA [
 	self assert: (grammar at: #B) firstSet includes: 'b' epsilon: true
 ]
 
-{ #category : #testing-firstset }
+{ #category : #'testing-firstset' }
 PPAnalyzerTest >> testFirstSetGrammarB [
 	| grammar |
 	grammar := self grammarB.
@@ -274,14 +274,14 @@ PPAnalyzerTest >> testFirstSetGrammarB [
 	self assert: (grammar at: #F) firstSet includes: '(i' epsilon: false
 ]
 
-{ #category : #testing-firstset }
+{ #category : #'testing-firstset' }
 PPAnalyzerTest >> testFirstSetGrammarC [
 	| grammar |
 	grammar := self grammarC.
 	self assert: grammar firstSet includes: '1' epsilon: false
 ]
 
-{ #category : #testing-firstset }
+{ #category : #'testing-firstset' }
 PPAnalyzerTest >> testFirstSetGrammarD [
 	| grammar |
 	grammar := self grammarD.
@@ -292,12 +292,12 @@ PPAnalyzerTest >> testFirstSetGrammarD [
 	self assert: (grammar at: #b) firstSet includes: 'b' epsilon: false
 ]
 
-{ #category : #testing-firstset }
+{ #category : #'testing-firstset' }
 PPAnalyzerTest >> testFirstSetGrammarE [
 	self assert: self grammarE firstSet includes: '' epsilon: false
 ]
 
-{ #category : #testing-firstset }
+{ #category : #'testing-firstset' }
 PPAnalyzerTest >> testFirstSetLambda [
 	| grammar |
 	grammar := PPLambdaParser new.
@@ -308,7 +308,7 @@ PPAnalyzerTest >> testFirstSetLambda [
 	self assert: grammar variable firstSet includes: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' epsilon: false
 ]
 
-{ #category : #testing-followset }
+{ #category : #'testing-followset' }
 PPAnalyzerTest >> testFollowSetExampleA [
 	| grammar followSets |
 	grammar := self grammarA.
@@ -323,7 +323,7 @@ PPAnalyzerTest >> testFollowSetExampleA [
 	self assert: (followSets at: (grammar at: #B)) includes: 'bc' epsilon: false
 ]
 
-{ #category : #testing-followset }
+{ #category : #'testing-followset' }
 PPAnalyzerTest >> testFollowSetExampleB [
 	| grammar followSets |
 	grammar := self grammarB.
@@ -335,12 +335,12 @@ PPAnalyzerTest >> testFollowSetExampleB [
 	self assert: (followSets at: (grammar at: #F)) includes: ')*+' epsilon: true
 ]
 
-{ #category : #testing-followset }
+{ #category : #'testing-followset' }
 PPAnalyzerTest >> testFollowSetExampleC [
 	self assert: self grammarC followSet includes: '+' epsilon: true
 ]
 
-{ #category : #testing-followset }
+{ #category : #'testing-followset' }
 PPAnalyzerTest >> testFollowSetExampleD [
 	| grammar followSets |
 	grammar := self grammarD.
@@ -352,7 +352,7 @@ PPAnalyzerTest >> testFollowSetExampleD [
 	self assert: (followSets at: (grammar at: #b)) includes: 'ab' epsilon: true
 ]
 
-{ #category : #testing-followset }
+{ #category : #'testing-followset' }
 PPAnalyzerTest >> testFollowSetExampleE [
 	self assert: self grammarE followSet includes: '' epsilon: true
 ]
@@ -401,7 +401,7 @@ PPAnalyzerTest >> testIsTerminal [
 	self deny: ($a asParser not) isTerminal
 ]
 
-{ #category : #testing-transform }
+{ #category : #'testing-transform' }
 PPAnalyzerTest >> testListReplace [
 	| one other another list |
 	one := $a asParser.
@@ -444,7 +444,7 @@ PPAnalyzerTest >> testNamedChildren [
 	self assert: p4 namedChildren first name equals: 'd'
 ]
 
-{ #category : #testing-transform }
+{ #category : #'testing-transform' }
 PPAnalyzerTest >> testRepetitionReplace [
 	| one two otherone othertwo repetition |
 	one := $a asParser.
@@ -465,7 +465,7 @@ PPAnalyzerTest >> testRepetitionReplace [
 	self assert: repetition children second == othertwo
 ]
 
-{ #category : #testing-transform }
+{ #category : #'testing-transform' }
 PPAnalyzerTest >> testTransformIdentityGrammarC [
 	| orig tran |
 	orig := self grammarC.
@@ -489,7 +489,7 @@ PPAnalyzerTest >> testTransformIdentityGrammarC [
 	self assert: tran children last class == PPLiteralObjectParser
 ]
 
-{ #category : #testing-transform }
+{ #category : #'testing-transform' }
 PPAnalyzerTest >> testTransformIdentityGrammarE [
 	| orig tran |
 	orig := self grammarE.
@@ -504,7 +504,7 @@ PPAnalyzerTest >> testTransformIdentityGrammarE [
 	self assert: tran children first == tran
 ]
 
-{ #category : #testing-transform }
+{ #category : #'testing-transform' }
 PPAnalyzerTest >> testTransformWrapGrammarC [
 	| orig tran |
 	orig := self grammarC.
@@ -526,7 +526,7 @@ PPAnalyzerTest >> testTransformWrapGrammarC [
 	self assert: tran children first children last children first class == PPLiteralObjectParser
 ]
 
-{ #category : #testing-transform }
+{ #category : #'testing-transform' }
 PPAnalyzerTest >> testTransformWrapGrammarE [
 	| orig tran |
 	orig := self grammarE.

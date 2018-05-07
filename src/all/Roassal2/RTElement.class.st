@@ -18,7 +18,7 @@ Class {
 		'connectedEdges',
 		'shouldUpdateEdges'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #public }
@@ -219,6 +219,12 @@ RTElement >> removeWithNestedElements [
 	self nestedElements do: #remove.
 	self remove. 
 	
+]
+
+{ #category : #actions }
+RTElement >> resetConnectedEdges [
+	"Simply make the elements not connected anymore"
+	connectedEdges := nil.
 ]
 
 { #category : #actions }

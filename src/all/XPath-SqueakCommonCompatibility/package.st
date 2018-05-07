@@ -1,1 +1,1 @@
-Package { #name : #XPath-SqueakCommonCompatibility }
+Package { #name : #'XPath-SqueakCommonCompatibility' }

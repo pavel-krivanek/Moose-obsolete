@@ -29,7 +29,7 @@ Class {
 		'isPreviewVisible',
 		'wasOpened'
 	],
-	#category : #GT-Spotter-Model
+	#category : #'GT-Spotter-Model'
 }
 
 { #category : #cleanup }
@@ -125,6 +125,17 @@ GTSpotter class >> markOpened [
 	wasOpened := true
 ]
 
+{ #category : #'world menu' }
+GTSpotter class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: #Spotter)
+		action: [ GTSpotterGlobalShortcut openGlobalSpotter ];
+		keyText: 'Shift + Enter';
+		order: 0.7;
+		parent: #MostUsedTools;
+		iconName: #smallFindIcon
+]
+
 { #category : #'instance creation' }
 GTSpotter class >> on: anObject [
 	
@@ -212,12 +223,12 @@ GTSpotter >> announcer [
 	^ announcer ifNil: [ announcer := Announcer new ]
 ]
 
-{ #category : #accessing-convenience }
+{ #category : #'accessing-convenience' }
 GTSpotter >> beDebugging [
 	self exceptionHandler: GTSpotterDebuggingExceptionHandler new
 ]
 
-{ #category : #accessing-convenience }
+{ #category : #'accessing-convenience' }
 GTSpotter >> beDeployment [
 	self exceptionHandler: GTSpotterDeploymentExceptionHandler new
 ]
@@ -237,17 +248,17 @@ GTSpotter >> currentStep: aStepModel [
 	self notifyCurrentStepChanged
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GTSpotter >> defaultExceptionHandler [
 	^ GTSpotterDeploymentExceptionHandler new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GTSpotter >> defaultPagerModel [
 	^ GLMPagerModel new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 GTSpotter >> defaultStep [
 	^ GTSpotterStep new
 ]

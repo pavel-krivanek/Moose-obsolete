@@ -4,7 +4,7 @@ The not-predicate, a parser that succeeds whenever its delegate does not, but co
 Class {
 	#name : #PPNotParser,
 	#superclass : #PPDelegateParser,
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #parsing }

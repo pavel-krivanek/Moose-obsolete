@@ -4,13 +4,15 @@ A StandardFileStream read stream factory. This stream is preferred for Squeak/Ph
 Class {
 	#name : #XMLStandardFileStreamReadStreamFactory,
 	#superclass : #XMLFileReadStreamFactory,
-	#category : #XML-Parser-Files
+	#category : #'XML-Parser-Files'
 }
 
 { #category : #basic }
 XMLStandardFileStreamReadStreamFactory class >> basicOnPath: aPathString [
-	^ (XMLClassFinder classNamed: #StandardFileStream)
-		readOnlyFileNamed: aPathString
+	^ ((XMLClassFinder classNamed: #StandardFileStream)
+		readOnlyFileNamed: aPathString)
+			binary;
+			yourself
 ]
 
 { #category : #testing }

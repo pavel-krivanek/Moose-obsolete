@@ -5,17 +5,16 @@ Class {
 		'keeper',
 		'owner'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 RPGTreasure class >> annotation [
 	<MSEClass: #Treasure super: #Object>
 	<package: #RPG>
-	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #initialization }
 RPGTreasure >> initialize [
 	super initialize.
 	keeper := nil.

@@ -14,13 +14,13 @@ Class {
 		'characters',
 		'ignoreCase'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
-SmaCCCharacterRENode class >> characters: aString [
+SmaCCCharacterRENode class >> characters: aSmaCCCharacterSet [
 	^ self new
-		assignCharacters: aString;
+		characters: aSmaCCCharacterSet;
 		yourself
 ]
 
@@ -32,23 +32,6 @@ SmaCCCharacterRENode >> asNFAStartingWith: aSmaCCNode [
 	endNode action: action.
 	startNode addEdgeTo: endNode onCharacters: characters.
 	^ endNode
-]
-
-{ #category : #private }
-SmaCCCharacterRENode >> assignCharacters: newCharacters [
-	| sortedCharacters stream |
-	sortedCharacters := newCharacters
-		asSortedCollection: [ :a :b | a asInteger < b asInteger ].
-	stream := WriteStream with: String new.
-	sortedCharacters
-		inject: nil
-		into:
-			[ :sum :each | 
-			(sum = each
-				or: [ each asInteger > SmaCCGrammar maximumCharacterValue ])
-				ifFalse: [ stream nextPut: each ].
-			each ].
-	characters := stream contents
 ]
 
 { #category : #testing }
@@ -66,12 +49,12 @@ SmaCCCharacterRENode >> characters [
 	^ characters
 ]
 
-{ #category : #initialize-release }
-SmaCCCharacterRENode >> characters: aString [
-	characters := aString
+{ #category : #'initialize-release' }
+SmaCCCharacterRENode >> characters: aSmaCCCharacterSet [
+	characters := aSmaCCCharacterSet
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCharacterRENode >> initialize [
 	super initialize.
 	ignoreCase := false
@@ -81,14 +64,17 @@ SmaCCCharacterRENode >> initialize [
 SmaCCCharacterRENode >> makeCaseInsensitive [
 	| newCharacters |
 	ignoreCase := true.
-	newCharacters := Set new.
+	newCharacters := characters copy.
 	characters
-		do:
-			[ :each | 
-			newCharacters
-				add: each asLowercase;
-				add: each asUppercase ].
-	self assignCharacters: newCharacters
+		do: [ :each | 
+			| upper lower |
+			upper := each asUppercase.
+			lower := each asLowercase.
+			upper asInteger > SmaCCGrammar maximumCharacterValue
+				ifFalse: [ newCharacters add: upper ].
+			lower asInteger > SmaCCGrammar maximumCharacterValue
+				ifFalse: [ newCharacters add: lower ] ].
+	characters := newCharacters
 ]
 
 { #category : #accessing }
@@ -129,22 +115,18 @@ SmaCCCharacterRENode >> printOn: aStream [
 	aStream nextPut: $[.
 	allCharacters := characters.
 	characters size > 128
-		ifTrue:
-			[ aStream nextPut: $^.
-			allCharacters := ((0 to: SmaCCGrammar maximumCharacterValue)
-				collect: [ :each | Character value: each ])
-				reject: [ :each | characters includes: each ] ].
+		ifTrue: [ allCharacters := ((0 to: SmaCCGrammar maximumCharacterValue) collect: [ :each | Character value: each ])
+				reject: [ :each | characters includes: each ].
+			allCharacters size < characters size
+				ifTrue: [ aStream nextPut: $^ ] ].
 	allCharacters do: [ :each | self printCharacter: each on: aStream ].
 	aStream nextPut: $]
 ]
 
 { #category : #constructing }
 SmaCCCharacterRENode >> | aSmaCCRegularExpressionNode [
-	| newCharacters |
 	(self canMergeWith: aSmaCCRegularExpressionNode)
 		ifFalse: [ ^ super | aSmaCCRegularExpressionNode ].
-	newCharacters := (characters , aSmaCCRegularExpressionNode characters)
-		asSet.
-	self assignCharacters: newCharacters.
+	characters := characters , aSmaCCRegularExpressionNode characters.
 	^ self
 ]

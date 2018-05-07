@@ -7,12 +7,12 @@ Class {
 	#category : 'Ghost-ObjectGhost'
 }
 
-{ #category : #Tool-Base }
+{ #category : #'Tool-Base' }
 GHStandardMetaMessages >> basicInspect [
 	^ Smalltalk tools basicInspector inspect: ghost
 ]
 
-{ #category : #Tool-Base }
+{ #category : #'Tool-Base' }
 GHStandardMetaMessages >> inspect [
 	"Create and schedule an Inspector in which the user can examine the receiver's variables."
 	^ Smalltalk tools inspector inspect: ghost

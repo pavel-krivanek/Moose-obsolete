@@ -1,7 +1,7 @@
 Class {
 	#name : #DistributionMapPropertyInfo,
 	#superclass : #Object,
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #'instance creation' }

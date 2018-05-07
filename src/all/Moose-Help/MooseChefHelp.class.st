@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseChefHelp,
 	#superclass : #CustomHelp,
-	#category : #Moose-Help
+	#category : #'Moose-Help'
 }
 
 { #category : #accessing }

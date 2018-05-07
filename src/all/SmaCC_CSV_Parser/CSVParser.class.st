@@ -1,12 +1,12 @@
 Class {
 	#name : #CSVParser,
 	#superclass : #SmaCCParser,
-	#category : #SmaCC_CSV_Parser
+	#category : #'SmaCC_CSV_Parser'
 }
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CSVParser class >> cacheId [
-	^'2016-10-24T21:05:29.488919-05:00'
+	^'2018-03-19T12:39:38.019384-05:00'
 ]
 
 { #category : #private }
@@ -117,7 +117,7 @@ CSVParser class >> parseFileWithoutHeader: aFilename [
 	^ lines
 ]
 
-{ #category : #generated-accessing }
+{ #category : #'generated-accessing' }
 CSVParser class >> scannerClass [
 	^CSVScanner
 ]
@@ -181,38 +181,38 @@ CSVParser >> reduceActionForMissing1: nodes [
 CSVParser >> reduceTable [
 ^#(
 	#(9 0 #reduceActionForMissing1:) 
-	#(7 1 #liftFirstValue:) 
-	#(8 1 #reduceActionForLines1:) 
-	#(5 1 #reduceActionForLine1:) 
-	#(6 1 #reduceActionForFile1:) 
-	#(5 3 #reduceActionForLine2:) 
-	#(8 3 #reduceActionForLines2:)
+	#(8 1 #liftFirstValue:) 
+	#(5 1 #reduceActionForFile1:) 
+	#(6 1 #reduceActionForLines1:) 
+	#(7 1 #reduceActionForLine1:) 
+	#(6 3 #reduceActionForLines2:) 
+	#(7 3 #reduceActionForLine2:)
 	).
 ]
 
 { #category : #generated }
 CSVParser >> symbolNames [
-	^ #('","' '<entry>' '<newline>' 'B e g i n' 'Line' 'File' 'Value' 'Lines' 'Missing' 'E O F' 'error')
+	^ #('","' '<entry>' '<newline>' 'B e g i n' 'File' 'Lines' 'Line' 'Value' 'Missing' 'E O F' 'error')
 ]
 
 { #category : #generated }
 CSVParser >> symbolTypes [
-	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #CSVFileNode #CSVLineNode #CSVFileNode #SmaCCToken #OrderedCollection #SmaCCToken #SmaCCToken #SmaCCToken)
+	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #CSVFileNode #CSVFileNode #OrderedCollection #CSVLineNode #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken)
 ]
 
 { #category : #generated }
 CSVParser >> transitionTable [
 ^#(
-#[1 0 6 0 1 0 21 0 2 0 6 0 3 0 13 0 5 0 17 0 6 0 21 0 7 0 25 0 8 0 21 0 9 0 6 0 10] 
+#[1 0 6 0 1 0 25 0 2 0 6 0 3 0 13 0 5 0 17 0 6 0 21 0 7 0 25 0 8 0 25 0 9 0 6 0 10] 
 #[0 0 10 0 1 0 3 0 10] 
-#[1 0 33 0 1 0 14 0 3 0 14 0 10] 
 #[0 0 0 0 10] 
-#[0 0 18 0 1 0 3 0 10] 
-#[1 0 37 0 3 0 22 0 10] 
+#[1 0 33 0 3 0 14 0 10] 
+#[1 0 37 0 1 0 18 0 3 0 18 0 10] 
+#[0 0 22 0 1 0 3 0 10] 
 #[0 0 10 0 1 0 3 0 10] 
-#[1 0 6 0 1 0 41 0 2 0 6 0 3 0 41 0 7 0 41 0 9 0 6 0 10] 
-#[1 0 6 0 1 0 21 0 2 0 6 0 3 0 45 0 5 0 21 0 7 0 21 0 9 0 6 0 10] 
-#[0 0 26 0 1 0 3 0 10] 
-#[1 0 33 0 1 0 30 0 3 0 30 0 10]
+#[1 0 6 0 1 0 25 0 2 0 6 0 3 0 41 0 7 0 25 0 8 0 25 0 9 0 6 0 10] 
+#[1 0 6 0 1 0 45 0 2 0 6 0 3 0 45 0 8 0 45 0 9 0 6 0 10] 
+#[1 0 37 0 1 0 26 0 3 0 26 0 10] 
+#[0 0 30 0 1 0 3 0 10]
 	).
 ]

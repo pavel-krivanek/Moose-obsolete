@@ -11,7 +11,7 @@ Class {
 		'trachelShapes',
 		'shapeBeingPointed'
 	],
-	#category : #Roassal2-Cachetor
+	#category : #'Roassal2-Cachetor'
 }
 
 { #category : #private }

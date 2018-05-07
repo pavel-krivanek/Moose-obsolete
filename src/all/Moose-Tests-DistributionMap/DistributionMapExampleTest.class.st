@@ -1,7 +1,7 @@
 Class {
 	#name : #DistributionMapExampleTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-DistributionMap
+	#category : #'Moose-Tests-DistributionMap'
 }
 
 { #category : #history }

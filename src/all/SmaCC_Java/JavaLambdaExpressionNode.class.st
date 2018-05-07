@@ -9,7 +9,7 @@ Class {
 		'arrowToken',
 		'value'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -52,7 +52,7 @@ JavaLambdaExpressionNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaLambdaExpressionNode >> initialize [
 	super initialize.
 	parameters := OrderedCollection new: 2.

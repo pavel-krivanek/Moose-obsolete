@@ -11,14 +11,13 @@ Class {
 	#instVars : [
 		'referencer'
 	],
-	#category : #Famix-C
+	#category : #'Famix-C'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXDereferencedInvocation class >> annotation [
 	<MSEClass: #DereferencedInvocation super: #FAMIXInvocation>
 	<package: #FAMIX>
-	^ self
 ]
 
 { #category : #accessing }

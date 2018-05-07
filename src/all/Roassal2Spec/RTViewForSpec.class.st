@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'lastEvent'
 	],
-	#category : #Roassal2Spec-Core
+	#category : #'Roassal2Spec-Core'
 }
 
 { #category : #adding }
@@ -46,7 +46,7 @@ RTViewForSpec >> lastEventSubscriptionsDo: aBlock [
 	lastEvent announcer subscriptions subscriptionsDo: aBlock
 ]
 
-{ #category : #protocol-events }
+{ #category : #'protocol-events' }
 RTViewForSpec >> whenLastEventChangedDo: aBlock [
 
 	lastEvent whenChangedDo: aBlock

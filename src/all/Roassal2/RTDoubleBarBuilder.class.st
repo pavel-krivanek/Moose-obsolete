@@ -11,7 +11,7 @@ Class {
 		'verticalGap',
 		'width'
 	],
-	#category : #Roassal2-Builder-Grapher-Core
+	#category : #'Roassal2-Builder-Grapher-Core'
 }
 
 { #category : #configuration }
@@ -110,12 +110,12 @@ RTDoubleBarBuilder >> pointName: aOneArgBlock [
 	self shape label text: aOneArgBlock
 ]
 
-{ #category : #public-accessing }
+{ #category : #'public-accessing' }
 RTDoubleBarBuilder >> points [
 	^ elements collect: #model
 ]
 
-{ #category : #public-accessing }
+{ #category : #'public-accessing' }
 RTDoubleBarBuilder >> points: someObjects [
 	elements := self createPointNameFrom: someObjects.
 	view addAll: elements.

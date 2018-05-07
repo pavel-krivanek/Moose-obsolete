@@ -4,7 +4,7 @@ This is an interaction for a view
 Class {
 	#name : #RTSelectableElementsContextInteraction,
 	#superclass : #RTAbstractContextInteraction,
-	#category : #Roassal2GT-Glamour-Roassal-Interaction
+	#category : #'Roassal2GT-Glamour-Roassal-Interaction'
 }
 
 { #category : #hooks }

@@ -11,7 +11,7 @@ Class {
 		'selectionListIndex',
 		'selectionListSelections'
 	],
-	#category : #Merlin-ToBeRemoved
+	#category : #'Merlin-ToBeRemoved'
 }
 
 { #category : #'instance creation' }
@@ -224,7 +224,7 @@ MultiSelectionListSelector >> initialListSelectionAt: anIndex put: value [
 		^ initialListSelections at: anIndex put: value
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MultiSelectionListSelector >> initialize [
 
 	super initialize.
@@ -239,7 +239,7 @@ MultiSelectionListSelector >> initialize [
 	"self enableNextButton: false."
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MultiSelectionListSelector >> initialize: aCollectionOfItems [
 "initialize the initial list with aCollectionOfItems and then fill in the contents of this WizardPart"
 	| morphPackagesList morphSelectionList |

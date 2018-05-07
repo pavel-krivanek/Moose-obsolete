@@ -13,7 +13,7 @@ Class {
 		'dashes',
 		'capStyle'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #drawing }

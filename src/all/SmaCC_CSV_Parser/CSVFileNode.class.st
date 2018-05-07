@@ -5,7 +5,7 @@ Class {
 		'lines',
 		'eols'
 	],
-	#category : #SmaCC_CSV_Parser
+	#category : #'SmaCC_CSV_Parser'
 }
 
 { #category : #generated }
@@ -33,7 +33,7 @@ CSVFileNode >> eols: anOrderedCollection [
 	eols := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSVFileNode >> initialize [
 	super initialize.
 	lines := OrderedCollection new: 2.

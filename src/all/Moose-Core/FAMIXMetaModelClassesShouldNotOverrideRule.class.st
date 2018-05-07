@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'metaModelClasses'
 	],
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #accessing }
@@ -54,5 +54,5 @@ FAMIXMetaModelClassesShouldNotOverrideRule >> rationale [
 { #category : #accessing }
 FAMIXMetaModelClassesShouldNotOverrideRule >> selectorsThatShouldNotBeOverriden [
 
-	^ #(#mooseName #printString #mooseDisplayString)
+	^ #(#mooseName #printString #gtDisplayString)
 ]

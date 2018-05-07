@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'lr1Item'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #accessing }
@@ -37,7 +37,7 @@ SmaCCPrimitiveAction >> lr1Item [
 	^ lr1Item
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCPrimitiveAction >> lr1Item: aSmaCCLR1Item [
 	lr1Item := aSmaCCLR1Item
 ]

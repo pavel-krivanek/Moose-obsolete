@@ -9,14 +9,13 @@ Class {
 		'fileName',
 		'encoding'
 	],
-	#category : #Famix-SourceAnchor
+	#category : #'Famix-SourceAnchor'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #meta }
 FAMIXAbstractFileAnchor class >> annotation [
 	<MSEClass: #AbstractFileAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #comparing }

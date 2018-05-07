@@ -1,7 +1,7 @@
 Class {
 	#name : #FMHeinekenExample,
 	#superclass : #TestCase,
-	#category : #Fame-Tests-Core
+	#category : #'Fame-Tests-Core'
 }
 
 { #category : #'as yet unclassified' }

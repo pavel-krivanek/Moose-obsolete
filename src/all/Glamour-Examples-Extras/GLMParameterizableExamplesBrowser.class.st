@@ -4,7 +4,7 @@ This is an abstract class that provides the infrastructure for an example browse
 Class {
 	#name : #GLMParameterizableExamplesBrowser,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Glamour-Examples-Extras
+	#category : #'Glamour-Examples-Extras'
 }
 
 { #category : #building }

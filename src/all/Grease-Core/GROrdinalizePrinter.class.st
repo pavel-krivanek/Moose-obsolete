@@ -1,7 +1,7 @@
 Class {
 	#name : #GROrdinalizePrinter,
 	#superclass : #GRPrinter,
-	#category : #Grease-Core-Text
+	#category : #'Grease-Core-Text'
 }
 
 { #category : #private }

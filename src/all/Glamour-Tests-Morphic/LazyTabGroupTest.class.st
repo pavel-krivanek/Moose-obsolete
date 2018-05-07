@@ -5,11 +5,12 @@ Class {
 		'window',
 		'tabs'
 	],
-	#category : #Glamour-Tests-Morphic
+	#category : #'Glamour-Tests-Morphic'
 }
 
 { #category : #'setup - tear down' }
 LazyTabGroupTest >> setUp [
+	super setUp.
 	tabs := LazyTabGroupMorph new.
 	tabs addLazyPage: (PanelMorph new fillStyle: (SolidFillStyle color: Color red)) label: 'one'.
 	tabs addLazyPage: (PanelMorph new fillStyle: (SolidFillStyle color: Color yellow)) label: (GLMLabelBrick new text: 'two').

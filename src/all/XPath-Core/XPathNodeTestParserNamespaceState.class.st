@@ -4,7 +4,7 @@ A state for parsing node tests where namespaces are the principal node type.
 Class {
 	#name : #XPathNodeTestParserNamespaceState,
 	#superclass : #XPathNodeTestParserState,
-	#category : #XPath-Core-Parsers
+	#category : #'XPath-Core-Parsers'
 }
 
 { #category : #handling }

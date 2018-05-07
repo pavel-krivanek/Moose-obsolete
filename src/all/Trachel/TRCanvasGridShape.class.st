@@ -9,7 +9,7 @@ Class {
 		'spacing',
 		'dashes'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #accessing }

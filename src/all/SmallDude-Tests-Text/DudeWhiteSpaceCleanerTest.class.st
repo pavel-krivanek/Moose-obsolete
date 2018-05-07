@@ -1,7 +1,7 @@
 Class {
 	#name : #DudeWhiteSpaceCleanerTest,
 	#superclass : #TestCase,
-	#category : #SmallDude-Tests-Text
+	#category : #'SmallDude-Tests-Text'
 }
 
 { #category : #testing }

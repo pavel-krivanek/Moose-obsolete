@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'repositoryCache'
 	],
-	#category : #Moose-MonticelloImporter
+	#category : #'Moose-MonticelloImporter'
 }
 
 { #category : #assertion }
@@ -124,7 +124,7 @@ MooseMonticelloImporter >> importLastVersionOf: projectName [
 	^ self importFileNamed: (self lastVersionOf: projectName)
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseMonticelloImporter >> initialize [
 	super initialize.
 	importingContext := MooseImportingContext new importMaximum; mergeClassAndMetaclass; yourself.

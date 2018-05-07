@@ -5,11 +5,11 @@ Class {
 	#name : #FAMIXSourceAnchor,
 	#superclass : #FAMIXEntity,
 	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'TDependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes})',
+	#classTraits : 'TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
 	#instVars : [
 		'element'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #accessing }
@@ -26,7 +26,6 @@ FAMIXSourceAnchor class >> allOutgoingAssociationTypes [
 FAMIXSourceAnchor class >> annotation [
 	<MSEClass: #SourceAnchor super: #FAMIXEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -62,7 +61,7 @@ FAMIXSourceAnchor >> element: anElement [
 	element sourceAnchor = self ifFalse: [  element sourceAnchor: self ]
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXSourceAnchor >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -91,7 +90,7 @@ FAMIXSourceAnchor >> lineCount [
 	^ self subclassResponsibility
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXSourceAnchor >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -100,52 +99,52 @@ FAMIXSourceAnchor >> outgoingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXSourceAnchor >> queryAllIncomingInvocations [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXSourceAnchor >> queryAllOutgoingInvocations [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXSourceAnchor >> queryIncomingAccesses [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXSourceAnchor >> queryIncomingReferences [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXSourceAnchor >> queryIncomingTypeDeclarations [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXSourceAnchor >> queryOutgoingAccesses [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXSourceAnchor >> queryOutgoingReferences [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXSourceAnchor >> queryOutgoingTypeDeclarations [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXSourceAnchor >> querySureIncomingInvocations [
 	^ MooseQueryResult new
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXSourceAnchor >> querySureOutgoingInvocations [
 	^ MooseQueryResult new
 ]

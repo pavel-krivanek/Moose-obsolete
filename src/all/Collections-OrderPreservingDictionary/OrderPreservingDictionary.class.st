@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'defaultValue'
 	],
-	#category : #Collections-OrderPreservingDictionary
+	#category : #'Collections-OrderPreservingDictionary'
 }
 
 { #category : #'instance creation' }

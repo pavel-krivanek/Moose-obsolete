@@ -49,7 +49,7 @@ Class {
 		'xAxisConfiguration',
 		'yAxisConfiguration'
 	],
-	#category : #Roassal2-Builder-AxisAdapted
+	#category : #'Roassal2-Builder-AxisAdapted'
 }
 
 { #category : #'as yet unclassified' }
@@ -60,7 +60,7 @@ RTAxisAdaptedBuilder >> axisOrigin [
 	
 ]
 
-{ #category : #private-axis }
+{ #category : #'private-axis' }
 RTAxisAdaptedBuilder >> axisXFrom: anOriginPoint to: aPoint [
 	| config |
 	(self xAxisConfiguration fromPoint) ifNil: [ self xAxisDefaultConfigurationOrigin: anOriginPoint toPoint: aPoint].
@@ -69,7 +69,7 @@ RTAxisAdaptedBuilder >> axisXFrom: anOriginPoint to: aPoint [
 	RTAxisRenderer new builder: self; config: config; axisFrom: anOriginPoint to: aPoint.
 ]
 
-{ #category : #private-axis }
+{ #category : #'private-axis' }
 RTAxisAdaptedBuilder >> axisYFrom: anOriginPoint to: aPoint [
 	| config |
 	(self yAxisConfiguration fromPoint) ifNil: [ self yAxisDefaultConfigurationOrigin: anOriginPoint toPoint: aPoint].

@@ -10,7 +10,7 @@ Class {
 		'clauses',
 		'rightBrace'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -54,7 +54,7 @@ JSSwitchStatementNode >> ignoredTokenVariables [
 	^ #(#left #right #leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSSwitchStatementNode >> initialize [
 	super initialize.
 	clauses := OrderedCollection new: 2.

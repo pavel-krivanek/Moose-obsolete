@@ -5,7 +5,7 @@ A xpath node applies me to filter xml elements.
 Class {
 	#name : #PPXPathFilter,
 	#superclass : #Object,
-	#category : #PetitXPath-Nodes
+	#category : #'PetitXPath-Nodes'
 }
 
 { #category : #resolving }

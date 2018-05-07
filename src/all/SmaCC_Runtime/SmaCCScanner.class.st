@@ -36,13 +36,13 @@ Class {
 		'lastOutputStreamMatchPosition',
 		'lastMatchWasEmpty',
 		'returnMatchBlock',
-		'state',
+		'scope',
 		'comments'
 	],
 	#classInstVars : [
 		'keywordMap'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #'class initialization' }
@@ -67,13 +67,6 @@ SmaCCScanner class >> needsLineNumbers [
 	"Redefine to return true, if you need line number information"
 
 	^ false
-]
-
-{ #category : #'instance creation' }
-SmaCCScanner class >> new [
-	^ super new
-		initialize;
-		yourself
 ]
 
 { #category : #'instance creation' }
@@ -107,7 +100,7 @@ SmaCCScanner >> checkForKeyword: aString [
 	entry isInteger
 		ifTrue: [ matchActions := entry ]
 		ifFalse:
-			[ (entry last includes: state)
+			[ (entry last includes: scope)
 				ifFalse: [ ^ self ].
 			matchActions := entry first ].
 	matchActions isInteger
@@ -179,12 +172,12 @@ SmaCCScanner >> errorTokenId [
 	^ self subclassResponsibility
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCScanner >> initialize [
 	super initialize.
 	outputStream := WriteStream with: String new.
 	lastMatchWasEmpty := true.
-	state := #default.
+	scope := #default.
 	comments := OrderedCollection new
 ]
 
@@ -219,7 +212,7 @@ SmaCCScanner >> next [
 	^ self scanForToken
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCScanner >> on: aStream [
 	stream := aStream.
 	start := stream position
@@ -331,18 +324,18 @@ SmaCCScanner >> scannerError [
 ]
 
 { #category : #accessing }
+SmaCCScanner >> scope [
+	^ scope
+]
+
+{ #category : #accessing }
+SmaCCScanner >> scope: aSymbol [
+	scope := aSymbol
+]
+
+{ #category : #accessing }
 SmaCCScanner >> setPosition: anInteger [
 	^ stream position: anInteger
-]
-
-{ #category : #accessing }
-SmaCCScanner >> state [
-	^ state
-]
-
-{ #category : #accessing }
-SmaCCScanner >> state: aSymbol [
-	state := aSymbol
 ]
 
 { #category : #private }

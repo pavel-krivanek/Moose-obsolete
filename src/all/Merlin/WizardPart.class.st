@@ -42,7 +42,7 @@ Class {
 		'hasBeenOpen',
 		'transformationBlock'
 	],
-	#category : #Merlin-Core
+	#category : #'Merlin-Core'
 }
 
 { #category : #accessing }
@@ -73,13 +73,13 @@ WizardPart >> contentsChanged [
 	self changed: #contents
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardPart >> defaultValue [ 
 
 	^ defaultValue. 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardPart >> defaultValue: aBlockOrObject [
 
 	defaultValue := aBlockOrObject. 
@@ -157,13 +157,13 @@ WizardPart >> hasChanged: aValue [
 	wizardPane ifNotNil: [ wizardPane  hasChanged: self].
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardPart >> inGroupboxNamed: aString [
 
 	groupBoxName := aString. 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardPart >> initialize [
 	
 	super initialize.
@@ -177,7 +177,7 @@ WizardPart >> initialize [
 	numberOfPopulateContents := 0.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardPart >> initializeDefault [
 
 	"implement this method to initialize you part according the default value specified by 'defaultValue:'. This method will be executed only one time when opening the wizard. After that, your defaultValue will not be taken into account anyMore"

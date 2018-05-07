@@ -23,7 +23,7 @@ b build.
 Class {
 	#name : #RTTreeMapExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-TreeMap
+	#category : #'Roassal2-Builder-TreeMap'
 }
 
 { #category : #sources }

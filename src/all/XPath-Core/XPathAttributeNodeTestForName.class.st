@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -33,6 +33,7 @@ XPathAttributeNodeTestForName >> name: aName [
 { #category : #printing }
 XPathAttributeNodeTestForName >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self name;

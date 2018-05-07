@@ -5,7 +5,7 @@ A RobustXmlFeedParser is XmlFeedParser, that can handle error within an xml Item
 Class {
 	#name : #PPRobustXmlFeedParser,
 	#superclass : #PPXmlFeedParser,
-	#category : #PetitIslands-Examples
+	#category : #'PetitIslands-Examples'
 }
 
 { #category : #'as yet unclassified' }

@@ -16,7 +16,7 @@ Class {
 		'packages',
 		'classExtensions'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #adding }
@@ -99,7 +99,7 @@ MoosePharoImporterTask >> description [
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MoosePharoImporterTask >> initialize [
 
 	super initialize.

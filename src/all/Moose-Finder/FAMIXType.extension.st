@@ -30,7 +30,7 @@ FAMIXType >> mooseFinderAttributesIn: composite [
 			titleIcon: MooseIcons famixAttributeGroup;
 			display: [ self attributes ];
 			column: 'Name' evaluated: #name;
-			column: 'Declared type' evaluated: [ :each | each declaredType mooseDisplayString ];
+			column: 'Declared type' evaluated: [ :each | each declaredType gtDisplayString ];
 			column: 'Modifiers' evaluated: [ '' ] tags: #modifiers;
 			when: [ self attributes notEmpty ];
 			selectionPopulate: #selection  
@@ -69,7 +69,7 @@ FAMIXType >> mooseFinderMethodsIn: composite [
 			titleIcon: MooseIcons famixMethodGroup;
 			display: [ self methods ];
 			column: 'Name' evaluated: #signature;
-			column: 'Declared type' evaluated: [ :each | each declaredType mooseDisplayString ];
+			column: 'Declared type' evaluated: [ :each | each declaredType gtDisplayString ];
 			when: [ self methods notEmpty ];
 			selectionPopulate: #selection  
 				entitled: 'Open declared type' 

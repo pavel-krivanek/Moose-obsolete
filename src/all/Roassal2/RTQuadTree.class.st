@@ -59,7 +59,7 @@ Class {
 		'cx',
 		'cy'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #public }
@@ -179,7 +179,7 @@ RTQuadTree >> cy: aFloat [
 	cy := aFloat
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTQuadTree >> initialize [ 
 
 	super initialize.

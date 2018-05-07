@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'collection'
 	],
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #private }
@@ -83,11 +83,12 @@ XMLOrderedList >> = anObject [
 
 	"Test each position with #= using #to:do: for speed instead of
 	just 'collection = anObject collection' because that would
-	make equality depend on the internal collections instead of
-	just their items."
+	make equality depend on the internal collection types instead
+	of just their items."
 	1 to: collection size do: [:i |
 		(collection at: i) = (anObject at: i)
 			ifFalse: [^ false]].
+
 	^ true.
 ]
 
@@ -214,6 +215,12 @@ XMLOrderedList >> asOrderedCollection [
 	^ OrderedCollection withAll: collection
 ]
 
+{ #category : #converting }
+XMLOrderedList >> asString [
+	"don't assume Object>>#asString is defined, for portability"
+	^ self printString
+]
+
 { #category : #accessing }
 XMLOrderedList >> at: anIndex [
 	"optimized"
@@ -270,7 +277,7 @@ XMLOrderedList >> collect: aBlock [
 	| collected |
 
 	collected := self copyEmptyForCollect.
-	"use to:do: for speed"
+	"use #to:do: for speed"
 	1 to: collection size do: [:i |
 		collected addLast: (aBlock value: (collection at: i))].
 	^ collected.
@@ -281,7 +288,7 @@ XMLOrderedList >> collect: aCollectBlock thenSelect: aSelectBlock [
 	| selected |
 
 	selected := self copyEmpty.
-	"use to:do: for speed"
+	"use #to:do: for speed"
 	1 to: collection size do: [:i | | item |
 		item := aCollectBlock value: (collection at: i).
 		(aSelectBlock value: item)
@@ -299,7 +306,7 @@ XMLOrderedList >> copy [
 	| copy |
 
 	copy := self copyEmpty.
-	"#to:do: for speed with direct access"
+	"use #to:do: for speed with direct access"
 	1 to: collection size do: [:i |
 		copy addToCopyLast: (collection at: i)].
 	^ copy.
@@ -542,7 +549,7 @@ XMLOrderedList >> fourth [
 
 { #category : #comparing }
 XMLOrderedList >> hash [
-	| hash|
+	| hash |
 
 	hash := self species hash.
 	self size > 10
@@ -669,7 +676,7 @@ XMLOrderedList >> reject: aBlock [
 	| selected |
 
 	selected := self copyEmpty.
-	"use to:do: for speed"
+	"use #to:do: for speed"
 	1 to: collection size do: [:i | | item |
 		item := collection at: i.
 		(aBlock value: item)
@@ -682,7 +689,7 @@ XMLOrderedList >> reject: aRejectBlock thenCollect: aCollectBlock [
 	| collected |
 
 	collected := self copyEmptyForCollect.
-	"use to:do: for speed"
+	"use #to:do: for speed"
 	1 to: collection size do: [:i | | item |
 		item := collection at: i.
 		(aRejectBlock value: item)
@@ -795,7 +802,7 @@ XMLOrderedList >> select: aBlock [
 	| selected |
 
 	selected := self copyEmpty.
-	"use to:do: for speed"
+	"use #to:do: for speed"
 	1 to: collection size do: [:i | | item |
 		item := collection at: i.
 		(aBlock value: item)
@@ -808,7 +815,7 @@ XMLOrderedList >> select: aSelectBlock thenCollect: aCollectBlock [
 	| collected |
 
 	collected := self copyEmptyForCollect.
-	"use to:do: for speed"
+	"use #to:do: for speed"
 	1 to: collection size do: [:i | | item |
 		item := collection at: i.
 		(aSelectBlock value: item)

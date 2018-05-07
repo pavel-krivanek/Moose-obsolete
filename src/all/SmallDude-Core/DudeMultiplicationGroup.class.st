@@ -6,14 +6,13 @@ a group of duplication groups should store a bunch of distinct clone groups
 Class {
 	#name : #DudeMultiplicationGroup,
 	#superclass : #MooseGroup,
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
 { #category : #meta }
 DudeMultiplicationGroup class >> annotation [
 	<MSEClass: #MultiplicationGroup super: #MooseGroup>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #roassal }

@@ -1,1 +1,1 @@
-Package { #name : #Fame-SmalltalkBinding }
+Package { #name : #'Fame-SmalltalkBinding' }

@@ -6,7 +6,7 @@ Class {
 		'properties',
 		'endToken'
 	],
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
 { #category : #generated }
@@ -29,7 +29,7 @@ DelphiFormItemNode >> endToken: aSmaCCToken [
 	endToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiFormItemNode >> initialize [
 	super initialize.
 	properties := OrderedCollection new: 2.

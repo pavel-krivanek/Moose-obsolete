@@ -13,10 +13,9 @@ SpecOfClassExtensionsTests >> testObjectsAreNotStateSpecs [
 { #category : #tests }
 SpecOfClassExtensionsTests >> testPrintingBlockForSpecTitle [
 	| result |
-	
-	result := [:blockArg | blockArg > 0] stringForSpecTitle.
-	
-	self assert: result = '[ :blockArg | blockArg > 0 ]'
+	result := [ :blockArg | blockArg > 0 ] stringForSpecTitle.
+
+	self assert: result equals: '[ :blockArg | blockArg > 0 ]'
 ]
 
 { #category : #tests }

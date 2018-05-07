@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'addedElements'
 	],
-	#category : #Roassal2-Builder-Map
+	#category : #'Roassal2-Builder-Map'
 }
 
 { #category : #adding }

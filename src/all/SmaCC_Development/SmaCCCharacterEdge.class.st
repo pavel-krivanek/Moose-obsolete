@@ -5,7 +5,10 @@ SmaCCCharacterEdge is a SmaCCEdge for Characters.
 Class {
 	#name : #SmaCCCharacterEdge,
 	#superclass : #SmaCCEdge,
-	#category : #SmaCC_Development
+	#instVars : [
+		'codeSizeEstimate'
+	],
+	#category : #'SmaCC_Development'
 }
 
 { #category : #comparing }
@@ -16,16 +19,16 @@ SmaCCCharacterEdge >> <= aSmaCCEdge [
 
 { #category : #compiling }
 SmaCCCharacterEdge >> codeSizeEstimate [
-	| last size |
-	size := 1.
-	last := transitionObjects first asInteger - 1.
-	transitionObjects
-		do:
-			[ :each | 
-			each asInteger - 1 = last
-				ifFalse: [ size := size + 1 ].
-			last := each asInteger ].
-	^ size * 8 + 4
+	^ codeSizeEstimate
+		ifNil: [ | last size |
+			size := 1.
+			last := transitionObjects first asInteger - 1.
+			transitionObjects
+				do: [ :each | 
+					each asInteger - 1 = last
+						ifFalse: [ size := size + 1 ].
+					last := each asInteger ].
+			codeSizeEstimate := size * 8 + 4 ]
 ]
 
 { #category : #compiling }
@@ -52,8 +55,7 @@ SmaCCCharacterEdge >> mergeWith: aSmaCCEdge [
 { #category : #private }
 SmaCCCharacterEdge >> remove: aCollection [
 	transitionObjects := transitionObjects copy.
-	aCollection
-		do: [ :each | transitionObjects remove: each ifAbsent: [  ] ]
+	transitionObjects smaccRemoveAll: aCollection
 ]
 
 { #category : #accessing }
@@ -61,7 +63,7 @@ SmaCCCharacterEdge >> setClass [
 	^ SmaCCCharacterSet
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCCharacterEdge >> to: aSmaCCNode on: aStringOrNil [
 	toNode := aSmaCCNode.
 	transitionObjects := aStringOrNil notNil

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'rootParserContext'
 	],
-	#category : #GT-PetitParserDebugger
+	#category : #'GT-PetitParserDebugger'
 }
 
 { #category : #'predicates creation' }

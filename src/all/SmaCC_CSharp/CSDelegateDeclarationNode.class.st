@@ -15,7 +15,7 @@ Class {
 		'constraintClauses',
 		'semicolon'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -77,7 +77,7 @@ CSDelegateDeclarationNode >> delegateToken: aSmaCCToken [
 	delegateToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSDelegateDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

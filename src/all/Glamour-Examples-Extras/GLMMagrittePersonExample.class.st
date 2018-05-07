@@ -8,10 +8,10 @@ Class {
 	#classVars : [
 		'SampleData'
 	],
-	#category : #Glamour-Examples-Extras
+	#category : #'Glamour-Examples-Extras'
 }
 
-{ #category : #examples-utils }
+{ #category : #'examples-utils' }
 GLMMagrittePersonExample class >> gtExampleShakespeare [
 	<gtExample>
 	^ self new
@@ -19,7 +19,7 @@ GLMMagrittePersonExample class >> gtExampleShakespeare [
 		address: 'Stratford-upon-Avon' 
 ]
 
-{ #category : #examples-utils }
+{ #category : #'examples-utils' }
 GLMMagrittePersonExample class >> sampleData [
 	"self new magritteAddressBook openOn: self new magritteAddressBookModel "
 	SampleData ifNil: 
@@ -35,7 +35,7 @@ GLMMagrittePersonExample class >> sampleData [
 
 ]
 
-{ #category : #examples-utils }
+{ #category : #'examples-utils' }
 GLMMagrittePersonExample class >> sampleReset [
 	SampleData := nil.
 

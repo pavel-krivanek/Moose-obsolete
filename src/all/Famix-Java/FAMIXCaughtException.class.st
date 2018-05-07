@@ -4,14 +4,13 @@ This is an exception that is explicitly handled by a method. For example, in Jav
 Class {
 	#name : #FAMIXCaughtException,
 	#superclass : #FAMIXException,
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXCaughtException class >> annotation [
 	<MSEClass: #CaughtException super: #FAMIXException>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }

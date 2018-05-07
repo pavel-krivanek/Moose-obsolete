@@ -4,7 +4,7 @@ SmaCCCaseInsensitiveToken represents a case insensitive token (e.g., ""IF"" and 
 Class {
 	#name : #SmaCCCaseInsensitiveToken,
 	#superclass : #SmaCCToken,
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #comparing }

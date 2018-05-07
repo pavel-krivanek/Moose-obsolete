@@ -1,13 +1,13 @@
 Class {
 	#name : #StScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Smalltalk_Parser
+	#category : #'SmaCC_Smalltalk_Parser'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 StScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(20 'false' 12) #(20 'nil' 14) #(20 'true' 11) #(26 '||' 15))
+	#(#(20 'false' 13) #(20 'nil' 14) #(20 'true' 15) #(26 '||' 18))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -22,12 +22,12 @@ StScanner >> binarySymbolId [
 
 { #category : #generated }
 StScanner >> emptySymbolTokenId [
-	^ 64
+	^ 67
 ]
 
 { #category : #generated }
 StScanner >> errorTokenId [
-	^ 65
+	^ 68
 ]
 
 { #category : #generated }
@@ -116,33 +116,27 @@ StScanner >> scan5 [
 StScanner >> scanForToken [
 	self step.
 	currentCharacter == $"
-		ifTrue:
-			[ ^ self scanForTokenX7 ].
+		ifTrue: [ ^ self scanForTokenX7 ].
 	currentCharacter == $#
 		ifTrue: [ ^ self recordAndReportMatch: #(1 32) ].
 	currentCharacter == $$
-		ifTrue:
-			[ ^ self scanForTokenX11 ].
+		ifTrue: [ ^ self scanForTokenX11 ].
 	currentCharacter == $'
-		ifTrue:
-			[ ^ self scanForTokenX10 ].
+		ifTrue: [ ^ self scanForTokenX10 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(10 32) ].
-	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(4 32) ].
-	currentCharacter == $-
-		ifTrue:
-			[ ^ self scanForTokenX1 ].
-	currentCharacter == $.
-		ifTrue: [ ^ self recordAndReportMatch: #(5 32) ].
-	currentCharacter == $:
-		ifTrue:
-			[ ^ self scanForTokenX8 ].
-	currentCharacter == $;
 		ifTrue: [ ^ self recordAndReportMatch: #(2 32) ].
+	currentCharacter == $)
+		ifTrue: [ ^ self recordAndReportMatch: #(3 32) ].
+	currentCharacter == $-
+		ifTrue: [ ^ self scanForTokenX1 ].
+	currentCharacter == $.
+		ifTrue: [ ^ self recordAndReportMatch: #(4 32) ].
+	currentCharacter == $:
+		ifTrue: [ ^ self scanForTokenX8 ].
+	currentCharacter == $;
+		ifTrue: [ ^ self recordAndReportMatch: #(7 32) ].
 	currentCharacter == $<
-		ifTrue:
-			[ ^ self scanForTokenX5 ].
+		ifTrue: [ ^ self scanForTokenX5 ].
 	^ self scanForTokenX12
 ]
 
@@ -157,8 +151,7 @@ StScanner >> scanForTokenX1 [
 				or: [ (currentCharacter between: $* and: $,)
 						or: [ currentCharacter == $/
 								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
+										or: [ '\|~' includes: currentCharacter ] ] ] ] ])
 		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
 	^ self reportLastMatch
 ]
@@ -182,32 +175,27 @@ StScanner >> scanForTokenX11 [
 { #category : #generated }
 StScanner >> scanForTokenX12 [
 	currentCharacter == $>
-		ifTrue:
-			[ ^ self scanForTokenX4 ].
+		ifTrue: [ ^ self scanForTokenX4 ].
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(17 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(10 32) ].
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(19 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11 32) ].
 	currentCharacter == $^
-		ifTrue: [ ^ self recordAndReportMatch: #(16 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(12 32) ].
 	currentCharacter == ${
-		ifTrue: [ ^ self recordAndReportMatch: #(3 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(16 32) ].
 	currentCharacter == $|
-		ifTrue:
-			[ ^ self scanForTokenX3 ].
+		ifTrue: [ ^ self scanForTokenX3 ].
 	currentCharacter == $}
-		ifTrue: [ ^ self recordAndReportMatch: #(8 32) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(19 32) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self recordAndReportMatch: #(21 32) ].
 	currentCharacter isSeparator
-		ifTrue:
-			[ ^ self scanForTokenX9 ].
+		ifTrue: [ ^ self scanForTokenX9 ].
 	currentCharacter isSpecial
-		ifTrue:
-			[ ^ self scanForTokenX2 ].
+		ifTrue: [ ^ self scanForTokenX2 ].
 	(currentCharacter isLetter or: [ currentCharacter == $_ ])
-		ifTrue:
-			[ ^ self scanForTokenX6 ].
+		ifTrue: [ ^ self scanForTokenX6 ].
 	^ self recordAndReportMatch: #(32)
 ]
 
@@ -220,14 +208,27 @@ StScanner >> scanForTokenX2 [
 				or: [ (currentCharacter between: $* and: $,)
 						or: [ currentCharacter == $/
 								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
+										or: [ '\|~' includes: currentCharacter ] ] ] ] ])
 		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 StScanner >> scanForTokenX3 [
+	self recordMatch: #(17 26 32).
+	self step.
+	(currentCharacter == $!
+		or: [ (currentCharacter between: $% and: $&)
+				or: [ (currentCharacter between: $* and: $,)
+						or: [ currentCharacter == $/
+								or: [ (currentCharacter between: $< and: $@)
+										or: [ '\|~' includes: currentCharacter ] ] ] ] ])
+		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
+	^ self reportLastMatch
+]
+
+{ #category : #generated }
+StScanner >> scanForTokenX4 [
 	self recordMatch: #(9 26 32).
 	self step.
 	(currentCharacter == $!
@@ -235,38 +236,21 @@ StScanner >> scanForTokenX3 [
 				or: [ (currentCharacter between: $* and: $,)
 						or: [ currentCharacter == $/
 								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
-		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
-	^ self reportLastMatch
-]
-
-{ #category : #generated }
-StScanner >> scanForTokenX4 [
-	self recordMatch: #(7 26 32).
-	self step.
-	(currentCharacter == $!
-		or: [ (currentCharacter between: $% and: $&)
-				or: [ (currentCharacter between: $* and: $,)
-						or: [ currentCharacter == $/
-								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
+										or: [ '\|~' includes: currentCharacter ] ] ] ] ])
 		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 StScanner >> scanForTokenX5 [
-	self recordMatch: #(6 26 32).
+	self recordMatch: #(8 26 32).
 	self step.
 	(currentCharacter == $!
 		or: [ (currentCharacter between: $% and: $&)
 				or: [ (currentCharacter between: $* and: $,)
 						or: [ currentCharacter == $/
 								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
+										or: [ '\|~' includes: currentCharacter ] ] ] ] ])
 		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
 	^ self reportLastMatch
 ]
@@ -307,10 +291,10 @@ StScanner >> scanForTokenX7 [
 
 { #category : #generated }
 StScanner >> scanForTokenX8 [
-	self recordMatch: #(18 32).
+	self recordMatch: #(5 32).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	^ self reportLastMatch
 ]
 

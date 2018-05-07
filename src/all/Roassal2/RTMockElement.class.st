@@ -5,7 +5,7 @@ Class {
 		'realElement',
 		'position'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #action }

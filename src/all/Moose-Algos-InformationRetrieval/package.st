@@ -1,1 +1,1 @@
-Package { #name : #Moose-Algos-InformationRetrieval }
+Package { #name : #'Moose-Algos-InformationRetrieval' }

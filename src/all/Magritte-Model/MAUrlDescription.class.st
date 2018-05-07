@@ -1,7 +1,7 @@
 Class {
 	#name : #MAUrlDescription,
 	#superclass : #MAElementDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
 { #category : #visiting }

@@ -9,15 +9,13 @@ Class {
 		'hasClassScope',
 		'parentType'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXAttribute class >> annotation [
 	<MSEClass: #Attribute super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
-
-	^ self
 ]
 
 { #category : #accessing }
@@ -45,19 +43,19 @@ FAMIXAttribute >> hasClassScope: aBoolean [
 	hasClassScope := aBoolean
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXAttribute >> initialize [
 	super initialize.
 	hasClassScope := false.
 
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXAttribute >> namespaceScope [
 	^ self parentType namespaceScope
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXAttribute >> packageScope [
 	^ self parentType packageScope
 ]
@@ -80,7 +78,7 @@ FAMIXAttribute >> parentType: aType [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXAttribute >> typeScope [
 	^ self parentType
 ]

@@ -13,7 +13,7 @@ Class {
 		'pairs',
 		'action'
 	],
-	#category : #Roassal2-Builder-SimilarityMatrix
+	#category : #'Roassal2-Builder-SimilarityMatrix'
 }
 
 { #category : #examples }
@@ -166,12 +166,12 @@ RTSimilarityMatrix >> gridView [
 	view open.
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTSimilarityMatrix >> on: aCollection by: similarity [
 	^ self on: aCollection by: similarity withAction: nil
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTSimilarityMatrix >> on: aCollection by: similarity withAction: aCallBack [
 	"initialize model"
 	elements := aCollection.

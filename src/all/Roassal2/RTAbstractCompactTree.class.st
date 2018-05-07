@@ -29,7 +29,7 @@ Class {
 		'initialLayout',
 		'margin'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #testing }
@@ -209,17 +209,17 @@ RTAbstractCompactTree >> getAbcissaOf: aNode inSubtreeFromLayer: anInteger [
 	^ x
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractCompactTree >> greedyCycleRemoval: aGraph [
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractCompactTree >> initialLayout: aLayout [
 
 	initialLayout := aLayout 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractCompactTree >> initialize [ 
 
 	super initialize.
@@ -229,7 +229,7 @@ RTAbstractCompactTree >> initialize [
 	sonsDictionary := Dictionary new
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractCompactTree >> initialize: aNode whoseFatherIs: another [ 
 
 	self fatherOf: aNode put: another.
@@ -257,7 +257,7 @@ RTAbstractCompactTree >> nodeAbcissaWithNeighbor: aNode [
 	self subclassResponsibility 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractCompactTree >> root: aNode [ 
 
 	root := aNode 

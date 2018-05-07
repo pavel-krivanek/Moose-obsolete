@@ -6,7 +6,7 @@ Class {
 		'envStack',
 		'superclassDict'
 	],
-	#category : #Fame-SmalltalkBinding
+	#category : #'Fame-SmalltalkBinding'
 }
 
 { #category : #DSL }
@@ -74,7 +74,7 @@ FMIncrementalMMBuilder >> ensurePackage: aString [
 	^ packageDict at: aString ifAbsentPut: [ Dictionary new ]
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> ensurePragmaClass: aClass while: aBlock [
 
 	| pragma pakPragma className superclass |
@@ -94,7 +94,7 @@ FMIncrementalMMBuilder >> ensurePragmaClass: aClass while: aBlock [
 
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> ensurePragmaSuperclass: aSuperclassName [
 
 	| stClass |
@@ -106,7 +106,7 @@ FMIncrementalMMBuilder >> ensurePragmaSuperclass: aSuperclassName [
 	^ stClass
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> followOppositeProperty: opposite in: aClassOrStringOrSymbol [
 
 	| aClass |
@@ -174,7 +174,7 @@ FMIncrementalMMBuilder >> pragmaProperty: aSymbol in: aClass [
 	self pragmaProperty: aSymbol in: aClass followOpposite: true
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> pragmaProperty: aSymbol in: aClass followOpposite: aBoolean [
 
 	| aMethod pragma propName propType opposite multi derived |
@@ -244,7 +244,7 @@ FMIncrementalMMBuilder >> property: name withMany: typeName opposite: oppositeNa
 	self property: name type: typeName opposite: oppositeName multivalued: true
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> resolveFameName: var [
 	"See FMPragmaProcessor>>ensureClass:"
 
@@ -258,7 +258,7 @@ FMIncrementalMMBuilder >> resolveFameName: var [
 	^ var
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> resolveFameNameFromPragma: class [
 	| pragma pakPragma typename |
 	pragma := (self retrieveClassPragma: class).
@@ -283,7 +283,7 @@ FMIncrementalMMBuilder >> resolveSmalltalkBindingsIn: aFMMetaRepository [
 	unboundProps do: [ :prop | prop setImplementingSelector: prop name asSymbol ]
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> retrieveClassPragma: aClass [
 	| pragma |
 	pragma := Pragma allNamed: #MSEClass:super: in: aClass class.
@@ -293,7 +293,7 @@ FMIncrementalMMBuilder >> retrieveClassPragma: aClass [
 	^ pragma
 ]
 
-{ #category : #private-pragmas }
+{ #category : #'private-pragmas' }
 FMIncrementalMMBuilder >> retrievePackagePragma: pragma [
 	^ Pragma inMethod: pragma method named: #package:
 ]

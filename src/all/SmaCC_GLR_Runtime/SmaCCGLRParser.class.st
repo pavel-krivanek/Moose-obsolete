@@ -22,15 +22,13 @@ Class {
 		'currentState',
 		'tryAllStates',
 		'lastToken',
-		'lastPosition',
 		'lastState',
-		'nextScannerState',
-		'nextScannerPosition'
+		'nextScannerState'
 	],
 	#classInstVars : [
 		'cachedTrees'
 	],
-	#category : #SmaCC_GLR_Runtime
+	#category : #'SmaCC_GLR_Runtime'
 }
 
 { #category : #accessing }
@@ -175,8 +173,7 @@ SmaCCGLRParser >> duplicateState [
 	stateStack := stateStack copy.
 	state := currentState copy.
 	state stateStack: stateStack nodeStack: nodeStack.
-	state position: scanner position.
-	state scannerState: scanner state.
+	state scannerState: scanner currentState.
 	states add: state.
 	^state
 ]
@@ -190,32 +187,19 @@ SmaCCGLRParser >> fixObject: anObject [
 	^ result
 ]
 
-{ #category : #public }
+{ #category : #private }
 SmaCCGLRParser >> getNextToken [
 	currentToken isNil
 		ifFalse: [ ^ self ].
-	(lastState = currentState scannerState
-		and: [ lastPosition = currentState position ])
-		ifTrue:
-			[ currentToken := lastToken.
-			scanner
-				setPosition: nextScannerPosition;
-				state: nextScannerState.
-			currentState
-				scannerState: nextScannerState;
-				position: nextScannerPosition ]
-		ifFalse:
-			[ lastPosition := currentState position.
-			lastState := currentState scannerState.
-			scanner
-				state: currentState scannerState;
-				setPosition: currentState position.
+	lastState = currentState scannerState
+		ifTrue: [ currentToken := lastToken.
+			scanner restoreState: nextScannerState.
+			currentState scannerState: nextScannerState ]
+		ifFalse: [ lastState := currentState scannerState.
+			scanner restoreState: currentState scannerState.
 			lastToken := currentToken := scanner next.
-			nextScannerPosition := scanner position.
-			nextScannerState := scanner state ].
-	currentState
-		scannerState: nextScannerState;
-		position: nextScannerPosition
+			nextScannerState := scanner currentState ].
+	currentState scannerState: nextScannerState
 ]
 
 { #category : #private }
@@ -224,12 +208,11 @@ SmaCCGLRParser >> initialParserState [
 	state := SmaCCParserState
 		stateStack: stateStack
 		nodeStack: nodeStack
-		scannerState: scanner state
-		position: scanner position.
+		scannerState: scanner currentState.
 	^ state
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCGLRParser >> initialize [
 	super initialize.
 	states := OrderedCollection new.
@@ -244,11 +227,7 @@ SmaCCGLRParser >> isAmbiguous: action [
 
 { #category : #private }
 SmaCCGLRParser >> killState [
-	| index |
-	index := states identityIndexOf: currentState.
-	index > 0
-		ifFalse: [ ^ self ].
-	states removeAt: index.
+	states remove: currentState ifAbsent: [  ].
 	states isEmpty
 		ifTrue: [ self handleError: 0 ].
 	(states size = 1 and: [ parseAll not ])
@@ -349,7 +328,7 @@ SmaCCGLRParser >> popNodeStack [
 { #category : #private }
 SmaCCGLRParser >> position: anInteger [
 	super position: anInteger.
-	currentState position: anInteger
+	currentState scannerState: scanner currentState
 ]
 
 { #category : #private }
@@ -408,7 +387,13 @@ SmaCCGLRParser >> restoreState: aSmaCCParserState [
 	currentState := aSmaCCParserState.
 	nodeStack := aSmaCCParserState nodeStack.
 	stateStack := aSmaCCParserState stateStack.
-	scanner state: currentState scannerState
+	scanner restoreState: currentState scannerState
+]
+
+{ #category : #private }
+SmaCCGLRParser >> scope: aSymbol [
+	super scope: aSymbol.
+	currentState scannerState: scanner currentState
 ]
 
 { #category : #accessing }
@@ -422,8 +407,7 @@ SmaCCGLRParser >> setAllStartingStates [
 					(SmaCCParserState
 						stateStack: (OrderedCollection with: each)
 						nodeStack: OrderedCollection new
-						scannerState: scanner state
-						position: scanner position) ]
+						scannerState: scanner currentState) ]
 ]
 
 { #category : #private }
@@ -494,12 +478,6 @@ SmaCCGLRParser >> splitWithAction: anInteger [
 		ifTrue: [ self performParsingStep ] ]
 		ensure: [ self restoreState: previousState.
 			currentToken := previousToken ]
-]
-
-{ #category : #private }
-SmaCCGLRParser >> state: aSymbol [
-	super state: aSymbol.
-	currentState scannerState: aSymbol
 ]
 
 { #category : #private }

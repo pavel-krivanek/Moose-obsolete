@@ -4,7 +4,7 @@ This class validates standalone externally defined attributes that contain unpar
 Class {
 	#name : #XMLStandaloneExternalEntityAttributeValidator,
 	#superclass : #XMLEntityAttributeValidator,
-	#category : #XML-Parser-Validation-Standalone
+	#category : #'XML-Parser-Validation-Standalone'
 }
 
 { #category : #testing }

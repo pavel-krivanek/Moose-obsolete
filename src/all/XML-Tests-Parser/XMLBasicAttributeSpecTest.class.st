@@ -1,7 +1,7 @@
 Class {
 	#name : #XMLBasicAttributeSpecTest,
 	#superclass : #XMLAttributeSpecTest,
-	#category : #XML-Tests-Parser-Utils
+	#category : #'XML-Tests-Parser-Utils'
 }
 
 { #category : #accessing }

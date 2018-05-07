@@ -11,7 +11,7 @@ b
 Class {
 	#name : #RTEmptyViewContextInteraction,
 	#superclass : #RTAbstractContextInteraction,
-	#category : #Roassal2GT-Glamour-Roassal-Interaction
+	#category : #'Roassal2GT-Glamour-Roassal-Interaction'
 }
 
 { #category : #hooks }

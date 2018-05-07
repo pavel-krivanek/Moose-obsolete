@@ -12,7 +12,7 @@ Class {
 		'selector',
 		'arguments'
 	],
-	#category : #SmaCC_GLR_Runtime
+	#category : #'SmaCC_GLR_Runtime'
 }
 
 { #category : #'instance creation' }
@@ -35,7 +35,7 @@ SmaCCDeferredReduceAction >> arguments [
 	^ arguments
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDeferredReduceAction >> argumentsFor: aSmaCCParser [
 	1 to: arguments size do:
 		[ :i | 
@@ -65,7 +65,7 @@ SmaCCDeferredReduceAction >> selector [
 	^ selector
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCDeferredReduceAction >> selector: aSymbol arguments: aCollection [
 	selector := aSymbol.
 	arguments := aCollection

@@ -12,7 +12,7 @@ Class {
 		'terms1',
 		'terms2'
 	],
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
 { #category : #'instance creation' }
@@ -84,13 +84,13 @@ MalLogLikelihoodRatio >> logL: p and: k and: n [
 						ifFalse: [(n - k) * (1 - p) ln])]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalLogLikelihoodRatio >> setTerms1: aHapaxTerms [
 	
 	terms1 := aHapaxTerms
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalLogLikelihoodRatio >> setTerms2: aHapaxTerms [
 	
 	terms2 := aHapaxTerms

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'prefix'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -33,6 +33,7 @@ XPathElementNodeTestForPrefix >> prefix: aPrefix [
 { #category : #printing }
 XPathElementNodeTestForPrefix >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self prefix;

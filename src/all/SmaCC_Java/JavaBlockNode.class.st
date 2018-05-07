@@ -6,7 +6,7 @@ Class {
 		'statements',
 		'rightBrace'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -24,7 +24,7 @@ JavaBlockNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaBlockNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

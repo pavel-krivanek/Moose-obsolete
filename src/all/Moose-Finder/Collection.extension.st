@@ -25,7 +25,7 @@ Collection >> mooseFinderListIn: composite [
 		searchOn: [:text :each | Smalltalk compiler evaluate: ' | entity each | each := self. entity := each.', text for: each logged: false];
 		display: #mooseInterestingEntity;
 		send: [:each | each isNil ifTrue: [nil] ifFalse: [each asMooseGroup]];
-		format: #mooseDisplayString;
+		format: #gtDisplayString;
 		icon: #mooseIcon;
 		title: [ :each | each mooseInterestingEntity size asString, ' items'];
 		titleIcon: MooseIcons mooseList;

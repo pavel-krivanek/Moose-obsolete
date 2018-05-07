@@ -12,7 +12,7 @@ Class {
 	#instVars : [
 		'node'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
@@ -46,7 +46,7 @@ SmaCCNotRENode >> makeCaseInsensitive [
 	node makeCaseInsensitive
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNotRENode >> node: aSmaCCCharacterRENode [
 	node := aSmaCCCharacterRENode
 ]

@@ -1,7 +1,7 @@
 Class {
 	#name : #RTSparklineExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Sparkline
+	#category : #'Roassal2-Sparkline'
 }
 
 { #category : #sources }

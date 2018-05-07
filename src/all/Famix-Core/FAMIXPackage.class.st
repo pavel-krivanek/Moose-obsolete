@@ -9,14 +9,13 @@ Class {
 	#instVars : [
 		'childNamedEntities'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXPackage class >> annotation [
 	<MSEClass: #Package super: #FAMIXScopingEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -37,32 +36,26 @@ FAMIXPackage >> childNamedEntities: aNamedEntity [
 	childNamedEntities value: aNamedEntity
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXPackage >> initialize [
 	super initialize.
 	self isPackage: true.
 	childNamedEntities := FMNullMultivalueLink on: self opposite: #parentPackage: selector: #childNamedEntities.
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXPackage >> namespaceScope [
 
 	self shouldNotImplement 
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXPackage >> packageScope [
 
 	^ self
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXPackage >> selectWithinYourScope: aMooseQueryResult [
 	^ aMooseQueryResult withinPackage: self
-]
-
-{ #category : #moosechef-scoping-filtering }
-FAMIXPackage >> yourScope [
-	
-	^ #packageScope
 ]

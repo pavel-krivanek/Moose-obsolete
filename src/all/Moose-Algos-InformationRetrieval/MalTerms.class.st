@@ -16,7 +16,7 @@ Class {
 	#instVars : [
 		'size'
 	],
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
 { #category : #examples }

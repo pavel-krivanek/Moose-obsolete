@@ -30,7 +30,7 @@ Class {
 		'toPositions',
 		'shouldSetDefaultAttachPoint'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #'as yet unclassified' }
@@ -166,7 +166,7 @@ RTEdgeDrivenLayout >> fromPositions: anArray [
 	fromPositions := anArray
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTEdgeDrivenLayout >> initialize [
 	"Initialization"
 	super initialize.
@@ -213,7 +213,7 @@ RTEdgeDrivenLayout >> userDefinedEdges [
 	^userDefinedEdges
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTEdgeDrivenLayout >> userDefinedEdges: aCollectionOfEdges [
 	"useful to tell to the layout which edges have to be used for the layout"
 

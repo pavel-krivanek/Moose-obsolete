@@ -4,10 +4,10 @@ I am a description of durations, possible values are instances of ==Duration==.
 Class {
 	#name : #MADurationDescription,
 	#superclass : #MAMagnitudeDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADurationDescription class >> defaultKind [
 	^ Duration
 ]

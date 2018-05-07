@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : #Arki-Reporter-Browser
+	#category : #'Arki-Reporter-Browser'
 }
 
 { #category : #opening }
@@ -43,6 +43,12 @@ REPReport >> build: spec [
 { #category : #opening }
 REPReport >> exportAsHudsonTests [
 	REPHudson runOn: self spec
+]
+
+{ #category : #'as yet unclassified' }
+REPReport >> gtInspectorConcernListIn: a [
+	<gtInspectorPresentationOrder: 1>
+	^ self spec root gtInspectorConcernListIn: a
 ]
 
 { #category : #private }

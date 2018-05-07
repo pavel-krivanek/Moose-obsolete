@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'size'
 	],
-	#category : #PetitParser-Parsers
+	#category : #'PetitParser-Parsers'
 }
 
 { #category : #operators }

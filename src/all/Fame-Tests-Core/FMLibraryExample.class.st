@@ -1,7 +1,7 @@
 Class {
 	#name : #FMLibraryExample,
 	#superclass : #TestCase,
-	#category : #Fame-Tests-Core
+	#category : #'Fame-Tests-Core'
 }
 
 { #category : #examples }

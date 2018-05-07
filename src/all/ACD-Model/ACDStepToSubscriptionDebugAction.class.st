@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'targetSubscription'
 	],
-	#category : #ACD-Model
+	#category : #'ACD-Model'
 }
 
 { #category : #'as yet unclassified' }

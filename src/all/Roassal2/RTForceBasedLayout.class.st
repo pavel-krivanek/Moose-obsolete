@@ -93,7 +93,7 @@ Class {
 		'nbIterations',
 		'shouldUseProgressBar'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #algorithm }
@@ -164,7 +164,7 @@ RTForceBasedLayout >> chargeOf: aNode [
 	^ charges at: aNode ifAbsent: [ ^ charge ] 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTForceBasedLayout >> defaultInitialLayout [
 	^ RTGridLayout new
 ]
@@ -207,7 +207,7 @@ RTForceBasedLayout >> initialPositionOfNodes: nodeElements [
 	initialLayout executeOnElements: nodeElements
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTForceBasedLayout >> initialize [
 	super initialize.
 	nbIterations := 0.

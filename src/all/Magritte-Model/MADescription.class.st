@@ -22,85 +22,85 @@ Class {
 	#instVars : [
 		'accessor'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultAccessor [
 	^ MANullAccessor new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultComment [
 	^ nil
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultConditions [
 	^ Array new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultDefault [
 	^ nil
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultGroup [
 	^ nil
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultKind [
 	^ Object
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultLabel [
 	^ String new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultPersistent [
 	^ true
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultPriority [
 	^ 0
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultReadonly [
 	^ false
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultRequired [
 	^ false
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultStringReader [
 	^ MAStringReader
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultStringWriter [
 	^ MAStringWriter
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultUndefined [
 	^ String new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultValidator [
 	^ MAValidatorVisitor
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MADescription class >> defaultVisible [
 	^ true
 ]
@@ -110,7 +110,7 @@ MADescription class >> defaultVisibleInReport [
 	^true
 ]
 
-{ #category : #accessing-examples }
+{ #category : #'accessing-examples' }
 MADescription class >> grouping [
 	^ MADescriptionHolder groupOf: self
 ]
@@ -208,6 +208,18 @@ MADescription >> beWriteable [
 	self readonly: false
 ]
 
+{ #category : #'*magritte-model-builder' }
+MADescription >> canExpand [
+	" used to expand a relation description into a group "
+	^self propertyAt: #canExpand ifAbsent: [ self defaultCanExpand ]
+]
+
+{ #category : #'*magritte-model-builder' }
+MADescription >> canExpand: aBoolean [
+	" used to expand a relation description into a group "
+	^self propertyAt: #canExpand put: aBoolean
+]
+
 { #category : #accessors }
 MADescription >> chainAccessor: anArray [
 	"Uses ==anArray== of selectors to read from the model."
@@ -215,36 +227,36 @@ MADescription >> chainAccessor: anArray [
 	self accessor: (MAChainAccessor accessors: anArray)
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> comment [
 	"Answer a comment or help-text giving a hint what this description is used for. GUIs that are built from this description might display it as a tool-tip."
 
 	^ self propertyAt: #comment ifAbsent: [ self class defaultComment ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> comment: aString [
 	self propertyAt: #comment put: aString
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> conditions [
 	"Answer a collection of additional conditions that need to be fulfilled so that the described model is valid. Internally the collection associates conditions with an error string."
 
 	^ self propertyAt: #conditions ifAbsent: [ self class defaultConditions ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> conditions: anArray [
 	self propertyAt: #conditions put: anArray
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> conflictErrorMessage [
 	^ self propertyAt: #conflictErrorMessage ifAbsent: [ 'Input is conflicting with concurrent modification' ]
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> conflictErrorMessage: aString [
 	self propertyAt: #conflictErrorMessage put: aString
 ]
@@ -258,12 +270,22 @@ MADescription >> default [
 MADescription >> default: anObject [
 ]
 
+{ #category : #'*magritte-model-builder' }
+MADescription >> defaultCanExpand [
+	" used to expand a relation description into a group "
+	self isVisible ifFalse: [ ^false ].
+	self isReadonly ifTrue: [ ^false ].
+	self tabDisplay ifTrue: [ ^false ].
+	self group ifNotNil: [ ^false ].
+	^true
+]
+
 { #category : #'owning object' }
 MADescription >> describedObject [
 	^ MADynamicDescribedObject value
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionComment [
 	<magritteDescription>
 	^ MAMemoDescription new
@@ -274,7 +296,7 @@ MADescription >> descriptionComment [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionDefault [
 	<magritteDescription>
 	^ self class isAbstract
@@ -287,7 +309,7 @@ MADescription >> descriptionDefault [
 				yourself ]
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionGroup [
 	<magritteDescription>
 	^ MAStringDescription new
@@ -298,7 +320,7 @@ MADescription >> descriptionGroup [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionLabel [
 	<magritteDescription>
 	^ MAStringDescription new
@@ -309,7 +331,7 @@ MADescription >> descriptionLabel [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionName [
 	<magritteDescription>
 	^ MAStringDescription new
@@ -320,7 +342,7 @@ MADescription >> descriptionName [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionPriority [
 	<magritteDescription>
 	^ MANumberDescription new
@@ -332,7 +354,7 @@ MADescription >> descriptionPriority [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionReadonly [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -343,7 +365,7 @@ MADescription >> descriptionReadonly [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionRequired [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -354,7 +376,7 @@ MADescription >> descriptionRequired [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionStringReader [
 	<magritteDescription>
 	^ MASingleOptionDescription new
@@ -367,7 +389,7 @@ MADescription >> descriptionStringReader [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionStringWriter [
 	<magritteDescription>
 	^ MASingleOptionDescription new
@@ -380,7 +402,7 @@ MADescription >> descriptionStringWriter [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionUndefined [
 	<magritteDescription>
 	^ MAStringDescription new
@@ -391,7 +413,7 @@ MADescription >> descriptionUndefined [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionValidator [
 	<magritteDescription>
 	^ MASingleOptionDescription new
@@ -404,7 +426,7 @@ MADescription >> descriptionValidator [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MADescription >> descriptionVisible [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -443,14 +465,14 @@ MADescription >> fromStringCollection: aCollection reader: aParser [
 	^ aCollection collect: [ :each | self fromString: each reader: aParser ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> group [
 	"Answer the group of the receiving description. The group is a string used to categorize and group descriptions. Certain display interpreters with be able to use this information to improve the usability."
 
 	^ self propertyAt: #group ifAbsent: [ self class defaultGroup ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> group: aString [
 	"Answer the group of the receiving description. The group is a string used to categorize and group descriptions. Certain display interpreters with be able to use this information to improve the usability."
 
@@ -551,39 +573,39 @@ MADescription >> kind: aClass [
 	self propertyAt: #kind put: aClass
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> kindErrorMessage [
 	^ self propertyAt: #kindErrorMessage ifAbsent: [ 'Invalid input given' ]
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> kindErrorMessage: aString [
 	self propertyAt: #kindErrorMessage put: aString
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> label [
 	"Answer the label of the receiving description. The label is mostly used as an identifier that is printed next to the input field when building a GUI from the receiver."
 
 	^ self propertyAt: #label ifAbsent: [ self class defaultLabel ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> label: aString [
 	self propertyAt: #label put: aString
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> multipleErrorsMessage [
 	^ self propertyAt: #multipleErrorsMessage ifAbsent: [ 'Multiple errors' ]
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> multipleErrorsMessage: aString [
 	self propertyAt: #multipleErrorsMessage put: aString
 ]
 
-{ #category : #accessing-configuration }
+{ #category : #'accessing-configuration' }
 MADescription >> name [
 	"Answer the name of the description, a human-readable string describing the type."
 
@@ -603,14 +625,14 @@ MADescription >> printOn: aStream [
 	aStream nextPutAll: ' comment: '; print: self comment
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> priority [
 	"Answer a number that is the priority of the receiving description. Priorities are used to give descriptions an explicit order by sorting them according to this number."
 
 	^ self propertyAt: #priority ifAbsent: [ self class defaultPriority ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> priority: aNumber [
 	self propertyAt: #priority put: aNumber
 ]
@@ -629,36 +651,36 @@ MADescription >> read: aModel [
 	^ self accessor read: aModel
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> readonly [
 	"Answer ==true== if the model described by the receiver is read-only."
 
 	^ self propertyAt: #readonly ifAbsent: [ self class defaultReadonly ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> readonly: aBoolean [
 	self propertyAt: #readonly put: aBoolean
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> required [
 	"Answer ==true== if the model described by the receiver is required, this is it cannot be ==nil==."
 
 	^ self propertyAt: #required ifAbsent: [ self class defaultRequired ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> required: aBoolean [
 	self propertyAt: #required put: aBoolean
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> requiredErrorMessage [
 	^ self propertyAt: #requiredErrorMessage ifAbsent: [ 'Input is required but no input given' ]
 ]
 
-{ #category : #accessing-messages }
+{ #category : #'accessing-messages' }
 MADescription >> requiredErrorMessage: aString [
 	self propertyAt: #requiredErrorMessage put: aString
 ]
@@ -670,26 +692,26 @@ MADescription >> selectorAccessor: aSelector [
 	self accessor: (MASelectorAccessor selector: aSelector)
 ]
 
-{ #category : #accessing-strings }
+{ #category : #'accessing-strings' }
 MADescription >> stringReader [
 	"Answer a Visitor that can be used to parse the model described by the receiver from a string."
 
 	^ self propertyAt: #stringReader ifAbsent: [ self class defaultStringReader ]
 ]
 
-{ #category : #accessing-strings }
+{ #category : #'accessing-strings' }
 MADescription >> stringReader: aClass [
 	self propertyAt: #stringReader put: aClass
 ]
 
-{ #category : #accessing-strings }
+{ #category : #'accessing-strings' }
 MADescription >> stringWriter [
 	"Answer a Visitor that can be used to convert the model described by the receiver to a string."
 
 	^ self propertyAt: #stringWriter ifAbsent: [ self class defaultStringWriter ]
 ]
 
-{ #category : #accessing-strings }
+{ #category : #'accessing-strings' }
 MADescription >> stringWriter: aClass [
 	self propertyAt: #stringWriter put: aClass
 ]
@@ -722,7 +744,7 @@ MADescription >> toStringCollection: aCollection writer: aFormatter [
 	^ aCollection collect: [ :each | self toString: each writer: aFormatter ]
 ]
 
-{ #category : #accessing-strings }
+{ #category : #'accessing-strings' }
 MADescription >> undefined [
 	"Answer a string that is printed whenever the model described by the receiver is ==nil==."
 
@@ -730,7 +752,7 @@ MADescription >> undefined [
 		ifNil: [ self class defaultUndefined ]
 ]
 
-{ #category : #accessing-strings }
+{ #category : #'accessing-strings' }
 MADescription >> undefined: aString [
 	self propertyAt: #undefined put: aString
 ]
@@ -742,7 +764,7 @@ MADescription >> validate: anObject [
 	self validator on: anObject description: self
 ]
 
-{ #category : #validation-private }
+{ #category : #'validation-private' }
 MADescription >> validateConditions: anObject [
 	"Validate ==anObject== to satisfy all its custom conditions."
 
@@ -751,7 +773,7 @@ MADescription >> validateConditions: anObject [
 			ifFalse: [ MAConditionError description: self signal: each value ] ]
 ]
 
-{ #category : #validation-private }
+{ #category : #'validation-private' }
 MADescription >> validateKind: anObject [
 	"Validate ==anObject== to be of the right kind."
 
@@ -759,7 +781,7 @@ MADescription >> validateKind: anObject [
 		ifFalse: [ MAKindError description: self signal: self kindErrorMessage ]
 ]
 
-{ #category : #validation-private }
+{ #category : #'validation-private' }
 MADescription >> validateRequired: anObject [
 	"Validate ==anObject== not to be ==nil== if it is required."
 
@@ -767,42 +789,42 @@ MADescription >> validateRequired: anObject [
 		ifTrue: [ MARequiredError description: self signal: self requiredErrorMessage ]
 ]
 
-{ #category : #validation-private }
+{ #category : #'validation-private' }
 MADescription >> validateSpecific: anObject [
 	"Validate ==anObject== to satisfy its descriptions specific validation rules. Subclasses mostly want to override this method."
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> validator [
 	"Answer a Visitor that can be used to validate the model described by the receiver."
 
 	^ self propertyAt: #validator ifAbsent: [ self class defaultValidator ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> validator: aClass [
 	self propertyAt: #validator put: aClass
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> visible [
 	"Answer ==true== if the model described by the receiver is visible, as an opposite to hidden."
 
 	^ self propertyAt: #visible ifAbsent: [ self class defaultVisible ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> visible: aBoolean [
 	self propertyAt: #visible put: aBoolean
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> visibleInReport [
 
 	^self propertyAt: #visibleInReport ifAbsent: [ self class defaultVisibleInReport ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MADescription >> visibleInReport: aBoolean [ 
 	self propertyAt: #visibleInReport put: aBoolean
 ]

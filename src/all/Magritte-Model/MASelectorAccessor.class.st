@@ -8,7 +8,7 @@ Class {
 		'readSelector',
 		'writeSelector'
 	],
-	#category : #Magritte-Model-Accessor
+	#category : #'Magritte-Model-Accessor'
 }
 
 { #category : #testing }
@@ -68,12 +68,12 @@ MASelectorAccessor >> readSelector: aSelector [
 	readSelector := aSelector
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MASelectorAccessor >> selector [
 	^ self readSelector
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MASelectorAccessor >> selector: aSelector [ 
 	self readSelector: aSelector asSymbol.
 	self writeSelector: (aSelector greaseString copyWith: $:) asSymbol

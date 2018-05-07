@@ -10,8 +10,8 @@ It can also return the list of invocations performed on this entity (considered 
 Class {
 	#name : #FAMIXNamedEntity,
 	#superclass : #FAMIXSourcedEntity,
-	#traits : 'TOODependencyQueries + TEntityMetaLevelDependency',
-	#classTraits : 'TOODependencyQueries classTrait + (TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes})',
+	#traits : 'TDependencyQueries + TEntityMetaLevelDependency',
+	#classTraits : 'TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
 	#instVars : [
 		'name',
 		'isStub',
@@ -21,6 +21,10 @@ Class {
 		'annotationInstances'
 	],
 	#classInstVars : [
+		'childrenSelectors',
+		'allParentTypes',
+		'allChildrenTypes',
+		'parentSelectors',
 		'outgoingMSEProperties',
 		'incomingMSEProperties',
 		'outgoingAssociationTypes',
@@ -28,7 +32,7 @@ Class {
 		'allIncomingAssociationTypes',
 		'allOutgoingAssociationTypes'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #accessing }
@@ -51,8 +55,6 @@ FAMIXNamedEntity class >> allOutgoingAssociationTypes [
 FAMIXNamedEntity class >> annotation [
 	<MSEClass: #NamedEntity super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }
@@ -104,16 +106,6 @@ FAMIXNamedEntity class >> parentMetaclass [
 ]
 
 { #category : #accessing }
-FAMIXNamedEntity class >> privateAllChildrenTypes [
-	^ (self childrenTypes withDeep: #childrenTypes collect: #yourself as: Set) asOrderedCollection
-]
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> privateAllParentTypes [
-	^ (self parentTypes withDeep: #parentTypes collect: #yourself as: Set) asOrderedCollection
-]
-
-{ #category : #accessing }
 FAMIXNamedEntity >> annotationInstances [
 	<MSEProperty: #annotationInstances type: #FAMIXAnnotationInstance opposite: #annotatedEntity> <multivalued> <derived>
 	<MSEComment: 'This property corresponds to the set of annotations associated to the entity'>
@@ -137,7 +129,7 @@ FAMIXNamedEntity >> hasUniqueMooseNameInModel [
 	^true
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXNamedEntity >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -171,7 +163,7 @@ FAMIXNamedEntity >> isStub: aBoolean [
 	isStub := aBoolean
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> methodScope [
 	"Empty default scope"
 	^ nil
@@ -190,7 +182,7 @@ FAMIXNamedEntity >> modifiers: aSet [
 	modifiers := aSet
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 	"checks whether receiver is equal to anEntity at the given scope.
 	  For example, a class could be equal to a method at the packageScope, i.e. they belong to the same package.
@@ -221,13 +213,13 @@ FAMIXNamedEntity >> name: aString [
 	self resetMooseName
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> namespaceScope [
 	"Empty default scope"
 	^ nil
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXNamedEntity >> outgoingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -238,7 +230,7 @@ FAMIXNamedEntity >> outgoingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> packageScope [
 	"Empty default scope"
 	^ nil
@@ -283,19 +275,25 @@ FAMIXNamedEntity >> resetMooseName [
 	self children do: [ :entity | entity resetMooseName ]
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> selectWithinYourScope: aMooseQueryResult [
 	self subclassResponsibility
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> typeScope [
 	"Empty default scope"
 	^ nil
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> yourScope [
 	"Empty default scope"
+
+	self
+		deprecated:
+			'#yourScope was used by MooseChef for queries. Now, MooseQuery does not need it anymore. Example of code update: "myEntity queryAllIncoming perform: mySecondEntity yourScope" => "myEntity queryAllIncoming withScope: mySecondEntity class"'
+		on: '12 january 2018'
+		in: 'Moose6.1'.
 	^ nil
 ]

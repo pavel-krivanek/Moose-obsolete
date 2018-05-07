@@ -1,1 +1,1 @@
-Package { #name : #Moose-Tests-Algos-LinearAlgebra }
+Package { #name : #'Moose-Tests-Algos-LinearAlgebra' }

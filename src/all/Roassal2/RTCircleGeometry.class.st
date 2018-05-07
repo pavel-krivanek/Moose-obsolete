@@ -10,7 +10,7 @@ Class {
 		'center',
 		'radius'
 	],
-	#category : #Roassal2-AttachPoint
+	#category : #'Roassal2-AttachPoint'
 }
 
 { #category : #'instance creation' }

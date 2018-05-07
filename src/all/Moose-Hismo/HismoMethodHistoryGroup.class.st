@@ -1,16 +1,16 @@
 Class {
 	#name : #HismoMethodHistoryGroup,
 	#superclass : #HismoHistoryGroup,
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 HismoMethodHistoryGroup class >> annotation [
 	<MSEClass: #MethodHistoryGroup super: #HismoHistoryGroup>
 	<package: #Hismo>
 ]
 
-{ #category : #co-change }
+{ #category : #'co-change' }
 HismoMethodHistoryGroup >> dispersedLogic [
 	
 	^self
@@ -24,7 +24,7 @@ HismoMethodHistoryGroup >> dispersedLogic [
 				collect: [:each | each referenceVersion]]
 ]
 
-{ #category : #co-change }
+{ #category : #'co-change' }
 HismoMethodHistoryGroup >> parallelComplexity [
 	
 	^self

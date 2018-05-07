@@ -4,13 +4,13 @@ Class {
 	#instVars : [
 		'identifier'
 	],
-	#category : #Fame-Example
+	#category : #'Fame-Example'
 }
 
-{ #category : #'As yet unclassified' }
+{ #category : #meta }
 EQVariable class >> annotation [
-	<MSEClass: 'Variable' super: #EQSimple>
-	<package: 'EQ'>
+	<MSEClass: #Variable super: #EQSimple>
+	<package: #EQ>
 	<abstract>
 ]
 

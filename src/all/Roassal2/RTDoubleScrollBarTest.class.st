@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'view'
 	],
-	#category : #Roassal2-Builder-ScrollBar
+	#category : #'Roassal2-Builder-ScrollBar'
 }
 
 { #category : #running }

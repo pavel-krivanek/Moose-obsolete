@@ -8,7 +8,7 @@ Class {
 		'forToken',
 		'_class'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -75,7 +75,7 @@ DelphiClassHelperTypeNode >> helperToken: aSmaCCToken [
 	helperToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiClassHelperTypeNode >> initialize [
 	super initialize.
 	classAttributes := OrderedCollection new: 2.

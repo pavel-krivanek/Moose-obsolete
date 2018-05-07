@@ -1,10 +1,10 @@
 Class {
 	#name : #PPExtensionTest,
 	#superclass : #PPAbstractParserTest,
-	#category : #PetitTests-Tests
+	#category : #'PetitTests-Tests'
 }
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testCharacter [
 	| parser |
 	parser := $a asParser.
@@ -12,7 +12,7 @@ PPExtensionTest >> testCharacter [
 	self assert: parser fail: 'b'
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testChoice [
 	| parser |
 	parser := #(1 2) asChoiceParser.
@@ -24,7 +24,7 @@ PPExtensionTest >> testChoice [
 	self assert: parser fail: #(3)
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testClosure [
 	| parser |
 	parser := [ :stream | stream upTo: $s ] asParser.
@@ -44,21 +44,21 @@ PPExtensionTest >> testClosure [
 	
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testEpsilon [
 	| parser |
 	parser := nil asParser.
 	self assert: parser asParser equals: parser
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testParser [
 	| parser |
 	parser := $a asParser.
 	self assert: parser asParser equals: parser
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testRange [
 	| parser |
 	parser := ($a to: $c) asParser.
@@ -68,7 +68,7 @@ PPExtensionTest >> testRange [
 	self assert: parser fail: 'd'
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testSequence [
 	| parser |
 	parser := #(1 2) asSequenceParser.
@@ -80,7 +80,7 @@ PPExtensionTest >> testSequence [
 	self assert: parser fail: #(1 1 2)
 ]
 
-{ #category : #testing-stream }
+{ #category : #'testing-stream' }
 PPExtensionTest >> testStream [
 	| dot stream |
 	dot := (Character codePoint: 183) asString.
@@ -94,7 +94,7 @@ PPExtensionTest >> testStream [
 	self assert: stream asPetitStream equals: stream
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testString [
 	| parser |
 	parser := 'ab' asParser.
@@ -105,7 +105,7 @@ PPExtensionTest >> testString [
 	self assert: parser fail: 'ac'
 ]
 
-{ #category : #testing-parser }
+{ #category : #'testing-parser' }
 PPExtensionTest >> testSymbol [
 	| parser |
 	parser := #any asParser.
@@ -113,7 +113,7 @@ PPExtensionTest >> testSymbol [
 	self assert: parser fail: ''
 ]
 
-{ #category : #testing-stream }
+{ #category : #'testing-stream' }
 PPExtensionTest >> testText [
 	| stream |
 	stream := 'abc' asText asPetitStream.

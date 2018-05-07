@@ -6,7 +6,7 @@ Class {
 		'result',
 		'context'
 	],
-	#category : #PetitIndent-Tests
+	#category : #'PetitIndent-Tests'
 }
 
 { #category : #'as yet unclassified' }

@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'names'
 	],
-	#category : #Roassal2-Core
+	#category : #'Roassal2-Core'
 }
 
 { #category : #initialization }

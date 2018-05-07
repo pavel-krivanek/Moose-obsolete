@@ -8,7 +8,7 @@ Class {
 		'body',
 		'semicolonToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -57,7 +57,7 @@ CSSetAccessorDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolonToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSSetAccessorDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

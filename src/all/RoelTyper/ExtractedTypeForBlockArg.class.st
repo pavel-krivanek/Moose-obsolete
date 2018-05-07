@@ -5,12 +5,12 @@ Class {
 		'lives',
 		'compiledMethod'
 	],
-	#category : #RoelTyper-Core
+	#category : #'RoelTyper-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 ExtractedTypeForBlockArg class >> forOffset: offset ofCompiledMethod: aCompiledMethod inClass: aClass [
-	^(self basicNew initialize)
+	^self new
 		tempOffset: offset;
 		ivarClass: aClass;
 		compiledMethod: aCompiledMethod;
@@ -38,7 +38,7 @@ ExtractedTypeForBlockArg >> initialize [
 	lives := OrderedCollection with: (ExtractedTypeForTmp new)
 ]
 
-{ #category : #private-accessing }
+{ #category : #'private-accessing' }
 ExtractedTypeForBlockArg >> interface [
 	^(lives inject: Set new into: [:ord :et | ord addAll: (et interface); yourself ]) asOrderedCollection
 ]
@@ -65,8 +65,7 @@ ExtractedTypeForBlockArg >> printOn: aStream [
 
 { #category : #accessing }
 ExtractedTypeForBlockArg >> tempOffset: anOffset [
-	ivarName := anOffset.
-	"self triggerEvent: #changed"
+	ivarName := anOffset
 ]
 
 { #category : #accessing }

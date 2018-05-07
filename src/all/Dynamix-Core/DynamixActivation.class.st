@@ -15,7 +15,7 @@ Class {
 		'arguments',
 		'return'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }
@@ -144,12 +144,12 @@ DynamixActivation >> checkForSequence [
 	self allChildrenDo: [:each | self checkChildrenForSequence: (each children) ].
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> classOfMethod [
 	^ self method belongsTo
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> classOfReceiver [
 	"If receiver is nil, fallback to the class of the method, which may be a superclass"
 
@@ -167,6 +167,17 @@ DynamixActivation >> compare: aCandidateSequence with: aList from: startpos [
 		whileTrue: [ i := i + 1.
 					   j := j + 1 ].
 	^(j - 1 = aCandidateSequence size)
+]
+
+{ #category : #printing }
+DynamixActivation >> gtDisplayOn: stream [ 
+	self behaviour isNil 
+		ifTrue: [stream nextPutAll: 'Unknown activation']
+		ifFalse: [self behaviour gtDisplayOn: stream ].
+	stream 
+		nextPutAll: ' (';
+		nextPutAll: self duration asString;
+		nextPut: $)
 ]
 
 { #category : #testing }
@@ -215,7 +226,7 @@ DynamixActivation >> isStartOfSequence [
 	^self sequence > 1
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> leaves [
 	"returns an ordered Collection of all the leaf nodes of a tree"
 	| stream |
@@ -224,7 +235,7 @@ DynamixActivation >> leaves [
 	^stream contents
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> level [
 
 	self parent ifNil: [^0].
@@ -236,7 +247,7 @@ DynamixActivation >> level [
 		ifTrue: [ self parent level + 1 ]"
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> maxDepth [
 	| maxLevel max |
 	maxDepth := 0.
@@ -248,30 +259,19 @@ DynamixActivation >> maxDepth [
     ^ max
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> method [
 	^ self behaviour
 ]
 
-{ #category : #printing }
-DynamixActivation >> mooseDisplayStringOn: stream [ 
-	self behaviour isNil 
-		ifTrue: [stream nextPutAll: 'Unknown activation']
-		ifFalse: [self behaviour mooseDisplayStringOn: stream ].
-	stream 
-		nextPutAll: ' (';
-		nextPutAll: self duration asString;
-		nextPut: $)
-]
-
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> nodesAtLevel: aLevel [ 
 	"returns an ordered Collection of all the nodes of a tree at a given level"
 
 	^self sortedChildren select: [ :each | each level = aLevel ].
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> nonleaves [
 	"returns an ordered Collection of all the non leaf nodes of a tree"
 	| stream |
@@ -280,7 +280,7 @@ DynamixActivation >> nonleaves [
 	^stream contents
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> notdisplayable [
 
 	^ (self properties includesKey: #notdisplayable )
@@ -334,7 +334,7 @@ DynamixActivation >> return: aReference [
 		to: aReference
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> returnAliases [
 	"Aliases of object returned to this activation, not to be confused with the alias returned from this activation (#return)"
 
@@ -351,21 +351,21 @@ DynamixActivation >> returnsPureObject [
 	^ self withAllChildren includes: root creator
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> sender [
 	"The reference which sent the message"
 
 	^ self parent notNil ifTrue: [ self parent receiver ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> seqitemsAddList: anItemList [
 	"saves nodes belonging to the sequence"
 
 	self propertyNamed: #seqitems put:  (self seqitems addAll: anItemList).
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> sequence [
 	"comment stating purpose of message"
 	self propertyNamed: #seqsize
@@ -373,14 +373,14 @@ DynamixActivation >> sequence [
 	^self propertyNamed: #seqsize
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> sequence: aLength [
 	"comment stating purpose of message"
 	self propertyNamed: #seqsize put:  aLength.
 	"self propertyNamed: #seqsize ifAbsentPut: [ aLength ]."
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> setNotdisplayable [
 	"comment stating purpose of message"
 	^(self propertyNamed: #notdisplayable ifAbsentPut: [1] )
@@ -391,7 +391,7 @@ DynamixActivation >> setSubtreeNotDisplayable [
 	self allChildren do: [:each | each setNotdisplayable].
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> signature [
 	"lazy evaluation (recursive) of signatures for nodes"
 	| aSignature |
@@ -403,13 +403,13 @@ DynamixActivation >> signature [
 	^self propertyNamed: #signature
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> signature: aSignature [
 	"sets the signature for a name"
 	self propertyNamed: #signature put:  aSignature.
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixActivation >> stack [
 	^self  parent isNil
 		ifFalse: [ self parent stack copyWith: self ]

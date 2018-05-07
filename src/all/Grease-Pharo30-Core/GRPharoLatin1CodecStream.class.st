@@ -4,7 +4,7 @@ A GRPharoLatin1CodecStream is a WACodecStream optimized for ISO-8859-1 (direct b
 Class {
 	#name : #GRPharoLatin1CodecStream,
 	#superclass : #GRNullCodecStream,
-	#category : #Grease-Pharo30-Core
+	#category : #'Grease-Pharo30-Core'
 }
 
 { #category : #streaming }

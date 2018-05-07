@@ -14,7 +14,7 @@ Class {
 		'rectangle',
 		'inset'
 	],
-	#category : #Roassal2-Builder-TreeMap
+	#category : #'Roassal2-Builder-TreeMap'
 }
 
 { #category : #hooks }
@@ -22,12 +22,12 @@ RTTreeMapBuilder >> createView [
 	^ super createView @ RTDraggableView.
 ]
 
-{ #category : #default-values }
+{ #category : #'default-values' }
 RTTreeMapBuilder >> defaultExtent [
 	^ 500@500.
 ]
 
-{ #category : #default-values }
+{ #category : #'default-values' }
 RTTreeMapBuilder >> defaultInset [
 	^ 4
 ]
@@ -54,7 +54,7 @@ RTTreeMapBuilder >> extent: anObject [
 	
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> getRemainingSpace [
 	^ self rectangle shortestSide
 ]
@@ -92,7 +92,7 @@ RTTreeMapBuilder >> inset: anObject [
 	inset := anObject
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> layoutChildrenOfRow: row [
 	| oldCanvas|
 	oldCanvas := self rectangle veryDeepCopy.
@@ -113,7 +113,7 @@ RTTreeMapBuilder >> layoutElements [
 	
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> layoutHorizontalRow: row [ 
 
 	| container totalWidth areaToLayout height |
@@ -136,7 +136,7 @@ RTTreeMapBuilder >> layoutRow: row [
 	self prepareNextRectangleAfterRow: row.
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> layoutVerticalRow: row [
 	| container totalHeight areaToLayout width |
 	container := rectangle currentSubrectangle.
@@ -152,7 +152,7 @@ RTTreeMapBuilder >> popup [
 	^ self interaction popup.
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> prepareElementsForLayout: elms inRectangle: rec [
 	| elementsArea viewArea area |
 	elms isEmpty ifTrue: [ ^ elms ].
@@ -167,7 +167,7 @@ RTTreeMapBuilder >> prepareElementsForLayout: elms inRectangle: rec [
 	^ elms
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> prepareNextRectangleAfterRow: row [
 	| nextRect |
 	nextRect := self rectangle currentSubrectangle computeRemainingSubrectangleFrom: row.
@@ -232,7 +232,7 @@ RTTreeMapBuilder >> squarify: children inRectangle: aTreeRectangle [
 		remainingSpace: (aTreeRectangle width min: aTreeRectangle height).
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> translateElementsHorizontally: row in: container [
 
 	| currentPoint |
@@ -243,13 +243,13 @@ RTTreeMapBuilder >> translateElementsHorizontally: row in: container [
 	].
 ]
 
-{ #category : #layout-utils }
+{ #category : #'layout-utils' }
 RTTreeMapBuilder >> translateElementsVertically: row in: container [
 	| currentPoint |
 	currentPoint := container origin.
 	row do: [ :each | 
 		each translateBy: currentPoint+(each extent/2).
-		currentPoint := currentPoint translateBy: (0@(each height))]
+		currentPoint := currentPoint + (0@(each height))]
 ]
 
 { #category : #customizing }

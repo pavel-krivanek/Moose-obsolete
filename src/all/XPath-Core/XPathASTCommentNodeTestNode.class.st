@@ -4,7 +4,7 @@ This is an AST node class for the 'comment()' type test.
 Class {
 	#name : #XPathASTCommentNodeTestNode,
 	#superclass : #XPathASTNodeTestNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

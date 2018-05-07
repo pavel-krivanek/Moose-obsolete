@@ -1,1 +1,1 @@
-Package { #name : #XML-Parser-GTExtensions }
+Package { #name : #'XML-Parser-GTExtensions' }

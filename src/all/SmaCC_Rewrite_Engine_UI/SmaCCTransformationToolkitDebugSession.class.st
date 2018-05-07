@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'rootContext'
 	],
-	#category : #SmaCC_Rewrite_Engine_UI
+	#category : #'SmaCC_Rewrite_Engine_UI'
 }
 
 { #category : #accessing }

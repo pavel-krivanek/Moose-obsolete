@@ -5,7 +5,7 @@ Class {
 		'object',
 		'container'
 	],
-	#category : #Magritte-Morph-Report
+	#category : #'Magritte-Morph-Report'
 }
 
 { #category : #'instance creation' }

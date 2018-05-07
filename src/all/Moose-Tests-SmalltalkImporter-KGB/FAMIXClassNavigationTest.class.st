@@ -1,10 +1,10 @@
 Class {
 	#name : #FAMIXClassNavigationTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : #Moose-Tests-SmalltalkImporter-KGB
+	#category : #'Moose-Tests-SmalltalkImporter-KGB'
 }
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXClassNavigationTest >> testClientClasses [
 	self assert: self c14ReferencerOutSideRefereeOutSide clientTypes size equals: 2.
 	self
@@ -27,7 +27,7 @@ FAMIXClassNavigationTest >> testClientClasses [
 						yourself))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXClassNavigationTest >> testClientNamespaces [
 	self assert: self c14ReferencerOutSideRefereeOutSide clientNamespaces size equals: 3.
 	self
@@ -41,7 +41,7 @@ FAMIXClassNavigationTest >> testClientNamespaces [
 						yourself))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXClassNavigationTest >> testClientPackages [
 	| p2 p8 p7 |
 	p2 := self packageP2InteractedReferencerReferee.
@@ -59,7 +59,7 @@ FAMIXClassNavigationTest >> testClientPackages [
 						yourself))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXClassNavigationTest >> testProviderClasses [
 	self assert: self c15FullReferencerOutSide providerTypes size equals: 3.
 	self
@@ -73,7 +73,7 @@ FAMIXClassNavigationTest >> testProviderClasses [
 						yourself))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXClassNavigationTest >> testProviderNamespace [
 	self assert: self c15FullReferencerOutSide providerNamespaces size equals: 3.
 	self
@@ -87,7 +87,7 @@ FAMIXClassNavigationTest >> testProviderNamespace [
 						yourself))
 ]
 
-{ #category : #MooseKGB-TestFamix3-allDependencies }
+{ #category : #'MooseKGB-TestFamix3-allDependencies' }
 FAMIXClassNavigationTest >> testProviderPackages [
 	| p10 p11 p7 pEx |
 	p10 := self packageP10InteractedReferee.

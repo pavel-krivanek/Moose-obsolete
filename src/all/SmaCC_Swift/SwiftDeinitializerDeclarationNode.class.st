@@ -17,7 +17,7 @@ Class {
 		'deinitToken',
 		'block'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -51,7 +51,7 @@ SwiftDeinitializerDeclarationNode >> block: aSwiftBlockNode [
 
 { #category : #generated }
 SwiftDeinitializerDeclarationNode >> compositeTokenVariables [
-	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens)
+	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #operatorTokens)
 ]
 
 { #category : #generated }
@@ -94,7 +94,7 @@ SwiftDeinitializerDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftDeinitializerDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.
@@ -107,8 +107,8 @@ SwiftDeinitializerDeclarationNode >> initialize [
 	rightBraceTokens := OrderedCollection new: 2.
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
-	operatorTokens := OrderedCollection new: 2.
 	full_string_literalTokens := OrderedCollection new: 2.
+	operatorTokens := OrderedCollection new: 2.
 ]
 
 { #category : #generated }

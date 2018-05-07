@@ -13,13 +13,19 @@ Class {
 	#name : #FAMIXAnnotationInstanceAttribute,
 	#superclass : #FAMIXSourcedEntity,
 	#traits : 'TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'TEntityMetaLevelDependency classTrait - {#childrenSelectors. #parentSelectors. #parentTypes. #allChildrenTypes. #allParentTypes} + TDependencyQueries classTrait',
+	#classTraits : 'TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#instVars : [
 		'parentAnnotationInstance',
 		'annotationTypeAttribute',
 		'value'
 	],
-	#category : #Famix-Core
+	#classInstVars : [
+		'childrenSelectors',
+		'allParentTypes',
+		'allChildrenTypes',
+		'parentSelectors'
+	],
+	#category : #'Famix-Core'
 }
 
 { #category : #accessing }
@@ -36,7 +42,6 @@ FAMIXAnnotationInstanceAttribute class >> allOutgoingAssociationTypes [
 FAMIXAnnotationInstanceAttribute class >> annotation [
 	<MSEClass: #AnnotationInstanceAttribute super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #accessing }
@@ -54,7 +59,7 @@ FAMIXAnnotationInstanceAttribute >> annotationTypeAttribute: anAnnotationTypeAtt
 					to: anAnnotationTypeAttribute
 ]
 
-{ #category : #moosequery-queries-incoming }
+{ #category : #'moosequery-queries-incoming' }
 FAMIXAnnotationInstanceAttribute >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -70,7 +75,7 @@ FAMIXAnnotationInstanceAttribute >> name [
 		ifFalse: [ nil ]
 ]
 
-{ #category : #moosequery-queries-outgoing }
+{ #category : #'moosequery-queries-outgoing' }
 FAMIXAnnotationInstanceAttribute >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	

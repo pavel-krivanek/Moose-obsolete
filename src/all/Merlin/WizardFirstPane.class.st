@@ -4,10 +4,10 @@ Class {
 	#instVars : [
 		'nextButton'
 	],
-	#category : #Merlin-Panes
+	#category : #'Merlin-Panes'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 WizardFirstPane >> initialize [
 
 	super initialize.

@@ -11,7 +11,7 @@ Class {
 		'creator',
 		'timestamp'
 	],
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }
@@ -20,7 +20,7 @@ DynamixAlias class >> annotation [
 	<package: #Dynamix>
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> allDescendants [
 	| collection result |
 	collection := self descendants.
@@ -41,7 +41,7 @@ DynamixAlias >> ancestor: anObject [
 	ancestor := anObject
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> ancestorFoundIn: aCollection [
 	self isRoot ifTrue: [ ^nil ].
 	^ (aCollection includes: self ancestor)
@@ -49,7 +49,7 @@ DynamixAlias >> ancestorFoundIn: aCollection [
 		ifFalse: [ self ancestor ancestorFoundIn: aCollection ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> ancestoryChain [
 	"Including self"
 
@@ -57,19 +57,19 @@ DynamixAlias >> ancestoryChain [
 	^ (Array with: self) , self ancestor ancestoryChain
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> cachedAllDescendants [
 	^ self	
 		propertyNamed: #allDescendants
 		ifAbsentPut: [ self allDescendants ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> clientAlias [
 	^ self creator ifNotNil: [ :each | each receiver ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> clientClass [
 	"following code could be used alternatively in case clientInstance isNil, but it may return a superclass:
 	self creator ifNotNil: [ self creator method belongsTo ]."
@@ -77,19 +77,19 @@ DynamixAlias >> clientClass [
 	^ self clientInstance ifNotNil: [ :object | object type ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> clientClassId [
 	^ self clientClass isNil
 		ifTrue: [ 'unknown' ]
 		ifFalse: [ self clientClass name ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> clientInstance [
 	^ self clientAlias ifNotNil: [ :each | each subject ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> clientName [
 	| clientClassName clientClassMethod activationReturnedFrom |
 	self creator ifNil: [ ^'n/a' ].
@@ -111,7 +111,7 @@ DynamixAlias >> creator: anObject [
 	creator := anObject
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> definingClass [
 	"Note, in contrast to #clientMethod we get the class in which the variable is statically defined, which may be a superclass of the subject instance!"
 	^ self variable isNil
@@ -119,12 +119,12 @@ DynamixAlias >> definingClass [
 		ifTrue: [ self clientClass ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> depth [
 	^self ancestor ifNil: [ 1 ] ifNotNil: [ 1 + self ancestor depth ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> descendants [
 	descendants ifNil: [
 		descendants := OrderedCollection new
@@ -138,13 +138,13 @@ DynamixAlias >> descendants: anObject [
 	descendants := anObject
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> externalActivations [
 	^ self activations reject: [ :each |
 		each isSelfMessage ]
 ]
 
-{ #category : #accessing-derived }
+{ #category : #'accessing-derived' }
 DynamixAlias >> feature [
 	^ self trace
 ]

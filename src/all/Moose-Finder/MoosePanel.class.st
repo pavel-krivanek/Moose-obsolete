@@ -4,7 +4,7 @@ self open
 Class {
 	#name : #MoosePanel,
 	#superclass : #GLMBrowserTemplate,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #menu }

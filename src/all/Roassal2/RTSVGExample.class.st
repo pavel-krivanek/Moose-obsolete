@@ -24,7 +24,7 @@ RTSVGExample new installTitle: 'Animated'
 Class {
 	#name : #RTSVGExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-ExampleBrowser
+	#category : #'Roassal2-ExampleBrowser'
 }
 
 { #category : #basic }

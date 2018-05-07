@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXModuleTest,
 	#superclass : #TestCase,
-	#category : #Famix-Tests-C
+	#category : #'Famix-Tests-C'
 }
 
 { #category : #tests }

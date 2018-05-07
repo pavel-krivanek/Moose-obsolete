@@ -12,7 +12,7 @@ Class {
 		'declarations',
 		'rightBrace'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -81,7 +81,7 @@ JavaEnumConstantNode >> ignoredTokenVariables [
 	^ #(#leftParen #rightParen #leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaEnumConstantNode >> initialize [
 	super initialize.
 	annotations := OrderedCollection new: 2.

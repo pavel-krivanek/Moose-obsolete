@@ -5,7 +5,7 @@ Class {
 		'composer',
 		'view'
 	],
-	#category : #Roassal2-Builder-Composer
+	#category : #'Roassal2-Builder-Composer'
 }
 
 { #category : #running }

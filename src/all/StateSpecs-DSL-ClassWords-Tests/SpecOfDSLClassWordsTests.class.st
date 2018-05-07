@@ -9,7 +9,7 @@ SpecOfDSLClassWordsTests >> testContainingItem [
 	| spec |
 	spec := Containing item: #collectionItem.
 	self assert: spec class = SpecOfCollectionContents.
-	self assert: spec requiredItem == #collectionItem
+	self assert: spec requiredItem requiredValue == #collectionItem.
 ]
 
 { #category : #tests }
@@ -127,4 +127,72 @@ SpecOfDSLClassWordsTests >> testSatisfying [
 	spec := Satisfying for: #block.
 	self assert: spec class = SpecOfObjectStateByPredicate.
 	self assert: spec predicate == #block
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringMatchingCaseSensitiveRegex [
+	| spec |
+	spec := String matchingCaseSensitiveRegex: 'test'.
+	self assert: spec class = SpecOfStringRegex.
+	self assert: spec requiredValue = 'test'.
+	self assert: spec caseSensitive
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringMatchingRegex [
+	| spec |
+	spec := String matchingRegex: 'test'.
+	self assert: spec class = SpecOfStringRegex.
+	self assert: spec requiredValue = 'test'
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringWithBeginning [
+	| spec |
+	spec := String withBeginning: 'test'.
+	self assert: spec class = SpecOfStringBeginning.
+	self assert: spec requiredValue = 'test'
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringWithCaseSensitiveBeginning [
+	| spec |
+	spec := String withCaseSensitiveBeginning: 'test'.
+	self assert: spec class = SpecOfStringBeginning.
+	self assert: spec requiredValue = 'test'.
+	self assert: spec caseSensitive
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringWithCaseSensitiveEnding [
+	| spec |
+	spec := String withCaseSensitiveEnding: 'test'.
+	self assert: spec class = SpecOfStringEnding.
+	self assert: spec requiredValue = 'test'.
+	self assert: spec caseSensitive
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringWithCaseSensitiveSubstring [
+	| spec |
+	spec := String withCaseSensitiveSubstring: 'test'.
+	self assert: spec class = SpecOfSubstring.
+	self assert: spec requiredValue = 'test'.
+	self assert: spec caseSensitive
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringWithEnding [
+	| spec |
+	spec := String withEnding: 'test'.
+	self assert: spec class = SpecOfStringEnding.
+	self assert: spec requiredValue = 'test'
+]
+
+{ #category : #tests }
+SpecOfDSLClassWordsTests >> testStringWithSubstring [
+	| spec |
+	spec := String withSubstring: 'test'.
+	self assert: spec class = SpecOfSubstring.
+	self assert: spec requiredValue = 'test'
 ]

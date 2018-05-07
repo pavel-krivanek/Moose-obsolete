@@ -5,69 +5,66 @@ Class {
 		'characters',
 		'objects'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
-
-{ #category : #'instance creation' }
-SmaCCSet class >> new [
-	^ super new
-		initialize;
-		yourself
-]
 
 { #category : #adding }
 SmaCCSet >> add: newObject [
 	^ (newObject isKindOf: Character)
-		ifTrue:
-			[ | index mask |
-			index := newObject asInteger // 8 + 1.
-			mask := 1 bitShift: newObject asInteger \\ 8.
-			characters at: index put: ((characters at: index) bitOr: mask).
-			newObject ]
+		ifTrue: [ characters add: newObject ]
 		ifFalse: [ objects add: newObject ]
+]
+
+{ #category : #adding }
+SmaCCSet >> addAll: aCollection [
+	(aCollection isKindOf: SmaCCCharacterSet)
+		ifTrue: [ ^ characters addAll: aCollection ].
+	^ super addAll: aCollection
+]
+
+{ #category : #enumerating }
+SmaCCSet >> commonElementWith: aCollection [
+	| intersected |
+	characters class = aCollection class
+		ifTrue: [ intersected := characters smaccIntersect: aCollection.
+			^ intersected isEmpty
+				ifTrue: [ nil ]
+				ifFalse: [ intersected first ] ].
+	aCollection
+		do: [ :each | 
+			(self includes: each)
+				ifTrue: [ ^ each ] ].
+	^ nil
 ]
 
 { #category : #enumerating }
 SmaCCSet >> do: aBlock [
 	objects do: aBlock.
-	characters
-		keysAndValuesDo:
-			[ :key :value | 
-			1 to: 8 do:
-				[ :j | 
-				((value bitShift: 1 - j) bitAnd: 1) = 1
-					ifTrue: [ aBlock value: (Character value: (key - 1) * 8 + j - 1) ] ] ]
+	characters do: aBlock
 ]
 
 { #category : #testing }
 SmaCCSet >> includes: anObject [
 	^ (anObject isKindOf: Character)
-		ifTrue:
-			[ | index mask |
-			index := anObject asInteger // 8 + 1.
-			mask := 1 bitShift: anObject asInteger \\ 8.
-			^ ((characters at: index) bitAnd: mask) = mask ]
+		ifTrue: [ characters includes: anObject ]
 		ifFalse: [ objects includes: anObject ]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSet >> initialize [
 	super initialize.
-	characters := ByteArray new: 16r10000 / 8.
+	characters := SmaCCCharacterSet new.
 	objects := Set new
+]
+
+{ #category : #testing }
+SmaCCSet >> isEmpty [
+	^ characters isEmpty and: [ objects isEmpty ]
 ]
 
 { #category : #removing }
 SmaCCSet >> remove: oldObject ifAbsent: aBlock [
-	(oldObject isKindOf: Character)
-		ifTrue:
-			[ | index mask |
-			index := oldObject asInteger // 8 + 1.
-			mask := 1 bitShift: oldObject asInteger \\ 8.
-			((characters at: index) bitAnd: mask) = mask
-				ifTrue:
-					[ characters at: index put: ((characters at: index) bitXor: mask).
-					^ oldObject ]
-				ifFalse: [ ^ aBlock value ] ]
-		ifFalse: [ ^ objects remove: oldObject ifAbsent: aBlock ]
+	^ (oldObject isKindOf: Character)
+		ifTrue: [ characters remove: oldObject ifAbsent: aBlock ]
+		ifFalse: [ objects remove: oldObject ifAbsent: aBlock ]
 ]

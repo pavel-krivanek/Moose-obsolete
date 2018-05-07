@@ -8,7 +8,7 @@ Class {
 		'rightBracket',
 		'elements'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -53,7 +53,7 @@ JSArrayBindingPatternNode >> ignoredTokenVariables [
 	^ #(#leftBracket #rightBracket)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSArrayBindingPatternNode >> initialize [
 	super initialize.
 	commas := OrderedCollection new: 2.

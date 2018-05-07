@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCStepToCursorAction,
 	#superclass : #SmaCCScannerStepToAction,
-	#category : #SmaCC_Debugging_Support
+	#category : #'SmaCC_Debugging_Support'
 }
 
 { #category : #registration }
@@ -13,6 +13,11 @@ SmaCCStepToCursorAction class >> gtActionFor: aDebugger [
 { #category : #accessing }
 SmaCCStepToCursorAction >> defaultLabel [
 	^ 'Step to Cursor'
+]
+
+{ #category : #accessing }
+SmaCCStepToCursorAction >> help [
+	^ 'Run until we get to the cursor position or a parse error is encountered.'
 ]
 
 { #category : #accessing }

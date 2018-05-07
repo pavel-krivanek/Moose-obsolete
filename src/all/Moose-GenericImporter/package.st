@@ -1,1 +1,1 @@
-Package { #name : #Moose-GenericImporter }
+Package { #name : #'Moose-GenericImporter' }

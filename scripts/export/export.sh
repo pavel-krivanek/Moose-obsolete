@@ -17,6 +17,6 @@ rm -rf ./Moose/src/all/*
 mv ./Moose/BaselineOfMoose ./Moose/src/all/
 mv ./Moose/.properties ./Moose/src/all
 
-./pharo moose-6.1.image ./Moose/scripts/export/export.st --quit
+#./pharo moose-6.1.image ./Moose/scripts/export/export.st --quit
 
 

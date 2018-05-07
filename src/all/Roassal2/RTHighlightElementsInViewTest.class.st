@@ -1,7 +1,7 @@
 Class {
 	#name : #RTHighlightElementsInViewTest,
 	#superclass : #RTTest,
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #tests }

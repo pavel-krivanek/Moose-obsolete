@@ -1,7 +1,7 @@
 Class {
 	#name : #ForExampleStack,
 	#superclass : #Phexample,
-	#category : #Phexample-Test
+	#category : #'Phexample-Test'
 }
 
 { #category : #examples }

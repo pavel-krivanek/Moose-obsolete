@@ -4,7 +4,7 @@ The root entity.
 Class {
 	#name : #DynamixEntity,
 	#superclass : #MooseEntity,
-	#category : #Dynamix-Core
+	#category : #'Dynamix-Core'
 }
 
 { #category : #meta }

@@ -17,17 +17,16 @@ Class {
 	#instVars : [
 		'values'
 	],
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXEnum class >> annotation [
 	<MSEClass: #Enum super: #FAMIXType>
 	<package: #FAMIX>
-	^self
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXEnum >> initialize [
 	super initialize.
 	values := FMNullMultivalueLink 

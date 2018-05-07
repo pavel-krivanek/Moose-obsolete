@@ -1,22 +1,22 @@
 "
-A base class for read stream adapters for basic streams that support #next, #peek, #atEnd, #position, #position:, and #reset. It adds support for skipping and reading upto a character or the end of the stream.
+A base class for read stream adapters for basic streams that support #next, #peek, #atEnd, #position, #position:, and #reset. It adds support for skipping and reading upto a character or the end of the stream, and ensures #next and #peek return nil when the stream is #atEnd instead of raising an error.
 "
 Class {
 	#name : #XMLReadStreamAdapter,
 	#superclass : #XMLStreamAdapter,
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
+
+{ #category : #'instance creation' }
+XMLReadStreamAdapter class >> onIfBinaryOrExternal: aStream [
+	^ aStream isXMLBinaryOrExternalStream
+		ifTrue: [self on: aStream]
+		ifFalse: [nil]
+]
 
 { #category : #testing }
 XMLReadStreamAdapter >> atEnd [
 	^ stream atEnd
-]
-
-{ #category : #private }
-XMLReadStreamAdapter >> basicNext [
-	stream atEnd
-		ifTrue: [^ nil]
-		ifFalse: [^ stream next]
 ]
 
 { #category : #accessing }
@@ -100,8 +100,7 @@ XMLReadStreamAdapter >> skip: anInteger [
 { #category : #positioning }
 XMLReadStreamAdapter >> skipSeparators [
 	"we use #isXMLWhitespace instead of the narrower, XML-specific
-	#isXMLSeparator, because this class can be used for non-XML
-	streams too"
+	#isXMLSeparator, because this class supports non-XML input too"
 	[self atEnd not
 		and: [self peek isXMLWhitespace]]
 		whileTrue: [self next]
@@ -139,5 +138,7 @@ XMLReadStreamAdapter >> upToEnd [
 
 { #category : #defaults }
 XMLReadStreamAdapter >> writeStreamCollectionClass [
-	^ String
+	self isBinary
+		ifTrue: [^ ByteArray]
+		ifFalse: [^ String]
 ]

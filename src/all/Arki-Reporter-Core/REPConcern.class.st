@@ -5,7 +5,7 @@ Class {
 		'model',
 		'announcer'
 	],
-	#category : #Arki-Reporter-Core
+	#category : #'Arki-Reporter-Core'
 }
 
 { #category : #'instance creation' }
@@ -52,7 +52,7 @@ REPConcern >> isComposite [
 
 { #category : #accessing }
 REPConcern >> label [ 
-	^ self class name
+	^ String space join: self class name piecesCutWhereCamelCase
 ]
 
 { #category : #accessing }
@@ -85,8 +85,8 @@ REPConcern >> stringResult [
 	| r |
 	r := self result.
 	r isCollection ifTrue: [
-		^ (String with: Character cr) join: (r collect: #mooseDisplayString) ].
-	^ r mooseDisplayString
+		^ (String with: Character cr) join: (r collect: #gtDisplayString) ].
+	^ r gtDisplayString
 ]
 
 { #category : #updating }

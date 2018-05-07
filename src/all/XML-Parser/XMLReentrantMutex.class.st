@@ -4,8 +4,13 @@ An abstract class for reentrant mutexes that support nested sends of #critical: 
 Class {
 	#name : #XMLReentrantMutex,
 	#superclass : #XMLAbstractFactory,
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
+
+{ #category : #testing }
+XMLReentrantMutex class >> canBeImplemented [
+	^ true
+]
 
 { #category : #finding }
 XMLReentrantMutex class >> noSupportedImplementationFound [

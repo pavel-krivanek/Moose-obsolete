@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'comments'
 	],
-	#category : #PetitJava-Core
+	#category : #'PetitJava-Core'
 }
 
 { #category : #accessing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #REPCompositeConcernTest,
 	#superclass : #TestCase,
-	#category : #Arki-Tests-Reporter
+	#category : #'Arki-Tests-Reporter'
 }
 
 { #category : #'as yet unclassified' }

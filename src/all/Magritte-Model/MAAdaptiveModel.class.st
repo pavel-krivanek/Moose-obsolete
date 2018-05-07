@@ -8,7 +8,7 @@ Class {
 		'magritteDescription',
 		'values'
 	],
-	#category : #Magritte-Model-Models
+	#category : #'Magritte-Model-Models'
 }
 
 { #category : #'instance creation' }
@@ -18,12 +18,12 @@ MAAdaptiveModel class >> description: aDescription [
 		yourself
 ]
 
-{ #category : #accessing-configuration }
+{ #category : #'accessing-configuration' }
 MAAdaptiveModel >> defaultDescription [
 	^ MAContainer new
 ]
 
-{ #category : #accessing-configuration }
+{ #category : #'accessing-configuration' }
 MAAdaptiveModel >> defaultDictionary [
 	^ Dictionary new
 ]

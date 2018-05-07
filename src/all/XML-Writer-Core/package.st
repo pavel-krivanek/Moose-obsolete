@@ -1,1 +1,1 @@
-Package { #name : #XML-Writer-Core }
+Package { #name : #'XML-Writer-Core' }

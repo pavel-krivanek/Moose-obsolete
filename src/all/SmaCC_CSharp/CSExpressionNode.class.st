@@ -5,7 +5,7 @@ Class {
 		'_leftParens',
 		'_rightParens'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -38,7 +38,7 @@ CSExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#_leftParens #_rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSExpressionNode >> initialize [
 	super initialize.
 	_leftParens := OrderedCollection new: 2.

@@ -2,6 +2,8 @@
 MooseQueryResult is the abstract class for holding the result of all Moose-Query queries.
 By default MooseQueryResults are assumed to contain a collection of associations between the entity in receiver and all the element in storage at the exception of  MooseObjectQueryResult.
 
+For more informations: https://moosequery.ferlicot.fr/
+
 Instance Variables:
 	storage	the elements resulting of the queries
 	receiver	the receiver of the query, necessary for example when we want to do a withoutSelfLoop
@@ -13,7 +15,7 @@ Class {
 		'storage',
 		'receiver'
 	],
-	#category : #Moose-Query
+	#category : #'Moose-Query'
 }
 
 { #category : #'instance creation' }
@@ -38,6 +40,23 @@ MooseQueryResult >> add: newObject [
 	ArrayedCollections cannot respond to this message."
 
 	^ storage add: newObject 
+]
+
+{ #category : #scoping }
+MooseQueryResult >> allAtScope: aSymbol [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #scoping }
+MooseQueryResult >> allToScope: aSymbol [
+
+	^ self subclassResponsibility
+]
+
+{ #category : #scoping }
+MooseQueryResult >> allWithScope: aSymbol [
+	^ self subclassResponsibility
 ]
 
 { #category : #scoping }
@@ -71,7 +90,7 @@ MooseQueryResult >> do: aBlock [
 	^ storage do: aBlock 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> gtInspectorItemsIn: composite [
 	^ composite list
 		title: 'Items';
@@ -89,14 +108,14 @@ MooseQueryResult >> gtInspectorItemsIn: composite [
 		helpMessage: 'Quick selection field. Given your INPUT, it executes: self select: [:each | INPUT ]'
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> initialize [
 
 	super initialize.
 	self initialize: OrderedCollection new
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> initialize: aCollectionForStorage [
 
 	storage := aCollectionForStorage 
@@ -115,7 +134,7 @@ MooseQueryResult >> intersection: aCollection [
 	^ result
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseQueryResult >> newObjectResultWith: aCollection [
 
 	^ MooseObjectQueryResult on: self receiver withAll: aCollection

@@ -126,7 +126,7 @@ ZeroConfCombinedScript >> generateScripts [
 	^ self scripts
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ZeroConfCombinedScript >> initialize [
 	super initialize.
 	scripts := OrderedCollection new.

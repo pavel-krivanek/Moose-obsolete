@@ -6,7 +6,7 @@ Class {
 		'statements',
 		'rightBraceToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -19,7 +19,7 @@ CSBlockStatementNode >> compositeNodeVariables [
 	^ #(#statements)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSBlockStatementNode >> initialize [
 	super initialize.
 	statements := OrderedCollection new: 2.

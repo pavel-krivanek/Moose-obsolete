@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'element'
 	],
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #'instance creation' }
@@ -96,6 +96,7 @@ XMLElementValidator >> isMixedContent [
 { #category : #printing }
 XMLElementValidator >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPutAll: '(<';
 		nextPutAll: self element;

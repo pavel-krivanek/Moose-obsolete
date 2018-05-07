@@ -1,8 +1,20 @@
 Class {
 	#name : #SmaCCIntegerSetTest,
 	#superclass : #SmaCCBitCollectionTest,
-	#category : #SmaCC_Tests
+	#category : #'SmaCC_Tests'
 }
+
+{ #category : #tests }
+SmaCCIntegerSetTest >> testMergeBug [
+	| a b |
+	a := SmaCCIntegerSet with: 1.
+	b := SmaCCIntegerSet with: 12000.
+	a addAll: b.
+	b
+		add: 12001;
+		add: 11999.
+	self assert: a size = 2
+]
 
 { #category : #tests }
 SmaCCIntegerSetTest >> testNegative [

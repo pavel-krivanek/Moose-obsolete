@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'parserClass'
 	],
-	#category : #GT-PetitParserDebugger
+	#category : #'GT-PetitParserDebugger'
 }
 
 { #category : #registration }

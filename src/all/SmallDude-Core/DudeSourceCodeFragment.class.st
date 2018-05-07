@@ -7,14 +7,13 @@ Class {
 		'entity',
 		'fragmentLength'
 	],
-	#category : #SmallDude-Core
+	#category : #'SmallDude-Core'
 }
 
-{ #category : #'instance creation' }
+{ #category : #meta }
 DudeSourceCodeFragment class >> annotation [
 	<MSEClass: #CodeFragment super: #FAMIXEntity>
 	<package: #Dude>
-	^self
 ]
 
 { #category : #'instance creation' }
@@ -83,7 +82,7 @@ DudeSourceCodeFragment >> entity [
 	^entity
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeSourceCodeFragment >> entity: anEntity beginLine: aLong endLine: anotherLong fragmentLength: aFragmentLength [ 
 	 
 	entity := anEntity. 

@@ -5,7 +5,7 @@ Class {
 		'classToken',
 		'classAttributes'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -38,7 +38,7 @@ DelphiNewClassTypeNode >> compositeTokenVariables [
 	^ #(#classAttributes)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiNewClassTypeNode >> initialize [
 	super initialize.
 	classAttributes := OrderedCollection new: 2.

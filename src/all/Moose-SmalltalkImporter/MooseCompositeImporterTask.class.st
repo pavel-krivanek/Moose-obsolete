@@ -14,7 +14,7 @@ Class {
 		'candidateClass',
 		'runSelector'
 	],
-	#category : #Moose-SmalltalkImporter
+	#category : #'Moose-SmalltalkImporter'
 }
 
 { #category : #accessing }

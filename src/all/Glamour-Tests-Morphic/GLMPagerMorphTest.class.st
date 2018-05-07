@@ -6,7 +6,7 @@ Class {
 		'pagerMorph',
 		'window'
 	],
-	#category : #Glamour-Tests-Morphic
+	#category : #'Glamour-Tests-Morphic'
 }
 
 { #category : #accessing }
@@ -35,7 +35,7 @@ GLMPagerMorphTest >> panesMorphs [
 
 { #category : #running }
 GLMPagerMorphTest >> setUp [
-
+	super setUp.
 	pagerModel := GLMPagerModel new.
 	pagerMorph := GLMPagerBrick new
 		pagerModel: pagerModel
@@ -44,8 +44,8 @@ GLMPagerMorphTest >> setUp [
 
 { #category : #running }
 GLMPagerMorphTest >> tearDown [
-
-	window ifNotNil: [ window delete ]
+	window ifNotNil: [ window delete ].
+	super tearDown
 ]
 
 { #category : #tests }

@@ -1,7 +1,7 @@
 Class {
 	#name : #PPMemoizingSeaTest,
 	#superclass : #PPSeaTest,
-	#category : #PetitIslands-Tests
+	#category : #'PetitIslands-Tests'
 }
 
 { #category : #'as yet unclassified' }

@@ -6,7 +6,7 @@ Class {
 		'heightDescription',
 		'boxDescription'
 	],
-	#category : #Roassal2-Builder-Legend
+	#category : #'Roassal2-Builder-Legend'
 }
 
 { #category : #accessing }

@@ -29,7 +29,7 @@ Class {
 		'initialRadius',
 		'factor'
 	],
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #public }
@@ -106,7 +106,7 @@ RTAbstractCircleLayout >> initialRadius: aNumber [
 	initialRadius := aNumber
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTAbstractCircleLayout >> initialize [
 	"Initialize a newly created instance. This method must answer the receiver."
 	

@@ -4,7 +4,7 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalSparseColumnMatrix,
 	#superclass : #MalColumnMatrix,
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #'instance creation' }

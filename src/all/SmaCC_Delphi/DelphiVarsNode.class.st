@@ -5,7 +5,7 @@ Class {
 		'varToken',
 		'variableDefinitions'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -18,7 +18,7 @@ DelphiVarsNode >> compositeNodeVariables [
 	^ #(#variableDefinitions)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiVarsNode >> initialize [
 	super initialize.
 	variableDefinitions := OrderedCollection new: 2.

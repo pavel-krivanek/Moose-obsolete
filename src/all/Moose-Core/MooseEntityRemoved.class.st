@@ -1,5 +1,5 @@
 Class {
 	#name : #MooseEntityRemoved,
 	#superclass : #MooseEntityAnnouncement,
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }

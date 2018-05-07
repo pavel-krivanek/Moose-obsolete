@@ -10,7 +10,7 @@ Class {
 		'rightParenToken',
 		'initializer'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -50,7 +50,7 @@ CSObjectCreationExpressionNode >> ignoredCompositeTokenVariables [
 	^ #(#commaTokens #_leftParens #_rightParens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSObjectCreationExpressionNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

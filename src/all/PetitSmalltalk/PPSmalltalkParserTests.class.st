@@ -1,7 +1,7 @@
 Class {
 	#name : #PPSmalltalkParserTests,
 	#superclass : #PPSmalltalkGrammarTests,
-	#category : #PetitSmalltalk-Tests
+	#category : #'PetitSmalltalk-Tests'
 }
 
 { #category : #private }
@@ -17,7 +17,7 @@ PPSmalltalkParserTests >> parserClass [
 	^ PPSmalltalkParser
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testArgumentsBlock1 [
 	super testArgumentsBlock1.
 	self assert: result isBlock.
@@ -28,7 +28,7 @@ PPSmalltalkParserTests >> testArgumentsBlock1 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testArgumentsBlock2 [
 	super testArgumentsBlock2.
 	self assert: result isBlock.
@@ -41,7 +41,7 @@ PPSmalltalkParserTests >> testArgumentsBlock2 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testArgumentsBlock3 [
 	super testArgumentsBlock3.
 	self assert: result isBlock.
@@ -94,21 +94,21 @@ PPSmalltalkParserTests >> testArray4 [
 	self assert: result statements last selector equals: #bar
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral1 [
 	super testArrayLiteral1.
 	self assert: result isLiteralNode.
 	self assert: result value equals: #()
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral10 [
 	super testArrayLiteral10.
 	self assert: result isLiteralNode.
 	self assert: result value equals: #(#(1 2) #(1 2 3))
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral11 [
 	super testArrayLiteral11.
 	self assert: result isLiteralNode.
@@ -119,42 +119,42 @@ PPSmalltalkParserTests >> testArrayLiteral11 [
 	self assert: result value last size equals: 3
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral2 [
 	super testArrayLiteral2.
 	self assert: result isLiteralNode.
 	self assert: result value equals: #(1)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral3 [
 	super testArrayLiteral3.
 	self assert: result isLiteralNode.
 	self assert: result value equals: #(1 2)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral4 [
 	super testArrayLiteral4.
 	self assert: result isLiteralNode.
 	self assert: result value equals: #(true false nil)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral5 [
 	super testArrayLiteral5.
 	self assert: result isLiteralNode.
 	self assert: result value equals: #($a)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral6 [
 	super testArrayLiteral6.
 	self assert: result isLiteralNode.
 	self assert: result value equals: #(1.2)
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral7 [
 	super testArrayLiteral7.
 	self assert: result isLiteralNode.
@@ -162,7 +162,7 @@ PPSmalltalkParserTests >> testArrayLiteral7 [
 	result value do: [ :each | self assert: each isSymbol ]
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral8 [
 	super testArrayLiteral8.
 	self assert: result isLiteralNode.
@@ -171,7 +171,7 @@ PPSmalltalkParserTests >> testArrayLiteral8 [
 	self assert: result value first isSymbol not
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testArrayLiteral9 [
 	super testArrayLiteral9.
 	self assert: result isLiteralNode.
@@ -248,7 +248,7 @@ PPSmalltalkParserTests >> testAssignment6 [
 	self assert: result value value name equals: 'c'
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryExpression1 [
 	super testBinaryExpression1.
 	self assert: result isMessage.
@@ -259,7 +259,7 @@ PPSmalltalkParserTests >> testBinaryExpression1 [
 	self assert: result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryExpression2 [
 	super testBinaryExpression2.
 	self assert: result isMessage.
@@ -274,7 +274,7 @@ PPSmalltalkParserTests >> testBinaryExpression2 [
 	self assert: result arguments first value equals: 3
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryExpression3 [
 	super testBinaryExpression3.
 	self assert: result isMessage.
@@ -287,7 +287,7 @@ PPSmalltalkParserTests >> testBinaryExpression3 [
 	self assert: result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryExpression4 [
 	super testBinaryExpression4.
 	self assert: result isMessage.
@@ -300,7 +300,7 @@ PPSmalltalkParserTests >> testBinaryExpression4 [
 	self assert: result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryExpression5 [
 	super testBinaryExpression5.
 	self assert: result isMessage.
@@ -313,7 +313,7 @@ PPSmalltalkParserTests >> testBinaryExpression5 [
 	self assert: result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryMethod1 [
 	super testBinaryMethod1.
 	self assert: result isMethod.
@@ -326,7 +326,7 @@ PPSmalltalkParserTests >> testBinaryMethod1 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryMethod2 [
 	super testBinaryMethod2.
 	self assert: result isMethod.
@@ -339,7 +339,7 @@ PPSmalltalkParserTests >> testBinaryMethod2 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryMethod3 [
 	super testBinaryMethod3.
 	self assert: result isMethod.
@@ -352,7 +352,7 @@ PPSmalltalkParserTests >> testBinaryMethod3 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryMethod4 [
 	super testBinaryMethod4.
 	self assert: result isMethod.
@@ -365,7 +365,7 @@ PPSmalltalkParserTests >> testBinaryMethod4 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testBinaryMethod5 [
 	super testBinaryMethod5.
 	self assert: result isMethod.
@@ -378,7 +378,7 @@ PPSmalltalkParserTests >> testBinaryMethod5 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testBlock1 [
 	super testBlock1.
 	self assert: result isBlock.
@@ -387,7 +387,7 @@ PPSmalltalkParserTests >> testBlock1 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testByteLiteral1 [
 	super testByteLiteral1.
 	self assert: result isLiteralNode.
@@ -395,7 +395,7 @@ PPSmalltalkParserTests >> testByteLiteral1 [
 	self assert: result value isEmpty
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testByteLiteral2 [
 	super testByteLiteral2.
 	self assert: result isLiteralNode.
@@ -404,7 +404,7 @@ PPSmalltalkParserTests >> testByteLiteral2 [
 	self assert: result value first equals: 0
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testByteLiteral3 [
 	super testByteLiteral3.
 	self assert: result isLiteralNode.
@@ -413,7 +413,7 @@ PPSmalltalkParserTests >> testByteLiteral3 [
 	self assert: result value first equals: 255
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testByteLiteral4 [
 	super testByteLiteral4.
 	self assert: result isLiteralNode.
@@ -423,7 +423,7 @@ PPSmalltalkParserTests >> testByteLiteral4 [
 	self assert: result value last equals: 2
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testByteLiteral5 [
 	super testByteLiteral5.
 	self assert: result isLiteralNode.
@@ -434,7 +434,7 @@ PPSmalltalkParserTests >> testByteLiteral5 [
 	self assert: result value last equals: 255
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testCascadeExpression1 [
 	super testCascadeExpression1.
 	self assert: result isCascade.
@@ -448,7 +448,7 @@ PPSmalltalkParserTests >> testCascadeExpression1 [
 	self assert: result messages second keywordsPositions equals: #(8) asIntegerArray
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testCascadeExpression2 [
 	super testCascadeExpression2.
 	self assert: result isCascade.
@@ -469,7 +469,7 @@ PPSmalltalkParserTests >> testCascadeExpression2 [
 	self assert: result messages third keywordsPositions equals: #(30) asIntegerArray
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testCascadeExpression3 [
 	super testCascadeExpression3.
 	self assert: result isCascade.
@@ -486,21 +486,21 @@ PPSmalltalkParserTests >> testCascadeExpression3 [
 	self assert: result messages second arguments size equals: 1
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testCharLiteral1 [
 	super testCharLiteral1.
 	self assert: result isLiteralNode.
 	self assert: result value equals: $a
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testCharLiteral2 [
 	super testCharLiteral2.
 	self assert: result isLiteralNode.
 	self assert: result value equals: Character space
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testCharLiteral3 [
 	super testCharLiteral3.
 	self assert: result isLiteralNode.
@@ -552,7 +552,7 @@ PPSmalltalkParserTests >> testComment5 [
 	self assert: result arguments first isValue
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testComplexBlock1 [
 	super testComplexBlock1.
 	self assert: result isBlock.
@@ -561,7 +561,7 @@ PPSmalltalkParserTests >> testComplexBlock1 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testComplexBlock2 [
 	super testComplexBlock2.
 	self assert: result isBlock.
@@ -570,7 +570,7 @@ PPSmalltalkParserTests >> testComplexBlock2 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testKeywordExpression1 [
 	super testKeywordExpression1.
 	self assert: result isMessage.
@@ -583,7 +583,7 @@ PPSmalltalkParserTests >> testKeywordExpression1 [
 	self assert: result arguments first value equals: 2
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testKeywordExpression2 [
 	super testKeywordExpression2.
 	self assert: result isMessage.
@@ -597,7 +597,7 @@ PPSmalltalkParserTests >> testKeywordExpression2 [
 	self assert: result arguments second value equals: 3
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testKeywordExpression3 [
 	super testKeywordExpression3.
 	self assert: result isMessage.
@@ -613,7 +613,7 @@ PPSmalltalkParserTests >> testKeywordExpression3 [
 	self assert: result arguments third value equals: 4
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testKeywordMethod1 [
 	super testKeywordMethod1.
 	self assert: result isMethod.
@@ -626,7 +626,7 @@ PPSmalltalkParserTests >> testKeywordMethod1 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testKeywordMethod2 [
 	super testKeywordMethod2.
 	self assert: result isMethod.
@@ -641,7 +641,7 @@ PPSmalltalkParserTests >> testKeywordMethod2 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testKeywordMethod3 [
 	super testKeywordMethod3.
 	self assert: result isMethod.
@@ -658,7 +658,7 @@ PPSmalltalkParserTests >> testKeywordMethod3 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testKeywordMethod4 [
 	super testKeywordMethod4.
 	self assert: result isMethod.
@@ -720,7 +720,7 @@ PPSmalltalkParserTests >> testMethod3 [
 	self assert: result body statements first value arguments first isVariable
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral1 [
 	super testNumberLiteral1.
 	self assert: result isLiteralNode.
@@ -728,7 +728,7 @@ PPSmalltalkParserTests >> testNumberLiteral1 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral10 [
 	super testNumberLiteral10.
 	self assert: result isLiteralNode.
@@ -736,7 +736,7 @@ PPSmalltalkParserTests >> testNumberLiteral10 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral11 [
 	super testNumberLiteral11.
 	self assert: result isLiteralNode.
@@ -744,7 +744,7 @@ PPSmalltalkParserTests >> testNumberLiteral11 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral12 [
 	super testNumberLiteral12.
 	self assert: result isLiteralNode.
@@ -752,7 +752,7 @@ PPSmalltalkParserTests >> testNumberLiteral12 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral13 [
 	super testNumberLiteral13.
 	self assert: result isLiteralNode.
@@ -760,7 +760,7 @@ PPSmalltalkParserTests >> testNumberLiteral13 [
 	self assert: result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral14 [
 	super testNumberLiteral14.
 	self assert: result isLiteralNode.
@@ -768,14 +768,14 @@ PPSmalltalkParserTests >> testNumberLiteral14 [
 	self assert: result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral15 [
 	super testNumberLiteral15.
 	self assert: result isLiteralNode.
 	self assert: result value equals: 1 / 2
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral2 [
 	super testNumberLiteral2.
 	self assert: result isLiteralNode.
@@ -783,7 +783,7 @@ PPSmalltalkParserTests >> testNumberLiteral2 [
 	self assert: result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral3 [
 	super testNumberLiteral3.
 	self assert: result isLiteralNode.
@@ -791,7 +791,7 @@ PPSmalltalkParserTests >> testNumberLiteral3 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral4 [
 	super testNumberLiteral4.
 	self assert: result isLiteralNode.
@@ -799,7 +799,7 @@ PPSmalltalkParserTests >> testNumberLiteral4 [
 	self assert: result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral5 [
 	super testNumberLiteral5.
 	self assert: result isLiteralNode.
@@ -807,7 +807,7 @@ PPSmalltalkParserTests >> testNumberLiteral5 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral6 [
 	super testNumberLiteral6.
 	self assert: result isLiteralNode.
@@ -815,7 +815,7 @@ PPSmalltalkParserTests >> testNumberLiteral6 [
 	self assert: result value isFloat
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral7 [
 	super testNumberLiteral7.
 	self assert: result isLiteralNode.
@@ -823,7 +823,7 @@ PPSmalltalkParserTests >> testNumberLiteral7 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral8 [
 	super testNumberLiteral8.
 	self assert: result isLiteralNode.
@@ -831,7 +831,7 @@ PPSmalltalkParserTests >> testNumberLiteral8 [
 	self assert: result value isInteger
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testNumberLiteral9 [
 	super testNumberLiteral9.
 	self assert: result isLiteralNode.
@@ -839,7 +839,7 @@ PPSmalltalkParserTests >> testNumberLiteral9 [
 	self assert: result value isFloat
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma1 [
 	super testPragma1.
 	self 
@@ -850,7 +850,7 @@ PPSmalltalkParserTests >> testPragma1 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma10 [
 	super testPragma10.
 	self 
@@ -861,7 +861,7 @@ PPSmalltalkParserTests >> testPragma10 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma11 [
 	super testPragma11.
 	self 
@@ -872,7 +872,7 @@ PPSmalltalkParserTests >> testPragma11 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma12 [
 	super testPragma12.
 	self 
@@ -883,7 +883,7 @@ PPSmalltalkParserTests >> testPragma12 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma13 [
 	super testPragma13.
 	self 
@@ -894,7 +894,7 @@ PPSmalltalkParserTests >> testPragma13 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma14 [
 	super testPragma14.
 	self 
@@ -905,7 +905,7 @@ PPSmalltalkParserTests >> testPragma14 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma15 [
 	super testPragma15.
 	self 
@@ -916,7 +916,7 @@ PPSmalltalkParserTests >> testPragma15 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma16 [
 	super testPragma16.
 	self 
@@ -927,7 +927,7 @@ PPSmalltalkParserTests >> testPragma16 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma17 [
 	super testPragma17.
 	self 
@@ -938,7 +938,7 @@ PPSmalltalkParserTests >> testPragma17 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma18 [
 	super testPragma18.
 	self 
@@ -949,7 +949,7 @@ PPSmalltalkParserTests >> testPragma18 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma2 [
 	super testPragma2.
 	self 
@@ -961,7 +961,7 @@ PPSmalltalkParserTests >> testPragma2 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma3 [
 	super testPragma3.
 	self assert: result pragmas format: #('<foo>').
@@ -970,7 +970,7 @@ PPSmalltalkParserTests >> testPragma3 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma4 [
 	super testPragma4.
 	self assert: result pragmas format: #('<foo>').
@@ -979,7 +979,7 @@ PPSmalltalkParserTests >> testPragma4 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma5 [
 	super testPragma5.
 	self assert: result pragmas format: #('<foo>' '<bar>').
@@ -989,7 +989,7 @@ PPSmalltalkParserTests >> testPragma5 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma6 [
 	super testPragma6.
 	self 
@@ -1000,7 +1000,7 @@ PPSmalltalkParserTests >> testPragma6 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma7 [
 	super testPragma7.
 	self 
@@ -1011,7 +1011,7 @@ PPSmalltalkParserTests >> testPragma7 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma8 [
 	super testPragma8.
 	self 
@@ -1022,7 +1022,7 @@ PPSmalltalkParserTests >> testPragma8 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-pragmas }
+{ #category : #'testing-pragmas' }
 PPSmalltalkParserTests >> testPragma9 [
 	super testPragma9.
 	self 
@@ -1047,7 +1047,7 @@ PPSmalltalkParserTests >> testSequence1 [
 	self assert: result statements second value equals: 2
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testSimpleBlock1 [
 	super testSimpleBlock1.
 	self assert: result isBlock.
@@ -1056,7 +1056,7 @@ PPSmalltalkParserTests >> testSimpleBlock1 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testSimpleBlock2 [
 	super testSimpleBlock2.
 	self assert: result isBlock.
@@ -1065,7 +1065,7 @@ PPSmalltalkParserTests >> testSimpleBlock2 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testSimpleBlock3 [
 	super testSimpleBlock3.
 	self assert: result isBlock.
@@ -1074,28 +1074,28 @@ PPSmalltalkParserTests >> testSimpleBlock3 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSpecialLiteral1 [
 	super testSpecialLiteral1.
 	self assert: result isLiteralNode.
 	self assert: result value equals: true
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSpecialLiteral2 [
 	super testSpecialLiteral2.
 	self assert: result isLiteralNode.
 	self assert: result value equals: false
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSpecialLiteral3 [
 	super testSpecialLiteral3.
 	self assert: result isLiteralNode.
 	self assert: result value equals: nil
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testStatementBlock1 [
 	super testStatementBlock1.
 	self assert: result isBlock.
@@ -1104,7 +1104,7 @@ PPSmalltalkParserTests >> testStatementBlock1 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testStatementBlock2 [
 	super testStatementBlock2.
 	self assert: result isBlock.
@@ -1113,7 +1113,7 @@ PPSmalltalkParserTests >> testStatementBlock2 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-blocks }
+{ #category : #'testing-blocks' }
 PPSmalltalkParserTests >> testStatementBlock3 [
 	super testStatementBlock3.
 	self assert: result isBlock.
@@ -1237,28 +1237,28 @@ PPSmalltalkParserTests >> testStatements9 [
 	self assert: result isEmpty.
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testStringLiteral1 [
 	super testStringLiteral1.
 	self assert: result isLiteralNode.
 	self assert: result value equals: ''
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testStringLiteral2 [
 	super testStringLiteral2.
 	self assert: result isLiteralNode.
 	self assert: result value equals: 'ab'
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testStringLiteral3 [
 	super testStringLiteral3.
 	self assert: result isLiteralNode.
 	self assert: result value equals: 'ab''cd'
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral1 [
 	super testSymbolLiteral1.
 	self assert: result isLiteralNode.
@@ -1266,7 +1266,7 @@ PPSmalltalkParserTests >> testSymbolLiteral1 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral2 [
 	super testSymbolLiteral2.
 	self assert: result isLiteralNode.
@@ -1274,7 +1274,7 @@ PPSmalltalkParserTests >> testSymbolLiteral2 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral3 [
 	super testSymbolLiteral3.
 	self assert: result isLiteralNode.
@@ -1282,7 +1282,7 @@ PPSmalltalkParserTests >> testSymbolLiteral3 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral4 [
 	super testSymbolLiteral4.
 	self assert: result isLiteralNode.
@@ -1290,7 +1290,7 @@ PPSmalltalkParserTests >> testSymbolLiteral4 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral5 [
 	super testSymbolLiteral5.
 	self assert: result isLiteralNode.
@@ -1298,7 +1298,7 @@ PPSmalltalkParserTests >> testSymbolLiteral5 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral6 [
 	super testSymbolLiteral6.
 	PPSmalltalkGrammar allowUnderscoreAssignment
@@ -1308,7 +1308,7 @@ PPSmalltalkParserTests >> testSymbolLiteral6 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral7 [
 	super testSymbolLiteral7.
 	self assert: result isLiteralNode.
@@ -1316,7 +1316,7 @@ PPSmalltalkParserTests >> testSymbolLiteral7 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral8 [
 	super testSymbolLiteral8.
 	self assert: result isLiteralNode.
@@ -1324,7 +1324,7 @@ PPSmalltalkParserTests >> testSymbolLiteral8 [
 	self assert: result value isSymbol
 ]
 
-{ #category : #testing-literals }
+{ #category : #'testing-literals' }
 PPSmalltalkParserTests >> testSymbolLiteral9 [
 	super testSymbolLiteral9.
 	self assert: result isLiteralNode.
@@ -1368,7 +1368,7 @@ PPSmalltalkParserTests >> testTemporaries3 [
 	self assert: result statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testUnaryExpression1 [
 	super testUnaryExpression1.
 	self assert: result isMessage.
@@ -1378,7 +1378,7 @@ PPSmalltalkParserTests >> testUnaryExpression1 [
 	self assert: result arguments isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testUnaryExpression2 [
 	super testUnaryExpression2.
 	self assert: result isMessage.
@@ -1393,7 +1393,7 @@ PPSmalltalkParserTests >> testUnaryExpression2 [
 	self assert: result arguments isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testUnaryMethod1 [
 	super testUnaryMethod1.
 	self assert: result isMethod.
@@ -1404,7 +1404,7 @@ PPSmalltalkParserTests >> testUnaryMethod1 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testUnaryMethod2 [
 	super testUnaryMethod2.
 	self assert: result isMethod.
@@ -1415,7 +1415,7 @@ PPSmalltalkParserTests >> testUnaryMethod2 [
 	self assert: result body statements isEmpty
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testUnaryMethod3 [
 	super testUnaryMethod3.
 	self assert: result isMethod.
@@ -1426,7 +1426,7 @@ PPSmalltalkParserTests >> testUnaryMethod3 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testUnaryMethod4 [
 	super testUnaryMethod4.
 	self assert: result isMethod.
@@ -1437,7 +1437,7 @@ PPSmalltalkParserTests >> testUnaryMethod4 [
 	self assert: result body statements size equals: 1
 ]
 
-{ #category : #testing-messages }
+{ #category : #'testing-messages' }
 PPSmalltalkParserTests >> testUnaryMethod5 [
 	super testUnaryMethod5.
 	self assert: result isMethod.

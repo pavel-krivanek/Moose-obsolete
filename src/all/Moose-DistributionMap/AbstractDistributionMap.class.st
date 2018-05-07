@@ -7,7 +7,7 @@ Class {
 		'title',
 		'elementTitleBlock'
 	],
-	#category : #Moose-DistributionMap
+	#category : #'Moose-DistributionMap'
 }
 
 { #category : #'instance creation' }
@@ -22,7 +22,7 @@ AbstractDistributionMap class >> onElements: aGroup containers: aBlockOrSelector
 	^ self new onElements: aGroup containers: aBlockOrSelector properties: blockOrSelector
 ]
 
-{ #category : #element-titles }
+{ #category : #'element-titles' }
 AbstractDistributionMap >> defaultElementTitleFormattingBlock [
 	^ #yourself
 ]
@@ -32,7 +32,7 @@ AbstractDistributionMap >> defaultTitle [
 	^ 'Distribution Map'
 ]
 
-{ #category : #element-titles }
+{ #category : #'element-titles' }
 AbstractDistributionMap >> elementTitleBlock [
 	"by default the title is just the title"
 	^ elementTitleBlock isNil 
@@ -40,7 +40,7 @@ AbstractDistributionMap >> elementTitleBlock [
 		ifFalse: [elementTitleBlock]
 ]
 
-{ #category : #element-titles }
+{ #category : #'element-titles' }
 AbstractDistributionMap >> elementTitleBlock: anUnaryBlock [
 	"Specify the block that will be applied to the default title to generate a displayed title"
 	
@@ -53,7 +53,7 @@ AbstractDistributionMap >> elementsFor: aPart [
 	^ partsAndElements at: aPart
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 AbstractDistributionMap >> initialize [
 
 	super initialize.
@@ -62,7 +62,7 @@ AbstractDistributionMap >> initialize [
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 AbstractDistributionMap >> onContainers: aGroup elements: elementsBlockOrSelector properties: propertyBlockOrSelector [
 
 	aGroup do: [:part | |elementsCollection|
@@ -77,7 +77,7 @@ AbstractDistributionMap >> onContainers: aGroup elements: elementsBlockOrSelecto
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 AbstractDistributionMap >> onElements: aGroup containers: containersBlockOrSelector properties: propertyBlockOrSelector [
 
 	aGroup do: [ :element | 

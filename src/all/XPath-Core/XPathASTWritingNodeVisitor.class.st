@@ -10,7 +10,7 @@ Class {
 	#classVars : [
 		'SpaceCharacter'
 	],
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #'class initialization' }
@@ -61,9 +61,10 @@ XPathASTWritingNodeVisitor >> on: aStream [
 { #category : #printing }
 XPathASTWritingNodeVisitor >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
-		print: self contents;
+		print: stream;
 		nextPut: $).
 ]
 

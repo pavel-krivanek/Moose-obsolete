@@ -16,7 +16,7 @@ Class {
 		'lineEnd',
 		'paragraph'
 	],
-	#category : #PetitIndent-Examples
+	#category : #'PetitIndent-Examples'
 }
 
 { #category : #'as yet unclassified' }

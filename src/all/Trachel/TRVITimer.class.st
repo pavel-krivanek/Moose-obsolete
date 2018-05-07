@@ -31,7 +31,7 @@ Class {
 		'startTime',
 		'elapsedCycles'
 	],
-	#category : #Trachel-Viva
+	#category : #'Trachel-Viva'
 }
 
 { #category : #private }
@@ -93,7 +93,7 @@ TRVITimer >> elapsedTime [
 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 TRVITimer >> initialize [
 	"defaults"
 	repeat := false.

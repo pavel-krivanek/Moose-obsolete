@@ -11,7 +11,7 @@ Class {
 		'wideCharacters',
 		'tally'
 	],
-	#category : #Collections-BitmapCharacterSet
+	#category : #'Collections-BitmapCharacterSet'
 }
 
 { #category : #inspecting }

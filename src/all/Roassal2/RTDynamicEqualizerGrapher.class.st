@@ -6,7 +6,7 @@ Class {
 		'lastObject',
 		'barElements'
 	],
-	#category : #Roassal2-Builder-Grapher-Core
+	#category : #'Roassal2-Builder-Grapher-Core'
 }
 
 { #category : #'public - metrics' }

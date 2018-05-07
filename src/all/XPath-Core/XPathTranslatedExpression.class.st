@@ -8,7 +8,7 @@ Class {
 		'sourceCode',
 		'nodeTests'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -26,6 +26,7 @@ XPathTranslatedExpression >> nodeTests [
 { #category : #printing }
 XPathTranslatedExpression >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		print: self sourceCode;

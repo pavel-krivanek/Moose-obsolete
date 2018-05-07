@@ -14,7 +14,7 @@ Class {
 		'semicolons',
 		'endToken'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -62,7 +62,7 @@ DelphiRecordTypeNode >> ignoredCompositeTokenVariables [
 	^ #(#semicolons)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiRecordTypeNode >> initialize [
 	super initialize.
 	sections := OrderedCollection new: 2.

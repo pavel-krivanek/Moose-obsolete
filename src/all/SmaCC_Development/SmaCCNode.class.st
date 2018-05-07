@@ -9,19 +9,12 @@ Class {
 	#classVars : [
 		'NextId'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'class initialization' }
 SmaCCNode class >> initialize [
 	NextId := 0
-]
-
-{ #category : #'instance creation' }
-SmaCCNode class >> new [
-	^ super new
-		initialize;
-		yourself
 ]
 
 { #category : #comparing }
@@ -39,7 +32,7 @@ SmaCCNode >> action [
 	^ action
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNode >> action: anObject [
 	anObject isNil
 		ifTrue: [ ^ self ].
@@ -48,7 +41,7 @@ SmaCCNode >> action: anObject [
 		ifFalse: [ SortedCollection with: anObject ]
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCNode >> actionForSpecificRegularExpression: aSmaCCRegularExpression [
 	| matchedAction strings startingStates first |
 	strings := aSmaCCRegularExpression possibleMatches.
@@ -187,7 +180,7 @@ SmaCCNode >> asNFAWithoutEpsilonTransitions [
 	^ SmaCCEpsilonRemoval removeEpsilonEdgesFrom: self
 ]
 
-{ #category : #compiling-scanner }
+{ #category : #'compiling-scanner' }
 SmaCCNode >> codeSizeEstimate: methodStates [
 	"Estimate how many bytecodes will be generated from this node and its containing nodes."
 
@@ -206,7 +199,7 @@ SmaCCNode >> codeSizeEstimate: methodStates [
 										ifFalse: [ each to codeSizeEstimate: methodStates ])) ])
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNode >> getId [
 	^ NextId := NextId + 1
 ]
@@ -238,7 +231,7 @@ SmaCCNode >> id [
 	^ id
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCNode >> initialize [
 	super initialize.
 	id := self getId.

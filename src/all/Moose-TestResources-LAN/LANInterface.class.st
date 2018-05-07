@@ -26,7 +26,7 @@ Class {
 		'originator',
 		'addressee'
 	],
-	#category : #Moose-TestResources-LAN
+	#category : #'Moose-TestResources-LAN'
 }
 
 { #category : #'interface specs' }
@@ -158,7 +158,7 @@ LANInterface >> contents [
 		ifFalse: [contents]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 LANInterface >> initialize [ 
 	 
 	| selectionHolder | 

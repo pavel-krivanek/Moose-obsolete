@@ -4,7 +4,7 @@ This class represents the list of nodes that comprise a document's internal DTD 
 Class {
 	#name : #XMLInternalSubsetList,
 	#superclass : #XMLObservableList,
-	#category : #XML-Parser-DOM
+	#category : #'XML-Parser-DOM'
 }
 
 { #category : #private }

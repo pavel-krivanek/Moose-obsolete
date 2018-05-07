@@ -5,7 +5,7 @@ Class {
 		'index',
 		'symbol'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }

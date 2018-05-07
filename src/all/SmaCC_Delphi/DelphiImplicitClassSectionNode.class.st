@@ -1,7 +1,7 @@
 Class {
 	#name : #DelphiImplicitClassSectionNode,
 	#superclass : #DelphiClassSectionNode,
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }

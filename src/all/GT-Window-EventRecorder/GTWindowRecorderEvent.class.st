@@ -5,7 +5,7 @@ All events have a timestamp.
 Class {
 	#name : #GTWindowRecorderEvent,
 	#superclass : #GTBasicRecorderEvent,
-	#category : #GT-Window-EventRecorder-Events
+	#category : #'GT-Window-EventRecorder-Events'
 }
 
 { #category : #'instance creation' }

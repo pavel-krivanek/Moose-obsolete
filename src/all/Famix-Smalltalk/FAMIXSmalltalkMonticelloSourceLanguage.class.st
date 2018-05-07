@@ -4,12 +4,11 @@ FAMIXSmalltalkMonticelloSourceLanguage represents the fact that the language is 
 Class {
 	#name : #FAMIXSmalltalkMonticelloSourceLanguage,
 	#superclass : #FAMIXSourceLanguage,
-	#category : #Famix-Smalltalk
+	#category : #'Famix-Smalltalk'
 }
 
 { #category : #meta }
 FAMIXSmalltalkMonticelloSourceLanguage class >> annotation [
 	<MSEClass: #SmalltalkMonticelloSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
-	^self
 ]

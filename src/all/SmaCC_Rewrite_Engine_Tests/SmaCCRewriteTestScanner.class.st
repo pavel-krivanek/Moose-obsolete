@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCRewriteTestScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Rewrite_Engine_Tests
+	#category : #'SmaCC_Rewrite_Engine_Tests'
 }
 
 { #category : #generated }
@@ -11,26 +11,26 @@ SmaCCRewriteTestScanner >> emptySymbolTokenId [
 
 { #category : #generated }
 SmaCCRewriteTestScanner >> errorTokenId [
-	^ 12
+	^ 14
 ]
 
 { #category : #generated }
 SmaCCRewriteTestScanner >> scanForToken [
 	self step.
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $)
 		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
-	currentCharacter == $+
 		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+	currentCharacter == $+
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	currentCharacter == $-
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	currentCharacter == $/
-		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
-	currentCharacter == $^
 		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+	currentCharacter == $^
+		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 	currentCharacter == $`
 		ifTrue: [ [ self step.
 			currentCharacter == $`

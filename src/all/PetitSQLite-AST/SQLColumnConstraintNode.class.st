@@ -7,7 +7,7 @@ Class {
 		'isPKConstraint',
 		'canBeNull'
 	],
-	#category : #PetitSQLite-AST
+	#category : #'PetitSQLite-AST'
 }
 
 { #category : #accessing }

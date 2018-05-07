@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'targetMethod'
 	],
-	#category : #GT-DebuggerExtensions
+	#category : #'GT-DebuggerExtensions'
 }
 
 { #category : #actions }

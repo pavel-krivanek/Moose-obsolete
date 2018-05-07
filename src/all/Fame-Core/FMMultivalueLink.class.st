@@ -38,7 +38,7 @@ Class {
 		'owner',
 		'opposite'
 	],
-	#category : #Fame-Core
+	#category : #'Fame-Core'
 }
 
 { #category : #'instance creation' }
@@ -109,7 +109,7 @@ FMMultivalueLink >> do: aBlock [
 	values do: aBlock
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 FMMultivalueLink >> first [
 	^ self at: 1
 ]
@@ -123,7 +123,7 @@ FMMultivalueLink >> hash [
 	^ hash
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 FMMultivalueLink >> last [
 	^ values last
 ]
@@ -149,7 +149,7 @@ FMMultivalueLink >> remove: anElement ifAbsent: exceptionBlock [
 	^anElement
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 FMMultivalueLink >> second [
 	^ self at: 2
 ]
@@ -166,7 +166,7 @@ FMMultivalueLink >> species [
 	^OrderedCollection
 ]
 
-{ #category : #accessing-computed }
+{ #category : #'accessing-computed' }
 FMMultivalueLink >> third [
 	^ self at: 3
 ]

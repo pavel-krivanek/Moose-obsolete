@@ -346,23 +346,6 @@ FAMIXType >> numberOfAttributesInherited: aNumber [
 ]
 
 { #category : #'*Famix-Extensions' }
-FAMIXType >> numberOfChildren [
-	<MSEProperty: #numberOfChildren type: #Number>
-	<derived>
-	<MSEComment: 'The number of subclasses of a class'>
-	
-	^self
-		lookUpPropertyNamed: #numberOfChildren
-		computedAs: [self subInheritances size]
-]
-
-{ #category : #'*Famix-Extensions' }
-FAMIXType >> numberOfChildren: aNumber [
-
-	self privateState propertyAt: #numberOfChildren put: aNumber
-]
-
-{ #category : #'*Famix-Extensions' }
 FAMIXType >> numberOfComments [
 	<MSEProperty: #numberOfComments type: #Number>
 	<derived>
@@ -711,6 +694,20 @@ FAMIXType >> numberOfStatements [
 FAMIXType >> numberOfStatements: aNumber [
 
 	self privateState propertyAt: #numberOfStatements put: aNumber
+]
+
+{ #category : #'*Famix-Extensions' }
+FAMIXType >> numberOfSubclasses [
+	<MSEProperty: #numberOfSubclasses type: #Number>
+	<derived>
+	<MSEComment: 'The number of subclasses of a class'>
+	^ self lookUpPropertyNamed: #numberOfSubclasses computedAs: [ self subInheritances size ]
+]
+
+{ #category : #'*Famix-Extensions' }
+FAMIXType >> numberOfSubclasses: aNumber [
+
+	self privateState propertyAt: #numberOfSubclasses put: aNumber
 ]
 
 { #category : #'*Famix-Extensions-navigation' }

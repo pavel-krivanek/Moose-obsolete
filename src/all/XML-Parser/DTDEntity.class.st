@@ -8,7 +8,7 @@ Class {
 		'name',
 		'uri'
 	],
-	#category : #XML-Parser-DTD
+	#category : #'XML-Parser-DTD'
 }
 
 { #category : #'instance creation' }
@@ -64,6 +64,7 @@ DTDEntity >> printNameOn: aStream [
 { #category : #printing }
 DTDEntity >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream nextPut: $(.
 	self printNameOn: aStream.
 	aStream nextPut: $).

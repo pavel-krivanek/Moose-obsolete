@@ -4,13 +4,13 @@ Class {
 	#classInstVars : [
 		'rewriter'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 SmaCCRewriteRuleFileScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(13 'Import' 2) #(13 'Parser' 4))
+	#(#(13 'Import' 9) #(13 'Parser' 10))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -30,12 +30,12 @@ SmaCCRewriteRuleFileScanner class >> rewriter: aParseTreeRewriter [
 
 { #category : #generated }
 SmaCCRewriteRuleFileScanner >> emptySymbolTokenId [
-	^ 33
+	^ 34
 ]
 
 { #category : #generated }
 SmaCCRewriteRuleFileScanner >> errorTokenId [
-	^ 34
+	^ 35
 ]
 
 { #category : #private }
@@ -120,7 +120,7 @@ SmaCCRewriteRuleFileScanner >> scanForToken [
 
 { #category : #generated }
 SmaCCRewriteRuleFileScanner >> scanForTokenX1 [
-	self recordMatch: #(8).
+	self recordMatch: #(4).
 	self step.
 	currentCharacter == $>
 		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
@@ -138,14 +138,14 @@ SmaCCRewriteRuleFileScanner >> scanForTokenX2 [
 { #category : #generated }
 SmaCCRewriteRuleFileScanner >> scanForTokenX3 [
 	(self scanForString: '>>')
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 SmaCCRewriteRuleFileScanner >> scanForTokenX4 [
 	(self scanForString: '<<')
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 	^ self reportLastMatch
 ]
 
@@ -168,16 +168,16 @@ SmaCCRewriteRuleFileScanner >> scanForTokenX6 [
 { #category : #generated }
 SmaCCRewriteRuleFileScanner >> scanForTokenX7 [
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	currentCharacter == $+
-		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
 	currentCharacter == $-
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
 	currentCharacter == $:
-		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $<
 		ifTrue:
 			[ ^ self scanForTokenX4 ].
@@ -185,9 +185,9 @@ SmaCCRewriteRuleFileScanner >> scanForTokenX7 [
 		ifTrue:
 			[ ^ self scanForTokenX3 ].
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
 	currentCharacter isSeparator
 		ifTrue:
 			[ ^ self scanForTokenX2 ].

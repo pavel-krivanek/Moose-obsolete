@@ -7,7 +7,7 @@ Class {
 		'leftBraceToken',
 		'rightBraceToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -20,7 +20,7 @@ SwiftPrefixOperatorDeclarationNode >> compositeTokenVariables [
 	^ #(#operatorTokens)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftPrefixOperatorDeclarationNode >> initialize [
 	super initialize.
 	operatorTokens := OrderedCollection new: 2.

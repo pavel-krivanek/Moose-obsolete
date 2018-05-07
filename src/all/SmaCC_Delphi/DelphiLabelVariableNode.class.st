@@ -7,7 +7,7 @@ Class {
 		'commas',
 		'semicolon'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -40,7 +40,7 @@ DelphiLabelVariableNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiLabelVariableNode >> initialize [
 	super initialize.
 	names := OrderedCollection new: 2.

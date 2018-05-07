@@ -1,7 +1,7 @@
 Class {
 	#name : #XPathBooleanTest,
 	#superclass : #TestCase,
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #tests }

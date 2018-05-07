@@ -8,7 +8,7 @@ Class {
 		'doToken',
 		'statement'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -58,7 +58,7 @@ DelphiWithStatementNode >> ignoredCompositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiWithStatementNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

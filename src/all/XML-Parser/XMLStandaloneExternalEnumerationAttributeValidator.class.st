@@ -4,7 +4,7 @@ This class validates attributes that can have any value taken from a list like "
 Class {
 	#name : #XMLStandaloneExternalEnumerationAttributeValidator,
 	#superclass : #XMLEnumerationAttributeValidator,
-	#category : #XML-Parser-Validation-Standalone
+	#category : #'XML-Parser-Validation-Standalone'
 }
 
 { #category : #testing }

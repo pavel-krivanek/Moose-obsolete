@@ -6,16 +6,16 @@ Copyright (c), 2004-2007 Adrian Kuhn. This class is part of Hapax. Hapax is dist
 Class {
 	#name : #MalGermanStemmer,
 	#superclass : #MalAbstractStemmer,
-	#category : #Moose-Algos-InformationRetrieval
+	#category : #'Moose-Algos-InformationRetrieval'
 }
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> isVowelAt: anIndex [
 	
 	^#eiauoyäöü includes: (string at: anIndex)
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> performStemming: aString [
 	
 	string := aString.
@@ -83,7 +83,7 @@ MalGermanStemmer >> performStemming: aString [
 	turn U and Y back into lower case, and remove the umlaut accent from a, o and u."
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> preprocessing [
 	
 	string := string copyReplaceAll: #ß with: #ss.
@@ -99,14 +99,14 @@ MalGermanStemmer >> preprocessing [
 						put: (string at: index) asUppercase]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> setMarks [
 	
 	super setMarks.
 	r1 < 3 ifTrue: [r1 := 3]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> step1 [
 	
 	#(#ern #em #en #er #es #e)
@@ -117,7 +117,7 @@ MalGermanStemmer >> step1 [
 			[(#nrtdhlgmbfk includes: (string at: cursor)) ifTrue: [self removeSuffix]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> step2 [
 	
 	#(#est #en #er)
@@ -130,7 +130,7 @@ MalGermanStemmer >> step2 [
 			[(#ntdhlgmbfk includes: (string at: cursor)) ifTrue: [self removeSuffix]]
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> step3 [
 	
 	| rule2 rule1 rule3 rule4 |
@@ -163,7 +163,7 @@ MalGermanStemmer >> step3 [
 		(self endsWith: each key in: r2) ifTrue: [ ^each value value ] ]."
 ]
 
-{ #category : #private-algorithm }
+{ #category : #'private-algorithm' }
 MalGermanStemmer >> toLowercase [
 	"Converts the current string to lowercase (reimplemented here for performance reasons)."
 	

@@ -1,1 +1,1 @@
-Package { #name : #ACD-Model }
+Package { #name : #'ACD-Model' }

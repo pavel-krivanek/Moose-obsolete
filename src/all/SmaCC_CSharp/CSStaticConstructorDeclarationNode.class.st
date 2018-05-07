@@ -12,7 +12,7 @@ Class {
 		'block',
 		'semicolonToken'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -71,7 +71,7 @@ CSStaticConstructorDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolonToken)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSStaticConstructorDeclarationNode >> initialize [
 	super initialize.
 	_attributes := OrderedCollection new: 2.

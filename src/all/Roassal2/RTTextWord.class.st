@@ -18,7 +18,7 @@ Class {
 		'interval',
 		'text'
 	],
-	#category : #Roassal2-Builder-TextBuilder
+	#category : #'Roassal2-Builder-TextBuilder'
 }
 
 { #category : #accessing }

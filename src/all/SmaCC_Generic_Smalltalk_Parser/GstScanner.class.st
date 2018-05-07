@@ -1,13 +1,13 @@
 Class {
 	#name : #GstScanner,
 	#superclass : #SmaCCScanner,
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 GstScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(15 'false' 7) #(15 'nil' 6) #(15 'true' 5))
+	#(#(15 'false' 12) #(15 'nil' 13) #(15 'true' 14))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -27,12 +27,12 @@ GstScanner >> binaryId [
 
 { #category : #generated }
 GstScanner >> emptySymbolTokenId [
-	^ 64
+	^ 67
 ]
 
 { #category : #generated }
 GstScanner >> errorTokenId [
-	^ 65
+	^ 68
 ]
 
 { #category : #generated }
@@ -260,17 +260,13 @@ GstScanner >> scan7 [
 	currentCharacter == $.
 		ifTrue: [ ^ self scan5 ].
 	currentCharacter == $0
-		ifTrue:
-			[ ^ self scan7X9 ].
+		ifTrue: [ ^ self scan7X9 ].
 	currentCharacter == $1
-		ifTrue:
-			[ ^ self scan7X8 ].
+		ifTrue: [ ^ self scan7X8 ].
 	currentCharacter == $2
-		ifTrue:
-			[ ^ self scan7X7 ].
+		ifTrue: [ ^ self scan7X7 ].
 	currentCharacter == $3
-		ifTrue:
-			[ ^ self scan7X6 ].
+		ifTrue: [ ^ self scan7X6 ].
 	^ self scan7X11
 ]
 
@@ -312,20 +308,15 @@ GstScanner >> scan7X10 [
 { #category : #generated }
 GstScanner >> scan7X11 [
 	currentCharacter == $4
-		ifTrue:
-			[ ^ self scan7X5 ].
+		ifTrue: [ ^ self scan7X5 ].
 	currentCharacter == $5
-		ifTrue:
-			[ ^ self scan7X4 ].
+		ifTrue: [ ^ self scan7X4 ].
 	currentCharacter == $6
-		ifTrue:
-			[ ^ self scan7X3 ].
+		ifTrue: [ ^ self scan7X3 ].
 	currentCharacter == $7
-		ifTrue:
-			[ ^ self scan7X2 ].
+		ifTrue: [ ^ self scan7X2 ].
 	currentCharacter == $8
-		ifTrue:
-			[ ^ self scan7X1 ].
+		ifTrue: [ ^ self scan7X1 ].
 	currentCharacter isDigit
 		ifTrue: [ self recordMatch: #(25).
 			self step.
@@ -1044,14 +1035,14 @@ GstScanner >> scanForToken [
 	currentCharacter == $'
 		ifTrue: [ ^ self scan3 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	currentCharacter == $-
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
 	currentCharacter == $.
-		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	^ self scanForTokenX9
 ]
 
@@ -1092,9 +1083,9 @@ GstScanner >> scanForTokenX2 [
 	currentCharacter == $'
 		ifTrue: [ ^ self scan1 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	currentCharacter isSpecial
 		ifTrue: [ [ self recordMatch: #(20).
 			self step.
@@ -1121,10 +1112,10 @@ GstScanner >> scanForTokenX3 [
 
 { #category : #generated }
 GstScanner >> scanForTokenX4 [
-	self recordMatch: #(10).
+	self recordMatch: #(6).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 	^ self reportLastMatch
 ]
 
@@ -1156,11 +1147,11 @@ GstScanner >> scanForTokenX7 [
 { #category : #generated }
 GstScanner >> scanForTokenX8 [
 	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
 	currentCharacter == $^
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
 	currentCharacter == $`
 		ifTrue: [ ^ self scan16 ].
 	currentCharacter == $|

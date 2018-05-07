@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseMonticelloClassPopulator,
 	#superclass : #MooseMonticelloVisitor,
-	#category : #Moose-MonticelloImporter
+	#category : #'Moose-MonticelloImporter'
 }
 
 { #category : #accessing }

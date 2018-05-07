@@ -4,7 +4,7 @@ This is an AST node class for addition '+' expressions.
 Class {
 	#name : #XPathASTAdditionExpressionNode,
 	#superclass : #XPathASTAdditiveExpressionNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

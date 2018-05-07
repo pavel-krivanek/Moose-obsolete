@@ -1,1 +1,1 @@
-Package { #name : #Moose-Algos-Kontractor }
+Package { #name : #'Moose-Algos-Kontractor' }

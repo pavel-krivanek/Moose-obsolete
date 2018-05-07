@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'entity'
 	],
-	#category : #XML-Parser-Drivers
+	#category : #'XML-Parser-Drivers'
 }
 
 { #category : #'instance creation' }
@@ -73,9 +73,10 @@ XMLPushedBackEntity >> poppedByTokenizer: aTokenizer [
 { #category : #printing }
 XMLPushedBackEntity >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
-		print: aStream;
+		print: entity;
 		nextPut: $).
 ]
 

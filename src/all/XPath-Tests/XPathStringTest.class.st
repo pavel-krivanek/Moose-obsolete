@@ -1,7 +1,7 @@
 Class {
 	#name : #XPathStringTest,
 	#superclass : #TestCase,
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #tests }

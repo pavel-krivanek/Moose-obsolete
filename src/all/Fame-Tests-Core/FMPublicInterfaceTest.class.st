@@ -1,7 +1,7 @@
 Class {
 	#name : #FMPublicInterfaceTest,
 	#superclass : #TestCase,
-	#category : #Fame-Tests-Core
+	#category : #'Fame-Tests-Core'
 }
 
 { #category : #private }

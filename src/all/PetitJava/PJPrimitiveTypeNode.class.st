@@ -1,7 +1,7 @@
 Class {
 	#name : #PJPrimitiveTypeNode,
 	#superclass : #PJTypeNode,
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #'as yet unclassified' }

@@ -1,7 +1,7 @@
 Class {
 	#name : #RTCompositeElementAttachPoint,
 	#superclass : #RTAttachPoint,
-	#category : #Roassal2-AttachPoint
+	#category : #'Roassal2-AttachPoint'
 }
 
 { #category : #'public - hooks' }

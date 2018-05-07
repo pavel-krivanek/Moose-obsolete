@@ -34,7 +34,7 @@ Class {
 		'getToken',
 		'setToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -84,7 +84,7 @@ SwiftProtocolSubscriptDeclarationNode >> commaTokens: anOrderedCollection [
 
 { #category : #generated }
 SwiftProtocolSubscriptDeclarationNode >> compositeTokenVariables [
-	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens #inoutTokens #letTokens #colonTokens #periodTokens #protocolTokens #lessThanTokens #greaterThanTokens #minusGreaterThanTokens #commaTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #equalTokens #varTokens)
+	^ #(#_Tokens #identifierTokens #leftParenTokens #rightParenTokens #leftBracketTokens #rightBracketTokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #full_string_literalTokens #operatorTokens #inoutTokens #letTokens #colonTokens #minusGreaterThanTokens #periodTokens #questionMarkTokens #bangTokens #protocolTokens #lessThanTokens #greaterThanTokens #typeTokens #commaTokens #equalTokens #varTokens #periodPeriodPeriodTokens)
 ]
 
 { #category : #generated }
@@ -157,7 +157,7 @@ SwiftProtocolSubscriptDeclarationNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftProtocolSubscriptDeclarationNode >> initialize [
 	super initialize.
 	_Tokens := OrderedCollection new: 2.
@@ -170,24 +170,24 @@ SwiftProtocolSubscriptDeclarationNode >> initialize [
 	rightBraceTokens := OrderedCollection new: 2.
 	integer_literalTokens := OrderedCollection new: 2.
 	floating_point_literalTokens := OrderedCollection new: 2.
-	operatorTokens := OrderedCollection new: 2.
 	full_string_literalTokens := OrderedCollection new: 2.
+	operatorTokens := OrderedCollection new: 2.
 	inoutTokens := OrderedCollection new: 2.
 	letTokens := OrderedCollection new: 2.
 	colonTokens := OrderedCollection new: 2.
+	minusGreaterThanTokens := OrderedCollection new: 2.
 	periodTokens := OrderedCollection new: 2.
+	questionMarkTokens := OrderedCollection new: 2.
+	bangTokens := OrderedCollection new: 2.
 	protocolTokens := OrderedCollection new: 2.
 	lessThanTokens := OrderedCollection new: 2.
 	greaterThanTokens := OrderedCollection new: 2.
-	minusGreaterThanTokens := OrderedCollection new: 2.
-	commaTokens := OrderedCollection new: 2.
-	questionMarkTokens := OrderedCollection new: 2.
-	bangTokens := OrderedCollection new: 2.
 	typeTokens := OrderedCollection new: 2.
-	periodPeriodPeriodTokens := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
 	equalTokens := OrderedCollection new: 2.
 	expressions := OrderedCollection new: 2.
 	varTokens := OrderedCollection new: 2.
+	periodPeriodPeriodTokens := OrderedCollection new: 2.
 ]
 
 { #category : #generated }

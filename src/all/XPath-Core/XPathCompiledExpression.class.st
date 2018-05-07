@@ -8,7 +8,7 @@ Class {
 		'block',
 		'nodeTests'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -39,6 +39,7 @@ XPathCompiledExpression >> nodeTests [
 { #category : #printing }
 XPathCompiledExpression >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		print: self block;

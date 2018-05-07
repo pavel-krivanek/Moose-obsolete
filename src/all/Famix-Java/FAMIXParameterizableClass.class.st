@@ -14,14 +14,13 @@ Class {
 	#instVars : [
 		'parameterizedTypes'
 	],
-	#category : #Famix-Java
+	#category : #'Famix-Java'
 }
 
-{ #category : #initialize-release }
+{ #category : #meta }
 FAMIXParameterizableClass class >> annotation [
 	<MSEClass: #ParameterizableClass super: #FAMIXClass>
 	<package: #FAMIX>
-	^self
 ]
 
 { #category : #initialization }
@@ -32,14 +31,14 @@ FAMIXParameterizableClass >> initialize [
 		opposite: #parameterizableClass:
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXParameterizableClass >> parameterizedTypes [
 	<MSEProperty: #parameterizedTypes type: #FAMIXParameterizedType opposite: #parameterizableClass>
 	<multivalued> <derived>
 	^ parameterizedTypes
 ]
 
-{ #category : #moosechef-scoping-filtering }
+{ #category : #'moosechef-scoping-filtering' }
 FAMIXParameterizableClass >> parameterizedTypes: aCollection [
 	parameterizedTypes value: aCollection
 ]
@@ -56,10 +55,4 @@ FAMIXParameterizableClass >> parameters [
 FAMIXParameterizableClass >> parameters: aCollection [
 
 	self privateState attributeAt: #parameters put: aCollection
-]
-
-{ #category : #moosechef-scoping-filtering }
-FAMIXParameterizableClass >> yourScope [
-
-	^ #typeScope
 ]

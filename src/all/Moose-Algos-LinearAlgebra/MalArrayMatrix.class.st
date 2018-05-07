@@ -9,7 +9,7 @@ Class {
 		'columnSize',
 		'rowSize'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
 { #category : #accessing }
@@ -38,7 +38,7 @@ MalArrayMatrix >> columnSize [
 	^columnSize
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalArrayMatrix >> initializeRows: n columns: m [
 	
 	rowSize := n.

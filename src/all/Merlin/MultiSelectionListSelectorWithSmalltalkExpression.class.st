@@ -5,10 +5,10 @@ Class {
 		'textEntry',
 		'textEntryContents'
 	],
-	#category : #Merlin-ToBeRemoved
+	#category : #'Merlin-ToBeRemoved'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MultiSelectionListSelectorWithSmalltalkExpression >> addSmalltalkExpressionRowToPackageSelector [
 	self 
 		addRowWithAll: { 
@@ -44,7 +44,7 @@ MultiSelectionListSelectorWithSmalltalkExpression >> evaluateTextEntryContents [
 			]
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MultiSelectionListSelectorWithSmalltalkExpression >> initialize: aCollectionOfItems [
 
 	super initialize: aCollectionOfItems.

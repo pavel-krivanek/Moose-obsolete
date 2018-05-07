@@ -5,5 +5,5 @@ Target: dragged element
 Class {
 	#name : #TRMouseDragStart,
 	#superclass : #TRAbstractMouseEvent,
-	#category : #Trachel-Events
+	#category : #'Trachel-Events'
 }

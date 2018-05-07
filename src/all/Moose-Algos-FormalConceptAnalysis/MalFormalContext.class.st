@@ -9,7 +9,7 @@ Class {
 		'fattributes',
 		'concepts'
 	],
-	#category : #Moose-Algos-FormalConceptAnalysis
+	#category : #'Moose-Algos-FormalConceptAnalysis'
 }
 
 { #category : #examples }
@@ -128,7 +128,7 @@ MalFormalContext >> printOn: stream [
 		nextPut: $)
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalFormalContext >> with: collection using: foBlock using: faBlock [
 	
 	| dict fobject fattribute |

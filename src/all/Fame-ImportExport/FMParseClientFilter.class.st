@@ -6,7 +6,7 @@ Class {
 		'filter',
 		'shouldSkip'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #'instance creation' }
@@ -76,7 +76,7 @@ FMParseClientFilter >> filter: aCollectionOfElementNames [
 	filter := aCollectionOfElementNames .
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMParseClientFilter >> initialize [
 
 	super initialize.

@@ -8,7 +8,7 @@ Class {
 		'script',
 		'lastEvent'
 	],
-	#category : #Roassal2Spec-Core
+	#category : #'Roassal2Spec-Core'
 }
 
 { #category : #specs }
@@ -61,7 +61,7 @@ RoassalModel >> script: aBlock [
 	script value: aBlock
 ]
 
-{ #category : #api-events }
+{ #category : #'api-events' }
 RoassalModel >> whenLastEventChangedDo: aBlock [
 
 	lastEvent whenChangedDo: aBlock

@@ -1,1 +1,1 @@
-Package { #name : #Dynamix-Tests-Core }
+Package { #name : #'Dynamix-Tests-Core' }

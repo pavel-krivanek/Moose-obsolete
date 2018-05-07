@@ -7,7 +7,7 @@ Class {
 		'commas',
 		'semicolon'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -52,7 +52,7 @@ JSLexicalDeclarationNode >> ignoredTokenVariables [
 	^ #(#semicolon)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSLexicalDeclarationNode >> initialize [
 	super initialize.
 	bindings := OrderedCollection new: 2.

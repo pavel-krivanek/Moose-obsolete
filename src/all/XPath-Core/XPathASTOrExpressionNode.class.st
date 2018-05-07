@@ -4,7 +4,7 @@ This is an AST node class for 'or' expressions. The evaluation should short-curc
 Class {
 	#name : #XPathASTOrExpressionNode,
 	#superclass : #XPathASTBinaryOperatorExpressionNode,
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #visiting }

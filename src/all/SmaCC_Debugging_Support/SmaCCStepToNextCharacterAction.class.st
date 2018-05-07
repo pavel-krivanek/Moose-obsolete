@@ -1,7 +1,7 @@
 Class {
 	#name : #SmaCCStepToNextCharacterAction,
 	#superclass : #SmaCCScannerStepToAction,
-	#category : #SmaCC_Debugging_Support
+	#category : #'SmaCC_Debugging_Support'
 }
 
 { #category : #registration }
@@ -13,6 +13,11 @@ SmaCCStepToNextCharacterAction class >> gtActionFor: aDebugger [
 { #category : #accessing }
 SmaCCStepToNextCharacterAction >> defaultLabel [
 	^ 'Step Next Character'
+]
+
+{ #category : #accessing }
+SmaCCStepToNextCharacterAction >> help [
+	^ 'Run until we get to the character or a parse error is encountered.'
 ]
 
 { #category : #accessing }

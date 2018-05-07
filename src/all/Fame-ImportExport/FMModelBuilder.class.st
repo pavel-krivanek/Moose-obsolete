@@ -4,22 +4,22 @@ Class {
 	#instVars : [
 		'client'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
-{ #category : #DSL-synonyms }
+{ #category : #'DSL-synonyms' }
 FMModelBuilder >> a: attributeName of: valueOrBodyOrArray [
 	
 	self attribute: attributeName with: valueOrBodyOrArray
 ]
 
-{ #category : #DSL-synonyms }
+{ #category : #'DSL-synonyms' }
 FMModelBuilder >> add: attributeName with: valueOrBodyOrArray [
 	
 	self attribute: attributeName with: valueOrBodyOrArray
 ]
 
-{ #category : #DSL-synonyms }
+{ #category : #'DSL-synonyms' }
 FMModelBuilder >> an: attributeName of: valueOrBodyOrArray [
 	
 	self attribute: attributeName with: valueOrBodyOrArray
@@ -76,7 +76,7 @@ FMModelBuilder >> id: index [
 	client serial: index
 ]
 
-{ #category : #DSL-synonyms }
+{ #category : #'DSL-synonyms' }
 FMModelBuilder >> new: elementName with: body [ 
 	
 	self element: elementName with: body

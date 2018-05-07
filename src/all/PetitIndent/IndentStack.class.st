@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'contents'
 	],
-	#category : #PetitIndent-Core
+	#category : #'PetitIndent-Core'
 }
 
 { #category : #comparison }

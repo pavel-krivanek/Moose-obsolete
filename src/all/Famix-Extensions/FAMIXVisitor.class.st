@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXVisitor,
 	#superclass : #Object,
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #visiting }

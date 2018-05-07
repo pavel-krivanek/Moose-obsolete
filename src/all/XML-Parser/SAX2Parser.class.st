@@ -19,7 +19,7 @@ Class {
 		'declarationHandler',
 		'parsingResult'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #'private ' }

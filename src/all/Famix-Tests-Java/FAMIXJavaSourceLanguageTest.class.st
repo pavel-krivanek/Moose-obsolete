@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXJavaSourceLanguageTest,
 	#superclass : #TestCase,
-	#category : #Famix-Tests-Java
+	#category : #'Famix-Tests-Java'
 }
 
 { #category : #tests }

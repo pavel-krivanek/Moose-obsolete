@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'accessor'
 	],
-	#category : #Magritte-Model-Accessor
+	#category : #'Magritte-Model-Accessor'
 }
 
 { #category : #'instance creation' }

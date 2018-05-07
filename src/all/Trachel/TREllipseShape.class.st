@@ -1,7 +1,7 @@
 Class {
 	#name : #TREllipseShape,
 	#superclass : #TRAbstractBoxShape,
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #hooks }

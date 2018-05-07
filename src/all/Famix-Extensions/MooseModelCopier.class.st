@@ -5,7 +5,7 @@ Class {
 		'model',
 		'table'
 	],
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #running }
@@ -27,7 +27,7 @@ MooseModelCopier >> copyModel: aMooseModel [
 	^ model
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseModelCopier >> initialize [
 
 	table := IdentityHashTable new.

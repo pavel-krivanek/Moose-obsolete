@@ -15,3 +15,8 @@ FAMIXContainerEntity >> classes [
 				cacheAt: #classes 
 				ifAbsentPut: [self types select: [:type| type isClass ]]
 ]
+
+{ #category : #'*Famix-Implementation' }
+FAMIXContainerEntity >> isContainerEntity [
+	^ true
+]

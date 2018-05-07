@@ -4,7 +4,7 @@ I am a class that display general information about how to report a bug
 Class {
 	#name : #RTHowToReportABug,
 	#superclass : #RTAbstractWorldMenu,
-	#category : #Roassal2-MorphSpecific-Menu
+	#category : #'Roassal2-MorphSpecific-Menu'
 }
 
 { #category : #'world menu' }
@@ -15,7 +15,7 @@ RTHowToReportABug class >> menuCommandOn: aBuilder [
 			parent: self projectName asSymbol;
 			label: 'How To report a bug';
 			icon: (Smalltalk ui icons iconNamed: #smallDebug);
-			action: [ self new open.  WebBrowser openOn: 'https://github.com/moosetechnology/Moose/issues'  ]
+			action: [ self new open.  "WebBrowser openOn: 'https://github.com/moosetechnology/Moose/issues'"  ]
 ]
 
 { #category : #'instance creation' }

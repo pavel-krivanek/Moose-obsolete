@@ -1,10 +1,10 @@
 Class {
 	#name : #DeepTraverserExamples,
 	#superclass : #Object,
-	#category : #DeepTraverser-Examples
+	#category : #'DeepTraverser-Examples'
 }
 
-{ #category : #examples-difference }
+{ #category : #'examples-difference' }
 DeepTraverserExamples >> allMethodsArray [
 	<gtExample>
 	| resultByRaw resultByTraverser |
@@ -21,7 +21,7 @@ DeepTraverserExamples >> allMethodsArray [
 	
 ]
 
-{ #category : #examples-difference }
+{ #category : #'examples-difference' }
 DeepTraverserExamples >> allSuperclassesNumber [
 	<gtExample>
 	| resultByRaw resultByTraverser |
@@ -33,7 +33,7 @@ DeepTraverserExamples >> allSuperclassesNumber [
 	
 ]
 
-{ #category : #examples-start-object }
+{ #category : #'examples-start-object' }
 DeepTraverserExamples >> collectionAsStartOnObject [
 	<gtExample>
 	| result1 result2 |
@@ -49,7 +49,7 @@ DeepTraverserExamples >> collectionAsStartOnObject [
 	self assert: result1 = result2.
 ]
 
-{ #category : #examples-start-object }
+{ #category : #'examples-start-object' }
 DeepTraverserExamples >> collectionAsWithStartOnObject [
 	<gtExample>
 	| result1 result2 |
@@ -65,7 +65,7 @@ DeepTraverserExamples >> collectionAsWithStartOnObject [
 	self assert: result1 = result2.
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> collectionRelations [
 	<gtExample>
 	| relations graph |
@@ -84,7 +84,7 @@ DeepTraverserExamples >> collectionRelations [
 	^ relations
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepCollect [
 	<gtExample>
 	
@@ -96,7 +96,7 @@ DeepTraverserExamples >> deepCollect [
 	self assert: result = #( 20 30 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepCollectAs [
 	<gtExample>
 	
@@ -109,7 +109,7 @@ DeepTraverserExamples >> deepCollectAs [
 	self assert: result = #( 20 30 ) asSet
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepCollectAsSet [
 	<gtExample>
 	
@@ -120,7 +120,7 @@ DeepTraverserExamples >> deepCollectAsSet [
 	self assert: result = #( 2 3 ) asSet
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepCollectSimple [
 	<gtExample>
 	
@@ -131,7 +131,7 @@ DeepTraverserExamples >> deepCollectSimple [
 	self assert: result = #( 2 3 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepDo [
 	<gtExample>
 	
@@ -144,7 +144,7 @@ DeepTraverserExamples >> deepDo [
 	self assert: trace = #( 2 3 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepDoRelationDo [
 	<gtExample>
 	
@@ -161,7 +161,7 @@ DeepTraverserExamples >> deepDoRelationDo [
 
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepEdgesDo [
 	<gtExample>
 	
@@ -174,7 +174,7 @@ DeepTraverserExamples >> deepEdgesDo [
 	self assert: trace = { 1->2. 1->3. 2->3 } asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepFlatCollect [
 	<gtExample>
 	
@@ -186,7 +186,7 @@ DeepTraverserExamples >> deepFlatCollect [
 	self assert: result = #( 1 2 1 2 3 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepFlatCollectAs [
 	<gtExample>
 	
@@ -199,7 +199,7 @@ DeepTraverserExamples >> deepFlatCollectAs [
 	self assert: result = #( 1 2 3 ) asSet
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepRelationDo [
 	<todo: 'is this really what we want ?'>
 	<gtExample>
@@ -214,7 +214,7 @@ DeepTraverserExamples >> deepRelationDo [
 
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepSelect [
 	<gtExample>
 	
@@ -226,7 +226,7 @@ DeepTraverserExamples >> deepSelect [
 	self assert: result = #( 2 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> deepSelectCollectAs [
 	<gtExample>
 	
@@ -410,7 +410,7 @@ DeepTraverserExamples >> nextElementsFor: each inGraph: graph [
 	^ graph at: each ifAbsent: [ #() ]
 ]
 
-{ #category : #examples-difference }
+{ #category : #'examples-difference' }
 DeepTraverserExamples >> plainTraverserAndWithActionWithoutEdgesAndWithActionWithEdges [
 	<gtExample>
 	<subjectClass: #DeepTraverserWithoutAction selector: #upToEnd>
@@ -430,7 +430,7 @@ DeepTraverserExamples >> plainTraverserAndWithActionWithoutEdgesAndWithActionWit
 	^ { t1 . t2 . t3 }
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingAtEnd [
 	<gtExample>
 	
@@ -449,7 +449,7 @@ DeepTraverserExamples >> streamingAtEnd [
 	self assert: false
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingNext [
 	<gtExample>
 	| traverser |
@@ -484,7 +484,7 @@ DeepTraverserExamples >> streamingNext [
 	^ traverser
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingNextElements [
 	<gtExample>
 	| traverser |
@@ -516,7 +516,7 @@ DeepTraverserExamples >> streamingNextElements [
 	^ traverser
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingRestart [
 	<gtExample>
 	| traverser |
@@ -531,7 +531,7 @@ DeepTraverserExamples >> streamingRestart [
 	self assert: traverser atEnd not.
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingTraverser [
 	<gtExample>
 	| graph |
@@ -542,7 +542,7 @@ DeepTraverserExamples >> streamingTraverser [
 		yourself
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingUpToAnyExistingElement [
 	<gtExample>
 	| traverser result |
@@ -561,7 +561,7 @@ DeepTraverserExamples >> streamingUpToAnyExistingElement [
 	^ traverser
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingUpToAnyMatching [
 	<gtExample>
 	| result traverser |
@@ -576,7 +576,7 @@ DeepTraverserExamples >> streamingUpToAnyMatching [
 	^ traverser
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingUpToEnd [
 	<gtExample>
 	| result traverser |
@@ -588,7 +588,7 @@ DeepTraverserExamples >> streamingUpToEnd [
 	^ traverser
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingUpToExistingElement [
 	<gtExample>
 	| result traverser |
@@ -602,7 +602,7 @@ DeepTraverserExamples >> streamingUpToExistingElement [
 	^ traverser
 ]
 
-{ #category : #examples-streaming }
+{ #category : #'examples-streaming' }
 DeepTraverserExamples >> streamingUpToNonExistingElement [
 	<gtExample>
 	
@@ -616,7 +616,7 @@ DeepTraverserExamples >> streamingUpToNonExistingElement [
 	^ traverser
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> subclassesOfNumber [
 	<gtExample>
 	| relations traverser |
@@ -635,7 +635,7 @@ DeepTraverserExamples >> subclassesOfNumber [
 	^ relations
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> superclassOfSmallInteger [
 	<gtExample>
 	| relations traverser |
@@ -654,7 +654,7 @@ DeepTraverserExamples >> superclassOfSmallInteger [
 	^ relations
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testCyclesAndEdgesInGraph2 [
 	<gtExample>
 
@@ -676,7 +676,7 @@ DeepTraverserExamples >> testCyclesAndEdgesInGraph2 [
 	^ traverser
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testCyclesAndEdgesInGraph3 [
 	<gtExample>
 	| nodes edges traverser graph |
@@ -698,7 +698,7 @@ DeepTraverserExamples >> testCyclesAndEdgesInGraph3 [
 	^ traverser
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testTraversedNodesInGraph4WithStartAndWithoutStart [
 	<gtExample>
 	<description: 'withStart / withoutStart only specifies whether to apply the action on the start node or not - has no influence on the traversal itself'>
@@ -708,7 +708,7 @@ DeepTraverserExamples >> testTraversedNodesInGraph4WithStartAndWithoutStart [
 	self assert: resultWithStart = resultWithoutStart
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testTraversedNodesInGraph4WithoutStartActionAndWithoutStart [
 	<gtExample>
 	<description: 'withStart / withoutStart only specifies whether to apply the action on the start node or not - has no influence on the traversal itself'>
@@ -718,7 +718,7 @@ DeepTraverserExamples >> testTraversedNodesInGraph4WithoutStartActionAndWithoutS
 	self assert: resultWithStartAction = resultWithoutStart
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testTraversedNodesWithStartInGraph4 [
 	<gtExample>
 	
@@ -735,7 +735,7 @@ DeepTraverserExamples >> testTraversedNodesWithStartInGraph4 [
 	^ traversedNodes
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testTraversedNodesWithStartInGraph6 [
 	<gtExample>
 	
@@ -761,7 +761,7 @@ DeepTraverserExamples >> testTraversedNodesWithStartInGraph6 [
 	
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testTraversedNodesWithoutAllInGraph4 [
 	<gtExample>
 	<description: 'no matter how many (starting) nodes are excluded from the action, the traversal remains the same'>
@@ -781,7 +781,7 @@ DeepTraverserExamples >> testTraversedNodesWithoutAllInGraph4 [
 	^ traversedNodes
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testTraversedNodesWithoutStartActionInGraph4 [
 	<gtExample>
 	
@@ -803,7 +803,7 @@ DeepTraverserExamples >> testTraversedNodesWithoutStartActionInGraph4 [
 
 ]
 
-{ #category : #examples-relations }
+{ #category : #'examples-relations' }
 DeepTraverserExamples >> testTraversedNodesWithoutStartInGraph4 [
 	<gtExample>
 	
@@ -820,7 +820,7 @@ DeepTraverserExamples >> testTraversedNodesWithoutStartInGraph4 [
 	^ traversedNodes
 ]
 
-{ #category : #examples-start-object }
+{ #category : #'examples-start-object' }
 DeepTraverserExamples >> variationsOfDeepCollect [
 	<gtExample>
 	| result1 result2 result3 |
@@ -834,7 +834,7 @@ DeepTraverserExamples >> variationsOfDeepCollect [
 	self assert: result3 = result1.
 ]
 
-{ #category : #examples-start-object }
+{ #category : #'examples-start-object' }
 DeepTraverserExamples >> variationsOfDeepCollectOfMultipleClasses [
 	<gtExample>
 	| result1 result2 result3 result4 |
@@ -850,7 +850,7 @@ DeepTraverserExamples >> variationsOfDeepCollectOfMultipleClasses [
 	self assert: result4 = result1.
 ]
 
-{ #category : #examples-start-object }
+{ #category : #'examples-start-object' }
 DeepTraverserExamples >> variationsOfWithDeepCollect [
 	<gtExample>
 	| result1 result2 result3 |
@@ -864,7 +864,7 @@ DeepTraverserExamples >> variationsOfWithDeepCollect [
 	self assert: result3 = result1.
 ]
 
-{ #category : #examples-start-object }
+{ #category : #'examples-start-object' }
 DeepTraverserExamples >> variationsOfWithDeepCollectOfMultipleClasses [
 	<gtExample>
 	| result1 result2 result3 result4 |
@@ -880,7 +880,7 @@ DeepTraverserExamples >> variationsOfWithDeepCollectOfMultipleClasses [
 	self assert: result4 = result1.
 ]
 
-{ #category : #examples-difference }
+{ #category : #'examples-difference' }
 DeepTraverserExamples >> withAllSubclassesCollection [
 	<gtExample>
 	| resultByRaw resultByTraverser |
@@ -892,7 +892,7 @@ DeepTraverserExamples >> withAllSubclassesCollection [
 	
 ]
 
-{ #category : #examples-difference }
+{ #category : #'examples-difference' }
 DeepTraverserExamples >> withAllSubclassesNumber [
 	<gtExample>
 	| resultByRaw resultByTraverser |
@@ -904,7 +904,7 @@ DeepTraverserExamples >> withAllSubclassesNumber [
 	
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepCollect [
 	<gtExample>
 	
@@ -915,7 +915,7 @@ DeepTraverserExamples >> withDeepCollect [
 	self assert: result = #( 1 2 3 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepCollectAs [
 	<gtExample>
 	
@@ -927,7 +927,7 @@ DeepTraverserExamples >> withDeepCollectAs [
 	self assert: result asSet = #( 1 2 3 ) asSet
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepDo [
 	<gtExample>
 	
@@ -940,7 +940,7 @@ DeepTraverserExamples >> withDeepDo [
 	self assert: trace = #( 1 2 3 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepDoRelationDo [
 	<gtExample>
 	
@@ -957,7 +957,7 @@ DeepTraverserExamples >> withDeepDoRelationDo [
 	self assert: relationTrace = { 1->2 . 1->3 . 2->3 } asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepEdgesDo [
 	<gtExample>
 	
@@ -970,7 +970,7 @@ DeepTraverserExamples >> withDeepEdgesDo [
 	self assert: trace = { 0->1. 1->2. 1->3. 2->3 } asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepFlatCollect [
 	<gtExample>
 	
@@ -981,7 +981,7 @@ DeepTraverserExamples >> withDeepFlatCollect [
 	self assert: result = #( 1 2 3 4 2 3 4 3 4 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepFlatCollectAs [
 	<gtExample>
 	
@@ -994,7 +994,7 @@ DeepTraverserExamples >> withDeepFlatCollectAs [
 	self assert: result = #( 1 2 3 4 2 3 4 3 4 ) asSet
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepRelationDo [
 	<gtExample>
 	
@@ -1008,7 +1008,7 @@ DeepTraverserExamples >> withDeepRelationDo [
 	self assert: relationTrace = { 1->2 . 1->3 . 2->3 } asOrderedCollection.
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepSelectCollect [
 	<gtExample>
 	
@@ -1021,7 +1021,7 @@ DeepTraverserExamples >> withDeepSelectCollect [
 	self assert: result = #( 10 30 ) asOrderedCollection
 ]
 
-{ #category : #examples-extensions }
+{ #category : #'examples-extensions' }
 DeepTraverserExamples >> withDeepSelectCollectAs [
 	<gtExample>
 	
@@ -1035,7 +1035,7 @@ DeepTraverserExamples >> withDeepSelectCollectAs [
 	self assert: result = #( 1 3 ) asSet
 ]
 
-{ #category : #examples-specs }
+{ #category : #'examples-specs' }
 DeepTraverserExamples >> withVSwithout [
 	<gtExample>
 	| result1 result2 diff21 diff12 |

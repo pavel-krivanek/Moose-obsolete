@@ -7,7 +7,7 @@ My main methods are:
 Class {
 	#name : #MooseEntityState,
 	#superclass : #Object,
-	#category : #Moose-Core
+	#category : #'Moose-Core'
 }
 
 { #category : #'instance creation' }
@@ -16,32 +16,32 @@ MooseEntityState class >> with: aMooseEntity [
 	^self new initialize: aMooseEntity
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MooseEntityState >> allProperties [ 
 	 
 	"for read only uses, i.e. don't change he returned value"
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 MooseEntityState >> attributeAt: name ifAbsent: aBlock [ 
 	 
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 MooseEntityState >> attributeAt: name ifAbsentPut: aBlock [ 
 	 
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 MooseEntityState >> attributeAt: name put: value [ 
 	 
 	self subclassResponsibility
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MooseEntityState >> cache: selector initializer: aBlock [
 	^ self propertyAt: selector ifAbsentPut: [ aBlock cullValue: self entity ]
 ]
@@ -64,7 +64,7 @@ MooseEntityState >> cacheAt: name put: value [
 	self subclassResponsibility 
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseEntityState >> clone: newOwner [ 
 	 
 	| newState | 
@@ -88,7 +88,7 @@ MooseEntityState >> description: text [
 	^ self attributeAt: #privateDescription put: text
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseEntityState >> entity [
 	
 	^ self subclassResponsibility
@@ -130,7 +130,7 @@ MooseEntityState >> includesKey: selector [
 	self subclassResponsibility
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MooseEntityState >> initialize: aMooseEntity [ 
 	 
 	self subclassResponsibility
@@ -160,19 +160,19 @@ MooseEntityState >> model: anObject [
 	^ self attributeAt: #privateModel put: anObject
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MooseEntityState >> propertyAt: name ifAbsent: aBlock [ 
 	 
 	self subclassResponsibility.
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MooseEntityState >> propertyAt: name ifAbsentPut: aBlock [ 
 	 
 	self subclassResponsibility.
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MooseEntityState >> propertyAt: name put: value [
 	 
 	self subclassResponsibility.

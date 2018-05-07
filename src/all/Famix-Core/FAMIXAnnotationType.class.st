@@ -11,23 +11,21 @@ Class {
 	#instVars : [
 		'instances'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXAnnotationType class >> annotation [
 	<MSEClass: #AnnotationType super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FAMIXAnnotationType >> annotatedEntities [
 	^ self instances collect: [:each | each annotatedEntity ]
 ]
 
-{ #category : #accessing-query }
+{ #category : #'accessing-query' }
 FAMIXAnnotationType >> annotatedEntitiesGroup [
 	<navigation: 'Annotated entities'>
 	^ self annotatedEntities asMooseGroup
@@ -57,7 +55,7 @@ FAMIXAnnotationType >> container: aContainer [
 	self resetMooseName
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXAnnotationType >> initialize [
 	super initialize.
 	instances := FMNullMultivalueLink 
@@ -66,7 +64,7 @@ FAMIXAnnotationType >> initialize [
 		selector: #instances.
 	attributes := FMNullMultivalueLink 
 		on: self
-		opposite: #annotationType:
+		opposite: #parentAnnotationType:
 		selector: #attributes.
 
 

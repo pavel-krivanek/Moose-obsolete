@@ -5,7 +5,7 @@ Class {
 		'breakpoints',
 		'debuggerData'
 	],
-	#category : #GT-DebuggerExtensions
+	#category : #'GT-DebuggerExtensions'
 }
 
 { #category : #adding }

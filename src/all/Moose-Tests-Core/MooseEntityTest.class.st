@@ -1,7 +1,7 @@
 Class {
 	#name : #MooseEntityTest,
 	#superclass : #TestCase,
-	#category : #Moose-Tests-Core
+	#category : #'Moose-Tests-Core'
 }
 
 { #category : #tests }
@@ -11,9 +11,9 @@ MooseEntityTest >> testAllMooseDisplayOn [
 		do: [ :cls | 
 			str := WriteStream on: String new.
 			ins := cls new.
-			self shouldnt: [ t := ins mooseDisplayString ] raise: Error.
+			self shouldnt: [ t := ins gtDisplayString ] raise: Error.
 			self assert: t isByteString.
-			ins mooseDisplayStringOn: str.
+			ins gtDisplayOn: str.
 			self assert: str contents equals: t ]
 ]
 

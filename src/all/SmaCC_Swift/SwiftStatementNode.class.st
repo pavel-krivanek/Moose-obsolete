@@ -1,7 +1,7 @@
 Class {
 	#name : #SwiftStatementNode,
 	#superclass : #SwiftParseNode,
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }

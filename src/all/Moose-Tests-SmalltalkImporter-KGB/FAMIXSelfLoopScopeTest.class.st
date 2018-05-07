@@ -1,10 +1,10 @@
 Class {
 	#name : #FAMIXSelfLoopScopeTest,
 	#superclass : #AbstractFAMIXNavigationTest,
-	#category : #Moose-Tests-SmalltalkImporter-KGB-MooseChef
+	#category : #'Moose-Tests-SmalltalkImporter-KGB-MooseChef'
 }
 
-{ #category : #famix-class }
+{ #category : #'famix-class' }
 FAMIXSelfLoopScopeTest >> testFamixClassClassScope [
 	self
 		assert:
@@ -25,21 +25,21 @@ FAMIXSelfLoopScopeTest >> testFamixClassClassScope [
 				includes: self c1FullReferencerOutSide)
 ]
 
-{ #category : #famix-class }
+{ #category : #'famix-class' }
 FAMIXSelfLoopScopeTest >> testFamixClassNamespaceScope [
 
 	self assert: (self c12FullReferencerInSide namespaceScope mooseIncludes: self namespace2FullReferee).
 	self deny: (self c12FullReferencerInSide namespaceScope mooseIncludes: self namespace1InteractedReferencerReferee)
 ]
 
-{ #category : #famix-class }
+{ #category : #'famix-class' }
 FAMIXSelfLoopScopeTest >> testFamixClassPackageScope [
 
 	self assert: (self c12FullReferencerInSide packageScope mooseIncludes: self packageP6InteractedReferee).
 	self deny: (self c12FullReferencerInSide packageScope mooseIncludes: self packageP5FullReferee )
 ]
 
-{ #category : #famix-method }
+{ #category : #'famix-method' }
 FAMIXSelfLoopScopeTest >> testFamixMethodClassScope [
 	| c1Mtd4 |
 	c1Mtd4 := self getMethod: 'm1p1c1Mtd4:(Object)' from: self c1FullReferencerOutSide.
@@ -48,7 +48,7 @@ FAMIXSelfLoopScopeTest >> testFamixMethodClassScope [
 	self deny: (c1Mtd4 typeScope mooseIncludes: self c2ReferencerOutSideRefereeInSide)
 ]
 
-{ #category : #famix-method }
+{ #category : #'famix-method' }
 FAMIXSelfLoopScopeTest >> testFamixMethodNamespaceScope [
 	| c1Mtd4 |
 	c1Mtd4 := self getMethod: 'm1p1c1Mtd4:(Object)' from: self c1FullReferencerOutSide.
@@ -57,7 +57,7 @@ FAMIXSelfLoopScopeTest >> testFamixMethodNamespaceScope [
 	self deny: (c1Mtd4 namespaceScope mooseIncludes: self namespace2FullReferee)
 ]
 
-{ #category : #famix-method }
+{ #category : #'famix-method' }
 FAMIXSelfLoopScopeTest >> testFamixMethodPackageScope [
 	| c1Mtd4 |
 	c1Mtd4 := self getMethod: 'm1p1c1Mtd4:(Object)' from: self c1FullReferencerOutSide.
@@ -66,21 +66,21 @@ FAMIXSelfLoopScopeTest >> testFamixMethodPackageScope [
 	self deny: (c1Mtd4 packageScope mooseIncludes: self packageP2InteractedReferencerReferee)
 ]
 
-{ #category : #famix-namespace }
+{ #category : #'famix-namespace' }
 FAMIXSelfLoopScopeTest >> testFamixNamespaceClassScope [
 
 	self assert: (self namespace1InteractedReferencerReferee typeScope mooseIncludes: self c2ReferencerOutSideRefereeInSide).
 	self deny: (self namespace1InteractedReferencerReferee typeScope mooseIncludes: self c20FullReferencerOutSide)
 ]
 
-{ #category : #famix-namespace }
+{ #category : #'famix-namespace' }
 FAMIXSelfLoopScopeTest >> testFamixNamespaceNamespaceScope [
 
 	self assert: (self namespace1InteractedReferencerReferee namespaceScope mooseIncludes: self namespace1InteractedReferencerReferee).
 	self deny: (self namespace1InteractedReferencerReferee namespaceScope mooseIncludes: self namespace2FullReferee)
 ]
 
-{ #category : #famix-namespace }
+{ #category : #'famix-namespace' }
 FAMIXSelfLoopScopeTest >> testFamixNamespacePackageScope [
 
 	self should: [self namespace1InteractedReferencerReferee packageScope ] raise: Error.
@@ -88,14 +88,14 @@ FAMIXSelfLoopScopeTest >> testFamixNamespacePackageScope [
 	self deny: (self namespace1InteractedReferencerReferee packageScope mooseIncludes: self packageP4FullInteracted )"
 ]
 
-{ #category : #famix-package }
+{ #category : #'famix-package' }
 FAMIXSelfLoopScopeTest >> testFamixPackageClassScope [
 
 	self assert: (self packageP5FullReferee typeScope mooseIncludes: self c11FullRefereeOutSide).
 	self deny: (self packageP5FullReferee typeScope mooseIncludes: self c5ReferencerInSideRefereeInSide )
 ]
 
-{ #category : #famix-package }
+{ #category : #'famix-package' }
 FAMIXSelfLoopScopeTest >> testFamixPackageNamespaceScope [
 
 	self should: [self assert: (self packageP5FullReferee namespaceScope )] raise: Error.
@@ -105,7 +105,7 @@ FAMIXSelfLoopScopeTest >> testFamixPackageNamespaceScope [
 		^ (self classes collectAsSet: #container) first"
 ]
 
-{ #category : #famix-package }
+{ #category : #'famix-package' }
 FAMIXSelfLoopScopeTest >> testFamixPackagePackageScope [
 
 	self assert: (self packageP5FullReferee packageScope mooseIncludes: self packageP5FullReferee ).

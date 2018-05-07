@@ -5,7 +5,7 @@ Class {
 		'entities',
 		'scope'
 	],
-	#category : #Moose-MonticelloImporter
+	#category : #'Moose-MonticelloImporter'
 }
 
 { #category : #accessing }
@@ -35,7 +35,7 @@ MooseMonticelloMethodPopulator >> createSpecialVariable: name forClass: aClass [
 	^attribute
 ]
 
-{ #category : #public-entity-creation }
+{ #category : #'public-entity-creation' }
 MooseMonticelloMethodPopulator >> ensureAnnotationType: aRBPragmaNode [ 
 	^self importer ensureAnnotationType: aRBPragmaNode.
 ]
@@ -52,7 +52,7 @@ MooseMonticelloMethodPopulator >> ensureGlobalVariable: name value: value [
 	^ importer ensureGlobalVariable: name value: value 
 ]
 
-{ #category : #public-entity-creation }
+{ #category : #'public-entity-creation' }
 MooseMonticelloMethodPopulator >> ensureImplicitVariable: name inClass: aClass [
 	
 	^(self scopeOfClass: aClass)
@@ -94,7 +94,7 @@ MooseMonticelloMethodPopulator >> initialize [
 	entities := OrderedCollection new
 ]
 
-{ #category : #private-entity-creation }
+{ #category : #'private-entity-creation' }
 MooseMonticelloMethodPopulator >> scopeOfClass: aClass [
 	^ importer scopeOfClass: aClass
 ]

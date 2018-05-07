@@ -1,10 +1,10 @@
 Class {
 	#name : #M1P1C1FullReferencerOutSide,
 	#superclass : #Object,
-	#category : #Moose-TestResources-KGB-P1FullReferencer
+	#category : #'Moose-TestResources-KGB-P1FullReferencer'
 }
 
-{ #category : #Moose-Cook-ModelFamix2-Test-Methods }
+{ #category : #'Moose-Cook-ModelFamix2-Test-Methods' }
 M1P1C1FullReferencerOutSide >> m1p1c1Mtd1 [ 
 	 
 	| tempVar | 
@@ -12,7 +12,7 @@ M1P1C1FullReferencerOutSide >> m1p1c1Mtd1 [
 	^tempVar m2p6c13Mtd2
 ]
 
-{ #category : #Moose-Cook-ModelFamix2-Test-Methods }
+{ #category : #'Moose-Cook-ModelFamix2-Test-Methods' }
 M1P1C1FullReferencerOutSide >> m1p1c1Mtd2 [ 
 	 
 	| tempVar | 
@@ -20,13 +20,13 @@ M1P1C1FullReferencerOutSide >> m1p1c1Mtd2 [
 	^tempVar m2p5c11Mtd5 m2p5c11Mtd2
 ]
 
-{ #category : #Moose-Cook-ModelFamix2-Test-Methods }
+{ #category : #'Moose-Cook-ModelFamix2-Test-Methods' }
 M1P1C1FullReferencerOutSide >> m1p1c1Mtd3: m2p5C11Object [ 
 	 
 	^m2p5C11Object m2p5c11Mtd2
 ]
 
-{ #category : #Moose-Cook-ModelFamix2-Test-Methods }
+{ #category : #'Moose-Cook-ModelFamix2-Test-Methods' }
 M1P1C1FullReferencerOutSide >> m1p1c1Mtd4: anObject [ 
 	 
 	self class new m1p1c1Mtd1. 
@@ -34,7 +34,7 @@ M1P1C1FullReferencerOutSide >> m1p1c1Mtd4: anObject [
 			anObject) m2p6c13Mtd2
 ]
 
-{ #category : #Moose-Cook-ModelFamix2-Test-Methods }
+{ #category : #'Moose-Cook-ModelFamix2-Test-Methods' }
 M1P1C1FullReferencerOutSide >> m1p1c1Mtd5: m1p2C3Object [ 
 	"m1p2C3Object is considered here as an instance of M1P2C3ReferencerInSideRefereeOutSide" 
 	 

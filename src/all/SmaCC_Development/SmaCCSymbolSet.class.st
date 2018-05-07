@@ -5,20 +5,13 @@ Class {
 		'symbols',
 		'components'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #'instance creation' }
 SmaCCSymbolSet class >> basedOn: aSmaCCSymbolSet [
 	^ self new
 		baseOn: aSmaCCSymbolSet;
-		yourself
-]
-
-{ #category : #'instance creation' }
-SmaCCSymbolSet class >> new [
-	^ super new
-		initialize;
 		yourself
 ]
 
@@ -84,7 +77,7 @@ SmaCCSymbolSet >> includes: aSmaCCSymbol [
 	^ symbols includes: aSmaCCSymbol
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCSymbolSet >> initialize [
 	super initialize.
 	symbols := Set new.

@@ -7,7 +7,7 @@ Class {
 		'commas',
 		'right'
 	],
-	#category : #SmaCC_Delphi_Forms
+	#category : #'SmaCC_Delphi_Forms'
 }
 
 { #category : #generated }
@@ -30,7 +30,7 @@ DelphiFormSetNode >> compositeTokenVariables [
 	^ #(#items #commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiFormSetNode >> initialize [
 	super initialize.
 	items := OrderedCollection new: 2.

@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'value'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -168,6 +168,7 @@ XPathComparable >> notEqualToString: aString [
 { #category : #printing }
 XPathComparable >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		print: value;

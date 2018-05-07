@@ -4,7 +4,7 @@ XPath string conversion function.
 Class {
 	#name : #XPathStringFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

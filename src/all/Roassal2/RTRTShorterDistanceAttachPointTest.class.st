@@ -8,7 +8,7 @@ Class {
 		'edge',
 		'view'
 	],
-	#category : #Roassal2-AttachPoint-Tests
+	#category : #'Roassal2-AttachPoint-Tests'
 }
 
 { #category : #running }

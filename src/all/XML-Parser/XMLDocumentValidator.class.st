@@ -8,7 +8,7 @@ Class {
 		'elementValidatorStack',
 		'defaultXMLIDValidator'
 	],
-	#category : #XML-Parser-Validation
+	#category : #'XML-Parser-Validation'
 }
 
 { #category : #accessing }
@@ -100,6 +100,7 @@ XMLDocumentValidator >> isCurrentElementWhitespaceIgnorable [
 { #category : #printing }
 XMLDocumentValidator >> printOn: aStream [
 	super printOn: aStream.
+
 	self hasCurrentElementValidator
 		ifTrue: [
 			aStream

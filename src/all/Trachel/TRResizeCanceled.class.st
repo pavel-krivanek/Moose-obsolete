@@ -8,5 +8,5 @@ DCRTResizable
 Class {
 	#name : #TRResizeCanceled,
 	#superclass : #TRShapeEvent,
-	#category : #Trachel-Events
+	#category : #'Trachel-Events'
 }

@@ -4,13 +4,13 @@ Class {
 	#instVars : [
 		'typeNames'
 	],
-	#category : #SmaCC_C_Parser
+	#category : #'SmaCC_C_Parser'
 }
 
-{ #category : #generated-initialization }
+{ #category : #'generated-initialization' }
 CScanner class >> initializeKeywordMap [
 	keywordMap := Dictionary new.
-	#(#(76 'auto' 69) #(76 'break' 48) #(76 'case' 38) #(76 'char' 71) #(76 'const' 40) #(76 'continue' 47) #(76 'default' 39) #(76 'do' 54) #(76 'double' 61) #(76 'else' 46) #(76 'enum' 45) #(76 'extern' 58) #(76 'float' 67) #(76 'for' 49) #(76 'goto' 50) #(76 'if' 42) #(76 'int' 68) #(76 'long' 66) #(76 'register' 72) #(76 'return' 19) #(76 'short' 70) #(76 'signed' 56) #(76 'sizeof' 24) #(76 'static' 65) #(76 'struct' 43) #(76 'switch' 52) #(76 'typedef' 57) #(76 'union' 44) #(76 'unsigned' 51) #(76 'void' 73) #(76 'volatile' 41) #(76 'while' 53))
+	#(#(76 'auto' 38) #(76 'break' 39) #(76 'case' 40) #(76 'char' 41) #(76 'const' 42) #(76 'continue' 43) #(76 'default' 44) #(76 'do' 45) #(76 'double' 46) #(76 'else' 47) #(76 'enum' 48) #(76 'extern' 49) #(76 'float' 50) #(76 'for' 51) #(76 'goto' 52) #(76 'if' 53) #(76 'int' 54) #(76 'long' 55) #(76 'register' 56) #(76 'return' 57) #(76 'short' 58) #(76 'signed' 59) #(76 'sizeof' 60) #(76 'static' 61) #(76 'struct' 62) #(76 'switch' 63) #(76 'typedef' 64) #(76 'union' 65) #(76 'unsigned' 66) #(76 'void' 67) #(76 'volatile' 68) #(76 'while' 69))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)
@@ -46,7 +46,7 @@ CScanner >> IDENTIFIERId [
 
 { #category : #generated }
 CScanner >> TypeNameId [
-	^ 150
+	^ 149
 ]
 
 { #category : #scanning }
@@ -56,15 +56,15 @@ CScanner >> addTypeName: aString [
 
 { #category : #generated }
 CScanner >> emptySymbolTokenId [
-	^ 148
+	^ 150
 ]
 
 { #category : #generated }
 CScanner >> errorTokenId [
-	^ 149
+	^ 151
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 CScanner >> initialize [
 	super initialize.
 	typeNames := Set new
@@ -206,9 +206,9 @@ CScanner >> scanForToken [
 	currentCharacter == $'
 		ifTrue: [ ^ self scan2 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(25) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
 	currentCharacter == $*
 		ifTrue:
 			[ ^ self scanForTokenX17 ].
@@ -216,7 +216,7 @@ CScanner >> scanForToken [
 		ifTrue:
 			[ ^ self scanForTokenX10 ].
 	currentCharacter == $,
-		ifTrue: [ ^ self recordAndReportMatch: #(21) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(15) ].
 	currentCharacter == $-
 		ifTrue:
 			[ ^ self scanForTokenX5 ].
@@ -253,32 +253,32 @@ CScanner >> scanForTokenX1 [
 
 { #category : #generated }
 CScanner >> scanForTokenX10 [
-	self recordMatch: #(35).
+	self recordMatch: #(12).
 	self step.
 	currentCharacter == $+
-		ifTrue: [ ^ self recordAndReportMatch: #(23) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX11 [
-	self recordMatch: #(28).
+	self recordMatch: #(5).
 	self step.
 	currentCharacter == $&
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(63) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX12 [
-	self recordMatch: #(30).
+	self recordMatch: #(3).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	currentCharacter == $>
 		ifTrue: [ ^ self recordAndReportMatch: #(82) ].
 	^ self reportLastMatch
@@ -295,25 +295,25 @@ CScanner >> scanForTokenX13 [
 
 { #category : #generated }
 CScanner >> scanForTokenX14 [
-	self recordMatch: #(1).
+	self recordMatch: #(36).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(64) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(37) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX15 [
-	self recordMatch: #(17).
+	self recordMatch: #(29).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(30) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX16 [
-	self recordMatch: #(16).
+	self recordMatch: #(23).
 	self step.
 	currentCharacter == $>
 		ifTrue: [ ^ self recordAndReportMatch: #(80) ].
@@ -322,19 +322,19 @@ CScanner >> scanForTokenX16 [
 
 { #category : #generated }
 CScanner >> scanForTokenX17 [
-	self recordMatch: #(34).
+	self recordMatch: #(10).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX18 [
-	self recordMatch: #(32).
+	self recordMatch: #(1).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	^ self reportLastMatch
 ]
 
@@ -351,7 +351,7 @@ CScanner >> scanForTokenX19 [
 	currentCharacter == $}
 		ifTrue: [ ^ self recordAndReportMatch: #(82) ].
 	currentCharacter == $~
-		ifTrue: [ ^ self recordAndReportMatch: #(31) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan10 ].
 	(currentCharacter isSeparator
@@ -401,7 +401,7 @@ CScanner >> scanForTokenX20 [
 		ifTrue:
 			[ ^ self scanForTokenX16 ].
 	currentCharacter == $;
-		ifTrue: [ ^ self recordAndReportMatch: #(60) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(24) ].
 	currentCharacter == $<
 		ifTrue:
 			[ ^ self scanForTokenX3 ].
@@ -412,7 +412,7 @@ CScanner >> scanForTokenX20 [
 		ifTrue:
 			[ ^ self scanForTokenX6 ].
 	currentCharacter == $?
-		ifTrue: [ ^ self recordAndReportMatch: #(15) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(35) ].
 	currentCharacter == $L
 		ifTrue:
 			[ ^ self scanForTokenX2 ].
@@ -425,20 +425,20 @@ CScanner >> scanForTokenX20 [
 
 { #category : #generated }
 CScanner >> scanForTokenX3 [
-	self recordMatch: #(18).
+	self recordMatch: #(25).
 	self step.
 	currentCharacter == $%
 		ifTrue: [ ^ self recordAndReportMatch: #(81) ].
 	currentCharacter == $:
 		ifTrue: [ ^ self recordAndReportMatch: #(79) ].
 	currentCharacter == $<
-		ifTrue: [ self recordMatch: #(33).
+		ifTrue: [ self recordMatch: #(26).
 			self step.
 			currentCharacter == $=
-				ifTrue: [ ^ self recordAndReportMatch: #(55) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(27) ].
 			^ self reportLastMatch ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(28) ].
 	^ self reportLastMatch
 ]
 
@@ -454,56 +454,56 @@ CScanner >> scanForTokenX4 [
 
 { #category : #generated }
 CScanner >> scanForTokenX5 [
-	self recordMatch: #(36).
+	self recordMatch: #(16).
 	self step.
 	currentCharacter == $-
-		ifTrue: [ ^ self recordAndReportMatch: #(20) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(37) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(18) ].
 	currentCharacter == $>
-		ifTrue: [ ^ self recordAndReportMatch: #(22) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(19) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX6 [
-	self recordMatch: #(6).
+	self recordMatch: #(31).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(32) ].
 	currentCharacter == $>
-		ifTrue: [ self recordMatch: #(14).
+		ifTrue: [ self recordMatch: #(33).
 			self step.
 			currentCharacter == $=
-				ifTrue: [ ^ self recordAndReportMatch: #(62) ] ].
+				ifTrue: [ ^ self recordAndReportMatch: #(34) ] ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX7 [
-	self recordMatch: #(2).
+	self recordMatch: #(70).
 	self step.
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(59) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(71) ].
 	currentCharacter == $|
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(72) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX8 [
-	self recordMatch: #(29).
+	self recordMatch: #(21).
 	self step.
 	currentCharacter == $*
 		ifTrue: [ ^ self scan8 ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(22) ].
 	^ self reportLastMatch
 ]
 
 { #category : #generated }
 CScanner >> scanForTokenX9 [
-	self recordMatch: #(27).
+	self recordMatch: #(20).
 	self step.
 	currentCharacter == $.
 		ifTrue: [ self step.

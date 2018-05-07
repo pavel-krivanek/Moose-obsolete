@@ -4,7 +4,7 @@ A state for content tokens, everything from the first stat tag to the end of the
 Class {
 	#name : #XMLContentState,
 	#superclass : #XMLTokenizerState,
-	#category : #XML-Parser-Drivers
+	#category : #'XML-Parser-Drivers'
 }
 
 { #category : #testing }
@@ -14,5 +14,5 @@ XMLContentState >> isContentState [
 
 { #category : #tokenizing }
 XMLContentState >> nextTokenFrom: aTokenizer [
-	aTokenizer nextContentToken
+	^ aTokenizer nextContentToken
 ]

@@ -7,7 +7,7 @@ Class {
 		'expression',
 		'rightBracket'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }

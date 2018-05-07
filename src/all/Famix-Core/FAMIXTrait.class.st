@@ -7,15 +7,13 @@ Class {
 	#instVars : [
 		'incomingTraitUsages'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXTrait class >> annotation [
 	<MSEClass: #Trait super: #FAMIXType>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }

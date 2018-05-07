@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'wizardCell'
 	],
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #rendering }

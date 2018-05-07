@@ -9,15 +9,15 @@ Class {
 	#instVars : [
 		'children'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAContainer class >> defaultAccessor [
 	^ MAIdentityAccessor new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAContainer class >> defaultCollection [
 	^ OrderedCollection new
 ]
@@ -125,7 +125,28 @@ MAContainer >> copyWithoutAll: aCollection [
 	^self reject: [:each | aCollection includes: each]
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'*magritte-model-builder' }
+MAContainer >> descriptionBuilder [
+	^self propertyAt: #descriptionBuilder ifAbsent: [ nil ]
+]
+
+{ #category : #'*magritte-model-builder' }
+MAContainer >> descriptionBuilder: aBuilderClass [
+	self propertyAt: #descriptionBuilder put: aBuilderClass
+]
+
+{ #category : #'*magritte-model-builder' }
+MAContainer >> descriptionBuilders [
+	^self propertyAt: #descriptionBuilders ifAbsent: [ #() ]
+]
+
+{ #category : #'*magritte-model-builder' }
+MAContainer >> descriptionBuilders: aList [ 
+	self descriptionBuilder: MAComposedDescriptionBuilder.
+	self propertyAt: #descriptionBuilders put: aList
+]
+
+{ #category : #'acessing-magritte' }
 MAContainer >> descriptionChildren [
 	<magritteDescription>
 	^ MAToManyRelationDescription new
@@ -138,7 +159,7 @@ MAContainer >> descriptionChildren [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAContainer >> descriptionDefault [
 	<magritteDescription>
 	^ nil

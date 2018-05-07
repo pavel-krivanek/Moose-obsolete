@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'step'
 	],
-	#category : #Trachel-Events
+	#category : #'Trachel-Events'
 }
 
 { #category : #public }

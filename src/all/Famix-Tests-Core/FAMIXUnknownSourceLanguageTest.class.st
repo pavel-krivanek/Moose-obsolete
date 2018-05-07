@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXUnknownSourceLanguageTest,
 	#superclass : #FAMIXEntityTest,
-	#category : #Famix-Tests-Core
+	#category : #'Famix-Tests-Core'
 }
 
 { #category : #tests }

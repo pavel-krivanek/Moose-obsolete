@@ -7,15 +7,15 @@ Class {
 	#instVars : [
 		'classes'
 	],
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MARelationDescription class >> defaultClasses [
 	^ Set new
 ]
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MARelationDescription class >> defaultReference [
 	^ nil
 ]
@@ -25,7 +25,7 @@ MARelationDescription >> acceptMagritte: aVisitor [
 	aVisitor visitRelationDescription: self
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MARelationDescription >> allClasses [
 	^ (Array withAll: self classes)
 		sort: [ :a :b | a label caseInsensitiveLessOrEqual: b label ];
@@ -42,7 +42,7 @@ MARelationDescription >> classes: aCollection [
 	classes := aCollection
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MARelationDescription >> commonClass [
 	"Answer a common superclass of the classes of the receiver. The algorithm is implemented to be as efficient as possible. The inner loop will be only executed the first few iterations."
 
@@ -56,7 +56,7 @@ MARelationDescription >> commonClass [
 	^ current
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MARelationDescription >> descriptionClasses [
 	<magritteDescription>
 	^ MAMultipleOptionDescription new
@@ -68,7 +68,7 @@ MARelationDescription >> descriptionClasses [
 		yourself
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MARelationDescription >> descriptionReference [
 	<magritteDescription>
 	^ super descriptionReference
@@ -83,7 +83,7 @@ MARelationDescription >> postCopy [
 	classes := classes copy
 ]
 
-{ #category : #accessing-dynamic }
+{ #category : #'accessing-dynamic' }
 MARelationDescription >> reference [
 	"The reference within a ==*MARelationDescription*== is calculated automatically from all the classes of the receiver, if set to ==nil==. By setting the reference to a ==*MAContainer*== instance it is possible to customize the reference description."
 

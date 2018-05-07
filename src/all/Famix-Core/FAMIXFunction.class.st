@@ -7,15 +7,13 @@ Class {
 	#instVars : [
 		'container'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXFunction class >> annotation [
 	<MSEClass: #Function super: #FAMIXBehaviouralEntity>
 	<package: #FAMIX>
-	
-	^self
 ]
 
 { #category : #accessing }
@@ -54,7 +52,7 @@ FAMIXFunction >> isPublic [
 			inv sender container ~~ self container]
 ]
 
-{ #category : #moose-chef-scoping-filtering }
+{ #category : #'moose-chef-scoping-filtering' }
 FAMIXFunction >> namespaceScope [
 	^ self container 
 		ifNotNil: [ self container namespaceScope ]
@@ -69,7 +67,6 @@ FAMIXFunction >> packageScope [
 
 { #category : #accessing }
 FAMIXFunction >> parentScope [
-	self deprecated: 'Please use container instead of parentScope'.
 	^ self container
 ]
 

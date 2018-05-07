@@ -4,16 +4,16 @@ A parser which creates an AST upor parsing the code
 Class {
 	#name : #PPJavaParser,
 	#superclass : #PPJavaSyntax,
-	#category : #PetitJava-Core
+	#category : #'PetitJava-Core'
 }
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> additiveExpression [ 
 
 	^ super additiveExpression ==> self infixOpProcessor  .
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> andExpression [ 
 
 	^ super andExpression ==> self infixOpProcessor
@@ -25,7 +25,7 @@ PPJavaParser >> annotation [
 	^ super annotation ==> [:nodes | PJAnnotationNode typeName: nodes second]
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaParser >> annotationTypeDeclaration [
 	^ super annotationTypeDeclaration ==> [ :nodes | 
 		PJTypeDeclarationNode new
@@ -39,7 +39,7 @@ PPJavaParser >> annotationTypeDeclaration [
 	]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> block [
 	^ super block ==> [ :nodes | 
 			| blockNode |
@@ -48,7 +48,7 @@ PPJavaParser >> block [
 			blockNode]
 ]
 
-{ #category : #grammar-literals-boolean }
+{ #category : #'grammar-literals-boolean' }
 PPJavaParser >> booleanLiteral [ 
 
  ^ super booleanLiteral trim ==> [:token | 
@@ -61,7 +61,7 @@ PPJavaParser >> booleanLiteral [
 		PJBooleanLiteralNode booleanValue: value.]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> characterLiteral [ 
  ^super characterLiteral trim ==> [:token | PJCharacterLiteralNode literalValue: (token inputValue allButFirst allButLast)]
 ]
@@ -72,32 +72,32 @@ PPJavaParser >> classModifierNotAnnotation [
 	^super classModifierNotAnnotation ==> [:tokenKeyword | PJModifierNode keyword: tokenKeyword inputValue]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> classOrInterfaceType [ 
 	self flag: 'NA: temporary hack, should interpret nodes instead of returning first'.
 	^ super classOrInterfaceType ==> [ :nodes | nodes first ]
 
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> conditionalAndExpression [ 
 
 	^ super conditionalAndExpression ==> self infixOpProcessor
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> conditionalExpression [ 
 
  ^super conditionalExpression ==> [:node | node second ifNil: [node first] ifNotNil: [node]]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> conditionalOrExpression [ 
 
 	^ super conditionalOrExpression ==> self infixOpProcessor
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> constructorDeclaration [ 
 
 		^ super constructorDeclaration ==> [:nodes |
@@ -119,7 +119,7 @@ PPJavaParser >> endOfLineComment [
 ^ super endOfLineComment ==> [ :nodes | PJEndOfLineCommentsNode comment:  nodes second .].
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaParser >> enumDeclaration [
 	^ super enumDeclaration ==> [ :nodes | 
 		PJTypeDeclarationNode new
@@ -135,19 +135,19 @@ PPJavaParser >> enumDeclaration [
 	]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> equalityExpression [ 
 
 	^ super equalityExpression ==> self infixOpProcessor
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> exclusiveOrExpression [ 
 
 	^ super exclusiveOrExpression ==> self infixOpProcessor
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> expression [ 
 
  ^super expression ==> [:node | node second ifNil: [node first] ifNotNil: [
@@ -160,7 +160,7 @@ PPJavaParser >> expression [
 		operation]]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> expressionStatement [ 
 	^ super expressionStatement ==> [ :nodes | 
 			| expressionStatementNode |
@@ -181,19 +181,19 @@ PPJavaParser >> formalParameters [
 	^ super formalParameters ==> [:nodes | nodes second]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> identifier [ 
 
  ^super identifier ==> [:token | PJIdentifierNode newWithName: token inputValue]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> identifierWithAccessors [ 
 
 	^ super identifierWithAccessors ==> [:node | node second isEmpty & node third isNil ifTrue: [node first] ifFalse: [node]]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> ifStatement [  
 
  ^super ifStatement ==> [:node |
@@ -207,13 +207,13 @@ PPJavaParser >> ifStatement [
 	statementNode]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> inclusiveOrExpression [ 
 
  ^super inclusiveOrExpression ==> self infixOpProcessor
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> infixOpProcessor [ 
 
 	^ [:node |
@@ -227,7 +227,7 @@ PPJavaParser >> infixOpProcessor [
 			operation]]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> initializerDeclaration [ 
 
 		^ super initializerDeclaration ==> [:nodes |
@@ -242,19 +242,19 @@ PPJavaParser >> initializerDeclaration [
 	]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> instanceofExpression [ 
 
  ^super instanceofExpression ==> [:node | node second ifNil: [node first] ifNotNil: [node]]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> integerLiteral [ 
 
  ^super integerLiteral trim ==> [ :token | PJIntegerLiteralNode newFrom: token value ]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> interfaceMethodDeclaration [ 
 
 		^ super methodNotConstructorDeclaration ==> [:nodes |
@@ -269,7 +269,7 @@ PPJavaParser >> interfaceMethodDeclaration [
 	]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> localVariableDeclaration [
 	^ super localVariableDeclaration ==> [ :nodes | 
 			| declarationNode |
@@ -281,7 +281,7 @@ PPJavaParser >> localVariableDeclaration [
 			declarationNode]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> localVariableDeclarationStatement [ 
 	^ super localVariableDeclarationStatement ==> [ :nodes | nodes first]
 ]
@@ -292,7 +292,7 @@ PPJavaParser >> methodModifierNotAnnotation [
 	^super methodModifierNotAnnotation ==> [:tokenKeyword | PJModifierNode keyword: tokenKeyword inputValue]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> methodNotConstructorDeclaration [ 
 
 		^ super methodNotConstructorDeclaration ==> [:nodes |
@@ -309,7 +309,7 @@ PPJavaParser >> methodNotConstructorDeclaration [
 	"Modified: / 21-04-2015 / 15:52:27 / Jan Vrany <jan.vrany@fit.cvut.cz>"
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> multiplicativeExpression [ 
 	^ super multiplicativeExpression ==> self infixOpProcessor
 ]
@@ -325,7 +325,7 @@ PPJavaParser >> nameFromQualified: aCollection [
 				qualifier: (self nameFromQualified: aCollection allButLast ).]
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaParser >> normalClassDeclaration [
 	^ super normalClassDeclaration ==> [ :nodes | 
 		PJTypeDeclarationNode new
@@ -337,7 +337,7 @@ PPJavaParser >> normalClassDeclaration [
 	]
 ]
 
-{ #category : #grammar-classes }
+{ #category : #'grammar-classes' }
 PPJavaParser >> normalInterfaceDeclaration [
 	^ super normalInterfaceDeclaration ==> [ :nodes | 
 		PJTypeDeclarationNode new
@@ -349,7 +349,7 @@ PPJavaParser >> normalInterfaceDeclaration [
 	]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> normalParameterDecl [  
 
 	^ super normalParameterDecl ==> [:nodes |
@@ -364,7 +364,7 @@ PPJavaParser >> normalParameterDecl [
 		declarator]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> normalParametersDecls [
 	^ super normalParametersDecls ==> [ :nodes | 
 			| declarationNode |
@@ -372,18 +372,18 @@ PPJavaParser >> normalParametersDecls [
 				addFirst: nodes first; yourself]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> nullLiteral [
 	 ^super nullLiteral trim ==> [:token | PJNullLiteralNode literalValue: (token inputValue)]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> parExpression [ 
 
  ^super parExpression ==> [ :nodes | nodes second ]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> primaryWithselectors [ 
 	^ super primaryWithselectors ==> [:node |
 		"JK: I have no idea, what this fold is supposed to do, 
@@ -394,7 +394,7 @@ PPJavaParser >> primaryWithselectors [
 		"
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> primitiveType [ 
 
  ^super primitiveType ==> [:token | PJPrimitiveTypeNode type: token inputValue]
@@ -409,13 +409,13 @@ PPJavaParser >> qualifiedName [
 				ifFalse: [ PJSimpleNameNode identifier: nodes first value ] ]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> relationalExpression [ 
 
  ^super relationalExpression ==> self infixOpProcessor
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> returnStatement [
 	^ super returnStatement ==> [ :nodes | 
 			| returnNode |
@@ -430,13 +430,13 @@ PPJavaParser >> separator [
  ^super separator trim ==> [:token | PJSeparatorNode separatorValue: (token inputValue)]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> shiftExpression [ 
 
  ^super shiftExpression ==> [:node | node second ifEmpty: [node first] ifNotEmpty: [node]]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> stringLiteral [ 
 
  ^super stringLiteral trim ==> [:token | PJStringLiteralNode literalValue: (token inputValue allButFirst allButLast)]
@@ -447,7 +447,7 @@ PPJavaParser >> traditionalComment [
 ^ super traditionalComment ==> [ :nodes | PJTraditionalCommentsNode comment:  (nodes second ).].
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> type [
 	^ super type
 		==> [ :nodes | 
@@ -458,12 +458,12 @@ PPJavaParser >> type [
 			pjtype ]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> unaryPostfixExpression [ 
 	^ super unaryPostfixExpression ==> [:node | node second ifNil: [node first] ifNotNil: [node]]
 ]
 
-{ #category : #grammar-classes-method }
+{ #category : #'grammar-classes-method' }
 PPJavaParser >> variableDeclarator [
 	^ super variableDeclarator
 		==> [ :nodes | 
@@ -477,7 +477,7 @@ PPJavaParser >> variableDeclarator [
 			declarator ]
 ]
 
-{ #category : #grammar-literals-string }
+{ #category : #'grammar-literals-string' }
 PPJavaParser >> whileStatement [  
 
  ^super whileStatement ==> [ :nodes |

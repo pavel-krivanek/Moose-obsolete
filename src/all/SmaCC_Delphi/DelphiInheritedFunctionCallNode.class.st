@@ -9,7 +9,7 @@ Class {
 		'commas',
 		'right'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -59,7 +59,7 @@ DelphiInheritedFunctionCallNode >> inheritedToken: aSmaCCToken [
 	inheritedToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiInheritedFunctionCallNode >> initialize [
 	super initialize.
 	arguments := OrderedCollection new: 2.

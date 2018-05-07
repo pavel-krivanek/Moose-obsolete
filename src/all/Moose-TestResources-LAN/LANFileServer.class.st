@@ -1,7 +1,7 @@
 Class {
 	#name : #LANFileServer,
 	#superclass : #LANOutputServer,
-	#category : #Moose-TestResources-LAN
+	#category : #'Moose-TestResources-LAN'
 }
 
 { #category : #outputting }

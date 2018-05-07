@@ -43,7 +43,7 @@ Class {
 		'curves',
 		'keepInOriginalPosition'
 	],
-	#category : #Roassal2-Shapes
+	#category : #'Roassal2-Shapes'
 }
 
 { #category : #countries }
@@ -997,7 +997,7 @@ RTSVGPath >> borderWidth: aValueOrBlock [
 	borderWidth := aValueOrBlock
 ]
 
-{ #category : #public-configuration }
+{ #category : #'public-configuration' }
 RTSVGPath >> borderWidthConstant [
 	"Make that the width is constant, independent of its scale"
 	self borderWidth: [ :e | (1 / (self scaleFor: e)) asFloat ]

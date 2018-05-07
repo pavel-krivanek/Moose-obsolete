@@ -1,7 +1,7 @@
 Class {
 	#name : #MPImportFileStructureCommand,
 	#superclass : #MPImportCommand,
-	#category : #Moose-Finder
+	#category : #'Moose-Finder'
 }
 
 { #category : #hooks }

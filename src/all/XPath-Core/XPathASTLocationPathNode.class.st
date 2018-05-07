@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'steps'
 	],
-	#category : #XPath-Core-Compilation-AST
+	#category : #'XPath-Core-Compilation-AST'
 }
 
 { #category : #'instance creation' }

@@ -35,7 +35,7 @@ v
 Class {
 	#name : #RTNoLayout,
 	#superclass : #RTLayout,
-	#category : #Roassal2-Layouts
+	#category : #'Roassal2-Layouts'
 }
 
 { #category : #hook }

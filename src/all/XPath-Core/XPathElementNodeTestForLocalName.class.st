@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'localName'
 	],
-	#category : #XPath-Core-Compilation
+	#category : #'XPath-Core-Compilation'
 }
 
 { #category : #'instance creation' }
@@ -33,6 +33,7 @@ XPathElementNodeTestForLocalName >> localName: aLocalName [
 { #category : #printing }
 XPathElementNodeTestForLocalName >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self localName;

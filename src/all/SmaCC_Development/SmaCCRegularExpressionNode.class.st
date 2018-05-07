@@ -22,15 +22,8 @@ Class {
 		'position',
 		'states'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
-
-{ #category : #'instance creation' }
-SmaCCRegularExpressionNode class >> new [
-	^ super new
-		initialize;
-		yourself
-]
 
 { #category : #constructing }
 SmaCCRegularExpressionNode >> , aSmaCCRegularExpressionNode [
@@ -43,12 +36,12 @@ SmaCCRegularExpressionNode >> action [
 	^ action
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRegularExpressionNode >> action: aString [
 	action := aString
 ]
 
-{ #category : #accessing-states }
+{ #category : #'accessing-states' }
 SmaCCRegularExpressionNode >> addState: aSymbol [
 	states add: aSymbol
 ]
@@ -65,7 +58,7 @@ SmaCCRegularExpressionNode >> addStateTransitionsTo: aSmaCCNode [
 	^ endNode
 ]
 
-{ #category : #accessing-states }
+{ #category : #'accessing-states' }
 SmaCCRegularExpressionNode >> addStates: aCollection [
 	states addAll: aCollection
 ]
@@ -90,7 +83,7 @@ SmaCCRegularExpressionNode >> asNFAStartingWith: aSmaCCNode [
 	^ self subclassResponsibility
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRegularExpressionNode >> initialize [
 	super initialize.
 	states := Set new
@@ -117,7 +110,7 @@ SmaCCRegularExpressionNode >> position [
 	^ position
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCRegularExpressionNode >> position: anInteger [
 	position := anInteger
 ]
@@ -171,7 +164,7 @@ SmaCCRegularExpressionNode >> repeatForAtLeast: minimum [
 	^ SmaCCRepeatingRENode component: self minimum: minimum
 ]
 
-{ #category : #accessing-states }
+{ #category : #'accessing-states' }
 SmaCCRegularExpressionNode >> states [
 	^ states
 ]

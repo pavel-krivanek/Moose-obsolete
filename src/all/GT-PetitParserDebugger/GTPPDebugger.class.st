@@ -1,7 +1,7 @@
 Class {
 	#name : #GTPPDebugger,
 	#superclass : #GTGenericStackDebugger,
-	#category : #GT-PetitParserDebugger
+	#category : #'GT-PetitParserDebugger'
 }
 
 { #category : #accessing }
@@ -174,7 +174,7 @@ GTPPDebugger >> methodCodeIn: aComposite forContext: aContext [
 	
 ]
 
-{ #category : #printing/formatting }
+{ #category : #'printing/formatting' }
 GTPPDebugger >> printStackClassColumnForContext: aContext [
 
 	^ (self session isPPParser: aContext receiver)
@@ -303,7 +303,7 @@ GTPPDebugger >> tallyIn: composite [
 		showOnly: 50
 ]
 
-{ #category : #printing/formatting }
+{ #category : #'printing/formatting' }
 GTPPDebugger >> textAttributesForStackEntry: aContext [
 
 	(self session isPPProduction: aContext receiver) 

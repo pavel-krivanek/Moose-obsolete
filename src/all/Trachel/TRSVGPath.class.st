@@ -36,7 +36,7 @@ Class {
 		'polygons',
 		'rectangle'
 	],
-	#category : #Trachel-Shapes
+	#category : #'Trachel-Shapes'
 }
 
 { #category : #visitor }

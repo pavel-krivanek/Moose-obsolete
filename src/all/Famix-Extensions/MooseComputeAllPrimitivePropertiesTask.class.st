@@ -9,7 +9,7 @@ Example of usage:
 Class {
 	#name : #MooseComputeAllPrimitivePropertiesTask,
 	#superclass : #MooseOperator,
-	#category : #Famix-Extensions
+	#category : #'Famix-Extensions'
 }
 
 { #category : #public }

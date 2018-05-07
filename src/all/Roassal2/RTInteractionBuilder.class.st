@@ -15,7 +15,7 @@ Class {
 	#instVars : [
 		'interactions'
 	],
-	#category : #Roassal2-Builder-Common
+	#category : #'Roassal2-Builder-Common'
 }
 
 { #category : #public }
@@ -24,14 +24,14 @@ RTInteractionBuilder >> action: aBlockOrSymbol [
 	^ self item: aBlockOrSymbol action: aBlockOrSymbol
 ]
 
-{ #category : #private-adding }
+{ #category : #'private-adding' }
 RTInteractionBuilder >> addExclusiveInteraction: anInteraction [
 	"We only keep all the interaction that have a different class"
 	interactions := interactions select: [ :i | i class ~~ anInteraction class ].
 	self addInteraction: anInteraction
 ]
 
-{ #category : #private-adding }
+{ #category : #'private-adding' }
 RTInteractionBuilder >> addInteraction: anInteraction [
 	interactions add: anInteraction
 ]
@@ -304,7 +304,7 @@ RTInteractionBuilder >> showEdge [
 	
 	| b |
 	b := RTMondrian new.
-	b interaction showEdge connectTo: [ :v | Array with: v + 1 ].
+	b interaction showEdge connectToAll: [ :v | Array with: v + 1 ].
 	b nodes: #(1 2 2 3).
 
 	b layout circle initialRadius: 10. 
@@ -318,7 +318,7 @@ b := RTMondrian new.
 b shape circle.
 b interaction showEdge 
 					shape: (RTArrowedLine new color: Color green);
-					connectTo: #dependentClasses.
+					connectToAll: #dependentClasses.
 b nodes: classes.
 b edges moveBehind; connectFrom: #superclass.
 b normalizer normalizeSize: #numberOfLinesOfCode; normalizeColor: #numberOfLinesOfCode.
@@ -330,6 +330,47 @@ b
 
 	| i |
 	i := RTShowEdge new.
+	interactions add: i. 
+	^ i
+]
+
+{ #category : #public }
+RTInteractionBuilder >> showLabel [
+	"Public method
+	
+	| b |
+	b := RTMondrian new.
+	b interaction showEdge connectToAll: [ :v | Array with: v + 1 ].
+	b interaction showLabel highlightObject: [ :v | v + 1 ].
+	b nodes: #(1 2 2 3).
+
+	b layout circle initialRadius: 10. 
+	b
+	"
+	
+	"
+	slighly more elaborated example:
+classes := Collection withAllSubclasses.
+b := RTMondrian new.
+b shape circle.
+b interaction showEdge 
+					shape: (RTArrowedLine new color: Color green);
+					connectToAll: #dependentClasses.
+
+b interaction showLabel
+					highlightObjects: #dependentClasses.
+					
+b nodes: classes.
+b edges moveBehind; connectFrom: #superclass.
+b normalizer normalizeSize: #numberOfLinesOfCode; normalizeColor: #numberOfLinesOfCode.
+b layout cluster.
+b
+	"
+	
+	
+
+	| i |
+	i := RTShowLabel new.
 	interactions add: i. 
 	^ i
 ]

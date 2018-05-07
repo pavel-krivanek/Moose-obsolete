@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'tables'
 	],
-	#category : #PetitSQLite-AST
+	#category : #'PetitSQLite-AST'
 }
 
 { #category : #accessing }

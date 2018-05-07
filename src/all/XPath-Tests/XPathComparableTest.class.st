@@ -4,7 +4,7 @@ Abstract; do not run
 Class {
 	#name : #XPathComparableTest,
 	#superclass : #TestCase,
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #testing }

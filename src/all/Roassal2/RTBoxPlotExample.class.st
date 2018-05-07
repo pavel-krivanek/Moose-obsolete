@@ -17,7 +17,7 @@ b view.
 Class {
 	#name : #RTBoxPlotExample,
 	#superclass : #RTAbstractExample,
-	#category : #Roassal2-Builder-BoxPlot
+	#category : #'Roassal2-Builder-BoxPlot'
 }
 
 { #category : #sources }

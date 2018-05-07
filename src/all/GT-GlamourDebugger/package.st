@@ -1,1 +1,1 @@
-Package { #name : #GT-GlamourDebugger }
+Package { #name : #'GT-GlamourDebugger' }

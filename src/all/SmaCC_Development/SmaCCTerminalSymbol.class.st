@@ -5,7 +5,7 @@ Class {
 		'regularExpression',
 		'createIdMethod'
 	],
-	#category : #SmaCC_Development
+	#category : #'SmaCC_Development'
 }
 
 { #category : #private }
@@ -23,7 +23,7 @@ SmaCCTerminalSymbol >> createIdMethod: aBoolean [
 	createIdMethod := aBoolean
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCTerminalSymbol >> initialize [
 	super initialize.
 	firstTerminals add: self.
@@ -44,6 +44,11 @@ SmaCCTerminalSymbol >> makeCaseInsensitive [
 { #category : #accessing }
 SmaCCTerminalSymbol >> modelTypes: anIdentitySet [
 	^ Set with: (self model classFor: SmaCCToken)
+]
+
+{ #category : #accessing }
+SmaCCTerminalSymbol >> position [
+	^ self regularExpression ifNil: [ SmallInteger maxVal ] ifNotNil: [ :re | re position ifNil: [ 0 ] ]
 ]
 
 { #category : #accessing }

@@ -22,15 +22,13 @@ Class {
 	#instVars : [
 		'annotationAttributeInstances'
 	],
-	#category : #Famix-Core
+	#category : #'Famix-Core'
 }
 
 { #category : #meta }
 FAMIXAnnotationTypeAttribute class >> annotation [
 	<MSEClass: #AnnotationTypeAttribute super: #FAMIXAttribute>
 	<package: #FAMIX>
-
-	^self
 ]
 
 { #category : #accessing }
@@ -45,7 +43,7 @@ FAMIXAnnotationTypeAttribute >> annotationAttributeInstances: anObject [
 	annotationAttributeInstances value: anObject
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FAMIXAnnotationTypeAttribute >> initialize [
 	super initialize.
 	annotationAttributeInstances := FMNullMultivalueLink on: self opposite: #annotationTypeAttribute: selector: #annotationAttributeInstances

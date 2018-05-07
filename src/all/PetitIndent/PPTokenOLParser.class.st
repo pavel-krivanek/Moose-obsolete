@@ -1,7 +1,7 @@
 Class {
 	#name : #PPTokenOLParser,
 	#superclass : #PPTokenParser,
-	#category : #PetitIndent-Offside-rule
+	#category : #'PetitIndent-Offside-rule'
 }
 
 { #category : #parsing }

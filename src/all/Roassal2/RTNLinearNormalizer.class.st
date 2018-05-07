@@ -24,7 +24,7 @@ Class {
 		'context',
 		'minimumValue'
 	],
-	#category : #Roassal2-ColorNormalizerOBSOLETE
+	#category : #'Roassal2-ColorNormalizerOBSOLETE'
 }
 
 { #category : #'instance creation' }
@@ -68,7 +68,7 @@ RTNLinearNormalizer >> flushCache [
 	maximumValue := nil
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 RTNLinearNormalizer >> initialize [
 	"Initialize a newly created instance. This method must answer the receiver."
 	

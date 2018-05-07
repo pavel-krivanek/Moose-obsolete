@@ -10,7 +10,7 @@ Class {
 		'SpaceCharacter',
 		'TabCharacter'
 	],
-	#category : #XML-Parser-Streams
+	#category : #'XML-Parser-Streams'
 }
 
 { #category : #'class initialization' }
@@ -22,6 +22,11 @@ XMLWriteStreamAdapter class >> initialize [
 	TabCharacter := Character tab.
 	CRCharacter := Character cr.
 	LFCharacter := Character lf.
+]
+
+{ #category : #basic }
+XMLWriteStreamAdapter >> basicNextPut: anObject [ 
+	^ self nextPut: anObject
 ]
 
 { #category : #accessing }

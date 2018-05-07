@@ -4,7 +4,7 @@ XPath function to replace/delete all occurances of certain characters in a strin
 Class {
 	#name : #XPathTranslateFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

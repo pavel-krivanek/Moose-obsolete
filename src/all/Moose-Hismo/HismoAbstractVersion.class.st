@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'history'
 	],
-	#category : #Moose-Hismo
+	#category : #'Moose-Hismo'
 }
 
 { #category : #meta }

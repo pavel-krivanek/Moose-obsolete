@@ -18,7 +18,7 @@ Class {
 		'parent',
 		'attributes'
 	],
-	#category : #SmaCC_Runtime
+	#category : #'SmaCC_Runtime'
 }
 
 { #category : #accessing }
@@ -28,13 +28,6 @@ SmaCCParseNode class >> collectionVariableIn: aSmaCCParseNode collectionGetter: 
 	(aSmaCCParseNode respondsTo: varSymbol)
 		ifTrue: [ ^ Array with: (aSmaCCParseNode perform: varSymbol) ].
 	^ #()
-]
-
-{ #category : #'instance creation' }
-SmaCCParseNode class >> new [
-	^ super new
-		initialize;
-		yourself
 ]
 
 { #category : #accessing }
@@ -106,7 +99,7 @@ SmaCCParseNode >> addFirstToken: aSmaCCToken to: aCollection [
 SmaCCParseNode >> addFirstTokens: aSmaCCTokenCollection to: aCollection [
 	aSmaCCTokenCollection isNil
 		ifTrue: [ ^ self ].
-	aCollection addAll: aSmaCCTokenCollection beforeIndex: 1
+	aCollection addAllFirst: aSmaCCTokenCollection
 ]
 
 { #category : #'collection handling' }
@@ -176,6 +169,14 @@ SmaCCParseNode >> allNodesDo: nodeBlock andTokensDo: tokenBlock [
 		andTokensDo: tokenBlock
 ]
 
+{ #category : #iterating }
+SmaCCParseNode >> allNodesOfType: aClass do: nodeBlock [
+	self
+		allNodesDo: [ :each | 
+			(each isKindOf: aClass)
+				ifTrue: [ nodeBlock value: each ] ]
+]
+
 { #category : #accessing }
 SmaCCParseNode >> allTokens [
 	| tokens |
@@ -203,29 +204,29 @@ SmaCCParseNode >> allVariableSelectors [
 	^ #(#tokenVariables #compositeTokenVariables #nodeVariables #compositeNodeVariables #otherVariables #ignoredTokenVariables #ignoredCompositeTokenVariables #ignoredNodeVariables #ignoredCompositeNodeVariables #ignoredOtherVariables)
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol [
 	attributes isNil
 		ifTrue: [ ^ nil ].
 	^ attributes at: aSymbol ifAbsent: [ nil ]
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol ifAbsent: aBlock [
 	^ self attributes at: aSymbol ifAbsent: aBlock
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol ifAbsentPut: aBlock [
 	^ self attributes at: aSymbol ifAbsentPut: aBlock
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributeNamed: aSymbol put: aValue [
 	^ self attributes at: aSymbol put: aValue
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> attributes [
 	^ attributes ifNil: [ attributes := IdentityDictionary new ]
 ]
@@ -358,7 +359,7 @@ SmaCCParseNode >> filename: aString [
 	self attributeNamed: #filename put: aString
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 SmaCCParseNode >> fixParentPointers [
 	self
 		nodesDo: [ :each | 
@@ -653,7 +654,7 @@ SmaCCParseNode >> printOn: aStream [
 			nextPut: $) ]
 ]
 
-{ #category : #accessing-attributes }
+{ #category : #'accessing-attributes' }
 SmaCCParseNode >> removeAttributeNamed: aSymbol [
 	attributes isNil
 		ifTrue: [ ^ self ].
@@ -811,4 +812,23 @@ SmaCCParseNode >> topParent [
 { #category : #variables }
 SmaCCParseNode >> variableSelectors [
 	^ #(#tokenVariables #compositeTokenVariables #nodeVariables #compositeNodeVariables #otherVariables)
+]
+
+{ #category : #iterating }
+SmaCCParseNode >> withAllNodesDo: nodeBlock [
+	nodeBlock value: self.
+	self allNodesDo: nodeBlock
+]
+
+{ #category : #iterating }
+SmaCCParseNode >> withAllNodesDo: nodeBlock andTokensDo: tokenBlock [
+	nodeBlock value: self.
+	self allNodesDo: nodeBlock andTokensDo: tokenBlock
+]
+
+{ #category : #iterating }
+SmaCCParseNode >> withAllNodesOfType: aClass do: nodeBlock [
+	(self isKindOf: aClass)
+		ifTrue: [ nodeBlock value: self ].
+	self allNodesOfType: aClass do: nodeBlock
 ]

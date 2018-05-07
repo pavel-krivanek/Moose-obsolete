@@ -29,7 +29,7 @@ Class {
 		'EndOfLineParser',
 		'EscapeMap'
 	],
-	#category : #PetitRegex-Core
+	#category : #'PetitRegex-Core'
 }
 
 { #category : #private }
@@ -160,7 +160,7 @@ PPRegexParser class >> lastCharIn: aStream [
 	^ aStream position = 0 ifFalse: [ aStream skip: -1; next ]
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> anyAtom [
 	^ $. asParser map: [ :char | (PPPredicateObjectParser char: (Character value: 0)) negate ]
 ]
@@ -170,7 +170,7 @@ PPRegexParser >> atom [
 	^ groupAtom / characterGroup / predicateAtom / anyAtom / beginOfLineAtom / endOfLineAtom / escapeAtom / characterAtom
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> beginOfLineAtom [
 	^ $^ asParser answer: BeginOfLineParser
 ]
@@ -181,12 +181,12 @@ PPRegexParser >> branch [
 	/ (PPEpsilonParser new ==> [ :r | PPEpsilonParser new ])
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> characterAtom [
 	^ (PPPredicateObjectParser anyOf: '()[|:{*+?\.^$') negate map: [ :char | char asParser ]
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> characterGroup [
 	^  $[ asParser , $^ asParser optional, $] asParser optional,  $- asParser optional , characterSet star , $- asParser optional , $] asParser 
 	map: [ :open :negate :closeSquareBracket :opend :parsers :closed :close |
@@ -204,28 +204,28 @@ PPRegexParser >> characterGroup [
 			ifFalse: [ result negate ] ] 
 ]
 
-{ #category : #grammar-characters }
+{ #category : #'grammar-characters' }
 PPRegexParser >> characterSet [
 	^ characterSetClass / characterSetEscape / characterSetRange / characterSetCharacter
 ]
 
-{ #category : #grammar-characters }
+{ #category : #'grammar-characters' }
 PPRegexParser >> characterSetCharacter [
 	^ (PPPredicateObjectParser anyOf: '-]') negate map: [ :char | char asParser ]
 ]
 
-{ #category : #grammar-characters }
+{ #category : #'grammar-characters' }
 PPRegexParser >> characterSetClass [
 	^ [ :stream | stream position ] asParser , '[:' asParser , #word asParser star flatten , ':]' asParser map: [ :pos :open :class :close | 
 		ClassMap at: class ifAbsent: [ PPFailure message: 'Invalid character class [:' , class , ':]' context: nil at: pos ] ]
 ]
 
-{ #category : #grammar-characters }
+{ #category : #'grammar-characters' }
 PPRegexParser >> characterSetEscape [
 	^ escapeAtom
 ]
 
-{ #category : #grammar-characters }
+{ #category : #'grammar-characters' }
 PPRegexParser >> characterSetRange [
 	^ [ :stream | stream position ] asParser , #any asParser , $- asParser , $] asParser negate map: [ :pos :start :sep :stop | 
 		start < stop
@@ -233,17 +233,17 @@ PPRegexParser >> characterSetRange [
 			ifFalse: [ PPFailure message: 'Invalid character range: ' , (String with: start with: $- with: stop) context: nil at: pos ] ]
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> endOfLineAtom [
 	^ $$ asParser answer: EndOfLineParser
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> escapeAtom [
 	^ $\ asParser , #any asParser map: [ :escape :char | EscapeMap at: char ifAbsent: [ char asParser ] ]
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> groupAtom [
 	^ $( asParser , regex , $) asParser ==> #second
 ]
@@ -253,7 +253,7 @@ PPRegexParser >> number [
 	^ #digit asParser plus flatten ==> [ :token | token asInteger ]
 ]
 
-{ #category : #grammar-operators }
+{ #category : #'grammar-operators' }
 PPRegexParser >> oneOrMorePiece [
 	"+	1 or more times"
 	
@@ -268,7 +268,7 @@ PPRegexParser >> piece [
 			ifFalse: [ op setParser: at ] ]
 ]
 
-{ #category : #grammar-atoms }
+{ #category : #'grammar-atoms' }
 PPRegexParser >> predicateAtom [
 	^ $: asParser , $^ asParser optional , #word asParser plus flatten , $: asParser map: [ :begin :negated :selector :end |
 		| result |
@@ -280,20 +280,20 @@ PPRegexParser >> predicateAtom [
 		result ]
 ]
 
-{ #category : #grammar-operators }
+{ #category : #'grammar-operators' }
 PPRegexParser >> quantifier [
 	^ ($+ asParser ==> [ :node | PPPossessiveRepeatingParser new ])
 	/ ($? asParser ==> [ :node | PPLazyRepeatingParser new setLimit: nil asParser end ])
 	/ (nil asParser ==> [ :node | PPGreedyRepeatingParser new setLimit: nil asParser end ])
 ]
 
-{ #category : #grammar-operators }
+{ #category : #'grammar-operators' }
 PPRegexParser >> rangePiece [
 	^ ${ asParser , rangePieceSpec , $} asParser , quantifier 
 		map: [ :op :ra :cl :qu | qu setMin: ra first; setMax: ra last ]
 ]
 
-{ #category : #grammar-operators }
+{ #category : #'grammar-operators' }
 PPRegexParser >> rangePieceSpec [
 	"{n,m}	at least n but not more than m times
 	{n,}	at least n times
@@ -342,14 +342,14 @@ PPRegexParser >> start [
 	^ regex end ==> [ :node | self resolveStubs: node ]
 ]
 
-{ #category : #grammar-operators }
+{ #category : #'grammar-operators' }
 PPRegexParser >> zeroOrMorePiece [
 	"*	0 or more times"
 		
 	^ $* asParser , quantifier map: [ :op :qu | qu ]
 ]
 
-{ #category : #grammar-operators }
+{ #category : #'grammar-operators' }
 PPRegexParser >> zeroOrOnePiece [
 	"?	0 or 1 times"
 

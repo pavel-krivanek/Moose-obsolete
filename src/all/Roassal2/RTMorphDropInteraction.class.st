@@ -5,7 +5,7 @@ Class {
 		'condition',
 		'behavior'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #'instance creation' }
@@ -13,7 +13,7 @@ RTMorphDropInteraction class >> if: aCondition do: aBlock [
 	^ self new if: aCondition do: aBlock
 ]
 
-{ #category : #dropping/grabbing }
+{ #category : #'dropping/grabbing' }
 RTMorphDropInteraction >> acceptDroppingMorph: aMorph event: anEvent [
 	behavior value: aMorph value: anEvent
 ]
@@ -59,7 +59,7 @@ RTMorphDropInteraction >> initializeElement: anElement [
 		do: [ :event | self acceptDroppingMorph: event droppedMorph event: event dropMorphEvent ]
 ]
 
-{ #category : #dropping/grabbing }
+{ #category : #'dropping/grabbing' }
 RTMorphDropInteraction >> wantsDroppedMorph: aMorph event: anEvent [
 	^ condition value: aMorph value: anEvent
 ]

@@ -6,10 +6,10 @@ Class {
 		'bits',
 		'value'
 	],
-	#category : #Moose-Algos-FormalConceptAnalysis
+	#category : #'Moose-Algos-FormalConceptAnalysis'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalFCAElement class >> with: anObject [
 	
 	^self basicNew initialize: anObject
@@ -28,7 +28,7 @@ MalFCAElement >> bits [
 	^bits
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalFCAElement >> initialize: anObject [
 	
 	value := anObject.

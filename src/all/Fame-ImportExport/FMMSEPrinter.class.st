@@ -1,7 +1,7 @@
 Class {
 	#name : #FMMSEPrinter,
 	#superclass : #FMPrintClient,
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #parsing }
@@ -49,7 +49,7 @@ FMMSEPrinter >> endElement: name [
 	indent := indent - 1
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMMSEPrinter >> initialize [
 	stream := nil.
 	indent := nil

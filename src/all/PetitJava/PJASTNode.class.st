@@ -4,7 +4,7 @@ General node defining for Java AST
 Class {
 	#name : #PJASTNode,
 	#superclass : #Object,
-	#category : #PetitJava-AST
+	#category : #'PetitJava-AST'
 }
 
 { #category : #visiting }

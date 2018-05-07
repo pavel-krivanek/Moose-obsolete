@@ -5,7 +5,7 @@ Class {
 		'x',
 		'y'
 	],
-	#category : #Trachel-Viva
+	#category : #'Trachel-Viva'
 }
 
 { #category : #'as yet unclassified' }

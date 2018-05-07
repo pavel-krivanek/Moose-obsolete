@@ -7,7 +7,7 @@ Class {
 		'referenceTable',
 		'indexedColumnNames'
 	],
-	#category : #PetitSQLite-AST
+	#category : #'PetitSQLite-AST'
 }
 
 { #category : #accessing }

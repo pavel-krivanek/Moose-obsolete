@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'messageQueue'
 	],
-	#category : #XML-Writer-Tests
+	#category : #'XML-Writer-Tests'
 }
 
 { #category : #'reflective operations' }

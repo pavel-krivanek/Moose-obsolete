@@ -15,7 +15,7 @@ Class {
 		'elementHandlerFactory',
 		'elementHandlerFactoryMapper'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #'handling - content' }

@@ -4,7 +4,7 @@ XPath substring function. First argument is the source string, second is the one
 Class {
 	#name : #XPathSubstringFunction,
 	#superclass : #XPathFunction,
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
 
 { #category : #accessing }

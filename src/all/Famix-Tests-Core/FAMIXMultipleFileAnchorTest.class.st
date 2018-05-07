@@ -4,7 +4,7 @@ A FAMIXMultipleFileAnchorTest is a test class for testing the behavior of FAMIXM
 Class {
 	#name : #FAMIXMultipleFileAnchorTest,
 	#superclass : #FAMIXSourceAnchorTest,
-	#category : #Famix-Tests-Core
+	#category : #'Famix-Tests-Core'
 }
 
 { #category : #helpers }

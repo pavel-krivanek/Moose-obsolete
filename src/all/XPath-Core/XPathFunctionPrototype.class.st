@@ -11,8 +11,15 @@ Class {
 		'maxArguments',
 		'argumentTypes'
 	],
-	#category : #XPath-Core-Functions
+	#category : #'XPath-Core-Functions'
 }
+
+{ #category : #'instance creation' }
+XPathFunctionPrototype class >> fromString: aSourceString [
+	^ (XPathFunctionPrototypeParser
+		on: aSourceString
+		for: XPathTypedFunctionPrototypeParserHandler new) parse
+]
 
 { #category : #'instance creation' }
 XPathFunctionPrototype class >> returnType: aReturnType name: aName minArguments: aMinimum maxArguments: aMaximum argumentTypes: anArgumentTypeCollection [
@@ -87,12 +94,14 @@ XPathFunctionPrototype >> name [
 { #category : #printing }
 XPathFunctionPrototype >> printOn: aStream [
 	super printOn: aStream.
+
 	aStream
 		nextPut: $(;
 		nextPutAll: self returnType name;
 		space;
 		nextPutAll: self name;
 		nextPut: $(.
+
 	self argumentTypes withIndexDo: [:each :i |
 		i > 1
 			ifTrue: [aStream nextPutAll: ', '].
@@ -102,6 +111,7 @@ XPathFunctionPrototype >> printOn: aStream [
 				self maxArguments
 					ifNil: [aStream nextPut: $*]
 					ifNotNil: [aStream nextPut: $?]]].
+
 	aStream nextPutAll: '))'.
 ]
 

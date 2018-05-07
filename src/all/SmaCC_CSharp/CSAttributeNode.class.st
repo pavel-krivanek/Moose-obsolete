@@ -9,7 +9,7 @@ Class {
 		'commas',
 		'rightBracket'
 	],
-	#category : #SmaCC_CSharp
+	#category : #'SmaCC_CSharp'
 }
 
 { #category : #generated }
@@ -59,7 +59,7 @@ CSAttributeNode >> compositeTokenVariables [
 	^ #(#commas)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 CSAttributeNode >> initialize [
 	super initialize.
 	attributeValues := OrderedCollection new: 2.

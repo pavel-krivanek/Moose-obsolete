@@ -7,7 +7,7 @@ Class {
 		'metaDescription',
 		'owner'
 	],
-	#category : #Fame-ImportExport
+	#category : #'Fame-ImportExport'
 }
 
 { #category : #'instance creation' }
@@ -61,7 +61,7 @@ FMFutureElement >> serial: serial [
 	owner assign: instance to: serial
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 FMFutureElement >> with: anImporter name: aString [ 
 	owner := anImporter.
 	metaDescription := owner metamodel elementNamed: aString.

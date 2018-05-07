@@ -1,7 +1,7 @@
 Class {
 	#name : #TRVIAnimatedValueTest,
 	#superclass : #TRTest,
-	#category : #Trachel-Viva
+	#category : #'Trachel-Viva'
 }
 
 { #category : #tests }

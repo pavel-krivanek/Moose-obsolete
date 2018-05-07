@@ -1,7 +1,7 @@
 Class {
 	#name : #REPStakeholderTest,
 	#superclass : #TestCase,
-	#category : #Arki-Tests-Reporter
+	#category : #'Arki-Tests-Reporter'
 }
 
 { #category : #tests }

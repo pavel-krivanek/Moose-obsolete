@@ -6,7 +6,7 @@ Class {
 		'source',
 		'method'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #'instance creation' }

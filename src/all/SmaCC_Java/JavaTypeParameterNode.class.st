@@ -7,7 +7,7 @@ Class {
 		'types',
 		'amps'
 	],
-	#category : #SmaCC_Java
+	#category : #'SmaCC_Java'
 }
 
 { #category : #generated }
@@ -45,7 +45,7 @@ JavaTypeParameterNode >> extendsToken: aSmaCCToken [
 	extendsToken := aSmaCCToken
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JavaTypeParameterNode >> initialize [
 	super initialize.
 	types := OrderedCollection new: 2.

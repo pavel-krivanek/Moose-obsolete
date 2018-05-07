@@ -13,9 +13,10 @@ Class {
 		'color',
 		'session',
 		'eventOverseer',
-		'theme'
+		'theme',
+		'clearBackground'
 	],
-	#category : #Trachel-Core
+	#category : #'Trachel-Core'
 }
 
 { #category : #visitor }
@@ -201,6 +202,16 @@ TRCanvas >> clean [
 ]
 
 { #category : #accessing }
+TRCanvas >> clearBackground [
+	^ clearBackground
+]
+
+{ #category : #accessing }
+TRCanvas >> clearBackground: aBool [
+	clearBackground := aBool
+]
+
+{ #category : #accessing }
 TRCanvas >> color [
 	"Return the color used as background" 
 	^ color
@@ -309,6 +320,7 @@ TRCanvas >> initialize [
 	theme := TRTheme infer.
 	color := theme trachelCanvasColor.
 	session := TRPlatform current session.
+	clearBackground := true.
 	"No event overseer at the creation"
 	eventOverseer := nil
 ]

@@ -22,7 +22,7 @@ Class {
 		'classF1',
 		'classG'
 	],
-	#category : #Famix-Tests-Extensions
+	#category : #'Famix-Tests-Extensions'
 }
 
 { #category : #tests }

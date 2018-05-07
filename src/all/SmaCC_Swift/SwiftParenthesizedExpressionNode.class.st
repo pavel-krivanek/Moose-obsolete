@@ -9,7 +9,7 @@ Class {
 		'commaTokens',
 		'rightParenToken'
 	],
-	#category : #SmaCC_Swift
+	#category : #'SmaCC_Swift'
 }
 
 { #category : #generated }
@@ -62,7 +62,7 @@ SwiftParenthesizedExpressionNode >> identifierTokens: anOrderedCollection [
 	identifierTokens := anOrderedCollection
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 SwiftParenthesizedExpressionNode >> initialize [
 	super initialize.
 	expressions := OrderedCollection new: 2.

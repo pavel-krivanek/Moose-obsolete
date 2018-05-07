@@ -1,1 +1,1 @@
-Package { #name : #Collections-Tests-OrderPreservingDictionary }
+Package { #name : #'Collections-Tests-OrderPreservingDictionary' }

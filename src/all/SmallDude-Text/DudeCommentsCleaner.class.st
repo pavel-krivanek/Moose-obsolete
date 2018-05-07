@@ -7,7 +7,7 @@ Class {
 		'sLineComments',
 		'sRegex'
 	],
-	#category : #SmallDude-Text
+	#category : #'SmallDude-Text'
 }
 
 { #category : #private }
@@ -49,7 +49,7 @@ DudeCommentsCleaner >> getIndexOf: aSubstring in: aString startingAt: startIndex
 	^0
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 DudeCommentsCleaner >> initialize [ 
 	"Initialize a newly created instance. This method must answer the receiver." 
 	 

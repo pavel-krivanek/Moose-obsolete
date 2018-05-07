@@ -31,7 +31,7 @@ Class {
 	#instVars : [
 		'lattice'
 	],
-	#category : #Moose-Algos-Lattice
+	#category : #'Moose-Algos-Lattice'
 }
 
 { #category : #'as yet unclassified' }

@@ -16,7 +16,7 @@ Class {
 		'dashes',
 		'color'
 	],
-	#category : #Roassal2-Interactions
+	#category : #'Roassal2-Interactions'
 }
 
 { #category : #initialization }

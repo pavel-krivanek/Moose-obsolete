@@ -8,7 +8,7 @@ Class {
 		'right',
 		'modifiers'
 	],
-	#category : #SmaCC_Delphi
+	#category : #'SmaCC_Delphi'
 }
 
 { #category : #generated }
@@ -35,7 +35,7 @@ DelphiMethodHeaderNode >> compositeNodeVariables [
 	^ #(#modifiers)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 DelphiMethodHeaderNode >> initialize [
 	super initialize.
 	modifiers := OrderedCollection new: 2.

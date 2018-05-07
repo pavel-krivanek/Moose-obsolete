@@ -7,7 +7,7 @@ Class {
 		'cx',
 		'cy'
 	],
-	#category : #Athens-SVG
+	#category : #'Athens-SVG'
 }
 
 { #category : #'as yet unclassified' }

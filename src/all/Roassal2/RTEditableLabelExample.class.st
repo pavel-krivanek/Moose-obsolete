@@ -4,7 +4,7 @@ I am a class example of RTEditable label
 Class {
 	#name : #RTEditableLabelExample,
 	#superclass : #RTObject,
-	#category : #Roassal2-MorphSpecific
+	#category : #'Roassal2-MorphSpecific'
 }
 
 { #category : #examples }

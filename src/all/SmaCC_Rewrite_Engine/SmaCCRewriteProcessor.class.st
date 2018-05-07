@@ -14,7 +14,7 @@ Class {
 	#classVars : [
 		'Debug'
 	],
-	#category : #SmaCC_Rewrite_Engine
+	#category : #'SmaCC_Rewrite_Engine'
 }
 
 { #category : #accessing }
@@ -238,14 +238,18 @@ SmaCCRewriteProcessor >> rules: aSmaCCAbstractRewrite [
 
 { #category : #accessing }
 SmaCCRewriteProcessor >> saveOutput: aString in: aFilename [
-	| stream directory |
+	| stream directory tries |
 	(aFilename isNil or: [ aFilename isEmpty ])
 		ifTrue: [ ^ self ].
 	aString isEmpty
 		ifTrue: [ ^ self ].
 	directory := aFilename asFileReference parent pathString.
-	directory asFileReference exists
-		ifFalse: [ directory asFileReference ensureCreateDirectory ].
+	tries := 1.
+	[ tries < 10 and: [ directory asFileReference exists not ] ]
+		whileTrue: [ [ directory asFileReference ensureCreateDirectory ]
+				on: Error
+				do: [ :ex | ex return ].
+			tries := tries + 1 ].
 	stream := FileStream forceNewFileNamed: aFilename.
 	[ stream nextPutAll: aString ]
 		ensure: [ stream close ]
@@ -253,15 +257,14 @@ SmaCCRewriteProcessor >> saveOutput: aString in: aFilename [
 
 { #category : #accessing }
 SmaCCRewriteProcessor >> sourceFor: aString [
-	| stream |
-	stream := FileStream readOnlyFileNamed: aString.
-	^ [ ([ #[239 187 191]
-		allSatisfy: [ :each | stream peekFor: (Character value: each) ] ]
-		on: Error
-		do: [ :ex | ex return: false ])
-		ifFalse: [ stream position: 0 ].	"HACK to handle UTF-8 streams"
-	stream upToEnd ]
-		ensure: [ stream close ]
+	^ aString asFileReference
+		readStreamDo: [ :stream | 
+			([ #[239 187 191] allSatisfy: [ :each | stream peekFor: (Character value: each) ] ]
+				on: Error
+				do: [ :ex | ex return: false ])
+				ifFalse: [ stream position: 0 ].	"HACK to handle BOM streams"
+			parserClass setEncodingOn: stream.
+			stream upToEnd ]
 ]
 
 { #category : #accessing }

@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'elementClassMap'
 	],
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
 
 { #category : #accessing }

@@ -5,7 +5,7 @@ Class {
 		'selectorParts',
 		'values'
 	],
-	#category : #SmaCC_Generic_Smalltalk_Parser
+	#category : #'SmaCC_Generic_Smalltalk_Parser'
 }
 
 { #category : #generated }
@@ -23,7 +23,7 @@ GstKeywordMessageNode >> compositeTokenVariables [
 	^ #(#selectorParts)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 GstKeywordMessageNode >> initialize [
 	super initialize.
 	selectorParts := OrderedCollection new: 2.

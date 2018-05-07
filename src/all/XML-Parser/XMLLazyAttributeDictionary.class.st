@@ -10,7 +10,7 @@ Class {
 	#classInstVars : [
 		'emptyAttributeDictionary'
 	],
-	#category : #XML-Parser
+	#category : #'XML-Parser'
 }
 
 { #category : #private }

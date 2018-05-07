@@ -1,7 +1,7 @@
 Class {
 	#name : #PPComposedTest,
 	#superclass : #PPAbstractParserTest,
-	#category : #PetitTests-Tests
+	#category : #'PetitTests-Tests'
 }
 
 { #category : #accessing }
@@ -19,7 +19,7 @@ PPComposedTest >> number [
 	^ ($- asParser optional , #digit asParser plus , ($. asParser , #digit asParser plus) optional) flatten
 ]
 
-{ #category : #testing-examples }
+{ #category : #'testing-examples' }
 PPComposedTest >> testComment [
 	self assert: self comment parse: '""' to: '""'.
 	self assert: self comment parse: '"a"' to: '"a"'.
@@ -84,7 +84,7 @@ PPComposedTest >> testEvenNumber [
 	self assert: s parse: 'bbbb'
 ]
 
-{ #category : #testing-examples }
+{ #category : #'testing-examples' }
 PPComposedTest >> testIdentifier [
 	self assert: self identifier parse: 'a' to: 'a'.
 	self assert: self identifier parse: 'a1' to: 'a1'.
@@ -201,7 +201,7 @@ PPComposedTest >> testNestedComments [
 	self assert: parser fail: '/*a/*b*/c'
 ]
 
-{ #category : #testing-examples }
+{ #category : #'testing-examples' }
 PPComposedTest >> testNumber [
 	self assert: self number parse: '1' to: '1'.
 	self assert: self number parse: '12' to: '12'.
@@ -392,7 +392,7 @@ PPComposedTest >> testParseAnBnCn [
 	self assert: s fail: 'aabbc'
 ]
 
-{ #category : #testing-examples }
+{ #category : #'testing-examples' }
 PPComposedTest >> testReturn [
 	| number spaces return |
 	number := #digit asParser plus flatten.

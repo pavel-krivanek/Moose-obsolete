@@ -7,10 +7,10 @@ Class {
 	#instVars : [
 		'number'
 	],
-	#category : #Moose-Algos-LinearAlgebra
+	#category : #'Moose-Algos-LinearAlgebra'
 }
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixCoercion class >> with: aNumber [
 	
 	^(aNumber isKindOf: MalMatrix)
@@ -60,7 +60,7 @@ MalMatrixCoercion >> hasDimension: aDimension [
 	^true
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixCoercion >> initializeRows: m columns: n [
 	
 	^self noDimensionError
@@ -88,7 +88,7 @@ MalMatrixCoercion >> rowSize [
 	self noDimensionError
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 MalMatrixCoercion >> setNumber: aNumber [
 	
 	^number := aNumber

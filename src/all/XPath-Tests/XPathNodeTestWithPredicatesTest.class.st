@@ -1,7 +1,7 @@
 Class {
 	#name : #XPathNodeTestWithPredicatesTest,
 	#superclass : #TestCase,
-	#category : #XPath-Tests
+	#category : #'XPath-Tests'
 }
 
 { #category : #asserting }

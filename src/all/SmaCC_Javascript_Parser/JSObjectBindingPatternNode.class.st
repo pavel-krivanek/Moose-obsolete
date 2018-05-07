@@ -7,7 +7,7 @@ Class {
 		'properties',
 		'commas'
 	],
-	#category : #SmaCC_Javascript_Parser
+	#category : #'SmaCC_Javascript_Parser'
 }
 
 { #category : #generated }
@@ -40,7 +40,7 @@ JSObjectBindingPatternNode >> ignoredTokenVariables [
 	^ #(#leftBrace #rightBrace)
 ]
 
-{ #category : #generated-initialize-release }
+{ #category : #'generated-initialize-release' }
 JSObjectBindingPatternNode >> initialize [
 	super initialize.
 	properties := OrderedCollection new: 2.

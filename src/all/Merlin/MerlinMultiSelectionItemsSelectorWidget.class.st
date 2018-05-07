@@ -1,7 +1,7 @@
 Class {
 	#name : #MerlinMultiSelectionItemsSelectorWidget,
 	#superclass : #MerlinItemsSelectorWidget,
-	#category : #Merlin-Rendering
+	#category : #'Merlin-Rendering'
 }
 
 { #category : #'control - initial list ' }

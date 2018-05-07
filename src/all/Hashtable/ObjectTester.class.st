@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'instances'
 	],
-	#category : #Hashtable-Objects
+	#category : #'Hashtable-Objects'
 }
 
 { #category : #testing }
@@ -13,7 +13,7 @@ ObjectTester class >> testAll [
 	self new testAll
 ]
 
-{ #category : #initialize-release }
+{ #category : #'initialize-release' }
 ObjectTester >> initialize [
 	super initialize.
 	self instances: 1000000

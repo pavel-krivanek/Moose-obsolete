@@ -1,7 +1,7 @@
 Class {
 	#name : #DuplicationNodeEliminationTest,
 	#superclass : #TestCase,
-	#category : #SmaCC_Tests
+	#category : #'SmaCC_Tests'
 }
 
 { #category : #tests }

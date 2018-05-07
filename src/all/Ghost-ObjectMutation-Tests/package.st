@@ -1,1 +1,1 @@
-Package { #name : #Ghost-ObjectMutation-Tests }
+Package { #name : #'Ghost-ObjectMutation-Tests' }

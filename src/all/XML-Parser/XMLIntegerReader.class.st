@@ -1,5 +1,5 @@
 "
-This class reads positive hex or decimal integers up to the maximum a SmallInteger can hold from minimal streams supporting next, peek, and atEnd. It returns nil instead of raising errors for invalid integers.
+This class reads positive hex or decimal integers from minimal streams supporting #next, #peek, and #atEnd. It returns nil instead of raising errors for invalid integers.
 "
 Class {
 	#name : #XMLIntegerReader,
@@ -9,19 +9,16 @@ Class {
 		'printStream'
 	],
 	#classVars : [
-		'CharacterDigitValues',
-		'MaxIntegerValue'
+		'CharacterDigitValues'
 	],
-	#category : #XML-Parser-Utils
+	#category : #'XML-Parser-Utils'
 }
 
 { #category : #'class initialization' }
 XMLIntegerReader class >> initialize [
 	"self initialize"
 
-	self
-		initializeMaxIntegerValue;
-		initializeCharacterDigitValues
+	self initializeCharacterDigitValues
 ]
 
 { #category : #'class initialization' }
@@ -46,20 +43,14 @@ XMLIntegerReader class >> initializeCharacterDigitValues [
 	CharacterDigitValues := temp.
 ]
 
-{ #category : #'class initialization' }
-XMLIntegerReader class >> initializeMaxIntegerValue [
-	"'SmallInteger maxVal' is large enough for char codes and port numbers"
-	MaxIntegerValue := SmallInteger maxVal
-]
-
-{ #category : #private }
+{ #category : #defaults }
 XMLIntegerReader class >> maxBase [
 	^ 16
 ]
 
-{ #category : #private }
+{ #category : #defaults }
 XMLIntegerReader class >> maxIntegerValue [
-	^ MaxIntegerValue
+	^ nil
 ]
 
 { #category : #'instance creation' }
@@ -86,19 +77,19 @@ XMLIntegerReader class >> readFrom: aStream withBase: aFirstBase andPrefixes: aC
 ]
 
 { #category : #reading }
-XMLIntegerReader class >> readFrom: aStream withBase: aFirstBase andPrefixes: aCharacterCollection orBase: aSecondBase upTo: aReadLimit [
+XMLIntegerReader class >> readFrom: aStream withBase: aFirstBase andPrefixes: aCharacterCollection orBase: aSecondBase upToLimit: aReadLimit [
 	^ (self on: aStream)
 		nextIntegerWithBase: aFirstBase
 		andPrefixes: aCharacterCollection
 		orBase: aSecondBase
-		upTo: aReadLimit
+		upToLimit: aReadLimit
 ]
 
 { #category : #reading }
-XMLIntegerReader class >> readFrom: aStream withBase: aBase upTo: aReadLimit [
+XMLIntegerReader class >> readFrom: aStream withBase: aBase upToLimit: aReadLimit [
 	^ (self on: aStream)
 		nextIntegerWithBase: aBase
-		upTo: aReadLimit
+		upToLimit: aReadLimit
 ]
 
 { #category : #testing }
@@ -146,7 +137,7 @@ XMLIntegerReader >> nextInteger [
 XMLIntegerReader >> nextIntegerWithBase: aBase [
 	^ self
 		nextIntegerWithBase: aBase
-		upTo: nil
+		upToLimit: nil
 ]
 
 { #category : #reading }
@@ -155,11 +146,11 @@ XMLIntegerReader >> nextIntegerWithBase: aFirstBase andPrefixes: aCharacterColle
 		nextIntegerWithBase: aFirstBase
 		andPrefixes: aCharacterCollection
 		orBase: aSecondBase
-		upTo: nil
+		upToLimit: nil
 ]
 
 { #category : #reading }
-XMLIntegerReader >> nextIntegerWithBase: aFirstBase andPrefixes: aCharacterCollection orBase: aSecondBase upTo: aReadLimit [
+XMLIntegerReader >> nextIntegerWithBase: aFirstBase andPrefixes: aCharacterCollection orBase: aSecondBase upToLimit: aReadLimit [
 	^ self
 		nextIntegerWithBase:
 			((self atEnd not
@@ -168,19 +159,21 @@ XMLIntegerReader >> nextIntegerWithBase: aFirstBase andPrefixes: aCharacterColle
 					self next.
 					aFirstBase]
 				ifFalse: [aSecondBase])
-		upTo: aReadLimit
+		upToLimit: aReadLimit
 ]
 
 { #category : #reading }
-XMLIntegerReader >> nextIntegerWithBase: aBase upTo: aReadLimit [
+XMLIntegerReader >> nextIntegerWithBase: aBase upToLimit: aReadLimit [
 	| integer maxValue maxBaseValue digitValue readLimit |
 
 	(aBase > 1
 		and: [aBase <= self class maxBase])
 		ifFalse: [self errorUnsupportedBase: aBase].
 
-	maxValue := self class maxIntegerValue.
-	maxBaseValue := (maxValue / aBase) floor.
+	self class maxIntegerValue
+		ifNotNil: [:maxIntegerValue |
+			maxValue := maxIntegerValue.
+			maxBaseValue := (maxValue / aBase) floor].
 	readLimit := aReadLimit.
 	[self atEnd
 		or: [(readLimit notNil and: [readLimit <= 0])
@@ -189,12 +182,22 @@ XMLIntegerReader >> nextIntegerWithBase: aBase upTo: aReadLimit [
 			integer
 				ifNil: [integer := 0].
 	
-			integer > maxBaseValue
-				ifTrue: [^ maxValue].
+			maxBaseValue
+				ifNotNil: [
+					integer > maxBaseValue
+						ifTrue: [
+							self overflowed.
+							"handle overflow with saturation"
+							^ maxValue]].
 			integer := integer * aBase.
 
-			integer > (maxValue - digitValue)
-				ifTrue: [^ maxValue].
+			maxValue
+				ifNotNil: [
+					integer > (maxValue - digitValue)
+						ifTrue: [
+							self overflowed.
+							"handle overflow with saturation"
+							^ maxValue]].
 			integer := integer + digitValue.
 			readLimit
 				ifNotNil: [readLimit := readLimit - 1]].
@@ -207,6 +210,11 @@ XMLIntegerReader >> on: aStringOrStream [
 		aStringOrStream isStream
 			ifTrue: [aStringOrStream]
 			ifFalse: [aStringOrStream readStream]
+]
+
+{ #category : #private }
+XMLIntegerReader >> overflowed [
+	"can override to raise a warning or error"
 ]
 
 { #category : #private }

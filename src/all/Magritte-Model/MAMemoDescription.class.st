@@ -4,10 +4,10 @@ I am a description of multiline strings, possible values are instances of ==Stri
 Class {
 	#name : #MAMemoDescription,
 	#superclass : #MAStringDescription,
-	#category : #Magritte-Model-Description
+	#category : #'Magritte-Model-Description'
 }
 
-{ #category : #accessing-defaults }
+{ #category : #'accessing-defaults' }
 MAMemoDescription class >> defaultLineCount [
 	^ 3
 ]
@@ -22,7 +22,7 @@ MAMemoDescription >> acceptMagritte: aVisitor [
 	aVisitor visitMemoDescription: self
 ]
 
-{ #category : #acessing-magritte }
+{ #category : #'acessing-magritte' }
 MAMemoDescription >> descriptionLineCount [
 	<magritteDescription>
 	^ MANumberDescription new
@@ -35,12 +35,12 @@ MAMemoDescription >> descriptionLineCount [
 		yourself
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAMemoDescription >> lineCount [
 	^ self propertyAt: #lineCount ifAbsent: [ self class defaultLineCount ]
 ]
 
-{ #category : #accessing-properties }
+{ #category : #'accessing-properties' }
 MAMemoDescription >> lineCount: anInteger [
 	self propertyAt: #lineCount put: anInteger
 ]
