@@ -26,7 +26,7 @@ Class {
 		'booleanOperators',
 		'cyclomaticNumber2'
 	],
-	#category : #'Famix-Extensions'
+	#category : #'Famix-Compatibility'
 }
 
 { #category : #'private-accessing' }

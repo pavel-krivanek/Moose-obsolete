@@ -7,7 +7,7 @@ Class {
 		'importer',
 		'targetModel'
 	],
-	#category : #'Famix-Extensions'
+	#category : #'Famix-Compatibility'
 }
 
 { #category : #public }
