@@ -90,28 +90,6 @@ FmxNGType >> addBehaviourWithDeclaredType: aBehaviour [
 	self structuresWithDeclaredType add: aBehaviour
 ]
 
-{ #category : #'Moose-Finder' }
-FmxNGType >> addBlueprintLegendOn: view [
-
-	| lb |
-	lb := RTLegendBuilder new.
-	lb onDemand.
-	lb view: view.
-
-	lb addColoredText: 'Class Blueprint' color: Color black.
-	lb addText: 'large box = class'.
-	lb addText: 'Each class is composed of 5 part, from left to right'.
-	lb addText: '  constructor, public methods, private methods, accessors, variables'.
-	lb addLineColor: Color cyan text: 'variable access'.
-	lb addLineColor: Color gray text: 'method invocation'.
-	lb addColor: Color red text: 'Setter'.
-	lb addColor: Color orange text: 'Getter'.
-	lb addColor: Color cyan text: 'Abstract'.
-	lb addColor: Color brown text: 'Overriding'.
-	lb addColor: Color gray text: 'Constant'.
-	lb build.
-]
-
 { #category : #accessing }
 FmxNGType >> addIncomingReference: aReference [ 
 	incomingReferences add: aReference
@@ -842,29 +820,6 @@ FmxNGType >> mooseFinderAttributesIn: composite [
 			selectionPopulate: #selection  
 				entitled: 'Open declared type' 
 				with:  [ :table | table selection declaredType ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderBlueprintIn: composite [
-	<moosePresentationOrder: 20>
-	composite roassal2 
-			title: 'Blueprint';
-			titleIcon: MooseIcons mooseBlueprint;
-			painting: [ :view :each | 
-				view @ RTDraggableView.
-				each mooseInterestingEntity viewBlueprintOn: view.
-				self addBlueprintLegendOn: view.
- ]
-]
-
-{ #category : #'Moose-Finder' }
-FmxNGType >> mooseFinderHierarchyIn: composite [
-	<moosePresentationOrder: 20>
-	composite roassal2
-			title: 'Hierarchy';
-			titleIcon: MooseIcons mooseSystemComplexity;
-			initializeView: [ RTMondrian new ];
-			painting: [ :b | self viewHierarchyOn: b ]
 ]
 
 { #category : #'Moose-Finder' }
@@ -1628,16 +1583,6 @@ FmxNGType >> understands: signature [
 ]
 
 { #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewBlueprint [
-	<menuItem: 'Class blueprint' category: 'Visualize'>
-	| view |
-	view := RTView new.
-	view @ RTDraggableView.
-	self viewBlueprintOn: view.
-	^ view open
-]
-
-{ #category : #'Moose-RoassalPaintings' }
 FmxNGType >> viewBlueprintOn: view [
 	^ FAMIXClassBlueprint new view: self on: view
 ]
@@ -1664,28 +1609,6 @@ FmxNGType >> viewTypeNestingGraphOn: view [
 	view nodes: visitor value graph nodes.
 	view edges: visitor value graph nodes from: #yourself toAll: #nextNodes.
 	view horizontalDominanceTreeLayout
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewUML [
-	<menuItem: 'UML class diagram' category: 'Visualize'> 
-	
-	| view |
-	view := RTUMLClassBuilder new.
-	self viewUMLOn: view.
-	^ view openWithToolbarEntitled: 'UML class diagram'
-]
-
-{ #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewUMLOn: view [
-
-	view
-		addObjects: {self};
-		classname: #name;
-		instanceVariables: #attributes;
-		methodsNames: #methods;
-		methodselector: #name;
-		superclass: nil
 ]
 
 { #category : #'Famix-Extensions' }

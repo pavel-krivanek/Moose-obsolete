@@ -869,6 +869,7 @@ BaselineOfMoose >> groups: spec [
 			'Fame-Util'
 			'Fame-ImportExport'
 			'Fame-SmalltalkBinding'
+			'Fame-Example'
 			'Fame-Tests-Core'
 
 			"'GToolkit-Examples' 
@@ -891,7 +892,7 @@ BaselineOfMoose >> groups: spec [
 			
 			'Moose-Query-Extensions'
 			'Moose-Query-Test'
-			'Phexample'
+			"'Phexample'"
 			
 			'FamixNG-MetamodelGeneration'
 			'FmxNG-Traits'
