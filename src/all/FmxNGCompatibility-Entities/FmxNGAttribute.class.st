@@ -3,6 +3,9 @@ Class {
 	#superclass : #FmxNGStructuralEntity,
 	#traits : 'FmxNGTAttribute + FmxNGTWithClassScope',
 	#classTraits : 'FmxNGTAttribute classTrait + FmxNGTWithClassScope classTrait',
+	#instVars : [
+		'#hasClassScope'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 

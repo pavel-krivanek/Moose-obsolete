@@ -3,6 +3,9 @@ Class {
 	#superclass : #FmxNGType,
 	#traits : 'FmxNGTWithExceptions',
 	#classTraits : 'FmxNGTWithExceptions classTrait',
+	#instVars : [
+		'#isInterface'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
