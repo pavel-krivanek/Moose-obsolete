@@ -1552,11 +1552,6 @@ FmxNGType >> understands: signature [
 ]
 
 { #category : #'Moose-RoassalPaintings' }
-FmxNGType >> viewBlueprintOn: view [
-	^ FAMIXClassBlueprint new view: self on: view
-]
-
-{ #category : #'Moose-RoassalPaintings' }
 FmxNGType >> viewHierarchyOn: view [
 	| hierarchy |
 	hierarchy :=		(self withDeepCollect: [:each | each directSubclasses]), 
