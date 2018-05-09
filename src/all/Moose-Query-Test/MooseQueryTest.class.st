@@ -113,42 +113,42 @@ MooseQueryTest >> testAllParents [
 { #category : #tests }
 MooseQueryTest >> testAllToScope [
 	| class3 |
-	self assertCollection: (class1 allToScope: FAMIXMethod) hasSameElements: {method1}.
+	self assertCollection: (class1 allToScope: FmxNGTMethod) hasSameElements: {method1}.
 	self
-		assertCollection: (class2 allToScope: FAMIXAttribute)
+		assertCollection: (class2 allToScope: FmxNGTAttribute)
 		hasSameElements:
 			{var1.
 			var2}.
-	self assertCollection: (package1 allToScope: FAMIXClass) hasSameElements: {class1}.
-	class3 := FAMIXClass new
+	"self assertCollection: (package1 allToScope: FmxNGTClass) hasSameElements: {class1}.
+	class3 := FmxNGTClass new
 		name: 'class3';
 		container: class1;
 		mooseModel: model.
 	self
-		assertCollection: (class1 allToScope: FAMIXClass)
+		assertCollection: (class1 allToScope: FmxNGTClass)
 		hasSameElements:
 			{class1.
 			class3}.
 	self
-		assertCollection: (package1 allToScope: FAMIXClass)
+		assertCollection: (package1 allToScope: FmxNGTClass)
 		hasSameElements:
 			{class1.
-			class3}
+			class3}"
 ]
 
 { #category : #tests }
 MooseQueryTest >> testAllWithScope [
 	| package3 class3 |
-	self assertCollection: (class1 allWithScope: FmxNGMethod) hasSameElements: {method1}.
-	self assertCollection: (class1 allWithScope: FmxNGClass) hasSameElements: {class1}.
-	self assertCollection: (class1 allWithScope: FmxNGType) hasSameElements: {class1}.
+	self assertCollection: (class1 allWithScope: FmxNGTMethod) hasSameElements: {method1}.
+"	self assertCollection: (class1 allWithScope: FmxNGTClass) hasSameElements: {class1}."
+	self assertCollection: (class1 allWithScope: FmxNGTType) hasSameElements: {class1}.
 	self assertCollection: (class1 allWithScope: FmxNGTPackage) hasSameElements: {package1}.
-	self
+"	self
 		assertCollection: (class1 allWithScope: FmxNGTScopingEntity)
 		hasSameElements:
 			{package1.
-			namespace}.
-	package3 := FmxNGTPackage new
+			namespace}."
+	package3 := FmxNGPackage new
 		name: 'package3';
 		mooseModel: model.
 	package1 parentPackage: package3.
@@ -156,37 +156,37 @@ MooseQueryTest >> testAllWithScope [
 		name: 'class3';
 		container: class1;
 		mooseModel: model.
-	self assertCollection: (class1 allWithScope: FmxNGMethod) hasSameElements: {method1}.
-	self
+	self assertCollection: (class1 allWithScope: FmxNGTMethod) hasSameElements: {method1}.
+"	self
 		assertCollection: (class1 allWithScope: FmxNGClass)
 		hasSameElements:
 			{class1.
-			class3}.
+			class3}."
 	self
-		assertCollection: (class1 allWithScope: FmxNGType)
+		assertCollection: (class1 allWithScope: FmxNGTType)
 		hasSameElements:
 			{class1.
 			class3}.
 	self
-		assertCollection: (class1 allWithScope: FmxNGPackage)
+		assertCollection: (class1 allWithScope: FmxNGTPackage)
 		hasSameElements:
 			{package1.
 			package3}.
-	self
-		assertCollection: (class1 allWithScope: FmxNGScopingEntity)
+	"self
+		assertCollection: (class1 allWithScope: FmxNGTScopingEntity)
 		hasSameElements:
 			{package1.
 			package3.
-			namespace}
+			namespace}"
 ]
 
 { #category : #tests }
 MooseQueryTest >> testAtScope [
-	self assertCollection: (class1 atScope: FAMIXClass) hasSameElements: {class1}.
-	self assertCollection: (class1 atScope: FAMIXType) hasSameElements: {class1}.
-	self assertCollection: (class1 atScope: FAMIXPackage) hasSameElements: {package1}.
+	"self assertCollection: (class1 atScope: FAMIXClass) hasSameElements: {class1}."
+	self assertCollection: (class1 atScope: FmxNGTType) hasSameElements: {class1}.
+	self assertCollection: (class1 atScope: FmxNGTPackage) hasSameElements: {package1}.
 	self
-		assertCollection: (class1 atScope: FAMIXScopingEntity)
+		assertCollection: (class1 atScope: FmxNGTScopingEntity)
 		hasSameElements:
 			{namespace.
 			package1}
