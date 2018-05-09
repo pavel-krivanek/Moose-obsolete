@@ -56,13 +56,6 @@ MooseQueryTest >> setUp [
 ]
 
 { #category : #tests }
-MooseQueryTest >> testAllChildren [
-	self assert: package2 allChildren size equals: 7.
-	self assert: class2 allChildren size equals: 6.
-	self assert: method2 allChildren size equals: 1
-]
-
-{ #category : #tests }
 MooseQueryTest >> testAllAtScope [
 	| package3 |
 	self assertCollection: (class1 allAtScope: FAMIXClass) hasSameElements: {class1}.
@@ -335,14 +328,6 @@ MooseQueryTest >> testParents [
 ]
 
 { #category : #tests }
-MooseQueryTest >> testParents [
-	self assert: class2 parents size equals: 1.
-	self assert: class2 parents anyOne equals: package2.
-	self assert: method1 parents size equals: 1.
-	self assert: method1 parents anyOne equals: class1.
-]
-
-{ #category : #tests }
 MooseQueryTest >> testQueryWith [
 "queryIncoming: is equivalent to query: #in with:"
 	self assert: (package1 query: #out with: FmxNGTInvocation) size equals: 1.
@@ -352,12 +337,12 @@ MooseQueryTest >> testQueryWith [
 MooseQueryTest >> testToScope [
 	self assert: (class1 toScope: FmxNGMethod) equals: {method1}.
 	self
-		assert: (class2 toScope: FmxNGAttribute) asSet
+		assertCollection: (class2 toScope: FmxNGAttribute) asSet
 		hasSameElements:
 			{var1.
 			var2}.
 	self
-		assert: (package1 toScope: FmxNGMethod)
+		assertCollection: (package1 toScope: FmxNGMethod)
 		hasSameElements:
 			{method1.
 			methodExt}
