@@ -902,8 +902,17 @@ BaselineOfMoose >> groups: spec [
 			'FmxNGCompatibility-Generator' 
 			'FmxNGCompatibility-Entities'
 			'FmxNGCompatibility-Groups'
+	).
 
-	). 
+	spec group: 'BasicMetamodellingWithRoassal' with: #(
+			'BasicMetamodelling'
+			'Trachel'
+			'Roassal2'
+			'GToolkit-Examples'
+			'Roassal2GT'
+	).
+	
+
 ]
 
 { #category : #accessing }
