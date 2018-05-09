@@ -387,7 +387,7 @@ MooseAbstractGroup >> includesAll: aCollection [
 
 { #category : #testing }
 MooseAbstractGroup >> includesAllOf: aCollection [ 
-	^ self entities includesAllOf: aCollection
+	^ self entities includesAll: aCollection
 ]
 
 { #category : #'entity collection' }
