@@ -168,7 +168,7 @@ TEntityMetaLevelDependency >> allAtScope: aClassFAMIX [
 { #category : #private }
 TEntityMetaLevelDependency >> allAtScope: aClassFAMIX in: aCollection [
 	| selectors |
-	(self isKindOf: aClassFAMIX) ifTrue: [ aCollection add: self ].	
+	(self isOfType: aClassFAMIX) ifTrue: [ aCollection add: self ].	
 	
 	"The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 	1 to: (selectors := self parentSelectors) size do: [ :ind | (self perform: (selectors at: ind)) allAtScope: aClassFAMIX in: aCollection ].
@@ -221,7 +221,7 @@ TEntityMetaLevelDependency >> allToScope: aClassFAMIX [
 { #category : #private }
 TEntityMetaLevelDependency >> allToScope: aClassFAMIX in: aCollection [
 	| selectors |
-	(self isKindOf: aClassFAMIX) ifTrue: [ aCollection add: self ].	
+	(self isOfType: aClassFAMIX) ifTrue: [ aCollection add: self ].	
 		
 	"The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 	1 to: (selectors := self childrenSelectors) size do: [ :ind | (self perform: (selectors at: ind)) allToScope: aClassFAMIX in: aCollection ].
@@ -253,7 +253,7 @@ TEntityMetaLevelDependency >> atScope: aClassFAMIX [
 
 { #category : #private }
 TEntityMetaLevelDependency >> atScope: aClassFAMIX in: aCollection [
-	(self isKindOf: aClassFAMIX)
+	(self isOfType: aClassFAMIX)
 		ifTrue: [ aCollection add: self ]
 		ifFalse: [ "The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 			| selectors |
@@ -378,7 +378,7 @@ TEntityMetaLevelDependency >> toScope: aClassFAMIX [
 
 { #category : #private }
 TEntityMetaLevelDependency >> toScope: aClassFAMIX in: aCollection [
-	(self isKindOf: aClassFAMIX)
+	(self isOfType: aClassFAMIX)
 		ifTrue: [ aCollection add: self ]
 		ifFalse: [ "The content of this block could be much more readable with #do: but we do this solution for performances... We need this method to be really really performant."
 			| selectors |
