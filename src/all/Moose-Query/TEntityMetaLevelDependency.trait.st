@@ -314,12 +314,6 @@ TEntityMetaLevelDependency >> incomingMSEProperties [
 	^ self class incomingMSEProperties 
 ]
 
-{ #category : #private }
-TEntityMetaLevelDependency >> isOfType: aClassFAMIX [
-	
-	^ ((self mooseTypes flatCollect: #withAllSuperclasses as: Set) includes: aClassFAMIX)
-]
-
 { #category : #accessing }
 TEntityMetaLevelDependency >> outgoingAssociationTypes [
 	^ self class outgoingAssociationTypes

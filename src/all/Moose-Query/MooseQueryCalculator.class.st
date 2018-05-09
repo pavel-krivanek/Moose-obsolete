@@ -111,7 +111,7 @@ MooseQueryCalculator >> queryLocal: aFAMIXClassAssociation for: anEntity in: aCo
 	
 	| properties |
 	"Instead of #to:do: we could just use #do: but this implementation is much faster. Maybe sista will remove the needs of the todo later."
-	1 to: (properties := self strategy msePropertiesOf: anEntity) size do: [ :ind | (anEntity perform: (properties at: ind) name) ifNotNil: [ :coll | aCollection addAll: (coll asCollection select: [ :each | each isKindOf: aFAMIXClassAssociation ]) ] ].
+	1 to: (properties := self strategy msePropertiesOf: anEntity) size do: [ :ind | (anEntity perform: (properties at: ind) name) ifNotNil: [ :coll | aCollection addAll: (coll asCollection select: [ :each | each isOfType: aFAMIXClassAssociation ]) ] ].
 	^ aCollection
 ]
 

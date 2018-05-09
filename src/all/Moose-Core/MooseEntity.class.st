@@ -360,6 +360,12 @@ MooseEntity >> isBookmarked: aBoolean [
 ]
 
 { #category : #testing }
+MooseEntity >> isOfType: aClassFAMIX [
+	
+	^ ((self mooseTypes flatCollect: #withAllSuperclasses as: Set) includes: aClassFAMIX)
+]
+
+{ #category : #testing }
 MooseEntity >> isStub [ 
 	^ self privateState isStub
 ]
