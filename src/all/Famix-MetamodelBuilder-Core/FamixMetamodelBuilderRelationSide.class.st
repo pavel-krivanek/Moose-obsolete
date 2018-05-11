@@ -284,7 +284,7 @@ FamixMetamodelBuilderRelationSide >> manyToMany: aRelationSide [
 	self many.
 	
 	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass.].
+		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity.].
 	
 	^ aRelation
 	
@@ -301,7 +301,7 @@ FamixMetamodelBuilderRelationSide >> manyToOne: aRelationSide [
 	aRelationSide many.
 	
 	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
+		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity ].
 	
 	^ aRelation
 	
@@ -346,7 +346,7 @@ FamixMetamodelBuilderRelationSide >> oneToMany: aRelationSide [
 	self many.
 	
 	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedClass ].
+		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity ].
 	
 	^ aRelation
 	
