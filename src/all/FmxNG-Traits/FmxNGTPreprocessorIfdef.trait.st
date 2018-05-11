@@ -5,7 +5,7 @@ Knows the name of the macro tested and whether it is ""negated"" (#ifndef) or no
 "
 Trait {
 	#name : #FmxNGTPreprocessorIfdef,
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Preprocessor'
 }
 
 { #category : #meta }

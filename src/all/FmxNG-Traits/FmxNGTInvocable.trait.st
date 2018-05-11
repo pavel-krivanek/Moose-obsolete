@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#incomingInvocations => FMMany type: #FmxNGTInvocation opposite: #candidates'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Invocation'
 }
 
 { #category : #meta }

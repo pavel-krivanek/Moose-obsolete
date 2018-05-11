@@ -9,7 +9,7 @@ Trait {
 	#instVars : [
 		'#aliasedType => FMOne type: #FmxNGTWithTypeAliases opposite: #typeAliases'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-TypeAlias'
 }
 
 { #category : #meta }

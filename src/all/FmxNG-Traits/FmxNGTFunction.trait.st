@@ -6,7 +6,7 @@ Trait {
 	#instVars : [
 		'#functionOwner => FMOne type: #FmxNGTWithFunctions opposite: #functions'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Function'
 }
 
 { #category : #meta }

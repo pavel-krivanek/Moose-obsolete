@@ -5,7 +5,7 @@ Knows the name of the macro defined
 "
 Trait {
 	#name : #FmxNGTPreprocessorDefine,
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Preprocessor'
 }
 
 { #category : #meta }

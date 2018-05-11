@@ -6,7 +6,7 @@ Trait {
 	#instVars : [
 		'#parentBehaviouralEntity => FMOne type: #FmxNGTWithImplicitVariables opposite: #implicitVariables'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-ImplicitVariable'
 }
 
 { #category : #meta }

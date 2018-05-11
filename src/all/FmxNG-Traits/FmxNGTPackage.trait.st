@@ -9,7 +9,7 @@ Trait {
 		'#childEntities => FMMany type: #FmxNGTPackageable opposite: #parentPackage',
 		'#packageOwner => FMOne type: #FmxNGTWithPackages opposite: #packages'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Package'
 }
 
 { #category : #meta }

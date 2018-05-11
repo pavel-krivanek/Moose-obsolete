@@ -6,7 +6,7 @@ Trait {
 	#instVars : [
 		'#parentBehaviouralEntity => FMOne type: #FmxNGTWithLocalVariables opposite: #localVariables'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-LocalVariable'
 }
 
 { #category : #meta }

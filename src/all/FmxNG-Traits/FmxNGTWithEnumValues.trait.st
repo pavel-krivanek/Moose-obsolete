@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#enumValues => FMMany type: #FmxNGTEnumValue opposite: #parentEnum'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-EnumValue'
 }
 
 { #category : #meta }

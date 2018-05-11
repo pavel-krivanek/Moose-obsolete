@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#parentNamespace => FMOne type: #FmxNGTNamespace opposite: #namespaceEntities'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Namespaces'
 }
 
 { #category : #meta }

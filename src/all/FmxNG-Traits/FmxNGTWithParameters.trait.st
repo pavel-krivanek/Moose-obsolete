@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#parameters => FMMany type: #FmxNGTParameter opposite: #parentBehaviouralEntity'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Parameter'
 }
 
 { #category : #meta }

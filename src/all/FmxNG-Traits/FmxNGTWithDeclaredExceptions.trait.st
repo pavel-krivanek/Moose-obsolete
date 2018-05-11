@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#declaredExceptions => FMMany type: #FmxNGTDeclaredException opposite: #definingEntity'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-DeclaredException'
 }
 
 { #category : #meta }

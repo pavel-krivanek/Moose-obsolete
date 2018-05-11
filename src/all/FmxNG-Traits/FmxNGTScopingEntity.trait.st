@@ -9,7 +9,7 @@ Trait {
 		'#childScopes => FMMany type: #FmxNGTScopingEntity opposite: #parentScope',
 		'#parentScope => FMOne type: #FmxNGTScopingEntity opposite: #childScopes'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-ScopingEntity'
 }
 
 { #category : #meta }

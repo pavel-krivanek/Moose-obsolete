@@ -16,7 +16,7 @@ Trait {
 	#instVars : [
 		'#parentEnum => FMOne type: #FmxNGTWithEnumValues opposite: #enumValues'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-EnumValue'
 }
 
 { #category : #meta }

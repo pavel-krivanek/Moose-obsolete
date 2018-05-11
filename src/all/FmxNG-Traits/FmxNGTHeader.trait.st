@@ -6,7 +6,7 @@ Trait {
 	#instVars : [
 		'#headerOwner => FMOne type: #FmxNGTWithHeader opposite: #header'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Header'
 }
 
 { #category : #meta }

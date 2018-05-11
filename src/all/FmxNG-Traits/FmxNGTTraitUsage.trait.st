@@ -4,7 +4,7 @@ Trait {
 		'#trait => FMOne type: #FmxNGTTrait opposite: #incomingTraitUsages',
 		'#user => FMOne type: #FmxNGTType opposite: #outgoingTraitUsages'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Trait'
 }
 
 { #category : #meta }

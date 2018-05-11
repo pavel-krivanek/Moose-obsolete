@@ -4,7 +4,7 @@ Trait {
 		'#templateOwner => FMOne type: #FmxNGTWithTemplates opposite: #templates',
 		'#templateUsers => FMMany type: #FmxNGTTemplateUser opposite: #template'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Template'
 }
 
 { #category : #meta }

@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#declaredType => FMOne type: #FmxNGTWithTypedStructures opposite: #structuresWithDeclaredType'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-TypedStructure'
 }
 
 { #category : #meta }

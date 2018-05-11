@@ -11,7 +11,7 @@ Trait {
 		'#annotationTypesContainer => FMOne type: #FmxNGTWithAnnotationTypes opposite: #definedAnnotationTypes',
 		'#instances => FMMany type: #FmxNGTTypedAnnotationInstance opposite: #annotationType'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-AnnotationType'
 }
 
 { #category : #meta }

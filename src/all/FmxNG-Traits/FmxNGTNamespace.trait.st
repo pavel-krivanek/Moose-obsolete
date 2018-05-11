@@ -11,7 +11,7 @@ Trait {
 		'#namespaceEntities => FMMany type: #FmxNGTNamespaceEntity opposite: #parentNamespace',
 		'#namespaceOwner => FMOne type: #FmxNGTWithNamespaces opposite: #namespaces'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Namespaces'
 }
 
 { #category : #meta }

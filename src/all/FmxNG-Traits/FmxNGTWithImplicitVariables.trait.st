@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#implicitVariables => FMMany type: #FmxNGTImplicitVariable opposite: #parentBehaviouralEntity'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-ImplicitVariable'
 }
 
 { #category : #meta }

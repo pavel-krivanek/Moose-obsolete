@@ -21,7 +21,7 @@ Trait {
 	#instVars : [
 		'#annotationAttributeInstances => FMMany type: #FmxNGTTypedAnnotationInstanceAttribute opposite: #annotationTypeAttribute'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-AnnotationTypeAttribute'
 }
 
 { #category : #meta }

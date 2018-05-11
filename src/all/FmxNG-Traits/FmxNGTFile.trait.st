@@ -7,7 +7,7 @@ Trait {
 		'#entities => FMOne type: #FmxNGTWithFiles opposite: #containerFiles',
 		'#name'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-File'
 }
 
 { #category : #meta }

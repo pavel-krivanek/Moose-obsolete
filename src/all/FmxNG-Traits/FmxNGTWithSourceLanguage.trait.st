@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#declaredSourceLanguage => FMOne type: #FmxNGTSourceLanguage opposite: #sourcedEntities'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-SourceLanguage'
 }
 
 { #category : #meta }

@@ -20,7 +20,7 @@ Trait {
 		'#mySlot',
 		'#variable => FMOne type: #FmxNGTAccessible opposite: #incomingAccesses'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Access'
 }
 
 { #category : #meta }

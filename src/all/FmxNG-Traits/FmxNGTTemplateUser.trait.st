@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#template => FMOne type: #FmxNGTTemplate opposite: #templateUsers'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Template'
 }
 
 { #category : #meta }

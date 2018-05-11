@@ -11,7 +11,7 @@ Trait {
 		'#outgoingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #user',
 		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Type'
 }
 
 { #category : #meta }

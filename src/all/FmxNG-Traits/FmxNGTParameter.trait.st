@@ -6,7 +6,7 @@ Trait {
 	#instVars : [
 		'#parentBehaviouralEntity => FMOne type: #FmxNGTWithParameters opposite: #parameters'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Parameter'
 }
 
 { #category : #meta }

@@ -4,7 +4,7 @@ Trait {
 		'#source => FMOne type: #FmxNGTWithFileInclude opposite: #outgoingIncludeRelations',
 		'#target => FMOne type: #FmxNGTWithFileInclude opposite: #incomingIncludeRelations'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-FileInclude'
 }
 
 { #category : #meta }

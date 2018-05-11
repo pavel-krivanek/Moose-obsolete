@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#arguments => FMMany type: #FmxNGTParameterizedTypeUser opposite: #argumentsInParameterizedTypes'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-ParameterizedTypeUser'
 }
 
 { #category : #meta }

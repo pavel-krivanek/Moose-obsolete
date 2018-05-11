@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#incomingAccesses => FMMany type: #FmxNGTAccess opposite: #variable'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Access'
 }
 
 { #category : #meta }

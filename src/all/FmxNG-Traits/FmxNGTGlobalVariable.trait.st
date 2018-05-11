@@ -7,7 +7,7 @@ Trait {
 	#instVars : [
 		'#parentScope => FMOne type: #FmxNGTGlobalVariableScope opposite: #globalVariables'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-GlobalVariable'
 }
 
 { #category : #meta }

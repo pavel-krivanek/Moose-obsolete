@@ -7,7 +7,7 @@ Trait {
 	#instVars : [
 		'#parentType => FMOne type: #FmxNGTWithAttributes opposite: #attributes'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Attribute'
 }
 
 { #category : #meta }

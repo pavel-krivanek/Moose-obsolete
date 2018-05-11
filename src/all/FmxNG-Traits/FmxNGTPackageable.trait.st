@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#parentPackage => FMOne type: #FmxNGTPackage opposite: #childEntities'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Package'
 }
 
 { #category : #meta }

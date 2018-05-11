@@ -7,7 +7,7 @@ Trait {
 		'#container => FMOne type: #FmxNGTWithComments opposite: #comments',
 		'#content'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Comment'
 }
 
 { #category : #meta }

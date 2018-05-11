@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#comments => FMMany type: #FmxNGTComment opposite: #container'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Comment'
 }
 
 { #category : #meta }

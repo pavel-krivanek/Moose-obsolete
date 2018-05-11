@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#module => FMOne type: #FmxNGTModule opposite: #moduleFiles'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Module'
 }
 
 { #category : #meta }

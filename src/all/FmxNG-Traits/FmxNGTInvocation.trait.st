@@ -17,7 +17,7 @@ Trait {
 		'#receiver => FMOne type: #FmxNGTInvocationsReceiver opposite: #receivingInvocations',
 		'#sender => FMOne type: #FmxNGTWithInvocations opposite: #outgoingInvocations'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Invocation'
 }
 
 { #category : #meta }

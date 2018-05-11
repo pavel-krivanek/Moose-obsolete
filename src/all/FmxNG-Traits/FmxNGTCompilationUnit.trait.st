@@ -6,7 +6,7 @@ Trait {
 	#instVars : [
 		'#compilationUnitOwner => FMOne type: #FmxNGTWithCompilationUnit opposite: #compilationUnit'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-CompilationUnit'
 }
 
 { #category : #meta }

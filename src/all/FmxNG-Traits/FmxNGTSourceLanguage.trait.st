@@ -9,7 +9,7 @@ Trait {
 	#instVars : [
 		'#sourcedEntities => FMMany type: #FmxNGTWithSourceLanguage opposite: #declaredSourceLanguage'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-SourceLanguage'
 }
 
 { #category : #meta }

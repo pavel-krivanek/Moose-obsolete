@@ -17,7 +17,7 @@ Trait {
 		'#source => FMOne type: #FmxNGTWithReferences opposite: #outgoingReferences',
 		'#target => FMOne type: #FmxNGTReferenceable opposite: #incomingReferences'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Reference'
 }
 
 { #category : #meta }

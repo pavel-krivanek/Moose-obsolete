@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#containerFiles => FMMany type: #FmxNGTFile opposite: #entities'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-File'
 }
 
 { #category : #meta }

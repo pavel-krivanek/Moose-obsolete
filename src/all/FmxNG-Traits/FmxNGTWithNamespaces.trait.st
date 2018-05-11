@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#namespaces => FMMany type: #FmxNGTNamespace opposite: #namespaceOwner'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Namespaces'
 }
 
 { #category : #meta }

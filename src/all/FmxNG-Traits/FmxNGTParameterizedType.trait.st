@@ -13,7 +13,7 @@ Trait {
 	#instVars : [
 		'#parameterizableClass => FMOne type: #FmxNGTWithParameterizedTypes opposite: #parameterizedTypes'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-ParameterizedType'
 }
 
 { #category : #meta }

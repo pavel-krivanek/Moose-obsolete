@@ -6,7 +6,7 @@ Trait {
 	#instVars : [
 		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-SourceAnchor'
 }
 
 { #category : #meta }

@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#incomingReferences => FMMany type: #FmxNGTReference opposite: #target'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Reference'
 }
 
 { #category : #meta }

@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'signature'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Signature'
 }
 
 { #category : #meta }

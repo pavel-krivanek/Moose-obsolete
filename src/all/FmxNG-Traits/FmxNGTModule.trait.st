@@ -7,7 +7,7 @@ Trait {
 	#instVars : [
 		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Module'
 }
 
 { #category : #meta }

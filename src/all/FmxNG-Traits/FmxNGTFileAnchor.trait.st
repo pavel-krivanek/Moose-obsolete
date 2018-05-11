@@ -8,7 +8,7 @@ Trait {
 		'encoding',
 		'fileName'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-FileAnchor'
 }
 
 { #category : #meta }

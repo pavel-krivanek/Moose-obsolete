@@ -14,7 +14,7 @@ Trait {
 		'#parentType => FMOne type: #FmxNGTWithMethods opposite: #methods',
 		'#timeStamp'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Method'
 }
 
 { #category : #meta }

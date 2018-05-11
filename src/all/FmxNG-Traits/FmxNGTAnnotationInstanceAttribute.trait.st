@@ -15,7 +15,7 @@ Trait {
 		'#parentAnnotationInstance => FMOne type: #FmxNGTWithAnnotationInstanceAttributes opposite: #attributes',
 		'#value'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-AnnotationInstanceAttribute'
 }
 
 { #category : #meta }

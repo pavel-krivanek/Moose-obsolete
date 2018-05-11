@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#globalVariables => FMMany type: #FmxNGTGlobalVariable opposite: #parentScope'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-GlobalVariable'
 }
 
 { #category : #meta }

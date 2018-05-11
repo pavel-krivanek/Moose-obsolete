@@ -16,7 +16,7 @@ Trait {
 	#instVars : [
 		'#annotatedEntity => FMOne type: #FmxNGTWithAnnotationInstances opposite: #annotationInstances'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-AnnotationInstance'
 }
 
 { #category : #meta }

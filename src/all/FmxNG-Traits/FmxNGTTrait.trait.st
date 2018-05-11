@@ -7,7 +7,7 @@ Trait {
 		'#incomingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #trait',
 		'#traitOwner => FMOne type: #FmxNGTWithTrait opposite: #traits'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Trait'
 }
 
 { #category : #meta }

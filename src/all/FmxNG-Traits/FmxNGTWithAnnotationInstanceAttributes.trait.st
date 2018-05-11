@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#attributes => FMMany type: #FmxNGTAnnotationInstanceAttribute opposite: #parentAnnotationInstance'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-AnnotationInstanceAttribute'
 }
 
 { #category : #meta }

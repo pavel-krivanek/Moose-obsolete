@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#superInheritances => FMMany type: #FmxNGTSubInheritance opposite: #subclass'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Inheritance'
 }
 
 { #category : #meta }

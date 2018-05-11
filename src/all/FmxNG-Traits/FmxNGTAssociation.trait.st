@@ -23,7 +23,7 @@ Trait {
 		'#next => FMOne type: #FmxNGTAssociation opposite: #previous',
 		'#previous => FMOne type: #FmxNGTAssociation opposite: #next'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Association'
 }
 
 { #category : #meta }

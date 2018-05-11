@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'modifiers'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Modifiers'
 }
 
 { #category : #meta }

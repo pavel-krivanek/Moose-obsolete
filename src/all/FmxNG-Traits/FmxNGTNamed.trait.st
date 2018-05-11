@@ -4,7 +4,7 @@ Trait {
 		'isStub',
 		'name'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Named'
 }
 
 { #category : #meta }

@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#functions => FMMany type: #FmxNGTFunction opposite: #functionOwner'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Function'
 }
 
 { #category : #meta }

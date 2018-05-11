@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'#dereferencedInvocations => FMMany type: #FmxNGTDereferencedInvocation opposite: #referencer'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-DereferencedInvocation'
 }
 
 { #category : #meta }
