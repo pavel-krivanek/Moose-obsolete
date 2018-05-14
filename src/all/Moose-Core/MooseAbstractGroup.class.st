@@ -53,6 +53,20 @@ MooseAbstractGroup >> allClasses [
 	^ self allWithSubTypesOf: FmxNGClass ofGroupClass: FAMIXClassGroup
 ]
 
+{ #category : #'Famix-Extensions' }
+MooseAbstractGroup >> allInheritanceDefinitions [
+	
+	<navigation: 'All inheritances'>
+	^self allWithType: FmxNGInheritance 
+]
+
+{ #category : #'Famix-Extensions' }
+MooseAbstractGroup >> allMethods [
+	<navigation: 'All methods'>
+	
+	^ self allWithType: FmxNGMethod
+]
+
 { #category : #groups }
 MooseAbstractGroup >> allModels [ 
 	 "returns all known Models (be them MooseModels or of a subclass of it)"

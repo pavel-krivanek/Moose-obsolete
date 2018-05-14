@@ -51,10 +51,12 @@ FamixTest >> testMSEImport [
 	"self debug: #testMSEImport"
 
 	| importer model |
-	MooseModel resetMeta.
+	"MooseModel resetMeta."
+	
 	importer := FMImporter new.
-	importer repository: (FMRepository with: MooseModel meta).
+	importer repository: FmxNGCompatibilityGenerator newRepository.
 	importer fromString: self oneClassAndOneMethod.
+	importer nameTranslator: FmxNGCompatibilityGenerator translationDictionary.
 	importer run.
 	self assert: importer repository elements size equals: 2.
 	model := MooseModel new.
@@ -66,11 +68,14 @@ FamixTest >> testMSEImport [
 { #category : #tests }
 FamixTest >> testRobustMSEImport [
 	| importer model |
-	MooseModel resetMeta.
+	
+	"MooseModel resetMeta."
 	importer := FMImporter new.
-	importer repository: (FMRepository with: MooseModel meta).
+	importer repository: FmxNGCompatibilityGenerator newRepository.
 	importer fromString: self classWithUnknownAttribute.
+	importer nameTranslator: FmxNGCompatibilityGenerator translationDictionary.
 	importer run.
+	
 	self assert: importer repository elements size equals: 4.
 	model := MooseModel new.
 	importer repository elements do: [ :each | model add: each ].
@@ -91,6 +96,7 @@ FamixTest >> testSlot [
 { #category : #tests }
 FamixTest >> testSourcesAnchorsAreNotDuplicatedAfterExport [
 	| model package tempFile importedModel |
+			
 	model := MooseModel new name: 'Perdu'.
 	package := FmxNGPackage new
 		name: 'Package';
@@ -107,7 +113,9 @@ FamixTest >> testSourcesAnchorsAreNotDuplicatedAfterExport [
 		mooseModel: model.
 	tempFile := (FileSystem memory / 'export-test.mse') ensureCreateFile.
 	model exportToMSEStream: tempFile writeStream.
-	importedModel := MooseModel new importFromMSEStream: tempFile readStream.
+	importedModel := MooseModel 
+		importFrom: tempFile readStream withMetamodel: FmxNGCompatibilityGenerator metamodel.
+
 	self assert: importedModel size equals: model size.
 	self assert: importedModel allClasses anyOne sourceAnchor notNil
 ]

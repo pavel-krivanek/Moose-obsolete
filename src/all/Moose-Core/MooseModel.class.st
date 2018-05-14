@@ -327,6 +327,17 @@ MooseModel >> cacheMooseGroups [
 		length: selectors size
 ]
 
+{ #category : #actions }
+MooseModel >> detectEncodingOfAllFileAnchors [
+	"I can be execute to reduce the time of detection of the encoding of each file anchor because multiple file anchor can point to the same file."
+
+	(((self allWithSubTypesOf: FmxNGAbstractFileAnchor) asOrderedCollection reject: #privateHasEncoding) groupedBy: #fileName)
+		valuesDo: [ :anchors | 
+			| encoding |
+			encoding := anchors anyOne detectEncoding.
+			anchors do: [ :anchor | anchor encoding: encoding ] ]
+]
+
 { #category : #'set operations' }
 MooseModel >> difference: aGroup [ 
 	 
@@ -367,8 +378,8 @@ MooseModel >> importFromMSEStream: aStream [
 	self silentlyAddAll: repository elements.
 	self entityStorage forRuntime.
 	self name: (aStream localName removeSuffix: '.mse').
-	aStream isFileStream
-		ifTrue: [ self rootFolder: aStream fullName asFileReference parent ]
+	"aStream isFileStream
+		ifTrue: [ self rootFolder: aStream fullName asFileReference parent ]"
 ]
 
 { #category : #actions }
