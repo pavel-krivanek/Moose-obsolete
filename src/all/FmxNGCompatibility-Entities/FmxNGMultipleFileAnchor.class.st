@@ -53,7 +53,7 @@ FmxNGMultipleFileAnchor >> addToFile: entity [
 
 { #category : #accessing }
 FmxNGMultipleFileAnchor >> allFiles [
-	<MSEProperty: #allFiles type: #FAMIXAbstractFileAnchor>
+	<MSEProperty: #allFiles type: #FmxNGAbstractFileAnchor>
 	<multivalued>
 	<MSEComment: 'All source code definition files'>
 	^ allFiles

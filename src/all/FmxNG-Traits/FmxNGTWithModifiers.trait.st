@@ -33,7 +33,7 @@ FmxNGTWithModifiers classSide >> generatedTraitNames [
 FmxNGTWithModifiers >> modifiers [
 
 	<MSEProperty: #modifiers type: #String>
-	<generated>
+	<multivalued> 
 	<MSEComment: 'Generic container for language dependent modifiers.'>
 	^ modifiers
 ]

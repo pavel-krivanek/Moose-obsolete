@@ -123,7 +123,7 @@ FmxNGSourceAnchor >> copyFrom: anEntity within: aVisitor [
 { #category : #accessing }
 FmxNGSourceAnchor >> element: anElement [
 
-	element := anElement
+	element := anElement.
 	element sourceAnchor = self ifFalse: [  element sourceAnchor: self ]
 
 ]
