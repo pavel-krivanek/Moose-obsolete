@@ -1,8 +1,8 @@
 "
 | g |
 g := FmxNGGenerator new.
-g builder traitsFlattening: false.
-g generate.
+g generateWithoutCleaning.
+FmxNGCompatibilityGenerator resetMetamodel. 
 
 "
 Class {
@@ -851,7 +851,8 @@ FmxNGGenerator >> defineProperties [
 		comment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.').
 
 	((tWithModifiers property: #modifiers type: #String)
-		comment: 'Generic container for language dependent modifiers.').
+		comment: 'Generic container for language dependent modifiers.';
+		multivalued).
 
 	((tMethod property: #timeStamp type: #String)
 		comment: 'TimeStamp of the method with author and time of the last change').

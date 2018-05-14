@@ -5,7 +5,8 @@ Class {
 	#name : #FamixMetamodelBuilderTypedProperty,
 	#superclass : #FamixMetamodelBuilderProperty,
 	#instVars : [
-		'propertyType'
+		'propertyType',
+		'multivalued'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -42,6 +43,8 @@ FamixMetamodelBuilderTypedProperty >> generateGetterIn: aClassOrTrait [
 		s nextPutAll: self name; cr; cr.
 		s tab; nextPutAll: propertyDefinition; cr.
 		s tab; nextPutAll: '<generated>'; cr.
+		self isMultivalued ifTrue: [ 
+			 s tab; nextPutAll: '<multivalued>'; cr. ].
 		commentDefinition  
 			ifNotEmpty: [ s tab; nextPutAll: commentDefinition; cr].
 		s tab; nextPutAll: '^ ';
@@ -64,6 +67,31 @@ FamixMetamodelBuilderTypedProperty >> generateSetterIn: aClassOrTrait [
 		s tab; nextPutAll: self name, ' := anObject'; cr 	].
 		
 	self builder environment compile: methodSource in: aClassOrTrait classified: 'accessing'.
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderTypedProperty >> initialize [
+
+	super initialize.
+	multivalued := false.
+
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderTypedProperty >> isMultivalued [
+
+	^ multivalued
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderTypedProperty >> multivalued [
+
+	multivalued := true.
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderTypedProperty >> multivalued: anObject [
+	multivalued := anObject
 ]
 
 { #category : #accessing }

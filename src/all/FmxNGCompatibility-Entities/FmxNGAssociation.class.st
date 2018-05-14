@@ -104,7 +104,7 @@ FmxNGAssociation >> mooseFinderSourceTextIn: composite [
 			format: [ self from formattedSourceText ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGAssociation >> previous: anAssociation [
 	| old |
 	previous = anAssociation
