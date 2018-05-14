@@ -190,7 +190,7 @@ MooseEntityTest >> testMooseFinderNavigationIn [
 
 { #category : #tests }
 MooseEntityTest >> testMooseIcon [
-	self assert: MooseEntity new mooseIcon isForm
+	self assert: FmxNGEntity new mooseIcon isForm
 ]
 
 { #category : #tests }
@@ -282,7 +282,7 @@ MooseEntityTest >> testPrivateStateMutator [
 { #category : #tests }
 MooseEntityTest >> testProperty [
 	| entity |
-	entity := MooseEntity new.
+	entity := FmxNGEntity new.
 	self assert: entity properties isEmpty.
 	self assert: (entity propertyNamed: #aKey ifNil: [ 10 ]) equals: 10.
 	entity propertyNamed: #aKey ifAbsentPut: 20.

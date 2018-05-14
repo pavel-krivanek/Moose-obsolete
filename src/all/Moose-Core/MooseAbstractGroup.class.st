@@ -47,6 +47,12 @@ MooseAbstractGroup >> addAll: aCollectionOfItems [
 	^ self subclassResponsibility
 ]
 
+{ #category : #navigation }
+MooseAbstractGroup >> allClasses [
+	<navigation: 'All classes'>
+	^ self allWithSubTypesOf: FmxNGClass ofGroupClass: FAMIXClassGroup
+]
+
 { #category : #groups }
 MooseAbstractGroup >> allModels [ 
 	 "returns all known Models (be them MooseModels or of a subclass of it)"
