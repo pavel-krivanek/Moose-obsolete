@@ -91,6 +91,12 @@ FmxNGSourceAnchor class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'Famix-Extensions' }
+FmxNGSourceAnchor >> accept: aVisitor [
+
+	aVisitor visitSourceAnchor: self
+]
+
 { #category : #accessing }
 FmxNGSourceAnchor >> completeText [
 	"The complete text of a FileAnchor contains all the code of the file pointed by the source anchor. On the contrary the #sourceText return only the pant of the file concerned by the entity. For example a FAMIXFileAnchon knows the start line and end line of the source anchor into the file."
@@ -98,6 +104,20 @@ FmxNGSourceAnchor >> completeText [
 	"By default I return the sourceText because most of my subclasses will only do that."
 
 	^ self sourceText
+]
+
+{ #category : #'Famix-File' }
+FmxNGSourceAnchor >> containerFiles [
+	"I should return a collection of files corresponding to the source anchor. If there is no file just return an empty collection."
+
+	^ self subclassResponsibility
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGSourceAnchor >> copyFrom: anEntity within: aVisitor [
+
+	super copyFrom: anEntity within: aVisitor.
+	self element: (aVisitor visit: anEntity)
 ]
 
 { #category : #accessing }
@@ -108,6 +128,16 @@ FmxNGSourceAnchor >> element: anElement [
 
 ]
 
+{ #category : #testing }
+FmxNGSourceAnchor >> isFile [
+	^ false
+]
+
+{ #category : #testing }
+FmxNGSourceAnchor >> isMultiple [
+	^ false
+]
+
 { #category : #accessing }
 FmxNGSourceAnchor >> lineCount [
 	"I should return the number of line in the source text of the entity."
@@ -116,6 +146,16 @@ FmxNGSourceAnchor >> lineCount [
 	<derived>
 	<MSEComment: 'The number of lines in the source text'>
 	^ self subclassResponsibility
+]
+
+{ #category : #'Moose-Finder' }
+FmxNGSourceAnchor >> mooseFinderSourceTextIn: composite [
+	<moosePresentationOrder: 10>
+	composite text
+			title: 'Source';
+			titleIcon: MooseIcons mooseSourceTextPartial;
+			display: [ :each | each mooseInterestingEntity sourceText ];
+			when: [ :input | input mooseInterestingEntity sourceText notEmpty ]
 ]
 
 { #category : #accessing }
