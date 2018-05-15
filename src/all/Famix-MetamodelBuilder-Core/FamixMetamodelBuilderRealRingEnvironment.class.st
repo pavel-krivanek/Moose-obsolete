@@ -233,13 +233,23 @@ FamixMetamodelBuilderRealRingEnvironment >> createTraitNamed: traitName slots: s
 { #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> ensureClassesFrom: anRGEnvironment [
 	
-	| resolvedClasses |
+	| resolvedClasses sorted notSorted toMove |
 	
 	resolvedClasses := ringEnvironment ask behaviors select: [ :each | each isRingResolved ].
 	resolvedClasses := resolvedClasses select: [ :each | each superclass isRingResolved ].
 
-	resolvedClasses := resolvedClasses sorted: [ :a :b | a allSuperclasses size <= b allSuperclasses size].
-	
+	notSorted := resolvedClasses asOrderedCollection.
+	sorted := OrderedCollection new.
+	[	
+		toMove := notSorted select: [ :each | notSorted noneSatisfy: [ :toCompare | each dependsOn: toCompare ] ].
+		toMove ifEmpty: [ self error: 'Classes cycling dependency' ].
+		sorted addAll: toMove.
+		notSorted removeAll: toMove.
+		notSorted isEmpty.
+	] whileFalse.
+
+	resolvedClasses := sorted.
+
 	resolvedClasses do: [:each | self installClassChangesFor: each ].
 ]
 
