@@ -30,6 +30,16 @@ FamixMetamodelGenerator class >> metamodel: anObject [
 ]
 
 { #category : #accessing }
+FamixMetamodelGenerator class >> newRepository [
+
+	| tower |
+	
+	tower := FMCompleteTower new.
+	tower metamodel addAll: self metamodel elements.
+	^ tower model.
+]
+
+{ #category : #accessing }
 FamixMetamodelGenerator class >> packageName [
 
 	self subclassResponsibility

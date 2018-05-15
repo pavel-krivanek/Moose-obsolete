@@ -82,16 +82,6 @@ Class {
 }
 
 { #category : #accessing }
-FmxNGCompatibilityGenerator class >> newRepository [
-
-	| tower |
-	
-	tower := FMCompleteTower new.
-	tower metamodel addAll: FmxNGCompatibilityGenerator metamodel elements.
-	^ tower model.
-]
-
-{ #category : #accessing }
 FmxNGCompatibilityGenerator class >> packageName [
 
 	^ #'FmxNGCompatibility-Entities'
