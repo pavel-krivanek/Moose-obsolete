@@ -107,7 +107,7 @@ Class {
 		'tWithTypedStructures',
 		'tWithTypes',
 		'tWithModifiers',
-		'y'
+		'tPossibleStub'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -847,8 +847,6 @@ FmxNGGenerator >> defineProperties [
 
 	((tNamed property: #name type: #String)
 		comment: 'Basic name of the entity, not full reference.').
-	((tNamed property: #isStub type: #Boolean)
-		comment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.').
 
 	((tWithModifiers property: #modifiers type: #String)
 		comment: 'Generic container for language dependent modifiers.';
@@ -872,6 +870,9 @@ FmxNGGenerator >> defineProperties [
 	"temporary"
 	(tMethod property: #isAbstract type: #Boolean).
 	(tMethod property: #isPublic type: #Boolean).
+
+	((tPossibleStub property: #isStub type: #Boolean)
+		comment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.').
 
 	"(tSourceAnchor property: #pharoEntity type: #Object)."
 
@@ -1474,6 +1475,8 @@ FmxNGGenerator >> defineTraits [
 	tWithTypes comment: self commentForTWithTypes.
 
 	tWithModifiers := builder newTraitNamed: #TWithModifiers.
+
+	tPossibleStub := builder newTraitNamed: #TPossibleStub.
 
 ]
 

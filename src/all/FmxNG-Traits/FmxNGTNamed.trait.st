@@ -21,30 +21,13 @@ FmxNGTNamed classSide >> annotation [
 { #category : #generator }
 FmxNGTNamed classSide >> generatedSlotNames [
 	<generated>
-	^ #(isStub name)
+	^ #(name)
 ]
 
 { #category : #generator }
 FmxNGTNamed classSide >> generatedTraitNames [
 	<generated>
 	^ #()
-]
-
-{ #category : #accessing }
-FmxNGTNamed >> isStub [
-
-	<MSEProperty: #isStub type: #Boolean>
-	<generated>
-	<MSEComment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.'>
-	^ isStub
-]
-
-{ #category : #accessing }
-FmxNGTNamed >> isStub: anObject [
-
-	<generated>
-	isStub := anObject
-
 ]
 
 { #category : #accessing }
@@ -62,4 +45,21 @@ FmxNGTNamed >> name: anObject [
 	<generated>
 	name := anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTNamed >> nameLength [
+	<MSEProperty: #nameLength type: #Number>
+	<derived>
+	<MSEComment: 'The number of characters in the name'>
+	
+	^self
+		lookUpPropertyNamed: #nameLength
+		computedAs: [self name size]
+]
+
+{ #category : #accessing }
+FmxNGTNamed >> nameLength: aNumber [
+	
+	self privateState propertyAt: #nameLength put: aNumber
 ]

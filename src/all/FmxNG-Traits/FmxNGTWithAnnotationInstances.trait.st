@@ -30,6 +30,20 @@ FmxNGTWithAnnotationInstances classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTWithAnnotationInstances >> annotationInstanceNamed: anAnnotationName [
+	^ self 
+		annotationInstanceNamed: anAnnotationName 
+		ifAbsent: [ ]
+]
+
+{ #category : #accessing }
+FmxNGTWithAnnotationInstances >> annotationInstanceNamed: anAnnotationName ifAbsent: aBlock [
+	^ self annotationInstances 
+		detect: [ :each | each annotationType name asSymbol = anAnnotationName asSymbol ]
+		ifNone: aBlock
+]
+
+{ #category : #accessing }
 FmxNGTWithAnnotationInstances >> annotationInstances [
 
 	<generated>
@@ -43,4 +57,20 @@ FmxNGTWithAnnotationInstances >> annotationInstances: anObject [
 	<generated>
 	annotationInstances value: anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTWithAnnotationInstances >> annotationTypes [
+	^ self annotationInstances collectAsSet: [:each | each annotationType ]
+
+]
+
+{ #category : #accessing }
+FmxNGTWithAnnotationInstances >> isAnnotated [
+	^ self annotationInstances notEmpty
+]
+
+{ #category : #accessing }
+FmxNGTWithAnnotationInstances >> isAnnotatedWith: anAnnotationName [
+	^ self annotationInstances contains: [ :each | each annotationType name asSymbol = anAnnotationName asSymbol ]
 ]
