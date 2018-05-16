@@ -32,3 +32,8 @@ FmxNGCSourceLanguage class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGCSourceLanguage >> isC [
+	^ true
+]

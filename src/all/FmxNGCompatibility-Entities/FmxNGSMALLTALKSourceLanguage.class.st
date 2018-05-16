@@ -32,3 +32,13 @@ FmxNGSMALLTALKSourceLanguage class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGSMALLTALKSourceLanguage >> isSmalltalk [
+	^ true
+]
+
+{ #category : #'Moose-Finder' }
+FmxNGSMALLTALKSourceLanguage >> parser [
+	^ self privateState attributeAt: #parser ifAbsentPut: [PPSmalltalkGrammar new]
+]
