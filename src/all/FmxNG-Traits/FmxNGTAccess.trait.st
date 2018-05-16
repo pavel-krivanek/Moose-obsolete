@@ -64,6 +64,13 @@ FmxNGTAccess >> accessor: anObject [
 
 ]
 
+{ #category : #testing }
+FmxNGTAccess >> isAccess [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTAccess >> isWrite [
 

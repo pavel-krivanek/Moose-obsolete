@@ -63,18 +63,24 @@ FmxNGEntity >> belongsTo [
 	^ self subclassResponsibility
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isAccess [
+
+	<generated>
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isAssociation [
-	^false
+
+	<generated>
+	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isAttribute [
+
+	<generated>
 	^ false
 ]
 
@@ -93,9 +99,11 @@ FmxNGEntity >> isContainerEntity [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isFunction [
-	^false
+
+	<generated>
+	^ false
 ]
 
 { #category : #'Famix-Implementation' }
@@ -103,8 +111,10 @@ FmxNGEntity >> isInheritance [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isInvocation [
+
+	<generated>
 	^ false
 ]
 
@@ -115,13 +125,17 @@ FmxNGEntity >> isMethod [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isNamespace [
+
+	<generated>
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isPackage [
+
+	<generated>
 	^ false
 ]
 
@@ -130,12 +144,16 @@ FmxNGEntity >> isPrimitiveType [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isReference [
+
+	<generated>
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isType [
+
+	<generated>
 	^ false
 ]

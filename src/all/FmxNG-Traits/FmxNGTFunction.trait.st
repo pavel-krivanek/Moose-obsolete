@@ -49,3 +49,10 @@ FmxNGTFunction >> functionOwner: anObject [
 	functionOwner := anObject
 
 ]
+
+{ #category : #testing }
+FmxNGTFunction >> isFunction [
+
+	<generated>
+	^ true
+]

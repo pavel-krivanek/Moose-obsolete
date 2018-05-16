@@ -43,6 +43,13 @@ FmxNGTReference classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTReference >> isReference [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTReference >> source [
 

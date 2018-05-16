@@ -37,6 +37,13 @@ FmxNGTType classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTType >> isType [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTType >> outgoingTraitUsages [
 

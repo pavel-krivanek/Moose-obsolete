@@ -61,6 +61,13 @@ FmxNGTInvocation >> candidates: anObject [
 
 ]
 
+{ #category : #testing }
+FmxNGTInvocation >> isInvocation [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTInvocation >> receiver [
 

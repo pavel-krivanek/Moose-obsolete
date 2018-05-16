@@ -50,6 +50,13 @@ FmxNGTPackage >> childEntities: anObject [
 
 ]
 
+{ #category : #testing }
+FmxNGTPackage >> isPackage [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTPackage >> packageOwner [
 

@@ -33,6 +33,13 @@ FmxNGTAttribute classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTAttribute >> isAttribute [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTAttribute >> parentType [
 

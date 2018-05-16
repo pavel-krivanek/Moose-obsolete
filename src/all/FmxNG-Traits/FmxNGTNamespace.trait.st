@@ -37,6 +37,13 @@ FmxNGTNamespace classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTNamespace >> isNamespace [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTNamespace >> namespaceEntities [
 

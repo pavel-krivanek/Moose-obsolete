@@ -1185,6 +1185,7 @@ FmxNGGenerator >> defineTraits [
 
 	tAccess := builder newTraitNamed: #TAccess.
 	tAccess comment: self commentForTAccess.
+	tAccess withTesting.
 	
 	tAccessible := builder newTraitNamed: #TAccessible.
 	tAccessible comment: self commentForTAccessible.
@@ -1203,9 +1204,11 @@ FmxNGGenerator >> defineTraits [
 		
 	tAssociation := builder newTraitNamed: #TAssociation.
 	tAssociation comment: self commentForTAssociation.
-
+	tAssociation withTesting.
+	
 	tAttribute := builder newTraitNamed: #TAttribute.
 	tAttribute comment: self commentForTAttribute.
+	tAttribute withTesting.
 
 	tCaughtException := builder newTraitNamed: #TCaughtException.
 	tCaughtException comment: self commentForTCaughtException.
@@ -1239,6 +1242,7 @@ FmxNGGenerator >> defineTraits [
 
 	tFunction := builder newTraitNamed: #TFunction.
 	tFunction comment: self commentForTFunction.
+	tFunction withTesting.
 
 	tGlobalVariable := builder newTraitNamed: #TGlobalVariable.
 	tGlobalVariable comment: self commentForTGlobalVariable.
@@ -1257,7 +1261,8 @@ FmxNGGenerator >> defineTraits [
 
 	tInvocation := builder newTraitNamed: #TInvocation.
 	tInvocation comment: self commentForTInvocation.
-
+	tInvocation withTesting.
+	
 	tInvocationsReceiver := builder newTraitNamed: #TInvocationsReceiver.
 	tInvocationsReceiver comment: self commentForTInvocationsReceiver.
 
@@ -1276,13 +1281,15 @@ FmxNGGenerator >> defineTraits [
 
 	tNamespace := builder newTraitNamed: #TNamespace.
 	tNamespace comment: self commentForTNamespace.
-
+	tNamespace withTesting.
+	
 	tNamespaceEntity := builder newTraitNamed: #TNamespaceEntity.
 	tNamespaceEntity comment: self commentForTNamespaceEntity.
 
 	tPackage := builder newTraitNamed: #TPackage.
 	tPackage comment: self commentForTPackage.
-
+	tPackage withTesting.
+	
 	tPackageable := builder newTraitNamed: #TPackageable.
 	tPackageable comment: self commentForTPackageable.
 
@@ -1303,6 +1310,7 @@ FmxNGGenerator >> defineTraits [
 
 	tReference := builder newTraitNamed: #TReference.
 	tReference comment: self commentForTReference.
+	tReference withTesting.
 
 	tReferenceable := builder newTraitNamed: #TReferenceable.
 	tReferenceable comment: self commentForTReferenceable.
@@ -1342,9 +1350,9 @@ FmxNGGenerator >> defineTraits [
 
 	tTraitUsage := builder newTraitNamed: #TTraitUsage.
 
-
 	tType := builder newTraitNamed: #TType.
 	tType comment: self commentForTType.
+	tType withTesting.
 
 	tTypeAlias := builder newTraitNamed: #TTypeAlias.
 	tTypeAlias comment: self commentForTTypeAlias.

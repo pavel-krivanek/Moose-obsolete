@@ -49,6 +49,13 @@ FmxNGTAssociation classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTAssociation >> isAssociation [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTAssociation >> next [
 
