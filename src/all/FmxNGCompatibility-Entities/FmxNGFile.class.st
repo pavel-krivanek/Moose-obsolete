@@ -1,6 +1,6 @@
 Class {
 	#name : #FmxNGFile,
-	#superclass : #FmxNGEntity,
+	#superclass : #FmxNGAbstractFile,
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -8,7 +8,7 @@ Class {
 FmxNGFile class >> annotation [
 
 	<generated>
-	<MSEClass: #File super: #FmxNGEntity>
+	<MSEClass: #File super: #FmxNGAbstractFile>
 	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self

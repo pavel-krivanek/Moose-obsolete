@@ -216,12 +216,14 @@ FmxNGCompatibilityGenerator >> defineClasses [
 FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	entity <|-- abstractFile.
-	entity <|-- file.
-	entity <|-- folder.
 	entity <|-- sourceAnchor.
 	entity <|-- sourceLanguage.
 	entity <|-- sourcedEntity.	
 	entity <|-- exception.
+	
+	abstractFile <|-- file.
+	abstractFile <|-- folder.
+
 	
 	abstractFile generalization: namedEntity.
 	
