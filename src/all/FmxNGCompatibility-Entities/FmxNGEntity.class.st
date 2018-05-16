@@ -84,7 +84,7 @@ FmxNGEntity >> isAttribute [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #'testing - custom' }
 FmxNGEntity >> isBehaviouralEntity [
 	^ false
 ]
@@ -96,7 +96,7 @@ FmxNGEntity >> isClass [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #'testing - custom' }
 FmxNGEntity >> isContainerEntity [
 	^ false
 ]
@@ -143,7 +143,7 @@ FmxNGEntity >> isPackage [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #'testing - custom' }
 FmxNGEntity >> isPrimitiveType [
 	^ false
 ]
