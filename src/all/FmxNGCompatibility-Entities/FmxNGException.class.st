@@ -35,7 +35,23 @@ FmxNGException class >> requirements [
 	^ {  }
 ]
 
-{ #category : #printing }
+{ #category : #compatibility }
+FmxNGException >> definingMethod [
+
+	^ self definingEntity
+	
+
+]
+
+{ #category : #compatibility }
+FmxNGException >> definingMethod: aMethod [ 
+
+	^ self definingEntity: aMethod 
+	
+
+]
+
+{ #category : #accessing }
 FmxNGException >> mooseNameOn: aStream [ 
 	aStream nextPutAll: (self class name withoutPrefix: 'FAMIX').
 	aStream nextPut: $-.

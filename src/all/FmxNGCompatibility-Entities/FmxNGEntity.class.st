@@ -40,7 +40,7 @@ FmxNGEntity class >> requirements [
 	^ {  }
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGEntity class >> resetMSEProperties [
 	"
 	self resetMSEProperties
@@ -51,7 +51,7 @@ FmxNGEntity class >> resetMSEProperties [
 			aSubClass resetMooseQueryCaches.]
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGEntity class >> resetMooseQueryCaches [
 	"Here do nothing. Customize in subclasses."
 ]

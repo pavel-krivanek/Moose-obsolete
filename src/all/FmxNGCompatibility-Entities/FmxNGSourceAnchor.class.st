@@ -128,6 +128,15 @@ FmxNGSourceAnchor >> element: anElement [
 
 ]
 
+{ #category : #'moosequery-queries-incoming' }
+FmxNGSourceAnchor >> incomingTypeDeclarations [
+	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
+	
+	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
+
+	^ {}
+]
+
 { #category : #testing }
 FmxNGSourceAnchor >> isFile [
 	^ false
