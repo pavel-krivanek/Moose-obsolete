@@ -13,7 +13,7 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> allChildrenTypes [
 	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
 ]
@@ -28,7 +28,7 @@ FmxNGAnnotationInstance class >> allOutgoingAssociationTypes [
 	^ self privateAllOutgoingAssociationTypes
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> allParentTypes [
 	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
@@ -43,12 +43,22 @@ FmxNGAnnotationInstance class >> annotation [
 	^self
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
+FmxNGAnnotationInstance class >> childrenAccessors [
+	self
+		deprecated: 'Use childrenSelectors instead'
+		on: '21 December 2016'
+		in: 'Pharo-6.0-60328-'
+		transformWith: '`@receiver childrenAccessors' -> '`@receiver childrenSelectors'.
+	^ self childrenSelectors
+]
+
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> childrenSelectors [
 	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> childrenTypes [
 	^ self privateChildrenTypes
 ]
@@ -65,17 +75,17 @@ FmxNGAnnotationInstance class >> generatedTraitNames [
 	^ #(FmxNGTAnnotationInstance FmxNGTTypedAnnotationInstance FmxNGTWithAnnotationInstanceAttributes)
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> incomingMSEProperties [
 	^ #()
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> outgoingMSEProperties [
 	^ #()
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> parentSelector [
 	self 
 		deprecated: 'Use parentSelectors instead'
@@ -85,12 +95,12 @@ FmxNGAnnotationInstance class >> parentSelector [
 	^ self parentSelectors
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> parentSelectors [
 	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> parentTypes [
 	^ self privateParentTypes 
 ]
@@ -102,7 +112,7 @@ FmxNGAnnotationInstance class >> requirements [
 	^ {  }
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstance class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
 	childrenSelectors := nil.
@@ -125,7 +135,7 @@ FmxNGAnnotationInstance >> incomingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Finder' }
 FmxNGAnnotationInstance >> mooseIcon [ 
 	^ MooseIcons famixAnnotationInstance
 ]

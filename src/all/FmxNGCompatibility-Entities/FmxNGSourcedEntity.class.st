@@ -41,7 +41,7 @@ FmxNGSourcedEntity >> accept: aVisitor [
 	aVisitor visitEntity: self
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 FmxNGSourcedEntity >> addComment: aComment [
 	self comments add: aComment asFAMIXComment
 ]
@@ -127,12 +127,12 @@ FmxNGSourcedEntity >> formattedSourceText [
 	^ self sourceLanguage format: self sourceText from: self
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-testing' }
 FmxNGSourcedEntity >> hasComments [
 	^ self comments isEmpty not
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-testing' }
 FmxNGSourcedEntity >> hasSourceAnchor [
 	^ self sourceAnchor notNil
 ]
@@ -188,12 +188,12 @@ FmxNGSourcedEntity >> numberOfLinesOfCodeWithMoreThanOneCharacter [
 				line trimBoth size > 1 ]) size ]
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 FmxNGSourcedEntity >> removeComment: aComment [
 	self comments remove: aComment
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 FmxNGSourcedEntity >> sourceAnchor: aSourceAnchor [
 	sourceAnchor := aSourceAnchor.
 	
@@ -201,7 +201,7 @@ FmxNGSourcedEntity >> sourceAnchor: aSourceAnchor [
 	aSourceAnchor element = self ifFalse: [ aSourceAnchor element: self ]
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 FmxNGSourcedEntity >> sourceLanguage [
 	^ self declaredSourceLanguage ifNil: [
 		self mooseModel 
