@@ -108,8 +108,10 @@ FmxNGEntity >> isInvocation [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isMethod [
+
+	<generated>
 	^ false
 ]
 

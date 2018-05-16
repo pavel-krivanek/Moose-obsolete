@@ -127,6 +127,12 @@ FamixMetamodelGenerator >> defineTraits [
 { #category : #generation }
 FamixMetamodelGenerator >> generate [
 
+	self generateWithoutCleaning.
+]
+
+{ #category : #generation }
+FamixMetamodelGenerator >> generateWithCleaning [
+
 	self define.
 	self builder 
 		cleanPackage;

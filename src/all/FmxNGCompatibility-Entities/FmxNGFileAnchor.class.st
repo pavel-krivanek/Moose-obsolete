@@ -2,10 +2,10 @@ Class {
 	#name : #FmxNGFileAnchor,
 	#superclass : #FmxNGAbstractFileAnchor,
 	#instVars : [
-		'startLine',
-		'startColumn',
+		'endColumn',
 		'endLine',
-		'endColumn'
+		'startColumn',
+		'startLine'
 	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }

@@ -4,8 +4,8 @@ Class {
 	#traits : 'FmxNGTFileAnchor',
 	#classTraits : 'FmxNGTFileAnchor classTrait',
 	#instVars : [
-		'fileName',
-		'encoding'
+		'encoding',
+		'fileName'
 	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }

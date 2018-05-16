@@ -542,3 +542,19 @@ FamixMetamodelBuilderBehavior >> willGenerate: anObject [
 
 	willGenerate := anObject
 ]
+
+{ #category : #'testing selectors' }
+FamixMetamodelBuilderBehavior >> withTesting [
+
+	"adds methods like #isMethod based on the behavior name"
+
+	| aName |
+	
+	aName := self name capitalized.
+	
+	"remove T (for traits)"
+	((aName size >= 2) and: [( aName first = $T ) and: [ aName second isUppercase ]])
+		ifTrue: [ aName := aName allButFirst ].
+		
+	testingSelectors add: 'is', aName.
+]

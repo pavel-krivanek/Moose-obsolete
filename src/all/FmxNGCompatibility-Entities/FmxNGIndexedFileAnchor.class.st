@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGIndexedFileAnchor,
 	#superclass : #FmxNGAbstractFileAnchor,
 	#instVars : [
-		'startPos',
-		'endPos'
+		'endPos',
+		'startPos'
 	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
