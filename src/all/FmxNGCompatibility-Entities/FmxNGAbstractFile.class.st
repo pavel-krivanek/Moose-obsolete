@@ -32,3 +32,19 @@ FmxNGAbstractFile class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #accessing }
+FmxNGAbstractFile >> belongsTo [
+	<navigation: 'parent folder'>
+	^ self parentFolder
+]
+
+{ #category : #accessing }
+FmxNGAbstractFile >> fileReference [ 
+	^ (FileSystem disk referenceTo: (self mooseName copyReplaceAll: self class famixFolderSeparatorString with: FileSystem disk delimiter asString))
+]
+
+{ #category : #accessing }
+FmxNGAbstractFile >> fullName [
+	^ self mooseName
+]

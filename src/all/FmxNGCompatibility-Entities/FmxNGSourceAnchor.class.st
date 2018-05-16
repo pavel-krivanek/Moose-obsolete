@@ -6,7 +6,7 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGSourceAnchor class >> allChildrenTypes [
 	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
 	^ {}
@@ -22,7 +22,7 @@ FmxNGSourceAnchor class >> allOutgoingAssociationTypes [
 	^ Set new
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGSourceAnchor class >> allParentTypes [
 	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
 	^ {}
@@ -38,13 +38,13 @@ FmxNGSourceAnchor class >> annotation [
 	^self
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGSourceAnchor class >> childrenSelectors [
 	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
 	^ {}
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGSourceAnchor class >> childrenTypes [
 	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
 	^ {}
@@ -72,13 +72,13 @@ FmxNGSourceAnchor class >> outgoingMSEProperties [
 	^ #()
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGSourceAnchor class >> parentSelectors [
 	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
 	^ {}
 ]
 
-{ #category : #MQ }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGSourceAnchor class >> parentTypes [
 	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
 	^ {}
@@ -165,6 +165,65 @@ FmxNGSourceAnchor >> mooseFinderSourceTextIn: composite [
 			titleIcon: MooseIcons mooseSourceTextPartial;
 			display: [ :each | each mooseInterestingEntity sourceText ];
 			when: [ :input | input mooseInterestingEntity sourceText notEmpty ]
+]
+
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGSourceAnchor >> outgoingTypeDeclarations [
+	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
+	
+	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
+
+	^ {}
+]
+
+{ #category : #'moosequery-queries-incoming' }
+FmxNGSourceAnchor >> queryAllIncomingInvocations [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGSourceAnchor >> queryAllOutgoingInvocations [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-incoming' }
+FmxNGSourceAnchor >> queryIncomingAccesses [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-incoming' }
+FmxNGSourceAnchor >> queryIncomingReferences [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-incoming' }
+FmxNGSourceAnchor >> queryIncomingTypeDeclarations [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGSourceAnchor >> queryOutgoingAccesses [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGSourceAnchor >> queryOutgoingReferences [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGSourceAnchor >> queryOutgoingTypeDeclarations [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-incoming' }
+FmxNGSourceAnchor >> querySureIncomingInvocations [
+	^ MooseQueryResult new
+]
+
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGSourceAnchor >> querySureOutgoingInvocations [
+	^ MooseQueryResult new
 ]
 
 { #category : #accessing }
