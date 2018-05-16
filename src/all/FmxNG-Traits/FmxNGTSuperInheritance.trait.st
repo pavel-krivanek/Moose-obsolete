@@ -29,6 +29,13 @@ FmxNGTSuperInheritance classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTSuperInheritance >> isInheritance [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTSuperInheritance >> superclass [
 

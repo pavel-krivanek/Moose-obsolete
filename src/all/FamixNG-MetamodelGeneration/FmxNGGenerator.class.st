@@ -107,7 +107,8 @@ Class {
 		'tWithTypedStructures',
 		'tWithTypes',
 		'tWithModifiers',
-		'tPossibleStub'
+		'tPossibleStub',
+		'tClass'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -235,6 +236,16 @@ FmxNGGenerator >> commentForTAttribute [
 FmxNGGenerator >> commentForTCaughtException [
 
 	^ 'This is an exception that is explicitly handled by a method. For example, in Java it is an exception that appears in a catch statement.'
+]
+
+{ #category : #comments }
+FmxNGGenerator >> commentForTClass [
+
+	^ 'FAMIXClass represents an entity which can build new instances. A FAMIXClass is a FAMIXType, therefore it is involved in super/sub types relationships (depending on the language) and it holds attributes, methods.
+
+FAMIX does not model explicitly interfaces, but a FAMIXClass can represent a Java interface by setting the isInterface property.
+
+A class is typically scoped in a namespace. To model nested or anonymous classes, extractors can set the container of classes to classes or methods, respectively.'
 ]
 
 { #category : #comments }
@@ -1219,6 +1230,9 @@ FmxNGGenerator >> defineTraits [
 	tCompilationUnit := builder newTraitNamed: #TCompilationUnit.
 	tCompilationUnit comment: self commentForTCompilationUnit.
 
+	tClass := builder newTraitNamed: #TClass.
+	tClass comment: self commentForTClass.
+
 	tDeclaredException := builder newTraitNamed: #TDeclaredException.
 	tDeclaredException comment: self commentForTDeclaredException.
 
@@ -1329,12 +1343,14 @@ FmxNGGenerator >> defineTraits [
 
 	tSubInheritance := builder newTraitNamed: #TSubInheritance.
 	tSubInheritance comment: self commentForTSubInheritance.
-
+	tSubInheritance testingSelector: #isInheritance.
+	
 	tSuper := builder newTraitNamed: #TSuper.
 	tSuper comment: self commentForTSuper.
 
 	tSuperInheritance := builder newTraitNamed: #TSuperInheritance.
 	tSuperInheritance comment: self commentForTSuperInheritance.
+	tSuperInheritance testingSelector: #isInheritance.
 
 	tTemplate := builder newTraitNamed: #TTemplate.
 	tTemplate comment: self commentForTTemplate.

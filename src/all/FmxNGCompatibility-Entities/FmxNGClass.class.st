@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGClass,
 	#superclass : #FmxNGType,
-	#traits : 'FmxNGTWithExceptions',
-	#classTraits : 'FmxNGTWithExceptions classTrait',
+	#traits : 'FmxNGTClass + FmxNGTWithExceptions',
+	#classTraits : 'FmxNGTClass classTrait + FmxNGTWithExceptions classTrait',
 	#instVars : [
 		'#isInterface'
 	],
@@ -28,7 +28,7 @@ FmxNGClass class >> generatedSlotNames [
 { #category : #generator }
 FmxNGClass class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithExceptions)
+	^ #(FmxNGTClass FmxNGTWithExceptions)
 ]
 
 { #category : #meta }

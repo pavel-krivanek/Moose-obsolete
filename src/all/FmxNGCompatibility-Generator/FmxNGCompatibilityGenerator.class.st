@@ -281,6 +281,7 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	class generalization: type.
 	class generalization: #TWithExceptions.
+	class generalization: #TClass.
 
 	comment generalization: sourcedEntity.
 	comment generalization: #TComment.

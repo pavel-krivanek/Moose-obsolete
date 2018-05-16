@@ -90,11 +90,6 @@ FmxNGEntity >> isBehaviouralEntity [
 ]
 
 { #category : #'Famix-Implementation' }
-FmxNGEntity >> isClass [
-	^ false
-]
-
-{ #category : #'Famix-Implementation' }
 FmxNGEntity >> isContainerEntity [
 	^ false
 ]
@@ -106,8 +101,10 @@ FmxNGEntity >> isFunction [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FmxNGEntity >> isInheritance [
+
+	<generated>
 	^ false
 ]
 
