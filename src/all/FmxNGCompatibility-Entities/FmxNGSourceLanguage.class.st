@@ -35,12 +35,12 @@ FmxNGSourceLanguage class >> requirements [
 	^ {  }
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 FmxNGSourceLanguage >> addSourcedEntity: aSourcedEntity [
 	^ self sourcedEntities add: aSourcedEntity
 ]
 
-{ #category : #formatting }
+{ #category : #utility }
 FmxNGSourceLanguage >> format: aSourceString from: anEntity [
 	^ aSourceString
 	
@@ -72,4 +72,14 @@ FmxNGSourceLanguage >> isSmalltalk [
 { #category : #testing }
 FmxNGSourceLanguage >> isUnknown [ 
 	^ false
+]
+
+{ #category : #accessing }
+FmxNGSourceLanguage >> name [
+	"The name of the language that is not modeled explicitly"
+	
+	<MSEProperty: #name type: #String> <derived>
+	<MSEComment: 'The name of the language that is not modeled explicitly.'>
+	
+	^ (self class name removePrefix: 'FmxNG') removeSuffix: 'SourceLanguage'
 ]

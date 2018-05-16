@@ -36,7 +36,7 @@ FmxNGSourceTextAnchor class >> requirements [
 	^ {  }
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-File' }
 FmxNGSourceTextAnchor >> containerFiles [
 	^ {}
 ]
@@ -44,16 +44,6 @@ FmxNGSourceTextAnchor >> containerFiles [
 { #category : #accessing }
 FmxNGSourceTextAnchor >> lineCount [
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
-]
-
-{ #category : #accessing }
-FmxNGSourceTextAnchor >> name [
-	"The name of the language that is not modeled explicitly"
-	
-	<MSEProperty: #name type: #String> <derived>
-	<MSEComment: 'The name of the language that is not modeled explicitly.'>
-	
-	^ (self class name removePrefix: 'FmxNG') removeSuffix: 'SourceLanguage'
 ]
 
 { #category : #accessing }
