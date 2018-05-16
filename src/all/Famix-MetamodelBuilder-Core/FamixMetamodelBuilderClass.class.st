@@ -154,6 +154,7 @@ FamixMetamodelBuilderClass >> generate [
 	isHierarchyRoot ifTrue: [ 
 		self generateRootMethodsIn: aClass ].
 	
+	
 
 ]
 
@@ -190,6 +191,20 @@ FamixMetamodelBuilderClass >> generateRootMethodsIn: aClass [
 
 	<generated>
 	^ {1} metamodel' format: { self builder generator class name }) classified: 'meta']
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderClass >> generateTestingSelectorsFor: aClass [
+
+	aClass testingSelectors do: [ :aSelector |
+
+		aClass instanceSide compile: ('{1}
+
+	<generated>
+	^ true' format: { aSelector }) 
+		classified: #testing ].
+	
+	
 ]
 
 { #category : #generating }

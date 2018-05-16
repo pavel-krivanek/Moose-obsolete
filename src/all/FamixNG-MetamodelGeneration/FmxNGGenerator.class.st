@@ -1266,6 +1266,7 @@ FmxNGGenerator >> defineTraits [
 
 	tMethod := builder newTraitNamed: #TMethod.
 	tMethod comment: self commentForTMethod.
+	tMethod testingSelector: #isMethod.
 
 	tModule := builder newTraitNamed: #TModule.
 	tModule comment: self commentForTModule.

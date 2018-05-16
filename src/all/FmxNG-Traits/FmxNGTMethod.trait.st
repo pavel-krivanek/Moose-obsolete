@@ -90,6 +90,13 @@ FmxNGTMethod >> isAbstract: anObject [
 
 ]
 
+{ #category : #testing }
+FmxNGTMethod >> isMethod [
+
+	<generated>
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTMethod >> isPublic [
 

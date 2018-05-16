@@ -14,7 +14,8 @@ Class {
 		'tag',
 		'comment',
 		'prefix',
-		'packageName'
+		'packageName',
+		'testingSelectors'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -213,6 +214,25 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass as: aName supe
 
 ]
 
+{ #category : #generating }
+FamixMetamodelBuilderBehavior >> generateTestingSelectors [
+
+	self testingSelectors do: [ :aSelector |
+		self realClass instanceSide compile: ('{1}
+
+	<generated>
+	^ true' format: { aSelector }) 
+		classified: #testing.
+
+		self builder classes do: [ :aBehavior |
+			aBehavior classGeneralization ifNil: [ 
+				aBehavior realClass instanceSide compile: ('{1}
+
+	<generated>
+	^ false' format: { aSelector }) 
+		classified: #testing. ]]].
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> initialize [
 
@@ -222,6 +242,7 @@ FamixMetamodelBuilderBehavior >> initialize [
 	willGenerate := true.
 	prefix := String new.
 	packageName := String new.
+	testingSelectors := Set new.
 ]
 
 { #category : #testing }
@@ -485,6 +506,24 @@ FamixMetamodelBuilderBehavior >> tag [
 FamixMetamodelBuilderBehavior >> tag: aSymbol [
 
 	tag := aSymbol
+]
+
+{ #category : #'testing selectors' }
+FamixMetamodelBuilderBehavior >> testingSelector: aSelector [
+
+	testingSelectors add: aSelector.
+]
+
+{ #category : #'testing selectors' }
+FamixMetamodelBuilderBehavior >> testingSelectors [
+
+	^ testingSelectors
+]
+
+{ #category : #'testing selectors' }
+FamixMetamodelBuilderBehavior >> testingSelectors: aCollection [
+
+	testingSelectors := aCollection
 ]
 
 { #category : #accessing }
