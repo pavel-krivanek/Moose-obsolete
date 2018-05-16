@@ -39,7 +39,7 @@ FmxNGAbstractFileAnchor class >> requirements [
 	^ {  }
 ]
 
-{ #category : #comparin }
+{ #category : #'Famix-File' }
 FmxNGAbstractFileAnchor >> <= aFileAnchor [
 	^ self fileName <= aFileAnchor fileName
 ]
