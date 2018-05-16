@@ -363,6 +363,7 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	namedEntity generalization: #TInvocationsReceiver.
 	namedEntity generalization: #TWithAnnotationInstances.
 	namedEntity generalization: #TWithModifiers.
+	namedEntity generalization: #TPossibleStub.
 
 	namespace generalization: scopingEntity.
 	namespace generalization: #TNamespace.

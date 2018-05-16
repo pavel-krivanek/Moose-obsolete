@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGNamedEntity,
 	#superclass : #FmxNGSourcedEntity,
-	#traits : 'FmxNGTInvocationsReceiver + FmxNGTNamed + FmxNGTPackageable + FmxNGTWithAnnotationInstances + FmxNGTWithModifiers + TDependencyQueries + TEntityMetaLevelDependency + FmxNGTPossibleStub',
-	#classTraits : 'FmxNGTInvocationsReceiver classTrait + FmxNGTNamed classTrait + FmxNGTPackageable classTrait + FmxNGTWithAnnotationInstances classTrait + FmxNGTWithModifiers classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait + FmxNGTPossibleStub classTrait',
+	#traits : 'FmxNGTInvocationsReceiver + FmxNGTNamed + FmxNGTPackageable + FmxNGTPossibleStub + FmxNGTWithAnnotationInstances + FmxNGTWithModifiers + TDependencyQueries + TEntityMetaLevelDependency',
+	#classTraits : 'FmxNGTInvocationsReceiver classTrait + FmxNGTNamed classTrait + FmxNGTPackageable classTrait + FmxNGTPossibleStub classTrait + FmxNGTWithAnnotationInstances classTrait + FmxNGTWithModifiers classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
 	#classInstVars : [
 		'#childrenSelectors',
 		'#allParentTypes',
@@ -84,7 +84,7 @@ FmxNGNamedEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGNamedEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTWithAnnotationInstances FmxNGTWithModifiers)
+	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTPossibleStub FmxNGTWithAnnotationInstances FmxNGTWithModifiers)
 ]
 
 { #category : #accessing }

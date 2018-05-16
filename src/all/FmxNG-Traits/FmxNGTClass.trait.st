@@ -32,3 +32,10 @@ FmxNGTClass classSide >> generatedTraitNames [
 	<generated>
 	^ #()
 ]
+
+{ #category : #testing }
+FmxNGTClass >> isClass [
+
+	<generated>
+	^ true
+]

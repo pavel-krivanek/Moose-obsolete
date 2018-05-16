@@ -1232,6 +1232,7 @@ FmxNGGenerator >> defineTraits [
 
 	tClass := builder newTraitNamed: #TClass.
 	tClass comment: self commentForTClass.
+	tClass withTesting.
 
 	tDeclaredException := builder newTraitNamed: #TDeclaredException.
 	tDeclaredException comment: self commentForTDeclaredException.
@@ -1503,15 +1504,6 @@ FmxNGGenerator >> defineTraits [
 
 	tPossibleStub := builder newTraitNamed: #TPossibleStub.
 
-]
-
-{ #category : #initialization }
-FmxNGGenerator >> generate [
-
-	self define.
-	self builder 
-		cleanPackage;
-		generate.
 ]
 
 { #category : #initialization }

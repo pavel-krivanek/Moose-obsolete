@@ -178,11 +178,6 @@ FmxNGClass >> isAccessedBy: anAccess [
 	^anAccess accesses == self
 ]
 
-{ #category : #'Famix-Implementation' }
-FmxNGClass >> isClass [
-	^ true
-]
-
 { #category : #'Famix-Java' }
 FmxNGClass >> isIgnored [
 	<MSEProperty: #isIgnored type: #Boolean>
