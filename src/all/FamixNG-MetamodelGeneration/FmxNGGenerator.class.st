@@ -921,11 +921,11 @@ FmxNGGenerator >> defineRelations [
 			container).
 
 	((tAnnotationType property: #annotationTypesContainer)
-		comment: 'Container in which an AnnotationType may reside';
-		container	)
+			comment: 'Container in which an AnnotationType may reside';
+			container	)
 		*-
 	((tWithAnnotationTypes property: #definedAnnotationTypes)
-		comment: 'The container in which the AnnotationTypes may be declared').
+			comment: 'The container in which the AnnotationTypes may be declared').
 
 	((tAnnotationTypeAttribute property: #annotationAttributeInstances)
 			comment: 'A collection of AnnotationInstanceAttribute which hold the usages of this attribute in actual AnnotationInstances')
@@ -948,7 +948,8 @@ FmxNGGenerator >> defineRelations [
 
 	((tCaughtException property: #definingEntity))
 		*-
-	((tWithCaughtExceptions property: #caughtExceptions)).
+	((tWithCaughtExceptions property: #caughtExceptions)
+			comment: 'The exceptions caught by the method').
 
 	((tComment property: #container)
 			comment: 'Source code entity containing the comment')
@@ -962,7 +963,8 @@ FmxNGGenerator >> defineRelations [
 
 	((tDeclaredException property: #definingEntity))
 		*-
-	((tWithDeclaredExceptions property: #declaredExceptions)).
+	((tWithDeclaredExceptions property: #declaredExceptions)
+			comment: 'The exceptions declared by the method').
 
 	((tDereferencedInvocation property: #referencer)
 			comment: 'Structural entity that references the BehaviouralEntity invoked')
@@ -989,23 +991,23 @@ FmxNGGenerator >> defineRelations [
 			comment: 'List of files containing the entity').
 
 	((tFileInclude property: #source)
-		comment: 'The file that is including')
+			comment: 'The file that is including')
 		*-
 	((tWithFileInclude property: #outgoingIncludeRelations)
-		comment: 'The include entities that have this file as a source.').
+			comment: 'The include entities that have this file as a source.').
 
 	((tFileInclude property: #target)
-		comment: 'The file that is included')
+			comment: 'The file that is included')
 		*-
 	((tWithFileInclude property: #incomingIncludeRelations)
-		comment: 'The include entities that have this file as a target.').
+			comment: 'The include entities that have this file as a target.').
 
 	((tFunction property: #functionOwner)
-		comment: 'The container defining the function. The function is placed in a container, because certain languages can nest functions in functions.';
-		container)
+			comment: 'The container defining the function. The function is placed in a container, because certain languages can nest functions in functions.';
+			container)
 		*-
 	((tWithFunctions property: #functions)
-		comment: 'Functions defined in the container, if any.').
+			comment: 'Functions defined in the container, if any.').
 
 	((tGlobalVariable property: #parentScope)
 			comment: 'Scope declaring the global variable. belongsTo implementation';
@@ -1026,7 +1028,7 @@ FmxNGGenerator >> defineRelations [
 			comment: 'Implicit variables used locally by this behaviour.').
 
 	((tInvocable property: #incomingInvocations)
-		comment: 'Incoming invocations from other behaviours computed by the candidate operator.')
+			comment: 'Incoming invocations from other behaviours computed by the candidate operator.')
 		*-*
 	((tInvocation property: #candidates) 
 			comment: 'List of candidate behavioural entities for receiving the invocation';
@@ -1137,14 +1139,14 @@ FmxNGGenerator >> defineRelations [
 	((tSuper property: #subs)).
 
 	((tSubInheritance property: #subclass)
-		comment: 'Subclass linked to in this relationship. from-side of the association';
-		source)
+			comment: 'Subclass linked to in this relationship. from-side of the association';
+			source)
 		*-
 	((tWithSubInheritances property: #superInheritances)).
 
 	((tSuperInheritance property: #superclass)
-		comment: 'Superclass linked to in this relationship. to-side of the association';
-		target)
+			comment: 'Superclass linked to in this relationship. to-side of the association';
+			target)
 		*-
 	((tWithSuperInheritances property: #subInheritances)).
 
@@ -1158,7 +1160,8 @@ FmxNGGenerator >> defineRelations [
 
 	((tThrownException property: #definingEntity))
 		*-
-	((tWithThrownExceptions property: #thrownExceptions)).
+	((tWithThrownExceptions property: #thrownExceptions)
+			comment: 'The exceptions thrown by the method').
 
 	((tTrait property: #traitOwner))
 		*-
@@ -1167,17 +1170,17 @@ FmxNGGenerator >> defineRelations [
 	((tTrait property: #incomingTraitUsages))
 		-*
 	((tTraitUsage property: #trait)
-		source).
+			source).
 
 	((tType property: #outgoingTraitUsages))
 		-*
 	((tTraitUsage property: #user)
-		target).
+			target).
 
 
 	((tType property: #typeContainer)
-		comment: 'Container entity to which this type belongs to. Container is a namespace, not a package (Smalltalk).';
-		container)
+			comment: 'Container entity to which this type belongs to. Container is a namespace, not a package (Smalltalk).';
+			container)
 		*-
 	((tWithTypes property: #types)
 		comment: 'Types contained (declared) in this entity, if any.
@@ -1190,7 +1193,7 @@ FmxNGGenerator >> defineRelations [
 			comment: 'Aliases').
 
 	((tTypedStructure property: #declaredType)
-		comment: 'Type of the behavioral entity, if any')
+			comment: 'Type of the behavioral entity, if any')
 		*-
 	((tWithTypedStructures property: #structuresWithDeclaredType)).
 

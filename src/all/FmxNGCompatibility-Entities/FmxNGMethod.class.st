@@ -54,7 +54,7 @@ FmxNGMethod >> accept: aVisitor [
 	aVisitor visitMethod: self
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGMethod >> accessedAttributes [
 	
 	"Returns the set of attributes of my class accessed by me (method). 
@@ -127,7 +127,7 @@ FmxNGMethod >> category: aString [
 	
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-ClassBlueprint' }
 FmxNGMethod >> classBlueprintFillColor [
 	
 	self isPureAccessor ifTrue: [ ^ Color orange].
@@ -145,7 +145,7 @@ FmxNGMethod >> classBlueprintFillColor [
 	^ Color white.
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> clientClasses [
 	self deprecated: 'use clientTypes instead'.
 	^ self clientTypes
@@ -156,21 +156,21 @@ FmxNGMethod >> clientMethods [
 	^ self clientBehaviours select: [ :each | each isMethod ]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> clientNamespaces [
 	"returns a set of all the namespaces that depend on the receiver"
 
 	^ (self queryAllIncoming atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> clientPackages [
 	"returns a set of all the packages that depend on the receiver"
 
 	^ (self queryAllIncoming atScope: FmxNGPackage) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> clientTypes [
 	<MSEProperty: #clientTypes type: #FmxNGType>
 	<multivalued>
@@ -368,8 +368,10 @@ FmxNGMethod >> isOverriden [
 	<MSEProperty: #isOverriden type: #Boolean>
 	<derived>
 	<MSEComment: 'The method is overrided in a sub class'>
-	^ self belongsTo subclassHierarchyGroup
-		anySatisfy: [ :each | each hasMethodWithSignature: self signature ]
+	"If we have a stub and we don't have the container, we can't have the information"
+	(self belongsTo isNil and: [ self isStub ]) ifTrue: [ ^ false ].
+	
+	^ self belongsTo subclassHierarchyGroup anySatisfy: [ :each | each hasMethodWithSignature: self signature ]
 ]
 
 { #category : #'Famix-Extensions' }
@@ -398,7 +400,7 @@ FmxNGMethod >> isSetter [
 	^#setter = self kind
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-InvocationTesting' }
 FmxNGMethod >> isSurelyInvokedBy: aFAMIXMethod [ 
 	 
 	| outgoingInvo |
@@ -420,7 +422,7 @@ FmxNGMethod >> isSurelyInvokedBy: aFAMIXMethod [
 	^false
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGMethod >> methodScope [
 "This is a special case, only meaningful when using #withoutSelfLoops. Rejecting self loops with a method means rejecting recursive calls."
 
@@ -445,7 +447,7 @@ FmxNGMethod >> mooseNameOn: stream [
 			self name ifNotNil: [ stream nextPutAll: self name] ]
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGMethod >> namespaceScope [
 	^ self parentType namespaceScope
 ]
@@ -475,7 +477,7 @@ FmxNGMethod >> overridesMethod [
 	^ self belongsTo superclassHierarchy collect: [ :each | each implementationOf: self signature ] thenSelect: #isNotNil
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGMethod >> packageScope [
 
 	^ self parentPackage ifNil:[ 
@@ -507,7 +509,7 @@ FmxNGMethod >> printOn: aStream [
 	aStream nextPutAll: ' (Method)'
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> providerClasses [
 	self deprecated: 'use providerTypes'.
 	^ self providerTypes
@@ -518,21 +520,21 @@ FmxNGMethod >> providerMethods [
 	^ self providerBehaviours select: [ :each | each isMethod ]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> providerNamespaces [
 	"returns a set of all the namespaces that the receiver depends on the receiver"
 
 	^ (self queryAllOutgoing atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> providerPackages [
 	"returns a set of all the packages that the receiver depends on the receiver"
 
 	^ (self queryAllOutgoing atScope: FmxNGPackage) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGMethod >> providerTypes [
 	<MSEProperty: #providerTypes type: #FmxNGType>
 	<derived>
@@ -567,7 +569,7 @@ FmxNGMethod >> sourceText [
 		ifFalse: [ super sourceText ]
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
 FmxNGMethod >> sureInvokedClasses [
 	
 	self flag: #fixme.
@@ -589,7 +591,7 @@ FmxNGMethod >> timeStamp: aTimeStamp [
 	self privateState attributeAt: #timeStamp put: aTimeStamp
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGMethod >> typeScope [
 
 	^ self parentType 

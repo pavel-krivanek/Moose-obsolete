@@ -33,6 +33,7 @@ FmxNGTWithCaughtExceptions classSide >> generatedTraitNames [
 FmxNGTWithCaughtExceptions >> caughtExceptions [
 
 	<generated>
+	<MSEComment: 'The exceptions caught by the method'>
 	^ caughtExceptions
 ]
 
