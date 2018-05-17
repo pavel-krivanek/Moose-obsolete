@@ -35,18 +35,18 @@ FmxNGReference class >> requirements [
 	^ {  }
 ]
 
-{ #category : #accessing }
+{ #category : #'instance creation' }
 FmxNGReference class >> source: source target: target [
 	^ self new source: source; target: target
 ]
 
-{ #category : #visiting }
+{ #category : #'Famix-Extensions' }
 FmxNGReference >> accept: aVisitor [
 
 	aVisitor visitReference: self
 ]
 
-{ #category : #visiting }
+{ #category : #'Famix-Extensions' }
 FmxNGReference >> copyFrom: anEntity within: aVisitor [
 
 	super copyFrom: anEntity within: aVisitor.
@@ -54,22 +54,17 @@ FmxNGReference >> copyFrom: anEntity within: aVisitor [
 	self target: (aVisitor visit: anEntity target).
 ]
 
-{ #category : #'instance  creation' }
+{ #category : #accessing }
 FmxNGReference >> from [
 	^ self source. 
 ]
 
-{ #category : #'instance  creation' }
+{ #category : #accessing }
 FmxNGReference >> from: aSource [
 	self source: aSource . 
 ]
 
-{ #category : #testing }
-FmxNGReference >> isReference [ 
-	^true
-]
-
-{ #category : #testing }
+{ #category : #'Famix-Implementation' }
 FmxNGReference >> mooseNameOn: aStream [
 	"aStream nextPutAll: 'Reference'."
 
@@ -78,18 +73,18 @@ FmxNGReference >> mooseNameOn: aStream [
 	self to ifNotNil: [ aStream nextPutAll: self to name ]
 ]
 
-{ #category : #testing }
+{ #category : #'Famix-Implementation' }
 FmxNGReference >> printOn: aStream [
 	super printOn: aStream.
 	aStream nextPutAll: ' (Reference)'
 ]
 
-{ #category : #'instance  creation' }
+{ #category : #accessing }
 FmxNGReference >> to [
 	^ self target
 ]
 
-{ #category : #'instance  creation' }
+{ #category : #accessing }
 FmxNGReference >> to: aTarget [
 	self target: aTarget
 ]

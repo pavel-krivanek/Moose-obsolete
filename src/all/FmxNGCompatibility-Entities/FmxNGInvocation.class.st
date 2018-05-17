@@ -103,14 +103,14 @@ FmxNGInvocation >> gtDisplayOn: aStream [
 		ifTrue: [ self anyCandidate gtDisplayOn: aStream ]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #initialization }
 FmxNGInvocation >> initialize [
 
 	super initialize.
 	signature := 'nosignature'.
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-testing' }
 FmxNGInvocation >> isAPotentialInvocation [
 	"test if the sender is a potential invocation"
 	| invokedMtdSignature invoRVar invokedMtd |
@@ -133,7 +133,7 @@ FmxNGInvocation >> isAPotentialInvocation [
 	
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-testing' }
 FmxNGInvocation >> isASureInvocation [
 	"Test if the receiver (an invocation) is sure (i.e. we know for sure the class of the invocation's receiver)"
 	| invoRVar |
@@ -158,6 +158,15 @@ FmxNGInvocation >> printOn: aStream [
 { #category : #accessing }
 FmxNGInvocation >> receiverSourceCode [
 	^ self receiver sourceText
+]
+
+{ #category : #accessing }
+FmxNGInvocation >> receiverSourceCode: aString [
+	"CyrilFerlicot: Deprecated the 19 sept 2017"
+
+	self
+		deprecated:
+			'The source code of the receiver should not be saved as a property. Instead access it via the receiver entity and it should be created as a sourceAnchor in the receiver.'
 ]
 
 { #category : #accessing }
