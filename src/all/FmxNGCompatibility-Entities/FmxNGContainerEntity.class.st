@@ -35,13 +35,13 @@ FmxNGContainerEntity class >> requirements [
 	^ {  }
 ]
 
-{ #category : #visiting }
+{ #category : #'Famix-Extensions' }
 FmxNGContainerEntity >> accept: aVisitor [
 
 	aVisitor visitContainerEntity: self
 ]
 
-{ #category : #visiting }
+{ #category : #'Famix-Implementation' }
 FmxNGContainerEntity >> addClass: aClass [
 	
 	types add: aClass
@@ -57,7 +57,7 @@ FmxNGContainerEntity >> addType: aType [
 	types add: aType
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Implementation' }
 FmxNGContainerEntity >> classes [
 	"Classes are usually seen as types from the point of view of a Container. However, there may other types (e.g. aspects) which we dont want to see as classes and are rejected by this method."
 	<navigation: 'Classes'>
@@ -67,7 +67,7 @@ FmxNGContainerEntity >> classes [
 				ifAbsentPut: [self types select: [:type| type isClass ]]
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGContainerEntity >> copyFrom: anEntity within: aVisitor [
 
 	super copyFrom: anEntity within: aVisitor.
@@ -77,7 +77,7 @@ FmxNGContainerEntity >> copyFrom: anEntity within: aVisitor [
 	
 ]
 
-{ #category : #testing }
+{ #category : #'Famix-Implementation' }
 FmxNGContainerEntity >> isContainerEntity [
 	^ true
 ]
@@ -104,7 +104,7 @@ FmxNGContainerEntity >> mooseFinderTypesIn: composite [
 		when: [ self types notEmpty ]
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Java' }
 FmxNGContainerEntity >> mooseNameWithDots [
 	^ self mooseName ifNotNil: [ '.' join: (self mooseName substrings: '::') ]
 ]

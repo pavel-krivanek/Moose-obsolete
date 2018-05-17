@@ -34,6 +34,7 @@ FmxNGTWithFileInclude classSide >> generatedTraitNames [
 FmxNGTWithFileInclude >> incomingIncludeRelations [
 
 	<generated>
+	<MSEComment: 'The include entities that have this file as a target.'>
 	^ incomingIncludeRelations
 ]
 
@@ -49,6 +50,7 @@ FmxNGTWithFileInclude >> incomingIncludeRelations: anObject [
 FmxNGTWithFileInclude >> outgoingIncludeRelations [
 
 	<generated>
+	<MSEComment: 'The include entities that have this file as a source.'>
 	^ outgoingIncludeRelations
 ]
 

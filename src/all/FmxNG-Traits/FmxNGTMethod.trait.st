@@ -31,7 +31,7 @@ FmxNGTMethod classSide >> annotation [
 { #category : #generator }
 FmxNGTMethod classSide >> generatedSlotNames [
 	<generated>
-	^ #(category parentType hasClassScope isPublic timeStamp kind isAbstract)
+	^ #(category hasClassScope timeStamp parentType kind)
 ]
 
 { #category : #generator }
@@ -74,43 +74,11 @@ FmxNGTMethod >> hasClassScope: anObject [
 
 ]
 
-{ #category : #accessing }
-FmxNGTMethod >> isAbstract [
-
-	<MSEProperty: #isAbstract type: #Boolean>
-	<generated>
-	^ isAbstract
-]
-
-{ #category : #accessing }
-FmxNGTMethod >> isAbstract: anObject [
-
-	<generated>
-	isAbstract := anObject
-
-]
-
 { #category : #testing }
 FmxNGTMethod >> isMethod [
 
 	<generated>
 	^ true
-]
-
-{ #category : #accessing }
-FmxNGTMethod >> isPublic [
-
-	<MSEProperty: #isPublic type: #Boolean>
-	<generated>
-	^ isPublic
-]
-
-{ #category : #accessing }
-FmxNGTMethod >> isPublic: anObject [
-
-	<generated>
-	isPublic := anObject
-
 ]
 
 { #category : #accessing }

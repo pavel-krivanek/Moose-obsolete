@@ -33,6 +33,7 @@ FmxNGTWithModule classSide >> generatedTraitNames [
 FmxNGTWithModule >> module [
 
 	<generated>
+	<MSEComment: 'Module that contains the definition of this compilation unit'>
 	^ module
 ]
 

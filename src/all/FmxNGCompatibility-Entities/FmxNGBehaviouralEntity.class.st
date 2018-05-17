@@ -83,7 +83,7 @@ FmxNGBehaviouralEntity >> clientBehaviours [
 	^ self invokingBehaviours 
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-private' }
 FmxNGBehaviouralEntity >> computeNumberOfLinesOfCode [
 	self hasSourceAnchor 
 		ifTrue: [ ^ self sourceAnchor lineCount ].
@@ -92,7 +92,7 @@ FmxNGBehaviouralEntity >> computeNumberOfLinesOfCode [
 			ifFalse: [ self sourceText lineCount ]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-private' }
 FmxNGBehaviouralEntity >> computeNumberOfLinesOfCodeIfSmalltalk [
 	| parser |
 	
@@ -312,7 +312,7 @@ FmxNGBehaviouralEntity >> providerBehaviours [
 	^ self invokedBehaviours 
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #accessing }
 FmxNGBehaviouralEntity >> signature: aString [
 
 	signature := aString.

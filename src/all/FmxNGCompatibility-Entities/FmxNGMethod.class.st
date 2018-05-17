@@ -92,6 +92,24 @@ FmxNGMethod >> belongsTo: aType [
 	self parentType
 ]
 
+{ #category : #'Moose-Finder' }
+FmxNGMethod >> browseSource [
+	<menuItem: 'Source' category: 'Browse'>
+	
+	|class browser |
+	self mooseModel isSmalltalk ifTrue: [
+		class := Smalltalk at: self parentType instanceSide name asSymbol.
+		self hasClassScope
+			ifFalse: [ Smalltalk tools browser openOnClass: class selector: self name ]
+			ifTrue: [ Smalltalk tools browser openOnClass: class class selector: self name ]
+		]
+	ifFalse: [ 
+		browser := MooseNamespacesCodeBrowser new browser.
+		browser openOn: (self mooseModel allNamespaces select: #isRoot).
+		(browser pane port: #focusOnMethod) value: self.
+		 ]
+]
+
 { #category : #'Famix-Smalltalk' }
 FmxNGMethod >> category [
 	<MSEProperty: #category type: #String>
@@ -125,6 +143,12 @@ FmxNGMethod >> classBlueprintFillColor [
 	self isConstant ifTrue: [ ^ Color gray].
 	
 	^ Color white.
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGMethod >> clientClasses [
+	self deprecated: 'use clientTypes instead'.
+	^ self clientTypes
 ]
 
 { #category : #'Famix-Extensions' }
@@ -403,6 +427,11 @@ FmxNGMethod >> methodScope [
 	^ self
 ]
 
+{ #category : #'Moose-Finder' }
+FmxNGMethod >> mooseIcon [ 
+	^ MooseIcons famixMethod
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGMethod >> mooseNameOn: stream [ 
 	| parent |
@@ -476,6 +505,12 @@ FmxNGMethod >> printOn: aStream [
 	aStream nextPutAll: '>>'.
 	signature ifNotNil: [ aStream nextPutAll: signature ].
 	aStream nextPutAll: ' (Method)'
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGMethod >> providerClasses [
+	self deprecated: 'use providerTypes'.
+	^ self providerTypes
 ]
 
 { #category : #'Famix-Extensions' }

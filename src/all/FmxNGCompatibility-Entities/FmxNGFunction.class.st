@@ -41,6 +41,16 @@ FmxNGFunction >> belongsTo [
 	^ self functionOwner
 ]
 
+{ #category : #accessing }
+FmxNGFunction >> container [
+	^ self functionOwner
+]
+
+{ #category : #accessing }
+FmxNGFunction >> container: anObject [
+	^ self functionOwner: anObject
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGFunction >> isFunction [
 	^true.
@@ -75,7 +85,7 @@ FmxNGFunction >> mooseNameOn: stream [
 		ifNil: [ self name ifNotNil: [ stream nextPutAll: self name] ]
 ]
 
-{ #category : #'moosechef-scoping-filtering' }
+{ #category : #'moose-chef-scoping-filtering' }
 FmxNGFunction >> namespaceScope [
 	^ self container 
 		ifNotNil: [ self container namespaceScope ]
@@ -113,4 +123,10 @@ FmxNGFunction >> parentModule: aModule [
 { #category : #accessing }
 FmxNGFunction >> parentScope [
 	^ self functionOwner
+]
+
+{ #category : #accessing }
+FmxNGFunction >> parentScope: aScopingEntity [ 
+	self deprecated: 'Please use container: instead of parentScope:'.
+	self container: aScopingEntity
 ]

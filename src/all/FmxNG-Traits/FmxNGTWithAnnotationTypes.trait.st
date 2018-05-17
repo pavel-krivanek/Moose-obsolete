@@ -33,6 +33,7 @@ FmxNGTWithAnnotationTypes classSide >> generatedTraitNames [
 FmxNGTWithAnnotationTypes >> definedAnnotationTypes [
 
 	<generated>
+	<MSEComment: 'The container in which the AnnotationTypes may be declared'>
 	^ definedAnnotationTypes
 ]
 

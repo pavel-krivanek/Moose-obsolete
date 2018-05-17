@@ -875,10 +875,6 @@ FmxNGGenerator >> defineProperties [
 	((tComment property: #content type: #String) 
 		comment: 'Content of the comment as a String').
 
-	"temporary"
-	(tMethod property: #isAbstract type: #Boolean).
-	(tMethod property: #isPublic type: #Boolean).
-
 	((tPossibleStub property: #isStub type: #Boolean)
 		comment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.').
 
@@ -928,7 +924,8 @@ FmxNGGenerator >> defineRelations [
 		comment: 'Container in which an AnnotationType may reside';
 		container	)
 		*-
-	((tWithAnnotationTypes property: #definedAnnotationTypes)).
+	((tWithAnnotationTypes property: #definedAnnotationTypes)
+		comment: 'The container in which the AnnotationTypes may be declared').
 
 	((tAnnotationTypeAttribute property: #annotationAttributeInstances)
 			comment: 'A collection of AnnotationInstanceAttribute which hold the usages of this attribute in actual AnnotationInstances')
@@ -1007,7 +1004,8 @@ FmxNGGenerator >> defineRelations [
 		comment: 'The container defining the function. The function is placed in a container, because certain languages can nest functions in functions.';
 		container)
 		*-
-	((tWithFunctions property: #functions)).
+	((tWithFunctions property: #functions)
+		comment: 'Functions defined in the container, if any.').
 
 	((tGlobalVariable property: #parentScope)
 			comment: 'Scope declaring the global variable. belongsTo implementation';
@@ -1027,7 +1025,8 @@ FmxNGGenerator >> defineRelations [
 	((tWithImplicitVariables property: #implicitVariables)
 			comment: 'Implicit variables used locally by this behaviour.').
 
-	((tInvocable property: #incomingInvocations))
+	((tInvocable property: #incomingInvocations)
+		comment: 'Incoming invocations from other behaviours computed by the candidate operator.')
 		*-*
 	((tInvocation property: #candidates) 
 			comment: 'List of candidate behavioural entities for receiving the invocation';
@@ -1180,7 +1179,9 @@ FmxNGGenerator >> defineRelations [
 		comment: 'Container entity to which this type belongs to. Container is a namespace, not a package (Smalltalk).';
 		container)
 		*-
-	((tWithTypes property: #types)).
+	((tWithTypes property: #types)
+		comment: 'Types contained (declared) in this entity, if any.
+#types is declared in ContainerEntity because different kinds of container can embed types. Types are usually contained in a Famix.Namespace. But types can also be contained in a Famix.Class or Famix.Method (in Java with inner classes for example). Famix.Function can also contain some types such as structs.').
 
 	((tTypeAlias property: #aliasedType)
 			comment: 'Points to the actual type.')
@@ -1188,7 +1189,8 @@ FmxNGGenerator >> defineRelations [
 	((tWithTypeAliases property: #typeAliases)
 			comment: 'Aliases').
 
-	((tTypedStructure property: #declaredType))
+	((tTypedStructure property: #declaredType)
+		comment: 'Type of the behavioral entity, if any')
 		*-
 	((tWithTypedStructures property: #structuresWithDeclaredType)).
 

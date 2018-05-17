@@ -33,6 +33,7 @@ FmxNGTTypedStructure classSide >> generatedTraitNames [
 FmxNGTTypedStructure >> declaredType [
 
 	<generated>
+	<MSEComment: 'Type of the behavioral entity, if any'>
 	^ declaredType
 ]
 

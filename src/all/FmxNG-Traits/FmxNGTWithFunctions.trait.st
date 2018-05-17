@@ -33,6 +33,7 @@ FmxNGTWithFunctions classSide >> generatedTraitNames [
 FmxNGTWithFunctions >> functions [
 
 	<generated>
+	<MSEComment: 'Functions defined in the container, if any.'>
 	^ functions
 ]
 
