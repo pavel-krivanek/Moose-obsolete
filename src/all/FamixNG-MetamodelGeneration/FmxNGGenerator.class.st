@@ -994,11 +994,13 @@ FmxNGGenerator >> defineRelations [
 	((tWithFiles property: #containerFiles)
 			comment: 'List of files containing the entity').
 
-	((tFileInclude property: #source))
+	((tFileInclude property: #source)
+		comment: 'The file that is including')
 		*-
 	((tWithFileInclude property: #outgoingIncludeRelations)).
 
-	((tFileInclude property: #target))
+	((tFileInclude property: #target)
+		comment: 'The file that is included')
 		*-
 	((tWithFileInclude property: #incomingIncludeRelations)).
 
@@ -1136,11 +1138,13 @@ FmxNGGenerator >> defineRelations [
 	((tSuper property: #subs)).
 
 	((tSubInheritance property: #subclass)
+		comment: 'Subclass linked to in this relationship. from-side of the association';
 		source)
 		*-
 	((tWithSubInheritances property: #superInheritances)).
 
 	((tSuperInheritance property: #superclass)
+		comment: 'Superclass linked to in this relationship. to-side of the association';
 		target)
 		*-
 	((tWithSuperInheritances property: #subInheritances)).

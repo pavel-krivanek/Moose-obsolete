@@ -35,13 +35,13 @@ FmxNGInheritance class >> requirements [
 	^ {  }
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'Famix-Extensions' }
 FmxNGInheritance >> accept: aVisitor [
 
 	aVisitor visitInheritance: self
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'Famix-Extensions' }
 FmxNGInheritance >> copyFrom: anEntity within: aVisitor [
 
 	super copyFrom: anEntity within: aVisitor.
@@ -49,40 +49,46 @@ FmxNGInheritance >> copyFrom: anEntity within: aVisitor [
 	self subclass: (aVisitor visit: anEntity subclass).
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGInheritance >> from [
 	^ self subclass 
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGInheritance >> from: aSubclass [
 	self subclass: aSubclass 
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'Moose-Hismo' }
+FmxNGInheritance >> historicalUniqueName [
+	
+	^(self subclass mooseName , '->' , self superclass mooseName) asSymbol
+]
+
+{ #category : #testing }
 FmxNGInheritance >> isInheritance [ 
 	^true
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'Famix-Implementation' }
 FmxNGInheritance >> mooseNameOn: aStream [
 	self subclass ifNotNil: [ aStream nextPutAll: self subclass name ].
 	aStream nextPutAll: ' -> '.
 	self superclass ifNotNil: [ aStream nextPutAll: self superclass name ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'Famix-Implementation' }
 FmxNGInheritance >> printOn: aStream [
 	super printOn: aStream.
 	aStream nextPutAll: ' (Inheritance)'
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGInheritance >> to [
 	^ self superclass 
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGInheritance >> to: aSuperclass [
 	self superclass: aSuperclass
 ]

@@ -35,12 +35,12 @@ FmxNGInclude class >> requirements [
 	^ {  }
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGInclude >> from [	
 	^ self source
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGInclude >> to [
 	^ self target
 ]

@@ -34,6 +34,7 @@ FmxNGTFileInclude classSide >> generatedTraitNames [
 FmxNGTFileInclude >> source [
 
 	<generated>
+	<MSEComment: 'The file that is including'>
 	^ source
 ]
 
@@ -49,6 +50,7 @@ FmxNGTFileInclude >> source: anObject [
 FmxNGTFileInclude >> target [
 
 	<generated>
+	<MSEComment: 'The file that is included'>
 	^ target
 ]
 
