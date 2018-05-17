@@ -16,7 +16,7 @@ FmxNGComment class >> annotation [
 	^self
 ]
 
-{ #category : #accessing }
+{ #category : #'instance creation' }
 FmxNGComment class >> content: aString [
 	^ self new
 		content: aString;
@@ -53,7 +53,7 @@ FmxNGComment >> asFAMIXComment [
 	^ self
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Implementation' }
 FmxNGComment >> belongsTo [
 	
 	^ self container
@@ -81,7 +81,7 @@ FmxNGComment >> gtDisplayOn: aStream [
 		self belongsTo gtDisplayOn: aStream ]
 ]
 
-{ #category : #printing }
+{ #category : #'Famix-Implementation' }
 FmxNGComment >> printOn: aStream [
 	self sourceText ifNotNil: [ :sourceText | aStream nextPutAll: (sourceText contractTo: 50) ].
 	aStream nextPutAll: ' (comment on '.
@@ -89,7 +89,7 @@ FmxNGComment >> printOn: aStream [
 	aStream nextPut: $)
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #accessing }
 FmxNGComment >> sourceText [
 	^ self content ifNil: [ self sourceAnchor ifNil: [ '' ] ifNotNil: [ :sa | sa sourceText ] ]
 ]

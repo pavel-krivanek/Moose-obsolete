@@ -30,22 +30,22 @@ FmxNGTTraitUsage classSide >> generatedTraitNames [
 	^ #()
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGTTraitUsage >> from [
 	^ self user
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGTTraitUsage >> from: anObject [
 	self user: anObject
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGTTraitUsage >> to [
 	^ self trait
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 FmxNGTTraitUsage >> to: anObject [
 	self trait: anObject
 ]
