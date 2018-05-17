@@ -63,7 +63,7 @@ FmxNGAnnotationType >> container: anObject [
 	^ self annotationTypesContainer: anObject
 ]
 
-{ #category : #'accessing-query' }
+{ #category : #'Moose-Finder' }
 FmxNGAnnotationType >> mooseIcon [ 
 	^ MooseIcons famixAnnotationType
 ]

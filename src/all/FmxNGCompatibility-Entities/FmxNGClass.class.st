@@ -38,13 +38,13 @@ FmxNGClass class >> requirements [
 	^ {  }
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-visitor' }
 FmxNGClass >> accept: aVisitor [
 
 	aVisitor visitClass: self
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGClass >> accessedAttributes [
 	
 	"Returns my attributes accessed by my methods. If the same attribute is accessed 
@@ -54,7 +54,106 @@ FmxNGClass >> accessedAttributes [
 	^ self methodsWithoutSutbsAndConstructors asOrderedCollection flatCollect: [ :method | method accessedAttributes ]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> allDuplicatingClasses [ 
+	 
+	<navigation: 'Classes with fragments duplicated here'> 
+	| files | 
+	files := OrderedCollection new. 
+	self allExternalDuplications 
+		do: 
+			[:dup |  
+			| other | 
+			other := dup referenceCode entity. 
+			self ~= other 
+				ifTrue: 
+					[files 
+						indexOf: other 
+						ifAbsent: [files add: other]]. 
+			other := dup duplicateCode entity. 
+			self ~= other 
+				ifTrue: 
+					[files 
+						indexOf: other 
+						ifAbsent: [files add: other]]]. 
+	^MooseGroup 
+		withAll: files 
+		withDescription: 'All classes with parts duplicated in ' , self mooseName
+]
+
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> allExternalDuplications [ 
+	 
+	<navigation: 'External duplications'> 
+	^DudeDuplicationGroup 
+		withAll: 
+			((self mooseModel ifNil: [ MooseModel new ]) allDuplications 
+				select: 
+					[:dup | (dup isSelfDuplicationOf: self) not and: [dup isDuplicationOf: self]]) 
+		withDescription: 'All external duplications of ' , self mooseName
+]
+
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> allExternalMultiplications [ 
+	 
+	<navigation: 'External multiplications'> 
+	^DudeMultiplicationGroup 
+		withAll: 
+			((self mooseModel ifNil: [MooseModel new]) 
+				allMultiplications select: 
+					[:each | (each isInternalTo: self) not and: [each isMultiplicationOf: self]]) 
+		withDescription: 'All external multiplications of ' , self mooseName
+]
+
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> allInternalDuplications [ 
+	 
+	<navigation: 'Internal duplications'> 
+	^DudeDuplicationGroup 
+		withAll: 
+			((self mooseModel ifNil: [ MooseModel new ]) allDuplications 
+				select: [:dup | dup isSelfDuplicationOf: self]) 
+		withDescription: 'All internal duplications of ' , self mooseName
+]
+
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> allInternalMultiplications [ 
+	 
+	<navigation: 'Internal multiplications'> 
+	^DudeMultiplicationGroup 
+		withAll: 
+			((self mooseModel ifNil: [MooseModel new]) 
+				allMultiplications 
+				select: [:each | each isInternalTo: self]) 
+		withDescription: 'All internal multiplications of ' , self mooseName
+]
+
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> allMultiplications [ 
+	 
+	<navigation: 'All multiplications'> 
+	^DudeMultiplicationGroup 
+		withAll: 
+			((self mooseModel ifNil: [ MooseModel new ]) 
+				allMultiplications 
+					select: [:each | each isMultiplicationOf: self]) 
+		withDescription: 'All multiplications of ' , self mooseName
+]
+
+{ #category : #'Moose-Finder' }
+FmxNGClass >> browseSource [
+	<menuItem: 'Source' category: 'Browse'>
+	| browser |
+	self mooseModel isSmalltalk 
+		ifTrue: [ (Smalltalk at: self name) browse ]
+	ifFalse: [ 
+		browser := MooseNamespacesCodeBrowser new browser.
+		browser openOn: (self mooseModel allNamespaces select: #isRoot).
+		(browser pane port: #focusOnClass) value: self.
+		 ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGClass >> calculateLCOM2 [
 	
 	"Definitions used for LCOM2 and LCOM3 m	number of procedures (methods) in class
@@ -79,7 +178,7 @@ FmxNGClass >> calculateLCOM2 [
 	^ (1 - (sumMa / (m*a)))
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGClass >> calculateLCOM3 [
 	
 	"Definitions used for LCOM2 and LCOM3 m	number of procedures (methods) in class
@@ -105,7 +204,7 @@ FmxNGClass >> calculateLCOM3 [
 	^ (m - (sumMa/a)) / (m-1)
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-Testing' }
 FmxNGClass >> containsTheReceiverOf: anInvocation [ 
 	 
 	^anInvocation receivingVariable notNil 
@@ -119,14 +218,14 @@ FmxNGClass >> containsTheReceiverOf: anInvocation [
 		ifFalse: [false]
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
 FmxNGClass >> inheritedClasses [
 	
 	self flag: #fixme.
 	^ #()
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
 FmxNGClass >> inheritedClassesOutOfMyPackage [
 	
 	self flag: #fixme.
@@ -140,7 +239,7 @@ FmxNGClass >> initialize [
 	isInterface := false
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-HierarchyTesting' }
 FmxNGClass >> isADirectSubclassOf: aClass [ 
 	 
 	aClass class = FmxNGClass 
@@ -148,7 +247,7 @@ FmxNGClass >> isADirectSubclassOf: aClass [
 		ifFalse: [^false]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-HierarchyTesting' }
 FmxNGClass >> isADirectSuperclassOf: aClass [ 
 	 
 	aClass class = FmxNGClass 
@@ -156,7 +255,7 @@ FmxNGClass >> isADirectSuperclassOf: aClass [
 		ifFalse: [^false]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-HierarchyTesting' }
 FmxNGClass >> isASubclassOf: aClass [ 
 	 
 	^aClass class = FmxNGClass 
@@ -164,7 +263,7 @@ FmxNGClass >> isASubclassOf: aClass [
 		ifFalse: [false]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-HierarchyTesting' }
 FmxNGClass >> isASuperclassOf: aClass [ 
 	 
 	^aClass class = FmxNGClass 
@@ -172,7 +271,7 @@ FmxNGClass >> isASuperclassOf: aClass [
 		ifFalse: [false]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-Testing' }
 FmxNGClass >> isAccessedBy: anAccess [ 
 	 
 	^anAccess accesses == self
@@ -188,7 +287,7 @@ FmxNGClass >> isIgnored [
 	^ (self isAnnotatedWith: 'Ignore') 
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-Testing' }
 FmxNGClass >> isInheritedBy: anInheritance [ 
 	 
 	^anInheritance superclass == self
@@ -206,7 +305,7 @@ FmxNGClass >> isInterface: boolean [
 	isInterface := boolean
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-Testing' }
 FmxNGClass >> isInvokedBy: anInvocation [ 
 	 
 	^(anInvocation candidateList notNil 
@@ -218,7 +317,18 @@ FmxNGClass >> isInvokedBy: anInvocation [
 		ifFalse: [false]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'SmallDude-Moose-testing' }
+FmxNGClass >> isMultipliedWithin: aGroup [ 
+	 
+	| intersection | 
+	^self allMultiplications 
+		anySatisfy: 
+			[:each |  
+			intersection := each multiplyingEntities intersection: aGroup. 
+			intersection size > 1 and: [intersection includes: self]]
+]
+
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGClass >> lcom2 [
 
 	<MSEProperty: #lcom2 type: #Number>
@@ -230,7 +340,7 @@ FmxNGClass >> lcom2 [
 		computedAs: [self calculateLCOM2]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGClass >> lcom3 [
 
 	<MSEProperty: #lcom3 type: #Number>
@@ -242,13 +352,47 @@ FmxNGClass >> lcom3 [
 		computedAs: [self calculateLCOM3]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGClass >> methodsWithoutSutbsAndConstructors [
 
 	"Removing stub and contructor methods. Used to support the calculation of LCOM."
 	
 	^ (self methods select: [ :each | 
 		each isStub not and: [each isConstructor not]]) asSet
+]
+
+{ #category : #'Moose-Finder' }
+FmxNGClass >> mooseIcon [
+	^ self isInterface 
+		ifTrue: [ MooseIcons famixInterface ]
+		ifFalse: [ MooseIcons famixClass ]
+]
+
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> numberOfExternalDuplications [ 
+	<MSEProperty: #numberOfExternalDuplications type: #Number>
+	<derived>
+	<MSEComment: 'The number of pairs of duplicate fragments between this class and other classes'>
+
+	^self 
+		lookUpPropertyNamed: #numberOfExternalDuplications 
+		computedAs: [self allExternalDuplications size]
+]
+
+{ #category : #'SmallDude-Moose-accessing derived' }
+FmxNGClass >> numberOfInternalDuplications [ 
+	<MSEProperty: #numberOfInternalDuplications type: #Number>
+	<derived>
+	<MSEComment:  'The number of pairs of duplicate fragments within the class'>
+
+	^self 
+		lookUpPropertyNamed: #numberOfInternalDuplications 
+		computedAs: [self allInternalDuplications size]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGClass >> selectWithinYourScope: aMooseQueryResult [
+	^ aMooseQueryResult withinClass: self
 ]
 
 { #category : #'Famix-Implementation' }
@@ -277,28 +421,28 @@ FmxNGClass >> structuralChildren [
 	^ (OrderedCollection withAll: self methods), self attributes
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
 FmxNGClass >> sureInvokedClasses [
 	
 	self flag: #fixme.
 	^ self queryAllOutgoingInvocations opposites
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
 FmxNGClass >> sureInvokedClassesInto: aFAMIXPackage [ 
 	
 	self flag: #fixme.
 	^ self sureInvokedClasses
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
 FmxNGClass >> sureInvokingClasses [
 	
 	self flag: #fixme.
 	^ self queryAllIncomingInvocations opposites
 ]
 
-{ #category : #'Moose-RoassalPaintings' }
+{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
 FmxNGClass >> sureInvokingClassesInto: aFAMIXPackage [ 
 	
 	self flag: #fixme.

@@ -33,6 +33,7 @@ FmxNGTWithTypedStructures classSide >> generatedTraitNames [
 FmxNGTWithTypedStructures >> structuresWithDeclaredType [
 
 	<generated>
+	<MSEComment: 'Structural entities that have this type as declaredType'>
 	^ structuresWithDeclaredType
 ]
 

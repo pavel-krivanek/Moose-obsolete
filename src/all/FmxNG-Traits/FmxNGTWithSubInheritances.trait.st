@@ -33,6 +33,7 @@ FmxNGTWithSubInheritances classSide >> generatedTraitNames [
 FmxNGTWithSubInheritances >> superInheritances [
 
 	<generated>
+	<MSEComment: 'Superinheritance relationships, i.e. known superclasses of this type.'>
 	^ superInheritances
 ]
 
