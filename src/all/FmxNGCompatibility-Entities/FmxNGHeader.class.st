@@ -34,3 +34,8 @@ FmxNGHeader class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGHeader >> isHeader [
+	^ true
+]

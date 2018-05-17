@@ -109,13 +109,6 @@ FmxNGAssociation >> gtDisplayOn: aStream [
 	self to gtDisplayOn: aStream	
 ]
 
-{ #category : #accessing }
-FmxNGAssociation >> isAssociation [
-
-	<generated>
-	^ true
-]
-
 { #category : #'Moose-Finder' }
 FmxNGAssociation >> mooseFinderSourceTextIn: composite [
 	<moosePresentationOrder: 20>

@@ -24,13 +24,18 @@ FmxNGTFile classSide >> annotation [
 { #category : #generator }
 FmxNGTFile classSide >> generatedSlotNames [
 	<generated>
-	^ #(name entities)
+	^ #(entities)
 ]
 
 { #category : #generator }
 FmxNGTFile classSide >> generatedTraitNames [
 	<generated>
 	^ #()
+]
+
+{ #category : #accessing }
+FmxNGTFile >> addEntity: famixEntity [
+	self entities add: famixEntity
 ]
 
 { #category : #accessing }
@@ -46,22 +51,5 @@ FmxNGTFile >> entities: anObject [
 
 	<generated>
 	entities := anObject
-
-]
-
-{ #category : #accessing }
-FmxNGTFile >> name [
-
-	<MSEProperty: #name type: #String>
-	<generated>
-	<MSEComment: 'Basic name of the entity, not full reference.'>
-	^ name
-]
-
-{ #category : #accessing }
-FmxNGTFile >> name: anObject [
-
-	<generated>
-	name := anObject
 
 ]

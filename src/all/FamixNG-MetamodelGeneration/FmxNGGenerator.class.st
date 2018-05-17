@@ -839,9 +839,6 @@ FmxNGGenerator >> commentForTWithTypes [
 { #category : #definition }
 FmxNGGenerator >> defineProperties [
 
-	((tFile property: #name type: #String)
-		comment: 'Basic name of the entity, not full reference.').
-	
 	"FIX"
 	((tFileAnchor property: #correspondingFile type: #FmxNGTFile) 
 		comment: 'File associated to this source anchor').
@@ -997,12 +994,14 @@ FmxNGGenerator >> defineRelations [
 	((tFileInclude property: #source)
 		comment: 'The file that is including')
 		*-
-	((tWithFileInclude property: #outgoingIncludeRelations)).
+	((tWithFileInclude property: #outgoingIncludeRelations)
+		comment: 'The include entities that have this file as a source.').
 
 	((tFileInclude property: #target)
 		comment: 'The file that is included')
 		*-
-	((tWithFileInclude property: #incomingIncludeRelations)).
+	((tWithFileInclude property: #incomingIncludeRelations)
+		comment: 'The include entities that have this file as a target.').
 
 	((tFunction property: #functionOwner)
 		comment: 'The container defining the function. The function is placed in a container, because certain languages can nest functions in functions.';
@@ -1063,7 +1062,8 @@ FmxNGGenerator >> defineRelations [
 
 	((tModule property: #moduleFiles))
 		-*
-	((tWithModule property: #module)).
+	((tWithModule property: #module)
+			comment: 'Module that contains the definition of this compilation unit').
 
 	((tNamespace property: #namespaceEntities))
 		-*

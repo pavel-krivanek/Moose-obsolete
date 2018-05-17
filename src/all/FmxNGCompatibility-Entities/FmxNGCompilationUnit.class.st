@@ -34,3 +34,8 @@ FmxNGCompilationUnit class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGCompilationUnit >> isCompilationUnit [
+	^ true
+]

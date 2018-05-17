@@ -224,7 +224,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	abstractFile <|-- file.
 	abstractFile <|-- folder.
 
-	
 	abstractFile generalization: namedEntity.
 	
 	abstractFileAnchor generalization: sourceAnchor.
@@ -310,6 +309,8 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	enumValue generalization: #TEnumValue.
 
 	exception generalization: #TException.
+
+	file generalization: #TFile.
 
 	fileAnchor generalization: abstractFileAnchor.
 
