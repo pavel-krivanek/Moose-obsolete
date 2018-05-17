@@ -12,7 +12,7 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> allChildrenTypes [
 	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
 ]
@@ -27,7 +27,7 @@ FmxNGAnnotationInstanceAttribute class >> allOutgoingAssociationTypes [
 	^ self privateAllOutgoingAssociationTypes
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> allParentTypes [
 	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
@@ -42,12 +42,22 @@ FmxNGAnnotationInstanceAttribute class >> annotation [
 	^self
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
+FmxNGAnnotationInstanceAttribute class >> childrenAccessors [
+	self
+		deprecated: 'Use childrenSelectors instead'
+		on: '21 December 2016'
+		in: 'Pharo-6.0-60328-'
+		transformWith: '`@receiver childrenAccessors' -> '`@receiver childrenSelectors'.
+	^ self childrenSelectors
+]
+
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> childrenSelectors [
 	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> childrenTypes [
 	^ self privateChildrenTypes
 ]
@@ -64,22 +74,32 @@ FmxNGAnnotationInstanceAttribute class >> generatedTraitNames [
 	^ #(FmxNGTAnnotationInstanceAttribute FmxNGTTypedAnnotationInstanceAttribute)
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> incomingMSEProperties [
 	^ #()
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> outgoingMSEProperties [
 	^ #()
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
+FmxNGAnnotationInstanceAttribute class >> parentSelector [
+	self 
+		deprecated: 'Use parentSelectors instead'
+		on: 	'21 December 2016' 
+		in: 'Pharo-6.0-60328-'
+		transformWith: '`@receiver parentSelector' -> '`@receiver parentSelectors'.
+	^ self parentSelectors
+]
+
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> parentSelectors [
 	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> parentTypes [
 	^ self privateParentTypes 
 ]
@@ -91,7 +111,7 @@ FmxNGAnnotationInstanceAttribute class >> requirements [
 	^ {  }
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
 	childrenSelectors := nil.
@@ -116,7 +136,7 @@ FmxNGAnnotationInstanceAttribute >> name [
 		ifFalse: [ nil ]
 ]
 
-{ #category : #'moosequery-queries-incoming' }
+{ #category : #'moosequery-queries-outgoing' }
 FmxNGAnnotationInstanceAttribute >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	

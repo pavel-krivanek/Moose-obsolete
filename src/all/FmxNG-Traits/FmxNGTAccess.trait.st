@@ -72,9 +72,25 @@ FmxNGTAccess >> isAccess [
 ]
 
 { #category : #accessing }
+FmxNGTAccess >> isRead [
+	<MSEProperty: #isRead type: #Boolean> <derived>
+	<MSEComment: 'Read access'>
+	
+	^ isWrite isNil ifTrue: [ false ] ifFalse: [ isWrite not ]
+]
+
+{ #category : #accessing }
+FmxNGTAccess >> isReadWriteUnknown [
+	<MSEProperty: #isReadWriteUnknown type: #Boolean> <derived>
+	<MSEComment: ''>
+	
+	^ isWrite isNil
+]
+
+{ #category : #accessing }
 FmxNGTAccess >> isWrite [
 
-	^ super isWrite ifNil: [ false ]
+	^ isWrite ifNil: [ false ]
 ]
 
 { #category : #accessing }
