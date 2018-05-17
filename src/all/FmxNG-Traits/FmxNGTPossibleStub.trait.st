@@ -46,7 +46,7 @@ FmxNGTPossibleStub >> isStub: anObject [
 
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Implementation' }
 FmxNGTPossibleStub >> stub: aBoolean [
 	
 	self isStub: aBoolean

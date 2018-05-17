@@ -28,7 +28,7 @@ TEntityMetaLevelDependency classSide >> allParentTypes [
 	^ self explicitRequirement
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 TEntityMetaLevelDependency classSide >> childrenAccessors [
 	self
 		deprecated: 'Use childrenSelectors instead'
@@ -78,7 +78,7 @@ TEntityMetaLevelDependency classSide >> outgoingMSEProperties [
 	^ self explicitRequirement
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 TEntityMetaLevelDependency classSide >> parentSelectors [
 	^ self explicitRequirement
 ]

@@ -29,12 +29,12 @@ FmxNGTWithModifiers classSide >> generatedTraitNames [
 	^ #()
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Implementation' }
 FmxNGTWithModifiers >> addModifier: aString [
 	modifiers add: aString
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isAbstract [
 	<MSEProperty: #isAbstract type: #Boolean> <derived>
 	<MSEComment: 'Flag true for abstract entities. Language dependent.'>
@@ -42,12 +42,12 @@ FmxNGTWithModifiers >> isAbstract [
 	^ self modifiers includes: #abstract
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isAbstract: aBoolean [
 	^ self modifierSet: aBoolean for: #abstract
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isFinal [
 	<MSEProperty: #isFinal type: #Boolean> <derived>
 	<MSEComment: 'Flag true for entities defined as being final. Language dependent.'>	
@@ -55,12 +55,12 @@ FmxNGTWithModifiers >> isFinal [
 	^ self modifiers includes: #final
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isFinal: aBoolean [
 	^ self modifierSet: aBoolean for: #final
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isPackage [
 	<MSEProperty: #isPackage type: #Boolean> <derived>
 	<MSEComment: 'Flag true for entities that have a package visibility. Language dependent.'>
@@ -68,12 +68,12 @@ FmxNGTWithModifiers >> isPackage [
 	^ self modifiers includes: #package
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isPackage: aBoolean [
 	^ self modifierSet: aBoolean for: #package
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isPrivate [
 	<MSEProperty: #isPrivate type: #Boolean> <derived>
 	<MSEComment: 'Flag true for entities invisible out of their owner scope. Language dependent.'>
@@ -81,12 +81,12 @@ FmxNGTWithModifiers >> isPrivate [
 	^ self modifiers includes: #private
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isPrivate: aBoolean [
 	^ self modifierSet: aBoolean for: #private
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isProtected [
 	<MSEProperty: #isProtected type: #Boolean> <derived>
 	<MSEComment: 'Flag true for protected entities, depending on language semantics.'>
@@ -94,12 +94,12 @@ FmxNGTWithModifiers >> isProtected [
 	^ self modifiers includes: #protected
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isProtected: aBoolean [
 	^ self modifierSet: aBoolean for: #protected
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isPublic [
 	<MSEProperty: #isPublic type: #Boolean> <derived>
 	<MSEComment: 'Flag true for entities accessible from anywhere. Language dependent.'>	
@@ -107,12 +107,12 @@ FmxNGTWithModifiers >> isPublic [
 	^ self modifiers includes: #public
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isPublic: aBoolean [
 	^ self modifierSet: aBoolean for: #public
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Implementation' }
 FmxNGTWithModifiers >> modifierSet: aBoolean for: aSymbol [
 	^ aBoolean ifTrue: [self addModifier: aSymbol] ifFalse: [self removeModifier: aSymbol]
 ]
@@ -135,7 +135,7 @@ FmxNGTWithModifiers >> modifiers: anObject [
 
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Implementation' }
 FmxNGTWithModifiers >> removeModifier: aString [
 	modifiers remove: aString ifAbsent: []
 ]

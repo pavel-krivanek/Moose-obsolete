@@ -47,7 +47,7 @@ FmxNGTNamed >> name: anObject [
 
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTNamed >> nameLength [
 	<MSEProperty: #nameLength type: #Number>
 	<derived>
@@ -58,7 +58,7 @@ FmxNGTNamed >> nameLength [
 		computedAs: [self name size]
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions' }
 FmxNGTNamed >> nameLength: aNumber [
 	
 	self privateState propertyAt: #nameLength put: aNumber

@@ -29,14 +29,14 @@ FmxNGTWithAnnotationInstances classSide >> generatedTraitNames [
 	^ #()
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Java' }
 FmxNGTWithAnnotationInstances >> annotationInstanceNamed: anAnnotationName [
 	^ self 
 		annotationInstanceNamed: anAnnotationName 
 		ifAbsent: [ ]
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Java' }
 FmxNGTWithAnnotationInstances >> annotationInstanceNamed: anAnnotationName ifAbsent: aBlock [
 	^ self annotationInstances 
 		detect: [ :each | each annotationType name asSymbol = anAnnotationName asSymbol ]
@@ -65,12 +65,12 @@ FmxNGTWithAnnotationInstances >> annotationTypes [
 
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Java' }
 FmxNGTWithAnnotationInstances >> isAnnotated [
 	^ self annotationInstances notEmpty
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Java' }
 FmxNGTWithAnnotationInstances >> isAnnotatedWith: anAnnotationName [
 	^ self annotationInstances contains: [ :each | each annotationType name asSymbol = anAnnotationName asSymbol ]
 ]

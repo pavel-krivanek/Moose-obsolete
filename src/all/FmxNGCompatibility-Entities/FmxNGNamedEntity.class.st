@@ -18,7 +18,7 @@ Class {
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> allChildrenTypes [
 	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
 ]
@@ -39,7 +39,7 @@ FmxNGNamedEntity class >> allOutgoingAssociationTypes [
 		ifNil: [ allOutgoingAssociationTypes := self privateAllOutgoingAssociationTypes ]
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> allParentTypes [
 	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
@@ -54,17 +54,17 @@ FmxNGNamedEntity class >> annotation [
 	^self
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> belongsToMethod [
 	^ self compiledMethodAt: #belongsTo ifAbsent: nil
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> childrenSelectors [
 	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> childrenTypes [
 	^ self privateChildrenTypes
 ]
@@ -105,7 +105,7 @@ FmxNGNamedEntity class >> incomingMSEPropertiesCache: aValue [
 	incomingMSEProperties := aValue
 ]
 
-{ #category : #accessing }
+{ #category : #'instance creation' }
 FmxNGNamedEntity class >> named: aString [
 	^ self new
 		name: aString;
@@ -131,11 +131,26 @@ FmxNGNamedEntity class >> outgoingMSEPropertiesCache: aValue [
 ]
 
 { #category : #accessing }
+FmxNGNamedEntity class >> parentMetaclass [
+	^((self class >> #annotation) pragmas select: [ :p | p keyword = 'parentMetaClass:' ]) collect: [:p | p arguments first ]
+]
+
+{ #category : #'Moose-Query-Extensions' }
+FmxNGNamedEntity class >> parentSelector [
+	self 
+		deprecated: 'Use parentSelectors instead'
+		on: 	'21 December 2016' 
+		in: 'Pharo-6.0-60328-'
+		transformWith: '`@receiver parentSelector' -> '`@receiver parentSelectors'.
+	^ self parentSelectors
+]
+
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> parentSelectors [
 	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> parentTypes [
 	^ self privateParentTypes 
 ]
@@ -147,10 +162,10 @@ FmxNGNamedEntity class >> requirements [
 	^ {  }
 ]
 
-{ #category : #accessing }
+{ #category : #'Moose-Query-Extensions' }
 FmxNGNamedEntity class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
-	childrenSelectors := parentSelectors := allChildrenTypes := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := nil
+	childrenSelectors := parentSelectors := allChildrenTypes := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := allOutgoingAssociationTypes := allIncomingAssociationTypes := nil
 ]
 
 { #category : #'Famix-Extensions' }
@@ -249,7 +264,7 @@ FmxNGNamedEntity >> namespaceScope [
 	^ nil
 ]
 
-{ #category : #'moosequery-queries-incoming' }
+{ #category : #'moosequery-queries-outgoing' }
 FmxNGNamedEntity >> outgoingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
 	
@@ -266,7 +281,7 @@ FmxNGNamedEntity >> packageScope [
 	^ nil
 ]
 
-{ #category : #accessing }
+{ #category : #'meta information' }
 FmxNGNamedEntity >> resetMooseName [
 	super resetMooseName.
 	self children do: [ :entity | entity resetMooseName ]
