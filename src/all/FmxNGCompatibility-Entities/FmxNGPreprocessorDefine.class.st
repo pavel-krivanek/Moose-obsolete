@@ -3,6 +3,9 @@ Class {
 	#superclass : #FmxNGPreprocessorStatement,
 	#traits : 'FmxNGTPreprocessorIfdef',
 	#classTraits : 'FmxNGTPreprocessorIfdef classTrait',
+	#instVars : [
+		'macro'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -33,4 +36,16 @@ FmxNGPreprocessorDefine class >> requirements [
 
 	<generated>
 	^ {  }
+]
+
+{ #category : #accessing }
+FmxNGPreprocessorDefine >> macro [
+	<MSEProperty: #macro type: #String>
+	<MSEComment: 'The name of the macro being defined'>
+	^ macro
+]
+
+{ #category : #accessing }
+FmxNGPreprocessorDefine >> macro: anObject [
+	macro := anObject
 ]

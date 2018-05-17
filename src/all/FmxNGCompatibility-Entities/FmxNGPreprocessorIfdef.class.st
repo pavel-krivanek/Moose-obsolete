@@ -1,6 +1,10 @@
 Class {
 	#name : #FmxNGPreprocessorIfdef,
 	#superclass : #FmxNGPreprocessorStatement,
+	#instVars : [
+		'negated',
+		'macro'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -31,4 +35,28 @@ FmxNGPreprocessorIfdef class >> requirements [
 
 	<generated>
 	^ {  }
+]
+
+{ #category : #accessing }
+FmxNGPreprocessorIfdef >> isNegated [
+	<MSEProperty: #negated type: #Boolean>
+	<MSEComment: 'Whether it is an #ifdef (false) or #ifndef (true)'>
+	^ negated
+]
+
+{ #category : #accessing }
+FmxNGPreprocessorIfdef >> isNegated: aBoolean [
+	negated := aBoolean
+]
+
+{ #category : #accessing }
+FmxNGPreprocessorIfdef >> macro [
+	<MSEProperty: #macro type: #String>
+	<MSEComment: 'The name of the macro being tested'>
+	^ macro
+]
+
+{ #category : #accessing }
+FmxNGPreprocessorIfdef >> macro: anObject [
+	macro := anObject
 ]

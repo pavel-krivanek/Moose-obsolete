@@ -35,7 +35,7 @@ FmxNGParameterizedType class >> requirements [
 	^ {  }
 ]
 
-{ #category : #enumerating }
+{ #category : #accessing }
 FmxNGParameterizedType >> allSubclassesDo: aBlock [
 	"we override this traversal because we want to
 	traverse the parameter type"
@@ -43,7 +43,7 @@ FmxNGParameterizedType >> allSubclassesDo: aBlock [
 	self parameterizableClass ifNotNil: [ :a | a withSubclassesDo: aBlock ]
 ]
 
-{ #category : #enumerating }
+{ #category : #accessing }
 FmxNGParameterizedType >> allSuperclassesDo: aBlock [
 	"we override this traversal because we want to
 	traverse the parameter type"
@@ -56,7 +56,7 @@ FmxNGParameterizedType >> isParameterizedType [
 	^ true
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #printing }
 FmxNGParameterizedType >> mooseNameOn: aStream [ 
 	self parameterizableClass notNil 
 		ifTrue: [self parameterizableClass mooseNameOn: aStream].

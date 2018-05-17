@@ -50,6 +50,18 @@ FmxNGImplicitVariable >> belongsTo: aBehaviouralEntity [
 	self parentBehaviouralEntity: aBehaviouralEntity 
 ]
 
+{ #category : #accessing }
+FmxNGImplicitVariable >> container [
+	self deprecated: 'Please use parentBehaviouralEntity instead'.  
+	^ self parentBehaviouralEntity
+]
+
+{ #category : #accessing }
+FmxNGImplicitVariable >> container: aBehaviouralEntity [
+	self deprecated: 'Please use #parentBehaviouralEntity: instead'.
+	^ self parentBehaviouralEntity: aBehaviouralEntity
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGImplicitVariable >> copyFrom: anEntity within: aVisitor [
 

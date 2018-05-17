@@ -41,7 +41,7 @@ FmxNGEnumValue >> belongsTo [
 	^ self parentEnum
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #printing }
 FmxNGEnumValue >> mooseNameOn: aStream [
 	(self belongsTo isNotNil and: [ self belongsTo name isNotNil ])
 		ifTrue: [ self belongsTo mooseNameOn: aStream.
