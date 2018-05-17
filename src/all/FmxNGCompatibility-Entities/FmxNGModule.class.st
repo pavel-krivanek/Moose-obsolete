@@ -34,3 +34,8 @@ FmxNGModule class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #accessing }
+FmxNGModule >> classes [ 
+	^ #()
+]

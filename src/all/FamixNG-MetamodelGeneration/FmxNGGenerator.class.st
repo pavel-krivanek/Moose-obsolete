@@ -957,7 +957,8 @@ FmxNGGenerator >> defineRelations [
 	((tWithComments property: #comments)
 			comment: 'list of comments defined in the entity').
 
-	((tCompilationUnit property: #compilationUnitOwner))
+	((tCompilationUnit property: #compilationUnitOwner)
+			comment: 'The compilation unit that defines this module')
 		-
 	((tWithCompilationUnit property: #compilationUnit)).
 
@@ -1018,7 +1019,8 @@ FmxNGGenerator >> defineRelations [
 
 	((tHeader property: #headerOwner))
 		-
-	((tWithHeader property: #header)).
+	((tWithHeader property: #header)
+			comment: 'The header file that defines this module').
 
 	((tImplicitVariable property: #parentBehaviouralEntity)
 			comment: 'The behaviour containing this implicit variable. belongsTo implementation';

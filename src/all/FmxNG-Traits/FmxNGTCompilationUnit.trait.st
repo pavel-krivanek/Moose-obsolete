@@ -36,6 +36,7 @@ FmxNGTCompilationUnit classSide >> generatedTraitNames [
 FmxNGTCompilationUnit >> compilationUnitOwner [
 
 	<generated>
+	<MSEComment: 'The compilation unit that defines this module'>
 	^ compilationUnitOwner
 ]
 

@@ -35,7 +35,7 @@ FmxNGScopingEntity class >> requirements [
 	^ {  }
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> abstractness [
 	"Abstractness is the ratio between the number of abstract classes and the total number of classes in a package, in the range [0, 1]. 0 means the package is fully concrete, 1 it is fully abstract."
 	
@@ -48,17 +48,17 @@ FmxNGScopingEntity >> accept: aVisitor [
 	aVisitor visitScopingEntity: self
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 FmxNGScopingEntity >> addChildScope: aScopingEntity [ 
 	childScopes add: aScopingEntity
 ]
 
-{ #category : #adding }
+{ #category : #accessing }
 FmxNGScopingEntity >> addGlobalVariable: aGlobalVariable [ 
 	globalVariables add: aGlobalVariable
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> afferentCoupling [
 	"Afferent coupling for a module is the number of modules that depend upon this module"
 	
@@ -105,19 +105,31 @@ FmxNGScopingEntity >> allParentScopesDo: aBlock [
 		self parentScope withAllParentScopesDo: aBlock ]
 ]
 
-{ #category : #adding }
+{ #category : #'Famix-Extensions' }
+FmxNGScopingEntity >> allRecursiveClasses [
+	self deprecated: 'Use allClasses'.
+	^ self allClasses 
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGScopingEntity >> allRecursiveScopes [
+	self deprecated: 'Use allChildScopes'.
+	^ self allChildScopes 
+]
+
+{ #category : #accessing }
 FmxNGScopingEntity >> belongsTo [
 	^ self parentScope ifNil: [ self parentPackage ]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> bunchCohesion [
 	"Computing cohesion (Bunch formula)"
 
 	^ self subclassResponsibility
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> bunchCouplingWith: aScope [
 	"Computing coupling (Bunch formula) with aScope"
 
@@ -143,21 +155,21 @@ FmxNGScopingEntity >> copyFrom: anEntity within: aVisitor [
 		self addFunction: (aVisitor visit: f) ].
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> distance [
 	"D = A + I - 1. A package should be balanced between abstractness and instability, i.e., somewhere between abstract and stable or concrete and unstable. This rule defines the main sequence by the equation A + I - 1 = 0. D is the distance to the main sequence."
 	
 	self subclassResponsibility
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> efferentCoupling [
 	"Efferent coupling for a module is the number of modules it depends upon"
 	
 	^ self subclassResponsibility
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> instability [
 	"I =	Ce(P)/(Ce(P)+Ca(P)), in the range [0, 1]. 0 means package is maximally stable (i.e., no dependency to other packages and can not change without big consequences), 1 means it is unstable."
 	
@@ -169,14 +181,14 @@ FmxNGScopingEntity >> isRoot [
 	^ self parentScope isNil
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGScopingEntity >> methodScope [
 	"This only makes sense to reject self loops in #collectAtScope:"
 
 	^ self classes collectAsSet: [:c | c methods]
 ]
 
-{ #category : #ui }
+{ #category : #'Moose-Finder' }
 FmxNGScopingEntity >> mooseFinderChildrenTreeIn: composite [ 
 	<moosePresentationOrder: 80>
 	composite tree 
@@ -201,7 +213,7 @@ FmxNGScopingEntity >> structuralChildren [
 	^ (OrderedCollection withAll: self childScopes), self classes 
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGScopingEntity >> typeScope [
 	"This only makes sense to reject self loops in #collectAtScope:"
 	^ self classes

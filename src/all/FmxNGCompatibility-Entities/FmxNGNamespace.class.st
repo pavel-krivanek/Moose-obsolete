@@ -35,7 +35,7 @@ FmxNGNamespace class >> requirements [
 	^ {  }
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> abstractness [
 	"Abstractness is the ratio between the number of abstract classes and the total number of classes in a package, in the range [0, 1]. 0 means the package is fully concrete, 1 it is fully abstract."
 	<MSEProperty: #abstractness type: #Number>
@@ -49,7 +49,7 @@ FmxNGNamespace >> abstractness [
 	^ (nsClasses select: [:c | c isAbstract]) size / (nsClasses size) asFloat
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> abstractness: aNumber [
 
 	self privateState propertyAt: #abstractness put: aNumber
@@ -61,7 +61,7 @@ FmxNGNamespace >> accept: aVisitor [
 	aVisitor visitNamespace: self
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> afferentCoupling [
 	<MSEProperty: #afferentCoupling type: #Number>
 	<derived>
@@ -69,7 +69,7 @@ FmxNGNamespace >> afferentCoupling [
 	^ ((self queryAllIncoming atScope: FmxNGType) outOfMyNamespace select: [ :c | c isInstanceSide ]) size
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> afferentCoupling: aNumber [
 
 	self privateState propertyAt: #afferentCoupling put: aNumber
@@ -81,7 +81,19 @@ FmxNGNamespace >> allParentsUpTo: aNamespace [
 	^ self parentScope withAllParentsUpTo: aNamespace
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Moose-Finder' }
+FmxNGNamespace >> browseSource [
+	<menuItem: 'Source' category: 'Browse'>
+	| browser |
+	self mooseModel isSmalltalk 
+		ifTrue: [ (Smalltalk at: self name) browse ]
+	ifFalse: [ 
+		browser := MooseNamespacesCodeBrowser new browser.
+		browser openOn: (self mooseModel allNamespaces select: #isRoot).
+		(browser pane port: #focusOnNamespace) value: self ]
+]
+
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> bunchCohesion [
 	"Computing cohesion (Bunch formula)"
 
@@ -96,13 +108,13 @@ FmxNGNamespace >> bunchCohesion [
 	^ intraConnectivities / myClasses size squared asFloat
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> bunchCohesion: aNumber [
 
 	self privateState propertyAt: #bunchCohesion put: aNumber
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> bunchCouplingWith: aNamespace [
 	"Computing coupling (Bunch formula) between receiver and aNamespace"
 
@@ -123,7 +135,7 @@ FmxNGNamespace >> bunchCouplingWith: aNamespace [
 	^ interConnectivities / (2 * myClasses size * otherClasses size) asFloat
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> bunchCouplingWithAll [
 	"Computing coupling (Bunch formula) between receiver and all namespaces"
 
@@ -151,14 +163,20 @@ FmxNGNamespace >> childrenOfMyKind [
 	^ self childScopes
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
+FmxNGNamespace >> clientClasses [
+	self deprecated: 'use clientTypes'.
+	^ self clientTypes
+]
+
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGNamespace >> clientNamespaces [
 	"MooseCook was: ^ self inheritedByNamespaces union: self invokingNamespaces"
 
 	^ (self queryAllIncoming atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGNamespace >> clientTypes [
 	<MSEProperty: #clientTypes type: #FmxNGType>
 	<multivalued>
@@ -167,17 +185,17 @@ FmxNGNamespace >> clientTypes [
 	^ (self queryAllIncoming atScope: FmxNGType) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-accessing' }
 FmxNGNamespace >> containedEntities [
 	^self types
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-accessing' }
 FmxNGNamespace >> containedEntities: collection [
 	self types: collection.
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> distance [
 	"D = A + I - 1. A package should be balanced between abstractness and instability, i.e., somewhere between abstract and stable or concrete and unstable. This rule defines the main sequence by the equation A + I - 1 = 0. D is the distance to the main sequence."
 	<MSEProperty: #distance type: #Number>
@@ -192,13 +210,13 @@ FmxNGNamespace >> distance [
 	^ abstractness + instability - 1
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> distance: aNumber [
 
 	self privateState propertyAt: #distance put: aNumber
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> efferentCoupling [
 	"Efferent coupling for a module is the number of classes it depends upon"
 
@@ -210,13 +228,13 @@ FmxNGNamespace >> efferentCoupling [
 		atScope: FmxNGType) select: [ :c | c isInstanceSide ]) size
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> efferentCoupling: aNumber [
 
 	self privateState propertyAt: #efferentCoupling put: aNumber
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> instability [
 	"I =	Ce(P)/(Ce(P)+Ca(P)), in the range [0, 1]. 0 means package is maximally stable (i.e., no dependency to other packages and can not change without big consequences), 1 means it is unstable."
 	<MSEProperty: #instability type: #Number>
@@ -231,7 +249,7 @@ FmxNGNamespace >> instability [
 	^ efferentCoupling / (efferentCoupling + afferentCoupling) asFloat
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> instability: aNumber [
 
 	self privateState propertyAt: #instability put: aNumber
@@ -242,7 +260,7 @@ FmxNGNamespace >> isNamespace [
 	^ true
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> martinCohesion [
 	"Computing cohesion as described by Robert C. Martin"
 
@@ -268,6 +286,22 @@ FmxNGNamespace >> methods [
 				self classes flatCollect: #methods ]
 ]
 
+{ #category : #'Moose-Finder' }
+FmxNGNamespace >> mooseFinderWithinHierarchyIn: composite [
+	<moosePresentationOrder: 20>
+	composite roassal2
+			title: 'Within overall hierarchy';
+			titleIcon: MooseIcons mooseCluster;
+			initializeView: [ RTMondrian new ];
+			painting: [ :view |
+				self withAllChildScopes asMooseGroup viewWithinOverallHierarchyOn: view ]
+]
+
+{ #category : #'Moose-Finder' }
+FmxNGNamespace >> mooseIcon [ 
+	^ MooseIcons famixNamespace
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGNamespace >> mooseNameOn: aStream [ 
 	| parent |
@@ -278,6 +312,12 @@ FmxNGNamespace >> mooseNameOn: aStream [
 			nextPut: $:;
 			nextPut: $: ].
 	self name ifNotNil: [aStream nextPutAll: self name]
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGNamespace >> namespaceScope [
+
+	^ self 
 ]
 
 { #category : #'Famix-Extensions' }
@@ -353,7 +393,7 @@ FmxNGNamespace >> numberOfMethods: aNumber [
 	self privateState propertyAt: #numberOfMethods put: aNumber
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> numberOfNonInterfacesClasses [
 	<MSEProperty: #numberOfNonInterfacesClasses type: #Number>
 	<derived>
@@ -364,13 +404,13 @@ FmxNGNamespace >> numberOfNonInterfacesClasses [
 		computedAs: [(self types reject: #isInterface) size]
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-metrics' }
 FmxNGNamespace >> numberOfNonInterfacesClasses: aNumber [
 
 	self privateState propertyAt: #numberOfNonInterfacesClasses put: aNumber
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGNamespace >> packageScope [
 
 	self shouldNotImplement
@@ -387,14 +427,20 @@ FmxNGNamespace >> printOn: aStream [
 	aStream nextPutAll: ' (Namespace)'
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
+FmxNGNamespace >> providerClasses [
+	self deprecated: 'use providerTypes'.
+	^ self providerTypes
+]
+
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGNamespace >> providerNamespaces [
 	"MooseCook was: ^ self inheritedNamespaces union: self invokedNamespaces"
 
 	^ (self queryAllOutgoing atScope: FmxNGNamespace) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions' }
+{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGNamespace >> providerTypes [
 	<MSEProperty: #providerTypes type: #FmxNGType>
 	<derived>
@@ -403,7 +449,7 @@ FmxNGNamespace >> providerTypes [
 	^ (self queryAllOutgoing atScope: FmxNGType) withoutSelfLoops
 ]
 
-{ #category : #'moose-chef-scoping-filtering' }
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGNamespace >> selectWithinYourScope: aMooseQueryResult [
 	^ aMooseQueryResult withinNamespace: self
 ]
