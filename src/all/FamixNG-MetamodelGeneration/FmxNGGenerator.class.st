@@ -1144,13 +1144,15 @@ FmxNGGenerator >> defineRelations [
 			comment: 'Subclass linked to in this relationship. from-side of the association';
 			source)
 		*-
-	((tWithSubInheritances property: #superInheritances)).
+	((tWithSubInheritances property: #superInheritances)
+			comment: 'Superinheritance relationships, i.e. known superclasses of this type.').
 
 	((tSuperInheritance property: #superclass)
 			comment: 'Superclass linked to in this relationship. to-side of the association';
 			target)
 		*-
-	((tWithSuperInheritances property: #subInheritances)).
+	((tWithSuperInheritances property: #subInheritances)
+			comment: 'Subinheritance relationships, i.e. known subclasses of this type.').
 
 	((tTemplate property: #templateOwner))
 		*-
@@ -1197,7 +1199,8 @@ FmxNGGenerator >> defineRelations [
 	((tTypedStructure property: #declaredType)
 			comment: 'Type of the behavioral entity, if any')
 		*-
-	((tWithTypedStructures property: #structuresWithDeclaredType)).
+	((tWithTypedStructures property: #structuresWithDeclaredType)
+			comment: 'Structural entities that have this type as declaredType').
 
 
 ]
