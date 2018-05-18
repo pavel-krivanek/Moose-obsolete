@@ -151,6 +151,8 @@ FamixMetamodelBuilderClass >> generate [
 		self generateAnnotationIn: aClass as: self name superclass: nil].
 	self generateRequirementsFor: aClass.
 	
+	isHierarchyRoot := (self name = #Entity). "HACK"
+	
 	isHierarchyRoot ifTrue: [ 
 		self generateRootMethodsIn: aClass ].
 	

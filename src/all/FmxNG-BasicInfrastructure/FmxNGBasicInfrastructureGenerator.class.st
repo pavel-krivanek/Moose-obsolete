@@ -32,6 +32,7 @@ FmxNGBasicInfrastructureGenerator >> defineClasses [
 FmxNGBasicInfrastructureGenerator >> defineHierarchy [
 
 	sourceAnchor --|> entity.
+	sourceAnchor --|> #TSourceAnchor.
 
 	sourceLanguage --|> entity.
 	sourceLanguage --|> #TSourceLanguage.

@@ -224,8 +224,11 @@ FamixMetamodelBuilderBehavior >> generateTestingSelectors [
 	^ true' format: { aSelector }) 
 		classified: #testing.
 
-		self builder classes do: [ :aBehavior |
-			aBehavior classGeneralization ifNil: [ 
+"		self builder classes do: [ :aBehavior |
+			aBehavior classGeneralization ifNil: ["
+				
+	self builder classes do: [ :aBehavior |
+			(aBehavior name = #Entity) ifTrue: [ "HACK"
 				aBehavior realClass instanceSide compile: ('{1}
 
 	<generated>

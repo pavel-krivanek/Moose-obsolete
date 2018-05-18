@@ -6,10 +6,8 @@ FmxNGCompatibilityGenerator resetMetamodel.
 "
 Class {
 	#name : #FmxNGCompatibilityGenerator,
-	#superclass : #FmxNGBasicInfrastructureGenerator,
+	#superclass : #FmxNGFileBasedLanguageGenerator,
 	#instVars : [
-		'abstractFile',
-		'abstractFileAnchor',
 		'access',
 		'annotationInstance',
 		'annotationInstanceAttribute',
@@ -30,15 +28,11 @@ Class {
 		'enum',
 		'enumValue',
 		'exception',
-		'file',
-		'fileAnchor',
-		'folder',
 		'function',
 		'globalVariable',
 		'header',
 		'implicitVariable',
 		'include',
-		'indexedFileAnchor',
 		'inheritance',
 		'invocation',
 		'jAVASourceLanguage',
@@ -46,7 +40,6 @@ Class {
 		'localVariable',
 		'method',
 		'module',
-		'multipleFileAnchor',
 		'namespace',
 		'package',
 		'parameter',
@@ -61,7 +54,6 @@ Class {
 		'reference',
 		'sMALLTALKSourceLanguage',
 		'scopingEntity',
-		'sourceTextAnchor',
 		'structuralEntity',
 		'thrownException',
 		'type',
@@ -205,17 +197,8 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	super defineHierarchy.
 
-	entity <|-- abstractFile.
 	entity <|-- exception.
 	
-	abstractFile <|-- file.
-	abstractFile <|-- folder.
-
-	abstractFile --|> namedEntity.
-	
-	abstractFileAnchor --|> sourceAnchor.
-	abstractFileAnchor --|> #TFileAnchor.
-
 	access --|> association.
 	access --|> #TAccess.
 
@@ -291,10 +274,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	exception --|> #TException.
 
-	file --|> #TFile.
-
-	fileAnchor --|> abstractFileAnchor.
-
 	function --|> behaviouralEntity.
 	function --|> #TFunction.
 
@@ -309,8 +288,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	include --|> association.
 	include --|> #TFileInclude.
-
-	indexedFileAnchor --|> abstractFileAnchor.
 
 	inheritance --|> association.
 	inheritance --|> #TSubInheritance.
@@ -338,8 +315,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	module --|> #TModule.
 	module --|> #TWithCompilationUnit.
 	module --|> #TWithHeader.
-
-	multipleFileAnchor --|> sourceAnchor.
 
 	namedEntity --|> #TPackageable.
 	namedEntity --|> #TInvocationsReceiver.
@@ -384,12 +359,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	scopingEntity --|> containerEntity.
 	scopingEntity --|> #TGlobalVariableScope.
 	scopingEntity --|> #TScopingEntity.
-
-	sourceAnchor --|> #TSourceAnchor.
-
-	sourcedEntity --|> #TWithFiles.
-
-	sourceTextAnchor --|> sourceAnchor.
 
 	structuralEntity --|> leafEntity.
 	structuralEntity --|> #TAccessible.
