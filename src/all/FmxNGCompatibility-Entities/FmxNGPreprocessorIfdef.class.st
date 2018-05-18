@@ -2,8 +2,8 @@ Class {
 	#name : #FmxNGPreprocessorIfdef,
 	#superclass : #FmxNGPreprocessorStatement,
 	#instVars : [
-		'negated',
-		'macro'
+		'macro',
+		'negated'
 	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
