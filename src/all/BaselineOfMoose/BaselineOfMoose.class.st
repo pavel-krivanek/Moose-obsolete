@@ -63,6 +63,8 @@ BaselineOfMoose >> baseline: spec [
 			
 			'FamixNG-MetamodelGeneration'
 			'FmxNG-Traits'	
+				
+			'FmxNG-BasicInfrastructure'
 			
 			'FmxNGCompatibility-Generator' 
 			'FmxNGCompatibility-Entities'

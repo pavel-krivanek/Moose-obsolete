@@ -6,9 +6,8 @@ FmxNGCompatibilityGenerator resetMetamodel.
 "
 Class {
 	#name : #FmxNGCompatibilityGenerator,
-	#superclass : #FamixMetamodelGenerator,
+	#superclass : #FmxNGBasicInfrastructureGenerator,
 	#instVars : [
-		'entity',
 		'abstractFile',
 		'abstractFileAnchor',
 		'access',
@@ -16,7 +15,6 @@ Class {
 		'annotationInstanceAttribute',
 		'annotationType',
 		'annotationTypeAttribute',
-		'association',
 		'attribute',
 		'behaviouralEntity',
 		'cFile',
@@ -25,7 +23,6 @@ Class {
 		'cUSTOMSourceLanguage',
 		'caughtException',
 		'class',
-		'comment',
 		'compilationUnit',
 		'containerEntity',
 		'declaredException',
@@ -50,7 +47,6 @@ Class {
 		'method',
 		'module',
 		'multipleFileAnchor',
-		'namedEntity',
 		'namespace',
 		'package',
 		'parameter',
@@ -65,10 +61,7 @@ Class {
 		'reference',
 		'sMALLTALKSourceLanguage',
 		'scopingEntity',
-		'sourceAnchor',
-		'sourceLanguage',
 		'sourceTextAnchor',
-		'sourcedEntity',
 		'structuralEntity',
 		'thrownException',
 		'type',
@@ -139,7 +132,8 @@ FmxNGCompatibilityGenerator class >> translationDictionary [
 { #category : #initialization }
 FmxNGCompatibilityGenerator >> defineClasses [
 
-	entity := builder newClassNamed: #Entity.
+	super defineClasses.
+
 	abstractFile := builder newClassNamed: #AbstractFile.
 	abstractFileAnchor := builder newClassNamed: #AbstractFileAnchor.
 	access := builder newClassNamed: #Access.
@@ -147,7 +141,6 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	annotationInstanceAttribute := builder newClassNamed: #AnnotationInstanceAttribute.
 	annotationType := builder newClassNamed: #AnnotationType.
 	annotationTypeAttribute := builder newClassNamed: #AnnotationTypeAttribute.
-	association := builder newClassNamed: #Association.
 	attribute := builder newClassNamed: #Attribute.
 	behaviouralEntity := builder newClassNamed: #BehaviouralEntity.
 	cFile := builder newClassNamed: #CFile.
@@ -156,7 +149,6 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	cUSTOMSourceLanguage := builder newClassNamed: #CUSTOMSourceLanguage.
 	caughtException := builder newClassNamed: #CaughtException.
 	class := builder newClassNamed: #Class.
-	comment := builder newClassNamed: #Comment.
 	compilationUnit := builder newClassNamed: #CompilationUnit.
 	containerEntity := builder newClassNamed: #ContainerEntity.
 	declaredException := builder newClassNamed: #DeclaredException.
@@ -181,7 +173,6 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	method := builder newClassNamed: #Method.
 	module := builder newClassNamed: #Module.
 	multipleFileAnchor := builder newClassNamed: #MultipleFileAnchor.
-	namedEntity := builder newClassNamed: #NamedEntity.
 	namespace := builder newClassNamed: #Namespace.
 	package := builder newClassNamed: #Package.
 	parameter := builder newClassNamed: #Parameter.
@@ -196,10 +187,7 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	reference := builder newClassNamed: #Reference.
 	sMALLTALKSourceLanguage := builder newClassNamed: #SMALLTALKSourceLanguage.
 	scopingEntity := builder newClassNamed: #ScopingEntity.
-	sourceAnchor := builder newClassNamed: #SourceAnchor.
-	sourceLanguage := builder newClassNamed: #SourceLanguage.
 	sourceTextAnchor := builder newClassNamed: #SourceTextAnchor.
-	sourcedEntity := builder newClassNamed: #SourcedEntity.
 	structuralEntity := builder newClassNamed: #StructuralEntity.
 	thrownException := builder newClassNamed: #ThrownException.
 	type := builder newClassNamed: #Type.
@@ -215,10 +203,9 @@ FmxNGCompatibilityGenerator >> defineClasses [
 { #category : #initialization }
 FmxNGCompatibilityGenerator >> defineHierarchy [
 
+	super defineHierarchy.
+
 	entity <|-- abstractFile.
-	entity <|-- sourceAnchor.
-	entity <|-- sourceLanguage.
-	entity <|-- sourcedEntity.	
 	entity <|-- exception.
 	
 	abstractFile <|-- file.
@@ -247,9 +234,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	annotationTypeAttribute --|> attribute.
 	annotationTypeAttribute --|> #TAnnotationTypeAttribute.
 	annotationTypeAttribute --|> #TTypedAnnotationInstanceAttribute.
-
-	association --|> sourcedEntity.
-	association --|> #TAssociation.
 
 	attribute --|> structuralEntity.
 	attribute --|> #TAttribute.
@@ -283,9 +267,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	class --|> type.
 	class --|> #TWithExceptions.
 	class --|> #TClass.
-
-	comment --|> sourcedEntity.
-	comment --|> #TComment.
 
 	compilationUnit --|> cFile.
 	compilationUnit --|> #TCompilationUnit.
@@ -360,8 +341,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	multipleFileAnchor --|> sourceAnchor.
 
-	namedEntity --|> sourcedEntity.
-	namedEntity --|> #TNamed.
 	namedEntity --|> #TPackageable.
 	namedEntity --|> #TInvocationsReceiver.
 	namedEntity --|> #TWithAnnotationInstances.
@@ -408,14 +387,9 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	sourceAnchor --|> #TSourceAnchor.
 
-	sourceLanguage --|> #TSourceLanguage.
+	sourcedEntity --|> #TWithFiles.
 
 	sourceTextAnchor --|> sourceAnchor.
-
-	sourcedEntity --|> #TWithSourceAnchor.
-	sourcedEntity --|> #TWithComments.
-	sourcedEntity --|> #TWithSourceLanguage.
-	sourcedEntity --|> #TWithFiles.
 
 	structuralEntity --|> leafEntity.
 	structuralEntity --|> #TAccessible.
