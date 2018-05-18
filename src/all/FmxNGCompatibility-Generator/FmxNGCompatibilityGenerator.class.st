@@ -224,230 +224,230 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	abstractFile <|-- file.
 	abstractFile <|-- folder.
 
-	abstractFile generalization: namedEntity.
+	abstractFile --|> namedEntity.
 	
-	abstractFileAnchor generalization: sourceAnchor.
-	abstractFileAnchor generalization: #TFileAnchor.
+	abstractFileAnchor --|> sourceAnchor.
+	abstractFileAnchor --|> #TFileAnchor.
 
-	access generalization: association.
-	access generalization: #TAccess.
+	access --|> association.
+	access --|> #TAccess.
 
-	annotationInstance generalization: sourcedEntity.
-	annotationInstance generalization: #TAnnotationInstance.
-	annotationInstance generalization: #TWithAnnotationInstanceAttributes.
-	annotationInstance generalization: #TTypedAnnotationInstance.
+	annotationInstance --|> sourcedEntity.
+	annotationInstance --|> #TAnnotationInstance.
+	annotationInstance --|> #TWithAnnotationInstanceAttributes.
+	annotationInstance --|> #TTypedAnnotationInstance.
 
-	annotationInstanceAttribute generalization: sourcedEntity.
-	annotationInstanceAttribute generalization: #TAnnotationInstanceAttribute.
-	annotationInstanceAttribute generalization: #TTypedAnnotationInstanceAttribute.
+	annotationInstanceAttribute --|> sourcedEntity.
+	annotationInstanceAttribute --|> #TAnnotationInstanceAttribute.
+	annotationInstanceAttribute --|> #TTypedAnnotationInstanceAttribute.
 
-	annotationType generalization: type.
-	annotationType generalization: #TAnnotationType.
+	annotationType --|> type.
+	annotationType --|> #TAnnotationType.
 
-	annotationTypeAttribute generalization: attribute.
-	annotationTypeAttribute generalization: #TAnnotationTypeAttribute.
-	annotationTypeAttribute generalization: #TTypedAnnotationInstanceAttribute.
+	annotationTypeAttribute --|> attribute.
+	annotationTypeAttribute --|> #TAnnotationTypeAttribute.
+	annotationTypeAttribute --|> #TTypedAnnotationInstanceAttribute.
 
-	association generalization: sourcedEntity.
-	association generalization: #TAssociation.
+	association --|> sourcedEntity.
+	association --|> #TAssociation.
 
-	attribute generalization: structuralEntity.
-	attribute generalization: #TAttribute.
-	attribute generalization: #TWithClassScope.
+	attribute --|> structuralEntity.
+	attribute --|> #TAttribute.
+	attribute --|> #TWithClassScope.
 
-	behaviouralEntity generalization: containerEntity.
-	behaviouralEntity generalization: #TWithParameters.
-	behaviouralEntity generalization: #TInvocable.
-	behaviouralEntity generalization: #TWithInvocations.
-	behaviouralEntity generalization: #TWithReferences.
-	behaviouralEntity generalization: #TTypedStructure.
-	behaviouralEntity generalization: #TWithAccesses.
-	behaviouralEntity generalization: #TWithLocalVariables.
-	behaviouralEntity generalization: #TWithImplicitVariables.
-	behaviouralEntity generalization: #TWithDereferencedInvocations.
-	behaviouralEntity generalization: #TWithSignature.
+	behaviouralEntity --|> containerEntity.
+	behaviouralEntity --|> #TWithParameters.
+	behaviouralEntity --|> #TInvocable.
+	behaviouralEntity --|> #TWithInvocations.
+	behaviouralEntity --|> #TWithReferences.
+	behaviouralEntity --|> #TTypedStructure.
+	behaviouralEntity --|> #TWithAccesses.
+	behaviouralEntity --|> #TWithLocalVariables.
+	behaviouralEntity --|> #TWithImplicitVariables.
+	behaviouralEntity --|> #TWithDereferencedInvocations.
+	behaviouralEntity --|> #TWithSignature.
 
-	cFile generalization: file.
-	cFile generalization: #TWithFileInclude.
+	cFile --|> file.
+	cFile --|> #TWithFileInclude.
 
-	cPPSourceLanguage generalization: cSourceLanguage.
+	cPPSourceLanguage --|> cSourceLanguage.
 
-	cSourceLanguage generalization: sourceLanguage.
+	cSourceLanguage --|> sourceLanguage.
 
-	cUSTOMSourceLanguage generalization: sourceLanguage.
-	cUSTOMSourceLanguage generalization: #TNamed.
+	cUSTOMSourceLanguage --|> sourceLanguage.
+	cUSTOMSourceLanguage --|> #TNamed.
 
-	caughtException generalization: exception.
-	caughtException generalization: #TCaughtException.
+	caughtException --|> exception.
+	caughtException --|> #TCaughtException.
 
-	class generalization: type.
-	class generalization: #TWithExceptions.
-	class generalization: #TClass.
+	class --|> type.
+	class --|> #TWithExceptions.
+	class --|> #TClass.
 
-	comment generalization: sourcedEntity.
-	comment generalization: #TComment.
+	comment --|> sourcedEntity.
+	comment --|> #TComment.
 
-	compilationUnit generalization: cFile.
-	compilationUnit generalization: #TCompilationUnit.
-	compilationUnit generalization: #TWithModule.
+	compilationUnit --|> cFile.
+	compilationUnit --|> #TCompilationUnit.
+	compilationUnit --|> #TWithModule.
 
-	containerEntity generalization: namedEntity.
-	containerEntity generalization: #TWithTypes.
-	containerEntity generalization: #TWithFunctions.
-	containerEntity generalization: #TWithAnnotationTypes.
+	containerEntity --|> namedEntity.
+	containerEntity --|> #TWithTypes.
+	containerEntity --|> #TWithFunctions.
+	containerEntity --|> #TWithAnnotationTypes.
 
-	declaredException generalization: exception.
-	declaredException generalization: #TDeclaredException.
+	declaredException --|> exception.
+	declaredException --|> #TDeclaredException.
 
-	dereferencedInvocation generalization: invocation.
-	dereferencedInvocation generalization: #TDereferencedInvocation.
+	dereferencedInvocation --|> invocation.
+	dereferencedInvocation --|> #TDereferencedInvocation.
 
-	enum generalization: type.
-	enum generalization: #TWithEnumValues.
+	enum --|> type.
+	enum --|> #TWithEnumValues.
 
-	enumValue generalization: structuralEntity.
-	enumValue generalization: #TEnumValue.
+	enumValue --|> structuralEntity.
+	enumValue --|> #TEnumValue.
 
-	exception generalization: #TException.
+	exception --|> #TException.
 
-	file generalization: #TFile.
+	file --|> #TFile.
 
-	fileAnchor generalization: abstractFileAnchor.
+	fileAnchor --|> abstractFileAnchor.
 
-	function generalization: behaviouralEntity.
-	function generalization: #TFunction.
+	function --|> behaviouralEntity.
+	function --|> #TFunction.
 
-	globalVariable generalization: structuralEntity.
-	globalVariable generalization: #TGlobalVariable.
+	globalVariable --|> structuralEntity.
+	globalVariable --|> #TGlobalVariable.
 
-	header generalization: cFile.
-	header generalization: #THeader.
+	header --|> cFile.
+	header --|> #THeader.
 
-	implicitVariable generalization: structuralEntity.
-	implicitVariable generalization: #TImplicitVariable.
+	implicitVariable --|> structuralEntity.
+	implicitVariable --|> #TImplicitVariable.
 
-	include generalization: association.
-	include generalization: #TFileInclude.
+	include --|> association.
+	include --|> #TFileInclude.
 
-	indexedFileAnchor generalization: abstractFileAnchor.
+	indexedFileAnchor --|> abstractFileAnchor.
 
-	inheritance generalization: association.
-	inheritance generalization: #TSubInheritance.
-	inheritance generalization: #TSuperInheritance.
+	inheritance --|> association.
+	inheritance --|> #TSubInheritance.
+	inheritance --|> #TSuperInheritance.
 
-	invocation generalization: association.
-	invocation generalization: #TInvocation.
-	invocation generalization: #TWithSignature.
+	invocation --|> association.
+	invocation --|> #TInvocation.
+	invocation --|> #TWithSignature.
 
-	jAVASourceLanguage generalization: sourceLanguage.
+	jAVASourceLanguage --|> sourceLanguage.
 
-	leafEntity generalization: namedEntity.
+	leafEntity --|> namedEntity.
 
-	localVariable generalization: structuralEntity.
-	localVariable generalization: #TLocalVariable.
+	localVariable --|> structuralEntity.
+	localVariable --|> #TLocalVariable.
 
-	method generalization: behaviouralEntity.
-	method generalization: #TMethod.
-	method generalization: #TWithThrownExceptions.
-	method generalization: #TWithDeclaredExceptions.
-	method generalization: #TWithCaughtExceptions.
-	method generalization: #TWithClassScope.
+	method --|> behaviouralEntity.
+	method --|> #TMethod.
+	method --|> #TWithThrownExceptions.
+	method --|> #TWithDeclaredExceptions.
+	method --|> #TWithCaughtExceptions.
+	method --|> #TWithClassScope.
 
-	module generalization: scopingEntity.
-	module generalization: #TModule.
-	module generalization: #TWithCompilationUnit.
-	module generalization: #TWithHeader.
+	module --|> scopingEntity.
+	module --|> #TModule.
+	module --|> #TWithCompilationUnit.
+	module --|> #TWithHeader.
 
-	multipleFileAnchor generalization: sourceAnchor.
+	multipleFileAnchor --|> sourceAnchor.
 
-	namedEntity generalization: sourcedEntity.
-	namedEntity generalization: #TNamed.
-	namedEntity generalization: #TPackageable.
-	namedEntity generalization: #TInvocationsReceiver.
-	namedEntity generalization: #TWithAnnotationInstances.
-	namedEntity generalization: #TWithModifiers.
-	namedEntity generalization: #TPossibleStub.
+	namedEntity --|> sourcedEntity.
+	namedEntity --|> #TNamed.
+	namedEntity --|> #TPackageable.
+	namedEntity --|> #TInvocationsReceiver.
+	namedEntity --|> #TWithAnnotationInstances.
+	namedEntity --|> #TWithModifiers.
+	namedEntity --|> #TPossibleStub.
 
-	namespace generalization: scopingEntity.
-	namespace generalization: #TNamespace.
+	namespace --|> scopingEntity.
+	namespace --|> #TNamespace.
 
-	package generalization: scopingEntity.
-	package generalization: #TPackage.
+	package --|> scopingEntity.
+	package --|> #TPackage.
 
-	parameter generalization: structuralEntity.
-	parameter generalization: #TParameter.
+	parameter --|> structuralEntity.
+	parameter --|> #TParameter.
 
-	parameterType generalization: type.
+	parameterType --|> type.
 
-	parameterizableClass generalization: class.
-	parameterizableClass generalization: #TWithParameterizedTypes.
+	parameterizableClass --|> class.
+	parameterizableClass --|> #TWithParameterizedTypes.
 
-	parameterizedType generalization: type.
-	parameterizedType generalization: #TParameterizedType.
-	parameterizedType generalization: #TWithParameterizedTypeUsers.
+	parameterizedType --|> type.
+	parameterizedType --|> #TParameterizedType.
+	parameterizedType --|> #TWithParameterizedTypeUsers.
 
-	pharoAnchor generalization: sourceAnchor.
+	pharoAnchor --|> sourceAnchor.
 
-	preprocessorDefine generalization: preprocessorStatement.
-	preprocessorDefine generalization: #TPreprocessorIfdef.
+	preprocessorDefine --|> preprocessorStatement.
+	preprocessorDefine --|> #TPreprocessorIfdef.
 
-	preprocessorIfdef generalization: preprocessorStatement.
+	preprocessorIfdef --|> preprocessorStatement.
 
-	preprocessorStatement generalization: sourcedEntity.
+	preprocessorStatement --|> sourcedEntity.
 
-	primitiveType generalization: type.
+	primitiveType --|> type.
 
-	reference generalization: association.
-	reference generalization: #TReference.
+	reference --|> association.
+	reference --|> #TReference.
 
-	sMALLTALKSourceLanguage generalization: sourceLanguage.
+	sMALLTALKSourceLanguage --|> sourceLanguage.
 
-	scopingEntity generalization: containerEntity.
-	scopingEntity generalization: #TGlobalVariableScope.
-	scopingEntity generalization: #TScopingEntity.
+	scopingEntity --|> containerEntity.
+	scopingEntity --|> #TGlobalVariableScope.
+	scopingEntity --|> #TScopingEntity.
 
-	sourceAnchor generalization: #TSourceAnchor.
+	sourceAnchor --|> #TSourceAnchor.
 
-	sourceLanguage generalization: #TSourceLanguage.
+	sourceLanguage --|> #TSourceLanguage.
 
-	sourceTextAnchor generalization: sourceAnchor.
+	sourceTextAnchor --|> sourceAnchor.
 
-	sourcedEntity generalization: #TWithSourceAnchor.
-	sourcedEntity generalization: #TWithComments.
-	sourcedEntity generalization: #TWithSourceLanguage.
-	sourcedEntity generalization: #TWithFiles.
+	sourcedEntity --|> #TWithSourceAnchor.
+	sourcedEntity --|> #TWithComments.
+	sourcedEntity --|> #TWithSourceLanguage.
+	sourcedEntity --|> #TWithFiles.
 
-	structuralEntity generalization: leafEntity.
-	structuralEntity generalization: #TAccessible.
-	structuralEntity generalization: #TWithDereferencedInvocations.
-	structuralEntity generalization: #TTypedStructure.
+	structuralEntity --|> leafEntity.
+	structuralEntity --|> #TAccessible.
+	structuralEntity --|> #TWithDereferencedInvocations.
+	structuralEntity --|> #TTypedStructure.
 
-	thrownException generalization: exception.
-	thrownException generalization: #TThrownException.
+	thrownException --|> exception.
+	thrownException --|> #TThrownException.
 
-	type generalization: containerEntity.
-	type generalization: #TType.
-	type generalization: #TReferenceable.
-	type generalization: #TWithTypedStructures.
-	type generalization: #TWithTypeAliases.
-	type generalization: #TWithMethods.
-	type generalization: #TWithSuperInheritances.
-	type generalization: #TWithSubInheritances.
-	type generalization: #TWithAttributes.
-	type generalization: #TParameterizedTypeUser.
+	type --|> containerEntity.
+	type --|> #TType.
+	type --|> #TReferenceable.
+	type --|> #TWithTypedStructures.
+	type --|> #TWithTypeAliases.
+	type --|> #TWithMethods.
+	type --|> #TWithSuperInheritances.
+	type --|> #TWithSubInheritances.
+	type --|> #TWithAttributes.
+	type --|> #TParameterizedTypeUser.
 
-	typeAlias generalization: type.
-	typeAlias generalization: #TTypeAlias.
+	typeAlias --|> type.
+	typeAlias --|> #TTypeAlias.
 
-	uNKNOWNSourceLanguage generalization: sourceLanguage.
+	uNKNOWNSourceLanguage --|> sourceLanguage.
 
-	unknownVariable generalization: structuralEntity.
+	unknownVariable --|> structuralEntity.
 	
-	trait generalization: type.
-	trait generalization: #TTrait.
+	trait --|> type.
+	trait --|> #TTrait.
 	
-	traitUsage generalization: association.
-	traitUsage generalization: #TTraitUsage.
+	traitUsage --|> association.
+	traitUsage --|> #TTraitUsage.
 	
 
 ]
