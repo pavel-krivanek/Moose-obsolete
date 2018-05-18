@@ -189,7 +189,7 @@ FmxNGPackage >> clientPackages [
 
 { #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGPackage >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
+	<MSEProperty: #clientTypes type: #FmxNGType>
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on the receiver'>
@@ -503,7 +503,7 @@ FmxNGPackage >> providerPackages [
 
 { #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGPackage >> providerTypes [
-	<MSEProperty: #providerTypes type: #FAMIXType>
+	<MSEProperty: #providerTypes type: #FmxNGType>
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>

@@ -55,7 +55,7 @@ FmxNGCFile >> allIncomingIncludeRelations: visitedPath [
 
 { #category : #accessing }
 FmxNGCFile >> includedFiles [
-	<MSEProperty: #includedFiles type: #FAMIXCFile> <multivalued> <derived>
+	<MSEProperty: #includedFiles type: #FmxNGCFile> <multivalued> <derived>
 	<MSEComment: 'Files included by this file.'>
 
 	^ outgoingIncludeRelations collect: [ :each | each target ]
@@ -63,7 +63,7 @@ FmxNGCFile >> includedFiles [
 
 { #category : #accessing }
 FmxNGCFile >> includingFiles [
-	<MSEProperty: #includingFiles type: #FAMIXCFile> <multivalued> <derived>
+	<MSEProperty: #includingFiles type: #FmxNGCFile> <multivalued> <derived>
 	<MSEComment: 'Files that include this file.'>
 
 	^ incomingIncludeRelations collect: [ :each | each source ]

@@ -56,7 +56,7 @@ FmxNGFolder >> allRecursiveFolders [
 
 { #category : #accessing }
 FmxNGFolder >> childrenFileSystemEntities [
-	<MSEProperty: #childrenFileSystemEntities type: #FAMIXAbstractFile opposite: #parentFolder>
+	<MSEProperty: #childrenFileSystemEntities type: #FmxNGAbstractFile opposite: #parentFolder>
 	<multivalued>
 	<derived>
 	<MSEComment: 'List of entities contained in this package.'>
