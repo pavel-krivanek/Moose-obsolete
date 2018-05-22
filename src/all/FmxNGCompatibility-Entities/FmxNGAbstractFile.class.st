@@ -123,29 +123,6 @@ FmxNGAbstractFile >> numberOfLinesOfText [
 	^ self lookUpPropertyNamed: #numberOfLinesOfText computedAs: [ self totalNumberOfLinesOfText - self numberOfEmptyLinesOfText ]
 ]
 
-{ #category : #accessing }
-FmxNGAbstractFile >> parentFolder [
-	"lazy initialization to reduce memory foot print if possible"
-
-	<MSEProperty: #parentFolder type: #FmxNGFolder opposite: #childrenFileSystemEntities>
-	<MSEComment: 'folder containing a file'>
-	<container>
-	^ self privateState attributeAt: #parentFolder ifAbsent: [ nil ]
-]
-
-{ #category : #accessing }
-FmxNGAbstractFile >> parentFolder: aFolder [
-	self privateState
-		attributeAt: #parentFolder
-		put:
-			(FMMultivalueLink
-				on: self
-				update: #childrenFileSystemEntities
-				from: self parentFolder
-				to: aFolder).
-	self resetMooseName
-]
-
 { #category : #properties }
 FmxNGAbstractFile >> totalNumberOfLinesOfText [
 	^ self subclassResponsibility

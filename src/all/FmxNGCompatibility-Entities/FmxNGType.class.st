@@ -235,23 +235,6 @@ FmxNGType >> anySuperclass [
 	^ nil
 ]
 
-{ #category : #'Famix-Java' }
-FmxNGType >> argumentsInParameterizedTypes [
-	<MSEProperty: #argumentsInParameterizedTypes type: #FmxNGParameterizedType opposite: #arguments>
-	<multivalued> <derived>
-	<MSEComment: 'Arguments of parameterized types that point to this type.'>
-	
-	^ self privateState 
-		attributeAt: #argumentsInParameterizedTypes 
-		ifAbsentPut: [
-			FMMultiMultivalueLink on: self opposite: #arguments ]
-]
-
-{ #category : #'Famix-Java' }
-FmxNGType >> argumentsInParameterizedTypes: aCollection [
-	^ self argumentsInParameterizedTypes value: aCollection
-]
-
 { #category : #accessing }
 FmxNGType >> behavioursWithDeclaredType [
 
