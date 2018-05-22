@@ -888,6 +888,8 @@ BaselineOfMoose >> groups: spec [
 
 			'Moose-Query'
 			'Moose-Core'
+			
+			'FmxNG-BasicInfrastructure'
 			'Famix-Compatibility'
 
 			'Famix-MetamodelBuilder-Core'
