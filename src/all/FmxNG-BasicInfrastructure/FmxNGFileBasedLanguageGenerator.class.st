@@ -36,6 +36,7 @@ FmxNGFileBasedLanguageGenerator >> defineHierarchy [
 	super defineHierarchy.
 	
 	abstractFile --|> namedEntity.
+	abstractFile --|> #TFileSystemEntity.
 	
 	abstractFileAnchor --|> sourceAnchor.
 	abstractFileAnchor --|> #TFileAnchor.
@@ -46,6 +47,7 @@ FmxNGFileBasedLanguageGenerator >> defineHierarchy [
 	fileAnchor --|> abstractFileAnchor.
 
 	folder --|> abstractFile.
+	folder --|> #TFolder.
 
 	indexedFileAnchor --|> abstractFileAnchor.
 

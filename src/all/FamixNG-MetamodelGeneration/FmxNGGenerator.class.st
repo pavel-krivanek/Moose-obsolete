@@ -108,7 +108,9 @@ Class {
 		'tWithTypes',
 		'tWithModifiers',
 		'tPossibleStub',
-		'tClass'
+		'tClass',
+		'tFolder',
+		'tFileSystemEntity'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -320,6 +322,12 @@ FmxNGGenerator >> commentForTFileAnchor [
 FmxNGGenerator >> commentForTFileInclude [
 
 	^ ''
+]
+
+{ #category : #comments }
+FmxNGGenerator >> commentForTFolder [
+
+	^ 'It represents a folder in the file system. It can contain other files or folders.'
 ]
 
 { #category : #comments }
@@ -985,6 +993,17 @@ FmxNGGenerator >> defineRelations [
 	((tWithExceptions property: #exceptions)
 			comment: 'Exceptions which class is myself.').
 
+	((tFolder property: #childrenFileSystemEntities)
+			comment: 'List of entities defined in the file')
+		*-
+	((tWithFiles property: #containerFiles)
+			comment: 'List of files containing the entity').
+
+	((tFolder property: #childrenFileSystemEntities)
+			comment: 'List of entities contained in this package.')
+		*-
+	((tFileSystemEntity property: #parentFolder)).
+
 	((tFile property: #entities)
 			comment: 'List of entities defined in the file')
 		*-
@@ -1262,6 +1281,11 @@ FmxNGGenerator >> defineTraits [
 
 	tFile := builder newTraitNamed: #TFile.
 	tFile comment: self commentForTFile.
+
+	tFolder := builder newTraitNamed: #TFolder.
+	tFolder comment: self commentForTFolder.
+	
+	tFileSystemEntity := builder newTraitNamed: #TFileSystemEntity.
 
 	tFileAnchor := builder newTraitNamed: #TFileAnchor.
 	tFileAnchor comment: self commentForTFileAnchor.

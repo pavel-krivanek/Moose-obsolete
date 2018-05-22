@@ -1,6 +1,8 @@
 Class {
 	#name : #FmxNGAbstractFile,
 	#superclass : #FmxNGNamedEntity,
+	#traits : 'FmxNGTFileSystemEntity',
+	#classTraits : 'FmxNGTFileSystemEntity classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -28,7 +30,7 @@ FmxNGAbstractFile class >> generatedSlotNames [
 { #category : #generator }
 FmxNGAbstractFile class >> generatedTraitNames [
 	<generated>
-	^ #()
+	^ #(FmxNGTFileSystemEntity)
 ]
 
 { #category : #'instance creation' }

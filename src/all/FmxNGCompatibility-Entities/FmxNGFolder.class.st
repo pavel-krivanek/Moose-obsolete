@@ -1,6 +1,8 @@
 Class {
 	#name : #FmxNGFolder,
 	#superclass : #FmxNGAbstractFile,
+	#traits : 'FmxNGTFolder',
+	#classTraits : 'FmxNGTFolder classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -23,7 +25,7 @@ FmxNGFolder class >> generatedSlotNames [
 { #category : #generator }
 FmxNGFolder class >> generatedTraitNames [
 	<generated>
-	^ #()
+	^ #(FmxNGTFolder)
 ]
 
 { #category : #meta }
@@ -52,22 +54,6 @@ FmxNGFolder >> allRecursiveFolders [
 	result := MooseGroup withAll: self folders withDescription: 'All recursive folders in ', self mooseName.
 	self folders do: [:each | result := result addAll: each allRecursiveFolders].
 	^result.
-]
-
-{ #category : #accessing }
-FmxNGFolder >> childrenFileSystemEntities [
-	<MSEProperty: #childrenFileSystemEntities type: #FmxNGAbstractFile opposite: #parentFolder>
-	<multivalued>
-	<derived>
-	<MSEComment: 'List of entities contained in this package.'>
-	^ self privateState
-		attributeAt: #childrenFileSystemEntities
-		ifAbsentPut: [ FMMultivalueLink on: self opposite: #parentFolder: ]
-]
-
-{ #category : #accessing }
-FmxNGFolder >> childrenFileSystemEntities: aFAMIXAbstractFile [
-	self childrenFileSystemEntities value: aFAMIXAbstractFile
 ]
 
 { #category : #accessing }
