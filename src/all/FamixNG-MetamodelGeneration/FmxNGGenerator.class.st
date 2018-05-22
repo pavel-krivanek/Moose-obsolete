@@ -88,7 +88,7 @@ Class {
 		'tWithInvocations',
 		'tWithLocalVariables',
 		'tWithMethods',
-		'tWithModule',
+		'tDefinedInModule',
 		'tWithNamespaces',
 		'tWithPackages',
 		'tWithParameterizedTypeUsers',
@@ -264,6 +264,12 @@ FmxNGGenerator >> commentForTCompilationUnit [
 FmxNGGenerator >> commentForTDeclaredException [
 
 	^ 'This is an exception explicitly declared as being thrown by a method.'
+]
+
+{ #category : #comments }
+FmxNGGenerator >> commentForTDefinedInModule [
+
+	^ ''
 ]
 
 { #category : #comments }
@@ -729,12 +735,6 @@ FmxNGGenerator >> commentForTWithMethods [
 ]
 
 { #category : #comments }
-FmxNGGenerator >> commentForTWithModule [
-
-	^ ''
-]
-
-{ #category : #comments }
 FmxNGGenerator >> commentForTWithNamespaces [
 
 	^ ''
@@ -1063,10 +1063,10 @@ FmxNGGenerator >> defineRelations [
 	((tWithMethods property: #methods)
 			comment: 'Methods declared by this type.').
 
-	((tModule property: #moduleFiles))
+	((tModule property: #moduleEntities))
 		-*
-	((tWithModule property: #module)
-			comment: 'Module that contains the definition of this compilation unit').
+	((tDefinedInModule property: #parentModule)
+			comment: 'Module that contains the definition of this entity').
 
 	((tNamespace property: #namespaceEntities))
 		-*
@@ -1460,8 +1460,8 @@ FmxNGGenerator >> defineTraits [
 	tWithMethods := builder newTraitNamed: #TWithMethods.
 	tWithMethods comment: self commentForTWithMethods.
 
-	tWithModule := builder newTraitNamed: #TWithModule.
-	tWithModule comment: self commentForTWithModule.
+	tDefinedInModule := builder newTraitNamed: #TDefinedInModule.
+	tDefinedInModule comment: self commentForTDefinedInModule.
 
 	tWithNamespaces := builder newTraitNamed: #TWithNamespaces.
 	tWithNamespaces comment: self commentForTWithNamespaces.

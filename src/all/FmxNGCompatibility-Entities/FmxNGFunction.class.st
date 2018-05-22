@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGFunction,
 	#superclass : #FmxNGBehaviouralEntity,
-	#traits : 'FmxNGTFunction',
-	#classTraits : 'FmxNGTFunction classTrait',
+	#traits : 'FmxNGTDefinedInModule + FmxNGTFunction',
+	#classTraits : 'FmxNGTDefinedInModule classTrait + FmxNGTFunction classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGFunction class >> generatedSlotNames [
 { #category : #generator }
 FmxNGFunction class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTFunction)
+	^ #(FmxNGTDefinedInModule FmxNGTFunction)
 ]
 
 { #category : #meta }
@@ -96,28 +96,6 @@ FmxNGFunction >> packageScope [
 	"No package scope for functions"
 
 	^ nil
-]
-
-{ #category : #'Famix-C' }
-FmxNGFunction >> parentModule [
-	<MSEProperty: #parentModule type: #FmxNGModule>
-	<MSEComment: 'Module (typically a file) defining the function.'>
-	^ self privateState 		
-		attributeAt: #parentModule
-		ifAbsentPut: [ nil ]
-]
-
-{ #category : #'Famix-C' }
-FmxNGFunction >> parentModule: aModule [
-	^ self privateState 		
-		attributeAt: #parentModule
-		put: (
-			FMMultivalueLink 
-				on: self
-				update: #functions
-				from: self parentModule
-				to: aModule
-			 )
 ]
 
 { #category : #accessing }

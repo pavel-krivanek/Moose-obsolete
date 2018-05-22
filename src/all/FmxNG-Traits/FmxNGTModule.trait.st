@@ -24,7 +24,7 @@ FmxNGTModule classSide >> annotation [
 { #category : #generator }
 FmxNGTModule classSide >> generatedSlotNames [
 	<generated>
-	^ #(moduleFiles)
+	^ #(moduleEntities)
 ]
 
 { #category : #generator }
@@ -34,16 +34,16 @@ FmxNGTModule classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
-FmxNGTModule >> moduleFiles [
+FmxNGTModule >> moduleEntities [
 
 	<generated>
-	^ moduleFiles
+	^ moduleEntities
 ]
 
 { #category : #accessing }
-FmxNGTModule >> moduleFiles: anObject [
+FmxNGTModule >> moduleEntities: anObject [
 
 	<generated>
-	moduleFiles value: anObject
+	moduleEntities value: anObject
 
 ]

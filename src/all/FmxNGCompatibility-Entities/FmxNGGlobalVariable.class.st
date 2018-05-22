@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGGlobalVariable,
 	#superclass : #FmxNGStructuralEntity,
-	#traits : 'FmxNGTGlobalVariable',
-	#classTraits : 'FmxNGTGlobalVariable classTrait',
+	#traits : 'FmxNGTDefinedInModule + FmxNGTGlobalVariable',
+	#classTraits : 'FmxNGTDefinedInModule classTrait + FmxNGTGlobalVariable classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGGlobalVariable class >> generatedSlotNames [
 { #category : #generator }
 FmxNGGlobalVariable class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTGlobalVariable)
+	^ #(FmxNGTDefinedInModule FmxNGTGlobalVariable)
 ]
 
 { #category : #meta }
@@ -67,26 +67,6 @@ FmxNGGlobalVariable >> namespaceScope [
 { #category : #'moosechef-scoping-filtering' }
 FmxNGGlobalVariable >> packageScope [
 	^ self parentPackage
-]
-
-{ #category : #'Famix-C' }
-FmxNGGlobalVariable >> parentModule [
-	<MSEProperty: #parentModule type: #FmxNGModule>
-	<MSEComment: 'Module (typically a file) defining the global variable.'>
-	^ self privateState 		
-		attributeAt: #parentModule
-		ifAbsentPut: [ nil ]
-]
-
-{ #category : #'Famix-C' }
-FmxNGGlobalVariable >> parentModule: aModule [
-	^ self privateState 		
-		attributeAt: #parentModule
-		put: (FMMultivalueLink 
-				on: self
-				update: #globalVariables
-				from: self parentModule
-				to: aModule)
 ]
 
 { #category : #'Famix-Implementation' }

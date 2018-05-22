@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGCompilationUnit,
 	#superclass : #FmxNGCFile,
-	#traits : 'FmxNGTCompilationUnit + FmxNGTWithModule',
-	#classTraits : 'FmxNGTCompilationUnit classTrait + FmxNGTWithModule classTrait',
+	#traits : 'FmxNGTCompilationUnit + FmxNGTDefinedInModule',
+	#classTraits : 'FmxNGTCompilationUnit classTrait + FmxNGTDefinedInModule classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGCompilationUnit class >> generatedSlotNames [
 { #category : #generator }
 FmxNGCompilationUnit class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTCompilationUnit FmxNGTWithModule)
+	^ #(FmxNGTCompilationUnit FmxNGTDefinedInModule)
 ]
 
 { #category : #meta }
@@ -38,4 +38,17 @@ FmxNGCompilationUnit class >> requirements [
 { #category : #testing }
 FmxNGCompilationUnit >> isCompilationUnit [
 	^ true
+]
+
+{ #category : #accessing }
+FmxNGCompilationUnit >> module [
+
+	^ self parentModule
+]
+
+{ #category : #accessing }
+FmxNGCompilationUnit >> module: anObject [
+
+	^ self module: anObject
+
 ]

@@ -253,7 +253,7 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	compilationUnit --|> cFile.
 	compilationUnit --|> #TCompilationUnit.
-	compilationUnit --|> #TWithModule.
+	compilationUnit --|> #TDefinedInModule.
 
 	containerEntity --|> namedEntity.
 	containerEntity --|> #TWithTypes.
@@ -276,9 +276,11 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 
 	function --|> behaviouralEntity.
 	function --|> #TFunction.
+	function --|> #TDefinedInModule.
 
 	globalVariable --|> structuralEntity.
 	globalVariable --|> #TGlobalVariable.
+	globalVariable --|> #TDefinedInModule.
 
 	header --|> cFile.
 	header --|> #THeader.
