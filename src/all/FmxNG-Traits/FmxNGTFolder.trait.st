@@ -36,7 +36,7 @@ FmxNGTFolder classSide >> generatedTraitNames [
 FmxNGTFolder >> childrenFileSystemEntities [
 
 	<generated>
-	<MSEComment: 'List of entities contained in this package.'>
+	<MSEComment: 'List of entities contained in this folder.'>
 	^ childrenFileSystemEntities
 ]
 

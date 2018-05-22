@@ -994,13 +994,7 @@ FmxNGGenerator >> defineRelations [
 			comment: 'Exceptions which class is myself.').
 
 	((tFolder property: #childrenFileSystemEntities)
-			comment: 'List of entities defined in the file')
-		*-
-	((tWithFiles property: #containerFiles)
-			comment: 'List of files containing the entity').
-
-	((tFolder property: #childrenFileSystemEntities)
-			comment: 'List of entities contained in this package.')
+			comment: 'List of entities contained in this folder.')
 		*-
 	((tFileSystemEntity property: #parentFolder)).
 
