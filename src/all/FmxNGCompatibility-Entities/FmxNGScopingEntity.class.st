@@ -48,41 +48,11 @@ FmxNGScopingEntity >> accept: aVisitor [
 	aVisitor visitScopingEntity: self
 ]
 
-{ #category : #accessing }
-FmxNGScopingEntity >> addChildScope: aScopingEntity [ 
-	childScopes add: aScopingEntity
-]
-
-{ #category : #accessing }
-FmxNGScopingEntity >> addGlobalVariable: aGlobalVariable [ 
-	globalVariables add: aGlobalVariable
-]
-
 { #category : #'Famix-Extensions-metrics' }
 FmxNGScopingEntity >> afferentCoupling [
 	"Afferent coupling for a module is the number of modules that depend upon this module"
 	
 	^ self subclassResponsibility
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> allChildScopes [
-	| result |
-	result := OrderedCollection new.
-	self allChildScopesDo: [ :each | result add: each].
-	^ result 
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> allChildScopesDo: aBlock [
-	self childScopes do: [:each |
-		each withAllChildScopesDo: aBlock ]
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> allChildScopesGroup [
-	<navigation: 'All child scopes'>
-	^ FAMIXNamespaceGroup withAll: self allChildScopes withDescription: 'All child scopes from ', self printString
 ]
 
 { #category : #'Famix-Extensions' }
@@ -100,21 +70,9 @@ FmxNGScopingEntity >> allClassesGroup [
 ]
 
 { #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> allParentScopesDo: aBlock [
-	self parentScope notNil ifTrue: [
-		self parentScope withAllParentScopesDo: aBlock ]
-]
-
-{ #category : #'Famix-Extensions' }
 FmxNGScopingEntity >> allRecursiveClasses [
 	self deprecated: 'Use allClasses'.
 	^ self allClasses 
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> allRecursiveScopes [
-	self deprecated: 'Use allChildScopes'.
-	^ self allChildScopes 
 ]
 
 { #category : #accessing }
@@ -176,11 +134,6 @@ FmxNGScopingEntity >> instability [
 	self subclassResponsibility
 ]
 
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> isRoot [
-	^ self parentScope isNil
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FmxNGScopingEntity >> methodScope [
 	"This only makes sense to reject self loops in #collectAtScope:"
@@ -202,13 +155,6 @@ FmxNGScopingEntity >> mooseFinderChildrenTreeIn: composite [
 ]
 
 { #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> root [
-	^ self isRoot 
-		ifTrue: [ self ]
-		ifFalse: [ ^ self parentScope root ]
-]
-
-{ #category : #'Famix-Extensions' }
 FmxNGScopingEntity >> structuralChildren [ 
 	^ (OrderedCollection withAll: self childScopes), self classes 
 ]
@@ -220,37 +166,9 @@ FmxNGScopingEntity >> typeScope [
 ]
 
 { #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> withAllChildScopes [
-	| result |
-	result := OrderedCollection new.
-	self withAllChildScopesDo: [ :each | result add: each].
-	^ result 
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> withAllChildScopesDo: aBlock [
-	aBlock value: self.
-	self allChildScopesDo: aBlock
-]
-
-{ #category : #'Famix-Extensions' }
 FmxNGScopingEntity >> withAllChildrenOfType: anSTClass [ 
 	| all |
 	all := OrderedCollection new.	
 	self withAllChildScopesDo: [:each | each class = anSTClass ifTrue: [ all add: each ] ].
 	^ (Smalltalk at: (anSTClass name, 'Group') asSymbol ifAbsent: [MooseGroup]) withAll: all
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> withAllParentScopes [
-	| result |
-	result := OrderedCollection new.
-	self withAllParentScopesDo: [ :each | result add: each].
-	^ result 
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGScopingEntity >> withAllParentScopesDo: aBlock [
-	aBlock value: self.
-	self allParentScopesDo: aBlock
 ]

@@ -36,6 +36,43 @@ FmxNGTScopingEntity classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTScopingEntity >> addChildScope: aScopingEntity [ 
+	childScopes add: aScopingEntity
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> allChildScopes [
+	| result |
+	result := OrderedCollection new.
+	self allChildScopesDo: [ :each | result add: each].
+	^ result 
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> allChildScopesDo: aBlock [
+	self childScopes do: [:each |
+		each withAllChildScopesDo: aBlock ]
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> allChildScopesGroup [
+	<navigation: 'All child scopes'>
+	^ FAMIXNamespaceGroup withAll: self allChildScopes withDescription: 'All child scopes from ', self printString
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> allParentScopesDo: aBlock [
+	self parentScope notNil ifTrue: [
+		self parentScope withAllParentScopesDo: aBlock ]
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> allRecursiveScopes [
+	self deprecated: 'Use allChildScopes'.
+	^ self allChildScopes 
+]
+
+{ #category : #accessing }
 FmxNGTScopingEntity >> childScopes [
 
 	<generated>
@@ -49,6 +86,11 @@ FmxNGTScopingEntity >> childScopes: anObject [
 	<generated>
 	childScopes value: anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> isRoot [
+	^ self parentScope isNil
 ]
 
 { #category : #accessing }
@@ -67,4 +109,39 @@ FmxNGTScopingEntity >> parentScope: anObject [
 	<generated>
 	parentScope := anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> root [
+	^ self isRoot 
+		ifTrue: [ self ]
+		ifFalse: [ ^ self parentScope root ]
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> withAllChildScopes [
+	| result |
+	result := OrderedCollection new.
+	self withAllChildScopesDo: [ :each | result add: each].
+	^ result 
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> withAllChildScopesDo: aBlock [
+	aBlock value: self.
+	self allChildScopesDo: aBlock
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> withAllParentScopes [
+	| result |
+	result := OrderedCollection new.
+	self withAllParentScopesDo: [ :each | result add: each].
+	^ result 
+]
+
+{ #category : #accessing }
+FmxNGTScopingEntity >> withAllParentScopesDo: aBlock [
+	aBlock value: self.
+	self allParentScopesDo: aBlock
 ]

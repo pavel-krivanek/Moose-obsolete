@@ -30,6 +30,11 @@ FmxNGTGlobalVariableScope classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTGlobalVariableScope >> addGlobalVariable: aGlobalVariable [ 
+	globalVariables add: aGlobalVariable
+]
+
+{ #category : #accessing }
 FmxNGTGlobalVariableScope >> globalVariables [
 
 	<generated>
