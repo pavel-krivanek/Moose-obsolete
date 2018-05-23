@@ -105,18 +105,9 @@ FmxNGCompatibilityGenerator class >> translationDictionary [
 
 	| classNames associations |
 
-	"based on #'FmxNGCompatibility-Entities' asPackage definedClasses collect: [:e | e name withoutPrefix: 'FmxNG' ]."
-	
-	classNames :=  #('AnnotationType' 'AnnotationTypeAttribute' 'ParameterizableClass' 'PrimitiveType' 'CaughtException' 'GlobalVariable' 'SourceLanguage' 'PreprocessorIfdef' 'ImplicitVariable' 'EnumValue' 'LeafEntity' 'SourcedEntity' 'Entity' 'Inheritance' 'ScopingEntity' 'Invocation' 'PreprocessorDefine' 'BehaviouralEntity' 'Header' 'Trait' 'CFile' 'TraitUsage' 'ParameterType' 'SourceAnchor' 'LocalVariable' 'ParameterizedType' 'NamedEntity' 'Type' 'CSourceLanguage' 'TypeAlias' 'Comment' 'FileAnchor' 'Parameter' 'Reference' 'AbstractFile' 'Exception' 'AbstractFileAnchor' 'SourceTextAnchor' 'CompilationUnit' 'ThrownException' 'ContainerEntity' 'File' 'StructuralEntity' 'UnknownVariable' 'DereferencedInvocation' 'CPPSourceLanguage' 'Association' 'Folder' 'IndexedFileAnchor' 'Attribute' 'Module' 'PreprocessorStatement' 'Method' 'Enum' 'AnnotationInstance' 'Package' 'MultipleFileAnchor' 'Class' 'Include' 'Access' 'PharoAnchor' 'DeclaredException' 'Function' 'Namespace' 'AnnotationInstanceAttribute').
+	classNames := 'FmxNGCompatibility-Entities' asPackage definedClasses collect: [:e | e name withoutPrefix: 'FAMIX' ].
 	
 	associations := classNames collect: [ :each | ('FAMIX.', each) -> ('FmxNGCompatibility-Entities.', each) ] as: OrderedCollection.
-
-	associations addAll: { 
-		'FAMIX.UnknownSourceLanguage' -> 'FmxNGCompatibility-Entities.UNKNOWNSourceLanguage'.
-		'FAMIX.SmalltalkSourceLanguage' -> 'FmxNGCompatibility-Entities.SMALLTALKSourceLanguage'.
-		'FAMIX.JavaSourceLanguage' -> 'FmxNGCompatibility-Entities.JAVASourceLanguage'.
-		'FAMIX.CustomSourceLanguage' -> 'FmxNGCompatibility-Entities.CUSTOMSourceLanguage'.
-	 }.	
 
 	^ Dictionary newFrom: associations.	
 ]

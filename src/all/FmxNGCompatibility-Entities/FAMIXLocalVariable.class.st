@@ -11,7 +11,7 @@ FAMIXLocalVariable class >> annotation [
 
 	<generated>
 	<MSEClass: #LocalVariable super: #FAMIXStructuralEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

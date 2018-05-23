@@ -9,7 +9,7 @@ FAMIXCppSourceLanguage class >> annotation [
 
 	<generated>
 	<MSEClass: #CppSourceLanguage super: #FAMIXCSourceLanguage>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

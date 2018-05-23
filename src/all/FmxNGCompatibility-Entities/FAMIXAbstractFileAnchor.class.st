@@ -15,7 +15,7 @@ FAMIXAbstractFileAnchor class >> annotation [
 
 	<generated>
 	<MSEClass: #AbstractFileAnchor super: #FAMIXSourceAnchor>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

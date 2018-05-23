@@ -11,7 +11,7 @@ FAMIXGlobalVariable class >> annotation [
 
 	<generated>
 	<MSEClass: #GlobalVariable super: #FAMIXStructuralEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

@@ -11,7 +11,7 @@ FAMIXStructuralEntity class >> annotation [
 
 	<generated>
 	<MSEClass: #StructuralEntity super: #FAMIXLeafEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

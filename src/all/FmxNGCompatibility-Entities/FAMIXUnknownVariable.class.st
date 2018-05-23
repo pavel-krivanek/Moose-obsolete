@@ -9,7 +9,7 @@ FAMIXUnknownVariable class >> annotation [
 
 	<generated>
 	<MSEClass: #UnknownVariable super: #FAMIXStructuralEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

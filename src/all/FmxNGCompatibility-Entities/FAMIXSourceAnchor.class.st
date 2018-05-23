@@ -33,7 +33,7 @@ FAMIXSourceAnchor class >> annotation [
 
 	<generated>
 	<MSEClass: #SourceAnchor super: #FAMIXEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

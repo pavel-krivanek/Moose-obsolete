@@ -11,7 +11,7 @@ FAMIXSourceLanguage class >> annotation [
 
 	<generated>
 	<MSEClass: #SourceLanguage super: #FAMIXEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

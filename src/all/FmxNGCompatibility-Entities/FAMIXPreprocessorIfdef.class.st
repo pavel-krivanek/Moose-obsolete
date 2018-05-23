@@ -13,7 +13,7 @@ FAMIXPreprocessorIfdef class >> annotation [
 
 	<generated>
 	<MSEClass: #PreprocessorIfdef super: #FAMIXPreprocessorStatement>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

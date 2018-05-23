@@ -12,7 +12,7 @@ FAMIXMultipleFileAnchor class >> annotation [
 
 	<generated>
 	<MSEClass: #MultipleFileAnchor super: #FAMIXSourceAnchor>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

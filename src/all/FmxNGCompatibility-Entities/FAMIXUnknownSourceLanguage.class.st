@@ -9,7 +9,7 @@ FAMIXUnknownSourceLanguage class >> annotation [
 
 	<generated>
 	<MSEClass: #UnknownSourceLanguage super: #FAMIXSourceLanguage>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

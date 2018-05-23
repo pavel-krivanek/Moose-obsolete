@@ -9,7 +9,7 @@ FAMIXPreprocessorStatement class >> annotation [
 
 	<generated>
 	<MSEClass: #PreprocessorStatement super: #FAMIXSourcedEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

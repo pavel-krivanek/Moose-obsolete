@@ -11,7 +11,7 @@ FAMIXPackage class >> annotation [
 
 	<generated>
 	<MSEClass: #Package super: #FAMIXScopingEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

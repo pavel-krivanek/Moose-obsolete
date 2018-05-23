@@ -11,7 +11,7 @@ FAMIXComment class >> annotation [
 
 	<generated>
 	<MSEClass: #Comment super: #FAMIXSourcedEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

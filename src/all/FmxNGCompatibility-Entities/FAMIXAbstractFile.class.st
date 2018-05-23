@@ -11,7 +11,7 @@ FAMIXAbstractFile class >> annotation [
 
 	<generated>
 	<MSEClass: #AbstractFile super: #FAMIXNamedEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

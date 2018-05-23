@@ -9,7 +9,7 @@ FAMIXParameterType class >> annotation [
 
 	<generated>
 	<MSEClass: #ParameterType super: #FAMIXType>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

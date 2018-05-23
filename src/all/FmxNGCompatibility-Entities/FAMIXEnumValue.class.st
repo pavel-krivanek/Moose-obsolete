@@ -11,7 +11,7 @@ FAMIXEnumValue class >> annotation [
 
 	<generated>
 	<MSEClass: #EnumValue super: #FAMIXStructuralEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

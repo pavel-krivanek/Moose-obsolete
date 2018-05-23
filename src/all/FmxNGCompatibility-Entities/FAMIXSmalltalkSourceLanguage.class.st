@@ -9,7 +9,7 @@ FAMIXSmalltalkSourceLanguage class >> annotation [
 
 	<generated>
 	<MSEClass: #SmalltalkSourceLanguage super: #FAMIXSourceLanguage>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

@@ -9,7 +9,7 @@ FAMIXPrimitiveType class >> annotation [
 
 	<generated>
 	<MSEClass: #PrimitiveType super: #FAMIXType>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

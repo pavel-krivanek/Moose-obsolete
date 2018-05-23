@@ -11,7 +11,7 @@ FAMIXFunction class >> annotation [
 
 	<generated>
 	<MSEClass: #Function super: #FAMIXBehaviouralEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

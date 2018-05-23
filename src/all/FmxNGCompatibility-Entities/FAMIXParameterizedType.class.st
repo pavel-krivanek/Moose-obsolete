@@ -11,7 +11,7 @@ FAMIXParameterizedType class >> annotation [
 
 	<generated>
 	<MSEClass: #ParameterizedType super: #FAMIXType>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

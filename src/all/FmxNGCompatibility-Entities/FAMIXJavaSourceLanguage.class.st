@@ -9,7 +9,7 @@ FAMIXJavaSourceLanguage class >> annotation [
 
 	<generated>
 	<MSEClass: #JavaSourceLanguage super: #FAMIXSourceLanguage>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]

@@ -38,7 +38,7 @@ FAMIXAnnotationInstance class >> annotation [
 
 	<generated>
 	<MSEClass: #AnnotationInstance super: #FAMIXSourcedEntity>
-	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<package: #'FmxNGCompatibility-Entities'>
 	<generated>
 	^self
 ]
