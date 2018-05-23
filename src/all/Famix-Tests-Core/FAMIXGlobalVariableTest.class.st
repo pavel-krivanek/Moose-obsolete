@@ -25,7 +25,7 @@ FAMIXGlobalVariableTest >> testIsPublic [
 { #category : #tests }
 FAMIXGlobalVariableTest >> testNamespaceScope [
 	| namespace globalVariable |
-	namespace := FmxNGNamespace new.
+	namespace := FAMIXNamespace new.
 	globalVariable := self actualClass new parentScope: namespace.
 	self assert: globalVariable namespaceScope equals: namespace
 ]

@@ -50,7 +50,7 @@ AbstractSmalltalkMethodVisitor >> extractCommentsFromNode: aSequenceNode [
 			[aSequenceNode comments
 				do:
 					[:eachComment | 
-					comment := FmxNGComment new.
+					comment := FAMIXComment new.
 					comment content: (aSequenceNode source 
 										copyFrom: eachComment start
 										to: eachComment stop) asString.
@@ -172,7 +172,7 @@ AbstractSmalltalkMethodVisitor >> resolve: name [
 AbstractSmalltalkMethodVisitor >> resolveInstanceSide: aNamedEntity [
 	"We ensure that a reference to a metaclass is considered as a reference to the class itself"
 
-	((aNamedEntity isKindOf: FmxNGClass) and: ['*_class' match: aNamedEntity name])
+	((aNamedEntity isKindOf: FAMIXClass) and: ['*_class' match: aNamedEntity name])
 		ifTrue: [| className |
 				className := aNamedEntity name removeSuffix: '_class'.
 				^ importer ensureClass: (Smalltalk at: className asSymbol) ]
@@ -254,7 +254,7 @@ AbstractSmalltalkMethodVisitor >> visitMessageNode: aMessageNode [
 	| invocation | 
 	importer importingContext shouldImportInvocation 
 		ifTrue: 
-			[invocation := FmxNGInvocation new. 
+			[invocation := FAMIXInvocation new. 
 			invocation sender: self methodEntity. 
 			
 			invocation signature: (FAMIXNameResolver signatureFromSmalltalkSelectorOn: aMessageNode selector).
@@ -315,13 +315,13 @@ AbstractSmalltalkMethodVisitor >> visitNode: aNode [
 AbstractSmalltalkMethodVisitor >> visitPragmaNode: aPragmaNode [
 	| annotationInstance annotationType |
 	annotationType := self importer ensureAnnotationType: aPragmaNode.
-	annotationInstance := FmxNGAnnotationInstance new.
+	annotationInstance := FAMIXAnnotationInstance new.
 	annotationInstance annotationType: annotationType.
 	self importer addEntity: annotationInstance.
 	annotationInstance annotatedEntity: self methodEntity.
 	aPragmaNode arguments doWithIndex: [:each :i |
 		| attribute |
-		attribute := FmxNGAnnotationInstanceAttribute new.
+		attribute := FAMIXAnnotationInstanceAttribute new.
 		attribute value: each value.
 		attribute parentAnnotationInstance: annotationInstance.
 		attribute annotationTypeAttribute: (annotationInstance annotationType attributes at: i).

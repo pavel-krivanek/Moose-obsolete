@@ -22,10 +22,10 @@ FAMIXObjectQueriesSelfLoopTest >> testPackageObjectTests [
 	self
 		assert:
 			((self packageP1FullReferencer queryAllIncomingInvocations
-				atScope: FmxNGPackage) includes: self packageP1FullReferencer).
+				atScope: FAMIXPackage) includes: self packageP1FullReferencer).
 	self
 		deny:
 			((self packageP1FullReferencer queryAllIncomingInvocations
-				atScope: FmxNGType) withoutSelfLoops
+				atScope: FAMIXType) withoutSelfLoops
 				includes: self packageP1FullReferencer)
 ]

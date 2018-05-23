@@ -128,5 +128,5 @@ AbstractCandidateListOperator >> length [
 AbstractCandidateListOperator >> setUp [ 
 	
 	"dont call 'model allMethods' here because it sorts the group and we dont care at this level"
-	groups := ((model allWithType: FmxNGMethod) reject: #isAbstract) groupedBy: #signature
+	groups := ((model allWithType: FAMIXMethod) reject: #isAbstract) groupedBy: #signature
 ]

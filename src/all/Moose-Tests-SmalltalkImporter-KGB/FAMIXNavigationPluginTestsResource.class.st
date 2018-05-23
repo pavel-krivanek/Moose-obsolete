@@ -46,7 +46,7 @@ FAMIXNavigationPluginTestsResource >> importModel [
 		'Model4FullReferencer'
 		'Model5InteractedReferencer'
 		'Model6InteractedReferee'
-		 'Model7FullInteracted' ) collect: [ :each | FmxNGNamespace new name: each ].
+		 'Model7FullInteracted' ) collect: [ :each | FAMIXNamespace new name: each ].
 	
 	importer := MoosePharoImporterTask new. 
 	importer importingContext mergeClassAndMetaclass. 

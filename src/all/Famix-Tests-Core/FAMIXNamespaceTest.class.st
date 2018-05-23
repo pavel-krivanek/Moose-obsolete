@@ -12,7 +12,7 @@ Class {
 
 { #category : #helpers }
 FAMIXNamespaceTest >> actualClass [
-	^ FmxNGNamespace
+	^ FAMIXNamespace
 ]
 
 { #category : #setUp }

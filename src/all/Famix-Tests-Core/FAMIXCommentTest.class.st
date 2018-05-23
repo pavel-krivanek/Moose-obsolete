@@ -6,18 +6,18 @@ Class {
 
 { #category : #helpers }
 FAMIXCommentTest >> actualClass [
-	^ FmxNGComment
+	^ FAMIXComment
 ]
 
 { #category : #tests }
 FAMIXCommentTest >> testAddingComment [
 	| cls |
-	cls := FmxNGClass new.
+	cls := FAMIXClass new.
 	cls name: 'AClass'.
 	self assert: cls mooseName == #AClass.
 	self assert: cls comments isEmpty.
 	cls addComment: 'This is a comment'.
-	self assert: (cls comments allSatisfy: [ :c | c isKindOf: FmxNGComment ]).
+	self assert: (cls comments allSatisfy: [ :c | c isKindOf: FAMIXComment ]).
 	self assert: (cls comments at: 1) content equals: 'This is a comment'
 ]
 

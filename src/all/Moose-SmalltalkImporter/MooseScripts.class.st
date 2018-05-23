@@ -266,7 +266,7 @@ MooseScripts class >> extractPackageNameOutOfMetacelloFile: filename [
 
 { #category : #workspace }
 MooseScripts class >> fixFileAnchorsForCurrentSystem [ 
-	FmxNGFileAnchor allInstances do: [:each | 
+	FAMIXFileAnchor allInstances do: [:each | 
 		each fileName: (each fileName copyReplaceAll: '\' with: FileSystem disk delimiter asString).
 		each fileName: (each fileName copyReplaceAll: '/' with: FileSystem disk delimiter asString). ]
 ]

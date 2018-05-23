@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXFileAnchorTest >> actualClass [
-	^ FmxNGFileAnchor
+	^ FAMIXFileAnchor
 ]
 
 { #category : #helpers }

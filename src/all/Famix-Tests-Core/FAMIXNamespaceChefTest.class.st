@@ -7,11 +7,11 @@ Class {
 { #category : #tests }
 FAMIXNamespaceChefTest >> testNilNamespaceScope [
 	| namespace |
-	namespace := FmxNGNamespace new.
+	namespace := FAMIXNamespace new.
 	self assert: namespace namespaceScope == namespace
 ]
 
 { #category : #tests }
 FAMIXNamespaceChefTest >> testNoClassScope [
-	self assert: FmxNGNamespace new typeScope isEmpty
+	self assert: FAMIXNamespace new typeScope isEmpty
 ]

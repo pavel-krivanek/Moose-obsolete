@@ -55,12 +55,12 @@ SmalltalkImporter >> allElements [
 { #category : #'private-entity-creation' }
 SmalltalkImporter >> basicClassCreation: aClass [
 	| class anchor |
-	class := classes at: aClass put: FmxNGClass new.
+	class := classes at: aClass put: FAMIXClass new.
 	class name: (aClass name replaceAll: Character space with: $_).
 	class stub: true.
 	importingContext shouldImportNamespace
 		ifTrue: [ class container: (self ensureNamespace: aClass environment) ].
-	anchor := FmxNGPharoAnchor new
+	anchor := FAMIXPharoAnchor new
 		element: class;
 		pharoEntity: aClass;
 		yourself.
@@ -85,12 +85,12 @@ SmalltalkImporter >> createAnnotationType: aPragmaNode [
 	| pragmaAnnotationType |
 	pragmaAnnotationType := annotationTypes
 		at: aPragmaNode selector
-		put: FmxNGAnnotationType new.
+		put: FAMIXAnnotationType new.
 	pragmaAnnotationType name: aPragmaNode selector.
 	aPragmaNode selector isUnary ifFalse: [
 		(aPragmaNode selector piecesCutWhere: [:a :b | a = $: ]) do: [ :each | 
 			| attribute |
-			attribute := FmxNGAnnotationTypeAttribute new.
+			attribute := FAMIXAnnotationTypeAttribute new.
 			attribute name: (each removeSuffix: ':').
 			attribute parentAnnotationType: pragmaAnnotationType.
 			self addEntity: attribute
@@ -197,7 +197,7 @@ SmalltalkImporter >> createGlobalVariable: name value: value [
 { #category : #'private-entity-creation' }
 SmalltalkImporter >> createMethod: aCompiledMethod [
 	| method thisClass anchor |
-	method := methods at: aCompiledMethod put: FmxNGMethod new.
+	method := methods at: aCompiledMethod put: FAMIXMethod new.
 	method name: aCompiledMethod selector.
 	method isAbstract: false.
 	thisClass := aCompiledMethod methodClass.
@@ -222,7 +222,7 @@ SmalltalkImporter >> createMethod: aCompiledMethod [
 		ifTrue: [ | visitor |
 			visitor := SmalltalkMethodVisitor on: self.
 			visitor runWith: aCompiledMethod and: method ].
-	anchor := FmxNGPharoAnchor new
+	anchor := FAMIXPharoAnchor new
 		element: method;
 		pharoEntity: aCompiledMethod;
 		yourself.
@@ -237,7 +237,7 @@ SmalltalkImporter >> createNamespace: aNamespace [
 	| namespace |
 	namespace := namespaces
 		at: aNamespace asString asSymbol
-		put: FmxNGNamespace new.
+		put: FAMIXNamespace new.
 	namespace name: 'Smalltalk'.
 	^namespace
 ]
@@ -248,7 +248,7 @@ SmalltalkImporter >> createPackage: aPackageModel [
 	| package |
 	package := packages
 		at: aPackageModel
-		put: FmxNGPackage new.
+		put: FAMIXPackage new.
 	package name: aPackageModel name.
 	package stub: true.
 	^package
@@ -434,7 +434,7 @@ SmalltalkImporter >> importClass: aClass [
 				ifTrue: 
 					[aClass hasComment 
 						ifTrue: 
-							[comment := self addEntity: FmxNGComment new. 
+							[comment := self addEntity: FAMIXComment new. 
 							comment content: aClass comment asString. 
 							comment container: class]]. 
 			aClass isMeta ifFalse: [self importClass: aClass class]]

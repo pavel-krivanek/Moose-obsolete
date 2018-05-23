@@ -108,15 +108,15 @@ MooseModelTest >> testBookmarkAsRaisesAnnouncement [
 MooseModelTest >> testCacheInvalidationAfterAdd [
 	| entity |
 	self assert: model allClasses isEmpty.
-	model add: FmxNGClass new.
+	model add: FAMIXClass new.
 	self assert: model allClasses size equals: 1
 ]
 
 { #category : #tests }
 MooseModelTest >> testCacheInvalidationAfterMultipleAddRemove [
 	| classA classB |
-	classA := FmxNGClass new name: 'ClassA'.
-	classB := FmxNGClass new name: 'ClassB'.
+	classA := FAMIXClass new name: 'ClassA'.
+	classB := FAMIXClass new name: 'ClassB'.
 	model add: classA.
 	self assert: model allClasses size equals: 1.
 	model add: classB.
@@ -134,7 +134,7 @@ MooseModelTest >> testCacheInvalidationAfterMultipleAddRemove [
 { #category : #tests }
 MooseModelTest >> testCacheInvalidationAfterRemove [
 	| class |
-	class := FmxNGClass new name: 'AClass'.
+	class := FAMIXClass new name: 'AClass'.
 	model add: class.
 	self assert: model allClasses size equals: 1.
 	model remove: class.
@@ -206,7 +206,7 @@ MooseModelTest >> testDoSeparatedBy [
 MooseModelTest >> testEnsureClassesAndNamespaces [
 	| aMethod |
 
-	model add: (aMethod := FmxNGMethod new).
+	model add: (aMethod := FAMIXMethod new).
 	self assert: (aMethod parentType isNil).
 	self should: [(aMethod parentScope isNil)] raise: Error.
 
@@ -226,7 +226,7 @@ MooseModelTest >> testExport [
 	stream := WriteStream on: String new.
 	MooseModel export: model to: stream.
 	self assert: stream contents equals: '()'.
-	model add: (FmxNGClass new name: 'Foo').
+	model add: (FAMIXClass new name: 'Foo').
 	stream := WriteStream on: String new.
 	MooseModel export: model to: stream.
 	self
@@ -248,7 +248,7 @@ MooseModelTest >> testExportMetamodelTo [
 
 { #category : #tests }
 MooseModelTest >> testIncludeElementOfType [
-	self assert: (self model includesElementsOfType: FmxNGClass).
+	self assert: (self model includesElementsOfType: FAMIXClass).
 	self deny: (self model includesElementsOfType: SmallInteger)
 ]
 
@@ -494,14 +494,14 @@ MooseModelTest >> testUnion2 [
 
 { #category : #tests }
 MooseModelTest >> testUnknownFAMIXClass [
-	self assert: (model unknownFAMIXClass isKindOf: FmxNGClass).
+	self assert: (model unknownFAMIXClass isKindOf: FAMIXClass).
 	self assert: (model unknownFAMIXClass == model unknownFAMIXClass).
 	self assert: (model unknownFAMIXClass isStub)
 ]
 
 { #category : #tests }
 MooseModelTest >> testUnknownFAMIXNamespace [
-	self assert: (model unknownFAMIXNamespace isKindOf: FmxNGNamespace).
+	self assert: (model unknownFAMIXNamespace isKindOf: FAMIXNamespace).
 	self assert: (model unknownFAMIXNamespace == model unknownFAMIXNamespace).
 	self assert: (model unknownFAMIXNamespace isStub)
 ]

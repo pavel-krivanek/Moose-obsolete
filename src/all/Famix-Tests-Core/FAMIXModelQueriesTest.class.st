@@ -17,14 +17,14 @@ Class {
 
 { #category : #'as yet unclassified' }
 FAMIXModelQueriesTest >> setUp [
-	namespace1 := FmxNGNamespace new.
-	namespace2 := FmxNGNamespace new.
-	stubNamespace := FmxNGNamespace new.
-	class1 := FmxNGClass new.
-	stubClass1 := FmxNGClass new isStub: true.
-	interface1 := FmxNGClass new isInterface: true.
-	stubInterface1 := FmxNGClass new isStub: true; isInterface: true.
-	stubPrimitiveType := FmxNGPrimitiveType new isStub: true.
+	namespace1 := FAMIXNamespace new.
+	namespace2 := FAMIXNamespace new.
+	stubNamespace := FAMIXNamespace new.
+	class1 := FAMIXClass new.
+	stubClass1 := FAMIXClass new isStub: true.
+	interface1 := FAMIXClass new isInterface: true.
+	stubInterface1 := FAMIXClass new isStub: true; isInterface: true.
+	stubPrimitiveType := FAMIXPrimitiveType new isStub: true.
 	class1 container: namespace1.
 	stubClass1 container: stubNamespace.
 	interface1 container: namespace2.
@@ -72,5 +72,5 @@ FAMIXModelQueriesTest >> testAllTypes [
 
 { #category : #'as yet unclassified' }
 FAMIXModelQueriesTest >> testAllWithTypeOfGroupClass [
-	self assert: (model allWithType: FmxNGClass ofGroupClass: FAMIXTypeGroup) size equals: 4
+	self assert: (model allWithType: FAMIXClass ofGroupClass: FAMIXTypeGroup) size equals: 4
 ]

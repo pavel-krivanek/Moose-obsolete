@@ -87,8 +87,8 @@ FamixTest >> testRobustMSEImport [
 { #category : #tests }
 FamixTest >> testSlot [
 	| fClass fMethod |
-	fClass := FmxNGClass new.
-	fMethod := FmxNGMethod new.
+	fClass := FAMIXClass new.
+	fMethod := FAMIXMethod new.
 	fMethod parentType: fClass.
 	self assert: (fClass methods at: 1) equals: fMethod
 ]
@@ -98,15 +98,15 @@ FamixTest >> testSourcesAnchorsAreNotDuplicatedAfterExport [
 	| model package tempFile importedModel |
 			
 	model := MooseModel new name: 'Perdu'.
-	package := FmxNGPackage new
+	package := FAMIXPackage new
 		name: 'Package';
 		mooseModel: model;
 		yourself.
-	FmxNGClass new
+	FAMIXClass new
 		name: 'Class';
 		container: package;
 		sourceAnchor:
-			(FmxNGSourceTextAnchor new
+			(FAMIXSourceTextAnchor new
 				source: 'some text';
 				mooseModel: model;
 				yourself);

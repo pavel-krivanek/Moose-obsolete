@@ -16,7 +16,7 @@ FAMIXSourcedEntityTest class >> isAbstract [
 FAMIXSourcedEntityTest >> testAddComment [
 	| inst comment |
 	inst := self actualClass new.
-	comment := FmxNGComment content: 'This is a test'.
+	comment := FAMIXComment content: 'This is a test'.
 	inst addComment: comment.
 	self assert: inst comments size equals: 1.
 	self assert: inst comments anyOne equals: comment.
@@ -34,7 +34,7 @@ FAMIXSourcedEntityTest >> testAddCommentFromString [
 
 { #category : #tests }
 FAMIXSourcedEntityTest >> testAddCommentRaiseErrorOnWrongObject [
-	self should: [ self actualClass new addComment: FmxNGSourceAnchor new ] raise: Error
+	self should: [ self actualClass new addComment: FAMIXSourceAnchor new ] raise: Error
 ]
 
 { #category : #tests }

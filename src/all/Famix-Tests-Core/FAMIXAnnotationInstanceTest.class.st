@@ -12,7 +12,7 @@ FAMIXAnnotationInstanceTest >> actualClass [
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testAnnotatedEntityBackPointer [
 	| entity instance |
-	entity := FmxNGNamedEntity new.
+	entity := FAMIXNamedEntity new.
 	instance := self actualClass new.
 	instance annotatedEntity: entity.
 	self assert: entity annotationInstances size equals: 1.
@@ -31,9 +31,9 @@ FAMIXAnnotationInstanceTest >> testAnnotationType [
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testMooseName [
 	| entity type instance |
-	type := FmxNGAnnotationType new.
+	type := FAMIXAnnotationType new.
 	type name: 'AnAnnotationType'.
-	entity := FmxNGNamedEntity new.
+	entity := FAMIXNamedEntity new.
 	entity name: 'AnEntity'.
 	instance := self actualClass new.
 	instance annotationType: type.
@@ -44,16 +44,16 @@ FAMIXAnnotationInstanceTest >> testMooseName [
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testMooseNameWithAttributes [
 	| entity type instance attributeType attributeInstance |
-	type := FmxNGAnnotationType new.
+	type := FAMIXAnnotationType new.
 	type name: 'AnAnnotationType'.
-	attributeType := FmxNGAnnotationTypeAttribute new.
+	attributeType := FAMIXAnnotationTypeAttribute new.
 	attributeType name: 'attribute'.
-	entity := FmxNGNamedEntity new.
+	entity := FAMIXNamedEntity new.
 	entity name: 'AnEntity'.
 	instance := self actualClass new.
 	instance annotationType: type.
 	instance annotatedEntity: entity.
-	attributeInstance := FmxNGAnnotationInstanceAttribute new.
+	attributeInstance := FAMIXAnnotationInstanceAttribute new.
 	attributeInstance parentAnnotationInstance: instance.
 	attributeInstance annotationTypeAttribute: attributeType.
 	attributeInstance value: 'value'.

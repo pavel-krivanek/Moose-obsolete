@@ -26,23 +26,23 @@ MooseModelDescriptionTest >> notTested_AllPropertyCommented [
 
 { #category : #tests }
 MooseModelDescriptionTest >> testAsMooseDescription [	
-	self assert: (FmxNGClass asMooseDescription isKindOf: FM3MetaDescription).
+	self assert: (FAMIXClass asMooseDescription isKindOf: FM3MetaDescription).
 ]
 
 { #category : #tests }
 MooseModelDescriptionTest >> testAsMooseDescriptionAttributes [
 	| fc ft |
-	fc := FmxNGClass asMooseDescription.
-	ft := FmxNGType asMooseDescription.
+	fc := FAMIXClass asMooseDescription.
+	ft := FAMIXType asMooseDescription.
 	self assert: (ft attributes anySatisfy: [:each | each name = #methods]).
 	self assert: (fc allAttributes anySatisfy: [:each | each name = #methods])
 ]
 
 { #category : #tests }
 MooseModelDescriptionTest >> testAsMooseDescriptionWithResetting [	
-	self assert: (FmxNGClass asMooseDescription isKindOf: FM3MetaDescription).
+	self assert: (FAMIXClass asMooseDescription isKindOf: FM3MetaDescription).
 	MooseModel resetMeta.
-	self assert: (FmxNGClass asMooseDescription isKindOf: FM3MetaDescription).
+	self assert: (FAMIXClass asMooseDescription isKindOf: FM3MetaDescription).
 ]
 
 { #category : #tests }

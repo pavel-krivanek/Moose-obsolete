@@ -19,12 +19,12 @@ FAMIXMetricTest >> model [
 
 { #category : #testing }
 FAMIXMetricTest >> testAllNamespaceMetrics [
-	self assertNoErrorForAllMetricsOf: (FmxNGNamespace new name: 'namespace')
+	self assertNoErrorForAllMetricsOf: (FAMIXNamespace new name: 'namespace')
 ]
 
 { #category : #testing }
 FAMIXMetricTest >> testAllPackageMetrics [
-	self assertNoErrorForAllMetricsOf: (FmxNGPackage new name: 'package'; mooseModel: MooseModel new)
+	self assertNoErrorForAllMetricsOf: (FAMIXPackage new name: 'package'; mooseModel: MooseModel new)
 ]
 
 { #category : #testing }

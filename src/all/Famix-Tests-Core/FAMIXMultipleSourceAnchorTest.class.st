@@ -27,7 +27,7 @@ FAMIXMultipleSourceAnchorTest >> testAdditionOfFiles [
 { #category : #tests }
 FAMIXMultipleSourceAnchorTest >> testMultipleSourceAnchorEntity [
 	| class |
-	class := FmxNGClass new mooseModel: MooseModel new; defineMultiSourceAnchorWithPath: 'aClassName'.
+	class := FAMIXClass new mooseModel: MooseModel new; defineMultiSourceAnchorWithPath: 'aClassName'.
 	self assert: class sourceAnchor allFiles size equals: 1.
 ]
 

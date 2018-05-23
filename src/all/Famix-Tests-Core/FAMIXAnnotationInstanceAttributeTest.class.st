@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXAnnotationInstanceAttributeTest >> actualClass [
-	^ FmxNGAnnotationInstanceAttribute
+	^ FAMIXAnnotationInstanceAttribute
 ]
 
 { #category : #tests }
@@ -68,7 +68,7 @@ FAMIXAnnotationInstanceAttributeTest >> testComplex [
 { #category : #tests }
 FAMIXAnnotationInstanceAttributeTest >> testName [
 	| type instance |
-	type := FmxNGAnnotationTypeAttribute new.
+	type := FAMIXAnnotationTypeAttribute new.
 	type name: 'aName'.
 	instance := self actualClass new.
 	instance annotationTypeAttribute: type.
@@ -78,7 +78,7 @@ FAMIXAnnotationInstanceAttributeTest >> testName [
 { #category : #tests }
 FAMIXAnnotationInstanceAttributeTest >> testParentAnnotationTypeAttribute [
 	| type instance |
-	type := FmxNGAnnotationTypeAttribute new.
+	type := FAMIXAnnotationTypeAttribute new.
 	instance := self actualClass new.
 	instance annotationTypeAttribute: type.
 	self assert: type annotationAttributeInstances size equals: 1

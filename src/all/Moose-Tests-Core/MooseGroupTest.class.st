@@ -112,7 +112,7 @@ MooseGroupTest >> testAsOrderedCollection [
 MooseGroupTest >> testAtIfAbsentIfPresent [
 	| group result |
 	group := MooseGroup new.
-	group add: (FmxNGClass new name: 'A').
+	group add: (FAMIXClass new name: 'A').
 	result := group entityNamed: 'X' ifAbsent: [ 42 ] ifPresent: [ :i |  ].
 	self assert: result equals: 42.
 	result := group entityNamed: 'A' ifAbsent: [ nil ] ifPresent: [ :cls | cls name ].
@@ -123,7 +123,7 @@ MooseGroupTest >> testAtIfAbsentIfPresent [
 MooseGroupTest >> testAtIfAbsentPut [
 	| group classA |
 	group := MooseGroup new.
-	classA := FmxNGClass new name: 'A'.
+	classA := FAMIXClass new name: 'A'.
 	group entityNamed: 'X' ifAbsentPut: classA.
 	self assert: group size equals: 1.
 	self assert: group first == classA
@@ -132,11 +132,11 @@ MooseGroupTest >> testAtIfAbsentPut [
 { #category : #tests }
 MooseGroupTest >> testAverage [
 	| classes classA classB |
-	classA := FmxNGClass new.
-	classA addMethod: FmxNGMethod new.
-	classB := FmxNGClass new.
-	classB addMethod: FmxNGMethod new.
-	classB addMethod: FmxNGMethod new.
+	classA := FAMIXClass new.
+	classA addMethod: FAMIXMethod new.
+	classB := FAMIXClass new.
+	classB addMethod: FAMIXMethod new.
+	classB addMethod: FAMIXMethod new.
 	classes := FAMIXTypeGroup
 		withAll:
 			{classA.
@@ -204,7 +204,7 @@ MooseGroupTest >> testCopy [
 
 { #category : #tests }
 MooseGroupTest >> testCount [
-	self assert: (self twoClasses count: [ :el | el class == FmxNGClass ]) equals: 2
+	self assert: (self twoClasses count: [ :el | el class == FAMIXClass ]) equals: 2
 ]
 
 { #category : #tests }
@@ -346,15 +346,15 @@ MooseGroupTest >> testEntityNamed [
 MooseGroupTest >> testEntityNamedWithType [
 	| group result c n |
 	group := MooseGroup new.
-	c := FmxNGClass new name: 'A'.
-	n := FmxNGNamespace new name: 'A'.
+	c := FAMIXClass new name: 'A'.
+	n := FAMIXNamespace new name: 'A'.
 	group add: c.
 	group add: n.
 	result := group entityNamed: 'A'.
 	self assert: result equals: n.
-	result := group entityNamed: 'A' withType: FmxNGNamespace.
+	result := group entityNamed: 'A' withType: FAMIXNamespace.
 	self assert: result equals: n.
-	result := group entityNamed: 'A' withType: FmxNGClass.
+	result := group entityNamed: 'A' withType: FAMIXClass.
 	self assert: result equals: c
 ]
 
@@ -604,12 +604,12 @@ MooseGroupTest >> testNumberOfPackages [
 	model := MooseModel new.
 	self assert: model numberOfPackages equals: 0.
 	model := MooseModel new.
-	model add: FmxNGPackage new.
-	model add: FmxNGPackage new.
+	model add: FAMIXPackage new.
+	model add: FAMIXPackage new.
 	self assert: model numberOfPackages equals: 0.
 	model := MooseModel new.
-	model add: FmxNGNamespace new.
-	model add: FmxNGNamespace new.
+	model add: FAMIXNamespace new.
+	model add: FAMIXNamespace new.
 	self assert: model numberOfPackages equals: 2
 ]
 
@@ -808,10 +808,10 @@ MooseGroupTest >> testWithIndexDo [
 { #category : #utility }
 MooseGroupTest >> twoClasses [
 	| classA classB |
-	classA := FmxNGClass new.
-	classA addMethod: FmxNGMethod new.
-	classB := FmxNGClass new.
-	classB addMethod: FmxNGMethod new.
-	classB addMethod: FmxNGMethod new.
+	classA := FAMIXClass new.
+	classA addMethod: FAMIXMethod new.
+	classB := FAMIXClass new.
+	classB addMethod: FAMIXMethod new.
+	classB addMethod: FAMIXMethod new.
 	^ FAMIXTypeGroup withAll: {classA . classB}.
 ]

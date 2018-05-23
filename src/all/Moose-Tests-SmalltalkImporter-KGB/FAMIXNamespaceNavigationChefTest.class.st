@@ -29,7 +29,7 @@ FAMIXNamespaceNavigationChefTest >> testClientClassesInto [
 FAMIXNamespaceNavigationChefTest >> testClientNamespaces [
 	self
 		assert:
-			((self namespace2FullReferee queryAllIncoming atScope: FmxNGNamespace)
+			((self namespace2FullReferee queryAllIncoming atScope: FAMIXNamespace)
 				equalsTo: (Set with: self namespace1InteractedReferencerReferee with: self namespace3ReferencerReferee with: self namespace2FullReferee))
 ]
 
@@ -41,17 +41,17 @@ FAMIXNamespaceNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingRe
 		assert:
 			(modelNamespaces
 				allSatisfy: [ :referencer | 
-					(referencer queryAllOutgoingInvocations atScope: FmxNGType)
+					(referencer queryAllOutgoingInvocations atScope: FAMIXType)
 						allSatisfy: [ :referenced | 
-							(referenced queryAllIncomingInvocations atScope: FmxNGNamespace)
+							(referenced queryAllIncomingInvocations atScope: FAMIXNamespace)
 								includes: referencer ] ]).
 	self
 		assert:
 			(modelNamespaces
 				allSatisfy: [ :referencer | 
-					(referencer queryAllOutgoingInvocations atScope: FmxNGNamespace)
+					(referencer queryAllOutgoingInvocations atScope: FAMIXNamespace)
 						allSatisfy: [ :referenced | 
-							(referenced queryAllIncomingInvocations atScope: FmxNGNamespace)
+							(referenced queryAllIncomingInvocations atScope: FAMIXNamespace)
 								includes: referencer ] ])
 ]
 
@@ -63,17 +63,17 @@ FAMIXNamespaceNavigationChefTest >> testEachSureOutgoingReferenceImpliesASureInc
 		assert:
 			(modelNamespaces
 				allSatisfy: [ :referencer | 
-					(referencer querySureOutgoingInvocations atScope: FmxNGType)
+					(referencer querySureOutgoingInvocations atScope: FAMIXType)
 						allSatisfy: [ :referenced | 
-							(referenced queryAllIncomingInvocations atScope: FmxNGNamespace)
+							(referenced queryAllIncomingInvocations atScope: FAMIXNamespace)
 								includes: referencer ] ]).
 	self
 		assert:
 			(modelNamespaces
 				allSatisfy: [ :referencer | 
-					(referencer querySureOutgoingInvocations atScope: FmxNGNamespace)
+					(referencer querySureOutgoingInvocations atScope: FAMIXNamespace)
 						allSatisfy: [ :referenced | 
-							(referenced queryAllIncomingInvocations atScope: FmxNGNamespace)
+							(referenced queryAllIncomingInvocations atScope: FAMIXNamespace)
 								includes: referencer ] ])
 ]
 
@@ -117,7 +117,7 @@ FAMIXNamespaceNavigationChefTest >> testInheritedByNamespaces [
 	self
 		assert:
 			((self namespace2FullReferee queryIncomingInheritances
-				atScope: FmxNGNamespace)
+				atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace1InteractedReferencerReferee
@@ -161,7 +161,7 @@ FAMIXNamespaceNavigationChefTest >> testInheritedNamespaces [
 	self
 		assert:
 			((self namespace1InteractedReferencerReferee queryOutgoingInheritances
-				atScope: FmxNGNamespace)
+				atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace2FullReferee
@@ -196,18 +196,18 @@ FAMIXNamespaceNavigationChefTest >> testProviderClassesInto [
 	| invos refs inh |
 	self
 		assert:
-			(((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FmxNGType) withinNamespace: self namespace2FullReferee)
+			(((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FAMIXType) withinNamespace: self namespace2FullReferee)
 				equalsTo: (Set with: self c11FullRefereeOutSide with: self c13FullRefereeInSideOutSide)).
 	self assert: 15 equals: (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) size.
-	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FmxNGInvocation ].
+	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FAMIXInvocation ].
 	self assert: 10 equals: invos size.
-	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FmxNGReference ].
+	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FAMIXReference ].
 	self assert: 4 equals: refs size.
-	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FmxNGInheritance ].
+	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FAMIXInheritance ].
 	self assert: 1 equals: inh size.
 	self
 		assert:
-			(((self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) atScope: FmxNGType)
+			(((self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) atScope: FAMIXType)
 				equalsTo: (Set with: self c11FullRefereeOutSide with: self c13FullRefereeInSideOutSide))
 ]
 
@@ -216,7 +216,7 @@ FAMIXNamespaceNavigationChefTest >> testProviderClassesOutOf [
 	| invos refs inh acc |
 	self
 		assert:
-			(((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FmxNGType) outOfPackage: self packageP5FullReferee)
+			(((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FAMIXType) outOfPackage: self packageP5FullReferee)
 				equalsTo:
 					((Set
 						with: self c13FullRefereeInSideOutSide
@@ -232,17 +232,17 @@ FAMIXNamespaceNavigationChefTest >> testProviderClassesOutOf [
 								with: self c4FullRefereeInSide
 								with: self c1FullReferencerOutSide))).
 	self assert: 55 equals: (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) size.
-	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGInvocation ].
+	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FAMIXInvocation ].
 	self assert: 29 equals: invos size.
-	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGReference ].
+	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FAMIXReference ].
 	self assert: 10 equals: refs size.
-	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGInheritance ].
+	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FAMIXInheritance ].
 	self assert: 7 equals: inh size.
-	acc := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGAccess ].
+	acc := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FAMIXAccess ].
 	self assert: 9 equals: acc size.
 	self
 		assert:
-			(((self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) atScope: FmxNGType)
+			(((self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) atScope: FAMIXType)
 				equalsTo:
 					((Set
 						with: self c13FullRefereeInSideOutSide
@@ -263,7 +263,7 @@ FAMIXNamespaceNavigationChefTest >> testProviderClassesOutOf [
 FAMIXNamespaceNavigationChefTest >> testProviderNamespaces [
 	self
 		assert:
-			((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FmxNGNamespace)
+			((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace2FullReferee
@@ -311,7 +311,7 @@ FAMIXNamespaceNavigationChefTest >> testReferencedNamespaces [
 	self
 		assert:
 			((self namespace1InteractedReferencerReferee
-				queryAllOutgoingInvocations atScope: FmxNGNamespace)
+				queryAllOutgoingInvocations atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace2FullReferee
@@ -353,7 +353,7 @@ FAMIXNamespaceNavigationChefTest >> testReferencingNamespaces [
 	self
 		assert:
 			((self namespace2FullReferee queryAllIncomingInvocations
-				atScope: FmxNGNamespace)
+				atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace1InteractedReferencerReferee
@@ -393,7 +393,7 @@ FAMIXNamespaceNavigationChefTest >> testSureReferencedNamespaces [
 	self
 		assert:
 			((self namespace1InteractedReferencerReferee
-				querySureOutgoingInvocations atScope: FmxNGNamespace)
+				querySureOutgoingInvocations atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace2FullReferee
@@ -433,7 +433,7 @@ FAMIXNamespaceNavigationChefTest >> testSureReferencingNamespaces [
 	self
 		assert:
 			((self namespace2FullReferee querySureIncomingInvocations
-				atScope: FmxNGNamespace)
+				atScope: FAMIXNamespace)
 				equalsTo:
 					(Set
 						with: self namespace1InteractedReferencerReferee
