@@ -6,6 +6,6 @@ A Mock invocation for MooseQuery's tests
 "
 Class {
 	#name : #MooseQueryMockSpecializedInvocation,
-	#superclass : #FmxNGInvocation,
+	#superclass : #AnObsoleteFmxNGInvocation,
 	#category : #'Moose-Query-Test'
 }

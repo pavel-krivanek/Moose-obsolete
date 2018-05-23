@@ -1,0 +1,85 @@
+Class {
+	#name : #FAMIXSourceLanguage,
+	#superclass : #FAMIXEntity,
+	#traits : 'FmxNGTSourceLanguage',
+	#classTraits : 'FmxNGTSourceLanguage classTrait',
+	#category : #'FmxNGCompatibility-Entities-Entities'
+}
+
+{ #category : #meta }
+FAMIXSourceLanguage class >> annotation [
+
+	<generated>
+	<MSEClass: #SourceLanguage super: #FAMIXEntity>
+	<package: #'FmxNGCompatibility-EntitiesOld'>
+	<generated>
+	^self
+]
+
+{ #category : #generator }
+FAMIXSourceLanguage class >> generatedSlotNames [
+	<generated>
+	^ #()
+]
+
+{ #category : #generator }
+FAMIXSourceLanguage class >> generatedTraitNames [
+	<generated>
+	^ #(FmxNGTSourceLanguage)
+]
+
+{ #category : #meta }
+FAMIXSourceLanguage class >> requirements [
+
+	<generated>
+	^ {  }
+]
+
+{ #category : #accessing }
+FAMIXSourceLanguage >> addSourcedEntity: aSourcedEntity [
+	^ self sourcedEntities add: aSourcedEntity
+]
+
+{ #category : #utility }
+FAMIXSourceLanguage >> format: aSourceString from: anEntity [
+	^ aSourceString
+	
+	
+]
+
+{ #category : #testing }
+FAMIXSourceLanguage >> isAttached [
+	"Returns whether the receiver (a language) has some entities associated with it. By default, if there are no entities attached, it means that all of them are of this language."
+
+	^ self sourcedEntities notEmpty  
+]
+
+{ #category : #'Famix-C' }
+FAMIXSourceLanguage >> isC [ 
+	^ false
+]
+
+{ #category : #'Famix-Java' }
+FAMIXSourceLanguage >> isJava [
+	^ false
+]
+
+{ #category : #'Famix-Smalltalk' }
+FAMIXSourceLanguage >> isSmalltalk [
+	 ^ false
+]
+
+{ #category : #testing }
+FAMIXSourceLanguage >> isUnknown [ 
+	^ false
+]
+
+{ #category : #accessing }
+FAMIXSourceLanguage >> name [
+	"The name of the language that is not modeled explicitly"
+	
+	<MSEProperty: #name type: #String> <derived>
+	<MSEComment: 'The name of the language that is not modeled explicitly.'>
+	
+	^ (self class name removePrefix: 'FmxNG') removeSuffix: 'SourceLanguage'
+]

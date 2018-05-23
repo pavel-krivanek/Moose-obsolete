@@ -75,7 +75,7 @@ FmxNGCompatibilityGenerator class >> packageName [
 { #category : #accessing }
 FmxNGCompatibilityGenerator class >> prefix [
 
-	^ #'FmxNG'
+	^ #'FAMIX'
 ]
 
 { #category : #accessing }
@@ -136,9 +136,9 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	attribute := builder newClassNamed: #Attribute.
 	behaviouralEntity := builder newClassNamed: #BehaviouralEntity.
 	cFile := builder newClassNamed: #CFile.
-	cPPSourceLanguage := builder newClassNamed: #CPPSourceLanguage.
+	cPPSourceLanguage := builder newClassNamed: #CppSourceLanguage.
 	cSourceLanguage := builder newClassNamed: #CSourceLanguage.
-	cUSTOMSourceLanguage := builder newClassNamed: #CUSTOMSourceLanguage.
+	cUSTOMSourceLanguage := builder newClassNamed: #CustomSourceLanguage.
 	caughtException := builder newClassNamed: #CaughtException.
 	class := builder newClassNamed: #Class.
 	compilationUnit := builder newClassNamed: #CompilationUnit.
@@ -159,7 +159,7 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	indexedFileAnchor := builder newClassNamed: #IndexedFileAnchor.
 	inheritance := builder newClassNamed: #Inheritance.
 	invocation := builder newClassNamed: #Invocation.
-	jAVASourceLanguage := builder newClassNamed: #JAVASourceLanguage.
+	jAVASourceLanguage := builder newClassNamed: #JavaSourceLanguage.
 	leafEntity := builder newClassNamed: #LeafEntity.
 	localVariable := builder newClassNamed: #LocalVariable.
 	method := builder newClassNamed: #Method.
@@ -177,14 +177,14 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	preprocessorStatement := builder newClassNamed: #PreprocessorStatement.
 	primitiveType := builder newClassNamed: #PrimitiveType.
 	reference := builder newClassNamed: #Reference.
-	sMALLTALKSourceLanguage := builder newClassNamed: #SMALLTALKSourceLanguage.
+	sMALLTALKSourceLanguage := builder newClassNamed: #SmalltalkSourceLanguage.
 	scopingEntity := builder newClassNamed: #ScopingEntity.
 	sourceTextAnchor := builder newClassNamed: #SourceTextAnchor.
 	structuralEntity := builder newClassNamed: #StructuralEntity.
 	thrownException := builder newClassNamed: #ThrownException.
 	type := builder newClassNamed: #Type.
 	typeAlias := builder newClassNamed: #TypeAlias.
-	uNKNOWNSourceLanguage := builder newClassNamed: #UNKNOWNSourceLanguage.
+	uNKNOWNSourceLanguage := builder newClassNamed: #UnknownSourceLanguage.
 	unknownVariable := builder newClassNamed: #UnknownVariable.
 	trait := builder newClassNamed: #Trait.
 	traitUsage := builder newClassNamed: #TraitUsage.

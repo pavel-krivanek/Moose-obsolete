@@ -50,21 +50,21 @@ MooseAbstractGroup >> addAll: aCollectionOfItems [
 { #category : #navigation }
 MooseAbstractGroup >> allClasses [
 	<navigation: 'All classes'>
-	^ self allWithSubTypesOf: FmxNGClass ofGroupClass: FAMIXClassGroup
+	^ self allWithSubTypesOf: FAMIXClass ofGroupClass: FAMIXClassGroup
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allInheritanceDefinitions [
 	
 	<navigation: 'All inheritances'>
-	^self allWithType: FmxNGInheritance 
+	^self allWithType: FAMIXInheritance 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allMethods [
 	<navigation: 'All methods'>
 	
-	^ self allWithType: FmxNGMethod
+	^ self allWithType: FAMIXMethod
 ]
 
 { #category : #groups }

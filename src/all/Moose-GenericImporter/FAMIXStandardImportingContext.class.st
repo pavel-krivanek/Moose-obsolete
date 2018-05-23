@@ -8,6 +8,6 @@ Class {
 FAMIXStandardImportingContext class >> new [
 
 	| collectionOfFM3Eelements |
-	collectionOfFM3Eelements := FmxNGSourcedEntity allSubclasses collect: [:each | each asMooseDescription ].
+	collectionOfFM3Eelements := FAMIXSourcedEntity allSubclasses collect: [:each | each asMooseDescription ].
 	^ super fromMeta: collectionOfFM3Eelements .
 ]

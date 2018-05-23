@@ -25,14 +25,14 @@ MooseQueryComparedToMooseChefTest >> testIncomingAccesses [
 				createIncomingQueryResultWith: (class2 attributes flatCollect: [ :each | each incomingAccesses ]))
 				asSet.
 	self
-		assert: (method2 queryIncoming: FmxNGAccess) asSet
+		assert: (method2 queryIncoming: FAMIXAccess) asSet
 		equals:
 			(method2
 				createIncomingQueryResultWith:
 					((method2 parameters flatCollect: #incomingAccesses) asOrderedCollection
 						addAll: (method2 localVariables flatCollect: #incomingAccesses);
 						yourself)) asSet.
-	self assert: (var3 queryIncoming: FmxNGAccess) asSet equals: var3 incomingAccesses asSet
+	self assert: (var3 queryIncoming: FAMIXAccess) asSet equals: var3 incomingAccesses asSet
 ]
 
 { #category : #tests }

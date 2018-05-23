@@ -11,10 +11,10 @@ Class {
 { #category : #running }
 MooseQueryOfInvocationWithNilCandidatesTest >> setUp [
 	| inh method inv |
-	class := FmxNGClass new name: 'class'.
-	inh := FmxNGInheritance new subclass: class.
-	method := FmxNGMethod new name: 'method' ; parentType: class.
-	inv := FmxNGInvocation new sender: method.
+	class := FAMIXClass new name: 'class'.
+	inh := FAMIXInheritance new subclass: class.
+	method := FAMIXMethod new name: 'method' ; parentType: class.
+	inv := FAMIXInvocation new sender: method.
 ]
 
 { #category : #tests }

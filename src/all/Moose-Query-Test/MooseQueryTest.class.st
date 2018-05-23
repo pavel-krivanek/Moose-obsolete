@@ -34,25 +34,25 @@ MooseQueryTest >> model [
 { #category : #running }
 MooseQueryTest >> setUp [
 	model := MooseModel new.
-	package1 := FmxNGPackage new name: 'package1' ; mooseModel: model.
-	package2 := FmxNGPackage new name: 'package2' ; mooseModel: model.
-	namespace := FmxNGNamespace new name: 'Smalltalk' ; mooseModel: model.
-	class1 := FmxNGClass new name: 'class1' ; parentPackage: package1 ; container: namespace ; mooseModel: model.
-	class2 := FmxNGClass new name: 'class2' ; parentPackage: package2 ; mooseModel: model.
-	inh := FmxNGInheritance new subclass: class1 ; superclass: class2 ; mooseModel: model.
-	method1 := FmxNGMethod new name: 'method1' ; parentType: class1 ; mooseModel: model.
-	method2 := FmxNGMethod new name: 'method2' ; parentType: class2 ; mooseModel: model.
-	method3 := FmxNGMethod new name: 'method3' ; parentType: class2 ; mooseModel: model.
-	methodExt := FmxNGMethod new name: 'methodExt' ; parentType: class2 ; parentPackage: package1 ; mooseModel: model.
-	var1 := FmxNGAttribute new name: 'var1' ; parentType: class2 ; declaredType: class1 ; mooseModel: model.
-	var2 := FmxNGAttribute new name: 'var2' ; parentType: class2 ; mooseModel: model.
-	var3 := FmxNGLocalVariable new name: 'var3' ; parentBehaviouralEntity: method2 ; declaredType: class1 ; mooseModel: model.
-	access := FmxNGAccess new accessor: method1 ; variable: var2 ; mooseModel: model.
-	acc1 := FmxNGAccess new accessor: method2 ; variable: var1 ; mooseModel: model.
-	inv1 := FmxNGInvocation new sender: method1 ; addCandidate: method2 ; receiver: var2 ; mooseModel: model.
-	inv2 := FmxNGInvocation new sender: method2 ; addCandidate: method2 ; receiver: var2 ; mooseModel: model.
-	inv3 := FmxNGInvocation new sender: method3 ; addCandidate: method2 ; receiver: var2 ; mooseModel: model.
-	ref1 := FmxNGReference new source: method1 ; target: class2 ; mooseModel: model.
+	package1 := FAMIXPackage new name: 'package1' ; mooseModel: model.
+	package2 := FAMIXPackage new name: 'package2' ; mooseModel: model.
+	namespace := FAMIXNamespace new name: 'Smalltalk' ; mooseModel: model.
+	class1 := FAMIXClass new name: 'class1' ; parentPackage: package1 ; container: namespace ; mooseModel: model.
+	class2 := FAMIXClass new name: 'class2' ; parentPackage: package2 ; mooseModel: model.
+	inh := FAMIXInheritance new subclass: class1 ; superclass: class2 ; mooseModel: model.
+	method1 := FAMIXMethod new name: 'method1' ; parentType: class1 ; mooseModel: model.
+	method2 := FAMIXMethod new name: 'method2' ; parentType: class2 ; mooseModel: model.
+	method3 := FAMIXMethod new name: 'method3' ; parentType: class2 ; mooseModel: model.
+	methodExt := FAMIXMethod new name: 'methodExt' ; parentType: class2 ; parentPackage: package1 ; mooseModel: model.
+	var1 := FAMIXAttribute new name: 'var1' ; parentType: class2 ; declaredType: class1 ; mooseModel: model.
+	var2 := FAMIXAttribute new name: 'var2' ; parentType: class2 ; mooseModel: model.
+	var3 := FAMIXLocalVariable new name: 'var3' ; parentBehaviouralEntity: method2 ; declaredType: class1 ; mooseModel: model.
+	access := FAMIXAccess new accessor: method1 ; variable: var2 ; mooseModel: model.
+	acc1 := FAMIXAccess new accessor: method2 ; variable: var1 ; mooseModel: model.
+	inv1 := FAMIXInvocation new sender: method1 ; addCandidate: method2 ; receiver: var2 ; mooseModel: model.
+	inv2 := FAMIXInvocation new sender: method2 ; addCandidate: method2 ; receiver: var2 ; mooseModel: model.
+	inv3 := FAMIXInvocation new sender: method3 ; addCandidate: method2 ; receiver: var2 ; mooseModel: model.
+	ref1 := FAMIXReference new source: method1 ; target: class2 ; mooseModel: model.
 ]
 
 { #category : #tests }
@@ -66,7 +66,7 @@ MooseQueryTest >> testAllAtScope [
 		hasSameElements:
 			{namespace.
 			package1}.
-	package3 := FmxNGPackage new
+	package3 := FAMIXPackage new
 		name: 'package3';
 		mooseModel: model.
 	package1 parentPackage: package3.
@@ -148,11 +148,11 @@ MooseQueryTest >> testAllWithScope [
 		hasSameElements:
 			{package1.
 			namespace}."
-	package3 := FmxNGPackage new
+	package3 := FAMIXPackage new
 		name: 'package3';
 		mooseModel: model.
 	package1 parentPackage: package3.
-	class3 := FmxNGClass new
+	class3 := FAMIXClass new
 		name: 'class3';
 		container: class1;
 		mooseModel: model.
@@ -218,18 +218,18 @@ MooseQueryTest >> testExplicitDirectionQueryEquivalentToQueryWithDirectionSymbol
 	"queryIncoming: is equivalent to query: #in with:"
 
 	self
-		assert: (method1 queryIncoming: FmxNGInvocation)
-		equals: (method1 query: #in with: FmxNGInvocation).
+		assert: (method1 queryIncoming: FAMIXInvocation)
+		equals: (method1 query: #in with: FAMIXInvocation).
 	self
-		assert: (class2 queryIncoming: FmxNGInvocation)
-		equals: (class2 query: #in with: FmxNGInvocation).
+		assert: (class2 queryIncoming: FAMIXInvocation)
+		equals: (class2 query: #in with: FAMIXInvocation).
 	"queryOutgoing: is equivalent to query: #out with:"
 	self
-		assert: (method1 queryOutgoing: FmxNGInvocation)
-		equals: (method1 query: #out with: FmxNGInvocation).
+		assert: (method1 queryOutgoing: FAMIXInvocation)
+		equals: (method1 query: #out with: FAMIXInvocation).
 	self
-		assert: (class2 queryOutgoing: FmxNGInvocation)
-		equals: (class2 query: #out with: FmxNGInvocation)
+		assert: (class2 queryOutgoing: FAMIXInvocation)
+		equals: (class2 query: #out with: FAMIXInvocation)
 ]
 
 { #category : #tests }
@@ -258,18 +258,18 @@ MooseQueryTest >> testIncomingInvocation [
 { #category : #tests }
 MooseQueryTest >> testIncomingInvocationAtScope [
 	self
-		assert: ((method2 queryIncoming: FmxNGTInvocation) atScope: FmxNGPackage) size
+		assert: ((method2 queryIncoming: FmxNGTInvocation) atScope: FAMIXPackage) size
 		equals: 2.
 	self
-		assert: ((class2 queryIncoming: FmxNGTInvocation) atScope: FmxNGPackage) size
+		assert: ((class2 queryIncoming: FmxNGTInvocation) atScope: FAMIXPackage) size
 		equals: 2
 ]
 
 { #category : #tests }
 MooseQueryTest >> testOutgoingAccessAtScope [
-	self assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGPackage) size equals: 1.
+	self assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FAMIXPackage) size equals: 1.
 	self
-		assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FmxNGPackage) storage first
+		assert: ((method1 queryOutgoing: FmxNGTAccess) atScope: FAMIXPackage) storage first
 		equals: package2
 ]
 
@@ -278,7 +278,7 @@ MooseQueryTest >> testOutgoingAccessesWithANamespaceInANamespace [
 	"queryOutgoing: is equivalent to query: #out with:"
 
 	| namespaceContainer |
-	namespaceContainer := FmxNGNamespace new
+	namespaceContainer := FAMIXNamespace new
 		name: 'Test';
 		mooseModel: model;
 		addChildScope: namespace.
@@ -308,8 +308,8 @@ MooseQueryTest >> testOutgoingInvocation [
 { #category : #tests }
 MooseQueryTest >> testOutgoingInvocationAtScope [
 
-	self assert: ((method2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGPackage) size equals: 1.
-	self assert: ((class2 queryOutgoing: FmxNGTInvocation) atScope: FmxNGPackage) size equals: 1.
+	self assert: ((method2 queryOutgoing: FmxNGTInvocation) atScope: FAMIXPackage) size equals: 1.
+	self assert: ((class2 queryOutgoing: FmxNGTInvocation) atScope: FAMIXPackage) size equals: 1.
 
 ]
 
@@ -335,14 +335,14 @@ MooseQueryTest >> testQueryWith [
 
 { #category : #tests }
 MooseQueryTest >> testToScope [
-	self assert: (class1 toScope: FmxNGMethod) equals: {method1}.
+	self assert: (class1 toScope: FAMIXMethod) equals: {method1}.
 	self
-		assertCollection: (class2 toScope: FmxNGAttribute) asSet
+		assertCollection: (class2 toScope: FAMIXAttribute) asSet
 		hasSameElements:
 			{var1.
 			var2}.
 	self
-		assertCollection: (package1 toScope: FmxNGMethod)
+		assertCollection: (package1 toScope: FAMIXMethod)
 		hasSameElements:
 			{method1.
 			methodExt}
