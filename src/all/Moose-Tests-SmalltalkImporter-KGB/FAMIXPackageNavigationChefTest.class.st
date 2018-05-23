@@ -10,7 +10,7 @@ FAMIXPackageNavigationChefTest >> testClientClasses [
 	p5 := self packageP5FullReferee.
 	self
 		assert:
-			((p5 queryAllIncoming atScope: FmxNGType)
+			((p5 queryAllIncoming atScope: FAMIXType)
 				equalsTo:
 					((Set
 						with: self c1FullReferencerOutSide
@@ -24,7 +24,7 @@ FAMIXPackageNavigationChefTest >> testClientClassesInto [
 	| p1 p5 |
 	p1 := self packageP1FullReferencer.
 	p5 := self packageP5FullReferee.
-	self assert: (((p5 queryAllIncoming atScope: FmxNGType) withinPackage: p1) equalsTo: (Set with: self c1FullReferencerOutSide))
+	self assert: (((p5 queryAllIncoming atScope: FAMIXType) withinPackage: p1) equalsTo: (Set with: self c1FullReferencerOutSide))
 ]
 
 { #category : #allDependencies }
@@ -183,7 +183,7 @@ FAMIXPackageNavigationChefTest >> testInheritedPackages [
 FAMIXPackageNavigationChefTest >> testProviderClasses [
 	| p8 |
 	p8 := self packageP8FullReferencer.
-	self assert: ((p8 queryAllOutgoing atScope: FmxNGType) equalsTo: (Set with: self c18FullRefereeInSideOutSide with: self c19FullRefereeOutSide with: self c14ReferencerOutSideRefereeOutSide))
+	self assert: ((p8 queryAllOutgoing atScope: FAMIXType) equalsTo: (Set with: self c18FullRefereeInSideOutSide with: self c19FullRefereeOutSide with: self c14ReferencerOutSideRefereeOutSide))
 ]
 
 { #category : #allDependencies }
@@ -192,8 +192,8 @@ FAMIXPackageNavigationChefTest >> testProviderClassesInto [
 	p8 := self packageP8FullReferencer.
 	p11 := self packageP11FullReferee.
 	pEx := self packagePExtensions.
-	self assert: (((p8 queryAllOutgoing atScope: FmxNGType) withinPackage: p11) equalsTo: (Set with: self c19FullRefereeOutSide)).
-	self assert: ((p8 queryAllOutgoing atScope: FmxNGType) withinPackage: pEx) isEmpty
+	self assert: (((p8 queryAllOutgoing atScope: FAMIXType) withinPackage: p11) equalsTo: (Set with: self c19FullRefereeOutSide)).
+	self assert: ((p8 queryAllOutgoing atScope: FAMIXType) withinPackage: pEx) isEmpty
 ]
 
 { #category : #allDependencies }
@@ -220,7 +220,7 @@ FAMIXPackageNavigationChefTest >> testReferencedClasses [
 	self
 		assert:
 			((self packageP8FullReferencer queryAllOutgoingInvocations
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c18FullRefereeInSideOutSide
@@ -235,12 +235,12 @@ FAMIXPackageNavigationChefTest >> testReferencedClassesInto [
 	pEx := self packagePExtensions.
 	self
 		assert:
-			(((p8 queryAllOutgoingInvocations atScope: FmxNGType)
+			(((p8 queryAllOutgoingInvocations atScope: FAMIXType)
 				withinPackage: p11)
 				equalsTo: (Set with: self c19FullRefereeOutSide)).
 	self
 		assert:
-			((p8 queryAllOutgoingInvocations atScope: FmxNGType)
+			((p8 queryAllOutgoingInvocations atScope: FAMIXType)
 				withinPackage: pEx) isEmpty
 ]
 
@@ -266,7 +266,7 @@ FAMIXPackageNavigationChefTest >> testReferencingClasses [
 	self
 		assert:
 			((self packageP5FullReferee queryAllIncomingInvocations
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c1FullReferencerOutSide
@@ -282,7 +282,7 @@ FAMIXPackageNavigationChefTest >> testReferencingClassesInto [
 	p5 := self packageP5FullReferee.
 	self
 		assert:
-			(((p5 queryAllIncomingInvocations atScope: FmxNGType)
+			(((p5 queryAllIncomingInvocations atScope: FAMIXType)
 				withinPackage: p1)
 				equalsTo: (Set with: self c1FullReferencerOutSide))
 ]
@@ -336,7 +336,7 @@ FAMIXPackageNavigationChefTest >> testStaticClientClasses [
 	p5 := self packageP5FullReferee.
 	self
 		assert:
-			((p5 queryStaticIncomingAssociations atScope: FmxNGType)
+			((p5 queryStaticIncomingAssociations atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c1FullReferencerOutSide
@@ -353,7 +353,7 @@ FAMIXPackageNavigationChefTest >> testStaticClientClassesInto [
 	p5 := self packageP5FullReferee.
 	self
 		assert:
-			(((p5 queryStaticIncomingAssociations atScope: FmxNGType)
+			(((p5 queryStaticIncomingAssociations atScope: FAMIXType)
 				withinPackage: p1)
 				equalsTo: (Set with: self c1FullReferencerOutSide))
 ]
@@ -384,7 +384,7 @@ FAMIXPackageNavigationChefTest >> testStaticProviderClasses [
 	p8 := self packageP8FullReferencer.
 	self
 		assert:
-			((p8 queryStaticOutgoingAssociations atScope: FmxNGType)
+			((p8 queryStaticOutgoingAssociations atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c18FullRefereeInSideOutSide
@@ -400,12 +400,12 @@ FAMIXPackageNavigationChefTest >> testStaticProviderClassesInto [
 	pEx := self packagePExtensions.
 	self
 		assert:
-			(((p8 queryStaticOutgoingAssociations atScope: FmxNGType)
+			(((p8 queryStaticOutgoingAssociations atScope: FAMIXType)
 				withinPackage: p11)
 				equalsTo: (Set with: self c19FullRefereeOutSide)).
 	self
 		assert:
-			((p8 queryStaticOutgoingAssociations atScope: FmxNGType)
+			((p8 queryStaticOutgoingAssociations atScope: FAMIXType)
 				withinPackage: pEx) isEmpty
 ]
 
@@ -428,7 +428,7 @@ FAMIXPackageNavigationChefTest >> testStaticReferencedClasses [
 	p8 := self packageP8FullReferencer.
 	self
 		assert:
-			((p8 queryOutgoingReferences atScope: FmxNGType)
+			((p8 queryOutgoingReferences atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c18FullRefereeInSideOutSide
@@ -443,11 +443,11 @@ FAMIXPackageNavigationChefTest >> testStaticReferencedClassesInto [
 	pEx := self packagePExtensions.
 	self
 		assert:
-			(((p8 queryOutgoingReferences atScope: FmxNGType) withinPackage: p11)
+			(((p8 queryOutgoingReferences atScope: FAMIXType) withinPackage: p11)
 				equalsTo: (Set with: self c19FullRefereeOutSide)).
 	self
 		assert:
-			((p8 queryOutgoingReferences atScope: FmxNGType) withinPackage: pEx)
+			((p8 queryOutgoingReferences atScope: FAMIXType) withinPackage: pEx)
 				isEmpty
 ]
 
@@ -469,7 +469,7 @@ FAMIXPackageNavigationChefTest >> testStaticReferencingClasses [
 	p5 := self packageP5FullReferee.
 	self
 		assert:
-			((p5 queryIncomingReferences atScope: FmxNGType)
+			((p5 queryIncomingReferences atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c1FullReferencerOutSide
@@ -485,7 +485,7 @@ FAMIXPackageNavigationChefTest >> testStaticReferencingClassesInto [
 	p5 := self packageP5FullReferee.
 	self
 		assert:
-			(((p5 queryIncomingReferences atScope: FmxNGType) withinPackage: p1)
+			(((p5 queryIncomingReferences atScope: FAMIXType) withinPackage: p1)
 				equalsTo: (Set with: self c1FullReferencerOutSide))
 ]
 
@@ -513,7 +513,7 @@ FAMIXPackageNavigationChefTest >> testSureReferencedClasses [
 	p8 := self packageP8FullReferencer.
 	self
 		assert:
-			((p8 querySureOutgoingInvocations atScope: FmxNGType)
+			((p8 querySureOutgoingInvocations atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c18FullRefereeInSideOutSide
@@ -538,12 +538,12 @@ FAMIXPackageNavigationChefTest >> testSureReferencedClassesInto [
 	pEx := self packagePExtensions.
 	self
 		assert:
-			(((p8 querySureOutgoingInvocations atScope: FmxNGType)
+			(((p8 querySureOutgoingInvocations atScope: FAMIXType)
 				withinPackage: p11)
 				equalsTo: (Set with: self c19FullRefereeOutSide)).
 	self
 		assert:
-			((p8 querySureOutgoingInvocations atScope: FmxNGType)
+			((p8 querySureOutgoingInvocations atScope: FAMIXType)
 				withinPackage: pEx) isEmpty
 ]
 
@@ -565,7 +565,7 @@ FAMIXPackageNavigationChefTest >> testSureReferencingClasses [
 	self
 		assert:
 			((self packageP5FullReferee querySureIncomingInvocations
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c1FullReferencerOutSide
@@ -595,7 +595,7 @@ FAMIXPackageNavigationChefTest >> testSureReferencingClassesInto [
 	p5 := self packageP5FullReferee.
 	self
 		assert:
-			(((p5 querySureIncomingInvocations atScope: FmxNGType)
+			(((p5 querySureIncomingInvocations atScope: FAMIXType)
 				withinPackage: p1)
 				equalsTo: (Set with: self c1FullReferencerOutSide))
 ]

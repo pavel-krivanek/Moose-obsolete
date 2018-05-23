@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXGlobalVariableTest >> actualClass [
-	^ FmxNGGlobalVariable
+	^ FAMIXGlobalVariable
 ]
 
 { #category : #tests }

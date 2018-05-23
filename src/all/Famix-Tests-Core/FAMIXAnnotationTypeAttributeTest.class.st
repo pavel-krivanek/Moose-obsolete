@@ -22,7 +22,7 @@ FAMIXAnnotationTypeAttributeTest >> testInstances [
 { #category : #tests }
 FAMIXAnnotationTypeAttributeTest >> testParentAnnotationType [
 	| type attribute |
-	type := FmxNGAnnotationType new.
+	type := FAMIXAnnotationType new.
 	attribute := self actualClass new.
 	attribute parentAnnotationType: type.
 	self assert: type attributes size equals: 1

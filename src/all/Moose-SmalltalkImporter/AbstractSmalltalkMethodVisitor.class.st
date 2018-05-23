@@ -31,7 +31,7 @@ AbstractSmalltalkMethodVisitor >> classifyMethodNode: aMethodNode [
 AbstractSmalltalkMethodVisitor >> createAccessTo: aNamedEntity writing: isWriteAccess [
 	| access |
 	
-	access := FmxNGAccess new.
+	access := FAMIXAccess new.
 	access isWrite: isWriteAccess ; variable: aNamedEntity ; accessor: self methodEntity.
 	^ access
 ]
@@ -210,7 +210,7 @@ AbstractSmalltalkMethodVisitor >> visitAssignmentNode: anAssignmentNode [
 	| access | 
 	importer importingContext shouldImportAccess 
 		ifTrue: 
-			[access := FmxNGAccess new. 
+			[access := FAMIXAccess new. 
 			access isWrite: true.
 			access variable: (self resolve: anAssignmentNode variable name). 
 			access accessor: self methodEntity.
@@ -228,7 +228,7 @@ AbstractSmalltalkMethodVisitor >> visitBlockNode: aBlockNode [
 			[aBlockNode arguments 
 				do: 
 					[:aVariableNode |  
-					local := FmxNGLocalVariable new. 
+					local := FAMIXLocalVariable new. 
 					local name: aVariableNode name asSymbol. 
 					local parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: local. 
@@ -287,7 +287,7 @@ AbstractSmalltalkMethodVisitor >> visitMethodNode: aMethodNode [
 			[aMethodNode arguments 
 				do: 
 					[:aVariableNode | | argument | 
-					argument := FmxNGParameter new. 
+					argument := FAMIXParameter new. 
 					argument name: aVariableNode name asSymbol. 
 					argument parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: argument. 
@@ -345,7 +345,7 @@ AbstractSmalltalkMethodVisitor >> visitSequenceNode: aSequenceNode [
 			[aSequenceNode temporaries 
 				do: 
 					[:aVariableNode |  
-					local := FmxNGLocalVariable new. 
+					local := FAMIXLocalVariable new. 
 					local name: aVariableNode name asSymbol. 
 					local parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: local. 

@@ -6,14 +6,14 @@ Class {
 
 { #category : #helpers }
 FAMIXTypeTest >> actualClass [
-	^ FmxNGType
+	^ FAMIXType
 ]
 
 { #category : #tests }
 FAMIXTypeTest >> testBehaviorsWithDeclaredType [
 	| type behaviour |
 	type := self actualClass new.
-	behaviour := FmxNGBehaviouralEntity new.
+	behaviour := FAMIXBehaviouralEntity new.
 	behaviour declaredType: type.
 	self assert: behaviour declaredType == type.
 	self assert: type behavioursWithDeclaredType size equals: 1.

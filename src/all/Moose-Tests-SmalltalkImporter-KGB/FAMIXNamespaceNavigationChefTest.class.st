@@ -7,7 +7,7 @@ Class {
 { #category : #allDependencies }
 FAMIXNamespaceNavigationChefTest >> testClientClasses [
 	self
-		assert: (self namespace2FullReferee queryAllIncoming atScope: FmxNGType) asSet
+		assert: (self namespace2FullReferee queryAllIncoming atScope: FAMIXType) asSet
 		equals:
 			{self c14ReferencerOutSideRefereeOutSide.
 			self c1FullReferencerOutSide.
@@ -22,7 +22,7 @@ FAMIXNamespaceNavigationChefTest >> testClientClasses [
 
 { #category : #allDependencies }
 FAMIXNamespaceNavigationChefTest >> testClientClassesInto [
-	self assert: (((self namespace2FullReferee queryAllIncoming atScope: FmxNGType) withinNamespace: self namespace3ReferencerReferee) equalsTo: (Set with: self c14ReferencerOutSideRefereeOutSide))
+	self assert: (((self namespace2FullReferee queryAllIncoming atScope: FAMIXType) withinNamespace: self namespace3ReferencerReferee) equalsTo: (Set with: self c14ReferencerOutSideRefereeOutSide))
 ]
 
 { #category : #allDependencies }
@@ -82,7 +82,7 @@ FAMIXNamespaceNavigationChefTest >> testInheritedByClasses [
 	self
 		assert:
 			((self namespace2FullReferee queryIncomingInheritances
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c3ReferencerInSideRefereeOutSide
@@ -101,13 +101,13 @@ FAMIXNamespaceNavigationChefTest >> testInheritedByClassesInto [
 	self
 		assert:
 			(((self namespace2FullReferee queryIncomingInheritances
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				withinNamespace: self namespace1InteractedReferencerReferee)
 				equalsTo: (Set with: self c3ReferencerInSideRefereeOutSide)).
 	self
 		assert:
 			((self namespace2FullReferee queryIncomingInheritances
-				atScope: FmxNGType) withinNamespace: self namespace2FullReferee)
+				atScope: FAMIXType) withinNamespace: self namespace2FullReferee)
 				size
 		equals: 1
 ]
@@ -129,7 +129,7 @@ FAMIXNamespaceNavigationChefTest >> testInheritedClasses [
 	self
 		assert:
 			((self namespace1InteractedReferencerReferee queryOutgoingInheritances
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c11FullRefereeOutSide
@@ -151,7 +151,7 @@ FAMIXNamespaceNavigationChefTest >> testInheritedClassesInto [
 	self
 		assert:
 			(((self namespace1InteractedReferencerReferee
-				queryOutgoingInheritances atScope: FmxNGType)
+				queryOutgoingInheritances atScope: FAMIXType)
 				withinNamespace: self namespace2FullReferee)
 				equalsTo: (Set with: self c11FullRefereeOutSide))
 ]
@@ -173,7 +173,7 @@ FAMIXNamespaceNavigationChefTest >> testInheritedNamespaces [
 FAMIXNamespaceNavigationChefTest >> testProviderClasses [
 	self
 		assert:
-			((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FmxNGType)
+			((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FAMIXType)
 				equalsTo:
 					((Set
 						with: self c11FullRefereeOutSide
@@ -277,7 +277,7 @@ FAMIXNamespaceNavigationChefTest >> testReferencedClasses [
 	self
 		assert:
 			((self namespace1InteractedReferencerReferee
-				queryAllOutgoingInvocations atScope: FmxNGType)
+				queryAllOutgoingInvocations atScope: FAMIXType)
 				equalsTo:
 					((Set
 						with: self c11FullRefereeOutSide
@@ -298,7 +298,7 @@ FAMIXNamespaceNavigationChefTest >> testReferencedClassesInto [
 	self
 		assert:
 			(((self namespace1InteractedReferencerReferee
-				queryAllOutgoingInvocations atScope: FmxNGType)
+				queryAllOutgoingInvocations atScope: FAMIXType)
 				withinNamespace: self namespace2FullReferee)
 				equalsTo:
 					(Set
@@ -324,7 +324,7 @@ FAMIXNamespaceNavigationChefTest >> testReferencingClasses [
 	self
 		assert:
 			((self namespace2FullReferee queryAllIncomingInvocations
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				equalsTo:
 					((Set
 						with: self c14ReferencerOutSideRefereeOutSide
@@ -343,7 +343,7 @@ FAMIXNamespaceNavigationChefTest >> testReferencingClassesInto [
 	self
 		assert:
 			(((self namespace2FullReferee queryAllIncomingInvocations
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				withinNamespace: self namespace3ReferencerReferee)
 				equalsTo: (Set with: self c14ReferencerOutSideRefereeOutSide))
 ]
@@ -366,7 +366,7 @@ FAMIXNamespaceNavigationChefTest >> testSureReferencedClasses [
 	self
 		assert:
 			((self namespace1InteractedReferencerReferee
-				querySureOutgoingInvocations atScope: FmxNGType)
+				querySureOutgoingInvocations atScope: FAMIXType)
 				equalsTo:
 					(Set
 						with: self c11FullRefereeOutSide
@@ -380,7 +380,7 @@ FAMIXNamespaceNavigationChefTest >> testSureReferencedClassesInto [
 	self
 		assert:
 			(((self namespace1InteractedReferencerReferee
-				querySureOutgoingInvocations atScope: FmxNGType)
+				querySureOutgoingInvocations atScope: FAMIXType)
 				withinNamespace: self namespace2FullReferee)
 				equalsTo:
 					(Set
@@ -406,7 +406,7 @@ FAMIXNamespaceNavigationChefTest >> testSureReferencingClasses [
 	self
 		assert:
 			((self namespace2FullReferee querySureIncomingInvocations
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				equalsTo:
 					((Set
 						with: self c14ReferencerOutSideRefereeOutSide
@@ -423,7 +423,7 @@ FAMIXNamespaceNavigationChefTest >> testSureReferencingClassesInto [
 	self
 		assert:
 			(((self namespace2FullReferee querySureIncomingInvocations
-				atScope: FmxNGType)
+				atScope: FAMIXType)
 				withinNamespace: self namespace3ReferencerReferee)
 				equalsTo: (Set with: self c14ReferencerOutSideRefereeOutSide))
 ]

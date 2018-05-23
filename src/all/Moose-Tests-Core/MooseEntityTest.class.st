@@ -87,9 +87,9 @@ MooseEntityTest >> testAnnotation [
 { #category : #tests }
 MooseEntityTest >> testAsMooseFinderItemNamed [
 	| entity1 entity2 model model2 |
-	entity1 := FmxNGType new.
+	entity1 := FAMIXType new.
 	entity1 name: 'hello'.
-	entity2 := FmxNGType new.
+	entity2 := FAMIXType new.
 	entity2 name: 'hello2'.
 	model := MooseModel new.
 	model

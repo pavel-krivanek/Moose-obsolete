@@ -12,7 +12,7 @@ FAMIXImplicitVariableTest >> actualClass [
 { #category : #tests }
 FAMIXImplicitVariableTest >> testParentBehavioralEntity [
 	| behaviour implicitVariable |
-	behaviour := FmxNGBehaviouralEntity new.
+	behaviour := FAMIXBehaviouralEntity new.
 	implicitVariable := self actualClass new.
 	implicitVariable parentBehaviouralEntity: behaviour.
 	self assert: implicitVariable parentBehaviouralEntity equals: behaviour.

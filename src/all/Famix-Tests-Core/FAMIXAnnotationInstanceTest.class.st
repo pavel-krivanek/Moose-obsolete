@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXAnnotationInstanceTest >> actualClass [
-	^ FmxNGAnnotationInstance
+	^ FAMIXAnnotationInstance
 ]
 
 { #category : #tests }
@@ -22,7 +22,7 @@ FAMIXAnnotationInstanceTest >> testAnnotatedEntityBackPointer [
 { #category : #tests }
 FAMIXAnnotationInstanceTest >> testAnnotationType [
 	| type instance |
-	type := FmxNGAnnotationType new.
+	type := FAMIXAnnotationType new.
 	instance := self actualClass new.
 	instance annotationType: type.
 	self assert: type instances size equals: 1

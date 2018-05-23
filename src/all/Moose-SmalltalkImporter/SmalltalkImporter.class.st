@@ -141,7 +141,7 @@ SmalltalkImporter >> createClass: aClass [
 			[ importingContext shouldMergeClassAndMetaclass 
 				ifFalse: [ true ]
 				ifTrue: [ aClass isMeta not ] ]) 
-					ifTrue: [ inheritance := self addEntity: FmxNGInheritance new.
+					ifTrue: [ inheritance := self addEntity: FAMIXInheritance new.
 							inheritance superclass: (self ensureClass: aClass superclass).
 							inheritance subclass: class ]
 		].
@@ -188,7 +188,7 @@ SmalltalkImporter >> createGlobalVariable: name value: value [
 	| global declaredType | 
 	global := globals 
 		at: name 
-		put: FmxNGGlobalVariable new. 
+		put: FAMIXGlobalVariable new. 
 	global name: name. 
 	global declaredType: (self ensureClass: value class ).
 	^ global

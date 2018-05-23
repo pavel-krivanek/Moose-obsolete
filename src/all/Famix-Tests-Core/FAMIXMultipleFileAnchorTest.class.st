@@ -9,7 +9,7 @@ Class {
 
 { #category : #helpers }
 FAMIXMultipleFileAnchorTest >> actualClass [
-	^ FmxNGMultipleFileAnchor
+	^ FAMIXMultipleFileAnchor
 ]
 
 { #category : #tests }
