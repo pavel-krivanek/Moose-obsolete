@@ -33,9 +33,8 @@ FmxNGTPossibleStub classSide >> generatedTraitNames [
 FmxNGTPossibleStub >> isStub [
 
 	<MSEProperty: #isStub type: #Boolean>
-	<generated>
 	<MSEComment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.'>
-	^ isStub
+	^ isStub ifNil: [ false ]
 ]
 
 { #category : #accessing }

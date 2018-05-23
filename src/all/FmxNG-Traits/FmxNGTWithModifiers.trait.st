@@ -31,7 +31,7 @@ FmxNGTWithModifiers classSide >> generatedTraitNames [
 
 { #category : #'Famix-Implementation' }
 FmxNGTWithModifiers >> addModifier: aString [
-	modifiers add: aString
+	self modifiers add: aString
 ]
 
 { #category : #'Famix-Extensions' }
@@ -137,5 +137,5 @@ FmxNGTWithModifiers >> modifiers: anObject [
 
 { #category : #'Famix-Implementation' }
 FmxNGTWithModifiers >> removeModifier: aString [
-	modifiers remove: aString ifAbsent: []
+	self modifiers remove: aString ifAbsent: []
 ]

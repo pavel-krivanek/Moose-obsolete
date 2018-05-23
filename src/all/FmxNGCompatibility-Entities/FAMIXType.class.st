@@ -340,11 +340,6 @@ FAMIXType >> copyFrom: anEntity within: aVisitor [
 
 ]
 
-{ #category : #'Moose-SmalltalkImporter' }
-FAMIXType >> createReferenceFrom: aBehaviouralEntity [
-	^ FAMIXReference source: aBehaviouralEntity target: self
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXType >> directSubclasses [
 	"returns a collection with all subclasses of this class"

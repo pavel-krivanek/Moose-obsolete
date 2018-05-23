@@ -218,6 +218,15 @@ FAMIXNamedEntity >> methodScope [
 	^ nil
 ]
 
+{ #category : #accessing }
+FAMIXNamedEntity >> modifiers [
+
+	<MSEProperty: #modifiers type: #String>
+	<multivalued>
+	<MSEComment: 'Generic container for language dependent modifiers.'>
+	^ modifiers ifNil: [ modifiers := Set new ]
+]
+
 { #category : #'Moose-Finder' }
 FAMIXNamedEntity >> mooseFinderAnnotationInstancesIn: composite [
 	<moosePresentationOrder: 20>
