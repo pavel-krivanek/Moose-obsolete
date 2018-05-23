@@ -7,7 +7,7 @@ Trait {
 	#instVars : [
 		'#moduleEntities => FMMany type: #FmxNGTDefinedInModule opposite: #parentModule'
 	],
-	#category : #'FmxNG-Traits-Module-mod'
+	#category : #'FmxNG-Traits-Module'
 }
 
 { #category : #meta }
