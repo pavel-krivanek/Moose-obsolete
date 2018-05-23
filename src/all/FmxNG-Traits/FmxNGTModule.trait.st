@@ -5,9 +5,9 @@ FAMIXModule represents a that basically provides a simple scoping abstraction fo
 Trait {
 	#name : #FmxNGTModule,
 	#instVars : [
-		'#moduleEntities => FMMany type: #FmxNGTDefinedInModule opposite: #parentModule'
+		'#moduleFiles => FMMany type: #FmxNGTWithModule opposite: #module'
 	],
-	#category : #'FmxNG-Traits-Module-mod'
+	#category : #'FmxNG-Traits-Module'
 }
 
 { #category : #meta }
