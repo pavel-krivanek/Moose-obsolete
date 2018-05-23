@@ -106,7 +106,7 @@ SmalltalkImporter >> createAttribute: name for: aClass [
 		class: aClass.
 	attribute := (self scopeOfClass: aClass) 
 		at: realName
-		bind: FmxNGAttribute new.
+		bind: FAMIXAttribute new.
 	attribute stub: true.
 	attribute name: realName asSymbol.
 	importingContext shouldMergeClassAndMetaclass 
@@ -166,7 +166,7 @@ SmalltalkImporter >> createClassVarAttribute: name for: aClass [
 	"a classVar always belongs to the base class"
 	| attribute |
 	
-	attribute := FmxNGAttribute new.
+	attribute := FAMIXAttribute new.
 	(self scopeOfClass: aClass) 
 		at: name
 		bind: attribute.
@@ -258,7 +258,7 @@ SmalltalkImporter >> createPackage: aPackageModel [
 SmalltalkImporter >> createSpecialVariable: name forClass: aClass [
 
 	| attribute |
-	attribute := (self scopeOfClass: aClass) at: name bind: FmxNGImplicitVariable new.
+	attribute := (self scopeOfClass: aClass) at: name bind: FAMIXImplicitVariable new.
 	attribute name: name.
 	attribute container: (self ensureClass: aClass).	
 	^attribute
@@ -268,7 +268,7 @@ SmalltalkImporter >> createSpecialVariable: name forClass: aClass [
 SmalltalkImporter >> createSpecialVariable: name forFamixMethod: aFamixMethod [
 
 	| attribute |
-	attribute := "(self scopeOfClass: aClass) at: name bind:" FmxNGImplicitVariable new.
+	attribute := "(self scopeOfClass: aClass) at: name bind:" FAMIXImplicitVariable new.
 	attribute name: name.
 	attribute parentBehaviouralEntity: aFamixMethod.
 	^attribute
@@ -280,7 +280,7 @@ SmalltalkImporter >> createUnknownVariable: name [
 	| unknown |
 	unknown := globals
 		at: name
-		put: FmxNGUnknownVariable new.
+		put: FAMIXUnknownVariable new.
 	unknown name: name.
 	^unknown
 ]

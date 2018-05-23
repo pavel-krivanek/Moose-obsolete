@@ -119,7 +119,7 @@ AbstractSmalltalkMethodVisitor >> matchGetter: aMethodNode [
 												ifAbsent: nil. 
 											attribute notNil 
 												ifTrue: 
-													[attribute class = FmxNGAttribute ifTrue: [famixMethod kind: #getter]]]]]]]
+													[attribute class = FAMIXAttribute ifTrue: [famixMethod kind: #getter]]]]]]]
 ]
 
 { #category : #'method-classifying' }
@@ -141,7 +141,7 @@ AbstractSmalltalkMethodVisitor >> matchSetter: aMethodNode [
 										ifAbsent: nil. 
 									attribute notNil 
 										ifTrue: 
-											[attribute class = FmxNGAttribute 
+											[attribute class = FAMIXAttribute 
 												ifTrue: 
 													[assignment value isVariable 
 														ifTrue: 
@@ -369,7 +369,7 @@ AbstractSmalltalkMethodVisitor >> visitVariableNode: aVariableNode [
 				access := self createAccessTo: global writing: false]
 			ifFalse: [
 				namedEntity := self resolve: aVariableNode name.
-				access := (namedEntity isKindOf: FmxNGContainerEntity)
+				access := (namedEntity isKindOf: FAMIXContainerEntity)
 					ifTrue: [ self createReferenceTo: namedEntity ]
 					ifFalse: [ self createAccessTo: namedEntity writing: false ] ].
 		importer addEntity: access ].

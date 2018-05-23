@@ -6,7 +6,7 @@ Class {
 
 { #category : #helpers }
 FAMIXImplicitVariableTest >> actualClass [
-	^ FmxNGImplicitVariable
+	^ FAMIXImplicitVariable
 ]
 
 { #category : #tests }

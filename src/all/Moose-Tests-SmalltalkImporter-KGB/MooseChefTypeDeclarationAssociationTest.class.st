@@ -80,26 +80,26 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 	 
 	| p1 p2 c1 c2 c3 m1 m2 m3 m4 at1 at2 pr1 pr2 v1 |
 		
-	p1 := FmxNGPackage new name: 'p1' ; stub: true ; yourself.
-	p2 := FmxNGPackage new name: 'p2' ; stub: true ; yourself.
+	p1 := FAMIXPackage new name: 'p1' ; stub: true ; yourself.
+	p2 := FAMIXPackage new name: 'p2' ; stub: true ; yourself.
 
-	c1 := FmxNGClass new
+	c1 := FAMIXClass new
 			stub: true ;
 			name: 'C1' ;
 			parentPackage: p1 ;
 			yourself.
-	c2 := FmxNGClass new
+	c2 := FAMIXClass new
 			stub: true ;
 			name: 'C2' ;
 			parentPackage: p1 ;
 			yourself.
-	c3 := FmxNGClass new
+	c3 := FAMIXClass new
 			stub: true ;
 			name: 'C3' ;
 			parentPackage: p2 ;
 			yourself.
 
-	m1 := FmxNGMethod new
+	m1 := FAMIXMethod new
 			stub: true ;
 			name: 'm1' ;
 			signature: 'm1()' ;
@@ -107,7 +107,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			parentPackage: p1 ;
 			declaredType: c2 ;
 			yourself.
-	m2 := FmxNGMethod new
+	m2 := FAMIXMethod new
 			stub: true ;
 			name: 'm2' ;
 			signature: 'm2()' ;
@@ -115,7 +115,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			parentPackage: p1 ;
 			declaredType: c3 ;
 			yourself.
-	m3 := FmxNGMethod new
+	m3 := FAMIXMethod new
 			stub: true ;
 			name: 'm3' ;
 			signature: 'm3(C2,C3)' ;
@@ -123,7 +123,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			parentPackage: p1 ;
 			declaredType: c1 ;
 			yourself.
-	m4 := FmxNGMethod new
+	m4 := FAMIXMethod new
 			stub: true ;
 			name: 'm4' ;
 			signature: 'm4()' ;
@@ -132,7 +132,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			declaredType: c3 ;
 			yourself.
 		
-	v1 := FmxNGLocalVariable new
+	v1 := FAMIXLocalVariable new
 			stub: true ;
 			name: 'v1' ;
 			parentBehaviouralEntity: m2 ;
@@ -140,14 +140,14 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			declaredType: c1 ;
 			yourself.
 
-	pr1 := FmxNGParameter new
+	pr1 := FAMIXParameter new
 			stub: true ;
 			name: 'pr1' ;
 			parentBehaviouralEntity: m3 ;
 			parentPackage: p1 ;
 			declaredType: c2 ;
 			yourself.
-	pr2 := FmxNGParameter new
+	pr2 := FAMIXParameter new
 			stub: true ;
 			name: 'pr2' ;
 			parentBehaviouralEntity: m3 ;
@@ -155,14 +155,14 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 			declaredType: c3 ;
 			yourself.
 		
-	at1 := FmxNGAttribute new
+	at1 := FAMIXAttribute new
 			stub: true ;
 			name: 'at1' ;
 			parentType: c1 ;
 			parentPackage: p1 ;
 			declaredType: c3 ;
 			yourself.
-	at2 := FmxNGAttribute new
+	at2 := FAMIXAttribute new
 			stub: true ;
 			name: 'at2' ;
 			parentType: c3 ;

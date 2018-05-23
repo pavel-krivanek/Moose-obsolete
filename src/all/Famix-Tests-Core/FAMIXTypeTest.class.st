@@ -24,7 +24,7 @@ FAMIXTypeTest >> testBehaviorsWithDeclaredType [
 FAMIXTypeTest >> testStructuresWithDeclaredType [
 	| type structure |
 	type := self actualClass new.
-	structure := FmxNGStructuralEntity new.
+	structure := FAMIXStructuralEntity new.
 	structure declaredType: type.
 	self assert: structure declaredType == type.
 	self assert: type structuresWithDeclaredType size equals: 1.

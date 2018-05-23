@@ -64,7 +64,7 @@ FAMIXStepwiseImporterTest >> testClassVariable [
 	importer runCandidateOperator.
 	importer model: model; addFromPackagesNamed: (MooseScripts packageNamesFor: 'Morphic*'); runWithProgress.
 	 
-	self shouldnt: [(model entities select: [:e | e isKindOf: FmxNGUnknownVariable ]) do: #typeScope ] raise: Error
+	self shouldnt: [(model entities select: [:e | e isKindOf: FAMIXUnknownVariable ]) do: #typeScope ] raise: Error
 ]
 
 { #category : #tests }
