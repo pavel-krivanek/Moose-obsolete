@@ -921,12 +921,18 @@ BaselineOfMoose >> groups: spec [
 
 	spec group: 'BasicMetamodellingWithRoassal' with: #(
 			'BasicMetamodelling'
-			'BasicTests'
 			'Trachel'
 			'Roassal2'
 			'GToolkit-Examples'
 			'Roassal2GT'
 	).
+	
+	spec group: 'MooseFinder' with: #(
+			'BasicMetamodellingWithRoassal'
+			'BasicTests'
+			'Glamour-Tools'
+			'Moose-Finder'
+	).	
 	
 
 ]
