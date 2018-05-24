@@ -106,24 +106,6 @@ FAMIXMethod >> category: aString [
 	
 ]
 
-{ #category : #'Moose-RoassalPaintings-ClassBlueprint' }
-FAMIXMethod >> classBlueprintFillColor [
-	
-	self isPureAccessor ifTrue: [ ^ Color orange].
-	
-	self isSetter ifTrue: [ ^ Color red].
-
-	self isGetter ifTrue: [ ^ Color orange].
-
-	self isAbstract ifTrue: [ ^ Color cyan].
-
-	self isOverriding ifTrue: [ ^ Color brown].
-
-	self isConstant ifTrue: [ ^ Color gray].
-	
-	^ Color white.
-]
-
 { #category : #'Famix-Extensions-nav All Dependencies' }
 FAMIXMethod >> clientClasses [
 	self deprecated: 'use clientTypes instead'.
@@ -541,13 +523,6 @@ FAMIXMethod >> sourceText [
 				on: Error
 				do: [ super sourceText ]	"probably class is not in the system" ]
 		ifFalse: [ super sourceText ]
-]
-
-{ #category : #'Moose-RoassalPaintings-PackageBlueprint' }
-FAMIXMethod >> sureInvokedClasses [
-	
-	self flag: #fixme.
-	^ #()
 ]
 
 { #category : #'Famix-Smalltalk' }

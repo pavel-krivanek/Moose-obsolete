@@ -838,35 +838,10 @@ BaselineOfMoose >> groups: spec [
 			'Grease-Pharo30-Core' 
 			'CollectionExtensions'
 
-			"'Magritte-Model'
-			'Magritte-Pharo3-Model'
-			'Magritte-Morph'"
-
 			'Hashtable'
 
 			'StateSpecs-Specs'
 			'StateSpecs-DSL-ShouldExpressions'
-			"'StateSpecs-DSL-ClassWords'
-			'StateSpecs-Help'
-			'StateSpecs-Specs-Tests'
-			'StateSpecs-DSL-ShouldExpressions-Tests'
-			'StateSpecs-DSL-ClassWords-Tests'"
-
-			"'Ghost-ObjectGhost'
-			'Ghost-ClassGhost'
-			'Ghost-ObjectMutation'
-			'Ghost-ObjectGhost-Tests'
-			'Ghost-ClassGhost-Tests'
-			'Ghost-ObjectMutation-Tests'
-			'Ghost-StateSpecsSupport'
-			'Ghost-StateSpecsSupport-Tests'
-			'Ghost-GTSupport'"
-
-			"'Mocketry-Domain'
-			'Mocketry-Domain-Tests'
-			'Mocketry-Help'
-			'Mocketry-Specs'
-			'Mocketry-Specs-Tests'"
 
 			'Fame-Core'
 			'Fame-Util'
@@ -875,16 +850,7 @@ BaselineOfMoose >> groups: spec [
 			'Fame-Example'
 			'Fame-Tests-Core'
 
-			"'GToolkit-Examples' 
-			'GToolkit-Examples-Dummies' 
-			'GToolkit-Examples-Extensions' 
-			'GToolkit-Examples-Roassal2UI' 
-			'GToolkit-Examples-UI' 
-			'GToolkit-Tests-Examples'"
-
-			 'DeepTraverser'
-			" 'DeepTraverser-Examples'
-			 'DeepTraverser-Tests'"
+			'DeepTraverser'
 
 			'Moose-Query'
 			'Moose-Core'
@@ -912,6 +878,8 @@ BaselineOfMoose >> groups: spec [
 			'Moose-TestResources-LAN'
 			'Moose-TestResources-Reference-Core'
 			'Moose-TestResources-KGB-P4FullInteracted'
+			'Moose-TestResources-KGB-P5FullReferee'
+			'Moose-TestResources-KGB-P7ReferencerReferee'
 			'Moose-Tests-SmalltalkImporter-LAN'
 			'Moose-Tests-SmalltalkImporter-KGB'
 			'Moose-GenericImporter'
@@ -922,6 +890,7 @@ BaselineOfMoose >> groups: spec [
 
 	spec group: 'BasicMetamodellingWithRoassal' with: #(
 			'BasicMetamodelling'
+			'Athens-SVG'
 			'Trachel'
 			'Roassal2'
 			'GToolkit-Examples'
@@ -939,6 +908,10 @@ BaselineOfMoose >> groups: spec [
 			'Metanool-Core'
 			'Metanool-Tests-Core'			
 			'Glamour-Magritte-Presentations'
+			'Moose-Algos-Lattice'
+			'Moose-Tests-Algos-Graph'
+			'Moose-Tests-Algos-FormalConceptAnalysis'
+			'Moose-RoassalPaintings'
 			'Moose-Finder'
 	).	
 	
