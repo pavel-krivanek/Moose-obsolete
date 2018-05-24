@@ -15,6 +15,6 @@ fi
 
 ./pharo $IMAGE_NAME.image st Moose/patches/patchPharo7.st --save --quit
 
-./pharo $IMAGE_NAME.image eval --save  "Metacello new baseline: 'Moose'; repository: 'tonel://./Moose/src/all'; load: #Moose-Finder."
+./pharo $IMAGE_NAME.image eval --save  "Metacello new baseline: 'Moose'; repository: 'tonel://./Moose/src/all'; load: #MooseFinder."
 
 
