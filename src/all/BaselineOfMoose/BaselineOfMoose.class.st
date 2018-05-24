@@ -903,7 +903,6 @@ BaselineOfMoose >> groups: spec [
 			'Glamour-Tools'
 			'Magritte-Model'
 			'Magritte-Pharo3-Model'
-			'Magritte-GT'
 			'Magritte-Morph'
 			'Metanool-Core'
 			'Metanool-Tests-Core'			
