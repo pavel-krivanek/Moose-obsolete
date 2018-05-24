@@ -4,7 +4,7 @@ It represents a folder in the file system. It can contain other files or folders
 Trait {
 	#name : #FmxNGTFolder,
 	#instVars : [
-		'#childrenFileSystemEntities => FMOne type: #FmxNGTWithFiles opposite: #containerFiles'
+		'#childrenFileSystemEntities => FMMany type: #FmxNGTFileSystemEntity opposite: #parentFolder'
 	],
 	#category : #'FmxNG-Traits-Traits'
 }

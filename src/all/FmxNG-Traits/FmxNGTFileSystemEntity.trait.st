@@ -1,7 +1,7 @@
 Trait {
 	#name : #FmxNGTFileSystemEntity,
 	#instVars : [
-		'#parentFolder => FMMany type: #FmxNGTFolder opposite: #childrenFileSystemEntities'
+		'#parentFolder => FMOne type: #FmxNGTFolder opposite: #childrenFileSystemEntities'
 	],
 	#category : #'FmxNG-Traits-Traits'
 }
