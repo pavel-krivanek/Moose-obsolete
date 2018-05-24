@@ -12,7 +12,7 @@ FAMIXSourceTextAnchor class >> annotation [
 
 	<generated>
 	<MSEClass: #SourceTextAnchor super: #FAMIXSourceAnchor>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

@@ -11,7 +11,7 @@ FAMIXCFile class >> annotation [
 
 	<generated>
 	<MSEClass: #CFile super: #FAMIXFile>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

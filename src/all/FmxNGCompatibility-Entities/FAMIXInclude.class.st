@@ -11,7 +11,7 @@ FAMIXInclude class >> annotation [
 
 	<generated>
 	<MSEClass: #Include super: #FAMIXAssociation>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

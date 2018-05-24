@@ -11,7 +11,7 @@ FAMIXFolder class >> annotation [
 
 	<generated>
 	<MSEClass: #Folder super: #FAMIXAbstractFile>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

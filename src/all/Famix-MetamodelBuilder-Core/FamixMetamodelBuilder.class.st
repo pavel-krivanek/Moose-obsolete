@@ -51,6 +51,7 @@ Class {
 		'environment',
 		'prefix',
 		'packageName',
+		'annotationPackageName',
 		'classes',
 		'traits',
 		'relations',
@@ -78,6 +79,16 @@ FamixMetamodelBuilder class >> forGenerator: aGenerator [
 FamixMetamodelBuilder >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitBuilder: self.
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> annotationPackageName [
+	^ annotationPackageName ifNil: [ self packageName ].
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> annotationPackageName: anObject [
+	annotationPackageName := anObject
 ]
 
 { #category : #accessing }
@@ -444,11 +455,11 @@ FamixMetamodelBuilder >> relations [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilder >> safePackageName [
+FamixMetamodelBuilder >> safeAnnotationPackageName [
 	
-	^ packageName isLiteralSymbol
-		ifTrue: [ ^ '#', packageName ]
-		ifFalse: [ ^ '#''', packageName, '''' ]
+	^ self annotationPackageName isLiteralSymbol
+		ifTrue: [ ^ '#', self annotationPackageName ]
+		ifFalse: [ ^ '#''', self annotationPackageName, '''' ]
 ]
 
 { #category : #accessing }

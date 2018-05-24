@@ -11,7 +11,7 @@ FAMIXImplicitVariable class >> annotation [
 
 	<generated>
 	<MSEClass: #ImplicitVariable super: #FAMIXStructuralEntity>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

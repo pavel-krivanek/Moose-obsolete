@@ -13,6 +13,12 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
+{ #category : #accessing }
+FamixMetamodelGenerator class >> annotationPackageName [
+
+	^ self packageName
+]
+
 { #category : #'as yet unclassified' }
 FamixMetamodelGenerator class >> builderWithDefinitions [
 
@@ -78,7 +84,15 @@ FamixMetamodelGenerator >> adoptBuilder: aBuilder [
 
 	aBuilder 
 		prefix: self prefix;
-		packageName: self packageName.
+		packageName: self packageName;
+		annotationPackageName: self annotationPackageName.
+
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> annotationPackageName [
+
+	^ self class annotationPackageName
 
 ]
 

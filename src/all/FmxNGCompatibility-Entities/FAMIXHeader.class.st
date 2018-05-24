@@ -11,7 +11,7 @@ FAMIXHeader class >> annotation [
 
 	<generated>
 	<MSEClass: #Header super: #FAMIXCFile>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

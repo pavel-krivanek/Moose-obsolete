@@ -11,7 +11,7 @@ FAMIXCustomSourceLanguage class >> annotation [
 
 	<generated>
 	<MSEClass: #CustomSourceLanguage super: #FAMIXSourceLanguage>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

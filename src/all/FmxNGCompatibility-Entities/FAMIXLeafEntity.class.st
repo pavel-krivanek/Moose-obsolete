@@ -9,7 +9,7 @@ FAMIXLeafEntity class >> annotation [
 
 	<generated>
 	<MSEClass: #LeafEntity super: #FAMIXNamedEntity>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

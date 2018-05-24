@@ -12,7 +12,7 @@ FAMIXPharoAnchor class >> annotation [
 
 	<generated>
 	<MSEClass: #PharoAnchor super: #FAMIXSourceAnchor>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

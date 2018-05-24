@@ -11,7 +11,7 @@ FAMIXAnnotationTypeAttribute class >> annotation [
 
 	<generated>
 	<MSEClass: #AnnotationTypeAttribute super: #FAMIXAttribute>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

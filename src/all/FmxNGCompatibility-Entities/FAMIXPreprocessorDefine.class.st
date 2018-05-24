@@ -14,7 +14,7 @@ FAMIXPreprocessorDefine class >> annotation [
 
 	<generated>
 	<MSEClass: #PreprocessorDefine super: #FAMIXPreprocessorStatement>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

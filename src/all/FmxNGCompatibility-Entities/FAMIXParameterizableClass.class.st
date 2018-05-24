@@ -11,7 +11,7 @@ FAMIXParameterizableClass class >> annotation [
 
 	<generated>
 	<MSEClass: #ParameterizableClass super: #FAMIXClass>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

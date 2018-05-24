@@ -49,7 +49,7 @@ FAMIXNamedEntity class >> annotation [
 
 	<generated>
 	<MSEClass: #NamedEntity super: #FAMIXSourcedEntity>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]

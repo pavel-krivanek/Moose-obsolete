@@ -67,6 +67,12 @@ Class {
 }
 
 { #category : #accessing }
+FmxNGCompatibilityGenerator class >> annotationPackageName [
+
+	^ #'FAMIX'
+]
+
+{ #category : #accessing }
 FmxNGCompatibilityGenerator class >> packageName [
 
 	^ #'FmxNGCompatibility-Entities'
@@ -107,7 +113,7 @@ FmxNGCompatibilityGenerator class >> translationDictionary [
 
 	classNames := 'FmxNGCompatibility-Entities' asPackage definedClasses collect: [:e | e name withoutPrefix: 'FAMIX' ].
 	
-	associations := classNames collect: [ :each | ('FAMIX.', each) -> ('FmxNGCompatibility-Entities.', each) ] as: OrderedCollection.
+	associations := classNames collect: [ :each | ('FAMIX.', each) -> ('FAMIX.', each) ] as: OrderedCollection.
 
 	^ Dictionary newFrom: associations.	
 ]

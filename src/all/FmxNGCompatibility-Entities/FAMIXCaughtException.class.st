@@ -11,7 +11,7 @@ FAMIXCaughtException class >> annotation [
 
 	<generated>
 	<MSEClass: #CaughtException super: #FAMIXException>
-	<package: #'FmxNGCompatibility-Entities'>
+	<package: #FAMIX>
 	<generated>
 	^self
 ]
