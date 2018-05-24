@@ -907,9 +907,21 @@ BaselineOfMoose >> groups: spec [
 			'FmxNGCompatibility-Entities'
 			'FmxNGCompatibility-Groups'
 	).
+	
+	spec group: 'BasicTests' with: #(
+			'Moose-TestResources-LAN'
+			'Moose-TestResources-Reference-Core'
+			'Moose-Tests-SmalltalkImporter-LAN'
+			'Moose-Tests-SmalltalkImporter-KGB'
+			'Moose-GenericImporter'
+			'Moose-SmalltalkImporter'
+			'Moose-Tests-Core'
+			'Famix-Tests-Core'
+	).	
 
 	spec group: 'BasicMetamodellingWithRoassal' with: #(
 			'BasicMetamodelling'
+			'BasicTests'
 			'Trachel'
 			'Roassal2'
 			'GToolkit-Examples'
