@@ -149,7 +149,6 @@ BaselineOfMoose >> baseline: spec [
 			'Glamour-Tests-Morphic'
 			"'Morphic-Widgets-FastTable'"
 			'Glamour-FastTable'
-			'Glamour-Magritte-Presentations'
 		) do: [ :packageName |
 			(SystemVersion current major < 7) ifTrue: [
 			  spec package: packageName with: [ spec repository: (self url: #Glamour) ]]].
@@ -204,6 +203,7 @@ BaselineOfMoose >> baseline: spec [
 
 		#(	
 			'Glamour-Tools'
+			'Glamour-Magritte-Presentations'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Glamour) ]].
 
