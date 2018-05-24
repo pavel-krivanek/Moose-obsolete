@@ -911,6 +911,7 @@ BaselineOfMoose >> groups: spec [
 	spec group: 'BasicTests' with: #(
 			'Moose-TestResources-LAN'
 			'Moose-TestResources-Reference-Core'
+			'Moose-TestResources-KGB-P4FullInteracted'
 			'Moose-Tests-SmalltalkImporter-LAN'
 			'Moose-Tests-SmalltalkImporter-KGB'
 			'Moose-GenericImporter'
@@ -931,6 +932,10 @@ BaselineOfMoose >> groups: spec [
 			'BasicMetamodellingWithRoassal'
 			'BasicTests'
 			'Glamour-Tools'
+			'Magritte-Model'
+			'Magritte-Pharo3-Model'
+			'Magritte-GT'
+			'Glamour-Magritte-Presentations'
 			'Moose-Finder'
 	).	
 	
