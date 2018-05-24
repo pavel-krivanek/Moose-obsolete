@@ -40,6 +40,6 @@ FmxNGTFileSystemEntity >> parentFolder [
 FmxNGTFileSystemEntity >> parentFolder: anObject [
 
 	<generated>
-	parentFolder value: anObject
+	parentFolder := anObject
 
 ]

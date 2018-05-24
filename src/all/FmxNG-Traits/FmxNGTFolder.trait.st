@@ -44,6 +44,6 @@ FmxNGTFolder >> childrenFileSystemEntities [
 FmxNGTFolder >> childrenFileSystemEntities: anObject [
 
 	<generated>
-	childrenFileSystemEntities := anObject
+	childrenFileSystemEntities value: anObject
 
 ]

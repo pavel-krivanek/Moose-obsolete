@@ -995,7 +995,7 @@ FmxNGGenerator >> defineRelations [
 
 	((tFolder property: #childrenFileSystemEntities)
 			comment: 'List of entities contained in this folder.')
-		*-
+		-*
 	((tFileSystemEntity property: #parentFolder)).
 
 	((tFile property: #entities)

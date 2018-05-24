@@ -17,7 +17,7 @@ MooseFileStructureImporterTest >> createDirectory: aString [
 { #category : #setup }
 MooseFileStructureImporterTest >> createFile: aString [
 	self toDelete addFirst: aString.
-	^ (self filesystem open: aString writable: true)
+	^ aString asFileReference writeStream
 ]
 
 { #category : #setup }
@@ -37,18 +37,18 @@ MooseFileStructureImporterTest >> setUp [
 	self createDirectory: self foldersString.
 	self createDirectory: self subFolderAString.
 	self createDirectory: self subFolderBString.
-	(self createFile: (self subFolderAString , 'emptyFile')) writeStream close.
-	(self createFile: (self subFolderBString , 'emptyFile')) writeStream close.
-	(self createFile: (self foldersString , 'emptyFile')) writeStream close.
+	(self createFile: (self subFolderAString , 'emptyFile')) close.
+	(self createFile: (self subFolderBString , 'emptyFile')) close.
+	(self createFile: (self foldersString , 'emptyFile')) close.
 	file := self createFile: (self foldersString , 'fileWith9Chars2Lines').
-	stream := file writeStream.
+	stream := file.
 	stream
 		nextPutAll: '123456';
 		cr;
 		nextPutAll: '789'.
 	stream close.
 	file := self createFile: (self foldersString , 'fileWith9Chars4Lines2EmptyLines').
-	stream := file writeStream.
+	stream := file.
 	stream
 		nextPutAll: '123456';cr;
 		cr;
