@@ -242,10 +242,12 @@ MooseModel class >> ownerOf: element [
 MooseModel class >> resetMeta [
 	"self resetMeta"
 
-	^ element mooseID
-		ifNotNil: [ :elementID | 
-			MostRecentOwner ifNotNil: [ :model | (model includesID: elementID) ifTrue: [ ^ model ] ].
-			self allInstances detect: [ :model | model includesID: elementID ] ifFound: [ :model | MostRecentOwner := model ] ifNone: [ nil ] ]
+	FAMIXEntity resetMSEProperties.
+	FAMIXNamedEntity resetMSEProperties.
+	
+	metaTower := nil.
+	^self meta
+	
 ]
 
 { #category : #'root model' }
@@ -421,6 +423,14 @@ MooseModel >> importFromMSEStream: aStream filteredBy: anImportingContext [
 MooseModel >> includes: anItem [ 
 	anItem ifNil: [^ false].
 	^ self includesID: anItem mooseID
+]
+
+{ #category : #'Moose-DistributionMap' }
+MooseModel >> includesElementsOfType: aClass [
+
+	"self entities detect: [:each | each class = aClass] ifNone: [^ false].
+	^true"
+	^ (self allWithType: aClass) isEmpty not
 ]
 
 { #category : #'initialize-release' }
