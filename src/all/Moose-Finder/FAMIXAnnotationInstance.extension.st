@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXAnnotationInstance }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXAnnotationInstance >> mooseIcon [ 
 	^ MooseIcons famixAnnotationInstance
 ]

@@ -52,6 +52,16 @@ FAMIXType >> mooseFinderBlueprintIn: composite [
 ]
 
 { #category : #'*Moose-Finder' }
+FAMIXType >> mooseFinderHierarchyIn: composite [
+	<moosePresentationOrder: 20>
+	composite roassal2
+			title: 'Hierarchy';
+			titleIcon: MooseIcons mooseSystemComplexity;
+			initializeView: [ RTMondrian new ];
+			painting: [ :b | self viewHierarchyOn: b ]
+]
+
+{ #category : #'*Moose-Finder' }
 FAMIXType >> mooseFinderMethodsIn: composite [
 	<moosePresentationOrder: 20>
 	composite table

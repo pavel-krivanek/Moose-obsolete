@@ -37,8 +37,3 @@ FAMIXSmalltalkSourceLanguage class >> requirements [
 FAMIXSmalltalkSourceLanguage >> isSmalltalk [
 	^ true
 ]
-
-{ #category : #'Moose-Finder' }
-FAMIXSmalltalkSourceLanguage >> parser [
-	^ self privateState attributeAt: #parser ifAbsentPut: [PPSmalltalkGrammar new]
-]

@@ -29,16 +29,6 @@ MoosePanel class >> menuOpenGlamorousEditorOn: aBuilder [
 		action: [GLMEditor open]
 ]
 
-{ #category : #menu }
-MoosePanel class >> menuOpenPetitParserAllParsersBrowserOn: aBuilder [
-	<worldMenu>
-	(aBuilder item: #PPBrowser)
-		order: 20; 
-		parent: #Moose;
-		label: PPBrowser new title;
-		action: [PPBrowser open]
-]
-
 { #category : #opening }
 MoosePanel class >> open [
 	^ self new openOn: MooseModel root

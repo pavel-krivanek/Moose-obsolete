@@ -1,6 +1,11 @@
 Extension { #name : #FAMIXSourcedEntity }
 
 { #category : #'*Moose-Finder' }
+FAMIXSourcedEntity >> formattedSourceText [
+	^ self sourceLanguage format: self sourceText from: self
+]
+
+{ #category : #'*Moose-Finder' }
 FAMIXSourcedEntity >> mooseFinderParentFolderIn: composite [
 	<moosePresentationOrder: 10>
 	self sourceAnchor ifNil: [ ^ self ].

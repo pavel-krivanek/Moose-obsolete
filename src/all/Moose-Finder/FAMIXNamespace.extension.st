@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXNamespace }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXNamespace >> browseSource [
 	<menuItem: 'Source' category: 'Browse'>
 	| browser |
@@ -23,7 +23,7 @@ FAMIXNamespace >> mooseFinderWithinHierarchyIn: composite [
 				self withAllChildScopes asMooseGroup viewWithinOverallHierarchyOn: view ]
 ]
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXNamespace >> mooseIcon [ 
 	^ MooseIcons famixNamespace
 ]

@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXAttribute }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXAttribute >> mooseIcon [ 
 	^ MooseIcons famixAttribute
 ]

@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXJavaSourceLanguage }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXJavaSourceLanguage >> format: aSourceString from: anEntity [
 	^ PP2TextHighlighter new
 		parser: self parser;
@@ -10,7 +10,7 @@ FAMIXJavaSourceLanguage >> format: aSourceString from: anEntity [
 		highlight: aSourceString asText
 ]
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXJavaSourceLanguage >> parser [
 	^ self privateState attributeAt: #parser ifAbsentPut: [PPJavaLexicon new]
 ]

@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXSourceAnchor }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXSourceAnchor >> mooseFinderSourceTextIn: composite [
 	<moosePresentationOrder: 10>
 	composite text

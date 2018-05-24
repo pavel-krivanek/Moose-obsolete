@@ -396,11 +396,6 @@ FAMIXPackage >> methods [
 	^ self localMethods union: self extensionMethods
 ]
 
-{ #category : #'Moose-Finder' }
-FAMIXPackage >> mooseIcon [ 
-	^ MooseIcons famixPackage
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FAMIXPackage >> namespaceScope [
 

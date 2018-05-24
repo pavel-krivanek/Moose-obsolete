@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXSmalltalkSourceLanguage }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXSmalltalkSourceLanguage >> parser [
 	^ self privateState attributeAt: #parser ifAbsentPut: [PPSmalltalkGrammar new]
 ]

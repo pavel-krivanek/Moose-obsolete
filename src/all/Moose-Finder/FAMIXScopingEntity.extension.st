@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXScopingEntity }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXScopingEntity >> mooseFinderChildrenTreeIn: composite [ 
 	<moosePresentationOrder: 80>
 	composite tree 

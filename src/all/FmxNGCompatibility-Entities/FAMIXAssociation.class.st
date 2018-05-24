@@ -109,16 +109,6 @@ FAMIXAssociation >> gtDisplayOn: aStream [
 	self to gtDisplayOn: aStream	
 ]
 
-{ #category : #'Moose-Finder' }
-FAMIXAssociation >> mooseFinderSourceTextIn: composite [
-	<moosePresentationOrder: 20>
-	composite text
-			title: 'Source';
-			titleIcon: MooseIcons mooseSourceText;
-			when: [ self from notNil and: [self from sourceText notEmpty ]];
-			format: [ self from formattedSourceText ]
-]
-
 { #category : #accessing }
 FAMIXAssociation >> previous: anAssociation [
 	| old |

@@ -135,11 +135,6 @@ FAMIXAnnotationInstance >> incomingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #'Moose-Finder' }
-FAMIXAnnotationInstance >> mooseIcon [ 
-	^ MooseIcons famixAnnotationInstance
-]
-
 { #category : #accessing }
 FAMIXAnnotationInstance >> mooseNameOn: aStream [
 	self annotationType notNil ifTrue: [

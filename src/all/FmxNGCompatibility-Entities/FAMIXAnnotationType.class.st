@@ -62,8 +62,3 @@ FAMIXAnnotationType >> container: anObject [
 
 	^ self annotationTypesContainer: anObject
 ]
-
-{ #category : #'Moose-Finder' }
-FAMIXAnnotationType >> mooseIcon [ 
-	^ MooseIcons famixAnnotationType
-]

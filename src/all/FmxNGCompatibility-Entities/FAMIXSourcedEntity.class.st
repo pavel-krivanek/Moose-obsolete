@@ -122,11 +122,6 @@ FAMIXSourcedEntity >> fileAnchorPath: aString startPos: anInteger endPos: anothe
 				model: self mooseModel)
 ]
 
-{ #category : #'Famix-Extensions' }
-FAMIXSourcedEntity >> formattedSourceText [
-	^ self sourceLanguage format: self sourceText from: self
-]
-
 { #category : #'Famix-Extensions-testing' }
 FAMIXSourcedEntity >> hasComments [
 	^ self comments isEmpty not
@@ -140,25 +135,6 @@ FAMIXSourcedEntity >> hasSourceAnchor [
 { #category : #'Famix-Implementation' }
 FAMIXSourcedEntity >> isImplicitVariable [
 	^false
-]
-
-{ #category : #'Moose-Finder' }
-FAMIXSourcedEntity >> mooseFinderParentFolderIn: composite [
-	<moosePresentationOrder: 10>
-	self sourceAnchor ifNil: [ ^ self ].
-	self sourceAnchor isFile
-		ifFalse: [ ^ self ].
-	(self sourceAnchor fileReference parent gtInspectorItemsIn: composite) titleIcon: MooseIcons mooseFolder
-]
-
-{ #category : #'Moose-Finder' }
-FAMIXSourcedEntity >> mooseFinderSourceTextIn: composite [
-	<moosePresentationOrder: 10>
-	composite text
-			title: 'Source';
-			titleIcon: MooseIcons mooseSourceText;
-			format: [ self mooseInterestingEntity formattedSourceText ];
-			when: [ self mooseInterestingEntity sourceText notEmpty ]
 ]
 
 { #category : #'Famix-Extensions' }
@@ -216,15 +192,6 @@ FAMIXSourcedEntity >> sourceText [
 	^ self sourceAnchor 
 		ifNil: [ '' ]
 		ifNotNil: [ self sourceAnchor sourceText ]
-]
-
-{ #category : #'Moose-Finder' }
-FAMIXSourcedEntity >> spotterPreviewSourceIn: composite [
-	<spotterPreview: 0>
-	composite text 
-		title: [ self mooseName ];
-		display: #yourself;
-		entity: self sourceText
 ]
 
 { #category : #'Famix-Extensions' }

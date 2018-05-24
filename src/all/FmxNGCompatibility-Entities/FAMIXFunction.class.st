@@ -68,11 +68,6 @@ FAMIXFunction >> isPublic [
 			inv sender container ~~ self container]
 ]
 
-{ #category : #'Moose-Finder' }
-FAMIXFunction >> mooseIcon [ 
-	^ MooseIcons famixFunction
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXFunction >> mooseNameOn: stream [ 
 	| parent |

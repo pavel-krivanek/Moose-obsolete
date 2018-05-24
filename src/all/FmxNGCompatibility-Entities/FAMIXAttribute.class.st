@@ -142,11 +142,6 @@ FAMIXAttribute >> isSharedVariable [
 	^ self propertyNamed: #sharedVariable ifNil: [false]
 ]
 
-{ #category : #'Moose-Finder' }
-FAMIXAttribute >> mooseIcon [ 
-	^ MooseIcons famixAttribute
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXAttribute >> mooseNameOn: aStream [ 
 	| parent |

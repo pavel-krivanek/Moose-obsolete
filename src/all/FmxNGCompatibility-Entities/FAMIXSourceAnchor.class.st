@@ -157,16 +157,6 @@ FAMIXSourceAnchor >> lineCount [
 	^ self subclassResponsibility
 ]
 
-{ #category : #'Moose-Finder' }
-FAMIXSourceAnchor >> mooseFinderSourceTextIn: composite [
-	<moosePresentationOrder: 10>
-	composite text
-			title: 'Source';
-			titleIcon: MooseIcons mooseSourceTextPartial;
-			display: [ :each | each mooseInterestingEntity sourceText ];
-			when: [ :input | input mooseInterestingEntity sourceText notEmpty ]
-]
-
 { #category : #'moosequery-queries-outgoing' }
 FAMIXSourceAnchor >> outgoingTypeDeclarations [
 	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.

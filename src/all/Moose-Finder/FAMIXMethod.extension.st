@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXMethod }
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXMethod >> browseSource [
 	<menuItem: 'Source' category: 'Browse'>
 	
@@ -18,7 +18,7 @@ FAMIXMethod >> browseSource [
 		 ]
 ]
 
-{ #category : #'*moose-finder' }
+{ #category : #'*Moose-Finder' }
 FAMIXMethod >> mooseIcon [ 
 	^ MooseIcons famixMethod
 ]

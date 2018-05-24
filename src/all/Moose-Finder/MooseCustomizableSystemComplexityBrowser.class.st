@@ -28,7 +28,7 @@ MooseCustomizableSystemComplexityBrowser class >> openOn: groupAndProperties hei
 { #category : #'instance creation' }
 MooseCustomizableSystemComplexityBrowser class >> openOnClassGroup: classGroup heightToSelect: heightSelector widthToSelect: widthSelector colorToSelect: colorSelector [
 	^ self 
-		openOn: (classGroup -> (FmxNGClass new mooseDescriptionsOfNumberProperties collect: #implementingSelector))
+		openOn: (classGroup -> (FAMIXClass new mooseDescriptionsOfNumberProperties collect: #implementingSelector))
 		heightToSelect: heightSelector
 		widthToSelect:  widthSelector
 		colorToSelect: colorSelector
