@@ -935,6 +935,9 @@ BaselineOfMoose >> groups: spec [
 			'Magritte-Model'
 			'Magritte-Pharo3-Model'
 			'Magritte-GT'
+			'Magritte-Morph'
+			'Metanool-Core'
+			'Metanool-Tests-Core'			
 			'Glamour-Magritte-Presentations'
 			'Moose-Finder'
 	).	
