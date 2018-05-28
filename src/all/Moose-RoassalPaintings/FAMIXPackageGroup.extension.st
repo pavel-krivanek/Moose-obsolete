@@ -14,7 +14,7 @@ FAMIXPackageGroup >> viewDependenciesWithCyclesOn: aView [
 	| tarjan |
 	tarjan := MalTarjan new.
 	tarjan nodes: self.
-	tarjan edges: self from: #yourself toAll: [ :each | (each querySureOutgoingAssociations atScope: FmxNGPackage) withoutSelfLoops ].
+	tarjan edges: self from: #yourself toAll: [ :each | (each querySureOutgoingAssociations atScope: FAMIXPackage) withoutSelfLoops ].
 	tarjan run.
 	
 	aView shape rectangle
@@ -53,7 +53,7 @@ FAMIXPackageGroup >> viewPackageInternalOn: view [
 				width: [ :c | c numberOfAttributes * 3 ];
 				height: #numberOfMethods;
 				if: #isStub fillColor: Color lightGray.
-			b interaction showEdge connectTo: [ :c | c queryAllOutgoingInvocations atScope: FmxNGType ].
+			b interaction showEdge connectTo: [ :c | c queryAllOutgoingInvocations atScope: FAMIXType ].
 			b nodes: pkg allClasses.
 			b edges connectFrom: #superclass.
 			b layout tree ].
@@ -61,7 +61,7 @@ FAMIXPackageGroup >> viewPackageInternalOn: view [
 	allClasses
 		ifNotEmpty: [ b normalizer
 				objects: allClasses;
-				normalizeColor: [ :c | (c queryAllOutgoingInvocations atScope: FmxNGType) size ] ].
+				normalizeColor: [ :c | (c queryAllOutgoingInvocations atScope: FAMIXType) size ] ].
 	b build.
 	lb := RTLegendBuilder new.
 	lb onDemand.
@@ -91,6 +91,6 @@ FAMIXPackageGroup >> viewSystemComplexityOn: view [
 			p localClassesGroup isEmpty
 				ifFalse: [ p localClassesGroup viewSimpleSystemComplexityOn: view ] ].
 	view shape orthoVerticalLine.
-	view edges connectFrom: #yourself toAll: [ :each | each queryIncomingInheritances atScope: FmxNGPackage ].
+	view edges connectFrom: #yourself toAll: [ :each | each queryIncomingInheritances atScope: FAMIXPackage ].
 	view layout dominanceTree
 ]
