@@ -913,8 +913,10 @@ BaselineOfMoose >> groups: spec [
 			'Glamour-Magritte-Presentations'
 			'Moose-Algos-Lattice'
 			'Moose-Tests-Algos-Graph'
+			'Moose-Algos-FormalConceptAnalysis'
 			'Moose-Tests-Algos-FormalConceptAnalysis'
 			'Moose-RoassalPaintings'
+			'Moose-Help'
 			'Moose-Finder'
 	).	
 	
