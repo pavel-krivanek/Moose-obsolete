@@ -878,6 +878,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-TestResources-LAN'
 			'Moose-TestResources-Reference-Core'
 			'Moose-TestResources-KGB-P4FullInteracted'
+			'Moose-TestResources-KGB-P6InteractedReferee'
 			'Moose-TestResources-KGB-P5FullReferee'
 			'Moose-TestResources-KGB-P7ReferencerReferee'
 			'Moose-Tests-SmalltalkImporter-LAN'
