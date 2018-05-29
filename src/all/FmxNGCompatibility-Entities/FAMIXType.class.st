@@ -254,6 +254,7 @@ FAMIXType >> container [
 
 	<generated>
 	<MSEProperty: #container type: #FAMIXContainerEntity>
+	<MSEComment: 'Deprected, use typeContainer'>
 	<container>
 	<derived>
 
