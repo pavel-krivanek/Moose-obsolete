@@ -46,6 +46,7 @@ MooseModelTest >> testAddAnnouncement [
 { #category : #tests }
 MooseModelTest >> testAddingAndRemoving [
 	| nbOfInstancesOriginal newModel nbOfInstancesBefore nbOfInstancesAfter |
+	self timeLimit: 60 seconds.
 	self flag: 'This is a weird test as it fails sporadically'.
 	10 timesRepeat: [ Smalltalk garbageCollect ].
 	Object new.
