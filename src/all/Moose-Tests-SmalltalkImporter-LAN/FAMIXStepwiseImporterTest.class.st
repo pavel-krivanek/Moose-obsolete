@@ -57,6 +57,7 @@ FAMIXStepwiseImporterTest >> testCheckSelfIsCreated [
 FAMIXStepwiseImporterTest >> testClassVariable [
 
 	| model importer |
+	self timeLimit: 60 seconds.
 	model := MooseModel new.
 	model name: 'Morphic'.
 	importer := MoosePharoImporterTask new.
