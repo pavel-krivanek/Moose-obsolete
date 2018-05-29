@@ -914,6 +914,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-Algos-Lattice'
 			'Moose-Tests-Algos-Graph'
 			'Moose-Algos-FormalConceptAnalysis'
+			'Moose-Algos-InformationRetrieval'
 			'Moose-Tests-Algos-FormalConceptAnalysis'
 			'Moose-RoassalPaintings'
 			'Moose-Help'

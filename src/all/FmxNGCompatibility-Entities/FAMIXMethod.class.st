@@ -3,6 +3,9 @@ Class {
 	#superclass : #FAMIXBehaviouralEntity,
 	#traits : 'FmxNGTMethod + FmxNGTWithCaughtExceptions + FmxNGTWithClassScope + FmxNGTWithDeclaredExceptions + FmxNGTWithThrownExceptions',
 	#classTraits : 'FmxNGTMethod classTrait + FmxNGTWithCaughtExceptions classTrait + FmxNGTWithClassScope classTrait + FmxNGTWithDeclaredExceptions classTrait + FmxNGTWithThrownExceptions classTrait',
+	#classVars : [
+		'#ShouldSearchForSmalltalkCodeInImage'
+	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
