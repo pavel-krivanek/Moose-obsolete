@@ -917,7 +917,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-Algos-InformationRetrieval'
 			'Moose-Algos-LinearAlgebra'
 			'Moose-Tests-Algos-FormalConceptAnalysis'
-			'Moose-Tests-Algos-LinearAlrgebra'
+			'Moose-Tests-Algos-LinearAlgebra'
 			'Moose-RoassalPaintings'
 			'Moose-Help'
 			'Moose-Finder'
