@@ -872,6 +872,8 @@ BaselineOfMoose >> groups: spec [
 			'FmxNGCompatibility-Generator' 
 			'FmxNGCompatibility-Entities'
 			'FmxNGCompatibility-Groups'
+			
+			'Famix-Extensions'
 	).
 	
 	spec group: 'BasicTests' with: #(
@@ -881,6 +883,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-TestResources-KGB-P6InteractedReferee'
 			'Moose-TestResources-KGB-P5FullReferee'
 			'Moose-TestResources-KGB-P7ReferencerReferee'
+			'Moose-TestResources-KGB-P2InteractedReferencerReferee'
 			'Moose-Tests-SmalltalkImporter-LAN'
 			'Moose-Tests-SmalltalkImporter-KGB'
 			'Moose-GenericImporter'
