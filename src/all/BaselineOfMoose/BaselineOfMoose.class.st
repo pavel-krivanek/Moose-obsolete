@@ -896,6 +896,7 @@ BaselineOfMoose >> groups: spec [
 			'BasicMetamodelling'
 			'Athens-SVG'
 			'Trachel'
+			'Geometry'
 			'Roassal2'
 			'GToolkit-Examples'
 			'Roassal2GT'
