@@ -12,6 +12,15 @@ Class {
 	#category : #'FmxNGCompatibility-Groups'
 }
 
+{ #category : #reading }
+FAMIXFileAnchorReader class >> readStream: aReadStream for: aFAMIXFileAnchor into: aWriteStream [
+	^ self new
+		readStream: aReadStream;
+		writeStream: aWriteStream;
+		fileAnchor: aFAMIXFileAnchor;
+		read
+]
+
 { #category : #accessing }
 FAMIXFileAnchorReader >> fileAnchor: anObject [
 	fileAnchor := anObject
