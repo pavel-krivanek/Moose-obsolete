@@ -501,15 +501,9 @@ BaselineOfMoose >> baselineMetanool: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineMocketry: spec [ 
     
-	#(
-		'Mocketry-Domain'
-		'Mocketry-Domain-Tests'
-		'Mocketry-Help'
-		'Mocketry-Specs'
-		'Mocketry-Specs-Tests'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #Fame) ]]
-
+	spec
+    baseline: 'Mocketry'
+    with: [ spec repository: 'github://dionisiydk/Mocketry:v4.0.3' ]
 ]
 
 { #category : #baseline }
@@ -877,6 +871,7 @@ BaselineOfMoose >> groups: spec [
 	).
 	
 	spec group: 'BasicTests' with: #(
+			'Mocketry'
 			'Moose-TestResources-LAN'
 			'Moose-TestResources-Reference-Core'
 			'Moose-TestResources-KGB-P4FullInteracted'
