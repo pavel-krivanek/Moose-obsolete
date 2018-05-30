@@ -71,7 +71,7 @@ FAMIXIndexedFileAnchor >> countNumberOfLinesRuturnsFrom: aStream from: start to:
 				ifTrue: [ "We increment the counter if it is a CR and we ignore a potential LF to manage CRLF"
 					count := count + 1.
 					(char := aStream next) isLf
-						ifFalse: [ aStream oneBack ] ]
+						ifFalse: [ aStream skip: -1 ] ]
 				ifFalse: [ char isLf
 						ifTrue: [ "Since we manage CRLF before we can just increment the counter" count := count + 1 ] ] ].
 	^ count
