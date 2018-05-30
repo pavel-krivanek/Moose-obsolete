@@ -261,10 +261,10 @@ FAMIXType >> container [
 	^ self typeContainer
 ]
 
-{ #category : #accessing }
-FAMIXType >> container: aContainerEntity [
+{ #category : #'as yet unclassified' }
+FAMIXType >> container: aContainer [
 
-	^ self typeContainer: aContainerEntity
+	self typeContainer: aContainer
 ]
 
 { #category : #'Famix-Extensions' }
