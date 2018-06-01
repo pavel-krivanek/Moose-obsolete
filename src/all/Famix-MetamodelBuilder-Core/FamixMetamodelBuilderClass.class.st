@@ -192,7 +192,8 @@ FamixMetamodelBuilderClass >> generateRootMethodsIn: aClass [
 		aClass classSide compile: ('metamodel
 
 	<generated>
-	^ {1} metamodel' format: { self builder generator class name }) classified: 'meta']
+	^ (self class environment at: #{1}) metamodel' format: {self builder generator class name})
+				classified: 'meta' ]
 ]
 
 { #category : #generating }

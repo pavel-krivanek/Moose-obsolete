@@ -684,7 +684,7 @@ MooseModel >> size [
 
 { #category : #'Famix-Extensions' }
 MooseModel >> sourceLanguage [
-	<MSEProperty: #sourceLanguage type: #FAMIXSourceLanguage>
+	<MSEProperty: #sourceLanguage type: #FmxNGTSourceLanguage>
 	<MSEComment: 'Source of the Language to which the model corresponds'>
 	^ sourceLanguage
 		ifNil: [ sourceLanguage := self allSourceLanguages
