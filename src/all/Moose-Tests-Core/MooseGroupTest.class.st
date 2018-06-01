@@ -748,7 +748,7 @@ MooseGroupTest >> testSort [
 MooseGroupTest >> testSum [
 	| classes |
 	classes := self model allClasses.
-	self assert: (classes sumNumbers: #numberOfMethods) equals: 54
+	self assert: (classes sumNumbers: #numberOfMethods) equals: 84 "was 54 before traits classes inclusion"
 ]
 
 { #category : #tests }
