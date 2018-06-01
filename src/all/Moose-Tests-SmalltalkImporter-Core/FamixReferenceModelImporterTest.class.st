@@ -24,7 +24,7 @@ FamixReferenceModelImporterTest >> model [
 FamixReferenceModelImporterTest >> privateTestAccessingVar: aVarName from: aMethodName shouldBeRead: aBoolean hasAccessesSize: anInteger [
 	| methodName var access |
 	methodName := self model allMethods entityNamed: aMethodName.
-	var := (self model allWithSubTypesOf: FmxNGStructuralEntity) entityNamed: aVarName.
+	var := (self model allWithSubTypesOf: FAMIXStructuralEntity) entityNamed: aVarName.
 	self assert: (var incomingAccesses select: [ :each | each accessor = methodName ]) size equals: anInteger.
 	access := (var incomingAccesses select: [ :each | each accessor = methodName ]) first.
 	self assert: access isRead == aBoolean.
@@ -98,7 +98,7 @@ FamixReferenceModelImporterTest >> testAccessingGlobalVariableFromInstanceSide [
 		hasAccessesSize: 1.
 	declaredType := (self model allGlobalVariables entityNamed: #Transcript) declaredType.
 	self assert: declaredType mooseName equals: Transcript class mooseName.
-	self assert: (declaredType isKindOf: FmxNGType)
+	self assert: (declaredType isKindOf: FAMIXType)
 ]
 
 { #category : #'reference model access' }
