@@ -45,7 +45,8 @@ FmxNGTLocalVariable >> parentBehaviouralEntity [
 { #category : #accessing }
 FmxNGTLocalVariable >> parentBehaviouralEntity: anObject [
 
-	<generated>
-	parentBehaviouralEntity := anObject
+	parentBehaviouralEntity := anObject.
+	self resetMooseName.
+	
 
 ]

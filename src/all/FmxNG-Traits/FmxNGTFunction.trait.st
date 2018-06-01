@@ -45,8 +45,8 @@ FmxNGTFunction >> functionOwner [
 { #category : #accessing }
 FmxNGTFunction >> functionOwner: anObject [
 
-	<generated>
-	functionOwner := anObject
+	functionOwner := anObject.
+	self resetMooseName.
 
 ]
 

@@ -53,7 +53,7 @@ FmxNGTAttribute >> parentType [
 { #category : #accessing }
 FmxNGTAttribute >> parentType: anObject [
 
-	<generated>
-	parentType := anObject
+	parentType := anObject.
+	self resetMooseName.
 
 ]

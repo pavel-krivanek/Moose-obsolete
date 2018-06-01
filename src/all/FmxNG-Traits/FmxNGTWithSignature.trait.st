@@ -41,7 +41,7 @@ FmxNGTWithSignature >> signature [
 { #category : #accessing }
 FmxNGTWithSignature >> signature: anObject [
 
-	<generated>
-	signature := anObject
+	signature := anObject.
+	self resetMooseName.
 
 ]

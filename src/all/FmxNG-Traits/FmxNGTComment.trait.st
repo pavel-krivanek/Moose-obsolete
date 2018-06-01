@@ -44,8 +44,8 @@ FmxNGTComment >> container [
 { #category : #accessing }
 FmxNGTComment >> container: anObject [
 
-	<generated>
-	container := anObject
+	container := anObject.
+	self resetMooseName.
 
 ]
 

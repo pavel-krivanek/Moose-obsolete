@@ -106,8 +106,8 @@ FmxNGTScopingEntity >> parentScope [
 { #category : #accessing }
 FmxNGTScopingEntity >> parentScope: anObject [
 
-	<generated>
-	parentScope := anObject
+	parentScope := anObject.
+	self resetMooseName.
 
 ]
 

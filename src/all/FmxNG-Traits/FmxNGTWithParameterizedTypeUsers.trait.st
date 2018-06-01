@@ -39,7 +39,7 @@ FmxNGTWithParameterizedTypeUsers >> arguments [
 { #category : #accessing }
 FmxNGTWithParameterizedTypeUsers >> arguments: anObject [
 
-	<generated>
-	arguments value: anObject
+	arguments value: anObject.
+	self resetMooseName.
 
 ]

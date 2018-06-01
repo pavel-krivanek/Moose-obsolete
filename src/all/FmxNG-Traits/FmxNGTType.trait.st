@@ -72,7 +72,7 @@ FmxNGTType >> typeContainer [
 { #category : #accessing }
 FmxNGTType >> typeContainer: anObject [
 
-	<generated>
-	typeContainer := anObject
+	typeContainer := anObject.
+	self resetMooseName.
 
 ]

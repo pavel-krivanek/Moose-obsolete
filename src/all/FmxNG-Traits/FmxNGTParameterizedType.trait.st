@@ -50,7 +50,8 @@ FmxNGTParameterizedType >> parameterizableClass [
 { #category : #accessing }
 FmxNGTParameterizedType >> parameterizableClass: anObject [
 
-	<generated>
-	parameterizableClass := anObject
+	parameterizableClass := anObject.
+	self resetMooseName.
+	
 
 ]

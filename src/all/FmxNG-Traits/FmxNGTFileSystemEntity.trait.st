@@ -39,7 +39,8 @@ FmxNGTFileSystemEntity >> parentFolder [
 { #category : #accessing }
 FmxNGTFileSystemEntity >> parentFolder: anObject [
 
-	<generated>
-	parentFolder := anObject
+	parentFolder := anObject.
+	self resetMooseName.
+	
 
 ]

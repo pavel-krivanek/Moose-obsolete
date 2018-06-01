@@ -111,8 +111,8 @@ FmxNGTMethod >> parentType [
 { #category : #accessing }
 FmxNGTMethod >> parentType: anObject [
 
-	<generated>
-	parentType := anObject
+	parentType := anObject.
+	self resetMooseName.
 
 ]
 
