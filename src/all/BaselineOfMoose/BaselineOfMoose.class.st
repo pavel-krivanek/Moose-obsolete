@@ -898,6 +898,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-TestResources-Reference-PackageTwo'
 			'Moose-Tests-SmalltalkImporter-LAN'
 			'Moose-Tests-SmalltalkImporter-KGB'
+			'Moose-TestResources-KGB-PExtensions'
 			'Moose-GenericImporter'
 			'Moose-SmalltalkImporter'
 			'Moose-Tests-Core'
