@@ -201,15 +201,29 @@ FamixMetamodelBuilderBehavior >> generateNavigationGroups [
 	allNavigationGroups do: [ :aGroup |
 		| sideName |
 		sideName := aGroup entity name.
-		self realClass instanceSide compile: ('{1}
+		
+		aGroup entity isMany ifTrue: [ 
+			self realClass instanceSide compile: ('{1}
 
 	<generated>
-	<navigation: ''Widgets''>
+	<navigation: ''{2}''>
 	^ MooseGroup
-		withAll: (self {2} asSet)' format: { 
-			sideName, 'Group'.
-			sideName }) 
-		classified: #navigation.
+			withAll: (self {3} asSet)' format: { 
+				sideName, 'Group'.
+				sideName capitalized.
+				sideName }) 
+			classified: #navigation.]
+		ifFalse: [ 
+			self realClass instanceSide compile: ('{1}
+
+	<generated>
+	<navigation: ''{2}''>
+	^ MooseGroup
+			with: (self {3})' format: { 
+				sideName, 'Group'.
+				sideName capitalized.
+				sideName }) 
+			classified: #navigation.]
 
 	].
 
