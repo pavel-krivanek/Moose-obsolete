@@ -206,7 +206,7 @@ FamixMetamodelBuilderBehavior >> generateNavigationGroups [
 	<generated>
 	<navigation: ''Widgets''>
 	^ MooseGroup
-		withAll: (self {1} asSet)' format: { 
+		withAll: (self {2} asSet)' format: { 
 			sideName, 'Group'.
 			sideName }) 
 		classified: #navigation.
