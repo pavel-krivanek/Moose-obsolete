@@ -123,6 +123,8 @@ FmxNGCompatibilityGenerator >> defineClasses [
 
 	super defineClasses.
 
+	abstractFile := builder newClassNamed: #AbstractFile.
+	abstractFileAnchor := builder newClassNamed: #AbstractFileAnchor.
 	access := builder newClassNamed: #Access.
 	annotationInstance := builder newClassNamed: #AnnotationInstance.
 	annotationInstanceAttribute := builder newClassNamed: #AnnotationInstanceAttribute.
@@ -143,11 +145,15 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	enum := builder newClassNamed: #Enum.
 	enumValue := builder newClassNamed: #EnumValue.
 	exception := builder newClassNamed: #Exception.
+	file := builder newClassNamed: #File.
+	fileAnchor := builder newClassNamed: #FileAnchor.
+	folder := builder newClassNamed: #Folder.
 	function := builder newClassNamed: #Function.
 	globalVariable := builder newClassNamed: #GlobalVariable.
 	header := builder newClassNamed: #Header.
 	implicitVariable := builder newClassNamed: #ImplicitVariable.
 	include := builder newClassNamed: #Include.
+	indexedFileAnchor := builder newClassNamed: #IndexedFileAnchor.
 	inheritance := builder newClassNamed: #Inheritance.
 	invocation := builder newClassNamed: #Invocation.
 	jAVASourceLanguage := builder newClassNamed: #JavaSourceLanguage.
@@ -155,6 +161,7 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	localVariable := builder newClassNamed: #LocalVariable.
 	method := builder newClassNamed: #Method.
 	module := builder newClassNamed: #Module.
+	multipleFileAnchor := builder newClassNamed: #MultipleFileAnchor.
 	namespace := builder newClassNamed: #Namespace.
 	package := builder newClassNamed: #Package.
 	parameter := builder newClassNamed: #Parameter.
@@ -169,6 +176,7 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	reference := builder newClassNamed: #Reference.
 	sMALLTALKSourceLanguage := builder newClassNamed: #SmalltalkSourceLanguage.
 	scopingEntity := builder newClassNamed: #ScopingEntity.
+	sourceTextAnchor := builder newClassNamed: #SourceTextAnchor.
 	structuralEntity := builder newClassNamed: #StructuralEntity.
 	thrownException := builder newClassNamed: #ThrownException.
 	type := builder newClassNamed: #Type.

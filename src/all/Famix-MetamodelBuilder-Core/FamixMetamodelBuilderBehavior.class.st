@@ -3,16 +3,12 @@ FamixMetamodelBuilderBehavior
 "
 Class {
 	#name : #FamixMetamodelBuilderBehavior,
-	#superclass : #Object,
+	#superclass : #FamixMetamodelBuilderEntity,
 	#instVars : [
-		'name',
 		'relations',
-		'builder',
 		'realClass',
-		'willGenerate',
 		'properties',
 		'tag',
-		'comment',
 		'prefix',
 		'packageName',
 		'testingSelectors'
@@ -118,26 +114,6 @@ FamixMetamodelBuilderBehavior >> as: aTraitOrTraitName property: propertyName co
 		yourself.
 ]
 
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> builder [
-	^ builder
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> builder: anObject [
-	builder := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> comment [
-	^ comment
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> comment: anObject [
-	comment := anObject
-]
-
 { #category : #'relations - named' }
 FamixMetamodelBuilderBehavior >> containsMany: otherClass [
 
@@ -215,6 +191,31 @@ FamixMetamodelBuilderBehavior >> generateAnnotationIn: aRealClass as: aName supe
 ]
 
 { #category : #generating }
+FamixMetamodelBuilderBehavior >> generateNavigationGroups [
+
+	| allNavigationGroups |
+	
+	allNavigationGroups := self navigationGroups, (self relations flatCollect: [ :relation |
+		relation side navigationGroups ]).
+
+	allNavigationGroups do: [ :aGroup |
+		| sideName |
+		sideName := aGroup entity name.
+		self realClass instanceSide compile: ('{1}
+
+	<generated>
+	<navigation: ''Widgets''>
+	^ MooseGroup
+		withAll: (self {1} asSet)' format: { 
+			sideName, 'Group'.
+			sideName }) 
+		classified: #navigation.
+
+	].
+
+]
+
+{ #category : #generating }
 FamixMetamodelBuilderBehavior >> generateTestingSelectors [
 
 	self testingSelectors do: [ :aSelector |
@@ -228,8 +229,8 @@ FamixMetamodelBuilderBehavior >> generateTestingSelectors [
 			aBehavior classGeneralization ifNil: ["
 				
 	self builder classes do: [ :aBehavior |
-		aBehavior isHierarchyRoot ifTrue: [ 
-			aBehavior realClass instanceSide compile: ('{1}
+			(aBehavior name = #Entity) ifTrue: [ "HACK"
+				aBehavior realClass instanceSide compile: ('{1}
 
 	<generated>
 	^ false' format: { aSelector }) 
@@ -242,7 +243,6 @@ FamixMetamodelBuilderBehavior >> initialize [
 	super initialize.
 	relations := OrderedCollection new.
 	properties := OrderedCollection new.
-	willGenerate := true.
 	prefix := String new.
 	packageName := String new.
 	testingSelectors := Set new.
@@ -533,17 +533,6 @@ FamixMetamodelBuilderBehavior >> testingSelectors: aCollection [
 FamixMetamodelBuilderBehavior >> uses: aTrait [
 
 	^ self generalization: aTrait
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> willGenerate [
-	^ willGenerate
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> willGenerate: anObject [
-
-	willGenerate := anObject
 ]
 
 { #category : #'testing selectors' }

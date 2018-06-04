@@ -249,9 +249,10 @@ FAMIXType >> clientTypes [
 	^ (self queryAllIncoming atScope: FAMIXType) withoutSelfLoops
 ]
 
-{ #category : #accessing }
+{ #category : #'as yet unclassified' }
 FAMIXType >> container [
 
+	<generated>
 	<MSEProperty: #container type: #FAMIXContainerEntity>
 	<MSEComment: 'Deprected, use typeContainer'>
 	<container>

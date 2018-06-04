@@ -246,6 +246,18 @@ FamixMetamodelBuilderRelationSide >> isDerived [
 	^ derived
 ]
 
+{ #category : #testing }
+FamixMetamodelBuilderRelationSide >> isMany [
+
+	^ self cardinality = #many
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderRelationSide >> isOne [
+
+	^ self cardinality = #one
+]
+
 { #category : #properties }
 FamixMetamodelBuilderRelationSide >> isSource [
 

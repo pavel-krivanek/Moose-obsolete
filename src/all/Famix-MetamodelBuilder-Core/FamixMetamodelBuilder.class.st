@@ -264,6 +264,7 @@ FamixMetamodelBuilder >> generate [
 
 	self traits do: [ :each | each generateTestingSelectors ] displayingProgress: 'generating testing selectors for traits'.
 	self sortedClasses do: [ :each | each generateTestingSelectors ] displayingProgress: 'generating testing selectors for classes'.
+	self sortedClasses do: [ :each | each generateNavigationGroups ] displayingProgress: 'generating navigation groups'.
 
 	self behaviorsCount > 0
 		ifTrue: [ self generateImportingContext ].

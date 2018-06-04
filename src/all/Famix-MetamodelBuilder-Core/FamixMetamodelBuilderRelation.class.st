@@ -128,3 +128,10 @@ FamixMetamodelBuilderRelation >> to: aBlock [
 		yourself).
 	aBlock cull: oppositeSide.
 ]
+
+{ #category : #accessing }
+FamixMetamodelBuilderRelation >> withNavigation [
+
+	self sides do: [ :aSide |
+		aSide withNavigation ]
+]
