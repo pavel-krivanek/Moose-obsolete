@@ -30,7 +30,7 @@ FAMIXEntity class >> generatedTraitNames [
 FAMIXEntity class >> metamodel [
 
 	<generated>
-	^ FmxNGCompatibilityGenerator metamodel
+	^ (self class environment at: #FmxNGCompatibilityGenerator) metamodel
 ]
 
 { #category : #meta }

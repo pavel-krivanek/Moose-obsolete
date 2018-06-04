@@ -7,7 +7,8 @@ Class {
 	#instVars : [
 		'traitGeneralizations',
 		'classGeneralization',
-		'requirements'
+		'requirements',
+		'isHierarchyRoot'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -125,20 +126,18 @@ FamixMetamodelBuilderClass >> generalization: anObject [
 { #category : #generating }
 FamixMetamodelBuilderClass >> generate [
 
-	| aClass aSuperclass aClassName isHierarchyRoot  |
+	| aClass aSuperclass aClassName  |
 	
 	self willGenerate ifFalse: [ ^ self ].
 	
 	aClassName := self fullName.
-	
-	isHierarchyRoot := false.
 	
 	aSuperclass := self classGeneralization 
 		ifNil: [ 
 			isHierarchyRoot := true.
 			self defaultSuperclass ]
 		ifNotNil: [ self classGeneralization realClass ].
-	
+		
 	aClass := self builder environment createClassNamed: aClassName asSymbol superclass: aSuperclass traitNames: self allTraitNames slots: self slotDefinitions in: self packageName overwrite: true.
 	
 	aClass tagWith: self tag.
@@ -150,8 +149,6 @@ FamixMetamodelBuilderClass >> generate [
 		self generateAccessors.
 		self generateAnnotationIn: aClass as: self name superclass: nil].
 	self generateRequirementsFor: aClass.
-	
-	isHierarchyRoot := (self name = #Entity). "HACK"
 	
 	isHierarchyRoot ifTrue: [ 
 		self generateRootMethodsIn: aClass ].
@@ -236,6 +233,17 @@ FamixMetamodelBuilderClass >> initialize [
 	super initialize.
 	
 	requirements := Set new.
+	isHierarchyRoot := false.
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderClass >> isHierarchyRoot [
+	^ isHierarchyRoot
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderClass >> isHierarchyRoot: anObject [
+	isHierarchyRoot := anObject
 ]
 
 { #category : #testing }
