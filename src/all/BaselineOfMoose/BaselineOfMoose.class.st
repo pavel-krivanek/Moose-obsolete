@@ -871,6 +871,7 @@ BaselineOfMoose >> groups: spec [
 	).
 	
 	spec group: 'BasicTests' with: #(
+			'Famix-MetamodelBuilder-Tests'
 			'Mocketry'
 			'Moose-TestResources-LAN'
 			'Moose-TestResources-Reference-Core'
