@@ -59,7 +59,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 	definition := '{superclass} named: #{className} 
 		uses: {traits} 
 		slots: {slots} 
-		package: ''{category}'''
+		category: ''{category}'''
 		format:
 			(Dictionary
 				newFrom:

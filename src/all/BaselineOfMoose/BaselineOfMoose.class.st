@@ -670,7 +670,7 @@ BaselineOfMoose >> baselineRing2: spec [
     
 	spec baseline: 'Ring2' with: [
 		spec 
-			repository: 'github://pavel-krivanek/Ring2:changesResolver/src';
+			repository: 'github://pavel-krivanek/Ring2:moose-dev/src';
 			loads: #calypso 	].
 
 ]
