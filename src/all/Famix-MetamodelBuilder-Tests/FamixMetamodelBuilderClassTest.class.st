@@ -80,12 +80,7 @@ FamixMetamodelBuilderClassTest >> testAs [
 	generatedTNamed := builder testingEnvironment ask classNamed: 'TstTNamed'.
 	
 	self deny: (generatedNamed superclass = generatedTNamed).
-	method := generatedNamed classSide methodNamed: #statefulTraits.
-	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
-	self assert: (method sourceCode includesSubstring: '<generated>').
-	self assert: (method sourceCode includesSubstring: '^ {TstTNamed}').
-	
-
+	self assertCollection: generatedNamed traits asArray equals: { generatedTNamed }.
 ]
 
 { #category : #tests }
@@ -561,11 +556,7 @@ FamixMetamodelBuilderClassTest >> testMultipleAs [
 	
 	self deny: (generatedNamed superclass = generatedTNamed).
 	self deny: (generatedNamed superclass = generatedTSourced).
-	method := generatedNamed classSide methodNamed: #statefulTraits.
-	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
-	self assert: (method sourceCode includesSubstring: '<generated>').
-	self assert: (method sourceCode includesSubstring: '^ {TstTNamed. TstTSourced}').
-
+	self assertCollection: generatedNamed traits asArray equals: { generatedTNamed. generatedTSourced }.
 
 ]
 

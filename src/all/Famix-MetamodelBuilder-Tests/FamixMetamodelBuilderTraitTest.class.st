@@ -317,11 +317,8 @@ FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehavior'.
 	
 	self deny: (generatedBehavior superclass = generatedTBehavior).
-	method := generatedBehavior classSide methodNamed: #statefulTraits.
-	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
-	self assert: (method sourceCode includesSubstring: '^ {TstTBehavior}').
+	self assertCollection: generatedBehavior traits asArray equals: { generatedTBehavior }.
 	
-
 ]
 
 { #category : #tests }
@@ -340,10 +337,7 @@ FamixMetamodelBuilderTraitTest >> testUses [
 	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehavior'.
 	
 	self deny: (generatedBehavior superclass = generatedTBehavior).
-	method := generatedBehavior classSide methodNamed: #statefulTraits.
-	self assert: (method sourceCode includesSubstring: '<generated>').
-	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
-	self assert: (method sourceCode includesSubstring: '^ {TstTBehavior}').
-	
+	self assertCollection: generatedBehavior traits asArray equals: { generatedTBehavior }.
+		
 
 ]
