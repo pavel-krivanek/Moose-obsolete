@@ -124,6 +124,7 @@ FamixMetamodelBuilderRingEnvironment >> initialize [
 	super initialize.
 	
 	ringEnvironment := RGEnvironment new.
+	ringEnvironment version: 7.
 	ringEnvironment ensureClassNamed: #FMOne.
 	ringEnvironment ensureClassNamed: #FMMany.		
 
