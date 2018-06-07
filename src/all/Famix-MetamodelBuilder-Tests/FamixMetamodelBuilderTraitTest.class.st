@@ -279,7 +279,7 @@ FamixMetamodelBuilderTraitTest >> testSimpleClassAnnotation [
 	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 
 	method := generated classSide methodNamed: #annotation.
-	self assert: (method sourceCode includesSubstring: '<MSEClass: #TComment super: #FmxTraitEntity>').
+	self assert: (method sourceCode includesSubstring: '<MSEClass: #TComment super: #Trait>').
 	self assert: (method sourceCode includesSubstring: '<package: #Tst>').
 
 
