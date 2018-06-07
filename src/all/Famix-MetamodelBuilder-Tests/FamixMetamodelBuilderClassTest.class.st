@@ -678,10 +678,7 @@ FamixMetamodelBuilderClassTest >> testSimpleClassStatefulTraits [
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	method := generated classSide methodNamed: #statefulTraits.
-	self assert: (method sourceCode includesSubstring: '<statefulTraits>').
-	self assert: (method sourceCode includesSubstring: '<generated>').
-	self assert: (method sourceCode includesSubstring: '^ {}').
-
+	self assert: generated traits isEmpty.
 ]
 
 { #category : #tests }

@@ -2,7 +2,7 @@
 an environment that uses Ring to simulate classes generation
 "
 Class {
-	#name : #FamixMetamodelBuilderRingEnvironment,
+	#name : #FamixMetamodelBuilderRingEnvironmentOld,
 	#superclass : #FamixMetamodelBuilderEnvironment,
 	#instVars : [
 		'ringEnvironment'
@@ -11,25 +11,25 @@ Class {
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> basicSuperclass [
+FamixMetamodelBuilderRingEnvironmentOld >> basicSuperclass [
 
 	^ self ringEnvironment ensureClassNamed: self builder basicSuperclassName
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> basicTrait [
+FamixMetamodelBuilderRingEnvironmentOld >> basicTrait [
 
 	^ self ringEnvironment ensureClassNamed: self builder basicTraitName
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> compile: aSource in: aClass classified: aProtocol [
+FamixMetamodelBuilderRingEnvironmentOld >> compile: aSource in: aClass classified: aProtocol [
 
 	aClass compile: aSource classified: aProtocol.
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName overwrite: shouldOverwrite [
+FamixMetamodelBuilderRingEnvironmentOld >> createClassNamed: aClassName superclass: aSuperclass slots: slots in: packageName overwrite: shouldOverwrite [
 
 	| aClass existingClass |
 	
@@ -57,11 +57,11 @@ FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass:
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createDummyClassNamed: aClassName in: packageName [
+FamixMetamodelBuilderRingEnvironmentOld >> createDummyClassNamed: aClassName in: packageName [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createImportingcontextClassNamed: aClassName in: packageName [
+FamixMetamodelBuilderRingEnvironmentOld >> createImportingcontextClassNamed: aClassName in: packageName [
 
 	| resultantClass |
 	
@@ -78,7 +78,7 @@ FamixMetamodelBuilderRingEnvironment >> createImportingcontextClassNamed: aClass
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
+FamixMetamodelBuilderRingEnvironmentOld >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
 
 	| aPackage aTrait existingClass |
 
@@ -107,19 +107,19 @@ FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> flattenTraitsFor: aClass [
+FamixMetamodelBuilderRingEnvironmentOld >> flattenTraitsFor: aClass [
 
 	self error: 'not supported'
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> hasBehaviorNamed: aClassName [
+FamixMetamodelBuilderRingEnvironmentOld >> hasBehaviorNamed: aClassName [
 
 	^ self ringEnvironment ask includesClassNamed: aClassName
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> initialize [
+FamixMetamodelBuilderRingEnvironmentOld >> initialize [
 
 	super initialize.
 	
@@ -131,31 +131,31 @@ FamixMetamodelBuilderRingEnvironment >> initialize [
 ]
 
 { #category : #'public registration' }
-FamixMetamodelBuilderRingEnvironment >> registerPackage: aPackageName [
+FamixMetamodelBuilderRingEnvironmentOld >> registerPackage: aPackageName [
 
 	^ self ringEnvironment ensurePackageNamed: aPackageName.
 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> ringEnvironment [
+FamixMetamodelBuilderRingEnvironmentOld >> ringEnvironment [
 	^ ringEnvironment
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> setComment: aString for: aClass [
+FamixMetamodelBuilderRingEnvironmentOld >> setComment: aString for: aClass [
 
 	aClass comment content: aString
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName [ 
+FamixMetamodelBuilderRingEnvironmentOld >> slotNamed: slotName [ 
 
 	^ (RGInstanceVariableSlot named: slotName asSymbol)
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName cardinality: cardinality type: type opposite: oppositeName [
+FamixMetamodelBuilderRingEnvironmentOld >> slotNamed: slotName cardinality: cardinality type: type opposite: oppositeName [
 
 	| cardinalityClassName |
 	

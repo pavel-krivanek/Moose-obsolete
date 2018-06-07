@@ -295,7 +295,7 @@ FamixMetamodelBuilderTraitTest >> testSimpleTrait [
 	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 	self assert: generated notNil.
 	self assert: generated isClass.
-	self assert: generated superclass name equals: 'FmxTraitEntity'.
+	self assert: generated superclass name equals: 'Trait'.
 	self assert: generated slots isEmpty.
 	self assert: generated instanceSide localSelectors isEmpty.	
 	self assertCollection: generated classSide localSelectors sorted equals: #(annotation).

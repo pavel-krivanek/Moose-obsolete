@@ -90,6 +90,9 @@ FmxNGTAccess >> isReadWriteUnknown [
 { #category : #accessing }
 FmxNGTAccess >> isWrite [
 
+	<MSEProperty: #isWrite type: #Boolean> 
+	<derived>
+	<MSEComment: 'Write access'>
 	^ isWrite ifNil: [ false ]
 ]
 
