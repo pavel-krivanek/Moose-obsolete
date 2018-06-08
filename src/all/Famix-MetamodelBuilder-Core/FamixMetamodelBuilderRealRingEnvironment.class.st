@@ -1,9 +1,6 @@
 Class {
 	#name : #FamixMetamodelBuilderRealRingEnvironment,
-	#superclass : #FamixMetamodelBuilderEnvironment,
-	#instVars : [
-		'ringEnvironment'
-	],
+	#superclass : #FamixMetamodelBuilderRingEnvironment,
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
@@ -107,123 +104,10 @@ FamixMetamodelBuilderRealRingEnvironment >> apply [
 
 ]
 
-{ #category : #accessing }
-FamixMetamodelBuilderRealRingEnvironment >> basicSuperclass [
-
-	^ self ringEnvironment ensureClassNamed: self builder basicSuperclassName
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRealRingEnvironment >> basicTrait [
-
-	^ self ringEnvironment ensureClassNamed: self builder basicTraitName
-]
-
 { #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> classVariablesStringFor: realClass [
 
 	^ '{', ((realClass classVarNames collect: [ :each | '#', each ]) joinUsing: ' '), '}'
-]
-
-{ #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> cleanClass: realClass [
-
-	realClass protocols 
-		select: [ :each | each beginsWith: '_fromTrait_' ] 
-		thenDo: [ :each | realClass removeProtocol: each ].
-
-	realClass classSide protocols 
-		select: [ :each | each beginsWith: '_fromTrait_' ] 
-		thenDo: [ :each | realClass classSide removeProtocol: each ].
-
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRealRingEnvironment >> compile: aSource in: aClass classified: aProtocol [
-
-	aClass compile: aSource classified: aProtocol.
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass traitNames: traitNames slots: slots in: packageName overwrite: shouldOverwrite [
-
-	| aClass existingClass composition |
-	
-	existingClass := self ringEnvironment ask behaviorNamed: aClassName asSymbol.
-	
-	(existingClass notNil and: [ shouldOverwrite not]) 
-		ifTrue: [ ^ existingClass ].
-		
-	aClass := self ringEnvironment ensureClassNamed: aClassName.
-	aClass superclass: aSuperclass.
-
-	composition := RGTraitComposition parent: aClass.
-	aClass traitComposition: composition.
-	traitNames do: [ :each |
-		composition addTransformation: (self ringEnvironment ensureTraitNamed: each) ].	
-	
-	aClass package: (self ringEnvironment ensurePackageNamed: packageName).
-	aClass layout makeResolved.
-	slots do: [ :slotInBadEnvironment |
-		| slot |
-		slot := slotInBadEnvironment isSpecial
-			ifTrue: [ 			
-				(RGUnknownSlot named: slotInBadEnvironment name parent: aClass layout) 
-					expression: slotInBadEnvironment expression;
-					yourself ]
-			ifFalse: [ 
-				RGInstanceVariableSlot named: slotInBadEnvironment name parent: aClass layout ].
-		aClass layout addSlot: slot.
-		slot propertyNamed: #isGenerated put: true ].
-
-	^ aClass
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> createImportingcontextClassNamed: aClassName in: packageName [
-
-	| resultantClass |
-	
-	(self hasBehaviorNamed: aClassName asSymbol ) 
-		ifTrue: [ ^ self ringEnvironment ensureClassNamed: aClassName asSymbol ].
-	
-	resultantClass := self ringEnvironment ensureClassNamed: aClassName asSymbol.
-	resultantClass superclass: (self ringEnvironment ensureClassNamed: self builder baseImportingContextName).
-	resultantClass layout makeResolved.
-	resultantClass package: (self ringEnvironment ensurePackageNamed: packageName).
-						
-	^ resultantClass
-
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
-
-	| aPackage aTrait existingClass |
-
-	existingClass := self ringEnvironment ask behaviorNamed: traitName asSymbol.
-	
-	(existingClass notNil and: [ shouldOverwrite not]) 
-		ifTrue: [ ^ existingClass ].
-
-	aPackage := self ringEnvironment ensurePackageNamed: packageName.
-	aTrait := ringEnvironment ensureTraitNamed: traitName. 
-	aTrait superclass: self basicTrait.
-	aTrait package: aPackage.
-	aTrait layout makeResolved.
-	slots do: [ :slotInBadEnvironment |
-		| slot |
-		slot := slotInBadEnvironment isSpecial
-			ifTrue: [ 			
-				(RGUnknownSlot named: slotInBadEnvironment name parent: aTrait layout) 
-					expression: slotInBadEnvironment expression;
-					yourself ]
-			ifFalse: [ 
-				RGInstanceVariableSlot named: slotInBadEnvironment name parent: aTrait layout ].
-		aTrait layout addSlot: slot.
-		slot propertyNamed: #isGenerated put: true ].
-	
-	^ aTrait
 ]
 
 { #category : #installing }
@@ -259,20 +143,6 @@ FamixMetamodelBuilderRealRingEnvironment >> ensurePackagesFrom: anRGEnvironment 
 	resolvedPackages do: [ :each |
 		(RPackageOrganizer default includesPackageNamed: each name)
 			ifFalse: [ RPackageOrganizer default registerPackageNamed: each name]].
-]
-
-{ #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> generateSlotsDescriptionFrom: anRGClass [
-
-	| generatedSlots |
-	
-	generatedSlots := anRGClass layout slots select: [ :each | each propertyNamed: #isGenerated ifAbsent: [false] ].
-	
-	anRGClass classSide compile: ('generatedSlotNames
-	<generated>
-	^ {1}' format: { '#(', ((generatedSlots collect: #name) joinUsing: ' '), ')' }) classified: 'generator'
-		
-
 ]
 
 { #category : #installing }
@@ -331,24 +201,6 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedTraitsOf: aRealClass [
 	
 ]
 
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> hasBehaviorNamed: aClassName [
-
-	^ self ringEnvironment ask includesClassNamed: aClassName
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> initialize [
-
-	super initialize.
-	
-	ringEnvironment := RGEnvironment new.
-	ringEnvironment version: 7.
-	ringEnvironment ensureClassNamed: #FMOne.
-	ringEnvironment ensureClassNamed: #FMMany.		
-
-]
-
 { #category : #installing }
 FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
 
@@ -366,55 +218,4 @@ FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
 	self generateTraitsDescriptionFrom: anRGClass.
 	self adoptMethodsOf: realClass to: anRGClass
 		
-]
-
-{ #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> leanClass: realClass [
-
-	realClass protocols 
-		select: [ :each | each beginsWith: '_fromTrait_' ] 
-		thenDo: [ :each | realClass removeProtocol: each ].
-
-	realClass classSide protocols 
-		select: [ :each | each beginsWith: '_fromTrait_' ] 
-		thenDo: [ :each | realClass classSide removeProtocol: each ].
-
-]
-
-{ #category : #'public registration' }
-FamixMetamodelBuilderRealRingEnvironment >> registerPackage: aPackageName [
-
-	^ self ringEnvironment ensurePackageNamed: aPackageName.
-
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRealRingEnvironment >> ringEnvironment [
-	^ ringEnvironment
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> setComment: aString for: aClass [
-
-	aClass comment content: aString
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> slotNamed: slotName [ 
-
-	^ (RGInstanceVariableSlot named: slotName asSymbol)
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> slotNamed: slotName cardinality: cardinality type: type opposite: oppositeName [
-
-	| cardinalityClassName |
-	
-	cardinalityClassName := cardinality = #one
-		ifTrue: [ #FMOne ]
-		ifFalse: [ #FMMany ].
-		
-	^ (RGUnknownSlot named: slotName asSymbol)
-		 expression: ('{1} type: #{2} opposite: #{3}' 
-			format: { cardinalityClassName. type. oppositeName}) 
 ]

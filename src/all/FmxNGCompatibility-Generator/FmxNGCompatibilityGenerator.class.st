@@ -67,15 +67,15 @@ Class {
 }
 
 { #category : #accessing }
-FmxNGCompatibilityGenerator class >> annotationPackageName [
-
-	^ #'FAMIX'
-]
-
-{ #category : #accessing }
 FmxNGCompatibilityGenerator class >> packageName [
 
 	^ #'FmxNGCompatibility-Entities'
+]
+
+{ #category : #accessing }
+FmxNGCompatibilityGenerator class >> packageNameForAnnotations [
+
+	^ #'FAMIX'
 ]
 
 { #category : #accessing }

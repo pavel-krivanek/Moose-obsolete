@@ -13,12 +13,6 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Core'
 }
 
-{ #category : #accessing }
-FamixMetamodelGenerator class >> annotationPackageName [
-
-	^ self packageName
-]
-
 { #category : #'as yet unclassified' }
 FamixMetamodelGenerator class >> builderWithDefinitions [
 
@@ -52,6 +46,12 @@ FamixMetamodelGenerator class >> packageName [
 ]
 
 { #category : #accessing }
+FamixMetamodelGenerator class >> packageNameForAnnotations [
+
+	^ self packageName
+]
+
+{ #category : #accessing }
 FamixMetamodelGenerator class >> prefix [
 
 	^ self packageName
@@ -80,14 +80,7 @@ FamixMetamodelGenerator >> adoptBuilder: aBuilder [
 	aBuilder 
 		prefix: self prefix;
 		packageName: self packageName;
-		annotationPackageName: self annotationPackageName.
-
-]
-
-{ #category : #definition }
-FamixMetamodelGenerator >> annotationPackageName [
-
-	^ self class annotationPackageName
+		packageNameForAnnotations: self packageNameForAnnotations.
 
 ]
 
@@ -182,6 +175,13 @@ FamixMetamodelGenerator >> newBuilder [
 FamixMetamodelGenerator >> packageName [
 
 	^ self class packageName
+
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> packageNameForAnnotations [
+
+	^ self class packageNameForAnnotations
 
 ]
 

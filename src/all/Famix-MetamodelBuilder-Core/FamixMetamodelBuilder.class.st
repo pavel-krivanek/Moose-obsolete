@@ -51,7 +51,7 @@ Class {
 		'environment',
 		'prefix',
 		'packageName',
-		'annotationPackageName',
+		'packageNameForAnnotations',
 		'classes',
 		'traits',
 		'relations',
@@ -79,16 +79,6 @@ FamixMetamodelBuilder class >> forGenerator: aGenerator [
 FamixMetamodelBuilder >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitBuilder: self.
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> annotationPackageName [
-	^ annotationPackageName ifNil: [ self packageName ].
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> annotationPackageName: anObject [
-	annotationPackageName := anObject
 ]
 
 { #category : #accessing }
@@ -434,6 +424,16 @@ FamixMetamodelBuilder >> packageName: anObject [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilder >> packageNameForAnnotations [
+	^ packageNameForAnnotations ifNil: [ self packageName ].
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> packageNameForAnnotations: anObject [
+	packageNameForAnnotations := anObject
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilder >> prefix [
 	^ prefix ifNil: [ prefix := '' ]
 ]
@@ -443,7 +443,7 @@ FamixMetamodelBuilder >> prefix: anObject [
 	prefix := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #generating }
 FamixMetamodelBuilder >> registerPackages [
 	
 	self environment registerPackage: self packageName.
@@ -458,9 +458,13 @@ FamixMetamodelBuilder >> relations [
 { #category : #accessing }
 FamixMetamodelBuilder >> safeAnnotationPackageName [
 	
-	^ self annotationPackageName isLiteralSymbol
-		ifTrue: [ ^ '#', self annotationPackageName ]
-		ifFalse: [ ^ '#''', self annotationPackageName, '''' ]
+	| aName |
+	
+	aName := self packageNameForAnnotations.
+	
+	^ aName isLiteralSymbol
+		ifTrue: [ ^ '#', aName ]
+		ifFalse: [ ^ '#''', aName, '''' ]
 ]
 
 { #category : #accessing }
