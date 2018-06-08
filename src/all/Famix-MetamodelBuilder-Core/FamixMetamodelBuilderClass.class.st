@@ -159,21 +159,6 @@ FamixMetamodelBuilderClass >> generate [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderClass >> generateDummy [
-
-	| aClassName |
-	
-	self willGenerate ifFalse: [ ^ self ].
-	
-	aClassName := self fullName.
-	
-	(self builder environment hasBehaviorNamed: aClassName) ifFalse: [ 
-		self builder environment createDummyClassNamed: aClassName in: self packageName ]
-
-		
-]
-
-{ #category : #generating }
 FamixMetamodelBuilderClass >> generateRequirementsFor: aClass [
 
 	aClass classSide compile: ('requirements

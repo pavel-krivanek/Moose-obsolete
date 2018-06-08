@@ -180,10 +180,6 @@ FamixMetamodelBuilderRealRingEnvironment >> createClassNamed: aClassName supercl
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRealRingEnvironment >> createDummyClassNamed: aClassName in: packageName [
-]
-
-{ #category : #initialization }
 FamixMetamodelBuilderRealRingEnvironment >> createImportingcontextClassNamed: aClassName in: packageName [
 
 	| resultantClass |
