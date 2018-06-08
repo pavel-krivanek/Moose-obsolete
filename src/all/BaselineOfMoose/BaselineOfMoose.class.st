@@ -57,8 +57,6 @@ BaselineOfMoose >> baseline: spec [
 			'Moose-Query'
 			'Moose-Query-Extensions'
 			'Famix-MetamodelBuilder-Core'
-			'Famix-MetamodelBuilder-Support'
-			'Famix-MetamodelBuilder-Support'
 			'Famix-MetamodelBuilder-Tests'
 			
 			'FamixNG-MetamodelGeneration'
@@ -853,7 +851,6 @@ BaselineOfMoose >> groups: spec [
 			'Famix-Compatibility'
 
 			'Famix-MetamodelBuilder-Core'
-			'Famix-MetamodelBuilder-Support'
 			
 			'Moose-Query-Extensions'
 			'Moose-Query-Test'
