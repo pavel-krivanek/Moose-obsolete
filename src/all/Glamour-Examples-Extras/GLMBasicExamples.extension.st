@@ -1,6 +1,6 @@
 Extension { #name : #GLMBasicExamples }
 
-{ #category : #'*Glamour-Magritte-Presentations' }
+{ #category : #'*Glamour-Examples-Extras' }
 GLMBasicExamples >> magritte [
 	<glmBrowser: 'Magritte presentation' input: 'GLMMagrittePersonExample sampleData'>
 	"self new magritte openOn: GLMMagrittePersonExample sampleData"
