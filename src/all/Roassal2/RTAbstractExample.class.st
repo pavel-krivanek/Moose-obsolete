@@ -99,7 +99,7 @@ RTAbstractExample >> installTitle: aTitle code: sourceCode [
 	"SourceCode should be a complete example, executable within a workspace"
 	
 	| viewOrBuilder canvas icon64Mime stream window | 
-	viewOrBuilder := (Compiler evaluate: sourceCode).
+	viewOrBuilder := ( self class compiler evaluate: sourceCode).
 	window := viewOrBuilder open.
 	viewOrBuilder class == RTView 
 		ifTrue: [ canvas := viewOrBuilder canvas ]
