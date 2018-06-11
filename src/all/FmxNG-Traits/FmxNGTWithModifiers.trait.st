@@ -124,7 +124,7 @@ FmxNGTWithModifiers >> modifiers [
 	<generated>
 	<multivalued>
 	<MSEComment: 'Generic container for language dependent modifiers.'>
-	^ modifiers
+	^ modifiers ifNil: [ modifiers := Set new ]
 ]
 
 { #category : #accessing }

@@ -218,15 +218,6 @@ FAMIXNamedEntity >> methodScope [
 	^ nil
 ]
 
-{ #category : #accessing }
-FAMIXNamedEntity >> modifiers [
-
-	<MSEProperty: #modifiers type: #String>
-	<multivalued>
-	<MSEComment: 'Generic container for language dependent modifiers.'>
-	^ modifiers ifNil: [ modifiers := Set new ]
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXNamedEntity >> mooseNameOn: stream [
 	self name ifNotNil: [ :n | stream nextPutAll: n ]
