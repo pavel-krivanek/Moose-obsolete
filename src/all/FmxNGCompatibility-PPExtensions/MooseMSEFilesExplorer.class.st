@@ -6,7 +6,7 @@ self openOn: FSDiskStore currentFilesystem workingDirectory / 'metamodels'.
 Class {
 	#name : #MooseMSEFilesExplorer,
 	#superclass : #GLMBrowserTemplate,
-	#category : #'Moose-Finder'
+	#category : #'FmxNGCompatibility-PPExtensions'
 }
 
 { #category : #'instance creation' }
@@ -70,7 +70,7 @@ MooseMSEFilesExplorer >> detailsOn: a [
 	
 ]
 
-{ #category : #private }
+{ #category : #building }
 MooseMSEFilesExplorer >> highlight: text [ 
 	^ PPTextHighlighter new
 		parser: PPMSEGrammar new;
