@@ -14,7 +14,7 @@ PhexampleTest class >> allTestSelectors [
 	^ selectors union: super allTestSelectors 
 ]
 
-{ #category : #fixture }
+{ #category : #running }
 PhexampleTest >> setUp [
 	factory := ClassFactoryForTestCase new
 ]
@@ -70,7 +70,7 @@ PhexampleTest >> shouldNotHaveTestsInPhexample [
 	
 ]
 
-{ #category : #fixture }
+{ #category : #running }
 PhexampleTest >> tearDown [
 	factory cleanUp
 ]

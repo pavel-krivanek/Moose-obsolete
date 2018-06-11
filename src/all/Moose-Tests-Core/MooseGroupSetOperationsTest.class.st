@@ -8,7 +8,7 @@ Class {
 	#category : #'Moose-Tests-Core'
 }
 
-{ #category : #setUp }
+{ #category : #running }
 MooseGroupSetOperationsTest >> setUp [
 	
 	group1 := MooseGroup withAll: #(1 2 3 4 5).

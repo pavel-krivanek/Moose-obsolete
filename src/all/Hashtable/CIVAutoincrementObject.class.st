@@ -26,7 +26,7 @@ CIVAutoincrementObject class >> new [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : #comparing }
 CIVAutoincrementObject >> hash [
 	^hash
 ]

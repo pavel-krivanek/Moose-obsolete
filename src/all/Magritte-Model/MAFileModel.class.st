@@ -109,7 +109,7 @@ MAFileModel >> filesize [
 	^ filesize
 ]
 
-{ #category : #initialization }
+{ #category : #finalization }
 MAFileModel >> finalize [
 	"Cleanup after a file is removed, subclasses might require to specialize this method."
 	

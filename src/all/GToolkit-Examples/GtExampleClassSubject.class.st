@@ -71,7 +71,7 @@ GtExampleClassSubject >> hasLiteralThorough: aLiteral [
 			and: [ self theClass = aLiteral ] ]
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtExampleClassSubject >> hash [
 	^ self class hash
 		bitXor: self theClassName hash

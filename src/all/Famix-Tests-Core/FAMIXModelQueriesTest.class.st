@@ -15,7 +15,7 @@ Class {
 	#category : #'Famix-Tests-Core'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #running }
 FAMIXModelQueriesTest >> setUp [
 	namespace1 := FAMIXNamespace new.
 	namespace2 := FAMIXNamespace new.

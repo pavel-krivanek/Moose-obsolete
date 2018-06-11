@@ -42,7 +42,7 @@ GtExampleSubject >> gtExamplesSubjects [
 	^ { self }
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtExampleSubject >> hash [
 	^ self subclassResponsibility
 ]

@@ -245,7 +245,7 @@ GSegment >> hasPoint:aPoint [
 
 ]
 
-{ #category : #initialization }
+{ #category : #comparing }
 GSegment >> hash [
 ^( v1 hash  + v2 hash ) hashMultiply
 ]

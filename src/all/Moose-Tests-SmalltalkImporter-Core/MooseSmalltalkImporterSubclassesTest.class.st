@@ -28,7 +28,7 @@ MooseSmalltalkImporterSubclassesTest >> pharoImporterTask: anObject [
 	pharoImporterTask := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #running }
 MooseSmalltalkImporterSubclassesTest >> setUp [
 	model := MooseModel new.	
 	model name: 'Test'.

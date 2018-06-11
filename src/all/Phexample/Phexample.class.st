@@ -72,7 +72,7 @@ Phexample >> given: anExampleName [
 			ex pass ]
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 Phexample >> hash [
 	^self class hash bitXor: self selector hash
 ]

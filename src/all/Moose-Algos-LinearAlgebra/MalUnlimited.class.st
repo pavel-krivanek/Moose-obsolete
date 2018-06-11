@@ -57,7 +57,7 @@ MalUnlimited >> adaptToNumber: rcvr andSend: selector [
 		].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #comparing }
 MalUnlimited >> hash [
 
 	^positive 

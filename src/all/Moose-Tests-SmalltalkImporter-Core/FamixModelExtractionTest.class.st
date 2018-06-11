@@ -116,7 +116,7 @@ FamixModelExtractionTest >> assignMethods [
 				class: mseNodeClassName.
 ]
 
-{ #category : #'setup-teardown' }
+{ #category : #running }
 FamixModelExtractionTest >> setUp [
 	self assignClasses.
 	self assignAttributes.

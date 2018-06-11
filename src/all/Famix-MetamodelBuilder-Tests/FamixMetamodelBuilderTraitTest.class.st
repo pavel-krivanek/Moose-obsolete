@@ -7,7 +7,7 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
-{ #category : #initialization }
+{ #category : #running }
 FamixMetamodelBuilderTraitTest >> setUp [
 
 	builder := FamixMetamodelBuilder forTesting.

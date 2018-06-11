@@ -33,7 +33,7 @@ exporter fileOutAsString
 "
 ]
 
-{ #category : #initialization }
+{ #category : #running }
 RTTest >> setUp [
 " The following lines are useful for debugging
 

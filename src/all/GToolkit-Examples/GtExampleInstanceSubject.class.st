@@ -42,7 +42,7 @@ GtExampleInstanceSubject >> hasLiteralThorough: aLiteral [
 				or: [ 	method hasLiteralThorough: aLiteral ] ] ]
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtExampleInstanceSubject >> hash [
 	^ self class hash
 		bitXor: self instance hash

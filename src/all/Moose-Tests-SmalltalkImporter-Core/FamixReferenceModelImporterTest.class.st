@@ -31,7 +31,7 @@ FamixReferenceModelImporterTest >> privateTestAccessingVar: aVarName from: aMeth
 	self assert: access isWrite ~~ aBoolean
 ]
 
-{ #category : #setup }
+{ #category : #running }
 FamixReferenceModelImporterTest >> setUp [
 	referenceModelSubRootLevelOneName := SubRootLevelOne mooseName.
 	referenceModelTheRootName := TheRoot  mooseName.

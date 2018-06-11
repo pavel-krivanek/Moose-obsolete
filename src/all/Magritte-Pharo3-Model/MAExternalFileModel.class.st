@@ -84,7 +84,7 @@ MAExternalFileModel >> file [
 	^(self directory / self filename) asFileReference
 ]
 
-{ #category : #initialization }
+{ #category : #finalization }
 MAExternalFileModel >> finalize [
 	|  dir |
 	dir := self directory.

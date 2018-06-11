@@ -30,7 +30,7 @@ MooseFileStructureImporterTest >> foldersString [
 	^ 'folders/'
 ]
 
-{ #category : #setup }
+{ #category : #running }
 MooseFileStructureImporterTest >> setUp [
 	| stream file |
 	toDelete := OrderedCollection new.
@@ -71,7 +71,7 @@ MooseFileStructureImporterTest >> subFolderBString [
 	^ 'folders/subfolderB/'
 ]
 
-{ #category : #setup }
+{ #category : #running }
 MooseFileStructureImporterTest >> tearDown [ 
 	"self new tearDown"
 	toDelete do: [:each | self filesystem delete: each ]

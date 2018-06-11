@@ -7,7 +7,7 @@ Class {
 	#category : #'Moose-Tests-Algos-Graph'
 }
 
-{ #category : #tests }
+{ #category : #running }
 MalHalTest >> setUp [
 
 	hal := MalHal new.

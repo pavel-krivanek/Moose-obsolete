@@ -7,7 +7,7 @@ Class {
 	#category : #'Hashtable-Objects'
 }
 
-{ #category : #accessing }
+{ #category : #comparing }
 RandomObject >> hash [
 	^hash
 ]

@@ -222,7 +222,7 @@ GtExample >> hasValidDependencies [
 			or: [ currentDependencies allSatisfy: #exists ]
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtExample >> hash [
 	^ (self class hash 
 		bitXor: self methodClass hash) 

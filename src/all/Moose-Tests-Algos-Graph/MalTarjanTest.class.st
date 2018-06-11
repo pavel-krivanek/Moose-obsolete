@@ -15,7 +15,7 @@ MalTarjanTest >> expectedFailures [
 		  ifFalse: [ Array with: #testMondrianSample ]
 ]
 
-{ #category : #tests }
+{ #category : #running }
 MalTarjanTest >> setUp [
 	tarjan := MalTarjan new.
 

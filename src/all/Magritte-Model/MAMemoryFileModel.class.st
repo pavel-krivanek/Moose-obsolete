@@ -26,7 +26,7 @@ MAMemoryFileModel >> contents: aByteArray [
 	contents := aByteArray asByteArray
 ]
 
-{ #category : #initialization }
+{ #category : #finalization }
 MAMemoryFileModel >> finalize [
 	super finalize.
 	contents := nil

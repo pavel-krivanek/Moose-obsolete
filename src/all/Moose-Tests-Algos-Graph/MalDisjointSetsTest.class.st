@@ -7,7 +7,7 @@ Class {
 	#category : #'Moose-Tests-Algos-Graph'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #running }
 MalDisjointSetsTest >> setUp [
 
 	ds := MalDisjointSets new

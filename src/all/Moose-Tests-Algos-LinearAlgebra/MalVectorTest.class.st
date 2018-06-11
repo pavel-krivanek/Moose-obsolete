@@ -17,7 +17,7 @@ MalVectorTest class >> isAbstract [
 	^self name = #MalVectorTest
 ]
 
-{ #category : #fixture }
+{ #category : #running }
 MalVectorTest >> setUp [
 	"comment stating purpose of message"
 	

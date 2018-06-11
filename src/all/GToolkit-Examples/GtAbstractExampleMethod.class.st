@@ -85,7 +85,7 @@ GtAbstractExampleMethod >> hasLiteralThorough: aLiteral [
 				and: [ self method hasLiteralThorough: aLiteral ] ] ]
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtAbstractExampleMethod >> hash [
 	^ (self class hash 
 		bitXor: self methodClassName hash)

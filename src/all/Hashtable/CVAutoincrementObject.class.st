@@ -16,7 +16,7 @@ CVAutoincrementObject class >> initialize [
 	NextHash := 0
 ]
 
-{ #category : #accessing }
+{ #category : #comparing }
 CVAutoincrementObject >> hash [
 	^hash
 ]

@@ -7,7 +7,7 @@ Class {
 	#category : #'Famix-Tests-Core'
 }
 
-{ #category : #initialization }
+{ #category : #running }
 FAMIXMultipleSourceAnchorTest >> setUp [
 	multipleFileAnchor := FAMIXMultipleFileAnchor new mooseModel: MooseModel new.
 	(1 to: 2) do: [:each | multipleFileAnchor addFileAnchorWithPath: 'aFileName']

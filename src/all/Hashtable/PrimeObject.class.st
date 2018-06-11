@@ -4,7 +4,7 @@ Class {
 	#category : #'Hashtable-Objects'
 }
 
-{ #category : #accessing }
+{ #category : #comparing }
 PrimeObject >> hash [
 	^self identityHash * 100799
 ]
