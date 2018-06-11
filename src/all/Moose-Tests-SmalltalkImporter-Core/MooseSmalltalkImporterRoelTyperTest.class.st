@@ -10,8 +10,7 @@ MooseSmalltalkImporterRoelTyperTest >> testASTCore [
 	model := MooseModel new.
 	importer := MoosePharoImporterTask new.
 	importer importingContext 
-		mergeClassAndMetaclass;
-		computeTypeOfAttributes.
+		mergeClassAndMetaclass.
 	importer runCandidateOperator.
 	self 
 		shouldnt: [ importer model: model; 

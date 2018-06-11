@@ -898,8 +898,6 @@ BaselineOfMoose >> groups: spec [
 			'Moose-Tests-SmalltalkImporter-KGB'
 			'Moose-TestResources-KGB-PExtensions'
 			
-			'RoelTyper'
-			
 			'Moose-GenericImporter'
 			'Moose-SmalltalkImporter'
 			'Moose-Tests-Core'

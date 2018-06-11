@@ -87,8 +87,7 @@ CandidateListOperator >> computeInstanceVariableCandidateListFor: anInvocation [
 	| roelTyperResult allCandidates classContainingInvocation instVarSymbol |
 	classContainingInvocation := Smalltalk at: (anInvocation receiver belongsTo name).
 	instVarSymbol := anInvocation receiver name.
-	roelTyperResult := (TypeCollector typeInstvar: instVarSymbol ofClassWithLookup:  classContainingInvocation ) types. 
-	"roelTyperResult := (TypeCollector typeInstvar: instVarSymbol ofClass: (self containerOf: instVarSymbol asString startingAt: classContainingInvocation )) assignments. "
+	roelTyperResult := nil. "RoelTyper disabled"
 	
 	allCandidates := self allCandidatesFor: anInvocation .
 	

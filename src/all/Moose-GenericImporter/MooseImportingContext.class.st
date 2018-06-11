@@ -24,7 +24,6 @@ Class {
 	#instVars : [
 		'entityKindsToBeExtracted',
 		'mergeClassAndMetaclass',
-		'computeAttributeTypes',
 		'importSubclasses'
 	],
 	#classVars : [
@@ -454,22 +453,9 @@ MooseImportingContext class >> initialize [
 ]
 
 { #category : #'import options' }
-MooseImportingContext >> computeTypeOfAttributes [
-
-	"use this method to tell the importer that it should compute the type of attributes (using RoelType). By default this not the case, because computing types can take some time "
-	computeAttributeTypes := true.
-]
-
-{ #category : #'import options' }
 MooseImportingContext >> distinguishClassAndMetaclass [
 	
 	mergeClassAndMetaclass := false
-]
-
-{ #category : #'import options' }
-MooseImportingContext >> doNotComputeTypeOfAttributes [
-
-	computeAttributeTypes := false.
 ]
 
 { #category : #'import options' }
@@ -790,7 +776,6 @@ MooseImportingContext >> initialize [
 
 	self entityKindsToBeExtracted: Set new.
 	mergeClassAndMetaclass := self class defaultMergeClassAndMetaclass.
-	computeAttributeTypes := false.
 	"for subclasses import for the moment we just do the same as before but it should be discussed and probably should be set to false"
 	importSubclasses := true.
 ]
@@ -809,13 +794,6 @@ MooseImportingContext >> maximum [
 MooseImportingContext >> mergeClassAndMetaclass [
 	
 	mergeClassAndMetaclass := true
-]
-
-{ #category : #'import options' }
-MooseImportingContext >> shouldComputeTypeOfAttributes [
-
-	"return true if the importer has to compute the type of attributes. False if not. "
-	^ computeAttributeTypes.
 ]
 
 { #category : #'importing queries' }
