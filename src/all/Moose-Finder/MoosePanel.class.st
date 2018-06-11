@@ -14,6 +14,7 @@ MoosePanel class >> menuCommandOn: aBuilder [
 		order: 1.0; 
 		parent: #Moose;
 		label: 'Moose Panel';
+		help: 'Moose models management';
 		icon: (MooseIcons mooseIcon scaledToSize: 16@16);
 		action:[MoosePanel open];
 		withSeparatorAfter
