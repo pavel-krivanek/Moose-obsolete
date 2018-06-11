@@ -124,7 +124,7 @@ TheRoot >> accessingUnknowVariable [
 	The goal is to provide an example to test that the Smalltalk importer 
 	works in the context of broken code analysis or partial like Squeak"
 	
-	^ york
+	^ undeclaredStubInstVar
 ]
 
 { #category : #'accessing variable' }

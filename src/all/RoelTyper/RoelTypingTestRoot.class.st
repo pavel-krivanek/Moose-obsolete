@@ -12,7 +12,7 @@ Class {
 { #category : #auxiliary }
 RoelTypingTestRoot >> doForSource: src [
 	| m |
-	m := (Compiler new
+	m := (self class compiler new
 		compile: 'gen ' , src
 		in: self class
 		notifying: nil

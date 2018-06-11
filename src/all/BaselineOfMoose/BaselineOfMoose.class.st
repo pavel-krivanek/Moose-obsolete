@@ -897,6 +897,9 @@ BaselineOfMoose >> groups: spec [
 			'Moose-Tests-SmalltalkImporter-LAN'
 			'Moose-Tests-SmalltalkImporter-KGB'
 			'Moose-TestResources-KGB-PExtensions'
+			
+			'RoelTyper'
+			
 			'Moose-GenericImporter'
 			'Moose-SmalltalkImporter'
 			'Moose-Tests-Core'
@@ -905,6 +908,9 @@ BaselineOfMoose >> groups: spec [
 
 	spec group: 'BasicMetamodellingWithRoassal' with: #(
 			'BasicMetamodelling'
+			'Collections-OrderPreservingDictionary'
+			'Collections-BitmapCharacterSet'
+			'XML-Parser'		
 			'Athens-SVG'
 			'Trachel'
 			'Geometry'

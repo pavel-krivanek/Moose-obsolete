@@ -133,7 +133,8 @@ PhexMatcher >> change: aBlock from: before to: after [
 
 { #category : #'TDD todos' }
 PhexMatcher >> do: aDescription [
-	TestTodo signal: aDescription
+	"TODO"
+	Error signal: aDescription
 ]
 
 { #category : #'expecting-collections' }
@@ -221,12 +222,14 @@ PhexMatcher >> findNameOfUnknownMessage [
 
 { #category : #'TDD todos' }
 PhexMatcher >> implement: aDescription [
-	TestTodo signal: aDescription
+	"TODO"
+	Error signal: aDescription
 ]
 
 { #category : #'TDD todos' }
 PhexMatcher >> implemented [
-	TestTodo signal.
+	"TODO"
+	Error signal.
 ]
 
 { #category : #private }
@@ -312,7 +315,8 @@ PhexMatcher >> state: anObject [
 
 { #category : #'TDD todos' }
 PhexMatcher >> testFor: aDescription [
-	TestTodo signal: aDescription
+	"TODO"
+	Error signal: aDescription
 ]
 
 { #category : #'expecting-boolean' }

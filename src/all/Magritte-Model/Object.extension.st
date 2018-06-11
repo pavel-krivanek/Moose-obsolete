@@ -34,27 +34,11 @@ Object >> magritteActionDescriptions [
 	^ self uniqueActionSelectors collect: [ :each | self perform: each ]
 ]
 
-{ #category : #'*magritte-model-builder' }
+{ #category : #'*Magritte-Model' }
 Object >> magritteDescription [
 	|basicDescription builders|
 	basicDescription := self basicMagritteDescription.
-	builders := self magritteDescriptionBuilders.
-	builders ifNotNil: [^builders buildFrom: basicDescription target: self].
 	^basicDescription
-]
-
-{ #category : #'*magritte-model-builder' }
-Object >> magritteDescriptionBuilders [
-	|builderPragmas container|
-	builderPragmas := Pragma allNamed: #magritteBuilder from: self class to: Object.
-	builderPragmas ifEmpty: [ ^nil ].
-	container := QCDescriptionBuilderContainer new.
-	builderPragmas do: [ :pragma |
-		|bld |
-		pragma method numArgs = 0 ifTrue: [ 
-			bld := self perform: pragma method selector.
-			bld ifNotNil: [ container add: bld ] ] ].
-	^container
 ]
 
 { #category : #'*magritte-model-description' }
