@@ -41,7 +41,7 @@ Phexample class >> shouldInheritSelectors [
 	^true
 ]
 
-{ #category : #equality }
+{ #category : #comparing }
 Phexample >> = example [
 	^self class = example class and: [ self selector = example selector ]
 ]

@@ -30,7 +30,7 @@ Class {
 	#category : #'GToolkit-Examples-Core'
 }
 
-{ #category : #testing }
+{ #category : #comparing }
 GtExample >> = anExample [
 	^ self class = anExample class 
 		and: [ self methodClass = anExample methodClass 

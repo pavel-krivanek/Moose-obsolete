@@ -17,7 +17,7 @@ GSegment class >> with: aPoint1 with: aPoint2 [
 	^ self new initializeWith: aPoint1 with: aPoint2
 ]
 
-{ #category : #initialization }
+{ #category : #comparing }
 GSegment >> = segment [
 ^
 ((self v1 =~ segment v1) and: [self v2 =~ segment v2]) 

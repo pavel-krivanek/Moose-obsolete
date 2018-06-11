@@ -41,7 +41,7 @@ GtAbstractExampleMethod class >> isAbstract [
 	^ self == GtAbstractExampleMethod
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtAbstractExampleMethod >> = anExampleMethod [
 	^ self class = anExampleMethod class 
 		and: [ self methodClassName = anExampleMethod methodClassName 

@@ -17,7 +17,7 @@ GtExampleInstanceSubject class >> fromObject: anObject [
 		yourself
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtExampleInstanceSubject >> = anExampleSubject [
 	^ self class = anExampleSubject class
 		and: [ self instance = anExampleSubject instance ]

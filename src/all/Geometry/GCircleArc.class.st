@@ -26,7 +26,7 @@ GCircleArc class >> circle: aCircle startAngle: aStart endAngle: anEnd [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #comparing }
 GCircleArc >> = anArc [
 	self species = anArc species
 		ifFalse: [ ^ false ].

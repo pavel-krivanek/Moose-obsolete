@@ -39,7 +39,7 @@ GtExampleClassSubject class >> fromMetaClassNamed: aString [
 		yourself
 ]
 
-{ #category : #testing }
+{ #category : #comparing }
 GtExampleClassSubject >> = anExampleSubject [
 	^ self class = anExampleSubject class
 		and: [ self theClassName = anExampleSubject theClassName ]
