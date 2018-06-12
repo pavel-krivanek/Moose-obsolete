@@ -23,6 +23,7 @@ FmxNGTImplicitVariable classSide >> annotation [
 { #category : #generator }
 FmxNGTImplicitVariable classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTImplicitVariable class>>#generatedSlotNames'.
 	^ #(parentBehaviouralEntity)
 ]
 

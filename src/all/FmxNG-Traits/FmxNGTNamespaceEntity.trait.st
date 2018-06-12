@@ -20,6 +20,7 @@ FmxNGTNamespaceEntity classSide >> annotation [
 { #category : #generator }
 FmxNGTNamespaceEntity classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTNamespaceEntity class>>#generatedSlotNames'.
 	^ #(parentNamespace)
 ]
 

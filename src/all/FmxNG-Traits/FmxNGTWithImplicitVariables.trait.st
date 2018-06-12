@@ -20,6 +20,7 @@ FmxNGTWithImplicitVariables classSide >> annotation [
 { #category : #generator }
 FmxNGTWithImplicitVariables classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithImplicitVariables class>>#generatedSlotNames'.
 	^ #(implicitVariables)
 ]
 

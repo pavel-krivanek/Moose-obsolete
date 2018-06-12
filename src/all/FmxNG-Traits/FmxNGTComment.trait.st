@@ -24,6 +24,7 @@ FmxNGTComment classSide >> annotation [
 { #category : #generator }
 FmxNGTComment classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTComment class>>#generatedSlotNames'.
 	^ #(content container)
 ]
 

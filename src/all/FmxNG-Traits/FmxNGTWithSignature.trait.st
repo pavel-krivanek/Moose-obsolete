@@ -20,6 +20,7 @@ FmxNGTWithSignature classSide >> annotation [
 { #category : #generator }
 FmxNGTWithSignature classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithSignature class>>#generatedSlotNames'.
 	^ #(signature)
 ]
 

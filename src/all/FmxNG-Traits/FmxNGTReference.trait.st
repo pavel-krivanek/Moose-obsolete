@@ -34,6 +34,7 @@ FmxNGTReference classSide >> annotation [
 { #category : #generator }
 FmxNGTReference classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTReference class>>#generatedSlotNames'.
 	^ #(target source)
 ]
 

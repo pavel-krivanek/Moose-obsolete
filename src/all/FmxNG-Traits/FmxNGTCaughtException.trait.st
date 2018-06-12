@@ -23,6 +23,7 @@ FmxNGTCaughtException classSide >> annotation [
 { #category : #generator }
 FmxNGTCaughtException classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTCaughtException class>>#generatedSlotNames'.
 	^ #(definingEntity)
 ]
 

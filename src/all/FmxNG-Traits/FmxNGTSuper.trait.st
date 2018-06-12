@@ -20,6 +20,7 @@ FmxNGTSuper classSide >> annotation [
 { #category : #generator }
 FmxNGTSuper classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTSuper class>>#generatedSlotNames'.
 	^ #(subs)
 ]
 

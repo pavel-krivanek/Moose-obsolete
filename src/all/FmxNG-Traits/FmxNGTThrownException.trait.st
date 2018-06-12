@@ -23,6 +23,7 @@ FmxNGTThrownException classSide >> annotation [
 { #category : #generator }
 FmxNGTThrownException classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTThrownException class>>#generatedSlotNames'.
 	^ #(definingEntity)
 ]
 

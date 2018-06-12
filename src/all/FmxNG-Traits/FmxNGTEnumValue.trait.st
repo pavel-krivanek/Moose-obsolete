@@ -33,6 +33,7 @@ FmxNGTEnumValue classSide >> annotation [
 { #category : #generator }
 FmxNGTEnumValue classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTEnumValue class>>#generatedSlotNames'.
 	^ #(parentEnum)
 ]
 

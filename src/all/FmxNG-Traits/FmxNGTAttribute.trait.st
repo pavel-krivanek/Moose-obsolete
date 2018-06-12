@@ -24,6 +24,7 @@ FmxNGTAttribute classSide >> annotation [
 { #category : #generator }
 FmxNGTAttribute classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTAttribute class>>#generatedSlotNames'.
 	^ #(parentType)
 ]
 

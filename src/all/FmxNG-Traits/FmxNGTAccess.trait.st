@@ -37,6 +37,7 @@ FmxNGTAccess classSide >> annotation [
 { #category : #generator }
 FmxNGTAccess classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTAccess class>>#generatedSlotNames'.
 	^ #(accessor isWrite variable)
 ]
 

@@ -20,6 +20,7 @@ FmxNGTWithEnumValues classSide >> annotation [
 { #category : #generator }
 FmxNGTWithEnumValues classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithEnumValues class>>#generatedSlotNames'.
 	^ #(enumValues)
 ]
 

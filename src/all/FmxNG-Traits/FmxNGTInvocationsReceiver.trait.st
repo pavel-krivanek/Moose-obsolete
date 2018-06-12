@@ -20,6 +20,7 @@ FmxNGTInvocationsReceiver classSide >> annotation [
 { #category : #generator }
 FmxNGTInvocationsReceiver classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTInvocationsReceiver class>>#generatedSlotNames'.
 	^ #(receivingInvocations)
 ]
 

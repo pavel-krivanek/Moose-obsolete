@@ -20,6 +20,7 @@ FmxNGTWithCaughtExceptions classSide >> annotation [
 { #category : #generator }
 FmxNGTWithCaughtExceptions classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithCaughtExceptions class>>#generatedSlotNames'.
 	^ #(caughtExceptions)
 ]
 

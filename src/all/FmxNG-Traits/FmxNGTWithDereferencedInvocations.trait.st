@@ -20,6 +20,7 @@ FmxNGTWithDereferencedInvocations classSide >> annotation [
 { #category : #generator }
 FmxNGTWithDereferencedInvocations classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithDereferencedInvocations class>>#generatedSlotNames'.
 	^ #(dereferencedInvocations)
 ]
 

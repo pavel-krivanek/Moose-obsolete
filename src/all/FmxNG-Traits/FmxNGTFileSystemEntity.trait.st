@@ -20,6 +20,7 @@ FmxNGTFileSystemEntity classSide >> annotation [
 { #category : #generator }
 FmxNGTFileSystemEntity classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTFileSystemEntity class>>#generatedSlotNames'.
 	^ #(parentFolder)
 ]
 

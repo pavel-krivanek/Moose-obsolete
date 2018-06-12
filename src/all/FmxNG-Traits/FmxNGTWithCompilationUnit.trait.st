@@ -20,6 +20,7 @@ FmxNGTWithCompilationUnit classSide >> annotation [
 { #category : #generator }
 FmxNGTWithCompilationUnit classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithCompilationUnit class>>#generatedSlotNames'.
 	^ #(compilationUnit)
 ]
 

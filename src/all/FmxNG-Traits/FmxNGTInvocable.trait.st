@@ -20,6 +20,7 @@ FmxNGTInvocable classSide >> annotation [
 { #category : #generator }
 FmxNGTInvocable classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTInvocable class>>#generatedSlotNames'.
 	^ #(incomingInvocations)
 ]
 

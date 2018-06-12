@@ -24,6 +24,7 @@ FmxNGTGlobalVariable classSide >> annotation [
 { #category : #generator }
 FmxNGTGlobalVariable classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTGlobalVariable class>>#generatedSlotNames'.
 	^ #(parentScope)
 ]
 

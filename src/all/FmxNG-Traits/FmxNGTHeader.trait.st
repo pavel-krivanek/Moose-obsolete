@@ -23,6 +23,7 @@ FmxNGTHeader classSide >> annotation [
 { #category : #generator }
 FmxNGTHeader classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTHeader class>>#generatedSlotNames'.
 	^ #(headerOwner)
 ]
 

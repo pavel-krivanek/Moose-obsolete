@@ -31,6 +31,7 @@ FmxNGTMethod classSide >> annotation [
 { #category : #generator }
 FmxNGTMethod classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTMethod class>>#generatedSlotNames'.
 	^ #(category hasClassScope timeStamp parentType kind)
 ]
 

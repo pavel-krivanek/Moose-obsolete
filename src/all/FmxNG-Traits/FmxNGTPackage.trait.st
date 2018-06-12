@@ -26,6 +26,7 @@ FmxNGTPackage classSide >> annotation [
 { #category : #generator }
 FmxNGTPackage classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTPackage class>>#generatedSlotNames'.
 	^ #(childEntities packageOwner)
 ]
 

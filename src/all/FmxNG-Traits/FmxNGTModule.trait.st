@@ -24,6 +24,7 @@ FmxNGTModule classSide >> annotation [
 { #category : #generator }
 FmxNGTModule classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTModule class>>#generatedSlotNames'.
 	^ #(moduleEntities)
 ]
 

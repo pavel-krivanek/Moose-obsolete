@@ -23,6 +23,7 @@ FmxNGTFunction classSide >> annotation [
 { #category : #generator }
 FmxNGTFunction classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTFunction class>>#generatedSlotNames'.
 	^ #(functionOwner)
 ]
 

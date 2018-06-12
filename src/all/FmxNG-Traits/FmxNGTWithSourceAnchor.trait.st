@@ -20,6 +20,7 @@ FmxNGTWithSourceAnchor classSide >> annotation [
 { #category : #generator }
 FmxNGTWithSourceAnchor classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithSourceAnchor class>>#generatedSlotNames'.
 	^ #(sourceAnchor)
 ]
 

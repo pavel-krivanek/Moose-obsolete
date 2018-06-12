@@ -20,6 +20,7 @@ FmxNGTReferenceable classSide >> annotation [
 { #category : #generator }
 FmxNGTReferenceable classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTReferenceable class>>#generatedSlotNames'.
 	^ #(incomingReferences)
 ]
 

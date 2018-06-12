@@ -20,6 +20,7 @@ FmxNGTPossibleStub classSide >> annotation [
 { #category : #generator }
 FmxNGTPossibleStub classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTPossibleStub class>>#generatedSlotNames'.
 	^ #(isStub)
 ]
 

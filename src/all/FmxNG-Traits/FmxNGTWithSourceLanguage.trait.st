@@ -20,6 +20,7 @@ FmxNGTWithSourceLanguage classSide >> annotation [
 { #category : #generator }
 FmxNGTWithSourceLanguage classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithSourceLanguage class>>#generatedSlotNames'.
 	^ #(declaredSourceLanguage)
 ]
 

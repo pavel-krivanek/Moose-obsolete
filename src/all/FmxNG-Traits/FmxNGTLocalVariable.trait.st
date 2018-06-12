@@ -23,6 +23,7 @@ FmxNGTLocalVariable classSide >> annotation [
 { #category : #generator }
 FmxNGTLocalVariable classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTLocalVariable class>>#generatedSlotNames'.
 	^ #(parentBehaviouralEntity)
 ]
 

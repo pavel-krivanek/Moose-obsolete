@@ -26,6 +26,7 @@ FmxNGTScopingEntity classSide >> annotation [
 { #category : #generator }
 FmxNGTScopingEntity classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTScopingEntity class>>#generatedSlotNames'.
 	^ #(parentScope childScopes)
 ]
 

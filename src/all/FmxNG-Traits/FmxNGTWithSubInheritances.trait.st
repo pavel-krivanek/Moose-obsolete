@@ -20,6 +20,7 @@ FmxNGTWithSubInheritances classSide >> annotation [
 { #category : #generator }
 FmxNGTWithSubInheritances classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithSubInheritances class>>#generatedSlotNames'.
 	^ #(superInheritances)
 ]
 

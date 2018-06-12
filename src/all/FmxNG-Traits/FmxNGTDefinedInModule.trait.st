@@ -20,6 +20,7 @@ FmxNGTDefinedInModule classSide >> annotation [
 { #category : #generator }
 FmxNGTDefinedInModule classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTDefinedInModule class>>#generatedSlotNames'.
 	^ #(parentModule)
 ]
 

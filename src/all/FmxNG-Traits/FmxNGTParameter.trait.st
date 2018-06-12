@@ -23,6 +23,7 @@ FmxNGTParameter classSide >> annotation [
 { #category : #generator }
 FmxNGTParameter classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTParameter class>>#generatedSlotNames'.
 	^ #(parentBehaviouralEntity)
 ]
 

@@ -20,6 +20,7 @@ FmxNGTWithModifiers classSide >> annotation [
 { #category : #generator }
 FmxNGTWithModifiers classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithModifiers class>>#generatedSlotNames'.
 	^ #(modifiers)
 ]
 
@@ -121,7 +122,6 @@ FmxNGTWithModifiers >> modifierSet: aBoolean for: aSymbol [
 FmxNGTWithModifiers >> modifiers [
 
 	<MSEProperty: #modifiers type: #String>
-	<generated>
 	<multivalued>
 	<MSEComment: 'Generic container for language dependent modifiers.'>
 	^ modifiers ifNil: [ modifiers := Set new ]

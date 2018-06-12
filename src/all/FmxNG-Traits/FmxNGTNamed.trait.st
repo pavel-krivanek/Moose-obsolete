@@ -21,6 +21,7 @@ FmxNGTNamed classSide >> annotation [
 { #category : #generator }
 FmxNGTNamed classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTNamed class>>#generatedSlotNames'.
 	^ #(name)
 ]
 

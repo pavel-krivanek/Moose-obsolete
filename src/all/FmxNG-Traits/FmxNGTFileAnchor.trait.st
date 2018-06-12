@@ -25,6 +25,7 @@ FmxNGTFileAnchor classSide >> annotation [
 { #category : #generator }
 FmxNGTFileAnchor classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTFileAnchor class>>#generatedSlotNames'.
 	^ #(encoding correspondingFile fileName)
 ]
 

@@ -20,6 +20,7 @@ FmxNGTParameterizedTypeUser classSide >> annotation [
 { #category : #generator }
 FmxNGTParameterizedTypeUser classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTParameterizedTypeUser class>>#generatedSlotNames'.
 	^ #(argumentsInParameterizedTypes)
 ]
 

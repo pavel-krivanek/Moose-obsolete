@@ -20,6 +20,7 @@ FmxNGTAccessible classSide >> annotation [
 { #category : #generator }
 FmxNGTAccessible classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTAccessible class>>#generatedSlotNames'.
 	^ #(incomingAccesses)
 ]
 

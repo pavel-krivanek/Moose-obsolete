@@ -20,6 +20,7 @@ FmxNGTWithLocalVariables classSide >> annotation [
 { #category : #generator }
 FmxNGTWithLocalVariables classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithLocalVariables class>>#generatedSlotNames'.
 	^ #(localVariables)
 ]
 

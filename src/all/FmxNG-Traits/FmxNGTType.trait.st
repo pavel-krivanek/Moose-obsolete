@@ -28,6 +28,7 @@ FmxNGTType classSide >> annotation [
 { #category : #generator }
 FmxNGTType classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTType class>>#generatedSlotNames'.
 	^ #(typeContainer outgoingTraitUsages)
 ]
 

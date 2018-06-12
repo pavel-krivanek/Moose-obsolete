@@ -40,6 +40,7 @@ FmxNGTAssociation classSide >> annotation [
 { #category : #generator }
 FmxNGTAssociation classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTAssociation class>>#generatedSlotNames'.
 	^ #(previous next)
 ]
 

@@ -32,6 +32,7 @@ FmxNGTAnnotationInstanceAttribute classSide >> annotation [
 { #category : #generator }
 FmxNGTAnnotationInstanceAttribute classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTAnnotationInstanceAttribute class>>#generatedSlotNames'.
 	^ #(value parentAnnotationInstance)
 ]
 

@@ -21,6 +21,7 @@ FmxNGTFileInclude classSide >> annotation [
 { #category : #generator }
 FmxNGTFileInclude classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTFileInclude class>>#generatedSlotNames'.
 	^ #(target source)
 ]
 

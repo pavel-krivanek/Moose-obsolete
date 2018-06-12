@@ -20,6 +20,7 @@ FmxNGTWithFiles classSide >> annotation [
 { #category : #generator }
 FmxNGTWithFiles classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithFiles class>>#generatedSlotNames'.
 	^ #(containerFiles)
 ]
 

@@ -20,6 +20,7 @@ FmxNGTWithAnnotationTypes classSide >> annotation [
 { #category : #generator }
 FmxNGTWithAnnotationTypes classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithAnnotationTypes class>>#generatedSlotNames'.
 	^ #(definedAnnotationTypes)
 ]
 

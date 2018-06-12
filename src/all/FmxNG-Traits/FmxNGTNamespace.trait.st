@@ -28,6 +28,7 @@ FmxNGTNamespace classSide >> annotation [
 { #category : #generator }
 FmxNGTNamespace classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTNamespace class>>#generatedSlotNames'.
 	^ #(namespaceEntities namespaceOwner)
 ]
 

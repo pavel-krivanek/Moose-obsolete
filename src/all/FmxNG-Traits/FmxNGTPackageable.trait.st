@@ -20,6 +20,7 @@ FmxNGTPackageable classSide >> annotation [
 { #category : #generator }
 FmxNGTPackageable classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTPackageable class>>#generatedSlotNames'.
 	^ #(parentPackage)
 ]
 

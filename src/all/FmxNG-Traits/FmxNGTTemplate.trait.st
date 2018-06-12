@@ -21,6 +21,7 @@ FmxNGTTemplate classSide >> annotation [
 { #category : #generator }
 FmxNGTTemplate classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTTemplate class>>#generatedSlotNames'.
 	^ #(templateUsers templateOwner)
 ]
 

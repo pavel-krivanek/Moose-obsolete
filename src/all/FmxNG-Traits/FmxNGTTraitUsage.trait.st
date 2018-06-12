@@ -21,6 +21,7 @@ FmxNGTTraitUsage classSide >> annotation [
 { #category : #generator }
 FmxNGTTraitUsage classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTTraitUsage class>>#generatedSlotNames'.
 	^ #(user trait)
 ]
 

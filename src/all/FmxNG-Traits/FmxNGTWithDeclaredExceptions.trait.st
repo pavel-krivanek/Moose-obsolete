@@ -20,6 +20,7 @@ FmxNGTWithDeclaredExceptions classSide >> annotation [
 { #category : #generator }
 FmxNGTWithDeclaredExceptions classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithDeclaredExceptions class>>#generatedSlotNames'.
 	^ #(declaredExceptions)
 ]
 

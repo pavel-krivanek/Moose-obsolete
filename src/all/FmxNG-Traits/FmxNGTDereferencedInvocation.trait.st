@@ -27,6 +27,7 @@ FmxNGTDereferencedInvocation classSide >> annotation [
 { #category : #generator }
 FmxNGTDereferencedInvocation classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTDereferencedInvocation class>>#generatedSlotNames'.
 	^ #(referencer)
 ]
 

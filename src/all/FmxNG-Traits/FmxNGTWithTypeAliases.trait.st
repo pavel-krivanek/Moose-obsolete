@@ -20,6 +20,7 @@ FmxNGTWithTypeAliases classSide >> annotation [
 { #category : #generator }
 FmxNGTWithTypeAliases classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTWithTypeAliases class>>#generatedSlotNames'.
 	^ #(typeAliases)
 ]
 

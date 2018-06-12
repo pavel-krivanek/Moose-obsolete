@@ -22,6 +22,7 @@ FmxNGTPreprocessorIfdef classSide >> annotation [
 { #category : #generator }
 FmxNGTPreprocessorIfdef classSide >> generatedSlotNames [
 	<generated>
+	'FmxNGTPreprocessorIfdef class>>#generatedSlotNames'.
 	^ #()
 ]
 
