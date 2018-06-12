@@ -80,6 +80,7 @@ MooseChefTypeDeclarationAssociationTest >> setUp [
 	 
 	| p1 p2 c1 c2 c3 m1 m2 m3 m4 at1 at2 pr1 pr2 v1 |
 		
+	super setUp.
 	p1 := FAMIXPackage new name: 'p1' ; stub: true ; yourself.
 	p2 := FAMIXPackage new name: 'p2' ; stub: true ; yourself.
 

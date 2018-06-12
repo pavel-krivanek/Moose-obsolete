@@ -10,6 +10,7 @@ Class {
 
 { #category : #running }
 HashTableTest >> setUp [
+	super setUp.
 	table := HashTable new.
 	testsize := 100.
 ]

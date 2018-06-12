@@ -9,6 +9,7 @@ Class {
 
 { #category : #running }
 FMRepositoryTest >> setUp [
+	super setUp.
 	t := FMTower new
 ]
 

@@ -10,6 +10,7 @@ Class {
 
 { #category : #running }
 IdentityHashTableTest >> setUp [
+	super setUp.
 	table := IdentityHashTable new.
 	testsize := 100.
 ]

@@ -10,6 +10,7 @@ Class {
 { #category : #running }
 MalBreadthFirstSearchPathTest >> setUp [ 
 
+	super setUp.
 	bfsp := MalBreadthFirstSearchPath new.
 ]
 

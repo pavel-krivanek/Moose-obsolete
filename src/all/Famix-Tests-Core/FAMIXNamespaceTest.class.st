@@ -17,6 +17,7 @@ FAMIXNamespaceTest >> actualClass [
 
 { #category : #running }
 FAMIXNamespaceTest >> setUp [
+	super setUp.
 	root := self actualClass new name: 'a'.
 	child1 := self actualClass new name: 'b'.
 	child2 := self actualClass new name: 'd'.

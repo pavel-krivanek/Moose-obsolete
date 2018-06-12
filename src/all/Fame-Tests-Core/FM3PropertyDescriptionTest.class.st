@@ -10,6 +10,7 @@ Class {
 { #category : #running }
 FM3PropertyDescriptionTest >> setUp [
 
+	super setUp.
 	tower := FMTower new.
 ]
 

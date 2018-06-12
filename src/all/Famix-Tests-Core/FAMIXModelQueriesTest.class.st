@@ -17,6 +17,7 @@ Class {
 
 { #category : #running }
 FAMIXModelQueriesTest >> setUp [
+	super setUp.
 	namespace1 := FAMIXNamespace new.
 	namespace2 := FAMIXNamespace new.
 	stubNamespace := FAMIXNamespace new.

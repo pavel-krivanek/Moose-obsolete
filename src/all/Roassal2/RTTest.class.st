@@ -35,6 +35,7 @@ exporter fileOutAsString
 
 { #category : #running }
 RTTest >> setUp [
+	super setUp.
 " The following lines are useful for debugging
 
 	'/tmp/results.txt' asFileReference writeStream 

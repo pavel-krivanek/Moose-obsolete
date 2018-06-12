@@ -19,6 +19,7 @@ FamixMetamodelBuilderImportingContextTest >> setUp [
 
 	| localMethod |
 	
+	super setUp.
 	builder := FamixMetamodelBuilder forTesting.
 
 	access := builder newClassNamed: #Access.	

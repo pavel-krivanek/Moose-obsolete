@@ -30,6 +30,7 @@ MooseSmalltalkImporterSubclassesTest >> pharoImporterTask: anObject [
 
 { #category : #running }
 MooseSmalltalkImporterSubclassesTest >> setUp [
+	super setUp.
 	model := MooseModel new.	
 	model name: 'Test'.
 	model sourceLanguage: FAMIXSmalltalkSourceLanguage new.

@@ -9,7 +9,7 @@ Class {
 
 { #category : #running }
 MalHalTest >> setUp [
-
+	super setUp.
 	hal := MalHal new.
 
 ]

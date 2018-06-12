@@ -11,6 +11,7 @@ Class {
 { #category : #running }
 MooseQueryOfInvocationWithNilCandidatesTest >> setUp [
 	| inh method inv |
+	super setUp.
 	class := FAMIXClass new name: 'class'.
 	inh := FAMIXInheritance new subclass: class.
 	method := FAMIXMethod new name: 'method' ; parentType: class.

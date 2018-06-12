@@ -33,6 +33,7 @@ MooseQueryTest >> model [
 
 { #category : #running }
 MooseQueryTest >> setUp [
+	super setUp.
 	model := MooseModel new.
 	package1 := FAMIXPackage new name: 'package1' ; mooseModel: model.
 	package2 := FAMIXPackage new name: 'package2' ; mooseModel: model.

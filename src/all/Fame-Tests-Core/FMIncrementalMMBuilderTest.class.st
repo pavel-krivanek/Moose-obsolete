@@ -11,6 +11,7 @@ Class {
 { #category : #running }
 FMIncrementalMMBuilderTest >> setUp [
 
+	super setUp.
 	builder := FMIncrementalMMBuilder new.
 ]
 

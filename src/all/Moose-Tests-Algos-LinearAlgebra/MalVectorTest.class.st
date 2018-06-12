@@ -20,7 +20,7 @@ MalVectorTest class >> isAbstract [
 { #category : #running }
 MalVectorTest >> setUp [
 	"comment stating purpose of message"
-	
+	super setUp.
 	v := self vectorClass withAll: (1 to: 10).
 	w := self vectorClass new: 10 withAll: -5
 ]

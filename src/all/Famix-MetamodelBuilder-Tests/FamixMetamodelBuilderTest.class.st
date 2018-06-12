@@ -21,6 +21,7 @@ Class {
 { #category : #running }
 FamixMetamodelBuilderTest >> setUp [
 
+	super setUp.
 	builder := FamixMetamodelBuilder forTesting.
 
 ]

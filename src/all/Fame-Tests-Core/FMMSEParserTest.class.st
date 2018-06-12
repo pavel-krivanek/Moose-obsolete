@@ -469,6 +469,7 @@ FMMSEParserTest class >> sampleMse [
 { #category : #running }
 FMMSEParserTest >> setUp [
 
+	super setUp.
 	p := FMMSEParser new.
 	r := FMDebugClient new.
 	p client: r.

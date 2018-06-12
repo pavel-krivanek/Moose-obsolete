@@ -16,8 +16,8 @@ RTInteractionTest >> setUp [
 
 { #category : #running }
 RTInteractionTest >> tearDown [
-	super tearDown.
 	ui ifNotNil: [ :aUI | ui := nil. aUI delete. ].
+	super tearDown
 ]
 
 { #category : #tests }

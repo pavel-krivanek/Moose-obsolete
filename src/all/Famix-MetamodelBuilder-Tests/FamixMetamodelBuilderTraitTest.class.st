@@ -10,6 +10,7 @@ Class {
 { #category : #running }
 FamixMetamodelBuilderTraitTest >> setUp [
 
+	super setUp.
 	builder := FamixMetamodelBuilder forTesting.
 
 ]

@@ -25,6 +25,7 @@ FamixMetamodelBuilderClassTest >> checkGeneralizationWithAnnotations [
 { #category : #running }
 FamixMetamodelBuilderClassTest >> setUp [
 
+	super setUp.
 	builder := FamixMetamodelBuilder forTesting.
 
 ]

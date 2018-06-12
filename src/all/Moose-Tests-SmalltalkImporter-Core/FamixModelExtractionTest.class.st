@@ -118,6 +118,7 @@ FamixModelExtractionTest >> assignMethods [
 
 { #category : #running }
 FamixModelExtractionTest >> setUp [
+	super setUp.
 	self assignClasses.
 	self assignAttributes.
 	self assignMethods

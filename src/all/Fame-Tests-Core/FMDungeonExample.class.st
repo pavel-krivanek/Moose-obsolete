@@ -37,6 +37,7 @@ FMDungeonExample class >> metamodelString [
 { #category : #running }
 FMDungeonExample >> setUp [
 
+	super setUp.
 	t := FMTower new.
 	t metamodel addSmalltalkClasses: (Array
 		with: RPGDragon

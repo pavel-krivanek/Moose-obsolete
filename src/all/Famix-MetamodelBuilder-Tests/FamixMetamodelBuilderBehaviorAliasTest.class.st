@@ -10,6 +10,7 @@ Class {
 { #category : #running }
 FamixMetamodelBuilderBehaviorAliasTest >> setUp [
 
+	super setUp.
 	builder := FamixMetamodelBuilder forTesting.
 
 ]

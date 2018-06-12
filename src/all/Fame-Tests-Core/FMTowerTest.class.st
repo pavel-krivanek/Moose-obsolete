@@ -10,6 +10,7 @@ Class {
 { #category : #running }
 FMTowerTest >> setUp [
 
+	super setUp.
 	tower := FMTower new
 ]
 

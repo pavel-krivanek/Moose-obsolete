@@ -10,6 +10,7 @@ Class {
 
 { #category : #running }
 WeakKeyIdentityHashTableTest >> setUp [
+	super setUp.
 	table := WeakKeyIdentityHashTable new.
 	testsize := 100.
 ]

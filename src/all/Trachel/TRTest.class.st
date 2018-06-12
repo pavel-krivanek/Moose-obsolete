@@ -24,6 +24,7 @@ exporter fileOutAsString
 
 { #category : #running }
 TRTest >> setUp [
+	super setUp.
 	Transcript show: self class name asString, '>>'.
 	Transcript show: testSelector asString; cr
 ]

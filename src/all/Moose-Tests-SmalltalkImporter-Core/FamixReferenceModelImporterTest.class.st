@@ -33,6 +33,7 @@ FamixReferenceModelImporterTest >> privateTestAccessingVar: aVarName from: aMeth
 
 { #category : #running }
 FamixReferenceModelImporterTest >> setUp [
+	super setUp.
 	referenceModelSubRootLevelOneName := SubRootLevelOne mooseName.
 	referenceModelTheRootName := TheRoot  mooseName.
 	testCaseName := TestCase mooseName.

@@ -143,6 +143,7 @@ FMMetaRepositoryFilterTest >> disabledBecauseItFailsOnTheServerInHeadlessModetes
 { #category : #running }
 FMMetaRepositoryFilterTest >> setUp [
 
+	super setUp.
 	eqModel := self buildEQ.
 	libModel := self buildLIB.
 	rpgModel := self buildRPG.

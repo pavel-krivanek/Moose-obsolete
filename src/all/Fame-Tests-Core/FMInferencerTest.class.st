@@ -9,6 +9,7 @@ Class {
 
 { #category : #running }
 FMInferencerTest >> setUp [
+	super setUp.
 	tower := FMTower new.
 ]
 

@@ -21,6 +21,7 @@ HashSetTest class >> testSet [
 
 { #category : #running }
 HashSetTest >> setUp [
+	super setUp.
 	set := HashSet new
 ]
 

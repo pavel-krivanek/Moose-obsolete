@@ -10,6 +10,7 @@ Class {
 { #category : #running }
 MalDisjointSetsTest >> setUp [
 
+	super setUp.
 	ds := MalDisjointSets new
 ]
 

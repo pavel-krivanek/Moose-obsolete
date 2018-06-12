@@ -57,6 +57,7 @@ FamixMetamodelBuilderRelationTest >> resetBuilder [
 { #category : #running }
 FamixMetamodelBuilderRelationTest >> setUp [
 
+	super setUp.
 	self resetBuilder
 
 ]
