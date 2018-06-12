@@ -17,6 +17,7 @@ FAMIXEntity class >> annotation [
 { #category : #generator }
 FAMIXEntity class >> generatedSlotNames [
 	<generated>
+	'FAMIXEntity class>>#generatedSlotNames'.
 	^ #()
 ]
 
@@ -30,7 +31,7 @@ FAMIXEntity class >> generatedTraitNames [
 FAMIXEntity class >> metamodel [
 
 	<generated>
-	^ FmxNGCompatibilityGenerator metamodel
+	^ (self class environment at: #FmxNGCompatibilityGenerator) metamodel
 ]
 
 { #category : #meta }

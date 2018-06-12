@@ -19,6 +19,7 @@ FAMIXBehaviouralEntity class >> annotation [
 { #category : #generator }
 FAMIXBehaviouralEntity class >> generatedSlotNames [
 	<generated>
+	'FAMIXBehaviouralEntity class>>#generatedSlotNames'.
 	^ #()
 ]
 

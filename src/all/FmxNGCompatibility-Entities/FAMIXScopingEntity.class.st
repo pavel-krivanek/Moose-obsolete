@@ -19,6 +19,7 @@ FAMIXScopingEntity class >> annotation [
 { #category : #generator }
 FAMIXScopingEntity class >> generatedSlotNames [
 	<generated>
+	'FAMIXScopingEntity class>>#generatedSlotNames'.
 	^ #()
 ]
 

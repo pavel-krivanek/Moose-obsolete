@@ -19,6 +19,7 @@ FAMIXCaughtException class >> annotation [
 { #category : #generator }
 FAMIXCaughtException class >> generatedSlotNames [
 	<generated>
+	'FAMIXCaughtException class>>#generatedSlotNames'.
 	^ #()
 ]
 

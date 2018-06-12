@@ -17,6 +17,7 @@ FAMIXCppSourceLanguage class >> annotation [
 { #category : #generator }
 FAMIXCppSourceLanguage class >> generatedSlotNames [
 	<generated>
+	'FAMIXCppSourceLanguage class>>#generatedSlotNames'.
 	^ #()
 ]
 

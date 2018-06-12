@@ -19,6 +19,7 @@ FAMIXParameterizableClass class >> annotation [
 { #category : #generator }
 FAMIXParameterizableClass class >> generatedSlotNames [
 	<generated>
+	'FAMIXParameterizableClass class>>#generatedSlotNames'.
 	^ #()
 ]
 

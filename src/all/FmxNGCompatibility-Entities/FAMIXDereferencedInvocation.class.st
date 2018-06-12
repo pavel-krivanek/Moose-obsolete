@@ -19,6 +19,7 @@ FAMIXDereferencedInvocation class >> annotation [
 { #category : #generator }
 FAMIXDereferencedInvocation class >> generatedSlotNames [
 	<generated>
+	'FAMIXDereferencedInvocation class>>#generatedSlotNames'.
 	^ #()
 ]
 

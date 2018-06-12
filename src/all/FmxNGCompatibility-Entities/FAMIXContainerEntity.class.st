@@ -19,6 +19,7 @@ FAMIXContainerEntity class >> annotation [
 { #category : #generator }
 FAMIXContainerEntity class >> generatedSlotNames [
 	<generated>
+	'FAMIXContainerEntity class>>#generatedSlotNames'.
 	^ #()
 ]
 

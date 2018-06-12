@@ -17,6 +17,7 @@ FAMIXUnknownVariable class >> annotation [
 { #category : #generator }
 FAMIXUnknownVariable class >> generatedSlotNames [
 	<generated>
+	'FAMIXUnknownVariable class>>#generatedSlotNames'.
 	^ #()
 ]
 

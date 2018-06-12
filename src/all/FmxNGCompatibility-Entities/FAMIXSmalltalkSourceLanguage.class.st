@@ -17,6 +17,7 @@ FAMIXSmalltalkSourceLanguage class >> annotation [
 { #category : #generator }
 FAMIXSmalltalkSourceLanguage class >> generatedSlotNames [
 	<generated>
+	'FAMIXSmalltalkSourceLanguage class>>#generatedSlotNames'.
 	^ #()
 ]
 

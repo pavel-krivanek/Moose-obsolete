@@ -17,6 +17,7 @@ FAMIXUnknownSourceLanguage class >> annotation [
 { #category : #generator }
 FAMIXUnknownSourceLanguage class >> generatedSlotNames [
 	<generated>
+	'FAMIXUnknownSourceLanguage class>>#generatedSlotNames'.
 	^ #()
 ]
 

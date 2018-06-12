@@ -17,6 +17,7 @@ FAMIXLeafEntity class >> annotation [
 { #category : #generator }
 FAMIXLeafEntity class >> generatedSlotNames [
 	<generated>
+	'FAMIXLeafEntity class>>#generatedSlotNames'.
 	^ #()
 ]
 

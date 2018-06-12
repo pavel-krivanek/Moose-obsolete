@@ -23,6 +23,7 @@ FAMIXAbstractFileAnchor class >> annotation [
 { #category : #generator }
 FAMIXAbstractFileAnchor class >> generatedSlotNames [
 	<generated>
+	'FAMIXAbstractFileAnchor class>>#generatedSlotNames'.
 	^ #()
 ]
 

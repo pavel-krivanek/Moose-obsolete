@@ -26,6 +26,7 @@ FAMIXComment class >> content: aString [
 { #category : #generator }
 FAMIXComment class >> generatedSlotNames [
 	<generated>
+	'FAMIXComment class>>#generatedSlotNames'.
 	^ #()
 ]
 

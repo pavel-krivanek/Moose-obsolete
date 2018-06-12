@@ -24,6 +24,7 @@ FAMIXAbstractFile class >> famixFolderSeparatorString [
 { #category : #generator }
 FAMIXAbstractFile class >> generatedSlotNames [
 	<generated>
+	'FAMIXAbstractFile class>>#generatedSlotNames'.
 	^ #()
 ]
 

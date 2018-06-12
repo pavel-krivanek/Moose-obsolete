@@ -19,6 +19,7 @@ FAMIXCustomSourceLanguage class >> annotation [
 { #category : #generator }
 FAMIXCustomSourceLanguage class >> generatedSlotNames [
 	<generated>
+	'FAMIXCustomSourceLanguage class>>#generatedSlotNames'.
 	^ #()
 ]
 

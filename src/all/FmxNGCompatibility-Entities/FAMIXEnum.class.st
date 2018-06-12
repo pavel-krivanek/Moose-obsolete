@@ -19,6 +19,7 @@ FAMIXEnum class >> annotation [
 { #category : #generator }
 FAMIXEnum class >> generatedSlotNames [
 	<generated>
+	'FAMIXEnum class>>#generatedSlotNames'.
 	^ #()
 ]
 

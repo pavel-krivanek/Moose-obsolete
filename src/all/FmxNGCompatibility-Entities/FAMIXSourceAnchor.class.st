@@ -53,6 +53,7 @@ FAMIXSourceAnchor class >> childrenTypes [
 { #category : #generator }
 FAMIXSourceAnchor class >> generatedSlotNames [
 	<generated>
+	'FAMIXSourceAnchor class>>#generatedSlotNames'.
 	^ #()
 ]
 

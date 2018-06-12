@@ -20,6 +20,7 @@ FAMIXPharoAnchor class >> annotation [
 { #category : #generator }
 FAMIXPharoAnchor class >> generatedSlotNames [
 	<generated>
+	'FAMIXPharoAnchor class>>#generatedSlotNames'.
 	^ #()
 ]
 

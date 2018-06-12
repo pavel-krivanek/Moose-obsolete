@@ -17,6 +17,7 @@ FAMIXPrimitiveType class >> annotation [
 { #category : #generator }
 FAMIXPrimitiveType class >> generatedSlotNames [
 	<generated>
+	'FAMIXPrimitiveType class>>#generatedSlotNames'.
 	^ #()
 ]
 

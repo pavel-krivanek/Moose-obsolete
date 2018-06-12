@@ -19,6 +19,7 @@ FAMIXType class >> annotation [
 { #category : #generator }
 FAMIXType class >> generatedSlotNames [
 	<generated>
+	'FAMIXType class>>#generatedSlotNames'.
 	^ #()
 ]
 
@@ -252,7 +253,6 @@ FAMIXType >> clientTypes [
 { #category : #'as yet unclassified' }
 FAMIXType >> container [
 
-	<generated>
 	<MSEProperty: #container type: #FAMIXContainerEntity>
 	<MSEComment: 'Deprected, use typeContainer'>
 	<container>

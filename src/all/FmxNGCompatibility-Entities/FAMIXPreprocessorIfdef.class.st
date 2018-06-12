@@ -21,6 +21,7 @@ FAMIXPreprocessorIfdef class >> annotation [
 { #category : #generator }
 FAMIXPreprocessorIfdef class >> generatedSlotNames [
 	<generated>
+	'FAMIXPreprocessorIfdef class>>#generatedSlotNames'.
 	^ #()
 ]
 

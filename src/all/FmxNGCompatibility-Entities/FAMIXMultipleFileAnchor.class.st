@@ -20,6 +20,7 @@ FAMIXMultipleFileAnchor class >> annotation [
 { #category : #generator }
 FAMIXMultipleFileAnchor class >> generatedSlotNames [
 	<generated>
+	'FAMIXMultipleFileAnchor class>>#generatedSlotNames'.
 	^ #()
 ]
 
@@ -27,6 +28,13 @@ FAMIXMultipleFileAnchor class >> generatedSlotNames [
 FAMIXMultipleFileAnchor class >> generatedTraitNames [
 	<generated>
 	^ #()
+]
+
+{ #category : #meta }
+FAMIXMultipleFileAnchor class >> metamodel [
+
+	<generated>
+	^ (self class environment at: #FmxNGCompatibilityGenerator) metamodel
 ]
 
 { #category : #meta }

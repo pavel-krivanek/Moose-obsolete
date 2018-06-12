@@ -24,6 +24,7 @@ FAMIXAccess class >> fromMethod [
 { #category : #generator }
 FAMIXAccess class >> generatedSlotNames [
 	<generated>
+	'FAMIXAccess class>>#generatedSlotNames'.
 	^ #()
 ]
 

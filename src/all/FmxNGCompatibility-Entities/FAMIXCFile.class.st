@@ -19,6 +19,7 @@ FAMIXCFile class >> annotation [
 { #category : #generator }
 FAMIXCFile class >> generatedSlotNames [
 	<generated>
+	'FAMIXCFile class>>#generatedSlotNames'.
 	^ #()
 ]
 

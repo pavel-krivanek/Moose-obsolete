@@ -19,6 +19,7 @@ FAMIXTrait class >> annotation [
 { #category : #generator }
 FAMIXTrait class >> generatedSlotNames [
 	<generated>
+	'FAMIXTrait class>>#generatedSlotNames'.
 	^ #()
 ]
 

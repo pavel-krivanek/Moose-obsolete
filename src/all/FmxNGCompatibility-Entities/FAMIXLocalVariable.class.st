@@ -19,6 +19,7 @@ FAMIXLocalVariable class >> annotation [
 { #category : #generator }
 FAMIXLocalVariable class >> generatedSlotNames [
 	<generated>
+	'FAMIXLocalVariable class>>#generatedSlotNames'.
 	^ #()
 ]
 

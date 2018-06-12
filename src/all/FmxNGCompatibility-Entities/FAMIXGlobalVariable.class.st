@@ -19,6 +19,7 @@ FAMIXGlobalVariable class >> annotation [
 { #category : #generator }
 FAMIXGlobalVariable class >> generatedSlotNames [
 	<generated>
+	'FAMIXGlobalVariable class>>#generatedSlotNames'.
 	^ #()
 ]
 

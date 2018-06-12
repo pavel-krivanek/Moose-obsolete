@@ -17,6 +17,7 @@ FAMIXJavaSourceLanguage class >> annotation [
 { #category : #generator }
 FAMIXJavaSourceLanguage class >> generatedSlotNames [
 	<generated>
+	'FAMIXJavaSourceLanguage class>>#generatedSlotNames'.
 	^ #()
 ]
 

@@ -19,6 +19,7 @@ FAMIXFolder class >> annotation [
 { #category : #generator }
 FAMIXFolder class >> generatedSlotNames [
 	<generated>
+	'FAMIXFolder class>>#generatedSlotNames'.
 	^ #()
 ]
 

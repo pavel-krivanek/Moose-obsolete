@@ -72,6 +72,7 @@ FAMIXNamedEntity class >> childrenTypes [
 { #category : #generator }
 FAMIXNamedEntity class >> generatedSlotNames [
 	<generated>
+	'FAMIXNamedEntity class>>#generatedSlotNames'.
 	^ #()
 ]
 

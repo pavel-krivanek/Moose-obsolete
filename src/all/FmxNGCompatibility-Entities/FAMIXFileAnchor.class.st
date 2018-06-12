@@ -46,6 +46,7 @@ FAMIXFileAnchor class >> fileName: aString startLine: anInteger startColumn: anI
 { #category : #generator }
 FAMIXFileAnchor class >> generatedSlotNames [
 	<generated>
+	'FAMIXFileAnchor class>>#generatedSlotNames'.
 	^ #()
 ]
 

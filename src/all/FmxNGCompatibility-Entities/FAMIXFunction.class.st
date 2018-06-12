@@ -19,6 +19,7 @@ FAMIXFunction class >> annotation [
 { #category : #generator }
 FAMIXFunction class >> generatedSlotNames [
 	<generated>
+	'FAMIXFunction class>>#generatedSlotNames'.
 	^ #()
 ]
 

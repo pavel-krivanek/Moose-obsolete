@@ -20,6 +20,7 @@ FAMIXSourceTextAnchor class >> annotation [
 { #category : #generator }
 FAMIXSourceTextAnchor class >> generatedSlotNames [
 	<generated>
+	'FAMIXSourceTextAnchor class>>#generatedSlotNames'.
 	^ #()
 ]
 

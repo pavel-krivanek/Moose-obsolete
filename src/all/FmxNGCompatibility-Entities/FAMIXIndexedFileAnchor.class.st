@@ -40,6 +40,7 @@ FAMIXIndexedFileAnchor class >> fileName: aString startPos: anInteger endPos: an
 { #category : #generator }
 FAMIXIndexedFileAnchor class >> generatedSlotNames [
 	<generated>
+	'FAMIXIndexedFileAnchor class>>#generatedSlotNames'.
 	^ #()
 ]
 
