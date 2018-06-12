@@ -69,12 +69,6 @@ FAMIXNamedEntity class >> childrenTypes [
 	^ self privateChildrenTypes
 ]
 
-{ #category : #accessing }
-FAMIXNamedEntity class >> dependencyFM3PropertyDescription [
-	^ self allDeclaredProperties
-		select: [ :e | e hasOpposite and: [ e opposite isSource or: [ e opposite isTarget ] ] ]
-]
-
 { #category : #generator }
 FAMIXNamedEntity class >> generatedSlotNames [
 	<generated>

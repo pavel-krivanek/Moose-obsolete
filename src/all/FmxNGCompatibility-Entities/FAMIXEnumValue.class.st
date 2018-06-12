@@ -34,22 +34,3 @@ FAMIXEnumValue class >> requirements [
 	<generated>
 	^ {  }
 ]
-
-{ #category : #accessing }
-FAMIXEnumValue >> belongsTo [
-
-	^ self parentEnum
-]
-
-{ #category : #printing }
-FAMIXEnumValue >> mooseNameOn: aStream [
-	(self belongsTo isNotNil and: [ self belongsTo name isNotNil ])
-		ifTrue: [ self belongsTo mooseNameOn: aStream.
-			aStream << self mooseNameSeparator ].
-	super mooseNameOn: aStream
-]
-
-{ #category : #printing }
-FAMIXEnumValue >> mooseNameSeparator [
-	^ '::'
-]
