@@ -27,6 +27,7 @@ MoosePanel class >> menuOpenGlamorousEditorOn: aBuilder [
 		order: 11; 
 		parent: #Moose;
 		label: GLMEditor new defaultTitle;
+		help: 'an editor for creation of moldable tools';
 		action: [GLMEditor open]
 ]
 

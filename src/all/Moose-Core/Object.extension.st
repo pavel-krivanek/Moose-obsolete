@@ -70,7 +70,7 @@ Object >> mooseMenu [
 	^ menu
 ]
 
-{ #category : #'*moose-core' }
+{ #category : #'*Moose-Core' }
 Object >> mooseMenuMorph [
 	| menu pragmas submenus |
 	menu := MenuMorph new.
@@ -99,7 +99,7 @@ Object >> mooseMenuMorph [
 				(submenus at: (eachPragma argumentAt: 2))
 					add: (eachPragma argumentAt: 1)
 					target: [ self perform: eachPragma selector ]
-					selector: #value 				
+					selector: #value
 				]
 			ifFalse: [ "Top level item"
 				menu 

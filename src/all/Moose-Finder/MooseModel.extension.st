@@ -127,6 +127,7 @@ MooseModel class >> menuBrowseMetaOn: aBuilder [
 		order: 100; 
 		parent: #Moose;
 		label: 'Meta Browser';
+		help: 'Famix compatiblity meta-model browser';
 		action:[MooseModel browseMeta]
 ]
 
