@@ -94,11 +94,6 @@ ClassDescription >> numberOfSubclasses [
 ]
 
 { #category : #'*Roassal2-Core' }
-ClassDescription >> numberOfVariables [
-	^ self instVarNames size
-]
-
-{ #category : #'*Roassal2-Core' }
 ClassDescription >> oldestMethod [
 	"We pick a method, and put the cache in it"
 	| aMethod |
