@@ -927,7 +927,7 @@ FamixReferenceModelImporterTest >> testTheRootInheritsFromUIModel [
 FamixReferenceModelImporterTest >> testUnknownVariableAccess [
 	"self debug: #testUnknownVariableAccess"
 	self 
-		privateTestAccessingVar: #'york'
+		privateTestAccessingVar: #'undeclaredStubInstVar'
 		from: #'Smalltalk::TheRoot.accessingUnknowVariable()'
 		shouldBeRead: true
 		hasAccessesSize: 1.
@@ -936,7 +936,7 @@ FamixReferenceModelImporterTest >> testUnknownVariableAccess [
 { #category : #'reference model reification' }
 FamixReferenceModelImporterTest >> testUnknownVariableReified [
 	"self debug: #testUnknownVariableReified"
-	self deny: (self model entityNamed: #york) isNil
+	self deny: (self model entityNamed: #undeclaredStubInstVar) isNil
 ]
 
 { #category : #'reference model reification' }
