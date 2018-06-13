@@ -68,11 +68,12 @@ FAMIXIndexedFileAnchor >> countNumberOfLinesRuturnsFrom: aStream from: start to:
 	"Go to the start position in the stream"
 	1 to: start - 1 do: [ :i | aStream next ].
 	[ aStream position < end ]
-		whileTrue: [ (char := aStream next) isCr
+		whileTrue: [ 
+			(char := aStream next) isCr
 				ifTrue: [ "We increment the counter if it is a CR and we ignore a potential LF to manage CRLF"
 					count := count + 1.
-					(char := aStream next) isLf
-						ifFalse: [ aStream skip: -1 ] ]
+					(char := aStream peek) isLf
+						ifTrue: [ aStream next ] ]
 				ifFalse: [ char isLf
 						ifTrue: [ "Since we manage CRLF before we can just increment the counter" count := count + 1 ] ] ].
 	^ count
