@@ -95,8 +95,7 @@ FamixTest >> testSlot [
 
 { #category : #tests }
 FamixTest >> testSourcesAnchorsAreNotDuplicatedAfterExport [
-	| model package tempFile importedModel |
-			
+	| model package tempFile importedModel ws |
 	model := MooseModel new name: 'Perdu'.
 	package := FAMIXPackage new
 		name: 'Package';
@@ -112,10 +111,10 @@ FamixTest >> testSourcesAnchorsAreNotDuplicatedAfterExport [
 				yourself);
 		mooseModel: model.
 	tempFile := (FileSystem memory / 'export-test.mse') ensureCreateFile.
-	model exportToMSEStream: tempFile writeStream.
-	importedModel := MooseModel 
-		importFrom: tempFile readStream withMetamodel: FmxNGCompatibilityGenerator metamodel.
-
+	ws := tempFile writeStream.
+	model exportToMSEStream: ws.
+	ws close; flush.
+	importedModel := MooseModel new importFromMSEStream: tempFile readStream.
 	self assert: importedModel size equals: model size.
 	self assert: importedModel allClasses anyOne sourceAnchor notNil
 ]
