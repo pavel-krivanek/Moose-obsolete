@@ -35,7 +35,7 @@ FAMIXMetricTest >> testAverageHierarchyHeight [
 
 	| classes average |
 	classes := self model allClasses.
-	self assert: classes ahh asInteger equals: 2
+	self assert: classes ahh asInteger equals: 1 "was 2 before stateful traits conversion"
 ]
 
 { #category : #testing }
