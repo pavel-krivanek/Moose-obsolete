@@ -426,7 +426,7 @@ TRPharoPlatform >> polygonTesterClass [
 
 { #category : #public }
 TRPharoPlatform >> roassalIcon [
-	^ Form fromBinaryStream: (Base64MimeConverter mimeDecodeToBytes: self roassalIconContents readStream)
+	^ Form fromBinaryStream: (self roassalIconContents base64Decoded readStream)
 ]
 
 { #category : #public }
