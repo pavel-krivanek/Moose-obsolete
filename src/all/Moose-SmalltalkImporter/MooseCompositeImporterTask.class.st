@@ -44,6 +44,7 @@ MooseCompositeImporterTask >> basicRun [
 		on: self model) runSelector: runSelector.
 	"CandidateListOperator populates a Moose model with (binary) element relations like: methodA invokes methodB"
 	candidateOperator ifTrue: [(self candidateClass runOn: self model) runSelector: runSelector].
+	self model sourceLanguage: FAMIXSmalltalkSourceLanguage new.
 	^ self model
 ]
 

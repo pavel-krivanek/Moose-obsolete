@@ -590,7 +590,7 @@ MooseGroupTest >> testLast [
 MooseGroupTest >> testMax [
 	| classes |
 	classes := self model allClasses.
-	self assert: (classes max: #numberOfMethods) equals: 15
+	self assert: (classes max: #numberOfMethods) equals: 32 "was 15 before stateful traits conversion"
 ]
 
 { #category : #tests }
