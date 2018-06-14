@@ -61,7 +61,7 @@ FAMIXMultipleFileAnchor >> addToFile: entity [
 
 { #category : #accessing }
 FAMIXMultipleFileAnchor >> allFiles [
-	<MSEProperty: #allFiles type: #FAMIXAbstractFileAnchor>
+	<MSEProperty: #allFiles type: #FmxNGTFileAnchor>
 	<multivalued>
 	<MSEComment: 'All source code definition files'>
 	^ allFiles

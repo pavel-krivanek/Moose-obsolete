@@ -120,13 +120,13 @@ MooseAbstractGroup >> allEnums [
 { #category : #'Famix-File' }
 MooseAbstractGroup >> allFiles [
 	<navigation: 'All files'>
-	^ self allWithSubTypesOf: FAMIXFile
+	^ self allWithSubTypesOf: FmxNGTFile
 ]
 
 { #category : #'Famix-File' }
 MooseAbstractGroup >> allFolders [
 	<navigation: 'All folders'>
-	^ self allWithSubTypesOf: FAMIXFolder
+	^ self allWithSubTypesOf: FmxNGTFolder
 ]
 
 { #category : #'Famix-Extensions' }
@@ -244,14 +244,14 @@ MooseAbstractGroup >> allModels [
 MooseAbstractGroup >> allNamespaces [
 	
 	<navigation: 'All namespaces'>
-	^self allWithSubTypesOf: FAMIXNamespace 
+	^self allWithSubTypesOf: FmxNGTNamespace 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allPackages [
 	
 	<navigation: 'All packages'>
-	^self allWithSubTypesOf: FAMIXPackage 
+	^self allWithSubTypesOf: FmxNGTPackage 
 ]
 
 { #category : #'Famix-Java' }
