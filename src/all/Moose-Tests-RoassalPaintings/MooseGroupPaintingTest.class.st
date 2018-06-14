@@ -9,7 +9,8 @@ Class {
 
 { #category : #running }
 MooseGroupPaintingTest >> tearDown [
-	window ifNotNil: [ window delete ]
+	window ifNotNil: [ window delete ].
+	super tearDown
 ]
 
 { #category : #tests }
