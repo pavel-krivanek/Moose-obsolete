@@ -20,10 +20,10 @@ FAMIXCSourceLanguageTest >> testIsC [
 
 { #category : #tests }
 FAMIXCSourceLanguageTest >> testIsUnknown [
-	self assert: FmxNGJAVASourceLanguage new isUnknown not
+	self assert: FAMIXJavaSourceLanguage new isUnknown not
 ]
 
 { #category : #tests }
 FAMIXCSourceLanguageTest >> testName [
-	self assert: FmxNGJAVASourceLanguage new name equals: 'Java'
+	self assert: FAMIXJavaSourceLanguage new name equals: 'Java'
 ]

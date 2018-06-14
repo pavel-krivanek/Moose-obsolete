@@ -7,9 +7,9 @@ Class {
 { #category : #tests }
 FAMIXModuleTest >> testFunctions [
 	| module function |
-	module := FmxNGModule new.
+	module := FAMIXModule new.
 	self assert: module functions isEmpty.
-	function := FmxNGFunction new.
+	function := FAMIXFunction new.
 	function parentModule: module.
 	self assert: function parentModule == module.
 	self assert: module functions size equals: 1

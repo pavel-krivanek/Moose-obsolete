@@ -59,7 +59,7 @@ FAMIXCImportingTest >> testBasic [
 FAMIXCImportingTest >> testClassInContainer [	
 	| cls module |
 	cls := model entityNamed: #'::AClass'.
-	module := model entities detect: [ :e | e class == FmxNGModule ].
+	module := model entities detect: [ :e | e class == FAMIXModule ].
 	self assert: cls belongsTo equals: module.
 
 ]
@@ -67,7 +67,7 @@ FAMIXCImportingTest >> testClassInContainer [
 { #category : #tests }
 FAMIXCImportingTest >> testCompilationUnitIncludes [
 	| cu |
-	cu := model entities detect: [ :e | e class == FmxNGCompilationUnit ].
+	cu := model entities detect: [ :e | e class == FAMIXCompilationUnit ].
 	self assert: cu notNil.
 	self assert: cu name equals: 'foobar.cpp'.
 	self assert: cu numberOfIncludes equals: 2
@@ -76,8 +76,8 @@ FAMIXCImportingTest >> testCompilationUnitIncludes [
 { #category : #tests }
 FAMIXCImportingTest >> testHeader [	
 	| headers module |
-	headers := model entities select: [ :e | e class == FmxNGHeader ].
-	module := model entities detect: [ :e | e class == FmxNGModule ].
+	headers := model entities select: [ :e | e class == FAMIXHeader ].
+	module := model entities detect: [ :e | e class == FAMIXModule ].
 	self assert: headers size equals: 2.
 	self assert: (headers allSatisfy: [ :h | h incomingIncludeRelations anyOne from == module compilationUnit ])
 
@@ -87,7 +87,7 @@ FAMIXCImportingTest >> testHeader [
 FAMIXCImportingTest >> testModuleContainsClass [
 	| cls module |
 	cls := model entityNamed: #'::AClass'.
-	module := model entities detect: [ :e | e class == FmxNGModule ].
+	module := model entities detect: [ :e | e class == FAMIXModule ].
 	self assert: module types size equals: 1.
 	self assert: module types anyOne equals: cls.
 ]
@@ -95,7 +95,7 @@ FAMIXCImportingTest >> testModuleContainsClass [
 { #category : #tests }
 FAMIXCImportingTest >> testModuleHasCompilationUnit [
 	| module cu |
-	module := model entities detect: [ :e | e class == FmxNGModule ].
+	module := model entities detect: [ :e | e class == FAMIXModule ].
 	cu := module compilationUnit.
 	self assert: cu notNil.
 	self assert: cu name equals: 'foobar.cpp'

@@ -902,6 +902,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-SmalltalkImporter'
 			'Moose-Tests-Core'
 			'Famix-Tests-Core'
+			'DeepTraverser-Tests'
 	).	
 
 	spec group: 'BasicMetamodellingWithRoassal' with: #(
