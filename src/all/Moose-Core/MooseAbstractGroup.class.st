@@ -68,6 +68,13 @@ MooseAbstractGroup >> allAnnotationTypes [
 	^ self allWithType: FAMIXAnnotationType
 ]
 
+{ #category : #'Famix-Extensions' }
+MooseAbstractGroup >> allAttributes [
+	
+	<navigation: 'All attributes'>
+	^self allWithType: FAMIXAttribute 
+]
+
 { #category : #'Famix-Java' }
 MooseAbstractGroup >> allCaughtExceptions [
 	<navigation: 'All caught exceptions'>

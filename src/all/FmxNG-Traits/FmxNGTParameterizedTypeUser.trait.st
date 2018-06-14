@@ -41,6 +41,6 @@ FmxNGTParameterizedTypeUser >> argumentsInParameterizedTypes [
 FmxNGTParameterizedTypeUser >> argumentsInParameterizedTypes: anObject [
 
 	<generated>
-	argumentsInParameterizedTypes := anObject
+	argumentsInParameterizedTypes value: anObject
 
 ]

@@ -1112,7 +1112,7 @@ FmxNGGenerator >> defineRelations [
 	((tWithParameterizedTypes property: #parameterizedTypes)).
 
 	((tParameterizedTypeUser property: #argumentsInParameterizedTypes))
-		*-
+		*-*
 	((tWithParameterizedTypeUsers property: #arguments)).
 
 	((tReference property: #source)

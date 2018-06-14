@@ -55,21 +55,21 @@ FamixJavaTest >> testImportExceptions [
 				(FAMIX.Method (id: 6) (name ''method4'') (parentType (ref: 1)))
 				(FAMIX.Class (id: 10) (name ''ExceptionA''))
 				(FAMIX.Class (id: 11) (name ''ExceptionB''))
-				(FAMIX.DeclaredException (definingMethod (ref: 3)) (exceptionClass (ref: 10)))
-				(FAMIX.DeclaredException (definingMethod (ref: 4)) (exceptionClass (ref: 10)))
-				(FAMIX.DeclaredException (definingMethod (ref: 4)) (exceptionClass (ref: 11)))
-				(FAMIX.ThrownException (definingMethod (ref: 3)) (exceptionClass (ref: 10)))
-				(FAMIX.ThrownException (definingMethod (ref: 4)) (exceptionClass (ref: 11)))
-				(FAMIX.CaughtException (definingMethod (ref: 5)) (exceptionClass (ref: 11)))
-				(FAMIX.CaughtException (definingMethod (ref: 6)) (exceptionClass (ref: 11)))
+				(FAMIX.DeclaredException (definingEntity (ref: 3)) (exceptionClass (ref: 10)))
+				(FAMIX.DeclaredException (definingEntity (ref: 4)) (exceptionClass (ref: 10)))
+				(FAMIX.DeclaredException (definingEntity (ref: 4)) (exceptionClass (ref: 11)))
+				(FAMIX.ThrownException (definingEntity (ref: 3)) (exceptionClass (ref: 10)))
+				(FAMIX.ThrownException (definingEntity (ref: 4)) (exceptionClass (ref: 11)))
+				(FAMIX.CaughtException (definingEntity (ref: 5)) (exceptionClass (ref: 11)))
+				(FAMIX.CaughtException (definingEntity (ref: 6)) (exceptionClass (ref: 11)))
 			)' readStream.
 	self assert: model entities size equals: 15.
 	self assert: model allDeclaredExceptions size equals: 3.
 	self assert: model allThrownExceptions size equals: 2.
 	self assert: model allCaughtExceptions size equals: 2.
-	model allDeclaredExceptions do: [ :each | self assert: (each definingMethod declaredExceptions includes: each) ].
-	model allThrownExceptions do: [ :each | self assert: (each definingMethod thrownExceptions includes: each) ].
-	model allCaughtExceptions do: [ :each | self assert: (each definingMethod caughtExceptions includes: each) ]
+	model allDeclaredExceptions do: [ :each | self assert: (each definingEntity declaredExceptions includes: each) ].
+	model allThrownExceptions do: [ :each | self assert: (each definingEntity thrownExceptions includes: each) ].
+	model allCaughtExceptions do: [ :each | self assert: (each definingEntity caughtExceptions includes: each) ]
 ]
 
 { #category : #tests }
