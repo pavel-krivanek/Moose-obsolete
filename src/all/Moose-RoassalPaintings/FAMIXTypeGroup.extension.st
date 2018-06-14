@@ -66,27 +66,6 @@ FAMIXTypeGroup >> viewBlueprintOn: view [
 ]
 
 { #category : #'*Moose-RoassalPaintings' }
-FAMIXTypeGroup >> viewDuplicationComplexity [
-	<menuItem: 'Duplication complexity' category: 'Visualize'>
-	| view |
-	view := RTMondrian new.
-	self viewDuplicationComplexityOn: view.
-	^ view open setLabel: 'Duplication Complexity'
-]
-
-{ #category : #'*Moose-RoassalPaintings' }
-FAMIXTypeGroup >> viewDuplicationComplexityOn: view [
-	self viewSimpleSystemComplexityOn: view.
-	view shape shape: (RTBezierLine new color: Color red).
-	view interaction popupText: [ :each | each duplicationText ].
-	RTEdgeBuilder new
-		view: view view;
-		objects: self mooseModel allDuplications;
-		connectFrom: [ :each | each referenceCode entity ]
-			to: [ :each | each duplicateCode entity ]
-]
-
-{ #category : #'*Moose-RoassalPaintings' }
 FAMIXTypeGroup >> viewSimpleSystemComplexityOn: b [ 
 	"b is an instance of RTMondrian"
 	b shape rectangle
