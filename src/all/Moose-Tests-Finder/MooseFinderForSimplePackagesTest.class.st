@@ -8,7 +8,7 @@ Class {
 MooseFinderForSimplePackagesTest >> buildModel [ 
 	model := MooseModel new.
 	model 
-		add: (FmxNGPackage new name: 'name1');
-		add: (FmxNGPackage new name: 'name2');
-		add: (FmxNGPackage new name: 'name3').
+		add: (FAMIXPackage new name: 'name1');
+		add: (FAMIXPackage new name: 'name2');
+		add: (FAMIXPackage new name: 'name3').
 ]

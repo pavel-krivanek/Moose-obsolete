@@ -941,6 +941,8 @@ BaselineOfMoose >> groups: spec [
 			'Moose-RoassalPaintings'
 			'Moose-Help'
 			'Moose-Finder'
+			
+			'Moose-Tests-RoassalPaintings'
 	).	
 	
 

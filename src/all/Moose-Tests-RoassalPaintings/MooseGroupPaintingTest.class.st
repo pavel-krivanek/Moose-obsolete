@@ -28,8 +28,8 @@ MooseGroupPaintingTest >> testBasic02 [
 
 	| m |
 	m := MooseGroup new.
-	m add: (FmxNGClass new name: 'Hello').
-	m add: (FmxNGClass new name: 'World').
+	m add: (FAMIXClass new name: 'Hello').
+	m add: (FAMIXClass new name: 'World').
 	
 	self assert: m symbolsUsedInName size equals: 1.
 	
