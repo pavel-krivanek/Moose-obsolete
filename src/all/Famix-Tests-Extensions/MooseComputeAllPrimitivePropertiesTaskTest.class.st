@@ -13,7 +13,7 @@ MooseComputeAllPrimitivePropertiesTaskTest >> setUp [
 
 	| importTask importer |
 	model := MooseModel new.
-	model sourceLanguage: ( FmxNGSMALLTALKSourceLanguage new ).
+	model sourceLanguage: ( FAMIXSmalltalkSourceLanguage new ).
 
 	importTask := MooseImportClassesTask new.
 	importTask importerClass: SmalltalkImporter.
