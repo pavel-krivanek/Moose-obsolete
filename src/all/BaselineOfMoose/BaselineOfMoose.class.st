@@ -943,6 +943,9 @@ BaselineOfMoose >> groups: spec [
 			'Moose-Finder'
 			
 			'Moose-Tests-RoassalPaintings'
+			'Moose-Tests-Finder'
+			'Moose-Tests-Algos-Lattice'
+			'Moose-Tests-Algos-InformationRetrieval'
 	).	
 	
 
