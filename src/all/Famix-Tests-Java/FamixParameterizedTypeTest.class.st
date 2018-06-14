@@ -7,8 +7,10 @@ Class {
 	#category : #'Famix-Tests-Java'
 }
 
-{ #category : #tests }
+{ #category : #running }
 FamixParameterizedTypeTest >> setUp [
+
+	super setUp.
 	MooseModel resetMeta.
 	model := MooseModel new.
 	

@@ -10,10 +10,11 @@ Class {
 	#category : #'Moose-Tests-Algos-Clustering'
 }
 
-{ #category : #fixture }
+{ #category : #running }
 MalDendrogramTest >> setUp [
 	
 	| ab cd ef abcd efg |
+	super setUp.
 	ab := (MalDendrogram with: #a)
 		merge: (MalDendrogram with: #b)
 		at: 1.

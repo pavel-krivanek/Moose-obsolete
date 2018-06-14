@@ -12,6 +12,7 @@ Class {
 MooseComputeAllPrimitivePropertiesTaskTest >> setUp [
 
 	| importTask importer |
+	super setUp.
 	model := MooseModel new.
 	model sourceLanguage: ( FAMIXSmalltalkSourceLanguage new ).
 

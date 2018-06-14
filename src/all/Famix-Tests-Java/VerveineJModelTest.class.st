@@ -7,8 +7,9 @@ Class {
 	#category : #'Famix-Tests-Java'
 }
 
-{ #category : #tests }
+{ #category : #running }
 VerveineJModelTest >> setUp [
+	super setUp.
 	model := VerveineJTestResource current model
 ]
 

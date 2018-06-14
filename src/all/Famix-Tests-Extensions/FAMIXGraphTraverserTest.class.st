@@ -17,8 +17,9 @@ Class {
 	#category : #'Famix-Tests-Extensions'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #running }
 FAMIXGraphTraverserTest >> setUp [
+	super setUp.
 	model := MooseModel new.
 	methodA := FAMIXMethod new signature: 'A'; name: 'A'; mooseModel: model.
 	methodB := FAMIXMethod new signature: 'B'; name: 'B'; mooseModel: model.
