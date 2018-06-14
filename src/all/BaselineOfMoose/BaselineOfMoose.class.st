@@ -902,6 +902,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-SmalltalkImporter'
 			'Moose-Tests-Core'
 			'Famix-Tests-Core'
+			'Famix-Tests-C'
 			'DeepTraverser-Tests'
 	).	
 

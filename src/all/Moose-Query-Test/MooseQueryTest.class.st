@@ -159,7 +159,7 @@ MooseQueryTest >> testAllWithScope [
 		mooseModel: model.
 	self assertCollection: (class1 allWithScope: FmxNGTMethod) hasSameElements: {method1}.
 "	self
-		assertCollection: (class1 allWithScope: FmxNGClass)
+		assertCollection: (class1 allWithScope: FmxNGTClass)
 		hasSameElements:
 			{class1.
 			class3}."

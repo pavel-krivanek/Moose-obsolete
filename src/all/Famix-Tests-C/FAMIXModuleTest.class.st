@@ -12,5 +12,5 @@ FAMIXModuleTest >> testFunctions [
 	function := FAMIXFunction new.
 	function parentModule: module.
 	self assert: function parentModule == module.
-	self assert: module functions size equals: 1
+	self assert: module moduleEntities size equals: 1
 ]
