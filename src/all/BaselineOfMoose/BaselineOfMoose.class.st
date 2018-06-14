@@ -903,6 +903,7 @@ BaselineOfMoose >> groups: spec [
 			'Moose-Tests-Core'
 			'Famix-Tests-Core'
 			'Famix-Tests-C'
+			'Famix-Tests-Java'
 			'DeepTraverser-Tests'
 	).	
 
