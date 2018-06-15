@@ -88,6 +88,12 @@ MooseMonticelloMethodPopulator >> entities [
 	^ entities
 ]
 
+{ #category : #accessing }
+MooseMonticelloMethodPopulator >> factory [
+
+	^ importer factory
+]
+
 { #category : #initialization }
 MooseMonticelloMethodPopulator >> initialize [
 	super initialize.

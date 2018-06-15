@@ -31,7 +31,7 @@ AbstractSmalltalkMethodVisitor >> classifyMethodNode: aMethodNode [
 AbstractSmalltalkMethodVisitor >> createAccessTo: aNamedEntity writing: isWriteAccess [
 	| access |
 	
-	access := FAMIXAccess new.
+	access := self importer factory access new.
 	access isWrite: isWriteAccess ; variable: aNamedEntity ; accessor: self methodEntity.
 	^ access
 ]
@@ -119,7 +119,7 @@ AbstractSmalltalkMethodVisitor >> matchGetter: aMethodNode [
 												ifAbsent: nil. 
 											attribute notNil 
 												ifTrue: 
-													[attribute class = FAMIXAttribute ifTrue: [famixMethod kind: #getter]]]]]]]
+													[attribute class = self importer factory attribute ifTrue: [famixMethod kind: #getter]]]]]]]
 ]
 
 { #category : #'method-classifying' }
@@ -141,7 +141,7 @@ AbstractSmalltalkMethodVisitor >> matchSetter: aMethodNode [
 										ifAbsent: nil. 
 									attribute notNil 
 										ifTrue: 
-											[attribute class = FAMIXAttribute 
+											[attribute class = self importer factory attribute 
 												ifTrue: 
 													[assignment value isVariable 
 														ifTrue: 
@@ -172,7 +172,7 @@ AbstractSmalltalkMethodVisitor >> resolve: name [
 AbstractSmalltalkMethodVisitor >> resolveInstanceSide: aNamedEntity [
 	"We ensure that a reference to a metaclass is considered as a reference to the class itself"
 
-	((aNamedEntity isKindOf: FAMIXClass) and: ['*_class' match: aNamedEntity name])
+	((aNamedEntity isKindOf: self importer factory classEntity) and: ['*_class' match: aNamedEntity name])
 		ifTrue: [| className |
 				className := aNamedEntity name removeSuffix: '_class'.
 				^ importer ensureClass: (Smalltalk at: className asSymbol) ]
@@ -210,7 +210,7 @@ AbstractSmalltalkMethodVisitor >> visitAssignmentNode: anAssignmentNode [
 	| access | 
 	importer importingContext shouldImportAccess 
 		ifTrue: 
-			[access := FAMIXAccess new. 
+			[access := self importer factory access new. 
 			access isWrite: true.
 			access variable: (self resolve: anAssignmentNode variable name). 
 			access accessor: self methodEntity.
@@ -228,7 +228,7 @@ AbstractSmalltalkMethodVisitor >> visitBlockNode: aBlockNode [
 			[aBlockNode arguments 
 				do: 
 					[:aVariableNode |  
-					local := FAMIXLocalVariable new. 
+					local := self importer factory localVariable new. 
 					local name: aVariableNode name asSymbol. 
 					local parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: local. 
@@ -254,10 +254,10 @@ AbstractSmalltalkMethodVisitor >> visitMessageNode: aMessageNode [
 	| invocation | 
 	importer importingContext shouldImportInvocation 
 		ifTrue: 
-			[invocation := FAMIXInvocation new. 
+			[invocation := self importer factory invocation new. 
 			invocation sender: self methodEntity. 
 			
-			invocation signature: (FAMIXNameResolver signatureFromSmalltalkSelectorOn: aMessageNode selector).
+			invocation signature: (self importer factory nameResolver signatureFromSmalltalkSelectorOn: aMessageNode selector).
 			"invocation  
 				setInvokes: 
 					(FAMIXNameResolver signatureFromSmalltalkSelector: aMessageNode selector)." 
@@ -287,7 +287,7 @@ AbstractSmalltalkMethodVisitor >> visitMethodNode: aMethodNode [
 			[aMethodNode arguments 
 				do: 
 					[:aVariableNode | | argument | 
-					argument := FAMIXParameter new. 
+					argument := self importer factory parameter new. 
 					argument name: aVariableNode name asSymbol. 
 					argument parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: argument. 
@@ -315,13 +315,13 @@ AbstractSmalltalkMethodVisitor >> visitNode: aNode [
 AbstractSmalltalkMethodVisitor >> visitPragmaNode: aPragmaNode [
 	| annotationInstance annotationType |
 	annotationType := self importer ensureAnnotationType: aPragmaNode.
-	annotationInstance := FAMIXAnnotationInstance new.
+	annotationInstance := self importer factory annotationInstance new.
 	annotationInstance annotationType: annotationType.
 	self importer addEntity: annotationInstance.
 	annotationInstance annotatedEntity: self methodEntity.
 	aPragmaNode arguments doWithIndex: [:each :i |
 		| attribute |
-		attribute := FAMIXAnnotationInstanceAttribute new.
+		attribute := self importer factory annotationInstanceAttribute new.
 		attribute value: each value.
 		attribute parentAnnotationInstance: annotationInstance.
 		attribute annotationTypeAttribute: (annotationInstance annotationType attributes at: i).
@@ -345,7 +345,7 @@ AbstractSmalltalkMethodVisitor >> visitSequenceNode: aSequenceNode [
 			[aSequenceNode temporaries 
 				do: 
 					[:aVariableNode |  
-					local := FAMIXLocalVariable new. 
+					local := self importer factory localVariable new. 
 					local name: aVariableNode name asSymbol. 
 					local parentBehaviouralEntity: self methodEntity. 
 					importer addEntity: local. 
@@ -369,7 +369,7 @@ AbstractSmalltalkMethodVisitor >> visitVariableNode: aVariableNode [
 				access := self createAccessTo: global writing: false]
 			ifFalse: [
 				namedEntity := self resolve: aVariableNode name.
-				access := (namedEntity isKindOf: FAMIXContainerEntity)
+				access := (namedEntity isKindOf: self importer factory containerEntity)
 					ifTrue: [ self createReferenceTo: namedEntity ]
 					ifFalse: [ self createAccessTo: namedEntity writing: false ] ].
 		importer addEntity: access ].

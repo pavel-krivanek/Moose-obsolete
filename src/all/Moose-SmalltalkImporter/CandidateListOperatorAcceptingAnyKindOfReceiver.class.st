@@ -34,7 +34,7 @@ CandidateListOperatorAcceptingAnyKindOfReceiver >> computeCandidateListFor: anIn
 				ifTrue: 
 					[^self computeCandidateListFor: anInvocation withBaseClass: receiver].
 				
-			(receiver class = FAMIXAttribute and: [receiver isSharedVariable not])
+			(((receiver class withAllSuperclasses flatCollect: #traits) includes: FmxNGTAttribute) and: [receiver isSharedVariable not])
 				ifTrue:
 					["Transcript show: receiver belongsTo name, '-->', receiver name, '  - roelTyperResult :- ',"(self computeInstanceVariableCandidateListFor: anInvocation ) "asString, '//////      '"].
 			
