@@ -74,7 +74,7 @@ FAMIXPackage >> afferentCoupling [
 	<MSEProperty: #afferentCoupling type: #Number>
 	<derived>
 	<MSEComment: 'Afferent Coupling of a package'>
-	^ ((self queryIncomingDependencies atScope: FAMIXType) outOfMyPackage
+	^ ((self queryIncomingDependencies atScope: FmxNGTType) outOfMyPackage
 		select: [ :c | c isInstanceSide ]) size
 ]
 
@@ -96,7 +96,7 @@ FAMIXPackage >> bunchCohesion [
 	myClasses := myClasses select: [ :c | c isInstanceSide ].
 	myClasses size == 0
 		ifTrue: [ ^ nil ].
-	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) withinMyPackage ])
+	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGTType) withinMyPackage ])
 		inject: 0
 		into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ].
 	^ intraConnectivities / myClasses size squared asFloat
@@ -115,7 +115,7 @@ FAMIXPackage >> bunchCouplingWith: aPackage [
 		ifTrue: [ ^ nil ].
 
 	"All outgoing dependencies"
-	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) withinPackage: aPackage ])
+	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGTType) withinPackage: aPackage ])
 		inject: 0
 		into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ].
 
@@ -140,7 +140,7 @@ FAMIXPackage >> bunchCouplingWithAll [
 		ifTrue: [ ^ nil ].
 
 	"All outgoing dependencies"
-	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) outOfMyPackage ])
+	interConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGTType) outOfMyPackage ])
 		inject: 0
 		into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ].
 
@@ -185,7 +185,7 @@ FAMIXPackage >> clientClasses [
 FAMIXPackage >> clientPackages [
 	"^ self inheritedByPackages union: self invokingPackages"
 
-	^ (self queryAllIncoming atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGTPackage) withoutSelfLoops
 ]
 
 { #category : #'Famix-Extensions-nav All Dependencies' }
@@ -194,7 +194,7 @@ FAMIXPackage >> clientTypes [
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
 ]
 
 { #category : #'Famix-Extensions-accessing' }
@@ -278,7 +278,7 @@ FAMIXPackage >> efferentCoupling [
 	<MSEProperty: #efferentCoupling type: #Number>
 	<derived>
 	<MSEComment: 'Efferent Coupling of a package'>
-	^ ((self queryAllOutgoing outOfMyPackage atScope: FAMIXType) select: [ :c | c isInstanceSide ]) size
+	^ ((self queryAllOutgoing outOfMyPackage atScope: FmxNGTType) select: [ :c | c isInstanceSide ]) size
 ]
 
 { #category : #'Famix-Smalltalk' }
@@ -386,7 +386,7 @@ FAMIXPackage >> martinCohesion [
 	myClasses := (myClasses union: (myClasses flatCollect: [ :c | c allRecursiveTypes ])) select: [ :c | c isInstanceSide ].
 	myClasses size == 0
 		ifTrue: [ ^ nil ].
-	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FAMIXType) withoutSelfLoops withinMyPackage ])
+	intraConnectivities := (myClasses collect: [ :c | (c queryOutgoingDependencies atScope: FmxNGTType) withoutSelfLoops withinMyPackage ])
 		inject: 0
 		into: [ :subTotal :each | subTotal + (each select: [ :c | c isInstanceSide ]) size ].
 	^ ((intraConnectivities + 1) / myClasses size) asFloat
@@ -494,7 +494,7 @@ FAMIXPackage >> providerClasses [
 FAMIXPackage >> providerPackages [
 	"^ self inheritedPackages union: self invokedPackages"
 
-	^ (self queryAllOutgoing atScope: FAMIXPackage) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGTPackage) withoutSelfLoops
 ]
 
 { #category : #'Famix-Extensions-nav All Dependencies' }
@@ -503,7 +503,7 @@ FAMIXPackage >> providerTypes [
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>
-	^ (self queryAllOutgoing atScope: FAMIXType) withoutSelfLoops
+	^ (self queryAllOutgoing atScope: FmxNGTType) withoutSelfLoops
 ]
 
 { #category : #'Famix-Extensions-metrics' }

@@ -85,7 +85,7 @@ MooseAbstractGroup >> allCaughtExceptions [
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allClasses [
 	<navigation: 'All classes'>
-	^ self allWithSubTypesOf: FAMIXClass ofGroupClass: FAMIXClassGroup
+	^ self allWithSubTypesOf: FmxNGTClass ofGroupClass: FAMIXClassGroup
 ]
 
 { #category : #'Famix-Extensions' }
@@ -326,7 +326,7 @@ MooseAbstractGroup >> allThrownExceptions [
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allTypes [
 	<navigation: 'All types'>
-	^ self allWithSubTypesOf: FAMIXType ofGroupClass: FAMIXTypeGroup
+	^ self allWithSubTypesOf: FmxNGTType ofGroupClass: FAMIXTypeGroup
 ]
 
 { #category : #'Famix-Extensions' }

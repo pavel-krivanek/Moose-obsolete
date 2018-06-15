@@ -10,13 +10,13 @@ FAMIXClassNavigationChefTest >> testAllIncomingInvocationsIntoMyNamespace [
 	self assert: self c13FullRefereeInSideOutSide queryAllIncomingInvocations withinMyNamespace size equals: 4.	"querying dependencies does not exclude self loop, hence C13 is on both sides"
 	self
 		assert:
-			((self c13FullRefereeInSideOutSide queryAllIncomingInvocations withinMyNamespace atScope: FAMIXType) asSet equalsTo: (Set with: self c13FullRefereeInSideOutSide with: self c12FullReferencerInSide))
+			((self c13FullRefereeInSideOutSide queryAllIncomingInvocations withinMyNamespace atScope: FmxNGTType) asSet equalsTo: (Set with: self c13FullRefereeInSideOutSide with: self c12FullReferencerInSide))
 ]
 
 { #category : #allIncomingInvocations }
 FAMIXClassNavigationChefTest >> testAllIncomingInvocationsOutOfMyPackage [
 	self assert: self c14ReferencerOutSideRefereeOutSide queryAllIncomingInvocations outOfMyPackage size equals: 3.
-	self assert: ((self c14ReferencerOutSideRefereeOutSide queryAllIncomingInvocations outOfMyPackage atScope: FAMIXType) equalsTo: (Set with: self c2ReferencerOutSideRefereeInSide)).
+	self assert: ((self c14ReferencerOutSideRefereeOutSide queryAllIncomingInvocations outOfMyPackage atScope: FmxNGTType) equalsTo: (Set with: self c2ReferencerOutSideRefereeInSide)).
 	self assert: self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations outOfMyPackage size equals: 4.
 	self
 		assert:
@@ -27,7 +27,7 @@ FAMIXClassNavigationChefTest >> testAllIncomingInvocationsOutOfMyPackage [
 { #category : #allOutgoingInvocations }
 FAMIXClassNavigationChefTest >> testAllOutgoingDependenciesWithoutSelfLoops [
 	self assert: 25 equals: self c1FullReferencerOutSide queryAllOutgoing size.
-	self assert: ((self c1FullReferencerOutSide queryAllOutgoing atScope: FAMIXType) includes: self c1FullReferencerOutSide).
+	self assert: ((self c1FullReferencerOutSide queryAllOutgoing atScope: FmxNGTType) includes: self c1FullReferencerOutSide).
 	self assert: 16 equals: self c1FullReferencerOutSide queryAllOutgoing withoutSelfLoops size.
 	self deny: ((self c1FullReferencerOutSide queryAllOutgoing withoutSelfLoops atScope: FAMIXType) includes: self c1FullReferencerOutSide)
 ]

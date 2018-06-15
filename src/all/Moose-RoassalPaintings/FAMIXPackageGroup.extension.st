@@ -14,7 +14,7 @@ FAMIXPackageGroup >> viewDependenciesWithCyclesOn: aView [
 	| tarjan |
 	tarjan := MalTarjan new.
 	tarjan nodes: self.
-	tarjan edges: self from: #yourself toAll: [ :each | (each querySureOutgoingAssociations atScope: FAMIXPackage) withoutSelfLoops ].
+	tarjan edges: self from: #yourself toAll: [ :each | (each querySureOutgoingAssociations atScope: FmxNGTPackage) withoutSelfLoops ].
 	tarjan run.
 	
 	aView shape rectangle
@@ -91,6 +91,6 @@ FAMIXPackageGroup >> viewSystemComplexityOn: view [
 			p localClassesGroup isEmpty
 				ifFalse: [ p localClassesGroup viewSimpleSystemComplexityOn: view ] ].
 	view shape orthoVerticalLine.
-	view edges connectFrom: #yourself toAll: [ :each | each queryIncomingInheritances atScope: FAMIXPackage ].
+	view edges connectFrom: #yourself toAll: [ :each | each queryIncomingInheritances atScope: FmxNGTPackage ].
 	view layout dominanceTree
 ]
