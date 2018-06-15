@@ -946,6 +946,9 @@ BaselineOfMoose >> groups: spec [
 			'Moose-Tests-Finder'
 			'Moose-Tests-Algos-Lattice'
 			'Moose-Tests-Algos-InformationRetrieval'
+
+			'Moose-MonticelloImporter'
+			'Moose-Tests-MonticelloImporter'
 	).	
 	
 

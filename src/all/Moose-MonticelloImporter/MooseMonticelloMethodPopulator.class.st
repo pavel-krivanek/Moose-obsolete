@@ -19,7 +19,7 @@ MooseMonticelloMethodPopulator >> createGlobalVariable: name value: value [
 	| global | 
 	global := self globals 
 		at: name 
-		put: FmxNGGlobalVariable new. 
+		put: FAMIXGlobalVariable new. 
 	global name: name. 
 	Smalltalk at: name ifPresent: [:each | global declaredType: each class mooseName].
 	^global
@@ -29,7 +29,7 @@ MooseMonticelloMethodPopulator >> createGlobalVariable: name value: value [
 MooseMonticelloMethodPopulator >> createSpecialVariable: name forClass: aClass [
 
 	| attribute |
-	attribute := (self scopeOfClass: aClass) at: name bind: FmxNGImplicitVariable new.
+	attribute := (self scopeOfClass: aClass) at: name bind: FAMIXImplicitVariable new.
 	attribute name: name.
 	attribute container: aClass.	
 	^attribute
@@ -113,7 +113,7 @@ MooseMonticelloMethodPopulator >> setInfoOn: famixMethod withSource: sourceAsStr
 { #category : #visiting }
 MooseMonticelloMethodPopulator >> visitMethodDefinition: definition [ 
 	| famixMethod classOnWhichItIsDefined |
-	famixMethod := FmxNGMethod new.
+	famixMethod := FAMIXMethod new.
 	famixMethod name: definition selector.
 	famixMethod signature: definition selector.
 	famixMethod hasClassScope: definition classIsMeta.
@@ -123,7 +123,7 @@ MooseMonticelloMethodPopulator >> visitMethodDefinition: definition [
 	famixMethod parentType: classOnWhichItIsDefined.
 	famixMethod category: definition category asSymbol.
 	famixMethod isPublic: true.
-	famixMethod sourceAnchor: (FmxNGSourceTextAnchor new source: definition source).
+	famixMethod sourceAnchor: (FAMIXSourceTextAnchor new source: definition source).
 	famixMethod 
 		propertyNamed: #timestamp
 		put: definition timeStamp.
