@@ -125,6 +125,18 @@ SmalltalkMetamodelFactory >> parameter [
 ]
 
 { #category : #accessing }
+SmalltalkMetamodelFactory >> reference [
+
+	^ FAMIXReference
+]
+
+{ #category : #accessing }
+SmalltalkMetamodelFactory >> sourceLanguage [
+
+	^ FAMIXSmalltalkSourceLanguage
+]
+
+{ #category : #accessing }
 SmalltalkMetamodelFactory >> unknownVariable [
 
 	^ FAMIXUnknownVariable

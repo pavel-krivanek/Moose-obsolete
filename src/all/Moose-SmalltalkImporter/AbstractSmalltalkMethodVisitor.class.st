@@ -38,7 +38,14 @@ AbstractSmalltalkMethodVisitor >> createAccessTo: aNamedEntity writing: isWriteA
 
 { #category : #'visitor-double dispatching' }
 AbstractSmalltalkMethodVisitor >> createReferenceTo: aNamedEntity [
-	^ (self resolveInstanceSide: aNamedEntity) createReferenceFrom: self methodEntity  
+
+	| referenceClass |
+	
+	referenceClass := self importer factory reference.
+	
+	^ referenceClass source: self methodEntity target: (self resolveInstanceSide: aNamedEntity)
+
+	
 ]
 
 { #category : #'method-classifying' }
@@ -50,7 +57,7 @@ AbstractSmalltalkMethodVisitor >> extractCommentsFromNode: aSequenceNode [
 			[aSequenceNode comments
 				do:
 					[:eachComment | 
-					comment := FAMIXComment new.
+					comment := self importer factory comment new.
 					comment content: (aSequenceNode source 
 										copyFrom: eachComment start
 										to: eachComment stop) asString.

@@ -2,10 +2,19 @@ Class {
 	#name : #AbstractCandidateListOperator,
 	#superclass : #MooseOperator,
 	#instVars : [
-		'groups'
+		'groups',
+		'importer'
 	],
 	#category : #'Moose-SmalltalkImporter'
 }
+
+{ #category : #'as yet unclassified' }
+AbstractCandidateListOperator class >> runOn: aMooseModel importer: anImporter [
+	 
+	^(self on: aMooseModel) 
+		importer: anImporter;
+		run
+]
 
 { #category : #running }
 AbstractCandidateListOperator >> allCandidatesFor: invocation [ 
@@ -92,6 +101,16 @@ AbstractCandidateListOperator >> description [
 ]
 
 { #category : #accessing }
+AbstractCandidateListOperator >> importer [
+	^ importer
+]
+
+{ #category : #accessing }
+AbstractCandidateListOperator >> importer: anObject [
+	importer := anObject
+]
+
+{ #category : #accessing }
 AbstractCandidateListOperator >> length [ 
 	 
 	^model allInvocations size
@@ -101,5 +120,5 @@ AbstractCandidateListOperator >> length [
 AbstractCandidateListOperator >> setUp [ 
 	
 	"dont call 'model allMethods' here because it sorts the group and we dont care at this level"
-	groups := ((model allWithType: FAMIXMethod) reject: #isAbstract) groupedBy: #signature
+	groups := ((model allWithType: self importer factory method) reject: #isAbstract) groupedBy: #signature
 ]
