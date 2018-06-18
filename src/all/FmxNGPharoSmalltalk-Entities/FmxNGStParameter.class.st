@@ -35,3 +35,23 @@ FmxNGStParameter class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #accessing }
+FmxNGStParameter >> mooseNameOn: stream [ 
+	| parent |
+	parent := self parentBehaviouralEntity.
+	parent ifNotNil: 
+		[ parent mooseNameOn: stream.
+		stream nextPut: $. ].
+	self name ifNotNil: [stream nextPutAll: self name]
+]
+
+{ #category : #accessing }
+FmxNGStParameter >> packageScope [
+	^ self parentBehaviouralEntity packageScope
+]
+
+{ #category : #accessing }
+FmxNGStParameter >> typeScope [
+	^ self parentBehaviouralEntity typeScope
+]

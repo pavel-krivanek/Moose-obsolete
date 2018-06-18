@@ -35,3 +35,11 @@ FmxNGStGlobalVariable class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGStGlobalVariable >> typeScope [
+	"typeScope does not make sense for a global variable,
+	so we return nil"
+
+	^ nil
+]

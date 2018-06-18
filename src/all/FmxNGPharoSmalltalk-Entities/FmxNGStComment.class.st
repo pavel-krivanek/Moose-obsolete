@@ -35,3 +35,9 @@ FmxNGStComment class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #accessing }
+FmxNGStComment >> belongsTo [
+	
+	^ self container
+]

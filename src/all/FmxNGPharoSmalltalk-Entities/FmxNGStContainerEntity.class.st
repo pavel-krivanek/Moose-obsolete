@@ -45,3 +45,12 @@ FmxNGStContainerEntity >> classes [
 				cacheAt: #classes 
 				ifAbsentPut: [self types select: [:type| type isClass ]]
 ]
+
+{ #category : #accessing }
+FmxNGStContainerEntity >> numberOfChildren [
+	<MSEProperty: #numberOfChildren type: #Number>
+	<MSEComment: 'Number of direct children entities in the containment tree.'>
+	<derived>
+	
+	^ self children size
+]

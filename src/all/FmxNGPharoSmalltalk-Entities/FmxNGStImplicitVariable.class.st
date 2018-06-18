@@ -60,3 +60,24 @@ FmxNGStImplicitVariable >> isSelf [
 FmxNGStImplicitVariable >> isSuper [
 	^ self name == #super
 ]
+
+{ #category : #testing }
+FmxNGStImplicitVariable >> mooseNameOn: stream [ 
+	| parent |
+	parent := self parentBehaviouralEntity.
+	parent ifNotNil: 
+		[ parent mooseNameOn: stream.
+		stream nextPut: $. ].
+
+	self name ifNotNil: [ stream nextPutAll: self name ]
+]
+
+{ #category : #testing }
+FmxNGStImplicitVariable >> packageScope [
+	^ self parentBehaviouralEntity packageScope
+]
+
+{ #category : #testing }
+FmxNGStImplicitVariable >> typeScope [
+	^ self parentBehaviouralEntity typeScope
+]

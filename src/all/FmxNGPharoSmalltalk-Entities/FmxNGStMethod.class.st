@@ -36,9 +36,44 @@ FmxNGStMethod class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> accessedAttributes [
+	
+	"Returns the set of attributes of my class accessed by me (method). 
+	Used to support the calculation of LCOM"
+	
+	^ self queryOutgoingAccesses opposites withinMyClass asSet select: #isAttribute
+]
+
 { #category : #accessing }
 FmxNGStMethod >> belongsTo [
 	^ self parentType
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> category [
+	<MSEProperty: #category type: #String>
+	<MSEComment: 'Category of the method'>
+	<package: 'Smalltalk'>
+	
+	^ self privateState attributeAt: #category ifAbsentPut: [ nil ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> category: aString [
+
+	self privateState attributeAt: #category put: aString
+
+	
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> compiledMethod [
+	"Return the compiled method associated to the receiver or nil"
+	
+	^ self smalltalkClass  compiledMethodAt: self name asSymbol
+	
+	
 ]
 
 { #category : #'Famix-Extensions-private' }
@@ -86,17 +121,187 @@ FmxNGStMethod >> hasEmptyBody [
 	^ self numberOfAccesses = 0 and: [ self numberOfOutgoingInvocations = 0 ]
 ]
 
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> hierarchyNestingLevel [
+	<MSEProperty: #hierarchyNestingLevel type: #Number>
+	<derived>
+	<MSEComment: 'The nesting level in the hierarchy'>
+	
+	^self
+		lookUpPropertyNamed: #hierarchyNestingLevel
+		computedAs: [self belongsTo hierarchyNestingLevel]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> hierarchyNestingLevel: aNumber [
+
+	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
+]
+
 { #category : #'Famix-Extensions-private' }
 FmxNGStMethod >> incomingTypeDeclarations [
 	^ {}
 ]
 
-{ #category : #testing }
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> initialize [
+	super initialize.
+	hasClassScope := false
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isCalledInternally [
+	^self incomingInvocations
+		anySatisfy:
+			[:each | each sender isMethod and: [each sender belongsTo == self belongsTo]]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isConstant [
+	<MSEProperty: #isConstant type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method simply returns a constant'>
+	^#constant = self kind
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isConstructor [
+	<MSEProperty: #isConstructor type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method is a constructor of the class'>
+
+	^ #constructor = self kind or: [ 
+		self privateState propertyAt: #isConstructor ifAbsent: [false] ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isConstructor: aBoolean [
+	aBoolean 
+		ifTrue: [ self kind: #constructor ]
+		ifFalse: [ 
+			self isConstructor ifTrue: [ self kind: nil ] ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isExtension [
+	^self belongsTo packageScope ~~ self packageScope.
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isGetter [
+	<MSEProperty: #isGetter type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method is a getter of an attribute'>
+	
+	^#getter = self kind
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isInitializer [
+	^ self mooseModel isSmalltalk
+		ifTrue: [ (('*initialize*' match: self category) or: [ '*initialize*' match: self name ]) or: [ self isConstructor ] ]
+		ifFalse: [ self isConstructor ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isInternalImplementation [
+	<MSEProperty: #isInternalImplementation type: #Boolean>
+	<derived>
+	<MSEComment: 'Public Interface Layer Method'>
+	<package: 'Smalltalk'>
+	^ (self isInitializer not and: [ self isCalledInternally ])
+		and: [ self isPureAccessor not ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> isJUnit4Test [
 	<MSEProperty: #isJUnit4Test type: #Boolean>
 	<derived>
 	<MSEComment: 'True if the method is considered as a Junit 4 Java test'>
 	^ self isAnnotatedWith: 'Test'
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isMethod [
+
+	^ true
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isOverriden [
+	<MSEProperty: #isOverriden type: #Boolean>
+	<derived>
+	<MSEComment: 'The method is overrided in a sub class'>
+	"If we have a stub and we don't have the container, we can't have the information"
+	(self belongsTo isNil and: [ self isStub ]) ifTrue: [ ^ false ].
+	
+	^ self belongsTo subclassHierarchyGroup anySatisfy: [ :each | each hasMethodWithSignature: self signature ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isOverriding [
+	<MSEProperty: #isOverriding type: #Boolean>
+	<derived>
+	<MSEComment: 'The method is overrinding a method defined in a super class'>
+	
+	^self belongsTo directSuperclasses anySatisfy: [:each | 
+		each isInterface not and: [each understands: self signature]]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isPureAccessor [
+	^self isGetter
+		or: [self isSetter
+		or: [self privateState propertyAt: #isPureAccessor ifAbsent: [false]]]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isSetter [
+	<MSEProperty: #isSetter type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method is a setter on an attribute'>
+
+	^#setter = self kind
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> isSurelyInvokedBy: aFAMIXMethod [ 
+	 
+	| outgoingInvo |
+
+	((self isAbstract or: [aFAMIXMethod isAbstract]) 
+		or: [(outgoingInvo := aFAMIXMethod queryAllOutgoingInvocations) isEmpty])
+		ifFalse: 
+			[
+			(outgoingInvo do:[:invo |
+				(invo signature = self signature and: [invo isASureInvocation]) ifTrue:[
+					| invocationRVar | 
+					invocationRVar := invo getReceivingFAMIXClass. 
+					(invocationRVar notNil 
+						and: [(invocationRVar lookUp: self signature) = self]) 
+							ifTrue:[^true]
+				]
+			]).
+		].
+	^false
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> mooseNameOn: stream [ 
+	| parent |
+	parent := self belongsTo.
+	parent ifNotNil: 
+		[ parent mooseNameOn: stream.
+		stream nextPut: $. ].
+	self signature
+		ifNotNil: [ stream nextPutAll: self signature ]
+		ifNil: [ 
+			self name ifNotNil: [ stream nextPutAll: self name] ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> namespaceScope [
+	^ self parentType namespaceScope
 ]
 
 { #category : #'Famix-Extensions-private' }
@@ -108,6 +313,17 @@ FmxNGStMethod >> numberOfAccesses [
 	^ self 
 		lookUpPropertyNamed: #numberOfAccesses
 		computedAs: [ self accesses size ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> numberOfAnnotationInstances [
+	<MSEProperty: #numberOfAnnotationInstances type: #Number>
+	<derived>
+	<MSEComment: 'The number of annotation instances defined in the method'>
+
+	^self
+		lookUpPropertyNamed: #numberOfAnnotationInstances
+		computedAs: [self annotationInstances size]
 ]
 
 { #category : #'Famix-Extensions-private' }
@@ -230,12 +446,24 @@ FmxNGStMethod >> outgoingTypeDeclarations [
 	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
 ]
 
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> packageScope [
+
+	^ self parentPackage ifNil:[ 
+		|cl|
+		cl := self parentType.
+		cl isNil 
+			ifTrue:[nil]
+			ifFalse:[cl packageScope]
+	]
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGStMethod >> parentTypeIsStub [
 	^ self parentType ifNotNil: [ :e | e isStub ] ifNil: [ true ]
 ]
 
-{ #category : #accessing }
+{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> smalltalkClass [ 
 	"Return the smalltalk class associated with the receiver. Note that it may be different than doing self parentType because the class and metaclass can be merged."
 	
@@ -244,4 +472,40 @@ FmxNGStMethod >> smalltalkClass [
 			ifFalse: [self hasClassScope 
 							ifTrue: [self parentType smalltalkClass class]
 							ifFalse: [self parentType smalltalkClass]]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> sourceText [
+	self flag: 'This code should be delegated to the FAMIXPharoAnchor'.
+	^ (self sourceLanguage isSmalltalk and: [ self class shouldSearchForSmalltalkCodeInImage ])
+		ifTrue: [ [ | class |
+			"take the normal class"
+			class := Smalltalk at: self parentType instanceSide name asSymbol.
+			self hasClassScope
+				ifFalse: [ class sourceCodeAt: self name asSymbol ]
+				ifTrue: [ class class sourceCodeAt: self name asSymbol ]	"dispatch on class or metaclass depending on method scope" ]
+				on: Error
+				do: [ super sourceText ]	"probably class is not in the system" ]
+		ifFalse: [ super sourceText ]
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> timeStamp [
+	<MSEProperty: #timeStamp type: #String>
+	<MSEComment: 'TimeStamp of the method with author and time of the last change'>
+	<package: 'Smalltalk'>
+	
+	^ self privateState attributeAt: #timeStamp ifAbsentPut: ['']
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> timeStamp: aTimeStamp [
+
+	self privateState attributeAt: #timeStamp put: aTimeStamp
+]
+
+{ #category : #'Famix-Extensions-metrics-support' }
+FmxNGStMethod >> typeScope [
+
+	^ self parentType 
 ]

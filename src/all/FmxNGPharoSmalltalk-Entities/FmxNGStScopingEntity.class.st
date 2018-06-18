@@ -35,3 +35,14 @@ FmxNGStScopingEntity class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #accessing }
+FmxNGStScopingEntity >> belongsTo [
+	^ self parentScope ifNil: [ self parentPackage ]
+]
+
+{ #category : #accessing }
+FmxNGStScopingEntity >> typeScope [
+	"This only makes sense to reject self loops in #collectAtScope:"
+	^ self classes
+]

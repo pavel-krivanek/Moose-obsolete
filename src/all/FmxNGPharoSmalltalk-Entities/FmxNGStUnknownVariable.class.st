@@ -33,3 +33,10 @@ FmxNGStUnknownVariable class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'moosechef-scoping-filtering' }
+FmxNGStUnknownVariable >> typeScope [
+	"typeScope does not make sense for an unknown variable,
+	so we return nil"
+	^ nil
+]

@@ -35,3 +35,18 @@ FmxNGStLocalVariable class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #accessing }
+FmxNGStLocalVariable >> mooseNameOn: stream [ 
+	| parent |
+	parent := self parentBehaviouralEntity.
+	parent ifNotNil: 
+		[ parent mooseNameOn: stream.
+		stream nextPut: $. ].
+	self name ifNotNil: [stream nextPutAll: self name]
+]
+
+{ #category : #accessing }
+FmxNGStLocalVariable >> packageScope [
+	^ self parentBehaviouralEntity packageScope
+]

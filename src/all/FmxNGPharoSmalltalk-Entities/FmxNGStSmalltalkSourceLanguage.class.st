@@ -33,3 +33,8 @@ FmxNGStSmalltalkSourceLanguage class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #testing }
+FmxNGStSmalltalkSourceLanguage >> isSmalltalk [
+	^ true
+]

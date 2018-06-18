@@ -37,6 +37,6 @@ FmxNGStSourceLanguage class >> requirements [
 ]
 
 { #category : #testing }
-FmxNGStSourceLanguage >> isC [ 
+FmxNGStSourceLanguage >> isSmalltalk [
 	^ false
 ]
