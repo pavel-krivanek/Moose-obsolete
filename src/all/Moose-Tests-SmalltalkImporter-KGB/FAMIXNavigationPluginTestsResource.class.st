@@ -64,7 +64,7 @@ FAMIXNavigationPluginTestsResource >> importModel [
 		classArray do: [ :each |
 			| class |
 			class := model entityNamed: 'Smalltalk::', each.
-			class container: namespace
+			class typeContainer: namespace
 			"(model entityNamed: #Smalltalk) types remove:(model entityNamed: each)."
 		] ]
 ]

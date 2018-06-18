@@ -312,11 +312,3 @@ FAMIXBehaviouralEntity >> providerBehaviours [
 
 	^ self invokedBehaviours 
 ]
-
-{ #category : #accessing }
-FAMIXBehaviouralEntity >> signature: aString [
-
-	signature := aString.
-	self resetMooseName
-
-]

@@ -60,7 +60,7 @@ SmalltalkImporter >> basicClassCreation: aClass [
 	class name: (aClass name replaceAll: Character space with: $_).
 	class stub: true.
 	importingContext shouldImportNamespace
-		ifTrue: [ class container: (self ensureNamespace: aClass environment) ].
+		ifTrue: [ class typeContainer: (self ensureNamespace: aClass environment) ].
 	anchor := self factory anchor new
 		element: class;
 		pharoEntity: aClass;
@@ -471,7 +471,7 @@ SmalltalkImporter >> initialize [
 	implicitVariables := IdentityDictionary new.
 	annotationTypes := IdentityDictionary new.
 	
-	factory := SmalltalkMetamodelFactory new.
+	factory := SmalltalkCompatibilityMetamodelFactory new.
 ]
 
 { #category : #'private accessing' }

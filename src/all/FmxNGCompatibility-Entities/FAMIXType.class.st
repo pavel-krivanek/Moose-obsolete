@@ -660,7 +660,7 @@ FAMIXType >> methodsGroup [
 { #category : #'Famix-Implementation' }
 FAMIXType >> mooseNameOn: aStream [ 
 	| parent |
-	parent := self container.
+	parent := self typeContainer.
 	parent ifNotNil: 
 		[ 
 			parent mooseNameOn: aStream.
