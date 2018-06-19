@@ -394,6 +394,12 @@ BaselineOfMoose >> baselineFamixNG: spec [
 		'CMetamodelGenerator'
 		'FmxC-Generated'
 		'FmxC-Entities'
+
+
+		'FmxNGPharoSmalltalk-Generator'
+		'FmxNGPharoSmalltalk-Entities'
+		'FmxNGPharoSmalltalk-Importer'
+
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
 
@@ -949,6 +955,11 @@ BaselineOfMoose >> groups: spec [
 
 			'Moose-MonticelloImporter'
 			'Moose-Tests-MonticelloImporter'
+			
+			'FmxNGPharoSmalltalk-Generator'
+			'FmxNGPharoSmalltalk-Entities'
+			'FmxNGPharoSmalltalk-Importer'
+			
 	).	
 	
 
