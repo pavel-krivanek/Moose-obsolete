@@ -52,7 +52,7 @@ FmxNGStPackage >> clientPackages [
 
 { #category : #accessing }
 FmxNGStPackage >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
+	<MSEProperty: #clientTypes type: #FmxNGStType>
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on the receiver'>
@@ -166,7 +166,7 @@ FmxNGStPackage >> providerPackages [
 
 { #category : #accessing }
 FmxNGStPackage >> providerTypes [
-	<MSEProperty: #providerTypes type: #FAMIXType>
+	<MSEProperty: #providerTypes type: #FmxNGStType>
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>

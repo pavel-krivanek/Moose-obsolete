@@ -36,6 +36,11 @@ FmxNGStMethod class >> requirements [
 	^ {  }
 ]
 
+{ #category : #meta }
+FmxNGStMethod class >> shouldSearchForSmalltalkCodeInImage [
+	^ true
+]
+
 { #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> accessedAttributes [
 	

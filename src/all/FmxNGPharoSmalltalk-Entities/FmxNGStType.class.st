@@ -156,7 +156,7 @@ FmxNGStType >> clientPackages [
 
 { #category : #adding }
 FmxNGStType >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
+	<MSEProperty: #clientTypes type: #FmxNGStType>
 	<multivalued>
 	<derived>
 	<MSEComment: 'All types that depend on (inherit, staticly access, or use some methods of) the receiver'>
@@ -166,7 +166,7 @@ FmxNGStType >> clientTypes [
 { #category : #adding }
 FmxNGStType >> container [
 
-	<MSEProperty: #container type: #FAMIXContainerEntity>
+	<MSEProperty: #container type: #FmxNGStContainerEntity>
 	<MSEComment: 'Deprected, use typeContainer'>
 	<container>
 	<derived>
@@ -1036,7 +1036,7 @@ FmxNGStType >> providerPackages [
 
 { #category : #'Famix-Extensions' }
 FmxNGStType >> providerTypes [
-	<MSEProperty: #providerTypes type: #FAMIXType>
+	<MSEProperty: #providerTypes type: #FmxNGStType>
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>
