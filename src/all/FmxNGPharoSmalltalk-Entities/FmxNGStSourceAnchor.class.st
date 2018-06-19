@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStSourceAnchor,
 	#superclass : #FmxNGStEntity,
-	#traits : 'FmxNGTSourceAnchor',
-	#classTraits : 'FmxNGTSourceAnchor classTrait',
+	#traits : 'FmxNGTSourceAnchor + TEntityMetaLevelDependency + TDependencyQueries',
+	#classTraits : 'FmxNGTSourceAnchor classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#instVars : [
 		'#pharoEntity',
 		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor',
@@ -21,6 +21,12 @@ FmxNGStSourceAnchor class >> annotation [
 	^self
 ]
 
+{ #category : #accessing }
+FmxNGStSourceAnchor class >> childrenSelectors [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
+]
+
 { #category : #generator }
 FmxNGStSourceAnchor class >> generatedSlotNames [
 	<generated>
@@ -32,6 +38,22 @@ FmxNGStSourceAnchor class >> generatedSlotNames [
 FmxNGStSourceAnchor class >> generatedTraitNames [
 	<generated>
 	^ #(FmxNGTSourceAnchor)
+]
+
+{ #category : #accessing }
+FmxNGStSourceAnchor class >> incomingMSEProperties [
+	^ #()
+]
+
+{ #category : #'Moose-Query-Extensions' }
+FmxNGStSourceAnchor class >> outgoingMSEProperties [
+	^ #()
+]
+
+{ #category : #'Moose-Query-Extensions' }
+FmxNGStSourceAnchor class >> parentSelectors [
+	self flag: #todo. "Source Anchors should not implement TEntityMetaLevelDependency but currently a source anchor is in Moose containment tree. This is a bug but Orion depend on this hack. So we first need to clean Orion, then we can remove those aweful methods. here."
+	^ {}
 ]
 
 { #category : #meta }
@@ -54,6 +76,15 @@ FmxNGStSourceAnchor >> element: anElement [
 
 ]
 
+{ #category : #'moosequery-queries-incoming' }
+FmxNGStSourceAnchor >> incomingTypeDeclarations [
+	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
+	
+	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
+
+	^ {}
+]
+
 { #category : #initialization }
 FmxNGStSourceAnchor >> initialize [
 	super initialize.
@@ -63,6 +94,15 @@ FmxNGStSourceAnchor >> initialize [
 { #category : #accessing }
 FmxNGStSourceAnchor >> lineCount [
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
+]
+
+{ #category : #'moosequery-queries-outgoing' }
+FmxNGStSourceAnchor >> outgoingTypeDeclarations [
+	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
+	
+	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
+
+	^ {}
 ]
 
 { #category : #accessing }

@@ -1,8 +1,20 @@
 Class {
 	#name : #FmxNGStNamedEntity,
 	#superclass : #FmxNGStSourcedEntity,
-	#traits : 'FmxNGTInvocationsReceiver + FmxNGTNamed + FmxNGTPackageable + FmxNGTPossibleStub + FmxNGTWithAnnotationInstances + FmxNGTWithModifiers',
-	#classTraits : 'FmxNGTInvocationsReceiver classTrait + FmxNGTNamed classTrait + FmxNGTPackageable classTrait + FmxNGTPossibleStub classTrait + FmxNGTWithAnnotationInstances classTrait + FmxNGTWithModifiers classTrait',
+	#traits : 'FmxNGTInvocationsReceiver + FmxNGTNamed + FmxNGTPackageable + FmxNGTPossibleStub + FmxNGTWithAnnotationInstances + FmxNGTWithModifiers + TDependencyQueries + TEntityMetaLevelDependency',
+	#classTraits : 'FmxNGTInvocationsReceiver classTrait + FmxNGTNamed classTrait + FmxNGTPackageable classTrait + FmxNGTPossibleStub classTrait + FmxNGTWithAnnotationInstances classTrait + FmxNGTWithModifiers classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
+	#classInstVars : [
+		'#childrenSelectors',
+		'#allParentTypes',
+		'#allChildrenTypes',
+		'#parentSelectors',
+		'#outgoingMSEProperties',
+		'#incomingMSEProperties',
+		'#outgoingAssociationTypes',
+		'#incomingAssociationTypes',
+		'#allIncomingAssociationTypes',
+		'#allOutgoingAssociationTypes'
+	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -14,6 +26,11 @@ FmxNGStNamedEntity class >> annotation [
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>
 	^self
+]
+
+{ #category : #accessing }
+FmxNGStNamedEntity class >> childrenSelectors [
+	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
 { #category : #generator }
@@ -29,6 +46,21 @@ FmxNGStNamedEntity class >> generatedTraitNames [
 	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTPossibleStub FmxNGTWithAnnotationInstances FmxNGTWithModifiers)
 ]
 
+{ #category : #accessing }
+FmxNGStNamedEntity class >> incomingMSEProperties [
+	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
+]
+
+{ #category : #accessing }
+FmxNGStNamedEntity class >> outgoingMSEProperties [
+	^ outgoingMSEProperties ifNil: [ outgoingMSEProperties := self privateOutgoingMSEProperties ]
+]
+
+{ #category : #'Moose-Query-Extensions' }
+FmxNGStNamedEntity class >> parentSelectors [
+	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
+]
+
 { #category : #meta }
 FmxNGStNamedEntity class >> requirements [
 
@@ -40,6 +72,17 @@ FmxNGStNamedEntity class >> requirements [
 FmxNGStNamedEntity >> hasUniqueMooseNameInModel [
 	" all subclasses should call the method: 'resetMooseName' if a change causes the moosename to change "
 	^true
+]
+
+{ #category : #'moosequery-queries-incoming' }
+FmxNGStNamedEntity >> incomingTypeDeclarations [
+	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
+	
+	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
+
+	"Most of the time it will return nothing. Overide me if it need to return something"
+
+	^ {}
 ]
 
 { #category : #testing }
@@ -69,6 +112,17 @@ FmxNGStNamedEntity >> name: aString [
 	name := aString.
 	self resetMooseName
 
+]
+
+{ #category : #'moosequery-queries-incoming' }
+FmxNGStNamedEntity >> outgoingTypeDeclarations [
+	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
+	
+	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
+
+	"Most of the time it will return nothing. Overide me if it need to return something"
+
+	^ {}
 ]
 
 { #category : #testing }

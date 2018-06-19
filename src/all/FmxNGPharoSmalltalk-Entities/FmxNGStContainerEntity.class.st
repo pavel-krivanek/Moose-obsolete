@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStContainerEntity,
 	#superclass : #FmxNGStNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 

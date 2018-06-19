@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStAssociation,
 	#superclass : #FmxNGStSourcedEntity,
-	#traits : 'FmxNGTAssociation',
-	#classTraits : 'FmxNGTAssociation classTrait',
+	#traits : 'FmxNGTAssociation + TAssociationMetaLevelDependency',
+	#classTraits : 'FmxNGTAssociation classTrait + TAssociationMetaLevelDependency classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
