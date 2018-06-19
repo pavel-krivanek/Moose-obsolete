@@ -53,13 +53,13 @@ FAMIXAnnotationType >> belongsTo [
 ]
 
 { #category : #accessing }
-FAMIXAnnotationType >> container [
+FAMIXAnnotationType >> typeContainer [
 
 	^ self annotationTypesContainer
 ]
 
 { #category : #accessing }
-FAMIXAnnotationType >> container: anObject [
+FAMIXAnnotationType >> typeContainer: anObject [
 
 	^ self annotationTypesContainer: anObject
 ]
