@@ -46,6 +46,19 @@ FmxNGTWithMethods >> methods: anObject [
 
 ]
 
+{ #category : #enumeration }
+FmxNGTWithMethods >> methodsDo: aBlock [
+	self methods do: aBlock
+]
+
+{ #category : #accessing }
+FmxNGTWithMethods >> methodsGroup [
+	<navigation: 'Methods'>
+	^MooseGroup
+		withAll: self methods
+		withDescription: 'Methods from ' , self mooseName
+]
+
 { #category : #accessing }
 FmxNGTWithMethods >> numberOfMethods [
 	<MSEProperty: #numberOfMethods type: #Number>

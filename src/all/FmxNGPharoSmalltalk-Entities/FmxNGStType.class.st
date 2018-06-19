@@ -466,19 +466,6 @@ FmxNGStType >> lookUp: aMethodSignature [
 ]
 
 { #category : #adding }
-FmxNGStType >> methodsDo: aBlock [
-	self methods do: aBlock
-]
-
-{ #category : #adding }
-FmxNGStType >> methodsGroup [
-	<navigation: 'Methods'>
-	^MooseGroup
-		withAll: self methods
-		withDescription: 'Methods from ' , self mooseName
-]
-
-{ #category : #adding }
 FmxNGStType >> mooseNameOn: aStream [ 
 	| parent |
 	parent := self typeContainer.

@@ -645,19 +645,6 @@ FAMIXType >> methodScope [
 ]
 
 { #category : #'Famix-Implementation' }
-FAMIXType >> methodsDo: aBlock [
-	self methods do: aBlock
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> methodsGroup [
-	<navigation: 'Methods'>
-	^MooseGroup
-		withAll: self methods
-		withDescription: 'Methods from ' , self mooseName
-]
-
-{ #category : #'Famix-Implementation' }
 FAMIXType >> mooseNameOn: aStream [ 
 	| parent |
 	parent := self typeContainer.
