@@ -288,6 +288,13 @@ FmxNGStType >> implements: aString [
 		anySatisfy: [ :each | aString = each signature	 "was changed from match: for performances and because signature is case sensitive" ]
 ]
 
+{ #category : #'Famix-Extensions' }
+FmxNGStType >> incomingAccesses [
+	^ self privateState 
+		cacheAt: #incomingAccesses
+		ifAbsentPut: [ attributes flatCollect: [ :each | each incomingAccesses ] ]
+]
+
 { #category : #adding }
 FmxNGStType >> incomingTypeDeclarations [
 	^ self structuresWithDeclaredType , self behavioursWithDeclaredType collect: [ :var | MooseChefTypeDeclarationAssociation newFrom: var to: self ]
@@ -586,6 +593,17 @@ FmxNGStType >> numberOfAttributes [
 FmxNGStType >> numberOfAttributes: aNumber [
 
 	self privateState propertyAt: #numberOfAttributes put: aNumber
+]
+
+{ #category : #adding }
+FmxNGStType >> numberOfAttributesInherited [
+	<MSEProperty: #numberOfAttributesInherited type: #Number>
+	<derived>
+	<MSEComment: 'The number of attributes in a class inherited from super classes'>	
+	
+	^self
+		lookUpPropertyNamed: #numberOfAttributesInherited
+		computedAs: [self inheritedAttributes size]
 ]
 
 { #category : #'Famix-Extensions' }
@@ -1023,6 +1041,12 @@ FmxNGStType >> providerTypes [
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>
 	^ (self queryAllOutgoing atScope: FmxNGTType) withoutSelfLoops
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGStType >> realType [
+	"All types except the alias ones are real"
+	^ self 
 ]
 
 { #category : #'Famix-Extensions' }

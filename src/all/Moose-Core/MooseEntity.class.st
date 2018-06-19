@@ -592,3 +592,9 @@ MooseEntity >> suspendAllAnnouncementsDuring: aBlock [
 		aBlock value ]
 			ensure: [ self announcer: currentAnnouncer ]
 ]
+
+{ #category : #accessing }
+MooseEntity >> usesTrait: aTrait [
+
+	^ (self class withAllSuperclasses flatCollect: #traits) includes: aTrait
+]

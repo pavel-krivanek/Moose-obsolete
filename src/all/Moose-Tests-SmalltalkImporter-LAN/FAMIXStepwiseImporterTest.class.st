@@ -175,7 +175,7 @@ FAMIXStepwiseImporterTest >> testImportClassAndMethodAndMergeItsMetaclass [
 	importer := importTask run.
 	importedMethods := importer methods values.
 	self assert: importedMethods size equals: 13.
-	self assert: importedMethods first class equals: FAMIXMethod
+	self assert: (importedMethods first usesTrait: FmxNGTMethod)
 ]
 
 { #category : #tests }
@@ -254,7 +254,7 @@ FAMIXStepwiseImporterTest >> testImportNamespace [
 		run;
 		yourself.
 	nap := model entityNamed: #Smalltalk.
-	self assert: nap class equals: FAMIXNamespace
+	self assert: (nap usesTrait: FmxNGTNamespace)
 ]
 
 { #category : #tests }
@@ -270,7 +270,7 @@ FAMIXStepwiseImporterTest >> testImportOneClassAndItsMetaclass [
 	importer := importTask run.
 	importedClasses := importer classes.
 	self assert: importedClasses values size equals: 6.
-	self assert: (importedClasses at: LANNode) class equals: FAMIXClass
+	self assert: ((importedClasses at: LANNode) usesTrait: FmxNGTClass)
 ]
 
 { #category : #tests }
@@ -291,7 +291,7 @@ FAMIXStepwiseImporterTest >> testImportOneClassAndMergeItsMetaclass [
 	importer := importTask run.
 	importedClasses := importer classes.
 	self assert: importedClasses values asSet size equals: 3.
-	self assert: (importedClasses at: LANNode) class equals: FAMIXClass
+	self assert: ((importedClasses at: LANNode) usesTrait: FmxNGTClass)
 ]
 
 { #category : #tests }
@@ -312,7 +312,7 @@ FAMIXStepwiseImporterTest >> testImportOneClassAndMethodAndMergeItsMetaclass [
 	importer := importTask run.
 	importedMethods := importer methods values.
 	self assert: importedMethods size equals: 13.
-	self assert: importedMethods first class equals: FAMIXMethod
+	self assert: (importedMethods first  usesTrait: FmxNGTMethod)
 ]
 
 { #category : #tests }

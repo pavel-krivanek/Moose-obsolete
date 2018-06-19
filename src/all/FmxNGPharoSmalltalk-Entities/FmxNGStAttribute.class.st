@@ -63,6 +63,17 @@ FmxNGStAttribute >> beSharedVariable [
 	self propertyNamed: #sharedVariable put: true 
 ]
 
+{ #category : #'Famix-Implementation' }
+FmxNGStAttribute >> belongsTo [
+
+	^ self parentType
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGStAttribute >> belongsTo: aType [
+	self parentType
+]
+
 { #category : #testing }
 FmxNGStAttribute >> hasClassScope [
 	<MSEProperty: #hasClassScope type: #Boolean>

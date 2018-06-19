@@ -45,3 +45,13 @@ FmxNGStAccess >> from [
 FmxNGStAccess >> from: anAccessor [
 	self accessor: anAccessor 
 ]
+
+{ #category : #'instance creation' }
+FmxNGStAccess >> to [	
+	^ self variable 
+]
+
+{ #category : #'instance creation' }
+FmxNGStAccess >> to: aVariable [
+	self variable: aVariable
+]

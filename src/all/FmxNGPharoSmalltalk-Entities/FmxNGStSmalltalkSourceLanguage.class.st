@@ -35,6 +35,12 @@ FmxNGStSmalltalkSourceLanguage class >> requirements [
 ]
 
 { #category : #testing }
+FmxNGStSmalltalkSourceLanguage >> isC [
+	"because of FmxNGStType>>#allSuperclassesDo:, should be fixed"
+	^ false
+]
+
+{ #category : #testing }
 FmxNGStSmalltalkSourceLanguage >> isSmalltalk [
 	^ true
 ]
