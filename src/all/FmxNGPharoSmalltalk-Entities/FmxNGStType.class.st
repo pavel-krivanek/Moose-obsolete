@@ -579,23 +579,6 @@ FmxNGStType >> numberOfAnnotationInstances: aNumber [
 ]
 
 { #category : #adding }
-FmxNGStType >> numberOfAttributes [
-	<MSEProperty: #numberOfAttributes type: #Number>
-	<derived>
-	<MSEComment: 'The number of attributes in the class'>
-	
-	^self
-		lookUpPropertyNamed: #numberOfAttributes
-		computedAs: [self attributes size]
-]
-
-{ #category : #adding }
-FmxNGStType >> numberOfAttributes: aNumber [
-
-	self privateState propertyAt: #numberOfAttributes put: aNumber
-]
-
-{ #category : #adding }
 FmxNGStType >> numberOfAttributesInherited [
 	<MSEProperty: #numberOfAttributesInherited type: #Number>
 	<derived>
@@ -610,24 +593,6 @@ FmxNGStType >> numberOfAttributesInherited [
 FmxNGStType >> numberOfAttributesInherited: aNumber [
 
 	self privateState propertyAt: #numberOfAttributesInherited put: aNumber
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> numberOfComments [
-	<MSEProperty: #numberOfComments type: #Number>
-	<derived>
-	<MSEComment: 'The number of comments in a class'>
-
-	^ self lookUpPropertyNamed: #numberOfComments computedAs: [
-		self comments size + 
-		(self methods asArray inject: 0 into: [:sum : el| 
-			el numberOfComments + sum ]) ]
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> numberOfComments: aNumber [
-
-	self privateState propertyAt: #numberOfComments put: aNumber
 ]
 
 { #category : #'Famix-Extensions' }
@@ -737,23 +702,6 @@ FmxNGStType >> numberOfMethodProtocols [
 FmxNGStType >> numberOfMethodProtocols: aNumber [
 
 	self privateState propertyAt: #numberOfMethodProtocols put: aNumber
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> numberOfMethods [
-	<MSEProperty: #numberOfMethods type: #Number>
-	<derived>
-	<MSEComment: 'The number of methods in a class'>
-
-	^self
-		lookUpPropertyNamed: #numberOfMethods
-		computedAs: [self methods size]
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> numberOfMethods: aNumber [
-
-	self privateState propertyAt: #numberOfMethods put: aNumber
 ]
 
 { #category : #'Famix-Extensions' }

@@ -45,3 +45,20 @@ FmxNGTWithMethods >> methods: anObject [
 	methods value: anObject
 
 ]
+
+{ #category : #accessing }
+FmxNGTWithMethods >> numberOfMethods [
+	<MSEProperty: #numberOfMethods type: #Number>
+	<derived>
+	<MSEComment: 'The number of methods in a class'>
+
+	^self
+		lookUpPropertyNamed: #numberOfMethods
+		computedAs: [self methods size]
+]
+
+{ #category : #accessing }
+FmxNGTWithMethods >> numberOfMethods: aNumber [
+
+	self privateState propertyAt: #numberOfMethods put: aNumber
+]

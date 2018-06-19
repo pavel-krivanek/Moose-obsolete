@@ -45,3 +45,21 @@ FmxNGTWithComments >> comments: anObject [
 	comments value: anObject
 
 ]
+
+{ #category : #accessing }
+FmxNGTWithComments >> numberOfComments [
+	<MSEProperty: #numberOfComments type: #Number>
+	<derived>
+	<MSEComment: 'The number of comments in a class'>
+
+	^ self lookUpPropertyNamed: #numberOfComments computedAs: [
+		self comments size + 
+		(self methods asArray inject: 0 into: [:sum : el| 
+			el numberOfComments + sum ]) ]
+]
+
+{ #category : #accessing }
+FmxNGTWithComments >> numberOfComments: aNumber [
+
+	self privateState propertyAt: #numberOfComments put: aNumber
+]
