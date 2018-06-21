@@ -17,6 +17,7 @@ FmxNGTraitGroupDescription classSide >> add: aTraitGroupMemeber to: aView [
 				ifFalse: [ slots add: (aSlot name asString -> aSlot inverseName asString) ]] ].
 	
 	aView
+		classname: [ :each | each name withoutPrefix: 'FmxNGT' ];
 		instanceVariables: [:each | each slots collect: #name]";
 		methodselector: #selector;
 		methodsNames: #();
@@ -54,7 +55,7 @@ FmxNGTraitGroupDescription classSide >> groupRepresentatives [
 			representatives add: each.
 			grouped addAll: (self traitGroupOf: each) ]].
 	
-	^ representatives asSortedCollection: [ :a :b | a name <= b name ]
+	^ representatives asSortedCollection: [ :a :b | (self traitGroupNameOf: a) <= (self traitGroupNameOf: b) ]
 	
 	
 ]
@@ -68,13 +69,14 @@ FmxNGTraitGroupDescription classSide >> openGroupsBrowser [
 	
 	data := FmxNGTraitGroupDescription groupRepresentatives.
 
-	"Display result in Glamorous Browser"
 	browser := GLMTabulator new.
 	browser 
-		column: #yourself;
-		column: #diff.
-	browser transmit to: #yourself.
-	browser transmit to: #diff; from: #yourself; andShow: [ :a | 
+		column: #traits;
+		column: #uml.
+	browser transmit to: #traits; andShow: [ :a |
+		a tree
+			format: [ :x | self traitGroupNameOf: x]].
+	browser transmit to: #uml; from: #traits; andShow: [ :a | 
 			a roassal2 
 				initializeView: [ RTUMLClassBuilder new ];
 				painting: [ :view :input | 
@@ -83,6 +85,16 @@ FmxNGTraitGroupDescription classSide >> openGroupsBrowser [
 	browser openOn: data.
 	
 
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGTraitGroupDescription classSide >> traitGroupNameOf: groupRepresentative [
+
+	| traits |
+	
+	traits := self traitGroupOf: groupRepresentative.
+	
+	^ (traits detectMin: [ :each | each name size ]) name withoutPrefix: #FmxNGT
 ]
 
 { #category : #'as yet unclassified' }
@@ -98,7 +110,7 @@ FmxNGTraitGroupDescription classSide >> traitGroupOf: aTrait [
 		unresolved isEmpty ] whileFalse: [ 
 			unresolved copy do: [ :trait |
 				resolved add: trait.
-				unresolved addAll: ((aTrait slots select: #isFMRelationSlot) collect: #targetClass) ] ].
+				unresolved addAll: ((trait slots select: #isFMRelationSlot) collect: #targetClass) ] ].
 
 	^ resolved.
 
