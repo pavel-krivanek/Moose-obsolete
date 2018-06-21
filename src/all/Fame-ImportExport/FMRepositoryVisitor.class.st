@@ -143,7 +143,7 @@ FMRepositoryVisitor >> roots [
 FMRepositoryVisitor >> run [
 	nb := 0.
 	UIManager default
-		displayProgress: 'Writing ' , printer stream localName
+		displayProgress: 'Writing ' , printer stream asString
 		from: 0
 		to: self roots size
 		during: [ :bar | 
