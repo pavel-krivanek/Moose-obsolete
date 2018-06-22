@@ -109,7 +109,6 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 
 	containerEntity --|> namedEntity.
 	containerEntity --|> #TWithTypes.
-	containerEntity --|> #TWithFunctions.
 	containerEntity --|> #TWithAnnotationTypes.
 
 	globalVariable --|> structuralEntity.

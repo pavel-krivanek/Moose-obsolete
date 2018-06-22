@@ -4,8 +4,8 @@ Class {
 	#traits : 'FmxNGTSourceAnchor + TEntityMetaLevelDependency + TDependencyQueries',
 	#classTraits : 'FmxNGTSourceAnchor classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#instVars : [
-		'#pharoEntity',
 		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor',
+		'#pharoEntity',
 		'#source'
 	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
