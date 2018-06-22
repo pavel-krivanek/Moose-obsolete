@@ -199,11 +199,11 @@ FAMIXNamespaceNavigationChefTest >> testProviderClassesInto [
 			(((self namespace1InteractedReferencerReferee queryAllOutgoing atScope: FmxNGTType) withinNamespace: self namespace2FullReferee)
 				equalsTo: (Set with: self c11FullRefereeOutSide with: self c13FullRefereeInSideOutSide)).
 	self assert: 15 equals: (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) size.
-	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FmxNGTInvocation ].
+	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep usesTrait: FmxNGTInvocation ].
 	self assert: 10 equals: invos size.
-	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FmxNGTReference ].
+	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep usesTrait: FmxNGTReference ].
 	self assert: 4 equals: refs size.
-	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep isKindOf: FmxNGTSubInheritance  ].
+	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing withinNamespace: self namespace2FullReferee) select: [ :dep | dep usesTrait: FmxNGTSubInheritance  ].
 	self assert: 1 equals: inh size.
 	self
 		assert:
@@ -232,13 +232,13 @@ FAMIXNamespaceNavigationChefTest >> testProviderClassesOutOf [
 								with: self c4FullRefereeInSide
 								with: self c1FullReferencerOutSide))).
 	self assert: 55 equals: (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) size.
-	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGTInvocation ].
+	invos := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep usesTrait: FmxNGTInvocation ].
 	self assert: 29 equals: invos size.
-	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGTReference ].
+	refs := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep usesTrait: FmxNGTReference ].
 	self assert: 10 equals: refs size.
-	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGTSubInheritance ].
+	inh := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep usesTrait: FmxNGTSubInheritance ].
 	self assert: 7 equals: inh size.
-	acc := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep isKindOf: FmxNGTAccess ].
+	acc := (self namespace1InteractedReferencerReferee queryAllOutgoing outOfPackage: self packageP5FullReferee) select: [ :dep | dep usesTrait: FmxNGTAccess ].
 	self assert: 9 equals: acc size.
 	self
 		assert:
