@@ -364,6 +364,14 @@ FmxNGStType >> isAbstract [
 	^super isAbstract
 ]
 
+{ #category : #testing }
+FmxNGStType >> isAnonymousClass [
+	^  self container notNil and: [
+			self container isMethod or: [
+				self name isAllDigits or: [
+					'*_anonymous_*' match: self name ]] ]
+]
+
 { #category : #adding }
 FmxNGStType >> isClassSide [
 	"Kind of a hack. Uses the FAMIX2 Smalltalk naming convention that every Smalltalk

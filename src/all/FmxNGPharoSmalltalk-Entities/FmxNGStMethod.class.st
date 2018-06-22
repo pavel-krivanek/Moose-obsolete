@@ -159,6 +159,19 @@ FmxNGStMethod >> initialize [
 	hasClassScope := false
 ]
 
+{ #category : #'Famix-Extensions' }
+FmxNGStMethod >> invokedBehaviours [
+	^ self queryAllOutgoingInvocations opposites
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGStMethod >> invokedMethods [
+	<MSEProperty: #invokedMethods type: #FAMIXMethod> <derived> <multivalued>
+	<MSEComment: 'The methods invoked by the receiver'>
+	
+	^ self invokedBehaviours select: [ :each | each isMethod ]
+]
+
 { #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> isCalledInternally [
 	^self incomingInvocations

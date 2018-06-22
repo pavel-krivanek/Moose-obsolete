@@ -36,6 +36,21 @@ FmxNGStScopingEntity class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'Famix-Extensions-metrics' }
+FmxNGStScopingEntity >> abstractness [
+	"Abstractness is the ratio between the number of abstract classes and the total number of classes in a package, in the range [0, 1]. 0 means the package is fully concrete, 1 it is fully abstract."
+	
+	self subclassResponsibility
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGStScopingEntity >> allClasses [
+	| result |
+	result := OrderedCollection new.
+	self withAllChildScopesDo: [ :each | result addAll: each classes ].
+	^ result
+]
+
 { #category : #accessing }
 FmxNGStScopingEntity >> belongsTo [
 	^ self parentScope ifNil: [ self parentPackage ]
