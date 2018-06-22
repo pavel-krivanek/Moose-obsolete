@@ -16,7 +16,9 @@ FAMIXNavigationPluginTestsResource >> getMethod: methodNameString from: aFAMIXCl
 { #category : #'MooseKGB-TestFamix3-hook' }
 FAMIXNavigationPluginTestsResource >> importModel [ 
 
-	| importer classes namespaces | 
+	| factory importer classes namespaces | 
+	
+	factory := SmalltalkMetamodelFactory new.
 	
 	classes := #( #( #'M1P1C1FullReferencerOutSide' #'M1P2C2ReferencerOutSideRefereeInSide'
 					#'M1P2C3ReferencerInSideRefereeOutSide'
@@ -46,7 +48,7 @@ FAMIXNavigationPluginTestsResource >> importModel [
 		'Model4FullReferencer'
 		'Model5InteractedReferencer'
 		'Model6InteractedReferee'
-		 'Model7FullInteracted' ) collect: [ :each | FAMIXNamespace new name: each ].
+		 'Model7FullInteracted' ) collect: [ :each | factory namespace new name: each ].
 	
 	importer := MoosePharoImporterTask new. 
 	importer importingContext mergeClassAndMetaclass. 

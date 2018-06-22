@@ -2,12 +2,12 @@ Extension { #name : #TOODependencyQueries }
 
 { #category : #'*Moose-Query-Extensions' }
 TOODependencyQueries >> queryIncomingInheritances [
-	^ self queryIncoming: FAMIXInheritance
+	^ self queryIncoming: FmxNGTSubInheritance
 ]
 
 { #category : #'*Moose-Query-Extensions' }
 TOODependencyQueries >> queryOutgoingInheritances [
-	^ self queryOutgoing: FAMIXInheritance
+	^ self queryOutgoing: FmxNGTSubInheritance
 ]
 
 { #category : #'*Moose-Query-Extensions' }
