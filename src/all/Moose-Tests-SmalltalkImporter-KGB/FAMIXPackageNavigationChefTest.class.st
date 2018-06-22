@@ -55,17 +55,17 @@ FAMIXPackageNavigationChefTest >> testEachOutgoingReferenceImpliesAnIncomingRefe
 		assert:
 			(modelPackages
 				allSatisfy: [ :referencer | 
-					(referencer queryAllOutgoingInvocations atScope: FAMIXType)
+					(referencer queryAllOutgoingInvocations atScope: FmxNGTType)
 						allSatisfy: [ :referenced | 
-							(referenced queryAllIncomingInvocations atScope: FAMIXPackage)
+							(referenced queryAllIncomingInvocations atScope: FmxNGTPackage)
 								includes: referencer ] ]).
 	self
 		assert:
 			(modelPackages
 				allSatisfy: [ :referencer | 
-					(referencer queryAllOutgoingInvocations atScope: FAMIXPackage)
+					(referencer queryAllOutgoingInvocations atScope: FmxNGTPackage)
 						allSatisfy: [ :referenced | 
-							(referenced queryAllIncomingInvocations atScope: FAMIXPackage)
+							(referenced queryAllIncomingInvocations atScope: FmxNGTPackage)
 								includes: referencer ] ])
 ]
 
@@ -77,17 +77,17 @@ FAMIXPackageNavigationChefTest >> testEachStaticOutgoingReferenceImpliesAStaticI
 		assert:
 			(modelPackages
 				allSatisfy: [ :referencer | 
-					(referencer queryOutgoingReferences atScope: FAMIXType)
+					(referencer queryOutgoingReferences atScope: FmxNGTType)
 						allSatisfy: [ :referenced | 
-							(referenced queryIncomingReferences atScope: FAMIXPackage)
+							(referenced queryIncomingReferences atScope: FmxNGTPackage)
 								includes: referencer ] ]).
 	self
 		assert:
 			(modelPackages
 				allSatisfy: [ :referencer | 
-					(referencer queryOutgoingReferences atScope: FAMIXPackage)
+					(referencer queryOutgoingReferences atScope: FmxNGTPackage)
 						allSatisfy: [ :referenced | 
-							(referenced queryIncomingReferences atScope: FAMIXPackage)
+							(referenced queryIncomingReferences atScope: FmxNGTPackage)
 								includes: referencer ] ])
 ]
 
@@ -99,17 +99,17 @@ FAMIXPackageNavigationChefTest >> testEachSureOutgoingReferenceImpliesASureIncom
 		assert:
 			(modelPackages
 				allSatisfy: [ :referencer | 
-					(referencer querySureOutgoingInvocations atScope: FAMIXType)
+					(referencer querySureOutgoingInvocations atScope: FmxNGTType)
 						allSatisfy: [ :referenced | 
-							(referenced querySureIncomingInvocations atScope: FAMIXPackage)
+							(referenced querySureIncomingInvocations atScope: FmxNGTPackage)
 								includes: referencer ] ]).
 	self
 		assert:
 			(modelPackages
 				allSatisfy: [ :referencer | 
-					(referencer querySureOutgoingInvocations atScope: FAMIXPackage)
+					(referencer querySureOutgoingInvocations atScope: FmxNGTPackage)
 						allSatisfy: [ :referenced | 
-							(referenced querySureIncomingInvocations atScope: FAMIXPackage)
+							(referenced querySureIncomingInvocations atScope: FmxNGTPackage)
 								includes: referencer ] ])
 ]
 
