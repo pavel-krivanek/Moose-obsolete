@@ -20,7 +20,7 @@ FAMIXClassNavigationChefTest >> testAllIncomingInvocationsOutOfMyPackage [
 	self assert: self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations outOfMyPackage size equals: 4.
 	self
 		assert:
-			((self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations outOfMyPackage atScope: FAMIXType)
+			((self c3ReferencerInSideRefereeOutSide queryAllIncomingInvocations outOfMyPackage atScope: FmxNGTType)
 				equalsTo: (Set with: self c1FullReferencerOutSide with: self c6FullReferencerInSideOutSide with: self c14ReferencerOutSideRefereeOutSide))
 ]
 
@@ -60,7 +60,7 @@ FAMIXClassNavigationChefTest >> testAllOutgoingInvocationsOutOfMyNamespace [
 { #category : #allOutgoingInvocations }
 FAMIXClassNavigationChefTest >> testAllOutgoingInvocationsWithoutSelfLoops [
 	self assert: 13 equals: self c1FullReferencerOutSide queryAllOutgoingInvocations size.
-	self assert: ((self c1FullReferencerOutSide queryAllOutgoingInvocations atScope: FAMIXType) includes: self c1FullReferencerOutSide).
+	self assert: ((self c1FullReferencerOutSide queryAllOutgoingInvocations atScope: FmxNGTType) includes: self c1FullReferencerOutSide).
 	self assert: 12 equals: self c1FullReferencerOutSide queryAllOutgoingInvocations withoutSelfLoops size.
 	self deny: ((self c1FullReferencerOutSide queryAllOutgoingInvocations withoutSelfLoops atScope: FAMIXType) includes: self c1FullReferencerOutSide)
 ]
@@ -1950,7 +1950,7 @@ FAMIXClassNavigationChefTest >> testUnion [
 FAMIXClassNavigationChefTest >> testWithin [
 	| set |
 	self assert: (self c1FullReferencerOutSide queryAllOutgoing within: self packageP2InteractedReferencerReferee) size equals: 1.
-	self assert: (((self c1FullReferencerOutSide queryAllOutgoing within: self packageP2InteractedReferencerReferee) atScope: FAMIXType) includes: self c3ReferencerInSideRefereeOutSide).
+	self assert: (((self c1FullReferencerOutSide queryAllOutgoing within: self packageP2InteractedReferencerReferee) atScope: FmxNGTType) includes: self c3ReferencerInSideRefereeOutSide).
 	self assert: (self c1FullReferencerOutSide queryAllOutgoingInvocations within: self c13FullRefereeInSideOutSide) opposites size equals: 3.
 	set := Set new
 		add: (self getMethod: 'm2p6c13Mtd2()' from: self c13FullRefereeInSideOutSide);
