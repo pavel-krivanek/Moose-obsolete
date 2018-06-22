@@ -43,8 +43,8 @@ FmxNGTNamed >> name [
 { #category : #accessing }
 FmxNGTNamed >> name: anObject [
 
-	<generated>
-	name := anObject
+	name := anObject.
+	self resetMooseName
 
 ]
 
@@ -63,4 +63,10 @@ FmxNGTNamed >> nameLength [
 FmxNGTNamed >> nameLength: aNumber [
 	
 	self privateState propertyAt: #nameLength put: aNumber
+]
+
+{ #category : #accessing }
+FmxNGTNamed >> resetMooseName [
+	super resetMooseName.
+	self children do: [ :entity | entity resetMooseName ]
 ]

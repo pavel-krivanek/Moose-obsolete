@@ -41,6 +41,11 @@ FmxNGStEntity class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGStEntity class >> resetMooseQueryCaches [
+	"Here do nothing. Customize in subclasses."
+]
+
 { #category : #testing }
 FmxNGStEntity >> isAccess [
 

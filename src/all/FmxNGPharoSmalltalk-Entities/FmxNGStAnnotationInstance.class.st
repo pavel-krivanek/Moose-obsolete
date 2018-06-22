@@ -63,6 +63,15 @@ FmxNGStAnnotationInstance class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGStAnnotationInstance class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	childrenSelectors := nil.
+	parentSelectors := nil.
+	allChildrenTypes := nil.
+	allParentTypes := nil
+]
+
 { #category : #'moosequery-queries-incoming' }
 FmxNGStAnnotationInstance >> incomingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.

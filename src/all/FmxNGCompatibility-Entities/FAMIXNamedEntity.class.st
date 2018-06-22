@@ -235,13 +235,6 @@ FAMIXNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 				ifFalse: [ ^ entityRescoped == myselfRescoped ] ]
 ]
 
-{ #category : #accessing }
-FAMIXNamedEntity >> name: aString [
-	name := aString.
-	self resetMooseName
-
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> namespaceScope [
 	"Empty default scope"
@@ -263,12 +256,6 @@ FAMIXNamedEntity >> outgoingTypeDeclarations [
 FAMIXNamedEntity >> packageScope [
 	"Empty default scope"
 	^ nil
-]
-
-{ #category : #'meta information' }
-FAMIXNamedEntity >> resetMooseName [
-	super resetMooseName.
-	self children do: [ :entity | entity resetMooseName ]
 ]
 
 { #category : #'moosechef-scoping-filtering' }

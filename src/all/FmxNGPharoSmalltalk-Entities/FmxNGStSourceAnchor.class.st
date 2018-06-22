@@ -120,18 +120,6 @@ FmxNGStSourceAnchor >> pharoEntity: anObject [
 ]
 
 { #category : #accessing }
-FmxNGStSourceAnchor >> source [
-	<MSEProperty: #source type: #String>
-	<MSEComment: 'Actual source code of the source entity'>
-	^ source
-]
-
-{ #category : #accessing }
-FmxNGStSourceAnchor >> source: anObject [
-	source := anObject
-]
-
-{ #category : #accessing }
 FmxNGStSourceAnchor >> sourceText [
-	^ self source
+	^ self pharoEntity ifNotNil: #definition  
 ]

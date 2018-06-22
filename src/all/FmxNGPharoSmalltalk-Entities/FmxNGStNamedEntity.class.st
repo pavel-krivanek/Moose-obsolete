@@ -68,6 +68,12 @@ FmxNGStNamedEntity class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGStNamedEntity class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	childrenSelectors := parentSelectors := allChildrenTypes := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := allOutgoingAssociationTypes := allIncomingAssociationTypes := nil
+]
+
 { #category : #testing }
 FmxNGStNamedEntity >> hasUniqueMooseNameInModel [
 	" all subclasses should call the method: 'resetMooseName' if a change causes the moosename to change "
@@ -107,13 +113,6 @@ FmxNGStNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 				ifFalse: [ ^ entityRescoped == myselfRescoped ] ]
 ]
 
-{ #category : #testing }
-FmxNGStNamedEntity >> name: aString [
-	name := aString.
-	self resetMooseName
-
-]
-
 { #category : #'moosequery-queries-incoming' }
 FmxNGStNamedEntity >> outgoingTypeDeclarations [
 	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
@@ -123,10 +122,4 @@ FmxNGStNamedEntity >> outgoingTypeDeclarations [
 	"Most of the time it will return nothing. Overide me if it need to return something"
 
 	^ {}
-]
-
-{ #category : #testing }
-FmxNGStNamedEntity >> resetMooseName [
-	super resetMooseName.
-	self children do: [ :entity | entity resetMooseName ]
 ]

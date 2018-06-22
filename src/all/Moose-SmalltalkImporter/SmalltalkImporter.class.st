@@ -471,7 +471,7 @@ SmalltalkImporter >> initialize [
 	implicitVariables := IdentityDictionary new.
 	annotationTypes := IdentityDictionary new.
 	
-"	factory := SmalltalkMetamodelFactory new.	"
+	"factory := SmalltalkMetamodelFactory new.	"
 	factory := SmalltalkCompatibilityMetamodelFactory new.
 ]
 

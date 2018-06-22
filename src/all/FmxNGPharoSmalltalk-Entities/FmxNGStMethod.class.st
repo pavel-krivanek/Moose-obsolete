@@ -55,6 +55,11 @@ FmxNGStMethod >> belongsTo [
 	^ self parentType
 ]
 
+{ #category : #accessing }
+FmxNGStMethod >> belongsTo: aType [
+	self parentType
+]
+
 { #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> category [
 	<MSEProperty: #category type: #String>
