@@ -18,7 +18,7 @@ FAMIXNavigationPluginTestsResource >> importModel [
 
 	| factory importer classes namespaces | 
 	
-	factory := SmalltalkMetamodelFactory new.
+	factory := SmalltalkCompatibilityMetamodelFactory new.
 	
 	classes := #( #( #'M1P1C1FullReferencerOutSide' #'M1P2C2ReferencerOutSideRefereeInSide'
 					#'M1P2C3ReferencerInSideRefereeOutSide'
