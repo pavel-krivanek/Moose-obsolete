@@ -50,3 +50,14 @@ FmxNGTSourceAnchor >> element: anObject [
 	element := anObject
 
 ]
+
+{ #category : #metrics }
+FmxNGTSourceAnchor >> lineCount [
+	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
+]
+
+{ #category : #accessing }
+FmxNGTSourceAnchor >> sourceText [
+
+	self explicitRequirement
+]

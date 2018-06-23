@@ -54,11 +54,6 @@ FmxNGStSourceAnchor >> initialize [
 ]
 
 { #category : #accessing }
-FmxNGStSourceAnchor >> lineCount [
-	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
-]
-
-{ #category : #accessing }
 FmxNGStSourceAnchor >> pharoEntity [
 	"pharoEntity var is a 1-element weak array"
 	

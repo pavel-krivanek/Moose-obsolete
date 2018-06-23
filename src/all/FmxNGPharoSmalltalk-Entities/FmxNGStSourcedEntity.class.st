@@ -37,34 +37,8 @@ FmxNGStSourcedEntity class >> requirements [
 ]
 
 { #category : #accessing }
-FmxNGStSourcedEntity >> containerFiles [
-	^ {  }
-]
-
-{ #category : #accessing }
-FmxNGStSourcedEntity >> hasComments [
-	^ self comments isEmpty not
-]
-
-{ #category : #accessing }
-FmxNGStSourcedEntity >> hasSourceAnchor [
-	^ self sourceAnchor notNil
-]
-
-{ #category : #accessing }
 FmxNGStSourcedEntity >> isImplicitVariable [
 	^false
-]
-
-{ #category : #accessing }
-FmxNGStSourcedEntity >> numberOfJavaNullChecks [
-	<MSEProperty: #numberOfJavaNullChecks type: #Number> <derived>
-	^self
-		lookUpPropertyNamed: #numberOfJavaNullChecks
-		computedAs: [
-			| nullCheckTextPatterns |
-			nullCheckTextPatterns := #('== null' '!= null' 'null ==' 'null !=').
-			(self sourceText allRegexMatches: ( '|' join: nullCheckTextPatterns)) size ]
 ]
 
 { #category : #accessing }
@@ -95,6 +69,6 @@ FmxNGStSourcedEntity >> sourceAnchor: aSourceAnchor [
 FmxNGStSourcedEntity >> sourceLanguage [
 	^ self declaredSourceLanguage ifNil: [
 		self mooseModel 
-			ifNil: [ FAMIXUnknownSourceLanguage new ] 
+			ifNil: [ FmxNGStUnknownSourceLanguage new ] 
 			ifNotNil: [ self mooseModel sourceLanguage ] ]
 ]

@@ -46,6 +46,11 @@ FmxNGTWithComments >> comments: anObject [
 
 ]
 
+{ #category : #testing }
+FmxNGTWithComments >> hasComments [
+	^ self comments isEmpty not
+]
+
 { #category : #accessing }
 FmxNGTWithComments >> numberOfComments [
 	<MSEProperty: #numberOfComments type: #Number>

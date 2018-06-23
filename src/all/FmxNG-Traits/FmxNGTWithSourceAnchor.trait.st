@@ -30,6 +30,11 @@ FmxNGTWithSourceAnchor classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTWithSourceAnchor >> hasSourceAnchor [
+	^ self sourceAnchor notNil
+]
+
 { #category : #accessing }
 FmxNGTWithSourceAnchor >> sourceAnchor [
 

@@ -123,16 +123,6 @@ FAMIXSourcedEntity >> fileAnchorPath: aString startPos: anInteger endPos: anothe
 				model: self mooseModel)
 ]
 
-{ #category : #'Famix-Extensions-testing' }
-FAMIXSourcedEntity >> hasComments [
-	^ self comments isEmpty not
-]
-
-{ #category : #'Famix-Extensions-testing' }
-FAMIXSourcedEntity >> hasSourceAnchor [
-	^ self sourceAnchor notNil
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXSourcedEntity >> isImplicitVariable [
 	^false
