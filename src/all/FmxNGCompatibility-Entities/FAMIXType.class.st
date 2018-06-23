@@ -68,11 +68,6 @@ FAMIXType >> addIncomingReference: aReference [
 ]
 
 { #category : #accessing }
-FAMIXType >> addMethod: aMethod [
-	methods add: aMethod
-]
-
-{ #category : #accessing }
 FAMIXType >> addOutgoingTraitUsage: aTraitUsage [
 	self outgoingTraitUsages add: aTraitUsage
 ]
@@ -80,16 +75,6 @@ FAMIXType >> addOutgoingTraitUsage: aTraitUsage [
 { #category : #accessing }
 FAMIXType >> addStructureWithDeclaredType: aStructuralEntity [
 	structuresWithDeclaredType add: aStructuralEntity
-]
-
-{ #category : #accessing }
-FAMIXType >> addSubInheritance: anInheritance [ 
-	subInheritances add: anInheritance
-]
-
-{ #category : #accessing }
-FAMIXType >> addSuperInheritance: anInheritance [ 
-	superInheritances add: anInheritance
 ]
 
 { #category : #accessing }

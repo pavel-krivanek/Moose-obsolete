@@ -37,21 +37,6 @@ FmxNGStType class >> requirements [
 ]
 
 { #category : #adding }
-FmxNGStType >> addMethod: aMethod [
-	methods add: aMethod
-]
-
-{ #category : #adding }
-FmxNGStType >> addSubInheritance: anInheritance [ 
-	subInheritances add: anInheritance
-]
-
-{ #category : #adding }
-FmxNGStType >> addSuperInheritance: anInheritance [ 
-	superInheritances add: anInheritance
-]
-
-{ #category : #adding }
 FmxNGStType >> addedMethods [
 	| inheritedMethodNames |
 	inheritedMethodNames := self inheritedMethods

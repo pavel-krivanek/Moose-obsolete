@@ -31,6 +31,11 @@ FmxNGTWithMethods classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTWithMethods >> addMethod: aMethod [
+	methods add: aMethod
+]
+
+{ #category : #accessing }
 FmxNGTWithMethods >> methods [
 
 	<generated>

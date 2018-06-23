@@ -31,6 +31,11 @@ FmxNGTWithSuperInheritances classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTWithSuperInheritances >> addSubInheritance: anInheritance [ 
+	subInheritances add: anInheritance
+]
+
+{ #category : #accessing }
 FmxNGTWithSuperInheritances >> subInheritances [
 
 	<generated>
