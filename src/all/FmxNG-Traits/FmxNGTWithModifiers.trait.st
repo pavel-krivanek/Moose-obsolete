@@ -36,6 +36,21 @@ FmxNGTWithModifiers >> addModifier: aString [
 ]
 
 { #category : #'Famix-Extensions' }
+FmxNGTWithModifiers >> bePrivate [
+	^ self isPrivate: true
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGTWithModifiers >> beProtected [
+	^ self isProtected: true
+]
+
+{ #category : #'Famix-Extensions' }
+FmxNGTWithModifiers >> bePublic [
+	^ self isPublic: true
+]
+
+{ #category : #'Famix-Extensions' }
 FmxNGTWithModifiers >> isAbstract [
 	<MSEProperty: #isAbstract type: #Boolean> <derived>
 	<MSEComment: 'Flag true for abstract entities. Language dependent.'>

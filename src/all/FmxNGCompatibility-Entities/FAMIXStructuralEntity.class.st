@@ -61,20 +61,6 @@ FAMIXStructuralEntity >> copyFrom: anEntity within: aVisitor [
 
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXStructuralEntity >> globalAccesses [
-	| attrclass globalAccesses |
-	attrclass := self belongsTo.
-	globalAccesses := Set new.
-	self
-		incomingAccesses do:
-			[:anAccess | 
-			| ent |
-			ent := anAccess accessor.
-			ent belongsTo = attrclass ifFalse: [globalAccesses add: anAccess]].
-	^globalAccesses
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXStructuralEntity >> hasDeclaredType [
 	^ self declaredType notNil
