@@ -95,11 +95,6 @@ FmxNGStAttribute >> initialize [
 ]
 
 { #category : #'Famix-Implementation' }
-FmxNGStAttribute >> isAttribute [
-	^ true
-]
-
-{ #category : #'Famix-Implementation' }
 FmxNGStAttribute >> isSharedVariable [
 
 	^ self propertyNamed: #sharedVariable ifNil: [false]
