@@ -5,10 +5,7 @@ Class {
 	#classTraits : 'FmxNGTAnnotationInstance classTrait + FmxNGTTypedAnnotationInstance classTrait + FmxNGTWithAnnotationInstanceAttributes classTrait + TDependencyQueries classTrait',
 	#classInstVars : [
 		'#childrenSelectors',
-		'#allParentTypes',
-		'#allChildrenTypes',
-		'#parentSelectors',
-		'#cVar'
+		'#parentSelectors'
 	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
@@ -58,8 +55,7 @@ FmxNGStAnnotationInstance class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
 	childrenSelectors := nil.
 	parentSelectors := nil.
-	allChildrenTypes := nil.
-	allParentTypes := nil
+
 ]
 
 { #category : #accessing }

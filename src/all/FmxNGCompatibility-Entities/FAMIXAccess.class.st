@@ -61,16 +61,6 @@ FAMIXAccess >> copyFrom: anEntity within: aVisitor [
 	self variable: (aVisitor visit: anEntity variable).
 ]
 
-{ #category : #accessing }
-FAMIXAccess >> from [
-	^ self accessor 
-]
-
-{ #category : #accessing }
-FAMIXAccess >> from: anAccessor [
-	self accessor: anAccessor 
-]
-
 { #category : #testing }
 FAMIXAccess >> isAccess [
 	^true
@@ -80,14 +70,4 @@ FAMIXAccess >> isAccess [
 FAMIXAccess >> printOn: aStream [
 	super printOn: aStream.
 	aStream nextPutAll: ' (Access)'
-]
-
-{ #category : #accessing }
-FAMIXAccess >> to [	
-	^ self variable 
-]
-
-{ #category : #accessing }
-FAMIXAccess >> to: aVariable [
-	self variable: aVariable
 ]

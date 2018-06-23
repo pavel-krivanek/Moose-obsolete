@@ -65,6 +65,16 @@ FmxNGTAccess >> accessor: anObject [
 
 ]
 
+{ #category : #accessing }
+FmxNGTAccess >> from [
+	^ self accessor 
+]
+
+{ #category : #accessing }
+FmxNGTAccess >> from: anAccessor [
+	self accessor: anAccessor 
+]
+
 { #category : #testing }
 FmxNGTAccess >> isAccess [
 
@@ -103,6 +113,16 @@ FmxNGTAccess >> isWrite: anObject [
 	<generated>
 	isWrite := anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTAccess >> to [	
+	^ self variable 
+]
+
+{ #category : #accessing }
+FmxNGTAccess >> to: aVariable [
+	self variable: aVariable
 ]
 
 { #category : #accessing }

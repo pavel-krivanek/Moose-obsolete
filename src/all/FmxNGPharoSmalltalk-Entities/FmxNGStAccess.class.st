@@ -35,23 +35,3 @@ FmxNGStAccess class >> requirements [
 	<generated>
 	^ {  }
 ]
-
-{ #category : #'instance creation' }
-FmxNGStAccess >> from [
-	^ self accessor 
-]
-
-{ #category : #'instance creation' }
-FmxNGStAccess >> from: anAccessor [
-	self accessor: anAccessor 
-]
-
-{ #category : #'instance creation' }
-FmxNGStAccess >> to [	
-	^ self variable 
-]
-
-{ #category : #'instance creation' }
-FmxNGStAccess >> to: aVariable [
-	self variable: aVariable
-]

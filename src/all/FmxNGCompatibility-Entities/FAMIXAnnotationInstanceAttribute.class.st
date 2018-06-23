@@ -101,7 +101,7 @@ FAMIXAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 	allParentTypes := nil
 ]
 
-{ #category : #accessing }
+{ #category : #'as yet unclassified' }
 FAMIXAnnotationInstanceAttribute >> name [ 
 	^ self annotationTypeAttribute notNil 
 		ifTrue: [ self annotationTypeAttribute name ]
