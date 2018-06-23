@@ -7,7 +7,7 @@ A class is typically scoped in a namespace. To model nested or anonymous classes
 "
 Trait {
 	#name : #FmxNGTClass,
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Class'
 }
 
 { #category : #meta }
