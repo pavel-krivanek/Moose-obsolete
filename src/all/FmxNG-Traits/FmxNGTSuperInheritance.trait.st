@@ -54,3 +54,13 @@ FmxNGTSuperInheritance >> superclass: anObject [
 	superclass := anObject
 
 ]
+
+{ #category : #accessing }
+FmxNGTSuperInheritance >> to [
+	^ self superclass 
+]
+
+{ #category : #accessing }
+FmxNGTSuperInheritance >> to: aSuperclass [
+	self superclass: aSuperclass
+]

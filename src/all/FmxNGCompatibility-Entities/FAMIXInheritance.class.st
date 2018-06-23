@@ -50,16 +50,6 @@ FAMIXInheritance >> copyFrom: anEntity within: aVisitor [
 	self subclass: (aVisitor visit: anEntity subclass).
 ]
 
-{ #category : #accessing }
-FAMIXInheritance >> from [
-	^ self subclass 
-]
-
-{ #category : #accessing }
-FAMIXInheritance >> from: aSubclass [
-	self subclass: aSubclass 
-]
-
 { #category : #'Moose-Hismo' }
 FAMIXInheritance >> historicalUniqueName [
 	
@@ -82,14 +72,4 @@ FAMIXInheritance >> mooseNameOn: aStream [
 FAMIXInheritance >> printOn: aStream [
 	super printOn: aStream.
 	aStream nextPutAll: ' (Inheritance)'
-]
-
-{ #category : #accessing }
-FAMIXInheritance >> to [
-	^ self superclass 
-]
-
-{ #category : #accessing }
-FAMIXInheritance >> to: aSuperclass [
-	self superclass: aSuperclass
 ]

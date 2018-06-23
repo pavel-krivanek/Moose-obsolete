@@ -35,23 +35,3 @@ FmxNGStInheritance class >> requirements [
 	<generated>
 	^ {  }
 ]
-
-{ #category : #'instance creation' }
-FmxNGStInheritance >> from [
-	^ self subclass 
-]
-
-{ #category : #'instance creation' }
-FmxNGStInheritance >> from: aSubclass [
-	self subclass: aSubclass 
-]
-
-{ #category : #'instance creation' }
-FmxNGStInheritance >> to [
-	^ self superclass 
-]
-
-{ #category : #'instance creation' }
-FmxNGStInheritance >> to: aSuperclass [
-	self superclass: aSuperclass
-]
