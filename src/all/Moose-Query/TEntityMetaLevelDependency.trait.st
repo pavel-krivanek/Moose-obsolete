@@ -63,7 +63,7 @@ TEntityMetaLevelDependency classSide >> incomingAssociationTypes [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> incomingMSEProperties [
-	^ self explicitRequirement
+	^ #()
 ]
 
 { #category : #accessing }
@@ -80,7 +80,7 @@ TEntityMetaLevelDependency classSide >> outgoingMSEProperties [
 
 { #category : #'Moose-Query-Extensions' }
 TEntityMetaLevelDependency classSide >> parentSelectors [
-	^ self explicitRequirement
+	^ {}
 ]
 
 { #category : #accessing }

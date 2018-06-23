@@ -66,11 +66,6 @@ FAMIXAnnotationInstanceAttribute class >> generatedTraitNames [
 ]
 
 { #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstanceAttribute class >> incomingMSEProperties [
-	^ #()
-]
-
-{ #category : #'Moose-Query-Extensions' }
 FAMIXAnnotationInstanceAttribute class >> parentSelector [
 	self 
 		deprecated: 'Use parentSelectors instead'

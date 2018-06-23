@@ -42,11 +42,6 @@ FmxNGStAnnotationInstance class >> generatedTraitNames [
 ]
 
 { #category : #'Moose-Query' }
-FmxNGStAnnotationInstance class >> incomingMSEProperties [
-	^ #()
-]
-
-{ #category : #'Moose-Query' }
 FmxNGStAnnotationInstance class >> parentSelectors [
 	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]

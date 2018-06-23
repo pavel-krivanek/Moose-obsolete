@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStSourcedEntity,
 	#superclass : #FmxNGStEntity,
-	#traits : 'FmxNGTWithComments + FmxNGTWithFiles + FmxNGTWithSourceAnchor + FmxNGTWithSourceLanguage + TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'FmxNGTWithComments classTrait + FmxNGTWithFiles classTrait + FmxNGTWithSourceAnchor classTrait + FmxNGTWithSourceLanguage classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
+	#traits : 'FmxNGTWithComments + FmxNGTWithSourceAnchor + FmxNGTWithSourceLanguage + TEntityMetaLevelDependency + TDependencyQueries',
+	#classTraits : 'FmxNGTWithComments classTrait + FmxNGTWithSourceAnchor classTrait + FmxNGTWithSourceLanguage classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -26,7 +26,7 @@ FmxNGStSourcedEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStSourcedEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithComments FmxNGTWithFiles FmxNGTWithSourceAnchor FmxNGTWithSourceLanguage)
+	^ #(FmxNGTWithComments FmxNGTWithSourceAnchor FmxNGTWithSourceLanguage)
 ]
 
 { #category : #meta }

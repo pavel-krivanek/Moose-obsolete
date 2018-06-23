@@ -161,7 +161,7 @@ FmxNGStMethod >> invokedBehaviours [
 
 { #category : #'Famix-Extensions' }
 FmxNGStMethod >> invokedMethods [
-	<MSEProperty: #invokedMethods type: #FAMIXMethod> <derived> <multivalued>
+	<MSEProperty: #invokedMethods type: #FmxNGStMethod> <derived> <multivalued>
 	<MSEComment: 'The methods invoked by the receiver'>
 	
 	^ self invokedBehaviours select: [ :each | each isMethod ]

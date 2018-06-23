@@ -75,8 +75,7 @@ FmxNGStType >> allSubclassesWithoutAliasesDo: aBlock [
 { #category : #adding }
 FmxNGStType >> allSuperclassesDo: aBlock [
 	self allSuperclassesWithoutAliasesDo: aBlock.
-	self mooseModel sourceLanguage isC
-		ifTrue: [ self typeAliases do: [ :each | each allSuperclassesWithoutAliasesDo: aBlock ] ]
+
 ]
 
 { #category : #adding }

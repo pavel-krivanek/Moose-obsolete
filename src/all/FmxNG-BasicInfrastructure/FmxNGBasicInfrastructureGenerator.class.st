@@ -41,7 +41,6 @@ FmxNGBasicInfrastructureGenerator >> defineHierarchy [
 	sourcedEntity --|> #TWithSourceAnchor.
 	sourcedEntity --|> #TWithComments.
 	sourcedEntity --|> #TWithSourceLanguage.
-	sourcedEntity --|> #TWithFiles.
 	
 	association --|> sourcedEntity.
 	association --|> #TAssociation.
