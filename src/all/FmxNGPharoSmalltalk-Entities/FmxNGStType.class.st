@@ -70,14 +70,6 @@ FmxNGStType >> allSuperclassesWithoutAliasesDo: aBlock [
 ]
 
 { #category : #adding }
-FmxNGStType >> allTypeAliases [
-	| all |
-	all := OrderedCollection withAll: self typeAliases.
-	self typeAliases do: [:each | all addAll: each allTypeAliases ].
-	^ all
-]
-
-{ #category : #adding }
 FmxNGStType >> anySuperclass [
 	"Mircea: this used to return interfaces too. fixed now. 
 	also added superclass that does the same thing"

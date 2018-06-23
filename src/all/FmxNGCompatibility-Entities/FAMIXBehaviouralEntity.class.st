@@ -262,20 +262,6 @@ FAMIXBehaviouralEntity >> numberOfOutgoingInvocations [
 ]
 
 { #category : #'Famix-Extensions' }
-FAMIXBehaviouralEntity >> numberOfParameters [
-	<MSEProperty: #numberOfParameters type: #Number>
-	<MSEComment: 'The number of parameters in a method'>
-	<derived>
-	^ self lookUpPropertyNamed: #numberOfParameters computedAs: [ self parameters size ]
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXBehaviouralEntity >> numberOfParameters: aNumber [
-
-	self privateState propertyAt: #numberOfParameters put: aNumber
-]
-
-{ #category : #'Famix-Extensions' }
 FAMIXBehaviouralEntity >> numberOfStatements [
 	<MSEProperty: #numberOfStatements type: #Number>
 	<MSEComment: 'The number of statements in a method'>

@@ -75,11 +75,46 @@ FmxNGTMethod >> hasClassScope: anObject [
 
 ]
 
+{ #category : #accessing }
+FmxNGTMethod >> isConstant [
+	<MSEProperty: #isConstant type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method simply returns a constant'>
+	^#constant = self kind
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> isConstructor [
+	<MSEProperty: #isConstructor type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method is a constructor of the class'>
+
+	^ #constructor = self kind or: [ 
+		self privateState propertyAt: #isConstructor ifAbsent: [false] ]
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> isConstructor: aBoolean [
+	aBoolean 
+		ifTrue: [ self kind: #constructor ]
+		ifFalse: [ 
+			self isConstructor ifTrue: [ self kind: nil ] ]
+]
+
 { #category : #testing }
 FmxNGTMethod >> isMethod [
 
 	<generated>
 	^ true
+]
+
+{ #category : #accessing }
+FmxNGTMethod >> isSetter [
+	<MSEProperty: #isSetter type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method is a setter on an attribute'>
+
+	^#setter = self kind
 ]
 
 { #category : #accessing }

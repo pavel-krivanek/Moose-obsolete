@@ -81,7 +81,7 @@ FmxNGStMethod >> category: aString [
 FmxNGStMethod >> compiledMethod [
 	"Return the compiled method associated to the receiver or nil"
 	
-	^ self smalltalkClass  compiledMethodAt: self name asSymbol
+	^ self smalltalkClass compiledMethodAt: self name asSymbol
 	
 	
 ]
@@ -110,12 +110,12 @@ FmxNGStMethod >> cyclomaticComplexity [
 	<MSEComment: 'The number of linear-independent paths through a method.'>
 	^ self
 		lookUpPropertyNamed: #cyclomaticComplexity
-		computedAs: [ self mooseModel isSmalltalk
-				ifTrue: [ | parser |
-					parser := RBVisitorForFAMIXMetrics new.
-					parser processMethod: self usingImporter: nil inModel: nil.
-					parser cyclomaticNumber2 ]
-				ifFalse: [ self notExistentMetricValue ] ]
+		computedAs: [ 
+			| parser |
+			parser := RBVisitorForFAMIXMetrics new.
+			parser processMethod: self usingImporter: nil inModel: nil.
+			parser cyclomaticNumber2 ]
+			
 ]
 
 { #category : #'Famix-Extensions-private' }
@@ -175,32 +175,6 @@ FmxNGStMethod >> isCalledInternally [
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isConstant [
-	<MSEProperty: #isConstant type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method simply returns a constant'>
-	^#constant = self kind
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isConstructor [
-	<MSEProperty: #isConstructor type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method is a constructor of the class'>
-
-	^ #constructor = self kind or: [ 
-		self privateState propertyAt: #isConstructor ifAbsent: [false] ]
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isConstructor: aBoolean [
-	aBoolean 
-		ifTrue: [ self kind: #constructor ]
-		ifFalse: [ 
-			self isConstructor ifTrue: [ self kind: nil ] ]
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> isExtension [
 	^self belongsTo packageScope ~~ self packageScope.
 ]
@@ -240,12 +214,6 @@ FmxNGStMethod >> isJUnit4Test [
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isMethod [
-
-	^ true
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> isOverriden [
 	<MSEProperty: #isOverriden type: #Boolean>
 	<derived>
@@ -271,15 +239,6 @@ FmxNGStMethod >> isPureAccessor [
 	^self isGetter
 		or: [self isSetter
 		or: [self privateState propertyAt: #isPureAccessor ifAbsent: [false]]]
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isSetter [
-	<MSEProperty: #isSetter type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method is a setter on an attribute'>
-
-	^#setter = self kind
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }
@@ -365,13 +324,11 @@ FmxNGStMethod >> numberOfConditionals [
 	^ self
 		lookUpPropertyNamed: #numberOfConditionals
 		computedAs: [ 
-			self mooseModel isSmalltalk
-				ifTrue: [ 
-					| parser |
-					parser := RBVisitorForFAMIXMetrics new.
-					parser processMethod: self usingImporter: nil inModel: nil.
-					parser numberOfConditionals ]
-				ifFalse: [ self notExistentMetricValue ] ]
+			| parser |
+			parser := RBVisitorForFAMIXMetrics new.
+			parser processMethod: self usingImporter: nil inModel: nil.
+			parser numberOfConditionals ]
+			
 ]
 
 { #category : #'Famix-Extensions-private' }
@@ -386,9 +343,7 @@ FmxNGStMethod >> numberOfLinesOfCode [
 	<MSEComment: 'The number of lines of code in a method.'>
 	^ self
 		lookUpPropertyNamed: #numberOfLinesOfCode
-		computedAs: [ self mooseModel isSmalltalk
-				ifTrue: [ self computeNumberOfLinesOfCodeIfSmalltalk ]
-				ifFalse: [ self computeNumberOfLinesOfCode ] ]
+		computedAs: [ self computeNumberOfLinesOfCodeIfSmalltalk ]
 ]
 
 { #category : #'Famix-Extensions-private' }
@@ -405,13 +360,11 @@ FmxNGStMethod >> numberOfMessageSends [
 	^ self
 		lookUpPropertyNamed: #numberOfMessageSends
 		computedAs: [ 
-			self mooseModel isSmalltalk
-				ifTrue: [ 
-					| parser |
-					parser := RBVisitorForFAMIXMetrics new.
-					parser processMethod: self usingImporter: nil inModel: nil.
-					parser numberOfMessageSends ]
-				ifFalse: [ self notExistentMetricValue ] ]
+			| parser |
+			parser := RBVisitorForFAMIXMetrics new.
+			parser processMethod: self usingImporter: nil inModel: nil.
+			parser numberOfMessageSends ]
+				
 ]
 
 { #category : #'Famix-Extensions-private' }
@@ -426,31 +379,16 @@ FmxNGStMethod >> numberOfOutgoingInvocations [
 ]
 
 { #category : #'Famix-Extensions-private' }
-FmxNGStMethod >> numberOfParameters [
-	<MSEProperty: #numberOfParameters type: #Number>
-	<MSEComment: 'The number of parameters in a method'>
-	<derived>
-	^ self lookUpPropertyNamed: #numberOfParameters computedAs: [ self parameters size ]
-]
-
-{ #category : #'Famix-Extensions-private' }
-FmxNGStMethod >> numberOfParameters: aNumber [
-
-	self privateState propertyAt: #numberOfParameters put: aNumber
-]
-
-{ #category : #'Famix-Extensions-private' }
 FmxNGStMethod >> numberOfStatements [
 	<MSEProperty: #numberOfStatements type: #Number>
 	<MSEComment: 'The number of statements in a method'>
 	^ self
 		lookUpPropertyNamed: #numberOfStatements
-		computedAs: [ self mooseModel isSmalltalk
-				ifTrue: [ | parser |
-					parser := RBVisitorForFAMIXMetrics new.
-					parser processMethod: self usingImporter: nil inModel: nil.
-					parser numberOfStatements ]
-				ifFalse: [ self notExistentMetricValue ] ]
+		computedAs: [
+			| parser |
+			parser := RBVisitorForFAMIXMetrics new.
+			parser processMethod: self usingImporter: nil inModel: nil.
+			parser numberOfStatements ]
 ]
 
 { #category : #'Famix-Extensions-private' }

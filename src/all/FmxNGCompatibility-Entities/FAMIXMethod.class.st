@@ -234,32 +234,6 @@ FAMIXMethod >> isClassInitializer [
 		or: [ self privateState propertyAt: #isClassInitializer ifAbsent: [ false ] ]
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXMethod >> isConstant [
-	<MSEProperty: #isConstant type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method simply returns a constant'>
-	^#constant = self kind
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXMethod >> isConstructor [
-	<MSEProperty: #isConstructor type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method is a constructor of the class'>
-
-	^ #constructor = self kind or: [ 
-		self privateState propertyAt: #isConstructor ifAbsent: [false] ]
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXMethod >> isConstructor: aBoolean [
-	aBoolean 
-		ifTrue: [ self kind: #constructor ]
-		ifFalse: [ 
-			self isConstructor ifTrue: [ self kind: nil ] ]
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXMethod >> isDetectedGetter [
 	^ self outgoingInvocations isEmpty and: [ 
@@ -322,12 +296,6 @@ FAMIXMethod >> isJUnit4Test [
 	^ self isAnnotatedWith: 'Test'
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXMethod >> isMethod [
-
-	^ true
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXMethod >> isOverriden [
 	<MSEProperty: #isOverriden type: #Boolean>
@@ -354,15 +322,6 @@ FAMIXMethod >> isPureAccessor [
 	^self isGetter
 		or: [self isSetter
 		or: [self privateState propertyAt: #isPureAccessor ifAbsent: [false]]]
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXMethod >> isSetter [
-	<MSEProperty: #isSetter type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method is a setter on an attribute'>
-
-	^#setter = self kind
 ]
 
 { #category : #'Famix-Extensions-InvocationTesting' }

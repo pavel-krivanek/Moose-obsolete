@@ -151,14 +151,6 @@ FAMIXType >> allSuperclassesWithoutAliasesDo: aBlock [
 ]
 
 { #category : #'Famix-Implementation' }
-FAMIXType >> allTypeAliases [
-	| all |
-	all := OrderedCollection withAll: self typeAliases.
-	self typeAliases do: [:each | all addAll: each allTypeAliases ].
-	^ all
-]
-
-{ #category : #'Famix-Implementation' }
 FAMIXType >> anySuperclass [
 	"Mircea: this used to return interfaces too. fixed now. 
 	also added superclass that does the same thing"

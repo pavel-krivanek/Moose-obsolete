@@ -31,6 +31,14 @@ FmxNGTWithTypeAliases classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTWithTypeAliases >> allTypeAliases [
+	| all |
+	all := OrderedCollection withAll: self typeAliases.
+	self typeAliases do: [:each | all addAll: each allTypeAliases ].
+	^ all
+]
+
+{ #category : #accessing }
 FmxNGTWithTypeAliases >> typeAliases [
 
 	<generated>
