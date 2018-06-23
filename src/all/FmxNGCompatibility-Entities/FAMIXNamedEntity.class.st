@@ -190,21 +190,10 @@ FAMIXNamedEntity >> copyFrom: anEntity within: aVisitor [
 
 ]
 
-{ #category : #testing }
-FAMIXNamedEntity >> hasUniqueMooseNameInModel [
-	" all subclasses should call the method: 'resetMooseName' if a change causes the moosename to change "
-	^true
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> methodScope [
 	"Empty default scope"
 	^ nil
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXNamedEntity >> mooseNameOn: stream [
-	self name ifNotNil: [ :n | stream nextPutAll: n ]
 ]
 
 { #category : #'moosechef-scoping-filtering' }

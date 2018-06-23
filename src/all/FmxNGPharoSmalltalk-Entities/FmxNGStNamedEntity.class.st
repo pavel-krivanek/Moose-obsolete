@@ -75,17 +75,6 @@ FmxNGStNamedEntity class >> resetMooseQueryCaches [
 ]
 
 { #category : #testing }
-FmxNGStNamedEntity >> hasUniqueMooseNameInModel [
-	" all subclasses should call the method: 'resetMooseName' if a change causes the moosename to change "
-	^true
-]
-
-{ #category : #testing }
-FmxNGStNamedEntity >> mooseNameOn: stream [
-	self name ifNotNil: [ :n | stream nextPutAll: n ]
-]
-
-{ #category : #testing }
 FmxNGStNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 	"checks whether receiver is equal to anEntity at the given scope.
 	  For example, a class could be equal to a method at the packageScope, i.e. they belong to the same package.

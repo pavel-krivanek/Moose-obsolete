@@ -31,6 +31,17 @@ FmxNGTNamed classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #testing }
+FmxNGTNamed >> hasUniqueMooseNameInModel [
+	" all subclasses should call the method: 'resetMooseName' if a change causes the moosename to change "
+	^true
+]
+
+{ #category : #printing }
+FmxNGTNamed >> mooseNameOn: stream [
+	self name ifNotNil: [ :n | stream nextPutAll: n ]
+]
+
 { #category : #accessing }
 FmxNGTNamed >> name [
 
