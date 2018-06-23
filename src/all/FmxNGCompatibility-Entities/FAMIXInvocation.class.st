@@ -63,16 +63,6 @@ FAMIXInvocation >> copyFrom: anEntity within: aVisitor [
 	anEntity candidates do: [ :c | self addCandidate: (aVisitor visit: c) ]
 ]
 
-{ #category : #accessing }
-FAMIXInvocation >> from [
-	^ self sender
-]
-
-{ #category : #accessing }
-FAMIXInvocation >> from: aSender [
-	self sender: aSender
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXInvocation >> getReceivingFAMIXClass [
 	|tmpReceiver|
@@ -168,14 +158,4 @@ FAMIXInvocation >> receiverSourceCode: aString [
 	self
 		deprecated:
 			'The source code of the receiver should not be saved as a property. Instead access it via the receiver entity and it should be created as a sourceAnchor in the receiver.'
-]
-
-{ #category : #accessing }
-FAMIXInvocation >> to [
-	^ self candidates
-]
-
-{ #category : #accessing }
-FAMIXInvocation >> to: aCollCandidates [
-	self candidates: aCollCandidates 
 ]

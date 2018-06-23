@@ -44,6 +44,16 @@ FmxNGTReference classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #accessing }
+FmxNGTReference >> from [
+	^ self source. 
+]
+
+{ #category : #accessing }
+FmxNGTReference >> from: aSource [
+	self source: aSource. 
+]
+
 { #category : #testing }
 FmxNGTReference >> isReference [
 
@@ -85,4 +95,14 @@ FmxNGTReference >> target: anObject [
 	<generated>
 	target := anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTReference >> to [
+	^ self target
+]
+
+{ #category : #accessing }
+FmxNGTReference >> to: aTarget [
+	self target: aTarget
 ]

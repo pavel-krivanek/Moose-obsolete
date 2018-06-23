@@ -37,16 +37,6 @@ FmxNGStInvocation class >> requirements [
 ]
 
 { #category : #'instance creation' }
-FmxNGStInvocation >> from [
-	^ self sender
-]
-
-{ #category : #'instance creation' }
-FmxNGStInvocation >> from: aSender [
-	self sender: aSender
-]
-
-{ #category : #'instance creation' }
 FmxNGStInvocation >> getReceivingFAMIXClass [
 	|tmpReceiver|
 	"return the FAMIXClass of the receiver. If the receiver is a FAMIXClass, this one is returned. If it is self or super, the corresponding FAMIXClass is returned. The receiver may not be nil"
@@ -79,14 +69,4 @@ FmxNGStInvocation >> isASureInvocation [
 	invoRVar := self receiver.
 	^(invoRVar notNil) and: 
 			[invoRVar class = FmxNGStClass or: [invoRVar isImplicitVariable and: [invoRVar isSelf or: [invoRVar isSuper]]]]
-]
-
-{ #category : #'instance creation' }
-FmxNGStInvocation >> to [
-	^ self candidates
-]
-
-{ #category : #'instance creation' }
-FmxNGStInvocation >> to: aCollCandidates [
-	self candidates: aCollCandidates 
 ]

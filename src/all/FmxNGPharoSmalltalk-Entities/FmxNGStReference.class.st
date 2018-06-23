@@ -40,23 +40,3 @@ FmxNGStReference class >> requirements [
 FmxNGStReference class >> source: source target: target [
 	^ self new source: source; target: target
 ]
-
-{ #category : #'instance creation' }
-FmxNGStReference >> from [
-	^ self source. 
-]
-
-{ #category : #'instance creation' }
-FmxNGStReference >> from: aSource [
-	self source: aSource . 
-]
-
-{ #category : #'instance creation' }
-FmxNGStReference >> to [
-	^ self target
-]
-
-{ #category : #'instance creation' }
-FmxNGStReference >> to: aTarget [
-	self target: aTarget
-]

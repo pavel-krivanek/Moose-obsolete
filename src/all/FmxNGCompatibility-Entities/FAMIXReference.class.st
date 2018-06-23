@@ -55,16 +55,6 @@ FAMIXReference >> copyFrom: anEntity within: aVisitor [
 	self target: (aVisitor visit: anEntity target).
 ]
 
-{ #category : #accessing }
-FAMIXReference >> from [
-	^ self source. 
-]
-
-{ #category : #accessing }
-FAMIXReference >> from: aSource [
-	self source: aSource . 
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXReference >> mooseNameOn: aStream [
 	"aStream nextPutAll: 'Reference'."
@@ -78,14 +68,4 @@ FAMIXReference >> mooseNameOn: aStream [
 FAMIXReference >> printOn: aStream [
 	super printOn: aStream.
 	aStream nextPutAll: ' (Reference)'
-]
-
-{ #category : #accessing }
-FAMIXReference >> to [
-	^ self target
-]
-
-{ #category : #accessing }
-FAMIXReference >> to: aTarget [
-	self target: aTarget
 ]

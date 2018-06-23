@@ -62,6 +62,16 @@ FmxNGTInvocation >> candidates: anObject [
 
 ]
 
+{ #category : #accessing }
+FmxNGTInvocation >> from [
+	^ self sender
+]
+
+{ #category : #accessing }
+FmxNGTInvocation >> from: aSender [
+	self sender: aSender
+]
+
 { #category : #testing }
 FmxNGTInvocation >> isInvocation [
 
@@ -101,4 +111,14 @@ FmxNGTInvocation >> sender: anObject [
 	<generated>
 	sender := anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTInvocation >> to [
+	^ self candidates
+]
+
+{ #category : #accessing }
+FmxNGTInvocation >> to: aCollCandidates [
+	self candidates: aCollCandidates 
 ]
