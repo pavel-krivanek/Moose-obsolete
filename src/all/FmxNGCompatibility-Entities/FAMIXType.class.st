@@ -426,6 +426,7 @@ FAMIXType >> incomingAccessesGroup [
 
 { #category : #'moosequery-queries-incoming' }
 FAMIXType >> incomingTypeDeclarations [
+
 	^ self structuresWithDeclaredType , self behavioursWithDeclaredType collect: [ :var | MooseChefTypeDeclarationAssociation newFrom: var to: self ]
 ]
 

@@ -88,7 +88,7 @@ TDependencyQueries >> incomingTypeDeclarations [
 	
 	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
 
-	^ self explicitRequirement
+	^ {}
 ]
 
 { #category : #'moosequery-queries-outgoing' }
@@ -97,7 +97,7 @@ TDependencyQueries >> outgoingTypeDeclarations [
 	
 	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
 
-	^ self explicitRequirement
+	^ {}
 ]
 
 { #category : #'moosequery-queries-generic' }

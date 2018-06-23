@@ -154,11 +154,6 @@ FAMIXBehaviouralEntity >> hasEmptyBody [
 	^ self numberOfAccesses = 0 and: [ self numberOfOutgoingInvocations = 0 ]
 ]
 
-{ #category : #'moosequery-queries-incoming' }
-FAMIXBehaviouralEntity >> incomingTypeDeclarations [
-	^ {}
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXBehaviouralEntity >> invokedBehaviours [
 	^ self queryAllOutgoingInvocations opposites

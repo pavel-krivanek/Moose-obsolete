@@ -72,11 +72,6 @@ FAMIXAnnotationInstance class >> incomingMSEProperties [
 ]
 
 { #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstance class >> outgoingMSEProperties [
-	^ #()
-]
-
-{ #category : #'Moose-Query-Extensions' }
 FAMIXAnnotationInstance class >> parentSelector [
 	self 
 		deprecated: 'Use parentSelectors instead'
@@ -117,15 +112,6 @@ FAMIXAnnotationInstance >> belongsTo [
 	^ self annotatedEntity
 ]
 
-{ #category : #'moosequery-queries-incoming' }
-FAMIXAnnotationInstance >> incomingTypeDeclarations [
-	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	^ {}
-]
-
 { #category : #accessing }
 FAMIXAnnotationInstance >> mooseNameOn: aStream [
 	self annotationType notNil ifTrue: [
@@ -147,13 +133,4 @@ FAMIXAnnotationInstance >> name [
 			stream << '@'
 				<< (self annotationType ifNil: [ super name ] ifNotNil: [ :type | type name ])
 				<< ' on ' << (self annotatedEntity ifNotNil: #name ifNil: [ 'undefined' ]) ]
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FAMIXAnnotationInstance >> outgoingTypeDeclarations [
-	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	^ {}
 ]

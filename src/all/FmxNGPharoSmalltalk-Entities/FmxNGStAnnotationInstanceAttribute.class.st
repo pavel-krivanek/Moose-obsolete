@@ -46,11 +46,6 @@ FmxNGStAnnotationInstanceAttribute class >> incomingMSEProperties [
 ]
 
 { #category : #'Moose-Query-Extensions' }
-FmxNGStAnnotationInstanceAttribute class >> outgoingMSEProperties [
-	^ #()
-]
-
-{ #category : #'Moose-Query-Extensions' }
 FmxNGStAnnotationInstanceAttribute class >> parentSelectors [
 	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
@@ -71,27 +66,9 @@ FmxNGStAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 	allParentTypes := nil
 ]
 
-{ #category : #'moosequery-queries-incoming' }
-FmxNGStAnnotationInstanceAttribute >> incomingTypeDeclarations [
-	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	^ {}
-]
-
 { #category : #accessing }
 FmxNGStAnnotationInstanceAttribute >> name [ 
 	^ self annotationTypeAttribute notNil 
 		ifTrue: [ self annotationTypeAttribute name ]
 		ifFalse: [ nil ]
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGStAnnotationInstanceAttribute >> outgoingTypeDeclarations [
-	"Should return the outgoing type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	^ {}
 ]

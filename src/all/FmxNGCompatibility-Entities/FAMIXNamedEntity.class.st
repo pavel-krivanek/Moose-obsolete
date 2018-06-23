@@ -196,17 +196,6 @@ FAMIXNamedEntity >> hasUniqueMooseNameInModel [
 	^true
 ]
 
-{ #category : #'moosequery-queries-incoming' }
-FAMIXNamedEntity >> incomingTypeDeclarations [
-	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	"Most of the time it will return nothing. Overide me if it need to return something"
-
-	^ {}
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FAMIXNamedEntity >> methodScope [
 	"Empty default scope"
@@ -239,17 +228,6 @@ FAMIXNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 FAMIXNamedEntity >> namespaceScope [
 	"Empty default scope"
 	^ nil
-]
-
-{ #category : #'moosequery-queries-outgoing' }
-FAMIXNamedEntity >> outgoingTypeDeclarations [
-	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	"Most of the time it will return nothing. Overide me if it need to return something"
-
-	^ {}
 ]
 
 { #category : #'moosechef-scoping-filtering' }

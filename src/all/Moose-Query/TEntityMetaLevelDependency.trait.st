@@ -40,7 +40,7 @@ TEntityMetaLevelDependency classSide >> childrenAccessors [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> childrenSelectors [
-	^ self explicitRequirement
+	^ {}
 ]
 
 { #category : #accessing }
@@ -75,7 +75,7 @@ TEntityMetaLevelDependency classSide >> outgoingAssociationTypes [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> outgoingMSEProperties [
-	^ self explicitRequirement
+	^ #()
 ]
 
 { #category : #'Moose-Query-Extensions' }

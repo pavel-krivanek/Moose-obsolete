@@ -80,17 +80,6 @@ FmxNGStNamedEntity >> hasUniqueMooseNameInModel [
 	^true
 ]
 
-{ #category : #'moosequery-queries-incoming' }
-FmxNGStNamedEntity >> incomingTypeDeclarations [
-	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	"Most of the time it will return nothing. Overide me if it need to return something"
-
-	^ {}
-]
-
 { #category : #testing }
 FmxNGStNamedEntity >> mooseNameOn: stream [
 	self name ifNotNil: [ :n | stream nextPutAll: n ]
@@ -111,17 +100,6 @@ FmxNGStNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 			entityRescoped isCollection
 				ifTrue: [ ^ entityRescoped includes: myselfRescoped ]
 				ifFalse: [ ^ entityRescoped == myselfRescoped ] ]
-]
-
-{ #category : #'moosequery-queries-incoming' }
-FmxNGStNamedEntity >> outgoingTypeDeclarations [
-	"Should return the incoming type declarations of the entity as MooseChefTypeDeclarationAssociation.
-	
-	typeDeclaration is a virtual association that relates a structural entity (i.e. a variable) to its type."
-
-	"Most of the time it will return nothing. Overide me if it need to return something"
-
-	^ {}
 ]
 
 { #category : #'Famix-Extensions' }

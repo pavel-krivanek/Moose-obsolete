@@ -148,11 +148,6 @@ FmxNGStMethod >> hierarchyNestingLevel: aNumber [
 	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
 ]
 
-{ #category : #'Famix-Extensions-private' }
-FmxNGStMethod >> incomingTypeDeclarations [
-	^ {}
-]
-
 { #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> initialize [
 	super initialize.
