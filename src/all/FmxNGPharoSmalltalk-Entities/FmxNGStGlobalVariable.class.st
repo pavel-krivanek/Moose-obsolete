@@ -37,6 +37,11 @@ FmxNGStGlobalVariable class >> requirements [
 ]
 
 { #category : #'moosechef-scoping-filtering' }
+FmxNGStGlobalVariable >> packageScope [
+	^ self parentPackage
+]
+
+{ #category : #'moosechef-scoping-filtering' }
 FmxNGStGlobalVariable >> typeScope [
 	"typeScope does not make sense for a global variable,
 	so we return nil"
