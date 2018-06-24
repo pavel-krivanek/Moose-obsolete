@@ -33,7 +33,7 @@ FmxNGStMethod class >> generatedTraitNames [
 FmxNGStMethod class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStClass }
 ]
 
 { #category : #meta }

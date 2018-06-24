@@ -71,7 +71,7 @@ FmxNGPharoSmalltalkGenerator >> defineClasses [
 	type := builder newClassNamed: #Type.
 	unknownSourceLanguage := builder newClassNamed: #UnknownSourceLanguage.
 	unknownVariable := builder newClassNamed: #UnknownVariable.
-	
+		
 	self defineHierarchy.
 ]
 
@@ -106,6 +106,9 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	class --|> type.
 	class --|> #TWithExceptions.
 	class --|> #TClass.
+	class --|> #TWithMethods.
+	class --|> #TWithSuperInheritances.
+	class --|> #TWithSubInheritances.
 
 	containerEntity --|> namedEntity.
 	containerEntity --|> #TWithTypes.
@@ -175,9 +178,6 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	type --|> #TReferenceable.
 	type --|> #TWithTypedStructures.
 	type --|> #TWithTypeAliases.
-	type --|> #TWithMethods.
-	type --|> #TWithSuperInheritances.
-	type --|> #TWithSubInheritances.
 	type --|> #TWithAttributes.
 	type --|> #TParameterizedTypeUser.
 
@@ -196,6 +196,7 @@ FmxNGPharoSmalltalkGenerator >> newBuilder [
 	^ (FmxNGGenerator builderWithDefinitions)
 		doNotGenerateCurrent;
 		generator: self;
+		generateImportingContext: true;
 		yourself
 		
 		

@@ -33,7 +33,7 @@ FmxNGStLocalVariable class >> generatedTraitNames [
 FmxNGStLocalVariable class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStMethod }
 ]
 
 { #category : #accessing }

@@ -36,7 +36,7 @@ FmxNGStAttribute class >> generatedTraitNames [
 FmxNGStAttribute class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStType }
 ]
 
 { #category : #'Famix-Implementation' }

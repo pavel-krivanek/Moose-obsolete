@@ -33,5 +33,5 @@ FmxNGStAnnotationType class >> generatedTraitNames [
 FmxNGStAnnotationType class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStContainerEntity }
 ]

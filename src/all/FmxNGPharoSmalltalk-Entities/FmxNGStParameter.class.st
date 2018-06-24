@@ -33,7 +33,7 @@ FmxNGStParameter class >> generatedTraitNames [
 FmxNGStParameter class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStMethod }
 ]
 
 { #category : #accessing }

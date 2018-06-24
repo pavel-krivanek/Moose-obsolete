@@ -30,6 +30,12 @@ FamixMetamodelBuilderProperty >> initialize [
 ]
 
 { #category : #printing }
+FamixMetamodelBuilderProperty >> isContainer [
+
+	^ false
+]
+
+{ #category : #printing }
 FamixMetamodelBuilderProperty >> printOn: aStream [
 
 	super printOn: aStream.

@@ -47,7 +47,7 @@ FmxNGStAnnotationInstanceAttribute class >> parentSelectors [
 FmxNGStAnnotationInstanceAttribute class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStAnnotationInstance }
 ]
 
 { #category : #'as yet unclassified' }

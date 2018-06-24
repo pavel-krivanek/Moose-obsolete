@@ -157,6 +157,14 @@ FamixMetamodelBuilder >> cleanPackage [
 		ifNotNil: [:aPackage | aPackage removeFromSystem ].
 ]
 
+{ #category : #accessing }
+FamixMetamodelBuilder >> containerRequirementsOf: aClass [
+
+	|  usedTraits |
+	usedTraits := aClass containerProperties collect: [ :e | e relation oppositeSide trait].
+	^ usedTraits flatCollect: [:aTrait | self classes select: [ :e | e hasTraitGeneralization: aTrait ]]
+]
+
 { #category : #'settings - default' }
 FamixMetamodelBuilder >> defaultBasicSuperclassName [
 
@@ -247,6 +255,8 @@ FamixMetamodelBuilder >> environment: anObject [
 { #category : #generating }
 FamixMetamodelBuilder >> generate [
 
+	self resolveRequirementsFromContainers.
+
 	self registerPackages.
 	self traits do: [ :each | each generate ] displayingProgress: 'generating traits'.
 
@@ -271,7 +281,7 @@ FamixMetamodelBuilder >> generateImportIn: contextClass [
 		source := String streamContents: [ :s |
 			s	nextPutAll: 'import'; nextPutAll: each name; cr;
 				cr;
-				tab; nextPutAll: '<generated>';
+				tab; nextPutAll: '<generated>'; cr;
 				tab; nextPutAll: '^ self import: '; nextPutAll: each fullName ].
 		 self environment compile: source in: contextClass classified: 'testing' ] 
 
@@ -283,7 +293,7 @@ FamixMetamodelBuilder >> generateImportingContext [
 	| contextClass |
 	
 	generateImportingContext ifFalse: [ ^ self ].
-	
+		
 	contextClass := self environment createImportingcontextClassNamed: self importingContextName in: self packageName.
 	
 	self generateShouldImportIn: contextClass.
@@ -304,7 +314,7 @@ FamixMetamodelBuilder >> generateShouldImportIn: contextClass [
 		source := String streamContents: [ :s |
 			s	nextPutAll: 'shouldImport'; nextPutAll: each name; cr;
 				cr;
-				tab; nextPutAll: '<generated>';
+				tab; nextPutAll: '<generated>'; cr;
 				tab; nextPutAll: '^ self shouldImport: '; nextPutAll: each fullName ].
 		 self environment compile: source in: contextClass classified: 'testing' ] 
 
@@ -453,6 +463,17 @@ FamixMetamodelBuilder >> registerPackages [
 { #category : #accessing }
 FamixMetamodelBuilder >> relations [
 	^ relations
+]
+
+{ #category : #generating }
+FamixMetamodelBuilder >> resolveRequirementsFromContainers [
+
+	self classes do: [ :each |
+		| req |
+		req := self containerRequirementsOf: each.
+		Transcript show: each; << 'requires: '; << req; cr.
+		each requires: (self containerRequirementsOf: each) ].
+
 ]
 
 { #category : #accessing }

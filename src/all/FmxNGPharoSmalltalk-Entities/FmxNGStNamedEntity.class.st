@@ -65,7 +65,7 @@ FmxNGStNamedEntity class >> parentSelectors [
 FmxNGStNamedEntity class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStNamedEntity }
 ]
 
 { #category : #'as yet unclassified' }

@@ -33,7 +33,7 @@ FmxNGStImplicitVariable class >> generatedTraitNames [
 FmxNGStImplicitVariable class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStMethod }
 ]
 
 { #category : #testing }

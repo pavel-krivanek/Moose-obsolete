@@ -33,7 +33,7 @@ FmxNGStGlobalVariable class >> generatedTraitNames [
 FmxNGStGlobalVariable class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStScopingEntity }
 ]
 
 { #category : #'moosechef-scoping-filtering' }

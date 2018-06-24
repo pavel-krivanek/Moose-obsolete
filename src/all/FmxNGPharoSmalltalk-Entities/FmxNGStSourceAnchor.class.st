@@ -44,7 +44,7 @@ FmxNGStSourceAnchor class >> parentTypes [
 FmxNGStSourceAnchor class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStSourcedEntity }
 ]
 
 { #category : #initialization }

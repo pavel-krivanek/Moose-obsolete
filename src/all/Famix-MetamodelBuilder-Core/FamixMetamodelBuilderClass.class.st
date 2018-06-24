@@ -112,6 +112,12 @@ FamixMetamodelBuilderClass >> classGeneralization: anObject [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilderClass >> containerProperties [
+
+	^ (self traitGeneralizations flatCollect: #properties) select: #isContainer
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilderClass >> generalization: anObject [
 
 	anObject isSymbol

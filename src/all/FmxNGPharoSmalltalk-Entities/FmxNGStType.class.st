@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStType,
 	#superclass : #FmxNGStContainerEntity,
-	#traits : 'FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
-	#classTraits : 'FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
+	#traits : 'FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
+	#classTraits : 'FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -26,14 +26,14 @@ FmxNGStType class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStType class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
+	^ #(FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
 ]
 
 { #category : #meta }
 FmxNGStType class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FmxNGStContainerEntity }
 ]
 
 { #category : #'Famix-Extensions' }
