@@ -46,42 +46,6 @@ FmxNGStType >> addedMethods [
 ]
 
 { #category : #adding }
-FmxNGStType >> allSubclassesDo: aBlock [
-	self allSubclassesWithoutAliasesDo: aBlock.
-	self typeAliases do: [ :each | each allSubclassesWithoutAliasesDo: aBlock ]
-]
-
-{ #category : #adding }
-FmxNGStType >> allSubclassesWithoutAliasesDo: aBlock [
-	self subInheritances do: [ :each | aBlock value: each subclass ].
-	self subInheritances do: [ :each | each subclass allSubclassesDo: aBlock ]
-]
-
-{ #category : #adding }
-FmxNGStType >> allSuperclassesDo: aBlock [
-	self allSuperclassesWithoutAliasesDo: aBlock.
-
-]
-
-{ #category : #adding }
-FmxNGStType >> allSuperclassesWithoutAliasesDo: aBlock [
-	superInheritances do: [:each | aBlock value: each superclass].
-	superInheritances do: [:each | each superclass allSuperclassesDo: aBlock]
-]
-
-{ #category : #adding }
-FmxNGStType >> anySuperclass [
-	"Mircea: this used to return interfaces too. fixed now. 
-	also added superclass that does the same thing"
-
-	self
-		allSuperclassesDo: [ :each | 
-			each isInterface
-				ifFalse: [ ^ each ] ].
-	^ nil
-]
-
-{ #category : #adding }
 FmxNGStType >> behavioursWithDeclaredType [
 
 	^ self structuresWithDeclaredType
@@ -151,20 +115,6 @@ FmxNGStType >> container [
 ]
 
 { #category : #adding }
-FmxNGStType >> directSubclasses [
-	"returns a collection with all subclasses of this class"
-
-	^ self subInheritances collect: [:each | each subclass]
-]
-
-{ #category : #adding }
-FmxNGStType >> directSuperclasses [
-	"returns a collection with all superclasses of this class"
-
-	^ self superInheritances collect: [:each | each superclass]
-]
-
-{ #category : #adding }
 FmxNGStType >> extendedInPackages [
 
 	^ self privateState cacheAt: #extendedInPackages
@@ -182,70 +132,10 @@ FmxNGStType >> extendedMethods [
 ]
 
 { #category : #adding }
-FmxNGStType >> fanIn [
-	<MSEProperty: #fanIn type: #Number>
-	<derived>
-	<MSEComment: 'Number of client classes'>
-
-	^self
-		lookUpPropertyNamed: #fanIn
-		computedAs: [self clientTypes size]
-]
-
-{ #category : #adding }
-FmxNGStType >> fanIn: aNumber [
-
-	self privateState propertyAt: #fanIn put: aNumber
-]
-
-{ #category : #adding }
-FmxNGStType >> fanOut [
-	<MSEProperty: #fanOut type: #Number>
-	<derived>
-	<MSEComment: 'Number of provider classes'>
-
-	^self
-		lookUpPropertyNamed: #fanOut
-		computedAs: [self providerTypes size]
-]
-
-{ #category : #adding }
-FmxNGStType >> fanOut: aNumber [
-
-	self privateState propertyAt: #fanOut put: aNumber
-]
-
-{ #category : #adding }
 FmxNGStType >> hasMethodWithSignature: aStringOrSymbol [
 	| symbol |
 	symbol := aStringOrSymbol asSymbol.
 	^self methods anySatisfy: [:each | each signature asSymbol = symbol]
-]
-
-{ #category : #adding }
-FmxNGStType >> hierarchyNestingLevel [
-	<MSEProperty: #hierarchyNestingLevel type: #Number>
-	<derived>
-	<MSEComment: 'The nesting of a class inside the hierarchy'>
-
-	^self
-		lookUpPropertyNamed: #hierarchyNestingLevel
-		computedAs:
-			[| currentMaxDepth |
-			(self directSuperclasses isEmpty or: [self isStub])
-				ifTrue: [0]
-				ifFalse:
-					[currentMaxDepth := 0.
-					self
-						allSuperclassesDo:
-							[:aClass | currentMaxDepth := currentMaxDepth max: aClass hierarchyNestingLevel].
-					currentMaxDepth + 1]]
-]
-
-{ #category : #adding }
-FmxNGStType >> hierarchyNestingLevel: aNumber [
-
-	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
 ]
 
 { #category : #adding }
@@ -274,53 +164,6 @@ FmxNGStType >> incomingAccesses [
 { #category : #adding }
 FmxNGStType >> incomingTypeDeclarations [
 	^ self structuresWithDeclaredType , self behavioursWithDeclaredType collect: [ :var | MooseChefTypeDeclarationAssociation newFrom: var to: self ]
-]
-
-{ #category : #adding }
-FmxNGStType >> inheritedAttributes [
-	| inheritedAttrs |
-	inheritedAttrs := OrderedCollection new.
-	self allSuperclassesDo: [:each | 
-			each attributes do: [:attr | 
-				attr isPrivate not ifTrue: [inheritedAttrs add: attr]]].
-	^ inheritedAttrs
-]
-
-{ #category : #adding }
-FmxNGStType >> inheritedMethods [
-	| inheritedMethods |
-	inheritedMethods := OrderedCollection new.
-	self allSuperclassesDo: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate not ifTrue: [inheritedMethods add: method]]].
-	^inheritedMethods
-]
-
-{ #category : #adding }
-FmxNGStType >> inheritedSignatures [
-	| inheritedSignatures |
-	inheritedSignatures := Set new.
-	self superclassHierarchy do: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate not ifTrue: [inheritedSignatures add: method signature]]].
-	^ inheritedSignatures
-]
-
-{ #category : #adding }
-FmxNGStType >> inheritedSignaturesToMethod [
-	| inheritedSignaturesToMethod |
-	inheritedSignaturesToMethod := Dictionary new.
-	self allSuperclassesDo: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate ifFalse: [
-					inheritedSignaturesToMethod at: method signature ifAbsentPut: [method]]]].
-	^ inheritedSignaturesToMethod
-]
-
-{ #category : #adding }
-FmxNGStType >> inheritsFrom: aClass [
-	self allSuperclassesDo: [:each | each = aClass ifTrue: [^true]].
-	^ false
 ]
 
 { #category : #adding }
@@ -360,17 +203,6 @@ FmxNGStType >> isClassSide [
 FmxNGStType >> isExtended [
 
 	^ self methods anySatisfy: [ :m| m isExtension ]
-]
-
-{ #category : #adding }
-FmxNGStType >> isHierarchyRoot [
-	^self superclassHierarchyGroup 
-		allSatisfy: [:each | each isNil or: [each isStub] ]
-]
-
-{ #category : #adding }
-FmxNGStType >> isHierarchyRootWithin: aClassGroup [
-	^(self superclassHierarchyGroup intersection: aClassGroup) isEmpty
 ]
 
 { #category : #adding }
@@ -512,43 +344,6 @@ FmxNGStType >> realType [
 ]
 
 { #category : #'Famix-Extensions' }
-FmxNGStType >> subclassHierarchy [
-	| subclasses |
-	subclasses := OrderedCollection new.
-	self allSubclassesDo: [:each | subclasses add: each].
-	^ subclasses
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> subclassHierarchyGroup [
-	<navigation: 'All subclasses'>
-	^ MooseGroup
-		withAll: self subclassHierarchy asSet
-		withDescription: 'All subclasses of ' , self mooseName
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> superclass [
-	^self anySuperclass
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> superclassHierarchy [
-	| superclasses |
-	superclasses := OrderedCollection new.
-	self allSuperclassesDo: [:each |  superclasses add: each].
-	^ superclasses
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> superclassHierarchyGroup [
-	<navigation: 'All superclasses'>
-	^ MooseGroup
-		withAll: self superclassHierarchy asSet
-		withDescription: 'All superclasses of ' , self mooseName
-]
-
-{ #category : #'Famix-Extensions' }
 FmxNGStType >> typeScope [
 	"all types are not classes. Redefined in FamixClass"
 
@@ -562,24 +357,4 @@ FmxNGStType >> understands: signature [
 	self withSuperclassesDo: [:each | 
 		(each implements: signature) ifTrue: [^true]].
 	^false
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> withSubclassHierarchy [
-	^ self subclassHierarchy 
-		addFirst: self realType;
-		addAll: self realType allTypeAliases;
-		yourself
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> withSubclassesDo: aBlock [
-	aBlock value: self.
-	self allSubclassesDo: aBlock
-]
-
-{ #category : #accessing }
-FmxNGStType >> withSuperclassesDo: aBlock [
-	aBlock value: self.
-	self allSuperclassesDo: aBlock
 ]

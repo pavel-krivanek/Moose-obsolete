@@ -3,6 +3,76 @@ Trait {
 	#category : #'FmxNG-Traits-Support'
 }
 
+{ #category : #meta }
+FmxNGTClassMetrics classSide >> annotation [
+
+	<ignoreInTraitUsers>
+	<MSEClass: #TClassMetrics super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTClassMetrics >> fanIn [
+	<MSEProperty: #fanIn type: #Number>
+	<derived>
+	<MSEComment: 'Number of client classes'>
+
+	^self
+		lookUpPropertyNamed: #fanIn
+		computedAs: [self clientTypes size]
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTClassMetrics >> fanIn: aNumber [
+
+	self privateState propertyAt: #fanIn put: aNumber
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTClassMetrics >> fanOut [
+	<MSEProperty: #fanOut type: #Number>
+	<derived>
+	<MSEComment: 'Number of provider classes'>
+
+	^self
+		lookUpPropertyNamed: #fanOut
+		computedAs: [self providerTypes size]
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTClassMetrics >> fanOut: aNumber [
+
+	self privateState propertyAt: #fanOut put: aNumber
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTClassMetrics >> hierarchyNestingLevel [
+	<MSEProperty: #hierarchyNestingLevel type: #Number>
+	<derived>
+	<MSEComment: 'The nesting of a class inside the hierarchy'>
+
+	^self
+		lookUpPropertyNamed: #hierarchyNestingLevel
+		computedAs:
+			[| currentMaxDepth |
+			(self directSuperclasses isEmpty or: [self isStub])
+				ifTrue: [0]
+				ifFalse:
+					[currentMaxDepth := 0.
+					self
+						allSuperclassesDo:
+							[:aClass | currentMaxDepth := currentMaxDepth max: aClass hierarchyNestingLevel].
+					currentMaxDepth + 1]]
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTClassMetrics >> hierarchyNestingLevel: aNumber [
+
+	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGTClassMetrics >> numberOfAbstractMethods [
 	<MSEProperty: #numberOfAbstractMethods type: #Number>

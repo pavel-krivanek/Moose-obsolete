@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStClass,
 	#superclass : #FmxNGStType,
-	#traits : 'FmxNGTClass + FmxNGTWithExceptions + FmxNGTClassMetrics + FmxNGTLCOMMetrics',
-	#classTraits : 'FmxNGTClass classTrait + FmxNGTWithExceptions classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait',
+	#traits : 'FmxNGTClass + FmxNGTWithExceptions + FmxNGTClassMetrics + FmxNGTLCOMMetrics + FmxNGTClassHierarchyNavigation',
+	#classTraits : 'FmxNGTClass classTrait + FmxNGTWithExceptions classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait + FmxNGTClassHierarchyNavigation classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 

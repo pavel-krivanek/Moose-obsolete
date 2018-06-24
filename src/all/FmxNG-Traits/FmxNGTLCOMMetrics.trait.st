@@ -3,6 +3,16 @@ Trait {
 	#category : #'FmxNG-Traits-Support'
 }
 
+{ #category : #meta }
+FmxNGTLCOMMetrics classSide >> annotation [
+
+	<ignoreInTraitUsers>
+	<MSEClass: #TLCOMMetrics super: #Trait>
+	<generated>
+	<package: #'FmxNG-Traits'>
+	^self
+]
+
 { #category : #'Famix-Extensions-metrics-support' }
 FmxNGTLCOMMetrics >> calculateLCOM2 [
 	
