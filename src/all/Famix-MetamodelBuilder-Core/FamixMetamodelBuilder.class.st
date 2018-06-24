@@ -160,9 +160,13 @@ FamixMetamodelBuilder >> cleanPackage [
 { #category : #accessing }
 FamixMetamodelBuilder >> containerRequirementsOf: aClass [
 
-	|  usedTraits |
-	usedTraits := aClass containerProperties collect: [ :e | e relation oppositeSide trait].
-	^ usedTraits flatCollect: [:aTrait | self classes select: [ :e | e hasTraitGeneralization: aTrait ]]
+	|  usedBehaviors |
+	
+	usedBehaviors := aClass containerProperties collect: [ :e | e relation oppositeSide trait].
+	^ usedBehaviors flatCollect: [:aBehavior |
+		aBehavior isMetamodelTrait
+			ifTrue: [ self classes select: [ :e | e hasTraitGeneralization: aBehavior ]]
+			ifFalse: [ {aBehavior} ]]
 ]
 
 { #category : #'settings - default' }

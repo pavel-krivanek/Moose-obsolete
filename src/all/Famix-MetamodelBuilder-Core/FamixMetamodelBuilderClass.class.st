@@ -114,7 +114,8 @@ FamixMetamodelBuilderClass >> classGeneralization: anObject [
 { #category : #accessing }
 FamixMetamodelBuilderClass >> containerProperties [
 
-	^ (self traitGeneralizations flatCollect: #properties) select: #isContainer
+	^ ((self properties) select: #isContainer),
+	((self traitGeneralizations flatCollect: #properties) select: #isContainer)
 ]
 
 { #category : #accessing }
