@@ -68,7 +68,6 @@ FmxNGTestSmalltalkGenerator >> defineClasses [
 	parameter := builder newClassNamed: #Parameter.
 	unknownVariable := builder newClassNamed: #UnknownVariable.
 	
-	self defineHierarchy.
 	self defineDependencies.
 ]
 

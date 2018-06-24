@@ -72,7 +72,6 @@ FmxNGPharoSmalltalkGenerator >> defineClasses [
 	unknownSourceLanguage := builder newClassNamed: #UnknownSourceLanguage.
 	unknownVariable := builder newClassNamed: #UnknownVariable.
 		
-	self defineHierarchy.
 ]
 
 { #category : #initialization }

@@ -63,6 +63,9 @@ FamixMetamodelGenerator class >> resetMetamodel [
 	" self resetMetamodel"
 
 	| classes tower |
+
+	FMRelationSlot allSubInstancesDo: #resetMooseProperty.
+
 	classes := self packageName asPackage definedClasses
 		select: [ :each | each inheritsFrom: MooseEntity ].
 	classes addAll: (self packageName asPackage definedClasses select: #isTrait).
@@ -71,6 +74,7 @@ FamixMetamodelGenerator class >> resetMetamodel [
 		do: [ :each | classes add: each ].
 	tower := MooseModel metaBuilder: classes.
 	self metamodel: tower metamodel.
+	
 	^ metamodel
 ]
 
@@ -105,6 +109,7 @@ FamixMetamodelGenerator >> define [
 
 	self defineTraits.
 	self defineClasses.
+	self defineHierarchy.
 	self defineProperties.
 	self defineRelations.
 	
@@ -112,6 +117,10 @@ FamixMetamodelGenerator >> define [
 
 { #category : #definition }
 FamixMetamodelGenerator >> defineClasses [
+]
+
+{ #category : #definition }
+FamixMetamodelGenerator >> defineHierarchy [
 ]
 
 { #category : #definition }
@@ -130,6 +139,7 @@ FamixMetamodelGenerator >> defineTraits [
 FamixMetamodelGenerator >> generate [
 
 	self generateWithoutCleaning.
+	self class resetMetamodel.
 ]
 
 { #category : #generation }

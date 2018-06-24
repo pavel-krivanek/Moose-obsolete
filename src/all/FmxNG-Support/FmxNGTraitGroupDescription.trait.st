@@ -60,6 +60,19 @@ FmxNGTraitGroupDescription classSide >> groupRepresentatives [
 	
 ]
 
+{ #category : #'world menu' }
+FmxNGTraitGroupDescription classSide >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: #'Famix traits groups')
+		order: 1.0; 
+		parent: #Moose;
+		label: 'Famix trait groups';
+		help: 'Famix traits groups browser';
+		icon: (MooseIcons mooseIcon scaledToSize: 16@16);
+		action:[ self openGroupsBrowser];
+		withSeparatorAfter
+]
+
 { #category : #'as yet unclassified' }
 FmxNGTraitGroupDescription classSide >> openGroupsBrowser [
 

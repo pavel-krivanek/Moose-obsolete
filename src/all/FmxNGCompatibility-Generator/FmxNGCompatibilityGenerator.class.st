@@ -178,7 +178,6 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	trait := builder newClassNamed: #Trait.
 	traitUsage := builder newClassNamed: #TraitUsage.
 
-	self defineHierarchy.
 ]
 
 { #category : #initialization }

@@ -83,7 +83,6 @@ MiniSmalltalkGenerator >> defineClasses [
 	namespace := builder newClassNamed: #Namespace.
 	package := builder newClassNamed: #Package.
 	
-	self defineHierarchy.
 ]
 
 { #category : #'instance creation' }

@@ -52,3 +52,12 @@ FmxNGBasicInfrastructureGenerator >> defineHierarchy [
 	namedEntity --|> #TNamed.
 
 ]
+
+{ #category : #definition }
+FmxNGBasicInfrastructureGenerator >> newBuilder [
+
+	^ (FmxNGGenerator builderWithDefinitions)
+		doNotGenerateCurrent;
+		generator: self;
+		yourself
+]
