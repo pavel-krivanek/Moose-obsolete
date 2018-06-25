@@ -40,3 +40,15 @@ FmxNGTClass >> isClass [
 	<generated>
 	^ true
 ]
+
+{ #category : #testing }
+FmxNGTClass >> isInterface [
+
+	^ false
+]
+
+{ #category : #testing }
+FmxNGTClass >> isTestCase [
+
+	^ false
+]
