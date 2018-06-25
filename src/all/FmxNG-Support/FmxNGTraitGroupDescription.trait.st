@@ -68,7 +68,6 @@ FmxNGTraitGroupDescription classSide >> menuCommandOn: aBuilder [
 		parent: #Moose;
 		label: 'Famix trait groups';
 		help: 'Famix traits groups browser';
-		icon: (MooseIcons mooseIcon scaledToSize: 16@16);
 		action:[ self openGroupsBrowser];
 		withSeparatorAfter
 ]
