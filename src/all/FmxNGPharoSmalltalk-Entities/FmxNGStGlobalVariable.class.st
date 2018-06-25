@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStGlobalVariable,
 	#superclass : #FmxNGStStructuralEntity,
-	#traits : 'FmxNGTDefinedInModule + FmxNGTGlobalVariable',
-	#classTraits : 'FmxNGTDefinedInModule classTrait + FmxNGTGlobalVariable classTrait',
+	#traits : 'FmxNGTGlobalVariable',
+	#classTraits : 'FmxNGTGlobalVariable classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -26,7 +26,7 @@ FmxNGStGlobalVariable class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStGlobalVariable class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTDefinedInModule FmxNGTGlobalVariable)
+	^ #(FmxNGTGlobalVariable)
 ]
 
 { #category : #meta }

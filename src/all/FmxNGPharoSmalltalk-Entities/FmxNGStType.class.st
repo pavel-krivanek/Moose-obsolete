@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStType,
 	#superclass : #FmxNGStContainerEntity,
-	#traits : 'FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
-	#classTraits : 'FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
+	#traits : 'FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes',
+	#classTraits : 'FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -26,7 +26,7 @@ FmxNGStType class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStType class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
+	^ #(FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes)
 ]
 
 { #category : #meta }

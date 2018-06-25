@@ -115,7 +115,6 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 
 	globalVariable --|> structuralEntity.
 	globalVariable --|> #TGlobalVariable.
-	globalVariable --|> #TDefinedInModule.
 
 	implicitVariable --|> structuralEntity.
 	implicitVariable --|> #TImplicitVariable.
@@ -136,7 +135,6 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	method --|> #TInvocable.
 	method --|> #TWithInvocations.
 	method --|> #TWithReferences.
-	method --|> #TTypedStructure.
 	method --|> #TWithAccesses.
 	method --|> #TWithLocalVariables.
 	method --|> #TWithImplicitVariables.
@@ -170,15 +168,11 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 
 	structuralEntity --|> namedEntity.
 	structuralEntity --|> #TAccessible.
-	structuralEntity --|> #TTypedStructure.
 
 	type --|> containerEntity.
 	type --|> #TType.
 	type --|> #TReferenceable.
-	type --|> #TWithTypedStructures.
-	type --|> #TWithTypeAliases.
 	type --|> #TWithAttributes.
-	type --|> #TParameterizedTypeUser.
 
 	unknownSourceLanguage --|> sourceLanguage.
 
