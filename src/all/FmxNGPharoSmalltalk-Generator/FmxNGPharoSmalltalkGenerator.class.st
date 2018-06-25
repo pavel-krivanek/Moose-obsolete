@@ -141,6 +141,7 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	method --|> #TWithSignature.
 	method --|> #TMethod.
 	method --|> #TWithClassScope.
+	method --|> #TTypedStructure.
 
 	namedEntity --|> #TPackageable.
 	namedEntity --|> #TInvocationsReceiver.
@@ -168,11 +169,13 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 
 	structuralEntity --|> namedEntity.
 	structuralEntity --|> #TAccessible.
+	structuralEntity --|> #TTypedStructure.
 
 	type --|> containerEntity.
 	type --|> #TType.
 	type --|> #TReferenceable.
 	type --|> #TWithAttributes.
+	type --|> #TWithTypedStructures.
 
 	unknownSourceLanguage --|> sourceLanguage.
 

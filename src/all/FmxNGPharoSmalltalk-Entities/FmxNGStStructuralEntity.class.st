@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStStructuralEntity,
 	#superclass : #FmxNGStNamedEntity,
-	#traits : 'FmxNGTAccessible',
-	#classTraits : 'FmxNGTAccessible classTrait',
+	#traits : 'FmxNGTAccessible + FmxNGTTypedStructure',
+	#classTraits : 'FmxNGTAccessible classTrait + FmxNGTTypedStructure classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -26,7 +26,7 @@ FmxNGStStructuralEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStStructuralEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTAccessible)
+	^ #(FmxNGTAccessible FmxNGTTypedStructure)
 ]
 
 { #category : #meta }
