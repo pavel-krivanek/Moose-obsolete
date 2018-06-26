@@ -10,6 +10,8 @@ Class {
 { #category : #utilities }
 FamixMetamodelBuilderClassTest >> checkGeneralizationWithAnnotations [
 
+	"check if TstClass is correctly created as a subclass of TstBehavior"
+
 	| generatedBehavior generatedClass annotation |
 	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
 	generatedClass := builder testingEnvironment ask classNamed: 'TstClass'.
@@ -32,7 +34,9 @@ FamixMetamodelBuilderClassTest >> setUp [
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testAllClassGeneralizations [
-
+	
+	"test message <|--"	
+	
 	| named behavior class |
 		
 	named := builder newClassNamed: #Named.	
@@ -52,6 +56,8 @@ FamixMetamodelBuilderClassTest >> testAllClassGeneralizations [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testAllClassGeneralizationsInChain [
 
+	"test chaining of <|-- messages"
+
 	| named behavior class |
 		
 	named := builder newClassNamed: #Named.	
@@ -68,7 +74,29 @@ FamixMetamodelBuilderClassTest >> testAllClassGeneralizationsInChain [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderClassTest >> testAllClassGeneralizationsInChainInverted [
+
+	"test chaining of --|> messages"
+
+	| named behavior class |
+		
+	named := builder newClassNamed: #Named.	
+	behavior := builder newClassNamed: #Behavior.	
+	class := builder newClassNamed: #Class.
+
+	class --|> behavior --|> named.
+
+	self assert: named allClassGeneralizations isEmpty.
+	self assertCollection: behavior allClassGeneralizations hasSameElements: { named }.
+	self assertCollection: class allClassGeneralizations hasSameElements: { named. behavior }.
+		
+
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testAs [
+
+	"test if as: creates a trait with correct name and links it to the class"
 
 	| named generatedNamed generatedTNamed method |
 		
@@ -80,12 +108,15 @@ FamixMetamodelBuilderClassTest >> testAs [
 	generatedNamed := builder testingEnvironment ask classNamed: 'TstNamed'.
 	generatedTNamed := builder testingEnvironment ask classNamed: 'TstTNamed'.
 	
+	self assert: generatedTNamed notNil.
 	self deny: (generatedNamed superclass = generatedTNamed).
 	self assertCollection: generatedNamed traits asArray equals: { generatedTNamed }.
 ]
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testAutogereatedContainsMany [
+
+	"test the message <>-* "
 
 	| access variable generatedAccess generatedVariable generatedTAccess generatedTWithAccesses |
 	
@@ -116,6 +147,8 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsMany [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testAutogereatedContainsOne [
 
+	"test the message <>- "
+
 	| access variable generatedAccess generatedVariable generatedTAccess generatedTVariable |
 	
 	access := builder newClassNamed: #Access.	
@@ -142,6 +175,8 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsOne [
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testAutogereatedManyBelongTo [
+
+	"test the message *-<> "
 
 	| access variable generatedAccess generatedVariable generatedTWithVariables generatedTVariable |
 	
@@ -379,6 +414,8 @@ FamixMetamodelBuilderClassTest >> testBuilderPrefixChange [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testClassGeneralization [
 
+	"test message --|>"
+	
 	| behavior class |
 	
 	behavior := builder newClassNamed: #Behavior.	
@@ -394,12 +431,14 @@ FamixMetamodelBuilderClassTest >> testClassGeneralization [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
 
+	"test message <|--"
+
 	| behavior class  |
 	
 	behavior := builder newClassNamed: #Behavior.	
 	class := builder newClassNamed: #Class.
 
-	class --|> behavior.
+	behavior <|-- class.
 
 	builder generate.
 
