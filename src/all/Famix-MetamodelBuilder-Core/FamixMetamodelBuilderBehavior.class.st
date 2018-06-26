@@ -307,8 +307,8 @@ FamixMetamodelBuilderBehavior >> manyToOne: otherClass [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self as: self relatedTraitName property: self ownerPropertyName. 
-	oppositeSide := otherClass as: self relatedOwnerTraitName property: self pluralPropertyName. 	
+	ownSide := self property: self ownerPropertyName. 
+	oppositeSide := otherClass property: self pluralPropertyName. 	
 	oppositeSide many.
 	aRelation := self relationFrom: ownSide to: oppositeSide.
 		
@@ -344,8 +344,8 @@ FamixMetamodelBuilderBehavior >> oneToMany: otherClass [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self as: otherClass relatedOwnerTraitName property: otherClass pluralPropertyName. 
-	oppositeSide := otherClass as: otherClass relatedTraitName property: otherClass ownerPropertyName. 	
+	ownSide := self property: otherClass pluralPropertyName. 
+	oppositeSide := otherClass property: otherClass ownerPropertyName. 	
 	ownSide many.
 	aRelation := self relationFrom: ownSide to: oppositeSide.
 		
@@ -359,8 +359,8 @@ FamixMetamodelBuilderBehavior >> oneToOne: otherClass [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self "as: self relatedTraitName" property: otherClass propertyName. 
-	oppositeSide := otherClass "as: otherClass relatedTraitName" property: self propertyName.
+	ownSide := self property: otherClass propertyName. 
+	oppositeSide := otherClass property: self propertyName.
 	 	
 	aRelation := self relationFrom: ownSide to: oppositeSide.
 		
