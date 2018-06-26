@@ -118,7 +118,7 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsMany [
 
 	"test the message <>-* "
 
-	| access variable generatedAccess generatedVariable generatedTAccess generatedTWithAccesses |
+	| access variable generatedAccess generatedVariable |
 	
 	access := builder newClassNamed: #Access.	
 	variable := builder newClassNamed: #Variable.	
@@ -129,18 +129,16 @@ FamixMetamodelBuilderClassTest >> testAutogereatedContainsMany [
 		
 	generatedAccess := builder testingEnvironment ask classNamed: 'TstAccess'.
 	generatedVariable := builder testingEnvironment ask classNamed: 'TstVariable'.
-	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
-	generatedTWithAccesses := builder testingEnvironment ask classNamed: 'TstTWithAccesses'.
 	
 	self assert: generatedAccess slots isEmpty.
 	self assert: generatedVariable slots isEmpty.
-	self assert: generatedTAccess slots first name equals: #accessOwner.
-	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTWithAccesses opposite: #accesses'.
-	self assert: generatedTWithAccesses slots first name equals: #accesses.
-	self assert: generatedTWithAccesses slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
+	self assert: generatedAccess slots first name equals: #accessOwner.
+	self assert: generatedAccess slots first expression equals: 'FMOne type: #TstVariable opposite: #accesses'.
+	self assert: generatedVariable slots first name equals: #accesses.
+	self assert: generatedVariable slots first expression equals: 'FMMany type: #TstAccess opposite: #accessOwner'.
 	
-	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
-	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<generated>').
+	self assert: ((generatedAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<generated>').
 	
 ]
 
