@@ -425,6 +425,8 @@ FamixMetamodelBuilderBehavior >> properties: anObject [
 FamixMetamodelBuilderBehavior >> property: propertyName [
 
 	| aSide |
+
+	self assert: propertyName isString.
 	
 	aSide := FamixMetamodelBuilderRelationSide new
 		builder: self builder;

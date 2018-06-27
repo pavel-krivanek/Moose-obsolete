@@ -19,17 +19,12 @@ FamixMetamodelBuilderTrait >> acceptVisitor: aVisitor [
 { #category : #generating }
 FamixMetamodelBuilderTrait >> as: aTraitName property: propertyName [
 
-	self assert: propertyName isString.
+	self name = aTraitName
+		ifFalse: [ FamixMetamodelBuilderTraitRenamingError signal ].
 	
 	^ self property: propertyName
 
 	
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderTrait >> asTrait [
-
-	^ self
 ]
 
 { #category : #generating }
@@ -53,7 +48,7 @@ FamixMetamodelBuilderTrait >> defaultTag [
 { #category : #accessing }
 FamixMetamodelBuilderTrait >> generalization: anObject [
 
-	self error: 'Traits cannot have a non-default superclasss'
+	FamixMetamodelBuilderTraitsGeneralizationError signal
 ]
 
 { #category : #generating }

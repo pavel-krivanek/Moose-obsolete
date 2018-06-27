@@ -15,6 +15,19 @@ FamixMetamodelBuilderTraitTest >> setUp [
 
 ]
 
+{ #category : #'tests - names' }
+FamixMetamodelBuilderTraitTest >> testAsProperty [
+
+	"traits should not be renamed during creation of properties"
+
+	| aTrait |
+		
+	aTrait := builder newTraitNamed: #TVariable.	
+		
+	self shouldnt: [ aTrait as: #TVariable property: #property ] raise: FamixMetamodelBuilderTraitRenamingError.
+	self should: [ aTrait as: #TOtherName property: #property ] raise: FamixMetamodelBuilderTraitRenamingError.
+]
+
 { #category : #tests }
 FamixMetamodelBuilderTraitTest >> testAutogereatedContainsMany [
 
@@ -269,6 +282,42 @@ FamixMetamodelBuilderTraitTest >> testMultipleTraits [
 
 ]
 
+{ #category : #'tests - names' }
+FamixMetamodelBuilderTraitTest >> testRelatedOwnerTraitName [
+
+	"test if relatedOwnerTraitName is correctly created from a trait name. It should be the same."
+
+	| aTrait |
+		
+	aTrait := builder newTraitNamed: #TVariable.	
+	self assert: aTrait relatedOwnerTraitName equals: 'TVariable'.
+		
+	aTrait := builder newTraitNamed: #TAccess.	
+	self assert: aTrait relatedOwnerTraitName equals: 'TAccess'.
+
+	aTrait := builder newTraitNamed: #TMethod.	
+	self assert: aTrait relatedOwnerTraitName equals: 'TMethod'.
+
+]
+
+{ #category : #'tests - names' }
+FamixMetamodelBuilderTraitTest >> testRelatedTraitName [
+
+	"test if a related trait name is correctly generated from a traitName name. It should be the same."
+
+	| aTrait |
+		
+	aTrait := builder newTraitNamed: #TVariable.	
+	self assert: aTrait relatedTraitName equals: 'TVariable'.
+		
+	aTrait := builder newTraitNamed: #TAccess.	
+	self assert: aTrait relatedTraitName equals: 'TAccess'.
+
+	aTrait := builder newTraitNamed: #TMethod.	
+	self assert: aTrait relatedTraitName equals: 'TMethod'.
+
+]
+
 { #category : #tests }
 FamixMetamodelBuilderTraitTest >> testSimpleClassAnnotation [
 
@@ -302,24 +351,15 @@ FamixMetamodelBuilderTraitTest >> testSimpleTrait [
 	self assertCollection: generated classSide localSelectors sorted equals: #(annotation).
 ]
 
-{ #category : #tests }
+{ #category : #'tests - names' }
 FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 
-	| behavior tBehavior generatedBehavior generatedTBehavior method |
-	
-	behavior := builder newClassNamed: #Behavior.	
-	tBehavior := builder newTraitNamed: #TBehavior.
-
-	tBehavior <|-- behavior.
-	
-	builder generate.
-
-	generatedBehavior := builder testingEnvironment ask classNamed: 'TstBehavior'.
-	generatedTBehavior := builder testingEnvironment ask classNamed: 'TstTBehavior'.
-	
-	self deny: (generatedBehavior superclass = generatedTBehavior).
-	self assertCollection: generatedBehavior traits asArray equals: { generatedTBehavior }.
-	
+	| aTrait aClass |
+		
+	aTrait := builder newTraitNamed: #TVariable.	
+	aClass := builder newClassNamed: #Variable.	
+		
+	self should: [aTrait --|> aClass] raise: FamixMetamodelBuilderTraitsGeneralizationError
 ]
 
 { #category : #tests }

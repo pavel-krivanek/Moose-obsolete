@@ -33,67 +33,6 @@ FamixMetamodelBuilderClassTest >> setUp [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassTest >> testAllClassGeneralizations [
-	
-	"test message <|--"	
-	
-	| named behavior class |
-		
-	named := builder newClassNamed: #Named.	
-	behavior := builder newClassNamed: #Behavior.	
-	class := builder newClassNamed: #Class.
-
-	named <|-- behavior.
-	behavior <|-- class.
-
-	self assert: named allClassGeneralizations isEmpty.
-	self assertCollection: behavior allClassGeneralizations hasSameElements: { named }.
-	self assertCollection: class allClassGeneralizations hasSameElements: { named. behavior }.
-		
-
-]
-
-{ #category : #tests }
-FamixMetamodelBuilderClassTest >> testAllClassGeneralizationsInChain [
-
-	"test chaining of <|-- messages"
-
-	| named behavior class |
-		
-	named := builder newClassNamed: #Named.	
-	behavior := builder newClassNamed: #Behavior.	
-	class := builder newClassNamed: #Class.
-
-	named <|-- behavior <|-- class.
-
-	self assert: named allClassGeneralizations isEmpty.
-	self assertCollection: behavior allClassGeneralizations hasSameElements: { named }.
-	self assertCollection: class allClassGeneralizations hasSameElements: { named. behavior }.
-		
-
-]
-
-{ #category : #tests }
-FamixMetamodelBuilderClassTest >> testAllClassGeneralizationsInChainInverted [
-
-	"test chaining of --|> messages"
-
-	| named behavior class |
-		
-	named := builder newClassNamed: #Named.	
-	behavior := builder newClassNamed: #Behavior.	
-	class := builder newClassNamed: #Class.
-
-	class --|> behavior --|> named.
-
-	self assert: named allClassGeneralizations isEmpty.
-	self assertCollection: behavior allClassGeneralizations hasSameElements: { named }.
-	self assertCollection: class allClassGeneralizations hasSameElements: { named. behavior }.
-		
-
-]
-
-{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testAs [
 
 	"test if #as: creates a trait with correct name and links it to the class"
@@ -116,9 +55,11 @@ FamixMetamodelBuilderClassTest >> testAs [
 { #category : #'tests - settings' }
 FamixMetamodelBuilderClassTest >> testBasicSuperclass [
 
-	| simpleClass generated |
+	"check if a new class has correct superclass (the default one)"
+
+	| generated |
 	
-	simpleClass := builder newClassNamed: #Comment.	
+	builder newClassNamed: #Comment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	self assert: generated superclass name equals: builder defaultBasicSuperclassName.
@@ -128,9 +69,11 @@ FamixMetamodelBuilderClassTest >> testBasicSuperclass [
 { #category : #'tests - settings' }
 FamixMetamodelBuilderClassTest >> testBasicTrait [
 
-	| simpleTrait generated |
+	"test if the trits have correct supperclass"
+
+	| generated |
 	
-	simpleTrait := builder newTraitNamed: #TComment.	
+	builder newTraitNamed: #TComment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 	self assert: generated superclass name equals: builder defaultBasicTraitName.
@@ -139,10 +82,11 @@ FamixMetamodelBuilderClassTest >> testBasicTrait [
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testBuilderPackageChange [
-
-	| simpleClass generated |
 	
-	simpleClass := builder newClassNamed: #Comment.	
+	"if we set for a builder a packag name, all newely defined entities should use be assigned to this package. If no explicit package name is set, the default one is used."
+
+	| generated |
+	
 	builder newClassNamed: #Comment.	
 	builder packageName: 'Another'.
 	builder newClassNamed: #Method.	
@@ -150,20 +94,21 @@ FamixMetamodelBuilderClassTest >> testBuilderPackageChange [
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	self assert: generated notNil.
 	self assert: generated isClass.
-	self assert: (generated package name = #Tst).
+	self assert: generated package name equals: #Tst.
 	generated := builder testingEnvironment ask classNamed: 'TstMethod'.
 	self assert: generated notNil.
 	self assert: generated isClass.
-	self assert: (generated package name = #Another).
+	self assert: generated package name equals: #Another.
 
 ]
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testBuilderPrefixChange [
 
-	| simpleClass generated |
+	"if we set for a builder a prefix, all newely defined entities should use it. If no explicit prefix is set, the default one is used."
+
+	| generated |
 	
-	simpleClass := builder newClassNamed: #Comment.	
 	builder newClassNamed: #Comment.	
 	builder prefix: 'Another'.
 	builder newClassNamed: #Method.	
@@ -171,53 +116,20 @@ FamixMetamodelBuilderClassTest >> testBuilderPrefixChange [
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	self assert: generated notNil.
 	self assert: generated isClass.
-	self assert: (generated package name = #Tst).
+	self assert: generated package name equals: #Tst.
 	generated := builder testingEnvironment ask classNamed: 'AnotherMethod'.
 	self assert: generated notNil.
 	self assert: generated isClass.
-	self assert: (generated package name = #Tst).
+	self assert: generated package name equals: #Tst.
 
-]
-
-{ #category : #tests }
-FamixMetamodelBuilderClassTest >> testClassGeneralization [
-
-	"test message --|>"
-	
-	| behavior class |
-	
-	behavior := builder newClassNamed: #Behavior.	
-	class := builder newClassNamed: #Class.
-
-	class --|> behavior.
-
-	builder generate.
-
-	self checkGeneralizationWithAnnotations.
-]
-
-{ #category : #tests }
-FamixMetamodelBuilderClassTest >> testClassOppositeGeneralization [
-
-	"test message <|--"
-
-	| behavior class  |
-	
-	behavior := builder newClassNamed: #Behavior.	
-	class := builder newClassNamed: #Class.
-
-	behavior <|-- class.
-
-	builder generate.
-
-	self checkGeneralizationWithAnnotations
 ]
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testComment [
 
+	"test assigning of a comment to a class"
+
 	| simpleClass generated commentString |
-	
 	
 	simpleClass := builder newClassNamed: #Comment.	
 	commentString := 'Simple testing class'.
@@ -228,14 +140,11 @@ FamixMetamodelBuilderClassTest >> testComment [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassTest >> testCommentNotSpecified [
-]
-
-{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testCommentOnTrait [
 
+	"test assigning of a comment to a trait"
+
 	| simpleTrait generated commentString |
-	
 	
 	simpleTrait := builder newTraitNamed: #TComment.	
 	commentString := 'Simple testing class'.
@@ -248,10 +157,12 @@ FamixMetamodelBuilderClassTest >> testCommentOnTrait [
 { #category : #'tests - settings' }
 FamixMetamodelBuilderClassTest >> testCustomBasicTrait [
 
-	| simpleTrait generated |
+	"test if #basicTraitName sets the correct superclass of traits"
+
+	| generated |
 
 	builder basicTraitName: #CustomBasicTrait.	
-	simpleTrait := builder newTraitNamed: #TComment.	
+	builder newTraitNamed: #TComment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstTComment'.
 	self assert: generated superclass name equals: #CustomBasicTrait.	
@@ -261,37 +172,39 @@ FamixMetamodelBuilderClassTest >> testCustomBasicTrait [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testCustomPackageForUserClasses [
 
-	| simpleClass generated |
+	"check if package name can by correctly set to a class"
+
+	| generated |
 	
 	builder packageName: 'Custom'.
 	
-	simpleClass := builder newClassNamed: #Comment.	
+	builder newClassNamed: #Comment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 
-	self assert: (generated package name = #Custom).
+	self assert: generated package name equals: #Custom.
 	
 ]
 
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testCustomPackageForUserClassesChanged [
 
-	| simpleClass generated generatedAccess  |
+	"test correct package assignments to classes"
+
+	| generated generatedAccess  |
 	
 	builder packageName: 'Custom'.
-	
-	simpleClass := builder newClassNamed: #Comment.	
+	builder newClassNamed: #Comment.	
 
 	builder packageName: 'Custom2'.
-
-	simpleClass := builder newClassNamed: #Access.	
+	builder newClassNamed: #Access.	
 
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	generatedAccess := builder testingEnvironment ask classNamed: 'TstAccess'.
 
-	self assert: (generated package name = #Custom).
-	self assert: (generatedAccess package name = #Custom2).
+	self assert: generated package name equals: #Custom.
+	self assert: generatedAccess package name equals: #Custom2.
 
 
 	
@@ -300,10 +213,12 @@ FamixMetamodelBuilderClassTest >> testCustomPackageForUserClassesChanged [
 { #category : #'tests - settings' }
 FamixMetamodelBuilderClassTest >> testCustomSuperclass [
 
-	| simpleClass generated |
+	"test if a custom basic superclass can correctly set"
+
+	| generated |
 	
 	builder basicSuperclassName: #BasicSuperclass.
-	simpleClass := builder newClassNamed: #Comment.
+	builder newClassNamed: #Comment.
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	self assert: generated superclass name equals: 'BasicSuperclass'.
@@ -313,22 +228,26 @@ FamixMetamodelBuilderClassTest >> testCustomSuperclass [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testDefaultPackageForUserClasses [
 
-	| simpleClass generated |
+	"test if the default package name is correctly set to classes"
 	
-	simpleClass := builder newClassNamed: #Comment.	
+	| generated |
+	
+	builder newClassNamed: #Comment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 
-	self assert: (generated package name = #Tst).
+	self assert: generated package name equals: #Tst.
 	
 ]
 
 { #category : #'tests - tags' }
 FamixMetamodelBuilderClassTest >> testDefaultTagForClass [
 
-	| tAccess generatedTAccess |
+	"test if correct default tag name is assigned to classes"
 
-	tAccess := builder newTraitNamed: #TAccess.	
+	| generatedTAccess |
+
+	builder newTraitNamed: #TAccess.	
 
 	builder generate.
 		
@@ -339,9 +258,11 @@ FamixMetamodelBuilderClassTest >> testDefaultTagForClass [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testEmptyComment [
 
-	| simpleClass generated |
+	"check that by default classes do not have any class comment"
 	
-	simpleClass := builder newClassNamed: #Comment.	
+	| generated |
+	
+	builder newClassNamed: #Comment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	self assert: generated comment content isEmptyOrNil.
@@ -367,11 +288,13 @@ FamixMetamodelBuilderClassTest >> testHasTraitGeneralization [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testMultipleAs [
 
-	| named tNamed tSourced generatedNamed generatedTNamed generatedTSourced method |
+	"test if we can assign multiple traits to a class using #as: message"
+
+	| named generatedNamed generatedTNamed generatedTSourced  |
 		
 	named := builder newClassNamed: #Named.
-	tNamed := named as: #TNamed.	
-	tSourced := named as: #TSourced.	
+	named as: #TNamed.	
+	named as: #TSourced.	
 
 	builder generate.
 
@@ -388,6 +311,8 @@ FamixMetamodelBuilderClassTest >> testMultipleAs [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testMultipleClasses [
 
+	"trivial test if we can generate several different classes"
+	
 	builder newClassNamed: #Comment.	
 	builder newClassNamed: #Method.
 	builder newClassNamed: #Package.
@@ -399,8 +324,10 @@ FamixMetamodelBuilderClassTest >> testMultipleClasses [
 
 ]
 
-{ #category : #tests }
+{ #category : #'tests - names' }
 FamixMetamodelBuilderClassTest >> testOwnerPropertyName [
+
+	"test if ownerPropertyName is correctly created from a class name"
 
 	| class |
 		
@@ -415,8 +342,10 @@ FamixMetamodelBuilderClassTest >> testOwnerPropertyName [
 
 ]
 
-{ #category : #tests }
+{ #category : #'tests - names' }
 FamixMetamodelBuilderClassTest >> testPluralRelationName [
+
+	"test if pluralRelationName is correctly created from a class name"
 
 	| class |
 		
@@ -431,8 +360,10 @@ FamixMetamodelBuilderClassTest >> testPluralRelationName [
 
 ]
 
-{ #category : #tests }
+{ #category : #'tests - names' }
 FamixMetamodelBuilderClassTest >> testRelatedOwnerTraitName [
+
+	"test if relatedOwnerTraitName is correctly created from a class name"
 
 	| class |
 		
@@ -447,8 +378,10 @@ FamixMetamodelBuilderClassTest >> testRelatedOwnerTraitName [
 
 ]
 
-{ #category : #tests }
+{ #category : #'tests - names' }
 FamixMetamodelBuilderClassTest >> testRelatedTraitName [
+
+	"test if a related trait name is correctly generated from a class name"
 
 	| class |
 		
@@ -466,6 +399,8 @@ FamixMetamodelBuilderClassTest >> testRelatedTraitName [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testSimpleClass [
 
+	"check expected parameters of a newely generated class"
+
 	| simpleClass generated |
 	
 	simpleClass := builder newClassNamed: #Comment.	
@@ -482,9 +417,11 @@ FamixMetamodelBuilderClassTest >> testSimpleClass [
 { #category : #tests }
 FamixMetamodelBuilderClassTest >> testSimpleClassAnnotation [
 
-	| simpleClass generated method |
+	"test correct generation of class annotations"
+
+	| generated method |
 		
-	simpleClass := builder newClassNamed: #Comment.	
+	builder newClassNamed: #Comment.	
 	builder generate.
 	generated := builder testingEnvironment ask classNamed: 'TstComment'.
 	method := generated classSide methodNamed: #annotation.
@@ -494,20 +431,10 @@ FamixMetamodelBuilderClassTest >> testSimpleClassAnnotation [
 
 ]
 
-{ #category : #tests }
-FamixMetamodelBuilderClassTest >> testSimpleClassStatefulTraits [
-
-	| simpleClass generated method |
-	
-	simpleClass := builder newClassNamed: #Comment.	
-	builder generate.
-	generated := builder testingEnvironment ask classNamed: 'TstComment'.
-	method := generated classSide methodNamed: #statefulTraits.
-	self assert: generated traits isEmpty.
-]
-
-{ #category : #tests }
+{ #category : #'tests - names' }
 FamixMetamodelBuilderClassTest >> testSingularPropertyName [
+
+	"test if singularPropertyName is correctly created from a class name"
 
 	| class |
 		
@@ -519,27 +446,6 @@ FamixMetamodelBuilderClassTest >> testSingularPropertyName [
 
 	class := builder newClassNamed: #Methods.	
 	self assert: class singularPropertyName equals: 'method'.
-
-]
-
-{ #category : #tests }
-FamixMetamodelBuilderClassTest >> testSubclassOf [
-	
-	"test message #subclassOf:"	
-	
-	| named behavior class |
-		
-	named := builder newClassNamed: #Named.	
-	behavior := builder newClassNamed: #Behavior.	
-	class := builder newClassNamed: #Class.
-
-	behavior subclassOf: named. 
-	class subclassOf: behavior.
-
-	self assert: named allClassGeneralizations isEmpty.
-	self assertCollection: behavior allClassGeneralizations hasSameElements: { named }.
-	self assertCollection: class allClassGeneralizations hasSameElements: { named. behavior }.
-		
 
 ]
 
