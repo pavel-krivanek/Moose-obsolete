@@ -570,6 +570,23 @@ FamixMetamodelBuilderClassTest >> testEmptyComment [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderClassTest >> testHasTraitGeneralization [
+	
+	"test message #hasTraitGeneralization:"	
+	
+	| named tNamed |
+		
+	named := builder newClassNamed: #Named.	
+	tNamed := builder newTraitNamed: #TBehavior.
+	
+	self deny: (named hasTraitGeneralization: tNamed).
+	
+	named subclassOf: tNamed.
+	
+	self assert: (named hasTraitGeneralization: tNamed).
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderClassTest >> testMultipleAs [
 
 	| named tNamed tSourced generatedNamed generatedTNamed generatedTSourced method |
@@ -727,6 +744,27 @@ FamixMetamodelBuilderClassTest >> testSingularPropertyName [
 
 ]
 
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testSubclassOf [
+	
+	"test message #subclassOf:"	
+	
+	| named behavior class |
+		
+	named := builder newClassNamed: #Named.	
+	behavior := builder newClassNamed: #Behavior.	
+	class := builder newClassNamed: #Class.
+
+	behavior subclassOf: named. 
+	class subclassOf: behavior.
+
+	self assert: named allClassGeneralizations isEmpty.
+	self assertCollection: behavior allClassGeneralizations hasSameElements: { named }.
+	self assertCollection: class allClassGeneralizations hasSameElements: { named. behavior }.
+		
+
+]
+
 { #category : #'tests - tags' }
 FamixMetamodelBuilderClassTest >> testTagForClass [
 
@@ -791,4 +829,38 @@ FamixMetamodelBuilderClassTest >> testTagForTraits [
 		
 	generatedTAccess := builder testingEnvironment ask classNamed: #TstTAccess.
 	self assertCollection: generatedTAccess tags hasSameElements: { #support }
+]
+
+{ #category : #'tests - tags' }
+FamixMetamodelBuilderClassTest >> testTestingMethods [
+
+	"test messages isMetamodelClass and isMetamodelTrait"
+	
+	| named |
+
+	named := builder newClassNamed: #Named.	
+
+	self assert: named isMetamodelClass.
+	self deny: named isMetamodelTrait.
+	
+	
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testUsesOnlyTrait [
+	
+	"test message #usesOnlyTrait:"	
+	
+	| named tNamed tSourced |
+		
+	named := builder newClassNamed: #Named.	
+	tNamed := builder newTraitNamed: #TBehavior.
+	tSourced := builder newTraitNamed: #TSourced.
+	
+	self deny: (named usesOnlyTrait: tNamed).
+	named subclassOf: tNamed.
+	self assert: (named usesOnlyTrait: tNamed).
+	named subclassOf: tSourced.
+	self deny: (named usesOnlyTrait: tNamed).
+
 ]

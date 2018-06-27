@@ -95,12 +95,6 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 	^ aSide.		
 ]
 
-{ #category : #converting }
-FamixMetamodelBuilderClass >> asTrait [
-
-	^ self builder ensureLocalTraitNamed: self relatedTraitName
-]
-
 { #category : #accessing }
 FamixMetamodelBuilderClass >> classGeneralization [
 	^ classGeneralization
@@ -184,34 +178,6 @@ FamixMetamodelBuilderClass >> generateRootMethodsIn: aClass [
 	<generated>
 	^ (self class environment at: #{1}) metamodel' format: {self builder generator class name})
 				classified: 'meta' ]
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderClass >> generateTestingSelectorsFor: aClass [
-
-	aClass testingSelectors do: [ :aSelector |
-
-		aClass instanceSide compile: ('{1}
-
-	<generated>
-	^ true' format: { aSelector }) 
-		classified: #testing ].
-	
-	
-]
-
-{ #category : #generating }
-FamixMetamodelBuilderClass >> generateTraitsAssignmentsFor: aClass [
-
-	aClass propertyNamed: #statefulTraits put: self allTraitNames.
-
-	aClass classSide compile: ('statefulTraits
-
-	<statefulTraits>
-	<generated>
-	^ \{{1}\}' format: { self allTraitNames joinUsing: '. ' }) 
-		classified: #meta
-
 ]
 
 { #category : #testing }
@@ -302,9 +268,9 @@ FamixMetamodelBuilderClass >> singularPropertyName [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderClass >> subclass: aClass [
+FamixMetamodelBuilderClass >> subclassOf: aClass [
 	
-	aClass generalization: self
+	self generalization: aClass
 ]
 
 { #category : #accessing }
