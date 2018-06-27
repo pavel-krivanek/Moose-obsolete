@@ -11,7 +11,8 @@ Class {
 		'tag',
 		'prefix',
 		'packageName',
-		'testingSelectors'
+		'testingSelectors',
+		'isRoot'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -232,6 +233,7 @@ FamixMetamodelBuilderBehavior >> generateNavigationGroups [
 { #category : #generating }
 FamixMetamodelBuilderBehavior >> generateTestingSelectors [
 
+self halt.
 	self testingSelectors do: [ :aSelector |
 		self realClass instanceSide compile: ('{1}
 
@@ -239,16 +241,9 @@ FamixMetamodelBuilderBehavior >> generateTestingSelectors [
 	^ true' format: { aSelector }) 
 		classified: #testing.
 
-"		self builder classes do: [ :aBehavior |
-			aBehavior classGeneralization ifNil: ["
-				
-	self builder classes do: [ :aBehavior |
-			(aBehavior name = #Entity) ifTrue: [ "HACK"
-				aBehavior realClass instanceSide compile: ('{1}
+		builder testingSelectorsMapping at: self put: aSelector ]
 
-	<generated>
-	^ false' format: { aSelector }) 
-		classified: #testing. ]]].
+
 ]
 
 { #category : #accessing }
@@ -260,6 +255,7 @@ FamixMetamodelBuilderBehavior >> initialize [
 	prefix := String new.
 	packageName := String new.
 	testingSelectors := Set new.
+	isRoot := true.
 ]
 
 { #category : #testing }
@@ -416,11 +412,6 @@ FamixMetamodelBuilderBehavior >> properties [
 	^ properties
 ]
 
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> properties: anObject [
-	properties := anObject
-]
-
 { #category : #generating }
 FamixMetamodelBuilderBehavior >> property: propertyName [
 
@@ -489,11 +480,6 @@ FamixMetamodelBuilderBehavior >> relationFrom: ownSide to: oppositeSide [
 { #category : #accessing }
 FamixMetamodelBuilderBehavior >> relations [
 	^ relations
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderBehavior >> relations: anObject [
-	relations := anObject
 ]
 
 { #category : #accessing }

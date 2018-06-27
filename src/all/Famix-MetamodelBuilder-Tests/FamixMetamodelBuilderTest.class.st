@@ -11,20 +11,9 @@ testRunner collectCoverageFor: (methods collect: #asRingDefinition)
 "
 Class {
 	#name : #FamixMetamodelBuilderTest,
-	#superclass : #TestCase,
-	#instVars : [
-		'builder'
-	],
+	#superclass : #FamixMetamodelBuilderTestCase,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
-
-{ #category : #running }
-FamixMetamodelBuilderTest >> setUp [
-
-	super setUp.
-	builder := FamixMetamodelBuilder forTesting.
-
-]
 
 { #category : #tests }
 FamixMetamodelBuilderTest >> testDoNotGenerateCurrent [

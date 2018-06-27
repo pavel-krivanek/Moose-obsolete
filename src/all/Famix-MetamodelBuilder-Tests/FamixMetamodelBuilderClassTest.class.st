@@ -1,11 +1,14 @@
 Class {
 	#name : #FamixMetamodelBuilderClassTest,
-	#superclass : #TestCase,
-	#instVars : [
-		'builder'
-	],
+	#superclass : #FamixMetamodelBuilderBehaviorTest,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
+
+{ #category : #accessing }
+FamixMetamodelBuilderClassTest >> behaviorClass [
+
+	^ FamixMetamodelBuilderClass
+]
 
 { #category : #utilities }
 FamixMetamodelBuilderClassTest >> checkGeneralizationWithAnnotations [
@@ -24,12 +27,10 @@ FamixMetamodelBuilderClassTest >> checkGeneralizationWithAnnotations [
 
 ]
 
-{ #category : #running }
-FamixMetamodelBuilderClassTest >> setUp [
+{ #category : #accessing }
+FamixMetamodelBuilderClassTest >> newEntityNamed: aString [
 
-	super setUp.
-	builder := FamixMetamodelBuilder forTesting.
-
+	^ builder newClassNamed: aString
 ]
 
 { #category : #tests }
@@ -122,21 +123,6 @@ FamixMetamodelBuilderClassTest >> testBuilderPrefixChange [
 	self assert: generated isClass.
 	self assert: generated package name equals: #Tst.
 
-]
-
-{ #category : #tests }
-FamixMetamodelBuilderClassTest >> testComment [
-
-	"test assigning of a comment to a class"
-
-	| simpleClass generated commentString |
-	
-	simpleClass := builder newClassNamed: #Comment.	
-	commentString := 'Simple testing class'.
-	simpleClass comment: commentString.
-	builder generate.
-	generated := builder testingEnvironment ask classNamed: 'TstComment'.
-	self assert: generated comment content equals: commentString.
 ]
 
 { #category : #tests }

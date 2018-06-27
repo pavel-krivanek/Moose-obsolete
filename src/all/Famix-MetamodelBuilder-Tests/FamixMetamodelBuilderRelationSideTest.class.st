@@ -1,6 +1,6 @@
 Class {
 	#name : #FamixMetamodelBuilderRelationSideTest,
-	#superclass : #TestCase,
+	#superclass : #FamixMetamodelBuilderTestCase,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 

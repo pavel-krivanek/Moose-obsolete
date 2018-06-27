@@ -1,9 +1,6 @@
 Class {
 	#name : #FamixMetamodelBuilderRelationTest,
-	#superclass : #TestCase,
-	#instVars : [
-		'builder'
-	],
+	#superclass : #FamixMetamodelBuilderTestCase,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
@@ -51,14 +48,6 @@ FamixMetamodelBuilderRelationTest >> checkArrow: aBinarySelector from: cardinali
 FamixMetamodelBuilderRelationTest >> resetBuilder [
 
 	builder := FamixMetamodelBuilder forTesting.
-
-]
-
-{ #category : #running }
-FamixMetamodelBuilderRelationTest >> setUp [
-
-	super setUp.
-	self resetBuilder
 
 ]
 

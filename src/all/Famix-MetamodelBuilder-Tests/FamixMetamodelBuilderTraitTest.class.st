@@ -1,18 +1,19 @@
 Class {
 	#name : #FamixMetamodelBuilderTraitTest,
-	#superclass : #TestCase,
-	#instVars : [
-		'builder'
-	],
+	#superclass : #FamixMetamodelBuilderBehaviorTest,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
-{ #category : #running }
-FamixMetamodelBuilderTraitTest >> setUp [
+{ #category : #accessing }
+FamixMetamodelBuilderTraitTest >> behaviorClass [
 
-	super setUp.
-	builder := FamixMetamodelBuilder forTesting.
+	^ FamixMetamodelBuilderTrait
+]
 
+{ #category : #accessing }
+FamixMetamodelBuilderTraitTest >> newEntityNamed: aString [
+
+	^ builder newTraitNamed: aString
 ]
 
 { #category : #'tests - names' }
@@ -349,6 +350,21 @@ FamixMetamodelBuilderTraitTest >> testSimpleTrait [
 	self assert: generated slots isEmpty.
 	self assert: generated instanceSide localSelectors isEmpty.	
 	self assertCollection: generated classSide localSelectors sorted equals: #(annotation).
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderTraitTest >> testTestingMethods [
+
+	"test messages isMetamodelClass and isMetamodelTrait"
+	
+	| tNamed |
+
+	tNamed := builder newTraitNamed: #TNamed.	
+
+	self deny: tNamed isMetamodelClass.
+	self assert: tNamed isMetamodelTrait.
+	
+	
 ]
 
 { #category : #'tests - names' }

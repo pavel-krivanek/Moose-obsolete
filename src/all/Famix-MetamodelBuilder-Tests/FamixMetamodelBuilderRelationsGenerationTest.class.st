@@ -1,8 +1,7 @@
 Class {
 	#name : #FamixMetamodelBuilderRelationsGenerationTest,
-	#superclass : #TestCase,
+	#superclass : #FamixMetamodelBuilderTestCase,
 	#instVars : [
-		'builder',
 		'access',
 		'variable',
 		'generatedAccess',
@@ -79,7 +78,6 @@ FamixMetamodelBuilderRelationsGenerationTest >> generate [
 FamixMetamodelBuilderRelationsGenerationTest >> setUp [
 
 	super setUp.
-	builder := FamixMetamodelBuilder forTesting.
 
 	access := builder newClassNamed: #Access.	
 	variable := builder newClassNamed: #Variable.	

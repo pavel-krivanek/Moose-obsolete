@@ -42,6 +42,12 @@ FamixMetamodelBuilderEntity >> initialize [
 
 ]
 
+{ #category : #testing }
+FamixMetamodelBuilderEntity >> isHierarchyRoot [
+
+	^ false
+]
+
 { #category : #accessing }
 FamixMetamodelBuilderEntity >> name [
 	^ name

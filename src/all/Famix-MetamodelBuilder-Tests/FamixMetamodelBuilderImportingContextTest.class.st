@@ -1,8 +1,7 @@
 Class {
 	#name : #FamixMetamodelBuilderImportingContextTest,
-	#superclass : #TestCase,
+	#superclass : #FamixMetamodelBuilderTestCase,
 	#instVars : [
-		'builder',
 		'access',
 		'variable',
 		'generatedAccess',
@@ -17,10 +16,7 @@ Class {
 { #category : #running }
 FamixMetamodelBuilderImportingContextTest >> setUp [
 
-	| localMethod |
-	
 	super setUp.
-	builder := FamixMetamodelBuilder forTesting.
 
 	access := builder newClassNamed: #Access.	
 	variable := builder newClassNamed: #Variable.	

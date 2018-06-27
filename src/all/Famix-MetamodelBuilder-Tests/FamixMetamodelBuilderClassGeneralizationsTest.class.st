@@ -1,8 +1,7 @@
 Class {
 	#name : #FamixMetamodelBuilderClassGeneralizationsTest,
-	#superclass : #TestCase,
+	#superclass : #FamixMetamodelBuilderTestCase,
 	#instVars : [
-		'builder',
 		'named',
 		'behavior',
 		'class'
@@ -43,7 +42,6 @@ FamixMetamodelBuilderClassGeneralizationsTest >> checkHierarchy [
 FamixMetamodelBuilderClassGeneralizationsTest >> setUp [
 
 	super setUp.
-	builder := FamixMetamodelBuilder forTesting.
 
 	named := builder newClassNamed: #Named.	
 	behavior := builder newClassNamed: #Behavior.	
@@ -51,7 +49,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> setUp [
 
 ]
 
-{ #category : #running }
+{ #category : #tests }
 FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizations [
 	
 	named <|-- behavior.
@@ -60,7 +58,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizations [
 	self checkHierarchy.
 ]
 
-{ #category : #running }
+{ #category : #tests }
 FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInChain [
 	
 	named <|-- behavior <|-- class.
@@ -68,7 +66,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInCh
 	self checkHierarchy.
 ]
 
-{ #category : #running }
+{ #category : #tests }
 FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInChainInverted [
 	
 	class --|> behavior --|> named.
@@ -76,7 +74,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInCh
 	self checkHierarchy.
 ]
 
-{ #category : #running }
+{ #category : #tests }
 FamixMetamodelBuilderClassGeneralizationsTest >> testClassOppositeGeneralization [
 
 	behavior <|-- class.
@@ -84,7 +82,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testClassOppositeGeneralization
 	self checkGeneralizationWithAnnotations
 ]
 
-{ #category : #running }
+{ #category : #tests }
 FamixMetamodelBuilderClassGeneralizationsTest >> testGeneralization [
 
 	class --|> behavior.
@@ -92,7 +90,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testGeneralization [
 	self checkGeneralizationWithAnnotations
 ]
 
-{ #category : #running }
+{ #category : #tests }
 FamixMetamodelBuilderClassGeneralizationsTest >> testSubclassOf [
 	
 	behavior subclassOf: named. 

@@ -1,19 +1,8 @@
 Class {
 	#name : #FamixMetamodelBuilderBehaviorAliasTest,
-	#superclass : #TestCase,
-	#instVars : [
-		'builder'
-	],
+	#superclass : #FamixMetamodelBuilderTestCase,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
-
-{ #category : #running }
-FamixMetamodelBuilderBehaviorAliasTest >> setUp [
-
-	super setUp.
-	builder := FamixMetamodelBuilder forTesting.
-
-]
 
 { #category : #initialization }
 FamixMetamodelBuilderBehaviorAliasTest >> testAsIncompletePropertyWithoutRelation [

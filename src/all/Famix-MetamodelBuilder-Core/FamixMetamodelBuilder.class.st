@@ -62,7 +62,8 @@ Class {
 		'basicTraitName',
 		'traitsFlattening',
 		'generator',
-		'generateImportingContext'
+		'generateImportingContext',
+		'testingSelectorsMapping'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -262,12 +263,15 @@ FamixMetamodelBuilder >> generate [
 	self resolveRequirementsFromContainers.
 
 	self registerPackages.
-	self traits do: [ :each | each generate ] displayingProgress: 'generating traits'.
 
+	self traits do: [ :each | 
+		self testingSelectorsMapping addAll: each testingSelectors. ].
+	self sortedClasses do: [ :each | 
+		self testingSelectorsMapping addAll: each testingSelectors. ].
+
+	self traits do: [ :each | each generate ] displayingProgress: 'generating traits'.
 	self sortedClasses do: [ :each | each generate ] displayingProgress: 'generating classes'.
 
-	self traits do: [ :each | each generateTestingSelectors ] displayingProgress: 'generating testing selectors for traits'.
-	self sortedClasses do: [ :each | each generateTestingSelectors ] displayingProgress: 'generating testing selectors for classes'.
 	self sortedClasses do: [ :each | each generateNavigationGroups ] displayingProgress: 'generating navigation groups'.
 
 	self behaviorsCount > 0
@@ -349,6 +353,7 @@ FamixMetamodelBuilder >> initialize [
 	classes := OrderedCollection new.
 	traits := OrderedCollection new.
 	relations := OrderedCollection new.
+	testingSelectorsMapping := Set new.
 	
 	generateImportingContext := false.
 	
@@ -511,6 +516,16 @@ FamixMetamodelBuilder >> sortedTraits [
 FamixMetamodelBuilder >> testingEnvironment [
 
 	^ self environment ringEnvironment
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> testingSelectorsMapping [
+	^ testingSelectorsMapping
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> testingSelectorsMapping: anObject [
+	testingSelectorsMapping := anObject
 ]
 
 { #category : #accessing }

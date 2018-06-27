@@ -69,6 +69,9 @@ FamixMetamodelBuilderTrait >> generate [
 	
 	self generateAccessors.
 	self generateAnnotationIn: aTrait as: self name superclass: nil.
+	
+	self generateTestingMethodsIn: aTrait.
+
 
 ]
 
@@ -96,6 +99,19 @@ FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName supercl
 	<package: {3}>
 	^self' format: { aName. aSuperclassName. self builder safeAnnotationPackageName})
 		classified: 'meta'
+
+]
+
+{ #category : #generating }
+FamixMetamodelBuilderTrait >> generateTestingMethodsIn: aClass [
+
+	self testingSelectors do: [ :aSelector |
+		aClass instanceSide compile: ('{1}
+
+	<generated>
+	^ true' format: { aSelector }) 
+		classified: #testing. ]
+
 
 ]
 
