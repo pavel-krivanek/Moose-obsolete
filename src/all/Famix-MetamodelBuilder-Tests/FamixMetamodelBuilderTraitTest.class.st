@@ -379,6 +379,19 @@ FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderTraitTest >> testTraitTestingSelectors [
+
+	"test automatic generation of testing methods in the entities hierarchy"
+
+	| simpleClass |
+	
+	simpleClass := builder newTraitNamed: #TComment.	
+	self assert: simpleClass testingSelectors isEmpty.
+	simpleClass withTesting.
+	self assertCollection: simpleClass testingSelectors hasSameElements: #(isComment).
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderTraitTest >> testUses [
 
 	| behavior tBehavior generatedBehavior generatedTBehavior method |

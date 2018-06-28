@@ -82,8 +82,8 @@ FamixMetamodelBuilderTestingMethodsTest >> testTrait [
 { #category : #tests }
 FamixMetamodelBuilderTestingMethodsTest >> testTraited [
 
-	self assert: (generatedNamed methodNamed: #isNamed) isNil.
-	self assert: (generatedNamed methodNamed: #isEntity) isNil.
+	self assert: (generatedNamed localMethodNamed: #isNamed ifAbsent: []) isNil.
+	self assert: (generatedNamed localMethodNamed: #isEntity ifAbsent: []) isNil.
 ]
 
 { #category : #tests }

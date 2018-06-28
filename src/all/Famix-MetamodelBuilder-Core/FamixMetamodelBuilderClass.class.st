@@ -189,11 +189,11 @@ FamixMetamodelBuilderClass >> generateTestingMethodsIn: aClass [
 			selectorsFromTraits := self traitGeneralizations flatCollect: #testingSelectors.
 			(selectorsFromTraits includes: sel) 
 				ifFalse: [ 
-					aClass instanceSide 
-						compile: ('{1}\\	<generated>	^ false' format: { sel }) 
-						classified: #testing. ] ] ].
+				aClass instanceSide 
+					compile: ('{1}\\	<generated>\	^ false' withCRs format: { sel }) 
+					classified: #testing ] ] ].
 
-	super generateTestingMethodsIn: aClass.
+	super generateTestingMethodsIn: aClass
 ]
 
 { #category : #testing }

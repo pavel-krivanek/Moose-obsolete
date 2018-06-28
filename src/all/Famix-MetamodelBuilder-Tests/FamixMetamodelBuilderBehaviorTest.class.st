@@ -38,16 +38,16 @@ FamixMetamodelBuilderBehaviorTest >> testComment [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderBehaviorTest >> testWithTesting [
+FamixMetamodelBuilderBehaviorTest >> testTestingSelectors [
 
 	"test automatic generation of testing methods in the entities hierarchy"
 
-	| simpleClass generated commentString |
+	| simpleClass |
 	
 	simpleClass := self newEntityNamed: #Comment.	
-	commentString := 'Simple testing class'.
-	simpleClass comment: commentString.
-	builder generate.
-	generated := builder testingEnvironment ask classNamed: 'TstComment'.
-	self assert: generated comment content equals: commentString.
+	self assert: simpleClass testingSelectors isEmpty.
+	simpleClass withTesting.
+	self assertCollection: simpleClass testingSelectors hasSameElements: #(isComment).
+	
+
 ]
