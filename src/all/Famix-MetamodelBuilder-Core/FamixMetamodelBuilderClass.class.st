@@ -180,26 +180,20 @@ FamixMetamodelBuilderClass >> generateRootMetamodelMethodIn: aClass [
 		classified: 'meta' 
 ]
 
-{ #category : #generating }
+{ #category : #accessing }
 FamixMetamodelBuilderClass >> generateTestingMethodsIn: aClass [
-
+	
 	self classGeneralization ifNil: [ 
 		builder testingSelectorsMapping do: [ :sel |
-			aClass instanceSide compile: ('{1}
+			| selectorsFromTraits |
+			selectorsFromTraits := self traitGeneralizations flatCollect: #testingSelectors.
+			(selectorsFromTraits includes: sel) 
+				ifFalse: [ 
+					aClass instanceSide 
+						compile: ('{1}\\	<generated>	^ false' format: { sel }) 
+						classified: #testing. ] ] ].
 
-	<generated>
-	^ false' format: { sel }) 
-		classified: #testing.
-			 ] ].
-
-	self testingSelectors do: [ :aSelector |
-		aClass instanceSide compile: ('{1}
-
-	<generated>
-	^ true' format: { aSelector }) 
-		classified: #testing. ]
-
-
+	super generateTestingMethodsIn: aClass.
 ]
 
 { #category : #testing }

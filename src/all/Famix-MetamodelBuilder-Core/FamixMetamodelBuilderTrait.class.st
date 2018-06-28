@@ -102,19 +102,6 @@ FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName supercl
 
 ]
 
-{ #category : #generating }
-FamixMetamodelBuilderTrait >> generateTestingMethodsIn: aClass [
-
-	self testingSelectors do: [ :aSelector |
-		aClass instanceSide compile: ('{1}
-
-	<generated>
-	^ true' format: { aSelector }) 
-		classified: #testing. ]
-
-
-]
-
 { #category : #initialization }
 FamixMetamodelBuilderTrait >> initialize [
 

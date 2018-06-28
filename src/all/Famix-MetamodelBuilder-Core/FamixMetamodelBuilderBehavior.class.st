@@ -231,17 +231,11 @@ FamixMetamodelBuilderBehavior >> generateNavigationGroups [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderBehavior >> generateTestingSelectors [
+FamixMetamodelBuilderBehavior >> generateTestingMethodsIn: aClass [
 
-self halt.
 	self testingSelectors do: [ :aSelector |
-		self realClass instanceSide compile: ('{1}
-
-	<generated>
-	^ true' format: { aSelector }) 
-		classified: #testing.
-
-		builder testingSelectorsMapping at: self put: aSelector ]
+		aClass instanceSide compile: ('{1}\\	<generated>\	^ true' withCRs format: { aSelector }) 
+		classified: #testing. ]
 
 
 ]

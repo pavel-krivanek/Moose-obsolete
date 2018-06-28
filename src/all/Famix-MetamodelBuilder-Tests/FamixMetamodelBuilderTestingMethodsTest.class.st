@@ -33,7 +33,7 @@ FamixMetamodelBuilderTestingMethodsTest >> setUp [
 	root1 <|-- entity.
 	root1 <|-- traited.
 	trait <|-- traited.
-	traitedRoot <|-- traited.
+	trait <|-- traitedRoot.
 	
 	entity withTesting.
 	trait withTesting.
@@ -89,6 +89,8 @@ FamixMetamodelBuilderTestingMethodsTest >> testTraited [
 { #category : #tests }
 FamixMetamodelBuilderTestingMethodsTest >> testTraitedRoot [
 
+	"a testing method should not be generated if it is provided by a trait"
+	
 	(generatedTraitedRoot methodNamed: #isEntity) sourceCode includesSubstring: '^ false'.	
-	self assert: (generatedTraitedRoot methodNamed: #isNamed) isNil.
+	self assert: (generatedTraitedRoot localMethodNamed: #isNamed ifAbsent: [nil]) isNil.
 ]
