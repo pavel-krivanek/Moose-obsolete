@@ -71,7 +71,7 @@ FamixMetamodelBuilderTrait >> generate [
 	self generateAnnotationIn: aTrait as: self name superclass: nil.
 	
 	self generateTestingMethodsIn: aTrait.
-
+	self generateRootMetamodelMethodIn: aTrait.
 
 ]
 

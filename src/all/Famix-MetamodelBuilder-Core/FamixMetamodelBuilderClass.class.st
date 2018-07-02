@@ -150,7 +150,8 @@ FamixMetamodelBuilderClass >> generate [
 	self generateAnnotationIn: aClass as: self name superclass: nil.
 	
 	self generateTestingMethodsIn: aClass.
-	
+	self generateRootMetamodelMethodIn: aClass. 	
+
 	self generateRequirementsFor: aClass.
 
 
@@ -172,6 +173,9 @@ FamixMetamodelBuilderClass >> generateRequirementsFor: aClass [
 { #category : #generating }
 FamixMetamodelBuilderClass >> generateRootMetamodelMethodIn: aClass [ 
 
+	self isRoot ifFalse: [ 
+		^ self ].
+
 	aClass classSide compile: ('metamodel
 
 	<generated>
@@ -183,7 +187,7 @@ FamixMetamodelBuilderClass >> generateRootMetamodelMethodIn: aClass [
 { #category : #accessing }
 FamixMetamodelBuilderClass >> generateTestingMethodsIn: aClass [
 	
-	self classGeneralization ifNil: [ 
+	self isRoot ifTrue: [ 
 		builder testingSelectorsMapping do: [ :sel |
 			| selectorsFromTraits |
 			selectorsFromTraits := self traitGeneralizations flatCollect: #testingSelectors.
@@ -214,6 +218,12 @@ FamixMetamodelBuilderClass >> initialize [
 FamixMetamodelBuilderClass >> isMetamodelClass [
 
 	^ true
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderClass >> isRoot [
+
+	^ self classGeneralization isNil
 ]
 
 { #category : #'name conversion' }
