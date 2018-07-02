@@ -38,6 +38,36 @@ FamixMetamodelBuilderBehaviorTest >> testComment [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderBehaviorTest >> testCustomTestingSelectors [
+
+	"test automatic generation of custom testing selector"
+
+	| simpleClass |
+	
+	simpleClass := self newEntityNamed: #Comment.	
+	simpleClass testingSelector: #isAComment.
+	self assertCollection: simpleClass testingSelectors hasSameElements: #(isAComment).
+	simpleClass testingSelector: #isADocumentation.
+	self assertCollection: simpleClass testingSelectors hasSameElements: #(isAComment isADocumentation).
+	
+
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderBehaviorTest >> testCustomTestingSelectorsAtOnce [
+
+	"test automatic generation of custom testing selector defined at once"
+
+	| simpleClass |
+	
+	simpleClass := self newEntityNamed: #Comment.	
+	simpleClass testingSelectors: #(isAComment isADocumentation).
+	self assertCollection: simpleClass testingSelectors hasSameElements: #(isAComment isADocumentation).
+	
+
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderBehaviorTest >> testTestingSelectors [
 
 	"test automatic generation of testing methods in the entities hierarchy"
