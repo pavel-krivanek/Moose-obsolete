@@ -170,20 +170,6 @@ FamixMetamodelBuilderClass >> generateRequirementsFor: aClass [
 		classified: #meta
 ]
 
-{ #category : #generating }
-FamixMetamodelBuilderClass >> generateRootMetamodelMethodIn: aClass [ 
-
-	self isRoot ifFalse: [ 
-		^ self ].
-
-	aClass classSide compile: ('metamodel
-
-	<generated>
-	^ (self class environment at: #{1}) metamodel' 
-		format: {self builder generator class name})
-		classified: 'meta' 
-]
-
 { #category : #accessing }
 FamixMetamodelBuilderClass >> generateTestingMethodsIn: aClass [
 	

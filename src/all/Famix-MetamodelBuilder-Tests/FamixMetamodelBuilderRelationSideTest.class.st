@@ -69,3 +69,29 @@ FamixMetamodelBuilderRelationSideTest >> testProperties [
 
 		
 ]
+
+{ #category : #tests }
+FamixMetamodelBuilderRelationSideTest >> testReconnection [
+
+	"test if after changing of related trait of a relation side all will be consistent"
+
+	| tClass tComment generatedTClass generatedTComment tAccess side |
+		
+	tClass := builder newTraitNamed: #TClass. 
+	tComment := builder newTraitNamed: #TComment. 
+	tAccess := builder newTraitNamed: #TAccess. 
+
+	(side := (tClass property: #property1)) - (tComment property: #property2).
+	
+	self assert: side trait equals: tClass.
+	self assertCollection: tClass sides asArray equals: { side }.
+	self assert: tAccess sides isEmpty.
+
+	side trait: tAccess.
+
+	self assert: side trait equals: tAccess.
+	self assert: tClass sides isEmpty.
+	self assertCollection: tAccess sides asArray equals: { side }.
+
+	
+]

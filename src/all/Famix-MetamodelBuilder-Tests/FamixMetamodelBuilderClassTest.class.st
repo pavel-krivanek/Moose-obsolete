@@ -397,7 +397,7 @@ FamixMetamodelBuilderClassTest >> testSimpleClass [
 	self assert: generated superclass name equals: 'MooseEntity'.
 	self assert: generated slots isEmpty.
 	self assert: generated instanceSide localSelectors isEmpty.	
-	self assertCollection: generated classSide localSelectors sorted equals: #(annotation #requirements).
+	self assertCollection: generated classSide localSelectors sorted equals: #(annotation #metamodel #requirements).
 ]
 
 { #category : #tests }

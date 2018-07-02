@@ -231,6 +231,20 @@ FamixMetamodelBuilderBehavior >> generateNavigationGroups [
 ]
 
 { #category : #generating }
+FamixMetamodelBuilderBehavior >> generateRootMetamodelMethodIn: aClass [ 
+
+	self isRoot ifFalse: [ 
+		^ self ].
+
+	aClass classSide compile: ('metamodel
+
+	<generated>
+	^ (self class environment at: #{1}) metamodel' 
+		format: {self builder generator class name})
+		classified: 'meta' 
+]
+
+{ #category : #generating }
 FamixMetamodelBuilderBehavior >> generateTestingMethodsIn: aClass [
 
 	self testingSelectors do: [ :aSelector |
@@ -260,6 +274,12 @@ FamixMetamodelBuilderBehavior >> isMetamodelClass [
 
 { #category : #testing }
 FamixMetamodelBuilderBehavior >> isMetamodelTrait [
+
+	^ false
+]
+
+{ #category : #testing }
+FamixMetamodelBuilderBehavior >> isRoot [
 
 	^ false
 ]
