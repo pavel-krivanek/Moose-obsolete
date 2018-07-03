@@ -12,8 +12,7 @@ Class {
 		'relatedClass',
 		'derived',
 		'source',
-		'target',
-		'propertyType'
+		'target'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -154,12 +153,6 @@ FamixMetamodelBuilderRelationSide >> derived [
 { #category : #properties }
 FamixMetamodelBuilderRelationSide >> derived: anObject [
 	derived := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> ensureTraitNamed: aString [
-
-	^ self builder ensureLocalTraitNamed: aString
 ]
 
 { #category : #accessing }
@@ -393,16 +386,6 @@ FamixMetamodelBuilderRelationSide >> otherSide [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> propertyType [
-	^ propertyType
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> propertyType: anObject [
-	propertyType := anObject
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderRelationSide >> relatedClass [
 	^ relatedClass
 ]
@@ -499,10 +482,4 @@ FamixMetamodelBuilderRelationSide >> traitName: aString [
 
 	trait := self builder ensureLocalTraitNamed: aString
 
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderRelationSide >> traitPrefix [
-
-	^ self trait prefix
 ]

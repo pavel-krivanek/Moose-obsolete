@@ -38,10 +38,12 @@ FamixMetamodelBuilderProperty >> isContainer [
 { #category : #printing }
 FamixMetamodelBuilderProperty >> printOn: aStream [
 
+	<ignoreForCoverage>
+
 	super printOn: aStream.
 	
 	aStream 
 		nextPutAll: '(';
-		nextPutAll: self name;
+		nextPutAll: (self name ifNil: ['']);
 		nextPutAll: ')'
 ]

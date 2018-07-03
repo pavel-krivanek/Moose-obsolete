@@ -1,11 +1,13 @@
 Class {
 	#name : #FamixMetamodelBuilderRelationSideTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#superclass : #FamixMetamodelBuilderPropertyTest,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
 { #category : #tests }
 FamixMetamodelBuilderRelationSideTest >> testBasics [
+
+	"check trivial testing and accessing methods"
 
 	| side |
 	
@@ -23,7 +25,29 @@ FamixMetamodelBuilderRelationSideTest >> testBasics [
 ]
 
 { #category : #tests }
+FamixMetamodelBuilderRelationSideTest >> testDirections [
+
+	"test setting of a type of the property"
+
+	| aClass aTrait relation |
+	
+	aClass := builder newClassNamed: #AClass.
+	aTrait := builder newTraitNamed: #ATrait.
+	
+	relation := aClass - aTrait.
+	
+	self assert: relation left from equals: relation left.
+	self assert: relation right from equals: relation left.
+
+	self assert: relation left to equals: relation right.
+	self assert: relation right to equals: relation right.
+
+]
+
+{ #category : #tests }
 FamixMetamodelBuilderRelationSideTest >> testProperties [
+
+	"simple tests of basic relation side properties"
 
 	| side |
 	
@@ -67,15 +91,23 @@ FamixMetamodelBuilderRelationSideTest >> testProperties [
 	side target: false.
 	self deny: side isTarget.
 
-		
+	self assert: side isOne.
+	self deny: side isMany.
+	side cardinality: #many.
+	self assert: side isMany.
+	self deny: side isOne.
+	side cardinality: #one.
+	self deny: side isMany.
+	self assert: side isOne.
+
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationSideTest >> testReconnection [
+FamixMetamodelBuilderRelationSideTest >> testPropertyType [
 
 	"test if after changing of related trait of a relation side all will be consistent"
 
-	| tClass tComment generatedTClass generatedTComment tAccess side |
+	| tClass tComment tAccess side |
 		
 	tClass := builder newTraitNamed: #TClass. 
 	tComment := builder newTraitNamed: #TComment. 
@@ -94,4 +126,47 @@ FamixMetamodelBuilderRelationSideTest >> testReconnection [
 	self assertCollection: tAccess sides asArray equals: { side }.
 
 	
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderRelationSideTest >> testReconnection [
+
+	"test if after changing of related trait of a relation side all will be consistent"
+
+	| tClass tComment tAccess side |
+		
+	tClass := builder newTraitNamed: #TClass. 
+	tComment := builder newTraitNamed: #TComment. 
+	tAccess := builder newTraitNamed: #TAccess. 
+
+	(side := (tClass property: #property1)) - (tComment property: #property2).
+	
+	self assert: side trait equals: tClass.
+	self assertCollection: tClass sides asArray equals: { side }.
+	self assert: tAccess sides isEmpty.
+
+	side trait: tAccess.
+
+	self assert: side trait equals: tAccess.
+	self assert: tClass sides isEmpty.
+	self assertCollection: tAccess sides asArray equals: { side }.
+
+	
+]
+
+{ #category : #tests }
+FamixMetamodelBuilderRelationSideTest >> testRelatedEntity [
+
+	"test setting of a type of the property"
+
+	| aClass aTrait relation |
+	
+	aClass := builder newClassNamed: #AClass.
+	aTrait := builder newTraitNamed: #ATrait.
+	
+	relation := aClass - aTrait.
+	
+	self assert: relation left relatedEntity equals: aClass.
+	self assert: relation right relatedEntity equals: aTrait.
+
 ]
