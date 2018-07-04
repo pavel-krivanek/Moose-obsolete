@@ -1,18 +1,18 @@
 Class {
-	#name : #FamixMetamodelBuilderRealRingEnvironment,
-	#superclass : #FamixMetamodelBuilderRingEnvironment,
-	#category : #'Famix-MetamodelBuilder-Core'
+	#name : #FmxMBRealRingEnvironment,
+	#superclass : #FmxMBRingEnvironment,
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> adoptClassCommentOf: realClass to: anRGClass [
+FmxMBRealRingEnvironment >> adoptClassCommentOf: realClass to: anRGClass [
 	
 	anRGClass comment content isEmptyOrNil
 		ifFalse: [ realClass comment: anRGClass comment content ]
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to: anRGClass [
+FmxMBRealRingEnvironment >> adoptClassDefinitionOf: realClass to: anRGClass [
 	| generatedOldSlots customSlots customTraits customTraitNames customSlotNames slotDefinitions slotsString definition generatedOldTraits traitsDefinitions traitsString |
 
 
@@ -74,7 +74,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptClassDefinitionOf: realClass to
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> adoptMethodsOf: realClass to: anRGClass [
+FmxMBRealRingEnvironment >> adoptMethodsOf: realClass to: anRGClass [
 
 	| generatedMethods |
 
@@ -97,7 +97,7 @@ FamixMetamodelBuilderRealRingEnvironment >> adoptMethodsOf: realClass to: anRGCl
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRealRingEnvironment >> apply [
+FmxMBRealRingEnvironment >> apply [
 
 	self ensurePackagesFrom: ringEnvironment.
 	self ensureClassesFrom: ringEnvironment.
@@ -105,13 +105,13 @@ FamixMetamodelBuilderRealRingEnvironment >> apply [
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> classVariablesStringFor: realClass [
+FmxMBRealRingEnvironment >> classVariablesStringFor: realClass [
 
 	^ '{', ((realClass classVarNames collect: [ :each | '#', each ]) joinUsing: ' '), '}'
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> ensureClassesFrom: anRGEnvironment [
+FmxMBRealRingEnvironment >> ensureClassesFrom: anRGEnvironment [
 	
 	| resolvedClasses sorted notSorted toMove |
 	
@@ -134,7 +134,7 @@ FamixMetamodelBuilderRealRingEnvironment >> ensureClassesFrom: anRGEnvironment [
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> ensurePackagesFrom: anRGEnvironment [
+FmxMBRealRingEnvironment >> ensurePackagesFrom: anRGEnvironment [
 	
 	| resolvedPackages |
 	
@@ -146,7 +146,7 @@ FamixMetamodelBuilderRealRingEnvironment >> ensurePackagesFrom: anRGEnvironment 
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> generateTraitsDescriptionFrom: anRGClass [
+FmxMBRealRingEnvironment >> generateTraitsDescriptionFrom: anRGClass [
 
 	| generatedTraits |
 	
@@ -160,7 +160,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generateTraitsDescriptionFrom: anRGC
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> generatedSlotsOf: aRealClass [
+FmxMBRealRingEnvironment >> generatedSlotsOf: aRealClass [
 
 	| slotNames |
 	
@@ -174,7 +174,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedSlotsOf: aRealClass [
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> generatedTraitNamessOf: aRealClass [
+FmxMBRealRingEnvironment >> generatedTraitNamessOf: aRealClass [
 
 	| traitNames |
 	
@@ -188,7 +188,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedTraitNamessOf: aRealClass [
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> generatedTraitsOf: aRealClass [
+FmxMBRealRingEnvironment >> generatedTraitsOf: aRealClass [
 
 	| traitNames |
 	
@@ -202,7 +202,7 @@ FamixMetamodelBuilderRealRingEnvironment >> generatedTraitsOf: aRealClass [
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRealRingEnvironment >> installClassChangesFor: anRGClass [
+FmxMBRealRingEnvironment >> installClassChangesFor: anRGClass [
 
 	| realClass | 
 	

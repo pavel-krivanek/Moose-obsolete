@@ -1,11 +1,11 @@
 Class {
-	#name : #FamixMetamodelBuilderPrintVisitor,
-	#superclass : #FamixMetamodelBuilderVisitor,
-	#category : #'Famix-MetamodelBuilder-Core'
+	#name : #FmxMBPrintVisitor,
+	#superclass : #FmxMBVisitor,
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #visiting }
-FamixMetamodelBuilderPrintVisitor >> visitBuilder: aBuilder [
+FmxMBPrintVisitor >> visitBuilder: aBuilder [
 
 	aBuilder logCr.
 	aBuilder sortedTraits do: [ :each | each acceptVisitor: self ].
@@ -13,7 +13,7 @@ FamixMetamodelBuilderPrintVisitor >> visitBuilder: aBuilder [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPrintVisitor >> visitClass: aClass [
+FmxMBPrintVisitor >> visitClass: aClass [
 
 	Transcript tab; nextPutAll: aClass name; cr.
 	Transcript tab; nextPutAll: ' -|> '.
@@ -29,7 +29,7 @@ FamixMetamodelBuilderPrintVisitor >> visitClass: aClass [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPrintVisitor >> visitRelationSide: aRelationSide [
+FmxMBPrintVisitor >> visitRelationSide: aRelationSide [
 
 	Transcript tab.
 	Transcript tab.
@@ -37,7 +37,7 @@ FamixMetamodelBuilderPrintVisitor >> visitRelationSide: aRelationSide [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPrintVisitor >> visitTrait: aTrait [
+FmxMBPrintVisitor >> visitTrait: aTrait [
 
 	Transcript tab; nextPutAll: aTrait name; cr.
 
@@ -46,7 +46,7 @@ FamixMetamodelBuilderPrintVisitor >> visitTrait: aTrait [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPrintVisitor >> visitTypedProperty: aTypedProperty [
+FmxMBPrintVisitor >> visitTypedProperty: aTypedProperty [
 
 	Transcript tab.
 	Transcript tab.

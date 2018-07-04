@@ -2,23 +2,23 @@
 basic class for generated importing contexts
 "
 Class {
-	#name : #FamixImportingContext,
+	#name : #FmxImportingContext,
 	#superclass : #Object,
 	#instVars : [
 		'imports'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Basic'
 }
 
 { #category : #accessing }
-FamixImportingContext >> import: aClass [
+FmxImportingContext >> import: aClass [
 	
 	self import: aClass traversed: Set new
 	
 ]
 
 { #category : #accessing }
-FamixImportingContext >> import: aClass traversed: traversedClasses [
+FmxImportingContext >> import: aClass traversed: traversedClasses [
 
 	(traversedClasses includes: aClass)
 		ifTrue: [ ^ self ].
@@ -32,17 +32,17 @@ FamixImportingContext >> import: aClass traversed: traversedClasses [
 ]
 
 { #category : #accessing }
-FamixImportingContext >> imports [
+FmxImportingContext >> imports [
 	^ imports
 ]
 
 { #category : #accessing }
-FamixImportingContext >> imports: anObject [
+FmxImportingContext >> imports: anObject [
 	imports := anObject
 ]
 
 { #category : #initialization }
-FamixImportingContext >> initialize [
+FmxImportingContext >> initialize [
 
 	super initialize.
 	
@@ -50,7 +50,7 @@ FamixImportingContext >> initialize [
 ]
 
 { #category : #testing }
-FamixImportingContext >> shouldImport: aClass [
+FmxImportingContext >> shouldImport: aClass [
 
 	^ self imports includes: aClass
 ]

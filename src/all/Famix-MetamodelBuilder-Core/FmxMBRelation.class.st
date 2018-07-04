@@ -2,28 +2,28 @@
 FamixMetamodelBuilderRelation
 "
 Class {
-	#name : #FamixMetamodelBuilderRelation,
+	#name : #FmxMBRelation,
 	#superclass : #Object,
 	#instVars : [
 		'side',
 		'oppositeSide',
 		'builder'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> builder [
+FmxMBRelation >> builder [
 	^ builder
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> builder: anObject [
+FmxMBRelation >> builder: anObject [
 	builder := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> cardinalityString [ 
+FmxMBRelation >> cardinalityString [ 
 
 	^ String streamContents: [ :s |
 		self from cardinality = #many 
@@ -36,15 +36,15 @@ FamixMetamodelBuilderRelation >> cardinalityString [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> from [
+FmxMBRelation >> from [
 
 	^ side 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> from: aBlock [
+FmxMBRelation >> from: aBlock [
 
-	side := (FamixMetamodelBuilderRelationSide new
+	side := (FmxMBRelationSide new
 		relation: self;
 		builder: self builder;
 		yourself).
@@ -52,35 +52,35 @@ FamixMetamodelBuilderRelation >> from: aBlock [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> left [
+FmxMBRelation >> left [
 
 	^ side 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeRelation [
+FmxMBRelation >> oppositeRelation [
 
 	^ self copy swapSides
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeSide [
+FmxMBRelation >> oppositeSide [
 	^ oppositeSide
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> oppositeSide: anObject [
+FmxMBRelation >> oppositeSide: anObject [
 	oppositeSide := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> right [
+FmxMBRelation >> right [
 
 	^ oppositeSide 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> shortCardinalityString [ 
+FmxMBRelation >> shortCardinalityString [ 
 
 	^ self from cardinality = #many 
 		ifTrue: [ '*' ]
@@ -88,24 +88,24 @@ FamixMetamodelBuilderRelation >> shortCardinalityString [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> side [
+FmxMBRelation >> side [
 
 	^ side
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> side: anObject [
+FmxMBRelation >> side: anObject [
 	side := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> sides [
+FmxMBRelation >> sides [
 
 	^ { side. oppositeSide }
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> swapSides [
+FmxMBRelation >> swapSides [
 
 	| temp |
 	temp := oppositeSide.
@@ -114,15 +114,15 @@ FamixMetamodelBuilderRelation >> swapSides [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> to [
+FmxMBRelation >> to [
 
 	^ oppositeSide 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> to: aBlock [
+FmxMBRelation >> to: aBlock [
 
-	oppositeSide := (FamixMetamodelBuilderRelationSide new
+	oppositeSide := (FmxMBRelationSide new
 		relation: self;
 		builder: self builder;
 		yourself).
@@ -130,7 +130,7 @@ FamixMetamodelBuilderRelation >> to: aBlock [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelation >> withNavigation [
+FmxMBRelation >> withNavigation [
 
 	self sides do: [ :aSide |
 		aSide withNavigation ]

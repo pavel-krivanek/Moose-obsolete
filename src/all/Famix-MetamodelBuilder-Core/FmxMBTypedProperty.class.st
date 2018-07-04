@@ -2,26 +2,26 @@
 FamixMetamodelBuilderTypedProperty
 "
 Class {
-	#name : #FamixMetamodelBuilderTypedProperty,
-	#superclass : #FamixMetamodelBuilderProperty,
+	#name : #FmxMBTypedProperty,
+	#superclass : #FmxMBProperty,
 	#instVars : [
 		'propertyType',
 		'multivalued'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #visitor }
-FamixMetamodelBuilderTypedProperty >> acceptVisitor: aVisitor [
+FmxMBTypedProperty >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitTypedProperty: self.
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTypedProperty >> asSlot [
+FmxMBTypedProperty >> asSlot [
 
 	self propertyType 
-		ifNil: [ FamixMetamodelBuilderIncompletePropertyDefiniton signal ].
+		ifNil: [ FmxMBIncompletePropertyDefiniton signal ].
 
 	^ self builder environment 
 		slotNamed: self name asSymbol 
@@ -29,7 +29,7 @@ FamixMetamodelBuilderTypedProperty >> asSlot [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTypedProperty >> generateGetterIn: aClassOrTrait [
+FmxMBTypedProperty >> generateGetterIn: aClassOrTrait [
 
 	| methodSource propertyDefinition commentDefinition |
 
@@ -57,7 +57,7 @@ FamixMetamodelBuilderTypedProperty >> generateGetterIn: aClassOrTrait [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTypedProperty >> generateSetterIn: aClassOrTrait [
+FmxMBTypedProperty >> generateSetterIn: aClassOrTrait [
 
 	| methodSource |
 	
@@ -70,7 +70,7 @@ FamixMetamodelBuilderTypedProperty >> generateSetterIn: aClassOrTrait [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderTypedProperty >> initialize [
+FmxMBTypedProperty >> initialize [
 
 	super initialize.
 	multivalued := false.
@@ -78,28 +78,28 @@ FamixMetamodelBuilderTypedProperty >> initialize [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTypedProperty >> isMultivalued [
+FmxMBTypedProperty >> isMultivalued [
 
 	^ multivalued
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTypedProperty >> multivalued [
+FmxMBTypedProperty >> multivalued [
 
 	multivalued := true.
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTypedProperty >> multivalued: anObject [
+FmxMBTypedProperty >> multivalued: anObject [
 	multivalued := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTypedProperty >> propertyType [
+FmxMBTypedProperty >> propertyType [
 	^ propertyType
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTypedProperty >> propertyType: anObject [
+FmxMBTypedProperty >> propertyType: anObject [
 	propertyType := anObject
 ]

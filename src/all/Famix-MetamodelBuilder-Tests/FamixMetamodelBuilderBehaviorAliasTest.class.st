@@ -12,7 +12,7 @@ FamixMetamodelBuilderBehaviorAliasTest >> testAsIncompletePropertyWithoutRelatio
 	named := builder newClassNamed: #Named.
 	named as: #TNamed property: #name.
 	
-	self should: [ builder generate ] raise: FamixMetamodelBuilderIncompletePropertyDefiniton.
+	self should: [ builder generate ] raise: FmxMBIncompletePropertyDefiniton.
 
 ]
 

@@ -2,13 +2,13 @@
 FamixMetamodelBuilderIncompletePropertyDefiniton
 "
 Class {
-	#name : #FamixMetamodelBuilderIncompletePropertyDefiniton,
+	#name : #FmxMBIncompletePropertyDefiniton,
 	#superclass : #Error,
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderIncompletePropertyDefiniton >> messageText [
+FmxMBIncompletePropertyDefiniton >> messageText [
 
 	^ 'Properties need to be part of a relations or have a primitive type'
 ]

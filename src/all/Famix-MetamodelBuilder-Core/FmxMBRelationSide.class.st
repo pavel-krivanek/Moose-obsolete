@@ -2,8 +2,10 @@
 FamixMetamodelBuilderRelationSide
 "
 Class {
-	#name : #FamixMetamodelBuilderRelationSide,
-	#superclass : #FamixMetamodelBuilderProperty,
+	#name : #FmxMBRelationSide,
+	#superclass : #FmxMBProperty,
+	#traits : 'FmxMBRelationSideTrait',
+	#classTraits : 'FmxMBRelationSideTrait classTrait',
 	#instVars : [
 		'cardinality',
 		'trait',
@@ -14,77 +16,22 @@ Class {
 		'source',
 		'target'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> *- aRelationSide [
-
-	^ self manyToOne: aRelationSide
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> *-* aRelationSide [
-
-	^ self manyToMany: aRelationSide
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> *-<> aRelationSide [
-
-	^ self manyBelongTo: aRelationSide
-	
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> - aRelationSide [
-
-	^ self oneToOne: aRelationSide
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> -* aRelationSide [
-
-	^ self oneToMany: aRelationSide
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> -<> aRelationSide [
-
-	^ self oneBelongsTo: aRelationSide
-
-	
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> <>- aRelationSide [
-
-	^ self containsOne: aRelationSide
-	
-]
-
-{ #category : #'relations - arrows' }
-FamixMetamodelBuilderRelationSide >> <>-* aRelationSide [
-
-	^ self containsMany: aRelationSide
-	
-
-	
-]
-
 { #category : #visitor }
-FamixMetamodelBuilderRelationSide >> acceptVisitor: aVisitor [
+FmxMBRelationSide >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitRelationSide: self.
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderRelationSide >> asSlot [
+FmxMBRelationSide >> asSlot [
 	
 	| slotName opposite |
 
 	self hasRelation 
-		ifFalse: [ FamixMetamodelBuilderIncompletePropertyDefiniton signal ].
+		ifFalse: [ FmxMBIncompletePropertyDefiniton signal ].
 	
 	slotName := self name.
 	opposite := self otherSide.
@@ -105,64 +52,44 @@ FamixMetamodelBuilderRelationSide >> asSlot [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> cardinality [
+FmxMBRelationSide >> cardinality [
 	^ cardinality
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> cardinality: anObject [
+FmxMBRelationSide >> cardinality: anObject [
 	cardinality := anObject
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> container [
+FmxMBRelationSide >> container [
 	
 	container := true
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> container: anObject [
+FmxMBRelationSide >> container: anObject [
 	container := anObject
 ]
 
-{ #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> containsMany: aRelationSide [
-
-	aRelationSide container.
-	self oneToMany: aRelationSide.
-	
-
-	
-]
-
-{ #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> containsOne: aRelationSide [
-
-	aRelationSide container.
-	self oneToOne: aRelationSide.
-	
-
-	
-]
-
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> derived [
+FmxMBRelationSide >> derived [
 	derived := true
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> derived: anObject [
+FmxMBRelationSide >> derived: anObject [
 	derived := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> from [
+FmxMBRelationSide >> from [
 
 	^ self relation from
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderRelationSide >> generateGetterIn: aClassOrTrait [
+FmxMBRelationSide >> generateGetterIn: aClassOrTrait [
 
 	| methodSource commentDefinition |
 	
@@ -192,7 +119,7 @@ FamixMetamodelBuilderRelationSide >> generateGetterIn: aClassOrTrait [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderRelationSide >> generateSetterIn: aClassOrTrait [
+FmxMBRelationSide >> generateSetterIn: aClassOrTrait [
 
 	| methodSource |
 	
@@ -209,13 +136,13 @@ FamixMetamodelBuilderRelationSide >> generateSetterIn: aClassOrTrait [
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderRelationSide >> hasRelation [
+FmxMBRelationSide >> hasRelation [
 
 	^ self relation notNil
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> initialize [
+FmxMBRelationSide >> initialize [
 
 	super initialize.	
 
@@ -228,59 +155,49 @@ FamixMetamodelBuilderRelationSide >> initialize [
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> isContainer [
+FmxMBRelationSide >> isContainer [
 
 	^ container
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> isDerived [
+FmxMBRelationSide >> isDerived [
 
 	^ derived
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderRelationSide >> isMany [
+FmxMBRelationSide >> isMany [
 
 	^ self cardinality = #many
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderRelationSide >> isOne [
+FmxMBRelationSide >> isOne [
 
 	^ self cardinality = #one
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> isSource [
+FmxMBRelationSide >> isSource [
 
 	^ source
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> isTarget [
+FmxMBRelationSide >> isTarget [
 
 	^ target
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> many [
+FmxMBRelationSide >> many [
 
 	cardinality := #many
 ]
 
 { #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> manyBelongTo: aRelationSide [
-
-	self container.
-	self manyToOne: aRelationSide.
-	
-
-	
-]
-
-{ #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> manyToMany: aRelationSide [
+FmxMBRelationSide >> manyToMany: aRelationSide [
 
 	| aRelation |
 	
@@ -297,7 +214,7 @@ FamixMetamodelBuilderRelationSide >> manyToMany: aRelationSide [
 ]
 
 { #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> manyToOne: aRelationSide [
+FmxMBRelationSide >> manyToOne: aRelationSide [
 
 	| aRelation |
 	
@@ -314,35 +231,25 @@ FamixMetamodelBuilderRelationSide >> manyToOne: aRelationSide [
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> noContainer [
+FmxMBRelationSide >> noContainer [
 	
 	container := false
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> notDerived [
+FmxMBRelationSide >> notDerived [
 	
 	derived := false
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> one [
+FmxMBRelationSide >> one [
 
 	cardinality := #one
 ]
 
 { #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> oneBelongsTo: aRelationSide [
-
-	self container.
-	self oneToOne: aRelationSide.
-	
-
-	
-]
-
-{ #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> oneToMany: aRelationSide [
+FmxMBRelationSide >> oneToMany: aRelationSide [
 
 	| aRelation |
 	
@@ -359,7 +266,7 @@ FamixMetamodelBuilderRelationSide >> oneToMany: aRelationSide [
 ]
 
 { #category : #'relations - named' }
-FamixMetamodelBuilderRelationSide >> oneToOne: aRelationSide [
+FmxMBRelationSide >> oneToOne: aRelationSide [
 
 	| aRelation |
 
@@ -374,7 +281,7 @@ FamixMetamodelBuilderRelationSide >> oneToOne: aRelationSide [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> otherSide [
+FmxMBRelationSide >> otherSide [
 
 	| aFromSide |
 	
@@ -386,33 +293,33 @@ FamixMetamodelBuilderRelationSide >> otherSide [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> relatedClass [
+FmxMBRelationSide >> relatedClass [
 	^ relatedClass
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> relatedClass: anObject [
+FmxMBRelationSide >> relatedClass: anObject [
 	relatedClass := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> relatedEntity [
+FmxMBRelationSide >> relatedEntity [
 
 	^ relatedClass ifNil: [ ^ trait ]
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> relation [
+FmxMBRelationSide >> relation [
 	^ relation
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> relation: anObject [
+FmxMBRelationSide >> relation: anObject [
 	relation := anObject
 ]
 
 { #category : #private }
-FamixMetamodelBuilderRelationSide >> relationWith: aRelationSide [
+FmxMBRelationSide >> relationWith: aRelationSide [
 
 	| aRelation |
 	
@@ -430,40 +337,40 @@ FamixMetamodelBuilderRelationSide >> relationWith: aRelationSide [
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> source [
+FmxMBRelationSide >> source [
 
 	source := true.
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> source: anObject [
+FmxMBRelationSide >> source: anObject [
 	source := anObject
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> target [
+FmxMBRelationSide >> target [
 
 	target := true.
 ]
 
 { #category : #properties }
-FamixMetamodelBuilderRelationSide >> target: anObject [
+FmxMBRelationSide >> target: anObject [
 	target := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> to [
+FmxMBRelationSide >> to [
 
 	^ self relation to
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> trait [
+FmxMBRelationSide >> trait [
 	^ trait
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> trait: anObject [
+FmxMBRelationSide >> trait: anObject [
 
 	trait ifNotNil: [ 
 		trait removeRelationSide: self ].
@@ -472,13 +379,13 @@ FamixMetamodelBuilderRelationSide >> trait: anObject [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> traitName [
+FmxMBRelationSide >> traitName [
 
 	^ self trait name
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRelationSide >> traitName: aString [
+FmxMBRelationSide >> traitName: aString [
 
 	trait := self builder ensureLocalTraitNamed: aString
 

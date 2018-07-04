@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 FamixMetamodelBuilderClassTest >> behaviorClass [
 
-	^ FamixMetamodelBuilderClass
+	^ FmxMBClass
 ]
 
 { #category : #utilities }

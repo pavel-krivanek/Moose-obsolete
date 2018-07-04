@@ -11,7 +11,7 @@ FamixMetamodelBuilderRelationSideTest >> testBasics [
 
 	| side |
 	
-	side := FamixMetamodelBuilderRelationSide new.
+	side := FmxMBRelationSide new.
 	
 	self assert: side cardinality equals: #one.
 	self deny: side isContainer.
@@ -51,7 +51,7 @@ FamixMetamodelBuilderRelationSideTest >> testProperties [
 
 	| side |
 	
-	side := FamixMetamodelBuilderRelationSide new.
+	side := FmxMBRelationSide new.
 
 	self deny: side isContainer.
 	side container.

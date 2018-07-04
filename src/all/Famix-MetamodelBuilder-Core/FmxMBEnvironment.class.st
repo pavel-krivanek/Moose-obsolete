@@ -2,16 +2,16 @@
 FamixMetamodelBuilderEnvironment
 "
 Class {
-	#name : #FamixMetamodelBuilderEnvironment,
+	#name : #FmxMBEnvironment,
 	#superclass : #Object,
 	#instVars : [
 		'builder'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #'instance creation' }
-FamixMetamodelBuilderEnvironment class >> for: aBuilder [
+FmxMBEnvironment class >> for: aBuilder [
 
 	^ self new 
 		builder: aBuilder;
@@ -19,23 +19,23 @@ FamixMetamodelBuilderEnvironment class >> for: aBuilder [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEnvironment >> apply [
+FmxMBEnvironment >> apply [
 
 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEnvironment >> builder [
+FmxMBEnvironment >> builder [
 	^ builder
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEnvironment >> builder: anObject [
+FmxMBEnvironment >> builder: anObject [
 	builder := anObject
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderEnvironment >> createClassNamed: aClassName superclass: aSuperclass traitNames: traitNames slots: slots in: packageName overwrite: shouldOverwrite [
+FmxMBEnvironment >> createClassNamed: aClassName superclass: aSuperclass traitNames: traitNames slots: slots in: packageName overwrite: shouldOverwrite [
 
 	| aClass existingClass composition |
 	

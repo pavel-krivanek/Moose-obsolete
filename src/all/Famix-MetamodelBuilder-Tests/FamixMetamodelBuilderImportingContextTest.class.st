@@ -51,7 +51,7 @@ FamixMetamodelBuilderImportingContextTest >> testDefineImport [
 FamixMetamodelBuilderImportingContextTest >> testGeneratedContextClass [
 
 	self assert: generatedContext notNil.
-	self assert: generatedContext superclass name = #FamixImportingContext.
+	self assert: generatedContext superclass name = #FmxImportingContext.
 ]
 
 { #category : #initialization }

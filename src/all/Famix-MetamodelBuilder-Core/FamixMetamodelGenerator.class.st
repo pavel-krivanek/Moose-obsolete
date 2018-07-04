@@ -10,7 +10,7 @@ Class {
 	#classInstVars : [
 		'metamodel'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Basic'
 }
 
 { #category : #'as yet unclassified' }

@@ -1,32 +1,32 @@
 Class {
-	#name : #FamixMetamodelBuilderRingEnvironment,
-	#superclass : #FamixMetamodelBuilderEnvironment,
+	#name : #FmxMBRingEnvironment,
+	#superclass : #FmxMBEnvironment,
 	#instVars : [
 		'ringEnvironment'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> apply [
+FmxMBRingEnvironment >> apply [
 
 	"do nothing"
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> basicSuperclass [
+FmxMBRingEnvironment >> basicSuperclass [
 
 	^ self ringEnvironment ensureClassNamed: self builder basicSuperclassName
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> basicTrait [
+FmxMBRingEnvironment >> basicTrait [
 
 	^ self ringEnvironment ensureClassNamed: self builder basicTraitName
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRingEnvironment >> cleanClass: realClass [
+FmxMBRingEnvironment >> cleanClass: realClass [
 
 	realClass protocols 
 		select: [ :each | each beginsWith: '_fromTrait_' ] 
@@ -39,13 +39,13 @@ FamixMetamodelBuilderRingEnvironment >> cleanClass: realClass [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> compile: aSource in: aClass classified: aProtocol [
+FmxMBRingEnvironment >> compile: aSource in: aClass classified: aProtocol [
 
 	aClass compile: aSource classified: aProtocol.
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass traitNames: traitNames slots: slots in: packageName overwrite: shouldOverwrite [
+FmxMBRingEnvironment >> createClassNamed: aClassName superclass: aSuperclass traitNames: traitNames slots: slots in: packageName overwrite: shouldOverwrite [
 
 	| aClass existingClass composition |
 	
@@ -80,7 +80,7 @@ FamixMetamodelBuilderRingEnvironment >> createClassNamed: aClassName superclass:
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createImportingcontextClassNamed: aClassName in: packageName [
+FmxMBRingEnvironment >> createImportingcontextClassNamed: aClassName in: packageName [
 
 	| resultantClass |
 	
@@ -97,7 +97,7 @@ FamixMetamodelBuilderRingEnvironment >> createImportingcontextClassNamed: aClass
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
+FmxMBRingEnvironment >> createTraitNamed: traitName slots: slots in: packageName overwrite: shouldOverwrite [
 
 	| aPackage aTrait existingClass |
 
@@ -127,7 +127,7 @@ FamixMetamodelBuilderRingEnvironment >> createTraitNamed: traitName slots: slots
 ]
 
 { #category : #installing }
-FamixMetamodelBuilderRingEnvironment >> generateSlotsDescriptionFrom: anRGClass [
+FmxMBRingEnvironment >> generateSlotsDescriptionFrom: anRGClass [
 
 	| generatedSlots |
 	
@@ -145,13 +145,13 @@ FamixMetamodelBuilderRingEnvironment >> generateSlotsDescriptionFrom: anRGClass 
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> hasBehaviorNamed: aClassName [
+FmxMBRingEnvironment >> hasBehaviorNamed: aClassName [
 
 	^ self ringEnvironment ask includesClassNamed: aClassName
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> initialize [
+FmxMBRingEnvironment >> initialize [
 
 	super initialize.
 	
@@ -163,31 +163,31 @@ FamixMetamodelBuilderRingEnvironment >> initialize [
 ]
 
 { #category : #'public registration' }
-FamixMetamodelBuilderRingEnvironment >> registerPackage: aPackageName [
+FmxMBRingEnvironment >> registerPackage: aPackageName [
 
 	^ self ringEnvironment ensurePackageNamed: aPackageName.
 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderRingEnvironment >> ringEnvironment [
+FmxMBRingEnvironment >> ringEnvironment [
 	^ ringEnvironment
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> setComment: aString for: aClass [
+FmxMBRingEnvironment >> setComment: aString for: aClass [
 
 	aClass comment content: aString
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName [ 
+FmxMBRingEnvironment >> slotNamed: slotName [ 
 
 	^ (RGInstanceVariableSlot named: slotName asSymbol)
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRingEnvironment >> slotNamed: slotName cardinality: cardinality type: type opposite: oppositeName [
+FmxMBRingEnvironment >> slotNamed: slotName cardinality: cardinality type: type opposite: oppositeName [
 
 	| cardinalityClassName |
 	

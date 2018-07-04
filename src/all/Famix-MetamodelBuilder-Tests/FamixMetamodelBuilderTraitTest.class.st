@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 FamixMetamodelBuilderTraitTest >> behaviorClass [
 
-	^ FamixMetamodelBuilderTrait
+	^ FmxMBTrait
 ]
 
 { #category : #accessing }
@@ -25,8 +25,8 @@ FamixMetamodelBuilderTraitTest >> testAsProperty [
 		
 	aTrait := builder newTraitNamed: #TVariable.	
 		
-	self shouldnt: [ aTrait as: #TVariable property: #property ] raise: FamixMetamodelBuilderTraitRenamingError.
-	self should: [ aTrait as: #TOtherName property: #property ] raise: FamixMetamodelBuilderTraitRenamingError.
+	self shouldnt: [ aTrait as: #TVariable property: #property ] raise: FmxMBTraitRenamingError.
+	self should: [ aTrait as: #TOtherName property: #property ] raise: FmxMBTraitRenamingError.
 ]
 
 { #category : #tests }
@@ -375,7 +375,7 @@ FamixMetamodelBuilderTraitTest >> testTraitGeneralization [
 	aTrait := builder newTraitNamed: #TVariable.	
 	aClass := builder newClassNamed: #Variable.	
 		
-	self should: [aTrait --|> aClass] raise: FamixMetamodelBuilderTraitsGeneralizationError
+	self should: [aTrait --|> aClass] raise: FmxMBTraitsGeneralizationError
 ]
 
 { #category : #tests }

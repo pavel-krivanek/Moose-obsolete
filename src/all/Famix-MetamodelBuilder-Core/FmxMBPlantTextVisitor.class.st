@@ -6,8 +6,8 @@ v contents
 
 "
 Class {
-	#name : #FamixMetamodelBuilderPlantTextVisitor,
-	#superclass : #FamixMetamodelBuilderVisitor,
+	#name : #FmxMBPlantTextVisitor,
+	#superclass : #FmxMBVisitor,
 	#instVars : [
 		'stream',
 		'relations',
@@ -18,11 +18,11 @@ Class {
 		'typedProperties',
 		'traitsWithUsers'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #private }
-FamixMetamodelBuilderPlantTextVisitor >> behaviorNameOrNilFor: aBehavior [
+FmxMBPlantTextVisitor >> behaviorNameOrNilFor: aBehavior [
 
 	| foundAssociation |
 	
@@ -34,35 +34,35 @@ FamixMetamodelBuilderPlantTextVisitor >> behaviorNameOrNilFor: aBehavior [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderPlantTextVisitor >> behaviors [
+FmxMBPlantTextVisitor >> behaviors [
 	^ behaviors
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPlantTextVisitor >> contents [
+FmxMBPlantTextVisitor >> contents [
 
 	^ stream contents
 ]
 
 { #category : #private }
-FamixMetamodelBuilderPlantTextVisitor >> ensureBehaviorNameFor: aBehavior [
+FmxMBPlantTextVisitor >> ensureBehaviorNameFor: aBehavior [
 
 	^ (self behaviorNameOrNilFor: aBehavior)
 		ifNil: [ self registerNewBehavior: aBehavior ]
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderPlantTextVisitor >> gatherTraits [
+FmxMBPlantTextVisitor >> gatherTraits [
 	^ gatherTraits
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderPlantTextVisitor >> gatherTraits: anObject [
+FmxMBPlantTextVisitor >> gatherTraits: anObject [
 	gatherTraits := anObject
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderPlantTextVisitor >> initialize [
+FmxMBPlantTextVisitor >> initialize [
 
 	super initialize.
 	
@@ -77,17 +77,17 @@ FamixMetamodelBuilderPlantTextVisitor >> initialize [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderPlantTextVisitor >> mergeTraits [
+FmxMBPlantTextVisitor >> mergeTraits [
 	^ mergeTraits
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderPlantTextVisitor >> mergeTraits: anObject [
+FmxMBPlantTextVisitor >> mergeTraits: anObject [
 	mergeTraits := anObject
 ]
 
 { #category : #private }
-FamixMetamodelBuilderPlantTextVisitor >> mergeTrat: aTrait withBehaviorNamed: aBehaviorName [
+FmxMBPlantTextVisitor >> mergeTrat: aTrait withBehaviorNamed: aBehaviorName [
 
 	(behaviors at: aBehaviorName) add: aTrait.
 	
@@ -96,13 +96,13 @@ FamixMetamodelBuilderPlantTextVisitor >> mergeTrat: aTrait withBehaviorNamed: aB
 ]
 
 { #category : #private }
-FamixMetamodelBuilderPlantTextVisitor >> onlySingleUserOf: aTrait [
+FmxMBPlantTextVisitor >> onlySingleUserOf: aTrait [
 
 	^ ((aTrait builder classesToGenerate) count: [ :aClass | aClass usesOnlyTrait: aTrait]) = 1
 ]
 
 { #category : #private }
-FamixMetamodelBuilderPlantTextVisitor >> registerNewBehavior: aBehavior [
+FmxMBPlantTextVisitor >> registerNewBehavior: aBehavior [
 
 	| key |
 
@@ -114,13 +114,13 @@ FamixMetamodelBuilderPlantTextVisitor >> registerNewBehavior: aBehavior [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPlantTextVisitor >> selectTraitsWithUsersFrom: aBuilder [
+FmxMBPlantTextVisitor >> selectTraitsWithUsersFrom: aBuilder [
 
 	^ traitsWithUsers := aBuilder classes flatCollect: [:each | each traitGeneralizations] as: Set
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
+FmxMBPlantTextVisitor >> visitBuilder: aBuilder [
 
 	stream nextPutAll: '@startuml'; cr; cr.
 	stream nextPutAll: 'hide empty members'; cr; cr.
@@ -144,7 +144,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
+FmxMBPlantTextVisitor >> visitClass: aClass [
 
 	| behaviorKey mergesTrait displayedName | 
 	
@@ -197,14 +197,14 @@ FamixMetamodelBuilderPlantTextVisitor >> visitClass: aClass [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPlantTextVisitor >> visitRelationSide: aRelationSide [
+FmxMBPlantTextVisitor >> visitRelationSide: aRelationSide [
 
 	relations add: aRelationSide relation.
 
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
+FmxMBPlantTextVisitor >> visitTrait: aTrait [
 
 	| behaviorKey |
 	
@@ -240,7 +240,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTrait: aTrait [
 ]
 
 { #category : #visiting }
-FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
+FmxMBPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 
 	stream 
 		tab; 
@@ -252,7 +252,7 @@ FamixMetamodelBuilderPlantTextVisitor >> visitTypedProperty: aTypedProperty [
 ]
 
 { #category : #relations }
-FamixMetamodelBuilderPlantTextVisitor >> writeGeneralizations [
+FmxMBPlantTextVisitor >> writeGeneralizations [
 
 	generalizationDefinitions do: [ :each| 
 		
@@ -268,7 +268,7 @@ FamixMetamodelBuilderPlantTextVisitor >> writeGeneralizations [
 ]
 
 { #category : #relations }
-FamixMetamodelBuilderPlantTextVisitor >> writeRelations [
+FmxMBPlantTextVisitor >> writeRelations [
 
 	| isContainer |
 

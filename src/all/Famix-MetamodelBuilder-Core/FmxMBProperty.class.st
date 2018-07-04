@@ -2,26 +2,26 @@
 FamixMetamodelBuilderProperty
 "
 Class {
-	#name : #FamixMetamodelBuilderProperty,
-	#superclass : #FamixMetamodelBuilderEntity,
-	#category : #'Famix-MetamodelBuilder-Core'
+	#name : #FmxMBProperty,
+	#superclass : #FmxMBEntity,
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderProperty >> asSlot [
+FmxMBProperty >> asSlot [
 
 	self subclassResponsibility
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderProperty >> generateAccessorsIn: aClassOrTrait [
+FmxMBProperty >> generateAccessorsIn: aClassOrTrait [
 
 	self generateGetterIn: aClassOrTrait.
 	self generateSetterIn: aClassOrTrait.
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderProperty >> initialize [
+FmxMBProperty >> initialize [
 
 	super initialize.	
 
@@ -30,13 +30,13 @@ FamixMetamodelBuilderProperty >> initialize [
 ]
 
 { #category : #printing }
-FamixMetamodelBuilderProperty >> isContainer [
+FmxMBProperty >> isContainer [
 
 	^ false
 ]
 
 { #category : #printing }
-FamixMetamodelBuilderProperty >> printOn: aStream [
+FmxMBProperty >> printOn: aStream [
 
 	<ignoreForCoverage>
 

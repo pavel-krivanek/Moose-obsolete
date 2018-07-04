@@ -6,7 +6,7 @@ FamixMetamodelBuilder class >> forTesting [
 	| aBuilder |
 	aBuilder := self new.
 	aBuilder
-		environment: (FamixMetamodelBuilderRingEnvironment for: aBuilder);
+		environment: (FmxMBRingEnvironment for: aBuilder);
 		prefix: 'Tst';
 		packageName: 'Tst';
 		yourself.

@@ -2,25 +2,25 @@
 FamixMetamodelBuilderTrait
 "
 Class {
-	#name : #FamixMetamodelBuilderTrait,
-	#superclass : #FamixMetamodelBuilderBehavior,
+	#name : #FmxMBTrait,
+	#superclass : #FmxMBBehavior,
 	#instVars : [
 		'sides'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #visitor }
-FamixMetamodelBuilderTrait >> acceptVisitor: aVisitor [
+FmxMBTrait >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitTrait: self.
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTrait >> as: aTraitName property: propertyName [
+FmxMBTrait >> as: aTraitName property: propertyName [
 
 	self name = aTraitName
-		ifFalse: [ FamixMetamodelBuilderTraitRenamingError signal ].
+		ifFalse: [ FmxMBTraitRenamingError signal ].
 	
 	^ self property: propertyName
 
@@ -28,31 +28,31 @@ FamixMetamodelBuilderTrait >> as: aTraitName property: propertyName [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTrait >> classGeneralization [
+FmxMBTrait >> classGeneralization [
 
 	^ self builder environment basicTrait
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTrait >> defaultSuperclass [
+FmxMBTrait >> defaultSuperclass [
 	
 	^ self builder environment basicTrait
 ]
 
 { #category : #'settings-default' }
-FamixMetamodelBuilderTrait >> defaultTag [
+FmxMBTrait >> defaultTag [
 
 	^ self builder traitTag
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTrait >> generalization: anObject [
+FmxMBTrait >> generalization: anObject [
 
-	FamixMetamodelBuilderTraitsGeneralizationError signal
+	FmxMBTraitsGeneralizationError signal
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTrait >> generate [
+FmxMBTrait >> generate [
 
 	| aTrait traitName |
 		
@@ -76,7 +76,7 @@ FamixMetamodelBuilderTrait >> generate [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass [
+FmxMBTrait >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass [
 
 	| aSuperclassName |
 	
@@ -103,7 +103,7 @@ FamixMetamodelBuilderTrait >> generateAnnotationIn: aRealClass as: aName supercl
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderTrait >> initialize [
+FmxMBTrait >> initialize [
 
 	super initialize.
 	
@@ -111,13 +111,13 @@ FamixMetamodelBuilderTrait >> initialize [
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderTrait >> isMetamodelTrait [
+FmxMBTrait >> isMetamodelTrait [
 
 	^ true
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderTrait >> ownerPropertyName [
+FmxMBTrait >> ownerPropertyName [
 	
 	| uncapitalized |
 		
@@ -128,7 +128,7 @@ FamixMetamodelBuilderTrait >> ownerPropertyName [
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderTrait >> pluralPropertyName [
+FmxMBTrait >> pluralPropertyName [
 
 	| uncapitalized |
 	
@@ -140,7 +140,7 @@ FamixMetamodelBuilderTrait >> pluralPropertyName [
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderTrait >> propertyName [
+FmxMBTrait >> propertyName [
 	
 	^ (self name withoutPrefix: 'T') uncapitalized.
 	
@@ -148,19 +148,19 @@ FamixMetamodelBuilderTrait >> propertyName [
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderTrait >> relatedOwnerTraitName [
+FmxMBTrait >> relatedOwnerTraitName [
 
 	^ self name
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTrait >> relatedTraitName [
+FmxMBTrait >> relatedTraitName [
 
 	^ self name
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderTrait >> removeRelationSide: aRelationSide [
+FmxMBTrait >> removeRelationSide: aRelationSide [
 
 	properties remove: aRelationSide ifAbsent: [ ].
 ]

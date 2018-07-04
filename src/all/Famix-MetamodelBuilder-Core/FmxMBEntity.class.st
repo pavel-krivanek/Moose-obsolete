@@ -1,5 +1,5 @@
 Class {
-	#name : #FamixMetamodelBuilderEntity,
+	#name : #FmxMBEntity,
 	#superclass : #Object,
 	#instVars : [
 		'name',
@@ -8,31 +8,31 @@ Class {
 		'willGenerate',
 		'navigationGroups'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> builder [
+FmxMBEntity >> builder [
 	^ builder
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> builder: anObject [
+FmxMBEntity >> builder: anObject [
 	builder := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> comment [
+FmxMBEntity >> comment [
 	^ comment
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> comment: anObject [
+FmxMBEntity >> comment: anObject [
 	comment := anObject
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderEntity >> initialize [
+FmxMBEntity >> initialize [
 
 	super initialize.	
 
@@ -43,39 +43,39 @@ FamixMetamodelBuilderEntity >> initialize [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> name [
+FmxMBEntity >> name [
 	^ name
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> name: anObject [
+FmxMBEntity >> name: anObject [
 	name := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> navigationGroups [
+FmxMBEntity >> navigationGroups [
 	^ navigationGroups
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> navigationGroups: anObject [
+FmxMBEntity >> navigationGroups: anObject [
 	navigationGroups := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> willGenerate [
+FmxMBEntity >> willGenerate [
 	^ willGenerate
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> willGenerate: anObject [
+FmxMBEntity >> willGenerate: anObject [
 	willGenerate := anObject
 ]
 
 { #category : #navigation }
-FamixMetamodelBuilderEntity >> withNavigation [
+FmxMBEntity >> withNavigation [
 
-	self navigationGroups add: (FamixMetamodelBuilderNavigationGroup new 
+	self navigationGroups add: (FmxMBNavigationGroup new 
 		name: self name;
 		entity: self;
 		yourself).

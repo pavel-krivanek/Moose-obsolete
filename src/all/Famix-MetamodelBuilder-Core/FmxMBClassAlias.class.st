@@ -1,18 +1,20 @@
 "
-FamixMetamodelBuilderBehaviorAlias
+FamixMetamodelBuilderClassAlias
 "
 Class {
-	#name : #FamixMetamodelBuilderBehaviorAlias,
+	#name : #FmxMBClassAlias,
 	#superclass : #Object,
+	#traits : 'FmxMBRelationSideTrait',
+	#classTraits : 'FmxMBRelationSideTrait classTrait',
 	#instVars : [
 		'subject',
 		'trait'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorAlias >> link: link1 throughAssociation: anAssociationAlias link: link2 with: anAlias [
+FmxMBClassAlias >> link: link1 throughAssociation: anAssociationAlias link: link2 with: anAlias [
 
 "(behavior as: #TWithAccesses)
 	link: #accesses -> #accessor
@@ -52,33 +54,33 @@ FamixMetamodelBuilderBehaviorAlias >> link: link1 throughAssociation: anAssociat
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorAlias >> property: propertyName type: aTypeName [
+FmxMBClassAlias >> property: propertyName type: aTypeName [
 
 	^ self trait property: propertyName type: aTypeName
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorAlias >> subject [
+FmxMBClassAlias >> subject [
 	^ subject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorAlias >> subject: anObject [
+FmxMBClassAlias >> subject: anObject [
 	subject := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorAlias >> trait [
+FmxMBClassAlias >> trait [
 	^ trait
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorAlias >> trait: anObject [
+FmxMBClassAlias >> trait: anObject [
 	trait := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorAlias >> traitName [
+FmxMBClassAlias >> traitName [
 
 	^ self trait name
 ]

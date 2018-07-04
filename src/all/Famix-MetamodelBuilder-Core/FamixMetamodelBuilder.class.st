@@ -64,7 +64,7 @@ Class {
 		'generateImportingContext',
 		'testingSelectorsMapping'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Basic'
 }
 
 { #category : #'instance creation' }
@@ -90,7 +90,7 @@ FamixMetamodelBuilder >> apply [
 { #category : #accessing }
 FamixMetamodelBuilder >> baseImportingContextName [
 
-	^ #FamixImportingContext
+	^ #FmxImportingContext
 ]
 
 { #category : #accessing }
@@ -347,7 +347,7 @@ FamixMetamodelBuilder >> importingContextName [
 { #category : #initialization }
 FamixMetamodelBuilder >> initialize [
 
-	environment := FamixMetamodelBuilderRealRingEnvironment for: self.
+	environment := FmxMBRealRingEnvironment for: self.
 
 	classes := OrderedCollection new.
 	traits := OrderedCollection new.
@@ -365,7 +365,7 @@ FamixMetamodelBuilder >> newClass [
 
 	| aClass |
 	
-	aClass := FamixMetamodelBuilderClass new.
+	aClass := FmxMBClass new.
 	aClass builder: self.
 	aClass prefix: self prefix.
 	aClass packageName: self packageName.
@@ -395,7 +395,7 @@ FamixMetamodelBuilder >> newRelation [
 
 	| aRelation |
 	
-	aRelation := FamixMetamodelBuilderRelation new.
+	aRelation := FmxMBRelation new.
 	aRelation builder: self.
 	self relations add: aRelation.
 	^ aRelation
@@ -406,7 +406,7 @@ FamixMetamodelBuilder >> newTrait [
 
 	| aTrait |
 	
-	aTrait := FamixMetamodelBuilderTrait new.
+	aTrait := FmxMBTrait new.
 	aTrait builder: self.
 	aTrait prefix: self prefix.
 	aTrait packageName: self packageName.
@@ -529,7 +529,7 @@ FamixMetamodelBuilder >> testingSelectorsMapping: anObject [
 { #category : #accessing }
 FamixMetamodelBuilder >> trait: aTraitName property: propertyName [
 
-	^ FamixMetamodelBuilderRelationSide new
+	^ FmxMBRelationSide new
 		traitName: aTraitName;
 		name: propertyName;
 		builder: self;

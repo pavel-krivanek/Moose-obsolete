@@ -96,7 +96,7 @@ FmxNGCompatibilityGenerator class >> resetMetamodel [
 	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
 	
 	{ Trait. Class. ClassDescription. Behavior. 
-	MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup. FamixImportingContext} 
+	MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup. FmxImportingContext} 
 		do: [ :each | classes add: each ].
 
 	tower := MooseModel metaBuilder: classes.

@@ -2,32 +2,32 @@
 FamixMetamodelBuilderClass
 "
 Class {
-	#name : #FamixMetamodelBuilderClass,
-	#superclass : #FamixMetamodelBuilderBehavior,
+	#name : #FmxMBClass,
+	#superclass : #FmxMBBehavior,
 	#instVars : [
 		'traitGeneralizations',
 		'classGeneralization',
 		'requirements',
 		'isHierarchyRoot'
 	],
-	#category : #'Famix-MetamodelBuilder-Core'
+	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
 
 { #category : #visitor }
-FamixMetamodelBuilderClass >> acceptVisitor: aVisitor [
+FmxMBClass >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitClass: self.
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> addTraitGeneralization: aTrait [
+FmxMBClass >> addTraitGeneralization: aTrait [
 
 	(self traitGeneralizations includes: aTrait)
 		ifFalse: [ self traitGeneralizations add: aTrait ]
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> allClassGeneralizations [
+FmxMBClass >> allClassGeneralizations [
 
 	| result c g|
 	result := OrderedCollection new.
@@ -40,19 +40,19 @@ FamixMetamodelBuilderClass >> allClassGeneralizations [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> allRequirementNames [ 
+FmxMBClass >> allRequirementNames [ 
 
 	^ (self requirements asSet collect: #fullName) sorted
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> allTraitNames [ 
+FmxMBClass >> allTraitNames [ 
 
 	^ (self traitNamesFromRelations, self traitNamesFromGeneralizations) asSet sorted
 ]
 
 { #category : #converting }
-FamixMetamodelBuilderClass >> as: aTraitOrTraitName [
+FmxMBClass >> as: aTraitOrTraitName [
 
 	| trait |
 	
@@ -61,7 +61,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName [
 		ifFalse: [ aTraitOrTraitName ].
 	self addTraitGeneralization: trait. 
 	
-	^ FamixMetamodelBuilderClassAlias new
+	^ FmxMBClassAlias new
 		subject: self;
 		trait: trait;
 		yourself.
@@ -70,7 +70,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName [
 ]
 
 { #category : #converting }
-FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
+FmxMBClass >> as: aTraitOrTraitName property: propertyName [
 
 	| aSide aTrait aTraitName |
 	
@@ -84,7 +84,7 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 			aTraitName := aTraitOrTraitName name.
 			aTraitOrTraitName ].
 	
-	aSide := FamixMetamodelBuilderRelationSide new
+	aSide := FmxMBRelationSide new
 		builder: self builder;
 		relatedClass: self;
 		traitName: aTraitName;
@@ -97,24 +97,24 @@ FamixMetamodelBuilderClass >> as: aTraitOrTraitName property: propertyName [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> classGeneralization [
+FmxMBClass >> classGeneralization [
 	^ classGeneralization
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> classGeneralization: anObject [
+FmxMBClass >> classGeneralization: anObject [
 	classGeneralization := anObject
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> containerProperties [
+FmxMBClass >> containerProperties [
 
 	^ ((self properties) select: #isContainer),
 	((self traitGeneralizations flatCollect: #properties) select: #isContainer)
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> generalization: anObject [
+FmxMBClass >> generalization: anObject [
 
 	anObject isSymbol
 		ifTrue: [ self addTraitGeneralization: (self builder ensureTraitNamed: anObject) ]
@@ -125,7 +125,7 @@ FamixMetamodelBuilderClass >> generalization: anObject [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderClass >> generate [
+FmxMBClass >> generate [
 
 	| aClass aSuperclass aClassName |
 	
@@ -161,7 +161,7 @@ FamixMetamodelBuilderClass >> generate [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderClass >> generateRequirementsFor: aClass [
+FmxMBClass >> generateRequirementsFor: aClass [
 
 	aClass classSide compile: ('requirements
 
@@ -171,7 +171,7 @@ FamixMetamodelBuilderClass >> generateRequirementsFor: aClass [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> generateTestingMethodsIn: aClass [
+FmxMBClass >> generateTestingMethodsIn: aClass [
 	
 	self isRoot ifTrue: [ 
 		builder testingSelectorsMapping do: [ :sel |
@@ -187,13 +187,13 @@ FamixMetamodelBuilderClass >> generateTestingMethodsIn: aClass [
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderClass >> hasTraitGeneralization: aTrait [
+FmxMBClass >> hasTraitGeneralization: aTrait [
 
 	^ self traitGeneralizations includes: aTrait 
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderClass >> initialize [
+FmxMBClass >> initialize [
 
 	super initialize.
 	
@@ -201,26 +201,26 @@ FamixMetamodelBuilderClass >> initialize [
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderClass >> isMetamodelClass [
+FmxMBClass >> isMetamodelClass [
 
 	^ true
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderClass >> isRoot [
+FmxMBClass >> isRoot [
 
 	^ self classGeneralization isNil
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderClass >> ownerPropertyName [
+FmxMBClass >> ownerPropertyName [
 
 	^ self name uncapitalized, 'Owner'.
 	
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderClass >> pluralPropertyName [
+FmxMBClass >> pluralPropertyName [
 
 	| uncapitalized |
 	
@@ -232,7 +232,7 @@ FamixMetamodelBuilderClass >> pluralPropertyName [
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderClass >> propertyName [
+FmxMBClass >> propertyName [
 	
 	^ self name uncapitalized.
 	
@@ -240,31 +240,31 @@ FamixMetamodelBuilderClass >> propertyName [
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderClass >> relatedOwnerTraitName [
+FmxMBClass >> relatedOwnerTraitName [
 
 	^ 'TWith', self pluralPropertyName capitalized
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderClass >> relatedTraitName [
+FmxMBClass >> relatedTraitName [
 
 	^ 'T', self name
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> requirements [
+FmxMBClass >> requirements [
 
 	^ requirements 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> requires: collectionOfClasses [
+FmxMBClass >> requires: collectionOfClasses [
 
 	requirements addAll: collectionOfClasses
 ]
 
 { #category : #'name conversion' }
-FamixMetamodelBuilderClass >> singularPropertyName [
+FmxMBClass >> singularPropertyName [
 
 	| uncapitalized |
 	
@@ -280,26 +280,26 @@ FamixMetamodelBuilderClass >> singularPropertyName [
 ]
 
 { #category : #generating }
-FamixMetamodelBuilderClass >> subclassOf: aClass [
+FmxMBClass >> subclassOf: aClass [
 	
 	self generalization: aClass
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> traitGeneralizations [
+FmxMBClass >> traitGeneralizations [
 
 	^ traitGeneralizations ifNil: [ traitGeneralizations := OrderedCollection new ]
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> traitNamesFromGeneralizations [
+FmxMBClass >> traitNamesFromGeneralizations [
 
 	^ self traitGeneralizations collect: [ :each |
 		each fullName]
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderClass >> traitNamesFromRelations [
+FmxMBClass >> traitNamesFromRelations [
 
 	"returns traits defined by relations"
 
@@ -307,7 +307,7 @@ FamixMetamodelBuilderClass >> traitNamesFromRelations [
 ]
 
 { #category : #testing }
-FamixMetamodelBuilderClass >> usesOnlyTrait: aTrait [
+FmxMBClass >> usesOnlyTrait: aTrait [
 
  	^ (self traitGeneralizations size = 1) 
 		and: [ self traitGeneralizations first = aTrait ]	
