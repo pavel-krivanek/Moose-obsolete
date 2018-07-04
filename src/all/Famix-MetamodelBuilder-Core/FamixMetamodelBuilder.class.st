@@ -56,7 +56,6 @@ Class {
 		'traits',
 		'relations',
 		'classTag',
-		'traitsTag',
 		'traitTag',
 		'basicSuperclassName',
 		'basicTraitName',
@@ -300,8 +299,8 @@ FamixMetamodelBuilder >> generateImportingContext [
 
 	| contextClass |
 	
-	generateImportingContext ifFalse: [ ^ self ].
-		
+	self wantsToGenerateImportingContext ifFalse: [ ^ self ].
+
 	contextClass := self environment createImportingcontextClassNamed: self importingContextName in: self packageName.
 	
 	self generateShouldImportIn: contextClass.
@@ -556,17 +555,12 @@ FamixMetamodelBuilder >> traits [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilder >> traitsTag: anObject [
-	traitsTag := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> traitsToGenerate [ 
-
-	^ self traits select: #willGenerate.
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilder >> wantsToGenerateImportingContext [
 	^ generateImportingContext
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> withImportingContext [
+
+	self generateImportingContext: true
 ]

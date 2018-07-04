@@ -119,24 +119,6 @@ FamixMetamodelBuilderPlantTextVisitor >> selectTraitsWithUsersFrom: aBuilder [
 	^ traitsWithUsers := aBuilder classes flatCollect: [:each | each traitGeneralizations] as: Set
 ]
 
-{ #category : #private }
-FamixMetamodelBuilderPlantTextVisitor >> traitsToShowFrom: aBuilder [
-
-	| traitsToGenerate classesToGenerate |
-
-	traitsToGenerate := aBuilder traitsToGenerate.
-	classesToGenerate := aBuilder classesToGenerate.
-	
-	^ self mergeTraits
-		ifTrue: [ 
-			traitsToGenerate select: [ :aTrait |
-				(classesToGenerate count: [ :aClass | aClass hasTraitGeneralization: aTrait ]) ~= 1 ]]
-		ifFalse: [ traitsToGenerate ]
-		
-		
-	
-]
-
 { #category : #visiting }
 FamixMetamodelBuilderPlantTextVisitor >> visitBuilder: aBuilder [
 

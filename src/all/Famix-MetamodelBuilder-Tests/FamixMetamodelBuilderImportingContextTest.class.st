@@ -18,12 +18,14 @@ FamixMetamodelBuilderImportingContextTest >> setUp [
 
 	super setUp.
 
+	builder withImportingContext.
+
 	access := builder newClassNamed: #Access.	
 	variable := builder newClassNamed: #Variable.	
 	method := builder newClassNamed: #Method.	
 		
 	access requires: { method. variable }.
-		
+
 	builder generate.
 		
 	generatedAccess := builder testingEnvironment ask classNamed: #TstAccess.
@@ -39,8 +41,6 @@ FamixMetamodelBuilderImportingContextTest >> testDefineImport [
 
 	| localMethod |
 	
-	self skip.
-	
 	localMethod := generatedContext methodNamed: #importMethod.
 	self assert: (localMethod sourceCode includesSubstring: '<generated>').
 	self assert: (localMethod sourceCode includesSubstring: '^ self import: TstMethod').
@@ -50,7 +50,6 @@ FamixMetamodelBuilderImportingContextTest >> testDefineImport [
 { #category : #initialization }
 FamixMetamodelBuilderImportingContextTest >> testGeneratedContextClass [
 
-	self skip.
 	self assert: generatedContext notNil.
 	self assert: generatedContext superclass name = #FamixImportingContext.
 ]
@@ -60,7 +59,6 @@ FamixMetamodelBuilderImportingContextTest >> testRequirements [
 
 	| localMethod |
 	
-	self skip.
 	localMethod := generatedVariable classSide methodNamed: #requirements.
 	self assert: (localMethod sourceCode includesSubstring: '<generated>').
 	self assert: (localMethod sourceCode includesSubstring: '^ {  }').
@@ -81,7 +79,6 @@ FamixMetamodelBuilderImportingContextTest >> testShouldImport [
 
 	| localMethod |
 	
-	self skip.
 	localMethod := generatedContext methodNamed: #shouldImportMethod.
 	self assert: (localMethod sourceCode includesSubstring: '<generated>').
 	self assert: (localMethod sourceCode includesSubstring: '^ self shouldImport: TstMethod').
