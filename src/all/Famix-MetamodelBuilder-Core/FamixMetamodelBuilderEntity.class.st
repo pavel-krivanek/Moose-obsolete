@@ -5,8 +5,7 @@ Class {
 		'name',
 		'comment',
 		'builder',
-		'willGenerate',
-		'navigationGroups'
+		'willGenerate'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -42,12 +41,6 @@ FamixMetamodelBuilderEntity >> initialize [
 
 ]
 
-{ #category : #testing }
-FamixMetamodelBuilderEntity >> isHierarchyRoot [
-
-	^ false
-]
-
 { #category : #accessing }
 FamixMetamodelBuilderEntity >> name [
 	^ name
@@ -59,16 +52,6 @@ FamixMetamodelBuilderEntity >> name: anObject [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderEntity >> navigationGroups [
-	^ navigationGroups
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilderEntity >> navigationGroups: anObject [
-	navigationGroups := anObject
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilderEntity >> willGenerate [
 	^ willGenerate
 ]
@@ -76,13 +59,4 @@ FamixMetamodelBuilderEntity >> willGenerate [
 { #category : #accessing }
 FamixMetamodelBuilderEntity >> willGenerate: anObject [
 	willGenerate := anObject
-]
-
-{ #category : #navigation }
-FamixMetamodelBuilderEntity >> withNavigation [
-
-	self navigationGroups add: (FamixMetamodelBuilderNavigationGroup new 
-		name: self name;
-		entity: self;
-		yourself).
 ]

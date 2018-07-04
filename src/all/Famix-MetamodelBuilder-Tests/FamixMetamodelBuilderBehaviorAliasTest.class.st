@@ -19,10 +19,13 @@ FamixMetamodelBuilderBehaviorAliasTest >> testAsIncompletePropertyWithoutRelatio
 { #category : #initialization }
 FamixMetamodelBuilderBehaviorAliasTest >> testClassPropertyWithType [
 
-	| named generated method |
+	"test if we can create typed property in a class alias"
+
+	| named alias generated method |
 		
 	named := builder newClassNamed: #Named.
-	named property: #name type: #String.
+	alias := named as: #TNamed.
+	alias property: #name type: #String.
 	
 	builder generate.
 	
@@ -55,6 +58,19 @@ FamixMetamodelBuilderBehaviorAliasTest >> testLink [
 	builder generate.
 	
 	"TODO: assert"
+]
+
+{ #category : #initialization }
+FamixMetamodelBuilderBehaviorAliasTest >> testTraitName [
+
+	"trivial test of alias #traitName"
+
+	| named alias |
+	named := builder newClassNamed: #Named.
+	alias := named as: #TNamed.
+	alias property: #name type: #String.
+	
+	self assert: alias traitName equals: #TNamed
 ]
 
 { #category : #initialization }

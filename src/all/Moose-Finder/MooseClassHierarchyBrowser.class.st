@@ -68,7 +68,7 @@ MooseClassHierarchyBrowser >> methodsIn: a [
 { #category : #building }
 MooseClassHierarchyBrowser >> typesIn: a [
 	^ a tree
-		display: [ :model | model allTypes select: [ :each | each isHierarchyRoot ] ];
+		display: [ :model | model allTypes select: [ :each | each isRoot ] ];
 		title: 'Types';
 		dynamicActionsOnSelection: [ :list | list selection mooseFinderActions ];
 		format: [:each | 

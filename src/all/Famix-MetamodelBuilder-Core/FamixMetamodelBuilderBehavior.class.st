@@ -12,7 +12,8 @@ Class {
 		'prefix',
 		'packageName',
 		'testingSelectors',
-		'isRoot'
+		'isRoot',
+		'navigationGroups'
 	],
 	#category : #'Famix-MetamodelBuilder-Core'
 }
@@ -337,6 +338,16 @@ FamixMetamodelBuilderBehavior >> name: anObject [
 	name := anObject
 ]
 
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> navigationGroups [
+	^ navigationGroups
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehavior >> navigationGroups: anObject [
+	navigationGroups := anObject
+]
+
 { #category : #'relations - named' }
 FamixMetamodelBuilderBehavior >> oneBelongsTo: otherClass [
 
@@ -549,6 +560,15 @@ FamixMetamodelBuilderBehavior >> testingSelectors: aCollection [
 FamixMetamodelBuilderBehavior >> uses: aTrait [
 
 	^ self generalization: aTrait
+]
+
+{ #category : #navigation }
+FamixMetamodelBuilderBehavior >> withNavigation [
+
+	self navigationGroups add: (FamixMetamodelBuilderNavigationGroup new 
+		name: self name;
+		entity: self;
+		yourself).
 ]
 
 { #category : #'testing selectors' }

@@ -76,3 +76,9 @@ FamixMetamodelBuilderBehaviorAlias >> trait [
 FamixMetamodelBuilderBehaviorAlias >> trait: anObject [
 	trait := anObject
 ]
+
+{ #category : #accessing }
+FamixMetamodelBuilderBehaviorAlias >> traitName [
+
+	^ self trait name
+]
