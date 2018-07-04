@@ -25,6 +25,13 @@ FmxMBRelationSide >> acceptVisitor: aVisitor [
 	^ aVisitor visitRelationSide: self.
 ]
 
+{ #category : #converting }
+FmxMBRelationSide >> asRelationSideNamed: aPropertyName [
+
+	"ignore the proposed name"
+	^ self 
+]
+
 { #category : #generating }
 FmxMBRelationSide >> asSlot [
 	
@@ -196,40 +203,6 @@ FmxMBRelationSide >> many [
 	cardinality := #many
 ]
 
-{ #category : #'relations - named' }
-FmxMBRelationSide >> manyToMany: aRelationSide [
-
-	| aRelation |
-	
-	aRelation := self relationWith: aRelationSide.
-	aRelationSide many.
-	self many.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity.].
-	
-	^ aRelation
-	
-	
-]
-
-{ #category : #'relations - named' }
-FmxMBRelationSide >> manyToOne: aRelationSide [
-
-	| aRelation |
-	
-	aRelation := self relationWith: aRelationSide.
-	
-	aRelationSide many.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity ].
-	
-	^ aRelation
-	
-	
-]
-
 { #category : #properties }
 FmxMBRelationSide >> noContainer [
 	
@@ -248,38 +221,6 @@ FmxMBRelationSide >> one [
 	cardinality := #one
 ]
 
-{ #category : #'relations - named' }
-FmxMBRelationSide >> oneToMany: aRelationSide [
-
-	| aRelation |
-	
-	aRelation := self relationWith: aRelationSide.
-
-	self many.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity ].
-	
-	^ aRelation
-	
-	
-]
-
-{ #category : #'relations - named' }
-FmxMBRelationSide >> oneToOne: aRelationSide [
-
-	| aRelation |
-
-	aRelation := self relationWith: aRelationSide.
-	
-	self relatedClass ifNotNil: [ 
-		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity ].
-	
-	^ aRelation
-	
-	
-]
-
 { #category : #accessing }
 FmxMBRelationSide >> otherSide [
 
@@ -290,6 +231,24 @@ FmxMBRelationSide >> otherSide [
 	^ (aFromSide == self)
 		ifTrue: [ self relation to ]
 		ifFalse: [ aFromSide ]		
+]
+
+{ #category : #private }
+FmxMBRelationSide >> ownerPropertyName [
+
+	^ self name
+]
+
+{ #category : #private }
+FmxMBRelationSide >> pluralPropertyName [
+
+	^ self name
+]
+
+{ #category : #private }
+FmxMBRelationSide >> propertyName [
+
+	^ self name
 ]
 
 { #category : #accessing }
@@ -331,6 +290,9 @@ FmxMBRelationSide >> relationWith: aRelationSide [
 		
 	self relation: aRelation.	
 	aRelationSide relation: aRelation.
+
+	self relatedClass ifNotNil: [ 
+		self relatedClass addRelation: aRelation with: aRelationSide relatedEntity ].
 	
 	^ aRelation
 

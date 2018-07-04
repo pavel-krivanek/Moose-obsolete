@@ -46,6 +46,12 @@ FmxMBBehavior >> as: aTraitOrTraitName property: propertyName comment: aString [
 		yourself.
 ]
 
+{ #category : #converting }
+FmxMBBehavior >> asRelationSideNamed: aPropertyName [
+
+	^ self property: aPropertyName
+]
+
 { #category : #'settings - default' }
 FmxMBBehavior >> defaultTag [
 

@@ -59,6 +59,13 @@ FmxMBRelationSideTrait >> <>-* aRelationSide [
 ]
 
 { #category : #'relations - named' }
+FmxMBRelationSideTrait >> asRelationSideNamed: aPropertyName [
+
+	self explicitRequirement
+	
+]
+
+{ #category : #'relations - named containers' }
 FmxMBRelationSideTrait >> containsMany: aRelationSide [
 
 	| aRelation |
@@ -70,7 +77,7 @@ FmxMBRelationSideTrait >> containsMany: aRelationSide [
 	
 ]
 
-{ #category : #'relations - named' }
+{ #category : #'relations - named containers' }
 FmxMBRelationSideTrait >> containsOne: aRelationSide [
 
 	| aRelation |
@@ -82,7 +89,7 @@ FmxMBRelationSideTrait >> containsOne: aRelationSide [
 	
 ]
 
-{ #category : #'relations - named' }
+{ #category : #'relations - named containers' }
 FmxMBRelationSideTrait >> manyBelongTo: aRelationSide [
 
 	| aRelation |
@@ -99,8 +106,8 @@ FmxMBRelationSideTrait >> manyToMany: aRelationSide [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self property: aRelationSide pluralPropertyName. 
-	oppositeSide := aRelationSide property: self pluralPropertyName. 	
+	ownSide := self asRelationSideNamed: aRelationSide pluralPropertyName. 
+	oppositeSide := aRelationSide asRelationSideNamed: self pluralPropertyName. 	
 	ownSide many.
 	oppositeSide many.
 	aRelation := self relationFrom: ownSide to: oppositeSide.
@@ -115,8 +122,8 @@ FmxMBRelationSideTrait >> manyToOne: aRelationSide [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self property: self ownerPropertyName. 
-	oppositeSide := aRelationSide property: self pluralPropertyName. 	
+	ownSide := self asRelationSideNamed: self ownerPropertyName. 
+	oppositeSide := aRelationSide asRelationSideNamed: self pluralPropertyName. 	
 	oppositeSide many.
 	aRelation := self relationFrom: ownSide to: oppositeSide.
 		
@@ -125,7 +132,7 @@ FmxMBRelationSideTrait >> manyToOne: aRelationSide [
 	
 ]
 
-{ #category : #'relations - named' }
+{ #category : #'relations - named containers' }
 FmxMBRelationSideTrait >> oneBelongsTo: aRelationSide [
 
 	| aRelation |
@@ -142,8 +149,8 @@ FmxMBRelationSideTrait >> oneToMany: aRelationSide [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self property: aRelationSide pluralPropertyName. 
-	oppositeSide := aRelationSide property: aRelationSide ownerPropertyName. 	
+	ownSide := self asRelationSideNamed: aRelationSide pluralPropertyName. 
+	oppositeSide := aRelationSide asRelationSideNamed: aRelationSide ownerPropertyName. 	
 	ownSide many.
 	aRelation := self relationFrom: ownSide to: oppositeSide.
 		
@@ -157,12 +164,51 @@ FmxMBRelationSideTrait >> oneToOne: aRelationSide [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self property: aRelationSide propertyName. 
-	oppositeSide := aRelationSide property: self propertyName.
+	ownSide := self asRelationSideNamed: aRelationSide propertyName. 
+	oppositeSide := aRelationSide asRelationSideNamed: self propertyName.
 	 	
 	aRelation := self relationFrom: ownSide to: oppositeSide.
 		
 	^ aRelation
 	
 	
+]
+
+{ #category : #private }
+FmxMBRelationSideTrait >> ownerPropertyName [
+
+	^ self explicitRequirement
+]
+
+{ #category : #private }
+FmxMBRelationSideTrait >> pluralPropertyName [
+
+	self explicitRequirement
+]
+
+{ #category : #private }
+FmxMBRelationSideTrait >> propertyName [
+
+	^ self explicitRequirement
+]
+
+{ #category : #private }
+FmxMBRelationSideTrait >> relationFrom: ownSide to: oppositeSide [
+
+	| aRelation |
+	
+	aRelation := self builder newRelation
+		side: ownSide;
+		oppositeSide: oppositeSide;
+		builder: self builder;
+		yourself.	
+
+	ownSide relation: aRelation.	
+	oppositeSide relation: aRelation.
+
+	ownSide relatedClass ifNotNil: [ 
+		ownSide relatedClass addRelation: aRelation with: oppositeSide relatedClass ].
+		
+	^ aRelation
+
 ]
