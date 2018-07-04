@@ -91,3 +91,17 @@ FamixMetamodelBuilderBehaviorAliasTest >> testTraitPropertyWithType [
 	self assert: (method sourceCode includesSubstring: 'name := ').
 
 ]
+
+{ #category : #initialization }
+FamixMetamodelBuilderBehaviorAliasTest >> testUseTraitInsteadOfTraitName [
+
+	"test usage of a trait instead of a trait name in the alias creation"
+
+	| named tNamed alias |
+	named := builder newClassNamed: #Named.
+	tNamed := builder newTraitNamed: #TNamed.
+	alias := named as: tNamed.
+	
+	self assert: alias traitName equals: #TNamed.
+	self assert: alias trait equals: tNamed
+]

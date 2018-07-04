@@ -479,7 +479,6 @@ FamixMetamodelBuilder >> resolveRequirementsFromContainers [
 	self classes do: [ :each |
 		| req |
 		req := self containerRequirementsOf: each.
-		Transcript show: each; << 'requires: '; << req; cr.
 		each requires: (self containerRequirementsOf: each) ].
 
 ]

@@ -53,6 +53,35 @@ FamixMetamodelBuilderClassTest >> testAs [
 	self assertCollection: generatedNamed traits asArray equals: { generatedTNamed }.
 ]
 
+{ #category : #tests }
+FamixMetamodelBuilderClassTest >> testAsPropertyComment [
+
+	"traits should not be renamed during creation of properties"
+
+	| behavior generated generatedTrait method |
+		
+	behavior := self newEntityNamed: #Named.	
+	
+	(behavior as: #TNamed property: #from comment: 'comment from') - (behavior as: #TNamed property: #to comment: 'comment to').
+	
+	builder generate.
+	
+	generated := builder testingEnvironment ask classNamed: 'TstNamed'.
+	generatedTrait := builder testingEnvironment ask classNamed: 'TstTNamed'.
+	self assert: generated slots isEmpty.
+	self assertCollection: (generatedTrait slots collect: #name) hasSameElements: #(from to).
+
+	method := generatedTrait methodNamed: #from.
+	self assert: (method sourceCode includesSubstring: '<MSEComment: ''comment from''>').
+	self assert: (method sourceCode includesSubstring: '<generated>').
+
+	method := generatedTrait methodNamed: #to.
+	self assert: (method sourceCode includesSubstring: '<MSEComment: ''comment to''>').
+	self assert: (method sourceCode includesSubstring: '<generated>').
+
+
+]
+
 { #category : #'tests - settings' }
 FamixMetamodelBuilderClassTest >> testBasicSuperclass [
 
