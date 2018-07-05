@@ -1,6 +1,6 @@
 Class {
-	#name : #FamixMetamodelBuilderTestingMethodsTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBTestingMethodsTest,
+	#superclass : #FmxMBTestCase,
 	#instVars : [
 		'root1',
 		'root2',
@@ -19,7 +19,7 @@ Class {
 }
 
 { #category : #running }
-FamixMetamodelBuilderTestingMethodsTest >> setUp [
+FmxMBTestingMethodsTest >> setUp [
 
 	super setUp.
 	
@@ -52,14 +52,14 @@ FamixMetamodelBuilderTestingMethodsTest >> setUp [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderTestingMethodsTest >> testEntity [
+FmxMBTestingMethodsTest >> testEntity [
 
 	(generatedEntity methodNamed: #isEntity) sourceCode includesSubstring: '^ true'.	
 	self assert: (generatedEntity methodNamed: #isNamed) isNil.
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderTestingMethodsTest >> testRoots [
+FmxMBTestingMethodsTest >> testRoots [
 
 	"all roots should have testing messages with negative answer"
 
@@ -71,7 +71,7 @@ FamixMetamodelBuilderTestingMethodsTest >> testRoots [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderTestingMethodsTest >> testTrait [
+FmxMBTestingMethodsTest >> testTrait [
 
 	"all roots should have testing messages with negative answer"
 
@@ -80,14 +80,14 @@ FamixMetamodelBuilderTestingMethodsTest >> testTrait [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderTestingMethodsTest >> testTraited [
+FmxMBTestingMethodsTest >> testTraited [
 
 	self assert: (generatedNamed localMethodNamed: #isNamed ifAbsent: []) isNil.
 	self assert: (generatedNamed localMethodNamed: #isEntity ifAbsent: []) isNil.
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderTestingMethodsTest >> testTraitedRoot [
+FmxMBTestingMethodsTest >> testTraitedRoot [
 
 	"a testing method should not be generated if it is provided by a trait"
 	

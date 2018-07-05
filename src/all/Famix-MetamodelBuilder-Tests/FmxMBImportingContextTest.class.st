@@ -1,6 +1,6 @@
 Class {
-	#name : #FamixMetamodelBuilderImportingContextTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBImportingContextTest,
+	#superclass : #FmxMBTestCase,
 	#instVars : [
 		'access',
 		'variable',
@@ -14,7 +14,7 @@ Class {
 }
 
 { #category : #running }
-FamixMetamodelBuilderImportingContextTest >> setUp [
+FmxMBImportingContextTest >> setUp [
 
 	super setUp.
 
@@ -37,7 +37,7 @@ FamixMetamodelBuilderImportingContextTest >> setUp [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderImportingContextTest >> testDefineImport [
+FmxMBImportingContextTest >> testDefineImport [
 
 	| localMethod |
 	
@@ -48,14 +48,14 @@ FamixMetamodelBuilderImportingContextTest >> testDefineImport [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderImportingContextTest >> testGeneratedContextClass [
+FmxMBImportingContextTest >> testGeneratedContextClass [
 
 	self assert: generatedContext notNil.
 	self assert: generatedContext superclass name = #FmxImportingContext.
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderImportingContextTest >> testRequirements [
+FmxMBImportingContextTest >> testRequirements [
 
 	| localMethod |
 	
@@ -75,7 +75,7 @@ FamixMetamodelBuilderImportingContextTest >> testRequirements [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderImportingContextTest >> testShouldImport [
+FmxMBImportingContextTest >> testShouldImport [
 
 	| localMethod |
 	

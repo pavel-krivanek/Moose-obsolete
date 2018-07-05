@@ -1,6 +1,6 @@
 Class {
 	#name : #FamixMetamodelBuilderClassTest,
-	#superclass : #FamixMetamodelBuilderBehaviorTest,
+	#superclass : #FmxMBBehaviorTest,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 

@@ -1,29 +1,29 @@
 Class {
-	#name : #FamixMetamodelBuilderBehaviorTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBBehaviorTest,
+	#superclass : #FmxMBTestCase,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
 { #category : #testing }
-FamixMetamodelBuilderBehaviorTest class >> isAbstract [
+FmxMBBehaviorTest class >> isAbstract [
 
-	^ self name = #FamixMetamodelBuilderBehaviorTest
+	^ self name = #FmxMBBehaviorTest
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorTest >> behaviorClass [
+FmxMBBehaviorTest >> behaviorClass [
 
 	self subclassResponsibility 
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilderBehaviorTest >> newEntityNamed: aString [
+FmxMBBehaviorTest >> newEntityNamed: aString [
 
 	self subclassResponsibility 
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderBehaviorTest >> testAsProperty [
+FmxMBBehaviorTest >> testAsProperty [
 
 	"traits should not be renamed during creation of properties"
 
@@ -42,7 +42,7 @@ FamixMetamodelBuilderBehaviorTest >> testAsProperty [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderBehaviorTest >> testComment [
+FmxMBBehaviorTest >> testComment [
 
 	"test assigning of a comment to a class"
 
@@ -57,7 +57,7 @@ FamixMetamodelBuilderBehaviorTest >> testComment [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderBehaviorTest >> testCustomTestingSelectors [
+FmxMBBehaviorTest >> testCustomTestingSelectors [
 
 	"test automatic generation of custom testing selector"
 
@@ -73,7 +73,7 @@ FamixMetamodelBuilderBehaviorTest >> testCustomTestingSelectors [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderBehaviorTest >> testCustomTestingSelectorsAtOnce [
+FmxMBBehaviorTest >> testCustomTestingSelectorsAtOnce [
 
 	"test automatic generation of custom testing selector defined at once"
 
@@ -87,7 +87,7 @@ FamixMetamodelBuilderBehaviorTest >> testCustomTestingSelectorsAtOnce [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderBehaviorTest >> testTestingSelectors [
+FmxMBBehaviorTest >> testTestingSelectors [
 
 	"test automatic generation of testing methods in the entities hierarchy"
 

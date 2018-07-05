@@ -1,11 +1,11 @@
 Class {
-	#name : #FamixMetamodelBuilderRelationTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBBuilderRelationTest,
+	#superclass : #FmxMBTestCase,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
 { #category : #initialization }
-FamixMetamodelBuilderRelationTest >> checkArrow: aBinarySelector from: cardinality1 to: cardinality2 containerFrom: containerFrom containerTo: containerTo forTraits: aBoolean [
+FmxMBBuilderRelationTest >> checkArrow: aBinarySelector from: cardinality1 to: cardinality2 containerFrom: containerFrom containerTo: containerTo forTraits: aBoolean [
 
 	| tClass tComment generatedTClass generatedTComment hasContainer |
 	
@@ -45,14 +45,14 @@ FamixMetamodelBuilderRelationTest >> checkArrow: aBinarySelector from: cardinali
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRelationTest >> resetBuilder [
+FmxMBBuilderRelationTest >> resetBuilder [
 
 	builder := FamixMetamodelBuilder forTesting.
 
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRelationTest >> testClassRelations [
+FmxMBBuilderRelationTest >> testClassRelations [
 
 	self checkArrow: #- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: false forTraits: false.
 	self resetBuilder.
@@ -75,7 +75,7 @@ FamixMetamodelBuilderRelationTest >> testClassRelations [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRelationTest >> testOneToOneTraitsRelation [
+FmxMBBuilderRelationTest >> testOneToOneTraitsRelation [
 
 	| tClass tComment generatedTClass generatedTComment |
 		
@@ -104,7 +104,7 @@ FamixMetamodelBuilderRelationTest >> testOneToOneTraitsRelation [
 ]
 
 { #category : #initialization }
-FamixMetamodelBuilderRelationTest >> testTraitRelations [
+FmxMBBuilderRelationTest >> testTraitRelations [
 
 	self checkArrow: #- from: 'FMOne' to: 'FMOne' containerFrom: false containerTo: false forTraits: true.
 	self resetBuilder.

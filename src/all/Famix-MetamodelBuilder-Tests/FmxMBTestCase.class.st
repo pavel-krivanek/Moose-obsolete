@@ -1,5 +1,5 @@
 Class {
-	#name : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBTestCase,
 	#superclass : #TestCase,
 	#instVars : [
 		'builder'
@@ -8,7 +8,7 @@ Class {
 }
 
 { #category : #running }
-FamixMetamodelBuilderTestCase >> setUp [
+FmxMBTestCase >> setUp [
 
 	super setUp.
 	builder := FamixMetamodelBuilder forTesting.

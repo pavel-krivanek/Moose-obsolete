@@ -1,11 +1,11 @@
 Class {
-	#name : #FamixMetamodelBuilderTypedPropertyTest,
-	#superclass : #FamixMetamodelBuilderPropertyTest,
+	#name : #FmxMBTypedPropertyTest,
+	#superclass : #FmxMBPropertyTest,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
 { #category : #tests }
-FamixMetamodelBuilderTypedPropertyTest >> testMultivalued [
+FmxMBTypedPropertyTest >> testMultivalued [
 
 	"test if typed properties can be multivalued"
 

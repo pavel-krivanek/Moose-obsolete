@@ -10,13 +10,13 @@ testRunner selectSubclasses.
 testRunner collectCoverageFor: (methods collect: #asRingDefinition)
 "
 Class {
-	#name : #FamixMetamodelBuilderTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBBuilderTest,
+	#superclass : #FmxMBTestCase,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
 { #category : #tests }
-FamixMetamodelBuilderTest >> testDoNotGenerateCurrent [
+FmxMBBuilderTest >> testDoNotGenerateCurrent [
 	
 	builder newClassNamed: #Behavior.	
 	builder newTraitNamed: #TBehavior.
@@ -36,7 +36,7 @@ FamixMetamodelBuilderTest >> testDoNotGenerateCurrent [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderTest >> testEmptyBuilder [
+FmxMBBuilderTest >> testEmptyBuilder [
 
 	| classesCount |
 	classesCount := builder testingEnvironment ask allClasses size.
@@ -46,7 +46,7 @@ FamixMetamodelBuilderTest >> testEmptyBuilder [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderTest >> testEnsureClassNamed [
+FmxMBBuilderTest >> testEnsureClassNamed [
 	
 	| behavior class behavior2 |
 	

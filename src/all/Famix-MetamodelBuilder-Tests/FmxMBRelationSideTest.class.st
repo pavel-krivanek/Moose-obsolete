@@ -1,11 +1,11 @@
 Class {
-	#name : #FamixMetamodelBuilderRelationSideTest,
-	#superclass : #FamixMetamodelBuilderPropertyTest,
+	#name : #FmxMBRelationSideTest,
+	#superclass : #FmxMBPropertyTest,
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
 { #category : #tests }
-FamixMetamodelBuilderRelationSideTest >> testBasics [
+FmxMBRelationSideTest >> testBasics [
 
 	"check trivial testing and accessing methods"
 
@@ -25,7 +25,7 @@ FamixMetamodelBuilderRelationSideTest >> testBasics [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationSideTest >> testDirections [
+FmxMBRelationSideTest >> testDirections [
 
 	"test setting of a type of the property"
 
@@ -45,7 +45,7 @@ FamixMetamodelBuilderRelationSideTest >> testDirections [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationSideTest >> testProperties [
+FmxMBRelationSideTest >> testProperties [
 
 	"simple tests of basic relation side properties"
 
@@ -103,7 +103,7 @@ FamixMetamodelBuilderRelationSideTest >> testProperties [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationSideTest >> testPropertyType [
+FmxMBRelationSideTest >> testPropertyType [
 
 	"test if after changing of related trait of a relation side all will be consistent"
 
@@ -129,7 +129,7 @@ FamixMetamodelBuilderRelationSideTest >> testPropertyType [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationSideTest >> testReconnection [
+FmxMBRelationSideTest >> testReconnection [
 
 	"test if after changing of related trait of a relation side all will be consistent"
 
@@ -155,7 +155,7 @@ FamixMetamodelBuilderRelationSideTest >> testReconnection [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationSideTest >> testRelatedEntity [
+FmxMBRelationSideTest >> testRelatedEntity [
 
 	"test setting of a type of the property"
 

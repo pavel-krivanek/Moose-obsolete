@@ -1,6 +1,6 @@
 Class {
-	#name : #FamixMetamodelBuilderRelationsGenerationTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBRelationsGenerationTest,
+	#superclass : #FmxMBTestCase,
 	#instVars : [
 		'access',
 		'variable',
@@ -11,7 +11,7 @@ Class {
 }
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> assertContainerInAccessMethod: selector [
+FmxMBRelationsGenerationTest >> assertContainerInAccessMethod: selector [
 
 	self assert: ((generatedAccess methodNamed: selector) sourceCode includesSubstring: '<container>').
 	self assert: ((generatedAccess methodNamed: selector) sourceCode includesSubstring: '<generated>').
@@ -20,7 +20,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> assertContainerInAccessMethod: s
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> assertContainerInVariableMethod: selector [
+FmxMBRelationsGenerationTest >> assertContainerInVariableMethod: selector [
 
 	self assert: ((generatedVariable methodNamed: selector) sourceCode includesSubstring: '<container>').
 	self assert: ((generatedVariable methodNamed: selector) sourceCode includesSubstring: '<generated>').
@@ -29,7 +29,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> assertContainerInVariableMethod:
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> cardinalityInAccess: selector1 inVariable: selector2 [
+FmxMBRelationsGenerationTest >> cardinalityInAccess: selector1 inVariable: selector2 [
 
 	self assert: generatedAccess slots first name equals: selector1.
 	self assert: generatedVariable slots first name equals: selector2.
@@ -37,7 +37,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> cardinalityInAccess: selector1 i
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> checkSlotsCount [		
+FmxMBRelationsGenerationTest >> checkSlotsCount [		
 
 	self assert: generatedAccess slots size equals: 1.
 	self assert: generatedVariable slots size equals: 1.
@@ -45,7 +45,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> checkSlotsCount [
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> denyContainerInAccessMethod: selector [
+FmxMBRelationsGenerationTest >> denyContainerInAccessMethod: selector [
 
 	self deny: ((generatedAccess methodNamed: selector) sourceCode includesSubstring: '<container>').
 	self assert: ((generatedAccess methodNamed: selector) sourceCode includesSubstring: '<generated>').
@@ -54,7 +54,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> denyContainerInAccessMethod: sel
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> denyContainerInVarialbeMethod: selector [
+FmxMBRelationsGenerationTest >> denyContainerInVarialbeMethod: selector [
 
 	self deny: ((generatedVariable methodNamed: selector) sourceCode includesSubstring: '<container>').
 	self assert: ((generatedVariable methodNamed: selector) sourceCode includesSubstring: '<generated>').
@@ -63,7 +63,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> denyContainerInVarialbeMethod: s
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> generate [
+FmxMBRelationsGenerationTest >> generate [
 
 	builder generate.
 		
@@ -75,7 +75,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> generate [
 ]
 
 { #category : #running }
-FamixMetamodelBuilderRelationsGenerationTest >> setUp [
+FmxMBRelationsGenerationTest >> setUp [
 
 	super setUp.
 
@@ -85,7 +85,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> setUp [
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> slotCardinalityinAccess: accessCardinality inVariable: variableCardinality [
+FmxMBRelationsGenerationTest >> slotCardinalityinAccess: accessCardinality inVariable: variableCardinality [
 
 	"slot expression example: FMMany type: #TstAccess opposite: #accessOwner"
 	self assert: (generatedAccess slots first expression beginsWith: ('FM', accessCardinality capitalized)).
@@ -94,7 +94,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> slotCardinalityinAccess: accessC
 ]
 
 { #category : #utility }
-FamixMetamodelBuilderRelationsGenerationTest >> slotNameinAccess: selector1 inVariable: selector2 [
+FmxMBRelationsGenerationTest >> slotNameinAccess: selector1 inVariable: selector2 [
 
 	self assert: generatedAccess slots first name equals: selector1.
 	self assert: generatedVariable slots first name equals: selector2.
@@ -102,7 +102,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> slotNameinAccess: selector1 inVa
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testContainsMany [
+FmxMBRelationsGenerationTest >> testContainsMany [
 
 	variable <>-* access.
 
@@ -113,7 +113,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testContainsMany [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testContainsOne [
+FmxMBRelationsGenerationTest >> testContainsOne [
 
 	variable <>- access.
 
@@ -124,7 +124,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testContainsOne [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testManyBelongTo [
+FmxMBRelationsGenerationTest >> testManyBelongTo [
 
 	variable *-<> access.
 
@@ -135,7 +135,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testManyBelongTo [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testManyToMany [
+FmxMBRelationsGenerationTest >> testManyToMany [
 
 	variable *-* access.
 
@@ -146,7 +146,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testManyToMany [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testManyToOne [
+FmxMBRelationsGenerationTest >> testManyToOne [
 
 	variable *- access.
 
@@ -157,7 +157,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testManyToOne [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testOneBelongsTo [
+FmxMBRelationsGenerationTest >> testOneBelongsTo [
 
 	variable -<> access.
 	
@@ -168,7 +168,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testOneBelongsTo [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testOneToMany [
+FmxMBRelationsGenerationTest >> testOneToMany [
 
 	variable -* access.
 	
@@ -179,7 +179,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testOneToMany [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> testOneToOne [
+FmxMBRelationsGenerationTest >> testOneToOne [
 
 	variable - access.
 	
@@ -190,7 +190,7 @@ FamixMetamodelBuilderRelationsGenerationTest >> testOneToOne [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderRelationsGenerationTest >> variable: selector2 cardinality: cardinality2 container: container2 access: selector1 cardinality: cardinality1 container: container1 [ 
+FmxMBRelationsGenerationTest >> variable: selector2 cardinality: cardinality2 container: container2 access: selector1 cardinality: cardinality1 container: container1 [ 
 
 	self generate.
 

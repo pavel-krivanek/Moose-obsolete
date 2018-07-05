@@ -1,6 +1,6 @@
 Class {
-	#name : #FamixMetamodelBuilderClassGeneralizationsTest,
-	#superclass : #FamixMetamodelBuilderTestCase,
+	#name : #FmxMBClassGeneralizationsTest,
+	#superclass : #FmxMBTestCase,
 	#instVars : [
 		'named',
 		'behavior',
@@ -10,7 +10,7 @@ Class {
 }
 
 { #category : #running }
-FamixMetamodelBuilderClassGeneralizationsTest >> checkGeneralizationWithAnnotations [
+FmxMBClassGeneralizationsTest >> checkGeneralizationWithAnnotations [
 
 	"check if TstClass is correctly created as a subclass of TstBehavior"
 
@@ -30,7 +30,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> checkGeneralizationWithAnnotati
 ]
 
 { #category : #running }
-FamixMetamodelBuilderClassGeneralizationsTest >> checkHierarchy [
+FmxMBClassGeneralizationsTest >> checkHierarchy [
 
 	self assert: named allClassGeneralizations isEmpty.
 	self assertCollection: behavior allClassGeneralizations hasSameElements: { named }.
@@ -39,7 +39,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> checkHierarchy [
 ]
 
 { #category : #running }
-FamixMetamodelBuilderClassGeneralizationsTest >> setUp [
+FmxMBClassGeneralizationsTest >> setUp [
 
 	super setUp.
 
@@ -50,7 +50,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> setUp [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizations [
+FmxMBClassGeneralizationsTest >> testAllClassGeneralizations [
 	
 	named <|-- behavior.
 	behavior <|-- class.
@@ -59,7 +59,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizations [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInChain [
+FmxMBClassGeneralizationsTest >> testAllClassGeneralizationsInChain [
 	
 	named <|-- behavior <|-- class.
 	
@@ -67,7 +67,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInCh
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInChainInverted [
+FmxMBClassGeneralizationsTest >> testAllClassGeneralizationsInChainInverted [
 	
 	class --|> behavior --|> named.
 	
@@ -75,7 +75,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testAllClassGeneralizationsInCh
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassGeneralizationsTest >> testClassOppositeGeneralization [
+FmxMBClassGeneralizationsTest >> testClassOppositeGeneralization [
 
 	behavior <|-- class.
 
@@ -83,7 +83,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testClassOppositeGeneralization
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassGeneralizationsTest >> testGeneralization [
+FmxMBClassGeneralizationsTest >> testGeneralization [
 
 	class --|> behavior.
 
@@ -91,7 +91,7 @@ FamixMetamodelBuilderClassGeneralizationsTest >> testGeneralization [
 ]
 
 { #category : #tests }
-FamixMetamodelBuilderClassGeneralizationsTest >> testSubclassOf [
+FmxMBClassGeneralizationsTest >> testSubclassOf [
 	
 	behavior subclassOf: named. 
 	class subclassOf: behavior.
