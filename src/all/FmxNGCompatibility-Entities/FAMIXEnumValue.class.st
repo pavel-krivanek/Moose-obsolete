@@ -33,5 +33,5 @@ FAMIXEnumValue class >> generatedTraitNames [
 FAMIXEnumValue class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXEnum }
 ]

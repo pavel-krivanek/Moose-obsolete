@@ -154,7 +154,7 @@ FAMIXNamedEntity class >> parentTypes [
 FAMIXNamedEntity class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXNamedEntity }
 ]
 
 { #category : #'Moose-Query-Extensions' }

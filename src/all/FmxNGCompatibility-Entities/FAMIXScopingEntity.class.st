@@ -33,7 +33,7 @@ FAMIXScopingEntity class >> generatedTraitNames [
 FAMIXScopingEntity class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXScopingEntity }
 ]
 
 { #category : #'Famix-Extensions-metrics' }

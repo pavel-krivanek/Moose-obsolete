@@ -67,7 +67,7 @@ FAMIXSourceAnchor class >> parentTypes [
 FAMIXSourceAnchor class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXSourcedEntity }
 ]
 
 { #category : #'Famix-Extensions' }

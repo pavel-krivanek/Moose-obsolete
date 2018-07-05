@@ -33,7 +33,7 @@ FAMIXType class >> generatedTraitNames [
 FAMIXType class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXContainerEntity }
 ]
 
 { #category : #'Famix-Extensions' }

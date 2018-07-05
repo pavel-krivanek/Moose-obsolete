@@ -33,7 +33,7 @@ FAMIXImplicitVariable class >> generatedTraitNames [
 FAMIXImplicitVariable class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXBehaviouralEntity }
 ]
 
 { #category : #'Famix-Extensions' }

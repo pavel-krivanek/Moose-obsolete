@@ -33,7 +33,7 @@ FAMIXAnnotationType class >> generatedTraitNames [
 FAMIXAnnotationType class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXContainerEntity }
 ]
 
 { #category : #'accessing-query' }

@@ -36,7 +36,7 @@ FAMIXMethod class >> generatedTraitNames [
 FAMIXMethod class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXType }
 ]
 
 { #category : #accessing }

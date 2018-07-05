@@ -33,7 +33,7 @@ FAMIXFunction class >> generatedTraitNames [
 FAMIXFunction class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXContainerEntity }
 ]
 
 { #category : #accessing }

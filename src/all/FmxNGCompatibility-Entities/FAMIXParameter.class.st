@@ -33,7 +33,7 @@ FAMIXParameter class >> generatedTraitNames [
 FAMIXParameter class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXBehaviouralEntity }
 ]
 
 { #category : #'Famix-Extensions' }

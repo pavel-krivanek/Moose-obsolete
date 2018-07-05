@@ -31,13 +31,6 @@ FAMIXMultipleFileAnchor class >> generatedTraitNames [
 ]
 
 { #category : #meta }
-FAMIXMultipleFileAnchor class >> metamodel [
-
-	<generated>
-	^ (self class environment at: #FmxNGCompatibilityGenerator) metamodel
-]
-
-{ #category : #meta }
 FAMIXMultipleFileAnchor class >> requirements [
 
 	<generated>

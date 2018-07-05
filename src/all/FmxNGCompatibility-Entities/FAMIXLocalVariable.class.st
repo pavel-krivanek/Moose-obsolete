@@ -33,7 +33,7 @@ FAMIXLocalVariable class >> generatedTraitNames [
 FAMIXLocalVariable class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXBehaviouralEntity }
 ]
 
 { #category : #'Famix-Extensions' }

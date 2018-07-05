@@ -33,7 +33,7 @@ FAMIXGlobalVariable class >> generatedTraitNames [
 FAMIXGlobalVariable class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXScopingEntity }
 ]
 
 { #category : #'Famix-Extensions' }

@@ -90,7 +90,7 @@ FAMIXAnnotationInstance class >> parentTypes [
 FAMIXAnnotationInstance class >> requirements [
 
 	<generated>
-	^ {  }
+	^ { FAMIXAnnotationInstance. FAMIXNamedEntity }
 ]
 
 { #category : #'Moose-Query-Extensions' }
