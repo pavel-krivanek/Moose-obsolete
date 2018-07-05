@@ -155,7 +155,7 @@ FmxMBBehavior >> generateRootMetamodelMethodIn: aClass [
 FmxMBBehavior >> generateTestingMethodsIn: aClass [
 
 	self testingSelectors do: [ :aSelector |
-		aClass instanceSide compile: ('{1}\\	<generated>\	^ false' withCRs format: { aSelector }) 
+		aClass instanceSide compile: ('{1}\\	<generated>\	^ true' withCRs format: { aSelector }) 
 		classified: #testing. ]
 
 
