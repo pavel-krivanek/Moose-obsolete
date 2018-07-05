@@ -453,13 +453,13 @@ FamixMetamodelBuilderClassTest >> testSingularPropertyName [
 
 	| class |
 		
-	class := builder newClassNamed: #Variables.	
+	class := builder newClassNamed: #Variable.	
 	self assert: class singularPropertyName equals: 'variable'.
 		
-	class := builder newClassNamed: #Accesses.	
+	class := builder newClassNamed: #Access.	
 	self assert: class singularPropertyName equals: 'access'.
 
-	class := builder newClassNamed: #Methods.	
+	class := builder newClassNamed: #Method.	
 	self assert: class singularPropertyName equals: 'method'.
 
 ]

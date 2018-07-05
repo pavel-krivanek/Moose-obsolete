@@ -44,12 +44,12 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedContainsMany [
 	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
 	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
-	self assert: generatedTAccess slots first name equals: #accessOwner.
+	self assert: generatedTAccess slots first name equals: #variable.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
 	self assert: generatedTVariable slots first name equals: #accesses.
-	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
+	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #variable'.
 	
-	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedTAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
 ]
 
 { #category : #tests }
@@ -91,12 +91,12 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyBelongTo [
 	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
 	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
-	self assert: generatedTAccess slots first name equals: #accessOwner.
+	self assert: generatedTAccess slots first name equals: #variable.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
 	self assert: generatedTVariable slots first name equals: #accesses.
-	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
+	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #variable'.
 	
-	self assert: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	self assert: ((generatedTAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
 ]
 
 { #category : #tests }
@@ -138,12 +138,12 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedManyToOne [
 	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
 	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
-	self assert: generatedTAccess slots first name equals: #accessOwner.
+	self assert: generatedTAccess slots first name equals: #variable.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
 	self assert: generatedTVariable slots first name equals: #accesses.
-	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
+	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #variable'.
 	
-	self deny: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	self deny: ((generatedTAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
 ]
 
 { #category : #tests }
@@ -185,12 +185,12 @@ FamixMetamodelBuilderTraitTest >> testAutogereatedOneToMany [
 	generatedTAccess := builder testingEnvironment ask classNamed: 'TstTAccess'.
 	generatedTVariable := builder testingEnvironment ask classNamed: 'TstTVariable'.
 	
-	self assert: generatedTAccess slots first name equals: #accessOwner.
+	self assert: generatedTAccess slots first name equals: #variable.
 	self assert: generatedTAccess slots first expression equals: 'FMOne type: #TstTVariable opposite: #accesses'.
 	self assert: generatedTVariable slots first name equals: #accesses.
-	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #accessOwner'.
+	self assert: generatedTVariable slots first expression equals: 'FMMany type: #TstTAccess opposite: #variable'.
 	
-	self deny: ((generatedTAccess methodNamed: #accessOwner) sourceCode includesSubstring: '<container>').
+	self deny: ((generatedTAccess methodNamed: #variable) sourceCode includesSubstring: '<container>').
 ]
 
 { #category : #tests }

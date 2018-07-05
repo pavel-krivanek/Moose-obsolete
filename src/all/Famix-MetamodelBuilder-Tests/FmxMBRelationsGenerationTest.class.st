@@ -108,7 +108,7 @@ FmxMBRelationsGenerationTest >> testContainsMany [
 
 	self 
 		variable: #accesses cardinality: #many container: false
-		access: #accessOwner cardinality: #one container: true 
+		access: #variable cardinality: #one container: true 
 
 ]
 
@@ -129,7 +129,7 @@ FmxMBRelationsGenerationTest >> testManyBelongTo [
 	variable *-<> access.
 
 	self 
-		variable: #variableOwner cardinality: #one container: true
+		variable: #access cardinality: #one container: true
 		access: #variables cardinality: #many container: false 
 
 ]
@@ -151,7 +151,7 @@ FmxMBRelationsGenerationTest >> testManyToOne [
 	variable *- access.
 
 	self 
-		variable: #variableOwner cardinality: #one container: false
+		variable: #access cardinality: #one container: false
 		access: #variables cardinality: #many container: false 
 
 ]
@@ -174,7 +174,7 @@ FmxMBRelationsGenerationTest >> testOneToMany [
 	
 	self 
 		variable: #accesses cardinality: #many container: false
-		access: #accessOwner cardinality: #one container: false 
+		access: #variable cardinality: #one container: false 
 
 ]
 

@@ -122,7 +122,7 @@ FmxMBRelationSideTrait >> manyToOne: aRelationSide [
 
 	| aRelation ownSide oppositeSide  |
 	
-	ownSide := self asRelationSideNamed: self ownerPropertyName. 
+	ownSide := self asRelationSideNamed: aRelationSide singularPropertyName. 
 	oppositeSide := aRelationSide asRelationSideNamed: self pluralPropertyName. 	
 	oppositeSide many.
 	aRelation := self relationFrom: ownSide to: oppositeSide.
@@ -148,9 +148,8 @@ FmxMBRelationSideTrait >> oneBelongsTo: aRelationSide [
 FmxMBRelationSideTrait >> oneToMany: aRelationSide [
 
 	| aRelation ownSide oppositeSide  |
-	
 	ownSide := self asRelationSideNamed: aRelationSide pluralPropertyName. 
-	oppositeSide := aRelationSide asRelationSideNamed: aRelationSide ownerPropertyName. 	
+	oppositeSide := aRelationSide asRelationSideNamed: self singularPropertyName. 	
 	ownSide many.
 	aRelation := self relationFrom: ownSide to: oppositeSide.
 		

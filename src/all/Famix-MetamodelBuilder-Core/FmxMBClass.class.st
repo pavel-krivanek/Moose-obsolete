@@ -263,22 +263,6 @@ FmxMBClass >> requires: collectionOfClasses [
 	requirements addAll: collectionOfClasses
 ]
 
-{ #category : #'name conversion' }
-FmxMBClass >> singularPropertyName [
-
-	| uncapitalized |
-	
-	uncapitalized := self name uncapitalized.
-	
-	^ (uncapitalized endsWith: 'ses')
-		ifTrue: [uncapitalized withoutSuffix: 'es']
-		ifFalse: [ 
-			(uncapitalized endsWith: 's')
-				ifTrue: [uncapitalized withoutSuffix: 's']
-				ifFalse: [ self error: 'Property name is not in plural' ] ].
-
-]
-
 { #category : #generating }
 FmxMBClass >> subclassOf: aClass [
 	

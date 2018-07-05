@@ -304,6 +304,23 @@ FmxMBRelationSide >> relationWith: aRelationSide [
 
 ]
 
+{ #category : #'name conversion' }
+FmxMBRelationSide >> singularPropertyName [
+
+	| normalizedName uncapitalized |
+	
+	normalizedName := ((self name size >= 2) 
+		and: [ ((self name first:2) allSatisfy: #isUppercase)
+		and: [ self name beginsWith: 'T' ] ])
+			ifTrue: [ self name withoutPrefix: 'T' ]
+			ifFalse: [ self name ].	
+	
+	uncapitalized := normalizedName uncapitalized.
+	
+	^ uncapitalized
+
+]
+
 { #category : #properties }
 FmxMBRelationSide >> source [
 
