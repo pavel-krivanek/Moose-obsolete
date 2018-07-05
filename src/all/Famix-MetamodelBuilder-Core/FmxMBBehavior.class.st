@@ -309,7 +309,7 @@ FmxMBBehavior >> relationFrom: ownSide to: oppositeSide [
 	oppositeSide relation: aRelation.
 
 	ownSide relatedClass ifNotNil: [ 
-		ownSide relatedClass addRelation: aRelation with: oppositeSide relatedClass ].
+		ownSide relatedClass addRelation: aRelation with: oppositeSide relatedEntity ].
 		
 	^ aRelation
 
