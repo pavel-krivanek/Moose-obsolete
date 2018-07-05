@@ -145,13 +145,6 @@ FamixMetamodelBuilder >> classesToGenerate [
 ]
 
 { #category : #accessing }
-FamixMetamodelBuilder >> cleanPackage [
-
-	(self packageName asPackageIfAbsent: [ nil ]) 
-		ifNotNil: [:aPackage | aPackage removeFromSystem ].
-]
-
-{ #category : #accessing }
 FamixMetamodelBuilder >> containerRequirementsOf: aClass [
 
 	|  usedBehaviors |
@@ -208,13 +201,6 @@ FamixMetamodelBuilder >> ensureClassNamed: aString [
 		ifTrue: [ candidates anyOne ]
 		ifFalse: [ self newClassNamed: aString ]
 	
-
-]
-
-{ #category : #initialization }
-FamixMetamodelBuilder >> ensureLocalClassNamed: aString [
-
-	^ self classes detect: [ :each | each name = aString and: [each prefix = self prefix]] ifNone: [ self newClassNamed: aString ]
 
 ]
 
@@ -328,6 +314,8 @@ FamixMetamodelBuilder >> generator [
 
 { #category : #accessing }
 FamixMetamodelBuilder >> generator: aGenerator [
+
+	<ignoreForCoverage>
 	generator := aGenerator.
 
 ]
@@ -371,6 +359,11 @@ FamixMetamodelBuilder >> newClass [
 { #category : #initialization }
 FamixMetamodelBuilder >> newClassNamed: aClassName [
 
+	| candidates |
+	
+	candidates := self classes select: [ :each | each name = aClassName].
+	candidates isEmpty ifFalse: [ FmxMBEntityAlreadyExists signal ].
+
 	^ self newClass name: aClassName.
 	
 ]
@@ -411,6 +404,11 @@ FamixMetamodelBuilder >> newTrait [
 
 { #category : #initialization }
 FamixMetamodelBuilder >> newTraitNamed: aTraitName [
+
+	| candidates |
+	
+	candidates := self traits select: [ :each | each name = aTraitName].
+	candidates isEmpty ifFalse: [ FmxMBEntityAlreadyExists signal ].
 
 	^ self newTrait name: aTraitName.
 
@@ -513,21 +511,6 @@ FamixMetamodelBuilder >> testingEnvironment [
 { #category : #accessing }
 FamixMetamodelBuilder >> testingSelectorsMapping [
 	^ testingSelectorsMapping
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> testingSelectorsMapping: anObject [
-	testingSelectorsMapping := anObject
-]
-
-{ #category : #accessing }
-FamixMetamodelBuilder >> trait: aTraitName property: propertyName [
-
-	^ FmxMBRelationSide new
-		traitName: aTraitName;
-		name: propertyName;
-		builder: self;
-		yourself.
 ]
 
 { #category : #settings }

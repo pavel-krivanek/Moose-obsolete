@@ -98,10 +98,11 @@ FamixMetamodelGenerator >> builder: anObject [
 	builder := anObject
 ]
 
-{ #category : #cleanup }
+{ #category : #generation }
 FamixMetamodelGenerator >> cleanPackage [
 
-	self builder cleanPackage.
+	(self packageName asPackageIfAbsent: [ nil ]) 
+		ifNotNil: [:aPackage | aPackage removeFromSystem ].
 ]
 
 { #category : #definition }
@@ -145,18 +146,16 @@ FamixMetamodelGenerator >> generate [
 { #category : #generation }
 FamixMetamodelGenerator >> generateWithCleaning [
 
+	self cleanPackage.
 	self define.
-	self builder 
-		cleanPackage;
-		generate.
+	self builder generate.
 ]
 
 { #category : #generation }
 FamixMetamodelGenerator >> generateWithoutCleaning [
 
 	self define.
-	self builder 
-		generate.
+	self builder generate.
 
 ]
 

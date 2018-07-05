@@ -47,18 +47,71 @@ FmxMBBuilderTest >> testEmptyBuilder [
 
 { #category : #tests }
 FmxMBBuilderTest >> testEnsureClassNamed [
+
+	| c1 |
 	
-	| behavior class behavior2 |
+	c1 := builder ensureClassNamed: #C1.
+	self assert: c1 isMetamodelClass.
+	self assert: (builder ensureClassNamed: #C1) identicalTo: c1.
 	
-	behavior := builder ensureClassNamed: #Behavior.	
-	class := builder ensureClassNamed: #Class.	
+	
+]
 
-	self assert: (builder classes includes: behavior).
-	self assert: (builder classes includes: class).
+{ #category : #tests }
+FmxMBBuilderTest >> testEnsureTraitNamed [
 
-	behavior2 := builder ensureClassNamed: #Behavior.	
+	| t1 |
+	
+	t1 := builder ensureTraitNamed: #T1.
+	self assert: t1 isMetamodelTrait.
+	self assert: (builder ensureTraitNamed: #T1) identicalTo: t1.
+	
+	
+]
 
-	self assert: (behavior2 == behavior).
+{ #category : #tests }
+FmxMBBuilderTest >> testMultipleClassesCreation [
+
+	"it should not be possible to create two classes with the same name"
+
+	builder newClassNamed: #C1.
+	self should: [ builder newClassNamed: #C1 ] raise: FmxMBEntityAlreadyExists.	
+	
+]
+
+{ #category : #tests }
+FmxMBBuilderTest >> testMultipleTraitsCreation [
+
+	"it should not be possible to create two traits with the same name"
+
+	builder newTraitNamed: #T1.
+	self should: [ builder newTraitNamed: #T1 ] raise: FmxMBEntityAlreadyExists.	
+	
+]
+
+{ #category : #tests }
+FmxMBBuilderTest >> testNewClassNamedComment [
+
+	| c1 |
+	
+	builder newClassNamed: #C1 comment: 'comment'.
+	builder generate.
+	
+	c1 := builder testingEnvironment ask classNamed: 'TstC1'.
+	self assert: c1 comment content equals: 'comment'
+	
+]
+
+{ #category : #tests }
+FmxMBBuilderTest >> testNewTraitNamedComment [
+
+	| t1 |
+	
+	builder newTraitNamed: #T1 comment: 'comment'.
+	builder generate.
+	
+	t1 := builder testingEnvironment ask traitNamed: 'TstT1'.
+	self assert: t1 comment content equals: 'comment'
 	
 ]
 
