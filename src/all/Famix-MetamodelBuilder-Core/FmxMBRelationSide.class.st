@@ -46,7 +46,7 @@ FmxMBRelationSide >> asSlot [
 	^ self builder environment 
 		slotNamed: slotName asSymbol 
 		cardinality: self cardinality 
-		type: (self builder prefix, opposite traitName) asSymbol 
+		type: (self builder prefix, opposite relatedEntityName) asSymbol 
 		opposite: opposite name asSymbol
 
 	
@@ -264,7 +264,13 @@ FmxMBRelationSide >> relatedClass: anObject [
 { #category : #accessing }
 FmxMBRelationSide >> relatedEntity [
 
-	^ relatedClass ifNil: [ ^ trait ]
+	^ trait ifNil: [ ^ relatedClass ]
+]
+
+{ #category : #accessing }
+FmxMBRelationSide >> relatedEntityName [
+
+	^ self relatedEntity name
 ]
 
 { #category : #accessing }

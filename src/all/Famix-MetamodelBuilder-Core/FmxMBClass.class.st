@@ -303,7 +303,8 @@ FmxMBClass >> traitNamesFromRelations [
 
 	"returns traits defined by relations"
 
-	^ (self relations collect: [ :each | each side trait fullName ]) asSet sorted
+	^ ((self relations select: [:each | each side trait notNil ])
+		collect: [ :each | each side trait fullName ]) asSet sorted
 ]
 
 { #category : #testing }

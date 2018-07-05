@@ -59,6 +59,12 @@ FmxMBClassAlias >> property: propertyName type: aTypeName [
 	^ self trait property: propertyName type: aTypeName
 ]
 
+{ #category : #'as yet unclassified' }
+FmxMBClassAlias >> relatedEntityName [
+
+	^ self relatedEntity name
+]
+
 { #category : #accessing }
 FmxMBClassAlias >> subject [
 	^ subject

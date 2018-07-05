@@ -259,7 +259,7 @@ FmxMBBehavior >> property: propertyName [
 	
 	aSide := FmxMBRelationSide new
 		builder: self builder;
-		trait: self;
+		relatedClass: self;
 		name: propertyName;
 		yourself.
 		
@@ -294,6 +294,12 @@ FmxMBBehavior >> realClass: anObject [
 	realClass := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+FmxMBBehavior >> relatedEntityName [
+
+	^ self name
+]
+
 { #category : #private }
 FmxMBBehavior >> relationFrom: ownSide to: oppositeSide [
 
@@ -309,7 +315,7 @@ FmxMBBehavior >> relationFrom: ownSide to: oppositeSide [
 	oppositeSide relation: aRelation.
 
 	ownSide relatedClass ifNotNil: [ 
-		ownSide relatedClass addRelation: aRelation with: oppositeSide relatedClass ].
+		ownSide relatedClass addRelation: aRelation with: oppositeSide relatedEntity ].
 		
 	^ aRelation
 

@@ -162,7 +162,7 @@ FamixMetamodelBuilder >> containerRequirementsOf: aClass [
 
 	|  usedBehaviors |
 	
-	usedBehaviors := aClass containerProperties collect: [ :e | e relation oppositeSide trait].
+	usedBehaviors := aClass containerProperties collect: [ :e | e relation oppositeSide relatedEntity].
 	^ usedBehaviors flatCollect: [:aBehavior |
 		aBehavior isMetamodelTrait
 			ifTrue: [ self classes select: [ :e | e hasTraitGeneralization: aBehavior ]]
