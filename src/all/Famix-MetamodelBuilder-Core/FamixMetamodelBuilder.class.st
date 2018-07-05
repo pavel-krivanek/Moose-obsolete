@@ -93,12 +93,6 @@ FamixMetamodelBuilder >> baseImportingContextName [
 	^ #FmxImportingContext
 ]
 
-{ #category : #accessing }
-FamixMetamodelBuilder >> baseMooseImportingContextName [
-
-	^ MooseImportingContext
-]
-
 { #category : #settings }
 FamixMetamodelBuilder >> basicSuperclassName [
 
@@ -551,6 +545,12 @@ FamixMetamodelBuilder >> traitTag: aSymbol [
 { #category : #accessing }
 FamixMetamodelBuilder >> traits [
 	^ traits
+]
+
+{ #category : #accessing }
+FamixMetamodelBuilder >> traitsToGenerate [ 
+
+	^ self traits select: #willGenerate
 ]
 
 { #category : #accessing }

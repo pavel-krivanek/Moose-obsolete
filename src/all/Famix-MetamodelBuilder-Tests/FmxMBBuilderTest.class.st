@@ -61,3 +61,28 @@ FmxMBBuilderTest >> testEnsureClassNamed [
 	self assert: (behavior2 == behavior).
 	
 ]
+
+{ #category : #tests }
+FmxMBBuilderTest >> testWillGenerate [
+
+	"test blocking of generation"
+
+	| c1 t1 c2 t2 |
+	
+	c1 := builder newClassNamed: #C1.
+	t1 := builder newTraitNamed: #T1.
+	self assert: c1 willGenerate.
+	self assert: t1 willGenerate.
+	builder doNotGenerateCurrent.
+	self deny: c1 willGenerate.
+	self deny: t1 willGenerate.
+	c2 := builder newClassNamed: #C2.
+	t2 := builder newTraitNamed: #T2.
+	self assert: c2 willGenerate.
+	self assert: t2 willGenerate.
+	
+	self assertCollection: builder classesToGenerate hasSameElements: { c2 }.
+	self assertCollection: builder traitsToGenerate hasSameElements: { t2 }
+	
+	
+]
