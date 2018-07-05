@@ -340,8 +340,8 @@ FmxMBRelationSide >> trait [
 { #category : #accessing }
 FmxMBRelationSide >> trait: anObject [
 
-	trait ifNotNil: [ 
-		trait removeRelationSide: self ].
+	self relatedEntity ifNotNil: [ :aRelatedEntity |
+		aRelatedEntity removeRelationSide: self ].
 	trait := anObject.
 	trait addRelationSide: self
 ]

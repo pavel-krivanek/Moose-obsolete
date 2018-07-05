@@ -115,13 +115,13 @@ FmxMBRelationSideTest >> testPropertyType [
 
 	(side := (tClass property: #property1)) - (tComment property: #property2).
 	
-	self assert: side trait equals: tClass.
+	self assert: side relatedEntity equals: tClass.
 	self assertCollection: tClass sides asArray equals: { side }.
 	self assert: tAccess sides isEmpty.
 
 	side trait: tAccess.
 
-	self assert: side trait equals: tAccess.
+	self assert: side relatedEntity equals: tAccess.
 	self assert: tClass sides isEmpty.
 	self assertCollection: tAccess sides asArray equals: { side }.
 
@@ -141,7 +141,7 @@ FmxMBRelationSideTest >> testReconnection [
 
 	(side := (tClass property: #property1)) - (tComment property: #property2).
 	
-	self assert: side trait equals: tClass.
+	self assert: side relatedEntity equals: tClass.
 	self assertCollection: tClass sides asArray equals: { side }.
 	self assert: tAccess sides isEmpty.
 
