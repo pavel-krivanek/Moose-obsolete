@@ -14,7 +14,25 @@ Class {
 }
 
 { #category : #accessing }
-FmxMBClassAlias >> link: link1 throughAssociation: anAssociationAlias link: link2 with: anAlias [
+FmxMBClassAlias >> addRelation: aRelation with: anotherClass [
+
+	^ self subject addRelation: aRelation with: anotherClass
+]
+
+{ #category : #testing }
+FmxMBClassAlias >> isMetamodelClass [
+
+	^ false
+]
+
+{ #category : #testing }
+FmxMBClassAlias >> isMetamodelTrait [
+
+	^ false
+]
+
+{ #category : #accessing }
+FmxMBClassAlias >> link: link1 throughAssociation: anAssociationEntity link: link2 with: otherEntity [
 
 "(behavior as: #TWithAccesses)
 	link: #accesses -> #accessor
@@ -26,7 +44,7 @@ FmxMBClassAlias >> link: link1 throughAssociation: anAssociationAlias link: link
 	rel := self subject builder newRelation
 	from: [ :side |
 		side1 := side name: (link1 value);
-			trait: anAssociationAlias trait;
+			relatedEntity: anAssociationEntity;
 			one; 
 			source	 ];
 	to: [ :opposite |
@@ -34,20 +52,20 @@ FmxMBClassAlias >> link: link1 throughAssociation: anAssociationAlias link: link
 			trait: self trait;
 			many ].
 			
-	anAssociationAlias subject addRelation: rel with: self subject.		
+	anAssociationEntity addRelation: rel with: self subject.		
 			
 	rel := self subject builder newRelation
 		from: [ :side |
 			side3 := side name: link2 value;
-				trait: anAssociationAlias trait;
+				relatedEntity: anAssociationEntity;
 				one;
 				target	 ];
 		to: [ :opposite |
 			side4 := opposite 	name: link2 key;
-				trait: anAlias trait;
+				relatedEntity: otherEntity;
 				many ].
 			
-	anAssociationAlias subject addRelation: rel with: anAlias subject.		
+	anAssociationEntity addRelation: rel with: otherEntity subject.		
 	
 	^ { side1. side2. side3. side4 }
 

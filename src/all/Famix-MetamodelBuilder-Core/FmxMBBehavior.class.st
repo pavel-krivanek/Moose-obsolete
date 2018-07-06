@@ -364,6 +364,12 @@ FmxMBBehavior >> slotDefinitions [
 ]
 
 { #category : #accessing }
+FmxMBBehavior >> subject [
+
+	^ self
+]
+
+{ #category : #accessing }
 FmxMBBehavior >> tag [
 	^ tag ifNil: [ self defaultTag ]
 ]

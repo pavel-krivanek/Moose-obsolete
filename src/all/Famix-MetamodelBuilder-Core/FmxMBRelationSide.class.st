@@ -268,6 +268,24 @@ FmxMBRelationSide >> relatedEntity [
 ]
 
 { #category : #accessing }
+FmxMBRelationSide >> relatedEntity: anEntity [
+
+	anEntity isMetamodelClass ifTrue: [ 
+		relatedClass := anEntity.
+		trait := nil.
+		^ self ].
+
+	anEntity isMetamodelTrait ifTrue: [ 
+		relatedClass := nil.
+		trait := anEntity.
+		^ self ].
+
+	"alias"
+	relatedClass := nil.
+	trait := anEntity trait.
+]
+
+{ #category : #accessing }
 FmxMBRelationSide >> relatedEntityName [
 
 	^ self relatedEntity name

@@ -170,3 +170,33 @@ FmxMBRelationSideTest >> testRelatedEntity [
 	self assert: relation right relatedEntity equals: aTrait.
 
 ]
+
+{ #category : #tests }
+FmxMBRelationSideTest >> testSetRelatedEntity [
+
+	"test setting of a type of the property"
+
+	| aClass aTrait anAlias other relationSide |
+	
+	aClass := builder newClassNamed: #AClass.
+	aTrait := builder newTraitNamed: #ATrait.
+	anAlias := (builder newClassNamed: #AnAliasParent) as: #AnAlias.
+	other := builder newClassNamed: #Other.
+
+	relationSide := FmxMBRelationSide new.
+	relationSide relatedEntity: aClass.
+	self assert: relationSide relatedClass equals: aClass.
+	self assert: relationSide trait equals: nil.
+	
+	relationSide := FmxMBRelationSide new.
+	relationSide relatedEntity: aTrait.
+	self assert: relationSide relatedClass equals: nil.
+	self assert: relationSide trait equals: aTrait.
+
+	relationSide := FmxMBRelationSide new.
+	relationSide relatedEntity: anAlias.
+	self assert: relationSide relatedClass equals: nil.
+	self assert: relationSide trait equals: (builder ensureTraitNamed: #AnAlias).
+
+
+]
