@@ -43,6 +43,12 @@ FmxMBClassAlias >> isMetamodelTrait [
 	^ false
 ]
 
+{ #category : #'relations - named' }
+FmxMBClassAlias >> pluralPropertyName [
+
+	^ self trait pluralPropertyName
+]
+
 { #category : #accessing }
 FmxMBClassAlias >> property: propertyName type: aTypeName [
 
@@ -59,6 +65,12 @@ FmxMBClassAlias >> propertyName [
 FmxMBClassAlias >> relatedEntityName [
 
 	^ self relatedEntity name
+]
+
+{ #category : #'relations - named' }
+FmxMBClassAlias >> singularPropertyName [
+
+	^ self trait singularPropertyName 
 ]
 
 { #category : #accessing }

@@ -38,6 +38,105 @@ FmxMBRelationSidesCombinationsTests >> testAliasToAlias [
 ]
 
 { #category : #tests }
+FmxMBRelationSidesCombinationsTests >> testAliasToAliasWithAutomaticNamingManyToOne [
+
+	"test simple relation between alias and alias with automatic property names"
+	
+	| entity1 entity2 env |
+
+	entity1 := builder newClassNamed: #Named.	
+	entity2 := builder newClassNamed: #Access.	
+
+	(entity1 as: #TNamed) *-* (entity2 as: #TAccess).
+	
+	builder generate.
+	
+	env := builder environment ringEnvironment.
+	
+	self 
+		assert: ((env ask behaviorNamed: #TstTNamed) slots first) expression 
+		equals: 'FMMany type: #TstTAccess opposite: #nameds'.
+	self 
+		assert: ((env ask behaviorNamed: #TstTAccess) slots first) expression 
+		equals: 'FMMany type: #TstTNamed opposite: #accesses'.
+	
+	self 
+		assertCollection: (env ask behaviorNamed: #TstNamed) traits
+		hasSameElements: {env ask behaviorNamed: #TstTNamed}.
+	self 
+		assertCollection: (env ask behaviorNamed: #TstAccess) traits
+		hasSameElements: {env ask behaviorNamed: #TstTAccess}.
+
+
+]
+
+{ #category : #tests }
+FmxMBRelationSidesCombinationsTests >> testAliasToAliasWithAutomaticNamingOneToMany [
+
+	"test simple relation between alias and alias with automatic property names"
+	
+	| entity1 entity2 env |
+
+	entity1 := builder newClassNamed: #Named.	
+	entity2 := builder newClassNamed: #Access.	
+
+	(entity1 as: #TNamed) -* (entity2 as: #TAccess).
+	
+	builder generate.
+	
+	env := builder environment ringEnvironment.
+	
+	self 
+		assert: ((env ask behaviorNamed: #TstTNamed) slots first) expression 
+		equals: 'FMMany type: #TstTAccess opposite: #named'.
+	self 
+		assert: ((env ask behaviorNamed: #TstTAccess) slots first) expression 
+		equals: 'FMOne type: #TstTNamed opposite: #accesses'.
+	
+	self 
+		assertCollection: (env ask behaviorNamed: #TstNamed) traits
+		hasSameElements: {env ask behaviorNamed: #TstTNamed}.
+	self 
+		assertCollection: (env ask behaviorNamed: #TstAccess) traits
+		hasSameElements: {env ask behaviorNamed: #TstTAccess}.
+
+
+]
+
+{ #category : #tests }
+FmxMBRelationSidesCombinationsTests >> testAliasToAliasWithAutomaticNamingOneToOne [
+
+	"test simple relation between alias and alias with automatic property names"
+	
+	| entity1 entity2 env |
+
+	entity1 := builder newClassNamed: #Named.	
+	entity2 := builder newClassNamed: #Access.	
+
+	(entity1 as: #TNamed) - (entity2 as: #TAccess).
+	
+	builder generate.
+	
+	env := builder environment ringEnvironment.
+	
+	self 
+		assert: ((env ask behaviorNamed: #TstTNamed) slots first) expression 
+		equals: 'FMOne type: #TstTAccess opposite: #named'.
+	self 
+		assert: ((env ask behaviorNamed: #TstTAccess) slots first) expression 
+		equals: 'FMOne type: #TstTNamed opposite: #access'.
+	
+	self 
+		assertCollection: (env ask behaviorNamed: #TstNamed) traits
+		hasSameElements: {env ask behaviorNamed: #TstTNamed}.
+	self 
+		assertCollection: (env ask behaviorNamed: #TstAccess) traits
+		hasSameElements: {env ask behaviorNamed: #TstTAccess}.
+
+
+]
+
+{ #category : #tests }
 FmxMBRelationSidesCombinationsTests >> testAliasToClass [
 
 	"test simple relation between alias and class"
