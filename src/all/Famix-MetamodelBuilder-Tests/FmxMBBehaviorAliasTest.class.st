@@ -39,28 +39,6 @@ FmxMBBehaviorAliasTest >> testClassPropertyWithType [
 ]
 
 { #category : #initialization }
-FmxMBBehaviorAliasTest >> testLink [
-
-	| access variable method sides |
-	
-	access := builder newClassNamed: #Access.	
-	variable := builder newClassNamed: #Variable.	
-	method := builder newClassNamed: #Method.	
-		
-	sides := (method as: #TWithAccesses)
-		link: #accesses -> #accessor
-		throughAssociation: (access as: #TAccess) 
-		link: #variable <- #icomingAcesses
-		with: (variable as: #TAccessible).
-		
-	sides first comment: 'This is a comment'.
-		
-	builder generate.
-	
-	"TODO: assert"
-]
-
-{ #category : #initialization }
 FmxMBBehaviorAliasTest >> testTraitName [
 
 	"trivial test of alias #traitName"
