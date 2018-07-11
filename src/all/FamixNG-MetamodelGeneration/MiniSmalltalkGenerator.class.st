@@ -143,11 +143,7 @@ MiniSmalltalkGenerator >> defineHierarchy [
 { #category : #'instance creation' }
 MiniSmalltalkGenerator >> newBuilder [
 
-	^ (FmxNGGenerator builderWithDefinitions)
-		doNotGenerateCurrent;
-		generator: self;
-		yourself.
-	
+	^ self builderWithStandardTraits
 		
 		
 	

@@ -189,9 +189,7 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 { #category : #initialization }
 FmxNGPharoSmalltalkGenerator >> newBuilder [
 
-	^ (FmxNGGenerator builderWithDefinitions)
-		doNotGenerateCurrent;
-		generator: self;
+	^ self builderWithStandardTraits
 		generateImportingContext: true;
 		yourself
 		

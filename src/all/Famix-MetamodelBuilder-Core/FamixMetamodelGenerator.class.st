@@ -98,6 +98,15 @@ FamixMetamodelGenerator >> builder: anObject [
 	builder := anObject
 ]
 
+{ #category : #definition }
+FamixMetamodelGenerator >> builderWithStandardTraits [
+
+	^ (FmxNGGenerator builderWithDefinitions)
+		doNotGenerateCurrent;
+		generator: self;
+		yourself.
+]
+
 { #category : #generation }
 FamixMetamodelGenerator >> cleanPackage [
 

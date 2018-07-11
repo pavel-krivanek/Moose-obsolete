@@ -384,15 +384,3 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	
 
 ]
-
-{ #category : #initialization }
-FmxNGCompatibilityGenerator >> newBuilder [
-
-	^ (FmxNGGenerator builderWithDefinitions)
-		doNotGenerateCurrent;
-		generator: self;
-		yourself
-		
-		
-	
-]
