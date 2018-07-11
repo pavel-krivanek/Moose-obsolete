@@ -18,10 +18,7 @@ FmxNGTraitGroupDescription classSide >> add: aTraitGroupMemeber to: aView [
 	
 	aView
 		classname: [ :each | each name withoutPrefix: 'FmxNGT' ];
-		instanceVariables: [:each | each slots collect: #name]";
-		methodselector: #selector;
-		methodsNames: #();
-		attributeselector: #yourself".
+		instanceVariables: [:each | each slots collect: #name].
 	aView attributeShape color: Color black.
 	aView methodShape color: Color black.
 	aView classNameShape color: Color black.
@@ -30,7 +27,6 @@ FmxNGTraitGroupDescription classSide >> add: aTraitGroupMemeber to: aView [
 	aView
 		layout packed.
 		aView addObjects: group.
-		"treeLayout".
 	aView shape line
 		color: Color blue;
 		withHorizontalAttachPoint.
@@ -60,6 +56,12 @@ FmxNGTraitGroupDescription classSide >> groupRepresentatives [
 	
 ]
 
+{ #category : #planttext }
+FmxNGTraitGroupDescription classSide >> isContainer: aSlot [
+
+	^ (aSlot definingClass methodNamed: aSlot name) hasPragmaNamed: #container
+]
+
 { #category : #'world menu' }
 FmxNGTraitGroupDescription classSide >> menuCommandOn: aBuilder [
 	<worldMenu>
@@ -70,6 +72,12 @@ FmxNGTraitGroupDescription classSide >> menuCommandOn: aBuilder [
 		help: 'Famix traits groups browser';
 		action:[ self openGroupsBrowser];
 		withSeparatorAfter
+]
+
+{ #category : #planttext }
+FmxNGTraitGroupDescription classSide >> normalizeName: aString [
+
+	^ aString withoutPrefix: 'FmxNGT'
 ]
 
 { #category : #'as yet unclassified' }
@@ -96,6 +104,84 @@ FmxNGTraitGroupDescription classSide >> openGroupsBrowser [
 				 ] ].
 	browser openOn: data.
 	
+
+]
+
+{ #category : #planttext }
+FmxNGTraitGroupDescription classSide >> plantTextForAllTraits [
+
+	^ String streamContents: [ :s |
+		FmxNGTraitGroupDescription groupRepresentatives do: [ :each |
+			FmxNGTraitGroupDescription 
+				printPlantTextOf: each to: s ] ]
+]
+
+{ #category : #planttext }
+FmxNGTraitGroupDescription classSide >> plantTextStringOf: aTraitGroupMemeber [
+
+	^ String streamContents: [ :s | 
+		self printPlantTextOf: aTraitGroupMemeber to: s
+	]
+]
+
+{ #category : #planttext }
+FmxNGTraitGroupDescription classSide >> printPlantTextOf: aTraitGroupMemeber to: s [
+
+		| group slots processedSlots |
+		
+		group := FmxNGTraitGroupDescription traitGroupOf: aTraitGroupMemeber.
+
+		slots := Set new.
+		group do: [ :aTrait |
+			(aTrait slots select: #isFMRelationSlot) do: [ :aSlot |
+				(slots includes: (aSlot inverseName asString -> aSlot name asString))
+					ifFalse: [ slots add: (aSlot name asString -> aSlot inverseName asString) ]] ].
+
+		s << '@startuml'; lf.
+		s << 'skinparam shadowing false'; lf.
+		s << 'skinparam monochrome true'; lf.
+		
+		s << 'skinparam class {
+	BackgroundColor White
+}'; lf.
+		s << 'hide empty members'; lf.
+		
+		group do: [ :aTrait |
+			s << 'class ' << (self normalizeName: aTrait name); << ' << (T,orchid) >> {'; lf.
+			(aTrait localMethods select: [ :e | e hasPragmaNamed: #MSEProperty:type: ]) do: [ :propertyMethod |
+				s tab; << '+'; << propertyMethod selector.
+				(propertyMethod hasPragmaNamed: #derived) ifTrue: [
+					s << '()' ].
+				s lf].
+			s << ' }'; lf ].
+
+		processedSlots := Set new.
+
+		group do: [ :aTrait |
+			(aTrait slots select: #isFMRelationSlot) do: [ :aSlot |
+				
+				(processedSlots includes: aSlot) ifFalse: [ 
+				
+				s << (self normalizeName: aSlot definingClass name).
+				s << ' "'.
+				aSlot inverseSlot isToOneSlot ifFalse: [ s << '* ' ].
+				s << aSlot inverseSlot name ; << '" '.
+				
+				(self isContainer: aSlot inverseSlot) 
+					ifTrue: [ s << 'o' ].
+				s << '--'.
+				(self isContainer: aSlot) 
+					ifTrue: [ s << 'o' ].
+				
+				s << ' "'.
+				aSlot isToOneSlot ifFalse: [ s << '* ' ].
+				s << aSlot name ; << '" '.				
+				s << (self normalizeName: aSlot inverseSlot definingClass name); lf.
+				
+				processedSlots addAll: { aSlot. aSlot inverseSlot }.
+				 ] ] ].
+				
+		s << '@enduml'; lf
 
 ]
 
