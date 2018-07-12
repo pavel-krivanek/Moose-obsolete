@@ -9,7 +9,7 @@ Class {
 	#category : #'Famix-MetamodelBuilder-Tests'
 }
 
-{ #category : #tests }
+{ #category : #running }
 FmxMBLinkTest >> setUp [
 
 	super setUp.
