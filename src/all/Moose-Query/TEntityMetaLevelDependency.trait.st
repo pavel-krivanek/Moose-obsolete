@@ -5,6 +5,10 @@ For more informations: https://moosequery.ferlicot.fr/
 "
 Trait {
 	#name : #TEntityMetaLevelDependency,
+	#classInstVars : [
+		'allChildrenTypes',
+		'allIncomingAssociationTypes'
+	],
 	#category : #'Moose-Query'
 }
 
