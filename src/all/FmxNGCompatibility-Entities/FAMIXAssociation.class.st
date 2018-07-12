@@ -3,10 +3,6 @@ Class {
 	#superclass : #FAMIXSourcedEntity,
 	#traits : 'FmxNGTAssociation + TAssociationMetaLevelDependency',
 	#classTraits : 'FmxNGTAssociation classTrait + TAssociationMetaLevelDependency classTrait',
-	#classInstVars : [
-		'#targetTypes',
-		'#sourceTypes'
-	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -33,43 +29,11 @@ FAMIXAssociation class >> generatedTraitNames [
 	^ #(FmxNGTAssociation)
 ]
 
-{ #category : #accessing }
-FAMIXAssociation class >> possibleSourceClasses [
-	self 
-		deprecated: 'Use sourceTypes instead'
-		on: '23 January 2018' 
-		in: 'Moose6.1'
-		transformWith: '`@receiver possibleSourceClasses' -> '`@receiver sourceTypes'.
-	^ self sourceTypes
-]
-
-{ #category : #accessing }
-FAMIXAssociation class >> possibleTargetClasses [
-	self 
-		deprecated: 'Use targetTypes instead'
-		on: '23 January 2018' 
-		in: 'Moose6.1'
-		transformWith: '`@receiver possibleTargetClasses' -> '`@receiver targetTypes'.
-	^ self targetTypes
-]
-
 { #category : #meta }
 FAMIXAssociation class >> requirements [
 
 	<generated>
 	^ {  }
-]
-
-{ #category : #accessing }
-FAMIXAssociation class >> sourceTypes [
-	^ sourceTypes
-		ifNil: [ sourceTypes := self privateSourceTypes ]
-]
-
-{ #category : #accessing }
-FAMIXAssociation class >> targetTypes [
-	^ targetTypes
-		ifNil: [ targetTypes := self privateTargetTypes ]
 ]
 
 { #category : #'Famix-Extensions' }

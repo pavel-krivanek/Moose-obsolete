@@ -6,21 +6,11 @@ Class {
 	#classInstVars : [
 		'#childrenSelectors',
 		'#allParentTypes',
-		'#allChildrenTypes',
-		'#parentSelectors'
+		'#parentSelectors',
+		'#allChildrenTypes'
 	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstanceAttribute class >> allChildrenTypes [
-	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
-]
-
-{ #category : #accessing }
-FAMIXAnnotationInstanceAttribute class >> allIncomingAssociationTypes [
-   ^ self privateAllIncomingAssociationTypes
-]
 
 { #category : #accessing }
 FAMIXAnnotationInstanceAttribute class >> allOutgoingAssociationTypes [

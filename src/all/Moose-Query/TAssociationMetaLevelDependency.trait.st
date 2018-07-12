@@ -15,6 +15,26 @@ TAssociationMetaLevelDependency classSide >> dependencyFM3PropertyDescription [
 	^ self allDeclaredProperties select: [ :e | e isSource or: [ e isTarget ] ]
 ]
 
+{ #category : #deprecated }
+TAssociationMetaLevelDependency classSide >> possibleSourceClasses [
+	self 
+		deprecated: 'Use sourceTypes instead'
+		on: '23 January 2018' 
+		in: 'Moose6.1'
+		transformWith: '`@receiver possibleSourceClasses' -> '`@receiver sourceTypes'.
+	^ self sourceTypes
+]
+
+{ #category : #deprecated }
+TAssociationMetaLevelDependency classSide >> possibleTargetClasses [
+	self 
+		deprecated: 'Use targetTypes instead'
+		on: '23 January 2018' 
+		in: 'Moose6.1'
+		transformWith: '`@receiver possibleTargetClasses' -> '`@receiver targetTypes'.
+	^ self targetTypes
+]
+
 { #category : #private }
 TAssociationMetaLevelDependency classSide >> privateSourceTypes [
 	"I return the classes that could be my source"
@@ -31,12 +51,14 @@ TAssociationMetaLevelDependency classSide >> privateTargetTypes [
 
 { #category : #accessing }
 TAssociationMetaLevelDependency classSide >> sourceTypes [
-	^ self explicitRequirement
+	^ sourceTypes
+		ifNil: [ sourceTypes := self privateSourceTypes ]
 ]
 
 { #category : #accessing }
 TAssociationMetaLevelDependency classSide >> targetTypes [
-	^ self explicitRequirement
+	^ targetTypes
+		ifNil: [ targetTypes := self privateTargetTypes ]
 ]
 
 { #category : #accessing }

@@ -6,13 +6,11 @@ Class {
 	#classInstVars : [
 		'#childrenSelectors',
 		'#allParentTypes',
-		'#allChildrenTypes',
 		'#parentSelectors',
 		'#outgoingMSEProperties',
 		'#incomingMSEProperties',
 		'#outgoingAssociationTypes',
 		'#incomingAssociationTypes',
-		'#allIncomingAssociationTypes',
 		'#allOutgoingAssociationTypes'
 	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
@@ -71,7 +69,7 @@ FmxNGStNamedEntity class >> requirements [
 { #category : #'as yet unclassified' }
 FmxNGStNamedEntity class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
-	childrenSelectors := parentSelectors := allChildrenTypes := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := allOutgoingAssociationTypes := allIncomingAssociationTypes := nil
+	childrenSelectors := parentSelectors := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := allOutgoingAssociationTypes := allIncomingAssociationTypes := nil
 ]
 
 { #category : #testing }

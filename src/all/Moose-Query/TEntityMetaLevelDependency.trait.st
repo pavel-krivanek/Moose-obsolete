@@ -10,12 +10,15 @@ Trait {
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> allChildrenTypes [
-	^ self explicitRequirement
+	^ allChildrenTypes ifNil: [ allChildrenTypes := self privateAllChildrenTypes ]
 ]
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> allIncomingAssociationTypes [
-   ^ self explicitRequirement
+	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
+
+	^ allIncomingAssociationTypes
+		ifNil: [ allIncomingAssociationTypes := self privateAllIncomingAssociationTypes ]
 ]
 
 { #category : #accessing }

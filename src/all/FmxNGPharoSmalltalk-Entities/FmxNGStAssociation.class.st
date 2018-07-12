@@ -3,6 +3,10 @@ Class {
 	#superclass : #FmxNGStSourcedEntity,
 	#traits : 'FmxNGTAssociation + TAssociationMetaLevelDependency',
 	#classTraits : 'FmxNGTAssociation classTrait + TAssociationMetaLevelDependency classTrait',
+	#classInstVars : [
+		'#targetTypes',
+		'#sourceTypes'
+	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
