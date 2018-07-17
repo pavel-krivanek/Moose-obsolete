@@ -3,9 +3,6 @@ Class {
 	#superclass : #FmxNGStEntity,
 	#traits : 'FmxNGTWithComments + FmxNGTWithSourceAnchor + FmxNGTWithSourceLanguage + TEntityMetaLevelDependency + TDependencyQueries',
 	#classTraits : 'FmxNGTWithComments classTrait + FmxNGTWithSourceAnchor classTrait + FmxNGTWithSourceLanguage classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
-	#classInstVars : [
-		'#allChildrenTypes'
-	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 

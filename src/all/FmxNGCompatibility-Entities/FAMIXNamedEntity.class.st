@@ -3,33 +3,8 @@ Class {
 	#superclass : #FAMIXSourcedEntity,
 	#traits : 'FmxNGTInvocationsReceiver + FmxNGTNamed + FmxNGTPackageable + FmxNGTPossibleStub + FmxNGTWithAnnotationInstances + FmxNGTWithModifiers + TDependencyQueries + TEntityMetaLevelDependency',
 	#classTraits : 'FmxNGTInvocationsReceiver classTrait + FmxNGTNamed classTrait + FmxNGTPackageable classTrait + FmxNGTPossibleStub classTrait + FmxNGTWithAnnotationInstances classTrait + FmxNGTWithModifiers classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
-	#classInstVars : [
-		'#childrenSelectors',
-		'#allParentTypes',
-		'#parentSelectors',
-		'#outgoingMSEProperties',
-		'#incomingMSEProperties',
-		'#outgoingAssociationTypes',
-		'#incomingAssociationTypes',
-		'#allOutgoingAssociationTypes',
-		'#allChildrenTypes',
-		'#allIncomingAssociationTypes'
-	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> allOutgoingAssociationTypes [
-	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
-
-	^ allOutgoingAssociationTypes
-		ifNil: [ allOutgoingAssociationTypes := self privateAllOutgoingAssociationTypes ]
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXNamedEntity class >> allParentTypes [
-	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
-]
 
 { #category : #meta }
 FAMIXNamedEntity class >> annotation [
@@ -44,11 +19,6 @@ FAMIXNamedEntity class >> annotation [
 { #category : #'Moose-Query-Extensions' }
 FAMIXNamedEntity class >> belongsToMethod [
 	^ self compiledMethodAt: #belongsTo ifAbsent: nil
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXNamedEntity class >> childrenSelectors [
-	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
 { #category : #'Moose-Query-Extensions' }
@@ -70,14 +40,6 @@ FAMIXNamedEntity class >> generatedTraitNames [
 ]
 
 { #category : #accessing }
-FAMIXNamedEntity class >> incomingAssociationTypes [
-	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
-
-	^ incomingAssociationTypes
-		ifNil: [ incomingAssociationTypes := self privateIncomingAssociationTypes ]
-]
-
-{ #category : #accessing }
 FAMIXNamedEntity class >> incomingMSEProperties [
 	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
 ]
@@ -92,19 +54,6 @@ FAMIXNamedEntity class >> named: aString [
 	^ self new
 		name: aString;
 		yourself
-]
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> outgoingAssociationTypes [
-	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
-
-	^ outgoingAssociationTypes
-		ifNil: [ outgoingAssociationTypes := self privateOutgoingAssociationTypes ]
-]
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> outgoingMSEProperties [
-	^ outgoingMSEProperties ifNil: [ outgoingMSEProperties := self privateOutgoingMSEProperties ]
 ]
 
 { #category : #accessing }
@@ -125,11 +74,6 @@ FAMIXNamedEntity class >> parentSelector [
 		in: 'Pharo-6.0-60328-'
 		transformWith: '`@receiver parentSelector' -> '`@receiver parentSelectors'.
 	^ self parentSelectors
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXNamedEntity class >> parentSelectors [
-	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
 { #category : #'Moose-Query-Extensions' }

@@ -27,12 +27,12 @@ TEntityMetaLevelDependency classSide >> allIncomingAssociationTypes [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> allOutgoingAssociationTypes [
-	^ self explicitRequirement
+	^ self privateAllOutgoingAssociationTypes
 ]
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> allParentTypes [
-	^ self explicitRequirement
+	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
 
 { #category : #'Moose-Query-Extensions' }
@@ -47,7 +47,7 @@ TEntityMetaLevelDependency classSide >> childrenAccessors [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> childrenSelectors [
-	^ {}
+	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
 { #category : #accessing }
@@ -75,19 +75,20 @@ TEntityMetaLevelDependency classSide >> incomingMSEProperties [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> outgoingAssociationTypes [
-	"Default value"
+	"Here we add a cache because this is heavely used in MooseQuery for the navigations."
 
-	^ self privateOutgoingAssociationTypes
+	^ outgoingAssociationTypes
+		ifNil: [ outgoingAssociationTypes := self privateOutgoingAssociationTypes ]
 ]
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> outgoingMSEProperties [
-	^ #()
+	^ outgoingMSEProperties ifNil: [ outgoingMSEProperties := self privateOutgoingMSEProperties ]
 ]
 
 { #category : #'Moose-Query-Extensions' }
 TEntityMetaLevelDependency classSide >> parentSelectors [
-	^ {}
+	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
 { #category : #accessing }

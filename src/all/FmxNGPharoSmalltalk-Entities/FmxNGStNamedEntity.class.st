@@ -3,16 +3,6 @@ Class {
 	#superclass : #FmxNGStSourcedEntity,
 	#traits : 'FmxNGTInvocationsReceiver + FmxNGTNamed + FmxNGTPackageable + FmxNGTPossibleStub + FmxNGTWithAnnotationInstances + FmxNGTWithModifiers + TDependencyQueries + TEntityMetaLevelDependency',
 	#classTraits : 'FmxNGTInvocationsReceiver classTrait + FmxNGTNamed classTrait + FmxNGTPackageable classTrait + FmxNGTPossibleStub classTrait + FmxNGTWithAnnotationInstances classTrait + FmxNGTWithModifiers classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
-	#classInstVars : [
-		'#childrenSelectors',
-		'#allParentTypes',
-		'#parentSelectors',
-		'#outgoingMSEProperties',
-		'#incomingMSEProperties',
-		'#outgoingAssociationTypes',
-		'#incomingAssociationTypes',
-		'#allOutgoingAssociationTypes'
-	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -24,11 +14,6 @@ FmxNGStNamedEntity class >> annotation [
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>
 	^self
-]
-
-{ #category : #accessing }
-FmxNGStNamedEntity class >> childrenSelectors [
-	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
 { #category : #generator }
@@ -47,16 +32,6 @@ FmxNGStNamedEntity class >> generatedTraitNames [
 { #category : #accessing }
 FmxNGStNamedEntity class >> incomingMSEProperties [
 	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
-]
-
-{ #category : #accessing }
-FmxNGStNamedEntity class >> outgoingMSEProperties [
-	^ outgoingMSEProperties ifNil: [ outgoingMSEProperties := self privateOutgoingMSEProperties ]
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FmxNGStNamedEntity class >> parentSelectors [
-	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
 { #category : #meta }

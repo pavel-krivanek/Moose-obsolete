@@ -3,10 +3,6 @@ Class {
 	#superclass : #FmxNGStSourcedEntity,
 	#traits : 'FmxNGTAnnotationInstance + FmxNGTTypedAnnotationInstance + FmxNGTWithAnnotationInstanceAttributes + TDependencyQueries',
 	#classTraits : 'FmxNGTAnnotationInstance classTrait + FmxNGTTypedAnnotationInstance classTrait + FmxNGTWithAnnotationInstanceAttributes classTrait + TDependencyQueries classTrait',
-	#classInstVars : [
-		'#childrenSelectors',
-		'#parentSelectors'
-	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -20,11 +16,6 @@ FmxNGStAnnotationInstance class >> annotation [
 	^self
 ]
 
-{ #category : #accessing }
-FmxNGStAnnotationInstance class >> childrenSelectors [
-	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
-]
-
 { #category : #generator }
 FmxNGStAnnotationInstance class >> generatedSlotNames [
 	<generated>
@@ -36,11 +27,6 @@ FmxNGStAnnotationInstance class >> generatedSlotNames [
 FmxNGStAnnotationInstance class >> generatedTraitNames [
 	<generated>
 	^ #(FmxNGTAnnotationInstance FmxNGTTypedAnnotationInstance FmxNGTWithAnnotationInstanceAttributes)
-]
-
-{ #category : #'Moose-Query' }
-FmxNGStAnnotationInstance class >> parentSelectors [
-	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
 { #category : #meta }

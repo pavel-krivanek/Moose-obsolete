@@ -3,24 +3,8 @@ Class {
 	#superclass : #FAMIXSourcedEntity,
 	#traits : 'FmxNGTAnnotationInstanceAttribute + FmxNGTTypedAnnotationInstanceAttribute + TEntityMetaLevelDependency + TDependencyQueries',
 	#classTraits : 'FmxNGTAnnotationInstanceAttribute classTrait + FmxNGTTypedAnnotationInstanceAttribute classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
-	#classInstVars : [
-		'#childrenSelectors',
-		'#allParentTypes',
-		'#parentSelectors',
-		'#allChildrenTypes'
-	],
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
-
-{ #category : #accessing }
-FAMIXAnnotationInstanceAttribute class >> allOutgoingAssociationTypes [
-	^ self privateAllOutgoingAssociationTypes
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstanceAttribute class >> allParentTypes [
-	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
-]
 
 { #category : #meta }
 FAMIXAnnotationInstanceAttribute class >> annotation [
@@ -30,11 +14,6 @@ FAMIXAnnotationInstanceAttribute class >> annotation [
 	<package: #FAMIX>
 	<generated>
 	^self
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstanceAttribute class >> childrenSelectors [
-	^ childrenSelectors ifNil: [ childrenSelectors := self privateChildrenSelectors ]
 ]
 
 { #category : #'Moose-Query-Extensions' }
@@ -63,11 +42,6 @@ FAMIXAnnotationInstanceAttribute class >> parentSelector [
 		in: 'Pharo-6.0-60328-'
 		transformWith: '`@receiver parentSelector' -> '`@receiver parentSelectors'.
 	^ self parentSelectors
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstanceAttribute class >> parentSelectors [
-	^ parentSelectors ifNil: [ parentSelectors := self privateParentSelectors ] 
 ]
 
 { #category : #'Moose-Query-Extensions' }
