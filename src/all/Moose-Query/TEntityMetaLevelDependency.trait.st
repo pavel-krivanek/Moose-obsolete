@@ -7,7 +7,14 @@ Trait {
 	#name : #TEntityMetaLevelDependency,
 	#classInstVars : [
 		'allChildrenTypes',
-		'allIncomingAssociationTypes'
+		'allParentTypes',
+		'allIncomingAssociationTypes',
+		'outgoingAssociationTypes',
+		'childrenSelectors',
+		'parentSelectors',
+		'incomingAssociationTypes',
+		'outgoingMSEProperties',
+		'incomingMSEProperties'
 	],
 	#category : #'Moose-Query'
 }
