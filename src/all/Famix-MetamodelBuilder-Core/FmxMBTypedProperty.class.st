@@ -37,7 +37,7 @@ FmxMBTypedProperty >> generateGetterIn: aClassOrTrait [
 		format: { self name. self propertyType }.
 
 	commentDefinition := self comment
-		ifNotEmpty: [ '<MSEComment: ''{1}''>' format: { self comment } ].
+		ifNotEmpty: [ '<MSEComment: {1}>' format: { self comment printString } ].
 
 	methodSource := String streamContents: [ :s |
 		s nextPutAll: self name; cr; cr.
