@@ -35,3 +35,8 @@ FmxNGJavaUnknownSourceLanguage class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaUnknownSourceLanguage >> isUnknown [ 
+	^ true
+]

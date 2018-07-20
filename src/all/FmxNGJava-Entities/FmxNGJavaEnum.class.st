@@ -35,3 +35,13 @@ FmxNGJavaEnum class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaEnum >> values [
+	^ self enumValues
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaEnum >> values: anObject [
+	self enumValues: anObject
+]

@@ -35,3 +35,26 @@ FmxNGJavaException class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #compatibility }
+FmxNGJavaException >> definingMethod [
+
+	^ self definingEntity
+	
+
+]
+
+{ #category : #compatibility }
+FmxNGJavaException >> definingMethod: aMethod [ 
+
+	^ self definingEntity: aMethod 
+	
+
+]
+
+{ #category : #compatibility }
+FmxNGJavaException >> mooseNameOn: aStream [ 
+	aStream nextPutAll: (self class name withoutPrefix: 'FmxNGJava').
+	aStream nextPut: $-.
+	self exceptionClass notNil ifTrue: [self exceptionClass mooseNameOn: aStream]
+]

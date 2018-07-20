@@ -35,3 +35,31 @@ FmxNGJavaAnnotationInstance class >> requirements [
 	<generated>
 	^ { FmxNGJavaAnnotationInstance. FmxNGJavaNamedEntity }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationInstance >> belongsTo [
+	^ self annotatedEntity
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationInstance >> mooseNameOn: aStream [
+	self annotationType notNil ifTrue: [
+		self annotationType mooseNameOn: aStream ].
+	aStream nextPut: $(.
+	self attributes 
+			do: [:each | aStream nextPutAll: each value asString ]
+			separatedBy: [aStream nextPut: $,].  
+	aStream nextPut: $).
+	aStream nextPut: $-.
+	self annotatedEntity notNil ifTrue: [
+		self annotatedEntity mooseNameOn: aStream ]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationInstance >> name [
+	^ String
+		streamContents: [ :stream | 
+			stream << '@'
+				<< (self annotationType ifNil: [ super name ] ifNotNil: [ :type | type name ])
+				<< ' on ' << (self annotatedEntity ifNotNil: #name ifNil: [ 'undefined' ]) ]
+]

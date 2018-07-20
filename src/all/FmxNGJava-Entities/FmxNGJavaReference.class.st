@@ -35,3 +35,32 @@ FmxNGJavaReference class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaReference >> accept: aVisitor [
+
+	aVisitor visitReference: self
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaReference >> copyFrom: anEntity within: aVisitor [
+
+	super copyFrom: anEntity within: aVisitor.
+	self source: (aVisitor visit: anEntity source).
+	self target: (aVisitor visit: anEntity target).
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaReference >> mooseNameOn: aStream [
+	"aStream nextPutAll: 'Reference'."
+
+	self from ifNotNil: [ aStream nextPutAll: self from name ].
+	aStream nextPutAll: ' refers to '.
+	self to ifNotNil: [ aStream nextPutAll: self to name ]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaReference >> printOn: aStream [
+	super printOn: aStream.
+	aStream nextPutAll: ' (Reference)'
+]

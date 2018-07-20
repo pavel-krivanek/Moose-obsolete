@@ -58,6 +58,13 @@ FmxNGJavaEntity class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGJavaEntity >> belongsTo [
+	"Return the primary container of the entity if it exist"
+	
+	^ self subclassResponsibility
+]
+
 { #category : #testing }
 FmxNGJavaEntity >> isAccess [
 
@@ -79,10 +86,20 @@ FmxNGJavaEntity >> isAttribute [
 	^ false
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGJavaEntity >> isBehaviouralEntity [
+	^ false
+]
+
 { #category : #testing }
 FmxNGJavaEntity >> isClass [
 
 	<generated>
+	^ false
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaEntity >> isContainerEntity [
 	^ false
 ]
 
@@ -125,6 +142,11 @@ FmxNGJavaEntity >> isNamespace [
 FmxNGJavaEntity >> isPackage [
 
 	<generated>
+	^ false
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaEntity >> isPrimitiveType [
 	^ false
 ]
 

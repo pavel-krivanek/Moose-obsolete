@@ -35,3 +35,29 @@ FmxNGJavaAccess class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAccess >> accept: aVisitor [
+
+	aVisitor visitAccess: self
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAccess >> copyFrom: anEntity within: aVisitor [
+
+	super copyFrom: anEntity within: aVisitor.
+	self isWrite: anEntity isWrite.
+	self accessor: (aVisitor visit: anEntity accessor).
+	self variable: (aVisitor visit: anEntity variable).
+]
+
+{ #category : #testing }
+FmxNGJavaAccess >> isAccess [
+	^true
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAccess >> printOn: aStream [
+	super printOn: aStream.
+	aStream nextPutAll: ' (Access)'
+]

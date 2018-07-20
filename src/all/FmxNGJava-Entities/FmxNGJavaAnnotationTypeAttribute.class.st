@@ -35,3 +35,16 @@ FmxNGJavaAnnotationTypeAttribute class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationTypeAttribute >> parentAnnotationType [
+	<MSEProperty: #parentAnnotationType type: #FmxNGJavaAnnotationType> <derived> 
+	<MSEComment: 'This is an alias pointing to the AnnotationType that defines this attribute'>
+
+	^ self parentType
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationTypeAttribute >> parentAnnotationType: anAnnotationType [
+	self parentType: anAnnotationType
+]

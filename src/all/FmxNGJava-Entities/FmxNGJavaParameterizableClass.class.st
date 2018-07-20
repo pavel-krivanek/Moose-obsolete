@@ -35,3 +35,17 @@ FmxNGJavaParameterizableClass class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameterizableClass >> parameters [
+	<MSEProperty: #parameters type: #FmxNGJavaParameterType> <multivalued> <derived>
+	<MSEComment: 'Parameter types of this class.'>
+	
+	^self types select: [:each | each isParameterType]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameterizableClass >> parameters: aCollection [
+
+	self privateState attributeAt: #parameters put: aCollection
+]

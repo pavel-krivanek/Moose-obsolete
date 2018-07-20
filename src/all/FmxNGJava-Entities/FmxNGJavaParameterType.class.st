@@ -33,3 +33,8 @@ FmxNGJavaParameterType class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameterType >> isParameterType [
+	^ true
+]

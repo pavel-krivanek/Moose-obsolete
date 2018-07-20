@@ -35,3 +35,78 @@ FmxNGJavaStructuralEntity class >> requirements [
 	<generated>
 	^ {  }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> accept: aVisitor [
+
+	aVisitor visitStructuralEntity: self
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> accessors [
+	<MSEProperty: #accessors type: #FmxNGJavaMethod> <multivalued> <derived>
+	^ (self incomingAccesses collectAsSet: [ :each | each accessor ]) asMooseGroup
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> addIncomingAccess: anAccess [
+	incomingAccesses add: anAccess
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> copyFrom: anEntity within: aVisitor [
+
+	super copyFrom: anEntity within: aVisitor.
+	self declaredType: (aVisitor visit: anEntity declaredType).
+
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> hasDeclaredType [
+	^ self declaredType notNil
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> isSharedVariable [
+
+	^ false
+]
+
+{ #category : #accessing }
+FmxNGJavaStructuralEntity >> localAccesses [
+	| attrclass localAccesses |
+	attrclass := self belongsTo.
+	localAccesses := Set new.
+	self
+		incomingAccesses do:
+			[:anAccess | 
+			| ent |
+			ent := anAccess accessor.
+			ent belongsTo = attrclass ifTrue: [localAccesses add: anAccess]].
+	^localAccesses
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> namespaceScope [
+	^ self subclassResponsibility
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> outgoingTypeDeclarations [
+	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> packageScope [
+
+	| cs |
+	cs := self typeScope.
+	
+	^ (cs isNil) ifTrue: [nil] ifFalse: [cs packageScope]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaStructuralEntity >> typeScope [
+
+	^ self belongsTo typeScope 
+]

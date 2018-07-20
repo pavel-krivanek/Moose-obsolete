@@ -36,6 +36,28 @@ FmxNGJavaContainerEntity class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> accept: aVisitor [
+
+	aVisitor visitContainerEntity: self
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> addClass: aClass [
+	
+	types add: aClass
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> addFunction: aFunction [ 
+	functions add: aFunction
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> addType: aType [ 
+	types add: aType
+]
+
 { #category : #accessing }
 FmxNGJavaContainerEntity >> classes [
 	"Classes are usually seen as types from the point of view of a Container. However, there may other types (e.g. aspects) which we dont want to see as classes and are rejected by this method."
@@ -44,4 +66,33 @@ FmxNGJavaContainerEntity >> classes [
 	^ self privateState 
 				cacheAt: #classes 
 				ifAbsentPut: [self types select: [:type| type isClass ]]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> copyFrom: anEntity within: aVisitor [
+
+	super copyFrom: anEntity within: aVisitor.
+	anEntity types do: [:t|
+		self addType: (aVisitor visit: t) ].
+
+	
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> isContainerEntity [
+	^ true
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> mooseNameWithDots [
+	^ self mooseName ifNotNil: [ '.' join: (self mooseName substrings: '::') ]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaContainerEntity >> numberOfChildren [
+	<MSEProperty: #numberOfChildren type: #Number>
+	<MSEComment: 'Number of direct children entities in the containment tree.'>
+	<derived>
+	
+	^ self children size
 ]

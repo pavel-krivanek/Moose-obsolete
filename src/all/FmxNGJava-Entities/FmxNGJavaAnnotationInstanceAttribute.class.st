@@ -35,3 +35,10 @@ FmxNGJavaAnnotationInstanceAttribute class >> requirements [
 	<generated>
 	^ { FmxNGJavaAnnotationInstance }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationInstanceAttribute >> name [ 
+	^ self annotationTypeAttribute notNil 
+		ifTrue: [ self annotationTypeAttribute name ]
+		ifFalse: [ nil ]
+]

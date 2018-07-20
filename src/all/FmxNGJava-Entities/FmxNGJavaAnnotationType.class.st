@@ -35,3 +35,31 @@ FmxNGJavaAnnotationType class >> requirements [
 	<generated>
 	^ { FmxNGJavaContainerEntity }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationType >> annotatedEntities [
+	^ self instances collect: [:each | each annotatedEntity ]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationType >> annotatedEntitiesGroup [
+	<navigation: 'Annotated entities'>
+	^ self annotatedEntities asMooseGroup
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationType >> belongsTo [
+	^ self annotationTypesContainer
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationType >> typeContainer [
+
+	^ self annotationTypesContainer
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaAnnotationType >> typeContainer: anObject [
+
+	^ self annotationTypesContainer: anObject
+]

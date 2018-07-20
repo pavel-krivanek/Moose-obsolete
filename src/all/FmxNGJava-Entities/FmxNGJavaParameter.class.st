@@ -35,3 +35,63 @@ FmxNGJavaParameter class >> requirements [
 	<generated>
 	^ { FmxNGJavaMethod }
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> accept: aVisitor [
+
+	aVisitor visitParameter: self
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> belongsTo [
+
+	^ self parentBehaviouralEntity
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> belongsTo: aBehaviouralEntity [ 
+	self parentBehaviouralEntity: aBehaviouralEntity 
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> mooseNameOn: stream [ 
+	| parent |
+	parent := self parentBehaviouralEntity.
+	parent ifNotNil: 
+		[ parent mooseNameOn: stream.
+		stream nextPut: $. ].
+	self name ifNotNil: [stream nextPutAll: self name]
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> namespaceScope [
+	^ self parentBehaviouralEntity namespaceScope
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> packageScope [
+	^ self parentBehaviouralEntity packageScope
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> parentType [
+	^self parentBehaviouralEntity parentType
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> printOn: stream [ 
+	| parent |
+	self name ifNotNil: [ stream nextPutAll: self name ].
+	stream nextPutAll: ' (parameter'.
+	parent := self parentBehaviouralEntity.
+	parent ifNotNil: [
+		stream nextPutAll: ' in '.
+		parent printOn: stream ].
+	stream nextPut: $)
+
+]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaParameter >> typeScope [
+	^ self parentBehaviouralEntity typeScope
+]
