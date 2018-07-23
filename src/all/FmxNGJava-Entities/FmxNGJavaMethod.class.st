@@ -1,6 +1,6 @@
 Class {
 	#name : #FmxNGJavaMethod,
-	#superclass : #FmxNGJavaNamedEntity,
+	#superclass : #FmxNGJavaContainerEntity,
 	#traits : 'FmxNGTInvocable + FmxNGTMethod + FmxNGTTypedStructure + FmxNGTWithAccesses + FmxNGTWithCaughtExceptions + FmxNGTWithClassScope + FmxNGTWithDeclaredExceptions + FmxNGTWithImplicitVariables + FmxNGTWithInvocations + FmxNGTWithLocalVariables + FmxNGTWithParameters + FmxNGTWithReferences + FmxNGTWithSignature + FmxNGTWithThrownExceptions',
 	#classTraits : 'FmxNGTInvocable classTrait + FmxNGTMethod classTrait + FmxNGTTypedStructure classTrait + FmxNGTWithAccesses classTrait + FmxNGTWithCaughtExceptions classTrait + FmxNGTWithClassScope classTrait + FmxNGTWithDeclaredExceptions classTrait + FmxNGTWithImplicitVariables classTrait + FmxNGTWithInvocations classTrait + FmxNGTWithLocalVariables classTrait + FmxNGTWithParameters classTrait + FmxNGTWithReferences classTrait + FmxNGTWithSignature classTrait + FmxNGTWithThrownExceptions classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
@@ -10,7 +10,7 @@ Class {
 FmxNGJavaMethod class >> annotation [
 
 	<generated>
-	<MSEClass: #Method super: #FmxNGJavaNamedEntity>
+	<MSEClass: #Method super: #FmxNGJavaContainerEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>
 	^self
@@ -675,7 +675,7 @@ FmxNGJavaMethod >> providerPackages [
 
 { #category : #'as yet unclassified' }
 FmxNGJavaMethod >> providerTypes [
-	<MSEProperty: #providerTypes type: #FFmxNGJavaType>
+	<MSEProperty: #providerTypes type: #FmxNGJavaType>
 	<derived>
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on'>

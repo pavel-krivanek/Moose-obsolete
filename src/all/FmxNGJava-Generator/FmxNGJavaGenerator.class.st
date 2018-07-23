@@ -123,7 +123,7 @@ FmxNGJavaGenerator >> defineHierarchy [
 	attribute --|> #TAttribute.
 	attribute --|> #TWithClassScope.
 
-	method --|> namedEntity.
+	method --|> containerEntity.
 	method --|> #TMethod.
 	method --|> #TWithParameters.
 	method --|> #TInvocable.
