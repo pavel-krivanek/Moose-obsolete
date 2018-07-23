@@ -401,7 +401,7 @@ BaselineOfMoose >> baselineFamixNG: spec [
 		'FmxNGPharoSmalltalk-Importer'
 
 		'FmxNGJava-Generator'
-		'FmxNGJava-Entities-Entities'
+		'FmxNGJava-Entities'
 		
 		'FmxNG-Support'
 
