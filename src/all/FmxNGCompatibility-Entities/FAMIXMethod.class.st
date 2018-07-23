@@ -65,25 +65,6 @@ FAMIXMethod >> accessedAttributes [
 ]
 
 { #category : #accessing }
-FAMIXMethod >> allRecursiveTypes [
-	"Retrieves all nested types recursively"
-	
-	| result |
-	result := Set new.
-	self allRecursiveTypesDo: [:each | result add: each ].
-	^ result
-]
-
-{ #category : #accessing }
-FAMIXMethod >> allRecursiveTypesDo: aBlock [
-	"Traverses all nested types recursively"
-
-	self types do: [ :each | 
-		aBlock value: each.
-		each allRecursiveTypesDo: aBlock ]
-]
-
-{ #category : #accessing }
 FAMIXMethod >> belongsTo [
 	^ self parentType
 ]

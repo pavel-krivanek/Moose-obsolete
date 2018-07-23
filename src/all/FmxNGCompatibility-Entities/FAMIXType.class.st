@@ -105,26 +105,6 @@ FAMIXType >> allAnnotationTypes [
 	^ self allAnnotationInstances collectAsSet: #annotationType
 ]
 
-{ #category : #accessing }
-FAMIXType >> allRecursiveTypes [
-	"Retrieves all nested types recursively (including directly nested types and those nested in methods)"
-	
-	| result |
-	result := Set new.
-	self allRecursiveTypesDo: [:each | result add: each ].
-	^ result
-]
-
-{ #category : #accessing }
-FAMIXType >> allRecursiveTypesDo: aBlock [
-	"Traverses all nested types recursively (including directly nested types and those nested in methods)"
-
-	self types do: [ :each | 
-		aBlock value: each.
-		each allRecursiveTypesDo: aBlock ].
-	self methods do: [ :each | each allRecursiveTypesDo: aBlock ]
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXType >> allSubclassesDo: aBlock [
 	self allSubclassesWithoutAliasesDo: aBlock.

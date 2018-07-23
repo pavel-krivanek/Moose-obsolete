@@ -62,18 +62,8 @@ FmxNGJavaMethod >> addImplicitVariable: anImplicitVariable [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> addIncomingInvocation: anInvocation [
-	incomingInvocations add: anInvocation
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> addLocalVariable: aLocalVariable [
 	localVariables add: aLocalVariable
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> addOutgoingInvocation: anInvocation [
-	outgoingInvocations add: anInvocation
 ]
 
 { #category : #'as yet unclassified' }
@@ -84,25 +74,6 @@ FmxNGJavaMethod >> addOutgoingReference: aReference [
 { #category : #'as yet unclassified' }
 FmxNGJavaMethod >> addParameter: aParameter [ 
 	parameters add: aParameter
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> allRecursiveTypes [
-	"Retrieves all nested types recursively"
-	
-	| result |
-	result := Set new.
-	self allRecursiveTypesDo: [:each | result add: each ].
-	^ result
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> allRecursiveTypesDo: aBlock [
-	"Traverses all nested types recursively"
-
-	self types do: [ :each | 
-		aBlock value: each.
-		each allRecursiveTypesDo: aBlock ]
 ]
 
 { #category : #'as yet unclassified' }
@@ -678,17 +649,6 @@ FmxNGJavaMethod >> providerTypes [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> smalltalkClass [ 
-	"Return the smalltalk class associated with the receiver. Note that it may be different than doing self parentType because the class and metaclass can be merged."
-	
-	^   ('*_class' match: self parentType name)
-			ifTrue: [self parentType smalltalkClass]
-			ifFalse: [self hasClassScope 
-							ifTrue: [self parentType smalltalkClass class]
-							ifFalse: [self parentType smalltalkClass]]
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> sourceText [
 	self flag: 'This code should be delegated to the FAMIXPharoAnchor'.
 	^ (self sourceLanguage isSmalltalk and: [ self class shouldSearchForSmalltalkCodeInImage ])
@@ -701,21 +661,6 @@ FmxNGJavaMethod >> sourceText [
 				on: Error
 				do: [ super sourceText ]	"probably class is not in the system" ]
 		ifFalse: [ super sourceText ]
-]
-
-{ #category : #accessing }
-FmxNGJavaMethod >> timeStamp [
-	<MSEProperty: #timeStamp type: #String>
-	<MSEComment: 'TimeStamp of the method with author and time of the last change'>
-	<package: 'Smalltalk'>
-	
-	^ self privateState attributeAt: #timeStamp ifAbsentPut: ['']
-]
-
-{ #category : #accessing }
-FmxNGJavaMethod >> timeStamp: aTimeStamp [
-
-	self privateState attributeAt: #timeStamp put: aTimeStamp
 ]
 
 { #category : #'as yet unclassified' }

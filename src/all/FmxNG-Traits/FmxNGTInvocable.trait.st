@@ -30,6 +30,11 @@ FmxNGTInvocable classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTInvocable >> addIncomingInvocation: anInvocation [
+	incomingInvocations add: anInvocation
+]
+
 { #category : #accessing }
 FmxNGTInvocable >> incomingInvocations [
 

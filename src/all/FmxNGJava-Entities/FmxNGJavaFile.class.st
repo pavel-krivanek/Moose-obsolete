@@ -79,16 +79,6 @@ FmxNGJavaFile >> isCompilationUnit [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaFile >> isFolder [
-	^ false
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaFile >> isHeader [
-	^ false
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaFile >> isSourceCodeLoaded [
 	self propertyNamed: #sourceText ifAbsentPut: [ ^ false].
 	^ true

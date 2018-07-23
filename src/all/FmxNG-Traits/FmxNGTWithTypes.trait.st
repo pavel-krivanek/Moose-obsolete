@@ -30,6 +30,30 @@ FmxNGTWithTypes classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTWithTypes >> addType: aType [ 
+	types add: aType
+]
+
+{ #category : #accessing }
+FmxNGTWithTypes >> allRecursiveTypes [
+	"Retrieves all nested types recursively"
+	
+	| result |
+	result := Set new.
+	self allRecursiveTypesDo: [:each | result add: each ].
+	^ result
+]
+
+{ #category : #accessing }
+FmxNGTWithTypes >> allRecursiveTypesDo: aBlock [
+	"Traverses all nested types recursively"
+
+	self types do: [ :each | 
+		aBlock value: each.
+		each allRecursiveTypesDo: aBlock ]
+]
+
 { #category : #accessing }
 FmxNGTWithTypes >> types [
 

@@ -106,26 +106,6 @@ FmxNGJavaType >> allAnnotationTypes [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> allRecursiveTypes [
-	"Retrieves all nested types recursively (including directly nested types and those nested in methods)"
-	
-	| result |
-	result := Set new.
-	self allRecursiveTypesDo: [:each | result add: each ].
-	^ result
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> allRecursiveTypesDo: aBlock [
-	"Traverses all nested types recursively (including directly nested types and those nested in methods)"
-
-	self types do: [ :each | 
-		aBlock value: each.
-		each allRecursiveTypesDo: aBlock ].
-	self methods do: [ :each | each allRecursiveTypesDo: aBlock ]
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> allSubclassesDo: aBlock [
 	self allSubclassesWithoutAliasesDo: aBlock.
 	self typeAliases do: [ :each | each allSubclassesWithoutAliasesDo: aBlock ]

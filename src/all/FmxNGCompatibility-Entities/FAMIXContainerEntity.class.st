@@ -53,11 +53,6 @@ FAMIXContainerEntity >> addFunction: aFunction [
 	functions add: aFunction
 ]
 
-{ #category : #accessing }
-FAMIXContainerEntity >> addType: aType [ 
-	types add: aType
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXContainerEntity >> classes [
 	"Classes are usually seen as types from the point of view of a Container. However, there may other types (e.g. aspects) which we dont want to see as classes and are rejected by this method."

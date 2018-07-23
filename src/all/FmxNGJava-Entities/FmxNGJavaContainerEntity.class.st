@@ -48,16 +48,6 @@ FmxNGJavaContainerEntity >> addClass: aClass [
 	types add: aClass
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaContainerEntity >> addFunction: aFunction [ 
-	functions add: aFunction
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaContainerEntity >> addType: aType [ 
-	types add: aType
-]
-
 { #category : #accessing }
 FmxNGJavaContainerEntity >> classes [
 	"Classes are usually seen as types from the point of view of a Container. However, there may other types (e.g. aspects) which we dont want to see as classes and are rejected by this method."

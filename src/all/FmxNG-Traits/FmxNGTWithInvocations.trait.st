@@ -30,6 +30,11 @@ FmxNGTWithInvocations classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTWithInvocations >> addOutgoingInvocation: anInvocation [
+	outgoingInvocations add: anInvocation
+]
+
 { #category : #accessing }
 FmxNGTWithInvocations >> outgoingInvocations [
 

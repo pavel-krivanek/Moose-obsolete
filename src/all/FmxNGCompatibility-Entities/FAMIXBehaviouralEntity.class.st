@@ -53,18 +53,8 @@ FAMIXBehaviouralEntity >> addImplicitVariable: anImplicitVariable [
 ]
 
 { #category : #accessing }
-FAMIXBehaviouralEntity >> addIncomingInvocation: anInvocation [
-	incomingInvocations add: anInvocation
-]
-
-{ #category : #accessing }
 FAMIXBehaviouralEntity >> addLocalVariable: aLocalVariable [
 	localVariables add: aLocalVariable
-]
-
-{ #category : #accessing }
-FAMIXBehaviouralEntity >> addOutgoingInvocation: anInvocation [
-	outgoingInvocations add: anInvocation
 ]
 
 { #category : #accessing }
