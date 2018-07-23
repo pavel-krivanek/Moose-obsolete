@@ -113,15 +113,9 @@ FmxNGJavaAttribute >> initialize [
 
 ]
 
-{ #category : #testing }
-FmxNGJavaAttribute >> isAttribute [
-	^ true
-]
-
 { #category : #'as yet unclassified' }
 FmxNGJavaAttribute >> isSharedVariable [
 
-	"^ self propertyNamed: #sharedVariable ifAbsent: [false] "
 	^ self propertyNamed: #sharedVariable ifNil: [false]
 ]
 

@@ -113,11 +113,6 @@ FAMIXAttribute >> initialize [
 
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXAttribute >> isAttribute [
-	^ true
-]
-
 { #category : #'Famix-Smalltalk' }
 FAMIXAttribute >> isSharedVariable [
 
