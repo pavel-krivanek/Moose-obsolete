@@ -3,6 +3,9 @@ Class {
 	#superclass : #FmxNGJavaStructuralEntity,
 	#traits : 'FmxNGTAttribute + FmxNGTWithClassScope',
 	#classTraits : 'FmxNGTAttribute classTrait + FmxNGTWithClassScope classTrait',
+	#instVars : [
+		'#hasClassScope'
+	],
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
