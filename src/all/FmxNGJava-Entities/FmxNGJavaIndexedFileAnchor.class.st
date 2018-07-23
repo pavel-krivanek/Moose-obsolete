@@ -1,6 +1,10 @@
 Class {
 	#name : #FmxNGJavaIndexedFileAnchor,
 	#superclass : #FmxNGJavaAbstractFileAnchor,
+	#instVars : [
+		'endPos',
+		'startPos'
+	],
 	#category : #'FmxNGJava-Entities-Entities'
 }
 

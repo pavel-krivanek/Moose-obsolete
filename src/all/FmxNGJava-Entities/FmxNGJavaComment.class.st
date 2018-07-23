@@ -43,7 +43,7 @@ FmxNGJavaComment >> accept: aVisitor [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaComment >> asFAMIXComment [
+FmxNGJavaComment >> asFmxNGJavaComment [
 	^ self
 ]
 

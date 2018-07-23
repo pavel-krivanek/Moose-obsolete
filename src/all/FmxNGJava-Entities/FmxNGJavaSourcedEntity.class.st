@@ -44,7 +44,7 @@ FmxNGJavaSourcedEntity >> accept: aVisitor [
 
 { #category : #'as yet unclassified' }
 FmxNGJavaSourcedEntity >> addComment: aComment [
-	self comments add: aComment asFAMIXComment
+	self comments add: aComment asFmxNGJavaComment
 ]
 
 { #category : #accessing }

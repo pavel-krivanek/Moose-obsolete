@@ -309,11 +309,6 @@ FmxNGJavaMethod >> invokingMethods [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> isBehaviouralEntity [
-	^ true
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> isCalledInternally [
 	^self incomingInvocations
 		anySatisfy:

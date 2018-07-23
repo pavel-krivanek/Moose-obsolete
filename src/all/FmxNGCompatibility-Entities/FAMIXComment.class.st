@@ -16,13 +16,6 @@ FAMIXComment class >> annotation [
 	^self
 ]
 
-{ #category : #'instance creation' }
-FAMIXComment class >> content: aString [
-	^ self new
-		content: aString;
-		yourself
-]
-
 { #category : #generator }
 FAMIXComment class >> generatedSlotNames [
 	<generated>

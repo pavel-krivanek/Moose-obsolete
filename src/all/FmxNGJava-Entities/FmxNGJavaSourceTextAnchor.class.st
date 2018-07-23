@@ -1,6 +1,9 @@
 Class {
 	#name : #FmxNGJavaSourceTextAnchor,
 	#superclass : #FmxNGJavaSourceAnchor,
+	#instVars : [
+		'source'
+	],
 	#category : #'FmxNGJava-Entities-Entities'
 }
 

@@ -21,6 +21,13 @@ FmxNGTComment classSide >> annotation [
 	^self
 ]
 
+{ #category : #'instance creation' }
+FmxNGTComment classSide >> content: aString [
+	^ self new
+		content: aString;
+		yourself
+]
+
 { #category : #generator }
 FmxNGTComment classSide >> generatedSlotNames [
 	<generated>

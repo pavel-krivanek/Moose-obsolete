@@ -36,7 +36,7 @@ FmxNGJavaException class >> requirements [
 	^ {  }
 ]
 
-{ #category : #compatibility }
+{ #category : #deprecated }
 FmxNGJavaException >> definingMethod [
 
 	^ self definingEntity
@@ -44,7 +44,7 @@ FmxNGJavaException >> definingMethod [
 
 ]
 
-{ #category : #compatibility }
+{ #category : #deprecated }
 FmxNGJavaException >> definingMethod: aMethod [ 
 
 	^ self definingEntity: aMethod 
@@ -52,7 +52,7 @@ FmxNGJavaException >> definingMethod: aMethod [
 
 ]
 
-{ #category : #compatibility }
+{ #category : #accessing }
 FmxNGJavaException >> mooseNameOn: aStream [ 
 	aStream nextPutAll: (self class name withoutPrefix: 'FmxNGJava').
 	aStream nextPut: $-.

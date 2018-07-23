@@ -86,11 +86,6 @@ FmxNGJavaEntity >> isAttribute [
 	^ false
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaEntity >> isBehaviouralEntity [
-	^ false
-]
-
 { #category : #testing }
 FmxNGJavaEntity >> isClass [
 

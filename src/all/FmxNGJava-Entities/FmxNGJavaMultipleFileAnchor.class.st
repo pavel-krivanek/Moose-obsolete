@@ -1,6 +1,9 @@
 Class {
 	#name : #FmxNGJavaMultipleFileAnchor,
 	#superclass : #FmxNGJavaSourceAnchor,
+	#instVars : [
+		'allFiles'
+	],
 	#category : #'FmxNGJava-Entities-Entities'
 }
 

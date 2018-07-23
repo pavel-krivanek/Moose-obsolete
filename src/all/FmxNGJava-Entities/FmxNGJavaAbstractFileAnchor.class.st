@@ -60,19 +60,6 @@ FmxNGJavaAbstractFileAnchor >> containerFiles [
 	^ self correspondingFile ifNil: [ {} ] ifNotNil: [ :file | {file} ]
 ]
 
-{ #category : #accessing }
-FmxNGJavaAbstractFileAnchor >> correspondingFile [
-	"file pointed to by this source anchor, ideally this value should never be nil for file-based systems"
-	<MSEProperty: #correspondingFile type: #FmxNGJavaFile>
-	<MSEComment: 'File associated to this source anchor'>
-	^ self privateState attributeAt: #correspondingFile ifAbsent: [ nil ]
-]
-
-{ #category : #accessing }
-FmxNGJavaAbstractFileAnchor >> correspondingFile: aFAMIXFile [
-	self privateState attributeAt: #correspondingFile put: aFAMIXFile
-]
-
 { #category : #'as yet unclassified' }
 FmxNGJavaAbstractFileAnchor >> detectEncoding [
 	self fileReference exists
