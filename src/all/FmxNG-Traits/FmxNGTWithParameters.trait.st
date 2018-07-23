@@ -30,6 +30,11 @@ FmxNGTWithParameters classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTWithParameters >> addParameter: aParameter [ 
+	parameters add: aParameter
+]
+
 { #category : #accessing }
 FmxNGTWithParameters >> numberOfParameters [
 	<MSEProperty: #numberOfParameters type: #Number>

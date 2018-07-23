@@ -43,11 +43,6 @@ FmxNGJavaNamedEntity >> accept: aVisitor [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaNamedEntity >> addReceivingInvocation: anInvocation [
-	receivingInvocations add: anInvocation
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaNamedEntity >> belongsTo [
 	
 	^self subclassResponsibility

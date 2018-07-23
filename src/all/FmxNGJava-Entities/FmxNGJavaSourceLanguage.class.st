@@ -37,11 +37,6 @@ FmxNGJavaSourceLanguage class >> requirements [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaSourceLanguage >> addSourcedEntity: aSourcedEntity [
-	^ self sourcedEntities add: aSourcedEntity
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaSourceLanguage >> format: aSourceString from: anEntity [
 	^ aSourceString
 	

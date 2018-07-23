@@ -48,11 +48,6 @@ FAMIXStructuralEntity >> accessors [
 	^ (self incomingAccesses collectAsSet: [ :each | each accessor ]) asMooseGroup
 ]
 
-{ #category : #accessing }
-FAMIXStructuralEntity >> addIncomingAccess: anAccess [
-	incomingAccesses add: anAccess
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXStructuralEntity >> copyFrom: anEntity within: aVisitor [
 

@@ -45,3 +45,8 @@ FmxNGTWithAccesses >> accesses: anObject [
 	accesses value: anObject
 
 ]
+
+{ #category : #adding }
+FmxNGTWithAccesses >> addAccess: anAccess [ 
+	accesses add: anAccess
+]

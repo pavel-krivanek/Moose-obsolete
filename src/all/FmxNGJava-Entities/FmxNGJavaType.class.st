@@ -53,11 +53,6 @@ FmxNGJavaType >> accessTo: aFAMIXPackageOrFAMIXClass [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> addAttribute: anAttribute [
-	attributes add: anAttribute
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> addBehaviourWithDeclaredType: aBehaviour [
 	self structuresWithDeclaredType add: aBehaviour
 ]
@@ -68,18 +63,8 @@ FmxNGJavaType >> addIncomingReference: aReference [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> addOutgoingTraitUsage: aTraitUsage [
-	self outgoingTraitUsages add: aTraitUsage
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> addStructureWithDeclaredType: aStructuralEntity [
 	structuresWithDeclaredType add: aStructuralEntity
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> addTraitUsage: aTraitUsage [
-	
 ]
 
 { #category : #'as yet unclassified' }

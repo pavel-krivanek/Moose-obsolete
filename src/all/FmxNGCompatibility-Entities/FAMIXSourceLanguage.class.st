@@ -36,11 +36,6 @@ FAMIXSourceLanguage class >> requirements [
 	^ {  }
 ]
 
-{ #category : #accessing }
-FAMIXSourceLanguage >> addSourcedEntity: aSourcedEntity [
-	^ self sourcedEntities add: aSourcedEntity
-]
-
 { #category : #utility }
 FAMIXSourceLanguage >> format: aSourceString from: anEntity [
 	^ aSourceString

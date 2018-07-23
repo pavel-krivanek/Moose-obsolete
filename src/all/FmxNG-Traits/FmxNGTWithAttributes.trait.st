@@ -30,6 +30,11 @@ FmxNGTWithAttributes classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTWithAttributes >> addAttribute: anAttribute [
+	attributes add: anAttribute
+]
+
 { #category : #accessing }
 FmxNGTWithAttributes >> attributes [
 

@@ -100,11 +100,6 @@ FAMIXNamedEntity >> accept: aVisitor [
 	aVisitor visitNamedEntity: self
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXNamedEntity >> addReceivingInvocation: anInvocation [
-	receivingInvocations add: anInvocation
-]
-
 { #category : #accessing }
 FAMIXNamedEntity >> belongsTo [
 	

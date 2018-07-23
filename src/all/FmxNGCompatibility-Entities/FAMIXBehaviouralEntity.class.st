@@ -43,16 +43,6 @@ FAMIXBehaviouralEntity >> accept: aVisitor [
 ]
 
 { #category : #accessing }
-FAMIXBehaviouralEntity >> addAccess: anAccess [ 
-	accesses add: anAccess
-]
-
-{ #category : #accessing }
-FAMIXBehaviouralEntity >> addImplicitVariable: anImplicitVariable [
-	implicitVariables add: anImplicitVariable
-]
-
-{ #category : #accessing }
 FAMIXBehaviouralEntity >> addLocalVariable: aLocalVariable [
 	localVariables add: aLocalVariable
 ]
@@ -60,11 +50,6 @@ FAMIXBehaviouralEntity >> addLocalVariable: aLocalVariable [
 { #category : #accessing }
 FAMIXBehaviouralEntity >> addOutgoingReference: aReference [ 
 	outgoingReferences add: aReference
-]
-
-{ #category : #accessing }
-FAMIXBehaviouralEntity >> addParameter: aParameter [ 
-	parameters add: aParameter
 ]
 
 { #category : #'Famix-Extensions' }

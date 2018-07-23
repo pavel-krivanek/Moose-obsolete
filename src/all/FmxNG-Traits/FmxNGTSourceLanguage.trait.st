@@ -36,6 +36,11 @@ FmxNGTSourceLanguage classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTSourceLanguage >> addSourcedEntity: aSourcedEntity [
+	^ self sourcedEntities add: aSourcedEntity
+]
+
 { #category : #accessing }
 FmxNGTSourceLanguage >> sourcedEntities [
 

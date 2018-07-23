@@ -52,16 +52,6 @@ FmxNGJavaMethod >> accessedAttributes [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> addAccess: anAccess [ 
-	accesses add: anAccess
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> addImplicitVariable: anImplicitVariable [
-	implicitVariables add: anImplicitVariable
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> addLocalVariable: aLocalVariable [
 	localVariables add: aLocalVariable
 ]
@@ -69,11 +59,6 @@ FmxNGJavaMethod >> addLocalVariable: aLocalVariable [
 { #category : #'as yet unclassified' }
 FmxNGJavaMethod >> addOutgoingReference: aReference [ 
 	outgoingReferences add: aReference
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> addParameter: aParameter [ 
-	parameters add: aParameter
 ]
 
 { #category : #'as yet unclassified' }

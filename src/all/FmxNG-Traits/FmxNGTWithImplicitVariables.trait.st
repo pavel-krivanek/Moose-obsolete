@@ -30,6 +30,11 @@ FmxNGTWithImplicitVariables classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTWithImplicitVariables >> addImplicitVariable: anImplicitVariable [
+	implicitVariables add: anImplicitVariable
+]
+
 { #category : #accessing }
 FmxNGTWithImplicitVariables >> implicitVariables [
 

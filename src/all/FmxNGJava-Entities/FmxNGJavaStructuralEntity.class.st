@@ -49,11 +49,6 @@ FmxNGJavaStructuralEntity >> accessors [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaStructuralEntity >> addIncomingAccess: anAccess [
-	incomingAccesses add: anAccess
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaStructuralEntity >> copyFrom: anEntity within: aVisitor [
 
 	super copyFrom: anEntity within: aVisitor.

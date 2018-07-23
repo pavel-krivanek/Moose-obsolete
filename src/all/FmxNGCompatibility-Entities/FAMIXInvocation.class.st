@@ -42,18 +42,6 @@ FAMIXInvocation >> accept: aVisitor [
 	aVisitor visitInvocation: self
 ]
 
-{ #category : #accessing }
-FAMIXInvocation >> addCandidate: aBehaviouralEntity [ 
-	candidates add: aBehaviouralEntity
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXInvocation >> anyCandidate [
-	^self candidates isEmpty
-		ifFalse: [self candidates at: 1]
-		ifTrue: [nil]
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXInvocation >> copyFrom: anEntity within: aVisitor [
 	super copyFrom: anEntity within: aVisitor.

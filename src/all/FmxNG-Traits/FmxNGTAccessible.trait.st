@@ -43,6 +43,11 @@ FmxNGTAccessible >> accessingMethods [
 
 ]
 
+{ #category : #adding }
+FmxNGTAccessible >> addIncomingAccess: anAccess [
+	incomingAccesses add: anAccess
+]
+
 { #category : #accessing }
 FmxNGTAccessible >> globalAccesses [
 	| attrclass globalAccesses |

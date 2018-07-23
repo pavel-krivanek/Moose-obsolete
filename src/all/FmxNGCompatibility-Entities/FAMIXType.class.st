@@ -53,11 +53,6 @@ FAMIXType >> accessTo: aFAMIXPackageOrFAMIXClass [
 ]
 
 { #category : #accessing }
-FAMIXType >> addAttribute: anAttribute [
-	attributes add: anAttribute
-]
-
-{ #category : #accessing }
 FAMIXType >> addBehaviourWithDeclaredType: aBehaviour [
 	self structuresWithDeclaredType add: aBehaviour
 ]

@@ -44,6 +44,18 @@ FmxNGTInvocation classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTInvocation >> addCandidate: aBehaviouralEntity [ 
+	candidates add: aBehaviouralEntity
+]
+
+{ #category : #accessing }
+FmxNGTInvocation >> anyCandidate [
+	^self candidates isEmpty
+		ifFalse: [self candidates at: 1]
+		ifTrue: [nil]
+]
+
 { #category : #accessing }
 FmxNGTInvocation >> candidates [
 

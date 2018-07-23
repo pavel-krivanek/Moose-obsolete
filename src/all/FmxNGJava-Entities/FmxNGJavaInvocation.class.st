@@ -43,18 +43,6 @@ FmxNGJavaInvocation >> accept: aVisitor [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaInvocation >> addCandidate: aBehaviouralEntity [ 
-	candidates add: aBehaviouralEntity
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaInvocation >> anyCandidate [
-	^self candidates isEmpty
-		ifFalse: [self candidates at: 1]
-		ifTrue: [nil]
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaInvocation >> copyFrom: anEntity within: aVisitor [
 	super copyFrom: anEntity within: aVisitor.
 	self sender: (aVisitor visit: anEntity sender).

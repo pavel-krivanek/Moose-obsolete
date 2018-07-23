@@ -30,6 +30,11 @@ FmxNGTInvocationsReceiver classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTInvocationsReceiver >> addReceivingInvocation: anInvocation [
+	receivingInvocations add: anInvocation
+]
+
 { #category : #accessing }
 FmxNGTInvocationsReceiver >> receivingInvocations [
 
