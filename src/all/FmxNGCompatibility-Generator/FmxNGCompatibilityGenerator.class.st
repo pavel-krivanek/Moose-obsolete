@@ -178,6 +178,10 @@ FmxNGCompatibilityGenerator >> defineClasses [
 	trait := builder newClassNamed: #Trait.
 	traitUsage := builder newClassNamed: #TraitUsage.
 
+	primitiveType withTesting.
+	containerEntity withTesting.
+
+
 ]
 
 { #category : #initialization }

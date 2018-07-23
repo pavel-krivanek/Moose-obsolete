@@ -36,5 +36,7 @@ FAMIXPrimitiveType class >> requirements [
 
 { #category : #testing }
 FAMIXPrimitiveType >> isPrimitiveType [
-	^true
+
+	<generated>
+	^ true
 ]

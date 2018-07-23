@@ -98,8 +98,10 @@ FmxNGJavaEntity >> isClass [
 	^ false
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #testing }
 FmxNGJavaEntity >> isContainerEntity [
+
+	<generated>
 	^ false
 ]
 
@@ -145,8 +147,10 @@ FmxNGJavaEntity >> isPackage [
 	^ false
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #testing }
 FmxNGJavaEntity >> isPrimitiveType [
+
+	<generated>
 	^ false
 ]
 

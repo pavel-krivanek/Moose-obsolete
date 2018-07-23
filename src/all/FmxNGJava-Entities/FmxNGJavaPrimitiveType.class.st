@@ -34,7 +34,9 @@ FmxNGJavaPrimitiveType class >> requirements [
 	^ {  }
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #testing }
 FmxNGJavaPrimitiveType >> isPrimitiveType [
-	^true
+
+	<generated>
+	^ true
 ]

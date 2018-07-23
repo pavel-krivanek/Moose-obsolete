@@ -97,8 +97,10 @@ FAMIXEntity >> isClass [
 	^ false
 ]
 
-{ #category : #'testing - custom' }
+{ #category : #testing }
 FAMIXEntity >> isContainerEntity [
+
+	<generated>
 	^ false
 ]
 
@@ -144,8 +146,10 @@ FAMIXEntity >> isPackage [
 	^ false
 ]
 
-{ #category : #'testing - custom' }
+{ #category : #testing }
 FAMIXEntity >> isPrimitiveType [
+
+	<generated>
 	^ false
 ]
 

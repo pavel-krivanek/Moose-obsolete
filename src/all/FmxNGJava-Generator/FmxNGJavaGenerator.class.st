@@ -90,6 +90,10 @@ FmxNGJavaGenerator >> defineClasses [
 	type := builder newClassNamed: #Type.
 	unknownSourceLanguage := builder newClassNamed: #UnknownSourceLanguage.
 	unknownVariable := builder newClassNamed: #UnknownVariable.
+	
+	primitiveType withTesting.
+	containerEntity withTesting.
+
 
 ]
 

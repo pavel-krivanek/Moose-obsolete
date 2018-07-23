@@ -78,8 +78,10 @@ FmxNGJavaContainerEntity >> copyFrom: anEntity within: aVisitor [
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #testing }
 FmxNGJavaContainerEntity >> isContainerEntity [
+
+	<generated>
 	^ true
 ]
 

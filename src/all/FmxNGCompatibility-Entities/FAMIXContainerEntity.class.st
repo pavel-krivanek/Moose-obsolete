@@ -78,8 +78,10 @@ FAMIXContainerEntity >> copyFrom: anEntity within: aVisitor [
 	
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #testing }
 FAMIXContainerEntity >> isContainerEntity [
+
+	<generated>
 	^ true
 ]
 
