@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaAssociation,
 	#superclass : #FmxNGJavaSourcedEntity,
-	#traits : 'FmxNGTAssociation',
-	#classTraits : 'FmxNGTAssociation classTrait',
+	#traits : 'FmxNGTAssociation + TAssociationMetaLevelDependency',
+	#classTraits : 'FmxNGTAssociation classTrait + TAssociationMetaLevelDependency classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 

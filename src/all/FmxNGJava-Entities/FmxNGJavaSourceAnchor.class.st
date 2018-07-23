@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaSourceAnchor,
 	#superclass : #FmxNGJavaEntity,
-	#traits : 'FmxNGTSourceAnchor',
-	#classTraits : 'FmxNGTSourceAnchor classTrait',
+	#traits : 'FmxNGTSourceAnchor + TEntityMetaLevelDependency + TDependencyQueries',
+	#classTraits : 'FmxNGTSourceAnchor classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
