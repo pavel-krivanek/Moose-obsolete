@@ -400,10 +400,11 @@ BaselineOfMoose >> baselineFamixNG: spec [
 		'FmxNGPharoSmalltalk-Entities'
 		'FmxNGPharoSmalltalk-Importer'
 
+		'FmxNG-Support'
+
 		'FmxNGJava-Generator'
 		'FmxNGJava-Entities'
-		
-		'FmxNG-Support'
+
 
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
@@ -966,6 +967,9 @@ BaselineOfMoose >> groups: spec [
 			'FmxNGPharoSmalltalk-Importer'
 			
 			'FmxNG-Support'
+
+			'FmxNGJava-Generator'
+			'FmxNGJava-Entities'
 			
 	).	
 	
