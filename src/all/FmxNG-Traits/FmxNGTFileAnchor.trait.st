@@ -35,6 +35,25 @@ FmxNGTFileAnchor classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #adding }
+FmxNGTFileAnchor >> addToFile: entity [
+	^ self correspondingFile addEntity: entity
+]
+
+{ #category : #accessing }
+FmxNGTFileAnchor >> completeText [
+	self sourcesAreReadable ifFalse: [ ^ '' ].
+	
+	^ self fileReference
+		binaryReadStreamDo:
+			[ :in | (ZnCharacterReadStream on: in encoding: self encoding) upToEnd ]
+]
+
+{ #category : #accessing }
+FmxNGTFileAnchor >> containerFiles [
+	^ self correspondingFile ifNil: [ {} ] ifNotNil: [ :file | {file} ]
+]
+
 { #category : #accessing }
 FmxNGTFileAnchor >> correspondingFile [
 
@@ -52,13 +71,20 @@ FmxNGTFileAnchor >> correspondingFile: anObject [
 
 ]
 
+{ #category : #decoding }
+FmxNGTFileAnchor >> detectEncoding [
+	self fileReference exists
+		ifFalse: [ ^ nil ].
+	^ [ self fileReference binaryReadStreamDo: [ :in | (ZnCharacterEncoder detectEncoding: in upToEnd) identifier ] ]
+		on: ZnCharacterEncodingError
+		do: [ nil ]
+]
+
 { #category : #accessing }
 FmxNGTFileAnchor >> encoding [
-
 	<MSEProperty: #encoding type: #String>
-	<generated>
 	<MSEComment: 'A string representing the encoding of a file'>
-	^ encoding
+	^ encoding ifNil: [ encoding := self detectEncoding ]
 ]
 
 { #category : #accessing }
@@ -79,9 +105,53 @@ FmxNGTFileAnchor >> fileName [
 ]
 
 { #category : #accessing }
-FmxNGTFileAnchor >> fileName: anObject [
+FmxNGTFileAnchor >> fileName: aFileName [
+	fileName := aFileName copyReplaceAll: '\' with: '/'. 
+]
 
-	<generated>
-	fileName := anObject
+{ #category : #accessing }
+FmxNGTFileAnchor >> fileReference [
+	^ self rootFolder asFileReference resolve: self fileName
+]
 
+{ #category : #accessing }
+FmxNGTFileAnchor >> hasSourceText [
+	^ self completeText notEmpty 
+]
+
+{ #category : #accessing }
+FmxNGTFileAnchor >> lineCount [
+	^ self hasSourceText 
+		ifTrue: [ self sourceText lineCount ]
+		ifFalse: [ self notExistentMetricValue ]
+	
+]
+
+{ #category : #private }
+FmxNGTFileAnchor >> privateHasEncoding [
+	^ encoding isNotNil
+]
+
+{ #category : #initialization }
+FmxNGTFileAnchor >> rootFolder [
+	^ self mooseModel rootFolder
+]
+
+{ #category : #initialization }
+FmxNGTFileAnchor >> setCorrespondingFile [
+	"files have already been added to the model"
+	^ self mooseModel allFiles asOrderedCollection
+		detect: [ :file | file mooseName = self fileName ]
+		ifFound: [ :aFile | self correspondingFile: aFile ]
+]
+
+{ #category : #accessing }
+FmxNGTFileAnchor >> sourceText [
+	self explicitRequirement
+]
+
+{ #category : #testing }
+FmxNGTFileAnchor >> sourcesAreReadable [
+	| file |
+	^ (file := self fileReference) exists and: [ file size > 0 ]
 ]

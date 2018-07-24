@@ -42,56 +42,6 @@ FmxNGJavaAbstractFileAnchor >> <= aFileAnchor [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> addToFile: entity [
-	^ self correspondingFile addEntity: entity
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> completeText [
-	self sourcesAreReadable ifFalse: [ ^ '' ].
-	
-	^ self fileReference
-		binaryReadStreamDo:
-			[ :in | (ZnCharacterReadStream on: in encoding: self encoding) upToEnd ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> containerFiles [
-	^ self correspondingFile ifNil: [ {} ] ifNotNil: [ :file | {file} ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> detectEncoding [
-	self fileReference exists
-		ifFalse: [ ^ nil ].
-	^ [ self fileReference binaryReadStreamDo: [ :in | (ZnCharacterEncoder detectEncoding: in upToEnd) identifier ] ]
-		on: ZnCharacterEncodingError
-		do: [ nil ]
-]
-
-{ #category : #accessing }
-FmxNGJavaAbstractFileAnchor >> encoding [
-	<MSEProperty: #encoding type: #String>
-	<MSEComment: 'A string representing the encoding of a file'>
-	^ encoding ifNil: [ encoding := self detectEncoding ]
-]
-
-{ #category : #accessing }
-FmxNGJavaAbstractFileAnchor >> fileName: aFileName [
-	fileName := aFileName copyReplaceAll: '\' with: '/'. 
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> fileReference [
-	^ self rootFolder asFileReference resolve: self fileName
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> hasSourceText [
-	^ self completeText notEmpty 
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaAbstractFileAnchor >> intervalAsCharPos [
 	self subclassResponsibility
 ]
@@ -102,43 +52,6 @@ FmxNGJavaAbstractFileAnchor >> isFile [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> lineCount [
-	^ self hasSourceText 
-		ifTrue: [ self sourceText lineCount ]
-		ifFalse: [ self notExistentMetricValue ]
-	
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaAbstractFileAnchor >> mooseNameOn: aStream [
 	aStream nextPutAll: self fileName asString
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> privateHasEncoding [
-	^ encoding isNotNil
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> rootFolder [
-	^ self mooseModel rootFolder
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> setCorrespondingFile [
-	"files have already been added to the model"
-	^ self mooseModel allFiles asOrderedCollection
-		detect: [ :file | file mooseName = self fileName ]
-		ifFound: [ :aFile | self correspondingFile: aFile ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> sourceText [
-	self subclassResponsibility
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAbstractFileAnchor >> sourcesAreReadable [
-	| file |
-	^ (file := self fileReference) exists and: [ file size > 0 ]
 ]
