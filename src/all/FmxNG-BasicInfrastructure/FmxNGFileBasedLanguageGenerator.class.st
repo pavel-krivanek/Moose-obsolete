@@ -51,6 +51,7 @@ FmxNGFileBasedLanguageGenerator >> defineHierarchy [
 	folder --|> #TFolder.
 
 	indexedFileAnchor --|> abstractFileAnchor.
+	indexedFileAnchor --|> #TIndexedFileNavigation.
 
 	multipleFileAnchor --|> sourceAnchor.
 

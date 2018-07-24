@@ -111,7 +111,8 @@ Class {
 		'tClass',
 		'tFolder',
 		'tFileSystemEntity',
-		'tFileNavigation'
+		'tFileNavigation',
+		'tIndexedFileNavigation'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -366,6 +367,12 @@ FmxNGGenerator >> commentForTHeader [
 FmxNGGenerator >> commentForTImplicitVariable [
 
 	^ 'FAMIXImplicitVariable represents a variable defined by the compiler in a context, such as self, super, thisContext.'
+]
+
+{ #category : #comments }
+FmxNGGenerator >> commentForTIndexedFileNavigation [
+
+	^ ''
 ]
 
 { #category : #comments }
@@ -902,6 +909,10 @@ FmxNGGenerator >> defineProperties [
 	((tFileNavigation property: #endColumn type: #Number)
 		comment: 'Number of the end column').
 
+	((tIndexedFileNavigation property: #startPos type: #Number)
+		comment: 'Start position in the source').
+	((tIndexedFileNavigation property: #endPos type: #Number)
+		comment: 'Stop position in the source').
 
 	"(tSourceAnchor property: #pharoEntity type: #Object)."
 
@@ -1303,6 +1314,9 @@ FmxNGGenerator >> defineTraits [
 
 	tFileNavigation := builder newTraitNamed: #TFileNavigation.
 	tFileNavigation comment: self commentForTFileNavigation.
+
+	tIndexedFileNavigation := builder newTraitNamed: #TIndexedFileNavigation.
+	tIndexedFileNavigation comment: self commentForTIndexedFileNavigation.
 
 	tFileInclude := builder newTraitNamed: #TFileInclude.
 	tFileInclude comment: self commentForTFileInclude.
