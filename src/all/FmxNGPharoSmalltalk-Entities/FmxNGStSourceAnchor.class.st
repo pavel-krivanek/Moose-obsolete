@@ -1,12 +1,11 @@
 Class {
 	#name : #FmxNGStSourceAnchor,
 	#superclass : #FmxNGStEntity,
-	#traits : 'FmxNGTSourceAnchor + TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'FmxNGTSourceAnchor classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
+	#traits : 'FmxNGTSourceAnchor + FmxNGTWithImmediateSource + TEntityMetaLevelDependency + TDependencyQueries',
+	#classTraits : 'FmxNGTSourceAnchor classTrait + FmxNGTWithImmediateSource classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
 	#instVars : [
 		'#element => FMOne type: #FmxNGTWithSourceAnchor opposite: #sourceAnchor',
-		'#pharoEntity',
-		'#source'
+		'#pharoEntity'
 	],
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
@@ -31,7 +30,7 @@ FmxNGStSourceAnchor class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStSourceAnchor class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTSourceAnchor)
+	^ #(FmxNGTSourceAnchor FmxNGTWithImmediateSource)
 ]
 
 { #category : #accessing }

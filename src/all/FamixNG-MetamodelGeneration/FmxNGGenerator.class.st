@@ -112,7 +112,8 @@ Class {
 		'tFolder',
 		'tFileSystemEntity',
 		'tFileNavigation',
-		'tIndexedFileNavigation'
+		'tIndexedFileNavigation',
+		'tWithImmediateSource'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -733,6 +734,12 @@ FmxNGGenerator >> commentForTWithHeader [
 ]
 
 { #category : #comments }
+FmxNGGenerator >> commentForTWithImmediateSource [
+
+	^ ''
+]
+
+{ #category : #comments }
 FmxNGGenerator >> commentForTWithImplicitVariables [
 
 	^ ''
@@ -913,6 +920,9 @@ FmxNGGenerator >> defineProperties [
 		comment: 'Start position in the source').
 	((tIndexedFileNavigation property: #endPos type: #Number)
 		comment: 'Stop position in the source').
+
+	((tWithImmediateSource property: #source type: #String)
+		comment: 'Actual source code of the source entity').
 
 	"(tSourceAnchor property: #pharoEntity type: #Object)."
 
@@ -1565,6 +1575,10 @@ FmxNGGenerator >> defineTraits [
 
 	tWithTypes := builder newTraitNamed: #TWithTypes.
 	tWithTypes comment: self commentForTWithTypes.
+
+	tWithImmediateSource := builder newTraitNamed: #TWithImmediateSource.
+	tWithImmediateSource comment: self commentForTWithImmediateSource.
+
 
 	tWithModifiers := builder newTraitNamed: #TWithModifiers.
 

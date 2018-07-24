@@ -1,9 +1,8 @@
 Class {
 	#name : #FAMIXSourceTextAnchor,
 	#superclass : #FAMIXSourceAnchor,
-	#instVars : [
-		'source'
-	],
+	#traits : 'FmxNGTWithImmediateSource',
+	#classTraits : 'FmxNGTWithImmediateSource classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -27,7 +26,7 @@ FAMIXSourceTextAnchor class >> generatedSlotNames [
 { #category : #generator }
 FAMIXSourceTextAnchor class >> generatedTraitNames [
 	<generated>
-	^ #()
+	^ #(FmxNGTWithImmediateSource)
 ]
 
 { #category : #meta }
@@ -45,18 +44,6 @@ FAMIXSourceTextAnchor >> containerFiles [
 { #category : #accessing }
 FAMIXSourceTextAnchor >> lineCount [
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
-]
-
-{ #category : #accessing }
-FAMIXSourceTextAnchor >> source [
-	<MSEProperty: #source type: #String>
-	<MSEComment: 'Actual source code of the source entity'>
-	^ source
-]
-
-{ #category : #accessing }
-FAMIXSourceTextAnchor >> source: anObject [
-	source := anObject
 ]
 
 { #category : #accessing }

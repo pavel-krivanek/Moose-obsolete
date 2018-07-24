@@ -56,6 +56,7 @@ FmxNGFileBasedLanguageGenerator >> defineHierarchy [
 	multipleFileAnchor --|> sourceAnchor.
 
 	sourceTextAnchor --|> sourceAnchor.
+	sourceTextAnchor --|> #TWithImmediateSource.
 
 	sourcedEntity --|> #TWithFiles.
 

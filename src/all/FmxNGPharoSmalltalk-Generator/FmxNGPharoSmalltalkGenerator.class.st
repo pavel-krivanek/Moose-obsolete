@@ -180,6 +180,8 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	unknownSourceLanguage --|> sourceLanguage.
 
 	unknownVariable --|> structuralEntity.
+
+	sourceAnchor --|> #TWithImmediateSource.
 	
 
 	

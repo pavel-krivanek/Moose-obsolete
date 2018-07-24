@@ -1,9 +1,8 @@
 Class {
 	#name : #FmxNGJavaSourceTextAnchor,
 	#superclass : #FmxNGJavaSourceAnchor,
-	#instVars : [
-		'source'
-	],
+	#traits : 'FmxNGTWithImmediateSource',
+	#classTraits : 'FmxNGTWithImmediateSource classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -27,7 +26,7 @@ FmxNGJavaSourceTextAnchor class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaSourceTextAnchor class >> generatedTraitNames [
 	<generated>
-	^ #()
+	^ #(FmxNGTWithImmediateSource)
 ]
 
 { #category : #meta }
@@ -45,18 +44,6 @@ FmxNGJavaSourceTextAnchor >> containerFiles [
 { #category : #'as yet unclassified' }
 FmxNGJavaSourceTextAnchor >> lineCount [
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaSourceTextAnchor >> source [
-	<MSEProperty: #source type: #String>
-	<MSEComment: 'Actual source code of the source entity'>
-	^ source
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaSourceTextAnchor >> source: anObject [
-	source := anObject
 ]
 
 { #category : #'as yet unclassified' }
