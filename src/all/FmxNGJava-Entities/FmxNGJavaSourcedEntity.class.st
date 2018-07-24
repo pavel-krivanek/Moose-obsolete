@@ -44,7 +44,7 @@ FmxNGJavaSourcedEntity >> accept: aVisitor [
 
 { #category : #'as yet unclassified' }
 FmxNGJavaSourcedEntity >> addComment: aComment [
-	self comments add: aComment asFmxNGJavaComment
+	self privateAddComment: aComment asFmxNGJavaComment
 ]
 
 { #category : #accessing }
@@ -140,16 +140,8 @@ FmxNGJavaSourcedEntity >> numberOfJavaNullChecks [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaSourcedEntity >> removeComment: aComment [
-	self comments remove: aComment
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaSourcedEntity >> sourceLanguage [
-	^ self declaredSourceLanguage ifNil: [
-		self mooseModel 
-			ifNil: [ FmxNGJavaUnknownSourceLanguage new ] 
-			ifNotNil: [ self mooseModel sourceLanguage ] ]
+	^ self sourceLanguageOr: FmxNGJavaUnknownSourceLanguage
 ]
 
 { #category : #'as yet unclassified' }

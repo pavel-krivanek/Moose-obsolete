@@ -1,12 +1,7 @@
-Extension { #name : #FAMIXSourcedEntity }
+Extension { #name : #FmxNGTWithSourceAnchor }
 
 { #category : #'*Moose-Finder' }
-FAMIXSourcedEntity >> formattedSourceText [
-	^ self sourceLanguage format: self sourceText from: self
-]
-
-{ #category : #'*Moose-Finder' }
-FAMIXSourcedEntity >> mooseFinderParentFolderIn: composite [
+FmxNGTWithSourceAnchor >> mooseFinderParentFolderIn: composite [
 	<moosePresentationOrder: 10>
 	self sourceAnchor ifNil: [ ^ self ].
 	self sourceAnchor isFile
@@ -15,7 +10,7 @@ FAMIXSourcedEntity >> mooseFinderParentFolderIn: composite [
 ]
 
 { #category : #'*Moose-Finder' }
-FAMIXSourcedEntity >> mooseFinderSourceTextIn: composite [
+FmxNGTWithSourceAnchor >> mooseFinderSourceTextIn: composite [
 	<moosePresentationOrder: 10>
 	composite text
 			title: 'Source';
@@ -25,7 +20,7 @@ FAMIXSourcedEntity >> mooseFinderSourceTextIn: composite [
 ]
 
 { #category : #'*Moose-Finder' }
-FAMIXSourcedEntity >> spotterPreviewSourceIn: composite [
+FmxNGTWithSourceAnchor >> spotterPreviewSourceIn: composite [
 	<spotterPreview: 0>
 	composite text 
 		title: [ self mooseName ];

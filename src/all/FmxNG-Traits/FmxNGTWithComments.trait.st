@@ -68,3 +68,13 @@ FmxNGTWithComments >> numberOfComments: aNumber [
 
 	self privateState propertyAt: #numberOfComments put: aNumber
 ]
+
+{ #category : #removing }
+FmxNGTWithComments >> privateAddComment: aComment [
+	self comments add: aComment 
+]
+
+{ #category : #removing }
+FmxNGTWithComments >> removeComment: aComment [
+	self comments remove: aComment
+]

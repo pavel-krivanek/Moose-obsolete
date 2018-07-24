@@ -40,3 +40,13 @@ FmxNGJavaUnknownSourceLanguage class >> requirements [
 FmxNGJavaUnknownSourceLanguage >> isUnknown [ 
 	^ true
 ]
+
+{ #category : #'as yet unclassified' }
+FmxNGJavaUnknownSourceLanguage >> name [
+	
+	<MSEProperty: #name type: #String> 
+	<derived>
+	<MSEComment: 'The name of the language'>
+	
+	^ 'Unknown'
+]

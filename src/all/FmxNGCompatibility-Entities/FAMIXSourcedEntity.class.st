@@ -44,7 +44,7 @@ FAMIXSourcedEntity >> accept: aVisitor [
 
 { #category : #accessing }
 FAMIXSourcedEntity >> addComment: aComment [
-	self comments add: aComment asFAMIXComment
+		self privateAddComment: aComment asFAMIXComment
 ]
 
 { #category : #'Famix-File' }
@@ -140,16 +140,8 @@ FAMIXSourcedEntity >> numberOfJavaNullChecks [
 ]
 
 { #category : #accessing }
-FAMIXSourcedEntity >> removeComment: aComment [
-	self comments remove: aComment
-]
-
-{ #category : #accessing }
 FAMIXSourcedEntity >> sourceLanguage [
-	^ self declaredSourceLanguage ifNil: [
-		self mooseModel 
-			ifNil: [ FAMIXUnknownSourceLanguage new ] 
-			ifNotNil: [ self mooseModel sourceLanguage ] ]
+	^ self sourceLanguageOr: FAMIXUnknownSourceLanguage
 ]
 
 { #category : #'Famix-Extensions' }

@@ -43,8 +43,5 @@ FmxNGStSourcedEntity >> isImplicitVariable [
 
 { #category : #accessing }
 FmxNGStSourcedEntity >> sourceLanguage [
-	^ self declaredSourceLanguage ifNil: [
-		self mooseModel 
-			ifNil: [ FmxNGStUnknownSourceLanguage new ] 
-			ifNotNil: [ self mooseModel sourceLanguage ] ]
+	^ self sourceLanguageOr: FmxNGStUnknownSourceLanguage
 ]
