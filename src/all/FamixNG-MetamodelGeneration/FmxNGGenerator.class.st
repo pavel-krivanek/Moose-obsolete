@@ -110,7 +110,8 @@ Class {
 		'tPossibleStub',
 		'tClass',
 		'tFolder',
-		'tFileSystemEntity'
+		'tFileSystemEntity',
+		'tFileNavigation'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -320,6 +321,12 @@ FmxNGGenerator >> commentForTFileAnchor [
 
 { #category : #comments }
 FmxNGGenerator >> commentForTFileInclude [
+
+	^ ''
+]
+
+{ #category : #comments }
+FmxNGGenerator >> commentForTFileNavigation [
 
 	^ ''
 ]
@@ -886,6 +893,16 @@ FmxNGGenerator >> defineProperties [
 	((tPossibleStub property: #isStub type: #Boolean)
 		comment: 'Flag true if the entity attributes are incomplete, either because the entity is missing or not imported.').
 
+	((tFileNavigation property: #startLine type: #Number)
+		comment: 'Number of the start line').
+	((tFileNavigation property: #endLine type: #Number)
+		comment: 'Number of the end line').
+	((tFileNavigation property: #startColumn type: #Number)
+		comment: 'Number of the start column').
+	((tFileNavigation property: #endColumn type: #Number)
+		comment: 'Number of the end column').
+
+
 	"(tSourceAnchor property: #pharoEntity type: #Object)."
 
 ]
@@ -1283,6 +1300,9 @@ FmxNGGenerator >> defineTraits [
 
 	tFileAnchor := builder newTraitNamed: #TFileAnchor.
 	tFileAnchor comment: self commentForTFileAnchor.
+
+	tFileNavigation := builder newTraitNamed: #TFileNavigation.
+	tFileNavigation comment: self commentForTFileNavigation.
 
 	tFileInclude := builder newTraitNamed: #TFileInclude.
 	tFileInclude comment: self commentForTFileInclude.
