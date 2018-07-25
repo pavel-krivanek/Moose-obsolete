@@ -6,7 +6,6 @@ Trait {
 { #category : #meta }
 FmxNGTWithClassScope classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TWithClassScope super: #Trait>
 	<generated>

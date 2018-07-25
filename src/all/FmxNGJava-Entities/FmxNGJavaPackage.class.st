@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaPackage class >> annotation [
 
-	<generated>
 	<MSEClass: #Package super: #FmxNGJavaScopingEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

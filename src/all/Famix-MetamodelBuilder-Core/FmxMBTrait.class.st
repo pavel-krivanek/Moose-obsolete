@@ -92,7 +92,6 @@ FmxMBTrait >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass
 
 	aRealClass classSide compile: ('annotation
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #{1} super: #{2}>
 	<generated>

@@ -20,7 +20,6 @@ Trait {
 { #category : #meta }
 FmxNGTMethod classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TMethod super: #Trait>
 	<generated>

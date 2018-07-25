@@ -11,7 +11,6 @@ Class {
 { #category : #meta }
 FAMIXPreprocessorIfdef class >> annotation [
 
-	<generated>
 	<MSEClass: #PreprocessorIfdef super: #FAMIXPreprocessorStatement>
 	<package: #FAMIX>
 	<generated>

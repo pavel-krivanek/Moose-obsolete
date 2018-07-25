@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FAMIXJavaSourceLanguage class >> annotation [
 
-	<generated>
 	<MSEClass: #JavaSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
 	<generated>

@@ -108,6 +108,8 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	class --|> #TWithMethods.
 	class --|> #TWithSuperInheritances.
 	class --|> #TWithSubInheritances.
+	class --|> #TClassHierarchyNavigation.
+	
 
 	containerEntity --|> namedEntity.
 	containerEntity --|> #TWithTypes.

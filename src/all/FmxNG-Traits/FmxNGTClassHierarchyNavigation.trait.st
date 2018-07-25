@@ -13,6 +13,19 @@ FmxNGTClassHierarchyNavigation classSide >> annotation [
 	^self
 ]
 
+{ #category : #generator }
+FmxNGTClassHierarchyNavigation classSide >> generatedSlotNames [
+	<generated>
+	'FmxNGTClassHierarchyNavigation class>>#generatedSlotNames'.
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGTClassHierarchyNavigation classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
 { #category : #enumerating }
 FmxNGTClassHierarchyNavigation >> allSubclassesDo: aBlock [
 	self allSubclassesWithoutAliasesDo: aBlock.

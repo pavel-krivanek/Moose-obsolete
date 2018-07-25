@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTPossibleStub classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TPossibleStub super: #Trait>
 	<generated>

@@ -12,7 +12,6 @@ Trait {
 { #category : #meta }
 FmxNGTFileNavigation classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TFileNavigation super: #Trait>
 	<generated>

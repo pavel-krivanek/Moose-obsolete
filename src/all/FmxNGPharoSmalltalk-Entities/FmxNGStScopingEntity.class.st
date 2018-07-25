@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGStScopingEntity class >> annotation [
 
-	<generated>
 	<MSEClass: #ScopingEntity super: #FmxNGStContainerEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

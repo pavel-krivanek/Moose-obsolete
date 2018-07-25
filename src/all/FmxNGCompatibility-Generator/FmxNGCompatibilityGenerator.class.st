@@ -372,6 +372,7 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	type --|> #TWithSubInheritances.
 	type --|> #TWithAttributes.
 	type --|> #TParameterizedTypeUser.
+	type --|> #TClassHierarchyNavigation. 
 
 	typeAlias --|> type.
 	typeAlias --|> #TTypeAlias.

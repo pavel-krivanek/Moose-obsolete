@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTWithEnumValues classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TWithEnumValues super: #Trait>
 	<generated>

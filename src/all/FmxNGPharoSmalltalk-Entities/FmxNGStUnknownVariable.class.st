@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FmxNGStUnknownVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #UnknownVariable super: #FmxNGStStructuralEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

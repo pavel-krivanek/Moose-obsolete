@@ -13,6 +13,19 @@ FmxNGTLCOMMetrics classSide >> annotation [
 	^self
 ]
 
+{ #category : #generator }
+FmxNGTLCOMMetrics classSide >> generatedSlotNames [
+	<generated>
+	'FmxNGTLCOMMetrics class>>#generatedSlotNames'.
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGTLCOMMetrics classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
 { #category : #'Famix-Extensions-metrics-support' }
 FmxNGTLCOMMetrics >> calculateLCOM2 [
 	

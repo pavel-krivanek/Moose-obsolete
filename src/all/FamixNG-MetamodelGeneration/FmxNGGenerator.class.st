@@ -113,7 +113,10 @@ Class {
 		'tFileSystemEntity',
 		'tFileNavigation',
 		'tIndexedFileNavigation',
-		'tWithImmediateSource'
+		'tWithImmediateSource',
+		'tClassHierarchyNavigation',
+		'tClassMetrics',
+		'tLCOMMetrics'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -1579,10 +1582,13 @@ FmxNGGenerator >> defineTraits [
 	tWithImmediateSource := builder newTraitNamed: #TWithImmediateSource.
 	tWithImmediateSource comment: self commentForTWithImmediateSource.
 
-
 	tWithModifiers := builder newTraitNamed: #TWithModifiers.
 
 	tPossibleStub := builder newTraitNamed: #TPossibleStub.
+
+	tClassHierarchyNavigation := builder newTraitNamed: #TClassHierarchyNavigation.
+	tClassMetrics := builder newTraitNamed: #TClassMetrics.
+	tLCOMMetrics := builder newTraitNamed: #TLCOMMetrics.
 
 ]
 

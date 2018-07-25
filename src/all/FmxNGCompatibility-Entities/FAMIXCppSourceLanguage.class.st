@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FAMIXCppSourceLanguage class >> annotation [
 
-	<generated>
 	<MSEClass: #CppSourceLanguage super: #FAMIXCSourceLanguage>
 	<package: #FAMIX>
 	<generated>

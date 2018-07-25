@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXCaughtException class >> annotation [
 
-	<generated>
 	<MSEClass: #CaughtException super: #FAMIXException>
 	<package: #FAMIX>
 	<generated>

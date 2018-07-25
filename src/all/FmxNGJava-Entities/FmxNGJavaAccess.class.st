@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaAccess class >> annotation [
 
-	<generated>
 	<MSEClass: #Access super: #FmxNGJavaAssociation>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

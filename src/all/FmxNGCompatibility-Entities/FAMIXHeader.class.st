@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXHeader class >> annotation [
 
-	<generated>
 	<MSEClass: #Header super: #FAMIXCFile>
 	<package: #FAMIX>
 	<generated>

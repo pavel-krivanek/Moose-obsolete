@@ -13,7 +13,6 @@ Class {
 { #category : #meta }
 FmxNGStAssociation class >> annotation [
 
-	<generated>
 	<MSEClass: #Association super: #FmxNGStSourcedEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXComment class >> annotation [
 
-	<generated>
 	<MSEClass: #Comment super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
 	<generated>

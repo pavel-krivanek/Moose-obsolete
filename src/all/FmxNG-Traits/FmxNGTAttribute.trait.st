@@ -13,7 +13,6 @@ Trait {
 { #category : #meta }
 FmxNGTAttribute classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TAttribute super: #Trait>
 	<generated>

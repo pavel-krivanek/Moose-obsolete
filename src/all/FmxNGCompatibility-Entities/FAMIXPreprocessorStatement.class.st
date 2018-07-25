@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FAMIXPreprocessorStatement class >> annotation [
 
-	<generated>
 	<MSEClass: #PreprocessorStatement super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
 	<generated>

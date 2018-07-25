@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTWithSourceLanguage classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TWithSourceLanguage super: #Trait>
 	<generated>

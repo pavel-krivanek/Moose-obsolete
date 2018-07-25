@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTNamespaceEntity classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TNamespaceEntity super: #Trait>
 	<generated>

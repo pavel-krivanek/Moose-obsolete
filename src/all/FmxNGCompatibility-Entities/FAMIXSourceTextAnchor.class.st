@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXSourceTextAnchor class >> annotation [
 
-	<generated>
 	<MSEClass: #SourceTextAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
 	<generated>

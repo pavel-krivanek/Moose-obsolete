@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FAMIXUnknownVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #UnknownVariable super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
 	<generated>

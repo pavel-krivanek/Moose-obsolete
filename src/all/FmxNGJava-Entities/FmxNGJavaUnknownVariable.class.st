@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FmxNGJavaUnknownVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #UnknownVariable super: #FmxNGJavaStructuralEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

@@ -12,7 +12,6 @@ Trait {
 { #category : #meta }
 FmxNGTThrownException classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TThrownException super: #Trait>
 	<generated>

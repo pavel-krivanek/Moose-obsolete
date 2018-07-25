@@ -3,13 +3,15 @@ Class {
 	#superclass : #FmxNGJavaType,
 	#traits : 'FmxNGTClass + FmxNGTWithExceptions',
 	#classTraits : 'FmxNGTClass classTrait + FmxNGTWithExceptions classTrait',
+	#instVars : [
+		'#isInterface'
+	],
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
 { #category : #meta }
 FmxNGJavaClass class >> annotation [
 
-	<generated>
 	<MSEClass: #Class super: #FmxNGJavaType>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

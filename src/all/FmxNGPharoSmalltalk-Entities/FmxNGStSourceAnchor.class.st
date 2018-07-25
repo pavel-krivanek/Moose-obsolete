@@ -13,7 +13,6 @@ Class {
 { #category : #meta }
 FmxNGStSourceAnchor class >> annotation [
 
-	<generated>
 	<MSEClass: #SourceAnchor super: #FmxNGStEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

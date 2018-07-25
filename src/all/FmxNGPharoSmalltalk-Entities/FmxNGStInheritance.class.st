@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGStInheritance class >> annotation [
 
-	<generated>
 	<MSEClass: #Inheritance super: #FmxNGStAssociation>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

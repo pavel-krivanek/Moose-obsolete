@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaEnumValue class >> annotation [
 
-	<generated>
 	<MSEClass: #EnumValue super: #FmxNGJavaStructuralEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

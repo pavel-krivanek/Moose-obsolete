@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGStParameter class >> annotation [
 
-	<generated>
 	<MSEClass: #Parameter super: #FmxNGStStructuralEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

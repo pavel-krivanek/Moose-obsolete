@@ -12,7 +12,6 @@ Class {
 { #category : #meta }
 FAMIXClass class >> annotation [
 
-	<generated>
 	<MSEClass: #Class super: #FAMIXType>
 	<package: #FAMIX>
 	<generated>

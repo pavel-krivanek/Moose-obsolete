@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXFunction class >> annotation [
 
-	<generated>
 	<MSEClass: #Function super: #FAMIXBehaviouralEntity>
 	<package: #FAMIX>
 	<generated>

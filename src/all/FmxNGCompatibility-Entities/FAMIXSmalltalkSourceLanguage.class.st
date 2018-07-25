@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FAMIXSmalltalkSourceLanguage class >> annotation [
 
-	<generated>
 	<MSEClass: #SmalltalkSourceLanguage super: #FAMIXSourceLanguage>
 	<package: #FAMIX>
 	<generated>

@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGStSourceLanguage class >> annotation [
 
-	<generated>
 	<MSEClass: #SourceLanguage super: #FmxNGStEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

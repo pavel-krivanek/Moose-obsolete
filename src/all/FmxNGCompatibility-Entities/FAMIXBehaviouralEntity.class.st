@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXBehaviouralEntity class >> annotation [
 
-	<generated>
 	<MSEClass: #BehaviouralEntity super: #FAMIXContainerEntity>
 	<package: #FAMIX>
 	<generated>

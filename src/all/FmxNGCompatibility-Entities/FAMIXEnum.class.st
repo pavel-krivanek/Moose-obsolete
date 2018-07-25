@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXEnum class >> annotation [
 
-	<generated>
 	<MSEClass: #Enum super: #FAMIXType>
 	<package: #FAMIX>
 	<generated>

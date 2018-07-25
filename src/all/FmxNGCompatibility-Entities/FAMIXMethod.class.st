@@ -12,7 +12,6 @@ Class {
 { #category : #meta }
 FAMIXMethod class >> annotation [
 
-	<generated>
 	<MSEClass: #Method super: #FAMIXBehaviouralEntity>
 	<package: #FAMIX>
 	<generated>

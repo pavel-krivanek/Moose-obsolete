@@ -12,7 +12,6 @@ Class {
 { #category : #meta }
 FAMIXPreprocessorDefine class >> annotation [
 
-	<generated>
 	<MSEClass: #PreprocessorDefine super: #FAMIXPreprocessorStatement>
 	<package: #FAMIX>
 	<generated>

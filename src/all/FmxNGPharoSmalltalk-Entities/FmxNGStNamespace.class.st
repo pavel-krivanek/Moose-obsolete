@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGStNamespace class >> annotation [
 
-	<generated>
 	<MSEClass: #Namespace super: #FmxNGStScopingEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

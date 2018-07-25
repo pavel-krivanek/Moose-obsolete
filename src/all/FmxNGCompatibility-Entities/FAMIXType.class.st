@@ -1,15 +1,14 @@
 Class {
 	#name : #FAMIXType,
 	#superclass : #FAMIXContainerEntity,
-	#traits : 'FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures + FmxNGTClassMetrics',
-	#classTraits : 'FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait + FmxNGTClassMetrics classTrait',
+	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures + FmxNGTClassMetrics',
+	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait + FmxNGTClassMetrics classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
 { #category : #meta }
 FAMIXType class >> annotation [
 
-	<generated>
 	<MSEClass: #Type super: #FAMIXContainerEntity>
 	<package: #FAMIX>
 	<generated>
@@ -26,7 +25,7 @@ FAMIXType class >> generatedSlotNames [
 { #category : #generator }
 FAMIXType class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
+	^ #(FmxNGTClassHierarchyNavigation FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
 ]
 
 { #category : #meta }

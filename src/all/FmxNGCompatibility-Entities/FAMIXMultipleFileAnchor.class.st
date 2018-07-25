@@ -10,7 +10,6 @@ Class {
 { #category : #meta }
 FAMIXMultipleFileAnchor class >> annotation [
 
-	<generated>
 	<MSEClass: #MultipleFileAnchor super: #FAMIXSourceAnchor>
 	<package: #FAMIX>
 	<generated>

@@ -13,7 +13,6 @@ Class {
 { #category : #meta }
 FmxNGJavaIndexedFileAnchor class >> annotation [
 
-	<generated>
 	<MSEClass: #IndexedFileAnchor super: #FmxNGJavaAbstractFileAnchor>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

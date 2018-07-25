@@ -12,7 +12,6 @@ Trait {
 { #category : #meta }
 FmxNGTImplicitVariable classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TImplicitVariable super: #Trait>
 	<generated>

@@ -14,7 +14,6 @@ Trait {
 { #category : #meta }
 FmxNGTFileAnchor classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TFileAnchor super: #Trait>
 	<generated>

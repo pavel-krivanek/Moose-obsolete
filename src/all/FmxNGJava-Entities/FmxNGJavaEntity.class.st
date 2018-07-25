@@ -24,7 +24,6 @@ Class {
 { #category : #meta }
 FmxNGJavaEntity class >> annotation [
 
-	<generated>
 	<MSEClass: #Entity super: #MooseEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

@@ -1,15 +1,14 @@
 Class {
 	#name : #FmxNGStClass,
 	#superclass : #FmxNGStType,
-	#traits : 'FmxNGTClass + FmxNGTWithExceptions + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTClassMetrics + FmxNGTLCOMMetrics + FmxNGTClassHierarchyNavigation',
-	#classTraits : 'FmxNGTClass classTrait + FmxNGTWithExceptions classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait + FmxNGTClassHierarchyNavigation classTrait',
+	#traits : 'FmxNGTClass + FmxNGTClassHierarchyNavigation + FmxNGTWithExceptions + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTClassMetrics + FmxNGTLCOMMetrics',
+	#classTraits : 'FmxNGTClass classTrait + FmxNGTClassHierarchyNavigation classTrait + FmxNGTWithExceptions classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
 { #category : #meta }
 FmxNGStClass class >> annotation [
 
-	<generated>
 	<MSEClass: #Class super: #FmxNGStType>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>
@@ -26,7 +25,7 @@ FmxNGStClass class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStClass class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClass FmxNGTWithExceptions FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances)
+	^ #(FmxNGTClass FmxNGTClassHierarchyNavigation FmxNGTWithExceptions FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances)
 ]
 
 { #category : #meta }

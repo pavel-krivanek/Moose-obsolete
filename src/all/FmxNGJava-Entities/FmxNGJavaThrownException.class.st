@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaThrownException class >> annotation [
 
-	<generated>
 	<MSEClass: #ThrownException super: #FmxNGJavaException>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

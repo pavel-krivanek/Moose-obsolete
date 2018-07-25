@@ -233,6 +233,7 @@ FmxNGJavaGenerator >> defineHierarchy [
 	type --|> #TWithSubInheritances.
 	type --|> #TWithAttributes.
 	type --|> #TParameterizedTypeUser.
+	type --|> #TClassHierarchyNavigation. 
 
 	unknownSourceLanguage --|> entity.
 	unknownSourceLanguage --|> #TSourceLanguage.

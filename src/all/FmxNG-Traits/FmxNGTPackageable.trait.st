@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTPackageable classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TPackageable super: #Trait>
 	<generated>

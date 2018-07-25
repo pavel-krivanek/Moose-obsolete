@@ -12,7 +12,6 @@ Class {
 { #category : #meta }
 FAMIXAttribute class >> annotation [
 
-	<generated>
 	<MSEClass: #Attribute super: #FAMIXStructuralEntity>
 	<package: #FAMIX>
 	<generated>

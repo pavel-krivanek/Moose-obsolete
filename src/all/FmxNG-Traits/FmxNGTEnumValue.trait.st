@@ -22,7 +22,6 @@ Trait {
 { #category : #meta }
 FmxNGTEnumValue classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TEnumValue super: #Trait>
 	<generated>

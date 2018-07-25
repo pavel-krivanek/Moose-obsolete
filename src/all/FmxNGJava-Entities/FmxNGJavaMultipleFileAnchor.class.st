@@ -10,7 +10,6 @@ Class {
 { #category : #meta }
 FmxNGJavaMultipleFileAnchor class >> annotation [
 
-	<generated>
 	<MSEClass: #MultipleFileAnchor super: #FmxNGJavaSourceAnchor>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

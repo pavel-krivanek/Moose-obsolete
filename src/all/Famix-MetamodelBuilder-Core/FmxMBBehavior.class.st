@@ -89,7 +89,6 @@ FmxMBBehavior >> generateAnnotationIn: aRealClass as: aName superclass: aSupercl
 
 	aRealClass classSide compile: ('annotation
 
-	<generated>
 	<MSEClass: #{1} super: #{2}>
 	<package: {3}>
 	<generated>

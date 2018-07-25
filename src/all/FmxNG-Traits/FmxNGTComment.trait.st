@@ -13,7 +13,6 @@ Trait {
 { #category : #meta }
 FmxNGTComment classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TComment super: #Trait>
 	<generated>

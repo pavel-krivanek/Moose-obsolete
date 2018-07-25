@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTInvocable classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TInvocable super: #Trait>
 	<generated>

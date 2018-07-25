@@ -13,6 +13,19 @@ FmxNGTClassMetrics classSide >> annotation [
 	^self
 ]
 
+{ #category : #generator }
+FmxNGTClassMetrics classSide >> generatedSlotNames [
+	<generated>
+	'FmxNGTClassMetrics class>>#generatedSlotNames'.
+	^ #()
+]
+
+{ #category : #generator }
+FmxNGTClassMetrics classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
 { #category : #'Famix-Implementation' }
 FmxNGTClassMetrics >> fanIn [
 	<MSEProperty: #fanIn type: #Number>

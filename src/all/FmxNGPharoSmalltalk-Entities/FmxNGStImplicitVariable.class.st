@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGStImplicitVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #ImplicitVariable super: #FmxNGStStructuralEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

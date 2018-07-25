@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTWithThrownExceptions classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TWithThrownExceptions super: #Trait>
 	<generated>

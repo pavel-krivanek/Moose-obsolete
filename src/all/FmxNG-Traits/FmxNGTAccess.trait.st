@@ -26,7 +26,6 @@ Trait {
 { #category : #meta }
 FmxNGTAccess classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TAccess super: #Trait>
 	<generated>

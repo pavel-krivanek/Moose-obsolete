@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FmxNGStUnknownSourceLanguage class >> annotation [
 
-	<generated>
 	<MSEClass: #UnknownSourceLanguage super: #FmxNGStSourceLanguage>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

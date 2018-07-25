@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaUnknownSourceLanguage class >> annotation [
 
-	<generated>
 	<MSEClass: #UnknownSourceLanguage super: #FmxNGJavaEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

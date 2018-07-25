@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTWithFiles classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TWithFiles super: #Trait>
 	<generated>

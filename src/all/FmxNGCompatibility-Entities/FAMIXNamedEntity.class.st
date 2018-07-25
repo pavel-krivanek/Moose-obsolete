@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXNamedEntity class >> annotation [
 
-	<generated>
 	<MSEClass: #NamedEntity super: #FAMIXSourcedEntity>
 	<package: #FAMIX>
 	<generated>

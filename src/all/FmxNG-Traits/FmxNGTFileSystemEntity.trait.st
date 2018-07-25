@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTFileSystemEntity classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TFileSystemEntity super: #Trait>
 	<generated>

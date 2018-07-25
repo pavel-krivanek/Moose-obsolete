@@ -12,7 +12,6 @@ Trait {
 { #category : #meta }
 FmxNGTException classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TException super: #Trait>
 	<generated>

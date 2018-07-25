@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaFolder class >> annotation [
 
-	<generated>
 	<MSEClass: #Folder super: #FmxNGJavaAbstractFile>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

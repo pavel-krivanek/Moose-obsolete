@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaSourceAnchor class >> annotation [
 
-	<generated>
 	<MSEClass: #SourceAnchor super: #FmxNGJavaEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXFolder class >> annotation [
 
-	<generated>
 	<MSEClass: #Folder super: #FAMIXAbstractFile>
 	<package: #FAMIX>
 	<generated>

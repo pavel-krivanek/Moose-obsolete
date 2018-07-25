@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaGlobalVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #GlobalVariable super: #FmxNGJavaStructuralEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

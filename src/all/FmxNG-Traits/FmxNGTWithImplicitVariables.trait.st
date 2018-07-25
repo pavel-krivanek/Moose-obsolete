@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTWithImplicitVariables classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TWithImplicitVariables super: #Trait>
 	<generated>

@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FmxNGJavaPrimitiveType class >> annotation [
 
-	<generated>
 	<MSEClass: #PrimitiveType super: #FmxNGJavaType>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

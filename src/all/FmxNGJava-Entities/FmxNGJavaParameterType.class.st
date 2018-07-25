@@ -7,7 +7,6 @@ Class {
 { #category : #meta }
 FmxNGJavaParameterType class >> annotation [
 
-	<generated>
 	<MSEClass: #ParameterType super: #FmxNGJavaType>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

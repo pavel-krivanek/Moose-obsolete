@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaLocalVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #LocalVariable super: #FmxNGJavaStructuralEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>

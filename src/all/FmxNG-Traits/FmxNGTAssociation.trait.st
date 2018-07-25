@@ -29,7 +29,6 @@ Trait {
 { #category : #meta }
 FmxNGTAssociation classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TAssociation super: #Trait>
 	<generated>

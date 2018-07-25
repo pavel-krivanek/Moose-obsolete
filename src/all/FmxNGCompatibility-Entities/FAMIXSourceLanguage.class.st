@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXSourceLanguage class >> annotation [
 
-	<generated>
 	<MSEClass: #SourceLanguage super: #FAMIXEntity>
 	<package: #FAMIX>
 	<generated>

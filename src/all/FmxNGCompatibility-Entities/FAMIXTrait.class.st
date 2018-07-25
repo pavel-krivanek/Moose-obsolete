@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FAMIXTrait class >> annotation [
 
-	<generated>
 	<MSEClass: #Trait super: #FAMIXType>
 	<package: #FAMIX>
 	<generated>

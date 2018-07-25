@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGJavaImplicitVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #ImplicitVariable super: #FmxNGJavaStructuralEntity>
 	<package: #'FmxNGJava-Entities'>
 	<generated>
@@ -74,16 +73,6 @@ FmxNGJavaImplicitVariable >> copyFrom: anEntity within: aVisitor [
 { #category : #'as yet unclassified' }
 FmxNGJavaImplicitVariable >> isImplicitVariable [
 	^true
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaImplicitVariable >> isSelf [
-	^ self name = #self
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaImplicitVariable >> isSuper [
-	^ self name == #super
 ]
 
 { #category : #'as yet unclassified' }

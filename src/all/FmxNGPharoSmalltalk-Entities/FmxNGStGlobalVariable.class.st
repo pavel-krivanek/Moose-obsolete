@@ -9,7 +9,6 @@ Class {
 { #category : #meta }
 FmxNGStGlobalVariable class >> annotation [
 
-	<generated>
 	<MSEClass: #GlobalVariable super: #FmxNGStStructuralEntity>
 	<package: #'FmxNGPharoSmalltalk-Entities'>
 	<generated>

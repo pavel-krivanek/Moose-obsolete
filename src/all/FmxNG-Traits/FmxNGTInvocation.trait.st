@@ -23,7 +23,6 @@ Trait {
 { #category : #meta }
 FmxNGTInvocation classSide >> annotation [
 
-	<generated>
 	<ignoreInTraitUsers>
 	<MSEClass: #TInvocation super: #Trait>
 	<generated>
