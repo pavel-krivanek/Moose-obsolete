@@ -51,11 +51,6 @@ FmxNGJavaAccess >> copyFrom: anEntity within: aVisitor [
 	self variable: (aVisitor visit: anEntity variable).
 ]
 
-{ #category : #testing }
-FmxNGJavaAccess >> isAccess [
-	^true
-]
-
 { #category : #'as yet unclassified' }
 FmxNGJavaAccess >> printOn: aStream [
 	super printOn: aStream.

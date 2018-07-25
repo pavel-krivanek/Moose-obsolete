@@ -43,11 +43,6 @@ FAMIXBehaviouralEntity >> accept: aVisitor [
 ]
 
 { #category : #accessing }
-FAMIXBehaviouralEntity >> addLocalVariable: aLocalVariable [
-	localVariables add: aLocalVariable
-]
-
-{ #category : #accessing }
 FAMIXBehaviouralEntity >> addOutgoingReference: aReference [ 
 	outgoingReferences add: aReference
 ]

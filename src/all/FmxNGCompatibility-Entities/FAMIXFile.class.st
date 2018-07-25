@@ -49,30 +49,6 @@ FAMIXFile >> averageNumberOfCharactersPerLine [
 				ifTrue: [ 0 ] ]
 ]
 
-{ #category : #accessing }
-FAMIXFile >> entitiesGroup [
-	<navigation: 'Entities'>
-	
-	^ MooseGroup withAll: self entities withDescription: 'Entities defined in a file'
-]
-
-{ #category : #testing }
-FAMIXFile >> exists [
-	^ self fileExists 
-]
-
-{ #category : #testing }
-FAMIXFile >> fileExists [
-	name ifNil: [ ^ false ].
-	^ self fileReference exists
-]
-
-{ #category : #testing }
-FAMIXFile >> ifFileExistsDo: aBlock [
-	name ifNil: [ ^ aBlock value ].
-	^ self fileExists ifTrue: [ aBlock value ]
-]
-
 { #category : #'Famix-C-testing' }
 FAMIXFile >> isCompilationUnit [
 	^ false
@@ -94,51 +70,6 @@ FAMIXFile >> isSourceCodeLoaded [
 	^ true
 ]
 
-{ #category : #properties }
-FAMIXFile >> numberOfBytes [
-	<MSEProperty: #numberOfBytes type: #Number>
-	<MSEComment: 'Number of bytes in a file.'>
-	<derived>
-	^ self
-		lookUpPropertyNamed: #numberOfBytes
-		computedAs: [ self fileExists
-				ifTrue: [ self fileReference size ]
-				ifFalse: [ 0 ] ]
-]
-
-{ #category : #properties }
-FAMIXFile >> numberOfCharacters [
-	<MSEProperty: #numberOfCharacters type: #Number>
-	<MSEComment: 'Number of characters in a file.'>
-	<derived>
-	^ self lookUpPropertyNamed: #numberOfCharacters computedAs: [ self sourceText size ]
-]
-
-{ #category : #properties }
-FAMIXFile >> numberOfEmptyLinesOfText [
-	<MSEProperty: #numberOfEmptyLinesOfText type: #Number>
-	<MSEComment: 'Number of empty lines of text'>
-	<derived>
-	^ self
-		lookUpPropertyNamed: #numberOfEmptyLinesOfText
-		computedAs: [ self fileExists
-				ifTrue: [ (self sourceText lines select: #isEmpty) size ]
-				ifFalse: [ 0 ] ]
-]
-
-{ #category : #properties }
-FAMIXFile >> numberOfKiloBytes [
-	<MSEProperty: #numberOfKiloBytes type: #Number>
-	<MSEComment: 'Number of kilo bytes in a file.'>
-	<derived>
-	^ self lookUpPropertyNamed: #numberOfKiloBytes computedAs: [ (self numberOfBytes / 1024) asFloat ]
-]
-
-{ #category : #accessing }
-FAMIXFile >> readStream [
-	^ self fileReference readStream
-]
-
 { #category : #accessing }
 FAMIXFile >> sourceText [
 	^ self
@@ -157,20 +88,4 @@ FAMIXFile >> sourceText: aString [
 	^self
 		propertyNamed: #sourceText
 		put: aString
-]
-
-{ #category : #properties }
-FAMIXFile >> totalNumberOfLinesOfText [
-	<MSEProperty: #totalNumberOfLinesOfText type: #Number>
-	<MSEComment: 'Number of lines of text'>
-	<derived>
-	^ self
-		lookUpPropertyNamed: #totalNumberOfLinesOfText
-		computedAs: [ 
-			self sourceText isEmpty
-				ifFalse: [ self sourceText lineCount ]
-				ifTrue: [ 
-					(name notNil and: [ self exists ])
-						ifTrue: [ (self sourceText select: [ :each | each = Character cr ]) size + 1 ]
-						ifFalse: [ 0 ] ] ]
 ]

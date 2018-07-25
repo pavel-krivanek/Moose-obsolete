@@ -75,7 +75,7 @@ FmxNGTMethod >> hasClassScope: anObject [
 
 ]
 
-{ #category : #accessing }
+{ #category : #testing }
 FmxNGTMethod >> isConstant [
 	<MSEProperty: #isConstant type: #Boolean>
 	<derived>
@@ -83,7 +83,7 @@ FmxNGTMethod >> isConstant [
 	^#constant = self kind
 ]
 
-{ #category : #accessing }
+{ #category : #testing }
 FmxNGTMethod >> isConstructor [
 	<MSEProperty: #isConstructor type: #Boolean>
 	<derived>
@@ -102,13 +102,29 @@ FmxNGTMethod >> isConstructor: aBoolean [
 ]
 
 { #category : #testing }
+FmxNGTMethod >> isGetter [
+	<MSEProperty: #isGetter type: #Boolean>
+	<derived>
+	<MSEComment: 'True if the method is a getter of an attribute'>
+	
+	^#getter = self kind
+]
+
+{ #category : #testing }
 FmxNGTMethod >> isMethod [
 
 	<generated>
 	^ true
 ]
 
-{ #category : #accessing }
+{ #category : #testing }
+FmxNGTMethod >> isPureAccessor [
+	^self isGetter
+		or: [self isSetter
+		or: [self privateState propertyAt: #isPureAccessor ifAbsent: [false]]]
+]
+
+{ #category : #testing }
 FmxNGTMethod >> isSetter [
 	<MSEProperty: #isSetter type: #Boolean>
 	<derived>

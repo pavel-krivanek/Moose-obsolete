@@ -235,13 +235,6 @@ FmxNGStMethod >> isOverriding [
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isPureAccessor [
-	^self isGetter
-		or: [self isSetter
-		or: [self privateState propertyAt: #isPureAccessor ifAbsent: [false]]]
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> isSurelyInvokedBy: aFAMIXMethod [ 
 	 
 	| outgoingInvo |

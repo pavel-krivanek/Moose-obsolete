@@ -234,15 +234,6 @@ FAMIXMethod >> isExtension [
 	^self belongsTo packageScope ~~ self packageScope.
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXMethod >> isGetter [
-	<MSEProperty: #isGetter type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method is a getter of an attribute'>
-	
-	^#getter = self kind
-]
-
 { #category : #'Famix-Java' }
 FAMIXMethod >> isImplementing [
 	<MSEProperty: #isImplementing type: #Boolean>
@@ -296,13 +287,6 @@ FAMIXMethod >> isOverriding [
 	
 	^self belongsTo directSuperclasses anySatisfy: [:each | 
 		each isInterface not and: [each understands: self signature]]
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXMethod >> isPureAccessor [
-	^self isGetter
-		or: [self isSetter
-		or: [self privateState propertyAt: #isPureAccessor ifAbsent: [false]]]
 ]
 
 { #category : #'Famix-Extensions-InvocationTesting' }

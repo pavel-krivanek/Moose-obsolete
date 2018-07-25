@@ -78,11 +78,6 @@ FmxNGJavaAbstractFile >> ifNotFolder: aBlock1 ifFolder: aBlock2 [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaAbstractFile >> isFolder [
-	self subclassResponsibility
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaAbstractFile >> isRoot [
 	^ self belongsTo isNil
 ]

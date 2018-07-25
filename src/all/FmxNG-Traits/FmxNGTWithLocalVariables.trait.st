@@ -31,6 +31,11 @@ FmxNGTWithLocalVariables classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTWithLocalVariables >> addLocalVariable: aLocalVariable [
+	localVariables add: aLocalVariable
+]
+
+{ #category : #accessing }
 FmxNGTWithLocalVariables >> localVariables [
 
 	<generated>

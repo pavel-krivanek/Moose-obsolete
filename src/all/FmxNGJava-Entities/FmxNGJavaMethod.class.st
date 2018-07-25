@@ -52,11 +52,6 @@ FmxNGJavaMethod >> accessedAttributes [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> addLocalVariable: aLocalVariable [
-	localVariables add: aLocalVariable
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> addOutgoingReference: aReference [ 
 	outgoingReferences add: aReference
 ]
@@ -78,14 +73,6 @@ FmxNGJavaMethod >> category [
 	<package: 'Smalltalk'>
 	
 	^ self privateState attributeAt: #category ifAbsentPut: [ nil ]
-]
-
-{ #category : #accessing }
-FmxNGJavaMethod >> category: aString [
-
-	self privateState attributeAt: #category put: aString
-
-	
 ]
 
 { #category : #'as yet unclassified' }
@@ -300,38 +287,12 @@ FmxNGJavaMethod >> isExtension [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> isGetter [
-	<MSEProperty: #isGetter type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method is a getter of an attribute'>
-	
-	^#getter = self kind
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> isImplementing [
 	<MSEProperty: #isImplementing type: #Boolean>
 	<derived>
 	<MSEComment: 'The method is implementing a method defined in an interface'>
 	^ self belongsTo directSuperclasses
 		anySatisfy: [ :each | each isInterface and: [ each understands: self signature ] ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> isInitializer [
-	^ self mooseModel isSmalltalk
-		ifTrue: [ (('*initialize*' match: self category) or: [ '*initialize*' match: self name ]) or: [ self isConstructor ] ]
-		ifFalse: [ self isConstructor ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> isInternalImplementation [
-	<MSEProperty: #isInternalImplementation type: #Boolean>
-	<derived>
-	<MSEComment: 'Public Interface Layer Method'>
-	<package: 'Smalltalk'>
-	^ (self isInitializer not and: [ self isCalledInternally ])
-		and: [ self isPureAccessor not ]
 ]
 
 { #category : #testing }
@@ -361,13 +322,6 @@ FmxNGJavaMethod >> isOverriding [
 	
 	^self belongsTo directSuperclasses anySatisfy: [:each | 
 		each isInterface not and: [each understands: self signature]]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> isPureAccessor [
-	^self isGetter
-		or: [self isSetter
-		or: [self privateState propertyAt: #isPureAccessor ifAbsent: [false]]]
 ]
 
 { #category : #'as yet unclassified' }
