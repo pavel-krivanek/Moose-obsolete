@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTSubInheritance classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TSubInheritance super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

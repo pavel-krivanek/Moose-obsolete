@@ -12,7 +12,6 @@ Trait {
 { #category : #meta }
 FmxNGTCaughtException classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TCaughtException super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

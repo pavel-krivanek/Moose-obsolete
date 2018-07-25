@@ -10,7 +10,6 @@ Trait {
 { #category : #meta }
 FmxNGTTraitUsage classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TTraitUsage super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

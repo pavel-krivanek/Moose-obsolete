@@ -15,7 +15,6 @@ Trait {
 { #category : #meta }
 FmxNGTScopingEntity classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TScopingEntity super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

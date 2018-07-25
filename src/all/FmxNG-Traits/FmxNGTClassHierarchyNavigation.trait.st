@@ -6,7 +6,6 @@ Trait {
 { #category : #meta }
 FmxNGTClassHierarchyNavigation classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TClassHierarchyNavigation super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

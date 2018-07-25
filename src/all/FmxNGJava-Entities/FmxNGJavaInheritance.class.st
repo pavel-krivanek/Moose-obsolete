@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaInheritance,
 	#superclass : #FmxNGJavaAssociation,
-	#traits : 'FmxNGTSubInheritance + FmxNGTSuperInheritance',
-	#classTraits : 'FmxNGTSubInheritance classTrait + FmxNGTSuperInheritance classTrait',
+	#traits : 'FmxNGTInheritanceGlue + FmxNGTSubInheritance + FmxNGTSuperInheritance',
+	#classTraits : 'FmxNGTInheritanceGlue classTrait + FmxNGTSubInheritance classTrait + FmxNGTSuperInheritance classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaInheritance class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaInheritance class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTSubInheritance FmxNGTSuperInheritance)
+	^ #(FmxNGTInheritanceGlue FmxNGTSubInheritance FmxNGTSuperInheritance)
 ]
 
 { #category : #meta }

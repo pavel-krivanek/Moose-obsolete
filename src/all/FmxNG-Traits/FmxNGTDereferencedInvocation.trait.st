@@ -16,7 +16,6 @@ Trait {
 { #category : #meta }
 FmxNGTDereferencedInvocation classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TDereferencedInvocation super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

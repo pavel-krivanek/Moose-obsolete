@@ -23,7 +23,6 @@ Trait {
 { #category : #meta }
 FmxNGTReference classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TReference super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

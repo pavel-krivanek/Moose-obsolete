@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTAccessible classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TAccessible super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

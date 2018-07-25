@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXInheritance,
 	#superclass : #FAMIXAssociation,
-	#traits : 'FmxNGTSubInheritance + FmxNGTSuperInheritance',
-	#classTraits : 'FmxNGTSubInheritance classTrait + FmxNGTSuperInheritance classTrait',
+	#traits : 'FmxNGTInheritanceGlue + FmxNGTSubInheritance + FmxNGTSuperInheritance',
+	#classTraits : 'FmxNGTInheritanceGlue classTrait + FmxNGTSubInheritance classTrait + FmxNGTSuperInheritance classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FAMIXInheritance class >> generatedSlotNames [
 { #category : #generator }
 FAMIXInheritance class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTSubInheritance FmxNGTSuperInheritance)
+	^ #(FmxNGTInheritanceGlue FmxNGTSubInheritance FmxNGTSuperInheritance)
 ]
 
 { #category : #meta }

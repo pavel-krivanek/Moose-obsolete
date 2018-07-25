@@ -10,7 +10,6 @@ Trait {
 { #category : #meta }
 FmxNGTIndexedFileNavigation classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TIndexedFileNavigation super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

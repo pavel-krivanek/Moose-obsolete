@@ -116,7 +116,8 @@ Class {
 		'tWithImmediateSource',
 		'tClassHierarchyNavigation',
 		'tClassMetrics',
-		'tLCOMMetrics'
+		'tLCOMMetrics',
+		'tInheritanceGlue'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -871,7 +872,6 @@ FmxNGGenerator >> commentForTWithTypes [
 { #category : #definition }
 FmxNGGenerator >> defineProperties [
 
-	"FIX"
 	((tFileAnchor property: #correspondingFile type: #FmxNGTFile) 
 		comment: 'File associated to this source anchor').
 	((tFileAnchor property: #encoding type: #String) 
@@ -926,9 +926,6 @@ FmxNGGenerator >> defineProperties [
 
 	((tWithImmediateSource property: #source type: #String)
 		comment: 'Actual source code of the source entity').
-
-	"(tSourceAnchor property: #pharoEntity type: #Object)."
-
 ]
 
 { #category : #definition }
@@ -1589,6 +1586,10 @@ FmxNGGenerator >> defineTraits [
 	tClassHierarchyNavigation := builder newTraitNamed: #TClassHierarchyNavigation.
 	tClassMetrics := builder newTraitNamed: #TClassMetrics.
 	tLCOMMetrics := builder newTraitNamed: #TLCOMMetrics.
+
+	tInheritanceGlue := builder newTraitNamed: #TInheritanceGlue.
+	tInheritanceGlue glues: tSubInheritance with: tSuperInheritance.
+
 
 ]
 

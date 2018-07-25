@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTReferenceable classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TReferenceable super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

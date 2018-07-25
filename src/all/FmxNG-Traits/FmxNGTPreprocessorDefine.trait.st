@@ -11,7 +11,6 @@ Trait {
 { #category : #meta }
 FmxNGTPreprocessorDefine classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TPreprocessorDefine super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

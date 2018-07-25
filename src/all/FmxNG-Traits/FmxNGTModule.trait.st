@@ -13,7 +13,6 @@ Trait {
 { #category : #meta }
 FmxNGTModule classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TModule super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTWithParameterizedTypeUsers classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TWithParameterizedTypeUsers super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

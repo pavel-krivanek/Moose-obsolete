@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTInvocationsReceiver classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TInvocationsReceiver super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

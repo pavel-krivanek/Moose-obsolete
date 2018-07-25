@@ -47,8 +47,14 @@ FmxMBClass >> allRequirementNames [
 
 { #category : #accessing }
 FmxMBClass >> allTraitNames [ 
-
-	^ (self traitNamesFromRelations, self traitNamesFromGeneralizations) asSet sorted
+	
+	| selectedTraits |
+	
+	selectedTraits := (self traitsFromRelations, self traitGeneralizations).
+	
+	selectedTraits addAll: (self glueingTraitsOf: selectedTraits).
+	
+	^ (selectedTraits asSet collect: #fullName) sorted
 ]
 
 { #category : #converting }
@@ -186,6 +192,12 @@ FmxMBClass >> generateTestingMethodsIn: aClass [
 	super generateTestingMethodsIn: aClass
 ]
 
+{ #category : #accessing }
+FmxMBClass >> glueingTraitsOf: selectedTraits [
+
+	^  self builder traits select: [ :each | each gluesSomeOf: selectedTraits ]
+]
+
 { #category : #testing }
 FmxMBClass >> hasTraitGeneralization: aTrait [
 
@@ -278,8 +290,7 @@ FmxMBClass >> traitGeneralizations [
 { #category : #accessing }
 FmxMBClass >> traitNamesFromGeneralizations [
 
-	^ self traitGeneralizations collect: [ :each |
-		each fullName]
+	^ (self traitGeneralizations collect: #fullName) sorted
 ]
 
 { #category : #accessing }
@@ -287,8 +298,16 @@ FmxMBClass >> traitNamesFromRelations [
 
 	"returns traits defined by relations"
 
+	^ (self traitsFromRelations collect: #fullName) sorted
+]
+
+{ #category : #accessing }
+FmxMBClass >> traitsFromRelations [
+
+	"returns traits defined by relations"
+
 	^ ((self relations select: [:each | each side trait notNil ])
-		collect: [ :each | each side trait fullName ]) asSet sorted
+		collect: [ :each | each side trait]) asSet
 ]
 
 { #category : #testing }

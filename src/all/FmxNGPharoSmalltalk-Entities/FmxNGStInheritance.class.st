@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStInheritance,
 	#superclass : #FmxNGStAssociation,
-	#traits : 'FmxNGTSubInheritance + FmxNGTSuperInheritance',
-	#classTraits : 'FmxNGTSubInheritance classTrait + FmxNGTSuperInheritance classTrait',
+	#traits : 'FmxNGTInheritanceGlue + FmxNGTSubInheritance + FmxNGTSuperInheritance',
+	#classTraits : 'FmxNGTInheritanceGlue classTrait + FmxNGTSubInheritance classTrait + FmxNGTSuperInheritance classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGStInheritance class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStInheritance class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTSubInheritance FmxNGTSuperInheritance)
+	^ #(FmxNGTInheritanceGlue FmxNGTSubInheritance FmxNGTSuperInheritance)
 ]
 
 { #category : #meta }

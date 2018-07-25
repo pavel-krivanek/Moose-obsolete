@@ -5,7 +5,8 @@ Class {
 	#name : #FmxMBTrait,
 	#superclass : #FmxMBBehavior,
 	#instVars : [
-		'sides'
+		'sides',
+		'gluedTraits'
 	],
 	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
@@ -92,7 +93,6 @@ FmxMBTrait >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass
 
 	aRealClass classSide compile: ('annotation
 
-	<ignoreInTraitUsers>
 	<MSEClass: #{1} super: #{2}>
 	<generated>
 	<package: {3}>
@@ -101,12 +101,42 @@ FmxMBTrait >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass
 
 ]
 
+{ #category : #testing }
+FmxMBTrait >> glues: otherTraits [
+
+	gluedTraits := otherTraits asSet. 
+]
+
+{ #category : #testing }
+FmxMBTrait >> glues: trait1 with: trait2 [
+
+	self glues: { trait1. trait2 }.
+	
+
+]
+
+{ #category : #testing }
+FmxMBTrait >> gluesSomeOf: selectedTraits [
+
+	gluedTraits ifEmpty: [ ^ false ].
+
+	^ selectedTraits includesAll: gluedTraits
+]
+
 { #category : #initialization }
 FmxMBTrait >> initialize [
 
 	super initialize.
 	
+	gluedTraits := Set new.
+	
 
+]
+
+{ #category : #testing }
+FmxMBTrait >> isGlueingTrait [
+
+	^ false
 ]
 
 { #category : #testing }

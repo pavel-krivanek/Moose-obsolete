@@ -9,7 +9,6 @@ Trait {
 { #category : #meta }
 FmxNGTGlobalVariableScope classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TGlobalVariableScope super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

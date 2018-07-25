@@ -6,7 +6,6 @@ Trait {
 { #category : #meta }
 FmxNGTLCOMMetrics classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TLCOMMetrics super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

@@ -27,7 +27,6 @@ Trait {
 { #category : #meta }
 FmxNGTAnnotationTypeAttribute classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TAnnotationTypeAttribute super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>

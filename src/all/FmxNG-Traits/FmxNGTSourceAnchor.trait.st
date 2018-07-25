@@ -12,7 +12,6 @@ Trait {
 { #category : #meta }
 FmxNGTSourceAnchor classSide >> annotation [
 
-	<ignoreInTraitUsers>
 	<MSEClass: #TSourceAnchor super: #Trait>
 	<generated>
 	<package: #'FmxNG-Traits'>
