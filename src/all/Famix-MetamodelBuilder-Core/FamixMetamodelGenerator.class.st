@@ -101,7 +101,16 @@ FamixMetamodelGenerator >> builder: anObject [
 { #category : #definition }
 FamixMetamodelGenerator >> builderWithStandardTraits [
 
-	^ (FmxNGGenerator builderWithDefinitions)
+	| standardBuilder mooseGenerator |
+	
+	standardBuilder := FmxNGGenerator builderWithDefinitions.
+
+	"add Moose-Query"
+	mooseGenerator := FmxNGMooseQueryGenerator new.
+	mooseGenerator builder: standardBuilder.
+	mooseGenerator define.
+	
+	^ standardBuilder
 		doNotGenerateCurrent;
 		generator: self;
 		yourself.

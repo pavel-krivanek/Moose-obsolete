@@ -24,3 +24,8 @@ FmxNGTInheritanceGlue classSide >> generatedTraitNames [
 	<generated>
 	^ #()
 ]
+
+{ #category : #testing }
+FmxNGTInheritanceGlue >> isInheritance [ 
+	^true
+]

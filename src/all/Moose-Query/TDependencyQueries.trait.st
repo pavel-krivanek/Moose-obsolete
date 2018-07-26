@@ -61,6 +61,28 @@ Trait {
 	#category : #'Moose-Query'
 }
 
+{ #category : #meta }
+TDependencyQueries classSide >> annotation [
+
+	<MSEClass: #TDependencyQueries super: #Trait>
+	<generated>
+	<package: #'Moose-Query'>
+	^self
+]
+
+{ #category : #generator }
+TDependencyQueries classSide >> generatedSlotNames [
+	<generated>
+	'TDependencyQueries class>>#generatedSlotNames'.
+	^ #()
+]
+
+{ #category : #generator }
+TDependencyQueries classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
 { #category : #'moosequery-queries-generic' }
 TDependencyQueries >> createFromTo: anInOutSymbol [
 	self

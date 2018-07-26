@@ -12,11 +12,33 @@ Trait {
 	#category : #'Moose-Query'
 }
 
+{ #category : #meta }
+TAssociationMetaLevelDependency classSide >> annotation [
+
+	<MSEClass: #TAssociationMetaLevelDependency super: #Trait>
+	<generated>
+	<package: #'Moose-Query'>
+	^self
+]
+
 { #category : #accessing }
 TAssociationMetaLevelDependency classSide >> dependencyFM3PropertyDescription [
 	"Return all the properties corresponding to the source or the target of the association"
 
 	^ self allDeclaredProperties select: [ :e | e isSource or: [ e isTarget ] ]
+]
+
+{ #category : #generator }
+TAssociationMetaLevelDependency classSide >> generatedSlotNames [
+	<generated>
+	'TAssociationMetaLevelDependency class>>#generatedSlotNames'.
+	^ #()
+]
+
+{ #category : #generator }
+TAssociationMetaLevelDependency classSide >> generatedTraitNames [
+	<generated>
+	^ #()
 ]
 
 { #category : #deprecated }

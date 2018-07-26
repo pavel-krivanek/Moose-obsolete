@@ -42,6 +42,15 @@ TEntityMetaLevelDependency classSide >> allParentTypes [
 	^ allParentTypes ifNil: [ allParentTypes := self privateAllParentTypes ]
 ]
 
+{ #category : #meta }
+TEntityMetaLevelDependency classSide >> annotation [
+
+	<MSEClass: #TEntityMetaLevelDependency super: #Trait>
+	<generated>
+	<package: #'Moose-Query'>
+	^self
+]
+
 { #category : #'Moose-Query-Extensions' }
 TEntityMetaLevelDependency classSide >> childrenAccessors [
 	self
@@ -66,6 +75,19 @@ TEntityMetaLevelDependency classSide >> childrenTypes [
 TEntityMetaLevelDependency classSide >> dependencyFM3PropertyDescription [
 	^ self allDeclaredProperties
 		select: [ :e | e hasOpposite and: [ e opposite isSource or: [ e opposite isTarget ] ] ]
+]
+
+{ #category : #generator }
+TEntityMetaLevelDependency classSide >> generatedSlotNames [
+	<generated>
+	'TEntityMetaLevelDependency class>>#generatedSlotNames'.
+	^ #()
+]
+
+{ #category : #generator }
+TEntityMetaLevelDependency classSide >> generatedTraitNames [
+	<generated>
+	^ #()
 ]
 
 { #category : #accessing }

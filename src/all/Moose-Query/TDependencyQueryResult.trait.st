@@ -8,6 +8,28 @@ Trait {
 	#category : #'Moose-Query'
 }
 
+{ #category : #meta }
+TDependencyQueryResult classSide >> annotation [
+
+	<MSEClass: #TDependencyQueryResult super: #Trait>
+	<generated>
+	<package: #'Moose-Query'>
+	^self
+]
+
+{ #category : #generator }
+TDependencyQueryResult classSide >> generatedSlotNames [
+	<generated>
+	'TDependencyQueryResult class>>#generatedSlotNames'.
+	^ #()
+]
+
+{ #category : #generator }
+TDependencyQueryResult classSide >> generatedTraitNames [
+	<generated>
+	^ #()
+]
+
 { #category : #filtering }
 TDependencyQueryResult >> allAtScope: aClassFamix [
 	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) allAtScope: aClassFamix in: res ]) asSet
