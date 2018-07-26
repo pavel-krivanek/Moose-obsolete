@@ -35,11 +35,6 @@ FAMIXReference class >> requirements [
 	^ {  }
 ]
 
-{ #category : #'instance creation' }
-FAMIXReference class >> source: source target: target [
-	^ self new source: source; target: target
-]
-
 { #category : #'Famix-Extensions' }
 FAMIXReference >> accept: aVisitor [
 

@@ -29,6 +29,13 @@ FmxNGTNamed classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #'instance creation' }
+FmxNGTNamed classSide >> named: aString [
+	^ self new
+		name: aString;
+		yourself
+]
+
 { #category : #testing }
 FmxNGTNamed >> hasUniqueMooseNameInModel [
 	" all subclasses should call the method: 'resetMooseName' if a change causes the moosename to change "

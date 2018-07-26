@@ -15,11 +15,6 @@ FAMIXAbstractFile class >> annotation [
 	^self
 ]
 
-{ #category : #constants }
-FAMIXAbstractFile class >> famixFolderSeparatorString [
-	^'/'
-]
-
 { #category : #generator }
 FAMIXAbstractFile class >> generatedSlotNames [
 	<generated>
@@ -33,26 +28,11 @@ FAMIXAbstractFile class >> generatedTraitNames [
 	^ #(FmxNGTFileSystemEntity)
 ]
 
-{ #category : #'instance creation' }
-FAMIXAbstractFile class >> named: aName filedIn: aFolder [
-
-	^self basicNew
-				initialize;
-				name: (aName copyReplaceAll: self systemFolderSeparatorString with: self famixFolderSeparatorString) asSymbol;
-				parentFolder: aFolder;
-				yourself.
-]
-
 { #category : #meta }
 FAMIXAbstractFile class >> requirements [
 
 	<generated>
 	^ {  }
-]
-
-{ #category : #constants }
-FAMIXAbstractFile class >> systemFolderSeparatorString [
-	^ DiskStore delimiter asString 
 ]
 
 { #category : #accessing }

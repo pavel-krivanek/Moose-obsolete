@@ -15,6 +15,11 @@ FmxNGTFileSystemEntity classSide >> annotation [
 	^self
 ]
 
+{ #category : #constants }
+FmxNGTFileSystemEntity classSide >> famixFolderSeparatorString [
+	^'/'
+]
+
 { #category : #generator }
 FmxNGTFileSystemEntity classSide >> generatedSlotNames [
 	<generated>
@@ -26,6 +31,21 @@ FmxNGTFileSystemEntity classSide >> generatedSlotNames [
 FmxNGTFileSystemEntity classSide >> generatedTraitNames [
 	<generated>
 	^ #()
+]
+
+{ #category : #constants }
+FmxNGTFileSystemEntity classSide >> named: aName filedIn: aFolder [
+
+	^self basicNew
+				initialize;
+				name: (aName copyReplaceAll: self systemFolderSeparatorString with: self famixFolderSeparatorString) asSymbol;
+				parentFolder: aFolder;
+				yourself.
+]
+
+{ #category : #constants }
+FmxNGTFileSystemEntity classSide >> systemFolderSeparatorString [
+	^ DiskStore delimiter asString 
 ]
 
 { #category : #accessing }

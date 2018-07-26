@@ -19,25 +19,6 @@ FAMIXIndexedFileAnchor class >> annotation [
 	^self
 ]
 
-{ #category : #'instance creation' }
-FAMIXIndexedFileAnchor class >> fileName: aString startPos: anInteger endPos: anotherInteger [
-	^ self
-		fileName: aString
-		startPos: anInteger
-		endPos: anotherInteger
-		model: nil
-]
-
-{ #category : #'instance creation' }
-FAMIXIndexedFileAnchor class >> fileName: aString startPos: anInteger endPos: anotherInteger model: aMooseModel [
-	^ self new
-		mooseModel: aMooseModel;
-		fileName: aString;
-		startPos: anInteger;
-		endPos: anotherInteger;
-		yourself
-]
-
 { #category : #generator }
 FAMIXIndexedFileAnchor class >> generatedSlotNames [
 	<generated>

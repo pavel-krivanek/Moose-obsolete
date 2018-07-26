@@ -42,6 +42,11 @@ FmxNGTReference classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #'instance creation' }
+FmxNGTReference classSide >> source: source target: target [
+	^ self new source: source; target: target
+]
+
 { #category : #accessing }
 FmxNGTReference >> from [
 	^ self source. 

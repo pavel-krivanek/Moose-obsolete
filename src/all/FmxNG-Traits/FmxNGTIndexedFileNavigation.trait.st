@@ -16,6 +16,25 @@ FmxNGTIndexedFileNavigation classSide >> annotation [
 	^self
 ]
 
+{ #category : #'instance creation' }
+FmxNGTIndexedFileNavigation classSide >> fileName: aString startPos: anInteger endPos: anotherInteger [
+	^ self
+		fileName: aString
+		startPos: anInteger
+		endPos: anotherInteger
+		model: nil
+]
+
+{ #category : #'instance creation' }
+FmxNGTIndexedFileNavigation classSide >> fileName: aString startPos: anInteger endPos: anotherInteger model: aMooseModel [
+	^ self new
+		mooseModel: aMooseModel;
+		fileName: aString;
+		startPos: anInteger;
+		endPos: anotherInteger;
+		yourself
+]
+
 { #category : #generator }
 FmxNGTIndexedFileNavigation classSide >> generatedSlotNames [
 	<generated>

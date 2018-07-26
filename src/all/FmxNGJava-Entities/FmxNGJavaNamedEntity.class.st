@@ -28,6 +28,11 @@ FmxNGJavaNamedEntity class >> generatedTraitNames [
 	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTPossibleStub FmxNGTWithAnnotationInstances FmxNGTWithModifiers TDependencyQueries TEntityMetaLevelDependency)
 ]
 
+{ #category : #'Moose-Query' }
+FmxNGJavaNamedEntity class >> incomingMSEProperties [
+	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
+]
+
 { #category : #meta }
 FmxNGJavaNamedEntity class >> requirements [
 

@@ -38,28 +38,6 @@ FAMIXNamedEntity class >> incomingMSEProperties [
 	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
 ]
 
-{ #category : #accessing }
-FAMIXNamedEntity class >> incomingMSEPropertiesCache: aValue [
-	incomingMSEProperties := aValue
-]
-
-{ #category : #'instance creation' }
-FAMIXNamedEntity class >> named: aString [
-	^ self new
-		name: aString;
-		yourself
-]
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> outgoingMSEPropertiesCache: aValue [
-	outgoingMSEProperties := aValue.
-]
-
-{ #category : #accessing }
-FAMIXNamedEntity class >> parentMetaclass [
-	^((self class >> #annotation) pragmas select: [ :p | p keyword = 'parentMetaClass:' ]) collect: [:p | p arguments first ]
-]
-
 { #category : #'Moose-Query-Extensions' }
 FAMIXNamedEntity class >> parentSelector [
 	self 

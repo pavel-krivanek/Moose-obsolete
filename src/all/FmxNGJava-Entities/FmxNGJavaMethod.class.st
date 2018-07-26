@@ -587,21 +587,6 @@ FmxNGJavaMethod >> providerTypes [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> sourceText [
-	self flag: 'This code should be delegated to the FAMIXPharoAnchor'.
-	^ (self sourceLanguage isSmalltalk and: [ self class shouldSearchForSmalltalkCodeInImage ])
-		ifTrue: [ [ | class |
-			"take the normal class"
-			class := Smalltalk at: self parentType instanceSide name asSymbol.
-			self hasClassScope
-				ifFalse: [ class sourceCodeAt: self name asSymbol ]
-				ifTrue: [ class class sourceCodeAt: self name asSymbol ]	"dispatch on class or metaclass depending on method scope" ]
-				on: Error
-				do: [ super sourceText ]	"probably class is not in the system" ]
-		ifFalse: [ super sourceText ]
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> typeScope [
 
 	^ self parentType 
