@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaSourceAnchor,
 	#superclass : #FmxNGJavaEntity,
-	#traits : 'FmxNGTSourceAnchor + TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'FmxNGTSourceAnchor classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
+	#traits : 'FmxNGTSourceAnchor + TDependencyQueries + TEntityMetaLevelDependency',
+	#classTraits : 'FmxNGTSourceAnchor classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaSourceAnchor class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaSourceAnchor class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTSourceAnchor)
+	^ #(FmxNGTSourceAnchor TDependencyQueries TEntityMetaLevelDependency)
 ]
 
 { #category : #meta }

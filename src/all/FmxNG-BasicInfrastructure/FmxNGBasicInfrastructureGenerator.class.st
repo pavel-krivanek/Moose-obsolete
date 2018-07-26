@@ -33,6 +33,9 @@ FmxNGBasicInfrastructureGenerator >> defineHierarchy [
 
 	sourceAnchor --|> entity.
 	sourceAnchor --|> #TSourceAnchor.
+	
+	sourceAnchor --|> #TEntityMetaLevelDependency.
+	sourceAnchor --|> #TDependencyQueries.
 
 	sourceLanguage --|> entity.
 	sourceLanguage --|> #TSourceLanguage.
@@ -45,11 +48,16 @@ FmxNGBasicInfrastructureGenerator >> defineHierarchy [
 	association --|> sourcedEntity.
 	association --|> #TAssociation.
 	
+	association --|> #TAssociationMetaLevelDependency.
+	
 	comment --|> sourcedEntity.
 	comment --|> #TComment.
 
 	namedEntity --|> sourcedEntity.
 	namedEntity --|> #TNamed.
+
+	namedEntity --|> #TDependencyQueries.
+	namedEntity --|> #TEntityMetaLevelDependency.
 
 ]
 

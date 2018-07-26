@@ -25,7 +25,7 @@ FmxNGJavaAnnotationInstance class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaAnnotationInstance class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTAnnotationInstance FmxNGTTypedAnnotationInstance FmxNGTWithAnnotationInstanceAttributes)
+	^ #(FmxNGTAnnotationInstance FmxNGTTypedAnnotationInstance FmxNGTWithAnnotationInstanceAttributes TDependencyQueries)
 ]
 
 { #category : #meta }

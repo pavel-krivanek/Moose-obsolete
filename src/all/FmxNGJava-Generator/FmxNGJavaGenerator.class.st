@@ -111,10 +111,12 @@ FmxNGJavaGenerator >> defineHierarchy [
 	annotationInstance --|> #TAnnotationInstance.
 	annotationInstance --|> #TWithAnnotationInstanceAttributes.
 	annotationInstance --|> #TTypedAnnotationInstance.
+	annotationInstance --|> #TDependencyQueries.
 
 	annotationInstanceAttribute --|> sourcedEntity.
 	annotationInstanceAttribute --|> #TAnnotationInstanceAttribute.
 	annotationInstanceAttribute --|> #TTypedAnnotationInstanceAttribute.
+	annotationInstanceAttribute --|> #TDependencyQueries.
 
 	annotationType --|> type.
 	annotationType --|> #TAnnotationType.
@@ -153,6 +155,8 @@ FmxNGJavaGenerator >> defineHierarchy [
 	containerEntity --|> namedEntity.
 	containerEntity --|> #TWithTypes.
 	containerEntity --|> #TWithAnnotationTypes.
+	containerEntity --|> #TDependencyQueries.
+	containerEntity --|> #TOODependencyQueries.
 
 	declaredException --|> exception.
 	declaredException --|> #TDeclaredException.

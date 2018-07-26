@@ -25,7 +25,7 @@ FmxNGJavaAssociation class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaAssociation class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTAssociation)
+	^ #(FmxNGTAssociation TAssociationMetaLevelDependency)
 ]
 
 { #category : #meta }
