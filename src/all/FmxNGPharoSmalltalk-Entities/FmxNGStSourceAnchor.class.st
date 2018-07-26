@@ -45,6 +45,11 @@ FmxNGStSourceAnchor class >> requirements [
 	^ { FmxNGStSourcedEntity }
 ]
 
+{ #category : #'as yet unclassified' }
+FmxNGStSourceAnchor >> childrenTypes [
+	^ self class childrenTypes
+]
+
 { #category : #initialization }
 FmxNGStSourceAnchor >> initialize [
 	super initialize.

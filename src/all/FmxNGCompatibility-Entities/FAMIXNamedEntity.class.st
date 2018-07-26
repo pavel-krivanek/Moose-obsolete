@@ -20,11 +20,6 @@ FAMIXNamedEntity class >> belongsToMethod [
 	^ self compiledMethodAt: #belongsTo ifAbsent: nil
 ]
 
-{ #category : #'Moose-Query-Extensions' }
-FAMIXNamedEntity class >> childrenTypes [
-	^ self privateChildrenTypes
-]
-
 { #category : #generator }
 FAMIXNamedEntity class >> generatedSlotNames [
 	<generated>
@@ -73,11 +68,6 @@ FAMIXNamedEntity class >> parentSelector [
 		in: 'Pharo-6.0-60328-'
 		transformWith: '`@receiver parentSelector' -> '`@receiver parentSelectors'.
 	^ self parentSelectors
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXNamedEntity class >> parentTypes [
-	^ self privateParentTypes 
 ]
 
 { #category : #meta }

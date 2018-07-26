@@ -9,6 +9,7 @@ Trait {
 		'allChildrenTypes',
 		'allParentTypes',
 		'allIncomingAssociationTypes',
+		'allOutgoingAssociationTypes',
 		'outgoingAssociationTypes',
 		'childrenSelectors',
 		'parentSelectors',
@@ -68,7 +69,7 @@ TEntityMetaLevelDependency classSide >> childrenSelectors [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> childrenTypes [
-	^ self explicitRequirement 
+	^ self privateChildrenTypes
 ]
 
 { #category : #accessing }
@@ -122,7 +123,7 @@ TEntityMetaLevelDependency classSide >> parentSelectors [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> parentTypes [
-	^ self explicitRequirement 
+	^ self privateParentTypes 
 ]
 
 { #category : #accessing }
@@ -339,11 +340,6 @@ TEntityMetaLevelDependency >> childrenEntities [
 { #category : #accessing }
 TEntityMetaLevelDependency >> childrenSelectors [
 	^ self class childrenSelectors
-]
-
-{ #category : #accessing }
-TEntityMetaLevelDependency >> childrenTypes [
-	^ self class childrenTypes
 ]
 
 { #category : #accessing }

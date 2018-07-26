@@ -15,11 +15,6 @@ FAMIXAnnotationInstance class >> annotation [
 	^self
 ]
 
-{ #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstance class >> childrenTypes [
-	^ self privateChildrenTypes
-]
-
 { #category : #generator }
 FAMIXAnnotationInstance class >> generatedSlotNames [
 	<generated>
@@ -41,11 +36,6 @@ FAMIXAnnotationInstance class >> parentSelector [
 		in: 'Pharo-6.0-60328-'
 		transformWith: '`@receiver parentSelector' -> '`@receiver parentSelectors'.
 	^ self parentSelectors
-]
-
-{ #category : #'Moose-Query-Extensions' }
-FAMIXAnnotationInstance class >> parentTypes [
-	^ self privateParentTypes 
 ]
 
 { #category : #meta }
