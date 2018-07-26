@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaContainerEntity,
 	#superclass : #FmxNGJavaNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithTypes + TOODependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
