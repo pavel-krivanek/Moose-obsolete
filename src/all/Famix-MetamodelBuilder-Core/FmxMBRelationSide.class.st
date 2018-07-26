@@ -14,7 +14,8 @@ Class {
 		'relatedClass',
 		'derived',
 		'source',
-		'target'
+		'target',
+		'subordinate'
 	],
 	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
@@ -156,6 +157,7 @@ FmxMBRelationSide >> initialize [
 	cardinality := #one.
 	container := false.
 	derived := false.
+	subordinate := false.
 	target := false.
 	source := false.
 
@@ -189,6 +191,12 @@ FmxMBRelationSide >> isOne [
 FmxMBRelationSide >> isSource [
 
 	^ source
+]
+
+{ #category : #properties }
+FmxMBRelationSide >> isSubordinate [
+
+	^ subordinate
 ]
 
 { #category : #properties }
@@ -348,6 +356,16 @@ FmxMBRelationSide >> source [
 { #category : #properties }
 FmxMBRelationSide >> source: anObject [
 	source := anObject
+]
+
+{ #category : #properties }
+FmxMBRelationSide >> subordinate [
+	subordinate := true
+]
+
+{ #category : #properties }
+FmxMBRelationSide >> subordinate: anObject [
+	subordinate := anObject
 ]
 
 { #category : #properties }
