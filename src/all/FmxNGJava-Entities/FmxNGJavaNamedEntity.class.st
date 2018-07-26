@@ -35,6 +35,13 @@ FmxNGJavaNamedEntity class >> requirements [
 	^ { FmxNGJavaNamedEntity }
 ]
 
+{ #category : #'Moose-Query' }
+FmxNGJavaNamedEntity class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	self resetTEntityMetaLevelDependencyCaches.
+
+]
+
 { #category : #'as yet unclassified' }
 FmxNGJavaNamedEntity >> accept: aVisitor [
 

@@ -43,7 +43,8 @@ FmxNGStNamedEntity class >> requirements [
 { #category : #'as yet unclassified' }
 FmxNGStNamedEntity class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
-	childrenSelectors := parentSelectors := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := allOutgoingAssociationTypes := allIncomingAssociationTypes := nil
+	self resetTEntityMetaLevelDependencyCaches.
+
 ]
 
 { #category : #testing }

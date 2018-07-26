@@ -35,6 +35,13 @@ FmxNGJavaAnnotationInstance class >> requirements [
 	^ { FmxNGJavaAnnotationInstance. FmxNGJavaNamedEntity }
 ]
 
+{ #category : #'Moose-Query' }
+FmxNGJavaAnnotationInstance class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	self resetTEntityMetaLevelDependencyCaches.
+
+]
+
 { #category : #'as yet unclassified' }
 FmxNGJavaAnnotationInstance >> belongsTo [
 	^ self annotatedEntity

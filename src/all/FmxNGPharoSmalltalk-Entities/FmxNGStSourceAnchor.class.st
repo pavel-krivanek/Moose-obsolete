@@ -46,6 +46,13 @@ FmxNGStSourceAnchor class >> requirements [
 ]
 
 { #category : #'as yet unclassified' }
+FmxNGStSourceAnchor class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	self resetTEntityMetaLevelDependencyCaches.
+
+]
+
+{ #category : #'as yet unclassified' }
 FmxNGStSourceAnchor >> childrenTypes [
 	^ self class childrenTypes
 ]

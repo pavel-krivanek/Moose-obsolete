@@ -191,6 +191,12 @@ TEntityMetaLevelDependency classSide >> privateParentTypes [
 	^ self mooseDescription allAttributes select: #isContainer thenCollect: [:prop | prop type implementingClass]
 ]
 
+{ #category : #'Moose-Query-Extensions' }
+TEntityMetaLevelDependency classSide >> resetTEntityMetaLevelDependencyCaches [
+
+	childrenSelectors := parentSelectors := allChildrenTypes := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := allOutgoingAssociationTypes := allIncomingAssociationTypes := nil
+]
+
 { #category : #private }
 TEntityMetaLevelDependency >> addAllChildrenIn: aCollection [
 	aCollection addAll: self children.

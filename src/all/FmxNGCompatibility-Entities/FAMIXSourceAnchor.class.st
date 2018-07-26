@@ -47,6 +47,13 @@ FAMIXSourceAnchor class >> requirements [
 	^ { FAMIXSourcedEntity }
 ]
 
+{ #category : #generator }
+FAMIXSourceAnchor class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	self resetTEntityMetaLevelDependencyCaches.
+
+]
+
 { #category : #'Famix-Extensions' }
 FAMIXSourceAnchor >> accept: aVisitor [
 

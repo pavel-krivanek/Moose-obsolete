@@ -80,7 +80,7 @@ FAMIXNamedEntity class >> requirements [
 { #category : #'Moose-Query-Extensions' }
 FAMIXNamedEntity class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
-	childrenSelectors := parentSelectors := allChildrenTypes := allParentTypes := outgoingMSEProperties := incomingMSEProperties := incomingAssociationTypes := outgoingAssociationTypes := allOutgoingAssociationTypes := allIncomingAssociationTypes := nil
+	self resetTEntityMetaLevelDependencyCaches.
 ]
 
 { #category : #'Famix-Extensions' }

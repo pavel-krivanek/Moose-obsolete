@@ -38,8 +38,7 @@ FmxNGStAnnotationInstanceAttribute class >> requirements [
 { #category : #'as yet unclassified' }
 FmxNGStAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
-	childrenSelectors := nil.
-	parentSelectors := nil.
+	self resetTEntityMetaLevelDependencyCaches.
 
 ]
 

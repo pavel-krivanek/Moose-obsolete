@@ -47,6 +47,13 @@ FmxNGJavaSourceAnchor class >> requirements [
 	^ { FmxNGJavaSourcedEntity }
 ]
 
+{ #category : #meta }
+FmxNGJavaSourceAnchor class >> resetMooseQueryCaches [
+	super resetMooseQueryCaches.
+	self resetTEntityMetaLevelDependencyCaches.
+
+]
+
 { #category : #'as yet unclassified' }
 FmxNGJavaSourceAnchor >> accept: aVisitor [
 

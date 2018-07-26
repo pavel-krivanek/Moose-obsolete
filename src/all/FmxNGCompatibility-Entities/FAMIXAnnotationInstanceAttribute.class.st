@@ -48,10 +48,8 @@ FAMIXAnnotationInstanceAttribute class >> requirements [
 { #category : #'Moose-Query-Extensions' }
 FAMIXAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
-	childrenSelectors := nil.
-	parentSelectors := nil.
-	allChildrenTypes := nil.
-	allParentTypes := nil
+	self resetTEntityMetaLevelDependencyCaches.
+
 ]
 
 { #category : #'as yet unclassified' }
