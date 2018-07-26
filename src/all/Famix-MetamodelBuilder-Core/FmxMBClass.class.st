@@ -5,7 +5,6 @@ Class {
 	#name : #FmxMBClass,
 	#superclass : #FmxMBBehavior,
 	#instVars : [
-		'traitGeneralizations',
 		'classGeneralization',
 		'requirements',
 		'isHierarchyRoot'
@@ -17,13 +16,6 @@ Class {
 FmxMBClass >> acceptVisitor: aVisitor [
 
 	^ aVisitor visitClass: self.
-]
-
-{ #category : #accessing }
-FmxMBClass >> addTraitGeneralization: aTrait [
-
-	(self traitGeneralizations includes: aTrait)
-		ifFalse: [ self traitGeneralizations add: aTrait ]
 ]
 
 { #category : #accessing }
@@ -279,18 +271,6 @@ FmxMBClass >> requires: collectionOfClasses [
 FmxMBClass >> subclassOf: aClass [
 	
 	self generalization: aClass
-]
-
-{ #category : #accessing }
-FmxMBClass >> traitGeneralizations [
-
-	^ traitGeneralizations ifNil: [ traitGeneralizations := OrderedCollection new ]
-]
-
-{ #category : #accessing }
-FmxMBClass >> traitNamesFromGeneralizations [
-
-	^ (self traitGeneralizations collect: #fullName) sorted
 ]
 
 { #category : #accessing }

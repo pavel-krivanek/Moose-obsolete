@@ -17,6 +17,12 @@ FmxMBTrait >> acceptVisitor: aVisitor [
 	^ aVisitor visitTrait: self.
 ]
 
+{ #category : #accessing }
+FmxMBTrait >> allTraitNames [
+
+	^ self traitGeneralizations collect: #fullName
+]
+
 { #category : #generating }
 FmxMBTrait >> as: aTraitName property: propertyName [
 
@@ -49,7 +55,14 @@ FmxMBTrait >> defaultTag [
 { #category : #accessing }
 FmxMBTrait >> generalization: anObject [
 
-	FmxMBTraitsGeneralizationError signal
+	anObject isSymbol
+		ifTrue: [ self addTraitGeneralization: (self builder ensureTraitNamed: anObject) ]
+		ifFalse: [ 
+			anObject isMetamodelTrait 
+				ifTrue: [ self addTraitGeneralization: anObject ]
+				ifFalse: [ FmxMBTraitsGeneralizationError signal ] ]
+			
+	
 ]
 
 { #category : #generating }
@@ -61,7 +74,7 @@ FmxMBTrait >> generate [
 	
 	traitName := self fullName.
 	
-	aTrait := self builder environment createTraitNamed: traitName asSymbol slots: self slotDefinitions in: self packageName overwrite: true.
+	aTrait := self builder environment createTraitNamed: traitName asSymbol uses: self allTraitNames slots: self slotDefinitions in: self packageName overwrite: true.
 
 	aTrait tagWith: self tag.
 	self builder environment setComment: self comment for: aTrait.

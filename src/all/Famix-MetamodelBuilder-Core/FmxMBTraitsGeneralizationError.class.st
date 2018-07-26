@@ -7,5 +7,5 @@ Class {
 { #category : #accessing }
 FmxMBTraitsGeneralizationError >> messageText [
 
-	^ 'Traits cannot inherit from other entities'
+	^ 'Traits cannot inherit from classes'
 ]

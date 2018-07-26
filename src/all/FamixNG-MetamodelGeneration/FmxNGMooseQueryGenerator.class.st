@@ -18,6 +18,13 @@ FmxNGMooseQueryGenerator class >> packageName [
 ]
 
 { #category : #definition }
+FmxNGMooseQueryGenerator >> defineHierarchy [
+
+	tOODependencyQueries --|> tDependencyQueries.
+
+]
+
+{ #category : #definition }
 FmxNGMooseQueryGenerator >> defineTraits [
 
 	tAssociationMetaLevelDependency := builder newTraitNamed: #TAssociationMetaLevelDependency.

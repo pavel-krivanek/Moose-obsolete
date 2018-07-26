@@ -14,7 +14,8 @@ Class {
 		'prefix',
 		'packageName',
 		'testingSelectors',
-		'isRoot'
+		'isRoot',
+		'traitGeneralizations'
 	],
 	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
@@ -36,6 +37,13 @@ FmxMBBehavior >> addRelationSide: aRelationSide [
 		ifTrue: [ ^ self ].
 
 	self sides add: aRelationSide
+]
+
+{ #category : #accessing }
+FmxMBBehavior >> addTraitGeneralization: aTrait [
+
+	(self traitGeneralizations includes: aTrait)
+		ifFalse: [ self traitGeneralizations add: aTrait ]
 ]
 
 { #category : #converting }
@@ -395,6 +403,18 @@ FmxMBBehavior >> testingSelectors [
 FmxMBBehavior >> testingSelectors: aCollection [
 
 	testingSelectors := aCollection
+]
+
+{ #category : #accessing }
+FmxMBBehavior >> traitGeneralizations [
+
+	^ traitGeneralizations ifNil: [ traitGeneralizations := OrderedCollection new ]
+]
+
+{ #category : #accessing }
+FmxMBBehavior >> traitNamesFromGeneralizations [
+
+	^ (self traitGeneralizations collect: #fullName) sorted
 ]
 
 { #category : #accessing }
