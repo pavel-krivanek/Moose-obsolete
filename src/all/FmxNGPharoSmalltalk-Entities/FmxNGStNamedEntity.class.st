@@ -25,7 +25,7 @@ FmxNGStNamedEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStNamedEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTPossibleStub FmxNGTWithAnnotationInstances FmxNGTWithModifiers)
+	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTPossibleStub FmxNGTWithAnnotationInstances FmxNGTWithModifiers TDependencyQueries TEntityMetaLevelDependency)
 ]
 
 { #category : #accessing }

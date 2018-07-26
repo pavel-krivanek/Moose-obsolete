@@ -29,7 +29,7 @@ FmxNGStAssociation class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStAssociation class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTAssociation)
+	^ #(FmxNGTAssociation TAssociationMetaLevelDependency)
 ]
 
 { #category : #meta }

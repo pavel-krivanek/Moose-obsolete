@@ -25,7 +25,7 @@ FmxNGStContainerEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStContainerEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithAnnotationTypes FmxNGTWithTypes)
+	^ #(FmxNGTWithAnnotationTypes FmxNGTWithTypes TOODependencyQueries)
 ]
 
 { #category : #meta }

@@ -86,10 +86,13 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	annotationInstance --|> #TAnnotationInstance.
 	annotationInstance --|> #TWithAnnotationInstanceAttributes.
 	annotationInstance --|> #TTypedAnnotationInstance.
+	annotationInstance --|> #TDependencyQueries.
 
 	annotationInstanceAttribute --|> sourcedEntity.
 	annotationInstanceAttribute --|> #TAnnotationInstanceAttribute.
 	annotationInstanceAttribute --|> #TTypedAnnotationInstanceAttribute.
+	annotationInstanceAttribute --|> #TEntityMetaLevelDependency.
+	annotationInstanceAttribute --|> #TDependencyQueries.
 
 	annotationType --|> type.
 	annotationType --|> #TAnnotationType.
@@ -110,10 +113,10 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	class --|> #TWithSubInheritances.
 	class --|> #TClassHierarchyNavigation.
 	
-
 	containerEntity --|> namedEntity.
 	containerEntity --|> #TWithTypes.
 	containerEntity --|> #TWithAnnotationTypes.
+	containerEntity --|> #TOODependencyQueries.
 
 	globalVariable --|> structuralEntity.
 	globalVariable --|> #TGlobalVariable.

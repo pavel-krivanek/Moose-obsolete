@@ -25,7 +25,7 @@ FmxNGStAnnotationInstance class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStAnnotationInstance class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTAnnotationInstance FmxNGTTypedAnnotationInstance FmxNGTWithAnnotationInstanceAttributes)
+	^ #(FmxNGTAnnotationInstance FmxNGTTypedAnnotationInstance FmxNGTWithAnnotationInstanceAttributes TDependencyQueries)
 ]
 
 { #category : #meta }
