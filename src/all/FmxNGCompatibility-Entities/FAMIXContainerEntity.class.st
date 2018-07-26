@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXContainerEntity,
 	#superclass : #FAMIXNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes + TOODependencyQueries + TDependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait + TDependencyQueries classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FAMIXContainerEntity class >> generatedSlotNames [
 { #category : #generator }
 FAMIXContainerEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithAnnotationTypes FmxNGTWithFunctions FmxNGTWithTypes)
+	^ #(FmxNGTWithAnnotationTypes FmxNGTWithFunctions FmxNGTWithTypes TDependencyQueries TOODependencyQueries)
 ]
 
 { #category : #meta }

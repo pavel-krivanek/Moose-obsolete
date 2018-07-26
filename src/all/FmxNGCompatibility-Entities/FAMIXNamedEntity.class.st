@@ -35,7 +35,7 @@ FAMIXNamedEntity class >> generatedSlotNames [
 { #category : #generator }
 FAMIXNamedEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTPossibleStub FmxNGTWithAnnotationInstances FmxNGTWithModifiers)
+	^ #(FmxNGTInvocationsReceiver FmxNGTNamed FmxNGTPackageable FmxNGTPossibleStub FmxNGTWithAnnotationInstances FmxNGTWithModifiers TDependencyQueries TEntityMetaLevelDependency)
 ]
 
 { #category : #accessing }

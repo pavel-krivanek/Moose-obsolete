@@ -198,10 +198,14 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	annotationInstance --|> #TAnnotationInstance.
 	annotationInstance --|> #TWithAnnotationInstanceAttributes.
 	annotationInstance --|> #TTypedAnnotationInstance.
+	annotationInstance --|> #TEntityMetaLevelDependency.
+	annotationInstance --|> #TDependencyQueries.
 
 	annotationInstanceAttribute --|> sourcedEntity.
 	annotationInstanceAttribute --|> #TAnnotationInstanceAttribute.
 	annotationInstanceAttribute --|> #TTypedAnnotationInstanceAttribute.
+	annotationInstanceAttribute --|> #TEntityMetaLevelDependency.
+	annotationInstanceAttribute --|> #TDependencyQueries.
 
 	annotationType --|> type.
 	annotationType --|> #TAnnotationType.
@@ -251,6 +255,8 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	containerEntity --|> #TWithTypes.
 	containerEntity --|> #TWithFunctions.
 	containerEntity --|> #TWithAnnotationTypes.
+	containerEntity --|> #TDependencyQueries.
+	containerEntity --|> #TOODependencyQueries.
 
 	declaredException --|> exception.
 	declaredException --|> #TDeclaredException.

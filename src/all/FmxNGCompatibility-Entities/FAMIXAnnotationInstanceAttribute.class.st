@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXAnnotationInstanceAttribute,
 	#superclass : #FAMIXSourcedEntity,
-	#traits : 'FmxNGTAnnotationInstanceAttribute + FmxNGTTypedAnnotationInstanceAttribute + TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'FmxNGTAnnotationInstanceAttribute classTrait + FmxNGTTypedAnnotationInstanceAttribute classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
+	#traits : 'FmxNGTAnnotationInstanceAttribute + FmxNGTTypedAnnotationInstanceAttribute + TDependencyQueries + TEntityMetaLevelDependency',
+	#classTraits : 'FmxNGTAnnotationInstanceAttribute classTrait + FmxNGTTypedAnnotationInstanceAttribute classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -30,7 +30,7 @@ FAMIXAnnotationInstanceAttribute class >> generatedSlotNames [
 { #category : #generator }
 FAMIXAnnotationInstanceAttribute class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTAnnotationInstanceAttribute FmxNGTTypedAnnotationInstanceAttribute)
+	^ #(FmxNGTAnnotationInstanceAttribute FmxNGTTypedAnnotationInstanceAttribute TDependencyQueries TEntityMetaLevelDependency)
 ]
 
 { #category : #'Moose-Query-Extensions' }

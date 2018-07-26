@@ -57,6 +57,22 @@ FmxNGJavaEntity class >> requirements [
 	^ {  }
 ]
 
+{ #category : #'Moose-Query' }
+FmxNGJavaEntity class >> resetMSEProperties [
+	"
+	self resetMSEProperties
+		"
+
+	self allSubclasses
+		do: [ :aSubClass | 
+			aSubClass resetMooseQueryCaches.]
+]
+
+{ #category : #'Moose-Query' }
+FmxNGJavaEntity class >> resetMooseQueryCaches [
+	"Here do nothing. Customize in subclasses."
+]
+
 { #category : #'as yet unclassified' }
 FmxNGJavaEntity >> belongsTo [
 	"Return the primary container of the entity if it exist"

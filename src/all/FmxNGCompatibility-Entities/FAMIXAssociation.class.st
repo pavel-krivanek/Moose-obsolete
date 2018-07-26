@@ -25,7 +25,7 @@ FAMIXAssociation class >> generatedSlotNames [
 { #category : #generator }
 FAMIXAssociation class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTAssociation)
+	^ #(FmxNGTAssociation TAssociationMetaLevelDependency)
 ]
 
 { #category : #meta }

@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXSourceAnchor,
 	#superclass : #FAMIXEntity,
-	#traits : 'FmxNGTSourceAnchor + TEntityMetaLevelDependency + TDependencyQueries',
-	#classTraits : 'FmxNGTSourceAnchor classTrait + TEntityMetaLevelDependency classTrait + TDependencyQueries classTrait',
+	#traits : 'FmxNGTSourceAnchor + TDependencyQueries + TEntityMetaLevelDependency',
+	#classTraits : 'FmxNGTSourceAnchor classTrait + TDependencyQueries classTrait + TEntityMetaLevelDependency classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -31,7 +31,7 @@ FAMIXSourceAnchor class >> generatedSlotNames [
 { #category : #generator }
 FAMIXSourceAnchor class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTSourceAnchor)
+	^ #(FmxNGTSourceAnchor TDependencyQueries TEntityMetaLevelDependency)
 ]
 
 { #category : #'Moose-Query-Extensions' }
