@@ -152,6 +152,12 @@ MooseEntity class >> freshID [
 	^MooseID
 ]
 
+{ #category : #accessing }
+MooseEntity class >> implementingClassesIn: aMetamodel [
+
+	^ { self }
+]
+
 { #category : #constants }
 MooseEntity class >> mooseDev [ 
 	"Answer the email address of the Moose mailinglist." 

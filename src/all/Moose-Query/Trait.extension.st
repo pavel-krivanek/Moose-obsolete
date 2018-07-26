@@ -7,6 +7,13 @@ Trait >> childrenTypes [
 ]
 
 { #category : #'*Moose-Query' }
+Trait >> implementingClassesIn: aMetamodel [
+
+	^ (aMetamodel classes select: [ :e | e implementingClass traits includes: self ]) collect: #implementingClass.
+
+]
+
+{ #category : #'*Moose-Query' }
 Trait >> parentTypes [
 
 	^ Set new

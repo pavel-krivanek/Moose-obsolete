@@ -133,14 +133,16 @@ TEntityMetaLevelDependency classSide >> privateAllChildrenTypes [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> privateAllIncomingAssociationTypes [
-   ^ (self allChildrenTypes flatCollectAsSet: #incomingAssociationTypes)
+   ^ ((self allChildrenTypes flatCollectAsSet: [:each | each implementingClassesIn: self metamodel ])
+		flatCollectAsSet: #incomingAssociationTypes)
        addAll: self incomingAssociationTypes;
        yourself
 ]
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> privateAllOutgoingAssociationTypes [
-   ^ (self allChildrenTypes flatCollectAsSet: #outgoingAssociationTypes)
+   ^ ((self allChildrenTypes flatCollectAsSet: [:each | each implementingClassesIn: self metamodel ])
+		flatCollectAsSet: #outgoingAssociationTypes)
        addAll: self outgoingAssociationTypes;
        yourself
 ]
