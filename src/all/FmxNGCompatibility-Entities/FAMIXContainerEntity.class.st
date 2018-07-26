@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXContainerEntity,
 	#superclass : #FAMIXNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
