@@ -43,7 +43,9 @@ FmxMBBehavior >> addRelationSide: aRelationSide [
 FmxMBBehavior >> addTraitGeneralization: aTrait [
 
 	(self traitGeneralizations includes: aTrait)
-		ifFalse: [ self traitGeneralizations add: aTrait ]
+		ifFalse: [ self traitGeneralizations add: aTrait ].
+		
+	^ aTrait
 ]
 
 { #category : #converting }
@@ -415,6 +417,17 @@ FmxMBBehavior >> traitGeneralizations [
 FmxMBBehavior >> traitNamesFromGeneralizations [
 
 	^ (self traitGeneralizations collect: #fullName) sorted
+]
+
+{ #category : #accessing }
+FmxMBBehavior >> useAsPrimaryContainer: aTrait [
+
+	| traitEntity |
+	
+	traitEntity := self generalization: aTrait.
+	traitEntity additionalProperties at: #providesPrimaryContainer put: true.
+	
+	^ traitEntity
 ]
 
 { #category : #accessing }

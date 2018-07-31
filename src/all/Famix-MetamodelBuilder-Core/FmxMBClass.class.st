@@ -101,7 +101,9 @@ FmxMBClass >> classGeneralization [
 
 { #category : #accessing }
 FmxMBClass >> classGeneralization: anObject [
-	classGeneralization := anObject
+	
+	classGeneralization := anObject.
+	^ anObject
 ]
 
 { #category : #accessing }
