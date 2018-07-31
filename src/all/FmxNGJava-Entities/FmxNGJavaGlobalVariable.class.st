@@ -41,10 +41,20 @@ FmxNGJavaGlobalVariable >> accept: aVisitor [
 	aVisitor visitGlobalVariable: self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaGlobalVariable >> belongsTo [
 
+	<generated>
 	^ self parentScope
+
+]
+
+{ #category : #accessing }
+FmxNGJavaGlobalVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentScope: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

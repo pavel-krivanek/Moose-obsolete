@@ -34,3 +34,19 @@ FmxNGJavaEnumValue class >> requirements [
 	<generated>
 	^ { FmxNGJavaEnum }
 ]
+
+{ #category : #accessing }
+FmxNGJavaEnumValue >> belongsTo [
+
+	<generated>
+	^ self parentEnum
+
+]
+
+{ #category : #accessing }
+FmxNGJavaEnumValue >> belongsTo: anObject [
+
+	<generated>
+	self parentEnum: anObject
+
+]

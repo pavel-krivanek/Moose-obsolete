@@ -77,7 +77,16 @@ FmxNGJavaScopingEntity >> allRecursiveClasses [
 
 { #category : #'as yet unclassified' }
 FmxNGJavaScopingEntity >> belongsTo [
+	
 	^ self parentScope ifNil: [ self parentPackage ]
+]
+
+{ #category : #accessing }
+FmxNGJavaScopingEntity >> belongsTo: anObject [
+
+	<generated>
+	self parentScope: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

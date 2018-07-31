@@ -32,7 +32,7 @@ FmxNGJavaAnnotationInstance class >> generatedTraitNames [
 FmxNGJavaAnnotationInstance class >> requirements [
 
 	<generated>
-	^ { FmxNGJavaAnnotationInstance. FmxNGJavaNamedEntity }
+	^ { FmxNGJavaNamedEntity }
 ]
 
 { #category : #'Moose-Query' }
@@ -42,9 +42,20 @@ FmxNGJavaAnnotationInstance class >> resetMooseQueryCaches [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaAnnotationInstance >> belongsTo [
+
+	<generated>
 	^ self annotatedEntity
+
+]
+
+{ #category : #accessing }
+FmxNGJavaAnnotationInstance >> belongsTo: anObject [
+
+	<generated>
+	self annotatedEntity: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

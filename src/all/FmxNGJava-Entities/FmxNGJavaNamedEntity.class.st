@@ -59,6 +59,13 @@ FmxNGJavaNamedEntity >> belongsTo [
 	^self subclassResponsibility
 ]
 
+{ #category : #accessing }
+FmxNGJavaNamedEntity >> belongsTo: anObject [
+
+	^self subclassResponsibility
+
+]
+
 { #category : #'as yet unclassified' }
 FmxNGJavaNamedEntity >> copyFrom: anEntity within: aVisitor [
 

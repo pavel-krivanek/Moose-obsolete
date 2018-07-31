@@ -46,9 +46,20 @@ FmxNGJavaAnnotationType >> annotatedEntitiesGroup [
 	^ self annotatedEntities asMooseGroup
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaAnnotationType >> belongsTo [
+
+	<generated>
 	^ self annotationTypesContainer
+
+]
+
+{ #category : #accessing }
+FmxNGJavaAnnotationType >> belongsTo: anObject [
+
+	<generated>
+	self annotationTypesContainer: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

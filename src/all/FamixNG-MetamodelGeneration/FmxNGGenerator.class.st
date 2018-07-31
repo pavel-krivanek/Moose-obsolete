@@ -963,8 +963,8 @@ FmxNGGenerator >> defineRelations [
 			comment: 'Annotations of this type')
 		-*
 	((tTypedAnnotationInstance property: #annotationType)
-			comment: 'Refers to the type of an annotation. (In some languages, Java and C#, an annotation as an explicit type). ';
-			container).
+			comment: 'Refers to the type of an annotation. (In some languages, Java and C#, an annotation as an explicit type). '";
+			container"). "TODO: resolve"
 
 	((tAnnotationType property: #annotationTypesContainer)
 			comment: 'Container in which an AnnotationType may reside';

@@ -41,10 +41,20 @@ FmxNGJavaLocalVariable >> accept: aVisitor [
 	aVisitor visitLocalVariable: self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaLocalVariable >> belongsTo [
 
+	<generated>
 	^ self parentBehaviouralEntity
+
+]
+
+{ #category : #accessing }
+FmxNGJavaLocalVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

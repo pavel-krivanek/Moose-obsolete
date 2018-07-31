@@ -62,6 +62,12 @@ FmxMBBehavior >> asRelationSideNamed: aPropertyName [
 	^ self property: aPropertyName
 ]
 
+{ #category : #testing }
+FmxMBBehavior >> canProvidePrimaryContainer [
+
+	^ additionalProperties at: #providesPrimaryContainer ifAbsent: [ true ]
+]
+
 { #category : #'settings - default' }
 FmxMBBehavior >> defaultTag [
 
@@ -110,11 +116,16 @@ FmxMBBehavior >> generateAnnotationIn: aRealClass as: aName superclass: aSupercl
 { #category : #generating }
 FmxMBBehavior >> generateContainerMethodsIn: aClass [
 
-	| primaryTrait containerSide |
+	| containerSides |
 	
-	primaryTrait := self allTraits detect: #hasPrimaryContainer ifNone: [ ^ self ].
-	containerSide := primaryTrait sides detect: #isContainer.
-	containerSide generateExtendedContainerMethodsIn: aClass.
+	containerSides := ((self allTraits 
+		select: #canProvidePrimaryContainer)
+		flatCollect: #sides) 
+		select: #isContainer.
+	
+	containerSides size > 1 ifTrue: [ self error: aClass name, 'defines more than one primary container: ', ((containerSides collect: #name) sorted joinUsing: ', ') ].
+	
+	containerSides do: [ :aSide | aSide generateExtendedContainerMethodsIn: aClass ].
 	
 	
 ]

@@ -42,6 +42,22 @@ FmxNGJavaAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 
 ]
 
+{ #category : #accessing }
+FmxNGJavaAnnotationInstanceAttribute >> belongsTo [
+
+	<generated>
+	^ self parentAnnotationInstance
+
+]
+
+{ #category : #accessing }
+FmxNGJavaAnnotationInstanceAttribute >> belongsTo: anObject [
+
+	<generated>
+	self parentAnnotationInstance: anObject
+
+]
+
 { #category : #'as yet unclassified' }
 FmxNGJavaAnnotationInstanceAttribute >> name [ 
 	^ self annotationTypeAttribute notNil 
