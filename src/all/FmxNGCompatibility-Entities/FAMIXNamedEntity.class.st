@@ -73,6 +73,13 @@ FAMIXNamedEntity >> belongsTo [
 	^self subclassResponsibility
 ]
 
+{ #category : #accessing }
+FAMIXNamedEntity >> belongsTo: anObject [
+
+	^self subclassResponsibility
+
+]
+
 { #category : #'Famix-Extensions' }
 FAMIXNamedEntity >> copyFrom: anEntity within: aVisitor [
 

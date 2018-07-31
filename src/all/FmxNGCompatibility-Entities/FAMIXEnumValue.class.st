@@ -34,3 +34,19 @@ FAMIXEnumValue class >> requirements [
 	<generated>
 	^ { FAMIXEnum }
 ]
+
+{ #category : #accessing }
+FAMIXEnumValue >> belongsTo [
+
+	<generated>
+	^ self parentEnum
+
+]
+
+{ #category : #accessing }
+FAMIXEnumValue >> belongsTo: anObject [
+
+	<generated>
+	self parentEnum: anObject
+
+]

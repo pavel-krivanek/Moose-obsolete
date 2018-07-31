@@ -52,6 +52,22 @@ FAMIXAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 
 ]
 
+{ #category : #accessing }
+FAMIXAnnotationInstanceAttribute >> belongsTo [
+
+	<generated>
+	^ self parentAnnotationInstance
+
+]
+
+{ #category : #accessing }
+FAMIXAnnotationInstanceAttribute >> belongsTo: anObject [
+
+	<generated>
+	self parentAnnotationInstance: anObject
+
+]
+
 { #category : #'as yet unclassified' }
 FAMIXAnnotationInstanceAttribute >> name [ 
 	^ self annotationTypeAttribute notNil 

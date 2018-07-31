@@ -48,7 +48,18 @@ FAMIXAnnotationType >> annotatedEntitiesGroup [
 
 { #category : #accessing }
 FAMIXAnnotationType >> belongsTo [
+
+	<generated>
 	^ self annotationTypesContainer
+
+]
+
+{ #category : #accessing }
+FAMIXAnnotationType >> belongsTo: anObject [
+
+	<generated>
+	self annotationTypesContainer: anObject
+
 ]
 
 { #category : #accessing }

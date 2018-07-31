@@ -42,7 +42,7 @@ FAMIXAnnotationInstance class >> parentSelector [
 FAMIXAnnotationInstance class >> requirements [
 
 	<generated>
-	^ { FAMIXAnnotationInstance. FAMIXNamedEntity }
+	^ { FAMIXNamedEntity }
 ]
 
 { #category : #'Moose-Query-Extensions' }
@@ -54,7 +54,18 @@ FAMIXAnnotationInstance class >> resetMooseQueryCaches [
 
 { #category : #accessing }
 FAMIXAnnotationInstance >> belongsTo [
+
+	<generated>
 	^ self annotatedEntity
+
+]
+
+{ #category : #accessing }
+FAMIXAnnotationInstance >> belongsTo: anObject [
+
+	<generated>
+	self annotatedEntity: anObject
+
 ]
 
 { #category : #accessing }

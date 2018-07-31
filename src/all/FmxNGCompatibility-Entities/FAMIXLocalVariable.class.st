@@ -44,7 +44,17 @@ FAMIXLocalVariable >> accept: aVisitor [
 { #category : #accessing }
 FAMIXLocalVariable >> belongsTo [
 
+	<generated>
 	^ self parentBehaviouralEntity
+
+]
+
+{ #category : #accessing }
+FAMIXLocalVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
 ]
 
 { #category : #'Famix-Implementation' }

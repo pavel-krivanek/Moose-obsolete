@@ -77,7 +77,16 @@ FAMIXScopingEntity >> allRecursiveClasses [
 
 { #category : #accessing }
 FAMIXScopingEntity >> belongsTo [
+
 	^ self parentScope ifNil: [ self parentPackage ]
+]
+
+{ #category : #accessing }
+FAMIXScopingEntity >> belongsTo: anObject [
+
+	<generated>
+	self parentScope: anObject
+
 ]
 
 { #category : #'Famix-Extensions-metrics' }

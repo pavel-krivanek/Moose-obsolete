@@ -36,9 +36,19 @@ FAMIXFunction class >> requirements [
 ]
 
 { #category : #accessing }
-FAMIXFunction >> belongsTo [	
-	
+FAMIXFunction >> belongsTo [
+
+	<generated>
 	^ self functionOwner
+
+]
+
+{ #category : #accessing }
+FAMIXFunction >> belongsTo: anObject [
+
+	<generated>
+	self functionOwner: anObject
+
 ]
 
 { #category : #accessing }
