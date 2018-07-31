@@ -97,13 +97,9 @@ FmxMBRelationSide >> from [
 ]
 
 { #category : #generating }
-FmxMBRelationSide >> generateExtendedContainersIn: aClassOrTrait [
+FmxMBRelationSide >> generateExtendedContainerMethodsIn: aClassOrTrait [
 
-	| isPrimaryContainer methodSource |
-	
-	isPrimaryContainer := self additionalProperties at: #primaryContainer ifAbsent: [ false ].
-	
-	isPrimaryContainer ifFalse: [ ^ self ].
+	| methodSource |
 	
 	methodSource := String streamContents: [ :s |
 		s nextPutAll: 'belongsTo'; cr; cr.
@@ -120,6 +116,14 @@ FmxMBRelationSide >> generateExtendedContainersIn: aClassOrTrait [
 	self builder environment compile: methodSource in: aClassOrTrait classified: 'accessing'.	
 
 
+]
+
+{ #category : #generating }
+FmxMBRelationSide >> generateExtendedContainersIn: aClassOrTrait [
+
+	(self additionalProperties at: #primaryContainer ifAbsent: [ false ])
+		ifTrue: [ 
+			self generateExtendedContainerMethodsIn: aClassOrTrait ]
 ]
 
 { #category : #generating }

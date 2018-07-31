@@ -108,6 +108,18 @@ FmxMBBehavior >> generateAnnotationIn: aRealClass as: aName superclass: aSupercl
 ]
 
 { #category : #generating }
+FmxMBBehavior >> generateContainerMethodsIn: aClass [
+
+	| primaryTrait containerSide |
+	
+	primaryTrait := self allTraits detect: #hasPrimaryContainer ifNone: [ ^ self ].
+	containerSide := primaryTrait sides detect: #isContainer.
+	containerSide generateExtendedContainerMethodsIn: aClass.
+	
+	
+]
+
+{ #category : #generating }
 FmxMBBehavior >> generateNavigationGroups [
 
 	| allNavigationGroups |
@@ -168,6 +180,12 @@ FmxMBBehavior >> generateTestingMethodsIn: aClass [
 		classified: #testing. ]
 
 
+]
+
+{ #category : #testing }
+FmxMBBehavior >> hasPrimaryContainer [
+
+	^ additionalProperties at: #providesPrimaryContainer ifAbsent: [ false ]
 ]
 
 { #category : #accessing }
@@ -426,7 +444,6 @@ FmxMBBehavior >> useAsPrimaryContainer: aTrait [
 	
 	traitEntity := self generalization: aTrait.
 	traitEntity additionalProperties at: #providesPrimaryContainer put: true.
-	
 	^ traitEntity
 ]
 

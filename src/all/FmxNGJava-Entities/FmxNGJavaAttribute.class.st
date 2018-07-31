@@ -56,15 +56,20 @@ FmxNGJavaAttribute >> beSharedVariable [
 	self propertyNamed: #sharedVariable put: true 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaAttribute >> belongsTo [
 
+	<generated>
 	^ self parentType
+
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaAttribute >> belongsTo: aType [
-	self parentType
+{ #category : #accessing }
+FmxNGJavaAttribute >> belongsTo: anObject [
+
+	<generated>
+	self parentType: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

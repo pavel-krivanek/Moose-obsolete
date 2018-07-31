@@ -127,7 +127,7 @@ FmxNGJavaGenerator >> defineHierarchy [
 	annotationTypeAttribute --|> #TTypedAnnotationInstanceAttribute.
 
 	attribute --|> structuralEntity.
-	attribute --|> #TAttribute.
+	attribute useAsPrimaryContainer: #TAttribute.
 	attribute --|> #TWithClassScope.
 
 	method --|> containerEntity.

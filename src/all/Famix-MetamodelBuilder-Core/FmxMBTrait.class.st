@@ -55,7 +55,7 @@ FmxMBTrait >> defaultTag [
 { #category : #accessing }
 FmxMBTrait >> generalization: anObject [
 
-	anObject isSymbol
+	^ anObject isSymbol
 		ifTrue: [ self addTraitGeneralization: (self builder ensureTraitNamed: anObject) ]
 		ifFalse: [ 
 			anObject isMetamodelTrait 

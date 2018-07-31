@@ -40,13 +40,19 @@ FmxMBClass >> allRequirementNames [
 { #category : #accessing }
 FmxMBClass >> allTraitNames [ 
 	
+	^ (self allTraits collect: #fullName) sorted
+]
+
+{ #category : #accessing }
+FmxMBClass >> allTraits [
+	
 	| selectedTraits |
 	
 	selectedTraits := (self traitsFromRelations, self traitGeneralizations).
 	
 	selectedTraits addAll: (self glueingTraitsOf: selectedTraits).
 	
-	^ (selectedTraits asSet collect: #fullName) sorted
+	^ selectedTraits asSet
 ]
 
 { #category : #converting }
@@ -116,7 +122,7 @@ FmxMBClass >> containerProperties [
 { #category : #accessing }
 FmxMBClass >> generalization: anObject [
 
-	anObject isSymbol
+	^ anObject isSymbol
 		ifTrue: [ self addTraitGeneralization: (self builder ensureTraitNamed: anObject) ]
 		ifFalse: [ 
 			anObject isMetamodelTrait 
@@ -150,6 +156,7 @@ FmxMBClass >> generate [
 	self generateAnnotationIn: aClass as: self name superclass: nil.
 	
 	self generateTestingMethodsIn: aClass.
+	self generateContainerMethodsIn: aClass.
 	self generateRootMetamodelMethodIn: aClass. 	
 
 	self generateRequirementsFor: aClass.
