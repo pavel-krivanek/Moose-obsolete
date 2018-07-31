@@ -449,19 +449,19 @@ FmxMBBehavior >> traitNamesFromGeneralizations [
 ]
 
 { #category : #accessing }
-FmxMBBehavior >> useAsPrimaryContainer: aTrait [
+FmxMBBehavior >> uses: aTrait [
+
+	^ self generalization: aTrait
+]
+
+{ #category : #accessing }
+FmxMBBehavior >> usesWithoutPrimaryContainer: aTrait [
 
 	| traitEntity |
 	
 	traitEntity := self generalization: aTrait.
-	traitEntity additionalProperties at: #providesPrimaryContainer put: true.
+	traitEntity additionalProperties at: #providesPrimaryContainer put: false.
 	^ traitEntity
-]
-
-{ #category : #accessing }
-FmxMBBehavior >> uses: aTrait [
-
-	^ self generalization: aTrait
 ]
 
 { #category : #'testing selectors' }
