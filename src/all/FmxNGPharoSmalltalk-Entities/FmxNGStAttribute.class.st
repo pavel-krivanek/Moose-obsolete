@@ -44,15 +44,20 @@ FmxNGStAttribute >> beSharedVariable [
 	self propertyNamed: #sharedVariable put: true 
 ]
 
-{ #category : #'Famix-Implementation' }
+{ #category : #accessing }
 FmxNGStAttribute >> belongsTo [
 
+	<generated>
 	^ self parentType
+
 ]
 
-{ #category : #'Famix-Implementation' }
-FmxNGStAttribute >> belongsTo: aType [
-	self parentType
+{ #category : #accessing }
+FmxNGStAttribute >> belongsTo: anObject [
+
+	<generated>
+	self parentType: anObject
+
 ]
 
 { #category : #testing }

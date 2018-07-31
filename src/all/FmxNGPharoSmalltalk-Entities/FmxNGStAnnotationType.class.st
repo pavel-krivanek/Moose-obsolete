@@ -34,3 +34,19 @@ FmxNGStAnnotationType class >> requirements [
 	<generated>
 	^ { FmxNGStContainerEntity }
 ]
+
+{ #category : #accessing }
+FmxNGStAnnotationType >> belongsTo [
+
+	<generated>
+	^ self annotationTypesContainer
+
+]
+
+{ #category : #accessing }
+FmxNGStAnnotationType >> belongsTo: anObject [
+
+	<generated>
+	self annotationTypesContainer: anObject
+
+]

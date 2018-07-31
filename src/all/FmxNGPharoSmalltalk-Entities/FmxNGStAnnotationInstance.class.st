@@ -32,13 +32,29 @@ FmxNGStAnnotationInstance class >> generatedTraitNames [
 FmxNGStAnnotationInstance class >> requirements [
 
 	<generated>
-	^ { FmxNGStAnnotationInstance. FmxNGStNamedEntity }
+	^ { FmxNGStNamedEntity }
 ]
 
 { #category : #'as yet unclassified' }
 FmxNGStAnnotationInstance class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
 	self resetTEntityMetaLevelDependencyCaches.
+
+]
+
+{ #category : #accessing }
+FmxNGStAnnotationInstance >> belongsTo [
+
+	<generated>
+	^ self annotatedEntity
+
+]
+
+{ #category : #accessing }
+FmxNGStAnnotationInstance >> belongsTo: anObject [
+
+	<generated>
+	self annotatedEntity: anObject
 
 ]
 

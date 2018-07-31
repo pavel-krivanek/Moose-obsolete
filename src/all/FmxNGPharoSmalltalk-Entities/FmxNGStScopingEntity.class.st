@@ -56,6 +56,14 @@ FmxNGStScopingEntity >> belongsTo [
 ]
 
 { #category : #accessing }
+FmxNGStScopingEntity >> belongsTo: anObject [
+
+	<generated>
+	self parentScope: anObject
+
+]
+
+{ #category : #accessing }
 FmxNGStScopingEntity >> typeScope [
 	"This only makes sense to reject self loops in #collectAtScope:"
 	^ self classes

@@ -36,6 +36,22 @@ FmxNGStParameter class >> requirements [
 ]
 
 { #category : #accessing }
+FmxNGStParameter >> belongsTo [
+
+	<generated>
+	^ self parentBehaviouralEntity
+
+]
+
+{ #category : #accessing }
+FmxNGStParameter >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
+]
+
+{ #category : #accessing }
 FmxNGStParameter >> mooseNameOn: stream [ 
 	| parent |
 	parent := self parentBehaviouralEntity.

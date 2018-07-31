@@ -143,9 +143,12 @@ FmxNGJavaType >> belongsTo [
 	^ self container ifNil: [ self parentPackage ]
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> belongsTo: aContainer [
-	self container: aContainer 
+{ #category : #accessing }
+FmxNGJavaType >> belongsTo: anObject [
+
+	<generated>
+	self typeContainer: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

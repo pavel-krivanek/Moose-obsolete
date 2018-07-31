@@ -61,9 +61,12 @@ FmxNGStType >> belongsTo [
 	^ self container ifNil: [ self parentPackage ]
 ]
 
-{ #category : #adding }
-FmxNGStType >> belongsTo: aContainer [
-	self container: aContainer 
+{ #category : #accessing }
+FmxNGStType >> belongsTo: anObject [
+
+	<generated>
+	self typeContainer: anObject
+
 ]
 
 { #category : #adding }

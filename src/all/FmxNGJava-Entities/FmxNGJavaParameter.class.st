@@ -41,15 +41,20 @@ FmxNGJavaParameter >> accept: aVisitor [
 	aVisitor visitParameter: self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaParameter >> belongsTo [
 
+	<generated>
 	^ self parentBehaviouralEntity
+
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaParameter >> belongsTo: aBehaviouralEntity [ 
-	self parentBehaviouralEntity: aBehaviouralEntity 
+{ #category : #accessing }
+FmxNGJavaParameter >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

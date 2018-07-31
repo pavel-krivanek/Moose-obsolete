@@ -55,14 +55,20 @@ FmxNGJavaMethod >> addOutgoingReference: aReference [
 	outgoingReferences add: aReference
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaMethod >> belongsTo [
+
+	<generated>
 	^ self parentType
+
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaMethod >> belongsTo: aType [
-	self parentType
+{ #category : #accessing }
+FmxNGJavaMethod >> belongsTo: anObject [
+
+	<generated>
+	self parentType: anObject
+
 ]
 
 { #category : #accessing }

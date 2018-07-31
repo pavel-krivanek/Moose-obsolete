@@ -35,6 +35,22 @@ FmxNGStGlobalVariable class >> requirements [
 	^ { FmxNGStScopingEntity }
 ]
 
+{ #category : #accessing }
+FmxNGStGlobalVariable >> belongsTo [
+
+	<generated>
+	^ self parentScope
+
+]
+
+{ #category : #accessing }
+FmxNGStGlobalVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentScope: anObject
+
+]
+
 { #category : #'moosechef-scoping-filtering' }
 FmxNGStGlobalVariable >> packageScope [
 	^ self parentPackage

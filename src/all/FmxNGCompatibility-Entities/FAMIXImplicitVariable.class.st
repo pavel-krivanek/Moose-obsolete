@@ -42,12 +42,18 @@ FAMIXImplicitVariable >> accept: aVisitor [
 
 { #category : #accessing }
 FAMIXImplicitVariable >> belongsTo [
-	^ self parentBehaviouralEntity  
+
+	<generated>
+	^ self parentBehaviouralEntity
+
 ]
 
 { #category : #accessing }
-FAMIXImplicitVariable >> belongsTo: aBehaviouralEntity [
-	self parentBehaviouralEntity: aBehaviouralEntity 
+FAMIXImplicitVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
 ]
 
 { #category : #accessing }

@@ -59,12 +59,17 @@ FAMIXAttribute >> beSharedVariable [
 { #category : #accessing }
 FAMIXAttribute >> belongsTo [
 
+	<generated>
 	^ self parentType
+
 ]
 
 { #category : #accessing }
-FAMIXAttribute >> belongsTo: aType [
-	self parentType
+FAMIXAttribute >> belongsTo: anObject [
+
+	<generated>
+	self parentType: anObject
+
 ]
 
 { #category : #'Famix-Extensions' }

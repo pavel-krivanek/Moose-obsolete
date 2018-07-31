@@ -35,7 +35,7 @@ FmxNGJavaEnumValue class >> requirements [
 	^ { FmxNGJavaEnum }
 ]
 
-{ #category : #accessing }
+{ #category : #'as yet unclassified' }
 FmxNGJavaEnumValue >> belongsTo [
 
 	<generated>

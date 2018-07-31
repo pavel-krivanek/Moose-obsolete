@@ -47,6 +47,22 @@ FmxNGStNamedEntity class >> resetMooseQueryCaches [
 
 ]
 
+{ #category : #accessing }
+FmxNGStNamedEntity >> belongsTo [
+
+	<generated>
+	^ self parentPackage
+
+]
+
+{ #category : #accessing }
+FmxNGStNamedEntity >> belongsTo: anObject [
+
+	<generated>
+	self parentPackage: anObject
+
+]
+
 { #category : #testing }
 FmxNGStNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 	"checks whether receiver is equal to anEntity at the given scope.

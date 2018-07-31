@@ -65,12 +65,18 @@ FAMIXMethod >> accessedAttributes [
 
 { #category : #accessing }
 FAMIXMethod >> belongsTo [
+
+	<generated>
 	^ self parentType
+
 ]
 
 { #category : #accessing }
-FAMIXMethod >> belongsTo: aType [
-	self parentType
+FAMIXMethod >> belongsTo: anObject [
+
+	<generated>
+	self parentType: anObject
+
 ]
 
 { #category : #'Famix-Smalltalk' }

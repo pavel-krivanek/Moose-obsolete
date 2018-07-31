@@ -43,6 +43,22 @@ FmxNGStAnnotationInstanceAttribute class >> resetMooseQueryCaches [
 ]
 
 { #category : #accessing }
+FmxNGStAnnotationInstanceAttribute >> belongsTo [
+
+	<generated>
+	^ self parentAnnotationInstance
+
+]
+
+{ #category : #accessing }
+FmxNGStAnnotationInstanceAttribute >> belongsTo: anObject [
+
+	<generated>
+	self parentAnnotationInstance: anObject
+
+]
+
+{ #category : #accessing }
 FmxNGStAnnotationInstanceAttribute >> name [ 
 	^ self annotationTypeAttribute notNil 
 		ifTrue: [ self annotationTypeAttribute name ]

@@ -51,12 +51,18 @@ FmxNGStMethod >> accessedAttributes [
 
 { #category : #accessing }
 FmxNGStMethod >> belongsTo [
+
+	<generated>
 	^ self parentType
+
 ]
 
 { #category : #accessing }
-FmxNGStMethod >> belongsTo: aType [
-	self parentType
+FmxNGStMethod >> belongsTo: anObject [
+
+	<generated>
+	self parentType: anObject
+
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }

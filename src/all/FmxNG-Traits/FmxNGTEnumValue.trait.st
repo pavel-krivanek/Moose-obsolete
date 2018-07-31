@@ -42,12 +42,6 @@ FmxNGTEnumValue classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
-FmxNGTEnumValue >> belongsTo [
-
-	^ self parentEnum
-]
-
-{ #category : #accessing }
 FmxNGTEnumValue >> mooseNameOn: aStream [
 	(self belongsTo isNotNil and: [ self belongsTo name isNotNil ])
 		ifTrue: [ self belongsTo mooseNameOn: aStream.

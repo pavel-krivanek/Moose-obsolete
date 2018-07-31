@@ -154,8 +154,11 @@ FAMIXType >> belongsTo [
 ]
 
 { #category : #accessing }
-FAMIXType >> belongsTo: aContainer [
-	self container: aContainer 
+FAMIXType >> belongsTo: anObject [
+
+	<generated>
+	self typeContainer: anObject
+
 ]
 
 { #category : #'Famix-Smalltalk' }

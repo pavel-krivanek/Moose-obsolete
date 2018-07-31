@@ -44,12 +44,17 @@ FAMIXParameter >> accept: aVisitor [
 { #category : #accessing }
 FAMIXParameter >> belongsTo [
 
+	<generated>
 	^ self parentBehaviouralEntity
+
 ]
 
 { #category : #accessing }
-FAMIXParameter >> belongsTo: aBehaviouralEntity [ 
-	self parentBehaviouralEntity: aBehaviouralEntity 
+FAMIXParameter >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
 ]
 
 { #category : #'Famix-Implementation' }

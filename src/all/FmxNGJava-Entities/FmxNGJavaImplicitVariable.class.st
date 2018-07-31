@@ -40,14 +40,20 @@ FmxNGJavaImplicitVariable >> accept: aVisitor [
 	aVisitor visitImplicitVariable: self
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaImplicitVariable >> belongsTo [
-	^ self parentBehaviouralEntity  
+
+	<generated>
+	^ self parentBehaviouralEntity
+
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaImplicitVariable >> belongsTo: aBehaviouralEntity [
-	self parentBehaviouralEntity: aBehaviouralEntity 
+{ #category : #accessing }
+FmxNGJavaImplicitVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
 ]
 
 { #category : #'as yet unclassified' }

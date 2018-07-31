@@ -52,6 +52,22 @@ FmxNGStSourceAnchor class >> resetMooseQueryCaches [
 
 ]
 
+{ #category : #accessing }
+FmxNGStSourceAnchor >> belongsTo [
+
+	<generated>
+	^ self element
+
+]
+
+{ #category : #accessing }
+FmxNGStSourceAnchor >> belongsTo: anObject [
+
+	<generated>
+	self element: anObject
+
+]
+
 { #category : #'as yet unclassified' }
 FmxNGStSourceAnchor >> childrenTypes [
 	^ self class childrenTypes

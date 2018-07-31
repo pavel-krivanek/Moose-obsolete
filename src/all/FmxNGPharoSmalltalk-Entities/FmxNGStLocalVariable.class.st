@@ -36,6 +36,22 @@ FmxNGStLocalVariable class >> requirements [
 ]
 
 { #category : #accessing }
+FmxNGStLocalVariable >> belongsTo [
+
+	<generated>
+	^ self parentBehaviouralEntity
+
+]
+
+{ #category : #accessing }
+FmxNGStLocalVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
+]
+
+{ #category : #accessing }
 FmxNGStLocalVariable >> mooseNameOn: stream [ 
 	| parent |
 	parent := self parentBehaviouralEntity.

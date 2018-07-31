@@ -35,14 +35,20 @@ FmxNGStImplicitVariable class >> requirements [
 	^ { FmxNGStMethod }
 ]
 
-{ #category : #testing }
+{ #category : #accessing }
 FmxNGStImplicitVariable >> belongsTo [
-	^ self parentBehaviouralEntity  
+
+	<generated>
+	^ self parentBehaviouralEntity
+
 ]
 
-{ #category : #testing }
-FmxNGStImplicitVariable >> belongsTo: aBehaviouralEntity [
-	self parentBehaviouralEntity: aBehaviouralEntity 
+{ #category : #accessing }
+FmxNGStImplicitVariable >> belongsTo: anObject [
+
+	<generated>
+	self parentBehaviouralEntity: anObject
+
 ]
 
 { #category : #testing }
