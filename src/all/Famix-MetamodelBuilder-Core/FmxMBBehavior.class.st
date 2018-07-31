@@ -301,7 +301,7 @@ FmxMBBehavior >> realClass: anObject [
 	realClass := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxMBBehavior >> relatedEntityName [
 
 	^ self name

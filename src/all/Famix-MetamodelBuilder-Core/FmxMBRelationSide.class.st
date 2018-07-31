@@ -97,6 +97,32 @@ FmxMBRelationSide >> from [
 ]
 
 { #category : #generating }
+FmxMBRelationSide >> generateExtendedContainersIn: aClassOrTrait [
+
+	| isPrimaryContainer methodSource |
+	
+	isPrimaryContainer := self additionalProperties at: #primaryContainer ifAbsent: [ false ].
+	
+	isPrimaryContainer ifFalse: [ ^ self ].
+	
+	methodSource := String streamContents: [ :s |
+		s nextPutAll: 'belongsTo'; cr; cr.
+		s tab; nextPutAll: '<generated>'; cr.
+		s tab; nextPutAll: '^ self '; nextPutAll: self name; cr ].
+		
+	self builder environment compile: methodSource in: aClassOrTrait classified: 'accessing'.	
+
+	methodSource := String streamContents: [ :s |
+		s nextPutAll: 'belongsTo: anObject'; cr; cr.
+		s tab; nextPutAll: '<generated>'; cr.
+		s tab; nextPutAll: 'self '; nextPutAll: self name; nextPutAll: ': anObject'; cr ].
+		
+	self builder environment compile: methodSource in: aClassOrTrait classified: 'accessing'.	
+
+
+]
+
+{ #category : #generating }
 FmxMBRelationSide >> generateGetterIn: aClassOrTrait [
 
 	| methodSource commentDefinition |
@@ -251,6 +277,13 @@ FmxMBRelationSide >> ownerPropertyName [
 FmxMBRelationSide >> pluralPropertyName [
 
 	^ self name
+]
+
+{ #category : #properties }
+FmxMBRelationSide >> primaryContainer [
+	
+	container := true.
+	additionalProperties at: #primaryContainer put: true
 ]
 
 { #category : #private }

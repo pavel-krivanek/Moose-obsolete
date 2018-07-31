@@ -6,10 +6,17 @@ Class {
 		'comment',
 		'builder',
 		'willGenerate',
-		'navigationGroups'
+		'navigationGroups',
+		'additionalProperties'
 	],
 	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
+
+{ #category : #accessing }
+FmxMBEntity >> additionalProperties [
+
+	^ additionalProperties 
+]
 
 { #category : #accessing }
 FmxMBEntity >> builder [
@@ -39,6 +46,7 @@ FmxMBEntity >> initialize [
 	comment := String new.
 	willGenerate := true.
 	navigationGroups := Set new.
+	additionalProperties := Dictionary new.
 
 ]
 

@@ -17,7 +17,20 @@ FmxMBProperty >> asSlot [
 FmxMBProperty >> generateAccessorsIn: aClassOrTrait [
 
 	self generateGetterIn: aClassOrTrait.
-	self generateSetterIn: aClassOrTrait.
+	self generateSetterIn: aClassOrTrait.	
+	self generateExtendedContainersIn: aClassOrTrait.
+]
+
+{ #category : #generating }
+FmxMBProperty >> generateExtendedContainersIn: aClassOrTrait [
+]
+
+{ #category : #generating }
+FmxMBProperty >> generateGetterIn: aClassOrTrait [
+]
+
+{ #category : #generating }
+FmxMBProperty >> generateSetterIn: aClassOrTrait [
 ]
 
 { #category : #accessing }
