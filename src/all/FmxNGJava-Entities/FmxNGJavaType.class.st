@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaType,
 	#superclass : #FmxNGJavaContainerEntity,
-	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTClassMetrics + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
-	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTClassMetrics classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
+	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTClassMetrics + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTTypeWithMethodsGlue + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
+	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTClassMetrics classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTTypeWithMethodsGlue classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaType class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaType class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClassHierarchyNavigation FmxNGTClassMetrics FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
+	^ #(FmxNGTClassHierarchyNavigation FmxNGTClassMetrics FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTTypeWithMethodsGlue FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
 ]
 
 { #category : #meta }

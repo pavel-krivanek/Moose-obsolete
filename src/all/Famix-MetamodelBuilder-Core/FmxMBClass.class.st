@@ -56,7 +56,7 @@ FmxMBClass >> allTraits [
 	| selectedTraits allTraits |
 	
 	selectedTraits := self allLocalTraits.
-	allTraits := (self allClassGeneralizations flatCollect: [ :each | each allLocalTraits ]) asSet.
+	allTraits := ((self allClassGeneralizations copyWith: self) flatCollect: [ :each | each allLocalTraits ]) asSet.
 	
 	selectedTraits addAll: (self glueingTraitsOf: selectedTraits whenAllHierarchyHas: allTraits).
 	
