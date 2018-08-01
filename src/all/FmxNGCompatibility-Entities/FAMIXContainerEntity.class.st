@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXContainerEntity,
 	#superclass : #FAMIXNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithFunctions + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithClasses + FmxNGTWithFunctions + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithClasses classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FAMIXContainerEntity class >> generatedSlotNames [
 { #category : #generator }
 FAMIXContainerEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithAnnotationTypes FmxNGTWithFunctions FmxNGTWithTypes TDependencyQueries TOODependencyQueries)
+	^ #(FmxNGTWithAnnotationTypes FmxNGTWithClasses FmxNGTWithFunctions FmxNGTWithTypes TDependencyQueries TOODependencyQueries)
 ]
 
 { #category : #meta }
@@ -50,16 +50,6 @@ FAMIXContainerEntity >> addClass: aClass [
 { #category : #accessing }
 FAMIXContainerEntity >> addFunction: aFunction [ 
 	functions add: aFunction
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXContainerEntity >> classes [
-	"Classes are usually seen as types from the point of view of a Container. However, there may other types (e.g. aspects) which we dont want to see as classes and are rejected by this method."
-	<navigation: 'Classes'>
-
-	^ self privateState 
-				cacheAt: #classes 
-				ifAbsentPut: [self types select: [:type| type isClass ]]
 ]
 
 { #category : #'Famix-Extensions' }

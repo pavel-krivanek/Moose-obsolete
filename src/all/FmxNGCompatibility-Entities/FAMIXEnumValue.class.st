@@ -35,7 +35,7 @@ FAMIXEnumValue class >> requirements [
 	^ { FAMIXEnum }
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FAMIXEnumValue >> belongsTo [
 
 	<generated>

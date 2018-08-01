@@ -116,6 +116,7 @@ FmxNGPharoSmalltalkGenerator >> defineHierarchy [
 	
 	containerEntity --|> namedEntity.
 	containerEntity --|> #TWithTypes.
+	containerEntity --|> #TWithClasses.
 	containerEntity --|> #TWithAnnotationTypes.
 	containerEntity --|> #TOODependencyQueries.
 

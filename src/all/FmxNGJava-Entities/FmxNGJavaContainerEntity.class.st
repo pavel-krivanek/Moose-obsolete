@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaContainerEntity,
 	#superclass : #FmxNGJavaNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithClasses + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithClasses classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaContainerEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaContainerEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithAnnotationTypes FmxNGTWithTypes TDependencyQueries TOODependencyQueries)
+	^ #(FmxNGTWithAnnotationTypes FmxNGTWithClasses FmxNGTWithTypes TDependencyQueries TOODependencyQueries)
 ]
 
 { #category : #meta }
@@ -45,16 +45,6 @@ FmxNGJavaContainerEntity >> accept: aVisitor [
 FmxNGJavaContainerEntity >> addClass: aClass [
 	
 	types add: aClass
-]
-
-{ #category : #accessing }
-FmxNGJavaContainerEntity >> classes [
-	"Classes are usually seen as types from the point of view of a Container. However, there may other types (e.g. aspects) which we dont want to see as classes and are rejected by this method."
-	<navigation: 'Classes'>
-
-	^ self privateState 
-				cacheAt: #classes 
-				ifAbsentPut: [self types select: [:type| type isClass ]]
 ]
 
 { #category : #'as yet unclassified' }

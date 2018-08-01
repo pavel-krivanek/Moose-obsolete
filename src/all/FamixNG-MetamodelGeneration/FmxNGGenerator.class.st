@@ -117,7 +117,8 @@ Class {
 		'tClassHierarchyNavigation',
 		'tClassMetrics',
 		'tLCOMMetrics',
-		'tInheritanceGlue'
+		'tInheritanceGlue',
+		'tWithClasses'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -673,6 +674,12 @@ FmxNGGenerator >> commentForTWithCaughtExceptions [
 
 { #category : #comments }
 FmxNGGenerator >> commentForTWithClassScope [
+
+	^ ''
+]
+
+{ #category : #comments }
+FmxNGGenerator >> commentForTWithClasses [
 
 	^ ''
 ]
@@ -1485,6 +1492,9 @@ FmxNGGenerator >> defineTraits [
 
 	tWithCaughtExceptions := builder newTraitNamed: #TWithCaughtExceptions.
 	tWithCaughtExceptions comment: self commentForTWithCaughtExceptions.
+
+	tWithClasses := builder newTraitNamed: #TWithClasses.
+	tWithClasses comment: self commentForTWithClasses.
 
 	tWithClassScope := builder newTraitNamed: #TWithClassScope.
 	tWithClassScope comment: self commentForTWithClassScope.

@@ -150,13 +150,13 @@ FmxNGJavaPackage >> bunchCouplingWithAll [
 	^ interConnectivities / (2 * myClasses size * (allClasses size - myClasses size)) asFloat
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #deprecated }
 FmxNGJavaPackage >> childNamedEntities [
 
 	^ self childEntities
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #deprecated }
 FmxNGJavaPackage >> childNamedEntities: aNamedEntity [
 
 	^ self childEntities: aNamedEntity

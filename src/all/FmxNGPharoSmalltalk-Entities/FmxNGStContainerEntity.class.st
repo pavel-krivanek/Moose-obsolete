@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStContainerEntity,
 	#superclass : #FmxNGStNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithTypes + TOODependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithClasses + FmxNGTWithTypes + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithClasses classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGStContainerEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStContainerEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithAnnotationTypes FmxNGTWithTypes TOODependencyQueries)
+	^ #(FmxNGTWithAnnotationTypes FmxNGTWithClasses FmxNGTWithTypes TOODependencyQueries)
 ]
 
 { #category : #meta }

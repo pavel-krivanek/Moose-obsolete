@@ -264,24 +264,6 @@ FmxNGJavaType >> isAnonymousClass [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> isBrainClass [
-	^ (self propertyNamed: #BrainClass) = true
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> isClassSide [
-	"Kind of a hack. Uses the FAMIX2 Smalltalk naming convention that every Smalltalk
-	 metaclass has _class appended to the classname of the class it is a metaclass of."
-
-	^'*_class' match: self name
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> isDataClass [
-	^ (self propertyNamed: #DataClass) = true
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> isExtended [
 
 	^ self methods anySatisfy: [ :m| m isExtension ]
