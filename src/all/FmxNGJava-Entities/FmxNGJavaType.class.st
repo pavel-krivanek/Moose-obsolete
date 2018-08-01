@@ -194,40 +194,6 @@ FmxNGJavaType >> extendedMethods [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> fanIn [
-	<MSEProperty: #fanIn type: #Number>
-	<derived>
-	<MSEComment: 'Number of client classes'>
-
-	^self
-		lookUpPropertyNamed: #fanIn
-		computedAs: [self clientTypes size]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> fanIn: aNumber [
-
-	self privateState propertyAt: #fanIn put: aNumber
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> fanOut [
-	<MSEProperty: #fanOut type: #Number>
-	<derived>
-	<MSEComment: 'Number of provider classes'>
-
-	^self
-		lookUpPropertyNamed: #fanOut
-		computedAs: [self providerTypes size]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> fanOut: aNumber [
-
-	self privateState propertyAt: #fanOut put: aNumber
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> hasMethodWithSignature: aStringOrSymbol [
 	| symbol |
 	symbol := aStringOrSymbol asSymbol.
@@ -257,12 +223,6 @@ FmxNGJavaType >> hierarchyNestingLevel [
 						allSuperclassesDo:
 							[:aClass | currentMaxDepth := currentMaxDepth max: aClass hierarchyNestingLevel].
 					currentMaxDepth + 1]]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> hierarchyNestingLevel: aNumber [
-
-	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
 ]
 
 { #category : #'as yet unclassified' }
