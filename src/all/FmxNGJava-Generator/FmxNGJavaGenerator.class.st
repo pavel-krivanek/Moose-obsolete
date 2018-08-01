@@ -157,7 +157,6 @@ FmxNGJavaGenerator >> defineHierarchy [
 	containerEntity --|> #TWithTypes.
 	containerEntity --|> #TWithClasses.
 	containerEntity --|> #TWithAnnotationTypes.
-	containerEntity --|> #TDependencyQueries.
 	containerEntity --|> #TOODependencyQueries.
 
 	declaredException --|> exception.

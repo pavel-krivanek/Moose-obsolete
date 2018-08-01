@@ -256,7 +256,6 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	containerEntity --|> #TWithClasses.
 	containerEntity --|> #TWithFunctions.
 	containerEntity --|> #TWithAnnotationTypes.
-	containerEntity --|> #TDependencyQueries.
 	containerEntity --|> #TOODependencyQueries.
 
 	declaredException --|> exception.

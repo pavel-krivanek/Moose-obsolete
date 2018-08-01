@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaContainerEntity,
 	#superclass : #FmxNGJavaNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithClasses + FmxNGTWithTypes + TDependencyQueries + TOODependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithClasses classTrait + FmxNGTWithTypes classTrait + TDependencyQueries classTrait + TOODependencyQueries classTrait',
+	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithClasses + FmxNGTWithTypes + TOODependencyQueries',
+	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithClasses classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaContainerEntity class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaContainerEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithAnnotationTypes FmxNGTWithClasses FmxNGTWithTypes TDependencyQueries TOODependencyQueries)
+	^ #(FmxNGTWithAnnotationTypes FmxNGTWithClasses FmxNGTWithTypes TOODependencyQueries)
 ]
 
 { #category : #meta }
