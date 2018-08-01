@@ -100,52 +100,10 @@ FAMIXType >> allAnnotationTypes [
 ]
 
 { #category : #'Famix-Implementation' }
-FAMIXType >> allSubclassesDo: aBlock [
-	self allSubclassesWithoutAliasesDo: aBlock.
-	self typeAliases do: [ :each | each allSubclassesWithoutAliasesDo: aBlock ]
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> allSubclassesWithoutAliasesDo: aBlock [
-	self subInheritances do: [ :each | aBlock value: each subclass ].
-	self subInheritances do: [ :each | each subclass allSubclassesDo: aBlock ]
-]
-
-{ #category : #'Famix-Implementation' }
 FAMIXType >> allSuperclassesDo: aBlock [
 	self allSuperclassesWithoutAliasesDo: aBlock.
 	self mooseModel sourceLanguage isC
 		ifTrue: [ self typeAliases do: [ :each | each allSuperclassesWithoutAliasesDo: aBlock ] ]
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> allSuperclassesWithoutAliasesDo: aBlock [
-	superInheritances do: [:each | aBlock value: each superclass].
-	superInheritances do: [:each | each superclass allSuperclassesDo: aBlock]
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> anySuperclass [
-	"Mircea: this used to return interfaces too. fixed now. 
-	also added superclass that does the same thing"
-
-	self
-		allSuperclassesDo: [ :each | 
-			each isInterface
-				ifFalse: [ ^ each ] ].
-	^ nil
-]
-
-{ #category : #accessing }
-FAMIXType >> behavioursWithDeclaredType [
-
-	^ self structuresWithDeclaredType
-]
-
-{ #category : #accessing }
-FAMIXType >> behavioursWithDeclaredType: anObject [
-
-	^ self structuresWithDeclaredType: anObject
 ]
 
 { #category : #accessing }
@@ -233,13 +191,6 @@ FAMIXType >> copyFrom: anEntity within: aVisitor [
 	anEntity methods do: [:m|
 		self addMethod: (aVisitor visit: m) ].
 
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> directSubclasses [
-	"returns a collection with all subclasses of this class"
-
-	^ self subInheritances collect: [:each | each subclass]
 ]
 
 { #category : #'Famix-Implementation' }

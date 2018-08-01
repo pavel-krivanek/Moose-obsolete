@@ -44,18 +44,6 @@ FmxNGJavaAttribute >> accept: aVisitor [
 	aVisitor visitAttribute: self
 ]
 
-{ #category : #'as yet unclassified' }
-FmxNGJavaAttribute >> beInstanceVariable [
-
-	self propertyNamed: #sharedVariable put: false 
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAttribute >> beSharedVariable [
-
-	self propertyNamed: #sharedVariable put: true 
-]
-
 { #category : #accessing }
 FmxNGJavaAttribute >> belongsTo [
 
@@ -115,12 +103,6 @@ FmxNGJavaAttribute >> initialize [
 	super initialize.
 	hasClassScope := false.
 
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaAttribute >> isSharedVariable [
-
-	^ self propertyNamed: #sharedVariable ifNil: [false]
 ]
 
 { #category : #'as yet unclassified' }

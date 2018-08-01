@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaType,
 	#superclass : #FmxNGJavaContainerEntity,
-	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
-	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
+	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTClassMetrics + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
+	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTClassMetrics classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaType class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaType class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClassHierarchyNavigation FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
+	^ #(FmxNGTClassHierarchyNavigation FmxNGTClassMetrics FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
 ]
 
 { #category : #meta }
@@ -87,55 +87,6 @@ FmxNGJavaType >> allAnnotationInstances [
 { #category : #'as yet unclassified' }
 FmxNGJavaType >> allAnnotationTypes [
 	^ self allAnnotationInstances collectAsSet: #annotationType
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> allSubclassesDo: aBlock [
-	self allSubclassesWithoutAliasesDo: aBlock.
-	self typeAliases do: [ :each | each allSubclassesWithoutAliasesDo: aBlock ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> allSubclassesWithoutAliasesDo: aBlock [
-	self subInheritances do: [ :each | aBlock value: each subclass ].
-	self subInheritances do: [ :each | each subclass allSubclassesDo: aBlock ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> allSuperclassesDo: aBlock [
-	self allSuperclassesWithoutAliasesDo: aBlock.
-	self mooseModel sourceLanguage isC
-		ifTrue: [ self typeAliases do: [ :each | each allSuperclassesWithoutAliasesDo: aBlock ] ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> allSuperclassesWithoutAliasesDo: aBlock [
-	superInheritances do: [:each | aBlock value: each superclass].
-	superInheritances do: [:each | each superclass allSuperclassesDo: aBlock]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> anySuperclass [
-	"Mircea: this used to return interfaces too. fixed now. 
-	also added superclass that does the same thing"
-
-	self
-		allSuperclassesDo: [ :each | 
-			each isInterface
-				ifFalse: [ ^ each ] ].
-	^ nil
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> behavioursWithDeclaredType [
-
-	^ self structuresWithDeclaredType
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> behavioursWithDeclaredType: anObject [
-
-	^ self structuresWithDeclaredType: anObject
 ]
 
 { #category : #'as yet unclassified' }
@@ -223,20 +174,6 @@ FmxNGJavaType >> copyFrom: anEntity within: aVisitor [
 	anEntity methods do: [:m|
 		self addMethod: (aVisitor visit: m) ].
 
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> directSubclasses [
-	"returns a collection with all subclasses of this class"
-
-	^ self subInheritances collect: [:each | each subclass]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> directSuperclasses [
-	"returns a collection with all superclasses of this class"
-
-	^ self superInheritances collect: [:each | each superclass]
 ]
 
 { #category : #'as yet unclassified' }
@@ -375,53 +312,6 @@ FmxNGJavaType >> incomingTypeDeclarations [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> inheritedAttributes [
-	| inheritedAttrs |
-	inheritedAttrs := OrderedCollection new.
-	self allSuperclassesDo: [:each | 
-			each attributes do: [:attr | 
-				attr isPrivate not ifTrue: [inheritedAttrs add: attr]]].
-	^ inheritedAttrs
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> inheritedMethods [
-	| inheritedMethods |
-	inheritedMethods := OrderedCollection new.
-	self allSuperclassesDo: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate not ifTrue: [inheritedMethods add: method]]].
-	^inheritedMethods
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> inheritedSignatures [
-	| inheritedSignatures |
-	inheritedSignatures := Set new.
-	self superclassHierarchy do: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate not ifTrue: [inheritedSignatures add: method signature]]].
-	^ inheritedSignatures
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> inheritedSignaturesToMethod [
-	| inheritedSignaturesToMethod |
-	inheritedSignaturesToMethod := Dictionary new.
-	self allSuperclassesDo: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate ifFalse: [
-					inheritedSignaturesToMethod at: method signature ifAbsentPut: [method]]]].
-	^ inheritedSignaturesToMethod
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> inheritsFrom: aClass [
-	self allSuperclassesDo: [:each | each = aClass ifTrue: [^true]].
-	^ false
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> instanceSide [
 	^self isClassSide
 		ifTrue:
@@ -473,17 +363,6 @@ FmxNGJavaType >> isExtended [
 { #category : #'as yet unclassified' }
 FmxNGJavaType >> isGodClass [
 	^ (self propertyNamed: #GodClass) = true
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> isHierarchyRoot [
-	^self superclassHierarchyGroup 
-		allSatisfy: [:each | each isNil or: [each isStub] ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> isHierarchyRootWithin: aClassGroup [
-	^(self superclassHierarchyGroup intersection: aClassGroup) isEmpty
 ]
 
 { #category : #'as yet unclassified' }
@@ -546,11 +425,6 @@ FmxNGJavaType >> isTestCase [
 	<derived>
 	<MSEComment: 'True if the method is considered as a Java test'>
 	^ self isJUnit3TestCase or: [ self isJUnit4TestCase ] 
-]
-
-{ #category : #testing }
-FmxNGJavaType >> isType [
-	^ true
 ]
 
 { #category : #'as yet unclassified' }
@@ -680,43 +554,6 @@ FmxNGJavaType >> realType [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> subclassHierarchy [
-	| subclasses |
-	subclasses := OrderedCollection new.
-	self allSubclassesDo: [:each | subclasses add: each].
-	^ subclasses
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> subclassHierarchyGroup [
-	<navigation: 'All subclasses'>
-	^ MooseGroup
-		withAll: self subclassHierarchy asSet
-		withDescription: 'All subclasses of ' , self mooseName
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> superclass [
-	^self anySuperclass
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> superclassHierarchy [
-	| superclasses |
-	superclasses := OrderedCollection new.
-	self allSuperclassesDo: [:each |  superclasses add: each].
-	^ superclasses
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> superclassHierarchyGroup [
-	<navigation: 'All superclasses'>
-	^ MooseGroup
-		withAll: self superclassHierarchy asSet
-		withDescription: 'All superclasses of ' , self mooseName
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> typeScope [
 	"all types are not classes. Redefined in FamixClass"
 
@@ -733,25 +570,11 @@ FmxNGJavaType >> understands: signature [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> withSubclassHierarchy [
-	^ self subclassHierarchy 
-		addFirst: self realType;
-		addAll: self realType allTypeAliases;
-		yourself
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> withSubclassHierarchyGroup [
 	<navigation: 'With all subclasses'>
 	^ MooseGroup
 		withAll: (self subclassHierarchy asSet; addFirst: self; yourself)
 		withDescription: 'With all subclasses of ' , self mooseName
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> withSubclassesDo: aBlock [
-	aBlock value: self.
-	self allSubclassesDo: aBlock
 ]
 
 { #category : #'as yet unclassified' }
@@ -768,10 +591,4 @@ FmxNGJavaType >> withSuperclassHierarchyGroup [
 	^ MooseGroup
 		withAll: self withSuperclassHierarchy asSet
 		withDescription: 'With all superclasses of ' , self mooseName
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> withSuperclassesDo: aBlock [
-	aBlock value: self.
-	self allSuperclassesDo: aBlock
 ]

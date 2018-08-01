@@ -28,6 +28,18 @@ FmxNGTWithTypedStructures classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #deprecated }
+FmxNGTWithTypedStructures >> behavioursWithDeclaredType [
+
+	^ self structuresWithDeclaredType
+]
+
+{ #category : #deprecated }
+FmxNGTWithTypedStructures >> behavioursWithDeclaredType: anObject [
+
+	^ self structuresWithDeclaredType: anObject
+]
+
 { #category : #accessing }
 FmxNGTWithTypedStructures >> structuresWithDeclaredType [
 

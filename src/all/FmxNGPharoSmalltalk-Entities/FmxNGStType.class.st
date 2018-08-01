@@ -45,18 +45,6 @@ FmxNGStType >> addedMethods [
 ]
 
 { #category : #adding }
-FmxNGStType >> behavioursWithDeclaredType [
-
-	^ self structuresWithDeclaredType
-]
-
-{ #category : #adding }
-FmxNGStType >> behavioursWithDeclaredType: anObject [
-
-	^ self structuresWithDeclaredType: anObject
-]
-
-{ #category : #adding }
 FmxNGStType >> belongsTo [
 	^ self container ifNil: [ self parentPackage ]
 ]
