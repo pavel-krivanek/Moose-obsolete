@@ -1,6 +1,6 @@
 Trait {
 	#name : #FmxNGTWithClasses,
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-Class'
 }
 
 { #category : #meta }

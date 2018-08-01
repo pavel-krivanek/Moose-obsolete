@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStPackage,
 	#superclass : #FmxNGStScopingEntity,
-	#traits : 'FmxNGTPackage',
-	#classTraits : 'FmxNGTPackage classTrait',
+	#traits : 'FmxNGTPackage + FmxNGTPackageWithClassesGlue',
+	#classTraits : 'FmxNGTPackage classTrait + FmxNGTPackageWithClassesGlue classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGStPackage class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStPackage class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTPackage)
+	^ #(FmxNGTPackage FmxNGTPackageWithClassesGlue)
 ]
 
 { #category : #meta }

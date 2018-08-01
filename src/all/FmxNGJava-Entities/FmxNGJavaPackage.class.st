@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaPackage,
 	#superclass : #FmxNGJavaScopingEntity,
-	#traits : 'FmxNGTPackage',
-	#classTraits : 'FmxNGTPackage classTrait',
+	#traits : 'FmxNGTPackage + FmxNGTPackageWithClassesGlue',
+	#classTraits : 'FmxNGTPackage classTrait + FmxNGTPackageWithClassesGlue classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaPackage class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaPackage class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTPackage)
+	^ #(FmxNGTPackage FmxNGTPackageWithClassesGlue)
 ]
 
 { #category : #meta }
@@ -518,15 +518,4 @@ FmxNGJavaPackage >> relativeImportanceForSystem [
 { #category : #'as yet unclassified' }
 FmxNGJavaPackage >> selectWithinYourScope: aMooseQueryResult [
 	^ aMooseQueryResult withinPackage: self
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaPackage >> weightedMethodCount [
-	<MSEProperty: #weightedMethodCount type: #Number>
-	<MSEComment: 'The sum of the complexity in a package'>
-	<derived>
-			
-	^self
-		lookUpPropertyNamed: #WMC
-		computedAs: [self classes inject: 0 into: [ :sum :each | sum + each weightedMethodCount] ]
 ]

@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXPackage,
 	#superclass : #FAMIXScopingEntity,
-	#traits : 'FmxNGTPackage',
-	#classTraits : 'FmxNGTPackage classTrait',
+	#traits : 'FmxNGTPackage + FmxNGTPackageWithClassesGlue',
+	#classTraits : 'FmxNGTPackage classTrait + FmxNGTPackageWithClassesGlue classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FAMIXPackage class >> generatedSlotNames [
 { #category : #generator }
 FAMIXPackage class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTPackage)
+	^ #(FmxNGTPackage FmxNGTPackageWithClassesGlue)
 ]
 
 { #category : #meta }
@@ -518,15 +518,4 @@ FAMIXPackage >> relativeImportanceForSystem [
 { #category : #'moosechef-scoping-filtering' }
 FAMIXPackage >> selectWithinYourScope: aMooseQueryResult [
 	^ aMooseQueryResult withinPackage: self
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXPackage >> weightedMethodCount [
-	<MSEProperty: #weightedMethodCount type: #Number>
-	<MSEComment: 'The sum of the complexity in a package'>
-	<derived>
-			
-	^self
-		lookUpPropertyNamed: #WMC
-		computedAs: [self classes inject: 0 into: [ :sum :each | sum + each weightedMethodCount] ]
 ]
