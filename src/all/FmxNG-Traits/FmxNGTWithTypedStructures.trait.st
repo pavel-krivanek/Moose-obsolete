@@ -29,6 +29,16 @@ FmxNGTWithTypedStructures classSide >> generatedTraitNames [
 ]
 
 { #category : #deprecated }
+FmxNGTWithTypedStructures >> addBehaviourWithDeclaredType: aBehaviour [
+	self structuresWithDeclaredType add: aBehaviour
+]
+
+{ #category : #adding }
+FmxNGTWithTypedStructures >> addStructureWithDeclaredType: aStructuralEntity [
+	structuresWithDeclaredType add: aStructuralEntity
+]
+
+{ #category : #deprecated }
 FmxNGTWithTypedStructures >> behavioursWithDeclaredType [
 
 	^ self structuresWithDeclaredType

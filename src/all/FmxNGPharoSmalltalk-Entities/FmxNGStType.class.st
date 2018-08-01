@@ -35,15 +35,6 @@ FmxNGStType class >> requirements [
 	^ { FmxNGStContainerEntity }
 ]
 
-{ #category : #'Famix-Extensions' }
-FmxNGStType >> addedMethods [
-	| inheritedMethodNames |
-	inheritedMethodNames := self inheritedMethods
-		collect: [:each | each signature].
-	^self methods
-		reject: [:each | inheritedMethodNames includes: each signature]
-]
-
 { #category : #adding }
 FmxNGStType >> belongsTo [
 	^ self container ifNil: [ self parentPackage ]
@@ -325,12 +316,6 @@ FmxNGStType >> providerTypes [
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>
 	^ (self queryAllOutgoing atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #'Famix-Implementation' }
-FmxNGStType >> realType [
-	"All types except the alias ones are real"
-	^ self 
 ]
 
 { #category : #'Famix-Extensions' }

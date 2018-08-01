@@ -58,6 +58,12 @@ FmxNGTType >> outgoingTraitUsages: anObject [
 
 ]
 
+{ #category : #testing }
+FmxNGTType >> realType [
+	"All types except the alias ones are real"
+	^ self 
+]
+
 { #category : #accessing }
 FmxNGTType >> typeContainer [
 

@@ -29,6 +29,11 @@ FmxNGTReferenceable classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTReferenceable >> addIncomingReference: aReference [ 
+	incomingReferences add: aReference
+]
+
+{ #category : #accessing }
 FmxNGTReferenceable >> incomingReferences [
 
 	<generated>

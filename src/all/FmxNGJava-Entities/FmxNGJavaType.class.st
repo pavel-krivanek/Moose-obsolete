@@ -52,30 +52,6 @@ FmxNGJavaType >> accessTo: aFAMIXPackageOrFAMIXClass [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> addBehaviourWithDeclaredType: aBehaviour [
-	self structuresWithDeclaredType add: aBehaviour
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> addIncomingReference: aReference [ 
-	incomingReferences add: aReference
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> addStructureWithDeclaredType: aStructuralEntity [
-	structuresWithDeclaredType add: aStructuralEntity
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> addedMethods [
-	| inheritedMethodNames |
-	inheritedMethodNames := self inheritedMethods
-		collect: [:each | each signature].
-	^self methods
-		reject: [:each | inheritedMethodNames includes: each signature]
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> allAnnotationInstances [
 	| result |
 	result := OrderedCollection new.
@@ -100,15 +76,6 @@ FmxNGJavaType >> belongsTo: anObject [
 	<generated>
 	self typeContainer: anObject
 
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> classSide [
-	^self isClassSide
-		ifFalse:
-			[self mooseModel allClasses
-				entityNamed: (self mooseName , '_class') asSymbol]
-		ifTrue: [self]
 ]
 
 { #category : #'as yet unclassified' }
@@ -374,12 +341,6 @@ FmxNGJavaType >> isParameterizedType [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> isSUnitTestCase [
-	self allSuperclassesDo: [:each | each name = 'TestCase' ifTrue: [^ true] ].
-	^ false
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> isTestCase [
 	<MSEProperty: #isTestCase type: #Boolean>
 	<derived>
@@ -505,12 +466,6 @@ FmxNGJavaType >> providerTypes [
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>
 	^ (self queryAllOutgoing atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> realType [
-	"All types except the alias ones are real"
-	^ self 
 ]
 
 { #category : #'as yet unclassified' }

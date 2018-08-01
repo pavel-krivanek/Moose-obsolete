@@ -52,37 +52,13 @@ FAMIXType >> accessTo: aFAMIXPackageOrFAMIXClass [
 ]
 
 { #category : #accessing }
-FAMIXType >> addBehaviourWithDeclaredType: aBehaviour [
-	self structuresWithDeclaredType add: aBehaviour
-]
-
-{ #category : #accessing }
-FAMIXType >> addIncomingReference: aReference [ 
-	incomingReferences add: aReference
-]
-
-{ #category : #accessing }
 FAMIXType >> addOutgoingTraitUsage: aTraitUsage [
 	self outgoingTraitUsages add: aTraitUsage
 ]
 
 { #category : #accessing }
-FAMIXType >> addStructureWithDeclaredType: aStructuralEntity [
-	structuresWithDeclaredType add: aStructuralEntity
-]
-
-{ #category : #accessing }
 FAMIXType >> addTraitUsage: aTraitUsage [
 	
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> addedMethods [
-	| inheritedMethodNames |
-	inheritedMethodNames := self inheritedMethods
-		collect: [:each | each signature].
-	^self methods
-		reject: [:each | inheritedMethodNames includes: each signature]
 ]
 
 { #category : #'Famix-Extensions' }
@@ -193,13 +169,6 @@ FAMIXType >> copyFrom: anEntity within: aVisitor [
 
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXType >> directSuperclasses [
-	"returns a collection with all superclasses of this class"
-
-	^ self superInheritances collect: [:each | each superclass]
-]
-
 { #category : #'Famix-Smalltalk' }
 FAMIXType >> extendedInPackages [
 
@@ -218,40 +187,6 @@ FAMIXType >> extendedMethods [
 ]
 
 { #category : #'Famix-Extensions' }
-FAMIXType >> fanIn [
-	<MSEProperty: #fanIn type: #Number>
-	<derived>
-	<MSEComment: 'Number of client classes'>
-
-	^self
-		lookUpPropertyNamed: #fanIn
-		computedAs: [self clientTypes size]
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXType >> fanIn: aNumber [
-
-	self privateState propertyAt: #fanIn put: aNumber
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXType >> fanOut [
-	<MSEProperty: #fanOut type: #Number>
-	<derived>
-	<MSEComment: 'Number of provider classes'>
-
-	^self
-		lookUpPropertyNamed: #fanOut
-		computedAs: [self providerTypes size]
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXType >> fanOut: aNumber [
-
-	self privateState propertyAt: #fanOut put: aNumber
-]
-
-{ #category : #'Famix-Extensions' }
 FAMIXType >> hasMethodWithSignature: aStringOrSymbol [
 	| symbol |
 	symbol := aStringOrSymbol asSymbol.
@@ -261,32 +196,6 @@ FAMIXType >> hasMethodWithSignature: aStringOrSymbol [
 { #category : #'Famix-Extensions' }
 FAMIXType >> hasMethodsAnnotatedWith: aString [
 	^ self methods anySatisfy: [ :each | each isAnnotatedWith: aString ]
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXType >> hierarchyNestingLevel [
-	<MSEProperty: #hierarchyNestingLevel type: #Number>
-	<derived>
-	<MSEComment: 'The nesting of a class inside the hierarchy'>
-
-	^self
-		lookUpPropertyNamed: #hierarchyNestingLevel
-		computedAs:
-			[| currentMaxDepth |
-			(self directSuperclasses isEmpty or: [self isStub])
-				ifTrue: [0]
-				ifFalse:
-					[currentMaxDepth := 0.
-					self
-						allSuperclassesDo:
-							[:aClass | currentMaxDepth := currentMaxDepth max: aClass hierarchyNestingLevel].
-					currentMaxDepth + 1]]
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXType >> hierarchyNestingLevel: aNumber [
-
-	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
 ]
 
 { #category : #'Famix-Implementation' }
@@ -333,53 +242,6 @@ FAMIXType >> incomingAccessesGroup [
 FAMIXType >> incomingTypeDeclarations [
 
 	^ self structuresWithDeclaredType , self behavioursWithDeclaredType collect: [ :var | MooseChefTypeDeclarationAssociation newFrom: var to: self ]
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> inheritedAttributes [
-	| inheritedAttrs |
-	inheritedAttrs := OrderedCollection new.
-	self allSuperclassesDo: [:each | 
-			each attributes do: [:attr | 
-				attr isPrivate not ifTrue: [inheritedAttrs add: attr]]].
-	^ inheritedAttrs
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> inheritedMethods [
-	| inheritedMethods |
-	inheritedMethods := OrderedCollection new.
-	self allSuperclassesDo: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate not ifTrue: [inheritedMethods add: method]]].
-	^inheritedMethods
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> inheritedSignatures [
-	| inheritedSignatures |
-	inheritedSignatures := Set new.
-	self superclassHierarchy do: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate not ifTrue: [inheritedSignatures add: method signature]]].
-	^ inheritedSignatures
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> inheritedSignaturesToMethod [
-	| inheritedSignaturesToMethod |
-	inheritedSignaturesToMethod := Dictionary new.
-	self allSuperclassesDo: [:each | 
-			each methodsDo: [:method | 
-				method isPrivate ifFalse: [
-					inheritedSignaturesToMethod at: method signature ifAbsentPut: [method]]]].
-	^ inheritedSignaturesToMethod
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> inheritsFrom: aClass [
-	self allSuperclassesDo: [:each | each = aClass ifTrue: [^true]].
-	^ false
 ]
 
 { #category : #'Famix-Smalltalk' }
@@ -434,17 +296,6 @@ FAMIXType >> isExtended [
 { #category : #'Famix-Extensions' }
 FAMIXType >> isGodClass [
 	^ (self propertyNamed: #GodClass) = true
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXType >> isHierarchyRoot [
-	^self superclassHierarchyGroup 
-		allSatisfy: [:each | each isNil or: [each isStub] ]
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXType >> isHierarchyRootWithin: aClassGroup [
-	^(self superclassHierarchyGroup intersection: aClassGroup) isEmpty
 ]
 
 { #category : #'Famix-Java' }
@@ -507,11 +358,6 @@ FAMIXType >> isTestCase [
 	<derived>
 	<MSEComment: 'True if the method is considered as a Java test'>
 	^ self isJUnit3TestCase or: [ self isJUnit4TestCase ] 
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> isType [
-	^ true
 ]
 
 { #category : #'Famix-Smalltalk' }
@@ -634,49 +480,6 @@ FAMIXType >> providerTypes [
 	^ (self queryAllOutgoing atScope: FmxNGTType) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXType >> realType [
-	"All types except the alias ones are real"
-	^ self 
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> subclassHierarchy [
-	| subclasses |
-	subclasses := OrderedCollection new.
-	self allSubclassesDo: [:each | subclasses add: each].
-	^ subclasses
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> subclassHierarchyGroup [
-	<navigation: 'All subclasses'>
-	^ MooseGroup
-		withAll: self subclassHierarchy asSet
-		withDescription: 'All subclasses of ' , self mooseName
-]
-
-{ #category : #'Famix-Smalltalk' }
-FAMIXType >> superclass [
-	^self anySuperclass
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> superclassHierarchy [
-	| superclasses |
-	superclasses := OrderedCollection new.
-	self allSuperclassesDo: [:each |  superclasses add: each].
-	^ superclasses
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> superclassHierarchyGroup [
-	<navigation: 'All superclasses'>
-	^ MooseGroup
-		withAll: self superclassHierarchy asSet
-		withDescription: 'All superclasses of ' , self mooseName
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FAMIXType >> typeScope [
 	"all types are not classes. Redefined in FamixClass"
@@ -694,25 +497,11 @@ FAMIXType >> understands: signature [
 ]
 
 { #category : #'Famix-Implementation' }
-FAMIXType >> withSubclassHierarchy [
-	^ self subclassHierarchy 
-		addFirst: self realType;
-		addAll: self realType allTypeAliases;
-		yourself
-]
-
-{ #category : #'Famix-Implementation' }
 FAMIXType >> withSubclassHierarchyGroup [
 	<navigation: 'With all subclasses'>
 	^ MooseGroup
 		withAll: (self subclassHierarchy asSet; addFirst: self; yourself)
 		withDescription: 'With all subclasses of ' , self mooseName
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> withSubclassesDo: aBlock [
-	aBlock value: self.
-	self allSubclassesDo: aBlock
 ]
 
 { #category : #'Famix-Implementation' }
@@ -729,10 +518,4 @@ FAMIXType >> withSuperclassHierarchyGroup [
 	^ MooseGroup
 		withAll: self withSuperclassHierarchy asSet
 		withDescription: 'With all superclasses of ' , self mooseName
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> withSuperclassesDo: aBlock [
-	aBlock value: self.
-	self allSuperclassesDo: aBlock
 ]

@@ -26,6 +26,15 @@ FmxNGTClassMetrics classSide >> generatedTraitNames [
 ]
 
 { #category : #'Famix-Implementation' }
+FmxNGTClassMetrics >> addedMethods [
+	| inheritedMethodNames |
+	inheritedMethodNames := self inheritedMethods
+		collect: [:each | each signature].
+	^self methods
+		reject: [:each | inheritedMethodNames includes: each signature]
+]
+
+{ #category : #'Famix-Implementation' }
 FmxNGTClassMetrics >> fanIn [
 	<MSEProperty: #fanIn type: #Number>
 	<derived>
