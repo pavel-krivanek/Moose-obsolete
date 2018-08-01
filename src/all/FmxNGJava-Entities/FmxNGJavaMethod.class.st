@@ -287,11 +287,6 @@ FmxNGJavaMethod >> isDetectedSetter [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> isExtension [
-	^self belongsTo packageScope ~~ self packageScope.
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> isImplementing [
 	<MSEProperty: #isImplementing type: #Boolean>
 	<derived>

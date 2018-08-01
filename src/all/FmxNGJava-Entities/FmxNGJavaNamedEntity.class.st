@@ -105,7 +105,7 @@ FmxNGJavaNamedEntity >> namespaceScope [
 	^ nil
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaNamedEntity >> packageScope [
 	"Empty default scope"
 	^ nil

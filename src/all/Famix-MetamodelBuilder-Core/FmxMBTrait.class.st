@@ -129,6 +129,14 @@ FmxMBTrait >> glues: trait1 with: trait2 [
 ]
 
 { #category : #testing }
+FmxMBTrait >> gluesOneOf: selectedTraits [
+
+	gluedTraits ifEmpty: [ ^ false ].
+
+	^ selectedTraits anySatisfy: [ :each | gluedTraits includes: each ]
+]
+
+{ #category : #testing }
 FmxMBTrait >> gluesSomeOf: selectedTraits [
 
 	gluedTraits ifEmpty: [ ^ false ].

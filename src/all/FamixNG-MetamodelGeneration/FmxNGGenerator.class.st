@@ -117,7 +117,8 @@ Class {
 		'tClassHierarchyNavigation',
 		'tClassMetrics',
 		'tLCOMMetrics',
-		'tInheritanceGlue'
+		'tInheritanceGlue',
+		'tTypeWithMethodsGlue'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -1589,6 +1590,9 @@ FmxNGGenerator >> defineTraits [
 
 	tInheritanceGlue := builder newTraitNamed: #TInheritanceGlue.
 	tInheritanceGlue glues: tSubInheritance with: tSuperInheritance.
+
+	tTypeWithMethodsGlue := builder newTraitNamed: #TTypeWithMethodsGlue.
+	tTypeWithMethodsGlue glues: tType with: tWithMethods.
 
 
 ]

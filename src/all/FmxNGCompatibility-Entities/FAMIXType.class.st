@@ -497,22 +497,6 @@ FAMIXType >> understands: signature [
 ]
 
 { #category : #'Famix-Implementation' }
-FAMIXType >> withSubclassHierarchyGroup [
-	<navigation: 'With all subclasses'>
-	^ MooseGroup
-		withAll: (self subclassHierarchy asSet; addFirst: self; yourself)
-		withDescription: 'With all subclasses of ' , self mooseName
-]
-
-{ #category : #'Famix-Implementation' }
-FAMIXType >> withSuperclassHierarchy [
-	^ self realType superclassHierarchy 
-		addFirst: self realType; 
-		addAll: self realType allTypeAliases;
-		yourself
-]
-
-{ #category : #'Famix-Implementation' }
 FAMIXType >> withSuperclassHierarchyGroup [
 	<navigation: 'With all superclasses'>
 	^ MooseGroup

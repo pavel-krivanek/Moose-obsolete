@@ -465,12 +465,6 @@ FAMIXPackage >> numberOfMethods: aNumber [
 	self privateState propertyAt: #numberOfMethods put: aNumber
 ]
 
-{ #category : #'moosechef-scoping-filtering' }
-FAMIXPackage >> packageScope [
-
-	^ self
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXPackage >> printOn: aStream [ 
 	| parent |

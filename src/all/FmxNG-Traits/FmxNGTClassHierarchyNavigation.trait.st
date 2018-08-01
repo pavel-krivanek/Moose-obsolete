@@ -178,10 +178,26 @@ FmxNGTClassHierarchyNavigation >> withSubclassHierarchy [
 		yourself
 ]
 
+{ #category : #'Famix-Implementation' }
+FmxNGTClassHierarchyNavigation >> withSubclassHierarchyGroup [
+	<navigation: 'With all subclasses'>
+	^ MooseGroup
+		withAll: (self subclassHierarchy asSet; addFirst: self; yourself)
+		withDescription: 'With all subclasses of ' , self mooseName
+]
+
 { #category : #enumerating }
 FmxNGTClassHierarchyNavigation >> withSubclassesDo: aBlock [
 	aBlock value: self.
 	self allSubclassesDo: aBlock
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTClassHierarchyNavigation >> withSuperclassHierarchy [
+	^ self realType superclassHierarchy 
+		addFirst: self realType; 
+		addAll: self realType allTypeAliases;
+		yourself
 ]
 
 { #category : #enumerating }

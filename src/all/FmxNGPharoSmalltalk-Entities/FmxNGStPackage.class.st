@@ -170,12 +170,6 @@ FmxNGStPackage >> numberOfClientPackages: aNumber [
 ]
 
 { #category : #accessing }
-FmxNGStPackage >> packageScope [
-
-	^ self
-]
-
-{ #category : #accessing }
 FmxNGStPackage >> providerPackages [
 	"^ self inheritedPackages union: self invokedPackages"
 

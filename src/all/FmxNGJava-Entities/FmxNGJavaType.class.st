@@ -288,11 +288,6 @@ FmxNGJavaType >> isExtended [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaType >> isGodClass [
-	^ (self propertyNamed: #GodClass) = true
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaType >> isInnerClass [
 	<MSEProperty: #isInnerClass type: #Boolean>
 	<derived>
@@ -482,22 +477,6 @@ FmxNGJavaType >> understands: signature [
 	self withSuperclassesDo: [:each | 
 		(each implements: signature) ifTrue: [^true]].
 	^false
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> withSubclassHierarchyGroup [
-	<navigation: 'With all subclasses'>
-	^ MooseGroup
-		withAll: (self subclassHierarchy asSet; addFirst: self; yourself)
-		withDescription: 'With all subclasses of ' , self mooseName
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaType >> withSuperclassHierarchy [
-	^ self realType superclassHierarchy 
-		addFirst: self realType; 
-		addAll: self realType allTypeAliases;
-		yourself
 ]
 
 { #category : #'as yet unclassified' }

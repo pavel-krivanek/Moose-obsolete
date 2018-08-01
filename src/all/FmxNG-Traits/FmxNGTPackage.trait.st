@@ -70,3 +70,9 @@ FmxNGTPackage >> packageOwner: anObject [
 	packageOwner := anObject
 
 ]
+
+{ #category : #accessing }
+FmxNGTPackage >> packageScope [
+
+	^ self
+]

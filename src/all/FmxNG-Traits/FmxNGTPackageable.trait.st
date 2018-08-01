@@ -29,6 +29,17 @@ FmxNGTPackageable classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTPackageable >> isExtension [
+	^self belongsTo packageScope ~~ self packageScope.
+]
+
+{ #category : #accessing }
+FmxNGTPackageable >> packageScope [
+
+	self explicitRequirement
+]
+
+{ #category : #accessing }
 FmxNGTPackageable >> parentPackage [
 
 	<generated>

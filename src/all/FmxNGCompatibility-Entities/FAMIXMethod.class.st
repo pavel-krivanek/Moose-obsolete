@@ -234,11 +234,6 @@ FAMIXMethod >> isDetectedSetter [
 			self accesses first isWrite ] ]
 ]
 
-{ #category : #'Famix-Smalltalk' }
-FAMIXMethod >> isExtension [
-	^self belongsTo packageScope ~~ self packageScope.
-]
-
 { #category : #'Famix-Java' }
 FAMIXMethod >> isImplementing [
 	<MSEProperty: #isImplementing type: #Boolean>

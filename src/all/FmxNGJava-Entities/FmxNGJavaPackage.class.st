@@ -466,12 +466,6 @@ FmxNGJavaPackage >> numberOfMethods: aNumber [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaPackage >> packageScope [
-
-	^ self
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaPackage >> printOn: aStream [ 
 	| parent |
 	parent := self parentPackage.

@@ -180,11 +180,6 @@ FmxNGStMethod >> isCalledInternally [
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isExtension [
-	^self belongsTo packageScope ~~ self packageScope.
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> isGetter [
 	<MSEProperty: #isGetter type: #Boolean>
 	<derived>

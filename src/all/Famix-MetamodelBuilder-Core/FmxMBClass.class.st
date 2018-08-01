@@ -32,6 +32,13 @@ FmxMBClass >> allClassGeneralizations [
 ]
 
 { #category : #accessing }
+FmxMBClass >> allLocalTraits [
+
+	^ self traitsFromRelations, self traitGeneralizations
+
+]
+
+{ #category : #accessing }
 FmxMBClass >> allRequirementNames [ 
 
 	^ (self requirements asSet collect: #fullName) sorted
@@ -46,11 +53,12 @@ FmxMBClass >> allTraitNames [
 { #category : #accessing }
 FmxMBClass >> allTraits [
 	
-	| selectedTraits |
+	| selectedTraits allTraits |
 	
-	selectedTraits := (self traitsFromRelations, self traitGeneralizations).
+	selectedTraits := self allLocalTraits.
+	allTraits := (self allClassGeneralizations flatCollect: [ :each | each allLocalTraits ]) asSet.
 	
-	selectedTraits addAll: (self glueingTraitsOf: selectedTraits).
+	selectedTraits addAll: (self glueingTraitsOf: selectedTraits whenAllHierarchyHas: allTraits).
 	
 	^ selectedTraits asSet
 ]
@@ -194,9 +202,14 @@ FmxMBClass >> generateTestingMethodsIn: aClass [
 ]
 
 { #category : #accessing }
-FmxMBClass >> glueingTraitsOf: selectedTraits [
+FmxMBClass >> glueingTraitsOf: selectedTraits whenAllHierarchyHas: allTraitsInHierarchy [
 
-	^  self builder traits select: [ :each | each gluesSomeOf: selectedTraits ]
+	| potentialGlues |
+	
+	potentialGlues := self builder traits select: [ :each | each gluesSomeOf: allTraitsInHierarchy ].
+	
+	^ potentialGlues select: [ :each | each gluesOneOf: selectedTraits ]
+	
 ]
 
 { #category : #testing }
@@ -304,4 +317,14 @@ FmxMBClass >> usesOnlyTrait: aTrait [
 
  	^ (self traitGeneralizations size = 1) 
 		and: [ self traitGeneralizations first = aTrait ]	
+]
+
+{ #category : #accessing }
+FmxMBClass >> withAllClassGeneralizations [
+
+	"returns all class generalizations of with generalizations of superclasses"
+	
+	^ classGeneralization 
+		ifNil: [ classGeneralization ]
+		ifNotNil: [ {self}, classGeneralization withAllClassGeneralizations ]
 ]
