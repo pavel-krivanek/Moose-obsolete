@@ -117,8 +117,7 @@ Class {
 		'tClassHierarchyNavigation',
 		'tClassMetrics',
 		'tLCOMMetrics',
-		'tInheritanceGlue',
-		'tTypeWithMethodsGlue'
+		'tInheritanceGlue'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -871,6 +870,15 @@ FmxNGGenerator >> commentForTWithTypes [
 ]
 
 { #category : #definition }
+FmxNGGenerator >> defineGlueingTraits [
+
+	tInheritanceGlue := builder newTraitNamed: #TInheritanceGlue.
+	tInheritanceGlue glues: tSubInheritance with: tSuperInheritance.
+
+
+]
+
+{ #category : #definition }
 FmxNGGenerator >> defineProperties [
 
 	((tFileAnchor property: #correspondingFile type: #FmxNGTFile) 
@@ -1588,11 +1596,7 @@ FmxNGGenerator >> defineTraits [
 	tClassMetrics := builder newTraitNamed: #TClassMetrics.
 	tLCOMMetrics := builder newTraitNamed: #TLCOMMetrics.
 
-	tInheritanceGlue := builder newTraitNamed: #TInheritanceGlue.
-	tInheritanceGlue glues: tSubInheritance with: tSuperInheritance.
-
-	tTypeWithMethodsGlue := builder newTraitNamed: #TTypeWithMethodsGlue.
-	tTypeWithMethodsGlue glues: tType with: tWithMethods.
+	self defineGlueingTraits.
 
 
 ]
