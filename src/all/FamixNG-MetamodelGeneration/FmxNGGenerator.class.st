@@ -119,7 +119,8 @@ Class {
 		'tLCOMMetrics',
 		'tInheritanceGlue',
 		'tWithClasses',
-		'tPackageWithClassesGlue'
+		'tPackageWithClassesGlue',
+		'tTraitUser'
 	],
 	#category : #'FamixNG-MetamodelGeneration'
 }
@@ -1246,7 +1247,7 @@ FmxNGGenerator >> defineRelations [
 	((tTraitUsage property: #trait)
 			source).
 
-	((tType property: #outgoingTraitUsages))
+	((tTraitUser property: #outgoingTraitUsages))
 		-*
 	((tTraitUsage property: #user)
 			target).
@@ -1461,6 +1462,8 @@ FmxNGGenerator >> defineTraits [
 	tTrait comment: self commentForTTrait.
 
 	tTraitUsage := builder newTraitNamed: #TTraitUsage.
+
+	tTraitUser := builder newTraitNamed: #TTraitUser.
 
 	tType := builder newTraitNamed: #TType.
 	tType comment: self commentForTType.

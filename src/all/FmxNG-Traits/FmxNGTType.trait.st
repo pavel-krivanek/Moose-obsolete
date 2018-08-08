@@ -8,7 +8,6 @@ A type can have multiple subtypes or supertypes. These are modelled by means of 
 Trait {
 	#name : #FmxNGTType,
 	#instVars : [
-		'#outgoingTraitUsages => FMMany type: #FmxNGTTraitUsage opposite: #user',
 		'#typeContainer => FMOne type: #FmxNGTWithTypes opposite: #types'
 	],
 	#category : #'FmxNG-Traits-Type'
@@ -27,7 +26,7 @@ FmxNGTType classSide >> annotation [
 FmxNGTType classSide >> generatedSlotNames [
 	<generated>
 	'FmxNGTType class>>#generatedSlotNames'.
-	^ #(typeContainer outgoingTraitUsages)
+	^ #(typeContainer)
 ]
 
 { #category : #generator }
@@ -41,21 +40,6 @@ FmxNGTType >> isType [
 
 	<generated>
 	^ true
-]
-
-{ #category : #accessing }
-FmxNGTType >> outgoingTraitUsages [
-
-	<generated>
-	^ outgoingTraitUsages
-]
-
-{ #category : #accessing }
-FmxNGTType >> outgoingTraitUsages: anObject [
-
-	<generated>
-	outgoingTraitUsages value: anObject
-
 ]
 
 { #category : #testing }

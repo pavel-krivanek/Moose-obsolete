@@ -1,10 +1,10 @@
 Trait {
 	#name : #FmxNGTFileNavigation,
 	#instVars : [
-		'startLine',
-		'startColumn',
+		'endColumn',
 		'endLine',
-		'endColumn'
+		'startColumn',
+		'startLine'
 	],
 	#category : #'FmxNG-Traits-Traits'
 }

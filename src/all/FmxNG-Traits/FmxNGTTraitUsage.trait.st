@@ -2,7 +2,7 @@ Trait {
 	#name : #FmxNGTTraitUsage,
 	#instVars : [
 		'#trait => FMOne type: #FmxNGTTrait opposite: #incomingTraitUsages',
-		'#user => FMOne type: #FmxNGTType opposite: #outgoingTraitUsages'
+		'#user => FMOne type: #FmxNGTTraitUser opposite: #outgoingTraitUsages'
 	],
 	#category : #'FmxNG-Traits-Trait'
 }
