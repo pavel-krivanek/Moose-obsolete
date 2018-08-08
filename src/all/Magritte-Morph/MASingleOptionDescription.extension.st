@@ -1,6 +1,6 @@
 Extension { #name : #MASingleOptionDescription }
 
-{ #category : #'*magritte-morph-defaults' }
+{ #category : #'*Magritte-Morph' }
 MASingleOptionDescription class >> defaultMorphClasses [
 	^ Array
 			with: MASingleSelectListMorph

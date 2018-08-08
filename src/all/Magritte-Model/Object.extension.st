@@ -5,7 +5,7 @@ Object >> basicMagritteDescription [
 	^ MAPragmaBuilder for: self
 ]
 
-{ #category : #'*magritte-model-accessing' }
+{ #category : #'*Magritte-Model' }
 Object >> descriptionContainer [
 	"Return the default description container."
 	<magritteContainer>
@@ -47,21 +47,21 @@ Object class >> magritteTemplate [
 	^self new
 ]
 
-{ #category : #'*magritte-model-accessing' }
+{ #category : #'*Magritte-Model' }
 Object >> mementoClass [
 	"Return a class to be used to remember or cache the receiver, namely a memento object."
 
 	^ MACheckedMemento
 ]
 
-{ #category : #'*magritte-model-model' }
+{ #category : #'*Magritte-Model' }
 Object >> readUsing: aDescription [
 	"Dispatch the read-access to the receiver using the accessor of aDescription."
 
 	^ aDescription accessor read: self
 ]
 
-{ #category : #'*magritte-model-actions' }
+{ #category : #'*Magritte-Model' }
 Object >> uniqueActionSelectors [
 
 	| descriptionPragmas selectors |	
@@ -74,7 +74,7 @@ Object >> uniqueActionSelectors [
 	^ Set withAll: selectors
 ]
 
-{ #category : #'*magritte-model-model' }
+{ #category : #'*Magritte-Model' }
 Object >> write: anObject using: aDescription [
 	"Dispatch the write-access to the receiver of anObject using the accessor of aDescription."
 

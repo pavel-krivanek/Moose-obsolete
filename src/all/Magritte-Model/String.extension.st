@@ -1,6 +1,6 @@
 Extension { #name : #String }
 
-{ #category : #'*magritte-model-testing' }
+{ #category : #'*Magritte-Model' }
 String >> matches: aString [
 	aString isEmpty ifTrue: [ ^ true ].
 	^ (aString includesAnyOf: '*#')

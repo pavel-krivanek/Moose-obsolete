@@ -1,6 +1,6 @@
 Extension { #name : #MAToOneRelationDescription }
 
-{ #category : #'*magritte-morph-defaults' }
+{ #category : #'*Magritte-Morph' }
 MAToOneRelationDescription class >> defaultMorphClasses [
 	^ Array with: MAExternalEditorMorph with: MAInternalEditorMorph
 ]

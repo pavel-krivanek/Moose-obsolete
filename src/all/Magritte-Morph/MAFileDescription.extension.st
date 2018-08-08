@@ -1,6 +1,6 @@
 Extension { #name : #MAFileDescription }
 
-{ #category : #'*magritte-morph-defaults' }
+{ #category : #'*Magritte-Morph' }
 MAFileDescription class >> defaultMorphClasses [
 	^ Array with: MAFileMorph
 ]

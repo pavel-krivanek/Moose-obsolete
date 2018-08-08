@@ -1,6 +1,6 @@
 Extension { #name : #MAMemoDescription }
 
-{ #category : #'*magritte-morph-defaults' }
+{ #category : #'*Magritte-Morph' }
 MAMemoDescription class >> defaultMorphClasses [
 	^ Array with: MAMemoMorph
 ]

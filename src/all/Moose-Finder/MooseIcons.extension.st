@@ -195,7 +195,7 @@ MooseIcons class >> importIcons: iconCollection fromFolder: aString inClass: aCl
 			aClass compile: method classified: aCategory ]
 ]
 
-{ #category : #'*moose-finder-utils' }
+{ #category : #'*Moose-Finder' }
 MooseIcons class >> importMooseFinderIcons [
 	"self importMooseFinderIcons"
 	| wantedIcons |

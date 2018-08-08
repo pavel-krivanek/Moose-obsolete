@@ -1,6 +1,6 @@
 Extension { #name : #Object }
 
-{ #category : #'*magritte-morph-converting' }
+{ #category : #'*Magritte-Morph' }
 Object >> asMagritteMorph [
 	^ self magritteDescription asMorphOn: self
 ]

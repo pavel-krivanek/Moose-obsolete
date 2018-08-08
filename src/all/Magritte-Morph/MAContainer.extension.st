@@ -8,7 +8,7 @@ MAContainer >> asMorphOn: anObject [
 			description: self)
 ]
 
-{ #category : #'*magritte-morph-defaults' }
+{ #category : #'*Magritte-Morph' }
 MAContainer class >> defaultMorphClasses [
 	^ Array with: MAContainerMorph
 ]

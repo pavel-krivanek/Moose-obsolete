@@ -1,6 +1,6 @@
 Extension { #name : #MAElementDescription }
 
-{ #category : #'*magritte-morph-defaults' }
+{ #category : #'*Magritte-Morph' }
 MAElementDescription class >> defaultMorphClasses [
 	^ Array with: MATextMorph
 ]

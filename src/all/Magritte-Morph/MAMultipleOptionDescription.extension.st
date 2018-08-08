@@ -1,6 +1,6 @@
 Extension { #name : #MAMultipleOptionDescription }
 
-{ #category : #'*magritte-morph-defaults' }
+{ #category : #'*Magritte-Morph' }
 MAMultipleOptionDescription class >> defaultMorphClasses [
 	^ Array with: MAMultiSelectListMorph
 ]
