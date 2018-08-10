@@ -1,7 +1,7 @@
 Class {
 	#name : #MPImportMonticelloCommand,
 	#superclass : #MPImportCommand,
-	#category : #'Moose-MonticelloImporter'
+	#category : #'Moose-Finder'
 }
 
 { #category : #hooks }
