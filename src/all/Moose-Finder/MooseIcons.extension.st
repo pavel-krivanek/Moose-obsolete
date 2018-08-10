@@ -180,7 +180,7 @@ MooseIcons class >> famixPackageGroup [
 	offset: (0@0))]
 ]
 
-{ #category : #'*moose-finder-utils' }
+{ #category : #'*moose-finder' }
 MooseIcons class >> importIcons: iconCollection fromFolder: aString inClass: aClass category: aCategory [
 	iconCollection
 		do: [:each |

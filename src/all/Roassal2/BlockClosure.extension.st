@@ -5,7 +5,7 @@ BlockClosure >> initializeElement: aRTElement [
 	self value: aRTElement 
 ]
 
-{ #category : #'*Roassal2-Core' }
+{ #category : #'*Roassal2' }
 BlockClosure >> rtValue: valueOrArray [
 	self numArgs = 0 ifTrue: [ ^ self value ].  
 	self numArgs = 1 ifTrue: [ ^ self value: valueOrArray ].

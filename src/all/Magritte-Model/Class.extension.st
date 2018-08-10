@@ -1,6 +1,6 @@
 Extension { #name : #Class }
 
-{ #category : #'*magritte-model-configuration' }
+{ #category : #'*Magritte-Model' }
 Class >> descriptionContainer [
 	"Return the default description container."
 	<magritteContainer>

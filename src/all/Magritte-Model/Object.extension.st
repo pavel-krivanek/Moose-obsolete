@@ -1,6 +1,6 @@
 Extension { #name : #Object }
 
-{ #category : #'*magritte-model-accessing' }
+{ #category : #'*Magritte-Model' }
 Object >> basicMagritteDescription [
 	^ MAPragmaBuilder for: self
 ]
@@ -14,7 +14,7 @@ Object >> descriptionContainer [
 		yourself
 ]
 
-{ #category : #'*magritte-model-model' }
+{ #category : #'*Magritte-Model' }
 Object >> initializeMagritte [
 	"Initializes the receiving object with the default values of its description."
 
@@ -23,12 +23,12 @@ Object >> initializeMagritte [
 			ifFalse: [ self write: each default using: each ] ]
 ]
 
-{ #category : #'*magritte-model-testing' }
+{ #category : #'*Magritte-Model' }
 Object >> isDescription [
 	^ false
 ]
 
-{ #category : #'*magritte-model-actions' }
+{ #category : #'*Magritte-Model' }
 Object >> magritteActionDescriptions [
 
 	^ self uniqueActionSelectors collect: [ :each | self perform: each ]
@@ -41,7 +41,7 @@ Object >> magritteDescription [
 	^basicDescription
 ]
 
-{ #category : #'*magritte-model-description' }
+{ #category : #'*Magritte-Model' }
 Object class >> magritteTemplate [
 	"Allow subclasses to have a prototype instance for creating a Magritte description (especially reference description)."
 	^self new

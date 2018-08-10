@@ -1,6 +1,6 @@
 Extension { #name : #SequenceableCollection }
 
-{ #category : #'*roassal2-core' }
+{ #category : #'*Roassal2' }
 SequenceableCollection >> cumsum [
 	"Cumulative sum
 	#(1 2 3 4 5) cumsum = #(1 3 6 10 15)

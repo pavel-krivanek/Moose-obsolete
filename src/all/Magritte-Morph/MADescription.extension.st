@@ -16,7 +16,7 @@ MADescription class >> defaultMorphColor [
 	^ Color white
 ]
 
-{ #category : #'*magritte-morph-accessing' }
+{ #category : #'*Magritte-Morph' }
 MADescription >> descriptionMorphClass [
 	<magritteDescription>
 	^ MASingleOptionDescription new

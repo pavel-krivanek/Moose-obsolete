@@ -1,6 +1,6 @@
 Extension { #name : #Symbol }
 
-{ #category : #'*magritte-model-converting' }
+{ #category : #'*Magritte-Model' }
 Symbol >> asAccessor [
 	^ MASelectorAccessor selector: self
 ]

@@ -1,6 +1,6 @@
 Extension { #name : #MAContainer }
 
-{ #category : #'*magritte-morph-converting' }
+{ #category : #'*Magritte-Morph' }
 MAContainer >> asMorphOn: anObject [
 	^ self morphClass
 		memento: (anObject mementoClass
