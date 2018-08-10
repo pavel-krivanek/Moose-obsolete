@@ -208,13 +208,13 @@ MADescription >> beWriteable [
 	self readonly: false
 ]
 
-{ #category : #'*magritte-model-builder' }
+{ #category : #builder }
 MADescription >> canExpand [
 	" used to expand a relation description into a group "
 	^self propertyAt: #canExpand ifAbsent: [ self defaultCanExpand ]
 ]
 
-{ #category : #'*magritte-model-builder' }
+{ #category : #builder }
 MADescription >> canExpand: aBoolean [
 	" used to expand a relation description into a group "
 	^self propertyAt: #canExpand put: aBoolean
@@ -270,7 +270,7 @@ MADescription >> default [
 MADescription >> default: anObject [
 ]
 
-{ #category : #'*magritte-model-builder' }
+{ #category : #builder }
 MADescription >> defaultCanExpand [
 	" used to expand a relation description into a group "
 	self isVisible ifFalse: [ ^false ].
