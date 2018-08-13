@@ -72,9 +72,20 @@ BaselineOfMoose >> baseline: spec [
 			'Moose-Tests-SmalltalkImporter-KGB'
 			'Famix-Tests-Core'
 			'Famix-Tests-Extensions'
+			'Moose-TestResources-Reference-Core'
 			'Moose-TestResources-Reference-PackageOne'
 			'Moose-TestResources-Reference-PackageTwo'
+			'Moose-TestResources-LAN'
 			'Moose-TestResources-LCOM'
+			'Moose-TestResources-KGB-P4FullInteracted'
+			'Moose-TestResources-KGB-P6InteractedReferee'
+			'Moose-TestResources-KGB-P5FullReferee'
+			'Moose-TestResources-KGB-P1FullReferencer'
+			'Moose-TestResources-KGB-P2InteractedReferencerReferee'
+			'Moose-TestResources-KGB-P3InteractedReferencer'
+			'Moose-TestResources-KGB-P7ReferencerReferee'
+			'Moose-TestResources-KGB-P8FullReferencer'
+			'Moose-TestResources-KGB-P9FullReferencer'
 			'Moose-TestResources-KGB-P10InteractedReferee'
 			'Moose-TestResources-KGB-P12FullReferencer'
 			'Moose-TestResources-KGB-P11FullReferee' "dependency"
@@ -86,7 +97,6 @@ BaselineOfMoose >> baseline: spec [
 			'Moose-TestResources-PackageBlueprint-P3'
 			'Moose-TestResources-PackageBlueprint-P4'
 			'Moose-Tests-MonticelloImporter'
-
 			'Moose-Query-Test'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
