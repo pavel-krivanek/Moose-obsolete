@@ -1,4 +1,0 @@
-utilities
-instVarNames
-
-	^ OrderedCollection new

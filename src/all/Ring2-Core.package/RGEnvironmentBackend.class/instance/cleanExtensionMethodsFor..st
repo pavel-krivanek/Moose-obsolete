@@ -1,4 +1,0 @@
-package
-cleanExtensionMethodsFor: anRGPackageDefinition
-
-	anRGPackageDefinition pvtCleanExtensionMethods

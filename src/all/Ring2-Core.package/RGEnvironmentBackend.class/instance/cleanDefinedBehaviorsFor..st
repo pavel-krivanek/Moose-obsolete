@@ -1,4 +1,0 @@
-package
-cleanDefinedBehaviorsFor: anRGPackageDefinition
-
-	anRGPackageDefinition pvtCleanDefinedBehaviors.

@@ -1,4 +1,0 @@
-class
-cleanClassVariablesFor: anRGBehavior
-
-	^ anRGBehavior behaviorStrategy pvtCleanClassVariables

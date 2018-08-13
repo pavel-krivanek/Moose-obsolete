@@ -1,4 +1,0 @@
-accessing
-extendedClasses
-	
-	^ self extendedBehaviors

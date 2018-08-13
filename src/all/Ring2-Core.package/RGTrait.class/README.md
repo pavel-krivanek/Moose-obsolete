@@ -1,1 +1,0 @@
-A factory that produces instances of RGBehavior composed with RGTraitStrategy

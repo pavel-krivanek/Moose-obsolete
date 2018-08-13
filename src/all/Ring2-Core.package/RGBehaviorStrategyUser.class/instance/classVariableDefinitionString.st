@@ -1,4 +1,0 @@
-strategy
-classVariableDefinitionString
-
-	^ self behaviorStrategy classVariableDefinitionString

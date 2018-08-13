@@ -1,4 +1,0 @@
-environment
-cleanPackagesFor: anRGEnvironment
-
-	anRGEnvironment pvtCleanPackages

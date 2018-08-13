@@ -1,4 +1,0 @@
-package
-cleanTagsForClassesFor: anRGPackageDefinition
-
-	anRGPackageDefinition pvtCleanTagsForClasses.

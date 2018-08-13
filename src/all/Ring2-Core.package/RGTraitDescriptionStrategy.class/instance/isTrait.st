@@ -1,4 +1,0 @@
-variables
-isTrait
-
-	^true

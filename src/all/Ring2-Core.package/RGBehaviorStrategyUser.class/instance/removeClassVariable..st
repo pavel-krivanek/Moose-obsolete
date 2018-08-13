@@ -1,4 +1,0 @@
-strategy
-removeClassVariable: anRGInstanceVariableDefinition
-
-	^ self behaviorStrategy removeClassVariable: anRGInstanceVariableDefinition

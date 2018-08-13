@@ -1,4 +1,0 @@
-testing
-isSpecial
-
-	^ false

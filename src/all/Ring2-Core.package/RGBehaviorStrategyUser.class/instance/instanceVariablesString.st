@@ -1,4 +1,0 @@
-printing
-instanceVariablesString
-
-	^ self behaviorStrategy instanceVariablesString

@@ -1,4 +1,0 @@
-resolving
-hasFullyUnresolved: anRGObject		
-		
-	^ false

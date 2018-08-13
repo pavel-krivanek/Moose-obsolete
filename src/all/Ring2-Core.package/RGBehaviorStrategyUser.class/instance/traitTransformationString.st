@@ -1,4 +1,0 @@
-strategy
-traitTransformationString
-
-	^ self behaviorStrategy traitTransformationString

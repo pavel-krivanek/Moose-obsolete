@@ -1,4 +1,0 @@
-tests
-backendClass
-
-	^ RGReadOnlyImageBackend 

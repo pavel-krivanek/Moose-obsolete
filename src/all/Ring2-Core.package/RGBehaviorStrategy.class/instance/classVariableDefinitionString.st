@@ -1,4 +1,0 @@
-class variables
-classVariableDefinitionString
-
-	self incompatibleBehaviorType

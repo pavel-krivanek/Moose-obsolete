@@ -1,4 +1,0 @@
-resolving
-hasResolved: anRGObject
-
-	^ true

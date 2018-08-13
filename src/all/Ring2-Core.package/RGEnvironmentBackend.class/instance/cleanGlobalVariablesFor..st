@@ -1,4 +1,0 @@
-environment
-cleanGlobalVariablesFor: anRGEnvironment
-
-	^ anRGEnvironment pvtCleanGlobalVariables

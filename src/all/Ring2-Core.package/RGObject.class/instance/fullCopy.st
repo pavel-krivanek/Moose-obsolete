@@ -1,4 +1,0 @@
-copying
-fullCopy
-
-	^ self copy.

@@ -1,4 +1,0 @@
-testing
-pvtPackage
-
-	^ package value

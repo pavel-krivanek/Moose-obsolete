@@ -1,4 +1,0 @@
-accessing
-queryInterface
-
-	^ self ask

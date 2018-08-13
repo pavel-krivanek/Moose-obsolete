@@ -1,4 +1,0 @@
-accessing
-pvtClassTrait
-
-	^ classTrait value
