@@ -848,7 +848,15 @@ BaselineOfMoose >> groups: spec [
     
 	spec group: 'BasicMetamodelling' with: #(
 
-			'Ring2'
+
+			'Ring2-Core' 
+			'Ring2-TraitsV2Support'
+			'Ring2-Monticello' 
+			'Ring2-ChunkImporter'
+			'Ring2-Tests-Core' 
+			'Ring2-Tests-Monticello' 
+			'Ring2-Tests-ChunkImporter' 
+	
 			'Grease-Core'
 			'Grease-Pharo30-Core' 
 			'CollectionExtensions'
