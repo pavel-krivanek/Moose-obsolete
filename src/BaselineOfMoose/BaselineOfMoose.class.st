@@ -233,37 +233,33 @@ BaselineOfMoose >> baselineBitmapCharacterSet: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineCollectionExtensions: spec [ 
     
-	#(
+	self defineGroup: #'CollectionExtensions-Group' in: spec locatedIn: #CollectionExtensions with: #(
 		'CollectionExtensions'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #CollectionExtensions) ]]
-
+	) 
 ]
 
 { #category : #baseline }
 BaselineOfMoose >> baselineDeepTraverser: spec [ 
     
-	#(
+	self defineGroup: #'DeepTraverser-Base' in: spec locatedIn: #DeepTraverser with: #(
 		 'DeepTraverser'
-		 'DeepTraverser-Examples'
+	).
+	
+	self defineGroup: #'DeepTraverser-Tests-Group' in: spec locatedIn: #DeepTraverser with: #(
 		 'DeepTraverser-Tests'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #DeepTraverser) ]]
-
+	).
 ]
 
 { #category : #baseline }
 BaselineOfMoose >> baselineFame: spec [ 
     
-	#(
+	self defineGroup: #'Fame' in: spec locatedIn: #Fame with: #(
 		'Fame-Core'
 		'Fame-Util'
 		'Fame-ImportExport'
 		'Fame-SmalltalkBinding'
 		'Fame-Tests-Core'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #Fame) ]]
-
+	) 
 ]
 
 { #category : #baseline }
@@ -319,23 +315,20 @@ BaselineOfMoose >> baselineGhost: spec [
 
 { #category : #baseline }
 BaselineOfMoose >> baselineGrease: spec [ 
-    
-	#(
+   
+	self defineGroup: #Grease in: spec locatedIn: #Grease with: #(
 		'Grease-Core'
 		'Grease-Pharo30-Core' 
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #Grease) ]]
-	
+	).
+
 ]
 
 { #category : #baseline }
 BaselineOfMoose >> baselineHashtable: spec [ 
     
-	#(
+	self defineGroup: #'HashTable-Group' in: spec locatedIn: #HashTable with: #(
 		'Hashtable'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #HashTable) ]]
-
+	) 
 ]
 
 { #category : #baseline }
@@ -527,12 +520,7 @@ BaselineOfMoose >> baselinePhexample: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineRing2: spec [ 
     
-"	spec baseline: 'Ring2' with: [
-		spec 
-			repository: 'github://pavel-krivanek/Ring2:moose-dev/src';
-			loads: #calypso 	].
-"
-		#(
+	self defineGroup: #Ring2 in: spec locatedIn: #Ring2 with: #(
 		'Ring2-Core' 
 		'Ring2-TraitsV2Support'
 		'Ring2-Monticello' 
@@ -541,9 +529,7 @@ BaselineOfMoose >> baselineRing2: spec [
 		'Ring2-Tests-Monticello' 
 		'Ring2-Tests-ChunkImporter' 
 		'Ring2-RuntimeSupport' 
-		'Calypso-Ring2' 
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #Ring2) ]].
+		'Calypso-Ring2').
 
 ]
 
@@ -573,17 +559,18 @@ BaselineOfMoose >> baselineRoelTyper: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineStateSpecs: spec [ 
     
-	#(
+	self defineGroup: #'StateSpecs-Base' in: spec locatedIn: #StateSpecs with: #(
 		'StateSpecs-Specs'
 		'StateSpecs-DSL-ShouldExpressions'
+	).
+
+	self defineGroup: #'StateSpecs-Additional' in: spec locatedIn: #StateSpecs with: #(
 		'StateSpecs-DSL-ClassWords'
 		'StateSpecs-Help'
 		'StateSpecs-Specs-Tests'
 		'StateSpecs-DSL-ShouldExpressions-Tests'
 		'StateSpecs-DSL-ClassWords-Tests'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #StateSpecs) ]]
-
+	)
 ]
 
 { #category : #baseline }
@@ -608,38 +595,26 @@ BaselineOfMoose >> baselineXMLParser: spec [
 ]
 
 { #category : #baseline }
+BaselineOfMoose >> defineGroup: groupName in: spec locatedIn: location with: packages [
+    
+	packages do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: location) ]].
+		
+	spec group: groupName with: packages.
+
+]
+
+{ #category : #baseline }
 BaselineOfMoose >> groups: spec [ 
     
 	spec group: 'BasicMetamodelling' with: #(
-
-
-			'Ring2-Core' 
-			'Ring2-TraitsV2Support'
-			'Ring2-Monticello' 
-			'Ring2-ChunkImporter'
-			'Ring2-Tests-Core' 
-			'Ring2-Tests-Monticello' 
-			'Ring2-Tests-ChunkImporter' 
-			'Ring2-RuntimeSupport' 
-			'Calypso-Ring2' 
-	
-			'Grease-Core'
-			'Grease-Pharo30-Core' 
-			'CollectionExtensions'
-
-			'Hashtable'
-
-			'StateSpecs-Specs'
-			'StateSpecs-DSL-ShouldExpressions'
-
-			'Fame-Core'
-			'Fame-Util'
-			'Fame-ImportExport'
-			'Fame-SmalltalkBinding'
-			'Fame-Example'
-			'Fame-Tests-Core'
-
-			'DeepTraverser'
+		'Ring2' 
+		'Grease' 
+		'CollectionExtensions-Group'
+		'HashTable-Group'
+		'StateSpecs-Base'
+		'Fame'
+		'DeepTraverser-Base'
 
 			'Moose-Query'
 			'Moose-Core'
@@ -667,14 +642,7 @@ BaselineOfMoose >> groups: spec [
 	spec group: 'BasicTests' with: #(
 			'Famix-MetamodelBuilder-Tests'
 
-			'StateSpecs-Specs'
-			'StateSpecs-DSL-ShouldExpressions'
-			'StateSpecs-DSL-ClassWords'
-			'StateSpecs-Help'
-			'StateSpecs-Specs-Tests'
-			'StateSpecs-GTTools'
-			'StateSpecs-DSL-ShouldExpressions-Tests'
-			'StateSpecs-DSL-ClassWords-Tests'
+			'StateSpecs-Additional'
 
 			'Ghost-ObjectGhost'
 			'Ghost-ClassGhost'
@@ -727,7 +695,7 @@ BaselineOfMoose >> groups: spec [
 			'Famix-Tests-C'
 			'Famix-Tests-Java'
 			'Famix-Tests-Extensions'
-			'DeepTraverser-Tests'
+			'DeepTraverser-Tests-Group'
 	).	
 
 	spec group: 'BasicMetamodellingWithRoassal' with: #(
