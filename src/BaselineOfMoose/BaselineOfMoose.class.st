@@ -509,11 +509,11 @@ BaselineOfMoose >> groups: spec [
 		'Ghost'
 		'Mocketry'
 			
+		'Moose-Tests-Core'
 		'MooseTestResources'
 			
 		'Moose-GenericImporter'
 		'Moose-SmalltalkImporter'
-		'Moose-Tests-Core'
 		'Famix-Tests-Core'
 		'Famix-Tests-C'
 		'Famix-Tests-Java'
