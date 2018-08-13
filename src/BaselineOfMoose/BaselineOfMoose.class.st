@@ -57,8 +57,6 @@ BaselineOfMoose >> baseline: spec [
 
 		spec baseline: 'FmxNGCompatibility' with: [spec repository: repository].
 		
-		self baselineMooseTestResources: spec.
-		
 		#(	
 			'Famix-Compatibility'
 			'Famix-Extensions'
@@ -69,9 +67,26 @@ BaselineOfMoose >> baseline: spec [
 			'Moose-MonticelloImporter'
 			'Moose-Tests-Core'
 			'Famix-Tests-Java'
+			'Moose-Tests-SmalltalkImporter-LAN'
+			'Moose-Tests-SmalltalkImporter-Core'
+			'Moose-Tests-SmalltalkImporter-KGB'
 			'Famix-Tests-Core'
 			'Famix-Tests-Extensions'
+			'Moose-TestResources-Reference-PackageOne'
+			'Moose-TestResources-Reference-PackageTwo'
+			'Moose-TestResources-LCOM'
+			'Moose-TestResources-KGB-P10InteractedReferee'
+			'Moose-TestResources-KGB-P12FullReferencer'
+			'Moose-TestResources-KGB-P11FullReferee' "dependency"
+			'Moose-TestResources-KGB-P13FullReferencer'
+			'Moose-TestResources-KGB-P14FullReferee'
+			'Moose-TestResources-KGB-PExtensions'
+			'Moose-TestResources-PackageBlueprint-P1'
+			'Moose-TestResources-PackageBlueprint-P2'
+			'Moose-TestResources-PackageBlueprint-P3'
+			'Moose-TestResources-PackageBlueprint-P4'
 			'Moose-Tests-MonticelloImporter'
+
 			'Moose-Query-Test'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
@@ -509,8 +524,33 @@ BaselineOfMoose >> groups: spec [
 		'Ghost'
 		'Mocketry'
 			
-		'Moose-Tests-Core'
-		'MooseTestResources'
+		'Moose-TestResources-LAN'
+		'Moose-TestResources-Reference-Core'
+		'Moose-TestResources-KGB-P4FullInteracted'
+		'Moose-TestResources-KGB-P6InteractedReferee'
+		'Moose-TestResources-KGB-P5FullReferee'
+		'Moose-TestResources-KGB-P7ReferencerReferee'
+		'Moose-TestResources-KGB-P2InteractedReferencerReferee'
+		'Moose-TestResources-KGB-P1FullReferencer'
+		'Moose-TestResources-KGB-P3InteractedReferencer'
+		'Moose-TestResources-KGB-P8FullReferencer'
+		'Moose-TestResources-KGB-P9FullReferencer'
+		'Moose-TestResources-KGB-P10InteractedReferee'
+		'Moose-TestResources-KGB-P11FullReferee'
+		'Moose-TestResources-KGB-P12FullReferencer'
+		'Moose-TestResources-KGB-P13FullReferencer'
+		'Moose-TestResources-KGB-P14FullReferee'
+		'Moose-TestResources-LCOM'
+		'Moose-TestResources-PackageBlueprint-P1'
+		'Moose-TestResources-PackageBlueprint-P2'
+		'Moose-TestResources-PackageBlueprint-P3'
+		'Moose-TestResources-PackageBlueprint-P4'
+		'Moose-TestResources-Reference-PackageOne'
+		'Moose-Tests-SmalltalkImporter-Core'
+		'Moose-TestResources-Reference-PackageTwo'
+		'Moose-Tests-SmalltalkImporter-LAN'
+		'Moose-Tests-SmalltalkImporter-KGB'
+		'Moose-TestResources-KGB-PExtensions'
 			
 		'Moose-GenericImporter'
 		'Moose-SmalltalkImporter'
