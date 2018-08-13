@@ -564,6 +564,7 @@ BaselineOfMoose >> groups: spec [
 			
 		'Moose-GenericImporter'
 		'Moose-SmalltalkImporter'
+		'Moose-Tests-Core'
 		'Famix-Tests-Core'
 		'Famix-Tests-C'
 		'Famix-Tests-Java'
