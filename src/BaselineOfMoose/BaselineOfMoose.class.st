@@ -206,6 +206,7 @@ BaselineOfMoose >> baselineFame: spec [
 		'Fame-Util'
 		'Fame-ImportExport'
 		'Fame-SmalltalkBinding'
+		'Fame-Example'
 		'Fame-Tests-Core'
 	) 
 ]
