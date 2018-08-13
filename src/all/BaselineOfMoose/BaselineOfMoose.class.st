@@ -1050,7 +1050,7 @@ BaselineOfMoose >> groups: spec [
 			
 	).
 	
-	group: 'default' with: #('MooseFinder').
+	spec group: 'default' with: #('MooseFinder').
 	
 
 ]
