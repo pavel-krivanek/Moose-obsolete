@@ -146,7 +146,7 @@ BaselineOfMoose >> baseline: spec [
 			(SystemVersion current major < 7) ifTrue: [
 			  spec package: packageName with: [ spec repository: (self url: #Glamour) ]]].
 		
-		self baselinePetitParser2: spec.
+		"self baselinePetitParser2: spec."
 		self baselineGeometry: spec.
 		self baselineAthens: spec.
 		self baselineRoassal2: spec.
@@ -173,7 +173,7 @@ BaselineOfMoose >> baseline: spec [
 			spec package: packageName with: [ spec repository: (self url: #FuelBeacon) ]].
 		
 		
-		self baselinePetitParser2GUI: spec.
+		"self baselinePetitParser2GUI: spec."
 		self baselineMooseAlgos: spec.
 
 		#(
