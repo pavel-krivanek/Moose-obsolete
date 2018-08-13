@@ -511,9 +511,44 @@ BaselineOfMoose >> baselineMetanool: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineMocketry: spec [ 
     
-	spec
+"	spec
     baseline: 'Mocketry'
-    with: [ spec repository: 'github://dionisiydk/Mocketry:v4.0.3' ]
+    with: [ spec repository: 'github://dionisiydk/Mocketry:v4.0.3' ]"
+
+	#(
+			'StateSpecs-Specs'
+			'StateSpecs-DSL-ShouldExpressions'
+			'StateSpecs-DSL-ClassWords'
+			'StateSpecs-Help'
+			'StateSpecs-Specs-Tests'
+			'StateSpecs-GTTools'
+			'StateSpecs-DSL-ShouldExpressions-Tests'
+			'StateSpecs-DSL-ClassWords-Tests'
+	) do: [ :packageName | 
+		spec package: packageName with: [ spec repository: (self url: #StateSpecs) ]].
+
+	#(
+			'Ghost-ObjectGhost'
+			'Ghost-ClassGhost'
+			'Ghost-ObjectMutation'
+			'Ghost-ObjectGhost-Tests'
+			'Ghost-GTSupport'
+			'Ghost-StateSpecsSupport'
+			'Ghost-StateSpecsSupport-Tests'
+			'Ghost-ClassGhost-Tests'
+			'Ghost-ObjectMutation-Tests'
+	) do: [ :packageName | 
+		spec package: packageName with: [ spec repository: (self url: #Ghost) ]].
+		
+	#(
+		'Mocketry-Specs'
+		'Mocketry-Domain'
+		'Mocketry-Help'
+		'Mocketry-Specs-Tests'
+		'Mocketry-Domain-Tests'
+	) do: [ :packageName | 
+		spec package: packageName with: [ spec repository: (self url: #Mocketry) ]].
+		
 ]
 
 { #category : #baseline }
@@ -900,7 +935,32 @@ BaselineOfMoose >> groups: spec [
 	
 	spec group: 'BasicTests' with: #(
 			'Famix-MetamodelBuilder-Tests'
-			'Mocketry'
+
+			'StateSpecs-Specs'
+			'StateSpecs-DSL-ShouldExpressions'
+			'StateSpecs-DSL-ClassWords'
+			'StateSpecs-Help'
+			'StateSpecs-Specs-Tests'
+			'StateSpecs-GTTools'
+			'StateSpecs-DSL-ShouldExpressions-Tests'
+			'StateSpecs-DSL-ClassWords-Tests'
+
+			'Ghost-ObjectGhost'
+			'Ghost-ClassGhost'
+			'Ghost-ObjectMutation'
+			'Ghost-ObjectGhost-Tests'
+			'Ghost-GTSupport'
+			'Ghost-StateSpecsSupport'
+			'Ghost-StateSpecsSupport-Tests'
+			'Ghost-ClassGhost-Tests'
+			'Ghost-ObjectMutation-Tests'
+
+			'Mocketry-Specs'
+			'Mocketry-Domain'
+			'Mocketry-Help'
+			'Mocketry-Specs-Tests'
+			'Mocketry-Domain-Tests'
+			
 			'Moose-TestResources-LAN'
 			'Moose-TestResources-Reference-Core'
 			'Moose-TestResources-KGB-P4FullInteracted'
