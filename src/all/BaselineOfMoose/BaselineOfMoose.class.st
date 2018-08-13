@@ -165,12 +165,12 @@ BaselineOfMoose >> baseline: spec [
 			(SystemVersion current major < 7) ifTrue: [
 			  spec package: packageName with: [ spec repository: (self url: #GToolkit)] ]].
 
-		self baselineBeacon: spec.
+		"self baselineBeacon: spec."
 		
-		#(	
+		"#(	
 			'FuelBeacon'
 		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #FuelBeacon) ]].
+			spec package: packageName with: [ spec repository: (self url: #FuelBeacon) ]]."
 		
 		
 		"self baselinePetitParser2GUI: spec."
@@ -720,6 +720,8 @@ BaselineOfMoose >> baselineRing2: spec [
 		'Ring2-Tests-Core' 
 		'Ring2-Tests-Monticello' 
 		'Ring2-Tests-ChunkImporter' 
+		'Ring2-RuntimeSupport' 
+		'Calypso-Ring2' 
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Ring2) ]].
 
@@ -885,6 +887,8 @@ BaselineOfMoose >> groups: spec [
 			'Ring2-Tests-Core' 
 			'Ring2-Tests-Monticello' 
 			'Ring2-Tests-ChunkImporter' 
+			'Ring2-RuntimeSupport' 
+			'Calypso-Ring2' 
 	
 			'Grease-Core'
 			'Grease-Pharo30-Core' 
