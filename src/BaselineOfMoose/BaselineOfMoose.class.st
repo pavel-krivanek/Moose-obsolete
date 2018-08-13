@@ -57,7 +57,7 @@ BaselineOfMoose >> baseline: spec [
 
 		spec baseline: 'FmxNGCompatibility' with: [spec repository: repository].
 		
-		spec baselineMooseTestResources: spec.
+		self baselineMooseTestResources: spec.
 		
 		#(	
 			'Famix-Compatibility'
