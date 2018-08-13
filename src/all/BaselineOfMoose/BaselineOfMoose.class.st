@@ -1048,7 +1048,9 @@ BaselineOfMoose >> groups: spec [
 			'FmxNGJava-Generator'
 			'FmxNGJava-Entities'
 			
-	).	
+	).
+	
+	group: 'default' with: #('MooseFinder').
 	
 
 ]
