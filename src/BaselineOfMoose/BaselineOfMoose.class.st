@@ -44,7 +44,6 @@ BaselineOfMoose >> baseline: spec [
 			spec package: packageName with: [ spec repository: (self url: #GToolkitExamples) ]].
 		
 		self baselineDeepTraverser: spec.
-		self baselineRoelTyper: spec.
 		self baselineRing2: spec.
 		
 		#(	
@@ -71,26 +70,15 @@ BaselineOfMoose >> baseline: spec [
 		spec baseline: 'FmxNGCompatibility' with: [spec repository: repository].
 		
 		#(	
-			'Famix-Core'
 			'Famix-Compatibility'
-			'Moose-Hismo'
-			'Moose-HismoImporter'
-			'Moose-Test-HismoImporter'
 			'Famix-Extensions'
-			'Famix-SourceAnchor'
-			'Famix-File'
 			'Moose-GenericImporter'
-			'Famix-C'
 			'Famix-Tests-C'
-			'Famix-Implementation'
-			'Famix-Java'
-			'Famix-Smalltalk'
 			'Moose-Query-Extensions'
 			'Moose-SmalltalkImporter'
 			'Moose-MonticelloImporter'
 			'Moose-Tests-Core'
 			'Famix-Tests-Java'
-			'Moose-Tests-Hismo'
 			'Moose-Tests-SmalltalkImporter-LAN'
 			'Moose-Tests-SmalltalkImporter-Core'
 			'Moose-Tests-SmalltalkImporter-KGB'
@@ -152,15 +140,10 @@ BaselineOfMoose >> baseline: spec [
 		self baselineRoassal2: spec.
 
 		#(
-			'GT-Setup'
 			'GT-Inspector'
 			"'GT-InspectorExtensions-Core'"
 			'GT-Debugger'
-			'GT-DebuggerExtensions'
-			'GT-InspectorExtensions-CoreRoassal'
-			'GT-GlamourDebugger'
 			'GT-EventRecorder'
-			'GT-Window-EventRecorder'
 		) do: [ :packageName | 
 			(SystemVersion current major < 7) ifTrue: [
 			  spec package: packageName with: [ spec repository: (self url: #GToolkit)] ]].
@@ -176,23 +159,10 @@ BaselineOfMoose >> baseline: spec [
 		"self baselinePetitParser2GUI: spec."
 		self baselineMooseAlgos: spec.
 
-		#(
-			 'SmallDude-Utils'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #SmallDude) ]].
-		
-		#(	
-			'PetitSQLite-Parser'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #PetitSQLParser) ]].		
-		
 		self baselineOrderPreservingDictionary: spec.
 		self baselineCollectionExtensions: spec.
-		self baselineXMLWriter: spec.
 		self baselineBitmapCharacterSet: spec.
 		self baselineXMLParser: spec.
-		self baselineXPath: spec.
-		self baselineMerlin: spec.	
 
 		#(	
 			'Glamour-Tools'
@@ -200,92 +170,28 @@ BaselineOfMoose >> baseline: spec [
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Glamour) ]].
 
-		self baselineArki: spec.
-		self baselineDynaMoose: spec.
-		self baselinePetitJava: spec.
-		self baselineSmaCC: spec.
-		self baselineZeroConf: spec.
-		
 		#(	
 			'Moose-Help'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
 	
-		self baselineAnnouncerCentricDebugger: spec.
-
-		#(	
-			'Factorial-Language'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #PetitParser) ]].
-
 		#(	
 			'Fame-Example'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Fame) ]].
 
-		#(	
-			'GT-Debugger-EventRecorder'
-			'GT-Tests-Release'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
-
-		#(	
-			'Glamour-Examples-Extras'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #Glamour) ]].
-
 		self baselineMetanool: spec.
 		
 		#(	
-			'Moose-Development-Tools'
-			'Moose-DistributionMap'
 			'Moose-Finder'
 			'Moose-RoassalPaintings'
-			'Moose-Settings'
-			'Moose-Tests-DistributionMap'
 			'Moose-Tests-Finder'
 			'Moose-Tests-RoassalPaintings'
-			'Moose-Wizard'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
 
-		self baselinePetitParser: spec.
-		self baselinePetitSQLParser: spec.
-		self baselineSmallDude: spec.
-		
-		#(	
-			'GT-PetitParserDebugger'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #GToolkit) ]].
-
-
 	   self groups: spec.
 	]
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineAnnouncerCentricDebugger: spec [ 
-    
-	#(	
-		'ACD-Model'
-		'ACD-Glamour-Interface'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #AnnouncerCentricDebugger) ]].
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineArki: spec [ 
-    
-	#(
-		'Arki-Reporter-Core'
-		'Arki-Reporter-Browser'
-		'Arki-Tests-Reporter'
-		'OnMoose-Report'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #Arki) ]]
-
-
 ]
 
 { #category : #baseline }
@@ -347,17 +253,6 @@ BaselineOfMoose >> baselineDeepTraverser: spec [
 ]
 
 { #category : #baseline }
-BaselineOfMoose >> baselineDynaMoose: spec [ 
-    
-	#(
-		'Dynamix-Core'
-		'Dynamix-Tests-Core'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #DynaMoose) ]]
-
-]
-
-{ #category : #baseline }
 BaselineOfMoose >> baselineFame: spec [ 
     
 	#(
@@ -374,22 +269,8 @@ BaselineOfMoose >> baselineFame: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineFamixNG: spec [ 
     
-	"#(
-		'Famix-General'
-		'Famix-SmalltalkModel'
-		'Famix-JavaMetamodel'
-		'Famix-CppMetamodel'
-		'Famix-SQLMetamodel'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #all) ]]"
-
 	#(
-		'FmxStImporter'
 		'FmxNG-Traits'
-		'CMetamodelGenerator'
-		'FmxC-Generated'
-		'FmxC-Entities'
-
 
 		'FmxNGPharoSmalltalk-Generator'
 		'FmxNGPharoSmalltalk-Entities'
@@ -472,16 +353,6 @@ BaselineOfMoose >> baselineMagritte3: spec [
 ]
 
 { #category : #baseline }
-BaselineOfMoose >> baselineMerlin: spec [ 
-    
-	#(
-		'Merlin'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #Merlin) ]]
-
-]
-
-{ #category : #baseline }
 BaselineOfMoose >> baselineMetamodelBuilder: spec [ 
     
 	#(
@@ -550,8 +421,6 @@ BaselineOfMoose >> baselineMooseAlgos: spec [
     
 	#(
 		'Moose-Tests-Algos-Graph'
-		'Moose-Algos-HierarchicalGraph'
-		'Moose-Tests-Algos-HierarchicalGraph'
 		'Moose-Tests-Algos-InformationRetrieval'
 		'Moose-Algos-FormalConceptAnalysis'
 		'Moose-Tests-Algos-FormalConceptAnalysis'
@@ -559,11 +428,7 @@ BaselineOfMoose >> baselineMooseAlgos: spec [
 		'Moose-Tests-Algos-Lattice'
 		'Moose-Algos-LinearAlgebra'
 		'Moose-Tests-Algos-LinearAlgebra'
-		'Moose-Algos-Clustering'
 		'Moose-Algos-InformationRetrieval'
-		'Moose-Tests-Algos-Clustering'
-		'Moose-Algos-Kontractor'
-		'Moose-Tests-Algos-Kontractor'
 		"'Moose-Algos-GraphObjectTraverser'"
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #MooseAlgos) ]]
@@ -575,20 +440,9 @@ BaselineOfMoose >> baselineOrderPreservingDictionary: spec [
     
 	#(
 		'Collections-OrderPreservingDictionary'
-		'Collections-OrderPreservingDictionary-GTExtensions'
-		'Collections-Tests-OrderPreservingDictionary'
+		"'Collections-Tests-OrderPreservingDictionary'"
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #OrderPreservingDictionary) ]]
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselinePetitJava: spec [
-    
-	#(
-		'PetitJava'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #PetitJava) ]]
 
 ]
 
@@ -619,40 +473,6 @@ BaselineOfMoose >> baselinePetitParser2GUI: spec [
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #PetitParser2) ]]
 	
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselinePetitParser: spec [ 
-    
-	#(
-		'PetitTests'
-		'PetitAnalyzer'
-		'PetitCSV'
-		'PetitGui'
-		'PetitIndent'
-		'PetitIslands'
-		'PetitJson'
-		'PetitMSE'
-		'PetitManifestMf'
-		'PetitRegex'
-		'PetitSmalltalk'
-		'PetitXml'
-		'PetitXPath'
-		'PetitYAML'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #PetitParser) ]]
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselinePetitSQLParser: spec [ 
-    
-	#(
-		'PetitSQLite-AST'
- 		'PetitSQLite-Tests-Parser'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #PetitSQLParser) ]]
-
 ]
 
 { #category : #baseline }
@@ -733,9 +553,7 @@ BaselineOfMoose >> baselineRoassal2: spec [
 		#(
 			'Trachel'
 			'Roassal2'
-			'Roassal2Spec'
 			'Roassal2GT'
-			'Roassal2-Rules'
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Roassal2) ]].
 
@@ -750,55 +568,6 @@ BaselineOfMoose >> baselineRoelTyper: spec [
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #RoelTyper) ]]
 
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineSmaCC: spec [ 
-    
-	#(
-		'SmaCC_Runtime'
-		'SmaCC_Line_Parser'
-		'SmaCC_GLR_Runtime'
-		'SmaCC_Javascript_Parser'
-		'SmaCC_Java'
-		'SmaCC_Generic_Smalltalk_Parser'
-		'SmaCC_CSharp'
-		'SmaCC_Delphi'
-		'SmaCC_Delphi_Forms'
-		'SmaCC_C_Parser'
-		'SmaCC_CSV_Parser'
-		'SmaCC_Smalltalk_Parser'
-		'SmaCC_Source_Editing'
-		'SmaCC_Rewrite_Engine'
-		'SmaCC_Rewrite_Engine_Tests'
-		'SmaCC_Swift'
-		'SmaCC_Debugging_Support'
-		'SmaCC_Development'
-		'SmaCC_Development_UI'
-		'SmaCC_Parse_Tree_Comparison'
-		'SmaCC_Rewrite_Engine_Command_Line'
-		'SmaCC_Rewrite_Engine_UI'
-		'SmaCC_Rewrite_Server'
-		'SmaCC_Rewrite_Server_Worker'
-		'SmaCC_Tests'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #SmaCC) ]]
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineSmallDude: spec [ 
-    
-		#(
-			 'SmallDude-Core'
-			 'SmallDude-Moose'
-			 'SmallDude-Species'
-			 'SmallDude-Tests-Core'
-			 'SmallDude-Tests-Text'
-			 'SmallDude-Text'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #SmallDude) ]].
-	
 ]
 
 { #category : #baseline }
@@ -833,44 +602,8 @@ BaselineOfMoose >> baselineXMLParser: spec [
     
 	#(
 		'XML-Parser'
-		'XML-Tests-Parser'
-		'XML-Parser-GTExtensions'
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #XMLParser) ]]
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineXMLWriter: spec [ 
-    
-	#(
-		'XML-Writer-Core'
-		'XML-Writer-Tests'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #XMLWriter) ]]
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineXPath: spec [ 
-    
-	#(
-		'XPath-Core'
-		'XPath-SqueakCommonCompatibility'
-		'XPath-Tests'
-		'XPath-GTExtensions'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #XPath) ]]
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineZeroConf: spec [ 
-    
-	#(
-		 'ZeroConf'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #ZeroConf) ]]
 
 ]
 
