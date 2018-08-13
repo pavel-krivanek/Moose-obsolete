@@ -218,7 +218,7 @@ GHMetaMessages >> metaMessagesClass [
 
 ]
 
-{ #category : #'helpers-copy' }
+{ #category : #copying }
 GHMetaMessages >> postCopy [
 	"we define this message as default implementation for ghost copy methods"
 	
@@ -237,7 +237,7 @@ GHMetaMessages >> printGhostClass [
 	^self ghostClass name
 ]
 
-{ #category : #'helpers-copy' }
+{ #category : #copying }
 GHMetaMessages >> shallowCopy [
 	"we define this message as default implementation for ghost copy methods"
 	

@@ -47,7 +47,7 @@ SpecOfObjectsInteraction >> basicMatches: occurredMessages [
 		each matches: occurredMessages ]
 ]
 
-{ #category : #accessing }
+{ #category : #copying }
 SpecOfObjectsInteraction >> copy [
 	| copy |
 	copy := super copy.

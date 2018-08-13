@@ -37,7 +37,7 @@ MockDefaultMethods class >> execute: anOccurredMessage on: aMock [
 	^MockForMessageReturn from: anOccurredMessage withBehaviour: aMock ghostBehaviour
 ]
 
-{ #category : #copy }
+{ #category : #copying }
 MockDefaultMethods >> copy [
 	self disableDefaultMethod
 ]
@@ -47,7 +47,7 @@ MockDefaultMethods >> disableDefaultMethod [
 	self error: 'Sender method should not be used as default for mocks'
 ]
 
-{ #category : #copy }
+{ #category : #copying }
 MockDefaultMethods >> shallowCopy [
 	self disableDefaultMethod
 ]

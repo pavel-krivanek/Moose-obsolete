@@ -85,7 +85,7 @@ SpecOfExpectedMessage >> captureArgumentsFrom: aMessageSend [
 	messageSend captureArgumentsFrom: aMessageSend
 ]
 
-{ #category : #accessing }
+{ #category : #copying }
 SpecOfExpectedMessage >> copy [
 
 	| result |
