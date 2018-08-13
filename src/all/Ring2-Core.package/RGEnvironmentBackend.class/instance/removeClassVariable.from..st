@@ -1,0 +1,4 @@
+class
+removeClassVariable: anRGInstanceVariableDefinition from: anRGBehavior
+
+	^ anRGBehavior behaviorStrategy pvtRemoveClassVariable: anRGInstanceVariableDefinition

@@ -1,0 +1,4 @@
+resolving
+hasFullyUnresolved: anRGObject		
+		
+	^ false

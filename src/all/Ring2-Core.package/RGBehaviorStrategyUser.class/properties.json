@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PavelKrivanek 6/7/2018 17:51",
+	"super" : "RGObject",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"behaviorStrategy"
+	],
+	"name" : "RGBehaviorStrategyUser",
+	"type" : "normal"
+}

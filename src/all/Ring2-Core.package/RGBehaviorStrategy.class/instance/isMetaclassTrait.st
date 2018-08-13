@@ -1,0 +1,4 @@
+testing
+isMetaclassTrait
+	
+	^ false

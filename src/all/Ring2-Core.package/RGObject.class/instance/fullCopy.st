@@ -1,0 +1,4 @@
+copying
+fullCopy
+
+	^ self copy.

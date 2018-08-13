@@ -1,0 +1,4 @@
+testing
+isRGObject
+
+	^true

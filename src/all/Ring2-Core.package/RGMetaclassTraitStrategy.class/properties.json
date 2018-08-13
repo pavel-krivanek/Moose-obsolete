@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RGTraitDescriptionStrategy",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGMetaclassTraitStrategy",
+	"type" : "normal"
+}

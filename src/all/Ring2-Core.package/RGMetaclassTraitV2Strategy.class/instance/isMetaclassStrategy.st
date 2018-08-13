@@ -1,0 +1,4 @@
+testing
+isMetaclassStrategy
+
+	^ true

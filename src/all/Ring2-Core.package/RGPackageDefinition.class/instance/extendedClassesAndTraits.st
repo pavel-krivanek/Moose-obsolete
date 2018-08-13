@@ -1,0 +1,4 @@
+accessing
+extendedClassesAndTraits
+	
+	^ self extendedBehaviors

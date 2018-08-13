@@ -1,0 +1,4 @@
+testing
+classSide
+
+	^ self classTrait

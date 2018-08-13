@@ -1,0 +1,2 @@
+managing container
+addoptToParentStub

@@ -1,0 +1,4 @@
+utilities
+announceDefinitionChangeDuring: aBlock
+
+	self owner announceDefinitionChangeDuring: aBlock

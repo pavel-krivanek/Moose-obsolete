@@ -1,0 +1,4 @@
+resolving
+hasResolved: anRGObject
+
+	^ true

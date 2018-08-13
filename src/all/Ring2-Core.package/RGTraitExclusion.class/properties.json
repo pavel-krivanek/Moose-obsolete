@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RGTraitTransformation",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exclusions"
+	],
+	"name" : "RGTraitExclusion",
+	"type" : "normal"
+}

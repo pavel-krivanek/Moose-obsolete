@@ -1,0 +1,3 @@
+expected failures
+expectedFailures
+	^ #(testMultipleMixedChunksInStrangeOrderWithMetaclassTrait testStandardMethodInNewMetaclassTrait)

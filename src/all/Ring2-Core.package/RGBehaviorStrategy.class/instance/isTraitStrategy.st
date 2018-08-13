@@ -1,0 +1,4 @@
+testing
+isTraitStrategy
+
+	^ false

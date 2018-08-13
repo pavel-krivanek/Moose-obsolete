@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RGObjectLayout",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGImmediateLayout",
+	"type" : "normal"
+}

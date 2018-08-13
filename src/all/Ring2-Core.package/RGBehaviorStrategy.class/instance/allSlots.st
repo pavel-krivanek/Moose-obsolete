@@ -1,0 +1,4 @@
+utilities
+allSlots
+
+	^ OrderedCollection new

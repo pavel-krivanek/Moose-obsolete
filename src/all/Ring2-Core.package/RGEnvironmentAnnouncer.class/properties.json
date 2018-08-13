@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Announcer",
+	"category" : "Ring2-Core-Announcements",
+	"classinstvars" : [
+		"announcer"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"suspended",
+		"private",
+		"storedAnnouncements"
+	],
+	"name" : "RGEnvironmentAnnouncer",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "TRGBehaviorTest classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGMetaclassTraitTest",
+	"commentStamp" : "",
+	"super" : "RGTest",
+	"traitcomposition" : "TRGBehaviorTest",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Ring2-Tests-Core"
+}

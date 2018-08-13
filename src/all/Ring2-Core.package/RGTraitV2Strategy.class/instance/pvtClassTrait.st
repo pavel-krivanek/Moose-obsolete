@@ -1,0 +1,4 @@
+testing
+pvtClassTrait
+
+	^ classTrait value

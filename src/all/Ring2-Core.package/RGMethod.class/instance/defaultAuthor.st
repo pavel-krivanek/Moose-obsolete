@@ -1,0 +1,4 @@
+default model values
+defaultAuthor
+
+	^ ''

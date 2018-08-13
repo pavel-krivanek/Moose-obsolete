@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "RGTestTrait classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGTestClass",
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "RGTestTrait",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Ring2-Tests-Core"
+}

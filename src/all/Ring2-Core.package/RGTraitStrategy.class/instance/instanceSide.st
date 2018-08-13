@@ -1,0 +1,3 @@
+testing
+instanceSide
+	^ self baseTrait

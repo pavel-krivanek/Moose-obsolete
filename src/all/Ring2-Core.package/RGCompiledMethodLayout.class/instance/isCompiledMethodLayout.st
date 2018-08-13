@@ -1,0 +1,4 @@
+testing types
+isCompiledMethodLayout
+
+	^ true

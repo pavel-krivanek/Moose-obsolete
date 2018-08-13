@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RGReadOnlyBackend",
+	"category" : "Ring2-Core-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGReadOnlyImageBackend",
+	"type" : "normal"
+}

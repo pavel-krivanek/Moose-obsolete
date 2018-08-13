@@ -1,0 +1,4 @@
+accessing
+ask
+
+	^ self 

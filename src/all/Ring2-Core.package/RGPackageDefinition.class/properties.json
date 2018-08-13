@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "PavelKrivanek 3/24/2018 08:24",
+	"super" : "RGObject",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"definedBehaviors",
+		"extensionMethods",
+		"tagsForClasses"
+	],
+	"name" : "RGPackageDefinition",
+	"type" : "normal"
+}

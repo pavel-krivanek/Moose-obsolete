@@ -1,0 +1,4 @@
+accessing
+definedClasses
+
+	^ self definedBehaviors

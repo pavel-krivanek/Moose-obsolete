@@ -1,0 +1,4 @@
+accessing
+pvtComment
+
+	^ comment value

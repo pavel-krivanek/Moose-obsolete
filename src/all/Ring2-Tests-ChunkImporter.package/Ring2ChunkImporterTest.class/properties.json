@@ -1,0 +1,1 @@
+{	"commentStamp" : "PavelKrivanek 10/26/2016 12:52",	"super" : "RGTest",	"category" : "Ring2-Tests-ChunkImporter",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "Ring2ChunkImporterTest",	"type" : "normal"}

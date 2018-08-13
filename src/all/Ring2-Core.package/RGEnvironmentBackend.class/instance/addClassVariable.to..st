@@ -1,0 +1,4 @@
+class
+addClassVariable: anRGInstanceVariableDefinition to: anRGBehavior
+
+	^ anRGBehavior behaviorStrategy pvtAddClassVariable: anRGInstanceVariableDefinition

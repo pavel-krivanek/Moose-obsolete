@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "PavelKrivanek 6/7/2018 10:50",
+	"super" : "Object",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"properties",
+		"name",
+		"parent"
+	],
+	"name" : "RGObject",
+	"type" : "normal"
+}

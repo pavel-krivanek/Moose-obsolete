@@ -1,0 +1,4 @@
+trait composition
+cleanTransformationsFor: anRGTraitComposition
+
+	^ anRGTraitComposition pvtCleanTransformations

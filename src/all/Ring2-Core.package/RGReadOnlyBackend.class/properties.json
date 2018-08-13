@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RGEnvironmentBackend",
+	"category" : "Ring2-Core-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGReadOnlyBackend",
+	"type" : "normal"
+}

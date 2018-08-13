@@ -678,10 +678,21 @@ BaselineOfMoose >> baselinePhexample: spec [
 { #category : #baseline }
 BaselineOfMoose >> baselineRing2: spec [ 
     
-	spec baseline: 'Ring2' with: [
+"	spec baseline: 'Ring2' with: [
 		spec 
 			repository: 'github://pavel-krivanek/Ring2:moose-dev/src';
 			loads: #calypso 	].
+"
+		#(
+		'Ring2-Core' 
+		'Ring2-TraitsV2Support'
+		'Ring2-Monticello' 
+		'Ring2-ChunkImporter'
+		'Ring2-Tests-Core' 
+		'Ring2-Tests-Monticello' 
+		'Ring2-Tests-ChunkImporter' 
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Ring2) ]].
 
 ]
 

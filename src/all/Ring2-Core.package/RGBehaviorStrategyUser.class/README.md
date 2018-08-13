@@ -1,0 +1,1 @@
+I am an abstract behavior that has a behavior strategy and and delegates all messages to it

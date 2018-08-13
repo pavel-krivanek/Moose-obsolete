@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "PavelKrivanek 6/7/2018 11:01",
+	"super" : "RGObject",
+	"category" : "Ring2-Core-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcer",
+		"behaviors",
+		"packages",
+		"globalVariables",
+		"backend",
+		"queryInterface",
+		"version"
+	],
+	"name" : "RGEnvironment",
+	"type" : "normal"
+}

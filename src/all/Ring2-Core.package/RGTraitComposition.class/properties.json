@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RGObject",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"transformations"
+	],
+	"name" : "RGTraitComposition",
+	"type" : "normal"
+}

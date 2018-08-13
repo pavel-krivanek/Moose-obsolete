@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "PavelKrivanek 3/23/2018 14:14",
+	"super" : "Error",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGWrongEnvironment",
+	"type" : "normal"
+}

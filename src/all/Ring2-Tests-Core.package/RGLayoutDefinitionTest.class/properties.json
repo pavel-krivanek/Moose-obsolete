@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RGTest",
+	"category" : "Ring2-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGLayoutDefinitionTest",
+	"type" : "normal"
+}

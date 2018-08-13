@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "RGTraitV2DescriptionStrategy",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"comment",
+		"classVariables",
+		"package",
+		"sharedPools",
+		"classTrait"
+	],
+	"name" : "RGTraitV2Strategy",
+	"type" : "normal"
+}

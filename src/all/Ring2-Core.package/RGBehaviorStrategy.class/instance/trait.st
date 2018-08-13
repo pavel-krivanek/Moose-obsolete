@@ -1,0 +1,4 @@
+variables
+trait
+
+	^ self incompatibleBehaviorType

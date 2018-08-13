@@ -1,0 +1,4 @@
+trait composition
+addTransformation: anRGTraitTransformation to: anRGTraitComposition
+
+	^ anRGTraitComposition pvtAddTransformation: anRGTraitTransformation

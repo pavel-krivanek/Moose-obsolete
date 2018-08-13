@@ -1,0 +1,4 @@
+accessing
+pvtClassTrait
+
+	^ classTrait value

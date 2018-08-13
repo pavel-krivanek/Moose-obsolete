@@ -1,0 +1,4 @@
+managing container
+defaultParentStub
+
+	self subclassResponsibility

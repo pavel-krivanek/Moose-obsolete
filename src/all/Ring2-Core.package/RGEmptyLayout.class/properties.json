@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RGLayout",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGEmptyLayout",
+	"type" : "normal"
+}

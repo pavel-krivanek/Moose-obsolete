@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TorstenBergmann 2/12/2014 23:08",
+	"super" : "RGObject",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGGlobalVariable",
+	"type" : "normal"
+}

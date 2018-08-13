@@ -1,0 +1,4 @@
+class
+cleanTagsForMethodsFor: anRGBehavior
+
+	anRGBehavior pvtCleanTagsForMethods.
