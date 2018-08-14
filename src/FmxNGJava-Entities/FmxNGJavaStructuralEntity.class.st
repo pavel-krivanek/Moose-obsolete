@@ -66,20 +66,6 @@ FmxNGJavaStructuralEntity >> isSharedVariable [
 	^ false
 ]
 
-{ #category : #accessing }
-FmxNGJavaStructuralEntity >> localAccesses [
-	| attrclass localAccesses |
-	attrclass := self belongsTo.
-	localAccesses := Set new.
-	self
-		incomingAccesses do:
-			[:anAccess | 
-			| ent |
-			ent := anAccess accessor.
-			ent belongsTo = attrclass ifTrue: [localAccesses add: anAccess]].
-	^localAccesses
-]
-
 { #category : #'as yet unclassified' }
 FmxNGJavaStructuralEntity >> namespaceScope [
 	^ self subclassResponsibility

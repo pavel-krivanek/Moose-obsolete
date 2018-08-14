@@ -56,12 +56,6 @@ FmxNGStClass >> isIgnored [
 ]
 
 { #category : #'Famix-Implementation' }
-FmxNGStClass >> isInterface [
-
-	^ false
-]
-
-{ #category : #'Famix-Implementation' }
 FmxNGStClass >> methodsWithoutSutbsAndConstructors [
 
 	"Removing stub and contructor methods. Used to support the calculation of LCOM."

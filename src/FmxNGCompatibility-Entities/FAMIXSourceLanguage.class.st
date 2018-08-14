@@ -35,13 +35,6 @@ FAMIXSourceLanguage class >> requirements [
 	^ {  }
 ]
 
-{ #category : #utility }
-FAMIXSourceLanguage >> format: aSourceString from: anEntity [
-	^ aSourceString
-	
-	
-]
-
 { #category : #'Famix-C' }
 FAMIXSourceLanguage >> isC [ 
 	^ false

@@ -53,11 +53,6 @@ FAMIXFile >> isCompilationUnit [
 	^ false
 ]
 
-{ #category : #testing }
-FAMIXFile >> isFolder [
-	^ false
-]
-
 { #category : #'Famix-C-testing' }
 FAMIXFile >> isHeader [
 	^ false

@@ -55,11 +55,6 @@ FmxNGJavaInheritance >> historicalUniqueName [
 	^(self subclass mooseName , '->' , self superclass mooseName) asSymbol
 ]
 
-{ #category : #testing }
-FmxNGJavaInheritance >> isInheritance [ 
-	^true
-]
-
 { #category : #'as yet unclassified' }
 FmxNGJavaInheritance >> mooseNameOn: aStream [
 	self subclass ifNotNil: [ aStream nextPutAll: self subclass name ].

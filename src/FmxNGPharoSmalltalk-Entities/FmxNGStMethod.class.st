@@ -180,15 +180,6 @@ FmxNGStMethod >> isCalledInternally [
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }
-FmxNGStMethod >> isGetter [
-	<MSEProperty: #isGetter type: #Boolean>
-	<derived>
-	<MSEComment: 'True if the method is a getter of an attribute'>
-	
-	^#getter = self kind
-]
-
-{ #category : #'Famix-Extensions-metrics-support' }
 FmxNGStMethod >> isInitializer [
 	^ self mooseModel isSmalltalk
 		ifTrue: [ (('*initialize*' match: self category) or: [ '*initialize*' match: self name ]) or: [ self isConstructor ] ]

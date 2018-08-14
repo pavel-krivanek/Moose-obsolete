@@ -55,11 +55,6 @@ FAMIXInheritance >> historicalUniqueName [
 	^(self subclass mooseName , '->' , self superclass mooseName) asSymbol
 ]
 
-{ #category : #testing }
-FAMIXInheritance >> isInheritance [ 
-	^true
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXInheritance >> mooseNameOn: aStream [
 	self subclass ifNotNil: [ aStream nextPutAll: self subclass name ].

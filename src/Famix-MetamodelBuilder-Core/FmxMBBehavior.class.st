@@ -365,27 +365,6 @@ FmxMBBehavior >> relatedEntityName [
 	^ self name
 ]
 
-{ #category : #private }
-FmxMBBehavior >> relationFrom: ownSide to: oppositeSide [
-
-	| aRelation |
-	
-	aRelation := self builder newRelation
-		side: ownSide;
-		oppositeSide: oppositeSide;
-		builder: self builder;
-		yourself.	
-
-	ownSide relation: aRelation.	
-	oppositeSide relation: aRelation.
-
-	ownSide relatedClass ifNotNil: [ 
-		ownSide relatedClass addRelation: aRelation with: oppositeSide relatedEntity ].
-		
-	^ aRelation
-
-]
-
 { #category : #accessing }
 FmxMBBehavior >> relations [
 	^ relations

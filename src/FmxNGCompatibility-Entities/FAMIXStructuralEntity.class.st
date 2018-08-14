@@ -66,20 +66,6 @@ FAMIXStructuralEntity >> isSharedVariable [
 	^ false
 ]
 
-{ #category : #'Famix-Implementation' }
-FAMIXStructuralEntity >> localAccesses [
-	| attrclass localAccesses |
-	attrclass := self belongsTo.
-	localAccesses := Set new.
-	self
-		incomingAccesses do:
-			[:anAccess | 
-			| ent |
-			ent := anAccess accessor.
-			ent belongsTo = attrclass ifTrue: [localAccesses add: anAccess]].
-	^localAccesses
-]
-
 { #category : #'moosechef-scoping-filtering' }
 FAMIXStructuralEntity >> namespaceScope [
 	^ self subclassResponsibility
