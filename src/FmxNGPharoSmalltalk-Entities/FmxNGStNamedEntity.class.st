@@ -80,6 +80,12 @@ FmxNGStNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
 				ifFalse: [ ^ entityRescoped == myselfRescoped ] ]
 ]
 
+{ #category : #accessing }
+FmxNGStNamedEntity >> packageScope [
+	"Empty default scope"
+	^ nil
+]
+
 { #category : #'Famix-Extensions' }
 FmxNGStNamedEntity >> stubFormattedName [
 	 ^ self isStub 

@@ -43,6 +43,12 @@ FmxMBClassAlias >> isMetamodelTrait [
 	^ false
 ]
 
+{ #category : #private }
+FmxMBClassAlias >> ownerPropertyName [
+
+	^ self trait ownerPropertyName
+]
+
 { #category : #'relations - named' }
 FmxMBClassAlias >> pluralPropertyName [
 

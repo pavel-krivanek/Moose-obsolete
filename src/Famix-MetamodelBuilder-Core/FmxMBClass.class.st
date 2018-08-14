@@ -239,33 +239,6 @@ FmxMBClass >> isRoot [
 ]
 
 { #category : #'name conversion' }
-FmxMBClass >> ownerPropertyName [
-
-	^ self name uncapitalized, 'Owner'.
-	
-]
-
-{ #category : #'name conversion' }
-FmxMBClass >> pluralPropertyName [
-
-	| uncapitalized |
-	
-	uncapitalized := self name uncapitalized.
-	
-	^ (uncapitalized endsWith: 's')
-		ifFalse: [ uncapitalized, 's' ]
-		ifTrue: [ uncapitalized, 'es' ]
-]
-
-{ #category : #'name conversion' }
-FmxMBClass >> propertyName [
-	
-	^ self name uncapitalized.
-	
-	
-]
-
-{ #category : #'name conversion' }
 FmxMBClass >> relatedOwnerTraitName [
 
 	^ 'TWith', self pluralPropertyName capitalized

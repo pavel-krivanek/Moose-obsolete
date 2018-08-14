@@ -54,3 +54,8 @@ FmxNGJavaAbstractFileAnchor >> isFile [
 FmxNGJavaAbstractFileAnchor >> mooseNameOn: aStream [
 	aStream nextPutAll: self fileName asString
 ]
+
+{ #category : #accessing }
+FmxNGJavaAbstractFileAnchor >> sourceText [
+	self subclassResponsibility
+]

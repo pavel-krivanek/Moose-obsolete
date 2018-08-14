@@ -239,6 +239,13 @@ FmxMBBehavior >> name: anObject [
 	name := anObject
 ]
 
+{ #category : #private }
+FmxMBBehavior >> ownerPropertyName [
+
+	^ self name uncapitalized, 'Owner'.
+	
+]
+
 { #category : #accessing }
 FmxMBBehavior >> packageName [
 	^ packageName
@@ -247,6 +254,18 @@ FmxMBBehavior >> packageName [
 { #category : #accessing }
 FmxMBBehavior >> packageName: anObject [
 	packageName := anObject
+]
+
+{ #category : #private }
+FmxMBBehavior >> pluralPropertyName [
+
+	| uncapitalized |
+	
+	uncapitalized := self name uncapitalized.
+	
+	^ (uncapitalized endsWith: 's')
+		ifFalse: [ uncapitalized, 's' ]
+		ifTrue: [ uncapitalized, 'es' ]
 ]
 
 { #category : #accessing }
@@ -319,6 +338,14 @@ FmxMBBehavior >> property: propertyName type: aTypeName [
 	self properties add: aSide.
 
 	^ aSide.		
+]
+
+{ #category : #private }
+FmxMBBehavior >> propertyName [
+	
+	^ self name uncapitalized.
+	
+	
 ]
 
 { #category : #accessing }
