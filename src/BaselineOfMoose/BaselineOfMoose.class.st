@@ -20,6 +20,11 @@ BaselineOfMoose >> baseline: spec [
 		spec preLoadDoIt: #'preload:package:'.
 		spec postLoadDoIt: #'postload:package:'.
 		
+		#(	
+			'Moose-PharoOverrides'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
+		
 		self baselineGrease: spec. 
 		self baselineMagritte3: spec.
 		self baselineHashtable: spec.
@@ -496,6 +501,8 @@ BaselineOfMoose >> defineGroup: groupName in: spec locatedIn: location with: pac
 BaselineOfMoose >> groups: spec [ 
     
 	spec group: 'BasicMetamodelling' with: #(
+		'Moose-PharoOverrides'
+
 		'Ring2' 
 		'Grease' 
 		'CollectionExtensions-Group'
