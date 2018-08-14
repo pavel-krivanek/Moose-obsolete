@@ -459,11 +459,11 @@ BaselineOfMoose >> groups: spec [
 		'Moose-Query'
 		'Moose-Core'
 			
+		'Famix-MetamodelBuilder-Core'
+
 		'FmxNG-BasicInfrastructure'
 		'Famix-Compatibility'
 
-		'Famix-MetamodelBuilder-Core'
-			
 		'Moose-Query-Extensions'
 		'Moose-Query-Test'
 		'Moose-GenericImporter'
