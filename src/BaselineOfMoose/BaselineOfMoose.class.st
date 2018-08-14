@@ -20,30 +20,126 @@ BaselineOfMoose >> baseline: spec [
 		spec preLoadDoIt: #'preload:package:'.
 		spec postLoadDoIt: #'postload:package:'.
 		
-		self baselineAthens: spec.
-		self baselineBitmapCharacterSet: spec.
-		self baselineCollectionExtensions: spec.
-		self baselineDeepTraverser: spec.
-		self baselineFame: spec.
-		self baselineFamixNG: spec.
-		self baselineGeometry: spec.
-		self baselineGhost: spec.
-		self baselineGlamour: spec.
+		#(	
+			'Moose-PharoOverrides'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
+		
 		self baselineGrease: spec. 
-		self baselineGToolkitExamples: spec.
-		self baselineHashtable: spec.
 		self baselineMagritte3: spec.
-		self baselineMetamodelBuilder: spec.
-		self baselineMetanool: spec.
-		self baselineMocketry: spec.
-		self baselineMoose: spec.
-		self baselineMooseAlgos: spec.
-		self baselineOrderPreservingDictionary: spec.
-		self baselinePhexample: spec.
-		self baselineRing2: spec.
-		self baselineRoassal2: spec.
+		self baselineHashtable: spec.
 		self baselineStateSpecs: spec.
+		self baselinePhexample: spec.
+		self baselineGhost: spec.
+		self baselineMocketry: spec.
+		self baselineFame: spec.
+
+		#(
+			'GToolkit-Examples' 
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #GToolkitExamples) ]].
+		
+		self baselineDeepTraverser: spec.
+		self baselineRing2: spec.
+		
+		#(	
+			'Moose-Core'
+			'Moose-Query'
+			'Moose-Query-Extensions'
+			'Famix-MetamodelBuilder-Core'
+			'Famix-MetamodelBuilder-Tests'
+			
+			'FamixNG-MetamodelGeneration'
+			'FmxNG-Traits'	
+				
+			'FmxNG-BasicInfrastructure'
+			
+			'FmxNGCompatibility-Generator' 
+			'FmxNGCompatibility-Entities'
+			'FmxNGCompatibility-Groups'	
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
+
+		spec baseline: 'FmxNGCompatibility' with: [spec repository: repository].
+		
+		#(	
+			'Famix-Compatibility'
+			'Famix-Extensions'
+			'Moose-GenericImporter'
+			'Famix-Tests-C'
+			'Moose-Query-Extensions'
+			'Moose-SmalltalkImporter'
+			'Moose-MonticelloImporter'
+			'Moose-Tests-Core'
+			'Famix-Tests-Java'
+			'Moose-Tests-SmalltalkImporter-LAN'
+			'Moose-Tests-SmalltalkImporter-Core'
+			'Moose-Tests-SmalltalkImporter-KGB'
+			'Famix-Tests-Core'
+			'Famix-Tests-Extensions'
+			'Moose-TestResources-Reference-Core'
+			'Moose-TestResources-Reference-PackageOne'
+			'Moose-TestResources-Reference-PackageTwo'
+			'Moose-TestResources-LAN'
+			'Moose-TestResources-LCOM'
+			'Moose-TestResources-KGB-P4FullInteracted'
+			'Moose-TestResources-KGB-P6InteractedReferee'
+			'Moose-TestResources-KGB-P5FullReferee'
+			'Moose-TestResources-KGB-P1FullReferencer'
+			'Moose-TestResources-KGB-P2InteractedReferencerReferee'
+			'Moose-TestResources-KGB-P3InteractedReferencer'
+			'Moose-TestResources-KGB-P7ReferencerReferee'
+			'Moose-TestResources-KGB-P8FullReferencer'
+			'Moose-TestResources-KGB-P9FullReferencer'
+			'Moose-TestResources-KGB-P10InteractedReferee'
+			'Moose-TestResources-KGB-P12FullReferencer'
+			'Moose-TestResources-KGB-P11FullReferee' "dependency"
+			'Moose-TestResources-KGB-P13FullReferencer'
+			'Moose-TestResources-KGB-P14FullReferee'
+			'Moose-TestResources-KGB-PExtensions'
+			'Moose-TestResources-PackageBlueprint-P1'
+			'Moose-TestResources-PackageBlueprint-P2'
+			'Moose-TestResources-PackageBlueprint-P3'
+			'Moose-TestResources-PackageBlueprint-P4'
+			'Moose-Tests-MonticelloImporter'
+			'Moose-Query-Test'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
+
+		self baselineMetamodelBuilder: spec.
+		self baselineFamixNG: spec.
+
+		self baselineGeometry: spec.
+		self baselineAthens: spec.
+		self baselineRoassal2: spec.
+
+		self baselineMooseAlgos: spec.
+
+		self baselineOrderPreservingDictionary: spec.
+		self baselineCollectionExtensions: spec.
+		self baselineBitmapCharacterSet: spec.
 		self baselineXMLParser: spec.
+
+		#(	
+			'Glamour-Tools'
+			'Glamour-Magritte-Presentations'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Glamour) ]].
+
+		#(	
+			'Moose-Help'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
+	
+		self baselineMetanool: spec.
+		
+		#(	
+			'Moose-Finder'
+			'Moose-RoassalPaintings'
+			'Moose-Tests-Finder'
+			'Moose-Tests-RoassalPaintings'
+		) do: [ :packageName | 
+			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
 
 	   self groups: spec.
 	]
@@ -107,32 +203,20 @@ BaselineOfMoose >> baselineFame: spec [
 BaselineOfMoose >> baselineFamixNG: spec [ 
     
 	#(
-		'Famix-MetamodelBuilder-Core'
-		'FamixNG-MetamodelGeneration'
-		'FmxNG-Traits'	
-		'FmxNG-BasicInfrastructure'
-		'FmxNGCompatibility-Generator' 
-		'FmxNGCompatibility-Entities'
-		'FmxNGCompatibility-Groups'	
+		'FmxNG-Traits'
+
 		'FmxNGPharoSmalltalk-Generator'
 		'FmxNGPharoSmalltalk-Entities'
 		'FmxNGPharoSmalltalk-Importer'
+
 		'FmxNG-Support'
+
 		'FmxNGJava-Generator'
 		'FmxNGJava-Entities'
+
+
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
-
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineGToolkitExamples: spec [ 
-    
-	#(
-		'GToolkit-Examples' 
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #GToolkitExamples) ]].
 
 
 ]
@@ -163,18 +247,6 @@ BaselineOfMoose >> baselineGhost: spec [
 		'Ghost-ObjectMutation-Tests'
 	)
 	
-
-
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineGlamour: spec [ 
-    
-	#(
-		'Glamour-Tools'
-		'Glamour-Magritte-Presentations'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #GToolkitExamples) ]].
 
 
 ]
@@ -240,66 +312,6 @@ BaselineOfMoose >> baselineMocketry: spec [
 		'Mocketry-Specs-Tests'
 		'Mocketry-Domain-Tests'
 	)
-]
-
-{ #category : #baseline }
-BaselineOfMoose >> baselineMoose: spec [ 
-    
-	#(	
-		'Moose-PharoOverrides'
-
-		'Moose-Core'
-		'Moose-Query'
-		'Moose-Query-Extensions'
-		'Famix-MetamodelBuilder-Tests'
-		'Famix-Compatibility'
-		'Famix-Extensions'
-		'Moose-GenericImporter'
-		'Famix-Tests-C'
-		'Moose-Query-Extensions'
-		'Moose-SmalltalkImporter'
-		'Moose-MonticelloImporter'
-		'Moose-Tests-Core'
-		'Famix-Tests-Java'
-		'Moose-Tests-SmalltalkImporter-LAN'
-		'Moose-Tests-SmalltalkImporter-Core'
-		'Moose-Tests-SmalltalkImporter-KGB'
-		'Famix-Tests-Core'
-		'Famix-Tests-Extensions'
-		'Moose-TestResources-Reference-Core'
-		'Moose-TestResources-Reference-PackageOne'
-		'Moose-TestResources-Reference-PackageTwo'
-		'Moose-TestResources-LAN'
-		'Moose-TestResources-LCOM'
-		'Moose-TestResources-KGB-P4FullInteracted'
-		'Moose-TestResources-KGB-P6InteractedReferee'
-		'Moose-TestResources-KGB-P5FullReferee'
-		'Moose-TestResources-KGB-P1FullReferencer'
-		'Moose-TestResources-KGB-P2InteractedReferencerReferee'
-		'Moose-TestResources-KGB-P3InteractedReferencer'
-		'Moose-TestResources-KGB-P7ReferencerReferee'
-		'Moose-TestResources-KGB-P8FullReferencer'
-		'Moose-TestResources-KGB-P9FullReferencer'
-		'Moose-TestResources-KGB-P10InteractedReferee'
-		'Moose-TestResources-KGB-P12FullReferencer'
-		'Moose-TestResources-KGB-P11FullReferee' "dependency"
-		'Moose-TestResources-KGB-P13FullReferencer'
-		'Moose-TestResources-KGB-P14FullReferee'
-		'Moose-TestResources-KGB-PExtensions'
-		'Moose-TestResources-PackageBlueprint-P1'
-		'Moose-TestResources-PackageBlueprint-P2'
-		'Moose-TestResources-PackageBlueprint-P3'
-		'Moose-TestResources-PackageBlueprint-P4'
-		'Moose-Tests-MonticelloImporter'
-		'Moose-Query-Test'
-		'Moose-Help'
-		'Moose-Finder'
-		'Moose-RoassalPaintings'
-		'Moose-Tests-Finder'
-		'Moose-Tests-RoassalPaintings'
-	) do: [ :packageName | 
-		spec package: packageName with: [ spec repository: (self url: #Moose) ]].
-
 ]
 
 { #category : #baseline }
@@ -459,11 +471,11 @@ BaselineOfMoose >> groups: spec [
 		'Moose-Query'
 		'Moose-Core'
 			
-		'Famix-MetamodelBuilder-Core'
-
 		'FmxNG-BasicInfrastructure'
 		'Famix-Compatibility'
 
+		'Famix-MetamodelBuilder-Core'
+			
 		'Moose-Query-Extensions'
 		'Moose-Query-Test'
 		'Moose-GenericImporter'
