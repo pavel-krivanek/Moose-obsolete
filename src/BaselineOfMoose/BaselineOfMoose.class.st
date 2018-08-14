@@ -109,47 +109,10 @@ BaselineOfMoose >> baseline: spec [
 		self baselineMetamodelBuilder: spec.
 		self baselineFamixNG: spec.
 
-		#(	
-			'PetitParser'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #PetitParser) ]].
-
-		#(	
-			'Glamour-Presentations'
-			'Glamour-Morphic-Brick'
-			'Glamour-Morphic-Widgets'
-			'Glamour-Morphic-Renderer'
-			'Glamour-Morphic-Pager'
-			'Glamour-Tests-Morphic'
-			"'Morphic-Widgets-FastTable'"
-			'Glamour-FastTable'
-		) do: [ :packageName |
-			(SystemVersion current major < 7) ifTrue: [
-			  spec package: packageName with: [ spec repository: (self url: #Glamour) ]]].
-		
-		"self baselinePetitParser2: spec."
 		self baselineGeometry: spec.
 		self baselineAthens: spec.
 		self baselineRoassal2: spec.
 
-		#(
-			'GT-Inspector'
-			"'GT-InspectorExtensions-Core'"
-			'GT-Debugger'
-			'GT-EventRecorder'
-		) do: [ :packageName | 
-			(SystemVersion current major < 7) ifTrue: [
-			  spec package: packageName with: [ spec repository: (self url: #GToolkit)] ]].
-
-		"self baselineBeacon: spec."
-		
-		"#(	
-			'FuelBeacon'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #FuelBeacon) ]]."
-		
-		
-		"self baselinePetitParser2GUI: spec."
 		self baselineMooseAlgos: spec.
 
 		self baselineOrderPreservingDictionary: spec.
@@ -168,11 +131,6 @@ BaselineOfMoose >> baseline: spec [
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].
 	
-		#(	
-			'Fame-Example'
-		) do: [ :packageName | 
-			spec package: packageName with: [ spec repository: (self url: #Fame) ]].
-
 		self baselineMetanool: spec.
 		
 		#(	
@@ -369,7 +327,6 @@ BaselineOfMoose >> baselineMooseAlgos: spec [
 		'Moose-Algos-LinearAlgebra'
 		'Moose-Tests-Algos-LinearAlgebra'
 		'Moose-Algos-InformationRetrieval'
-		"'Moose-Algos-GraphObjectTraverser'"
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #MooseAlgos) ]]
 
