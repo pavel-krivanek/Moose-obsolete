@@ -107,6 +107,7 @@ BaselineOfMoose >> baselineFame: spec [
 BaselineOfMoose >> baselineFamixNG: spec [ 
     
 	#(
+		'Famix-MetamodelBuilder-Core'
 		'FamixNG-MetamodelGeneration'
 		'FmxNG-Traits'	
 		'FmxNG-BasicInfrastructure'
@@ -250,7 +251,6 @@ BaselineOfMoose >> baselineMoose: spec [
 		'Moose-Core'
 		'Moose-Query'
 		'Moose-Query-Extensions'
-		'Famix-MetamodelBuilder-Core'
 		'Famix-MetamodelBuilder-Tests'
 		'Famix-Compatibility'
 		'Famix-Extensions'
