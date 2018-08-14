@@ -15,11 +15,6 @@ FmxNGJavaAbstractFile class >> annotation [
 	^self
 ]
 
-{ #category : #constants }
-FmxNGJavaAbstractFile class >> famixFolderSeparatorString [
-	^'/'
-]
-
 { #category : #generator }
 FmxNGJavaAbstractFile class >> generatedSlotNames [
 	<generated>

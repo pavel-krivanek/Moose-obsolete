@@ -34,8 +34,3 @@ FmxNGStReference class >> requirements [
 	<generated>
 	^ {  }
 ]
-
-{ #category : #'instance creation' }
-FmxNGStReference class >> source: source target: target [
-	^ self new source: source; target: target
-]
