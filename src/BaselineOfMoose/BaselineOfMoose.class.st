@@ -107,7 +107,12 @@ BaselineOfMoose >> baselineFame: spec [
 BaselineOfMoose >> baselineFamixNG: spec [ 
     
 	#(
-		'FmxNG-Traits'
+		'FamixNG-MetamodelGeneration'
+		'FmxNG-Traits'	
+		'FmxNG-BasicInfrastructure'
+		'FmxNGCompatibility-Generator' 
+		'FmxNGCompatibility-Entities'
+		'FmxNGCompatibility-Groups'	
 		'FmxNGPharoSmalltalk-Generator'
 		'FmxNGPharoSmalltalk-Entities'
 		'FmxNGPharoSmalltalk-Importer'
@@ -247,12 +252,6 @@ BaselineOfMoose >> baselineMoose: spec [
 		'Moose-Query-Extensions'
 		'Famix-MetamodelBuilder-Core'
 		'Famix-MetamodelBuilder-Tests'
-		'FamixNG-MetamodelGeneration'
-		'FmxNG-Traits'	
-		'FmxNG-BasicInfrastructure'
-		'FmxNGCompatibility-Generator' 
-		'FmxNGCompatibility-Entities'
-		'FmxNGCompatibility-Groups'	
 		'Famix-Compatibility'
 		'Famix-Extensions'
 		'Moose-GenericImporter'
