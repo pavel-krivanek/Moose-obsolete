@@ -29,7 +29,7 @@ Class {
 		'parameter',
 		'unknownVariable'
 	],
-	#category : #'FamixNG-MetamodelGeneration'
+	#category : #'FmxNG-MetamodelGeneration'
 }
 
 { #category : #accessing }

@@ -49,7 +49,7 @@ BaselineOfMoose >> baseline: spec [
 			'Famix-MetamodelBuilder-Core'
 			'Famix-MetamodelBuilder-Tests'
 			
-			'FamixNG-MetamodelGeneration'
+			'FmxNG-MetamodelGeneration'
 			'FmxNG-Traits'	
 				
 			'FmxNG-BasicInfrastructure'
@@ -481,7 +481,7 @@ BaselineOfMoose >> groups: spec [
 		'Moose-GenericImporter'
 		'Phexample'
 			
-		'FamixNG-MetamodelGeneration'
+		'FmxNG-MetamodelGeneration'
 		'FmxNG-Traits'
 			
 		'FmxNGCompatibility-Generator' 

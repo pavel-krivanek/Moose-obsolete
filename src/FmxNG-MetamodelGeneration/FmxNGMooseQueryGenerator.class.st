@@ -8,7 +8,7 @@ Class {
 		'tEntityMetaLevelDependency',
 		'tOODependencyQueries'
 	],
-	#category : #'FamixNG-MetamodelGeneration'
+	#category : #'FmxNG-MetamodelGeneration'
 }
 
 { #category : #accessing }

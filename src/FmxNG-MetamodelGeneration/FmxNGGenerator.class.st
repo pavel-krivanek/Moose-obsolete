@@ -122,7 +122,7 @@ Class {
 		'tPackageWithClassesGlue',
 		'tTraitUser'
 	],
-	#category : #'FamixNG-MetamodelGeneration'
+	#category : #'FmxNG-MetamodelGeneration'
 }
 
 { #category : #accessing }
