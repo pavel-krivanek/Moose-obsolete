@@ -39,20 +39,7 @@ FMMany >> lazyInitializationFor: anObject slotValue: aSlotValue [
 { #category : #'meta-object-protocol' }
 FMMany >> mooseProperty [
 
-	^ mooseProperty ifNil: [ 
-
-		mooseProperty := FM3PropertyDescription new.
-			
-		mooseProperty name: self name asString.
-		mooseProperty setImplementingSelector: self name. "should be a link to slot"
-
-		mooseProperty isMultivalued: true.
-		mooseProperty isDerived: true.
-		
-		mooseProperty privOpposite: self inverseSlot mooseProperty.
-		
-		mooseProperty ].
-		
+	^ self moosePropertyFor: self owningClass name multivalued: true.
 ]
 
 { #category : #internal }

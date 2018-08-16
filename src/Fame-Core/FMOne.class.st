@@ -13,20 +13,7 @@ FMOne >> isToOneSlot [
 { #category : #'meta-object-protocol' }
 FMOne >> mooseProperty [
 
-	^ mooseProperty ifNil: [ 
-
-		mooseProperty := FM3PropertyDescription new.
-		
-		mooseProperty name: self name asString.
-		mooseProperty setImplementingSelector: self name. "should be a link to slot"
-
-		mooseProperty isMultivalued: false.
-		mooseProperty isDerived: true.
-		
-		mooseProperty privOpposite: self inverseSlot mooseProperty.
-		
-		mooseProperty ].
-
+	^ self moosePropertyFor: self owningClass name multivalued: false.
 ]
 
 { #category : #'meta-object-protocol' }

@@ -48,7 +48,12 @@ FM3PropertyDescription class >> gtExampleBasic [
 { #category : #'accessing-query' }
 FM3PropertyDescription >> compiledMethod [
 
-	^ self mmClass implementingClass methodNamed: self implementingSelector
+	^ self mmClass 
+		ifNotNil: [ :aClass | aClass implementingClass methodNamed: self implementingSelector ]
+		ifNil: [ ^ nil ].
+
+
+	
 ]
 
 { #category : #'accessing-meta' }
