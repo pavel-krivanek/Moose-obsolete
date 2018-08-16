@@ -190,7 +190,20 @@ TEntityMetaLevelDependency classSide >> privateParentSelectors [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> privateParentTypes [
-	^ self mooseDescription allAttributes select: #isContainer thenCollect: [:prop | prop type implementingClass]
+
+	| containerBehaviors metamodelClasses containerUsers |
+	
+	containerBehaviors := self mooseDescription allAttributes select: #isContainer thenCollect: [:prop | prop type implementingClass].
+	
+	metamodelClasses := FAMIXClass metamodel classes reject: [ :e | e implementingClass isTrait ].
+	
+	containerUsers := metamodelClasses select: [ :e | 
+		containerBehaviors anySatisfy: [ :t | e implementingClass usesMooseTraitDirectly: t ] ].
+	
+	^ (containerBehaviors, (containerUsers collect: #implementingClass) ) asSet asArray
+	
+
+	
 ]
 
 { #category : #'Moose-Query-Extensions' }
@@ -440,7 +453,10 @@ TEntityMetaLevelDependency >> withScope: aClassFAMIX [
 
 { #category : #private }
 TEntityMetaLevelDependency >> withScope: aClassFAMIX in: aCollection [
-	self allParentTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ] ifFound: [ self atScope: aClassFAMIX in: aCollection ].
-	self allChildrenTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ] ifFound: [ self toScope: aClassFAMIX in: aCollection ].
+
+	(self class traits includes: aClassFAMIX) ifTrue: [ self atScope: aClassFAMIX in: aCollection  ].
+
+	self allParentTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX mooseInheritsFrom: class ] ] ifFound: [ self atScope: aClassFAMIX in: aCollection ].
+	self allChildrenTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX mooseInheritsFrom: class ] ] ifFound: [ self toScope: aClassFAMIX in: aCollection ].
 	^ aCollection
 ]
