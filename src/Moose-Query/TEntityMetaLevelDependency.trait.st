@@ -307,6 +307,9 @@ TEntityMetaLevelDependency >> allWithScope: aClassFAMIX [
 
 { #category : #private }
 TEntityMetaLevelDependency >> allWithScope: aClassFAMIX in: aCollection [
+
+	(self class traits includes: aClassFAMIX) ifTrue: [ self allToScope: aClassFAMIX in: aCollection  ].
+
 	self allParentTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ] ifFound: [ self allAtScope: aClassFAMIX in: aCollection ].
 	self allChildrenTypes detect: [ :class | aClassFAMIX = class or: [ aClassFAMIX inheritsFrom: class ] ] ifFound: [ self allToScope: aClassFAMIX in: aCollection ].
 	^ aCollection

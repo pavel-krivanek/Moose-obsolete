@@ -141,7 +141,7 @@ MooseQueryTest >> testAllToScope [
 MooseQueryTest >> testAllWithScope [
 	| package3 class3 |
 	self assertCollection: (class1 allWithScope: FmxNGTMethod) hasSameElements: {method1}.
-	"self assertCollection: (class1 allWithScope: FmxNGTClass) hasSameElements: {class1}."
+	self assertCollection: (class1 allWithScope: FmxNGTClass) hasSameElements: {class1}.
 	self assertCollection: (class1 allWithScope: FmxNGTType) hasSameElements: {class1}.
 	self assertCollection: (class1 allWithScope: FmxNGTPackage) hasSameElements: {package1}.
 	self
@@ -158,11 +158,11 @@ MooseQueryTest >> testAllWithScope [
 		container: class1;
 		mooseModel: model.
 	self assertCollection: (class1 allWithScope: FmxNGTMethod) hasSameElements: {method1}.
-	"self
+	self
 		assertCollection: (class1 allWithScope: FmxNGTClass)
 		hasSameElements:
 			{class1.
-			class3}."
+			class3}.
 	self
 		assertCollection: (class1 allWithScope: FmxNGTType)
 		hasSameElements:
@@ -173,12 +173,12 @@ MooseQueryTest >> testAllWithScope [
 		hasSameElements:
 			{package1.
 			package3}.
-	"self
+	self
 		assertCollection: (class1 allWithScope: FmxNGTScopingEntity)
 		hasSameElements:
 			{package1.
 			package3.
-			namespace}"
+			namespace}
 ]
 
 { #category : #tests }
