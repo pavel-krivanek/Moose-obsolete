@@ -68,15 +68,19 @@ FAMIXTypeGroup >> viewBlueprintOn: view [
 { #category : #'*Moose-RoassalPaintings' }
 FAMIXTypeGroup >> viewSimpleSystemComplexityOn: b [ 
 	"b is an instance of RTMondrian"
-	b shape rectangle
-		height: [ :cls | cls numberOfMethods max: 5];
-		width: [ :cls | cls numberOfAttributes max: 5];
-		linearFillColor: #numberOfLinesOfCode within: self entities;
+	
+	| aRectangle |
+	aRectangle := b shape rectangle
+		height: [ :cls | [cls numberOfMethods max: 5] ifError: [0]];
+		width: [ :cls | [cls numberOfAttributes max: 5] ifError: [0]];
 		borderColor: Color lightGray.
+
+	[aRectangle linearFillColor: #numberOfLinesOfCode within: self entities ] ifError: [].
+	
 	b interaction popupText.
 	b interaction menu: [ :each | each mooseMenuMorph ].
 	b nodes: self entities.
-	b edges connectFromAll: [ :cls | cls directSuperclasses ].
+	[b edges connectFromAll: [ :cls | cls directSuperclasses] ] ifError: [ ].
 	b layout tree 
 ]
 
