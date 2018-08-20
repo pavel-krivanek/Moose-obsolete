@@ -3,9 +3,6 @@ Class {
 	#superclass : #FmxNGJavaType,
 	#traits : 'FmxNGTClass + FmxNGTWithExceptions',
 	#classTraits : 'FmxNGTClass classTrait + FmxNGTWithExceptions classTrait',
-	#instVars : [
-		'#isInterface'
-	],
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -69,13 +66,6 @@ FmxNGJavaClass >> containsTheReceiverOf: anInvocation [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaClass >> initialize [
-
-	super initialize.
-	isInterface := false
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaClass >> isADirectSubclassOf: aClass [ 
 	 
 	aClass class = FmxNGJavaClass 
@@ -127,18 +117,6 @@ FmxNGJavaClass >> isIgnored [
 FmxNGJavaClass >> isInheritedBy: anInheritance [ 
 	 
 	^anInheritance superclass == self
-]
-
-{ #category : #testing }
-FmxNGJavaClass >> isInterface [
-	<MSEProperty: #isInterface type: #Boolean>
-	<MSEComment: 'This is a boolean flag used to distinguish between classes with implementation and interfaces. It is particularly relevant for Java systems.'>
-	^ isInterface ifNil: [ false ]
-]
-
-{ #category : #'as yet unclassified' }
-FmxNGJavaClass >> isInterface: boolean [
-	isInterface := boolean
 ]
 
 { #category : #'as yet unclassified' }

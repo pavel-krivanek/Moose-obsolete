@@ -42,11 +42,29 @@ FmxNGTClass >> isClass [
 { #category : #testing }
 FmxNGTClass >> isInterface [
 
-	^ false
+	<MSEProperty: #isInterface type: #Boolean>
+	<MSEComment: 'This is a boolean flag used to distinguish between classes with implementation and interfaces'>
+
+	^ self privateState attributeAt: #isInterface ifAbsent: [ false ]
+]
+
+{ #category : #testing }
+FmxNGTClass >> isInterface: aBoolean [
+
+	^ self privateState attributeAt: #isInterface put: true
 ]
 
 { #category : #testing }
 FmxNGTClass >> isTestCase [
 
-	^ false
+	<MSEProperty: #isTestCase type: #Boolean>
+	<MSEComment: 'True if the method is considered as a test'>
+
+	^ self privateState attributeAt: #isTestCase ifAbsent: [ false ]
+]
+
+{ #category : #testing }
+FmxNGTClass >> isTestCase: aBoolean [
+
+	^ self privateState attributeAt: #isTestCase put: true
 ]

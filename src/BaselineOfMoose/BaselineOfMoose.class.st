@@ -214,6 +214,11 @@ BaselineOfMoose >> baselineFamixNG: spec [
 		'FmxNGJava-Generator'
 		'FmxNGJava-Entities'
 
+		'FmxNGTestGenerators'
+		'FmxNGTests-Test1'
+		'FmxNGTest1-Entities'
+		'FmxNGTests-Test1'
+
 
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
@@ -586,6 +591,12 @@ BaselineOfMoose >> groups: spec [
 
 		'FmxNGJava-Generator'
 		'FmxNGJava-Entities'
+		
+		'FmxNGTestGenerators'
+		'FmxNGTests-Test1'
+		'FmxNGTest1-Entities'
+		'FmxNGTests-Test1'
+		
 	).
 	
 	spec group: 'default' with: #('MooseFinder').
