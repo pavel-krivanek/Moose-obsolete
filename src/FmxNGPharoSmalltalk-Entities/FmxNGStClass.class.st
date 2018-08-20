@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGStClass,
 	#superclass : #FmxNGStType,
-	#traits : 'FmxNGTClass + FmxNGTClassHierarchyNavigation + FmxNGTWithExceptions + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTClassMetrics + FmxNGTLCOMMetrics',
-	#classTraits : 'FmxNGTClass classTrait + FmxNGTClassHierarchyNavigation classTrait + FmxNGTWithExceptions classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait',
+	#traits : 'FmxNGTClass + FmxNGTClassHierarchyNavigation + FmxNGTClassMetrics + FmxNGTLCOMMetrics + FmxNGTWithExceptions + FmxNGTWithMethods + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances',
+	#classTraits : 'FmxNGTClass classTrait + FmxNGTClassHierarchyNavigation classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait + FmxNGTWithExceptions classTrait + FmxNGTWithMethods classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait',
 	#category : #'FmxNGPharoSmalltalk-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGStClass class >> generatedSlotNames [
 { #category : #generator }
 FmxNGStClass class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClass FmxNGTClassHierarchyNavigation FmxNGTWithExceptions FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances)
+	^ #(FmxNGTClass FmxNGTClassHierarchyNavigation FmxNGTClassMetrics FmxNGTLCOMMetrics FmxNGTWithExceptions FmxNGTWithMethods FmxNGTWithSubInheritances FmxNGTWithSuperInheritances)
 ]
 
 { #category : #meta }
