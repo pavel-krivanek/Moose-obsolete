@@ -45,7 +45,7 @@ FmxNGJavaAbstractFileAnchor >> intervalAsCharPos [
 	self subclassResponsibility
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #testing }
 FmxNGJavaAbstractFileAnchor >> isFile [
 	^ true
 ]

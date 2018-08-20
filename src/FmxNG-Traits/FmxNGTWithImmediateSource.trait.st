@@ -3,7 +3,7 @@ Trait {
 	#instVars : [
 		'source'
 	],
-	#category : #'FmxNG-Traits-Traits'
+	#category : #'FmxNG-Traits-SourceAnchor'
 }
 
 { #category : #meta }
@@ -29,6 +29,12 @@ FmxNGTWithImmediateSource classSide >> generatedTraitNames [
 ]
 
 { #category : #accessing }
+FmxNGTWithImmediateSource >> isFile [
+
+	^ false
+]
+
+{ #category : #accessing }
 FmxNGTWithImmediateSource >> source [
 
 	<MSEProperty: #source type: #String>
@@ -43,4 +49,10 @@ FmxNGTWithImmediateSource >> source: anObject [
 	<generated>
 	source := anObject
 
+]
+
+{ #category : #accessing }
+FmxNGTWithImmediateSource >> sourceText [
+
+	^ self source
 ]

@@ -45,7 +45,7 @@ FmxNGJavaSourceTextAnchor >> lineCount [
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 FmxNGJavaSourceTextAnchor >> sourceText [
 	^ self source
 ]

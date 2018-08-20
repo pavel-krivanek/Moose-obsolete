@@ -117,6 +117,11 @@ FmxNGTFileAnchor >> hasSourceText [
 	^ self completeText notEmpty 
 ]
 
+{ #category : #testing }
+FmxNGTFileAnchor >> isFile [
+	^ true
+]
+
 { #category : #accessing }
 FmxNGTFileAnchor >> lineCount [
 	^ self hasSourceText 

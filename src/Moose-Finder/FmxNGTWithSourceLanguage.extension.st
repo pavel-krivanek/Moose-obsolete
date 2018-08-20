@@ -2,7 +2,9 @@ Extension { #name : #FmxNGTWithSourceLanguage }
 
 { #category : #'*Moose-Finder' }
 FmxNGTWithSourceLanguage >> formattedSourceText [
-	^ self sourceLanguage format: self sourceText from: self
+	^ self sourceLanguage 
+		ifNotNil: [ :language | language format: self sourceText from: self ]
+		ifNil: [ self sourceText ]
 ]
 
 { #category : #'*Moose-Finder' }

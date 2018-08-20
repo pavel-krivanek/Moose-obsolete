@@ -166,6 +166,12 @@ FmxNGTMethod >> parentType: anObject [
 
 ]
 
+{ #category : #testing }
+FmxNGTMethod >> parentTypeIsStub [
+
+	^ self parentType ifNotNil: [ :e | e isStub ] ifNil: [ true ]
+]
+
 { #category : #accessing }
 FmxNGTMethod >> timeStamp [
 
