@@ -44,8 +44,3 @@ FmxNGJavaSourceTextAnchor >> containerFiles [
 FmxNGJavaSourceTextAnchor >> lineCount [
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
 ]
-
-{ #category : #accessing }
-FmxNGJavaSourceTextAnchor >> sourceText [
-	^ self source
-]

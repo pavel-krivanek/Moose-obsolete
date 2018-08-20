@@ -45,17 +45,7 @@ FmxNGJavaAbstractFileAnchor >> intervalAsCharPos [
 	self subclassResponsibility
 ]
 
-{ #category : #testing }
-FmxNGJavaAbstractFileAnchor >> isFile [
-	^ true
-]
-
 { #category : #'as yet unclassified' }
 FmxNGJavaAbstractFileAnchor >> mooseNameOn: aStream [
 	aStream nextPutAll: self fileName asString
-]
-
-{ #category : #accessing }
-FmxNGJavaAbstractFileAnchor >> sourceText [
-	self subclassResponsibility
 ]

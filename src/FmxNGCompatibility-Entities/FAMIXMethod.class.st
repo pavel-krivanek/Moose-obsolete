@@ -371,11 +371,6 @@ FAMIXMethod >> parentScope [
 	^ self parentType parentScope
 ]
 
-{ #category : #'Famix-Extensions' }
-FAMIXMethod >> parentTypeIsStub [
-	^ self parentType ifNotNil: [ :e | e isStub ] ifNil: [ true ]
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXMethod >> printOn: aStream [
 	parentType ifNotNil: [ aStream nextPutAll: parentType name ].

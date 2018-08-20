@@ -120,7 +120,8 @@ Class {
 		'tInheritanceGlue',
 		'tWithClasses',
 		'tPackageWithClassesGlue',
-		'tTraitUser'
+		'tTraitUser',
+		'tClassWithInvocationsGlue'
 	],
 	#category : #'FmxNG-MetamodelGeneration'
 }
@@ -887,6 +888,15 @@ FmxNGGenerator >> defineGlueingTraits [
 	tPackageWithClassesGlue := builder newTraitNamed: #TPackageWithClassesGlue.
 	tPackageWithClassesGlue glues: tPackage with: tWithClasses.
 
+	tClassMetrics := builder newTraitNamed: #TClassMetrics.
+	tClassMetrics glues: tClass with: tWithMethods.
+	
+	tLCOMMetrics := builder newTraitNamed: #TLCOMMetrics.
+	tLCOMMetrics glues: tClass with: tWithMethods.
+
+	tClassWithInvocationsGlue := builder newTraitNamed: #TClassWithInvocationsGlue.
+	tClassWithInvocationsGlue glues: tClass with: tWithInvocations.
+
 ]
 
 { #category : #definition }
@@ -1609,8 +1619,6 @@ FmxNGGenerator >> defineTraits [
 	tPossibleStub := builder newTraitNamed: #TPossibleStub.
 
 	tClassHierarchyNavigation := builder newTraitNamed: #TClassHierarchyNavigation.
-	tClassMetrics := builder newTraitNamed: #TClassMetrics.
-	tLCOMMetrics := builder newTraitNamed: #TLCOMMetrics.
 
 	self defineGlueingTraits.
 

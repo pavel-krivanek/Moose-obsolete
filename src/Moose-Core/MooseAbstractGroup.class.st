@@ -314,7 +314,7 @@ MooseAbstractGroup >> allTestMethods [
 	<navigation: 'All test methods'>
 	<package: #Java>
 	^ self allModelMethods select: [ :each | 
-		(each respondsTo: #isJUnit4Test) and: [ each | each isJUnit4Test ]]
+		(each respondsTo: #isJUnit4Test) and: [ each isJUnit4Test ]]
 ]
 
 { #category : #'Famix-Java' }

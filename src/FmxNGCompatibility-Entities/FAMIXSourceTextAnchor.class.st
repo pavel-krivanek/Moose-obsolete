@@ -44,8 +44,3 @@ FAMIXSourceTextAnchor >> containerFiles [
 FAMIXSourceTextAnchor >> lineCount [
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
 ]
-
-{ #category : #accessing }
-FAMIXSourceTextAnchor >> sourceText [
-	^ self source
-]

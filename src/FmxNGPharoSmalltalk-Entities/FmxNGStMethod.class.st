@@ -92,15 +92,6 @@ FmxNGStMethod >> compiledMethod [
 ]
 
 { #category : #'Famix-Extensions-private' }
-FmxNGStMethod >> computeNumberOfLinesOfCode [
-	self hasSourceAnchor 
-		ifTrue: [ ^ self sourceAnchor lineCount ].
-	^ (self sourceText = '')
-			ifTrue: [ self notExistentMetricValue ]
-			ifFalse: [ self sourceText lineCount ]
-]
-
-{ #category : #'Famix-Extensions-private' }
 FmxNGStMethod >> computeNumberOfLinesOfCodeIfSmalltalk [
 	| parser |
 	
@@ -396,11 +387,6 @@ FmxNGStMethod >> packageScope [
 			ifTrue:[nil]
 			ifFalse:[cl packageScope]
 	]
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGStMethod >> parentTypeIsStub [
-	^ self parentType ifNotNil: [ :e | e isStub ] ifNil: [ true ]
 ]
 
 { #category : #'Famix-Extensions-metrics-support' }

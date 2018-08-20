@@ -56,6 +56,15 @@ FmxNGTMethod >> category: anObject [
 
 ]
 
+{ #category : #'Famix-Implementation' }
+FmxNGTMethod >> computeNumberOfLinesOfCode [
+	self hasSourceAnchor 
+		ifTrue: [ ^ self sourceAnchor lineCount ].
+	^ (self sourceText = '')
+			ifTrue: [ self notExistentMetricValue ]
+			ifFalse: [ self sourceText lineCount ]
+]
+
 { #category : #accessing }
 FmxNGTMethod >> hasClassScope [
 
@@ -146,6 +155,15 @@ FmxNGTMethod >> kind: anObject [
 	<generated>
 	kind := anObject
 
+]
+
+{ #category : #'Famix-Implementation' }
+FmxNGTMethod >> numberOfLinesOfCode [
+	<MSEProperty: #numberOfLinesOfCode type: #Number>
+	<MSEComment: 'The number of lines of code in a method.'>
+	^ self
+		lookUpPropertyNamed: #numberOfLinesOfCode
+		computedAs: [ self computeNumberOfLinesOfCode ]
 ]
 
 { #category : #accessing }

@@ -541,17 +541,6 @@ FmxNGTClassMetrics >> outgoingInvocations [
 ]
 
 { #category : #'Famix-Implementation' }
-FmxNGTClassMetrics >> outgoingInvocationsGroup [
-	<navigation: 'Outgoing invocations'>
-	^ self privateState cacheAt:
-		#outgoingInvocationsGroup
-		ifAbsentPut:
-			[MooseGroup
-				withAll: self outgoingInvocations
-				withDescription: 'Outgoing invocations from ' , self mooseName]
-]
-
-{ #category : #'Famix-Implementation' }
 FmxNGTClassMetrics >> subclassHierarchyDepth [ 
 	<MSEProperty: #subclassHierarchyDepth type: #Number>
 	<derived>

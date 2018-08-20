@@ -122,15 +122,6 @@ FmxNGJavaMethod >> compiledMethod [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> computeNumberOfLinesOfCode [
-	self hasSourceAnchor 
-		ifTrue: [ ^ self sourceAnchor lineCount ].
-	^ (self sourceText = '')
-			ifTrue: [ self notExistentMetricValue ]
-			ifFalse: [ self sourceText lineCount ]
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> computeNumberOfLinesOfCodeIfSmalltalk [
 	| parser |
 	
@@ -430,15 +421,6 @@ FmxNGJavaMethod >> numberOfInvokedMethods [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> numberOfLinesOfCode [
-	<MSEProperty: #numberOfLinesOfCode type: #Number>
-	<MSEComment: 'The number of lines of code in a method.'>
-	^ self
-		lookUpPropertyNamed: #numberOfLinesOfCode
-		computedAs: [ self computeNumberOfLinesOfCode ]
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> numberOfLinesOfCode: aNumber [
 
 	self privateState propertyAt: #numberOfLinesOfCode put: aNumber
@@ -519,11 +501,6 @@ FmxNGJavaMethod >> parentScope [
 	"Polymorphic alias to mimic GlobalVariable#parentScope and similar"
 
 	^ self parentType parentScope
-]
-
-{ #category : #'Famix-Extensions' }
-FmxNGJavaMethod >> parentTypeIsStub [
-	^ self parentType ifNotNil: [ :e | e isStub ] ifNil: [ true ]
 ]
 
 { #category : #'as yet unclassified' }
