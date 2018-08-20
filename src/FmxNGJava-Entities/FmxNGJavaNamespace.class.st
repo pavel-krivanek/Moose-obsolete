@@ -165,15 +165,6 @@ FmxNGJavaNamespace >> clientNamespaces [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaNamespace >> clientTypes [
-	<MSEProperty: #clientTypes type: #FmxNGJavaType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaNamespace >> containedEntities [
 	^self types
 ]

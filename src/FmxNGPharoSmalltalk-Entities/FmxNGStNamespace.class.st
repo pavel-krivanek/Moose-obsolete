@@ -57,15 +57,6 @@ FmxNGStNamespace >> clientNamespaces [
 ]
 
 { #category : #'Famix-Extensions-nav All Dependencies' }
-FmxNGStNamespace >> clientTypes [
-	<MSEProperty: #clientTypes type: #FmxNGStType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #'Famix-Extensions-nav All Dependencies' }
 FmxNGStNamespace >> isNamespace [
 	^ true
 ]

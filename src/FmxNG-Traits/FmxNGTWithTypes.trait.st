@@ -52,6 +52,15 @@ FmxNGTWithTypes >> allRecursiveTypesDo: aBlock [
 		each allRecursiveTypesDo: aBlock ]
 ]
 
+{ #category : #'Famix-Extensions-nav All Dependencies' }
+FmxNGTWithTypes >> clientTypes [
+	<MSEProperty: #clientTypes type: #FmxNGTType>
+	<multivalued>
+	<derived>
+	<MSEComment: 'All types that depend on (inherit, staticly access, or use some methods of) the receiver'>
+	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
+]
+
 { #category : #accessing }
 FmxNGTWithTypes >> types [
 

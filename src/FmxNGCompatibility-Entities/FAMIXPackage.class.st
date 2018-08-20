@@ -187,15 +187,6 @@ FAMIXPackage >> clientPackages [
 	^ (self queryAllIncoming atScope: FmxNGTPackage) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions-nav All Dependencies' }
-FAMIXPackage >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
 { #category : #'Famix-Extensions-accessing' }
 FAMIXPackage >> concernedClassesCollection [
 	"it returns the collection of the receiver's concerned classes (See #__concernedClassesCollection). Before returning this value it verifies if it is cached in the receiver's state under the properiety #concernedClasses."

@@ -76,15 +76,6 @@ FmxNGStType >> clientPackages [
 ]
 
 { #category : #adding }
-FmxNGStType >> clientTypes [
-	<MSEProperty: #clientTypes type: #FmxNGStType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on (inherit, staticly access, or use some methods of) the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #adding }
 FmxNGStType >> container [
 
 	<MSEProperty: #container type: #FmxNGStContainerEntity>

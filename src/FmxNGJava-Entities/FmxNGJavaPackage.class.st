@@ -188,15 +188,6 @@ FmxNGJavaPackage >> clientPackages [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaPackage >> clientTypes [
-	<MSEProperty: #clientTypes type: #FmxNGJavaType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaPackage >> concernedClassesCollection [
 	"it returns the collection of the receiver's concerned classes (See #__concernedClassesCollection). Before returning this value it verifies if it is cached in the receiver's state under the properiety #concernedClasses."
 

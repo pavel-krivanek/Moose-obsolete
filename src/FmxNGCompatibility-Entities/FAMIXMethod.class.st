@@ -121,15 +121,6 @@ FAMIXMethod >> clientPackages [
 	^ (self queryAllIncoming atScope: FmxNGTPackage) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions-nav All Dependencies' }
-FAMIXMethod >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
 { #category : #'Famix-Implementation' }
 FAMIXMethod >> compiledMethod [
 	"Return the compiled method associated to the receiver or nil"

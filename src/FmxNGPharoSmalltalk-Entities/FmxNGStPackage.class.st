@@ -69,15 +69,6 @@ FmxNGStPackage >> clientPackages [
 ]
 
 { #category : #accessing }
-FmxNGStPackage >> clientTypes [
-	<MSEProperty: #clientTypes type: #FmxNGStType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #accessing }
 FmxNGStPackage >> extendedClasses [
 	"select all classes extended in this package"
 

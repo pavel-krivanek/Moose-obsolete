@@ -113,15 +113,6 @@ FmxNGJavaMethod >> clientPackages [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> clientTypes [
-	<MSEProperty: #clientTypes type: #FmxNGJavaType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> compiledMethod [
 	"Return the compiled method associated to the receiver or nil"
 	

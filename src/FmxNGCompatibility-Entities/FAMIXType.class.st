@@ -129,15 +129,6 @@ FAMIXType >> clientPackages [
 	^ (self queryAllIncoming atScope: FmxNGTPackage) withoutSelfLoops
 ]
 
-{ #category : #'Famix-Extensions-nav All Dependencies' }
-FAMIXType >> clientTypes [
-	<MSEProperty: #clientTypes type: #FAMIXType>
-	<multivalued>
-	<derived>
-	<MSEComment: 'All types that depend on (inherit, staticly access, or use some methods of) the receiver'>
-	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
-]
-
 { #category : #'as yet unclassified' }
 FAMIXType >> container [
 
