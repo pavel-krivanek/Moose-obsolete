@@ -17,10 +17,10 @@ Class {
 FmxNGTest1Test >> setUp [
 
 	model := MooseModel new.
-	c1 := FmxNGSandClass named: 'Class1'.
-	c2 := FmxNGSandClass named: 'Class2'.
-	m1 := FmxNGSandMethod named: 'method1'.
-	m2 := FmxNGSandMethod named: 'method2'.
+	c1 := FmxNGTest1Class named: 'Class1'.
+	c2 := FmxNGTest1Class named: 'Class2'.
+	m1 := FmxNGTest1Method named: 'method1'.
+	m2 := FmxNGTest1Method named: 'method2'.
 	anchor1 := FmxNGTest1SourceTextAnchor new source: 'method1\source1' withCRs .
 	anchor2 := FmxNGTest1SourceTextAnchor new source: 'method2\source2a\source2b' withCRs .
 	
