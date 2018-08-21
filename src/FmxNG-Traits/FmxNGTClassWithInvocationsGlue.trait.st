@@ -24,14 +24,3 @@ FmxNGTClassWithInvocationsGlue classSide >> generatedTraitNames [
 	<generated>
 	^ #()
 ]
-
-{ #category : #'Famix-Implementation' }
-FmxNGTClassWithInvocationsGlue >> outgoingInvocationsGroup [
-	<navigation: 'Outgoing invocations'>
-	^ self privateState cacheAt:
-		#outgoingInvocationsGroup
-		ifAbsentPut:
-			[MooseGroup
-				withAll: self outgoingInvocations
-				withDescription: 'Outgoing invocations from ' , self mooseName]
-]
