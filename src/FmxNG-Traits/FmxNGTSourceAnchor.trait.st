@@ -57,5 +57,6 @@ FmxNGTSourceAnchor >> lineCount [
 { #category : #accessing }
 FmxNGTSourceAnchor >> sourceText [
 
-	self explicitRequirement
+	"I should be overriden in my users"
+	^ String new
 ]

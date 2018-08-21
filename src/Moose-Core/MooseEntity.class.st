@@ -392,6 +392,11 @@ MooseEntity >> isStub [
 	^ self privateState isStub
 ]
 
+{ #category : #testing }
+MooseEntity >> isStub: aBoolean [ 
+	^ self privateState isStub: aBoolean
+]
+
 { #category : #accessing }
 MooseEntity >> localMooseModel [ 
 	 
@@ -600,6 +605,12 @@ MooseEntity >> removeFromModel [
 MooseEntity >> resetMooseName [
 	(self hasUniqueMooseNameInModel and: [ self privateState hasMooseModel ])
 		ifTrue: [ self mooseModel resetMooseNameFor: self ]
+]
+
+{ #category : #testing }
+MooseEntity >> stub: aBoolean [
+
+	self isStub: aBoolean
 ]
 
 { #category : #private }

@@ -150,7 +150,9 @@ FmxNGTFileAnchor >> setCorrespondingFile [
 
 { #category : #accessing }
 FmxNGTFileAnchor >> sourceText [
-	self explicitRequirement
+
+	"I should be overriden in my users"
+	^ String new
 ]
 
 { #category : #testing }

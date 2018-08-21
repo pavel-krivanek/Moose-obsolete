@@ -65,7 +65,7 @@ FmxNGTMethod >> computeNumberOfLinesOfCode [
 			ifFalse: [ self sourceText lineCount ]
 ]
 
-{ #category : #accessing }
+{ #category : #testing }
 FmxNGTMethod >> hasClassScope [
 
 	<MSEProperty: #hasClassScope type: #Boolean>
@@ -74,7 +74,7 @@ FmxNGTMethod >> hasClassScope [
 	^ hasClassScope
 ]
 
-{ #category : #accessing }
+{ #category : #testing }
 FmxNGTMethod >> hasClassScope: anObject [
 
 	<generated>
@@ -100,7 +100,7 @@ FmxNGTMethod >> isConstructor [
 		self privateState propertyAt: #isConstructor ifAbsent: [false] ]
 ]
 
-{ #category : #accessing }
+{ #category : #testing }
 FmxNGTMethod >> isConstructor: aBoolean [
 	aBoolean 
 		ifTrue: [ self kind: #constructor ]

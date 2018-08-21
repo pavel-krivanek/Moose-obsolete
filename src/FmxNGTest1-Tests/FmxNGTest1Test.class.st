@@ -16,6 +16,8 @@ Class {
 { #category : #running }
 FmxNGTest1Test >> setUp [
 
+	super setUp.
+
 	model := MooseModel new.
 	c1 := FmxNGTest1Class named: 'Class1'.
 	c2 := FmxNGTest1Class named: 'Class2'.
@@ -31,7 +33,24 @@ FmxNGTest1Test >> setUp [
 
 ]
 
-{ #category : #running }
+{ #category : #tests }
+FmxNGTest1Test >> testCategory [
+
+	self assert: m1 category isNil.
+	m1 category: 'accessing'.
+	self assert: m1 category equals: 'accessing'.
+
+]
+
+{ #category : #tests }
+FmxNGTest1Test >> testHasClassScope [
+
+	m1 hasClassScope: true.
+	self assert: m1 hasClassScope.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testIsClass [
 
 	self assert: c1 isClass. 	
@@ -42,7 +61,34 @@ FmxNGTest1Test >> testIsClass [
 	self deny: anchor2 isClass.
 ]
 
-{ #category : #running }
+{ #category : #tests }
+FmxNGTest1Test >> testIsConstant [
+
+	self deny: m1 isConstant.
+	m1 kind: #constant.
+	self assert: m1 isConstant.
+
+]
+
+{ #category : #tests }
+FmxNGTest1Test >> testIsConstructor [
+
+	self deny: m1 isConstructor.
+	m1 isConstructor: true.
+	self assert: m1 isConstructor.
+
+]
+
+{ #category : #tests }
+FmxNGTest1Test >> testIsGetter [
+
+	self deny: m1 isGetter.
+	m1 kind: #getter.
+	self assert: m1 isGetter.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testIsInterface [
 
 	self deny: c1 isInterface.
@@ -52,7 +98,27 @@ FmxNGTest1Test >> testIsInterface [
 
 ]
 
-{ #category : #running }
+{ #category : #tests }
+FmxNGTest1Test >> testIsMethod [
+
+	self deny: m1 isPureAccessor.
+	m1 kind: #getter.
+	self assert: m1 isPureAccessor.
+	m1 kind: #setter.
+	self assert: m1 isPureAccessor.
+
+]
+
+{ #category : #tests }
+FmxNGTest1Test >> testIsSetter [
+
+	self deny: m1 isSetter.
+	m1 kind: #setter.
+	self assert: m1 isSetter.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testIsTestCase [
 
 	self deny: c1 isTestCase.
@@ -62,7 +128,7 @@ FmxNGTest1Test >> testIsTestCase [
 
 ]
 
-{ #category : #running }
+{ #category : #tests }
 FmxNGTest1Test >> testMethodsGroup [
 	
 	| group | 
@@ -71,7 +137,18 @@ FmxNGTest1Test >> testMethodsGroup [
 	self assertCollection: group entities hasSameElements: { m1 }.
 ]
 
-{ #category : #running }
+{ #category : #tests }
+FmxNGTest1Test >> testNumberOfAccessorMethods [
+
+	self assert: c1 numberOfAccessorMethods equals: 0.
+
+	"explicit count"
+	c1 numberOfMethods: 100.
+	self assert: c1 numberOfMethods equals: 100.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testNumberOfMethods [
 
 	self assert: c1 numberOfMethods equals: 1.
@@ -82,7 +159,16 @@ FmxNGTest1Test >> testNumberOfMethods [
 
 ]
 
-{ #category : #running }
+{ #category : #tests }
+FmxNGTest1Test >> testParentTypeIsStub [
+
+	self deny: m1 parentTypeIsStub.
+	c1 stub: true.
+	self assert: m1 parentTypeIsStub.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testRelations [
 
 	self assertCollection: c1 methods hasSameElements:  { m1 }.	
