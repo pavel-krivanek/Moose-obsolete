@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaClass,
 	#superclass : #FmxNGJavaType,
-	#traits : 'FmxNGTClass + FmxNGTClassMetrics + FmxNGTLCOMMetrics + FmxNGTWithExceptions',
-	#classTraits : 'FmxNGTClass classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait + FmxNGTWithExceptions classTrait',
+	#traits : 'FmxNGTClass + FmxNGTLCOMMetrics + FmxNGTWithExceptions',
+	#classTraits : 'FmxNGTClass classTrait + FmxNGTLCOMMetrics classTrait + FmxNGTWithExceptions classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaClass class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaClass class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClass FmxNGTClassMetrics FmxNGTLCOMMetrics FmxNGTWithExceptions)
+	^ #(FmxNGTClass FmxNGTLCOMMetrics FmxNGTWithExceptions)
 ]
 
 { #category : #meta }

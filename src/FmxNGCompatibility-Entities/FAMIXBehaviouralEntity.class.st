@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXBehaviouralEntity,
 	#superclass : #FAMIXContainerEntity,
-	#traits : 'FmxNGTInvocable + FmxNGTTypedStructure + FmxNGTWithAccesses + FmxNGTWithDereferencedInvocations + FmxNGTWithImplicitVariables + FmxNGTWithInvocations + FmxNGTWithLocalVariables + FmxNGTWithParameters + FmxNGTWithReferences + FmxNGTWithSignature',
-	#classTraits : 'FmxNGTInvocable classTrait + FmxNGTTypedStructure classTrait + FmxNGTWithAccesses classTrait + FmxNGTWithDereferencedInvocations classTrait + FmxNGTWithImplicitVariables classTrait + FmxNGTWithInvocations classTrait + FmxNGTWithLocalVariables classTrait + FmxNGTWithParameters classTrait + FmxNGTWithReferences classTrait + FmxNGTWithSignature classTrait',
+	#traits : 'FmxNGTInvocable + FmxNGTTypedStructure + FmxNGTWithAccesses + FmxNGTWithDereferencedInvocations + FmxNGTWithImplicitVariables + FmxNGTWithInvocations + FmxNGTWithLocalVariables + FmxNGTWithParameters + FmxNGTWithReferences + FmxNGTWithSignature + FmxNGTWithStatements',
+	#classTraits : 'FmxNGTInvocable classTrait + FmxNGTTypedStructure classTrait + FmxNGTWithAccesses classTrait + FmxNGTWithDereferencedInvocations classTrait + FmxNGTWithImplicitVariables classTrait + FmxNGTWithInvocations classTrait + FmxNGTWithLocalVariables classTrait + FmxNGTWithParameters classTrait + FmxNGTWithReferences classTrait + FmxNGTWithSignature classTrait + FmxNGTWithStatements classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FAMIXBehaviouralEntity class >> generatedSlotNames [
 { #category : #generator }
 FAMIXBehaviouralEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTInvocable FmxNGTTypedStructure FmxNGTWithAccesses FmxNGTWithDereferencedInvocations FmxNGTWithImplicitVariables FmxNGTWithInvocations FmxNGTWithLocalVariables FmxNGTWithParameters FmxNGTWithReferences FmxNGTWithSignature)
+	^ #(FmxNGTInvocable FmxNGTTypedStructure FmxNGTWithAccesses FmxNGTWithDereferencedInvocations FmxNGTWithImplicitVariables FmxNGTWithInvocations FmxNGTWithLocalVariables FmxNGTWithParameters FmxNGTWithReferences FmxNGTWithSignature FmxNGTWithStatements)
 ]
 
 { #category : #meta }
@@ -242,12 +242,6 @@ FAMIXBehaviouralEntity >> numberOfStatements [
 					parser processMethod: self usingImporter: nil inModel: nil.
 					parser numberOfStatements ]
 				ifFalse: [ self notExistentMetricValue ] ]
-]
-
-{ #category : #'Famix-Extensions' }
-FAMIXBehaviouralEntity >> numberOfStatements: aNumber [
-
-	self privateState propertyAt: #numberOfStatements put: aNumber
 ]
 
 { #category : #'moosequery-queries-outgoing' }

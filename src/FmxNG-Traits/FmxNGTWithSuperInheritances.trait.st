@@ -33,6 +33,20 @@ FmxNGTWithSuperInheritances >> addSubInheritance: anInheritance [
 	subInheritances add: anInheritance
 ]
 
+{ #category : #metrics }
+FmxNGTWithSuperInheritances >> numberOfSubclasses [
+	<MSEProperty: #numberOfSubclasses type: #Number>
+	<derived>
+	<MSEComment: 'The number of subclasses of a class'>
+	^ self lookUpPropertyNamed: #numberOfSubclasses computedAs: [ self subInheritances size ]
+]
+
+{ #category : #metrics }
+FmxNGTWithSuperInheritances >> numberOfSubclasses: aNumber [
+
+	self privateState propertyAt: #numberOfSubclasses put: aNumber
+]
+
 { #category : #accessing }
 FmxNGTWithSuperInheritances >> subInheritances [
 

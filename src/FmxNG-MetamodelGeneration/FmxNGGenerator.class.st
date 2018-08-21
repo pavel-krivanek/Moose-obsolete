@@ -115,13 +115,13 @@ Class {
 		'tIndexedFileNavigation',
 		'tWithImmediateSource',
 		'tClassHierarchyNavigation',
-		'tClassMetrics',
 		'tLCOMMetrics',
 		'tInheritanceGlue',
 		'tWithClasses',
 		'tPackageWithClassesGlue',
 		'tTraitUser',
-		'tClassWithInvocationsGlue'
+		'tClassWithInvocationsGlue',
+		'tWithStatements'
 	],
 	#category : #'FmxNG-MetamodelGeneration'
 }
@@ -882,15 +882,14 @@ FmxNGGenerator >> commentForTWithTypes [
 { #category : #definition }
 FmxNGGenerator >> defineGlueingTraits [
 
+	tClassHierarchyNavigation := builder newTraitNamed: #TClassHierarchyNavigation.
+	
 	tInheritanceGlue := builder newTraitNamed: #TInheritanceGlue.
 	tInheritanceGlue glues: tSubInheritance with: tSuperInheritance.
 
 	tPackageWithClassesGlue := builder newTraitNamed: #TPackageWithClassesGlue.
 	tPackageWithClassesGlue glues: tPackage with: tWithClasses.
 
-	tClassMetrics := builder newTraitNamed: #TClassMetrics.
-	tClassMetrics glues: tClass with: tWithMethods.
-	
 	tLCOMMetrics := builder newTraitNamed: #TLCOMMetrics.
 	tLCOMMetrics glues: tClass with: tWithMethods.
 
@@ -1618,7 +1617,7 @@ FmxNGGenerator >> defineTraits [
 
 	tPossibleStub := builder newTraitNamed: #TPossibleStub.
 
-	tClassHierarchyNavigation := builder newTraitNamed: #TClassHierarchyNavigation.
+	tWithStatements := builder newTraitNamed: #TWithStatements.
 
 	self defineGlueingTraits.
 

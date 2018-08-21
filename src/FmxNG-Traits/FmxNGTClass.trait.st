@@ -68,3 +68,20 @@ FmxNGTClass >> isTestCase: aBoolean [
 
 	^ self privateState attributeAt: #isTestCase put: true
 ]
+
+{ #category : #metrics }
+FmxNGTClass >> weightOfAClass [
+	<MSEProperty: #weightOfAClass type: #Number>
+	<derived>
+	<MSEComment: 'Weight of a class'>	
+			
+	^self
+		lookUpPropertyNamed: #weightOfAClass
+		computedAs: [self notExistentMetricValue]
+]
+
+{ #category : #metrics }
+FmxNGTClass >> weightOfAClass: aNumber [
+
+	self privateState propertyAt: #weightOfAClass put: aNumber
+]

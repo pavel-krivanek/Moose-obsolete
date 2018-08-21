@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXClass,
 	#superclass : #FAMIXType,
-	#traits : 'FmxNGTClass + FmxNGTClassMetrics + FmxNGTLCOMMetrics + FmxNGTWithExceptions',
-	#classTraits : 'FmxNGTClass classTrait + FmxNGTClassMetrics classTrait + FmxNGTLCOMMetrics classTrait + FmxNGTWithExceptions classTrait',
+	#traits : 'FmxNGTClass + FmxNGTLCOMMetrics + FmxNGTWithExceptions',
+	#classTraits : 'FmxNGTClass classTrait + FmxNGTLCOMMetrics classTrait + FmxNGTWithExceptions classTrait',
 	#instVars : [
 		'#isInterface'
 	],
@@ -28,7 +28,7 @@ FAMIXClass class >> generatedSlotNames [
 { #category : #generator }
 FAMIXClass class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClass FmxNGTClassMetrics FmxNGTLCOMMetrics FmxNGTWithExceptions)
+	^ #(FmxNGTClass FmxNGTLCOMMetrics FmxNGTWithExceptions)
 ]
 
 { #category : #meta }

@@ -61,6 +61,32 @@ FmxNGTWithTypes >> clientTypes [
 	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
 ]
 
+{ #category : #metrics }
+FmxNGTWithTypes >> fanOut [
+	<MSEProperty: #fanOut type: #Number>
+	<derived>
+	<MSEComment: 'Number of provider classes'>
+
+	^self
+		lookUpPropertyNamed: #fanOut
+		computedAs: [self providerTypes size]
+]
+
+{ #category : #metrics }
+FmxNGTWithTypes >> fanOut: aNumber [
+
+	self privateState propertyAt: #fanOut put: aNumber
+]
+
+{ #category : #accessing }
+FmxNGTWithTypes >> providerTypes [
+	<MSEProperty: #providerTypes type: #FmxNGTType>
+	<derived>
+	<multivalued>
+	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>
+	^ (self queryAllOutgoing atScope: FmxNGTType) withoutSelfLoops
+]
+
 { #category : #accessing }
 FmxNGTWithTypes >> types [
 

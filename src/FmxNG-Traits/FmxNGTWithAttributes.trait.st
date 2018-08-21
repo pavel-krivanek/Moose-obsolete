@@ -65,3 +65,72 @@ FmxNGTWithAttributes >> numberOfAttributes: aNumber [
 
 	self privateState propertyAt: #numberOfAttributes put: aNumber
 ]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfPrivateAttributes [
+	<MSEProperty: #numberOfPrivateAttributes type: #Number>
+	<derived>
+	<MSEComment: 'The number of private attributes in a class'>
+	
+	^self
+		lookUpPropertyNamed: #numberOfPrivateAttributes
+		computedAs: [(self attributes select: [:each | each isPrivate]) size]
+]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfPrivateAttributes: aNumber [
+
+	self privateState propertyAt: #numberOfPrivateAttributes put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfProtectedAttributes [
+	<MSEProperty: #numberOfProtectedAttributes type: #Number>
+	<derived>
+	<MSEComment: 'The number of protected attributes in a class'>				
+	
+	^self
+		lookUpPropertyNamed: #numberOfProtectedAttributes
+		computedAs: [(self attributes select: [:each | each isProtected]) size]
+]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfProtectedAttributes: aNumber [
+
+	self privateState propertyAt: #numberOfProtectedAttributes put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfPublicAttributes [
+	<MSEProperty: #numberOfPublicAttributes type: #Number>
+	<derived>
+	<MSEComment: 'The number of public attributes in a class'>
+	
+	^self
+		lookUpPropertyNamed: #numberOfPublicAttributes
+		computedAs: [(self attributes select: [:each | each isPublic]) size]
+]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfPublicAttributes: aNumber [
+
+	self privateState propertyAt: #numberOfPublicAttributes put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfRevealedAttributes [
+	<MSEProperty: #numberOfRevealedAttributes type: #Number>
+	<derived>
+	<MSEComment: 'The number of public attributes plus the number of accessor methods'>		
+
+	^self
+		lookUpPropertyNamed: #numberOfRevealedAttributes
+		computedAs:
+			[self numberOfPublicAttributes + self numberOfAccessorMethods]
+]
+
+{ #category : #metrics }
+FmxNGTWithAttributes >> numberOfRevealedAttributes: aNumber [
+
+	self privateState propertyAt: #numberOfRevealedAttributes put: aNumber
+]

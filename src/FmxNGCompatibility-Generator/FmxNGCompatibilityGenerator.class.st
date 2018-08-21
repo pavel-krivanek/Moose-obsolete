@@ -229,6 +229,7 @@ FmxNGCompatibilityGenerator >> defineHierarchy [
 	behaviouralEntity --|> #TWithImplicitVariables.
 	behaviouralEntity --|> #TWithDereferencedInvocations.
 	behaviouralEntity --|> #TWithSignature.
+	behaviouralEntity --|> #TWithStatements.
 
 	cFile --|> file.
 	cFile --|> #TWithFileInclude.

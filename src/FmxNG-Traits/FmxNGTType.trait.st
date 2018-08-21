@@ -44,11 +44,62 @@ FmxNGTType >> clientTypes [
 	^ (self queryAllIncoming atScope: FmxNGTType) withoutSelfLoops
 ]
 
+{ #category : #metrics }
+FmxNGTType >> fanIn [
+	<MSEProperty: #fanIn type: #Number>
+	<derived>
+	<MSEComment: 'Number of client classes'>
+
+	^self
+		lookUpPropertyNamed: #fanIn
+		computedAs: [self clientTypes size]
+]
+
+{ #category : #metrics }
+FmxNGTType >> fanIn: aNumber [
+
+	self privateState propertyAt: #fanIn put: aNumber
+]
+
 { #category : #testing }
 FmxNGTType >> isType [
 
 	<generated>
 	^ true
+]
+
+{ #category : #metrics }
+FmxNGTType >> numberOfAccessesToForeignData [
+	<MSEProperty: #numberOfAccessesToForeignData type: #Number>
+	<derived>
+	<MSEComment: 'Number of accesses to foreign data'>
+	
+	^self
+		lookUpPropertyNamed: #numberOfAccessesToForeignData
+		computedAs: [self notExistentMetricValue]
+]
+
+{ #category : #metrics }
+FmxNGTType >> numberOfAccessesToForeignData: aNumber [
+
+	self privateState propertyAt: #numberOfAccessesToForeignData put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTType >> numberOfDuplicatedLinesOfCodeInternally [
+	<MSEProperty: #numberOfDuplicatedLinesOfCodeInternally type: #Number>
+	<derived>
+	<MSEComment: 'The number of duplicated lines of code internally'>		
+
+	^self
+		lookUpPropertyNamed: #numberOfDuplicatedLinesOfCodeInternally
+		computedAs: [self notExistentMetricValue]
+]
+
+{ #category : #metrics }
+FmxNGTType >> numberOfDuplicatedLinesOfCodeInternally: aNumber [
+
+	self privateState propertyAt: #numberOfDuplicatedLinesOfCodeInternally put: aNumber
 ]
 
 { #category : #testing }

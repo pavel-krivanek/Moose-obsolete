@@ -82,3 +82,21 @@ FmxNGTWithAnnotationInstances >> isAnnotated [
 FmxNGTWithAnnotationInstances >> isAnnotatedWith: anAnnotationName [
 	^ self annotationInstances contains: [ :each | each annotationType name asSymbol = anAnnotationName asSymbol ]
 ]
+
+{ #category : #metrics }
+FmxNGTWithAnnotationInstances >> numberOfAnnotationInstances [
+	<MSEProperty: #numberOfAnnotationInstances type: #Number>
+	<derived>
+	<MSEComment: 'The number of annotation instances defined in the class or in any of its methods'>
+
+	^self
+		lookUpPropertyNamed: #numberOfAnnotationInstances
+		computedAs: [
+			self annotationInstances size + (self methods inject: 0 into: [:sum :each | sum + each numberOfAnnotationInstances])]
+]
+
+{ #category : #metrics }
+FmxNGTWithAnnotationInstances >> numberOfAnnotationInstances: aNumber [
+
+	self privateState propertyAt: #numberOfAnnotationInstances put: aNumber
+]

@@ -25,6 +25,15 @@ FmxNGTClassHierarchyNavigation classSide >> generatedTraitNames [
 	^ #()
 ]
 
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> addedMethods [
+	| inheritedMethodNames |
+	inheritedMethodNames := self inheritedMethods
+		collect: [:each | each signature].
+	^self methods
+		reject: [:each | inheritedMethodNames includes: each signature]
+]
+
 { #category : #enumerating }
 FmxNGTClassHierarchyNavigation >> allSubclassesDo: aBlock [
 	self allSubclassesWithoutAliasesDo: aBlock.
@@ -73,6 +82,32 @@ FmxNGTClassHierarchyNavigation >> directSuperclasses [
 	"returns a collection with all superclasses of this class"
 
 	^ self superInheritances collect: [:each | each superclass]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> hierarchyNestingLevel [
+	<MSEProperty: #hierarchyNestingLevel type: #Number>
+	<derived>
+	<MSEComment: 'The nesting of a class inside the hierarchy'>
+
+	^self
+		lookUpPropertyNamed: #hierarchyNestingLevel
+		computedAs:
+			[| currentMaxDepth |
+			(self directSuperclasses isEmpty or: [self isStub])
+				ifTrue: [0]
+				ifFalse:
+					[currentMaxDepth := 0.
+					self
+						allSuperclassesDo:
+							[:aClass | currentMaxDepth := currentMaxDepth max: aClass hierarchyNestingLevel].
+					currentMaxDepth + 1]]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> hierarchyNestingLevel: aNumber [
+
+	self privateState propertyAt: #hierarchyNestingLevel put: aNumber
 ]
 
 { #category : #enumerating }
@@ -133,12 +168,138 @@ FmxNGTClassHierarchyNavigation >> isHierarchyRootWithin: aClassGroup [
 	^(self superclassHierarchyGroup intersection: aClassGroup) isEmpty
 ]
 
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfAttributesInherited [
+	<MSEProperty: #numberOfAttributesInherited type: #Number>
+	<derived>
+	<MSEComment: 'The number of attributes in a class inherited from super classes'>	
+	
+	^self
+		lookUpPropertyNamed: #numberOfAttributesInherited
+		computedAs: [self inheritedAttributes size]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfAttributesInherited: aNumber [
+
+	self privateState propertyAt: #numberOfAttributesInherited put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsAdded [
+	<MSEProperty: #numberOfMethodsAdded type: #Number>
+	<derived>
+	<MSEComment: 'The number of methods in a class added with respect to super classes'>	
+	
+	^self
+		lookUpPropertyNamed: #numberOfMethodsAdded
+		computedAs: [self addedMethods size]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsAdded: aNumber [
+
+	self privateState propertyAt: #numberOfMethodsAdded put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsInHierarchy [
+	<MSEProperty: #numberOfMethodsInHierarchy type: #Number>
+	<derived>
+	<MSEComment: 'The number of methods of a class included the inherited ones'>	
+	
+	| totNom |
+	totNom := self methods size.
+	self superclassHierarchyGroup
+		do: [:aClass | totNom := totNom + aClass methods size].
+	^totNom
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsInHierarchy: aNumber [
+
+	self privateState propertyAt: #numberOfMethodsInHierarchy put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsInherited [
+	<MSEProperty: #numberOfMethodsInherited type: #Number>
+	<derived>
+	<MSEComment: 'The number of methods in a class inherited from super classes'>	
+
+	^self
+		lookUpPropertyNamed: #numberOfMethodsInherited
+		computedAs: [self inheritedMethods size]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsInherited: aNumber [
+
+	self privateState propertyAt: #numberOfMethodsInherited put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsOverriden [
+	<MSEProperty: #numberOfMethodsOverriden type: #Number>
+	<derived>
+	<MSEComment: 'The number of methods in a class overriden with respect to super classes'>
+			
+	^self
+		lookUpPropertyNamed: #numberOfMethodsOverriden
+		computedAs: [self numberOfMethods - self numberOfMethodsAdded]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfMethodsOverriden: aNumber [
+
+	self privateState propertyAt: #numberOfMethodsOverriden put: aNumber
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfParents [
+	<MSEProperty: #numberOfParents type: #Number>
+	<derived>
+	<MSEComment: 'The number of superclasses'>
+			
+	^self
+		lookUpPropertyNamed: #numberOfParents
+		computedAs: [self directSuperclasses size]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfParents: aNumber [
+
+	self privateState propertyAt: #numberOfParents put: aNumber
+]
+
 { #category : #enumerating }
 FmxNGTClassHierarchyNavigation >> subclassHierarchy [
 	| subclasses |
 	subclasses := OrderedCollection new.
 	self allSubclassesDo: [:each | subclasses add: each].
 	^ subclasses
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> subclassHierarchyDepth [ 
+	<MSEProperty: #subclassHierarchyDepth type: #Number>
+	<derived>
+	<MSEComment: 'The depth of the class hierarchy for which I am the root'>
+		
+	^ self directSubclasses isEmpty 
+		ifTrue: [ 0 ] 
+		ifFalse: 
+			[ | currentMaxDepth| 
+				currentMaxDepth := 0. 
+				self allSubclassesDo: 
+					[ :aClass | currentMaxDepth := currentMaxDepth max: aClass subclassHierarchyDepth ]. 
+            1 + currentMaxDepth ] 
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> subclassHierarchyDepth: aNumber [
+
+	self privateState propertyAt: #subclassHierarchyDepth put: aNumber
 ]
 
 { #category : #enumerating }
@@ -168,6 +329,23 @@ FmxNGTClassHierarchyNavigation >> superclassHierarchyGroup [
 	^ MooseGroup
 		withAll: self superclassHierarchy asSet
 		withDescription: 'All superclasses of ' , self mooseName
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> totalNumberOfChildren [
+	<MSEProperty: #totalNumberOfChildren type: #Number>
+	<derived>	
+	<MSEComment: 'The total number of subclasses of a class'>
+	
+	^self
+		lookUpPropertyNamed: #totalNumberOfChildren
+		computedAs: [self subclassHierarchyGroup size]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> totalNumberOfChildren: aNumber [
+
+	self privateState propertyAt: #totalNumberOfChildren put: aNumber
 ]
 
 { #category : #enumerating }
