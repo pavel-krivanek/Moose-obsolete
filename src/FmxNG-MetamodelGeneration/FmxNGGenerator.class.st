@@ -121,7 +121,8 @@ Class {
 		'tPackageWithClassesGlue',
 		'tTraitUser',
 		'tClassWithInvocationsGlue',
-		'tWithStatements'
+		'tWithStatements',
+		'tWithMethodsWithModifiersGlue'
 	],
 	#category : #'FmxNG-MetamodelGeneration'
 }
@@ -895,6 +896,13 @@ FmxNGGenerator >> defineGlueingTraits [
 
 	tClassWithInvocationsGlue := builder newTraitNamed: #TClassWithInvocationsGlue.
 	tClassWithInvocationsGlue glues: tClass with: tWithInvocations.
+	
+	tWithMethodsWithModifiersGlue := builder newTraitNamed: #TWithMethodsWithModifiersGlue.
+	tWithMethodsWithModifiersGlue glueingCondition: [ :aClass |
+		| methodClasses |
+		methodClasses := self builder classes select: [ :each | each allLocalTraits includes: tMethod ].
+		(aClass allLocalTraits includes: tWithMethods) 
+		and: [ methodClasses anySatisfy: [ :methodClass | methodClass allTraitsInHierarchy includes: tWithModifiers ] ] ].
 
 ]
 

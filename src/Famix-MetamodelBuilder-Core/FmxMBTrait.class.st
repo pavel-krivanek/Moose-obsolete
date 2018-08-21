@@ -6,7 +6,8 @@ Class {
 	#superclass : #FmxMBBehavior,
 	#instVars : [
 		'sides',
-		'gluedTraits'
+		'gluedTraits',
+		'glueingCondition'
 	],
 	#category : #'Famix-MetamodelBuilder-Core-Implementation'
 }
@@ -32,6 +33,14 @@ FmxMBTrait >> as: aTraitName property: propertyName [
 	^ self property: propertyName
 
 	
+]
+
+{ #category : #testing }
+FmxMBTrait >> canGlueTo: aClass [
+
+	^ glueingCondition 
+		ifNotNil: [ glueingCondition value: aClass ]
+		ifNil: [ false ]
 ]
 
 { #category : #generating }
@@ -112,6 +121,16 @@ FmxMBTrait >> generateAnnotationIn: aRealClass as: aName superclass: aSuperclass
 	^self' format: { aName. aSuperclassName. self builder safeAnnotationPackageName})
 		classified: 'meta'
 
+]
+
+{ #category : #accessing }
+FmxMBTrait >> glueingCondition [
+	^ glueingCondition
+]
+
+{ #category : #accessing }
+FmxMBTrait >> glueingCondition: anObject [
+	glueingCondition := anObject
 ]
 
 { #category : #testing }

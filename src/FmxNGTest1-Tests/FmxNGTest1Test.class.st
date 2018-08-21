@@ -138,6 +138,15 @@ FmxNGTest1Test >> testMethodsGroup [
 ]
 
 { #category : #tests }
+FmxNGTest1Test >> testNumberOfAbstractMethods [
+
+	self assert: c1 numberOfAbstractMethods equals: 0.
+	m1 isAbstract: true.
+	self assert: c1 numberOfAbstractMethods equals: 1.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testNumberOfAccessorMethods [
 
 	self assert: c1 numberOfAccessorMethods equals: 0.

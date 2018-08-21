@@ -65,7 +65,7 @@ FmxNGTMethod >> computeNumberOfLinesOfCode [
 			ifFalse: [ self sourceText lineCount ]
 ]
 
-{ #category : #testing }
+{ #category : #accessing }
 FmxNGTMethod >> hasClassScope [
 
 	<MSEProperty: #hasClassScope type: #Boolean>
@@ -74,7 +74,7 @@ FmxNGTMethod >> hasClassScope [
 	^ hasClassScope
 ]
 
-{ #category : #testing }
+{ #category : #accessing }
 FmxNGTMethod >> hasClassScope: anObject [
 
 	<generated>

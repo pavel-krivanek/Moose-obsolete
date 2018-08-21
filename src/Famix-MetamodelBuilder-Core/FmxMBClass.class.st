@@ -56,11 +56,18 @@ FmxMBClass >> allTraits [
 	| selectedTraits allTraits |
 	
 	selectedTraits := self allLocalTraits.
-	allTraits := ((self allClassGeneralizations copyWith: self) flatCollect: [ :each | each allLocalTraits ]) asSet.
+	allTraits := self allTraitsInHierarchy.
 	
 	selectedTraits addAll: (self glueingTraitsOf: selectedTraits whenAllHierarchyHas: allTraits).
+	selectedTraits addAll: (self conditionalGlueingTraitsFor: self).
 	
 	^ selectedTraits asSet
+]
+
+{ #category : #accessing }
+FmxMBClass >> allTraitsInHierarchy [
+
+	^ ((self allClassGeneralizations copyWith: self) flatCollect: [ :each | each allLocalTraits ]) asSet
 ]
 
 { #category : #converting }
@@ -118,6 +125,13 @@ FmxMBClass >> classGeneralization: anObject [
 	
 	classGeneralization := anObject.
 	^ anObject
+]
+
+{ #category : #accessing }
+FmxMBClass >> conditionalGlueingTraitsFor: aClass [
+
+	^ self builder traits select: [ :each | 
+		each canGlueTo: aClass ].
 ]
 
 { #category : #accessing }
