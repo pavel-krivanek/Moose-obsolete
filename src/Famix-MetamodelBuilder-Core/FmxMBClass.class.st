@@ -199,8 +199,6 @@ FmxMBClass >> generate [
 { #category : #generating }
 FmxMBClass >> generateMethodsMadeByTraitsFor: aClass [
 
-(aClass name = #FmxNGJavaType)  ifTrue: [ self halt ].
-
 	self allTraits do: [ :aTrait | 
 		(aTrait realClass notNil and: [ aTrait realClass class canUnderstand: #generateMethodsFor:in:])
 			ifTrue: [ aTrait realClass generateMethodsFor: self in: aClass ]]

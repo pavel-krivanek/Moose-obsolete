@@ -417,7 +417,7 @@ FmxNGJavaType >> providerTypes [
 ]
 
 { #category : #'builder support' }
-FmxNGJavaType >> tWithStatementsLinks [
+FmxNGJavaType >> tContainingWithStatementsLinks [
 
 	<generated>
 	^ #(#methods)

@@ -22,7 +22,7 @@ FmxNGTContainingWithStatementsGlue classSide >> generateMethodsFor: aBuilderClas
 
 	selectedLinkNames := (((aBuilderClass allTraits flatCollect: #properties) select: [ :each | links includes: each name ]) collect: #name) asArray.
 	
-	aRingClass instanceSide compile: ('{1}\\	<generated>\	^ {2}' withCRs format: { #tWithStatementsLinks. selectedLinkNames printString }) 
+	aRingClass instanceSide compile: ('{1}\\	<generated>\	^ {2}' withCRs format: { #tContainingWithStatementsLinks. selectedLinkNames printString }) 
 		classified: #'builder support'.
 
 ]
@@ -49,8 +49,12 @@ FmxNGTContainingWithStatementsGlue >> numberOfStatements [
 	^self
 		lookUpPropertyNamed: #numberOfStatements
 		computedAs: [
-			self halt.
-			self methodsGroup sumNumbers: #numberOfStatements]
+			self tContainingWithStatementsLinks sum: [ :selector | 
+				| group |
+				group := MooseGroup
+					withAll: (self perform: selector)
+					withDescription: 'Entities from ' , self mooseName.
+				group sumNumbers: #numberOfStatements ] ]
 ]
 
 { #category : #metrics }
