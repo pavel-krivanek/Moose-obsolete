@@ -142,6 +142,12 @@ FmxMBClass >> containerProperties [
 ]
 
 { #category : #accessing }
+FmxMBClass >> directlyUses: aTrait [
+
+	^ self allLocalTraits includes: aTrait
+]
+
+{ #category : #accessing }
 FmxMBClass >> generalization: anObject [
 
 	^ anObject isSymbol

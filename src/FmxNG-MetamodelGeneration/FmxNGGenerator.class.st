@@ -910,11 +910,8 @@ FmxNGGenerator >> defineGlueingTraits [
 		| withStatements containerProperties |
 		withStatements := self builder classesThatDirectlyUse: tWithStatements.
 		containerProperties := withStatements flatCollect: #containerProperties.
-		
-		self halt.
-		
-		"(aClass allLocalTraits includes: tWithMethods) 
-			and: [ methodClasses anySatisfy: [ :methodClass | methodClass allTraitsInHierarchy includes: tWithModifiers ] ]" ].
+		((containerProperties collect: [ :side | side otherSide relatedClass ]) select: [ :each | each notNil ])
+			anySatisfy: [ :aTrait | 	aClass directlyUses: aTrait ] ].
 
 
 ]
