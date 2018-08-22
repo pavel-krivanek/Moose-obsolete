@@ -139,6 +139,12 @@ FamixMetamodelBuilder >> classes [
 ]
 
 { #category : #accessing }
+FamixMetamodelBuilder >> classesThatDirectlyUse: aTrait [
+
+	^ self classes select: [ :each | each allLocalTraits includes: aTrait ].
+]
+
+{ #category : #accessing }
 FamixMetamodelBuilder >> classesToGenerate [ 
 
 	^ self classes select: #willGenerate

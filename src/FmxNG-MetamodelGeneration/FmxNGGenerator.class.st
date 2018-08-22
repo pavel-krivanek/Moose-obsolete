@@ -900,9 +900,9 @@ FmxNGGenerator >> defineGlueingTraits [
 	tWithMethodsWithModifiersGlue := builder newTraitNamed: #TWithMethodsWithModifiersGlue.
 	tWithMethodsWithModifiersGlue glueingCondition: [ :aClass |
 		| methodClasses |
-		methodClasses := self builder classes select: [ :each | each allLocalTraits includes: tMethod ].
+		methodClasses := self builder classesThatDirectlyUse: tMethod.
 		(aClass allLocalTraits includes: tWithMethods) 
-		and: [ methodClasses anySatisfy: [ :methodClass | methodClass allTraitsInHierarchy includes: tWithModifiers ] ] ].
+			and: [ methodClasses anySatisfy: [ :methodClass | methodClass allTraitsInHierarchy includes: tWithModifiers ] ] ].
 
 ]
 
