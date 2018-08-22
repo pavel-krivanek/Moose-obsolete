@@ -184,13 +184,35 @@ FmxNGTest1Test >> testNumberOfMessageSends [
 ]
 
 { #category : #tests }
+FmxNGTest1Test >> testNumberOfMethodProtocols [
+
+	m1 category: #accessing.
+	self assert: c1 numberOfMethodProtocols equals: 1.
+	c1 numberOfMethodProtocols: 100.
+	self assert: c1 numberOfMethodProtocols equals: 100.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testNumberOfMethods [
 
 	self assert: c1 numberOfMethods equals: 1.
+	self assert: c2 numberOfMethods equals: 2.
 
 	"explicit count"
 	c1 numberOfMethods: 100.
 	self assert: c1 numberOfMethods equals: 100.
+
+]
+
+{ #category : #tests }
+FmxNGTest1Test >> testNumberOfStatements [
+
+	self assert: c1 numberOfStatements equals: 0.
+	self assert: c2 numberOfStatements equals: 0.
+	
+	c2 numberOfStatements: 100.
+	self assert: c2 numberOfStatements equals: 100.
 
 ]
 

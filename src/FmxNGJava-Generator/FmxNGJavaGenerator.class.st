@@ -145,6 +145,7 @@ FmxNGJavaGenerator >> defineHierarchy [
 	method --|> #TWithDeclaredExceptions.
 	method --|> #TWithCaughtExceptions.
 	method --|> #TWithClassScope.
+	method --|> #TWithStatements.
 
 	caughtException --|> exception.
 	caughtException --|> #TCaughtException.
