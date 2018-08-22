@@ -123,7 +123,8 @@ Class {
 		'tClassWithInvocationsGlue',
 		'tWithStatements',
 		'tWithMethodsWithModifiersGlue',
-		'tContainingWithStatementsGlue'
+		'tContainingWithStatementsGlue',
+		'tContainingWithInvocationsGlue'
 	],
 	#category : #'FmxNG-MetamodelGeneration'
 }
@@ -906,12 +907,12 @@ FmxNGGenerator >> defineGlueingTraits [
 			and: [ methodClasses anySatisfy: [ :methodClass | methodClass allTraitsInHierarchy includes: tWithModifiers ] ] ].
 
 	tContainingWithStatementsGlue := builder newTraitNamed: #TContainingWithStatementsGlue.
-	tContainingWithStatementsGlue glueingCondition: [ :aClass |
-		| withStatements containerProperties |
-		withStatements := self builder classesThatDirectlyUse: tWithStatements.
-		containerProperties := withStatements flatCollect: #containerProperties.
-		((containerProperties collect: [ :side | side otherSide relatedClass ]) select: [ :each | each notNil ])
-			anySatisfy: [ :aTrait | 	aClass directlyUses: aTrait ] ].
+	tContainingWithStatementsGlue glueingCondition: [ :aClass | 
+		aClass isContainerOfClassThatUses: tWithStatements ].
+
+	tContainingWithInvocationsGlue := builder newTraitNamed: #TContainingWithInvocationsGlue.
+	tContainingWithInvocationsGlue glueingCondition: [ :aClass | 
+		aClass isContainerOfClassThatUses: tWithInvocations ].
 
 
 ]

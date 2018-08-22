@@ -519,6 +519,12 @@ FamixMetamodelBuilder >> testingSelectorsMapping [
 	^ testingSelectorsMapping
 ]
 
+{ #category : #initialization }
+FamixMetamodelBuilder >> traitNamed: aTraitName [
+
+	^ self traits detect: [ :each | each name = aTraitName].
+]
+
 { #category : #settings }
 FamixMetamodelBuilder >> traitTag [
 

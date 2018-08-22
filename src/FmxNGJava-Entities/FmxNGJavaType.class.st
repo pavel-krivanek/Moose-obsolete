@@ -1,8 +1,8 @@
 Class {
 	#name : #FmxNGJavaType,
 	#superclass : #FmxNGJavaContainerEntity,
-	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTContainingWithStatementsGlue + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithMethodsWithModifiersGlue + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
-	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTContainingWithStatementsGlue classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithMethodsWithModifiersGlue classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
+	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTContainingWithInvocationsGlue + FmxNGTContainingWithStatementsGlue + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithMethodsWithModifiersGlue + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures',
+	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTContainingWithInvocationsGlue classTrait + FmxNGTContainingWithStatementsGlue classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithMethodsWithModifiersGlue classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait',
 	#category : #'FmxNGJava-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FmxNGJavaType class >> generatedSlotNames [
 { #category : #generator }
 FmxNGJavaType class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClassHierarchyNavigation FmxNGTContainingWithStatementsGlue FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithMethodsWithModifiersGlue FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
+	^ #(FmxNGTClassHierarchyNavigation FmxNGTContainingWithInvocationsGlue FmxNGTContainingWithStatementsGlue FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithMethodsWithModifiersGlue FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
 ]
 
 { #category : #meta }
@@ -414,6 +414,13 @@ FmxNGJavaType >> providerTypes [
 	<multivalued>
 	<MSEComment: 'All types that the receiver depends on (inherites, staticly accesses, or uses some of their methods)'>
 	^ (self queryAllOutgoing atScope: FmxNGTType) withoutSelfLoops
+]
+
+{ #category : #'builder support' }
+FmxNGJavaType >> tWithStatementsLinks [
+
+	<generated>
+	^ #(#methods)
 ]
 
 { #category : #'as yet unclassified' }

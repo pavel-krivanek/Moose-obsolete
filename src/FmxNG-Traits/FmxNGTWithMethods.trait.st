@@ -182,23 +182,6 @@ FmxNGTWithMethods >> numberOfMethods: aNumber [
 ]
 
 { #category : #metrics }
-FmxNGTWithMethods >> numberOfStatements [
-	<MSEProperty: #numberOfStatements type: #Number>
-	<derived>
-	<MSEComment: 'The number of statements in a class'>
-			
-	^self
-		lookUpPropertyNamed: #numberOfStatements
-		computedAs: [self methodsGroup sumNumbers: #numberOfStatements]
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfStatements: aNumber [
-
-	self privateState propertyAt: #numberOfStatements put: aNumber
-]
-
-{ #category : #metrics }
 FmxNGTWithMethods >> outgoingInvocations [
 	^ self methods flatCollect: [ :each | each outgoingInvocations ]
 ]

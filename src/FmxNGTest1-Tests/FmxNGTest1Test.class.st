@@ -206,17 +206,6 @@ FmxNGTest1Test >> testNumberOfMethods [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfStatements [
-
-	self assert: c1 numberOfStatements equals: 0.
-	self assert: c2 numberOfStatements equals: 0.
-	
-	c2 numberOfStatements: 100.
-	self assert: c2 numberOfStatements equals: 100.
-
-]
-
-{ #category : #tests }
 FmxNGTest1Test >> testParentTypeIsStub [
 
 	self deny: m1 parentTypeIsStub.

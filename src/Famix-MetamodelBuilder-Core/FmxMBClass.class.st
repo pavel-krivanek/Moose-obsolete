@@ -189,10 +189,21 @@ FmxMBClass >> generate [
 
 	self generateRequirementsFor: aClass.
 
+	self generateMethodsMadeByTraitsFor: aClass.
 
 	
 	
 
+]
+
+{ #category : #generating }
+FmxMBClass >> generateMethodsMadeByTraitsFor: aClass [
+
+(aClass name = #FmxNGJavaType)  ifTrue: [ self halt ].
+
+	self allTraits do: [ :aTrait | 
+		(aTrait realClass notNil and: [ aTrait realClass class canUnderstand: #generateMethodsFor:in:])
+			ifTrue: [ aTrait realClass generateMethodsFor: self in: aClass ]]
 ]
 
 { #category : #generating }
@@ -244,6 +255,17 @@ FmxMBClass >> initialize [
 	super initialize.
 	
 	requirements := Set new.
+]
+
+{ #category : #testing }
+FmxMBClass >> isContainerOfClassThatUses: aTrait [
+
+	| directUsers containerProperties |
+	
+	directUsers := self builder classesThatDirectlyUse: aTrait.
+	containerProperties := directUsers flatCollect: #containerProperties.
+	^ ((containerProperties collect: [ :side | side otherSide relatedClass ]) select: #notNil)
+		anySatisfy: [ :t | self directlyUses: t ] 
 ]
 
 { #category : #testing }
