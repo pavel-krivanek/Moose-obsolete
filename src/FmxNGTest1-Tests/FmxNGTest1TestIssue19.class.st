@@ -1,5 +1,5 @@
 Class {
-	#name : #FmxNGTest1TestIssue20,
+	#name : #FmxNGTest1TestIssue19,
 	#superclass : #TestCase,
 	#instVars : [
 		'model',
@@ -15,7 +15,7 @@ Class {
 }
 
 { #category : #running }
-FmxNGTest1TestIssue20 >> setUp [
+FmxNGTest1TestIssue19 >> setUp [
 
 	super setUp.
 
@@ -39,14 +39,13 @@ FmxNGTest1TestIssue20 >> setUp [
 ]
 
 { #category : #tests }
-FmxNGTest1TestIssue20 >> testNumberOfLinesOfCode [
+FmxNGTest1TestIssue19 >> testNumberOfAccessorMethods [
 
 	<expectedFailure>
-	"https://github.com/pavel-krivanek/Moose/issues/20"
+	"https://github.com/pavel-krivanek/Moose/issues/19"
 	
-	self assert: c1 numberOfLinesOfCode equals: 2.
-	self assert: c2 numberOfLinesOfCode equals: 3.
-	self assert: m3 numberOfLinesOfCode equals: -1.
-
+	self assert: c1 numberOfAccessorMethods equals: 0.
+	m1 kind: #getter.
+	self assert: c1 numberOfAccessorMethods equals: 1.
 
 ]

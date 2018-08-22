@@ -166,6 +166,16 @@ FmxNGTMethod >> numberOfLinesOfCode [
 		computedAs: [ self computeNumberOfLinesOfCode ]
 ]
 
+{ #category : #metrics }
+FmxNGTMethod >> numberOfMessageSends [
+	<MSEProperty: #numberOfMessageSends type: #Number>
+	<derived>
+	<MSEComment: 'The number of message from a method'>
+	^ self
+		lookUpPropertyNamed: #numberOfMessageSends
+		computedAs: [ self notExistentMetricValue ]
+]
+
 { #category : #accessing }
 FmxNGTMethod >> parentType [
 

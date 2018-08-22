@@ -175,6 +175,15 @@ FmxNGTest1Test >> testNumberOfLinesOfCode [
 ]
 
 { #category : #tests }
+FmxNGTest1Test >> testNumberOfMessageSends [
+
+	self assert: c1 numberOfMessageSends equals: model notExistentMetricValue.
+	c1 numberOfMessageSends: 100.
+	self assert: c1 numberOfMessageSends equals: 100.
+
+]
+
+{ #category : #tests }
 FmxNGTest1Test >> testNumberOfMethods [
 
 	self assert: c1 numberOfMethods equals: 1.
