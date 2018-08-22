@@ -186,6 +186,21 @@ FmxNGTClassHierarchyNavigation >> numberOfAttributesInherited: aNumber [
 ]
 
 { #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfDirectSubclasses [
+	<MSEProperty: #numberOfDirectSubclasses type: #Number>
+	<MSEComment: 'The number of direct subclasses'>
+	<derived>
+
+	^ self privateState propertyAt: #numberOfDirectSubclasses ifAbsentPut: [self directSubclasses size]
+]
+
+{ #category : #metrics }
+FmxNGTClassHierarchyNavigation >> numberOfDirectSubclasses: aNumber [
+
+	self privateState propertyAt: #numberOfDirectSubclasses put: aNumber
+]
+
+{ #category : #metrics }
 FmxNGTClassHierarchyNavigation >> numberOfMethodsAdded [
 	<MSEProperty: #numberOfMethodsAdded type: #Number>
 	<derived>

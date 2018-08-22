@@ -63,23 +63,6 @@ FmxNGTWithMethods >> methodsGroup [
 ]
 
 { #category : #metrics }
-FmxNGTWithMethods >> numberOfAbstractMethods [
-	<MSEProperty: #numberOfAbstractMethods type: #Number>
-	<derived>
-	<MSEComment: 'The number of abstract methods in the class'>
-	
-	^self
-		lookUpPropertyNamed: #numberOfAbstractMethods
-		computedAs: [self methodsGroup count: [:each | each isAbstract]]
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfAbstractMethods: aNumber [
-
-	self privateState propertyAt: #numberOfAbstractMethods put: aNumber
-]
-
-{ #category : #metrics }
 FmxNGTWithMethods >> numberOfAccessorMethods [
 	<MSEProperty: #numberOfAccessorMethods type: #Number>
 	<derived>
@@ -127,21 +110,6 @@ FmxNGTWithMethods >> numberOfConstructorMethods [
 FmxNGTWithMethods >> numberOfConstructorMethods: aNumber [
 
 	self privateState propertyAt: #numberOfConstructorMethods put: aNumber
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfDirectSubclasses [
-	<MSEProperty: #numberOfDirectSubclasses type: #Number>
-	<MSEComment: 'The number of direct subclasses'>
-	<derived>
-
-	^ self privateState propertyAt: #numberOfDirectSubclasses ifAbsentPut: [self directSubclasses size]
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfDirectSubclasses: aNumber [
-
-	self privateState propertyAt: #numberOfDirectSubclasses put: aNumber
 ]
 
 { #category : #metrics }
@@ -211,57 +179,6 @@ FmxNGTWithMethods >> numberOfMethods [
 FmxNGTWithMethods >> numberOfMethods: aNumber [
 
 	self privateState propertyAt: #numberOfMethods put: aNumber
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfPrivateMethods [
-	<MSEProperty: #numberOfPrivateMethods type: #Number>
-	<derived>
-	<MSEComment: 'The number of private methods in a class'>
-			
-	^self
-		lookUpPropertyNamed: #numberOfPrivateMethods
-		computedAs: [(self methods select: [:each | each isPrivate]) size]
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfPrivateMethods: aNumber [
-
-	self privateState propertyAt: #numberOfPrivateMethods put: aNumber
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfProtectedMethods [
-	<MSEProperty: #numberOfProtectedMethods type: #Number>
-	<derived>
-	<MSEComment: 'The number of protected methods in a class'>		
-	
-	^self
-		lookUpPropertyNamed: #numberOfProtectedMethods
-		computedAs: [(self methods select: [:each | each isProtected]) size]
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfProtectedMethods: aNumber [
-
-	self privateState propertyAt: #numberOfProtectedMethods put: aNumber
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfPublicMethods [
-	<MSEProperty: #numberOfPublicMethods type: #Number>
-	<derived>
-	<MSEComment: 'The number of public methods in a class'>		
-		
-	^self
-		lookUpPropertyNamed: #numberOfPublicMethods
-		computedAs: [(self methods select: [:each | each isPublic]) size]
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> numberOfPublicMethods: aNumber [
-
-	self privateState propertyAt: #numberOfPublicMethods put: aNumber
 ]
 
 { #category : #metrics }

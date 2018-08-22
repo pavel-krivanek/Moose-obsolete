@@ -8,7 +8,9 @@ Class {
 		'm1',
 		'm2',
 		'anchor1',
-		'anchor2'
+		'anchor2',
+		'm3',
+		'anchor3'
 	],
 	#category : #'FmxNGTest1-Tests'
 }
@@ -23,13 +25,19 @@ FmxNGTest1Test >> setUp [
 	c2 := FmxNGTest1Class named: 'Class2'.
 	m1 := FmxNGTest1Method named: 'method1'.
 	m2 := FmxNGTest1Method named: 'method2'.
+	m3 := FmxNGTest1Method named: 'method3'.
 	anchor1 := FmxNGTest1SourceTextAnchor new source: 'method1\source1' withCRs .
 	anchor2 := FmxNGTest1SourceTextAnchor new source: 'method2\source2a\source2b' withCRs.
+	anchor3 := FmxNGTest1SourceTextAnchor new source: 'method3\source3a\source3b\source3c' withCRs.
 	
-	model addAll: { c1. c2. m1. m2. anchor1. anchor2 }.
+	model addAll: { c1. c2. m1. m2. m3. anchor1. anchor2 }.
 	
 	c1 addMethod: m1.
 	m2 parentType: c2. "opposite way"
+	c2 addMethod: m3.
+	m1 sourceAnchor: anchor1.
+	m2 sourceAnchor: anchor2.
+	m3 sourceAnchor: anchor3.
 
 ]
 
@@ -138,22 +146,31 @@ FmxNGTest1Test >> testMethodsGroup [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfAbstractMethods [
+FmxNGTest1Test >> testNumberOfAccessorMethods [
 
-	self assert: c1 numberOfAbstractMethods equals: 0.
-	m1 isAbstract: true.
-	self assert: c1 numberOfAbstractMethods equals: 1.
+	m1 kind: #getter.
+	self assert: c1 numberOfAccessorMethods equals: 1.
+	c1 numberOfAccessorMethods: 100.
+	self assert: c1 numberOfAccessorMethods equals: 100.
 
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfAccessorMethods [
+FmxNGTest1Test >> testNumberOfConstructorMethods [
 
-	self assert: c1 numberOfAccessorMethods equals: 0.
+	m1 isConstructor: true.
+	self assert: c1 numberOfConstructorMethods equals: 1.
+	c1 numberOfConstructorMethods: 100.
+	self assert: c1 numberOfConstructorMethods equals: 100.
 
-	"explicit count"
-	c1 numberOfMethods: 100.
-	self assert: c1 numberOfMethods equals: 100.
+]
+
+{ #category : #tests }
+FmxNGTest1Test >> testNumberOfLinesOfCode [
+
+	self assert: c1 numberOfLinesOfCode equals: 2.
+	self assert: c2 numberOfLinesOfCode equals: 7.
+
 
 ]
 
@@ -181,7 +198,7 @@ FmxNGTest1Test >> testParentTypeIsStub [
 FmxNGTest1Test >> testRelations [
 
 	self assertCollection: c1 methods hasSameElements:  { m1 }.	
-	self assertCollection: c2 methods hasSameElements:  { m2 }.
+	self assertCollection: c2 methods hasSameElements:  { m2. m3 }.
 	self assertCollection: m1 parentType equals: c1.
 	self assertCollection: m2 parentType equals: c2.
 ]
