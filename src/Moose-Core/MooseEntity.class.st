@@ -368,7 +368,7 @@ MooseEntity >> initialize [
 	super initialize. 
 	self class initializeSlots: self.
 	mooseID := MooseModel freshID.
-	state := self defaultStateClass with: self
+	self resetPrivateState.
 ]
 
 { #category : #accessing }
@@ -605,6 +605,12 @@ MooseEntity >> removeFromModel [
 MooseEntity >> resetMooseName [
 	(self hasUniqueMooseNameInModel and: [ self privateState hasMooseModel ])
 		ifTrue: [ self mooseModel resetMooseNameFor: self ]
+]
+
+{ #category : #initialization }
+MooseEntity >> resetPrivateState [
+
+	state := self defaultStateClass with: self
 ]
 
 { #category : #testing }
