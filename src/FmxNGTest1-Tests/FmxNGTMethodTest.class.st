@@ -64,6 +64,27 @@ FmxNGTMethodTest >> testCategory [
 ]
 
 { #category : #tests }
+FmxNGTMethodTest >> testComputeNumberOfLinesOfCode [
+
+	| withoutSource |
+	
+	self assert: m1 computeNumberOfLinesOfCode equals: 2.
+	self assert: m2 computeNumberOfLinesOfCode equals: 3.
+
+	withoutSource := FmxNGTest1Method named: #withoutSource.
+	self assert: withoutSource computeNumberOfLinesOfCode equals: model notExistentMetricValue
+]
+
+{ #category : #tests }
+FmxNGTMethodTest >> testCyclomaticComplexity [
+
+	self assert: m1 cyclomaticComplexity equals: model notExistentMetricValue.
+	m1 cyclomaticComplexity: 100.
+	self assert: m1 cyclomaticComplexity equals: 100.
+
+]
+
+{ #category : #tests }
 FmxNGTMethodTest >> testHasClassScope [
 
 	m1 hasClassScope: true.
@@ -80,6 +101,15 @@ FmxNGTMethodTest >> testIsClass [
 	self deny: m2 isClass.
 	self deny: anchor1 isClass.
 	self deny: anchor2 isClass.
+]
+
+{ #category : #tests }
+FmxNGTMethodTest >> testIsConstant [
+
+	self deny: m1 isConstant.
+	m1 kind: #constant.
+	self assert: m1 isConstant.
+
 ]
 
 { #category : #tests }
@@ -103,6 +133,13 @@ FmxNGTMethodTest >> testIsGetter [
 { #category : #tests }
 FmxNGTMethodTest >> testIsMethod [
 
+	self assert: m1 isMethod.
+	self deny: c1 isMethod.
+]
+
+{ #category : #tests }
+FmxNGTMethodTest >> testIsPureAccessor [
+
 	self deny: m1 isPureAccessor.
 	m1 kind: #getter.
 	self assert: m1 isPureAccessor.
@@ -121,12 +158,39 @@ FmxNGTMethodTest >> testIsSetter [
 ]
 
 { #category : #tests }
+FmxNGTMethodTest >> testKind [
+
+	m1 kind: #constant.
+	self assert: m1 kind equals: #constant.
+
+]
+
+{ #category : #tests }
 FmxNGTMethodTest >> testNumberOfLinesOfCode [
 
-	self assert: c1 numberOfLinesOfCode equals: 2.
-	self assert: c2 numberOfLinesOfCode equals: 7.
+	self assert: m1 numberOfLinesOfCode equals: 2.
+	self assert: m2 numberOfLinesOfCode equals: 3.
+	m1 numberOfLinesOfCode: 100.
+	self assert: m1 numberOfLinesOfCode equals: 100.
+	
 
 
+]
+
+{ #category : #tests }
+FmxNGTMethodTest >> testNumberOfMessageSends [
+
+	self assert: m1 numberOfMessageSends equals: model notExistentMetricValue.
+	m1 numberOfMessageSends: 100.
+	self assert: m1 numberOfMessageSends equals: 100.
+
+]
+
+{ #category : #tests }
+FmxNGTMethodTest >> testParentType [
+
+	self assertCollection: m1 parentType equals: c1.
+	self assertCollection: m2 parentType equals: c2.
 ]
 
 { #category : #tests }
@@ -145,4 +209,13 @@ FmxNGTMethodTest >> testRelations [
 	self assertCollection: c2 methods hasSameElements:  { m2. m3 }.
 	self assertCollection: m1 parentType equals: c1.
 	self assertCollection: m2 parentType equals: c2.
+]
+
+{ #category : #tests }
+FmxNGTMethodTest >> testTimeStamp [
+
+	self assert: m1 timeStamp isNil.
+	m1 timeStamp: 'stamp'.
+	self assert: m1 timeStamp equals: 'stamp'.
+
 ]

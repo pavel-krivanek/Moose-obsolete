@@ -70,8 +70,14 @@ FmxNGTMethod >> cyclomaticComplexity [
 	<MSEProperty: #cyclomaticComplexity type: #Number>
 	<MSEComment: 'The number of linear-independent paths through a method.'>
 	^ self
-		lookUpPropertyNamed: #cyclomaticComplexity
+		lookUpPropertyNamed:  #cyclomaticComplexity
 		computedAs: [ self notExistentMetricValue ]
+]
+
+{ #category : #metrics }
+FmxNGTMethod >> cyclomaticComplexity: aNumber [
+
+	self privateState propertyAt: #cyclomaticComplexity put: aNumber
 ]
 
 { #category : #accessing }
@@ -175,6 +181,12 @@ FmxNGTMethod >> numberOfLinesOfCode [
 		computedAs: [ self computeNumberOfLinesOfCode ]
 ]
 
+{ #category : #'Famix-Implementation' }
+FmxNGTMethod >> numberOfLinesOfCode: aNumber [
+
+	self privateState propertyAt: #numberOfLinesOfCode put: aNumber
+]
+
 { #category : #metrics }
 FmxNGTMethod >> numberOfMessageSends [
 	<MSEProperty: #numberOfMessageSends type: #Number>
@@ -183,6 +195,12 @@ FmxNGTMethod >> numberOfMessageSends [
 	^ self
 		lookUpPropertyNamed: #numberOfMessageSends
 		computedAs: [ self notExistentMetricValue ]
+]
+
+{ #category : #metrics }
+FmxNGTMethod >> numberOfMessageSends: aNumber [
+
+	self privateState propertyAt: #numberOfMessageSends put: aNumber
 ]
 
 { #category : #accessing }
