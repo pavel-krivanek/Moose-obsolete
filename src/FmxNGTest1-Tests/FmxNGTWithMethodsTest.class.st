@@ -1,5 +1,5 @@
 Class {
-	#name : #FmxNGTest1Test,
+	#name : #FmxNGTWithMethodsTest,
 	#superclass : #TestCase,
 	#instVars : [
 		'model',
@@ -17,7 +17,7 @@ Class {
 }
 
 { #category : #running }
-FmxNGTest1Test >> setUp [
+FmxNGTWithMethodsTest >> setUp [
 
 	super setUp.
 
@@ -43,7 +43,7 @@ FmxNGTest1Test >> setUp [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testAddAllChildrenIn [
+FmxNGTWithMethodsTest >> testAddAllChildrenIn [
 
 	| aCollection |
 	
@@ -53,7 +53,7 @@ FmxNGTest1Test >> testAddAllChildrenIn [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testAddAllParentsIn [
+FmxNGTWithMethodsTest >> testAddAllParentsIn [
 
 	| aCollection |
 	
@@ -63,7 +63,7 @@ FmxNGTest1Test >> testAddAllParentsIn [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testAllAtScope [
+FmxNGTWithMethodsTest >> testAllAtScope [
 
 	| aCollection |
 	
@@ -75,114 +75,7 @@ FmxNGTest1Test >> testAllAtScope [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testBelongsTo [
-
-	self assert: m1 belongsTo equals: c1.
-	
-	m1 belongsTo: c2.
-	self assert: m1 parentType equals: c2.
-	self assert: c1 numberOfMethods equals: 0.
-	self assert: (c2 methods includes: m1).
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testCategory [
-
-	self assert: m1 category isNil.
-	m1 category: 'accessing'.
-	self assert: m1 category equals: 'accessing'.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testHasClassScope [
-
-	m1 hasClassScope: true.
-	self assert: m1 hasClassScope.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsClass [
-
-	self assert: c1 isClass. 	
-	self assert: c2 isClass. 
-	self deny: m1 isClass.
-	self deny: m2 isClass.
-	self deny: anchor1 isClass.
-	self deny: anchor2 isClass.
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsConstant [
-
-	self deny: m1 isConstant.
-	m1 kind: #constant.
-	self assert: m1 isConstant.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsConstructor [
-
-	self deny: m1 isConstructor.
-	m1 isConstructor: true.
-	self assert: m1 isConstructor.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsGetter [
-
-	self deny: m1 isGetter.
-	m1 kind: #getter.
-	self assert: m1 isGetter.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsInterface [
-
-	self deny: c1 isInterface.
-	c1 isInterface: true.
-	self assert: c1 isInterface.
-	
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsMethod [
-
-	self deny: m1 isPureAccessor.
-	m1 kind: #getter.
-	self assert: m1 isPureAccessor.
-	m1 kind: #setter.
-	self assert: m1 isPureAccessor.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsSetter [
-
-	self deny: m1 isSetter.
-	m1 kind: #setter.
-	self assert: m1 isSetter.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testIsTestCase [
-
-	self deny: c1 isTestCase.
-	c1 isTestCase: true.
-	self assert: c1 isTestCase.
-	
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testMethodsGroup [
+FmxNGTWithMethodsTest >> testMethodsGroup [
 	
 	| group | 
 	
@@ -191,7 +84,7 @@ FmxNGTest1Test >> testMethodsGroup [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfAccessorMethods [
+FmxNGTWithMethodsTest >> testNumberOfAccessorMethods [
 
 	m1 kind: #getter.
 	self assert: c1 numberOfAccessorMethods equals: 1.
@@ -201,7 +94,7 @@ FmxNGTest1Test >> testNumberOfAccessorMethods [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfConstructorMethods [
+FmxNGTWithMethodsTest >> testNumberOfConstructorMethods [
 
 	m1 isConstructor: true.
 	self assert: c1 numberOfConstructorMethods equals: 1.
@@ -211,7 +104,7 @@ FmxNGTest1Test >> testNumberOfConstructorMethods [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfLinesOfCode [
+FmxNGTWithMethodsTest >> testNumberOfLinesOfCode [
 
 	self assert: c1 numberOfLinesOfCode equals: 2.
 	self assert: c2 numberOfLinesOfCode equals: 7.
@@ -220,7 +113,7 @@ FmxNGTest1Test >> testNumberOfLinesOfCode [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfMessageSends [
+FmxNGTWithMethodsTest >> testNumberOfMessageSends [
 
 	self assert: c1 numberOfMessageSends equals: model notExistentMetricValue.
 	c1 numberOfMessageSends: 100.
@@ -229,7 +122,7 @@ FmxNGTest1Test >> testNumberOfMessageSends [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfMethodProtocols [
+FmxNGTWithMethodsTest >> testNumberOfMethodProtocols [
 
 	m1 category: #accessing.
 	self assert: c1 numberOfMethodProtocols equals: 1.
@@ -239,7 +132,7 @@ FmxNGTest1Test >> testNumberOfMethodProtocols [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testNumberOfMethods [
+FmxNGTWithMethodsTest >> testNumberOfMethods [
 
 	self assert: c1 numberOfMethods equals: 1.
 	self assert: c2 numberOfMethods equals: 2.
@@ -251,23 +144,7 @@ FmxNGTest1Test >> testNumberOfMethods [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testParentTypeIsStub [
-
-	self deny: m1 parentTypeIsStub.
-	c1 stub: true.
-	self assert: m1 parentTypeIsStub.
-
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testQueryLocalIncoming [
-
-	"just smoke test"
-	self assert: (c1 queryLocalIncoming: FmxNGTInheritanceGlue) isEmpty.
-]
-
-{ #category : #tests }
-FmxNGTest1Test >> testRelations [
+FmxNGTWithMethodsTest >> testRelations [
 
 	self assertCollection: c1 methods hasSameElements:  { m1 }.	
 	self assertCollection: c2 methods hasSameElements:  { m2. m3 }.
@@ -276,7 +153,7 @@ FmxNGTest1Test >> testRelations [
 ]
 
 { #category : #tests }
-FmxNGTest1Test >> testTightClassCohesion [
+FmxNGTWithMethodsTest >> testWeightedMethodCount [
 
 	self assert: c1 weightedMethodCount equals: model notExistentMetricValue
 ]
