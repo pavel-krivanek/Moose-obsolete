@@ -43,35 +43,39 @@ FmxNGTWithMethodsTest >> setUp [
 ]
 
 { #category : #tests }
-FmxNGTWithMethodsTest >> testAddAllChildrenIn [
-
-	| aCollection |
+FmxNGTWithMethodsTest >> testAddMethod [
 	
-	aCollection := Set new.
-	c1 addAllChildrenIn: aCollection.
-	self assertCollection: aCollection hasSameElements: { m1. anchor1 }.
+	| newMethod | 
+	
+	newMethod := FmxNGTest1Method named: #newMethod.
+	self deny: (c1 methods includes: newMethod).
+	c1 addMethod: newMethod.
+	self assert: (c1 methods includes: newMethod).
 ]
 
 { #category : #tests }
-FmxNGTWithMethodsTest >> testAddAllParentsIn [
-
-	| aCollection |
+FmxNGTWithMethodsTest >> testMethods [
 	
-	aCollection := Set new.
-	m1 addAllParentsIn: aCollection.
-	self assertCollection: aCollection hasSameElements: { c1 }.
+	| newMethod1 newMethod2 | 
+	
+	newMethod1 := FmxNGTest1Method named: #newMethod1.
+	newMethod2 := FmxNGTest1Method named: #newMethod2.
+
+	c1 methods: { newMethod1. newMethod2 }.
+	self assertCollection: c1 methods hasSameElements: { newMethod1. newMethod2 }.
+	self assert: newMethod1 parentType equals: c1. 
+	self assert: newMethod2 parentType equals: c1. 
+	
+	
 ]
 
 { #category : #tests }
-FmxNGTWithMethodsTest >> testAllAtScope [
-
-	| aCollection |
+FmxNGTWithMethodsTest >> testMethodsDo [
 	
-	aCollection := m1 allAtScope: FmxNGTMethod.
-	self assertCollection: aCollection hasSameElements: { m1 }.
-
-	aCollection := m1 allAtScope: FmxNGTClass.
-	self assertCollection: aCollection hasSameElements: { c1 }.
+	| aCollection |
+	aCollection := Set new.
+	c2 methodsDo: [ :each | aCollection add: each ].
+	self assertCollection: aCollection hasSameElements: { m2. m3 }
 ]
 
 { #category : #tests }
