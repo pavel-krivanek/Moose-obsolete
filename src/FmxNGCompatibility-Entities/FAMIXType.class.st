@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXType,
 	#superclass : #FAMIXContainerEntity,
-	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTTraitUser + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithMethodsWithModifiersGlue + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures + FmxNGTClassMetrics',
-	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTTraitUser classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithMethodsWithModifiersGlue classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait + FmxNGTClassMetrics classTrait',
+	#traits : 'FmxNGTClassHierarchyNavigation + FmxNGTContainingWithInvocationsGlue + FmxNGTContainingWithStatementsGlue + FmxNGTParameterizedTypeUser + FmxNGTReferenceable + FmxNGTTraitUser + FmxNGTType + FmxNGTWithAttributes + FmxNGTWithMethods + FmxNGTWithMethodsWithModifiersGlue + FmxNGTWithSubInheritances + FmxNGTWithSuperInheritances + FmxNGTWithTypeAliases + FmxNGTWithTypedStructures + FmxNGTClassMetrics',
+	#classTraits : 'FmxNGTClassHierarchyNavigation classTrait + FmxNGTContainingWithInvocationsGlue classTrait + FmxNGTContainingWithStatementsGlue classTrait + FmxNGTParameterizedTypeUser classTrait + FmxNGTReferenceable classTrait + FmxNGTTraitUser classTrait + FmxNGTType classTrait + FmxNGTWithAttributes classTrait + FmxNGTWithMethods classTrait + FmxNGTWithMethodsWithModifiersGlue classTrait + FmxNGTWithSubInheritances classTrait + FmxNGTWithSuperInheritances classTrait + FmxNGTWithTypeAliases classTrait + FmxNGTWithTypedStructures classTrait + FmxNGTClassMetrics classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FAMIXType class >> generatedSlotNames [
 { #category : #generator }
 FAMIXType class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTClassHierarchyNavigation FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTTraitUser FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithMethodsWithModifiersGlue FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
+	^ #(FmxNGTClassHierarchyNavigation FmxNGTContainingWithInvocationsGlue FmxNGTContainingWithStatementsGlue FmxNGTParameterizedTypeUser FmxNGTReferenceable FmxNGTTraitUser FmxNGTType FmxNGTWithAttributes FmxNGTWithMethods FmxNGTWithMethodsWithModifiersGlue FmxNGTWithSubInheritances FmxNGTWithSuperInheritances FmxNGTWithTypeAliases FmxNGTWithTypedStructures)
 ]
 
 { #category : #meta }

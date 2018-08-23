@@ -1,8 +1,8 @@
 Class {
 	#name : #FAMIXContainerEntity,
 	#superclass : #FAMIXNamedEntity,
-	#traits : 'FmxNGTWithAnnotationTypes + FmxNGTWithClasses + FmxNGTWithFunctions + FmxNGTWithTypes + TOODependencyQueries',
-	#classTraits : 'FmxNGTWithAnnotationTypes classTrait + FmxNGTWithClasses classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
+	#traits : 'FmxNGTContainingWithInvocationsGlue + FmxNGTContainingWithStatementsGlue + FmxNGTWithAnnotationTypes + FmxNGTWithClasses + FmxNGTWithFunctions + FmxNGTWithTypes + TOODependencyQueries',
+	#classTraits : 'FmxNGTContainingWithInvocationsGlue classTrait + FmxNGTContainingWithStatementsGlue classTrait + FmxNGTWithAnnotationTypes classTrait + FmxNGTWithClasses classTrait + FmxNGTWithFunctions classTrait + FmxNGTWithTypes classTrait + TOODependencyQueries classTrait',
 	#category : #'FmxNGCompatibility-Entities-Entities'
 }
 
@@ -25,7 +25,7 @@ FAMIXContainerEntity class >> generatedSlotNames [
 { #category : #generator }
 FAMIXContainerEntity class >> generatedTraitNames [
 	<generated>
-	^ #(FmxNGTWithAnnotationTypes FmxNGTWithClasses FmxNGTWithFunctions FmxNGTWithTypes TOODependencyQueries)
+	^ #(FmxNGTContainingWithInvocationsGlue FmxNGTContainingWithStatementsGlue FmxNGTWithAnnotationTypes FmxNGTWithClasses FmxNGTWithFunctions FmxNGTWithTypes TOODependencyQueries)
 ]
 
 { #category : #meta }

@@ -24,3 +24,22 @@ FmxNGTContainingWithInvocationsGlue classSide >> generatedTraitNames [
 	<generated>
 	^ #()
 ]
+
+{ #category : #metrics }
+FmxNGTContainingWithInvocationsGlue >> outgoingInvocations [
+
+	| withInvocations |
+	withInvocations :=  self children select: [ :child | child usesTrait: FmxNGTWithInvocations].
+	^ withInvocations flatCollect: [ :each | each outgoingInvocations ]
+]
+
+{ #category : #metrics }
+FmxNGTContainingWithInvocationsGlue >> outgoingInvocationsGroup [
+	<navigation: 'Outgoing invocations'>
+	^ self privateState cacheAt:
+		#outgoingInvocationsGroup
+		ifAbsentPut:
+			[MooseGroup
+				withAll: self outgoingInvocations
+				withDescription: 'Outgoing invocations from ' , self mooseName]
+]

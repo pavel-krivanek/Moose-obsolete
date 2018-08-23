@@ -58,8 +58,8 @@ FmxMBClass >> allTraits [
 	selectedTraits := self allLocalTraits.
 	allTraits := self allTraitsInHierarchy.
 	
-	selectedTraits addAll: (self glueingTraitsOf: selectedTraits whenAllHierarchyHas: allTraits).
-	selectedTraits addAll: (self conditionalGlueingTraitsFor: self).
+	selectedTraits addAll: ((self glueingTraitsOf: selectedTraits whenAllHierarchyHas: allTraits) copyWithoutAll: allTraits).
+	selectedTraits addAll: ((self conditionalGlueingTraitsFor: self) copyWithoutAll: allTraits).
 	
 	^ selectedTraits asSet
 ]
@@ -260,10 +260,11 @@ FmxMBClass >> isContainerOfClassThatUses: aTrait [
 
 	| directUsers containerProperties |
 	
-	directUsers := self builder classesThatDirectlyUse: aTrait.
+	directUsers := self builder classesThatUse: aTrait.
 	containerProperties := directUsers flatCollect: #containerProperties.
 	^ ((containerProperties collect: [ :side | side otherSide relatedClass ]) select: #notNil)
 		anySatisfy: [ :t | self directlyUses: t ] 
+		
 ]
 
 { #category : #testing }

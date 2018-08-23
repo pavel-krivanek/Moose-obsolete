@@ -15,6 +15,8 @@ FmxNGTContainingWithStatementsGlue classSide >> annotation [
 { #category : #generation }
 FmxNGTContainingWithStatementsGlue classSide >> generateMethodsFor: aBuilderClass in: aRingClass [
 
+	"method not needed if we use MQ for getting of children. Kept as an example"
+	"
 	| withStatementsUsers links selectedLinkNames |
 	
 	withStatementsUsers := aBuilderClass builder classes select: [ :each | each directlyUses: (aBuilderClass builder traitNamed: #TWithStatements) ].
@@ -24,7 +26,7 @@ FmxNGTContainingWithStatementsGlue classSide >> generateMethodsFor: aBuilderClas
 	
 	aRingClass instanceSide compile: ('{1}\\	<generated>\	^ {2}' withCRs format: { #tContainingWithStatementsLinks. selectedLinkNames printString }) 
 		classified: #'builder support'.
-
+"
 ]
 
 { #category : #generator }

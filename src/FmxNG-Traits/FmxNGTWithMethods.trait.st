@@ -182,22 +182,6 @@ FmxNGTWithMethods >> numberOfMethods: aNumber [
 ]
 
 { #category : #metrics }
-FmxNGTWithMethods >> outgoingInvocations [
-	^ self methods flatCollect: [ :each | each outgoingInvocations ]
-]
-
-{ #category : #metrics }
-FmxNGTWithMethods >> outgoingInvocationsGroup [
-	<navigation: 'Outgoing invocations'>
-	^ self privateState cacheAt:
-		#outgoingInvocationsGroup
-		ifAbsentPut:
-			[MooseGroup
-				withAll: self outgoingInvocations
-				withDescription: 'Outgoing invocations from ' , self mooseName]
-]
-
-{ #category : #metrics }
 FmxNGTWithMethods >> tightClassCohesion [
 	<MSEProperty: #tightClassCohesion type: #Number>
 	<derived>
