@@ -65,6 +65,15 @@ FmxNGTMethod >> computeNumberOfLinesOfCode [
 			ifFalse: [ self sourceText lineCount ]
 ]
 
+{ #category : #metrics }
+FmxNGTMethod >> cyclomaticComplexity [
+	<MSEProperty: #cyclomaticComplexity type: #Number>
+	<MSEComment: 'The number of linear-independent paths through a method.'>
+	^ self
+		lookUpPropertyNamed: #cyclomaticComplexity
+		computedAs: [ self notExistentMetricValue ]
+]
+
 { #category : #accessing }
 FmxNGTMethod >> hasClassScope [
 

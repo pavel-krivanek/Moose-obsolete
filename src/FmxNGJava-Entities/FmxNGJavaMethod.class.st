@@ -140,7 +140,7 @@ FmxNGJavaMethod >> copyFrom: anEntity within: aVisitor [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #metrics }
 FmxNGJavaMethod >> cyclomaticComplexity [
 	<MSEProperty: #cyclomaticComplexity type: #Number>
 	<MSEComment: 'The number of linear-independent paths through a method.'>
