@@ -452,12 +452,6 @@ FmxNGJavaMethod >> numberOfStatements [
 ]
 
 { #category : #'as yet unclassified' }
-FmxNGJavaMethod >> numberOfStatements: aNumber [
-
-	self privateState propertyAt: #numberOfStatements put: aNumber
-]
-
-{ #category : #'as yet unclassified' }
 FmxNGJavaMethod >> outgoingTypeDeclarations [
 	^ self declaredType ifNil: [ {} ] ifNotNil: [ :dt | {(MooseChefTypeDeclarationAssociation newFrom: self to: dt)} ]
 ]
