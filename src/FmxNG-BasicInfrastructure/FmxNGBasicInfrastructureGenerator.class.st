@@ -8,7 +8,8 @@ Class {
 		'sourcedEntity',
 		'association',
 		'comment',
-		'namedEntity'
+		'namedEntity',
+		'sourceTextAnchor'
 	],
 	#category : #'FmxNG-BasicInfrastructure'
 }
@@ -25,6 +26,7 @@ FmxNGBasicInfrastructureGenerator >> defineClasses [
 	association := builder newClassNamed: #Association.
 	comment := builder newClassNamed: #Comment.
 	namedEntity := builder newClassNamed: #NamedEntity.
+	sourceTextAnchor := builder newClassNamed: #SourceTextAnchor.
 
 ]
 
@@ -58,6 +60,10 @@ FmxNGBasicInfrastructureGenerator >> defineHierarchy [
 
 	namedEntity --|> #TDependencyQueries.
 	namedEntity --|> #TEntityMetaLevelDependency.
+	
+	sourceTextAnchor --|> sourceAnchor.
+	sourceTextAnchor --|> #TWithImmediateSource.
+
 
 ]
 

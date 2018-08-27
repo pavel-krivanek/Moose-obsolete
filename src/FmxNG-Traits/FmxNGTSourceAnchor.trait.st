@@ -51,6 +51,11 @@ FmxNGTSourceAnchor >> element: anObject [
 
 { #category : #metrics }
 FmxNGTSourceAnchor >> lineCount [
+
+	<MSEProperty: #lineCount type: #Number>
+	<derived>
+	<MSEComment: 'The number of lines in the source text'>
+
 	^ self sourceText ifNotNil: #lineCount ifNil: [ self notExistentMetricValue ]
 ]
 
@@ -58,5 +63,5 @@ FmxNGTSourceAnchor >> lineCount [
 FmxNGTSourceAnchor >> sourceText [
 
 	"I should be overriden in my users"
-	^ String new
+	^ nil
 ]

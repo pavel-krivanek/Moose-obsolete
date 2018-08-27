@@ -8,8 +8,7 @@ Class {
 		'fileAnchor',
 		'folder',
 		'indexedFileAnchor',
-		'multipleFileAnchor',
-		'sourceTextAnchor'
+		'multipleFileAnchor'
 	],
 	#category : #'FmxNG-BasicInfrastructure'
 }
@@ -26,7 +25,6 @@ FmxNGFileBasedLanguageGenerator >> defineClasses [
 	folder := builder newClassNamed: #Folder.
 	indexedFileAnchor := builder newClassNamed: #IndexedFileAnchor.
 	multipleFileAnchor := builder newClassNamed: #MultipleFileAnchor.
-	sourceTextAnchor := builder newClassNamed: #SourceTextAnchor.
 
 ]
 
@@ -54,9 +52,6 @@ FmxNGFileBasedLanguageGenerator >> defineHierarchy [
 	indexedFileAnchor --|> #TIndexedFileNavigation.
 
 	multipleFileAnchor --|> sourceAnchor.
-
-	sourceTextAnchor --|> sourceAnchor.
-	sourceTextAnchor --|> #TWithImmediateSource.
 
 	sourcedEntity --|> #TWithFiles.
 
