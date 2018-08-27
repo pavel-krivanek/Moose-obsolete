@@ -20,6 +20,9 @@ FmxNGTWithImmediateSourceTest >> setUp [
 	m2 := FmxNGTest1Method named: 'method2'.
 	anchor := FmxNGTest1SourceTextAnchor new.
 	
+	model addAll: { m1. m2. anchor }.
+
+	
 
 ]
 

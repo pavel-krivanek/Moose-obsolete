@@ -1,7 +1,6 @@
 Trait {
 	#name : #FmxNGTNamed,
 	#instVars : [
-		'isStub',
 		'name'
 	],
 	#category : #'FmxNG-Traits-Named'
@@ -83,6 +82,7 @@ FmxNGTNamed >> nameLength: aNumber [
 
 { #category : #accessing }
 FmxNGTNamed >> resetMooseName [
+
 	super resetMooseName.
 	self children do: [ :entity | entity resetMooseName ]
 ]

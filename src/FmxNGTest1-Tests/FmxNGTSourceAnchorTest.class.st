@@ -20,6 +20,9 @@ FmxNGTSourceAnchorTest >> setUp [
 	m2 := FmxNGTest1Method named: 'method2'.
 	anchor := FmxNGTest1SourceAnchor new.
 	
+	model addAll: { m1. m2. anchor }.
+	
+	
 
 ]
 
