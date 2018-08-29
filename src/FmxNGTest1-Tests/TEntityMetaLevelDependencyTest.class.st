@@ -280,12 +280,12 @@ TEntityMetaLevelDependencyTest >> testWithScope [
 	self assertCollection: (c2 withScope: FmxNGTMethod) hasSameElements: { m2. m3 }.
 	self assertCollection: (c2 withScope: FmxNGTest1Method) hasSameElements: { m2. m3 }.
 
-	self assertCollection: (c1 withScope: FmxNGTSourceAnchor) hasSameElements: { anchor1. anchorC1 }.
-	self assertCollection: (c1 withScope: FmxNGTest1SourceTextAnchor) hasSameElements: { anchor1. anchorC1 }.
-	self assertCollection: (c2 withScope: FmxNGTSourceAnchor) hasSameElements: { anchor2. anchor3 }.
-	self assertCollection: (c2 withScope: FmxNGTest1SourceTextAnchor) hasSameElements: { anchor2. anchor3 }.
+	self assertCollection: (c1 withScope: FmxNGTSourceAnchor) hasSameElements: { }.
+	self assertCollection: (c1 withScope: FmxNGTest1SourceTextAnchor) hasSameElements: { }.
+	self assertCollection: (c2 withScope: FmxNGTSourceAnchor) hasSameElements: { }.
+	self assertCollection: (c2 withScope: FmxNGTest1SourceTextAnchor) hasSameElements: { }.
 
-	self assertCollection: (m1 withScope: FmxNGTClass) hasSameElements: { c1 }.
+	self assertCollection: (m1 withScope: FmxNGTWithMethods) hasSameElements: { c1 }.
 	self assertCollection: (m1 withScope: FmxNGTest1Class) hasSameElements: { c1 }.
 
 ]
