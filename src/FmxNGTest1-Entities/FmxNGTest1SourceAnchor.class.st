@@ -32,21 +32,5 @@ FmxNGTest1SourceAnchor class >> generatedTraitNames [
 FmxNGTest1SourceAnchor class >> requirements [
 
 	<generated>
-	^ { FmxNGTest1SourcedEntity }
-]
-
-{ #category : #accessing }
-FmxNGTest1SourceAnchor >> belongsTo [
-
-	<generated>
-	^ self element
-
-]
-
-{ #category : #accessing }
-FmxNGTest1SourceAnchor >> belongsTo: anObject [
-
-	<generated>
-	self element: anObject
-
+	^ {  }
 ]

@@ -52,7 +52,7 @@ TEntityMetaLevelDependencyTest >> testAddAllChildrenIn [
 	
 	aCollection := Set new.
 	c1 addAllChildrenIn: aCollection.
-	self assertCollection: aCollection hasSameElements: { m1. anchor1. anchorC1 }.
+	self assertCollection: aCollection hasSameElements: { m1 }.
 ]
 
 { #category : #tests }
@@ -88,18 +88,18 @@ TEntityMetaLevelDependencyTest >> testAllAtScope [
 { #category : #tests }
 TEntityMetaLevelDependencyTest >> testAllChildren [
 
-	self assertCollection: c1 allChildren hasSameElements: { m1. anchor1. anchorC1 }.
-	self assertCollection: c2 allChildren hasSameElements: { m2. anchor2. m3. anchor3 }.
-	self assertCollection: m1 allChildren hasSameElements: { anchor1 }.
+	self assertCollection: c1 allChildren hasSameElements: { m1. }.
+	self assertCollection: c2 allChildren hasSameElements: { m2. m3 }.
+	self assertCollection: m1 allChildren hasSameElements: { }.
 	self assert: anchor1 allChildren isEmpty.
 ]
 
 { #category : #tests }
 TEntityMetaLevelDependencyTest >> testAllChildrenTypes [
 
-	self assertCollection: c1 allChildrenTypes hasSameElements: { FmxNGTMethod. FmxNGTSourceAnchor }.
-	self assertCollection: c2 allChildrenTypes hasSameElements: { FmxNGTMethod. FmxNGTSourceAnchor }.
-	self assertCollection: m1 allChildrenTypes hasSameElements: { FmxNGTSourceAnchor }.
+	self assertCollection: c1 allChildrenTypes hasSameElements: { FmxNGTMethod }.
+	self assertCollection: c2 allChildrenTypes hasSameElements: { FmxNGTMethod }.
+	self assertCollection: m1 allChildrenTypes hasSameElements: { }.
 	self assert: anchor1 allChildrenTypes isEmpty.
 ]
 
@@ -120,11 +120,9 @@ TEntityMetaLevelDependencyTest >> testAllOutgoingAssociationTypes [
 { #category : #tests }
 TEntityMetaLevelDependencyTest >> testAllParentTypes [
 	
-	self fail.
-	
-	self assertCollection: c1 allParentTypes hasSameElements: { FmxNGTMethod. FmxNGTSourceAnchor }.
-	self assertCollection: c2 allParentTypes hasSameElements: { FmxNGTMethod. FmxNGTSourceAnchor }.
-	self assertCollection: m1 allParentTypes hasSameElements: { FmxNGTSourceAnchor }.
+	self assertCollection: c1 allParentTypes hasSameElements: {  }.
+	self assertCollection: m1 allParentTypes hasSameElements: { FmxNGTest1Class. FmxNGTWithMethods }.
+	self assertCollection: anchor1 allParentTypes hasSameElements: { }.
 	self assert: anchor1 allParentTypes isEmpty.
 ]
 
@@ -134,7 +132,7 @@ TEntityMetaLevelDependencyTest >> testAllParents [
 	self assertCollection: c1 allParents hasSameElements: { }.
 	self assertCollection: c2 allParents hasSameElements: { }.
 	self assertCollection: m1 allParents hasSameElements: { c1 }.
-	self assertCollection: anchor1 allParents hasSameElements: { c1. m1 }.
+	self assertCollection: anchor1 allParents hasSameElements: { }.
 
 ]
 
@@ -150,8 +148,8 @@ TEntityMetaLevelDependencyTest >> testAllToScope [
 	self assertCollection: (c2 allToScope: FmxNGTMethod) hasSameElements: { m2. m3 }.
 	self assertCollection: (c2 allToScope: FmxNGTest1Method) hasSameElements: { m2. m3 }.
 
-	self assertCollection: (c1 allToScope: FmxNGTSourceAnchor) hasSameElements: { anchor1. anchorC1 }.
-	self assertCollection: (c2 allToScope: FmxNGTSourceAnchor) hasSameElements: { anchor2. anchor3 }.
+	self assertCollection: (c1 allToScope: FmxNGTSourceAnchor) hasSameElements: { }.
+	self assertCollection: (c2 allToScope: FmxNGTest1SourceAnchor) hasSameElements: { }.
 
 	self assertCollection: (m1 allToScope: FmxNGTClass) hasSameElements: { }.
 
@@ -169,10 +167,10 @@ TEntityMetaLevelDependencyTest >> testAllWithScope [
 	self assertCollection: (c2 allWithScope: FmxNGTMethod) hasSameElements: { m2. m3 }.
 	self assertCollection: (c2 allWithScope: FmxNGTest1Method) hasSameElements: { m2. m3 }.
 
-	self assertCollection: (c1 allWithScope: FmxNGTSourceAnchor) hasSameElements: { anchor1. anchorC1 }.
-	self assertCollection: (c1 allWithScope: FmxNGTest1SourceTextAnchor) hasSameElements: { anchor1. anchorC1 }.
-	self assertCollection: (c2 allWithScope: FmxNGTSourceAnchor) hasSameElements: { anchor2. anchor3 }.
-	self assertCollection: (c2 allWithScope: FmxNGTest1SourceTextAnchor) hasSameElements: { anchor2. anchor3 }.
+	self assertCollection: (c1 allWithScope: FmxNGTSourceAnchor) hasSameElements: { }.
+	self assertCollection: (c1 allWithScope: FmxNGTest1SourceTextAnchor) hasSameElements: { }.
+	self assertCollection: (c2 allWithScope: FmxNGTSourceAnchor) hasSameElements: { }.
+	self assertCollection: (c2 allWithScope: FmxNGTest1SourceTextAnchor) hasSameElements: { }.
 
 	self assertCollection: (m1 allWithScope: FmxNGTClass) hasSameElements: { }.
 	self assertCollection: (m1 allWithScope: FmxNGTest1Class) hasSameElements: { }.
@@ -194,7 +192,7 @@ TEntityMetaLevelDependencyTest >> testBelongsTo [
 { #category : #tests }
 TEntityMetaLevelDependencyTest >> testChildren [
 
-	self assertCollection: m1 children hasSameElements: { anchor1 }.
+	self assertCollection: m1 children hasSameElements: { }.
 	self assertCollection: c1 children hasSameElements: { m1 }.
 	self assertCollection: c2 children hasSameElements: { m2. m3 }.
 	self assertCollection: anchor1 children hasSameElements: { }.
@@ -205,9 +203,9 @@ TEntityMetaLevelDependencyTest >> testChildren [
 { #category : #tests }
 TEntityMetaLevelDependencyTest >> testChildrenSelectors [
 
-	self assertCollection: m1 childrenSelectors hasSameElements: { #sourceAnchor }.
-	self assertCollection: c1 childrenSelectors hasSameElements: { #methods. #sourceAnchor }.
-	self assertCollection: c2 childrenSelectors hasSameElements: { #methods. #sourceAnchor }.
+	self assertCollection: m1 childrenSelectors hasSameElements: { }.
+	self assertCollection: c1 childrenSelectors hasSameElements: { #methods }.
+	self assertCollection: c2 childrenSelectors hasSameElements: { #methods}.
 	self assertCollection: anchor1 childrenSelectors hasSameElements: { }.
 	
 
@@ -244,15 +242,9 @@ TEntityMetaLevelDependencyTest >> testOutgoingMSEProperties [
 { #category : #tests }
 TEntityMetaLevelDependencyTest >> testParentTypes [
 
-	| newMethod |
-	
-	self assertCollection: m1 parentTypes hasSameElements: { c1 }.
-	self assertCollection: m2 parents hasSameElements: { c2 }.
-	self assertCollection: m3 parents hasSameElements: { c2 }.
-	
-	newMethod := FmxNGTest1Method new.
-	self assert: newMethod parents isEmpty.
-
+	self assertCollection: m1 parentTypes hasSameElements: { FmxNGTest1Class. FmxNGTWithMethods }.
+ 	self assertCollection: c1 parentTypes hasSameElements: { }.
+ 	self assertCollection: anchor1 parentTypes hasSameElements: { }.
 ]
 
 { #category : #tests }

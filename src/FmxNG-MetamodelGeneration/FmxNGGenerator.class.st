@@ -1231,8 +1231,7 @@ FmxNGGenerator >> defineRelations [
 			comment: 'Child scopes embedded in this scope, if any.').
 
 	((tSourceAnchor property: #element)
-			comment: 'Enable the accessibility to the famix entity that this class is a source pointer for';
-			container)
+			comment: 'Enable the accessibility to the famix entity that this class is a source pointer for') "this realtion was a container in the old FAMIX"
 		-
 	((tWithSourceAnchor property: #sourceAnchor)
 			comment: 'SourceAnchor entity linking to the original source code for this entity').

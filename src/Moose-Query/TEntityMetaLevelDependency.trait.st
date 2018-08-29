@@ -195,7 +195,7 @@ TEntityMetaLevelDependency classSide >> privateParentTypes [
 	
 	containerBehaviors := self mooseDescription allAttributes select: #isContainer thenCollect: [:prop | prop type implementingClass].
 	
-	metamodelClasses := FAMIXClass metamodel classes reject: [ :e | e implementingClass isTrait ].
+	metamodelClasses := self metamodel classes reject: [ :e | e implementingClass isTrait ].
 	
 	containerUsers := metamodelClasses select: [ :e | 
 		containerBehaviors anySatisfy: [ :t | e implementingClass usesMooseTraitDirectly: t ] ].
