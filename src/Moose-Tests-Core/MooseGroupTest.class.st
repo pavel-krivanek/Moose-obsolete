@@ -642,7 +642,7 @@ MooseGroupTest >> testOccurenceOf [
 MooseGroupTest >> testPrintOn [
 	| printOn |
 	printOn := String streamContents: [ :stream | self model allTypes printOn: stream ].
-	self assert: printOn equals: 'All fmxngttypes (' , self model allTypes size asString , ' FAMIXTypes)'
+	self assert: printOn equals: 'All famixttypes (' , self model allTypes size asString , ' FAMIXTypes)'
 ]
 
 { #category : #tests }
@@ -723,7 +723,7 @@ MooseGroupTest >> testSelectFirst [
 MooseGroupTest >> testSelectGroupType [
 	| selected |
 	selected := self model allMethods select: [ :each | each cyclomaticComplexity  = 1 ].
-	self assert: (selected isKindOf: FAMIXMethodGroup)
+	self assert: (selected isKindOf: MooseGroup)
 ]
 
 { #category : #tests }

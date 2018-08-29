@@ -140,26 +140,6 @@ FamixJavaMethod >> copyFrom: anEntity within: aVisitor [
 
 ]
 
-{ #category : #metrics }
-FamixJavaMethod >> cyclomaticComplexity [
-	<MSEProperty: #cyclomaticComplexity type: #Number>
-	<MSEComment: 'The number of linear-independent paths through a method.'>
-	^ self
-		lookUpPropertyNamed: #cyclomaticComplexity
-		computedAs: [ self mooseModel isSmalltalk
-				ifTrue: [ | parser |
-					parser := RBVisitorForFAMIXMetrics new.
-					parser processMethod: self usingImporter: nil inModel: nil.
-					parser cyclomaticNumber2 ]
-				ifFalse: [ self notExistentMetricValue ] ]
-]
-
-{ #category : #'as yet unclassified' }
-FamixJavaMethod >> cyclomaticComplexity: aNumber [
-
-	self privateState propertyAt: #cyclomaticComplexity put: aNumber
-]
-
 { #category : #'as yet unclassified' }
 FamixJavaMethod >> hasEmptyBody [
 	"Copied from FAMIX2.
@@ -418,12 +398,6 @@ FamixJavaMethod >> numberOfInvokedMethods [
 	<derived>
 	
 	^ self privateState propertyAt: #numberOfInvokedMethods ifAbsentPut: [self invokedMethods size]
-]
-
-{ #category : #'as yet unclassified' }
-FamixJavaMethod >> numberOfLinesOfCode: aNumber [
-
-	self privateState propertyAt: #numberOfLinesOfCode put: aNumber
 ]
 
 { #category : #'as yet unclassified' }

@@ -322,12 +322,6 @@ FamixStMethod >> numberOfLinesOfCode [
 ]
 
 { #category : #'Famix-Extensions-private' }
-FamixStMethod >> numberOfLinesOfCode: aNumber [
-
-	self privateState propertyAt: #numberOfLinesOfCode put: aNumber
-]
-
-{ #category : #'Famix-Extensions-private' }
 FamixStMethod >> numberOfMessageSends [
 	<MSEProperty: #numberOfMessageSends type: #Number>
 	<derived>

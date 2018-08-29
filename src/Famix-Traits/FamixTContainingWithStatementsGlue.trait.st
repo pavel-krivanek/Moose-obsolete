@@ -63,20 +63,3 @@ FamixTContainingWithStatementsGlue >> numberOfStatements: aNumber [
 
 	self privateState propertyAt: #numberOfStatements put: aNumber
 ]
-
-{ #category : #metrics }
-FamixTContainingWithStatementsGlue >> numberOfStatementsWithoutMQ [
-	<MSEProperty: #numberOfStatements type: #Number>
-	<derived>
-	<MSEComment: 'The number of statements in a class'>
-			
-	^self
-		lookUpPropertyNamed: #numberOfStatements
-		computedAs: [
-			self tContainingWithStatementsLinks sum: [ :selector | 
-				| group |
-				group := MooseGroup
-					withAll: (self perform: selector)
-					withDescription: 'Entities from ' , self mooseName.
-				group sumNumbers: #numberOfStatements ] ]
-]
