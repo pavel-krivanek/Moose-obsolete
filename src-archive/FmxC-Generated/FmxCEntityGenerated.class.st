@@ -33,5 +33,5 @@ FmxCEntityGenerated class >> requirements [
 FmxCEntityGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTEntity. FmxNGTNamed}
+	^ {FmxCTEntity. FamixTNamed}
 ]

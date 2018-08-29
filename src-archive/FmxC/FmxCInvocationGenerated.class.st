@@ -2,9 +2,9 @@ Class {
 	#name : #FmxCInvocationGenerated,
 	#superclass : #MooseEntity,
 	#instVars : [
-		'#sender => FMOne type: #FmxNGTWithInvocations opposite: #outgoingInvocations',
-		'#candidates => FMMany type: #FmxNGTInvocable opposite: #incomingInvocations',
-		'#receiver => FMOne type: #FmxNGTInvocationsReceiver opposite: #receivingInvocations'
+		'#sender => FMOne type: #FamixTWithInvocations opposite: #outgoingInvocations',
+		'#candidates => FMMany type: #FamixTInvocable opposite: #incomingInvocations',
+		'#receiver => FMOne type: #FamixTInvocationsReceiver opposite: #receivingInvocations'
 	],
 	#category : #'FmxC-Entities'
 }
@@ -33,10 +33,10 @@ FmxCInvocationGenerated class >> requirements [
 FmxCInvocationGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTInvocation}
+	^ {FamixTInvocation}
 ]
 
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+{ #category : #'_fromTrait_FamixTInvocationGenerated' }
 FmxCInvocationGenerated >> candidates [
 
 	<target>
@@ -44,28 +44,28 @@ FmxCInvocationGenerated >> candidates [
 	^ candidates
 ]
 
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+{ #category : #'_fromTrait_FamixTInvocationGenerated' }
 FmxCInvocationGenerated >> candidates: anObject [
 
 	candidates value: anObject
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+{ #category : #'_fromTrait_FamixTInvocationGenerated' }
 FmxCInvocationGenerated >> receiver [
 
 	<MSEComment: 'Named entity (variable, class...) receiving the invocation. to-side of the association'>
 	^ receiver
 ]
 
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+{ #category : #'_fromTrait_FamixTInvocationGenerated' }
 FmxCInvocationGenerated >> receiver: anObject [
 
 	receiver := anObject
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+{ #category : #'_fromTrait_FamixTInvocationGenerated' }
 FmxCInvocationGenerated >> sender [
 
 	<MSEComment: 'Behavioural entity making the call. from-side of the association'>
@@ -74,7 +74,7 @@ FmxCInvocationGenerated >> sender [
 	^ sender
 ]
 
-{ #category : #'_fromTrait_FmxNGTInvocationGenerated' }
+{ #category : #'_fromTrait_FamixTInvocationGenerated' }
 FmxCInvocationGenerated >> sender: anObject [
 
 	sender := anObject

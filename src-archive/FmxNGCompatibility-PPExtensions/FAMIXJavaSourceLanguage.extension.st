@@ -1,6 +1,6 @@
 Extension { #name : #FAMIXJavaSourceLanguage }
 
-{ #category : #'*FmxNGCompatibility-PPExtensions' }
+{ #category : #'*FamixCompatibility-PPExtensions' }
 FAMIXJavaSourceLanguage >> format: aSourceString from: anEntity [
 	^ PP2TextHighlighter new
 		parser: self parser;
@@ -10,7 +10,7 @@ FAMIXJavaSourceLanguage >> format: aSourceString from: anEntity [
 		highlight: aSourceString asText
 ]
 
-{ #category : #'*FmxNGCompatibility-PPExtensions' }
+{ #category : #'*FamixCompatibility-PPExtensions' }
 FAMIXJavaSourceLanguage >> parser [
 	^ self privateState attributeAt: #parser ifAbsentPut: [PPJavaLexicon new]
 ]

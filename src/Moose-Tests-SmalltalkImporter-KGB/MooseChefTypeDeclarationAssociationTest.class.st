@@ -200,37 +200,37 @@ MooseChefTypeDeclarationAssociationTest >> testFamixClassIncomingTypeDeclaration
 	self
 		assert:
 			((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) size
+				atScope: FamixTType) size
 		equals: 3.
 	self
 		assert:
 			(((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) includes: (self model entityNamed: 'C1')).
+				atScope: FamixTType) includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			(((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) includes: (self model entityNamed: 'C2')).
+				atScope: FamixTType) includes: (self model entityNamed: 'C2')).
 	self
 		assert:
 			(((self model entityNamed: 'C2') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) includes: (self model entityNamed: 'C3')).
+				atScope: FamixTType) includes: (self model entityNamed: 'C3')).
 	self
 		assert:
 			((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) size
+				atScope: FamixTType) size
 		equals: 3.
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) includes: (self model entityNamed: 'C1')).
+				atScope: FamixTType) includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) includes: (self model entityNamed: 'C2')).
+				atScope: FamixTType) includes: (self model entityNamed: 'C2')).
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				atScope: FmxNGTType) includes: (self model entityNamed: 'C3'))
+				atScope: FamixTType) includes: (self model entityNamed: 'C3'))
 ]
 
 { #category : #'famix-class' }
@@ -259,27 +259,27 @@ MooseChefTypeDeclarationAssociationTest >> testFamixClassTypeDeclarationsWithout
 	self
 		assert:
 			((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				withoutSelfLoops atScope: FmxNGTType) size
+				withoutSelfLoops atScope: FamixTType) size
 		equals: 2.
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				withoutSelfLoops atScope: FmxNGTType)
+				withoutSelfLoops atScope: FamixTType)
 				includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryIncomingTypeDeclarations
-				withoutSelfLoops atScope: FmxNGTType)
+				withoutSelfLoops atScope: FamixTType)
 				includes: (self model entityNamed: 'C2')).
 	self
 		assert:
 			((self model entityNamed: 'C3') queryOutgoingTypeDeclarations
-				withoutSelfLoops atScope: FmxNGTType) size
+				withoutSelfLoops atScope: FamixTType) size
 		equals: 1.
 	self
 		assert:
 			(((self model entityNamed: 'C3') queryOutgoingTypeDeclarations
-				withoutSelfLoops atScope: FmxNGTType)
+				withoutSelfLoops atScope: FamixTType)
 				includes: (self model entityNamed: 'C2'))
 ]
 
@@ -321,18 +321,18 @@ MooseChefTypeDeclarationAssociationTest >> testFamixMethodTypeDeclarationsWithou
 	self
 		assert:
 			(((self model entityNamed: 'C2.m3(C2,C3)')
-				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FmxNGTType)
+				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FamixTType)
 				includes: (self model entityNamed: 'C1')).
 	self
 		assert:
 			((self model entityNamed: 'C2.m3(C2,C3)')
-				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FmxNGTType)
+				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FamixTType)
 				size
 		equals: 3.
 	self
 		assert:
 			(((self model entityNamed: 'C2.m3(C2,C3)')
-				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FmxNGTType)
+				queryOutgoingTypeDeclarations withoutSelfLoops atScope: FamixTType)
 				includes: (self model entityNamed: 'C3'))
 ]
 
@@ -341,16 +341,16 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageIncomingTypeDeclarati
 	self
 		assert:
 			((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FmxNGTPackage) size
+				atScope: FamixTPackage) size
 		equals: 2.
 	self
 		assert:
 			(((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FmxNGTPackage) includes: (self model entityNamed: 'p1')).
+				atScope: FamixTPackage) includes: (self model entityNamed: 'p1')).
 	self
 		assert:
 			(((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FmxNGTPackage) includes: (self model entityNamed: 'p2'))
+				atScope: FamixTPackage) includes: (self model entityNamed: 'p2'))
 ]
 
 { #category : #'famix-package' }
@@ -358,16 +358,16 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageOutgoingTypeDeclarati
 	self
 		assert:
 			((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FmxNGTPackage) size
+				atScope: FamixTPackage) size
 		equals: 2.
 	self
 		assert:
 			(((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FmxNGTPackage) includes: (self model entityNamed: 'p1')).
+				atScope: FamixTPackage) includes: (self model entityNamed: 'p1')).
 	self
 		assert:
 			(((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FmxNGTPackage) includes: (self model entityNamed: 'p2'))
+				atScope: FamixTPackage) includes: (self model entityNamed: 'p2'))
 ]
 
 { #category : #'famix-package' }
@@ -375,21 +375,21 @@ MooseChefTypeDeclarationAssociationTest >> testFamixPackageTypeDeclarationsWitho
 	self
 		assert:
 			((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FmxNGTPackage) withoutSelfLoops size
+				atScope: FamixTPackage) withoutSelfLoops size
 		equals: 1.
 	self
 		assert:
 			(((self model entityNamed: 'p2') queryIncomingTypeDeclarations
-				atScope: FmxNGTPackage) withoutSelfLoops
+				atScope: FamixTPackage) withoutSelfLoops
 				includes: (self model entityNamed: 'p1')).
 	self
 		assert:
 			((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FmxNGTPackage) withoutSelfLoops size
+				atScope: FamixTPackage) withoutSelfLoops size
 		equals: 1.
 	self
 		assert:
 			(((self model entityNamed: 'p1') queryOutgoingTypeDeclarations
-				atScope: FmxNGTPackage) withoutSelfLoops
+				atScope: FamixTPackage) withoutSelfLoops
 				includes: (self model entityNamed: 'p2'))
 ]

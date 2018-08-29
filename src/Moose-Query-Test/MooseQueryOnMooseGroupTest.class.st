@@ -17,10 +17,10 @@ MooseQueryOnMooseGroupTest >> testAllOutgoing [
 MooseQueryOnMooseGroupTest >> testIncomingInvocation [
 	| methGroup classGroup|
 	methGroup := FAMIXMethodGroup withAll: (self model entities select: #isMethod).
-	self assert: (methGroup queryIncoming: FmxNGTInvocation) size equals: 3.
+	self assert: (methGroup queryIncoming: FamixTInvocation) size equals: 3.
 	
 	classGroup := FAMIXClassGroup withAll: (self model entities select: #isClass).
-	self assert: (classGroup queryIncoming: FmxNGTInvocation) size equals: 3.
+	self assert: (classGroup queryIncoming: FamixTInvocation) size equals: 3.
 	
 ]
 
@@ -28,9 +28,9 @@ MooseQueryOnMooseGroupTest >> testIncomingInvocation [
 MooseQueryOnMooseGroupTest >> testOutgoingInvocation [
 	| methGroup classGroup|
 	methGroup := FAMIXMethodGroup withAll: (self model entities select: #isMethod).
-	self assert: (methGroup queryOutgoing: FmxNGTInvocation) size equals: 3.
+	self assert: (methGroup queryOutgoing: FamixTInvocation) size equals: 3.
 	
 	classGroup := FAMIXClassGroup withAll: (self model entities select: #isClass).
-	self assert: (classGroup queryOutgoing: FmxNGTInvocation) size equals: 3.
+	self assert: (classGroup queryOutgoing: FamixTInvocation) size equals: 3.
 	
 ]

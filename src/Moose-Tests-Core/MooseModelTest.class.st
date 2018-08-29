@@ -249,7 +249,7 @@ MooseModelTest >> testExportMetamodelTo [
 
 { #category : #tests }
 MooseModelTest >> testIncludeElementOfType [
-	self assert: (self model includesElementsOfType: FmxNGTClass).
+	self assert: (self model includesElementsOfType: FamixTClass).
 	self deny: (self model includesElementsOfType: SmallInteger)
 ]
 

@@ -4,21 +4,21 @@ Extension { #name : #MooseAbstractGroup }
 MooseAbstractGroup >> allAnnotationInstances [
 	<navigation: 'All annotation instances'>
 	<package: #Java>
-	^ self allWithType: FmxNGAnnotationInstance
+	^ self allWithType: FamixAnnotationInstance
 ]
 
 { #category : #'*Famix-Java' }
 MooseAbstractGroup >> allAnnotationTypes [
 	<navigation: 'All annotation types'>
 	<package: #Java>
-	^ self allWithType: FmxNGAnnotationType
+	^ self allWithType: FamixAnnotationType
 ]
 
 { #category : #'*Famix-Java' }
 MooseAbstractGroup >> allCaughtExceptions [
 	<navigation: 'All caught exceptions'>
 	<package: #Java>
-	^ self allWithType: FmxNGCaughtException
+	^ self allWithType: FamixCaughtException
 ]
 
 { #category : #'*Famix-Java' }
@@ -46,21 +46,21 @@ MooseAbstractGroup >> allEnums [
 MooseAbstractGroup >> allParameterTypes [
 	<navigation: 'All parameter types'>
 	<package: #Java>
-	^ self allWithType: FmxNGParameterType
+	^ self allWithType: FamixParameterType
 ]
 
 { #category : #'*Famix-Java' }
 MooseAbstractGroup >> allParameterizableClasses [
 	<navigation: 'All parameterizable classes'>
 	<package: #Java>
-	^ self allWithType: FmxNGParameterizableClass
+	^ self allWithType: FamixParameterizableClass
 ]
 
 { #category : #'*Famix-Java' }
 MooseAbstractGroup >> allParameterizedTypes [
 	<navigation: 'All parameterized types'>
 	<package: #Java>
-	^ self allWithType: FmxNGParameterizedType
+	^ self allWithType: FamixParameterizedType
 ]
 
 { #category : #'*Famix-Java' }
@@ -74,7 +74,7 @@ MooseAbstractGroup >> allTestClasses [
 MooseAbstractGroup >> allThrownExceptions [
 	<navigation: 'All thrown exceptions'>
 	<package: #Java>
-	^ self allWithType: FmxNGThrownException
+	^ self allWithType: FamixThrownException
 ]
 
 { #category : #'*Famix-Java' }

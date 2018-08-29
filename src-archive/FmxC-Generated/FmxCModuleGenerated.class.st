@@ -34,7 +34,7 @@ FmxCModuleGenerated class >> requirements [
 FmxCModuleGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTNamed}
+	^ {FamixTNamed}
 ]
 
 { #category : #accessing }

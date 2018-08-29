@@ -1,11 +1,11 @@
 Class {
-	#name : #BaselineOfFmxNGCompatibility,
+	#name : #BaselineOfFamixCompatibility,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfFmxNGCompatibility
+	#category : #BaselineOfFamixCompatibility
 }
 
 { #category : #accessing }
-BaselineOfFmxNGCompatibility >> baseline: spec [ 
+BaselineOfFamixCompatibility >> baseline: spec [ 
     
 	<baseline>
         
@@ -14,14 +14,14 @@ BaselineOfFmxNGCompatibility >> baseline: spec [
 	repository := self packageRepositoryURL.
 
 	spec for: #common do: [
-		spec package: 'FmxNGCompatibility-Generator'.
-		spec package: 'FmxNGCompatibility-Entities'.
+		spec package: 'FamixCompatibility-Generator'.
+		spec package: 'FamixCompatibility-Entities'.
 	].
 
 ]
 
 { #category : #accessing }
-BaselineOfFmxNGCompatibility >> packageRepository [
+BaselineOfFamixCompatibility >> packageRepository [
 
 	" Tries to determine a repository from which the baseline is being loaded. Useful for 
 	refering other baselines in the same repository. "
@@ -35,7 +35,7 @@ BaselineOfFmxNGCompatibility >> packageRepository [
 ]
 
 { #category : #accessing }
-BaselineOfFmxNGCompatibility >> packageRepositoryURL [
+BaselineOfFamixCompatibility >> packageRepositoryURL [
 
 	" Tries to determine a repository URL from which the baseline is being loaded. Useful for 
 	refering other baselines in the same repository. "
@@ -49,7 +49,7 @@ BaselineOfFmxNGCompatibility >> packageRepositoryURL [
 ]
 
 { #category : #accessing }
-BaselineOfFmxNGCompatibility >> project [
+BaselineOfFamixCompatibility >> project [
 	
 	| aProject |
 	

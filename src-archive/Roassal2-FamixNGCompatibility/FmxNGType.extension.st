@@ -1,7 +1,7 @@
-Extension { #name : #FmxNGType }
+Extension { #name : #FamixType }
 
 { #category : #'*Roassal2-FamixNGCompatibility' }
-FmxNGType >> addBlueprintLegendOn: view [
+FamixType >> addBlueprintLegendOn: view [
 
 	| lb |
 	lb := RTLegendBuilder new.
@@ -23,7 +23,7 @@ FmxNGType >> addBlueprintLegendOn: view [
 ]
 
 { #category : #'*Roassal2-FamixNGCompatibility' }
-FmxNGType >> mooseFinderBlueprintIn: composite [
+FamixType >> mooseFinderBlueprintIn: composite [
 	<moosePresentationOrder: 20>
 	composite roassal2 
 			title: 'Blueprint';
@@ -36,7 +36,7 @@ FmxNGType >> mooseFinderBlueprintIn: composite [
 ]
 
 { #category : #'*Roassal2-FamixNGCompatibility' }
-FmxNGType >> mooseFinderHierarchyIn: composite [
+FamixType >> mooseFinderHierarchyIn: composite [
 	<moosePresentationOrder: 20>
 	composite roassal2
 			title: 'Hierarchy';
@@ -46,7 +46,7 @@ FmxNGType >> mooseFinderHierarchyIn: composite [
 ]
 
 { #category : #'*Roassal2-FamixNGCompatibility' }
-FmxNGType >> viewBlueprint [
+FamixType >> viewBlueprint [
 	<menuItem: 'Class blueprint' category: 'Visualize'>
 	| view |
 	view := RTView new.
@@ -56,7 +56,7 @@ FmxNGType >> viewBlueprint [
 ]
 
 { #category : #'*Roassal2-FamixNGCompatibility' }
-FmxNGType >> viewUML [
+FamixType >> viewUML [
 	<menuItem: 'UML class diagram' category: 'Visualize'> 
 	
 	| view |
@@ -66,7 +66,7 @@ FmxNGType >> viewUML [
 ]
 
 { #category : #'*Roassal2-FamixNGCompatibility' }
-FmxNGType >> viewUMLOn: view [
+FamixType >> viewUMLOn: view [
 
 	view
 		addObjects: {self};

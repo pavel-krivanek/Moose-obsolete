@@ -139,7 +139,7 @@ FamixModelExtractionTest >> testAccessesReification [
 	| accesses |
 	accesses := self model allAccesses.
 	self assert: accesses isEmpty not.
-	accesses do: [:each | self assert: (each accessor  usesTrait: FmxNGTMethod)].
+	accesses do: [:each | self assert: (each accessor  usesTrait: FamixTMethod)].
 ]
 
 { #category : #tests }

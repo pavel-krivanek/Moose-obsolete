@@ -2,7 +2,7 @@
 generate the general traits:
 
 | g |
-g := FmxNGGenerator new.
+g := FamixGenerator new.
 g builder traitsFlattening: false.
 g generateWithoutCleaning.
 
@@ -108,7 +108,7 @@ CMetamodelGenerator >> defineRelations [
 { #category : #'instance creation' }
 CMetamodelGenerator >> newBuilder [
 
-	^ (FmxNGGenerator builderWithDefinitions)
+	^ (FamixGenerator builderWithDefinitions)
 		doNotGenerateCurrent;
 		generator: self;
 		yourself.

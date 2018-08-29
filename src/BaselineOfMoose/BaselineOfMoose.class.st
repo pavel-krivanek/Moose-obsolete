@@ -49,18 +49,18 @@ BaselineOfMoose >> baseline: spec [
 			'Famix-MetamodelBuilder-Core'
 			'Famix-MetamodelBuilder-Tests'
 			
-			'FmxNG-MetamodelGeneration'
-			'FmxNG-Traits'	
+			'Famix-MetamodelGeneration'
+			'Famix-Traits'	
 				
-			'FmxNG-BasicInfrastructure'
+			'Famix-BasicInfrastructure'
 			
-			'FmxNGCompatibility-Generator' 
-			'FmxNGCompatibility-Entities'
-			'FmxNGCompatibility-Groups'	
+			'FamixCompatibility-Generator' 
+			'FamixCompatibility-Entities'
+			'FamixCompatibility-Groups'	
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
 
-		spec baseline: 'FmxNGCompatibility' with: [spec repository: repository].
+		spec baseline: 'FamixCompatibility' with: [spec repository: repository].
 		
 		#(	
 			'Famix-Compatibility'
@@ -203,22 +203,22 @@ BaselineOfMoose >> baselineFame: spec [
 BaselineOfMoose >> baselineFamixNG: spec [ 
     
 	#(
-		'FmxNG-Traits'
+		'Famix-Traits'
 
-		'FmxNGPharoSmalltalk-Generator'
-		'FmxNGPharoSmalltalk-Entities'
-		'FmxNGPharoSmalltalk-Importer'
+		'FamixPharoSmalltalk-Generator'
+		'FamixPharoSmalltalk-Entities'
+		'FamixPharoSmalltalk-Importer'
 
-		'FmxNG-Support'
+		'Famix-Support'
 
-		'FmxNGJava-Generator'
-		'FmxNGJava-Entities'
+		'FamixJava-Generator'
+		'FamixJava-Entities'
 
-		'FmxNGTestGenerators'
-		'FmxNGTest1-Entities'
-		'FmxNGTest1-Tests'
-		'FmxNGTest2-Entities'
-		'FmxNGTest2-Tests'
+		'FamixTestGenerators'
+		'FamixTest1-Entities'
+		'FamixTest1-Tests'
+		'FamixTest2-Entities'
+		'FamixTest2-Tests'
 
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
@@ -476,7 +476,7 @@ BaselineOfMoose >> groups: spec [
 		'Moose-Query'
 		'Moose-Core'
 			
-		'FmxNG-BasicInfrastructure'
+		'Famix-BasicInfrastructure'
 		'Famix-Compatibility'
 
 		'Famix-MetamodelBuilder-Core'
@@ -486,12 +486,12 @@ BaselineOfMoose >> groups: spec [
 		'Moose-GenericImporter'
 		'Phexample'
 			
-		'FmxNG-MetamodelGeneration'
-		'FmxNG-Traits'
+		'Famix-MetamodelGeneration'
+		'Famix-Traits'
 			
-		'FmxNGCompatibility-Generator' 
-		'FmxNGCompatibility-Entities'
-		'FmxNGCompatibility-Groups'
+		'FamixCompatibility-Generator' 
+		'FamixCompatibility-Entities'
+		'FamixCompatibility-Groups'
 			
 		'Famix-Extensions'
 	).
@@ -583,20 +583,20 @@ BaselineOfMoose >> groups: spec [
 		'Moose-MonticelloImporter'
 		'Moose-Tests-MonticelloImporter'
 		
-		'FmxNGPharoSmalltalk-Generator'
-		'FmxNGPharoSmalltalk-Entities'
-		'FmxNGPharoSmalltalk-Importer'
+		'FamixPharoSmalltalk-Generator'
+		'FamixPharoSmalltalk-Entities'
+		'FamixPharoSmalltalk-Importer'
 		
-		'FmxNG-Support'
+		'Famix-Support'
 
-		'FmxNGJava-Generator'
-		'FmxNGJava-Entities'
+		'FamixJava-Generator'
+		'FamixJava-Entities'
 		
-		'FmxNGTestGenerators'
-		'FmxNGTest1-Entities'
-		'FmxNGTest1-Tests'
-		'FmxNGTest2-Entities'
-		'FmxNGTest2-Tests'
+		'FamixTestGenerators'
+		'FamixTest1-Entities'
+		'FamixTest1-Tests'
+		'FamixTest2-Entities'
+		'FamixTest2-Tests'
 		
 	).
 	

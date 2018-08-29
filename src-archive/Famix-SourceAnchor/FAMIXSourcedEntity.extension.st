@@ -13,7 +13,7 @@ FAMIXSourcedEntity >> ensureMultiSourceAnchor [
 		ifNil: [ 
 			self
 				sourceAnchor:
-					(FmxNGMultipleFileAnchor new
+					(FamixMultipleFileAnchor new
 						element: self;
 						mooseModel: self mooseModel;
 						yourself);
@@ -26,7 +26,7 @@ FAMIXSourcedEntity >> fileAnchorPath: aString startLine: anInteger startColumn: 
 
 	self
 		sourceAnchor:
-			(FmxNGFileAnchor
+			(FamixFileAnchor
 				fileName: aString
 				startLine: anInteger
 				startColumn: anInteger2
@@ -41,7 +41,7 @@ FAMIXSourcedEntity >> fileAnchorPath: aString startPos: anInteger endPos: anothe
 
 	self
 		sourceAnchor:
-			(FmxNGIndexedFileAnchor
+			(FamixIndexedFileAnchor
 				fileName: aString
 				startPos: anInteger
 				endPos: anotherInteger

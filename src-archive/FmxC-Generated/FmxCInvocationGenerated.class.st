@@ -2,9 +2,9 @@ Class {
 	#name : #FmxCInvocationGenerated,
 	#superclass : #MooseEntity,
 	#instVars : [
-		'#sender => FMOne type: #FmxNGTWithInvocations opposite: #outgoingInvocations',
-		'#candidates => FMMany type: #FmxNGTInvocable opposite: #incomingInvocations',
-		'#receiver => FMOne type: #FmxNGTInvocationsReceiver opposite: #receivingInvocations'
+		'#sender => FMOne type: #FamixTWithInvocations opposite: #outgoingInvocations',
+		'#candidates => FMMany type: #FamixTInvocable opposite: #incomingInvocations',
+		'#receiver => FMOne type: #FamixTInvocationsReceiver opposite: #receivingInvocations'
 	],
 	#category : #'FmxC-Generated-Entities'
 }
@@ -33,5 +33,5 @@ FmxCInvocationGenerated class >> requirements [
 FmxCInvocationGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTInvocation}
+	^ {FamixTInvocation}
 ]

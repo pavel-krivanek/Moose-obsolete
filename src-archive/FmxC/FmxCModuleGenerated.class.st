@@ -34,7 +34,7 @@ FmxCModuleGenerated class >> requirements [
 FmxCModuleGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxNGTNamed}
+	^ {FamixTNamed}
 ]
 
 { #category : #accessing }
@@ -63,7 +63,7 @@ FmxCModuleGenerated >> hFile: anObject [
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCModuleGenerated >> isStub [
 
 	<MSEProperty: #isStub type: #Boolean>
@@ -71,14 +71,14 @@ FmxCModuleGenerated >> isStub [
 	^ isStub
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCModuleGenerated >> isStub: anObject [
 
 	isStub := anObject
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCModuleGenerated >> name [
 
 	<MSEProperty: #name type: #String>
@@ -86,7 +86,7 @@ FmxCModuleGenerated >> name [
 	^ name
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCModuleGenerated >> name: anObject [
 
 	name := anObject

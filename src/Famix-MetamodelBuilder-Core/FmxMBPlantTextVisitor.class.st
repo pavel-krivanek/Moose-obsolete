@@ -1,5 +1,5 @@
 "
-b := FmxNGTestCompatibilityGenerator builderWithDefinitions.
+b := FamixTestCompatibilityGenerator builderWithDefinitions.
 v := FamixMetamodelBuilderPlantTextVisitor new.
 b acceptVisitor: v.
 v contents

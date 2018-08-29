@@ -1,1 +1,1 @@
-Package { #name : #'FmxNGCompatibility-JavaParsing' }
+Package { #name : #'FamixCompatibility-JavaParsing' }

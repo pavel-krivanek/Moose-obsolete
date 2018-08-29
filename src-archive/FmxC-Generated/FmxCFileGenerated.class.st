@@ -33,5 +33,5 @@ FmxCFileGenerated class >> requirements [
 FmxCFileGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTFile. FmxNGTNamed}
+	^ {FmxCTFile. FamixTNamed}
 ]

@@ -1,1 +1,1 @@
-Package { #name : #'FmxNGCompatibility-PPExtensions' }
+Package { #name : #'FamixCompatibility-PPExtensions' }

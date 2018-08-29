@@ -54,9 +54,9 @@ FamixTest >> testMSEImport [
 	"MooseModel resetMeta."
 	
 	importer := FMImporter new.
-	importer repository: FmxNGCompatibilityGenerator newRepository.
+	importer repository: FamixCompatibilityGenerator newRepository.
 	importer fromString: self oneClassAndOneMethod.
-	importer nameTranslator: FmxNGCompatibilityGenerator translationDictionary.
+	importer nameTranslator: FamixCompatibilityGenerator translationDictionary.
 	importer run.
 	self assert: importer repository elements size equals: 2.
 	model := MooseModel new.
@@ -71,9 +71,9 @@ FamixTest >> testRobustMSEImport [
 	
 	"MooseModel resetMeta."
 	importer := FMImporter new.
-	importer repository: FmxNGCompatibilityGenerator newRepository.
+	importer repository: FamixCompatibilityGenerator newRepository.
 	importer fromString: self classWithUnknownAttribute.
-	importer nameTranslator: FmxNGCompatibilityGenerator translationDictionary.
+	importer nameTranslator: FamixCompatibilityGenerator translationDictionary.
 	importer run.
 	
 	self assert: importer repository elements size equals: 4.

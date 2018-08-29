@@ -11,7 +11,7 @@ TDependencyQueries >> queryAllIncomingAssociations [
 
 { #category : #'*Moose-Query-Extensions' }
 TDependencyQueries >> queryAllIncomingInvocations [
-	^ self queryIncoming: FmxNGTInvocation
+	^ self queryIncoming: FamixTInvocation
 ]
 
 { #category : #'*Moose-Query-Extensions' }
@@ -25,27 +25,27 @@ TDependencyQueries >> queryAllOutgoingAssociations [
 
 { #category : #'*Moose-Query-Extensions' }
 TDependencyQueries >> queryAllOutgoingInvocations [
-	^ self queryOutgoing: FmxNGTInvocation
+	^ self queryOutgoing: FamixTInvocation
 ]
 
 { #category : #'*Moose-Query-Extensions' }
 TDependencyQueries >> queryIncomingAccesses [
-	^ self queryIncoming: FmxNGTAccess
+	^ self queryIncoming: FamixTAccess
 ]
 
 { #category : #'*Moose-Query-Extensions' }
 TDependencyQueries >> queryIncomingReferences [
-	^ self queryIncoming: FmxNGTReference
+	^ self queryIncoming: FamixTReference
 ]
 
 { #category : #'*Moose-Query-Extensions' }
 TDependencyQueries >> queryOutgoingAccesses [
-	^ self queryOutgoing: FmxNGTAccess
+	^ self queryOutgoing: FamixTAccess
 ]
 
 { #category : #'*Moose-Query-Extensions' }
 TDependencyQueries >> queryOutgoingReferences [
-	^ self queryOutgoing: FmxNGTReference
+	^ self queryOutgoing: FamixTReference
 ]
 
 { #category : #'*Moose-Query-Extensions' }

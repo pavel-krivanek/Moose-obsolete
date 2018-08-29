@@ -108,7 +108,7 @@ FAMIXType >> attributes: anAttribute [
 
 { #category : #accessing }
 FAMIXType >> behavioursWithDeclaredType [
-	<MSEProperty: #behavioursWithDeclaredType type: #FmxNGBehaviouralEntity opposite: #declaredType> <multivalued> <derived>
+	<MSEProperty: #behavioursWithDeclaredType type: #FamixBehaviouralEntity opposite: #declaredType> <multivalued> <derived>
 	<MSEComment: 'Behavioral entities that have this type as declaredType'>
 
 	^ behavioursWithDeclaredType

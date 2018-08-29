@@ -2,7 +2,7 @@ Extension { #name : #FAMIXContainerEntity }
 
 { #category : #'*Famix-Java' }
 FAMIXContainerEntity >> definedAnnotationTypes [
-	<MSEProperty: #definedAnnotationTypes type: #FmxNGAnnotationType opposite: #container>
+	<MSEProperty: #definedAnnotationTypes type: #FamixAnnotationType opposite: #container>
 	<multivalued>
 	<derived>
 	<MSEComment: 'The container in which the AnnotationTypes may be declared'>

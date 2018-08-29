@@ -10,7 +10,7 @@ FAMIXPackage >> createPackagesFromCategories [
 		cat := (Smalltalk at: class instanceSide name) category.
 		famixCat := self mooseModel allPackages detect: [:each | each mooseName = cat] ifNone: [nil].
 		famixCat ifNil: [
-			famixCat := self mooseModel add: (FmxNGPackage new name: cat; isStub: true)
+			famixCat := self mooseModel add: (FamixPackage new name: cat; isStub: true)
 		].
 		class isStub
 			ifFalse: [ famixCat isStub: false ].

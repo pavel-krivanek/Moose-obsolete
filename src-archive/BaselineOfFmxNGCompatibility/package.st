@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfFmxNGCompatibility }
+Package { #name : #BaselineOfFamixCompatibility }

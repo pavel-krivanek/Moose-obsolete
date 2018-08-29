@@ -307,7 +307,7 @@ MooseModel >> allBookmarks [
 { #category : #'Famix-Extensions' }
 MooseModel >> allSourceLanguages [
 
-	^ self allWithType: FmxNGTSourceLanguage.
+	^ self allWithType: FamixTSourceLanguage.
 
 ]
 
@@ -348,7 +348,7 @@ MooseModel >> cacheMooseGroups [
 MooseModel >> detectEncodingOfAllFileAnchors [
 	"I can be execute to reduce the time of detection of the encoding of each file anchor because multiple file anchor can point to the same file."
 
-	(((self allWithSubTypesOf: FmxNGTFileAnchor) asOrderedCollection reject: #privateHasEncoding) groupedBy: #fileName)
+	(((self allWithSubTypesOf: FamixTFileAnchor) asOrderedCollection reject: #privateHasEncoding) groupedBy: #fileName)
 		valuesDo: [ :anchors | 
 			| encoding |
 			encoding := anchors anyOne detectEncoding.
@@ -682,7 +682,7 @@ MooseModel >> size [
 
 { #category : #'Famix-Extensions' }
 MooseModel >> sourceLanguage [
-	<MSEProperty: #sourceLanguage type: #FmxNGTSourceLanguage>
+	<MSEProperty: #sourceLanguage type: #FamixTSourceLanguage>
 	<MSEComment: 'Source of the Language to which the model corresponds'>
 	^ sourceLanguage
 		ifNil: [ sourceLanguage := self allSourceLanguages

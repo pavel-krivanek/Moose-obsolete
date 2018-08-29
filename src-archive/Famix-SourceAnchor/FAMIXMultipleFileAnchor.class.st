@@ -43,7 +43,7 @@ FAMIXMultipleFileAnchor >> allFiles: aCollection [
 FAMIXMultipleFileAnchor >> createAnchorWithPath: aPath [
 	self
 		addSourceAnchor:
-			(FmxNGFileAnchor new
+			(FamixFileAnchor new
 				fileName: aPath;
 				mooseModel: self mooseModel;
 				yourself)

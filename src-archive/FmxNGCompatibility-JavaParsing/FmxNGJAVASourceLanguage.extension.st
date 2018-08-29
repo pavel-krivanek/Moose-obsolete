@@ -1,7 +1,7 @@
-Extension { #name : #FmxNGJAVASourceLanguage }
+Extension { #name : #FamixJAVASourceLanguage }
 
-{ #category : #'*FmxNGCompatibility-JavaParsing' }
-FmxNGJAVASourceLanguage >> format: aSourceString from: anEntity [
+{ #category : #'*FamixCompatibility-JavaParsing' }
+FamixJAVASourceLanguage >> format: aSourceString from: anEntity [
 	^ PP2TextHighlighter new
 		parser: self parser;
 		color: 'keyword' with: Color red muchDarker;
@@ -10,7 +10,7 @@ FmxNGJAVASourceLanguage >> format: aSourceString from: anEntity [
 		highlight: aSourceString asText
 ]
 
-{ #category : #'*FmxNGCompatibility-JavaParsing' }
-FmxNGJAVASourceLanguage >> parser [
+{ #category : #'*FamixCompatibility-JavaParsing' }
+FamixJAVASourceLanguage >> parser [
 	^ self privateState attributeAt: #parser ifAbsentPut: [PPJavaLexicon new]
 ]

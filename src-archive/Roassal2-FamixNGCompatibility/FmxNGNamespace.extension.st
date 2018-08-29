@@ -1,7 +1,7 @@
-Extension { #name : #FmxNGNamespace }
+Extension { #name : #FamixNamespace }
 
 { #category : #'*Roassal2-FamixNGCompatibility' }
-FmxNGNamespace >> mooseFinderWithinHierarchyIn: composite [
+FamixNamespace >> mooseFinderWithinHierarchyIn: composite [
 	<moosePresentationOrder: 20>
 	composite roassal2
 			title: 'Within overall hierarchy';

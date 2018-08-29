@@ -37,8 +37,8 @@ LANImporterTest >> testAccessReification [
 	self model allAccesses 
 		do: 
 			[:each |  
-			self assert: (each accessor usesTrait: FmxNGTMethod). 
-			self assert: (each variable usesTrait: FmxNGTAccessible) ]
+			self assert: (each accessor usesTrait: FamixTMethod). 
+			self assert: (each variable usesTrait: FamixTAccessible) ]
 ]
 
 { #category : #tests }
@@ -216,8 +216,8 @@ LANImporterTest >> testInheritanceReification [
 	self assert: inheritances isEmpty not.
 	inheritances do: 
 			[:each |  
-			self assert: (each superclass usesTrait: FmxNGTClass). 
-			self assert: (each subclass usesTrait: FmxNGTClass)]
+			self assert: (each superclass usesTrait: FamixTClass). 
+			self assert: (each subclass usesTrait: FamixTClass)]
 ]
 
 { #category : #tests }
@@ -242,10 +242,10 @@ LANImporterTest >> testInheritsFrom [
 LANImporterTest >> testInvocationReification [
 	self model allInvocations
 		do: [ :each | 
-			self assert: (each sender usesTrait: FmxNGTMethod).
+			self assert: (each sender usesTrait: FamixTMethod).
 			each candidates
 				do: [ :eachCandidate | 
-					self assert: (eachCandidate usesTrait: FmxNGTMethod).
+					self assert: (eachCandidate usesTrait: FamixTMethod).
 					self assert: eachCandidate signature equals: each signature ] ]
 ]
 
@@ -343,14 +343,14 @@ LANImporterTest >> testNamespace [
 
 	| namespace |
 	namespace := self model entityNamed: #Smalltalk.
-	self assert: (namespace usesTrait: FmxNGTNamespace)
+	self assert: (namespace usesTrait: FamixTNamespace)
 ]
 
 { #category : #tests }
 LANImporterTest >> testNamespaceReification [ 
 	 
 	self model allClasses 
-		do: [:each | self assert: (each belongsTo usesTrait: FmxNGTNamespace)]
+		do: [:each | self assert: (each belongsTo usesTrait: FamixTNamespace)]
 ]
 
 { #category : #tests }
@@ -376,7 +376,7 @@ LANImporterTest >> testPackageReification [
 	self new testPackageReification
 	"
 
-	self model allClasses do: [ :each | self assert: (each parentPackage usesTrait: FmxNGTPackage) ].
+	self model allClasses do: [ :each | self assert: (each parentPackage usesTrait: FamixTPackage) ].
 	self model allPackages
 		do: [ :each | each localClasses do: [ :eachClass | self assert: eachClass parentPackage equals: each ] ].
 	self assert: (self model allPackages entityNamed: #'Moose-TestResources-LAN') localClasses size equals: 20

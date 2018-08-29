@@ -33,7 +33,7 @@ FmxCEntityGenerated class >> requirements [
 FmxCEntityGenerated class >> statefulTraits [
 
 	<statefulTraits>
-	^ {FmxCTEntity. FmxNGTNamed}
+	^ {FmxCTEntity. FamixTNamed}
 ]
 
 { #category : #'_fromTrait_FmxCTEntityGenerated' }
@@ -49,7 +49,7 @@ FmxCEntityGenerated >> definedIn: anObject [
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCEntityGenerated >> isStub [
 
 	<MSEProperty: #isStub type: #Boolean>
@@ -57,14 +57,14 @@ FmxCEntityGenerated >> isStub [
 	^ isStub
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCEntityGenerated >> isStub: anObject [
 
 	isStub := anObject
 
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCEntityGenerated >> name [
 
 	<MSEProperty: #name type: #String>
@@ -72,7 +72,7 @@ FmxCEntityGenerated >> name [
 	^ name
 ]
 
-{ #category : #'_fromTrait_FmxNGTNamedGenerated' }
+{ #category : #'_fromTrait_FamixTNamedGenerated' }
 FmxCEntityGenerated >> name: anObject [
 
 	name := anObject

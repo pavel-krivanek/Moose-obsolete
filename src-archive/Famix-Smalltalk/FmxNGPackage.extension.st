@@ -1,7 +1,7 @@
-Extension { #name : #FmxNGPackage }
+Extension { #name : #FamixPackage }
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> createPackagesFromCategories [
+FamixPackage >> createPackagesFromCategories [
 	<menuItem: 'Create packages from package categories' category: 'Utilities'>
 	"Inspired by the Moose Smalltalk Category importer"
 	| cat famixCat |
@@ -10,7 +10,7 @@ FmxNGPackage >> createPackagesFromCategories [
 		cat := (Smalltalk at: class instanceSide name) category.
 		famixCat := self mooseModel allPackages detect: [:each | each mooseName = cat] ifNone: [nil].
 		famixCat ifNil: [
-			famixCat := self mooseModel add: (FmxNGPackage new name: cat; stub: true)
+			famixCat := self mooseModel add: (FamixPackage new name: cat; stub: true)
 		].
 		class isStub
 			ifFalse: [ famixCat stub: false ].
@@ -23,14 +23,14 @@ FmxNGPackage >> createPackagesFromCategories [
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> definedMethods [
+FamixPackage >> definedMethods [
 	"alias"
 
 	^ self localMethods
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> extendedClasses [
+FamixPackage >> extendedClasses [
 	"select all classes extended in this package"
 
 	^ self privateState cacheAt: #extendedClasses
@@ -39,7 +39,7 @@ FmxNGPackage >> extendedClasses [
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> extendedClassesGroup [
+FamixPackage >> extendedClassesGroup [
 	<navigation: 'Extended classes in package'>
 	
 	^ FAMIXClassGroup 
@@ -48,7 +48,7 @@ FmxNGPackage >> extendedClassesGroup [
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> extensionClasses [
+FamixPackage >> extensionClasses [
 	"select all classes extended by this package"
 
 	^ self privateState 
@@ -57,7 +57,7 @@ FmxNGPackage >> extensionClasses [
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> extensionClassesGroup [
+FamixPackage >> extensionClassesGroup [
 	<navigation: 'Classes extended by package'>
 	
 	^ FAMIXClassGroup 
@@ -66,7 +66,7 @@ FmxNGPackage >> extensionClassesGroup [
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> extensionMethods [
+FamixPackage >> extensionMethods [
 	"select all class extensions made by this package"
 
 	^ self privateState 
@@ -75,14 +75,14 @@ FmxNGPackage >> extensionMethods [
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> localClasses [
+FamixPackage >> localClasses [
 	"select all local classes. Just an alias"
 
 	^ self classes
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> localClassesGroup [
+FamixPackage >> localClassesGroup [
 	<navigation: 'Local classes'>
 
 	^ FAMIXClassGroup 
@@ -91,7 +91,7 @@ FmxNGPackage >> localClassesGroup [
 ]
 
 { #category : #'*Famix-Smalltalk' }
-FmxNGPackage >> localMethods [
+FamixPackage >> localMethods [
 	"select all local methods"
 
 	^ self privateState 

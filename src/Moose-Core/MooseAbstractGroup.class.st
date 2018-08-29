@@ -51,48 +51,48 @@ MooseAbstractGroup >> addAll: aCollectionOfItems [
 MooseAbstractGroup >> allAccesses [
 	
 	<navigation: 'All accesses'>
-	^self allWithType: FmxNGTAccess 
+	^self allWithType: FamixTAccess 
 ]
 
 { #category : #'Famix-Java' }
 MooseAbstractGroup >> allAnnotationInstances [
 	<navigation: 'All annotation instances'>
 	<package: #Java>
-	^ self allWithType: FmxNGTAnnotationInstance
+	^ self allWithType: FamixTAnnotationInstance
 ]
 
 { #category : #'Famix-Java' }
 MooseAbstractGroup >> allAnnotationTypes [
 	<navigation: 'All annotation types'>
 	<package: #Java>
-	^ self allWithType: FmxNGTAnnotationType
+	^ self allWithType: FamixTAnnotationType
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allAttributes [
 	
 	<navigation: 'All attributes'>
-	^self allWithType: FmxNGTAttribute 
+	^self allWithType: FamixTAttribute 
 ]
 
 { #category : #'Famix-Java' }
 MooseAbstractGroup >> allCaughtExceptions [
 	<navigation: 'All caught exceptions'>
 	<package: #Java>
-	^ self allWithType: FmxNGTCaughtException
+	^ self allWithType: FamixTCaughtException
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allClasses [
 	<navigation: 'All classes'>
-	^ self allWithSubTypesOf: FmxNGTClass ofGroupClass: FAMIXClassGroup
+	^ self allWithSubTypesOf: FamixTClass ofGroupClass: FAMIXClassGroup
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allComments [
 	
 	<navigation: 'All comments'>
-	^self allWithType: FmxNGTComment 
+	^self allWithType: FamixTComment 
 	
 ]
 
@@ -100,82 +100,82 @@ MooseAbstractGroup >> allComments [
 MooseAbstractGroup >> allDeclaredExceptions [
 	<navigation: 'All declared exceptions'>
 	<package: #Java>
-	^ self allWithType: FmxNGTDeclaredException
+	^ self allWithType: FamixTDeclaredException
 ]
 
 { #category : #'Famix-Java' }
 MooseAbstractGroup >> allEnumValues [
 	<navigation: 'All enum values'>
 	<package: #Java>
-	^ self allWithType: FmxNGTEnumValue 
+	^ self allWithType: FamixTEnumValue 
 ]
 
 { #category : #'Famix-Java' }
 MooseAbstractGroup >> allEnums [
 	<navigation: 'All enums'>
 	<package: #Java>
-	^ self allWithType: FmxNGTWithEnumValues  
+	^ self allWithType: FamixTWithEnumValues  
 ]
 
 { #category : #'Famix-File' }
 MooseAbstractGroup >> allFiles [
 	<navigation: 'All files'>
-	^ self allWithSubTypesOf: FmxNGTFile
+	^ self allWithSubTypesOf: FamixTFile
 ]
 
 { #category : #'Famix-File' }
 MooseAbstractGroup >> allFolders [
 	<navigation: 'All folders'>
-	^ self allWithSubTypesOf: FmxNGTFolder
+	^ self allWithSubTypesOf: FamixTFolder
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allFunctions [
 	<navigation: 'All functions'>
-	^ self allWithType: FmxNGTFunction
+	^ self allWithType: FamixTFunction
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allGlobalVariables [
 	
 	<navigation: 'All global variables'>
-	^self allWithType: FmxNGTGlobalVariable 
+	^self allWithType: FamixTGlobalVariable 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allImplicitVariables [
 	
 	<navigation: 'All implicit variables'>
-	^self allWithType: FmxNGTImplicitVariable 
+	^self allWithType: FamixTImplicitVariable 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allInheritanceDefinitions [
 	
 	<navigation: 'All inheritances'>
-	^self allWithType: FmxNGTSubInheritance
-	"TODO: FmxNGTSuperInheritance?" 
+	^self allWithType: FamixTSubInheritance
+	"TODO: FamixTSuperInheritance?" 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allInvocations [
 	
 	<navigation: 'All invocations'>
-	^self allWithType: FmxNGTInvocation 
+	^self allWithType: FamixTInvocation 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allLocalVariables [
 	
 	<navigation: 'All local variables'>
-	^self allWithType: FmxNGTLocalVariable 
+	^self allWithType: FamixTLocalVariable 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allMethods [
 	<navigation: 'All methods'>
 	
-	^ self allWithType: FmxNGTMethod
+	^ self allWithType: FamixTMethod
 ]
 
 { #category : #'Famix-Extensions' }
@@ -244,14 +244,14 @@ MooseAbstractGroup >> allModels [
 MooseAbstractGroup >> allNamespaces [
 	
 	<navigation: 'All namespaces'>
-	^self allWithSubTypesOf: FmxNGTNamespace 
+	^self allWithSubTypesOf: FamixTNamespace 
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allPackages [
 	
 	<navigation: 'All packages'>
-	^self allWithSubTypesOf: FmxNGTPackage 
+	^self allWithSubTypesOf: FamixTPackage 
 ]
 
 { #category : #'Famix-Java' }
@@ -265,21 +265,21 @@ MooseAbstractGroup >> allParameterTypes [
 MooseAbstractGroup >> allParameterizableClasses [
 	<navigation: 'All parameterizable classes'>
 	<package: #Java>
-	^ self allWithType: FmxNGTWithParameterizedTypes
+	^ self allWithType: FamixTWithParameterizedTypes
 ]
 
 { #category : #'Famix-Java' }
 MooseAbstractGroup >> allParameterizedTypes [
 	<navigation: 'All parameterized types'>
 	<package: #Java>
-	^ self allWithType: FmxNGTParameterizedType
+	^ self allWithType: FamixTParameterizedType
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allParameters [
 	
 	<navigation: 'All parameters'>
-	^self allWithType: FmxNGTParameter 
+	^self allWithType: FamixTParameter 
 ]
 
 { #category : #'Famix-Extensions' }
@@ -293,7 +293,7 @@ MooseAbstractGroup >> allPrimitiveTypes [
 MooseAbstractGroup >> allReferences [
 	
 	<navigation: 'All references'>
-	^self allWithType: FmxNGTReference  
+	^self allWithType: FamixTReference  
 ]
 
 { #category : #'public interface' }
@@ -321,13 +321,13 @@ MooseAbstractGroup >> allTestMethods [
 MooseAbstractGroup >> allThrownExceptions [
 	<navigation: 'All thrown exceptions'>
 	<package: #Java>
-	^ self allWithType: FmxNGTThrownException
+	^ self allWithType: FamixTThrownException
 ]
 
 { #category : #'Famix-Extensions' }
 MooseAbstractGroup >> allTypes [
 	<navigation: 'All types'>
-	^ self allWithSubTypesOf: FmxNGTType ofGroupClass: FAMIXTypeGroup
+	^ self allWithSubTypesOf: FamixTType ofGroupClass: FAMIXTypeGroup
 ]
 
 { #category : #'Famix-Extensions' }

@@ -69,7 +69,7 @@ FamixMetamodelGenerator class >> resetMetamodel [
 	classes := self packageName asPackage definedClasses
 		select: [ :each | each inheritsFrom: MooseEntity ].
 	classes addAll: (self packageName asPackage definedClasses select: #isTrait).
-	classes addAll: #'FmxNG-Traits' asPackage definedClasses.
+	classes addAll: #'Famix-Traits' asPackage definedClasses.
 	{ Trait. 	Class. ClassDescription. Behavior. MooseModel. MooseAbstractGroup. MooseEntity. MooseGroup} 
 		do: [ :each | classes add: each ].
 	tower := MooseModel metaBuilder: classes.
@@ -103,10 +103,10 @@ FamixMetamodelGenerator >> builderWithStandardTraits [
 
 	| standardBuilder mooseGenerator |
 	
-	standardBuilder := FmxNGGenerator builderWithDefinitions.
+	standardBuilder := FamixGenerator builderWithDefinitions.
 
 	"add Moose-Query"
-	mooseGenerator := FmxNGMooseQueryGenerator new.
+	mooseGenerator := FamixMooseQueryGenerator new.
 	mooseGenerator builder: standardBuilder.
 	mooseGenerator adoptBuilder: standardBuilder.
 	standardBuilder generator: mooseGenerator.

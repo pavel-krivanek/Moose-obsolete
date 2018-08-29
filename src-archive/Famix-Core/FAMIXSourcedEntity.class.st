@@ -25,7 +25,7 @@ FAMIXSourcedEntity >> addComment: aComment [
 FAMIXSourcedEntity >> comments [
 	"VBU - Put in private state because it is not used and so take place in the memory"
 
-	<MSEProperty: #comments type: #FmxNGComment opposite: #container>
+	<MSEProperty: #comments type: #FamixComment opposite: #container>
 	<multivalued>
 	<derived>
 	<MSEComment: 'list of comments defined in the entity'>
@@ -85,6 +85,6 @@ FAMIXSourcedEntity >> sourceAnchor: aSourceAnchor [
 FAMIXSourcedEntity >> sourceLanguage [
 	^ self declaredSourceLanguage ifNil: [
 		self mooseModel 
-			ifNil: [ FmxNGUNKNOWNSourceLanguage new ] 
+			ifNil: [ FamixUNKNOWNSourceLanguage new ] 
 			ifNotNil: [ self mooseModel sourceLanguage ] ]
 ]

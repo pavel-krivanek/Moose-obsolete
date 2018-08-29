@@ -17,7 +17,7 @@ MooseModelDistributionMapExtensionsTest >> testPropertiesForDistributionMap [
 	self assert: (model resultOfProperty: #numberOfLinesOfCode appliedTo: model allClasses first class) isNumber.
 	self assert: (model resultOfProperty: #numberOfLinesOfCode appliedTo: model allClasses first) isNil.
 	
-	self assert: (model classConcernedByProperty: #numberOfLinesOfCode appliedTo: FmxNGClass) isNil.
+	self assert: (model classConcernedByProperty: #numberOfLinesOfCode appliedTo: FamixClass) isNil.
 
 ]
 

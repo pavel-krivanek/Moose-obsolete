@@ -1,8 +1,8 @@
 "
 builder := FamixMetamodelBuilder new.
 builder 
-	prefix: 'FmxNGTest';
-	packageName: 'FmxNGTest'.
+	prefix: 'FamixTest';
+	packageName: 'FamixTest'.
 
 comment := builder newClassNamed: #Comment.
 method := builder newClassNamed: #Method.

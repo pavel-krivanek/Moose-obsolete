@@ -17,11 +17,11 @@ FAMIXSelfLoopScopeTest >> testFamixClassClassScope [
 	self
 		assert:
 			((self c1FullReferencerOutSide queryAllIncomingInvocations
-				atScope: FmxNGTType) includes: self c1FullReferencerOutSide).
+				atScope: FamixTType) includes: self c1FullReferencerOutSide).
 	self
 		deny:
 			((self c1FullReferencerOutSide queryAllIncomingInvocations
-				atScope: FmxNGTType) withoutSelfLoops
+				atScope: FamixTType) withoutSelfLoops
 				includes: self c1FullReferencerOutSide)
 ]
 
