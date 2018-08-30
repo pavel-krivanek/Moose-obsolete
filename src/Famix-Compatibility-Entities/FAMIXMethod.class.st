@@ -140,6 +140,23 @@ FAMIXMethod >> copyFrom: anEntity within: aVisitor [
 
 ]
 
+{ #category : #'Famix-Extensions' }
+FAMIXMethod >> cyclomaticComplexity [
+
+	"redefine this method because we need to override an implementation provided by FamixTMethod"
+
+	<MSEProperty: #cyclomaticComplexity type: #Number>
+	<MSEComment: 'The number of linear-independent paths through a method.'>
+	^ self
+		lookUpPropertyNamed: #cyclomaticComplexity
+		computedAs: [ self mooseModel isSmalltalk
+				ifTrue: [ | parser |
+					parser := RBVisitorForFAMIXMetrics new.
+					parser processMethod: self usingImporter: nil inModel: nil.
+					parser cyclomaticNumber2 ]
+				ifFalse: [ self notExistentMetricValue ] ]
+]
+
 { #category : #'Famix-Java' }
 FAMIXMethod >> hasInnerClassImplementingMethods [
 	^ self innerClassesImplementingMethods isNotEmpty
