@@ -44,7 +44,7 @@ FAMIXSourceAnchor class >> parentTypes [
 FAMIXSourceAnchor class >> requirements [
 
 	<generated>
-	^ { FAMIXSourcedEntity }
+	^ {  }
 ]
 
 { #category : #generator }
@@ -58,22 +58,6 @@ FAMIXSourceAnchor class >> resetMooseQueryCaches [
 FAMIXSourceAnchor >> accept: aVisitor [
 
 	aVisitor visitSourceAnchor: self
-]
-
-{ #category : #accessing }
-FAMIXSourceAnchor >> belongsTo [
-
-	<generated>
-	^ self element
-
-]
-
-{ #category : #accessing }
-FAMIXSourceAnchor >> belongsTo: anObject [
-
-	<generated>
-	self element: anObject
-
 ]
 
 { #category : #accessing }
