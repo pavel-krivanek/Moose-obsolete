@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : #'Famix-Tests-Java'
+	#category : #'Famix-Compatibility-Tests-Java'
 }
 
 { #category : #running }
