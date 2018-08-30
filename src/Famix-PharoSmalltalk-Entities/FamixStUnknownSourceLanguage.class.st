@@ -8,7 +8,7 @@ Class {
 FamixStUnknownSourceLanguage class >> annotation [
 
 	<MSEClass: #UnknownSourceLanguage super: #FamixStSourceLanguage>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

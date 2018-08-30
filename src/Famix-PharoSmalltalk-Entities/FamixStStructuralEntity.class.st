@@ -10,7 +10,7 @@ Class {
 FamixStStructuralEntity class >> annotation [
 
 	<MSEClass: #StructuralEntity super: #FamixStNamedEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

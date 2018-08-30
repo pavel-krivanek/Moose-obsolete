@@ -8,7 +8,7 @@ Class {
 FamixStUnknownVariable class >> annotation [
 
 	<MSEClass: #UnknownVariable super: #FamixStStructuralEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

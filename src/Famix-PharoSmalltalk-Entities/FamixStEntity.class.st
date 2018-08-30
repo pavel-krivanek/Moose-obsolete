@@ -8,7 +8,7 @@ Class {
 FamixStEntity class >> annotation [
 
 	<MSEClass: #Entity super: #MooseEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

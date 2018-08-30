@@ -10,7 +10,7 @@ Class {
 FamixStSourceLanguage class >> annotation [
 
 	<MSEClass: #SourceLanguage super: #FamixStEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

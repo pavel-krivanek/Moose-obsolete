@@ -10,7 +10,7 @@ Class {
 FamixStLocalVariable class >> annotation [
 
 	<MSEClass: #LocalVariable super: #FamixStStructuralEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

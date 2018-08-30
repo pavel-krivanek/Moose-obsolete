@@ -14,7 +14,7 @@ Class {
 FamixStAssociation class >> annotation [
 
 	<MSEClass: #Association super: #FamixStSourcedEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

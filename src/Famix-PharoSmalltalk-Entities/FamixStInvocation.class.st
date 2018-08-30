@@ -10,7 +10,7 @@ Class {
 FamixStInvocation class >> annotation [
 
 	<MSEClass: #Invocation super: #FamixStAssociation>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

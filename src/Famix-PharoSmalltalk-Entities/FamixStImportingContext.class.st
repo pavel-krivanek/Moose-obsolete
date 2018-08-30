@@ -200,6 +200,13 @@ FamixStImportingContext >> importSourceLanguage [
 ]
 
 { #category : #testing }
+FamixStImportingContext >> importSourceTextAnchor [
+
+	<generated>
+	^ self import: FamixStSourceTextAnchor
+]
+
+{ #category : #testing }
 FamixStImportingContext >> importSourcedEntity [
 
 	<generated>
@@ -414,6 +421,13 @@ FamixStImportingContext >> shouldImportSourceLanguage [
 
 	<generated>
 	^ self shouldImport: FamixStSourceLanguage
+]
+
+{ #category : #testing }
+FamixStImportingContext >> shouldImportSourceTextAnchor [
+
+	<generated>
+	^ self shouldImport: FamixStSourceTextAnchor
 ]
 
 { #category : #testing }

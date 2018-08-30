@@ -10,7 +10,7 @@ Class {
 FamixStAnnotationInstanceAttribute class >> annotation [
 
 	<MSEClass: #AnnotationInstanceAttribute super: #FamixStSourcedEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

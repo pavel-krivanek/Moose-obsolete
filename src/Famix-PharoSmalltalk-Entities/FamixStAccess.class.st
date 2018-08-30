@@ -10,7 +10,7 @@ Class {
 FamixStAccess class >> annotation [
 
 	<MSEClass: #Access super: #FamixStAssociation>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

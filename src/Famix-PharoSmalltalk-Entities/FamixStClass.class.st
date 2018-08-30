@@ -1,8 +1,8 @@
 Class {
 	#name : #FamixStClass,
 	#superclass : #FamixStType,
-	#traits : 'FamixTClass + FamixTClassHierarchyNavigation + FamixTLCOMMetrics + FamixTWithExceptions + FamixTWithMethods + FamixTWithSubInheritances + FamixTWithSuperInheritances',
-	#classTraits : 'FamixTClass classTrait + FamixTClassHierarchyNavigation classTrait + FamixTLCOMMetrics classTrait + FamixTWithExceptions classTrait + FamixTWithMethods classTrait + FamixTWithSubInheritances classTrait + FamixTWithSuperInheritances classTrait',
+	#traits : 'FamixTClass + FamixTClassHierarchyNavigation + FamixTContainingWithInvocationsGlue + FamixTLCOMMetrics + FamixTWithExceptions + FamixTWithMethods + FamixTWithMethodsWithAccessesGlue + FamixTWithMethodsWithModifiersGlue + FamixTWithSubInheritances + FamixTWithSuperInheritances',
+	#classTraits : 'FamixTClass classTrait + FamixTClassHierarchyNavigation classTrait + FamixTContainingWithInvocationsGlue classTrait + FamixTLCOMMetrics classTrait + FamixTWithExceptions classTrait + FamixTWithMethods classTrait + FamixTWithMethodsWithAccessesGlue classTrait + FamixTWithMethodsWithModifiersGlue classTrait + FamixTWithSubInheritances classTrait + FamixTWithSuperInheritances classTrait',
 	#category : #'Famix-PharoSmalltalk-Entities-Entities'
 }
 
@@ -10,7 +10,7 @@ Class {
 FamixStClass class >> annotation [
 
 	<MSEClass: #Class super: #FamixStType>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]
@@ -25,7 +25,7 @@ FamixStClass class >> generatedSlotNames [
 { #category : #generator }
 FamixStClass class >> generatedTraitNames [
 	<generated>
-	^ #(FamixTClass FamixTClassHierarchyNavigation FamixTLCOMMetrics FamixTWithExceptions FamixTWithMethods FamixTWithSubInheritances FamixTWithSuperInheritances)
+	^ #(FamixTClass FamixTClassHierarchyNavigation FamixTContainingWithInvocationsGlue FamixTLCOMMetrics FamixTWithExceptions FamixTWithMethods FamixTWithMethodsWithAccessesGlue FamixTWithMethodsWithModifiersGlue FamixTWithSubInheritances FamixTWithSuperInheritances)
 ]
 
 { #category : #meta }

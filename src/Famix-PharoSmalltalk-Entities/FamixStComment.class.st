@@ -10,7 +10,7 @@ Class {
 FamixStComment class >> annotation [
 
 	<MSEClass: #Comment super: #FamixStSourcedEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

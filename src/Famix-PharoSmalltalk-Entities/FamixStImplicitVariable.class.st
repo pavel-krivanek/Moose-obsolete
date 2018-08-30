@@ -10,7 +10,7 @@ Class {
 FamixStImplicitVariable class >> annotation [
 
 	<MSEClass: #ImplicitVariable super: #FamixStStructuralEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

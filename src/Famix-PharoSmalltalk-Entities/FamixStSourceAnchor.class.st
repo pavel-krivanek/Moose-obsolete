@@ -14,7 +14,7 @@ Class {
 FamixStSourceAnchor class >> annotation [
 
 	<MSEClass: #SourceAnchor super: #FamixStEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]
@@ -42,29 +42,13 @@ FamixStSourceAnchor class >> parentTypes [
 FamixStSourceAnchor class >> requirements [
 
 	<generated>
-	^ { FamixStSourcedEntity }
+	^ {  }
 ]
 
 { #category : #'as yet unclassified' }
 FamixStSourceAnchor class >> resetMooseQueryCaches [
 	super resetMooseQueryCaches.
 	self resetTEntityMetaLevelDependencyCaches.
-
-]
-
-{ #category : #accessing }
-FamixStSourceAnchor >> belongsTo [
-
-	<generated>
-	^ self element
-
-]
-
-{ #category : #accessing }
-FamixStSourceAnchor >> belongsTo: anObject [
-
-	<generated>
-	self element: anObject
 
 ]
 

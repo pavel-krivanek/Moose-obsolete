@@ -10,7 +10,7 @@ Class {
 FamixStNamespace class >> annotation [
 
 	<MSEClass: #Namespace super: #FamixStScopingEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]

@@ -10,7 +10,7 @@ Class {
 FamixStScopingEntity class >> annotation [
 
 	<MSEClass: #ScopingEntity super: #FamixStContainerEntity>
-	<package: #'FamixPharoSmalltalk-Entities'>
+	<package: #'Famix-PharoSmalltalk-Entities'>
 	<generated>
 	^self
 ]
