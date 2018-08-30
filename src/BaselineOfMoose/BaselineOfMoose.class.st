@@ -582,9 +582,9 @@ BaselineOfMoose >> groups: spec [
 		'Moose-MonticelloImporter'
 		'Moose-Tests-MonticelloImporter'
 		
-		'FamixPharoSmalltalk-Generator'
-		'FamixPharoSmalltalk-Entities'
-		'FamixPharoSmalltalk-Importer'
+		'Famix-PharoSmalltalk-Generator'
+		'Famix-PharoSmalltalk-Entities'
+		'Famix-PharoSmalltalk-Importer'
 		
 		'Famix-Java-Generator'
 		'Famix-Java-Entities'
