@@ -8,7 +8,7 @@ Class {
 FamixJavaUnknownVariable class >> annotation [
 
 	<MSEClass: #UnknownVariable super: #FamixJavaStructuralEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

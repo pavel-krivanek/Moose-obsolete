@@ -11,7 +11,7 @@ Class {
 FamixJavaMultipleFileAnchor class >> annotation [
 
 	<MSEClass: #MultipleFileAnchor super: #FamixJavaSourceAnchor>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

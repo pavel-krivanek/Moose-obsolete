@@ -10,7 +10,7 @@ Class {
 FamixJavaFile class >> annotation [
 
 	<MSEClass: #File super: #FamixJavaAbstractFile>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

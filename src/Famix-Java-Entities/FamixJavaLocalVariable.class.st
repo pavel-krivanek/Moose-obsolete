@@ -10,7 +10,7 @@ Class {
 FamixJavaLocalVariable class >> annotation [
 
 	<MSEClass: #LocalVariable super: #FamixJavaStructuralEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

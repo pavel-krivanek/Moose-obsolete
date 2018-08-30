@@ -10,7 +10,7 @@ Class {
 FamixJavaNamespace class >> annotation [
 
 	<MSEClass: #Namespace super: #FamixJavaScopingEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

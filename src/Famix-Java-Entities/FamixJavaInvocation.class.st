@@ -10,7 +10,7 @@ Class {
 FamixJavaInvocation class >> annotation [
 
 	<MSEClass: #Invocation super: #FamixJavaAssociation>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

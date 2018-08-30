@@ -10,7 +10,7 @@ Class {
 FamixJavaParameter class >> annotation [
 
 	<MSEClass: #Parameter super: #FamixJavaStructuralEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

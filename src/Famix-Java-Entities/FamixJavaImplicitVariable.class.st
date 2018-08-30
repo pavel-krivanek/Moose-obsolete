@@ -10,7 +10,7 @@ Class {
 FamixJavaImplicitVariable class >> annotation [
 
 	<MSEClass: #ImplicitVariable super: #FamixJavaStructuralEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

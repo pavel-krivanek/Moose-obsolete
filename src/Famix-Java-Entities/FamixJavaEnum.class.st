@@ -10,7 +10,7 @@ Class {
 FamixJavaEnum class >> annotation [
 
 	<MSEClass: #Enum super: #FamixJavaType>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

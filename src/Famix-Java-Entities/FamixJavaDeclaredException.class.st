@@ -10,7 +10,7 @@ Class {
 FamixJavaDeclaredException class >> annotation [
 
 	<MSEClass: #DeclaredException super: #FamixJavaException>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

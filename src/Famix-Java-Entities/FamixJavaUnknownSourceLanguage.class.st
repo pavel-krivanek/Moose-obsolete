@@ -10,7 +10,7 @@ Class {
 FamixJavaUnknownSourceLanguage class >> annotation [
 
 	<MSEClass: #UnknownSourceLanguage super: #FamixJavaEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

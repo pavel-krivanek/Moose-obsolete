@@ -13,7 +13,7 @@ Class {
 FamixJavaAttribute class >> annotation [
 
 	<MSEClass: #Attribute super: #FamixJavaStructuralEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

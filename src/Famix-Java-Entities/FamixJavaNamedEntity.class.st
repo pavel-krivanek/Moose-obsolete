@@ -10,7 +10,7 @@ Class {
 FamixJavaNamedEntity class >> annotation [
 
 	<MSEClass: #NamedEntity super: #FamixJavaSourcedEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

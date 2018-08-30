@@ -10,7 +10,7 @@ Class {
 FamixJavaGlobalVariable class >> annotation [
 
 	<MSEClass: #GlobalVariable super: #FamixJavaStructuralEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

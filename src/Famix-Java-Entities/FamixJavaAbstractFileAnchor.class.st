@@ -10,7 +10,7 @@ Class {
 FamixJavaAbstractFileAnchor class >> annotation [
 
 	<MSEClass: #AbstractFileAnchor super: #FamixJavaSourceAnchor>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

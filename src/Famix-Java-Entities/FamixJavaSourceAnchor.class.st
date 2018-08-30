@@ -10,7 +10,7 @@ Class {
 FamixJavaSourceAnchor class >> annotation [
 
 	<MSEClass: #SourceAnchor super: #FamixJavaEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]
@@ -44,7 +44,7 @@ FamixJavaSourceAnchor class >> parentTypes [
 FamixJavaSourceAnchor class >> requirements [
 
 	<generated>
-	^ { FamixJavaSourcedEntity }
+	^ {  }
 ]
 
 { #category : #meta }
@@ -58,22 +58,6 @@ FamixJavaSourceAnchor class >> resetMooseQueryCaches [
 FamixJavaSourceAnchor >> accept: aVisitor [
 
 	aVisitor visitSourceAnchor: self
-]
-
-{ #category : #accessing }
-FamixJavaSourceAnchor >> belongsTo [
-
-	<generated>
-	^ self element
-
-]
-
-{ #category : #accessing }
-FamixJavaSourceAnchor >> belongsTo: anObject [
-
-	<generated>
-	self element: anObject
-
 ]
 
 { #category : #'as yet unclassified' }

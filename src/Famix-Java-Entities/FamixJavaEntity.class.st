@@ -25,7 +25,7 @@ Class {
 FamixJavaEntity class >> annotation [
 
 	<MSEClass: #Entity super: #MooseEntity>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]

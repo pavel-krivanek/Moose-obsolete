@@ -10,7 +10,7 @@ Class {
 FamixJavaAccess class >> annotation [
 
 	<MSEClass: #Access super: #FamixJavaAssociation>
-	<package: #'FamixJava-Entities'>
+	<package: #'Famix-Java-Entities'>
 	<generated>
 	^self
 ]
