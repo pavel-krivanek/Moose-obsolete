@@ -75,7 +75,7 @@ BaselineOfMoose >> baseline: spec [
 			'Moose-Tests-SmalltalkImporter-Core'
 			'Moose-Tests-SmalltalkImporter-KGB'
 			'Famix-Compatibility-Tests-Core'
-			'Famix-Tests-Extensions'
+			'Famix-Compatibility-Tests-Extensions'
 			'Moose-TestResources-Reference-Core'
 			'Moose-TestResources-Reference-PackageOne'
 			'Moose-TestResources-Reference-PackageTwo'
@@ -536,7 +536,7 @@ BaselineOfMoose >> groups: spec [
 		'Famix-Compatibility-Tests-Core'
 		'Famix-Compatibility-Tests-C'
 		'Famix-Compatibility-Tests-Java'
-		'Famix-Tests-Extensions'
+		'Famix-Compatibility-Tests-Extensions'
 		'DeepTraverser-Tests-Group'
 	).	
 
