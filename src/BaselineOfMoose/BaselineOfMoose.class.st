@@ -211,8 +211,8 @@ BaselineOfMoose >> baselineFamixNG: spec [
 
 		'Famix-Support'
 
-		'FamixJava-Generator'
-		'FamixJava-Entities'
+		'Famix-Java-Generator'
+		'Famix-Java-Entities'
 
 		'FamixTestGenerators'
 		'FamixTest1-Entities'
@@ -589,8 +589,8 @@ BaselineOfMoose >> groups: spec [
 		
 		'Famix-Support'
 
-		'FamixJava-Generator'
-		'FamixJava-Entities'
+		'Famix-Java-Generator'
+		'Famix-Java-Entities'
 		
 		'FamixTestGenerators'
 		'FamixTest1-Entities'
