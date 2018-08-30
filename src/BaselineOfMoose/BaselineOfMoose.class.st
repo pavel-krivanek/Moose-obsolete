@@ -213,11 +213,11 @@ BaselineOfMoose >> baselineFamixNG: spec [
 		'Famix-Java-Generator'
 		'Famix-Java-Entities'
 
-		'FamixTestGenerators'
-		'FamixTest1-Entities'
-		'FamixTest1-Tests'
-		'FamixTest2-Entities'
-		'FamixTest2-Tests'
+		'Famix-TestGenerators'
+		'Famix-Test1-Entities'
+		'Famix-Test1-Tests'
+		'Famix-Test2-Entities'
+		'Famix-Test2-Tests'
 
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
@@ -589,11 +589,11 @@ BaselineOfMoose >> groups: spec [
 		'Famix-Java-Generator'
 		'Famix-Java-Entities'
 		
-		'FamixTestGenerators'
-		'FamixTest1-Entities'
-		'FamixTest1-Tests'
-		'FamixTest2-Entities'
-		'FamixTest2-Tests'
+		'Famix-TestGenerators'
+		'Famix-Test1-Entities'
+		'Famix-Test1-Tests'
+		'Famix-Test2-Entities'
+		'Famix-Test2-Tests'
 		
 	).
 	
