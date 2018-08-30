@@ -111,7 +111,7 @@ FamixCompatibilityGenerator class >> translationDictionary [
 
 	| classNames associations |
 
-	classNames := 'FamixCompatibility-Entities' asPackage definedClasses collect: [:e | e name withoutPrefix: 'FAMIX' ].
+	classNames := 'Famix-Compatibility-Entities' asPackage definedClasses collect: [:e | e name withoutPrefix: 'FAMIX' ].
 	
 	associations := classNames collect: [ :each | ('FAMIX.', each) -> ('FAMIX.', each) ] as: OrderedCollection.
 
