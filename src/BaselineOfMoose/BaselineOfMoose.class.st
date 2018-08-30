@@ -205,9 +205,9 @@ BaselineOfMoose >> baselineFamixNG: spec [
 	#(
 		'Famix-Traits'
 
-		'FamixPharoSmalltalk-Generator'
-		'FamixPharoSmalltalk-Entities'
-		'FamixPharoSmalltalk-Importer'
+		'Famix-PharoSmalltalk-Generator'
+		'Famix-PharoSmalltalk-Entities'
+		'Famix-PharoSmalltalk-Importer'
 
 		'Famix-Support'
 
