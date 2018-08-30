@@ -65,7 +65,7 @@ BaselineOfMoose >> baseline: spec [
 		#(	
 			'Famix-Extensions'
 			'Moose-GenericImporter'
-			'Famix-Tests-C'
+			'Famix-Compatibility-Tests-C'
 			'Moose-Query-Extensions'
 			'Moose-SmalltalkImporter'
 			'Moose-MonticelloImporter'
@@ -534,7 +534,7 @@ BaselineOfMoose >> groups: spec [
 		'Moose-SmalltalkImporter'
 		'Moose-Tests-Core'
 		'Famix-Tests-Core'
-		'Famix-Tests-C'
+		'Famix-Compatibility-Tests-C'
 		'Famix-Tests-Java'
 		'Famix-Tests-Extensions'
 		'DeepTraverser-Tests-Group'
