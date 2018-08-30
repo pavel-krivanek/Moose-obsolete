@@ -54,9 +54,9 @@ BaselineOfMoose >> baseline: spec [
 				
 			'Famix-BasicInfrastructure'
 			
-			'FamixCompatibility-Generator' 
-			'FamixCompatibility-Entities'
-			'FamixCompatibility-Groups'	
+			'Famix-Compatibility-Generator' 
+			'Famix-Compatibility-Entities'
+			'Famix-Compatibility-Groups'	
 		) do: [ :packageName | 
 			spec package: packageName with: [ spec repository: (self url: #Moose) ]].		
 
@@ -489,9 +489,9 @@ BaselineOfMoose >> groups: spec [
 		'Famix-MetamodelGeneration'
 		'Famix-Traits'
 			
-		'FamixCompatibility-Generator' 
-		'FamixCompatibility-Entities'
-		'FamixCompatibility-Groups'
+		'Famix-Compatibility-Generator' 
+		'Famix-Compatibility-Entities'
+		'Famix-Compatibility-Groups'
 			
 		'Famix-Extensions'
 	).
