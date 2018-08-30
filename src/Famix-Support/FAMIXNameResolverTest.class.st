@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXNameResolverTest,
 	#superclass : #TestCase,
-	#category : #'Famix-Compatibility'
+	#category : #'Famix-Support'
 }
 
 { #category : #tests }

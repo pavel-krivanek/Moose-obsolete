@@ -1,6 +1,6 @@
 Extension { #name : #MooseModel }
 
-{ #category : #'*Famix-Compatibility' }
+{ #category : #'*Famix-Support' }
 MooseModel >> inferNamespaceParentsBasedOnNames [
 	<menuItem: 'Infer Namespace Parents Based on Names' category: 'Utilities'>
 	| parent parentNameSize currentPosition parentName namespaces |

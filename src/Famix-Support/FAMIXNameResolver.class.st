@@ -1,7 +1,7 @@
 Class {
 	#name : #FAMIXNameResolver,
 	#superclass : #MooseUtilities,
-	#category : #'Famix-Compatibility'
+	#category : #'Famix-Support'
 }
 
 { #category : #private }

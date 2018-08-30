@@ -63,7 +63,6 @@ BaselineOfMoose >> baseline: spec [
 		spec baseline: 'FamixCompatibility' with: [spec repository: repository].
 		
 		#(	
-			'Famix-Compatibility'
 			'Famix-Extensions'
 			'Moose-GenericImporter'
 			'Famix-Tests-C'
@@ -477,7 +476,7 @@ BaselineOfMoose >> groups: spec [
 		'Moose-Core'
 			
 		'Famix-BasicInfrastructure'
-		'Famix-Compatibility'
+		'Famix-Support'
 
 		'Famix-MetamodelBuilder-Core'
 			
@@ -587,8 +586,6 @@ BaselineOfMoose >> groups: spec [
 		'FamixPharoSmalltalk-Entities'
 		'FamixPharoSmalltalk-Importer'
 		
-		'Famix-Support'
-
 		'Famix-Java-Generator'
 		'Famix-Java-Entities'
 		
