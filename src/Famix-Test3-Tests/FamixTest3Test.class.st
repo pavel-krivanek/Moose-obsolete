@@ -17,6 +17,22 @@ Class {
 }
 
 { #category : #running }
+FamixTest3Test >> checkAtScopeWithNonMatchingEntitiesDoWith: aBehavior [
+
+	| mooseQueryResult nonMatching |
+	mooseQueryResult := MooseOutgoingQueryResult on: c1 withAll: { ref1. inv1 }.
+
+	nonMatching := Set new.
+	self assertCollection: (
+		mooseQueryResult 
+			atScope: aBehavior 
+			withNonMatchingEntitiesDo: [ :entities :matchingAtTheScope | 
+				nonMatching addAll: entities asCollection ]) hasSameElements: { c1. }.
+	self assertCollection: nonMatching hasSameElements: { pt1 }.
+
+]
+
+{ #category : #running }
 FamixTest3Test >> setUp [
 
 	super setUp.
@@ -56,7 +72,8 @@ FamixTest3Test >> testAllClients [
 { #category : #running }
 FamixTest3Test >> testAllClientsAtScope [
 
-	self assertCollection: (pt1 allClientsAtScope: FamixTClass) hasSameElements: { c1 }
+	self assertCollection: (pt1 allClientsAtScope: FamixTClass) hasSameElements: { c1 }	.
+	self assertCollection: (pt1 allClientsAtScope: FamixTest3Class) hasSameElements: { c1 }
 ]
 
 { #category : #running }
@@ -68,13 +85,17 @@ FamixTest3Test >> testAllProviders [
 { #category : #running }
 FamixTest3Test >> testAllProvidersAtScope [
 
-	self assertCollection: (m1 allProvidersAtScope: FamixTClass) hasSameElements: { c1. pt1 }
+	self assertCollection: (m1 allProvidersAtScope: FamixTClass) hasSameElements: { c1. pt1 }.
+	self assertCollection: (m1 allProvidersAtScope: FamixTest3Class) hasSameElements: { c1. pt1 }.
 ]
 
 { #category : #running }
 FamixTest3Test >> testAtScope [
 
-	self assertCollection: (m1 atScope: FamixTClass) hasSameElements: { c1 }
+	self assertCollection: (m1 atScope: FamixTClass) hasSameElements: { c1 }.
+	self assertCollection: (m1 atScope: FamixTest3Class) hasSameElements: { c1 }.
+	
+
 ]
 
 { #category : #running }
@@ -82,20 +103,16 @@ FamixTest3Test >> testAtScopeOnQueryResult [
 	| mooseQueryResult |
 	mooseQueryResult := MooseObjectQueryResult on: c1 withAll: { m1 . m2 . pt1 . pt2 }.
 
-	self assertCollection: (mooseQueryResult atScope: FamixTClass) hasSameElements: { c1 . c2 } 
+	self assertCollection: (mooseQueryResult atScope: FamixTClass) hasSameElements: { c1 . c2 }.
+	self assertCollection: (mooseQueryResult atScope: FamixTest3Class) hasSameElements: { c1 . c2 }.
+	
 ]
 
 { #category : #running }
 FamixTest3Test >> testAtScopeWithNonMatchingEntitiesDo [
 
-	| mooseQueryResult nonMatching |
-	mooseQueryResult := MooseOutgoingQueryResult on: c1 withAll: { ref1. inv1 }.
-
-	nonMatching := Set new.
-	self assertCollection: (mooseQueryResult atScope: FamixTClass withNonMatchingEntitiesDo: [ :entities :matchingAtTheScope | 
-		nonMatching addAll: entities asCollection ]) hasSameElements: { c1. }.
-	
-	self assertCollection: nonMatching hasSameElements: { pt1 }
+	self checkAtScopeWithNonMatchingEntitiesDoWith: FamixTClass.
+	self checkAtScopeWithNonMatchingEntitiesDoWith: FamixTest3Class.
 ]
 
 { #category : #running }
