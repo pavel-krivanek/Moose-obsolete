@@ -50,7 +50,6 @@ FamixTest3Test >> setUp [
 { #category : #running }
 FamixTest3Test >> testAllClientsAtScope [
 
-	self halt.
 	self assertCollection: (pt1 allClientsAtScope: FamixTClass) hasSameElements: { c1 }
 ]
 
