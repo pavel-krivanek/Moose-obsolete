@@ -48,6 +48,19 @@ FamixTest3Test >> setUp [
 ]
 
 { #category : #running }
+FamixTest3Test >> testAllClientsAtScope [
+
+	self halt.
+	self assertCollection: (pt1 allClientsAtScope: FamixTClass) hasSameElements: { c1 }
+]
+
+{ #category : #running }
+FamixTest3Test >> testAllProvidersAtScope [
+
+	self assertCollection: (m1 allProvidersAtScope: FamixTClass) hasSameElements: { c1. pt1 }
+]
+
+{ #category : #running }
 FamixTest3Test >> testAtScope [
 
 	self assertCollection: (m1 atScope: FamixTClass) hasSameElements: { c1 }
@@ -72,4 +85,16 @@ FamixTest3Test >> testAtScopeWithNonMatchingEntitiesDo [
 		nonMatching addAll: entities asCollection ]) hasSameElements: { c1. }.
 	
 	self assertCollection: nonMatching hasSameElements: { pt1 }
+]
+
+{ #category : #running }
+FamixTest3Test >> testIncomingReferences [
+
+	self assertCollection: pt1 incomingReferences hasSameElements: { ref1 }
+]
+
+{ #category : #running }
+FamixTest3Test >> testQueryIncomingDependencies [
+
+	self assertCollection: pt1 queryIncomingDependencies hasSameElements: { ref1 }
 ]

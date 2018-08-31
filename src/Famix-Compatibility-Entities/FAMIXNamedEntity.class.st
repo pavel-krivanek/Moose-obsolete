@@ -33,11 +33,6 @@ FAMIXNamedEntity class >> generatedTraitNames [
 	^ #(FamixTInvocationsReceiver FamixTNamed FamixTPackageable FamixTPossibleStub FamixTWithAnnotationInstances FamixTWithModifiers TDependencyQueries TEntityMetaLevelDependency)
 ]
 
-{ #category : #accessing }
-FAMIXNamedEntity class >> incomingMSEProperties [
-	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
-]
-
 { #category : #'Moose-Query-Extensions' }
 FAMIXNamedEntity class >> parentSelector [
 	self 
@@ -94,23 +89,6 @@ FAMIXNamedEntity >> copyFrom: anEntity within: aVisitor [
 FAMIXNamedEntity >> methodScope [
 	"Empty default scope"
 	^ nil
-]
-
-{ #category : #'moosechef-scoping-filtering' }
-FAMIXNamedEntity >> moosechefEqualsTo: anEntity moduloScope: aScope [
-	"checks whether receiver is equal to anEntity at the given scope.
-	  For example, a class could be equal to a method at the packageScope, i.e. they belong to the same package.
-	  When changing scopes, we might get collections and then we check whether it includes the receiver"
-
-	| entityRescoped myselfRescoped |
-	myselfRescoped := self atScope: aScope.
-	(myselfRescoped size = 1) ifTrue: [ myselfRescoped := myselfRescoped anyOne ].
-	myselfRescoped isCollection
-		ifTrue: [ ^ myselfRescoped anySatisfy: [ :myElt | myElt moosechefEqualsTo: anEntity moduloScope: aScope ] ]
-		ifFalse: [ entityRescoped := anEntity atScope: aScope.
-			entityRescoped isCollection
-				ifTrue: [ ^ entityRescoped includes: myselfRescoped ]
-				ifFalse: [ ^ entityRescoped == myselfRescoped ] ]
 ]
 
 { #category : #'moosechef-scoping-filtering' }

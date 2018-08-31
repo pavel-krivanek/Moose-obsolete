@@ -100,7 +100,7 @@ TEntityMetaLevelDependency classSide >> incomingAssociationTypes [
 
 { #category : #accessing }
 TEntityMetaLevelDependency classSide >> incomingMSEProperties [
-	^ #()
+	^ incomingMSEProperties ifNil: [ incomingMSEProperties := self privateIncomingMSEProperties ]
 ]
 
 { #category : #accessing }
@@ -258,6 +258,11 @@ TEntityMetaLevelDependency >> allChildrenTypes [
 ]
 
 { #category : #accessing }
+TEntityMetaLevelDependency >> allClientsAtScope: aClass [
+	^ (self queryIncomingDependencies atScope: aClass withNonMatchingEntitiesDo: [ :entities :res | entities ifNotNil: [ res addAll: entities asCollection ] ]) withoutSelfLoops
+]
+
+{ #category : #accessing }
 TEntityMetaLevelDependency >> allIncomingAssociationTypes [
 	^ self class allIncomingAssociationTypes
 ]
@@ -277,6 +282,11 @@ TEntityMetaLevelDependency >> allParents [
 	"Returns all the parents and sup-parents of an entity, i.e my parents and those of my parents, and those of the parents of my parents, etc"
 
 	^ self addAllParentsIn: OrderedCollection new
+]
+
+{ #category : #accessing }
+TEntityMetaLevelDependency >> allProvidersAtScope: aClass [
+	^ (self queryOutgoingDependencies atScope: aClass withNonMatchingEntitiesDo: [ :entities :res | entities ifNotNil: [ res addAll: entities asCollection ] ]) withoutSelfLoops
 ]
 
 { #category : #scoping }
@@ -379,6 +389,23 @@ TEntityMetaLevelDependency >> incomingAssociationTypes [
 { #category : #accessing }
 TEntityMetaLevelDependency >> incomingMSEProperties [
 	^ self class incomingMSEProperties 
+]
+
+{ #category : #'moosechef-scoping-filtering' }
+TEntityMetaLevelDependency >> moosechefEqualsTo: anEntity moduloScope: aScope [
+	"checks whether receiver is equal to anEntity at the given scope.
+	  For example, a class could be equal to a method at the packageScope, i.e. they belong to the same package.
+	  When changing scopes, we might get collections and then we check whether it includes the receiver"
+
+	| entityRescoped myselfRescoped |
+	myselfRescoped := self atScope: aScope.
+	(myselfRescoped size = 1) ifTrue: [ myselfRescoped := myselfRescoped anyOne ].
+	myselfRescoped isCollection
+		ifTrue: [ ^ myselfRescoped anySatisfy: [ :myElt | myElt moosechefEqualsTo: anEntity moduloScope: aScope ] ]
+		ifFalse: [ entityRescoped := anEntity atScope: aScope.
+			entityRescoped isCollection
+				ifTrue: [ ^ entityRescoped includes: myselfRescoped ]
+				ifFalse: [ ^ entityRescoped == myselfRescoped ] ]
 ]
 
 { #category : #accessing }
