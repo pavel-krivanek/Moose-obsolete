@@ -50,6 +50,20 @@ TDependencyQueryResult >> atScope: aClassFamix [
 	^ self newObjectResultWith: (self storage inject: OrderedCollection new into: [ :res :dep | (self opposite: dep) atScope: aClassFamix in: res ]) asSet
 ]
 
+{ #category : #filtering }
+TDependencyQueryResult >> atScope: aClassFamix withNonMatchingEntitiesDo: aBlock [
+	"I do the same at #atScope: but when an element has nothing to return as scope I execute the block with the opposite as first parameter and the result collection as second parameter."
+
+	| res opposite coll |
+	res := OrderedCollection new.
+	self storage
+		do: [ :dep | 
+			coll := OrderedCollection new.
+			(opposite := self opposite: dep) atScope: aClassFamix in: coll.
+			coll ifEmpty: [ aBlock cull: opposite cull: res ] ifNotEmpty: [ :results | res addAll: results ] ].
+	^ self newObjectResultWith: res asSet
+]
+
 { #category : #private }
 TDependencyQueryResult >> elementAtReceiverScope: dep [
 	"returns scope (parents and children) of opposite element matching the scope of the receiver.

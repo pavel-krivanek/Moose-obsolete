@@ -218,6 +218,8 @@ BaselineOfMoose >> baselineFamixNG: spec [
 		'Famix-Test1-Tests'
 		'Famix-Test2-Entities'
 		'Famix-Test2-Tests'
+		'Famix-Test3-Entities'
+		'Famix-Test3-Tests'
 
 	) do: [ :packageName | 
 		spec package: packageName with: [ spec repository: (self url: #all) ]]
@@ -594,6 +596,8 @@ BaselineOfMoose >> groups: spec [
 		'Famix-Test1-Tests'
 		'Famix-Test2-Entities'
 		'Famix-Test2-Tests'
+		'Famix-Test3-Entities'
+		'Famix-Test3-Tests'
 		
 	).
 	
