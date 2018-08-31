@@ -48,9 +48,21 @@ FamixTest3Test >> setUp [
 ]
 
 { #category : #running }
+FamixTest3Test >> testAllClients [
+
+	self assertCollection: (pt1 allClients) hasSameElements: { m1 }
+]
+
+{ #category : #running }
 FamixTest3Test >> testAllClientsAtScope [
 
 	self assertCollection: (pt1 allClientsAtScope: FamixTClass) hasSameElements: { c1 }
+]
+
+{ #category : #running }
+FamixTest3Test >> testAllProviders [
+
+	self assertCollection: (m1 allProviders) hasSameElements: { pt1 }
 ]
 
 { #category : #running }

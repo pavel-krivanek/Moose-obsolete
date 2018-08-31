@@ -257,6 +257,11 @@ TEntityMetaLevelDependency >> allChildrenTypes [
 	^ self class allChildrenTypes
 ]
 
+{ #category : #'as yet unclassified' }
+TEntityMetaLevelDependency >> allClients [
+	^ self allClientsAtScope: self class
+]
+
 { #category : #accessing }
 TEntityMetaLevelDependency >> allClientsAtScope: aClass [
 	^ (self queryIncomingDependencies atScope: aClass withNonMatchingEntitiesDo: [ :entities :res | entities ifNotNil: [ res addAll: entities asCollection ] ]) withoutSelfLoops
@@ -282,6 +287,11 @@ TEntityMetaLevelDependency >> allParents [
 	"Returns all the parents and sup-parents of an entity, i.e my parents and those of my parents, and those of the parents of my parents, etc"
 
 	^ self addAllParentsIn: OrderedCollection new
+]
+
+{ #category : #'as yet unclassified' }
+TEntityMetaLevelDependency >> allProviders [
+	^ self allProvidersAtScope: self class
 ]
 
 { #category : #accessing }
