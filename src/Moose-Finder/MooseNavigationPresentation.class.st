@@ -27,7 +27,7 @@ MooseNavigationPresentation >> displayFor: anObject [
 		collect: [ :pragma | 
 			pragma
 				->
-					(anObject mooseInterestingEntity perform: pragma methodSelector)
+					([anObject mooseInterestingEntity perform: pragma methodSelector] ifError: [nil])
 						mooseInterestingEntity ].
 	^ (pragmaValueAssociations
 		reject: [ :association | 

@@ -139,7 +139,7 @@ MooseEntity >> mooseSpecificSpotterProcessorsFor: aSpotterStep [
 		collect: [ :pragma | 
 			pragma
 				->
-					(self mooseInterestingEntity perform: pragma methodSelector)
+					([self mooseInterestingEntity perform: pragma methodSelector] ifError: [nil])
 						mooseInterestingEntity ].
 	assocs := (pragmaValueAssociations
 		reject: [ :association | 
